@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestRoomRescueKeyPairsPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
 // RequestRoomRescueKeyPairsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestRoomRescueKeyPairsXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestRoomRescueKeyPairsXSdsDateFormatEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type RequestRoomRescueKeyPairsHeaders struct {
+type RequestRoomRescueKeyPairsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestRoomRescueKeyPairsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestRoomRescueKeyPairsRequest struct {
-	PathParams RequestRoomRescueKeyPairsPathParams
-	Headers    RequestRoomRescueKeyPairsHeaders
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type RequestRoomRescueKeyPairsResponse struct {

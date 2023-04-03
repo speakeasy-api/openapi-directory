@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRasterDataCollectionPathParams struct {
+type GetRasterDataCollectionRequest struct {
 	// The Amazon Resource Name (ARN) of the raster data collection.
-	Arn string `pathParam:"style=simple,explode=false,name=Arn"`
-}
-
-type GetRasterDataCollectionHeaders struct {
+	Arn               string  `pathParam:"style=simple,explode=false,name=Arn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetRasterDataCollectionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRasterDataCollectionRequest struct {
-	PathParams GetRasterDataCollectionPathParams
-	Headers    GetRasterDataCollectionHeaders
 }
 
 type GetRasterDataCollectionResponse struct {

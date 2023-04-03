@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EaseeSessionsQueryParams struct {
+type EaseeSessionsRequest struct {
 	// Password as used on easy.cloud
 	Password *string `queryParam:"style=form,explode=true,name=password"`
 	// Username as used on easy.cloud
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type EaseeSessionsRequest struct {
-	QueryParams EaseeSessionsQueryParams
 }
 
 type EaseeSessionsResponse struct {

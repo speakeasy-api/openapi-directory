@@ -8,8 +8,8 @@ import (
 )
 
 type AccountUpdatePasswordSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountUpdatePasswordRequestBody struct {
@@ -17,11 +17,6 @@ type AccountUpdatePasswordRequestBody struct {
 	OldPassword *string `json:"oldPassword,omitempty"`
 	// New user password. Must be between 6 to 32 chars.
 	Password string `json:"password"`
-}
-
-type AccountUpdatePasswordRequest struct {
-	Request  *AccountUpdatePasswordRequestBody `request:"mediaType=application/json"`
-	Security AccountUpdatePasswordSecurity
 }
 
 type AccountUpdatePasswordResponse struct {

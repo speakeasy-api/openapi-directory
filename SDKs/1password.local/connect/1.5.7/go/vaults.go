@@ -34,16 +34,16 @@ func newVaults(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetVaultByID - Get Vault details and metadata
-func (s *vaults) GetVaultByID(ctx context.Context, request operations.GetVaultByIDRequest) (*operations.GetVaultByIDResponse, error) {
+func (s *vaults) GetVaultByID(ctx context.Context, request operations.GetVaultByIDRequest, security operations.GetVaultByIDSecurity) (*operations.GetVaultByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *vaults) GetVaultByID(ctx context.Context, request operations.GetVaultBy
 }
 
 // GetVaults - Get all Vaults
-func (s *vaults) GetVaults(ctx context.Context, request operations.GetVaultsRequest) (*operations.GetVaultsResponse, error) {
+func (s *vaults) GetVaults(ctx context.Context, request operations.GetVaultsRequest, security operations.GetVaultsSecurity) (*operations.GetVaultsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vaults"
 
@@ -101,11 +101,11 @@ func (s *vaults) GetVaults(ctx context.Context, request operations.GetVaultsRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

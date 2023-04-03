@@ -77,7 +77,7 @@ func (e *GETDescribeTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeTypeQueryParams struct {
+type GETDescribeTypeRequest struct {
 	Action GETDescribeTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the extension.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
 	Arn *string `queryParam:"style=form,explode=true,name=Arn"`
@@ -91,10 +91,7 @@ type GETDescribeTypeQueryParams struct {
 	TypeName *string                    `queryParam:"style=form,explode=true,name=TypeName"`
 	Version  GETDescribeTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name (ARN) assigned to the extension version when it is registered.</p> <p>If you specify a <code>VersionId</code>, <code>DescribeType</code> returns information about that specific extension version. Otherwise, it returns information about the default extension version.</p>
-	VersionID *string `queryParam:"style=form,explode=true,name=VersionId"`
-}
-
-type GETDescribeTypeHeaders struct {
+	VersionID         *string `queryParam:"style=form,explode=true,name=VersionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -102,11 +99,6 @@ type GETDescribeTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeTypeRequest struct {
-	QueryParams GETDescribeTypeQueryParams
-	Headers     GETDescribeTypeHeaders
 }
 
 type GETDescribeTypeResponse struct {

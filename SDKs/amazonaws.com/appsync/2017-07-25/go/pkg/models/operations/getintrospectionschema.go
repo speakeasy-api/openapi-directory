@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIntrospectionSchemaPathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
 // GetIntrospectionSchemaFormatEnum - The schema format: SDL or JSON.
 type GetIntrospectionSchemaFormatEnum string
 
@@ -38,14 +33,7 @@ func (e *GetIntrospectionSchemaFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetIntrospectionSchemaQueryParams struct {
-	// The schema format: SDL or JSON.
-	Format GetIntrospectionSchemaFormatEnum `queryParam:"style=form,explode=true,name=format"`
-	// A flag that specifies whether the schema introspection should contain directives.
-	IncludeDirectives *bool `queryParam:"style=form,explode=true,name=includeDirectives"`
-}
-
-type GetIntrospectionSchemaHeaders struct {
+type GetIntrospectionSchemaRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -53,12 +41,12 @@ type GetIntrospectionSchemaHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetIntrospectionSchemaRequest struct {
-	PathParams  GetIntrospectionSchemaPathParams
-	QueryParams GetIntrospectionSchemaQueryParams
-	Headers     GetIntrospectionSchemaHeaders
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The schema format: SDL or JSON.
+	Format GetIntrospectionSchemaFormatEnum `queryParam:"style=form,explode=true,name=format"`
+	// A flag that specifies whether the schema introspection should contain directives.
+	IncludeDirectives *bool `queryParam:"style=form,explode=true,name=includeDirectives"`
 }
 
 type GetIntrospectionSchemaResponse struct {

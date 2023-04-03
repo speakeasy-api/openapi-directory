@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSettingPathParams struct {
+type UpdateSettingRequest struct {
+	JSONPatchInput shared.JSONPatchInput `request:"mediaType=application/json"`
 	// The identifier of the Setting.
 	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type UpdateSettingRequest struct {
-	PathParams UpdateSettingPathParams
-	Request    shared.JSONPatchInput `request:"mediaType=application/json"`
 }
 
 type UpdateSettingResponse struct {

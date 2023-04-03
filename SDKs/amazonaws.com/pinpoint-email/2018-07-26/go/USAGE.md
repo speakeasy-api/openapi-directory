@@ -13,30 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateConfigurationSetRequest{
-        Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "illum",
+        RequestBody: operations.CreateConfigurationSetRequestBody{
+            ConfigurationSetName: "corrupti",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "vel",
+                SendingPoolName: "provident",
                 TLSPolicy: "OPTIONAL",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2022-03-26T09:37:56.283Z",
+                LastFreshStart: "2021-03-11T23:22:42.658Z",
                 ReputationMetricsEnabled: false,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
@@ -44,18 +33,33 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "magnam",
-                    Value: "debitis",
+                    Key: "corrupti",
+                    Value: "illum",
                 },
                 shared.Tag{
-                    Key: "ipsa",
-                    Value: "delectus",
+                    Key: "vel",
+                    Value: "error",
+                },
+                shared.Tag{
+                    Key: "deserunt",
+                    Value: "suscipit",
+                },
+                shared.Tag{
+                    Key: "iure",
+                    Value: "magnam",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "tempora",
+                CustomRedirectDomain: "debitis",
             },
         },
+        XAmzAlgorithm: "ipsa",
+        XAmzContentSha256: "delectus",
+        XAmzCredential: "tempora",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "molestiae",
+        XAmzSignature: "minus",
+        XAmzSignedHeaders: "placeat",
     }
 
     ctx := context.Background()

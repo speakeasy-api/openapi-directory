@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePaymentPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdatePaymentRequest struct {
-	PathParams UpdatePaymentPathParams
 	// Payment history object that you would like to update.
-	Request []shared.PaymentHistory `request:"mediaType=application/json"`
+	RequestBody []shared.PaymentHistory `request:"mediaType=application/json"`
+	ID          int64                   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdatePaymentResponse struct {

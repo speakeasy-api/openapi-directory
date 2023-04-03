@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetActivityHistoryPathParams struct {
+type Destiny2GetActivityHistoryRequest struct {
 	// The id of the character to retrieve.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
+	// Number of rows to return
+	Count *int `queryParam:"style=form,explode=true,name=count"`
 	// The Destiny membershipId of the user to retrieve.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetActivityHistoryQueryParams struct {
-	// Number of rows to return
-	Count *int `queryParam:"style=form,explode=true,name=count"`
 	// A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
 	Mode *int `queryParam:"style=form,explode=true,name=mode"`
 	// Page number to return, starting with 0.
 	Page *int `queryParam:"style=form,explode=true,name=page"`
-}
-
-type Destiny2GetActivityHistoryRequest struct {
-	PathParams  Destiny2GetActivityHistoryPathParams
-	QueryParams Destiny2GetActivityHistoryQueryParams
 }
 
 // Destiny2GetActivityHistory200Wildcard - Look at the Response property for more information about the nature of this response

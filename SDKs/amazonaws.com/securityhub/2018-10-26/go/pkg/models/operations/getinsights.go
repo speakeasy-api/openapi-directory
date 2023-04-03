@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInsightsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetInsightsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetInsightsRequestBody struct {
 	// The ARNs of the insights to describe. If you do not provide any insight ARNs, then <code>GetInsights</code> returns all of your custom insights. It does not return any managed insights.
 	InsightArns []string `json:"InsightArns,omitempty"`
@@ -34,9 +17,18 @@ type GetInsightsRequestBody struct {
 }
 
 type GetInsightsRequest struct {
-	QueryParams GetInsightsQueryParams
-	Headers     GetInsightsHeaders
-	Request     GetInsightsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       GetInsightsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetInsightsResponse struct {

@@ -40,9 +40,9 @@ func newMembers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Only a single Permission Group can be set per Product.
 func (s *members) AddMemberToGroup(ctx context.Context, request operations.AddMemberToGroupRequest) (*operations.AddMemberToGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddUserToGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -95,7 +95,7 @@ func (s *members) AddMemberToGroup(ctx context.Context, request operations.AddMe
 // given Organization identified by the `organizationId` parameter.
 func (s *members) DeleteOrganizationMember(ctx context.Context, request operations.DeleteOrganizationMemberRequest) (*operations.DeleteOrganizationMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *members) DeleteOrganizationMember(ctx context.Context, request operatio
 // given Product identified by the `productId` parameter.
 func (s *members) DeleteProductMember(ctx context.Context, request operations.DeleteProductMemberRequest) (*operations.DeleteProductMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/members/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/members/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *members) DeleteProductMember(ctx context.Context, request operations.De
 // to the given Organization, identified by the `organizationId` parameter.
 func (s *members) GetOrganizationMembers(ctx context.Context, request operations.GetOrganizationMembersRequest) (*operations.GetOrganizationMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -245,7 +245,7 @@ func (s *members) GetOrganizationMembers(ctx context.Context, request operations
 // to the given Product, identified by the `productId` parameter.
 func (s *members) GetProductMembers(ctx context.Context, request operations.GetProductMembersRequest) (*operations.GetProductMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,9 +304,9 @@ func (s *members) GetProductMembers(ctx context.Context, request operations.GetP
 // This endpoint invites a Member into the given Product identified by the `productId` parameter.
 func (s *members) InviteMember(ctx context.Context, request operations.InviteMemberRequest) (*operations.InviteMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/members/invite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/members/invite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InviteMembersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

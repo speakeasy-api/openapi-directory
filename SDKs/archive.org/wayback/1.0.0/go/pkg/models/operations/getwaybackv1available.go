@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWaybackV1AvailableQueryParams struct {
+type GetWaybackV1AvailableRequest struct {
 	// Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
 	//
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
@@ -33,10 +33,6 @@ type GetWaybackV1AvailableQueryParams struct {
 	Timestamp *string `queryParam:"style=form,explode=true,name=timestamp"`
 	// A single URL to query.
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type GetWaybackV1AvailableRequest struct {
-	QueryParams GetWaybackV1AvailableQueryParams
 }
 
 type GetWaybackV1AvailableResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPipelineVariableForUserPathParams struct {
+type GetPipelineVariableForUserRequest struct {
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
 	// The UUID of the variable to retrieve.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
-}
-
-type GetPipelineVariableForUserRequest struct {
-	PathParams GetPipelineVariableForUserPathParams
 }
 
 type GetPipelineVariableForUserResponse struct {

@@ -19,10 +19,6 @@ type PostAuthRenewRequestBody struct {
 	RevokePrevious *bool `multipartForm:"name=revoke_previous"`
 }
 
-type PostAuthRenewRequest struct {
-	Request *PostAuthRenewRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAuthRenew200ApplicationJSON struct {
 	// the access token transformed from the temporary one
 	AccessToken string `json:"access_token"`

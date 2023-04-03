@@ -8,12 +8,12 @@ import (
 )
 
 type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams struct {
+type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest struct {
 	// Name of the file.
 	Filename string `pathParam:"style=simple,explode=false,name=filename"`
 	// This can either be the repository slug or the UUID of the repository,
@@ -24,11 +24,6 @@ type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest struct {
-	PathParams DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams
-	Security   DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity
 }
 
 type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse struct {

@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSuiteDefinitionPathParams struct {
-	// Suite definition ID of the test suite to get.
-	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
-}
-
-type GetSuiteDefinitionQueryParams struct {
-	// Suite definition version of the test suite to get.
-	SuiteDefinitionVersion *string `queryParam:"style=form,explode=true,name=suiteDefinitionVersion"`
-}
-
-type GetSuiteDefinitionHeaders struct {
+type GetSuiteDefinitionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type GetSuiteDefinitionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSuiteDefinitionRequest struct {
-	PathParams  GetSuiteDefinitionPathParams
-	QueryParams GetSuiteDefinitionQueryParams
-	Headers     GetSuiteDefinitionHeaders
+	// Suite definition ID of the test suite to get.
+	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
+	// Suite definition version of the test suite to get.
+	SuiteDefinitionVersion *string `queryParam:"style=form,explode=true,name=suiteDefinitionVersion"`
 }
 
 type GetSuiteDefinitionResponse struct {

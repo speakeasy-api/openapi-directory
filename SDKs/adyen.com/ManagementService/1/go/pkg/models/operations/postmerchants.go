@@ -8,13 +8,8 @@ import (
 )
 
 type PostMerchantsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostMerchantsRequest struct {
-	Request  *shared.CreateMerchantRequest `request:"mediaType=application/json"`
-	Security PostMerchantsSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostMerchantsResponse struct {

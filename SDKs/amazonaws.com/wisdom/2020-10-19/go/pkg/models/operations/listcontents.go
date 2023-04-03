@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListContentsPathParams struct {
-	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
-}
-
-type ListContentsQueryParams struct {
-	// The maximum number of results to return per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListContentsHeaders struct {
+type ListContentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListContentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListContentsRequest struct {
-	PathParams  ListContentsPathParams
-	QueryParams ListContentsQueryParams
-	Headers     ListContentsHeaders
+	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
+	// The maximum number of results to return per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListContentsResponse struct {

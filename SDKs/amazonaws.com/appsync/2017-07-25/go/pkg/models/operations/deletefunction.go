@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteFunctionPathParams struct {
-	// The GraphQL API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The <code>Function</code> ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
-}
-
-type DeleteFunctionHeaders struct {
+type DeleteFunctionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteFunctionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFunctionRequest struct {
-	PathParams DeleteFunctionPathParams
-	Headers    DeleteFunctionHeaders
+	// The GraphQL API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The <code>Function</code> ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type DeleteFunctionResponse struct {

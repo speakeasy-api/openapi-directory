@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSavingsPlansUtilizationDetailsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetSavingsPlansUtilizationDetailsXAmzTargetEnum
 type GetSavingsPlansUtilizationDetailsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetSavingsPlansUtilizationDetailsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetSavingsPlansUtilizationDetailsHeaders struct {
+type GetSavingsPlansUtilizationDetailsRequest struct {
+	GetSavingsPlansUtilizationDetailsRequest shared.GetSavingsPlansUtilizationDetailsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetSavingsPlansUtilizationDetailsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetSavingsPlansUtilizationDetailsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetSavingsPlansUtilizationDetailsRequest struct {
-	QueryParams GetSavingsPlansUtilizationDetailsQueryParams
-	Headers     GetSavingsPlansUtilizationDetailsHeaders
-	Request     shared.GetSavingsPlansUtilizationDetailsRequest `request:"mediaType=application/json"`
 }
 
 type GetSavingsPlansUtilizationDetailsResponse struct {

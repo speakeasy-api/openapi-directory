@@ -30,20 +30,16 @@ func (e *StartGUISessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StartGUISessionHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartGUISessionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartGUISessionRequest struct {
-	Headers StartGUISessionHeaders
-	Request shared.StartGUISessionRequest `request:"mediaType=application/json"`
+	StartGUISessionRequest shared.StartGUISessionRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             StartGUISessionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartGUISessionResponse struct {

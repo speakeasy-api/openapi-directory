@@ -8,19 +8,14 @@ import (
 )
 
 type PatchBusinessLinesIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchBusinessLinesIDPathParams struct {
-	// The unique identifier of the business line.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchBusinessLinesIDRequest struct {
-	PathParams PatchBusinessLinesIDPathParams
-	Request    *shared.BusinessLineInfoUpdateInput `request:"mediaType=application/json"`
-	Security   PatchBusinessLinesIDSecurity
+	BusinessLineInfoUpdateInput *shared.BusinessLineInfoUpdateInput `request:"mediaType=application/json"`
+	// The unique identifier of the business line.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchBusinessLinesIDResponse struct {

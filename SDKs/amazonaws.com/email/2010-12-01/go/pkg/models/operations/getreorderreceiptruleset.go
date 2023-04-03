@@ -50,28 +50,20 @@ func (e *GETReorderReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETReorderReceiptRuleSetQueryParams struct {
+type GETReorderReceiptRuleSetRequest struct {
 	Action GETReorderReceiptRuleSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A list of the specified receipt rule set's receipt rules in the order that you want to put them.
 	RuleNames []string `queryParam:"style=form,explode=true,name=RuleNames"`
 	// The name of the receipt rule set to reorder.
-	RuleSetName string                              `queryParam:"style=form,explode=true,name=RuleSetName"`
-	Version     GETReorderReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReorderReceiptRuleSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReorderReceiptRuleSetRequest struct {
-	QueryParams GETReorderReceiptRuleSetQueryParams
-	Headers     GETReorderReceiptRuleSetHeaders
+	RuleSetName       string                              `queryParam:"style=form,explode=true,name=RuleSetName"`
+	Version           GETReorderReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReorderReceiptRuleSetResponse struct {

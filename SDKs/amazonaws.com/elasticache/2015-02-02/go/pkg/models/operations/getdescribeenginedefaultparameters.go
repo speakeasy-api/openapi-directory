@@ -50,30 +50,22 @@ func (e *GETDescribeEngineDefaultParametersVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETDescribeEngineDefaultParametersQueryParams struct {
+type GETDescribeEngineDefaultParametersRequest struct {
 	Action GETDescribeEngineDefaultParametersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the cache parameter group family.</p> <p>Valid values are: <code>memcached1.4</code> | <code>memcached1.5</code> | <code>memcached1.6</code> | <code>redis2.6</code> | <code>redis2.8</code> | <code>redis3.2</code> | <code>redis4.0</code> | <code>redis5.0</code> | <code>redis6.x</code> | <code>redis6.2</code> | <code>redis7</code> </p>
 	CacheParameterGroupFamily string `queryParam:"style=form,explode=true,name=CacheParameterGroupFamily"`
 	// An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a marker is included in the response so that the remaining results can be retrieved.</p> <p>Default: 100</p> <p>Constraints: minimum 20; maximum 100.</p>
-	MaxRecords *int64                                        `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeEngineDefaultParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEngineDefaultParametersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEngineDefaultParametersRequest struct {
-	QueryParams GETDescribeEngineDefaultParametersQueryParams
-	Headers     GETDescribeEngineDefaultParametersHeaders
+	MaxRecords        *int64                                        `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeEngineDefaultParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEngineDefaultParametersResponse struct {

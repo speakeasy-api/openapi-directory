@@ -9,14 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItemPathParams struct {
-	// The identifier of the item to load.
-	//
-	// The custom identifier of an item can be used here if the `use_custom_id` parameter is true.
-	//
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetItemExpandEnum - If no value is specified no dependencies are expanded.
 //
 // If 'children' is specified then the list of any direct children will be expanded. For example
@@ -95,7 +87,7 @@ func (e *GetItemSelectSeasonEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetItemQueryParams struct {
+type GetItemRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// If no value is specified no dependencies are expanded.
@@ -140,6 +132,11 @@ type GetItemQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the item to load.
+	//
+	// The custom identifier of an item can be used here if the `use_custom_id` parameter is true.
+	//
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -170,11 +167,6 @@ type GetItemQueryParams struct {
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
 	// Set to true when passing a custom Id as the `id` path parameter.
 	UseCustomID *bool `queryParam:"style=form,explode=true,name=use_custom_id"`
-}
-
-type GetItemRequest struct {
-	PathParams  GetItemPathParams
-	QueryParams GetItemQueryParams
 }
 
 type GetItemResponse struct {

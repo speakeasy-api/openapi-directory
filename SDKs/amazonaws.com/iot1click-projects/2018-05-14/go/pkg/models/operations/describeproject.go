@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeProjectPathParams struct {
-	// The name of the project to be described.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type DescribeProjectHeaders struct {
+type DescribeProjectRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeProjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeProjectRequest struct {
-	PathParams DescribeProjectPathParams
-	Headers    DescribeProjectHeaders
+	// The name of the project to be described.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type DescribeProjectResponse struct {

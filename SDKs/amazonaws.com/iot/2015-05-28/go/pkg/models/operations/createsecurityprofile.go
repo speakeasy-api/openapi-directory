@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSecurityProfilePathParams struct {
-	// The name you are giving to the security profile.
-	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
-}
-
-type CreateSecurityProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateSecurityProfileRequestBody struct {
 	// <p> <i>Please use <a>CreateSecurityProfileRequest$additionalMetricsToRetainV2</a> instead.</i> </p> <p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here. Can be used with custom metrics; cannot be used with dimensions.</p>
 	AdditionalMetricsToRetain []string `json:"additionalMetricsToRetain,omitempty"`
@@ -38,9 +23,16 @@ type CreateSecurityProfileRequestBody struct {
 }
 
 type CreateSecurityProfileRequest struct {
-	PathParams CreateSecurityProfilePathParams
-	Headers    CreateSecurityProfileHeaders
-	Request    CreateSecurityProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSecurityProfileRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name you are giving to the security profile.
+	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
 }
 
 type CreateSecurityProfileResponse struct {

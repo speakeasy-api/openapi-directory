@@ -30,20 +30,16 @@ func (e *CreateImageBuilderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateImageBuilderHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateImageBuilderXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateImageBuilderRequest struct {
-	Headers CreateImageBuilderHeaders
-	Request shared.CreateImageBuilderRequest `request:"mediaType=application/json"`
+	CreateImageBuilderRequest shared.CreateImageBuilderRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                CreateImageBuilderXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateImageBuilderResponse struct {

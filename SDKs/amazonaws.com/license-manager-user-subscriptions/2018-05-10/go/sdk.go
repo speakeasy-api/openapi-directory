@@ -116,7 +116,7 @@ func (s *SDK) AssociateUser(ctx context.Context, request operations.AssociateUse
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/AssociateUser"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateUser(ctx context.Context, request operations.AssociateUse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -242,7 +242,7 @@ func (s *SDK) DeregisterIdentityProvider(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity-provider/DeregisterIdentityProvider"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) DeregisterIdentityProvider(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -368,7 +368,7 @@ func (s *SDK) DisassociateUser(ctx context.Context, request operations.Disassoci
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/DisassociateUser"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *SDK) DisassociateUser(ctx context.Context, request operations.Disassoci
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -494,7 +494,7 @@ func (s *SDK) ListIdentityProviders(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity-provider/ListIdentityProviders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,9 +509,9 @@ func (s *SDK) ListIdentityProviders(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -624,7 +624,7 @@ func (s *SDK) ListInstances(ctx context.Context, request operations.ListInstance
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/instance/ListInstances"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -639,9 +639,9 @@ func (s *SDK) ListInstances(ctx context.Context, request operations.ListInstance
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -754,7 +754,7 @@ func (s *SDK) ListProductSubscriptions(ctx context.Context, request operations.L
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/ListProductSubscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -769,9 +769,9 @@ func (s *SDK) ListProductSubscriptions(ctx context.Context, request operations.L
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -884,7 +884,7 @@ func (s *SDK) ListUserAssociations(ctx context.Context, request operations.ListU
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/ListUserAssociations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -899,9 +899,9 @@ func (s *SDK) ListUserAssociations(ctx context.Context, request operations.ListU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1014,7 +1014,7 @@ func (s *SDK) RegisterIdentityProvider(ctx context.Context, request operations.R
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity-provider/RegisterIdentityProvider"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1029,7 +1029,7 @@ func (s *SDK) RegisterIdentityProvider(ctx context.Context, request operations.R
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1140,7 +1140,7 @@ func (s *SDK) StartProductSubscription(ctx context.Context, request operations.S
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/StartProductSubscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1155,7 +1155,7 @@ func (s *SDK) StartProductSubscription(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1266,7 +1266,7 @@ func (s *SDK) StopProductSubscription(ctx context.Context, request operations.St
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/StopProductSubscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1281,7 +1281,7 @@ func (s *SDK) StopProductSubscription(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1392,7 +1392,7 @@ func (s *SDK) UpdateIdentityProviderSettings(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/identity-provider/UpdateIdentityProviderSettings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1407,7 +1407,7 @@ func (s *SDK) UpdateIdentityProviderSettings(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

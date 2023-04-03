@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetPasswordPathParams struct {
+type ResetPasswordRequest struct {
+	ResetPasswordWithTokenRequest shared.ResetPasswordWithTokenRequest `request:"mediaType=application/json"`
 	// Password reset token
 	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type ResetPasswordRequest struct {
-	PathParams ResetPasswordPathParams
-	Request    shared.ResetPasswordWithTokenRequest `request:"mediaType=application/json"`
 }
 
 type ResetPassword400ApplicationJSONType string

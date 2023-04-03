@@ -116,7 +116,7 @@ func (s *SDK) AddTagsToResource(ctx context.Context, request operations.AddTagsT
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.AddTagsToResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTagsToResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AddTagsToResource(ctx context.Context, request operations.AddTagsT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -202,7 +202,7 @@ func (s *SDK) CreateHapg(ctx context.Context, request operations.CreateHapgReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.CreateHapg"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateHapgRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -217,7 +217,7 @@ func (s *SDK) CreateHapg(ctx context.Context, request operations.CreateHapgReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -288,7 +288,7 @@ func (s *SDK) CreateHsm(ctx context.Context, request operations.CreateHsmRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.CreateHsm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateHsmRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *SDK) CreateHsm(ctx context.Context, request operations.CreateHsmRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -374,7 +374,7 @@ func (s *SDK) CreateLunaClient(ctx context.Context, request operations.CreateLun
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.CreateLunaClient"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateLunaClientRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,7 +389,7 @@ func (s *SDK) CreateLunaClient(ctx context.Context, request operations.CreateLun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -460,7 +460,7 @@ func (s *SDK) DeleteHapg(ctx context.Context, request operations.DeleteHapgReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.DeleteHapg"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteHapgRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -475,7 +475,7 @@ func (s *SDK) DeleteHapg(ctx context.Context, request operations.DeleteHapgReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -546,7 +546,7 @@ func (s *SDK) DeleteHsm(ctx context.Context, request operations.DeleteHsmRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.DeleteHsm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteHsmRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -561,7 +561,7 @@ func (s *SDK) DeleteHsm(ctx context.Context, request operations.DeleteHsmRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -632,7 +632,7 @@ func (s *SDK) DeleteLunaClient(ctx context.Context, request operations.DeleteLun
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.DeleteLunaClient"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteLunaClientRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -647,7 +647,7 @@ func (s *SDK) DeleteLunaClient(ctx context.Context, request operations.DeleteLun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -718,7 +718,7 @@ func (s *SDK) DescribeHapg(ctx context.Context, request operations.DescribeHapgR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.DescribeHapg"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeHapgRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -733,7 +733,7 @@ func (s *SDK) DescribeHapg(ctx context.Context, request operations.DescribeHapgR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -804,7 +804,7 @@ func (s *SDK) DescribeHsm(ctx context.Context, request operations.DescribeHsmReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.DescribeHsm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeHsmRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -819,7 +819,7 @@ func (s *SDK) DescribeHsm(ctx context.Context, request operations.DescribeHsmReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -890,7 +890,7 @@ func (s *SDK) DescribeLunaClient(ctx context.Context, request operations.Describ
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.DescribeLunaClient"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeLunaClientRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -905,7 +905,7 @@ func (s *SDK) DescribeLunaClient(ctx context.Context, request operations.Describ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -976,7 +976,7 @@ func (s *SDK) GetConfig(ctx context.Context, request operations.GetConfigRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.GetConfig"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -991,7 +991,7 @@ func (s *SDK) GetConfig(ctx context.Context, request operations.GetConfigRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1062,7 +1062,7 @@ func (s *SDK) ListAvailableZones(ctx context.Context, request operations.ListAva
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ListAvailableZones"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1077,7 +1077,7 @@ func (s *SDK) ListAvailableZones(ctx context.Context, request operations.ListAva
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1148,7 +1148,7 @@ func (s *SDK) ListHapgs(ctx context.Context, request operations.ListHapgsRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ListHapgs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListHapgsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1163,7 +1163,7 @@ func (s *SDK) ListHapgs(ctx context.Context, request operations.ListHapgsRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1234,7 +1234,7 @@ func (s *SDK) ListHsms(ctx context.Context, request operations.ListHsmsRequest) 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ListHsms"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListHsmsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1249,7 +1249,7 @@ func (s *SDK) ListHsms(ctx context.Context, request operations.ListHsmsRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1320,7 +1320,7 @@ func (s *SDK) ListLunaClients(ctx context.Context, request operations.ListLunaCl
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ListLunaClients"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListLunaClientsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1335,7 +1335,7 @@ func (s *SDK) ListLunaClients(ctx context.Context, request operations.ListLunaCl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1406,7 +1406,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ListTagsForResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListTagsForResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1421,7 +1421,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1492,7 +1492,7 @@ func (s *SDK) ModifyHapg(ctx context.Context, request operations.ModifyHapgReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ModifyHapg"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyHapgRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1507,7 +1507,7 @@ func (s *SDK) ModifyHapg(ctx context.Context, request operations.ModifyHapgReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1578,7 +1578,7 @@ func (s *SDK) ModifyHsm(ctx context.Context, request operations.ModifyHsmRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ModifyHsm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyHsmRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1593,7 +1593,7 @@ func (s *SDK) ModifyHsm(ctx context.Context, request operations.ModifyHsmRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1664,7 +1664,7 @@ func (s *SDK) ModifyLunaClient(ctx context.Context, request operations.ModifyLun
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.ModifyLunaClient"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyLunaClientRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1679,7 +1679,7 @@ func (s *SDK) ModifyLunaClient(ctx context.Context, request operations.ModifyLun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1730,7 +1730,7 @@ func (s *SDK) RemoveTagsFromResource(ctx context.Context, request operations.Rem
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=CloudHsmFrontendService.RemoveTagsFromResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTagsFromResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1745,7 +1745,7 @@ func (s *SDK) RemoveTagsFromResource(ctx context.Context, request operations.Rem
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

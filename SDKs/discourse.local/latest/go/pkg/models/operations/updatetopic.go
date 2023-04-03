@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateTopicPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateTopicHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type UpdateTopicRequestBodyTopic struct {
 	CategoryID *int64  `json:"category_id,omitempty"`
 	Title      *string `json:"title,omitempty"`
@@ -25,9 +16,10 @@ type UpdateTopicRequestBody struct {
 }
 
 type UpdateTopicRequest struct {
-	PathParams UpdateTopicPathParams
-	Headers    UpdateTopicHeaders
-	Request    *UpdateTopicRequestBody `request:"mediaType=application/json"`
+	APIKey      string                  `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                  `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *UpdateTopicRequestBody `request:"mediaType=application/json"`
+	ID          string                  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateTopic200ApplicationJSONBasicTopic struct {

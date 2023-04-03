@@ -36,16 +36,16 @@ func newClientKeyMerchantLevel(defaultClient, securityClient HTTPClient, serverU
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *clientKeyMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKey(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKeyRequest) (*operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKeyResponse, error) {
+func (s *clientKeyMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKey(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKeyRequest, security operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKeySecurity) (*operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateClientKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateClientKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateClientKey", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

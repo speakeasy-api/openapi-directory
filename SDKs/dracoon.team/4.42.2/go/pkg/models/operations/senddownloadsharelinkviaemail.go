@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendDownloadShareLinkViaEmailPathParams struct {
-	// Share ID
-	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
-}
-
-type SendDownloadShareLinkViaEmailHeaders struct {
+type SendDownloadShareLinkViaEmailRequest struct {
+	DownloadShareLinkEmail shared.DownloadShareLinkEmail `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type SendDownloadShareLinkViaEmailRequest struct {
-	PathParams SendDownloadShareLinkViaEmailPathParams
-	Headers    SendDownloadShareLinkViaEmailHeaders
-	Request    shared.DownloadShareLinkEmail `request:"mediaType=application/json"`
+	// Share ID
+	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
 }
 
 type SendDownloadShareLinkViaEmailResponse struct {

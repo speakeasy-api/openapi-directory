@@ -10,8 +10,8 @@ import (
 )
 
 type FslcsSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type FslcsRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type FslcsRequestBody struct {
 	Format FslcsRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type FslcsRequest struct {
-	// Request format
-	Request  *FslcsRequestBody `request:"mediaType=application/json"`
-	Security FslcsSecurity
 }
 
 type Fslcs504ApplicationJSONErrorEnum string

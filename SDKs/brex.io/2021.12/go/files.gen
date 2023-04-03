@@ -74,7 +74,6 @@ pkg/models/operations/vatbasic.go
 pkg/models/operations/vatcomprehensive.go
 pkg/models/operations/vatleveltwo.go
 pkg/models/operations/vatlookup.go
-pkg/models/shared/security.go
 pkg/models/shared/oneapi1v11company1deepsearch1lei1percent7bnumberpercent7dgetresponses200contentapplication1jsonschemapropertiescompany.go
 pkg/models/shared/oneapi1v11einverification1lookupgetresponses200contentapplication1jsonschemapropertiesmatchedeincompanies.go
 pkg/models/shared/oneapi1v11ibanverification1checkibanpostresponses200contentapplication1jsonschema.go

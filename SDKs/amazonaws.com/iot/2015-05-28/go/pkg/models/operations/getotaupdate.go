@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOTAUpdatePathParams struct {
-	// The OTA update ID.
-	OtaUpdateID string `pathParam:"style=simple,explode=false,name=otaUpdateId"`
-}
-
-type GetOTAUpdateHeaders struct {
+type GetOTAUpdateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetOTAUpdateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetOTAUpdateRequest struct {
-	PathParams GetOTAUpdatePathParams
-	Headers    GetOTAUpdateHeaders
+	// The OTA update ID.
+	OtaUpdateID string `pathParam:"style=simple,explode=false,name=otaUpdateId"`
 }
 
 type GetOTAUpdateResponse struct {

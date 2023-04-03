@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterIdentityProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterIdentityProviderRequestBodyIdentityProvider - Details about an identity provider.
 type RegisterIdentityProviderRequestBodyIdentityProvider struct {
 	ActiveDirectoryIdentityProvider *shared.ActiveDirectoryIdentityProvider `json:"ActiveDirectoryIdentityProvider,omitempty"`
@@ -38,8 +28,14 @@ type RegisterIdentityProviderRequestBody struct {
 }
 
 type RegisterIdentityProviderRequest struct {
-	Headers RegisterIdentityProviderHeaders
-	Request RegisterIdentityProviderRequestBody `request:"mediaType=application/json"`
+	RequestBody       RegisterIdentityProviderRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type RegisterIdentityProviderResponse struct {

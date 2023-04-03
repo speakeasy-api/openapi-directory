@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.BalanceLookupRequest{
-        QueryParams: operations.BalanceLookupQueryParams{
-            APIKey: "corrupti",
-        },
+        APIKey: "corrupti",
     }
 
     ctx := context.Background()

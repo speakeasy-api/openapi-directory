@@ -30,20 +30,16 @@ func (e *CreateEdgeDeploymentStageXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type CreateEdgeDeploymentStageHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateEdgeDeploymentStageXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateEdgeDeploymentStageRequest struct {
-	Headers CreateEdgeDeploymentStageHeaders
-	Request shared.CreateEdgeDeploymentStageRequest `request:"mediaType=application/json"`
+	CreateEdgeDeploymentStageRequest shared.CreateEdgeDeploymentStageRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                         *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                       CreateEdgeDeploymentStageXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateEdgeDeploymentStageResponse struct {

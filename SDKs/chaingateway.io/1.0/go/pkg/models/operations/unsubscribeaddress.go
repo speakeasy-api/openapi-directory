@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnsubscribeAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type UnsubscribeAddressRequest struct {
-	Headers UnsubscribeAddressHeaders
-	Request shared.UnsubscribeAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization             string                           `header:"style=simple,explode=false,name=Authorization"`
+	UnsubscribeAddressRequest shared.UnsubscribeAddressRequest `request:"mediaType=application/json"`
 }
 
 type UnsubscribeAddressResponse struct {

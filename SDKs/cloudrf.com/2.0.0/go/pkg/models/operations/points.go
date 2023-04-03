@@ -8,7 +8,7 @@ import (
 )
 
 type PointsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 // PointsRequestBody - A minimal request needs a transmitters array of (latitude,longitude,altitude) locations, antenna, receiver and output objects defined as a minimum. Model and environment options will enhance accuracy.
@@ -24,12 +24,6 @@ type PointsRequestBody struct {
 	// Site name
 	Site        *string             `json:"site,omitempty"`
 	Transmitter *shared.Transmitter `json:"transmitter,omitempty"`
-}
-
-type PointsRequest struct {
-	// A minimal request needs a transmitters array of (latitude,longitude,altitude) locations, antenna, receiver and output objects defined as a minimum. Model and environment options will enhance accuracy.
-	Request  PointsRequestBody `request:"mediaType=application/json"`
-	Security PointsSecurity
 }
 
 type PointsResponse struct {

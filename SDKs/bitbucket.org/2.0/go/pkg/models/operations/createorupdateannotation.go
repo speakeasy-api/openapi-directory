@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type CreateOrUpdateAnnotationPathParams struct {
+type CreateOrUpdateAnnotationRequest struct {
+	// The annotation to create or update
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Either the uuid or external-id of the annotation.
 	AnnotationID string `pathParam:"style=simple,explode=false,name=annotationId"`
 	// The commit the report belongs to.
@@ -17,12 +19,6 @@ type CreateOrUpdateAnnotationPathParams struct {
 	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type CreateOrUpdateAnnotationRequest struct {
-	PathParams CreateOrUpdateAnnotationPathParams
-	// The annotation to create or update
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreateOrUpdateAnnotationResponse struct {

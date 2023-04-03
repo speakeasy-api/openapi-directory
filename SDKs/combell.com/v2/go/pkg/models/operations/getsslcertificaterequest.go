@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSslCertificateRequestPathParams struct {
+type GetSslCertificateRequestRequest struct {
 	// The id of the certificate request.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSslCertificateRequestRequest struct {
-	PathParams GetSslCertificateRequestPathParams
 }
 
 type GetSslCertificateRequestResponse struct {

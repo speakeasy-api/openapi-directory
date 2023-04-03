@@ -19,10 +19,6 @@ type PostAuthJwtRequestBody struct {
 	Scope *string `multipartForm:"name=scope"`
 }
 
-type PostAuthJwtRequest struct {
-	Request *PostAuthJwtRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAuthJwt200ApplicationJSON struct {
 	// the jwt token
 	JwtToken string `json:"jwt_token"`

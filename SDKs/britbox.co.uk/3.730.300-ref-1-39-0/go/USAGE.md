@@ -14,28 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.AddPaymentMethodRequest{
-        Security: operations.AddPaymentMethodSecurity{
-            AccountAuth: shared.SchemeAccountAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.AddPaymentMethodQueryParams{
-            Ff: []shared.FeatureFlagsEnum{
-                "rpt",
-                "cas",
-                "lrl",
-            },
-            Lang: "unde",
-        },
-        Request: shared.AddPaymentMethodRequest{
+        AddPaymentMethodRequest: shared.AddPaymentMethodRequest{
             MakeDefault: false,
-            Token: "nulla",
+            Token: "corrupti",
             Type: "Card",
         },
+        Ff: []shared.FeatureFlagsEnum{
+            "cas",
+            "lrl",
+            "rpt",
+        },
+        Lang: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.Account.AddPaymentMethod(ctx, req)
+    res, err := s.Account.AddPaymentMethod(ctx, req, operations.AddPaymentMethodSecurity{
+        AccountAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

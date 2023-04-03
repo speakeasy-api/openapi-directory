@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDataflowEndpointGroupPathParams struct {
-	// UUID of a dataflow endpoint group.
-	DataflowEndpointGroupID string `pathParam:"style=simple,explode=false,name=dataflowEndpointGroupId"`
-}
-
-type DeleteDataflowEndpointGroupHeaders struct {
+type DeleteDataflowEndpointGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteDataflowEndpointGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDataflowEndpointGroupRequest struct {
-	PathParams DeleteDataflowEndpointGroupPathParams
-	Headers    DeleteDataflowEndpointGroupHeaders
+	// UUID of a dataflow endpoint group.
+	DataflowEndpointGroupID string `pathParam:"style=simple,explode=false,name=dataflowEndpointGroupId"`
 }
 
 type DeleteDataflowEndpointGroupResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateInviteHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type CreateInviteRequestBody struct {
 	// optional, for email invites
 	CustomMessage *string `json:"custom_message,omitempty"`
@@ -30,8 +25,9 @@ type CreateInviteRequestBody struct {
 }
 
 type CreateInviteRequest struct {
-	Headers CreateInviteHeaders
-	Request *CreateInviteRequestBody `request:"mediaType=application/json"`
+	APIKey      string                   `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                   `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *CreateInviteRequestBody `request:"mediaType=application/json"`
 }
 
 // CreateInvite200ApplicationJSON - success response

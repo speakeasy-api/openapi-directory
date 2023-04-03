@@ -6,35 +6,25 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsGroupCountsPerDaySecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ErrorsGroupCountsPerDayPathParams struct {
+type ErrorsGroupCountsPerDayRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Last date time in data in ISO 8601 date time format
+	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// The id of the error group
 	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsGroupCountsPerDayQueryParams struct {
-	// Last date time in data in ISO 8601 date time format
-	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// Start date time in data in ISO 8601 date time format
 	Start   time.Time `queryParam:"style=form,explode=true,name=start"`
 	Version *string   `queryParam:"style=form,explode=true,name=version"`
-}
-
-type ErrorsGroupCountsPerDayRequest struct {
-	PathParams  ErrorsGroupCountsPerDayPathParams
-	QueryParams ErrorsGroupCountsPerDayQueryParams
-	Security    ErrorsGroupCountsPerDaySecurity
 }
 
 type ErrorsGroupCountsPerDayDefaultApplicationJSONErrorCodeEnum string

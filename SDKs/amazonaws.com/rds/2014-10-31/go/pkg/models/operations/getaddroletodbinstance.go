@@ -50,30 +50,22 @@ func (e *GETAddRoleToDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAddRoleToDBInstanceQueryParams struct {
+type GETAddRoleToDBInstanceRequest struct {
 	Action GETAddRoleToDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the DB instance to associate the IAM role with.
 	DBInstanceIdentifier string `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	// The name of the feature for the DB instance that the IAM role is to be associated with. For information about supported feature names, see <a>DBEngineVersion</a>.
 	FeatureName string `queryParam:"style=form,explode=true,name=FeatureName"`
 	// The Amazon Resource Name (ARN) of the IAM role to associate with the DB instance, for example <code>arn:aws:iam::123456789012:role/AccessRole</code>.
-	RoleArn string                            `queryParam:"style=form,explode=true,name=RoleArn"`
-	Version GETAddRoleToDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddRoleToDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddRoleToDBInstanceRequest struct {
-	QueryParams GETAddRoleToDBInstanceQueryParams
-	Headers     GETAddRoleToDBInstanceHeaders
+	RoleArn           string                            `queryParam:"style=form,explode=true,name=RoleArn"`
+	Version           GETAddRoleToDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddRoleToDBInstanceResponse struct {

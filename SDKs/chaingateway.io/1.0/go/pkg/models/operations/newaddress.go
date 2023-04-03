@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type NewAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type NewAddressRequest struct {
-	Headers NewAddressHeaders
-	Request shared.NewAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization     string                   `header:"style=simple,explode=false,name=Authorization"`
+	NewAddressRequest shared.NewAddressRequest `request:"mediaType=application/json"`
 }
 
 type NewAddressResponse struct {

@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsListAllTestersForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsListAllTestersForOrgPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DistributionGroupsListAllTestersForOrgRequest struct {
-	PathParams DistributionGroupsListAllTestersForOrgPathParams
-	Security   DistributionGroupsListAllTestersForOrgSecurity
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsListAllTestersForOrgDefaultApplicationJSONErrorCodeEnum string

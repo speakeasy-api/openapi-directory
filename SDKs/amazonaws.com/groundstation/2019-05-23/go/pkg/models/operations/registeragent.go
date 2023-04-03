@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterAgentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterAgentRequestBodyAgentDetails - Detailed information about the agent.
 type RegisterAgentRequestBodyAgentDetails struct {
 	AgentVersion      *string                   `json:"agentVersion,omitempty"`
@@ -41,8 +31,14 @@ type RegisterAgentRequestBody struct {
 }
 
 type RegisterAgentRequest struct {
-	Headers RegisterAgentHeaders
-	Request RegisterAgentRequestBody `request:"mediaType=application/json"`
+	RequestBody       RegisterAgentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type RegisterAgentResponse struct {

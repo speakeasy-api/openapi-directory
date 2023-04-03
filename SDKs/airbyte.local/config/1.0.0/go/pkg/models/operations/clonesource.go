@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CloneSourceRequest struct {
-	Request shared.SourceCloneRequestBody `request:"mediaType=application/json"`
-}
-
 type CloneSourceResponse struct {
 	ContentType string
 	// Input failed validation

@@ -122,9 +122,9 @@ func (s *SDK) GETDeleteAlarms(ctx context.Context, request operations.GETDeleteA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -173,9 +173,9 @@ func (s *SDK) GETDeleteDashboards(ctx context.Context, request operations.GETDel
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -229,9 +229,9 @@ func (s *SDK) GETDeleteInsightRules(ctx context.Context, request operations.GETD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -283,9 +283,9 @@ func (s *SDK) GETDeleteMetricStream(ctx context.Context, request operations.GETD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -339,9 +339,9 @@ func (s *SDK) GETDescribeAlarmHistory(ctx context.Context, request operations.GE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -391,9 +391,9 @@ func (s *SDK) GETDescribeAlarms(ctx context.Context, request operations.GETDescr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -443,9 +443,9 @@ func (s *SDK) GETDescribeInsightRules(ctx context.Context, request operations.GE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -495,9 +495,9 @@ func (s *SDK) GETDisableAlarmActions(ctx context.Context, request operations.GET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -536,9 +536,9 @@ func (s *SDK) GETDisableInsightRules(ctx context.Context, request operations.GET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -590,9 +590,9 @@ func (s *SDK) GETEnableAlarmActions(ctx context.Context, request operations.GETE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -631,9 +631,9 @@ func (s *SDK) GETEnableInsightRules(ctx context.Context, request operations.GETE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -687,9 +687,9 @@ func (s *SDK) GETGETDashboard(ctx context.Context, request operations.GETGETDash
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -743,9 +743,9 @@ func (s *SDK) GETGETInsightRuleReport(ctx context.Context, request operations.GE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -799,9 +799,9 @@ func (s *SDK) GETGETMetricStream(ctx context.Context, request operations.GETGETM
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -859,9 +859,9 @@ func (s *SDK) GETGETMetricWidgetImage(ctx context.Context, request operations.GE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -909,9 +909,9 @@ func (s *SDK) GETListDashboards(ctx context.Context, request operations.GETListD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -963,9 +963,9 @@ func (s *SDK) GETListManagedInsightRules(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1019,9 +1019,9 @@ func (s *SDK) GETListMetricStreams(ctx context.Context, request operations.GETLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1077,9 +1077,9 @@ func (s *SDK) GETListTagsForResource(ctx context.Context, request operations.GET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1133,9 +1133,9 @@ func (s *SDK) GETPutDashboard(ctx context.Context, request operations.GETPutDash
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1187,9 +1187,9 @@ func (s *SDK) GETSetAlarmState(ctx context.Context, request operations.GETSetAla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1240,9 +1240,9 @@ func (s *SDK) GETStartMetricStreams(ctx context.Context, request operations.GETS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1296,9 +1296,9 @@ func (s *SDK) GETStopMetricStreams(ctx context.Context, request operations.GETSt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1352,9 +1352,9 @@ func (s *SDK) GETUntagResource(ctx context.Context, request operations.GETUntagR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1405,7 +1405,7 @@ func (s *SDK) POSTDeleteAlarms(ctx context.Context, request operations.POSTDelet
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteAlarms"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1417,9 +1417,9 @@ func (s *SDK) POSTDeleteAlarms(ctx context.Context, request operations.POSTDelet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1463,7 +1463,7 @@ func (s *SDK) POSTDeleteAnomalyDetector(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteAnomalyDetector"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1475,9 +1475,9 @@ func (s *SDK) POSTDeleteAnomalyDetector(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1530,7 +1530,7 @@ func (s *SDK) POSTDeleteDashboards(ctx context.Context, request operations.POSTD
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDashboards"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1542,9 +1542,9 @@ func (s *SDK) POSTDeleteDashboards(ctx context.Context, request operations.POSTD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1593,7 +1593,7 @@ func (s *SDK) POSTDeleteInsightRules(ctx context.Context, request operations.POS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteInsightRules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1605,9 +1605,9 @@ func (s *SDK) POSTDeleteInsightRules(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1654,7 +1654,7 @@ func (s *SDK) POSTDeleteMetricStream(ctx context.Context, request operations.POS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteMetricStream"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1666,9 +1666,9 @@ func (s *SDK) POSTDeleteMetricStream(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1717,7 +1717,7 @@ func (s *SDK) POSTDescribeAlarmHistory(ctx context.Context, request operations.P
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeAlarmHistory"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1729,9 +1729,9 @@ func (s *SDK) POSTDescribeAlarmHistory(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1776,7 +1776,7 @@ func (s *SDK) POSTDescribeAlarms(ctx context.Context, request operations.POSTDes
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeAlarms"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1788,9 +1788,9 @@ func (s *SDK) POSTDescribeAlarms(ctx context.Context, request operations.POSTDes
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1835,7 +1835,7 @@ func (s *SDK) POSTDescribeAlarmsForMetric(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeAlarmsForMetric"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1847,9 +1847,9 @@ func (s *SDK) POSTDescribeAlarmsForMetric(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1892,7 +1892,7 @@ func (s *SDK) POSTDescribeAnomalyDetectors(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeAnomalyDetectors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1904,9 +1904,9 @@ func (s *SDK) POSTDescribeAnomalyDetectors(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1957,7 +1957,7 @@ func (s *SDK) POSTDescribeInsightRules(ctx context.Context, request operations.P
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeInsightRules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1969,9 +1969,9 @@ func (s *SDK) POSTDescribeInsightRules(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2016,7 +2016,7 @@ func (s *SDK) POSTDisableAlarmActions(ctx context.Context, request operations.PO
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DisableAlarmActions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2028,9 +2028,9 @@ func (s *SDK) POSTDisableAlarmActions(ctx context.Context, request operations.PO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2064,7 +2064,7 @@ func (s *SDK) POSTDisableInsightRules(ctx context.Context, request operations.PO
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DisableInsightRules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2076,9 +2076,9 @@ func (s *SDK) POSTDisableInsightRules(ctx context.Context, request operations.PO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2125,7 +2125,7 @@ func (s *SDK) POSTEnableAlarmActions(ctx context.Context, request operations.POS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=EnableAlarmActions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2137,9 +2137,9 @@ func (s *SDK) POSTEnableAlarmActions(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2173,7 +2173,7 @@ func (s *SDK) POSTEnableInsightRules(ctx context.Context, request operations.POS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=EnableInsightRules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2185,9 +2185,9 @@ func (s *SDK) POSTEnableInsightRules(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2236,7 +2236,7 @@ func (s *SDK) POSTGetDashboard(ctx context.Context, request operations.POSTGetDa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetDashboard"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2248,9 +2248,9 @@ func (s *SDK) POSTGetDashboard(ctx context.Context, request operations.POSTGetDa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2299,7 +2299,7 @@ func (s *SDK) POSTGetInsightRuleReport(ctx context.Context, request operations.P
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetInsightRuleReport"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2311,9 +2311,9 @@ func (s *SDK) POSTGetInsightRuleReport(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2362,7 +2362,7 @@ func (s *SDK) POSTGetMetricData(ctx context.Context, request operations.POSTGetM
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetMetricData"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2374,9 +2374,9 @@ func (s *SDK) POSTGetMetricData(ctx context.Context, request operations.POSTGetM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2421,7 +2421,7 @@ func (s *SDK) POSTGetMetricStatistics(ctx context.Context, request operations.PO
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetMetricStatistics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2433,9 +2433,9 @@ func (s *SDK) POSTGetMetricStatistics(ctx context.Context, request operations.PO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2486,7 +2486,7 @@ func (s *SDK) POSTGetMetricStream(ctx context.Context, request operations.POSTGe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetMetricStream"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2498,9 +2498,9 @@ func (s *SDK) POSTGetMetricStream(ctx context.Context, request operations.POSTGe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2553,7 +2553,7 @@ func (s *SDK) POSTGetMetricWidgetImage(ctx context.Context, request operations.P
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetMetricWidgetImage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2565,9 +2565,9 @@ func (s *SDK) POSTGetMetricWidgetImage(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2610,7 +2610,7 @@ func (s *SDK) POSTListDashboards(ctx context.Context, request operations.POSTLis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListDashboards"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2622,9 +2622,9 @@ func (s *SDK) POSTListDashboards(ctx context.Context, request operations.POSTLis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2671,7 +2671,7 @@ func (s *SDK) POSTListManagedInsightRules(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListManagedInsightRules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2683,9 +2683,9 @@ func (s *SDK) POSTListManagedInsightRules(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2734,7 +2734,7 @@ func (s *SDK) POSTListMetricStreams(ctx context.Context, request operations.POST
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListMetricStreams"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2746,9 +2746,9 @@ func (s *SDK) POSTListMetricStreams(ctx context.Context, request operations.POST
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2799,7 +2799,7 @@ func (s *SDK) POSTListMetrics(ctx context.Context, request operations.POSTListMe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListMetrics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2811,9 +2811,9 @@ func (s *SDK) POSTListMetrics(ctx context.Context, request operations.POSTListMe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2860,7 +2860,7 @@ func (s *SDK) POSTListTagsForResource(ctx context.Context, request operations.PO
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListTagsForResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2872,9 +2872,9 @@ func (s *SDK) POSTListTagsForResource(ctx context.Context, request operations.PO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2923,7 +2923,7 @@ func (s *SDK) POSTPutAnomalyDetector(ctx context.Context, request operations.POS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutAnomalyDetector"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2935,9 +2935,9 @@ func (s *SDK) POSTPutAnomalyDetector(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2990,7 +2990,7 @@ func (s *SDK) POSTPutCompositeAlarm(ctx context.Context, request operations.POST
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutCompositeAlarm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3002,9 +3002,9 @@ func (s *SDK) POSTPutCompositeAlarm(ctx context.Context, request operations.POST
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3048,7 +3048,7 @@ func (s *SDK) POSTPutDashboard(ctx context.Context, request operations.POSTPutDa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutDashboard"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3060,9 +3060,9 @@ func (s *SDK) POSTPutDashboard(ctx context.Context, request operations.POSTPutDa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3109,7 +3109,7 @@ func (s *SDK) POSTPutInsightRule(ctx context.Context, request operations.POSTPut
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutInsightRule"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3121,9 +3121,9 @@ func (s *SDK) POSTPutInsightRule(ctx context.Context, request operations.POSTPut
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3172,7 +3172,7 @@ func (s *SDK) POSTPutManagedInsightRules(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutManagedInsightRules"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3184,9 +3184,9 @@ func (s *SDK) POSTPutManagedInsightRules(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3233,7 +3233,7 @@ func (s *SDK) POSTPutMetricAlarm(ctx context.Context, request operations.POSTPut
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutMetricAlarm"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3245,9 +3245,9 @@ func (s *SDK) POSTPutMetricAlarm(ctx context.Context, request operations.POSTPut
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3291,7 +3291,7 @@ func (s *SDK) POSTPutMetricData(ctx context.Context, request operations.POSTPutM
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutMetricData"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3303,9 +3303,9 @@ func (s *SDK) POSTPutMetricData(ctx context.Context, request operations.POSTPutM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3355,7 +3355,7 @@ func (s *SDK) POSTPutMetricStream(ctx context.Context, request operations.POSTPu
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PutMetricStream"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3367,9 +3367,9 @@ func (s *SDK) POSTPutMetricStream(ctx context.Context, request operations.POSTPu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3422,7 +3422,7 @@ func (s *SDK) POSTSetAlarmState(ctx context.Context, request operations.POSTSetA
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=SetAlarmState"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3434,9 +3434,9 @@ func (s *SDK) POSTSetAlarmState(ctx context.Context, request operations.POSTSetA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3482,7 +3482,7 @@ func (s *SDK) POSTStartMetricStreams(ctx context.Context, request operations.POS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=StartMetricStreams"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3494,9 +3494,9 @@ func (s *SDK) POSTStartMetricStreams(ctx context.Context, request operations.POS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3545,7 +3545,7 @@ func (s *SDK) POSTStopMetricStreams(ctx context.Context, request operations.POST
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=StopMetricStreams"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3557,9 +3557,9 @@ func (s *SDK) POSTStopMetricStreams(ctx context.Context, request operations.POST
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3608,7 +3608,7 @@ func (s *SDK) POSTTagResource(ctx context.Context, request operations.POSTTagRes
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=TagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3620,9 +3620,9 @@ func (s *SDK) POSTTagResource(ctx context.Context, request operations.POSTTagRes
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3673,7 +3673,7 @@ func (s *SDK) POSTUntagResource(ctx context.Context, request operations.POSTUnta
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=UntagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3685,9 +3685,9 @@ func (s *SDK) POSTUntagResource(ctx context.Context, request operations.POSTUnta
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

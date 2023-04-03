@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteVirtualClusterPathParams struct {
-	// The ID of the virtual cluster that will be deleted.
-	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
-}
-
-type DeleteVirtualClusterHeaders struct {
+type DeleteVirtualClusterRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteVirtualClusterHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVirtualClusterRequest struct {
-	PathParams DeleteVirtualClusterPathParams
-	Headers    DeleteVirtualClusterHeaders
+	// The ID of the virtual cluster that will be deleted.
+	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
 }
 
 type DeleteVirtualClusterResponse struct {

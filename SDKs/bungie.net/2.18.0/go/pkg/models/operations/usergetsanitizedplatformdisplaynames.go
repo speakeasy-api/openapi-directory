@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type UserGetSanitizedPlatformDisplayNamesPathParams struct {
+type UserGetSanitizedPlatformDisplayNamesRequest struct {
 	// The requested membership id to load.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
-}
-
-type UserGetSanitizedPlatformDisplayNamesRequest struct {
-	PathParams UserGetSanitizedPlatformDisplayNamesPathParams
 }
 
 // UserGetSanitizedPlatformDisplayNames200Wildcard - Look at the Response property for more information about the nature of this response

@@ -8,17 +8,10 @@ import (
 )
 
 type GetVoucherByIDSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetVoucherByIDPathParams struct {
-	// The identifier of the plan.
-	PlanID string `pathParam:"style=simple,explode=false,name=planId"`
-	// The identifier of the voucher.
-	VoucherID string `pathParam:"style=simple,explode=false,name=voucherId"`
-}
-
-type GetVoucherByIDQueryParams struct {
+type GetVoucherByIDRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -31,12 +24,10 @@ type GetVoucherByIDQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetVoucherByIDRequest struct {
-	PathParams  GetVoucherByIDPathParams
-	QueryParams GetVoucherByIDQueryParams
-	Security    GetVoucherByIDSecurity
+	// The identifier of the plan.
+	PlanID string `pathParam:"style=simple,explode=false,name=planId"`
+	// The identifier of the voucher.
+	VoucherID string `pathParam:"style=simple,explode=false,name=voucherId"`
 }
 
 type GetVoucherByIDResponse struct {

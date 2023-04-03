@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetConnectionRequest struct {
-	Request shared.ConnectionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type ResetConnectionResponse struct {
 	ContentType string
 	// Input failed validation

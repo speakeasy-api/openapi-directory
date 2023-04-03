@@ -50,29 +50,21 @@ func (e *POSTGetTransitGatewayMulticastDomainAssociationsVersionEnum) UnmarshalJ
 	}
 }
 
-type POSTGetTransitGatewayMulticastDomainAssociationsQueryParams struct {
+type POSTGetTransitGatewayMulticastDomainAssociationsRequest struct {
 	Action POSTGetTransitGatewayMulticastDomainAssociationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination limit
 	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token
-	NextToken *string                                                     `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTGetTransitGatewayMulticastDomainAssociationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetTransitGatewayMulticastDomainAssociationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTGetTransitGatewayMulticastDomainAssociationsRequest struct {
-	QueryParams POSTGetTransitGatewayMulticastDomainAssociationsQueryParams
-	Headers     POSTGetTransitGatewayMulticastDomainAssociationsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                                                     `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                                                      `request:"mediaType=text/xml"`
+	Version           POSTGetTransitGatewayMulticastDomainAssociationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetTransitGatewayMulticastDomainAssociationsResponse struct {

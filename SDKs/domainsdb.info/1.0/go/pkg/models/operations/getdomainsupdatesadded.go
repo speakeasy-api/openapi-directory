@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainsUpdatesAddedQueryParams struct {
+type GetDomainsUpdatesAddedRequest struct {
 	// API key
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Request date
@@ -16,10 +16,6 @@ type GetDomainsUpdatesAddedQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search page to request
 	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetDomainsUpdatesAddedRequest struct {
-	QueryParams GetDomainsUpdatesAddedQueryParams
 }
 
 type GetDomainsUpdatesAddedResponse struct {

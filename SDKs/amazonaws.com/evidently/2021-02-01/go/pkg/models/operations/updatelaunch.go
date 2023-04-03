@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLaunchPathParams struct {
-	// The name of the launch that is to be updated.
-	Launch string `pathParam:"style=simple,explode=false,name=launch"`
-	// The name or ARN of the project that contains the launch that you want to update.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type UpdateLaunchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateLaunchRequestBodyScheduledSplitsConfig - An array of structures that define the traffic allocation percentages among the feature variations during each step of a launch. This also defines the start time of each step.
 type UpdateLaunchRequestBodyScheduledSplitsConfig struct {
 	Steps []shared.ScheduledSplitConfig `json:"steps,omitempty"`
@@ -43,9 +26,18 @@ type UpdateLaunchRequestBody struct {
 }
 
 type UpdateLaunchRequest struct {
-	PathParams UpdateLaunchPathParams
-	Headers    UpdateLaunchHeaders
-	Request    UpdateLaunchRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateLaunchRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the launch that is to be updated.
+	Launch string `pathParam:"style=simple,explode=false,name=launch"`
+	// The name or ARN of the project that contains the launch that you want to update.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type UpdateLaunchResponse struct {

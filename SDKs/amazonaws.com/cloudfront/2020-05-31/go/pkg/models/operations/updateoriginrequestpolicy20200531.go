@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateOriginRequestPolicy20200531PathParams struct {
-	// The unique identifier for the origin request policy that you are updating. The identifier is returned in a cache behavior's <code>OriginRequestPolicyId</code> field in the response to <code>GetDistributionConfig</code>.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateOriginRequestPolicy20200531Headers struct {
-	// The version of the origin request policy that you are updating. The version is returned in the origin request policy's <code>ETag</code> field in the response to <code>GetOriginRequestPolicyConfig</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateOriginRequestPolicy20200531RequestBodyOriginRequestPolicyConfig - <p>An origin request policy configuration.</p> <p>This configuration determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:</p> <ul> <li> <p>The request body and the URL path (without the domain name) from the viewer request.</p> </li> <li> <p>The headers that CloudFront automatically includes in every origin request, including <code>Host</code>, <code>User-Agent</code>, and <code>X-Amz-Cf-Id</code>.</p> </li> <li> <p>All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.</p> </li> </ul> <p>CloudFront sends a request when it can't find an object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use <code>CachePolicy</code>.</p>
 type UpdateOriginRequestPolicy20200531RequestBodyOriginRequestPolicyConfig struct {
 	Comment            *string
@@ -39,9 +22,18 @@ type UpdateOriginRequestPolicy20200531RequestBody struct {
 }
 
 type UpdateOriginRequestPolicy20200531Request struct {
-	PathParams UpdateOriginRequestPolicy20200531PathParams
-	Headers    UpdateOriginRequestPolicy20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The unique identifier for the origin request policy that you are updating. The identifier is returned in a cache behavior's <code>OriginRequestPolicyId</code> field in the response to <code>GetDistributionConfig</code>.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The version of the origin request policy that you are updating. The version is returned in the origin request policy's <code>ETag</code> field in the response to <code>GetOriginRequestPolicyConfig</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateOriginRequestPolicy20200531Response struct {

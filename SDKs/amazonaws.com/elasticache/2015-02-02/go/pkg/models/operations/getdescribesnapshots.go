@@ -50,7 +50,7 @@ func (e *GETDescribeSnapshotsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeSnapshotsQueryParams struct {
+type GETDescribeSnapshotsRequest struct {
 	Action GETDescribeSnapshotsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A user-supplied cluster identifier. If this parameter is specified, only snapshots associated with that specific cluster are described.
 	CacheClusterID *string `queryParam:"style=form,explode=true,name=CacheClusterId"`
@@ -65,23 +65,15 @@ type GETDescribeSnapshotsQueryParams struct {
 	// A user-supplied name of the snapshot. If this parameter is specified, only this snapshot are described.
 	SnapshotName *string `queryParam:"style=form,explode=true,name=SnapshotName"`
 	// If set to <code>system</code>, the output shows snapshots that were automatically created by ElastiCache. If set to <code>user</code> the output shows snapshots that were manually created. If omitted, the output shows both automatically and manually created snapshots.
-	SnapshotSource *string                         `queryParam:"style=form,explode=true,name=SnapshotSource"`
-	Version        GETDescribeSnapshotsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeSnapshotsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeSnapshotsRequest struct {
-	QueryParams GETDescribeSnapshotsQueryParams
-	Headers     GETDescribeSnapshotsHeaders
+	SnapshotSource    *string                         `queryParam:"style=form,explode=true,name=SnapshotSource"`
+	Version           GETDescribeSnapshotsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeSnapshotsResponse struct {

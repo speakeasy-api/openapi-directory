@@ -39,16 +39,16 @@ func newPayoutSettingsMerchantLevel(defaultClient, securityClient HTTPClient, se
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 //
 // * Management API—Payout account settings read and write
-func (s *payoutSettingsMerchantLevel) DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest) (*operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
+func (s *payoutSettingsMerchantLevel) DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest, security operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity) (*operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,16 +98,16 @@ func (s *payoutSettingsMerchantLevel) DeleteMerchantsMerchantIDPayoutSettingsPay
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payout account settings read
-func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettings(ctx context.Context, request operations.GetMerchantsMerchantIDPayoutSettingsRequest) (*operations.GetMerchantsMerchantIDPayoutSettingsResponse, error) {
+func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettings(ctx context.Context, request operations.GetMerchantsMerchantIDPayoutSettingsRequest, security operations.GetMerchantsMerchantIDPayoutSettingsSecurity) (*operations.GetMerchantsMerchantIDPayoutSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,16 +167,16 @@ func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettings(ctx c
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payout account settings read
-func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest) (*operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
+func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest, security operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity) (*operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -237,11 +237,11 @@ func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettingsPayout
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 //
 // * Management API—Payout account settings read and write
-func (s *payoutSettingsMerchantLevel) PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest) (*operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
+func (s *payoutSettingsMerchantLevel) PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest, security operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity) (*operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePayoutSettingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -253,7 +253,7 @@ func (s *payoutSettingsMerchantLevel) PatchMerchantsMerchantIDPayoutSettingsPayo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -316,11 +316,11 @@ func (s *payoutSettingsMerchantLevel) PatchMerchantsMerchantIDPayoutSettingsPayo
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 //
 // * Management API—Payout account settings read and write
-func (s *payoutSettingsMerchantLevel) PostMerchantsMerchantIDPayoutSettings(ctx context.Context, request operations.PostMerchantsMerchantIDPayoutSettingsRequest) (*operations.PostMerchantsMerchantIDPayoutSettingsResponse, error) {
+func (s *payoutSettingsMerchantLevel) PostMerchantsMerchantIDPayoutSettings(ctx context.Context, request operations.PostMerchantsMerchantIDPayoutSettingsRequest, security operations.PostMerchantsMerchantIDPayoutSettingsSecurity) (*operations.PostMerchantsMerchantIDPayoutSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayoutSettingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -332,7 +332,7 @@ func (s *payoutSettingsMerchantLevel) PostMerchantsMerchantIDPayoutSettings(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

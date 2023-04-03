@@ -8,19 +8,14 @@ import (
 )
 
 type PostCompaniesCompanyIDWebhooksSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCompaniesCompanyIDWebhooksPathParams struct {
-	// Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account).
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostCompaniesCompanyIDWebhooksRequest struct {
-	PathParams PostCompaniesCompanyIDWebhooksPathParams
-	Request    *shared.CreateCompanyWebhookRequest `request:"mediaType=application/json"`
-	Security   PostCompaniesCompanyIDWebhooksSecurity
+	CreateCompanyWebhookRequest *shared.CreateCompanyWebhookRequest `request:"mediaType=application/json"`
+	// Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account).
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 }
 
 type PostCompaniesCompanyIDWebhooksResponse struct {

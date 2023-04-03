@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type NetworkSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
-type NetworkQueryParams struct {
+type NetworkRequest struct {
 	// Height above ground level in metres
 	Alt int `queryParam:"style=form,explode=true,name=alt"`
 	// Latitude in decimal degrees
@@ -24,11 +23,6 @@ type NetworkQueryParams struct {
 	Net string `queryParam:"style=form,explode=true,name=net"`
 	// Receiver gain in dBi
 	Rxg *float32 `queryParam:"style=form,explode=true,name=rxg"`
-}
-
-type NetworkRequest struct {
-	QueryParams NetworkQueryParams
-	Security    NetworkSecurity
 }
 
 type NetworkResponse struct {

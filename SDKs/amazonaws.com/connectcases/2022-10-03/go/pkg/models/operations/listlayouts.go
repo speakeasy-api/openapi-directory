@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLayoutsPathParams struct {
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-}
-
-type ListLayoutsQueryParams struct {
-	// The maximum number of results to return per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListLayoutsHeaders struct {
+type ListLayoutsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListLayoutsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLayoutsRequest struct {
-	PathParams  ListLayoutsPathParams
-	QueryParams ListLayoutsQueryParams
-	Headers     ListLayoutsHeaders
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// The maximum number of results to return per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListLayoutsResponse struct {

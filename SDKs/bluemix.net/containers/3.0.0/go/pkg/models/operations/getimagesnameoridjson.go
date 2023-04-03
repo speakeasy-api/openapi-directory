@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImagesNameOrIDJSONPathParams struct {
-	// The full private Bluemix registry path to your image or the unique ID of the image that you want to inspect. Run `cf ic images` or call the `GET /images/json` endpoint to review the images in your private Bluemix registry.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type GetImagesNameOrIDJSONHeaders struct {
+type GetImagesNameOrIDJSONRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetImagesNameOrIDJSONRequest struct {
-	PathParams GetImagesNameOrIDJSONPathParams
-	Headers    GetImagesNameOrIDJSONHeaders
+	// The full private Bluemix registry path to your image or the unique ID of the image that you want to inspect. Run `cf ic images` or call the `GET /images/json` endpoint to review the images in your private Bluemix registry.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type GetImagesNameOrIDJSONResponse struct {

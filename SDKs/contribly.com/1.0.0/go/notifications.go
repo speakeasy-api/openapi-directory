@@ -34,14 +34,14 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 
 func (s *notifications) GetNotificationsContributionsIDPreview(ctx context.Context, request operations.GetNotificationsContributionsIDPreviewRequest) (*operations.GetNotificationsContributionsIDPreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/contributions/{id}/preview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/notifications/contributions/{id}/preview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

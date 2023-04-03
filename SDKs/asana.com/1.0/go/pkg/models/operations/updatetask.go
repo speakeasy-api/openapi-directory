@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTaskPathParams struct {
-	// The task to operate on.
-	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
+// UpdateTaskRequestBodyInput - The task to update.
+type UpdateTaskRequestBodyInput struct {
+	Data *shared.TaskRequestInput `json:"data,omitempty"`
 }
 
-type UpdateTaskQueryParams struct {
+type UpdateTaskRequest struct {
+	// The task to update.
+	RequestBody UpdateTaskRequestBodyInput `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type UpdateTaskQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// UpdateTaskRequestBodyInput - The task to update.
-type UpdateTaskRequestBodyInput struct {
-	Data *shared.TaskRequestInput `json:"data,omitempty"`
-}
-
-type UpdateTaskRequest struct {
-	PathParams  UpdateTaskPathParams
-	QueryParams UpdateTaskQueryParams
-	// The task to update.
-	Request UpdateTaskRequestBodyInput `request:"mediaType=application/json"`
+	// The task to operate on.
+	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
 }
 
 // UpdateTask200ApplicationJSON - Successfully updated the specified task.

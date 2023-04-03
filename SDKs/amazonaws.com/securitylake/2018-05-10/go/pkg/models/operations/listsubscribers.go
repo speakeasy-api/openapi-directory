@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSubscribersQueryParams struct {
-	// The maximum number of accounts for which the configuration is displayed.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// If nextToken is returned, there are more results available. You can repeat the call using the returned token to retrieve the next page.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListSubscribersHeaders struct {
+type ListSubscribersRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListSubscribersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSubscribersRequest struct {
-	QueryParams ListSubscribersQueryParams
-	Headers     ListSubscribersHeaders
+	// The maximum number of accounts for which the configuration is displayed.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// If nextToken is returned, there are more results available. You can repeat the call using the returned token to retrieve the next page.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSubscribersResponse struct {

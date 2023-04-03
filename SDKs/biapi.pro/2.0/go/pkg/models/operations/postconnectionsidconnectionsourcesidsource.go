@@ -7,17 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostConnectionsIDConnectionSourcesIDSourcePathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDSource     int64 `pathParam:"style=simple,explode=false,name=id_source"`
-}
-
-type PostConnectionsIDConnectionSourcesIDSourceQueryParams struct {
-	// do the synchronization in background (to use with the sysynchronizenc parameter)
-	Background *bool   `queryParam:"style=form,explode=true,name=background"`
-	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 	// to enable or disable connector source
 	Disabled *bool `multipartForm:"name=disabled"`
@@ -26,9 +15,12 @@ type PostConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 }
 
 type PostConnectionsIDConnectionSourcesIDSourceRequest struct {
-	PathParams  PostConnectionsIDConnectionSourcesIDSourcePathParams
-	QueryParams PostConnectionsIDConnectionSourcesIDSourceQueryParams
-	Request     *PostConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	// do the synchronization in background (to use with the sysynchronizenc parameter)
+	Background   *bool   `queryParam:"style=form,explode=true,name=background"`
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDSource     int64   `pathParam:"style=simple,explode=false,name=id_source"`
 }
 
 type PostConnectionsIDConnectionSourcesIDSourceResponse struct {

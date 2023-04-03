@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIGetPathParams struct {
-	// The internal billbee id of the order
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // OrderAPIGetArticleTitleSourceEnum - The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
 type OrderAPIGetArticleTitleSourceEnum string
 
@@ -44,14 +39,11 @@ func (e *OrderAPIGetArticleTitleSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type OrderAPIGetQueryParams struct {
+type OrderAPIGetRequest struct {
 	// The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
 	ArticleTitleSource *OrderAPIGetArticleTitleSourceEnum `queryParam:"style=form,explode=true,name=articleTitleSource"`
-}
-
-type OrderAPIGetRequest struct {
-	PathParams  OrderAPIGetPathParams
-	QueryParams OrderAPIGetQueryParams
+	// The internal billbee id of the order
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type OrderAPIGetResponse struct {

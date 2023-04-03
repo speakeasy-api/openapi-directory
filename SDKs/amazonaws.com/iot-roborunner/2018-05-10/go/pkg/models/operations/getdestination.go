@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDestinationQueryParams struct {
-	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetDestinationHeaders struct {
+type GetDestinationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +15,7 @@ type GetDestinationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDestinationRequest struct {
-	QueryParams GetDestinationQueryParams
-	Headers     GetDestinationHeaders
+	ID                string  `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetDestinationResponse struct {

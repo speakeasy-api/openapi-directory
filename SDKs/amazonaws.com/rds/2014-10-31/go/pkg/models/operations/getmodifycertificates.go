@@ -50,28 +50,20 @@ func (e *GETModifyCertificatesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyCertificatesQueryParams struct {
+type GETModifyCertificatesRequest struct {
 	Action GETModifyCertificatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The new default certificate identifier to override the current one with.</p> <p>To determine the valid values, use the <code>describe-certificates</code> CLI command or the <code>DescribeCertificates</code> API operation.</p>
 	CertificateIdentifier *string `queryParam:"style=form,explode=true,name=CertificateIdentifier"`
 	// A value that indicates whether to remove the override for the default certificate. If the override is removed, the default certificate is the system default.
 	RemoveCustomerOverride *bool                            `queryParam:"style=form,explode=true,name=RemoveCustomerOverride"`
 	Version                GETModifyCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyCertificatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyCertificatesRequest struct {
-	QueryParams GETModifyCertificatesQueryParams
-	Headers     GETModifyCertificatesHeaders
+	XAmzAlgorithm          *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyCertificatesResponse struct {

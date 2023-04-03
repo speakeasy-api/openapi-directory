@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SignDeletePathParams struct {
+type SignDeleteRequest struct {
 	// Job ID (20 chars)
 	Job string `pathParam:"style=simple,explode=false,name=job"`
-}
-
-type SignDeleteRequest struct {
-	PathParams SignDeletePathParams
 }
 
 // SignDelete200ApplicationJSON - Successfully deleted

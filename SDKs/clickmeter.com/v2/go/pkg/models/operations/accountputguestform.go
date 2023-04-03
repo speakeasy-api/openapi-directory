@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutGuestFormRequest struct {
-	// Guest object to create
-	Request shared.APICoreDtoAccountingGuest `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type AccountPutGuestFormResponse struct {
 	APICoreDtoAccountingGuest *shared.APICoreDtoAccountingGuest
 	Body                      []byte

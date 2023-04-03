@@ -8,15 +8,12 @@ import (
 )
 
 type UpdateProfileWithIDSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateProfileWithIDPathParams struct {
-	// The identifier of the profile to update.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateProfileWithIDQueryParams struct {
+type UpdateProfileWithIDRequest struct {
+	// Updated profile details.
+	ProfileUpdateRequest shared.ProfileUpdateRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -39,6 +36,8 @@ type UpdateProfileWithIDQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the profile to update.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -51,14 +50,6 @@ type UpdateProfileWithIDQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type UpdateProfileWithIDRequest struct {
-	PathParams  UpdateProfileWithIDPathParams
-	QueryParams UpdateProfileWithIDQueryParams
-	// Updated profile details.
-	Request  shared.ProfileUpdateRequest `request:"mediaType=application/json"`
-	Security UpdateProfileWithIDSecurity
 }
 
 type UpdateProfileWithIDResponse struct {

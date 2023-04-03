@@ -8,23 +8,6 @@ import (
 	"net/http"
 )
 
-type TestFunction20200531PathParams struct {
-	// The name of the function that you are testing.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type TestFunction20200531Headers struct {
-	// The current version (<code>ETag</code> value) of the function that you are testing, which you can get using <code>DescribeFunction</code>.
-	IfMatch           string  `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // TestFunction20200531RequestBodyStageEnum - The stage of the function that you are testing, either <code>DEVELOPMENT</code> or <code>LIVE</code>.
 type TestFunction20200531RequestBodyStageEnum string
 
@@ -57,9 +40,18 @@ type TestFunction20200531RequestBody struct {
 }
 
 type TestFunction20200531Request struct {
-	PathParams TestFunction20200531PathParams
-	Headers    TestFunction20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The current version (<code>ETag</code> value) of the function that you are testing, which you can get using <code>DescribeFunction</code>.
+	IfMatch string `header:"style=simple,explode=false,name=If-Match"`
+	// The name of the function that you are testing.
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type TestFunction20200531Response struct {

@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBanksCategoriesQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostBanksCategoriesRequestBody struct {
 	// name of the category to be created
 	Name string `multipartForm:"name=name"`
 }
 
 type PostBanksCategoriesRequest struct {
-	QueryParams PostBanksCategoriesQueryParams
-	Request     PostBanksCategoriesRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostBanksCategoriesRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                        `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PostBanksCategoriesResponse struct {

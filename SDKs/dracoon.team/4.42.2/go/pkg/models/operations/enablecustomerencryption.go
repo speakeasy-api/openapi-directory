@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnableCustomerEncryptionHeaders struct {
+type EnableCustomerEncryptionRequest struct {
+	EnableCustomerEncryptionRequest shared.EnableCustomerEncryptionRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type EnableCustomerEncryptionRequest struct {
-	Headers EnableCustomerEncryptionHeaders
-	Request shared.EnableCustomerEncryptionRequest `request:"mediaType=application/json"`
 }
 
 type EnableCustomerEncryptionResponse struct {

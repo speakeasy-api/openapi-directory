@@ -10,9 +10,9 @@ import (
 )
 
 type GetSnippetsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetSnippetsRoleEnum - Filter down the result based on the authenticated user's role (`owner`, `contributor`, or `member`).
@@ -42,14 +42,9 @@ func (e *GetSnippetsRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSnippetsQueryParams struct {
+type GetSnippetsRequest struct {
 	// Filter down the result based on the authenticated user's role (`owner`, `contributor`, or `member`).
 	Role *GetSnippetsRoleEnum `queryParam:"style=form,explode=true,name=role"`
-}
-
-type GetSnippetsRequest struct {
-	QueryParams GetSnippetsQueryParams
-	Security    GetSnippetsSecurity
 }
 
 type GetSnippetsResponse struct {

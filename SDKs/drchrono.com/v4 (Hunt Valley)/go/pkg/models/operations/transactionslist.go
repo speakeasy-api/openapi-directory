@@ -8,10 +8,10 @@ import (
 )
 
 type TransactionsListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TransactionsListQueryParams struct {
+type TransactionsListRequest struct {
 	Appointment *int64  `queryParam:"style=form,explode=true,name=appointment"`
 	Cursor      *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor      *int64  `queryParam:"style=form,explode=true,name=doctor"`
@@ -19,11 +19,6 @@ type TransactionsListQueryParams struct {
 	PageSize    *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	PostedDate  *string `queryParam:"style=form,explode=true,name=posted_date"`
 	Since       *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type TransactionsListRequest struct {
-	QueryParams TransactionsListQueryParams
-	Security    TransactionsListSecurity
 }
 
 // TransactionsList200ApplicationJSON - Paginated Result

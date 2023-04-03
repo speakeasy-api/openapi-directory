@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLivePlaysQueryParams struct {
+type GetLivePlaysRequest struct {
 	// Game id
 	ID int64 `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetLivePlaysRequest struct {
-	QueryParams GetLivePlaysQueryParams
 }
 
 type GetLivePlaysResponse struct {

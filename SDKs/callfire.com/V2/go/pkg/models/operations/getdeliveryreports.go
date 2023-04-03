@@ -10,7 +10,8 @@ import (
 )
 
 type GetDeliveryReportsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // GetDeliveryReportsDeliveryCategoryEnum - ~
@@ -196,7 +197,7 @@ func (e *GetDeliveryReportsDeliveryStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDeliveryReportsQueryParams struct {
+type GetDeliveryReportsRequest struct {
 	// ~
 	CampaignID *int64 `queryParam:"style=form,explode=true,name=campaignId"`
 	// ~
@@ -219,11 +220,6 @@ type GetDeliveryReportsQueryParams struct {
 	StartDate *string `queryParam:"style=form,explode=true,name=startDate"`
 	// ~
 	ToNumber *string `queryParam:"style=form,explode=true,name=toNumber"`
-}
-
-type GetDeliveryReportsRequest struct {
-	QueryParams GetDeliveryReportsQueryParams
-	Security    GetDeliveryReportsSecurity
 }
 
 type GetDeliveryReportsResponse struct {

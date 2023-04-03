@@ -50,25 +50,17 @@ func (e *POSTUpdatePartnerStatusVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTUpdatePartnerStatusQueryParams struct {
-	Action  POSTUpdatePartnerStatusActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUpdatePartnerStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdatePartnerStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUpdatePartnerStatusRequest struct {
-	QueryParams POSTUpdatePartnerStatusQueryParams
-	Headers     POSTUpdatePartnerStatusHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUpdatePartnerStatusActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTUpdatePartnerStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUpdatePartnerStatusResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFileTemplatesIDFileGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetFileTemplatesIDFileGetRequest struct {
-	PathParams GetFileTemplatesIDFileGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetFileTemplatesIDFileGetResponse struct {

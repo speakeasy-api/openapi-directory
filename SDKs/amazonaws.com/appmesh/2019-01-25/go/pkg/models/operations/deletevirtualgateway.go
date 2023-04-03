@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteVirtualGatewayPathParams struct {
-	// The name of the service mesh to delete the virtual gateway from.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual gateway to delete.
-	VirtualGatewayName string `pathParam:"style=simple,explode=false,name=virtualGatewayName"`
-}
-
-type DeleteVirtualGatewayQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type DeleteVirtualGatewayHeaders struct {
+type DeleteVirtualGatewayRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteVirtualGatewayHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVirtualGatewayRequest struct {
-	PathParams  DeleteVirtualGatewayPathParams
-	QueryParams DeleteVirtualGatewayQueryParams
-	Headers     DeleteVirtualGatewayHeaders
+	// The name of the service mesh to delete the virtual gateway from.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the virtual gateway to delete.
+	VirtualGatewayName string `pathParam:"style=simple,explode=false,name=virtualGatewayName"`
 }
 
 type DeleteVirtualGatewayResponse struct {

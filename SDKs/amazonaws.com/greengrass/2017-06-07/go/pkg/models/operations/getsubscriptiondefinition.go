@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionDefinitionPathParams struct {
-	// The ID of the subscription definition.
-	SubscriptionDefinitionID string `pathParam:"style=simple,explode=false,name=SubscriptionDefinitionId"`
-}
-
-type GetSubscriptionDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetSubscriptionDefinitionRequest struct {
-	PathParams GetSubscriptionDefinitionPathParams
-	Headers    GetSubscriptionDefinitionHeaders
+	// The ID of the subscription definition.
+	SubscriptionDefinitionID string  `pathParam:"style=simple,explode=false,name=SubscriptionDefinitionId"`
+	XAmzAlgorithm            *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetSubscriptionDefinitionResponse struct {

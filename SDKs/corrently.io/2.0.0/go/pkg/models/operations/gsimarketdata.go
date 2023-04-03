@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GsiMarketdataQueryParams struct {
+type GsiMarketdataRequest struct {
 	// Zipcode (Postleitzahl) of a city in Germany.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GsiMarketdataRequest struct {
-	QueryParams GsiMarketdataQueryParams
 }
 
 // GsiMarketdata200ApplicationJSON - Success

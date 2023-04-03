@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelsWithPushSubscribersQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetChannelsWithPushSubscribersHeaders struct {
+type GetChannelsWithPushSubscribersRequest struct {
 	// The version of the API you wish to use.
 	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetChannelsWithPushSubscribersRequest struct {
-	QueryParams GetChannelsWithPushSubscribersQueryParams
-	Headers     GetChannelsWithPushSubscribersHeaders
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type GetChannelsWithPushSubscribersResponse struct {

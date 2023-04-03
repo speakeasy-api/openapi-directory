@@ -8,21 +8,6 @@ import (
 	"time"
 )
 
-type StartDetectMitigationActionsTaskPathParams struct {
-	//  The unique identifier of the task.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type StartDetectMitigationActionsTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartDetectMitigationActionsTaskRequestBodyTarget -  The target of a mitigation action task.
 type StartDetectMitigationActionsTaskRequestBodyTarget struct {
 	BehaviorName        *string  `json:"behaviorName,omitempty"`
@@ -52,9 +37,16 @@ type StartDetectMitigationActionsTaskRequestBody struct {
 }
 
 type StartDetectMitigationActionsTaskRequest struct {
-	PathParams StartDetectMitigationActionsTaskPathParams
-	Headers    StartDetectMitigationActionsTaskHeaders
-	Request    StartDetectMitigationActionsTaskRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartDetectMitigationActionsTaskRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique identifier of the task.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type StartDetectMitigationActionsTaskResponse struct {

@@ -8,17 +8,13 @@ import (
 )
 
 type GetCallRecordingMp3Security struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCallRecordingMp3PathParams struct {
-	// An id of a call
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetCallRecordingMp3Request struct {
-	PathParams GetCallRecordingMp3PathParams
-	Security   GetCallRecordingMp3Security
+	// An id of a call
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetCallRecordingMp3Response struct {

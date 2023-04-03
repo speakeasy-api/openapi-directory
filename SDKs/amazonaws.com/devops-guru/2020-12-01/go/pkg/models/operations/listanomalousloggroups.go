@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAnomalousLogGroupsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListAnomalousLogGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListAnomalousLogGroupsRequestBody struct {
 	//  The ID of the insight containing the log groups.
 	InsightID string `json:"InsightId"`
@@ -34,9 +17,18 @@ type ListAnomalousLogGroupsRequestBody struct {
 }
 
 type ListAnomalousLogGroupsRequest struct {
-	QueryParams ListAnomalousLogGroupsQueryParams
-	Headers     ListAnomalousLogGroupsHeaders
-	Request     ListAnomalousLogGroupsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListAnomalousLogGroupsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListAnomalousLogGroupsResponse struct {

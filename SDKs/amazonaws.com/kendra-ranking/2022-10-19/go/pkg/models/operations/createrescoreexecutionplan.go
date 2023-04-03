@@ -30,20 +30,16 @@ func (e *CreateRescoreExecutionPlanXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type CreateRescoreExecutionPlanHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateRescoreExecutionPlanXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateRescoreExecutionPlanRequest struct {
-	Headers CreateRescoreExecutionPlanHeaders
-	Request shared.CreateRescoreExecutionPlanRequest `request:"mediaType=application/json"`
+	CreateRescoreExecutionPlanRequest shared.CreateRescoreExecutionPlanRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                 *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                        CreateRescoreExecutionPlanXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateRescoreExecutionPlanResponse struct {

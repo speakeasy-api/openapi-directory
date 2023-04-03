@@ -13,55 +13,51 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateEnvironmentRequest{
-        Headers: operations.CreateEnvironmentHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateEnvironmentRequestBody{
+        RequestBody: operations.CreateEnvironmentRequestBody{
             DataBundles: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            Description: "iure",
-            FederationMode: "FEDERATED",
+            Description: "unde",
+            FederationMode: "LOCAL",
             FederationParameters: &operations.CreateEnvironmentRequestBodyFederationParameters{
-                ApplicationCallBackURL: "debitis",
+                ApplicationCallBackURL: "corrupti",
                 AttributeMap: map[string]string{
-                    "delectus": "tempora",
+                    "vel": "error",
+                    "deserunt": "suscipit",
+                    "iure": "magnam",
+                    "debitis": "ipsa",
                 },
-                FederationProviderName: "suscipit",
-                FederationURN: "molestiae",
-                SamlMetadataDocument: "minus",
-                SamlMetadataURL: "placeat",
+                FederationProviderName: "delectus",
+                FederationURN: "tempora",
+                SamlMetadataDocument: "suscipit",
+                SamlMetadataURL: "molestiae",
             },
-            KmsKeyID: "voluptatum",
-            Name: "iusto",
+            KmsKeyID: "minus",
+            Name: "placeat",
             SuperuserParameters: &operations.CreateEnvironmentRequestBodySuperuserParameters{
-                EmailAddress: "excepturi",
-                FirstName: "Glen",
-                LastName: "Walsh",
+                EmailAddress: "voluptatum",
+                FirstName: "Jaycee",
+                LastName: "Mante",
             },
             Tags: map[string]string{
+                "recusandae": "temporibus",
                 "ab": "quis",
-                "veritatis": "deserunt",
-                "perferendis": "ipsam",
-                "repellendus": "sapiente",
             },
         },
+        XAmzAlgorithm: "veritatis",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "perferendis",
+        XAmzDate: "ipsam",
+        XAmzSecurityToken: "repellendus",
+        XAmzSignature: "sapiente",
+        XAmzSignedHeaders: "quo",
     }
 
     ctx := context.Background()

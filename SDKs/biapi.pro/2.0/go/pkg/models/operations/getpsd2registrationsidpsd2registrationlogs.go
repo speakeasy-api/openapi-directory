@@ -8,12 +8,9 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetPsd2RegistrationsIDPsd2registrationLogsPathParams struct {
-	IDPsd2registration int64 `pathParam:"style=simple,explode=false,name=id_psd2registration"`
-}
-
-type GetPsd2RegistrationsIDPsd2registrationLogsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+type GetPsd2RegistrationsIDPsd2registrationLogsRequest struct {
+	Expand             *string `queryParam:"style=form,explode=true,name=expand"`
+	IDPsd2registration int64   `pathParam:"style=simple,explode=false,name=id_psd2registration"`
 	// limit number of results
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// maximum (inclusive) date
@@ -22,11 +19,6 @@ type GetPsd2RegistrationsIDPsd2registrationLogsQueryParams struct {
 	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
 	// offset of first result
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetPsd2RegistrationsIDPsd2registrationLogsRequest struct {
-	PathParams  GetPsd2RegistrationsIDPsd2registrationLogsPathParams
-	QueryParams GetPsd2RegistrationsIDPsd2registrationLogsQueryParams
 }
 
 // GetPsd2RegistrationsIDPsd2registrationLogs200ApplicationJSON - psd2registrationlogs

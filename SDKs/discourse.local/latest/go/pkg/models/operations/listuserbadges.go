@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListUserBadgesPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type ListUserBadgesRequest struct {
-	PathParams ListUserBadgesPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ListUserBadges200ApplicationJSONBadgeTypes struct {

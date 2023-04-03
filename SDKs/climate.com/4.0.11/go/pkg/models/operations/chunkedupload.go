@@ -8,26 +8,17 @@ import (
 )
 
 type ChunkedUploadSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ChunkedUploadPathParams struct {
-	// Unique identifier of an Upload.
-	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
-}
-
-type ChunkedUploadHeaders struct {
+type ChunkedUploadRequest struct {
 	// Byte range `bytes start-end/total` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.16). e.g. bytes 0-5242880/10242880. Downloads larger than 5MiB (5242880 bytes) in size must be downloaded in chunks no larger than 5MiB (5242880 bytes) and no smaller than 1MiB (1048576 bytes). The last chunk could be less than 1MiB (1048576 bytes).
 	ContentRange string `header:"style=simple,explode=false,name=Content-Range"`
 	// Must be `application/octet-stream`
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type ChunkedUploadRequest struct {
-	PathParams ChunkedUploadPathParams
-	Headers    ChunkedUploadHeaders
-	Security   ChunkedUploadSecurity
+	// Unique identifier of an Upload.
+	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
 }
 
 type ChunkedUploadResponse struct {

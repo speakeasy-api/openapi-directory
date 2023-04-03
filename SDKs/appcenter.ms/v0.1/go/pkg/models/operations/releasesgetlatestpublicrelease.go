@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type ReleasesGetLatestPublicReleasePathParams struct {
+type ReleasesGetLatestPublicReleaseRequest struct {
 	// The secret of the target application
 	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
-}
-
-type ReleasesGetLatestPublicReleaseRequest struct {
-	PathParams ReleasesGetLatestPublicReleasePathParams
 }
 
 type ReleasesGetLatestPublicRelease404ApplicationJSONCodeEnum string

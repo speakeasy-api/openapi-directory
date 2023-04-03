@@ -16,5 +16,4 @@ pkg/models/operations/alsfc.go
 pkg/models/operations/clcer.go
 pkg/models/operations/srcer.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

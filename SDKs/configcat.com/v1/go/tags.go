@@ -37,9 +37,9 @@ func newTags(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // identified by the `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagRequest) (*operations.CreateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateTagModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,7 +106,7 @@ func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagReques
 // This endpoint deletes a Tag identified by the `tagId` parameter. To remove a Tag from a Feature Flag or Setting use the [Update Flag](#operation/update-setting) endpoint.
 func (s *tags) DeleteTag(ctx context.Context, request operations.DeleteTagRequest) (*operations.DeleteTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +151,7 @@ func (s *tags) DeleteTag(ctx context.Context, request operations.DeleteTagReques
 // has the specified Tag, identified by the `tagId` parameter.
 func (s *tags) GetSettingsByTag(ctx context.Context, request operations.GetSettingsByTagRequest) (*operations.GetSettingsByTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,7 +211,7 @@ func (s *tags) GetSettingsByTag(ctx context.Context, request operations.GetSetti
 // identified by the `tagId`.
 func (s *tags) GetTag(ctx context.Context, request operations.GetTagRequest) (*operations.GetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *tags) GetTag(ctx context.Context, request operations.GetTagRequest) (*o
 // specified Product, identified by the `productId` parameter.
 func (s *tags) GetTags(ctx context.Context, request operations.GetTagsRequest) (*operations.GetTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,9 +326,9 @@ func (s *tags) GetTags(ctx context.Context, request operations.GetTagsRequest) (
 // This endpoint updates a Tag identified by the `tagId` parameter.
 func (s *tags) UpdateTag(ctx context.Context, request operations.UpdateTagRequest) (*operations.UpdateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{tagId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTagModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

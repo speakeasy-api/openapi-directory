@@ -48,14 +48,14 @@ func newNodes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // None.
 func (s *nodes) AddFavorite(ctx context.Context, request operations.AddFavoriteRequest) (*operations.AddFavoriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/favorite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/favorite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -126,9 +126,9 @@ func (s *nodes) AddFavorite(ctx context.Context, request operations.AddFavoriteR
 // Batch function.
 func (s *nodes) AddRoomGuestUsers(ctx context.Context, request operations.AddRoomGuestUsersRequest) (*operations.AddRoomGuestUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/guest_users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/guest_users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoomGuestUserAddRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -143,7 +143,7 @@ func (s *nodes) AddRoomGuestUsers(ctx context.Context, request operations.AddRoo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -204,14 +204,14 @@ func (s *nodes) AddRoomGuestUsers(ctx context.Context, request operations.AddRoo
 // It is recommended to notify the API about cancelled uploads if possible.
 func (s *nodes) CancelFileUpload(ctx context.Context, request operations.CancelFileUploadRequest) (*operations.CancelFileUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -277,7 +277,7 @@ func (s *nodes) ChangePendingAssignments(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/rooms/pending"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PendingAssignmentsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -292,7 +292,7 @@ func (s *nodes) ChangePendingAssignments(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -373,9 +373,9 @@ func (s *nodes) ChangePendingAssignments(ctx context.Context, request operations
 // `'\\', '<','>', ':', '\"', '|', '?', '*', '/', leading '-', trailing '.' `
 func (s *nodes) CompleteFileUpload(ctx context.Context, request operations.CompleteFileUploadRequest) (*operations.CompleteFileUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -387,7 +387,7 @@ func (s *nodes) CompleteFileUpload(ctx context.Context, request operations.Compl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -468,9 +468,9 @@ func (s *nodes) CompleteFileUpload(ctx context.Context, request operations.Compl
 // - `keepShareLinks` is `true`
 func (s *nodes) CompleteS3FileUpload(ctx context.Context, request operations.CompleteS3FileUploadRequest) (*operations.CompleteS3FileUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}/s3", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}/s3", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteS3FileUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -485,7 +485,7 @@ func (s *nodes) CompleteS3FileUpload(ctx context.Context, request operations.Com
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -556,9 +556,9 @@ func (s *nodes) CompleteS3FileUpload(ctx context.Context, request operations.Com
 // APIs.
 func (s *nodes) ConfigureRoom(ctx context.Context, request operations.ConfigureRoomRequest) (*operations.ConfigureRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigRoomRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -573,7 +573,7 @@ func (s *nodes) ConfigureRoom(ctx context.Context, request operations.ConfigureR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -658,9 +658,9 @@ func (s *nodes) ConfigureRoom(ctx context.Context, request operations.ConfigureR
 // `'\\', '<','>', ':', '\"', '|', '?', '*', '/', leading '-', trailing '.' `
 func (s *nodes) CopyNodes(ctx context.Context, request operations.CopyNodesRequest) (*operations.CopyNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/copy_to", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/copy_to", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopyNodesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -675,7 +675,7 @@ func (s *nodes) CopyNodes(ctx context.Context, request operations.CopyNodesReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -764,9 +764,9 @@ func (s *nodes) CopyNodes(ctx context.Context, request operations.CopyNodesReque
 // This allows migrating file keys encrypted with your old key pair to the new one.
 func (s *nodes) CreateAndPreserveRoomRescueKeyPair(ctx context.Context, request operations.CreateAndPreserveRoomRescueKeyPairRequest) (*operations.CreateAndPreserveRoomRescueKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypairs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypairs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateKeyPairRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -781,7 +781,7 @@ func (s *nodes) CreateAndPreserveRoomRescueKeyPair(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -856,7 +856,7 @@ func (s *nodes) CreateFileUploadChannel(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/files/uploads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateFileUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -871,7 +871,7 @@ func (s *nodes) CreateFileUploadChannel(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -955,7 +955,7 @@ func (s *nodes) CreateFolder(ctx context.Context, request operations.CreateFolde
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/folders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateFolderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -970,7 +970,7 @@ func (s *nodes) CreateFolder(ctx context.Context, request operations.CreateFolde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1044,9 +1044,9 @@ func (s *nodes) CreateFolder(ctx context.Context, request operations.CreateFolde
 // Maximum allowed text length: **65535** characters.
 func (s *nodes) CreateNodeComment(ctx context.Context, request operations.CreateNodeCommentRequest) (*operations.CreateNodeCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateNodeCommentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1061,7 +1061,7 @@ func (s *nodes) CreateNodeComment(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1148,7 +1148,7 @@ func (s *nodes) CreateRoom(ctx context.Context, request operations.CreateRoomReq
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/rooms"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateRoomRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1163,7 +1163,7 @@ func (s *nodes) CreateRoom(ctx context.Context, request operations.CreateRoomReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1237,7 +1237,7 @@ func (s *nodes) DownloadZipArchive(ctx context.Context, request operations.Downl
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/zip/download"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ZipDownloadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1252,7 +1252,7 @@ func (s *nodes) DownloadZipArchive(ctx context.Context, request operations.Downl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1314,14 +1314,14 @@ func (s *nodes) DownloadZipArchive(ctx context.Context, request operations.Downl
 // **This action is irreversible.**
 func (s *nodes) EmptyDeletedNodes(ctx context.Context, request operations.EmptyDeletedNodesRequest) (*operations.EmptyDeletedNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/deleted_nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/deleted_nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1383,9 +1383,9 @@ func (s *nodes) EmptyDeletedNodes(ctx context.Context, request operations.EmptyD
 // This endpoint may also be used to disable encryption of an empty room.
 func (s *nodes) EncryptRoom(ctx context.Context, request operations.EncryptRoomRequest) (*operations.EncryptRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/encrypt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/encrypt", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EncryptRoomRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1400,7 +1400,7 @@ func (s *nodes) EncryptRoom(ctx context.Context, request operations.EncryptRoomR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1470,14 +1470,14 @@ func (s *nodes) EncryptRoom(ctx context.Context, request operations.EncryptRoomR
 // The token is necessary to access `downloads` ressources.
 func (s *nodes) GenerateDownloadURL(ctx context.Context, request operations.GenerateDownloadURLRequest) (*operations.GenerateDownloadURLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/downloads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1550,7 +1550,7 @@ func (s *nodes) GenerateDownloadURLForZipArchive(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/zip"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ZipDownloadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1565,7 +1565,7 @@ func (s *nodes) GenerateDownloadURLForZipArchive(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1639,9 +1639,9 @@ func (s *nodes) GenerateDownloadURLForZipArchive(ctx context.Context, request op
 // Use HTTP method `PUT` for uploading bytes via presigned URL.
 func (s *nodes) GeneratePresignedUrlsFiles(ctx context.Context, request operations.GeneratePresignedUrlsFilesRequest) (*operations.GeneratePresignedUrlsFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}/s3_urls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}/s3_urls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GeneratePresignedUrlsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1656,7 +1656,7 @@ func (s *nodes) GeneratePresignedUrlsFiles(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1754,9 +1754,9 @@ func (s *nodes) GeneratePresignedUrlsFiles(ctx context.Context, request operatio
 // </details>
 func (s *nodes) HandleRoomWebhookAssignments(ctx context.Context, request operations.HandleRoomWebhookAssignmentsRequest) (*operations.HandleRoomWebhookAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/webhooks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateRoomWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1771,7 +1771,7 @@ func (s *nodes) HandleRoomWebhookAssignments(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1854,9 +1854,9 @@ func (s *nodes) HandleRoomWebhookAssignments(ctx context.Context, request operat
 // `'\\', '<','>', ':', '\"', '|', '?', '*', '/', leading '-', trailing '.' `
 func (s *nodes) MoveNodes(ctx context.Context, request operations.MoveNodesRequest) (*operations.MoveNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/move_to", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/move_to", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MoveNodesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1871,7 +1871,7 @@ func (s *nodes) MoveNodes(ctx context.Context, request operations.MoveNodesReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1958,7 +1958,7 @@ func (s *nodes) RemoveDeletedNodes(ctx context.Context, request operations.Remov
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/deleted_nodes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteDeletedNodesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1973,7 +1973,7 @@ func (s *nodes) RemoveDeletedNodes(ctx context.Context, request operations.Remov
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2034,14 +2034,14 @@ func (s *nodes) RemoveDeletedNodes(ctx context.Context, request operations.Remov
 // None.
 func (s *nodes) RemoveFavorite(ctx context.Context, request operations.RemoveFavoriteRequest) (*operations.RemoveFavoriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/favorite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/favorite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2102,14 +2102,14 @@ func (s *nodes) RemoveFavorite(ctx context.Context, request operations.RemoveFav
 // None.
 func (s *nodes) RemoveNode(ctx context.Context, request operations.RemoveNodeRequest) (*operations.RemoveNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2172,14 +2172,14 @@ func (s *nodes) RemoveNode(ctx context.Context, request operations.RemoveNodeReq
 // None.
 func (s *nodes) RemoveNodeComment(ctx context.Context, request operations.RemoveNodeCommentRequest) (*operations.RemoveNodeCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2242,7 +2242,7 @@ func (s *nodes) RemoveNodes(ctx context.Context, request operations.RemoveNodesR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteNodesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2257,7 +2257,7 @@ func (s *nodes) RemoveNodes(ctx context.Context, request operations.RemoveNodesR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2322,16 +2322,16 @@ func (s *nodes) RemoveNodes(ctx context.Context, request operations.RemoveNodesR
 // Although, `version` **SHOULD** be set.
 func (s *nodes) RemoveRoomRescueKeyPair(ctx context.Context, request operations.RemoveRoomRescueKeyPairRequest) (*operations.RemoveRoomRescueKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypair", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypair", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2394,14 +2394,14 @@ func (s *nodes) RemoveRoomRescueKeyPair(ctx context.Context, request operations.
 // None.
 func (s *nodes) RequestDeletedNode(ctx context.Context, request operations.RequestDeletedNodeRequest) (*operations.RequestDeletedNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/deleted_nodes/{deleted_node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/deleted_nodes/{deleted_node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2506,16 +2506,16 @@ func (s *nodes) RequestDeletedNode(ctx context.Context, request operations.Reque
 // </details>
 func (s *nodes) RequestDeletedNodeVersions(ctx context.Context, request operations.RequestDeletedNodeVersionsRequest) (*operations.RequestDeletedNodeVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/deleted_nodes/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/deleted_nodes/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2646,16 +2646,16 @@ func (s *nodes) RequestDeletedNodeVersions(ctx context.Context, request operatio
 // </details>
 func (s *nodes) RequestDeletedNodesSummary(ctx context.Context, request operations.RequestDeletedNodesSummaryRequest) (*operations.RequestDeletedNodesSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/deleted_nodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/deleted_nodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2729,16 +2729,16 @@ func (s *nodes) RequestDeletedNodesSummary(ctx context.Context, request operatio
 // Maximum number of file versions is 500. The list is sorted by ID DESC.
 func (s *nodes) RequestFileVersionList(ctx context.Context, request operations.RequestFileVersionListRequest) (*operations.RequestFileVersionListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/versions/{reference_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/versions/{reference_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2825,16 +2825,16 @@ func (s *nodes) RequestFileVersionList(ctx context.Context, request operations.R
 // </details>
 func (s *nodes) RequestListOfWebhooksForRoom(ctx context.Context, request operations.RequestListOfWebhooksForRoomRequest) (*operations.RequestListOfWebhooksForRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2918,9 +2918,9 @@ func (s *nodes) RequestMissingFileKeys(ctx context.Context, request operations.R
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2992,14 +2992,14 @@ func (s *nodes) RequestMissingFileKeys(ctx context.Context, request operations.R
 // None.
 func (s *nodes) RequestNode(ctx context.Context, request operations.RequestNodeRequest) (*operations.RequestNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3073,16 +3073,16 @@ func (s *nodes) RequestNode(ctx context.Context, request operations.RequestNodeR
 // For more results please use filter criteria and paging (`offset` + `limit`).
 func (s *nodes) RequestNodeComments(ctx context.Context, request operations.RequestNodeCommentsRequest) (*operations.RequestNodeCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3156,14 +3156,14 @@ func (s *nodes) RequestNodeComments(ctx context.Context, request operations.Requ
 // None.
 func (s *nodes) RequestNodeParents(ctx context.Context, request operations.RequestNodeParentsRequest) (*operations.RequestNodeParentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/parents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/{node_id}/parents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3316,9 +3316,9 @@ func (s *nodes) RequestNodes(ctx context.Context, request operations.RequestNode
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3455,9 +3455,9 @@ func (s *nodes) RequestPendingAssignments(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3550,16 +3550,16 @@ func (s *nodes) RequestPendingAssignments(ctx context.Context, request operation
 // </details>
 func (s *nodes) RequestRoomActivitiesLogAsJSON(ctx context.Context, request operations.RequestRoomActivitiesLogAsJSONRequest) (*operations.RequestRoomActivitiesLogAsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3682,16 +3682,16 @@ func (s *nodes) RequestRoomActivitiesLogAsJSON(ctx context.Context, request oper
 // </details>
 func (s *nodes) RequestRoomGroups(ctx context.Context, request operations.RequestRoomGroupsRequest) (*operations.RequestRoomGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3769,14 +3769,14 @@ func (s *nodes) RequestRoomGroups(ctx context.Context, request operations.Reques
 // `0` means no default expiration policy will be enforced.
 func (s *nodes) RequestRoomPolicies(ctx context.Context, request operations.RequestRoomPoliciesRequest) (*operations.RequestRoomPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/policies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3848,16 +3848,16 @@ func (s *nodes) RequestRoomPolicies(ctx context.Context, request operations.Requ
 // None.
 func (s *nodes) RequestRoomRescueKey(ctx context.Context, request operations.RequestRoomRescueKeyRequest) (*operations.RequestRoomRescueKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/data_room_file_key", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/data_room_file_key", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3929,16 +3929,16 @@ func (s *nodes) RequestRoomRescueKey(ctx context.Context, request operations.Req
 // None.
 func (s *nodes) RequestRoomRescueKeyPair(ctx context.Context, request operations.RequestRoomRescueKeyPairRequest) (*operations.RequestRoomRescueKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypair", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypair", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4014,14 +4014,14 @@ func (s *nodes) RequestRoomRescueKeyPair(ctx context.Context, request operations
 // This API allows to retrieve both key pairs, in contrast to `GET /nodes/rooms/{room_id}/keypair`, which only delivers the preferred one.
 func (s *nodes) RequestRoomRescueKeyPairs(ctx context.Context, request operations.RequestRoomRescueKeyPairsRequest) (*operations.RequestRoomRescueKeyPairsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypairs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypairs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -4095,14 +4095,14 @@ func (s *nodes) RequestRoomRescueKeyPairs(ctx context.Context, request operation
 // None.
 func (s *nodes) RequestRoomS3Tags(ctx context.Context, request operations.RequestRoomS3TagsRequest) (*operations.RequestRoomS3TagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/s3_tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/s3_tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -4235,16 +4235,16 @@ func (s *nodes) RequestRoomS3Tags(ctx context.Context, request operations.Reques
 // </details>
 func (s *nodes) RequestRoomUsers(ctx context.Context, request operations.RequestRoomUsersRequest) (*operations.RequestRoomUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4318,16 +4318,16 @@ func (s *nodes) RequestRoomUsers(ctx context.Context, request operations.Request
 // None.
 func (s *nodes) RequestSystemRescueKey(ctx context.Context, request operations.RequestSystemRescueKeyRequest) (*operations.RequestSystemRescueKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/data_space_file_key", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/data_space_file_key", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4430,14 +4430,14 @@ func (s *nodes) RequestSystemRescueKey(ctx context.Context, request operations.R
 // </details>
 func (s *nodes) RequestUploadStatusFiles(ctx context.Context, request operations.RequestUploadStatusFilesRequest) (*operations.RequestUploadStatusFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -4508,16 +4508,16 @@ func (s *nodes) RequestUploadStatusFiles(ctx context.Context, request operations
 // File keys are generated with the workflow _"Generate file keys"_ that starts at `GET /nodes/missingFileKeys`.
 func (s *nodes) RequestUserFileKey(ctx context.Context, request operations.RequestUserFileKeyRequest) (*operations.RequestUserFileKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/user_file_key", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}/user_file_key", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4598,7 +4598,7 @@ func (s *nodes) RestoreNodes(ctx context.Context, request operations.RestoreNode
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/deleted_nodes/actions/restore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreDeletedNodesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4613,7 +4613,7 @@ func (s *nodes) RestoreNodes(ctx context.Context, request operations.RestoreNode
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -4678,9 +4678,9 @@ func (s *nodes) RestoreNodes(ctx context.Context, request operations.RestoreNode
 // Batch function.
 func (s *nodes) RevokeRoomGroups(ctx context.Context, request operations.RevokeRoomGroupsRequest) (*operations.RevokeRoomGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoomGroupsDeleteBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4695,7 +4695,7 @@ func (s *nodes) RevokeRoomGroups(ctx context.Context, request operations.RevokeR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -4756,9 +4756,9 @@ func (s *nodes) RevokeRoomGroups(ctx context.Context, request operations.RevokeR
 // Batch function.
 func (s *nodes) RevokeRoomUsers(ctx context.Context, request operations.RevokeRoomUsersRequest) (*operations.RevokeRoomUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoomUsersDeleteBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4773,7 +4773,7 @@ func (s *nodes) RevokeRoomUsers(ctx context.Context, request operations.RevokeRo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -4929,9 +4929,9 @@ func (s *nodes) SearchNodes(ctx context.Context, request operations.SearchNodesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5007,9 +5007,9 @@ func (s *nodes) SearchNodes(ctx context.Context, request operations.SearchNodesR
 // `0` means no default expiration policy will be enforced. This removes all expiration dates from existing files.
 func (s *nodes) SetRoomPolicies(ctx context.Context, request operations.SetRoomPoliciesRequest) (*operations.SetRoomPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/policies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/policies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoomPoliciesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5024,7 +5024,7 @@ func (s *nodes) SetRoomPolicies(ctx context.Context, request operations.SetRoomP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5087,9 +5087,9 @@ func (s *nodes) SetRoomPolicies(ctx context.Context, request operations.SetRoomP
 // Room rescue key pair can be used to upgrade algorithm.
 func (s *nodes) SetRoomRescueKeyPair(ctx context.Context, request operations.SetRoomRescueKeyPairRequest) (*operations.SetRoomRescueKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypair", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/keypair", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserKeyPairContainer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5104,7 +5104,7 @@ func (s *nodes) SetRoomRescueKeyPair(ctx context.Context, request operations.Set
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5170,9 +5170,9 @@ func (s *nodes) SetRoomRescueKeyPair(ctx context.Context, request operations.Set
 // Mandatory S3 tag IDs **MUST** be sent.
 func (s *nodes) SetRoomS3Tags(ctx context.Context, request operations.SetRoomS3TagsRequest) (*operations.SetRoomS3TagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/s3_tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/s3_tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "S3TagIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5187,7 +5187,7 @@ func (s *nodes) SetRoomS3Tags(ctx context.Context, request operations.SetRoomS3T
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5263,7 +5263,7 @@ func (s *nodes) SetUserFileKeys(ctx context.Context, request operations.SetUserF
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/files/keys"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserFileKeySetBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5278,7 +5278,7 @@ func (s *nodes) SetUserFileKeys(ctx context.Context, request operations.SetUserF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5343,7 +5343,7 @@ func (s *nodes) UpdateFavorites(ctx context.Context, request operations.UpdateFa
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/favorites"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateFavoritesBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5358,7 +5358,7 @@ func (s *nodes) UpdateFavorites(ctx context.Context, request operations.UpdateFa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5416,9 +5416,9 @@ func (s *nodes) UpdateFavorites(ctx context.Context, request operations.UpdateFa
 // File's metadata is changed.
 func (s *nodes) UpdateFile(ctx context.Context, request operations.UpdateFileRequest) (*operations.UpdateFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/{file_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateFileRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5433,7 +5433,7 @@ func (s *nodes) UpdateFile(ctx context.Context, request operations.UpdateFileReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5509,7 +5509,7 @@ func (s *nodes) UpdateFiles(ctx context.Context, request operations.UpdateFilesR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/nodes/files"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateFilesBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5524,7 +5524,7 @@ func (s *nodes) UpdateFiles(ctx context.Context, request operations.UpdateFilesR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5594,9 +5594,9 @@ func (s *nodes) UpdateFiles(ctx context.Context, request operations.UpdateFilesR
 // `'\\', '<','>', ':', '\"', '|', '?', '*', '/', leading '-', trailing '.' `
 func (s *nodes) UpdateFolder(ctx context.Context, request operations.UpdateFolderRequest) (*operations.UpdateFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/folders/{folder_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/folders/{folder_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateFolderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5611,7 +5611,7 @@ func (s *nodes) UpdateFolder(ctx context.Context, request operations.UpdateFolde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5685,9 +5685,9 @@ func (s *nodes) UpdateFolder(ctx context.Context, request operations.UpdateFolde
 // Maximum allowed text length: **65535** characters.
 func (s *nodes) UpdateNodeComment(ctx context.Context, request operations.UpdateNodeCommentRequest) (*operations.UpdateNodeCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeNodeCommentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5702,7 +5702,7 @@ func (s *nodes) UpdateNodeComment(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5779,9 +5779,9 @@ func (s *nodes) UpdateNodeComment(ctx context.Context, request operations.Update
 // `'\\', '<','>', ':', '\"', '|', '?', '*', '/', leading '-', trailing '.' `
 func (s *nodes) UpdateRoom(ctx context.Context, request operations.UpdateRoomRequest) (*operations.UpdateRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateRoomRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5796,7 +5796,7 @@ func (s *nodes) UpdateRoom(ctx context.Context, request operations.UpdateRoomReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5868,9 +5868,9 @@ func (s *nodes) UpdateRoom(ctx context.Context, request operations.UpdateRoomReq
 // Batch function.
 func (s *nodes) UpdateRoomGroups(ctx context.Context, request operations.UpdateRoomGroupsRequest) (*operations.UpdateRoomGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoomGroupsAddBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5885,7 +5885,7 @@ func (s *nodes) UpdateRoomGroups(ctx context.Context, request operations.UpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -5946,9 +5946,9 @@ func (s *nodes) UpdateRoomGroups(ctx context.Context, request operations.UpdateR
 // Batch function.
 func (s *nodes) UpdateRoomUsers(ctx context.Context, request operations.UpdateRoomUsersRequest) (*operations.UpdateRoomUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/rooms/{room_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoomUsersAddBatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5963,7 +5963,7 @@ func (s *nodes) UpdateRoomUsers(ctx context.Context, request operations.UpdateRo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -6068,9 +6068,9 @@ func (s *nodes) UpdateRoomUsers(ctx context.Context, request operations.UpdateRo
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *nodes) UploadFileAsMultipart(ctx context.Context, request operations.UploadFileAsMultipartRequest) (*operations.UploadFileAsMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/nodes/files/uploads/{upload_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6082,7 +6082,7 @@ func (s *nodes) UploadFileAsMultipart(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

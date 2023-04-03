@@ -50,24 +50,16 @@ func (e *POSTListDomainNamesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListDomainNamesQueryParams struct {
-	Action  POSTListDomainNamesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTListDomainNamesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListDomainNamesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTListDomainNamesRequest struct {
-	QueryParams POSTListDomainNamesQueryParams
-	Headers     POSTListDomainNamesHeaders
+	Action            POSTListDomainNamesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           POSTListDomainNamesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListDomainNamesResponse struct {

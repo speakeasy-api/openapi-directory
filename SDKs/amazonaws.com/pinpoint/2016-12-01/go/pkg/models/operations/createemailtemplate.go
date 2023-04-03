@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEmailTemplatePathParams struct {
-	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
-	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
-}
-
-type CreateEmailTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateEmailTemplateRequestBodyEmailTemplateRequest - Specifies the content and settings for a message template that can be used in messages that are sent through the email channel.
 type CreateEmailTemplateRequestBodyEmailTemplateRequest struct {
 	DefaultSubstitutions *string           `json:"DefaultSubstitutions,omitempty"`
@@ -39,9 +24,16 @@ type CreateEmailTemplateRequestBody struct {
 }
 
 type CreateEmailTemplateRequest struct {
-	PathParams CreateEmailTemplatePathParams
-	Headers    CreateEmailTemplateHeaders
-	Request    CreateEmailTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateEmailTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
 }
 
 type CreateEmailTemplateResponse struct {

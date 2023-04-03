@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetUserFileKeysHeaders struct {
+type SetUserFileKeysRequest struct {
+	UserFileKeySetBatchRequest shared.UserFileKeySetBatchRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type SetUserFileKeysRequest struct {
-	Headers SetUserFileKeysHeaders
-	Request shared.UserFileKeySetBatchRequest `request:"mediaType=application/json"`
 }
 
 type SetUserFileKeysResponse struct {

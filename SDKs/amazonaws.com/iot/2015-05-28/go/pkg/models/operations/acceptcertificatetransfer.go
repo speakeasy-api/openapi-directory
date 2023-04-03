@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type AcceptCertificateTransferPathParams struct {
-	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type AcceptCertificateTransferQueryParams struct {
-	// Specifies whether the certificate is active.
-	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
-}
-
-type AcceptCertificateTransferHeaders struct {
+type AcceptCertificateTransferRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type AcceptCertificateTransferHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AcceptCertificateTransferRequest struct {
-	PathParams  AcceptCertificateTransferPathParams
-	QueryParams AcceptCertificateTransferQueryParams
-	Headers     AcceptCertificateTransferHeaders
+	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
+	// Specifies whether the certificate is active.
+	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
 }
 
 type AcceptCertificateTransferResponse struct {

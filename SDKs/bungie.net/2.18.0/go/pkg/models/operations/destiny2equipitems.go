@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2EquipItemsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type Destiny2EquipItemsRequest struct {
-	Security Destiny2EquipItemsSecurity
-}
-
 // Destiny2EquipItems200Wildcard - The results of a bulk Equipping operation performed through the Destiny API.
 type Destiny2EquipItems200Wildcard struct {
 	DetailedErrorTrace *string

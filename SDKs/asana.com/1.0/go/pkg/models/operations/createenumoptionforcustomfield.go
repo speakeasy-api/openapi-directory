@@ -7,12 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEnumOptionForCustomFieldPathParams struct {
-	// Globally unique identifier for the custom field.
-	CustomFieldGid string `pathParam:"style=simple,explode=false,name=custom_field_gid"`
+// CreateEnumOptionForCustomFieldRequestBodyInput - The enum option object to create.
+type CreateEnumOptionForCustomFieldRequestBodyInput struct {
+	Data *shared.EnumOptionRequestInput `json:"data,omitempty"`
 }
 
-type CreateEnumOptionForCustomFieldQueryParams struct {
+type CreateEnumOptionForCustomFieldRequest struct {
+	// The enum option object to create.
+	RequestBody *CreateEnumOptionForCustomFieldRequestBodyInput `request:"mediaType=application/json"`
+	// Globally unique identifier for the custom field.
+	CustomFieldGid string `pathParam:"style=simple,explode=false,name=custom_field_gid"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,18 +31,6 @@ type CreateEnumOptionForCustomFieldQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// CreateEnumOptionForCustomFieldRequestBodyInput - The enum option object to create.
-type CreateEnumOptionForCustomFieldRequestBodyInput struct {
-	Data *shared.EnumOptionRequestInput `json:"data,omitempty"`
-}
-
-type CreateEnumOptionForCustomFieldRequest struct {
-	PathParams  CreateEnumOptionForCustomFieldPathParams
-	QueryParams CreateEnumOptionForCustomFieldQueryParams
-	// The enum option object to create.
-	Request *CreateEnumOptionForCustomFieldRequestBodyInput `request:"mediaType=application/json"`
 }
 
 // CreateEnumOptionForCustomField201ApplicationJSON - Custom field enum option successfully created.

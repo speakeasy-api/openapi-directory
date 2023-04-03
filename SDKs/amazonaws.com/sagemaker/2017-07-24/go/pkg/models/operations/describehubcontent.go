@@ -30,20 +30,16 @@ func (e *DescribeHubContentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeHubContentHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeHubContentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeHubContentRequest struct {
-	Headers DescribeHubContentHeaders
-	Request shared.DescribeHubContentRequest `request:"mediaType=application/json"`
+	DescribeHubContentRequest shared.DescribeHubContentRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                DescribeHubContentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeHubContentResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteWebhookPathParams struct {
-	//  The unique ID for a webhook.
-	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type DeleteWebhookHeaders struct {
+type DeleteWebhookRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteWebhookHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteWebhookRequest struct {
-	PathParams DeleteWebhookPathParams
-	Headers    DeleteWebhookHeaders
+	//  The unique ID for a webhook.
+	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
 }
 
 type DeleteWebhookResponse struct {

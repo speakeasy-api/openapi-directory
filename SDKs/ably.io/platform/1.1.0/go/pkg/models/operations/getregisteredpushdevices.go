@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRegisteredPushDevicesQueryParams struct {
+type GetRegisteredPushDevicesRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
 	// Optional filter to restrict to devices associated with that clientId.
 	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 	// Optional filter to restrict to devices associated with that deviceId.
@@ -16,16 +18,6 @@ type GetRegisteredPushDevicesQueryParams struct {
 	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The maximum number of records to return.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetRegisteredPushDevicesHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetRegisteredPushDevicesRequest struct {
-	QueryParams GetRegisteredPushDevicesQueryParams
-	Headers     GetRegisteredPushDevicesHeaders
 }
 
 type GetRegisteredPushDevicesResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetLogConfigurationPathParams struct {
+type SetLogConfigurationRequest struct {
+	// The new logger configuration.
+	LogConfiguration shared.LogConfiguration `request:"mediaType=application/json"`
 	// The name of a single logger.
 	Logger string `pathParam:"style=simple,explode=false,name=logger"`
-}
-
-type SetLogConfigurationRequest struct {
-	PathParams SetLogConfigurationPathParams
-	// The new logger configuration.
-	Request shared.LogConfiguration `request:"mediaType=application/json"`
 }
 
 type SetLogConfigurationResponse struct {

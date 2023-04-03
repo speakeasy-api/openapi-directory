@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSchemasPathParams struct {
-	// A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
-	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
-}
-
 // ListSchemasSchemaTypeEnum - If present, filter schemas by schema type. The only valid schema type is currently `TABLE`.
 type ListSchemasSchemaTypeEnum string
 
@@ -35,16 +30,7 @@ func (e *ListSchemasSchemaTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSchemasQueryParams struct {
-	// The maximum size of the results that is returned per call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token value retrieved from a previous call to access the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// If present, filter schemas by schema type. The only valid schema type is currently `TABLE`.
-	SchemaType *ListSchemasSchemaTypeEnum `queryParam:"style=form,explode=true,name=schemaType"`
-}
-
-type ListSchemasHeaders struct {
+type ListSchemasRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -52,12 +38,14 @@ type ListSchemasHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSchemasRequest struct {
-	PathParams  ListSchemasPathParams
-	QueryParams ListSchemasQueryParams
-	Headers     ListSchemasHeaders
+	// A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
+	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
+	// The maximum size of the results that is returned per call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token value retrieved from a previous call to access the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// If present, filter schemas by schema type. The only valid schema type is currently `TABLE`.
+	SchemaType *ListSchemasSchemaTypeEnum `queryParam:"style=form,explode=true,name=schemaType"`
 }
 
 type ListSchemasResponse struct {

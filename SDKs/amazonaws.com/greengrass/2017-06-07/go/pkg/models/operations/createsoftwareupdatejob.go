@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSoftwareUpdateJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 // CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum - The piece of software on the Greengrass core that will be updated.
 type CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum string
 
@@ -163,8 +151,16 @@ type CreateSoftwareUpdateJobRequestBody struct {
 }
 
 type CreateSoftwareUpdateJobRequest struct {
-	Headers CreateSoftwareUpdateJobHeaders
-	Request CreateSoftwareUpdateJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSoftwareUpdateJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateSoftwareUpdateJobResponse struct {

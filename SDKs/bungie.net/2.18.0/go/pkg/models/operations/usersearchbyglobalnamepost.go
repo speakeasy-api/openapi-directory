@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserSearchByGlobalNamePostPathParams struct {
+type UserSearchByGlobalNamePostRequest struct {
 	// The zero-based page of results you desire.
 	Page int `pathParam:"style=simple,explode=false,name=page"`
-}
-
-type UserSearchByGlobalNamePostRequest struct {
-	PathParams UserSearchByGlobalNamePostPathParams
 }
 
 // UserSearchByGlobalNamePost200Wildcard - Look at the Response property for more information about the nature of this response

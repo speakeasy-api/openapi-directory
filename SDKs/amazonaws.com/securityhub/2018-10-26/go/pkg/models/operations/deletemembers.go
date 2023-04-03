@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteMembersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteMembersRequestBody struct {
 	// The list of account IDs for the member accounts to delete.
 	AccountIds []string `json:"AccountIds"`
 }
 
 type DeleteMembersRequest struct {
-	Headers DeleteMembersHeaders
-	Request DeleteMembersRequestBody `request:"mediaType=application/json"`
+	RequestBody       DeleteMembersRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteMembersResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteImageRecipeQueryParams struct {
-	// The Amazon Resource Name (ARN) of the image recipe to delete.
-	ImageRecipeArn string `queryParam:"style=form,explode=true,name=imageRecipeArn"`
-}
-
-type DeleteImageRecipeHeaders struct {
+type DeleteImageRecipeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteImageRecipeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteImageRecipeRequest struct {
-	QueryParams DeleteImageRecipeQueryParams
-	Headers     DeleteImageRecipeHeaders
+	// The Amazon Resource Name (ARN) of the image recipe to delete.
+	ImageRecipeArn string `queryParam:"style=form,explode=true,name=imageRecipeArn"`
 }
 
 type DeleteImageRecipeResponse struct {

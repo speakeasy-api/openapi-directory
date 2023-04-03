@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateImageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateImageRequestBodyImageTestsConfiguration - Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 type CreateImageRequestBodyImageTestsConfiguration struct {
 	ImageTestsEnabled *bool  `json:"imageTestsEnabled,omitempty"`
@@ -43,8 +33,14 @@ type CreateImageRequestBody struct {
 }
 
 type CreateImageRequest struct {
-	Headers CreateImageHeaders
-	Request CreateImageRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateImageRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateImageResponse struct {

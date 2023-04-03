@@ -50,7 +50,7 @@ func (e *GETAddPartnerVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAddPartnerQueryParams struct {
+type GETAddPartnerRequest struct {
 	// The Amazon Web Services account ID that owns the cluster.
 	AccountID string                  `queryParam:"style=form,explode=true,name=AccountId"`
 	Action    GETAddPartnerActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -59,23 +59,15 @@ type GETAddPartnerQueryParams struct {
 	// The name of the database that receives data from the partner.
 	DatabaseName string `queryParam:"style=form,explode=true,name=DatabaseName"`
 	// The name of the partner that is authorized to send data.
-	PartnerName string                   `queryParam:"style=form,explode=true,name=PartnerName"`
-	Version     GETAddPartnerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddPartnerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddPartnerRequest struct {
-	QueryParams GETAddPartnerQueryParams
-	Headers     GETAddPartnerHeaders
+	PartnerName       string                   `queryParam:"style=form,explode=true,name=PartnerName"`
+	Version           GETAddPartnerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddPartnerResponse struct {

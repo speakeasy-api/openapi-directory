@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssetModelsQueryParams struct {
-	// <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAssetModelsHeaders struct {
+type ListAssetModelsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListAssetModelsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssetModelsRequest struct {
-	QueryParams ListAssetModelsQueryParams
-	Headers     ListAssetModelsHeaders
+	// <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAssetModelsResponse struct {

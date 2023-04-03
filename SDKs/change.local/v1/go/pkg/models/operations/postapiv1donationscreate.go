@@ -6,11 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1DonationsCreateSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // PostAPIV1DonationsCreateFundingSourceEnum - Source of the donation funds. If you are collecting payment from your customer for the donation, use `customer`.
@@ -37,7 +37,7 @@ func (e *PostAPIV1DonationsCreateFundingSourceEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type PostAPIV1DonationsCreateQueryParams struct {
+type PostAPIV1DonationsCreateRequest struct {
 	// The amount of the donation in cents.
 	Amount string `queryParam:"style=form,explode=true,name=amount"`
 	// Source of the donation funds. If you are collecting payment from your customer for the donation, use `customer`.
@@ -46,11 +46,6 @@ type PostAPIV1DonationsCreateQueryParams struct {
 	NonprofitID string `queryParam:"style=form,explode=true,name=nonprofit_id"`
 	// The customer's zip code. Provide this to unlock geographic insights.
 	ZipCode *string `queryParam:"style=form,explode=true,name=zip_code"`
-}
-
-type PostAPIV1DonationsCreateRequest struct {
-	QueryParams PostAPIV1DonationsCreateQueryParams
-	Security    PostAPIV1DonationsCreateSecurity
 }
 
 type PostAPIV1DonationsCreateResponse struct {

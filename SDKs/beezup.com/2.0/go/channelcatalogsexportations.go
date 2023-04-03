@@ -34,7 +34,7 @@ func newChannelCatalogsExportations(defaultClient, securityClient HTTPClient, se
 // ClearChannelCatalogExportationCache - Clear the exportation cache
 func (s *channelCatalogsExportations) ClearChannelCatalogExportationCache(ctx context.Context, request operations.ClearChannelCatalogExportationCacheRequest) (*operations.ClearChannelCatalogExportationCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache/clear", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache/clear", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *channelCatalogsExportations) ClearChannelCatalogExportationCache(ctx co
 // GetChannelCatalogExportationCacheInfo - Get the exportation cache information
 func (s *channelCatalogsExportations) GetChannelCatalogExportationCacheInfo(ctx context.Context, request operations.GetChannelCatalogExportationCacheInfoRequest) (*operations.GetChannelCatalogExportationCacheInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,14 +137,14 @@ func (s *channelCatalogsExportations) GetChannelCatalogExportationCacheInfo(ctx 
 // GetChannelCatalogExportationHistory - Get the exportation history
 func (s *channelCatalogsExportations) GetChannelCatalogExportationHistory(ctx context.Context, request operations.GetChannelCatalogExportationHistoryRequest) (*operations.GetChannelCatalogExportationHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

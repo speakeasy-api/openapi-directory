@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListVocabulariesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListVocabulariesXAmzTargetEnum
 type ListVocabulariesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListVocabulariesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListVocabulariesHeaders struct {
+type ListVocabulariesRequest struct {
+	ListVocabulariesRequest shared.ListVocabulariesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListVocabulariesHeaders struct {
 	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListVocabulariesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListVocabulariesRequest struct {
-	QueryParams ListVocabulariesQueryParams
-	Headers     ListVocabulariesHeaders
-	Request     shared.ListVocabulariesRequest `request:"mediaType=application/json"`
 }
 
 type ListVocabulariesResponse struct {

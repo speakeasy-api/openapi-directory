@@ -50,7 +50,7 @@ func (e *GETDeleteDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDBClusterQueryParams struct {
+type GETDeleteDBClusterRequest struct {
 	Action GETDeleteDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB cluster identifier for the DB cluster to be deleted. This parameter isn't case-sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match an existing DBClusterIdentifier.</p> </li> </ul>
 	DBClusterIdentifier string `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
@@ -59,21 +59,13 @@ type GETDeleteDBClusterQueryParams struct {
 	// <p>A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default, this parameter is disabled.</p> <note> <p>You must specify a <code>FinalDBSnapshotIdentifier</code> parameter if <code>SkipFinalSnapshot</code> is disabled.</p> </note>
 	SkipFinalSnapshot *bool                         `queryParam:"style=form,explode=true,name=SkipFinalSnapshot"`
 	Version           GETDeleteDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBClusterRequest struct {
-	QueryParams GETDeleteDBClusterQueryParams
-	Headers     GETDeleteDBClusterHeaders
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBClusterResponse struct {

@@ -30,7 +30,7 @@ func (e *DescribeCustomerMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DescribeCustomerMetadataHeaders struct {
+type DescribeCustomerMetadataRequest struct {
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type DescribeCustomerMetadataHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeCustomerMetadataXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeCustomerMetadataRequest struct {
-	Headers DescribeCustomerMetadataHeaders
 }
 
 type DescribeCustomerMetadataResponse struct {

@@ -51,7 +51,7 @@ func (e *GETGETInsightRuleReportVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETInsightRuleReportQueryParams struct {
+type GETGETInsightRuleReportRequest struct {
 	Action GETGETInsightRuleReportActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The end time of the data to use in the report. When used in a raw HTTP Query API, it is formatted as <code>yyyy-MM-dd'T'HH:mm:ss</code>. For example, <code>2019-07-01T23:59:59</code>.
 	EndTime time.Time `queryParam:"style=form,explode=true,name=EndTime"`
@@ -66,23 +66,15 @@ type GETGETInsightRuleReportQueryParams struct {
 	// The name of the rule that you want to see data from.
 	RuleName string `queryParam:"style=form,explode=true,name=RuleName"`
 	// The start time of the data to use in the report. When used in a raw HTTP Query API, it is formatted as <code>yyyy-MM-dd'T'HH:mm:ss</code>. For example, <code>2019-07-01T23:59:59</code>.
-	StartTime time.Time                          `queryParam:"style=form,explode=true,name=StartTime"`
-	Version   GETGETInsightRuleReportVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETInsightRuleReportHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETInsightRuleReportRequest struct {
-	QueryParams GETGETInsightRuleReportQueryParams
-	Headers     GETGETInsightRuleReportHeaders
+	StartTime         time.Time                          `queryParam:"style=form,explode=true,name=StartTime"`
+	Version           GETGETInsightRuleReportVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETInsightRuleReportResponse struct {

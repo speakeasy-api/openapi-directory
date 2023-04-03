@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateBatchOrderInvoiceQueryParams struct {
+type GenerateBatchOrderInvoiceRequest struct {
+	RequestBody []shared.GenerateBatchOrderInvoiceRequestItem `request:"mediaType=application/json"`
 	// Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
 	UserName string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type GenerateBatchOrderInvoiceRequest struct {
-	QueryParams GenerateBatchOrderInvoiceQueryParams
-	Request     []shared.GenerateBatchOrderInvoiceRequestItem `request:"mediaType=application/json"`
 }
 
 type GenerateBatchOrderInvoiceResponse struct {

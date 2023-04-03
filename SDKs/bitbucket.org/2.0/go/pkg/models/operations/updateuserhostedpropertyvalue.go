@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type UpdateUserHostedPropertyValuePathParams struct {
+type UpdateUserHostedPropertyValueRequest struct {
+	// The application property to create or update.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The key of the Connect app.
 	AppKey string `pathParam:"style=simple,explode=false,name=app_key"`
 	// The name of the property.
 	PropertyName string `pathParam:"style=simple,explode=false,name=property_name"`
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type UpdateUserHostedPropertyValueRequest struct {
-	PathParams UpdateUserHostedPropertyValuePathParams
-	// The application property to create or update.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateUserHostedPropertyValueResponse struct {

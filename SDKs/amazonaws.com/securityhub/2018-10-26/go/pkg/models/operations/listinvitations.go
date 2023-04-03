@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListInvitationsQueryParams struct {
+type ListInvitationsRequest struct {
 	// The maximum number of items to return in the response.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that is required for pagination. On your first call to the <code>ListInvitations</code> operation, set the value of this parameter to <code>NULL</code>.</p> <p>For subsequent calls to the operation, to continue listing data, set the value of this parameter to the value returned from the previous response.</p>
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListInvitationsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListInvitationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListInvitationsRequest struct {
-	QueryParams ListInvitationsQueryParams
-	Headers     ListInvitationsHeaders
 }
 
 type ListInvitationsResponse struct {

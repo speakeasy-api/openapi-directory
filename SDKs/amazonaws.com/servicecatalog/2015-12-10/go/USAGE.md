@@ -13,28 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcceptPortfolioShareRequest{
-        Headers: operations.AcceptPortfolioShareHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWS242ServiceCatalogService.AcceptPortfolioShare",
+        AcceptPortfolioShareInput: shared.AcceptPortfolioShareInput{
+            AcceptLanguage: "corrupti",
+            PortfolioID: "provident",
+            PortfolioShareType: "AWS_ORGANIZATIONS",
         },
-        Request: shared.AcceptPortfolioShareInput{
-            AcceptLanguage: "illum",
-            PortfolioID: "vel",
-            PortfolioShareType: "AWS_SERVICECATALOG",
-        },
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
+        XAmzTarget: "AWS242ServiceCatalogService.AcceptPortfolioShare",
     }
 
     ctx := context.Background()

@@ -33,14 +33,7 @@ func (e *DisassociateLicenseLicenseTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DisassociateLicensePathParams struct {
-	// The type of license to remove from the workspace.
-	LicenseType DisassociateLicenseLicenseTypeEnum `pathParam:"style=simple,explode=false,name=licenseType"`
-	// The ID of the workspace to remove the Grafana Enterprise license from.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DisassociateLicenseHeaders struct {
+type DisassociateLicenseRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -48,11 +41,10 @@ type DisassociateLicenseHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateLicenseRequest struct {
-	PathParams DisassociateLicensePathParams
-	Headers    DisassociateLicenseHeaders
+	// The type of license to remove from the workspace.
+	LicenseType DisassociateLicenseLicenseTypeEnum `pathParam:"style=simple,explode=false,name=licenseType"`
+	// The ID of the workspace to remove the Grafana Enterprise license from.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DisassociateLicenseResponse struct {

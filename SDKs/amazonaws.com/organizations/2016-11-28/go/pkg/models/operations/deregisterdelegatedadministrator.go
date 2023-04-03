@@ -30,20 +30,16 @@ func (e *DeregisterDelegatedAdministratorXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type DeregisterDelegatedAdministratorHeaders struct {
-	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeregisterDelegatedAdministratorXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeregisterDelegatedAdministratorRequest struct {
-	Headers DeregisterDelegatedAdministratorHeaders
-	Request shared.DeregisterDelegatedAdministratorRequest `request:"mediaType=application/json"`
+	DeregisterDelegatedAdministratorRequest shared.DeregisterDelegatedAdministratorRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                          *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                       *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                              DeregisterDelegatedAdministratorXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeregisterDelegatedAdministratorResponse struct {

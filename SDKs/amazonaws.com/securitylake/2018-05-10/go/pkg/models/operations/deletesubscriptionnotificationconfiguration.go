@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteSubscriptionNotificationConfigurationPathParams struct {
-	// The ID of the Security Lake subscriber account.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type DeleteSubscriptionNotificationConfigurationHeaders struct {
+type DeleteSubscriptionNotificationConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteSubscriptionNotificationConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSubscriptionNotificationConfigurationRequest struct {
-	PathParams DeleteSubscriptionNotificationConfigurationPathParams
-	Headers    DeleteSubscriptionNotificationConfigurationHeaders
+	// The ID of the Security Lake subscriber account.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type DeleteSubscriptionNotificationConfigurationResponse struct {

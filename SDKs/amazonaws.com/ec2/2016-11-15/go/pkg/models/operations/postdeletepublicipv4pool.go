@@ -50,25 +50,17 @@ func (e *POSTDeletePublicIpv4PoolVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeletePublicIpv4PoolQueryParams struct {
-	Action  POSTDeletePublicIpv4PoolActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeletePublicIpv4PoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeletePublicIpv4PoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeletePublicIpv4PoolRequest struct {
-	QueryParams POSTDeletePublicIpv4PoolQueryParams
-	Headers     POSTDeletePublicIpv4PoolHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeletePublicIpv4PoolActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTDeletePublicIpv4PoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeletePublicIpv4PoolResponse struct {

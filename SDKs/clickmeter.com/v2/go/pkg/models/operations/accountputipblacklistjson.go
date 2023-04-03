@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutIPBlacklistJSONRequest struct {
-	// The entry to add
-	Request shared.APICoreDtoAccountingIPBlacklistEntry `request:"mediaType=application/json"`
-}
-
 type AccountPutIPBlacklistJSONResponse struct {
 	APICoreDtoAccountingIPBlacklistEntry *shared.APICoreDtoAccountingIPBlacklistEntry
 	Body                                 []byte

@@ -8,16 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateSecurityHubConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateSecurityHubConfigurationRequestBodyControlFindingGeneratorEnum - <p>Updates whether the calling account has consolidated control findings turned on. If the value for this field is set to <code>SECURITY_CONTROL</code>, Security Hub generates a single finding for a control check even when the check applies to multiple enabled standards.</p> <p>If the value for this field is set to <code>STANDARD_CONTROL</code>, Security Hub generates separate findings for a control check when the check applies to multiple enabled standards.</p> <p>For accounts that are part of an organization, this value can only be updated in the administrator account.</p>
 type UpdateSecurityHubConfigurationRequestBodyControlFindingGeneratorEnum string
 
@@ -50,8 +40,14 @@ type UpdateSecurityHubConfigurationRequestBody struct {
 }
 
 type UpdateSecurityHubConfigurationRequest struct {
-	Headers UpdateSecurityHubConfigurationHeaders
-	Request UpdateSecurityHubConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSecurityHubConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateSecurityHubConfigurationResponse struct {

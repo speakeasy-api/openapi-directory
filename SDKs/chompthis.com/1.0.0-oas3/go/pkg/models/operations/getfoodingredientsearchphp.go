@@ -10,7 +10,7 @@ import (
 )
 
 type GetFoodIngredientSearchPhpSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=query"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
 // GetFoodIngredientSearchPhpLimitEnum - #### Set maximum number of records you want the API to return, per search term. The default value is "**1**."
@@ -43,7 +43,7 @@ func (e *GetFoodIngredientSearchPhpLimitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFoodIngredientSearchPhpQueryParams struct {
+type GetFoodIngredientSearchPhpRequest struct {
 	// Search our database for a single ingredient or a specific set of ingredients.
 	//
 	// **Example #1: Single Ingredient**
@@ -62,11 +62,6 @@ type GetFoodIngredientSearchPhpQueryParams struct {
 	// > ```&limit=3```
 	//
 	Limit *GetFoodIngredientSearchPhpLimitEnum `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetFoodIngredientSearchPhpRequest struct {
-	QueryParams GetFoodIngredientSearchPhpQueryParams
-	Security    GetFoodIngredientSearchPhpSecurity
 }
 
 type GetFoodIngredientSearchPhpResponse struct {

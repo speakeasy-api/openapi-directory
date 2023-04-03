@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRecommendedLocationRequest{
-        QueryParams: operations.GetRecommendedLocationQueryParams{
-            CityCodes: "corrupti",
-            DestinationCountryCodes: "provident",
-            TravelerCountryCode: "distinctio",
-        },
+        CityCodes: "corrupti",
+        DestinationCountryCodes: "provident",
+        TravelerCountryCode: "distinctio",
     }
 
     ctx := context.Background()

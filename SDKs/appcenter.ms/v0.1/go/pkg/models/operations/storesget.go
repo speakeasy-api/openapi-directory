@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type StoresGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type StoresGetPathParams struct {
+type StoresGetRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The name of the store
 	StoreName string `pathParam:"style=simple,explode=false,name=store_name"`
-}
-
-type StoresGetRequest struct {
-	PathParams StoresGetPathParams
-	Security   StoresGetSecurity
 }
 
 type StoresGetDefaultApplicationJSONCodeEnum string

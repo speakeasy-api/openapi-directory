@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartReadSetExportJobPathParams struct {
-	// The read set's sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
-type StartReadSetExportJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type StartReadSetExportJobRequestBody struct {
 	// To ensure that jobs don't run multiple times, specify a unique token for each job.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -34,9 +19,16 @@ type StartReadSetExportJobRequestBody struct {
 }
 
 type StartReadSetExportJobRequest struct {
-	PathParams StartReadSetExportJobPathParams
-	Headers    StartReadSetExportJobHeaders
-	Request    StartReadSetExportJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartReadSetExportJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The read set's sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type StartReadSetExportJobResponse struct {

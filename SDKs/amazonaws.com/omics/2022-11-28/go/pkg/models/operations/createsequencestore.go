@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSequenceStoreHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateSequenceStoreRequestBodySseConfig - Server-side encryption (SSE) settings for a store.
 type CreateSequenceStoreRequestBodySseConfig struct {
 	KeyArn *string                    `json:"keyArn,omitempty"`
@@ -37,8 +27,14 @@ type CreateSequenceStoreRequestBody struct {
 }
 
 type CreateSequenceStoreRequest struct {
-	Headers CreateSequenceStoreHeaders
-	Request CreateSequenceStoreRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSequenceStoreRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateSequenceStoreResponse struct {

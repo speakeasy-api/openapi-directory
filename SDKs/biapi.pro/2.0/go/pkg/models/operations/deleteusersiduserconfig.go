@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteUsersIDUserConfigPathParams struct {
+type DeleteUsersIDUserConfigRequest struct {
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type DeleteUsersIDUserConfigRequest struct {
-	PathParams DeleteUsersIDUserConfigPathParams
 }
 
 type DeleteUsersIDUserConfigResponse struct {

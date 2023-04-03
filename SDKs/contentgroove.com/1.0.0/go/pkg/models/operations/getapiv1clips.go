@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1ClipsSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 // GetAPIV1ClipsSortEnum - Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
@@ -49,7 +48,7 @@ func (e *GetAPIV1ClipsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV1ClipsQueryParams struct {
+type GetAPIV1ClipsRequest struct {
 	// Filters to be applied to the query.
 	//
 	// Query params in the url must look like this: "filter[attributeName_*matcher*]"
@@ -64,11 +63,6 @@ type GetAPIV1ClipsQueryParams struct {
 	Page map[string]interface{} `queryParam:"style=deepObject,explode=true,name=page"`
 	// Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
 	Sort *GetAPIV1ClipsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAPIV1ClipsRequest struct {
-	QueryParams GetAPIV1ClipsQueryParams
-	Security    GetAPIV1ClipsSecurity
 }
 
 type GetAPIV1ClipsResponse struct {

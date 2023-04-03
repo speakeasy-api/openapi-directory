@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSuiteRunPathParams struct {
-	// Suite definition ID for the test suite run.
-	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
-	// Suite run ID for the test suite run.
-	SuiteRunID string `pathParam:"style=simple,explode=false,name=suiteRunId"`
-}
-
-type GetSuiteRunHeaders struct {
+type GetSuiteRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetSuiteRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSuiteRunRequest struct {
-	PathParams GetSuiteRunPathParams
-	Headers    GetSuiteRunHeaders
+	// Suite definition ID for the test suite run.
+	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
+	// Suite run ID for the test suite run.
+	SuiteRunID string `pathParam:"style=simple,explode=false,name=suiteRunId"`
 }
 
 type GetSuiteRunResponse struct {

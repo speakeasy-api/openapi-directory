@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateScenePathParams struct {
-	// The ID of the scene.
-	SceneID string `pathParam:"style=simple,explode=false,name=sceneId"`
-	// The ID of the workspace that contains the scene.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type UpdateSceneHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateSceneRequestBody struct {
 	// A list of capabilities that the scene uses to render.
 	Capabilities []string `json:"capabilities,omitempty"`
@@ -36,9 +19,18 @@ type UpdateSceneRequestBody struct {
 }
 
 type UpdateSceneRequest struct {
-	PathParams UpdateScenePathParams
-	Headers    UpdateSceneHeaders
-	Request    UpdateSceneRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSceneRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the scene.
+	SceneID string `pathParam:"style=simple,explode=false,name=sceneId"`
+	// The ID of the workspace that contains the scene.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type UpdateSceneResponse struct {

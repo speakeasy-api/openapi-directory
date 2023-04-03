@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWaveHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateWaveRequestBody struct {
 	// Wave description.
 	Description *string `json:"description,omitempty"`
@@ -27,8 +17,14 @@ type CreateWaveRequestBody struct {
 }
 
 type CreateWaveRequest struct {
-	Headers CreateWaveHeaders
-	Request CreateWaveRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateWaveRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateWaveResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArtifactVersionMetaDataByContentPathParams struct {
+type GetArtifactVersionMetaDataByContentRequest struct {
+	// The content of an artifact version.
+	RequestBody []byte `request:"mediaType=*/*"`
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GetArtifactVersionMetaDataByContentQueryParams struct {
 	// Parameter that can be set to `true` to indicate that the server should "canonicalize" the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
 	Canonical *bool `queryParam:"style=form,explode=true,name=canonical"`
-}
-
-type GetArtifactVersionMetaDataByContentRequest struct {
-	PathParams  GetArtifactVersionMetaDataByContentPathParams
-	QueryParams GetArtifactVersionMetaDataByContentQueryParams
-	// The content of an artifact version.
-	Request []byte `request:"mediaType=*/*"`
+	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type GetArtifactVersionMetaDataByContentResponse struct {

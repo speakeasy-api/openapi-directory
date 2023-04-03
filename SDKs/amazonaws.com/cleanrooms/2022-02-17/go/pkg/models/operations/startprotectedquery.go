@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartProtectedQueryPathParams struct {
-	// A unique identifier for the membership to run this query against. Currently accepts a membership ID.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
-type StartProtectedQueryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartProtectedQueryRequestBodyResultConfiguration - Contains configurations for protected query results.
 type StartProtectedQueryRequestBodyResultConfiguration struct {
 	OutputConfiguration *shared.ProtectedQueryOutputConfiguration `json:"outputConfiguration,omitempty"`
@@ -65,9 +50,16 @@ type StartProtectedQueryRequestBody struct {
 }
 
 type StartProtectedQueryRequest struct {
-	PathParams StartProtectedQueryPathParams
-	Headers    StartProtectedQueryHeaders
-	Request    StartProtectedQueryRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartProtectedQueryRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier for the membership to run this query against. Currently accepts a membership ID.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
 }
 
 type StartProtectedQueryResponse struct {

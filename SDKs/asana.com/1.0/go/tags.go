@@ -48,7 +48,7 @@ func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagReques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -63,7 +63,7 @@ func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,9 +130,9 @@ func (s *tags) CreateTag(ctx context.Context, request operations.CreateTagReques
 // Returns the full record of the newly created tag.
 func (s *tags) CreateTagForWorkspace(ctx context.Context, request operations.CreateTagForWorkspaceRequest) (*operations.CreateTagForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -147,7 +147,7 @@ func (s *tags) CreateTagForWorkspace(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -210,14 +210,14 @@ func (s *tags) CreateTagForWorkspace(ctx context.Context, request operations.Cre
 // Returns an empty data record.
 func (s *tags) DeleteTag(ctx context.Context, request operations.DeleteTagRequest) (*operations.DeleteTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -277,14 +277,14 @@ func (s *tags) DeleteTag(ctx context.Context, request operations.DeleteTagReques
 // Returns the complete tag record for a single tag.
 func (s *tags) GetTag(ctx context.Context, request operations.GetTagRequest) (*operations.GetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -351,7 +351,7 @@ func (s *tags) GetTags(ctx context.Context, request operations.GetTagsRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -411,14 +411,14 @@ func (s *tags) GetTags(ctx context.Context, request operations.GetTagsRequest) (
 // Get a compact representation of all of the tags the task has.
 func (s *tags) GetTagsForTask(ctx context.Context, request operations.GetTagsForTaskRequest) (*operations.GetTagsForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -478,14 +478,14 @@ func (s *tags) GetTagsForTask(ctx context.Context, request operations.GetTagsFor
 // Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.
 func (s *tags) GetTagsForWorkspace(ctx context.Context, request operations.GetTagsForWorkspaceRequest) (*operations.GetTagsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -552,14 +552,14 @@ func (s *tags) GetTagsForWorkspace(ctx context.Context, request operations.GetTa
 // Returns the complete updated tag record.
 func (s *tags) UpdateTag(ctx context.Context, request operations.UpdateTagRequest) (*operations.UpdateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

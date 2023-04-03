@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWorkspaceAPIKeyPathParams struct {
-	// The ID of the workspace to create an API key.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type CreateWorkspaceAPIKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateWorkspaceAPIKeyRequestBody struct {
 	// Specifies the name of the key. Keynames must be unique to the workspace.
 	KeyName string `json:"keyName"`
@@ -32,9 +17,16 @@ type CreateWorkspaceAPIKeyRequestBody struct {
 }
 
 type CreateWorkspaceAPIKeyRequest struct {
-	PathParams CreateWorkspaceAPIKeyPathParams
-	Headers    CreateWorkspaceAPIKeyHeaders
-	Request    CreateWorkspaceAPIKeyRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateWorkspaceAPIKeyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the workspace to create an API key.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type CreateWorkspaceAPIKeyResponse struct {

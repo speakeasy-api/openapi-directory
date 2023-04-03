@@ -50,28 +50,20 @@ func (e *GETDeleteLifecycleHookVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteLifecycleHookQueryParams struct {
+type GETDeleteLifecycleHookRequest struct {
 	Action GETDeleteLifecycleHookActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The name of the lifecycle hook.
 	LifecycleHookName string                            `queryParam:"style=form,explode=true,name=LifecycleHookName"`
 	Version           GETDeleteLifecycleHookVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteLifecycleHookHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteLifecycleHookRequest struct {
-	QueryParams GETDeleteLifecycleHookQueryParams
-	Headers     GETDeleteLifecycleHookHeaders
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteLifecycleHookResponse struct {

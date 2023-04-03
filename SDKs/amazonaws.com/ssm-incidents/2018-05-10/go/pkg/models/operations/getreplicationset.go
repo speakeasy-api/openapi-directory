@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReplicationSetQueryParams struct {
-	// The Amazon Resource Name (ARN) of the replication set you want to retrieve.
-	Arn string `queryParam:"style=form,explode=true,name=arn"`
-}
-
-type GetReplicationSetHeaders struct {
+type GetReplicationSetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetReplicationSetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReplicationSetRequest struct {
-	QueryParams GetReplicationSetQueryParams
-	Headers     GetReplicationSetHeaders
+	// The Amazon Resource Name (ARN) of the replication set you want to retrieve.
+	Arn string `queryParam:"style=form,explode=true,name=arn"`
 }
 
 type GetReplicationSetResponse struct {

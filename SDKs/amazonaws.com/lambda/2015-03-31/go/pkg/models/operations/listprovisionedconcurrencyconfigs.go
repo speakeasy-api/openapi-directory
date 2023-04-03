@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProvisionedConcurrencyConfigsPathParams struct {
-	// <p>The name of the Lambda function.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code>.</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
 // ListProvisionedConcurrencyConfigsListEnum
 type ListProvisionedConcurrencyConfigsListEnum string
 
@@ -35,15 +30,14 @@ func (e *ListProvisionedConcurrencyConfigsListEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListProvisionedConcurrencyConfigsQueryParams struct {
-	List ListProvisionedConcurrencyConfigsListEnum `queryParam:"style=form,explode=true,name=List"`
+type ListProvisionedConcurrencyConfigsRequest struct {
+	// <p>The name of the Lambda function.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code>.</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
+	FunctionName string                                    `pathParam:"style=simple,explode=false,name=FunctionName"`
+	List         ListProvisionedConcurrencyConfigsListEnum `queryParam:"style=form,explode=true,name=List"`
 	// Specify the pagination token that's returned by a previous request to retrieve the next page of results.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Specify a number to limit the number of configurations returned.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListProvisionedConcurrencyConfigsHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -51,12 +45,6 @@ type ListProvisionedConcurrencyConfigsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProvisionedConcurrencyConfigsRequest struct {
-	PathParams  ListProvisionedConcurrencyConfigsPathParams
-	QueryParams ListProvisionedConcurrencyConfigsQueryParams
-	Headers     ListProvisionedConcurrencyConfigsHeaders
 }
 
 type ListProvisionedConcurrencyConfigsResponse struct {

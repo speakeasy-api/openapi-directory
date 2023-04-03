@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestTenantWebhookPathParams struct {
-	// Webhook ID
-	WebhookID int64 `pathParam:"style=simple,explode=false,name=webhook_id"`
-}
-
 // RequestTenantWebhookXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestTenantWebhookXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestTenantWebhookXSdsDateFormatEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type RequestTenantWebhookHeaders struct {
+type RequestTenantWebhookRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestTenantWebhookXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RequestTenantWebhookRequest struct {
-	PathParams RequestTenantWebhookPathParams
-	Headers    RequestTenantWebhookHeaders
+	// Webhook ID
+	WebhookID int64 `pathParam:"style=simple,explode=false,name=webhook_id"`
 }
 
 type RequestTenantWebhookResponse struct {

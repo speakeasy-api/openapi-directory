@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TinVerificationBasicCheckSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
-type TinVerificationBasicCheckQueryParams struct {
+type TinVerificationBasicCheckRequest struct {
 	// Company Name
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// Nine letter TIN number with or without hyphens
 	Tin string `queryParam:"style=form,explode=true,name=tin"`
-}
-
-type TinVerificationBasicCheckRequest struct {
-	QueryParams TinVerificationBasicCheckQueryParams
-	Security    TinVerificationBasicCheckSecurity
 }
 
 // TinVerificationBasicCheckDefaultApplicationJSON - Detailed information about the error

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OptionsBlockIDTransactionIndexPathParams struct {
+type OptionsBlockIDTransactionIndexRequest struct {
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Automatically added
 	Index string `pathParam:"style=simple,explode=false,name=index"`
-}
-
-type OptionsBlockIDTransactionIndexRequest struct {
-	PathParams OptionsBlockIDTransactionIndexPathParams
 }
 
 type OptionsBlockIDTransactionIndexResponse struct {

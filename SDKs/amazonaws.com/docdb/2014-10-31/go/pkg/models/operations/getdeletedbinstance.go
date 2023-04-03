@@ -50,26 +50,18 @@ func (e *GETDeleteDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDBInstanceQueryParams struct {
+type GETDeleteDBInstanceRequest struct {
 	Action GETDeleteDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The instance identifier for the instance to be deleted. This parameter isn't case sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match the name of an existing instance.</p> </li> </ul>
 	DBInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Version              GETDeleteDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBInstanceRequest struct {
-	QueryParams GETDeleteDBInstanceQueryParams
-	Headers     GETDeleteDBInstanceHeaders
+	XAmzAlgorithm        *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBInstanceResponse struct {

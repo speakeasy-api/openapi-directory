@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRoutingControlHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateRoutingControlRequestBody struct {
 	// A unique, case-sensitive string of up to 64 ASCII characters. To make an idempotent API request with an action, specify a client token in the request.
 	ClientToken *string `json:"ClientToken,omitempty"`
@@ -29,8 +19,14 @@ type CreateRoutingControlRequestBody struct {
 }
 
 type CreateRoutingControlRequest struct {
-	Headers CreateRoutingControlHeaders
-	Request CreateRoutingControlRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateRoutingControlRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateRoutingControlResponse struct {

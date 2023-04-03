@@ -39,15 +39,11 @@ func (e *ProvincesOptionalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProvincesQueryParams struct {
+type ProvincesRequest struct {
 	// A boolean parameter. If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
 	Optional *ProvincesOptionalEnum `queryParam:"style=form,explode=true,name=optional"`
 	// A calendar year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type ProvincesRequest struct {
-	QueryParams ProvincesQueryParams
 }
 
 // Provinces200ApplicationJSON - OK

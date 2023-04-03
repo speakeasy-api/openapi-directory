@@ -20,5 +20,4 @@ pkg/models/operations/dtcer.go
 pkg/models/operations/incer.go
 pkg/models/shared/academiccertificateschema.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

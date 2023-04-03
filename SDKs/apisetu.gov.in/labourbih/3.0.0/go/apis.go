@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Alimw - Application for License for Inter State Migrant Workmen
 // API to verify Application for License for Inter State Migrant Workmen.
-func (s *apIs) Alimw(ctx context.Context, request operations.AlimwRequest) (*operations.AlimwResponse, error) {
+func (s *apIs) Alimw(ctx context.Context, request operations.AlimwRequestBody, security operations.AlimwSecurity) (*operations.AlimwResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alimw/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Alimw(ctx context.Context, request operations.AlimwRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Alimw(ctx context.Context, request operations.AlimwRequest) (*ope
 
 // Alsbl - Application/ License for Boilers
 // API to verify Application/ License for Boilers.
-func (s *apIs) Alsbl(ctx context.Context, request operations.AlsblRequest) (*operations.AlsblResponse, error) {
+func (s *apIs) Alsbl(ctx context.Context, request operations.AlsblRequestBody, security operations.AlsblSecurity) (*operations.AlsblResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alsbl/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Alsbl(ctx context.Context, request operations.AlsblRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Alsbl(ctx context.Context, request operations.AlsblRequest) (*ope
 
 // Alsfc - Application/ License for Factory
 // API to verify Application/ License for Factory.
-func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequest) (*operations.AlsfcResponse, error) {
+func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequestBody, security operations.AlsfcSecurity) (*operations.AlsfcResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alsfc/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequest) (*ope
 
 // Apptu - Application realted to Trade Unions
 // API to verify Application realted to Trade Unions.
-func (s *apIs) Apptu(ctx context.Context, request operations.ApptuRequest) (*operations.ApptuResponse, error) {
+func (s *apIs) Apptu(ctx context.Context, request operations.ApptuRequestBody, security operations.ApptuSecurity) (*operations.ApptuResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apptu/certificate"
 
@@ -388,7 +388,7 @@ func (s *apIs) Apptu(ctx context.Context, request operations.ApptuRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,7 +485,7 @@ func (s *apIs) Apptu(ctx context.Context, request operations.ApptuRequest) (*ope
 
 // Clcer - Registration Certificate for Contract Labour License
 // API to verify Registration Certificate for Contract Labour License.
-func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequest) (*operations.ClcerResponse, error) {
+func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequestBody, security operations.ClcerSecurity) (*operations.ClcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clcer/certificate"
 
@@ -501,7 +501,7 @@ func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -598,7 +598,7 @@ func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequest) (*ope
 
 // Noocl - Notice of Closure
 // API to verify Notice of Closure.
-func (s *apIs) Noocl(ctx context.Context, request operations.NooclRequest) (*operations.NooclResponse, error) {
+func (s *apIs) Noocl(ctx context.Context, request operations.NooclRequestBody, security operations.NooclSecurity) (*operations.NooclResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/noocl/certificate"
 
@@ -614,7 +614,7 @@ func (s *apIs) Noocl(ctx context.Context, request operations.NooclRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -711,7 +711,7 @@ func (s *apIs) Noocl(ctx context.Context, request operations.NooclRequest) (*ope
 
 // Srcer - Registration Certificate of Shops And Commercial Establishment
 // API to verify Registration Certificate of Shops And Commercial Establishment.
-func (s *apIs) Srcer(ctx context.Context, request operations.SrcerRequest) (*operations.SrcerResponse, error) {
+func (s *apIs) Srcer(ctx context.Context, request operations.SrcerRequestBody, security operations.SrcerSecurity) (*operations.SrcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/srcer/certificate"
 
@@ -727,7 +727,7 @@ func (s *apIs) Srcer(ctx context.Context, request operations.SrcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

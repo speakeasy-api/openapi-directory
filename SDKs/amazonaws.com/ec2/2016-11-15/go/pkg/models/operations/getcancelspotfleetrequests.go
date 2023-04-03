@@ -50,7 +50,7 @@ func (e *GETCancelSpotFleetRequestsVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETCancelSpotFleetRequestsQueryParams struct {
+type GETCancelSpotFleetRequestsRequest struct {
 	Action GETCancelSpotFleetRequestsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -59,21 +59,13 @@ type GETCancelSpotFleetRequestsQueryParams struct {
 	// <p>Indicates whether to terminate the associated instances when the Spot Fleet request is canceled. The default is to terminate the instances.</p> <p>To let the instances continue to run after the Spot Fleet request is canceled, specify <code>no-terminate-instances</code>.</p>
 	TerminateInstances bool                                  `queryParam:"style=form,explode=true,name=TerminateInstances"`
 	Version            GETCancelSpotFleetRequestsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelSpotFleetRequestsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCancelSpotFleetRequestsRequest struct {
-	QueryParams GETCancelSpotFleetRequestsQueryParams
-	Headers     GETCancelSpotFleetRequestsHeaders
+	XAmzAlgorithm      *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCancelSpotFleetRequestsResponse struct {

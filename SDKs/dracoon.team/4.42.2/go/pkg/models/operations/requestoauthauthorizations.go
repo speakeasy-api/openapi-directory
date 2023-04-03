@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestOAuthAuthorizationsQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestOAuthAuthorizationsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestOAuthAuthorizationsXSdsDateFormatEnum string
 
@@ -49,16 +42,15 @@ func (e *RequestOAuthAuthorizationsXSdsDateFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type RequestOAuthAuthorizationsHeaders struct {
+type RequestOAuthAuthorizationsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestOAuthAuthorizationsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestOAuthAuthorizationsRequest struct {
-	QueryParams RequestOAuthAuthorizationsQueryParams
-	Headers     RequestOAuthAuthorizationsHeaders
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestOAuthAuthorizationsResponse struct {

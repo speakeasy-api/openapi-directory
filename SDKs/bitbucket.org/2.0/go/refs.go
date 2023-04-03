@@ -45,16 +45,16 @@ func newRefs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 //
 // The branch name should not include any prefixes (e.g.
 // refs/heads).
-func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse, error) {
+func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -95,16 +95,16 @@ func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.C
 // Delete a tag in the specified repository.
 //
 // The tag name should not include any prefixes (e.g. refs/tags).
-func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
+func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -154,20 +154,20 @@ func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Conte
 //
 // Sorting can be changed using the ?sort= query parameter. When using ?sort=name to explicitly sort on ref name,
 // Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
-func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugRefsResponse, error) {
+func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -353,20 +353,20 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request
 //
 //	Sorting can be changed using the ?q= query parameter. When using ?q=name to explicitly sort on ref name,
 //	Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
-func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse, error) {
+func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,16 +534,16 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context,
 //
 //	For Git, the branch name should not include any prefixes (e.g.
 //	refs/heads).
-func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest) (*operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse, error) {
+func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -601,20 +601,20 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Cont
 //
 // Sorting can be changed using the ?sort= query parameter. When using ?sort=name to explicitly sort on ref name,
 // Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
-func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse, error) {
+func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -789,16 +789,16 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, req
 //	}
 //
 // ```
-func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest) (*operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
+func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -872,16 +872,16 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context,
 // the commit hash, but it may return a 400 response if the provided
 // prefix is ambiguous. Using a full commit hash is the preferred
 // approach.
-func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest) (*operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse, error) {
+func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest, security operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -949,11 +949,11 @@ func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context
 // This endpoint does support using short hash prefixes for the commit
 // hash, but it may return a 400 response if the provided prefix is
 // ambiguous. Using a full commit hash is the preferred approach.
-func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse, error) {
+func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest, security operations.PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -968,7 +968,7 @@ func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

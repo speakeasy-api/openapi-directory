@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendEmailHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SendEmailRequestBodyContent - An object that defines the entire content of the email, including the message headers and the body content. You can create a simple email message, in which you specify the subject and the text and HTML versions of the message body. You can also create raw messages, in which you specify a complete MIME-formatted message. Raw messages can include attachments and custom headers.
 type SendEmailRequestBodyContent struct {
 	Raw      *shared.RawMessage `json:"Raw,omitempty"`
@@ -49,8 +39,14 @@ type SendEmailRequestBody struct {
 }
 
 type SendEmailRequest struct {
-	Headers SendEmailHeaders
-	Request SendEmailRequestBody `request:"mediaType=application/json"`
+	RequestBody       SendEmailRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SendEmailResponse struct {

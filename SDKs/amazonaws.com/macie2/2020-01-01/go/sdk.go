@@ -116,7 +116,7 @@ func (s *SDK) AcceptInvitation(ctx context.Context, request operations.AcceptInv
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitations/accept"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AcceptInvitation(ctx context.Context, request operations.AcceptInv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -242,7 +242,7 @@ func (s *SDK) BatchGetCustomDataIdentifiers(ctx context.Context, request operati
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custom-data-identifiers/get"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) BatchGetCustomDataIdentifiers(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -368,7 +368,7 @@ func (s *SDK) CreateAllowList(ctx context.Context, request operations.CreateAllo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/allow-lists"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *SDK) CreateAllowList(ctx context.Context, request operations.CreateAllo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -494,7 +494,7 @@ func (s *SDK) CreateClassificationJob(ctx context.Context, request operations.Cr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,7 +509,7 @@ func (s *SDK) CreateClassificationJob(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -620,7 +620,7 @@ func (s *SDK) CreateCustomDataIdentifier(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custom-data-identifiers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -635,7 +635,7 @@ func (s *SDK) CreateCustomDataIdentifier(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -746,7 +746,7 @@ func (s *SDK) CreateFindingsFilter(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/findingsfilters"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -761,7 +761,7 @@ func (s *SDK) CreateFindingsFilter(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -872,7 +872,7 @@ func (s *SDK) CreateInvitations(ctx context.Context, request operations.CreateIn
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -887,7 +887,7 @@ func (s *SDK) CreateInvitations(ctx context.Context, request operations.CreateIn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -998,7 +998,7 @@ func (s *SDK) CreateMember(ctx context.Context, request operations.CreateMemberR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/members"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1013,7 +1013,7 @@ func (s *SDK) CreateMember(ctx context.Context, request operations.CreateMemberR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1124,7 +1124,7 @@ func (s *SDK) CreateSampleFindings(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/findings/sample"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1139,7 +1139,7 @@ func (s *SDK) CreateSampleFindings(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1250,7 +1250,7 @@ func (s *SDK) DeclineInvitations(ctx context.Context, request operations.Decline
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitations/decline"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1265,7 +1265,7 @@ func (s *SDK) DeclineInvitations(ctx context.Context, request operations.Decline
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1374,16 +1374,16 @@ func (s *SDK) DeclineInvitations(ctx context.Context, request operations.Decline
 // DeleteAllowList - Deletes an allow list.
 func (s *SDK) DeleteAllowList(ctx context.Context, request operations.DeleteAllowListRequest) (*operations.DeleteAllowListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1474,14 +1474,14 @@ func (s *SDK) DeleteAllowList(ctx context.Context, request operations.DeleteAllo
 // DeleteCustomDataIdentifier - Soft deletes a custom data identifier.
 func (s *SDK) DeleteCustomDataIdentifier(ctx context.Context, request operations.DeleteCustomDataIdentifierRequest) (*operations.DeleteCustomDataIdentifierResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1590,14 +1590,14 @@ func (s *SDK) DeleteCustomDataIdentifier(ctx context.Context, request operations
 // DeleteFindingsFilter - Deletes a findings filter.
 func (s *SDK) DeleteFindingsFilter(ctx context.Context, request operations.DeleteFindingsFilterRequest) (*operations.DeleteFindingsFilterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1708,7 +1708,7 @@ func (s *SDK) DeleteInvitations(ctx context.Context, request operations.DeleteIn
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitations/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1723,7 +1723,7 @@ func (s *SDK) DeleteInvitations(ctx context.Context, request operations.DeleteIn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1832,14 +1832,14 @@ func (s *SDK) DeleteInvitations(ctx context.Context, request operations.DeleteIn
 // DeleteMember - Deletes the association between an Amazon Macie administrator account and an account.
 func (s *SDK) DeleteMember(ctx context.Context, request operations.DeleteMemberRequest) (*operations.DeleteMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/members/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1950,7 +1950,7 @@ func (s *SDK) DescribeBuckets(ctx context.Context, request operations.DescribeBu
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datasources/s3"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1965,9 +1965,9 @@ func (s *SDK) DescribeBuckets(ctx context.Context, request operations.DescribeBu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2078,14 +2078,14 @@ func (s *SDK) DescribeBuckets(ctx context.Context, request operations.DescribeBu
 // DescribeClassificationJob - Retrieves the status and settings for a classification job.
 func (s *SDK) DescribeClassificationJob(ctx context.Context, request operations.DescribeClassificationJobRequest) (*operations.DescribeClassificationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2201,7 +2201,7 @@ func (s *SDK) DescribeOrganizationConfiguration(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2317,7 +2317,7 @@ func (s *SDK) DisableMacie(ctx context.Context, request operations.DisableMacieR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2433,9 +2433,9 @@ func (s *SDK) DisableOrganizationAdminAccount(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2553,7 +2553,7 @@ func (s *SDK) DisassociateFromAdministratorAccount(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2669,7 +2669,7 @@ func (s *SDK) DisassociateFromMasterAccount(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2778,14 +2778,14 @@ func (s *SDK) DisassociateFromMasterAccount(ctx context.Context, request operati
 // DisassociateMember - Disassociates an Amazon Macie administrator account from a member account.
 func (s *SDK) DisassociateMember(ctx context.Context, request operations.DisassociateMemberRequest) (*operations.DisassociateMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/members/disassociate/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/members/disassociate/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2896,7 +2896,7 @@ func (s *SDK) EnableMacie(ctx context.Context, request operations.EnableMacieReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/macie"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2911,7 +2911,7 @@ func (s *SDK) EnableMacie(ctx context.Context, request operations.EnableMacieReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3022,7 +3022,7 @@ func (s *SDK) EnableOrganizationAdminAccount(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3037,7 +3037,7 @@ func (s *SDK) EnableOrganizationAdminAccount(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3153,7 +3153,7 @@ func (s *SDK) GetAdministratorAccount(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3262,14 +3262,14 @@ func (s *SDK) GetAdministratorAccount(ctx context.Context, request operations.Ge
 // GetAllowList - Retrieves the settings and status of an allow list.
 func (s *SDK) GetAllowList(ctx context.Context, request operations.GetAllowListRequest) (*operations.GetAllowListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3365,7 +3365,7 @@ func (s *SDK) GetAutomatedDiscoveryConfiguration(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3446,7 +3446,7 @@ func (s *SDK) GetBucketStatistics(ctx context.Context, request operations.GetBuc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datasources/s3/statistics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3461,7 +3461,7 @@ func (s *SDK) GetBucketStatistics(ctx context.Context, request operations.GetBuc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3577,7 +3577,7 @@ func (s *SDK) GetClassificationExportConfiguration(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3686,14 +3686,14 @@ func (s *SDK) GetClassificationExportConfiguration(ctx context.Context, request 
 // GetClassificationScope - Retrieves the classification scope settings for an account.
 func (s *SDK) GetClassificationScope(ctx context.Context, request operations.GetClassificationScopeRequest) (*operations.GetClassificationScopeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3782,14 +3782,14 @@ func (s *SDK) GetClassificationScope(ctx context.Context, request operations.Get
 // GetCustomDataIdentifier - Retrieves the criteria and other settings for a custom data identifier.
 func (s *SDK) GetCustomDataIdentifier(ctx context.Context, request operations.GetCustomDataIdentifierRequest) (*operations.GetCustomDataIdentifierResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3900,7 +3900,7 @@ func (s *SDK) GetFindingStatistics(ctx context.Context, request operations.GetFi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/findings/statistics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3915,7 +3915,7 @@ func (s *SDK) GetFindingStatistics(ctx context.Context, request operations.GetFi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4026,7 +4026,7 @@ func (s *SDK) GetFindings(ctx context.Context, request operations.GetFindingsReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/findings/describe"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4041,7 +4041,7 @@ func (s *SDK) GetFindings(ctx context.Context, request operations.GetFindingsReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4150,14 +4150,14 @@ func (s *SDK) GetFindings(ctx context.Context, request operations.GetFindingsReq
 // GetFindingsFilter - Retrieves the criteria and other settings for a findings filter.
 func (s *SDK) GetFindingsFilter(ctx context.Context, request operations.GetFindingsFilterRequest) (*operations.GetFindingsFilterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4273,7 +4273,7 @@ func (s *SDK) GetFindingsPublicationConfiguration(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4389,7 +4389,7 @@ func (s *SDK) GetInvitationsCount(ctx context.Context, request operations.GetInv
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4505,7 +4505,7 @@ func (s *SDK) GetMacieSession(ctx context.Context, request operations.GetMacieSe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4621,7 +4621,7 @@ func (s *SDK) GetMasterAccount(ctx context.Context, request operations.GetMaster
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4730,14 +4730,14 @@ func (s *SDK) GetMasterAccount(ctx context.Context, request operations.GetMaster
 // GetMember - Retrieves information about an account that's associated with an Amazon Macie administrator account.
 func (s *SDK) GetMember(ctx context.Context, request operations.GetMemberRequest) (*operations.GetMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/members/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4853,9 +4853,9 @@ func (s *SDK) GetResourceProfile(ctx context.Context, request operations.GetReso
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4963,7 +4963,7 @@ func (s *SDK) GetRevealConfiguration(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5042,14 +5042,14 @@ func (s *SDK) GetRevealConfiguration(ctx context.Context, request operations.Get
 // GetSensitiveDataOccurrences - Retrieves occurrences of sensitive data reported by a finding.
 func (s *SDK) GetSensitiveDataOccurrences(ctx context.Context, request operations.GetSensitiveDataOccurrencesRequest) (*operations.GetSensitiveDataOccurrencesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5148,14 +5148,14 @@ func (s *SDK) GetSensitiveDataOccurrences(ctx context.Context, request operation
 // GetSensitiveDataOccurrencesAvailability - Checks whether occurrences of sensitive data can be retrieved for a finding.
 func (s *SDK) GetSensitiveDataOccurrencesAvailability(ctx context.Context, request operations.GetSensitiveDataOccurrencesAvailabilityRequest) (*operations.GetSensitiveDataOccurrencesAvailabilityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal/availability", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal/availability", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5234,14 +5234,14 @@ func (s *SDK) GetSensitiveDataOccurrencesAvailability(ctx context.Context, reque
 // GetSensitivityInspectionTemplate -  <p>Retrieves the settings for the sensitivity inspection template for an account.</p>
 func (s *SDK) GetSensitivityInspectionTemplate(ctx context.Context, request operations.GetSensitivityInspectionTemplateRequest) (*operations.GetSensitivityInspectionTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5332,7 +5332,7 @@ func (s *SDK) GetUsageStatistics(ctx context.Context, request operations.GetUsag
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/usage/statistics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5347,9 +5347,9 @@ func (s *SDK) GetUsageStatistics(ctx context.Context, request operations.GetUsag
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5467,9 +5467,9 @@ func (s *SDK) GetUsageTotals(ctx context.Context, request operations.GetUsageTot
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5587,9 +5587,9 @@ func (s *SDK) ListAllowLists(ctx context.Context, request operations.ListAllowLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5672,7 +5672,7 @@ func (s *SDK) ListClassificationJobs(ctx context.Context, request operations.Lis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jobs/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5687,9 +5687,9 @@ func (s *SDK) ListClassificationJobs(ctx context.Context, request operations.Lis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5807,9 +5807,9 @@ func (s *SDK) ListClassificationScopes(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5892,7 +5892,7 @@ func (s *SDK) ListCustomDataIdentifiers(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custom-data-identifiers/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5907,9 +5907,9 @@ func (s *SDK) ListCustomDataIdentifiers(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6022,7 +6022,7 @@ func (s *SDK) ListFindings(ctx context.Context, request operations.ListFindingsR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/findings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6037,9 +6037,9 @@ func (s *SDK) ListFindings(ctx context.Context, request operations.ListFindingsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6157,9 +6157,9 @@ func (s *SDK) ListFindingsFilters(ctx context.Context, request operations.ListFi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6277,9 +6277,9 @@ func (s *SDK) ListInvitations(ctx context.Context, request operations.ListInvita
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6392,7 +6392,7 @@ func (s *SDK) ListManagedDataIdentifiers(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/managed-data-identifiers/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6407,9 +6407,9 @@ func (s *SDK) ListManagedDataIdentifiers(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6457,9 +6457,9 @@ func (s *SDK) ListMembers(ctx context.Context, request operations.ListMembersReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6577,9 +6577,9 @@ func (s *SDK) ListOrganizationAdminAccounts(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6697,9 +6697,9 @@ func (s *SDK) ListResourceProfileArtifacts(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6797,9 +6797,9 @@ func (s *SDK) ListResourceProfileDetections(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6907,9 +6907,9 @@ func (s *SDK) ListSensitivityInspectionTemplates(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7000,14 +7000,14 @@ func (s *SDK) ListSensitivityInspectionTemplates(ctx context.Context, request op
 // ListTagsForResource - Retrieves the tags (keys and values) that are associated with an Amazon Macie resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7048,7 +7048,7 @@ func (s *SDK) PutClassificationExportConfiguration(ctx context.Context, request 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/classification-export-configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7063,7 +7063,7 @@ func (s *SDK) PutClassificationExportConfiguration(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7174,7 +7174,7 @@ func (s *SDK) PutFindingsPublicationConfiguration(ctx context.Context, request o
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/findings-publication-configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7189,7 +7189,7 @@ func (s *SDK) PutFindingsPublicationConfiguration(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7300,7 +7300,7 @@ func (s *SDK) SearchResources(ctx context.Context, request operations.SearchReso
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datasources/search-resources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7315,9 +7315,9 @@ func (s *SDK) SearchResources(ctx context.Context, request operations.SearchReso
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7428,9 +7428,9 @@ func (s *SDK) SearchResources(ctx context.Context, request operations.SearchReso
 // TagResource - Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7445,7 +7445,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7486,7 +7486,7 @@ func (s *SDK) TestCustomDataIdentifier(ctx context.Context, request operations.T
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/custom-data-identifiers/test"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7501,7 +7501,7 @@ func (s *SDK) TestCustomDataIdentifier(ctx context.Context, request operations.T
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7610,16 +7610,16 @@ func (s *SDK) TestCustomDataIdentifier(ctx context.Context, request operations.T
 // UntagResource - Removes one or more tags (keys and values) from an Amazon Macie resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7660,9 +7660,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAllowList - Updates the settings for an allow list.
 func (s *SDK) UpdateAllowList(ctx context.Context, request operations.UpdateAllowListRequest) (*operations.UpdateAllowListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7677,7 +7677,7 @@ func (s *SDK) UpdateAllowList(ctx context.Context, request operations.UpdateAllo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7768,7 +7768,7 @@ func (s *SDK) UpdateAutomatedDiscoveryConfiguration(ctx context.Context, request
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/automated-discovery/configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7783,7 +7783,7 @@ func (s *SDK) UpdateAutomatedDiscoveryConfiguration(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7862,9 +7862,9 @@ func (s *SDK) UpdateAutomatedDiscoveryConfiguration(ctx context.Context, request
 // UpdateClassificationJob - Changes the status of a classification job.
 func (s *SDK) UpdateClassificationJob(ctx context.Context, request operations.UpdateClassificationJobRequest) (*operations.UpdateClassificationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7879,7 +7879,7 @@ func (s *SDK) UpdateClassificationJob(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7988,9 +7988,9 @@ func (s *SDK) UpdateClassificationJob(ctx context.Context, request operations.Up
 // UpdateClassificationScope - Updates the classification scope settings for an account.
 func (s *SDK) UpdateClassificationScope(ctx context.Context, request operations.UpdateClassificationScopeRequest) (*operations.UpdateClassificationScopeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8005,7 +8005,7 @@ func (s *SDK) UpdateClassificationScope(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8094,9 +8094,9 @@ func (s *SDK) UpdateClassificationScope(ctx context.Context, request operations.
 // UpdateFindingsFilter - Updates the criteria and other settings for a findings filter.
 func (s *SDK) UpdateFindingsFilter(ctx context.Context, request operations.UpdateFindingsFilterRequest) (*operations.UpdateFindingsFilterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8111,7 +8111,7 @@ func (s *SDK) UpdateFindingsFilter(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8222,7 +8222,7 @@ func (s *SDK) UpdateMacieSession(ctx context.Context, request operations.UpdateM
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/macie"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8237,7 +8237,7 @@ func (s *SDK) UpdateMacieSession(ctx context.Context, request operations.UpdateM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8346,9 +8346,9 @@ func (s *SDK) UpdateMacieSession(ctx context.Context, request operations.UpdateM
 // UpdateMemberSession - Enables an Amazon Macie administrator to suspend or re-enable Macie for a member account.
 func (s *SDK) UpdateMemberSession(ctx context.Context, request operations.UpdateMemberSessionRequest) (*operations.UpdateMemberSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/macie/members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/macie/members/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8363,7 +8363,7 @@ func (s *SDK) UpdateMemberSession(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8474,7 +8474,7 @@ func (s *SDK) UpdateOrganizationConfiguration(ctx context.Context, request opera
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8489,7 +8489,7 @@ func (s *SDK) UpdateOrganizationConfiguration(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8600,7 +8600,7 @@ func (s *SDK) UpdateResourceProfile(ctx context.Context, request operations.Upda
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resource-profiles#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8615,9 +8615,9 @@ func (s *SDK) UpdateResourceProfile(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8720,7 +8720,7 @@ func (s *SDK) UpdateResourceProfileDetections(ctx context.Context, request opera
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resource-profiles/detections#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8735,9 +8735,9 @@ func (s *SDK) UpdateResourceProfileDetections(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8840,7 +8840,7 @@ func (s *SDK) UpdateRevealConfiguration(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reveal-configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8855,7 +8855,7 @@ func (s *SDK) UpdateRevealConfiguration(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8934,9 +8934,9 @@ func (s *SDK) UpdateRevealConfiguration(ctx context.Context, request operations.
 // UpdateSensitivityInspectionTemplate -  <p>Updates the settings for the sensitivity inspection template for an account.</p>
 func (s *SDK) UpdateSensitivityInspectionTemplate(ctx context.Context, request operations.UpdateSensitivityInspectionTemplateRequest) (*operations.UpdateSensitivityInspectionTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8951,7 +8951,7 @@ func (s *SDK) UpdateSensitivityInspectionTemplate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

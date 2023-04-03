@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArtifactVersionPathParams struct {
+type GetArtifactVersionRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
+	// Allows the user to specify if the content should be dereferenced when being returned
+	Dereference *bool `queryParam:"style=form,explode=true,name=dereference"`
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// The unique identifier of a specific version of the artifact content.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetArtifactVersionQueryParams struct {
-	// Allows the user to specify if the content should be dereferenced when being returned
-	Dereference *bool `queryParam:"style=form,explode=true,name=dereference"`
-}
-
-type GetArtifactVersionRequest struct {
-	PathParams  GetArtifactVersionPathParams
-	QueryParams GetArtifactVersionQueryParams
 }
 
 type GetArtifactVersionResponse struct {

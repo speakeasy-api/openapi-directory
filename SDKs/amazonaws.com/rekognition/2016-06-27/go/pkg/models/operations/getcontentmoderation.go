@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContentModerationQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetContentModerationXAmzTargetEnum
 type GetContentModerationXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetContentModerationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetContentModerationHeaders struct {
+type GetContentModerationRequest struct {
+	GetContentModerationRequest shared.GetContentModerationRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetContentModerationHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetContentModerationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetContentModerationRequest struct {
-	QueryParams GetContentModerationQueryParams
-	Headers     GetContentModerationHeaders
-	Request     shared.GetContentModerationRequest `request:"mediaType=application/json"`
 }
 
 type GetContentModerationResponse struct {

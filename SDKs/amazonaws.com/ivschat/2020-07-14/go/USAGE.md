@@ -13,39 +13,34 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateChatTokenRequest{
-        Headers: operations.CreateChatTokenHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateChatTokenRequestBody{
+        RequestBody: operations.CreateChatTokenRequestBody{
             Attributes: map[string]string{
-                "vel": "error",
-                "deserunt": "suscipit",
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
             Capabilities: []shared.ChatTokenCapabilityEnum{
-                "SEND_MESSAGE",
                 "DISCONNECT_USER",
                 "DISCONNECT_USER",
-                "DELETE_MESSAGE",
+                "DISCONNECT_USER",
+                "DISCONNECT_USER",
             },
-            RoomIdentifier: "placeat",
-            SessionDurationInMinutes: 528895,
-            UserID: "iusto",
+            RoomIdentifier: "iure",
+            SessionDurationInMinutes: 297534,
+            UserID: "debitis",
         },
+        XAmzAlgorithm: "ipsa",
+        XAmzContentSha256: "delectus",
+        XAmzCredential: "tempora",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "molestiae",
+        XAmzSignature: "minus",
+        XAmzSignedHeaders: "placeat",
     }
 
     ctx := context.Background()

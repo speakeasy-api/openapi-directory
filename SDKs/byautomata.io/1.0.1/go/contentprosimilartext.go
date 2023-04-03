@@ -32,7 +32,7 @@ func newContentproSimilarText(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // PostContentproSimilarText - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
-func (s *contentproSimilarText) PostContentproSimilarText(ctx context.Context, request operations.PostContentproSimilarTextRequest) (*operations.PostContentproSimilarTextResponse, error) {
+func (s *contentproSimilarText) PostContentproSimilarText(ctx context.Context, request operations.PostContentproSimilarTextRequestBody) (*operations.PostContentproSimilarTextResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contentpro-similar-text"
 

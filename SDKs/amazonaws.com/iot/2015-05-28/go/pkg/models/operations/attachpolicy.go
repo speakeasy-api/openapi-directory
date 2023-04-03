@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type AttachPolicyPathParams struct {
-	// The name of the policy to attach.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type AttachPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AttachPolicyRequestBody struct {
 	// The <a href="https://docs.aws.amazon.com/iot/latest/developerguide/security-iam.html">identity</a> to which the policy is attached. For example, a thing group or a certificate.
 	Target string `json:"target"`
 }
 
 type AttachPolicyRequest struct {
-	PathParams AttachPolicyPathParams
-	Headers    AttachPolicyHeaders
-	Request    AttachPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       AttachPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the policy to attach.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 }
 
 type AttachPolicyResponse struct {

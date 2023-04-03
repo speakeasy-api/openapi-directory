@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type QuittungZugferdQueryParams struct {
+type QuittungZugferdRequest struct {
 	// Quittung Identifier  (serialnumber generated during receipt generation process)
 	Account *string `queryParam:"style=form,explode=true,name=account"`
-}
-
-type QuittungZugferdRequest struct {
-	QueryParams QuittungZugferdQueryParams
 }
 
 type QuittungZugferdResponse struct {

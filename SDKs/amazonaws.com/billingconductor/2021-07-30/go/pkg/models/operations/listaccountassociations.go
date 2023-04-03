@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccountAssociationsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListAccountAssociationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListAccountAssociationsRequestBodyFilters - <p>The filter on the account ID of the linked account, or any of the following:</p> <p> <code>MONITORED</code>: linked accounts that are associated to billing groups.</p> <p> <code>UNMONITORED</code>: linked accounts that are not associated to billing groups.</p> <p> <code>Billing Group Arn</code>: linked accounts that are associated to the provided Billing Group Arn. </p>
 type ListAccountAssociationsRequestBodyFilters struct {
 	AccountID   *string  `json:"AccountId,omitempty"`
@@ -39,9 +24,16 @@ type ListAccountAssociationsRequestBody struct {
 }
 
 type ListAccountAssociationsRequest struct {
-	QueryParams ListAccountAssociationsQueryParams
-	Headers     ListAccountAssociationsHeaders
-	Request     ListAccountAssociationsRequestBody `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListAccountAssociationsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListAccountAssociationsResponse struct {

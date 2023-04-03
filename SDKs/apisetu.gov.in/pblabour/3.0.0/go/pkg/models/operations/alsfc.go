@@ -10,8 +10,8 @@ import (
 )
 
 type AlsfcSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type AlsfcRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type AlsfcRequestBody struct {
 	Format AlsfcRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type AlsfcRequest struct {
-	// Request format
-	Request  *AlsfcRequestBody `request:"mediaType=application/json"`
-	Security AlsfcSecurity
 }
 
 type Alsfc504ApplicationJSONErrorEnum string

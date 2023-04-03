@@ -43,7 +43,7 @@ func (s *nameTypes) GetClassificationsNameTypes(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

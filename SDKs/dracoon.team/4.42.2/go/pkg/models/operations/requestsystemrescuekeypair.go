@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestSystemRescueKeyPairQueryParams struct {
-	// Version (NEW)
-	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
 // RequestSystemRescueKeyPairXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestSystemRescueKeyPairXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestSystemRescueKeyPairXSdsDateFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type RequestSystemRescueKeyPairHeaders struct {
+type RequestSystemRescueKeyPairRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestSystemRescueKeyPairXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestSystemRescueKeyPairRequest struct {
-	QueryParams RequestSystemRescueKeyPairQueryParams
-	Headers     RequestSystemRescueKeyPairHeaders
+	// Version (NEW)
+	Version *string `queryParam:"style=form,explode=true,name=version"`
 }
 
 type RequestSystemRescueKeyPairResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDeleteClientVpnRouteVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteClientVpnRouteQueryParams struct {
+type GETDeleteClientVpnRouteRequest struct {
 	Action GETDeleteClientVpnRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Client VPN endpoint from which the route is to be deleted.
 	ClientVpnEndpointID string `queryParam:"style=form,explode=true,name=ClientVpnEndpointId"`
@@ -61,21 +61,13 @@ type GETDeleteClientVpnRouteQueryParams struct {
 	// The ID of the target subnet used by the route.
 	TargetVpcSubnetID *string                            `queryParam:"style=form,explode=true,name=TargetVpcSubnetId"`
 	Version           GETDeleteClientVpnRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteClientVpnRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteClientVpnRouteRequest struct {
-	QueryParams GETDeleteClientVpnRouteQueryParams
-	Headers     GETDeleteClientVpnRouteHeaders
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteClientVpnRouteResponse struct {

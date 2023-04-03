@@ -13,10 +13,6 @@ type PostAuthInitRequestBody struct {
 	ClientSecret *string `multipartForm:"name=client_secret"`
 }
 
-type PostAuthInitRequest struct {
-	Request *PostAuthInitRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAuthInit200ApplicationJSON struct {
 	// new token created for the new anonymous user
 	AuthToken string `json:"auth_token"`

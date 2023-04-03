@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteV2AccessTokensUUIDPathParams struct {
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
-}
-
 type DeleteV2AccessTokensUUIDRequest struct {
-	PathParams DeleteV2AccessTokensUUIDPathParams
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type DeleteV2AccessTokensUUIDResponse struct {

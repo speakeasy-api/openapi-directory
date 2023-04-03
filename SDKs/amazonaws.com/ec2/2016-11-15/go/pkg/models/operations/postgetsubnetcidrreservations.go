@@ -50,25 +50,17 @@ func (e *POSTGetSubnetCidrReservationsVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTGetSubnetCidrReservationsQueryParams struct {
-	Action  POSTGetSubnetCidrReservationsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetSubnetCidrReservationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetSubnetCidrReservationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetSubnetCidrReservationsRequest struct {
-	QueryParams POSTGetSubnetCidrReservationsQueryParams
-	Headers     POSTGetSubnetCidrReservationsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetSubnetCidrReservationsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTGetSubnetCidrReservationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetSubnetCidrReservationsResponse struct {

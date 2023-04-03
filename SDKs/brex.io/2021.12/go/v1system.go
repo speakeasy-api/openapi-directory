@@ -34,7 +34,7 @@ func newV1System(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // HealthCheck - Returns the health information for the official business registers based on usage.
 // Returns the health information for the official business registers based on usage.
-func (s *v1System) HealthCheck(ctx context.Context, request operations.HealthCheckRequest) (*operations.HealthCheckResponse, error) {
+func (s *v1System) HealthCheck(ctx context.Context) (*operations.HealthCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/system/health"
 
@@ -43,7 +43,7 @@ func (s *v1System) HealthCheck(ctx context.Context, request operations.HealthChe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *v1System) HealthCheck(ctx context.Context, request operations.HealthChe
 
 // SystemCountries - Returns a list of countries
 // Retrieve the list of all currently enabled countries
-func (s *v1System) SystemCountries(ctx context.Context, request operations.SystemCountriesRequest) (*operations.SystemCountriesResponse, error) {
+func (s *v1System) SystemCountries(ctx context.Context) (*operations.SystemCountriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/system/countries"
 
@@ -98,7 +98,7 @@ func (s *v1System) SystemCountries(ctx context.Context, request operations.Syste
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *v1System) SystemCountries(ctx context.Context, request operations.Syste
 
 // SystemPricelist - Returns a list of products with prices
 // Retrieve pricing rules for your subscription plan
-func (s *v1System) SystemPricelist(ctx context.Context, request operations.SystemPricelistRequest) (*operations.SystemPricelistResponse, error) {
+func (s *v1System) SystemPricelist(ctx context.Context) (*operations.SystemPricelistResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/system/pricelist"
 
@@ -153,7 +153,7 @@ func (s *v1System) SystemPricelist(ctx context.Context, request operations.Syste
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

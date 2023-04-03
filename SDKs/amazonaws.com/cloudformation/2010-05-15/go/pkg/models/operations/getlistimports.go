@@ -50,28 +50,20 @@ func (e *GETListImportsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListImportsQueryParams struct {
+type GETListImportsRequest struct {
 	Action GETListImportsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the exported output value. CloudFormation returns the stack names that are importing this value.
 	ExportName string `queryParam:"style=form,explode=true,name=ExportName"`
 	// A string (provided by the <a>ListImports</a> response output) that identifies the next page of stacks that are importing the specified exported output value.
-	NextToken *string                   `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListImportsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListImportsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListImportsRequest struct {
-	QueryParams GETListImportsQueryParams
-	Headers     GETListImportsHeaders
+	NextToken         *string                   `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListImportsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListImportsResponse struct {

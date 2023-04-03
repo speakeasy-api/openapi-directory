@@ -13,60 +13,63 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateBatchInferenceJobRequest{
-        Headers: operations.CreateBatchInferenceJobHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
-        },
-        Request: shared.CreateBatchInferenceJobRequest{
+        CreateBatchInferenceJobRequest: shared.CreateBatchInferenceJobRequest{
             BatchInferenceJobConfig: &shared.BatchInferenceJobConfig{
                 ItemExplorationConfig: map[string]string{
-                    "vel": "error",
-                    "deserunt": "suscipit",
-                    "iure": "magnam",
-                    "debitis": "ipsa",
+                    "provident": "distinctio",
+                    "quibusdam": "unde",
+                    "nulla": "corrupti",
                 },
             },
-            FilterArn: "delectus",
+            FilterArn: "illum",
             JobInput: shared.BatchInferenceJobInput{
                 S3DataSource: shared.S3DataConfig{
-                    KmsKeyArn: "tempora",
-                    Path: "suscipit",
+                    KmsKeyArn: "vel",
+                    Path: "error",
                 },
             },
-            JobName: "molestiae",
+            JobName: "deserunt",
             JobOutput: shared.BatchInferenceJobOutput{
                 S3DataDestination: shared.S3DataConfig{
-                    KmsKeyArn: "minus",
-                    Path: "placeat",
+                    KmsKeyArn: "suscipit",
+                    Path: "iure",
                 },
             },
-            NumResults: 528895,
-            RoleArn: "iusto",
-            SolutionVersionArn: "excepturi",
+            NumResults: 297534,
+            RoleArn: "debitis",
+            SolutionVersionArn: "ipsa",
             Tags: []shared.Tag{
                 shared.Tag{
-                    TagKey: "recusandae",
-                    TagValue: "temporibus",
+                    TagKey: "tempora",
+                    TagValue: "suscipit",
                 },
                 shared.Tag{
-                    TagKey: "ab",
-                    TagValue: "quis",
+                    TagKey: "molestiae",
+                    TagValue: "minus",
+                },
+                shared.Tag{
+                    TagKey: "placeat",
+                    TagValue: "voluptatum",
+                },
+                shared.Tag{
+                    TagKey: "iusto",
+                    TagValue: "excepturi",
                 },
             },
         },
+        XAmzAlgorithm: "nisi",
+        XAmzContentSha256: "recusandae",
+        XAmzCredential: "temporibus",
+        XAmzDate: "ab",
+        XAmzSecurityToken: "quis",
+        XAmzSignature: "veritatis",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
     }
 
     ctx := context.Background()

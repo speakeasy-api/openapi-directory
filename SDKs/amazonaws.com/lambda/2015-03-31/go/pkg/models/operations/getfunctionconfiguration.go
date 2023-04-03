@@ -7,17 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFunctionConfigurationPathParams struct {
+type GetFunctionConfigurationRequest struct {
 	// <p>The name of the Lambda function, version, or alias.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code> (name-only), <code>my-function:v1</code> (with alias).</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>You can append a version number or alias to any of the formats. The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
 	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type GetFunctionConfigurationQueryParams struct {
 	// Specify a version or alias to get details about a published version of the function.
-	Qualifier *string `queryParam:"style=form,explode=true,name=Qualifier"`
-}
-
-type GetFunctionConfigurationHeaders struct {
+	Qualifier         *string `queryParam:"style=form,explode=true,name=Qualifier"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +19,6 @@ type GetFunctionConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetFunctionConfigurationRequest struct {
-	PathParams  GetFunctionConfigurationPathParams
-	QueryParams GetFunctionConfigurationQueryParams
-	Headers     GetFunctionConfigurationHeaders
 }
 
 type GetFunctionConfigurationResponse struct {

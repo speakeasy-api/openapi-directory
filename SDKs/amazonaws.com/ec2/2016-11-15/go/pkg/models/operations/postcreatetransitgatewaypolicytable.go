@@ -50,25 +50,17 @@ func (e *POSTCreateTransitGatewayPolicyTableVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTCreateTransitGatewayPolicyTableQueryParams struct {
-	Action  POSTCreateTransitGatewayPolicyTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateTransitGatewayPolicyTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateTransitGatewayPolicyTableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateTransitGatewayPolicyTableRequest struct {
-	QueryParams POSTCreateTransitGatewayPolicyTableQueryParams
-	Headers     POSTCreateTransitGatewayPolicyTableHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateTransitGatewayPolicyTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTCreateTransitGatewayPolicyTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateTransitGatewayPolicyTableResponse struct {

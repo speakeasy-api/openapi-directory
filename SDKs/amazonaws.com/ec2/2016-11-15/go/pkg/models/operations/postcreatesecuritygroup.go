@@ -50,25 +50,17 @@ func (e *POSTCreateSecurityGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateSecurityGroupQueryParams struct {
-	Action  POSTCreateSecurityGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateSecurityGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateSecurityGroupRequest struct {
-	QueryParams POSTCreateSecurityGroupQueryParams
-	Headers     POSTCreateSecurityGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateSecurityGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTCreateSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateSecurityGroupResponse struct {

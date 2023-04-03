@@ -34,16 +34,16 @@ func newResourceOwners(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetResourceOwner - Retrieve a resource owner by ID
 // Retrieve a resource owner for the given `resourceOwnerId`.
-func (s *resourceOwners) GetResourceOwner(ctx context.Context, request operations.GetResourceOwnerRequest) (*operations.GetResourceOwnerResponse, error) {
+func (s *resourceOwners) GetResourceOwner(ctx context.Context, request operations.GetResourceOwnerRequest, security operations.GetResourceOwnerSecurity) (*operations.GetResourceOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/resourceOwners/{resourceOwnerId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/resourceOwners/{resourceOwnerId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

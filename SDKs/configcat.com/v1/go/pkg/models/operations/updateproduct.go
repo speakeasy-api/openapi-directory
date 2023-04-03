@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProductPathParams struct {
+type UpdateProductRequest struct {
+	UpdateProductRequest shared.UpdateProductRequest `request:"mediaType=application/json"`
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type UpdateProductRequest struct {
-	PathParams UpdateProductPathParams
-	Request    shared.UpdateProductRequest `request:"mediaType=application/json"`
 }
 
 type UpdateProductResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchSearchJSONRequest struct {
-	Request shared.RechnungsdruckWebAppControllersAPISearchControllerSearchModel `request:"mediaType=application/json"`
-}
-
 type SearchSearchJSONResponse struct {
 	Body        []byte
 	ContentType string

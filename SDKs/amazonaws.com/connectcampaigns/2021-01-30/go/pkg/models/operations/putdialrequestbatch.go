@@ -7,29 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDialRequestBatchPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutDialRequestBatchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutDialRequestBatchRequestBody struct {
 	// A list of dial requests.
 	DialRequests []shared.DialRequest `json:"dialRequests"`
 }
 
 type PutDialRequestBatchRequest struct {
-	PathParams PutDialRequestBatchPathParams
-	Headers    PutDialRequestBatchHeaders
-	Request    PutDialRequestBatchRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutDialRequestBatchRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	ID                string                         `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutDialRequestBatchResponse struct {

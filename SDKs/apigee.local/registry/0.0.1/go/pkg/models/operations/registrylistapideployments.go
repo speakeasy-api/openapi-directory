@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryListAPIDeploymentsPathParams struct {
+type RegistryListAPIDeploymentsRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
-	// The location id.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// The project id.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryListAPIDeploymentsQueryParams struct {
 	// An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// The location id.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The maximum number of deployments to return. The service may return fewer than this value. If unspecified, at most 50 values will be returned. The maximum is 1000; values above 1000 will be coerced to 1000.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListApiDeployments` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListApiDeployments` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
-}
-
-type RegistryListAPIDeploymentsRequest struct {
-	PathParams  RegistryListAPIDeploymentsPathParams
-	QueryParams RegistryListAPIDeploymentsQueryParams
+	// The project id.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type RegistryListAPIDeploymentsResponse struct {

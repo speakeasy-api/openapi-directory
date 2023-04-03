@@ -216,16 +216,16 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // DeleteAPIV1ClipsID - delete clip
-func (s *SDK) DeleteAPIV1ClipsID(ctx context.Context, request operations.DeleteAPIV1ClipsIDRequest) (*operations.DeleteAPIV1ClipsIDResponse, error) {
+func (s *SDK) DeleteAPIV1ClipsID(ctx context.Context, request operations.DeleteAPIV1ClipsIDRequest, security operations.DeleteAPIV1ClipsIDSecurity) (*operations.DeleteAPIV1ClipsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -257,16 +257,16 @@ func (s *SDK) DeleteAPIV1ClipsID(ctx context.Context, request operations.DeleteA
 }
 
 // DeleteAPIV1MediasID - delete media
-func (s *SDK) DeleteAPIV1MediasID(ctx context.Context, request operations.DeleteAPIV1MediasIDRequest) (*operations.DeleteAPIV1MediasIDResponse, error) {
+func (s *SDK) DeleteAPIV1MediasID(ctx context.Context, request operations.DeleteAPIV1MediasIDRequest, security operations.DeleteAPIV1MediasIDSecurity) (*operations.DeleteAPIV1MediasIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -298,16 +298,16 @@ func (s *SDK) DeleteAPIV1MediasID(ctx context.Context, request operations.Delete
 }
 
 // DeleteAPIV1WebhookSubscriptionsID - delete webhook subscription
-func (s *SDK) DeleteAPIV1WebhookSubscriptionsID(ctx context.Context, request operations.DeleteAPIV1WebhookSubscriptionsIDRequest) (*operations.DeleteAPIV1WebhookSubscriptionsIDResponse, error) {
+func (s *SDK) DeleteAPIV1WebhookSubscriptionsID(ctx context.Context, request operations.DeleteAPIV1WebhookSubscriptionsIDRequest, security operations.DeleteAPIV1WebhookSubscriptionsIDSecurity) (*operations.DeleteAPIV1WebhookSubscriptionsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhook_subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhook_subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -339,7 +339,7 @@ func (s *SDK) DeleteAPIV1WebhookSubscriptionsID(ctx context.Context, request ope
 }
 
 // GetAPIV1Clips - list clips
-func (s *SDK) GetAPIV1Clips(ctx context.Context, request operations.GetAPIV1ClipsRequest) (*operations.GetAPIV1ClipsResponse, error) {
+func (s *SDK) GetAPIV1Clips(ctx context.Context, request operations.GetAPIV1ClipsRequest, security operations.GetAPIV1ClipsSecurity) (*operations.GetAPIV1ClipsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/clips"
 
@@ -348,11 +348,11 @@ func (s *SDK) GetAPIV1Clips(ctx context.Context, request operations.GetAPIV1Clip
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,16 +382,16 @@ func (s *SDK) GetAPIV1Clips(ctx context.Context, request operations.GetAPIV1Clip
 }
 
 // GetAPIV1ClipsID - show clip
-func (s *SDK) GetAPIV1ClipsID(ctx context.Context, request operations.GetAPIV1ClipsIDRequest) (*operations.GetAPIV1ClipsIDResponse, error) {
+func (s *SDK) GetAPIV1ClipsID(ctx context.Context, request operations.GetAPIV1ClipsIDRequest, security operations.GetAPIV1ClipsIDSecurity) (*operations.GetAPIV1ClipsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,7 +423,7 @@ func (s *SDK) GetAPIV1ClipsID(ctx context.Context, request operations.GetAPIV1Cl
 }
 
 // GetAPIV1DirectUploads - prepare presigned upload url
-func (s *SDK) GetAPIV1DirectUploads(ctx context.Context, request operations.GetAPIV1DirectUploadsRequest) (*operations.GetAPIV1DirectUploadsResponse, error) {
+func (s *SDK) GetAPIV1DirectUploads(ctx context.Context) (*operations.GetAPIV1DirectUploadsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/direct_uploads"
 
@@ -432,7 +432,7 @@ func (s *SDK) GetAPIV1DirectUploads(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -462,7 +462,7 @@ func (s *SDK) GetAPIV1DirectUploads(ctx context.Context, request operations.GetA
 }
 
 // GetAPIV1Medias - list medias
-func (s *SDK) GetAPIV1Medias(ctx context.Context, request operations.GetAPIV1MediasRequest) (*operations.GetAPIV1MediasResponse, error) {
+func (s *SDK) GetAPIV1Medias(ctx context.Context, request operations.GetAPIV1MediasRequest, security operations.GetAPIV1MediasSecurity) (*operations.GetAPIV1MediasResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/medias"
 
@@ -471,11 +471,11 @@ func (s *SDK) GetAPIV1Medias(ctx context.Context, request operations.GetAPIV1Med
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -505,16 +505,16 @@ func (s *SDK) GetAPIV1Medias(ctx context.Context, request operations.GetAPIV1Med
 }
 
 // GetAPIV1MediasID - show media
-func (s *SDK) GetAPIV1MediasID(ctx context.Context, request operations.GetAPIV1MediasIDRequest) (*operations.GetAPIV1MediasIDResponse, error) {
+func (s *SDK) GetAPIV1MediasID(ctx context.Context, request operations.GetAPIV1MediasIDRequest, security operations.GetAPIV1MediasIDSecurity) (*operations.GetAPIV1MediasIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -546,7 +546,7 @@ func (s *SDK) GetAPIV1MediasID(ctx context.Context, request operations.GetAPIV1M
 }
 
 // GetAPIV1WebhookSubscriptions - list webhook subscriptions
-func (s *SDK) GetAPIV1WebhookSubscriptions(ctx context.Context, request operations.GetAPIV1WebhookSubscriptionsRequest) (*operations.GetAPIV1WebhookSubscriptionsResponse, error) {
+func (s *SDK) GetAPIV1WebhookSubscriptions(ctx context.Context, request operations.GetAPIV1WebhookSubscriptionsRequest, security operations.GetAPIV1WebhookSubscriptionsSecurity) (*operations.GetAPIV1WebhookSubscriptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/webhook_subscriptions"
 
@@ -555,11 +555,11 @@ func (s *SDK) GetAPIV1WebhookSubscriptions(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -589,16 +589,16 @@ func (s *SDK) GetAPIV1WebhookSubscriptions(ctx context.Context, request operatio
 }
 
 // GetAPIV1WebhookSubscriptionsID - show webhook subscription
-func (s *SDK) GetAPIV1WebhookSubscriptionsID(ctx context.Context, request operations.GetAPIV1WebhookSubscriptionsIDRequest) (*operations.GetAPIV1WebhookSubscriptionsIDResponse, error) {
+func (s *SDK) GetAPIV1WebhookSubscriptionsID(ctx context.Context, request operations.GetAPIV1WebhookSubscriptionsIDRequest, security operations.GetAPIV1WebhookSubscriptionsIDSecurity) (*operations.GetAPIV1WebhookSubscriptionsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhook_subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhook_subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -630,7 +630,7 @@ func (s *SDK) GetAPIV1WebhookSubscriptionsID(ctx context.Context, request operat
 }
 
 // PostAPIV1Clips - create clip
-func (s *SDK) PostAPIV1Clips(ctx context.Context, request operations.PostAPIV1ClipsRequest) (*operations.PostAPIV1ClipsResponse, error) {
+func (s *SDK) PostAPIV1Clips(ctx context.Context, request operations.PostAPIV1ClipsRequestBody, security operations.PostAPIV1ClipsSecurity) (*operations.PostAPIV1ClipsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/clips"
 
@@ -649,7 +649,7 @@ func (s *SDK) PostAPIV1Clips(ctx context.Context, request operations.PostAPIV1Cl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -681,7 +681,7 @@ func (s *SDK) PostAPIV1Clips(ctx context.Context, request operations.PostAPIV1Cl
 }
 
 // PostAPIV1Medias - create media
-func (s *SDK) PostAPIV1Medias(ctx context.Context, request operations.PostAPIV1MediasRequest) (*operations.PostAPIV1MediasResponse, error) {
+func (s *SDK) PostAPIV1Medias(ctx context.Context, request operations.PostAPIV1MediasRequestBody, security operations.PostAPIV1MediasSecurity) (*operations.PostAPIV1MediasResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/medias"
 
@@ -700,7 +700,7 @@ func (s *SDK) PostAPIV1Medias(ctx context.Context, request operations.PostAPIV1M
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -732,7 +732,7 @@ func (s *SDK) PostAPIV1Medias(ctx context.Context, request operations.PostAPIV1M
 }
 
 // PostAPIV1WebhookSubscriptions - create webhook subscription
-func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operations.PostAPIV1WebhookSubscriptionsRequest) (*operations.PostAPIV1WebhookSubscriptionsResponse, error) {
+func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operations.PostAPIV1WebhookSubscriptionsRequestBody, security operations.PostAPIV1WebhookSubscriptionsSecurity) (*operations.PostAPIV1WebhookSubscriptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/webhook_subscriptions"
 
@@ -751,7 +751,7 @@ func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -781,11 +781,11 @@ func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operati
 }
 
 // PutAPIV1ClipsID - update clip
-func (s *SDK) PutAPIV1ClipsID(ctx context.Context, request operations.PutAPIV1ClipsIDRequest) (*operations.PutAPIV1ClipsIDResponse, error) {
+func (s *SDK) PutAPIV1ClipsID(ctx context.Context, request operations.PutAPIV1ClipsIDRequest, security operations.PutAPIV1ClipsIDSecurity) (*operations.PutAPIV1ClipsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -800,7 +800,7 @@ func (s *SDK) PutAPIV1ClipsID(ctx context.Context, request operations.PutAPIV1Cl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -830,11 +830,11 @@ func (s *SDK) PutAPIV1ClipsID(ctx context.Context, request operations.PutAPIV1Cl
 }
 
 // PutAPIV1MediasID - update media
-func (s *SDK) PutAPIV1MediasID(ctx context.Context, request operations.PutAPIV1MediasIDRequest) (*operations.PutAPIV1MediasIDResponse, error) {
+func (s *SDK) PutAPIV1MediasID(ctx context.Context, request operations.PutAPIV1MediasIDRequest, security operations.PutAPIV1MediasIDSecurity) (*operations.PutAPIV1MediasIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -849,7 +849,7 @@ func (s *SDK) PutAPIV1MediasID(ctx context.Context, request operations.PutAPIV1M
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

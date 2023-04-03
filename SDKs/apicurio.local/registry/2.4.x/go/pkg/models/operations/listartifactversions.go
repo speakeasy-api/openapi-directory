@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListArtifactVersionsPathParams struct {
+type ListArtifactVersionsRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type ListArtifactVersionsQueryParams struct {
 	// The number of versions to return.  Defaults to 20.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The number of versions to skip before starting to collect the result set.  Defaults to 0.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListArtifactVersionsRequest struct {
-	PathParams  ListArtifactVersionsPathParams
-	QueryParams ListArtifactVersionsQueryParams
 }
 
 type ListArtifactVersionsResponse struct {

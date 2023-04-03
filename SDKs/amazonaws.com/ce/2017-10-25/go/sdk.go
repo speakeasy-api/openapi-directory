@@ -116,7 +116,7 @@ func (s *SDK) CreateAnomalyMonitor(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.CreateAnomalyMonitor"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAnomalyMonitorRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateAnomalyMonitor(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -182,7 +182,7 @@ func (s *SDK) CreateAnomalySubscription(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.CreateAnomalySubscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAnomalySubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,7 +197,7 @@ func (s *SDK) CreateAnomalySubscription(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -258,7 +258,7 @@ func (s *SDK) CreateCostCategoryDefinition(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.CreateCostCategoryDefinition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCostCategoryDefinitionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -273,7 +273,7 @@ func (s *SDK) CreateCostCategoryDefinition(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -334,7 +334,7 @@ func (s *SDK) DeleteAnomalyMonitor(ctx context.Context, request operations.Delet
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DeleteAnomalyMonitor"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteAnomalyMonitorRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,7 +349,7 @@ func (s *SDK) DeleteAnomalyMonitor(ctx context.Context, request operations.Delet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -410,7 +410,7 @@ func (s *SDK) DeleteAnomalySubscription(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DeleteAnomalySubscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteAnomalySubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -425,7 +425,7 @@ func (s *SDK) DeleteAnomalySubscription(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -486,7 +486,7 @@ func (s *SDK) DeleteCostCategoryDefinition(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DeleteCostCategoryDefinition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteCostCategoryDefinitionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -501,7 +501,7 @@ func (s *SDK) DeleteCostCategoryDefinition(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -562,7 +562,7 @@ func (s *SDK) DescribeCostCategoryDefinition(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DescribeCostCategoryDefinition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeCostCategoryDefinitionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -577,7 +577,7 @@ func (s *SDK) DescribeCostCategoryDefinition(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -638,7 +638,7 @@ func (s *SDK) GetAnomalies(ctx context.Context, request operations.GetAnomaliesR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetAnomalies"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetAnomaliesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -653,7 +653,7 @@ func (s *SDK) GetAnomalies(ctx context.Context, request operations.GetAnomaliesR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -714,7 +714,7 @@ func (s *SDK) GetAnomalyMonitors(ctx context.Context, request operations.GetAnom
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetAnomalyMonitors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetAnomalyMonitorsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -729,7 +729,7 @@ func (s *SDK) GetAnomalyMonitors(ctx context.Context, request operations.GetAnom
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -800,7 +800,7 @@ func (s *SDK) GetAnomalySubscriptions(ctx context.Context, request operations.Ge
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetAnomalySubscriptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetAnomalySubscriptionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -815,7 +815,7 @@ func (s *SDK) GetAnomalySubscriptions(ctx context.Context, request operations.Ge
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -886,7 +886,7 @@ func (s *SDK) GetCostAndUsage(ctx context.Context, request operations.GetCostAnd
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostAndUsage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetCostAndUsageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -901,7 +901,7 @@ func (s *SDK) GetCostAndUsage(ctx context.Context, request operations.GetCostAnd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -992,7 +992,7 @@ func (s *SDK) GetCostAndUsageWithResources(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostAndUsageWithResources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetCostAndUsageWithResourcesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1007,7 +1007,7 @@ func (s *SDK) GetCostAndUsageWithResources(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1098,7 +1098,7 @@ func (s *SDK) GetCostCategories(ctx context.Context, request operations.GetCostC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostCategories"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetCostCategoriesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1113,7 +1113,7 @@ func (s *SDK) GetCostCategories(ctx context.Context, request operations.GetCostC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1204,7 +1204,7 @@ func (s *SDK) GetCostForecast(ctx context.Context, request operations.GetCostFor
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostForecast"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetCostForecastRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1219,7 +1219,7 @@ func (s *SDK) GetCostForecast(ctx context.Context, request operations.GetCostFor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1280,7 +1280,7 @@ func (s *SDK) GetDimensionValues(ctx context.Context, request operations.GetDime
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetDimensionValues"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetDimensionValuesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1295,7 +1295,7 @@ func (s *SDK) GetDimensionValues(ctx context.Context, request operations.GetDime
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1386,7 +1386,7 @@ func (s *SDK) GetReservationCoverage(ctx context.Context, request operations.Get
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetReservationCoverage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetReservationCoverageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1401,7 +1401,7 @@ func (s *SDK) GetReservationCoverage(ctx context.Context, request operations.Get
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1472,7 +1472,7 @@ func (s *SDK) GetReservationPurchaseRecommendation(ctx context.Context, request 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetReservationPurchaseRecommendation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetReservationPurchaseRecommendationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1487,7 +1487,7 @@ func (s *SDK) GetReservationPurchaseRecommendation(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1558,7 +1558,7 @@ func (s *SDK) GetReservationUtilization(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetReservationUtilization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetReservationUtilizationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1573,7 +1573,7 @@ func (s *SDK) GetReservationUtilization(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1644,7 +1644,7 @@ func (s *SDK) GetRightsizingRecommendation(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetRightsizingRecommendation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetRightsizingRecommendationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1659,7 +1659,7 @@ func (s *SDK) GetRightsizingRecommendation(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1720,7 +1720,7 @@ func (s *SDK) GetSavingsPlansCoverage(ctx context.Context, request operations.Ge
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansCoverage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetSavingsPlansCoverageRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1735,9 +1735,9 @@ func (s *SDK) GetSavingsPlansCoverage(ctx context.Context, request operations.Ge
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1810,7 +1810,7 @@ func (s *SDK) GetSavingsPlansPurchaseRecommendation(ctx context.Context, request
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansPurchaseRecommendation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetSavingsPlansPurchaseRecommendationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1825,7 +1825,7 @@ func (s *SDK) GetSavingsPlansPurchaseRecommendation(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1886,7 +1886,7 @@ func (s *SDK) GetSavingsPlansUtilization(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansUtilization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetSavingsPlansUtilizationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1901,7 +1901,7 @@ func (s *SDK) GetSavingsPlansUtilization(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1962,7 +1962,7 @@ func (s *SDK) GetSavingsPlansUtilizationDetails(ctx context.Context, request ope
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansUtilizationDetails"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetSavingsPlansUtilizationDetailsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1977,9 +1977,9 @@ func (s *SDK) GetSavingsPlansUtilizationDetails(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2052,7 +2052,7 @@ func (s *SDK) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetTags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetTagsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2067,7 +2067,7 @@ func (s *SDK) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2158,7 +2158,7 @@ func (s *SDK) GetUsageForecast(ctx context.Context, request operations.GetUsageF
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetUsageForecast"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetUsageForecastRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2173,7 +2173,7 @@ func (s *SDK) GetUsageForecast(ctx context.Context, request operations.GetUsageF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2244,7 +2244,7 @@ func (s *SDK) ListCostAllocationTags(ctx context.Context, request operations.Lis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ListCostAllocationTags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListCostAllocationTagsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2259,9 +2259,9 @@ func (s *SDK) ListCostAllocationTags(ctx context.Context, request operations.Lis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2324,7 +2324,7 @@ func (s *SDK) ListCostCategoryDefinitions(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ListCostCategoryDefinitions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListCostCategoryDefinitionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2339,9 +2339,9 @@ func (s *SDK) ListCostCategoryDefinitions(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2394,7 +2394,7 @@ func (s *SDK) ListSavingsPlansPurchaseRecommendationGeneration(ctx context.Conte
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ListSavingsPlansPurchaseRecommendationGeneration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListSavingsPlansPurchaseRecommendationGenerationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2409,7 +2409,7 @@ func (s *SDK) ListSavingsPlansPurchaseRecommendationGeneration(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2470,7 +2470,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ListTagsForResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListTagsForResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2485,7 +2485,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2546,7 +2546,7 @@ func (s *SDK) ProvideAnomalyFeedback(ctx context.Context, request operations.Pro
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ProvideAnomalyFeedback"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProvideAnomalyFeedbackRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2561,7 +2561,7 @@ func (s *SDK) ProvideAnomalyFeedback(ctx context.Context, request operations.Pro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2612,7 +2612,7 @@ func (s *SDK) StartSavingsPlansPurchaseRecommendationGeneration(ctx context.Cont
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.StartSavingsPlansPurchaseRecommendationGeneration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2627,7 +2627,7 @@ func (s *SDK) StartSavingsPlansPurchaseRecommendationGeneration(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2698,7 +2698,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.TagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2713,7 +2713,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2784,7 +2784,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UntagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UntagResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2799,7 +2799,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2860,7 +2860,7 @@ func (s *SDK) UpdateAnomalyMonitor(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateAnomalyMonitor"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnomalyMonitorRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2875,7 +2875,7 @@ func (s *SDK) UpdateAnomalyMonitor(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2936,7 +2936,7 @@ func (s *SDK) UpdateAnomalySubscription(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateAnomalySubscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnomalySubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2951,7 +2951,7 @@ func (s *SDK) UpdateAnomalySubscription(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3022,7 +3022,7 @@ func (s *SDK) UpdateCostAllocationTagsStatus(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateCostAllocationTagsStatus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCostAllocationTagsStatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3037,7 +3037,7 @@ func (s *SDK) UpdateCostAllocationTagsStatus(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3088,7 +3088,7 @@ func (s *SDK) UpdateCostCategoryDefinition(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateCostCategoryDefinition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCostCategoryDefinitionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3103,7 +3103,7 @@ func (s *SDK) UpdateCostCategoryDefinition(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

@@ -9,6 +9,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy - Controls on the query specifications that can be run on a configured table.
+type UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy struct {
+	V1 *shared.ConfiguredTableAnalysisRulePolicyV1 `json:"v1,omitempty"`
+}
+
+type UpdateConfiguredTableAnalysisRuleRequestBody struct {
+	// Controls on the query specifications that can be run on a configured table.
+	AnalysisRulePolicy UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy `json:"analysisRulePolicy"`
+}
+
 // UpdateConfiguredTableAnalysisRuleAnalysisRuleTypeEnum - The analysis rule type to be updated. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
 type UpdateConfiguredTableAnalysisRuleAnalysisRuleTypeEnum string
 
@@ -33,37 +43,19 @@ func (e *UpdateConfiguredTableAnalysisRuleAnalysisRuleTypeEnum) UnmarshalJSON(da
 	}
 }
 
-type UpdateConfiguredTableAnalysisRulePathParams struct {
+type UpdateConfiguredTableAnalysisRuleRequest struct {
+	RequestBody       UpdateConfiguredTableAnalysisRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The analysis rule type to be updated. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
 	AnalysisRuleType UpdateConfiguredTableAnalysisRuleAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=analysisRuleType"`
 	// The unique identifier for the configured table that the analysis rule applies to. Currently accepts the configured table ID.
 	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
-}
-
-type UpdateConfiguredTableAnalysisRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy - Controls on the query specifications that can be run on a configured table.
-type UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy struct {
-	V1 *shared.ConfiguredTableAnalysisRulePolicyV1 `json:"v1,omitempty"`
-}
-
-type UpdateConfiguredTableAnalysisRuleRequestBody struct {
-	// Controls on the query specifications that can be run on a configured table.
-	AnalysisRulePolicy UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy `json:"analysisRulePolicy"`
-}
-
-type UpdateConfiguredTableAnalysisRuleRequest struct {
-	PathParams UpdateConfiguredTableAnalysisRulePathParams
-	Headers    UpdateConfiguredTableAnalysisRuleHeaders
-	Request    UpdateConfiguredTableAnalysisRuleRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateConfiguredTableAnalysisRuleResponse struct {

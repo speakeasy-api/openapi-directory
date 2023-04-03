@@ -33,7 +33,14 @@ func (e *ListCoreDevicesStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCoreDevicesQueryParams struct {
+type ListCoreDevicesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of results to be returned per paginated request.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// The token to be used for the next set of paginated results.
@@ -42,21 +49,6 @@ type ListCoreDevicesQueryParams struct {
 	Status *ListCoreDevicesStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT thing group by which to filter. If you specify this parameter, the list includes only core devices that have successfully deployed a deployment that targets the thing group. When you remove a core device from a thing group, the list continues to include that core device.
 	ThingGroupArn *string `queryParam:"style=form,explode=true,name=thingGroupArn"`
-}
-
-type ListCoreDevicesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCoreDevicesRequest struct {
-	QueryParams ListCoreDevicesQueryParams
-	Headers     ListCoreDevicesHeaders
 }
 
 type ListCoreDevicesResponse struct {

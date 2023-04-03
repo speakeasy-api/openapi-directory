@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendCustomVerificationEmailHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type SendCustomVerificationEmailRequestBody struct {
 	// <p>The name of a configuration set.</p> <p> <i>Configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>
 	ConfigurationSetName *string `json:"ConfigurationSetName,omitempty"`
@@ -27,8 +17,14 @@ type SendCustomVerificationEmailRequestBody struct {
 }
 
 type SendCustomVerificationEmailRequest struct {
-	Headers SendCustomVerificationEmailHeaders
-	Request SendCustomVerificationEmailRequestBody `request:"mediaType=application/json"`
+	RequestBody       SendCustomVerificationEmailRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SendCustomVerificationEmailResponse struct {

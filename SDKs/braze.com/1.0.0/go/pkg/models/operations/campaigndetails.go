@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CampaignDetailsQueryParams struct {
+type CampaignDetailsRequest struct {
 	// (Required) String
 	//
 	// Campaign API identifier
 	CampaignID *string `queryParam:"style=form,explode=true,name=campaign_id"`
-}
-
-type CampaignDetailsRequest struct {
-	QueryParams CampaignDetailsQueryParams
 }
 
 type CampaignDetailsResponse struct {

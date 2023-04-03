@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteEmailIdentityPathParams struct {
+type DeleteEmailIdentityRequest struct {
 	// The identity (that is, the email address or domain) that you want to delete from your Amazon Pinpoint account.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-}
-
-type DeleteEmailIdentityHeaders struct {
+	EmailIdentity     string  `pathParam:"style=simple,explode=false,name=EmailIdentity"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteEmailIdentityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEmailIdentityRequest struct {
-	PathParams DeleteEmailIdentityPathParams
-	Headers    DeleteEmailIdentityHeaders
 }
 
 type DeleteEmailIdentityResponse struct {

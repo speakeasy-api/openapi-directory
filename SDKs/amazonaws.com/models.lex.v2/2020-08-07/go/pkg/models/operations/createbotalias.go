@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBotAliasPathParams struct {
-	// The unique identifier of the bot that the alias applies to.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type CreateBotAliasHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateBotAliasRequestBodyConversationLogSettings - Configures conversation logging that saves audio, text, and metadata for the conversations with your users.
 type CreateBotAliasRequestBodyConversationLogSettings struct {
 	AudioLogSettings []shared.AudioLogSetting `json:"audioLogSettings,omitempty"`
@@ -51,9 +36,16 @@ type CreateBotAliasRequestBody struct {
 }
 
 type CreateBotAliasRequest struct {
-	PathParams CreateBotAliasPathParams
-	Headers    CreateBotAliasHeaders
-	Request    CreateBotAliasRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBotAliasRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the bot that the alias applies to.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 }
 
 type CreateBotAliasResponse struct {

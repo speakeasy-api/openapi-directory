@@ -10,9 +10,9 @@ import (
 )
 
 type GetHookEventsSubjectTypeSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetHookEventsSubjectTypeSubjectTypeEnum - A resource or subject type.
@@ -39,14 +39,9 @@ func (e *GetHookEventsSubjectTypeSubjectTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetHookEventsSubjectTypePathParams struct {
+type GetHookEventsSubjectTypeRequest struct {
 	// A resource or subject type.
 	SubjectType GetHookEventsSubjectTypeSubjectTypeEnum `pathParam:"style=simple,explode=false,name=subject_type"`
-}
-
-type GetHookEventsSubjectTypeRequest struct {
-	PathParams GetHookEventsSubjectTypePathParams
-	Security   GetHookEventsSubjectTypeSecurity
 }
 
 type GetHookEventsSubjectTypeResponse struct {

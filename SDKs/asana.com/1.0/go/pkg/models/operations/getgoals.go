@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGoalsQueryParams struct {
+type GetGoalsRequest struct {
 	// Filter to goals with is_workspace_level set to query value. Must be used with the workspace parameter.
 	IsWorkspaceLevel *bool `queryParam:"style=form,explode=true,name=is_workspace_level"`
 	// Results per page.
@@ -34,10 +34,6 @@ type GetGoalsQueryParams struct {
 	TimePeriods []string `queryParam:"style=form,explode=true,name=time_periods"`
 	// Globally unique identifier for the workspace.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetGoalsRequest struct {
-	QueryParams GetGoalsQueryParams
 }
 
 // GetGoals200ApplicationJSON - Successfully retrieved the requested goals.

@@ -8,17 +8,13 @@ import (
 )
 
 type FindWebhookResourcesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindWebhookResourcesQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindWebhookResourcesRequest struct {
-	QueryParams FindWebhookResourcesQueryParams
-	Security    FindWebhookResourcesSecurity
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 type FindWebhookResourcesResponse struct {

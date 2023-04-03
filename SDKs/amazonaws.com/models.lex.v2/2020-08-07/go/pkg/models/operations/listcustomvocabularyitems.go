@@ -7,32 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCustomVocabularyItemsPathParams struct {
-	// The identifier of the version of the bot associated with this custom vocabulary.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The bot version of the bot to the list custom vocabulary request.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale where this custom vocabulary is used. The string must match one of the supported locales. For more information, see Supported languages (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type ListCustomVocabularyItemsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListCustomVocabularyItemsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListCustomVocabularyItemsRequestBody struct {
 	// The maximum number of items returned by the list operation.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -41,10 +15,24 @@ type ListCustomVocabularyItemsRequestBody struct {
 }
 
 type ListCustomVocabularyItemsRequest struct {
-	PathParams  ListCustomVocabularyItemsPathParams
-	QueryParams ListCustomVocabularyItemsQueryParams
-	Headers     ListCustomVocabularyItemsHeaders
-	Request     ListCustomVocabularyItemsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListCustomVocabularyItemsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the version of the bot associated with this custom vocabulary.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The bot version of the bot to the list custom vocabulary request.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale where this custom vocabulary is used. The string must match one of the supported locales. For more information, see Supported languages (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListCustomVocabularyItemsResponse struct {

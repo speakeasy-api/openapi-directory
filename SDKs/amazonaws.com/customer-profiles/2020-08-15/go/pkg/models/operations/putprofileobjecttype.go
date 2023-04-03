@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutProfileObjectTypePathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-	// The name of the profile object type.
-	ObjectTypeName string `pathParam:"style=simple,explode=false,name=ObjectTypeName"`
-}
-
-type PutProfileObjectTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutProfileObjectTypeRequestBody struct {
 	// Indicates whether a profile should be created when data is received if one doesn’t exist for an object of this type. The default is <code>FALSE</code>. If the AllowProfileCreation flag is set to <code>FALSE</code>, then the service tries to fetch a standard profile and associate this object with the profile. If it is set to <code>TRUE</code>, and if no match is found, then the service creates a new standard profile.
 	AllowProfileCreation *bool `json:"AllowProfileCreation,omitempty"`
@@ -46,9 +29,18 @@ type PutProfileObjectTypeRequestBody struct {
 }
 
 type PutProfileObjectTypeRequest struct {
-	PathParams PutProfileObjectTypePathParams
-	Headers    PutProfileObjectTypeHeaders
-	Request    PutProfileObjectTypeRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
+	// The name of the profile object type.
+	ObjectTypeName    string                          `pathParam:"style=simple,explode=false,name=ObjectTypeName"`
+	RequestBody       PutProfileObjectTypeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutProfileObjectTypeResponse struct {

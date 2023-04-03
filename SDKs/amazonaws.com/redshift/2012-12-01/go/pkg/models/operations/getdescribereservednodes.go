@@ -50,30 +50,22 @@ func (e *GETDescribeReservedNodesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeReservedNodesQueryParams struct {
+type GETDescribeReservedNodesRequest struct {
 	Action GETDescribeReservedNodesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional parameter that specifies the starting point to return a set of response records. When the results of a <a>DescribeReservedNodes</a> request exceed the value specified in <code>MaxRecords</code>, Amazon Web Services returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. </p> <p>Default: <code>100</code> </p> <p>Constraints: minimum 20, maximum 100.</p>
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// Identifier for the node reservation.
-	ReservedNodeID *string                             `queryParam:"style=form,explode=true,name=ReservedNodeId"`
-	Version        GETDescribeReservedNodesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeReservedNodesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeReservedNodesRequest struct {
-	QueryParams GETDescribeReservedNodesQueryParams
-	Headers     GETDescribeReservedNodesHeaders
+	ReservedNodeID    *string                             `queryParam:"style=form,explode=true,name=ReservedNodeId"`
+	Version           GETDescribeReservedNodesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeReservedNodesResponse struct {

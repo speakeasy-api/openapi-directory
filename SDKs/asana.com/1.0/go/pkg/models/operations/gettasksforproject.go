@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTasksForProjectPathParams struct {
-	// Globally unique identifier for the project.
-	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
-}
-
-type GetTasksForProjectQueryParams struct {
+type GetTasksForProjectRequest struct {
 	// Only return tasks that are either incomplete or that have been completed since this time. Accepts a date-time string or the keyword *now*.
 	//
 	CompletedSince *string `queryParam:"style=form,explode=true,name=completed_since"`
@@ -30,11 +25,8 @@ type GetTasksForProjectQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetTasksForProjectRequest struct {
-	PathParams  GetTasksForProjectPathParams
-	QueryParams GetTasksForProjectQueryParams
+	// Globally unique identifier for the project.
+	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
 }
 
 // GetTasksForProject200ApplicationJSON - Successfully retrieved the requested project's tasks.

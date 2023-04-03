@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListQueryExecutionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListQueryExecutionsXAmzTargetEnum
 type ListQueryExecutionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListQueryExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListQueryExecutionsHeaders struct {
+type ListQueryExecutionsRequest struct {
+	ListQueryExecutionsInput shared.ListQueryExecutionsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListQueryExecutionsHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListQueryExecutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListQueryExecutionsRequest struct {
-	QueryParams ListQueryExecutionsQueryParams
-	Headers     ListQueryExecutionsHeaders
-	Request     shared.ListQueryExecutionsInput `request:"mediaType=application/json"`
 }
 
 type ListQueryExecutionsResponse struct {

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Phcer - Pharmacist Registration Certificate
 // API to verify Pharmacist Registration Certificate.
-func (s *apIs) Phcer(ctx context.Context, request operations.PhcerRequest) (*operations.PhcerResponse, error) {
+func (s *apIs) Phcer(ctx context.Context, request operations.PhcerRequestBody, security operations.PhcerSecurity) (*operations.PhcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/phcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Phcer(ctx context.Context, request operations.PhcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Phcer(ctx context.Context, request operations.PhcerRequest) (*ope
 
 // Rpcer - Pharmacist Renewal certificate
 // API to verify Pharmacist Renewal certificate.
-func (s *apIs) Rpcer(ctx context.Context, request operations.RpcerRequest) (*operations.RpcerResponse, error) {
+func (s *apIs) Rpcer(ctx context.Context, request operations.RpcerRequestBody, security operations.RpcerSecurity) (*operations.RpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rpcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Rpcer(ctx context.Context, request operations.RpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

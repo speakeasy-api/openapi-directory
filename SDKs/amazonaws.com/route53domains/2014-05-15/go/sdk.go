@@ -116,7 +116,7 @@ func (s *SDK) AcceptDomainTransferFromAnotherAwsAccount(ctx context.Context, req
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AcceptDomainTransferFromAnotherAwsAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AcceptDomainTransferFromAnotherAwsAccount(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -212,7 +212,7 @@ func (s *SDK) AssociateDelegationSignerToDomain(ctx context.Context, request ope
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.AssociateDelegationSignerToDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssociateDelegationSignerToDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) AssociateDelegationSignerToDomain(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -328,7 +328,7 @@ func (s *SDK) CancelDomainTransferToAnotherAwsAccount(ctx context.Context, reque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.CancelDomainTransferToAnotherAwsAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelDomainTransferToAnotherAwsAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,7 +343,7 @@ func (s *SDK) CancelDomainTransferToAnotherAwsAccount(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -414,7 +414,7 @@ func (s *SDK) CheckDomainAvailability(ctx context.Context, request operations.Ch
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.CheckDomainAvailability"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckDomainAvailabilityRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -429,7 +429,7 @@ func (s *SDK) CheckDomainAvailability(ctx context.Context, request operations.Ch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -490,7 +490,7 @@ func (s *SDK) CheckDomainTransferability(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.CheckDomainTransferability"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckDomainTransferabilityRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -505,7 +505,7 @@ func (s *SDK) CheckDomainTransferability(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -566,7 +566,7 @@ func (s *SDK) DeleteDomain(ctx context.Context, request operations.DeleteDomainR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.DeleteDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -581,7 +581,7 @@ func (s *SDK) DeleteDomain(ctx context.Context, request operations.DeleteDomainR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -662,7 +662,7 @@ func (s *SDK) DeleteTagsForDomain(ctx context.Context, request operations.Delete
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.DeleteTagsForDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteTagsForDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -677,7 +677,7 @@ func (s *SDK) DeleteTagsForDomain(ctx context.Context, request operations.Delete
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -748,7 +748,7 @@ func (s *SDK) DisableDomainAutoRenew(ctx context.Context, request operations.Dis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.DisableDomainAutoRenew"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisableDomainAutoRenewRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -763,7 +763,7 @@ func (s *SDK) DisableDomainAutoRenew(ctx context.Context, request operations.Dis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -824,7 +824,7 @@ func (s *SDK) DisableDomainTransferLock(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.DisableDomainTransferLock"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisableDomainTransferLockRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -839,7 +839,7 @@ func (s *SDK) DisableDomainTransferLock(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -930,7 +930,7 @@ func (s *SDK) DisassociateDelegationSignerFromDomain(ctx context.Context, reques
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.DisassociateDelegationSignerFromDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisassociateDelegationSignerFromDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -945,7 +945,7 @@ func (s *SDK) DisassociateDelegationSignerFromDomain(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1036,7 +1036,7 @@ func (s *SDK) EnableDomainAutoRenew(ctx context.Context, request operations.Enab
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.EnableDomainAutoRenew"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableDomainAutoRenewRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1051,7 +1051,7 @@ func (s *SDK) EnableDomainAutoRenew(ctx context.Context, request operations.Enab
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1122,7 +1122,7 @@ func (s *SDK) EnableDomainTransferLock(ctx context.Context, request operations.E
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.EnableDomainTransferLock"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableDomainTransferLockRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1137,7 +1137,7 @@ func (s *SDK) EnableDomainTransferLock(ctx context.Context, request operations.E
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1228,7 +1228,7 @@ func (s *SDK) GetContactReachabilityStatus(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.GetContactReachabilityStatus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetContactReachabilityStatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1243,7 +1243,7 @@ func (s *SDK) GetContactReachabilityStatus(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1314,7 +1314,7 @@ func (s *SDK) GetDomainDetail(ctx context.Context, request operations.GetDomainD
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.GetDomainDetail"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetDomainDetailRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1329,7 +1329,7 @@ func (s *SDK) GetDomainDetail(ctx context.Context, request operations.GetDomainD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1390,7 +1390,7 @@ func (s *SDK) GetDomainSuggestions(ctx context.Context, request operations.GetDo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.GetDomainSuggestions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetDomainSuggestionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1405,7 +1405,7 @@ func (s *SDK) GetDomainSuggestions(ctx context.Context, request operations.GetDo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1466,7 +1466,7 @@ func (s *SDK) GetOperationDetail(ctx context.Context, request operations.GetOper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.GetOperationDetail"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetOperationDetailRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1481,7 +1481,7 @@ func (s *SDK) GetOperationDetail(ctx context.Context, request operations.GetOper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1532,7 +1532,7 @@ func (s *SDK) ListDomains(ctx context.Context, request operations.ListDomainsReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ListDomains"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListDomainsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1547,9 +1547,9 @@ func (s *SDK) ListDomains(ctx context.Context, request operations.ListDomainsReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1602,7 +1602,7 @@ func (s *SDK) ListOperations(ctx context.Context, request operations.ListOperati
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ListOperations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListOperationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1617,9 +1617,9 @@ func (s *SDK) ListOperations(ctx context.Context, request operations.ListOperati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1672,7 +1672,7 @@ func (s *SDK) ListPrices(ctx context.Context, request operations.ListPricesReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ListPrices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListPricesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1687,9 +1687,9 @@ func (s *SDK) ListPrices(ctx context.Context, request operations.ListPricesReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1752,7 +1752,7 @@ func (s *SDK) ListTagsForDomain(ctx context.Context, request operations.ListTags
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ListTagsForDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListTagsForDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1767,7 +1767,7 @@ func (s *SDK) ListTagsForDomain(ctx context.Context, request operations.ListTags
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1838,7 +1838,7 @@ func (s *SDK) PushDomain(ctx context.Context, request operations.PushDomainReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.PushDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1853,7 +1853,7 @@ func (s *SDK) PushDomain(ctx context.Context, request operations.PushDomainReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1915,7 +1915,7 @@ func (s *SDK) RegisterDomain(ctx context.Context, request operations.RegisterDom
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.RegisterDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegisterDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1930,7 +1930,7 @@ func (s *SDK) RegisterDomain(ctx context.Context, request operations.RegisterDom
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2031,7 +2031,7 @@ func (s *SDK) RejectDomainTransferFromAnotherAwsAccount(ctx context.Context, req
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.RejectDomainTransferFromAnotherAwsAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RejectDomainTransferFromAnotherAwsAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2046,7 +2046,7 @@ func (s *SDK) RejectDomainTransferFromAnotherAwsAccount(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2117,7 +2117,7 @@ func (s *SDK) RenewDomain(ctx context.Context, request operations.RenewDomainReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.RenewDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RenewDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2132,7 +2132,7 @@ func (s *SDK) RenewDomain(ctx context.Context, request operations.RenewDomainReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2223,7 +2223,7 @@ func (s *SDK) ResendContactReachabilityEmail(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ResendContactReachabilityEmail"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResendContactReachabilityEmailRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2238,7 +2238,7 @@ func (s *SDK) ResendContactReachabilityEmail(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2309,7 +2309,7 @@ func (s *SDK) ResendOperationAuthorization(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ResendOperationAuthorization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResendOperationAuthorizationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2324,7 +2324,7 @@ func (s *SDK) ResendOperationAuthorization(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2366,7 +2366,7 @@ func (s *SDK) RetrieveDomainAuthCode(ctx context.Context, request operations.Ret
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.RetrieveDomainAuthCode"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RetrieveDomainAuthCodeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2381,7 +2381,7 @@ func (s *SDK) RetrieveDomainAuthCode(ctx context.Context, request operations.Ret
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2442,7 +2442,7 @@ func (s *SDK) TransferDomain(ctx context.Context, request operations.TransferDom
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.TransferDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2457,7 +2457,7 @@ func (s *SDK) TransferDomain(ctx context.Context, request operations.TransferDom
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2558,7 +2558,7 @@ func (s *SDK) TransferDomainToAnotherAwsAccount(ctx context.Context, request ope
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.TransferDomainToAnotherAwsAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferDomainToAnotherAwsAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2573,7 +2573,7 @@ func (s *SDK) TransferDomainToAnotherAwsAccount(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2654,7 +2654,7 @@ func (s *SDK) UpdateDomainContact(ctx context.Context, request operations.Update
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.UpdateDomainContact"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDomainContactRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2669,7 +2669,7 @@ func (s *SDK) UpdateDomainContact(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2760,7 +2760,7 @@ func (s *SDK) UpdateDomainContactPrivacy(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.UpdateDomainContactPrivacy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDomainContactPrivacyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2775,7 +2775,7 @@ func (s *SDK) UpdateDomainContactPrivacy(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2866,7 +2866,7 @@ func (s *SDK) UpdateDomainNameservers(ctx context.Context, request operations.Up
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.UpdateDomainNameservers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDomainNameserversRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2881,7 +2881,7 @@ func (s *SDK) UpdateDomainNameservers(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2972,7 +2972,7 @@ func (s *SDK) UpdateTagsForDomain(ctx context.Context, request operations.Update
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.UpdateTagsForDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTagsForDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2987,7 +2987,7 @@ func (s *SDK) UpdateTagsForDomain(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3058,7 +3058,7 @@ func (s *SDK) ViewBilling(ctx context.Context, request operations.ViewBillingReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Domains_v20140515.ViewBilling"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ViewBillingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3073,9 +3073,9 @@ func (s *SDK) ViewBilling(ctx context.Context, request operations.ViewBillingReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

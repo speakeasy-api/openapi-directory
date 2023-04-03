@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSessionPathParams struct {
-	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
-	// The identifier of the session. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type GetSessionHeaders struct {
+type GetSessionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetSessionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSessionRequest struct {
-	PathParams GetSessionPathParams
-	Headers    GetSessionHeaders
+	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
+	// The identifier of the session. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type GetSessionResponse struct {

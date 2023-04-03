@@ -34,16 +34,16 @@ func newBalanceAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // GetBalanceAccountsID - Get a balance account
 // Returns a balance account and its balances for the default currency and other currencies with a non-zero balance.
-func (s *balanceAccounts) GetBalanceAccountsID(ctx context.Context, request operations.GetBalanceAccountsIDRequest) (*operations.GetBalanceAccountsIDResponse, error) {
+func (s *balanceAccounts) GetBalanceAccountsID(ctx context.Context, request operations.GetBalanceAccountsIDRequest, security operations.GetBalanceAccountsIDSecurity) (*operations.GetBalanceAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,20 +99,20 @@ func (s *balanceAccounts) GetBalanceAccountsID(ctx context.Context, request oper
 // Returns a paginated list of the payment instruments associated with a balance account.
 //
 // To fetch multiple pages, use the query parameters.For example, to limit the page to 3 payment instruments and to skip the first 6, use `/balanceAccounts/{id}/paymentInstruments?limit=3&offset=6`.
-func (s *balanceAccounts) GetBalanceAccountsIDPaymentInstruments(ctx context.Context, request operations.GetBalanceAccountsIDPaymentInstrumentsRequest) (*operations.GetBalanceAccountsIDPaymentInstrumentsResponse, error) {
+func (s *balanceAccounts) GetBalanceAccountsIDPaymentInstruments(ctx context.Context, request operations.GetBalanceAccountsIDPaymentInstrumentsRequest, security operations.GetBalanceAccountsIDPaymentInstrumentsSecurity) (*operations.GetBalanceAccountsIDPaymentInstrumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}/paymentInstruments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}/paymentInstruments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,11 +166,11 @@ func (s *balanceAccounts) GetBalanceAccountsIDPaymentInstruments(ctx context.Con
 
 // PatchBalanceAccountsID - Update a balance account
 // Updates a balance account.
-func (s *balanceAccounts) PatchBalanceAccountsID(ctx context.Context, request operations.PatchBalanceAccountsIDRequest) (*operations.PatchBalanceAccountsIDResponse, error) {
+func (s *balanceAccounts) PatchBalanceAccountsID(ctx context.Context, request operations.PatchBalanceAccountsIDRequest, security operations.PatchBalanceAccountsIDSecurity) (*operations.PatchBalanceAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BalanceAccountUpdateRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -182,7 +182,7 @@ func (s *balanceAccounts) PatchBalanceAccountsID(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *balanceAccounts) PatchBalanceAccountsID(ctx context.Context, request op
 
 // PostBalanceAccounts - Create a balance account
 // Creates a balance account that holds the funds of the associated account holder.
-func (s *balanceAccounts) PostBalanceAccounts(ctx context.Context, request operations.PostBalanceAccountsRequest) (*operations.PostBalanceAccountsResponse, error) {
+func (s *balanceAccounts) PostBalanceAccounts(ctx context.Context, request shared.BalanceAccountInfoInput, security operations.PostBalanceAccountsSecurity) (*operations.PostBalanceAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/balanceAccounts"
 
@@ -252,7 +252,7 @@ func (s *balanceAccounts) PostBalanceAccounts(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

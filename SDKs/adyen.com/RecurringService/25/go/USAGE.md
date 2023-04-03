@@ -13,22 +13,17 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostDisableRequest{
-        Security: operations.PostDisableSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &shared.DisableRequest{
-            Contract: "corrupti",
-            MerchantAccount: "provident",
-            RecurringDetailReference: "distinctio",
-            ShopperReference: "quibusdam",
-        },
+    req := shared.DisableRequest{
+        Contract: "corrupti",
+        MerchantAccount: "provident",
+        RecurringDetailReference: "distinctio",
+        ShopperReference: "quibusdam",
     }
 
     ctx := context.Background()
-    res, err := s.General.PostDisable(ctx, req)
+    res, err := s.General.PostDisable(ctx, req, operations.PostDisableSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

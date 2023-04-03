@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAccountAuditConfigurationQueryParams struct {
-	// If true, all scheduled audits are deleted.
-	DeleteScheduledAudits *bool `queryParam:"style=form,explode=true,name=deleteScheduledAudits"`
-}
-
-type DeleteAccountAuditConfigurationHeaders struct {
+type DeleteAccountAuditConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteAccountAuditConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAccountAuditConfigurationRequest struct {
-	QueryParams DeleteAccountAuditConfigurationQueryParams
-	Headers     DeleteAccountAuditConfigurationHeaders
+	// If true, all scheduled audits are deleted.
+	DeleteScheduledAudits *bool `queryParam:"style=form,explode=true,name=deleteScheduledAudits"`
 }
 
 type DeleteAccountAuditConfigurationResponse struct {

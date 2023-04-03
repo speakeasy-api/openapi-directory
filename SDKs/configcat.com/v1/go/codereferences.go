@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +35,7 @@ func newCodeReferences(defaultClient, securityClient HTTPClient, serverURL, lang
 	}
 }
 
-func (s *codeReferences) PostV1CodeReferences(ctx context.Context, request operations.PostV1CodeReferencesRequest) (*operations.PostV1CodeReferencesResponse, error) {
+func (s *codeReferences) PostV1CodeReferences(ctx context.Context, request shared.CodeReferenceRequest) (*operations.PostV1CodeReferencesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/code-references"
 
@@ -85,7 +86,7 @@ func (s *codeReferences) PostV1CodeReferences(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *codeReferences) PostV1CodeReferencesDeleteReports(ctx context.Context, request operations.PostV1CodeReferencesDeleteReportsRequest) (*operations.PostV1CodeReferencesDeleteReportsResponse, error) {
+func (s *codeReferences) PostV1CodeReferencesDeleteReports(ctx context.Context, request shared.DeleteRepositoryReportsRequest) (*operations.PostV1CodeReferencesDeleteReportsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/code-references/delete-reports"
 

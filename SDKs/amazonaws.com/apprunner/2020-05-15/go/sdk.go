@@ -116,7 +116,7 @@ func (s *SDK) AssociateCustomDomain(ctx context.Context, request operations.Asso
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.AssociateCustomDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssociateCustomDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateCustomDomain(ctx context.Context, request operations.Asso
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -202,7 +202,7 @@ func (s *SDK) CreateAutoScalingConfiguration(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.CreateAutoScalingConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAutoScalingConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -217,7 +217,7 @@ func (s *SDK) CreateAutoScalingConfiguration(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -288,7 +288,7 @@ func (s *SDK) CreateConnection(ctx context.Context, request operations.CreateCon
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.CreateConnection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *SDK) CreateConnection(ctx context.Context, request operations.CreateCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -374,7 +374,7 @@ func (s *SDK) CreateObservabilityConfiguration(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.CreateObservabilityConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateObservabilityConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,7 +389,7 @@ func (s *SDK) CreateObservabilityConfiguration(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -460,7 +460,7 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.CreateService"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -475,7 +475,7 @@ func (s *SDK) CreateService(ctx context.Context, request operations.CreateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -546,7 +546,7 @@ func (s *SDK) CreateVpcConnector(ctx context.Context, request operations.CreateV
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.CreateVpcConnector"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateVpcConnectorRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -561,7 +561,7 @@ func (s *SDK) CreateVpcConnector(ctx context.Context, request operations.CreateV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -632,7 +632,7 @@ func (s *SDK) CreateVpcIngressConnection(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.CreateVpcIngressConnection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateVpcIngressConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -647,7 +647,7 @@ func (s *SDK) CreateVpcIngressConnection(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -728,7 +728,7 @@ func (s *SDK) DeleteAutoScalingConfiguration(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DeleteAutoScalingConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteAutoScalingConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -743,7 +743,7 @@ func (s *SDK) DeleteAutoScalingConfiguration(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -814,7 +814,7 @@ func (s *SDK) DeleteConnection(ctx context.Context, request operations.DeleteCon
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DeleteConnection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -829,7 +829,7 @@ func (s *SDK) DeleteConnection(ctx context.Context, request operations.DeleteCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -900,7 +900,7 @@ func (s *SDK) DeleteObservabilityConfiguration(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DeleteObservabilityConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteObservabilityConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -915,7 +915,7 @@ func (s *SDK) DeleteObservabilityConfiguration(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -986,7 +986,7 @@ func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServic
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DeleteService"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1001,7 +1001,7 @@ func (s *SDK) DeleteService(ctx context.Context, request operations.DeleteServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1082,7 +1082,7 @@ func (s *SDK) DeleteVpcConnector(ctx context.Context, request operations.DeleteV
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DeleteVpcConnector"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteVpcConnectorRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1097,7 +1097,7 @@ func (s *SDK) DeleteVpcConnector(ctx context.Context, request operations.DeleteV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1168,7 +1168,7 @@ func (s *SDK) DeleteVpcIngressConnection(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DeleteVpcIngressConnection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteVpcIngressConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1183,7 +1183,7 @@ func (s *SDK) DeleteVpcIngressConnection(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1264,7 +1264,7 @@ func (s *SDK) DescribeAutoScalingConfiguration(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DescribeAutoScalingConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeAutoScalingConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1279,7 +1279,7 @@ func (s *SDK) DescribeAutoScalingConfiguration(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1350,7 +1350,7 @@ func (s *SDK) DescribeCustomDomains(ctx context.Context, request operations.Desc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DescribeCustomDomains"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeCustomDomainsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1365,9 +1365,9 @@ func (s *SDK) DescribeCustomDomains(ctx context.Context, request operations.Desc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1440,7 +1440,7 @@ func (s *SDK) DescribeObservabilityConfiguration(ctx context.Context, request op
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DescribeObservabilityConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeObservabilityConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1455,7 +1455,7 @@ func (s *SDK) DescribeObservabilityConfiguration(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1526,7 +1526,7 @@ func (s *SDK) DescribeService(ctx context.Context, request operations.DescribeSe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DescribeService"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1541,7 +1541,7 @@ func (s *SDK) DescribeService(ctx context.Context, request operations.DescribeSe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1612,7 +1612,7 @@ func (s *SDK) DescribeVpcConnector(ctx context.Context, request operations.Descr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DescribeVpcConnector"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeVpcConnectorRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1627,7 +1627,7 @@ func (s *SDK) DescribeVpcConnector(ctx context.Context, request operations.Descr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1698,7 +1698,7 @@ func (s *SDK) DescribeVpcIngressConnection(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DescribeVpcIngressConnection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeVpcIngressConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1713,7 +1713,7 @@ func (s *SDK) DescribeVpcIngressConnection(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1784,7 +1784,7 @@ func (s *SDK) DisassociateCustomDomain(ctx context.Context, request operations.D
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.DisassociateCustomDomain"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisassociateCustomDomainRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1799,7 +1799,7 @@ func (s *SDK) DisassociateCustomDomain(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1880,7 +1880,7 @@ func (s *SDK) ListAutoScalingConfigurations(ctx context.Context, request operati
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListAutoScalingConfigurations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListAutoScalingConfigurationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1895,9 +1895,9 @@ func (s *SDK) ListAutoScalingConfigurations(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1960,7 +1960,7 @@ func (s *SDK) ListConnections(ctx context.Context, request operations.ListConnec
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListConnections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListConnectionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1975,9 +1975,9 @@ func (s *SDK) ListConnections(ctx context.Context, request operations.ListConnec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2040,7 +2040,7 @@ func (s *SDK) ListObservabilityConfigurations(ctx context.Context, request opera
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListObservabilityConfigurations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListObservabilityConfigurationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2055,9 +2055,9 @@ func (s *SDK) ListObservabilityConfigurations(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2120,7 +2120,7 @@ func (s *SDK) ListOperations(ctx context.Context, request operations.ListOperati
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListOperations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListOperationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2135,9 +2135,9 @@ func (s *SDK) ListOperations(ctx context.Context, request operations.ListOperati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2210,7 +2210,7 @@ func (s *SDK) ListServices(ctx context.Context, request operations.ListServicesR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListServices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListServicesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2225,9 +2225,9 @@ func (s *SDK) ListServices(ctx context.Context, request operations.ListServicesR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2290,7 +2290,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListTagsForResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListTagsForResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2305,7 +2305,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2386,7 +2386,7 @@ func (s *SDK) ListVpcConnectors(ctx context.Context, request operations.ListVpcC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListVpcConnectors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListVpcConnectorsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2401,9 +2401,9 @@ func (s *SDK) ListVpcConnectors(ctx context.Context, request operations.ListVpcC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2466,7 +2466,7 @@ func (s *SDK) ListVpcIngressConnections(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ListVpcIngressConnections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListVpcIngressConnectionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2481,9 +2481,9 @@ func (s *SDK) ListVpcIngressConnections(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2546,7 +2546,7 @@ func (s *SDK) PauseService(ctx context.Context, request operations.PauseServiceR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.PauseService"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PauseServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2561,7 +2561,7 @@ func (s *SDK) PauseService(ctx context.Context, request operations.PauseServiceR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2642,7 +2642,7 @@ func (s *SDK) ResumeService(ctx context.Context, request operations.ResumeServic
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.ResumeService"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResumeServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2657,7 +2657,7 @@ func (s *SDK) ResumeService(ctx context.Context, request operations.ResumeServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2738,7 +2738,7 @@ func (s *SDK) StartDeployment(ctx context.Context, request operations.StartDeplo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.StartDeployment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartDeploymentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2753,7 +2753,7 @@ func (s *SDK) StartDeployment(ctx context.Context, request operations.StartDeplo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2824,7 +2824,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.TagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2839,7 +2839,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2920,7 +2920,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.UntagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UntagResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2935,7 +2935,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3016,7 +3016,7 @@ func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServic
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.UpdateService"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3031,7 +3031,7 @@ func (s *SDK) UpdateService(ctx context.Context, request operations.UpdateServic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3112,7 +3112,7 @@ func (s *SDK) UpdateVpcIngressConnection(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AppRunner.UpdateVpcIngressConnection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateVpcIngressConnectionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3127,7 +3127,7 @@ func (s *SDK) UpdateVpcIngressConnection(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

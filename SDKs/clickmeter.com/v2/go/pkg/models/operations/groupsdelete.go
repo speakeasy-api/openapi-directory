@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsDeletePathParams struct {
+type GroupsDeleteRequest struct {
 	// Id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsDeleteRequest struct {
-	PathParams GroupsDeletePathParams
 }
 
 type GroupsDeleteResponse struct {

@@ -50,24 +50,16 @@ func (e *POSTGetAccountSendingEnabledVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTGetAccountSendingEnabledQueryParams struct {
-	Action  POSTGetAccountSendingEnabledActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetAccountSendingEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetAccountSendingEnabledHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetAccountSendingEnabledRequest struct {
-	QueryParams POSTGetAccountSendingEnabledQueryParams
-	Headers     POSTGetAccountSendingEnabledHeaders
+	Action            POSTGetAccountSendingEnabledActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           POSTGetAccountSendingEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetAccountSendingEnabledResponse struct {

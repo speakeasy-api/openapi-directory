@@ -8,15 +8,9 @@ import (
 )
 
 type CreateClientSecurity struct {
-	ClientRegistrationToken *shared.SchemeClientRegistrationToken `security:"scheme,type=apiKey,subtype=header"`
-	OauthCode               *shared.SchemeOauthCode               `security:"scheme,type=oauth2"`
-	OauthImplicit           *shared.SchemeOauthImplicit           `security:"scheme,type=oauth2"`
-}
-
-type CreateClientRequest struct {
-	// Client Object
-	Request  shared.Client `request:"mediaType=application/json"`
-	Security CreateClientSecurity
+	ClientRegistrationToken *string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	OauthCode               *string `security:"scheme,type=oauth2,name=Authorization"`
+	OauthImplicit           *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CreateClientResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSegmentPathParams struct {
+type CreateSegmentRequest struct {
+	CreateSegmentModel shared.CreateSegmentModel `request:"mediaType=application/json"`
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type CreateSegmentRequest struct {
-	PathParams CreateSegmentPathParams
-	Request    shared.CreateSegmentModel `request:"mediaType=application/json"`
 }
 
 type CreateSegmentResponse struct {

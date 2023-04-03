@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderInvoicePdfRequest struct {
-	Request shared.GetOrderInvoicePdfFromHTMLInvoiceURLRequest `request:"mediaType=application/json"`
-}
-
 type GetOrderInvoicePdfResponse struct {
 	// Occurs when something goes wrong
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

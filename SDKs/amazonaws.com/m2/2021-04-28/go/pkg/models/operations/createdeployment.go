@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDeploymentPathParams struct {
-	// The application identifier.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type CreateDeploymentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateDeploymentRequestBody struct {
 	// The version of the application to deploy.
 	ApplicationVersion int64 `json:"applicationVersion"`
@@ -32,9 +17,16 @@ type CreateDeploymentRequestBody struct {
 }
 
 type CreateDeploymentRequest struct {
-	PathParams CreateDeploymentPathParams
-	Headers    CreateDeploymentHeaders
-	Request    CreateDeploymentRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDeploymentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The application identifier.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 }
 
 type CreateDeploymentResponse struct {

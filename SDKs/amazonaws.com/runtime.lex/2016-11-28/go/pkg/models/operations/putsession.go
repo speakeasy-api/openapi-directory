@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSessionPathParams struct {
-	// The alias in use for the bot that contains the session data.
-	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
-	// The name of the bot that contains the session data.
-	BotName string `pathParam:"style=simple,explode=false,name=botName"`
-	// The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PutSessionHeaders struct {
-	// <p>The message that Amazon Lex returns in the response can be either text or speech based depending on the value of this field.</p> <ul> <li> <p>If the value is <code>text/plain; charset=utf-8</code>, Amazon Lex returns text in the response.</p> </li> <li> <p>If the value begins with <code>audio/</code>, Amazon Lex returns speech in the response. Amazon Lex uses Amazon Polly to generate the speech in the configuration that you specify. For example, if you specify <code>audio/mpeg</code> as the value, Amazon Lex returns speech in the MPEG format.</p> </li> <li> <p>If the value is <code>audio/pcm</code>, the speech is returned as <code>audio/pcm</code> in 16-bit, little endian format.</p> </li> <li> <p>The following are the accepted values:</p> <ul> <li> <p> <code>audio/mpeg</code> </p> </li> <li> <p> <code>audio/ogg</code> </p> </li> <li> <p> <code>audio/pcm</code> </p> </li> <li> <p> <code>audio/*</code> (defaults to mpeg)</p> </li> <li> <p> <code>text/plain; charset=utf-8</code> </p> </li> </ul> </li> </ul>
-	Accept            *string `header:"style=simple,explode=false,name=Accept"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutSessionRequestBodyDialogAction - Describes the next action that the bot should take in its interaction with the user and provides information about the context in which the action takes place. Use the <code>DialogAction</code> data type to set the interaction to a specific state, or to return the interaction to a previous state.
 type PutSessionRequestBodyDialogAction struct {
 	FulfillmentState *shared.FulfillmentStateEnum  `json:"fulfillmentState,omitempty"`
@@ -51,9 +30,22 @@ type PutSessionRequestBody struct {
 }
 
 type PutSessionRequest struct {
-	PathParams PutSessionPathParams
-	Headers    PutSessionHeaders
-	Request    PutSessionRequestBody `request:"mediaType=application/json"`
+	// <p>The message that Amazon Lex returns in the response can be either text or speech based depending on the value of this field.</p> <ul> <li> <p>If the value is <code>text/plain; charset=utf-8</code>, Amazon Lex returns text in the response.</p> </li> <li> <p>If the value begins with <code>audio/</code>, Amazon Lex returns speech in the response. Amazon Lex uses Amazon Polly to generate the speech in the configuration that you specify. For example, if you specify <code>audio/mpeg</code> as the value, Amazon Lex returns speech in the MPEG format.</p> </li> <li> <p>If the value is <code>audio/pcm</code>, the speech is returned as <code>audio/pcm</code> in 16-bit, little endian format.</p> </li> <li> <p>The following are the accepted values:</p> <ul> <li> <p> <code>audio/mpeg</code> </p> </li> <li> <p> <code>audio/ogg</code> </p> </li> <li> <p> <code>audio/pcm</code> </p> </li> <li> <p> <code>audio/*</code> (defaults to mpeg)</p> </li> <li> <p> <code>text/plain; charset=utf-8</code> </p> </li> </ul> </li> </ul>
+	Accept            *string               `header:"style=simple,explode=false,name=Accept"`
+	RequestBody       PutSessionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The alias in use for the bot that contains the session data.
+	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
+	// The name of the bot that contains the session data.
+	BotName string `pathParam:"style=simple,explode=false,name=botName"`
+	// The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type PutSessionResponse struct {

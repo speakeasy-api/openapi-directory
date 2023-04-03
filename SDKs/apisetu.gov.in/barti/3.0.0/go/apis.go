@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Cvcer - Caste Validity Certificate
 // API to verify Caste Validity Certificate.
-func (s *apIs) Cvcer(ctx context.Context, request operations.CvcerRequest) (*operations.CvcerResponse, error) {
+func (s *apIs) Cvcer(ctx context.Context, request operations.CvcerRequestBody, security operations.CvcerSecurity) (*operations.CvcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cvcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Cvcer(ctx context.Context, request operations.CvcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

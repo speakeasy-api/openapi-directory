@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRepositoryPipelineCachesPathParams struct {
+type GetRepositoryPipelineCachesRequest struct {
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The account.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoryPipelineCachesRequest struct {
-	PathParams GetRepositoryPipelineCachesPathParams
 }
 
 type GetRepositoryPipelineCachesResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchSuggestQueryParams struct {
+type SearchSuggestRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The language for any applicable localised strings.
@@ -16,10 +16,6 @@ type SearchSuggestQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type SearchSuggestRequest struct {
-	QueryParams SearchSuggestQueryParams
 }
 
 type SearchSuggestResponse struct {

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartAuditMitigationActionsTaskPathParams struct {
-	// A unique identifier for the task. You can use this identifier to check the status of the task or to cancel it.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type StartAuditMitigationActionsTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartAuditMitigationActionsTaskRequestBodyTarget - Used in MitigationActionParams, this information identifies the target findings to which the mitigation actions are applied. Only one entry appears.
 type StartAuditMitigationActionsTaskRequestBodyTarget struct {
 	AuditCheckToReasonCodeFilter map[string][]string `json:"auditCheckToReasonCodeFilter,omitempty"`
@@ -39,9 +24,16 @@ type StartAuditMitigationActionsTaskRequestBody struct {
 }
 
 type StartAuditMitigationActionsTaskRequest struct {
-	PathParams StartAuditMitigationActionsTaskPathParams
-	Headers    StartAuditMitigationActionsTaskHeaders
-	Request    StartAuditMitigationActionsTaskRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartAuditMitigationActionsTaskRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier for the task. You can use this identifier to check the status of the task or to cancel it.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type StartAuditMitigationActionsTaskResponse struct {

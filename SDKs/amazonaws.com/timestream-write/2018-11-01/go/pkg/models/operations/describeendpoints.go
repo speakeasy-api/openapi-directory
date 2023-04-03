@@ -30,7 +30,8 @@ func (e *DescribeEndpointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeEndpointsHeaders struct {
+type DescribeEndpointsRequest struct {
+	RequestBody       map[string]interface{}          `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DescribeEndpointsHeaders struct {
 	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeEndpointsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeEndpointsRequest struct {
-	Headers DescribeEndpointsHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DescribeEndpointsResponse struct {

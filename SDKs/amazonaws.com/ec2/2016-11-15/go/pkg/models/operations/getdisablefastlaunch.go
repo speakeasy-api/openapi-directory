@@ -50,30 +50,22 @@ func (e *GETDisableFastLaunchVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDisableFastLaunchQueryParams struct {
+type GETDisableFastLaunchRequest struct {
 	Action GETDisableFastLaunchActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any errors that are encountered while cleaning up resources in your account.
 	Force *bool `queryParam:"style=form,explode=true,name=Force"`
 	// The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
-	ImageID string                          `queryParam:"style=form,explode=true,name=ImageId"`
-	Version GETDisableFastLaunchVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisableFastLaunchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableFastLaunchRequest struct {
-	QueryParams GETDisableFastLaunchQueryParams
-	Headers     GETDisableFastLaunchHeaders
+	ImageID           string                          `queryParam:"style=form,explode=true,name=ImageId"`
+	Version           GETDisableFastLaunchVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisableFastLaunchResponse struct {

@@ -33,16 +33,7 @@ func (e *GetSchemaAnalysisRuleTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSchemaAnalysisRulePathParams struct {
-	// A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
-	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
-	// The name of the schema to retrieve the analysis rule for.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The type of the schema analysis rule to retrieve. Schema analysis rules are uniquely identified by a combination of the collaboration, the schema name, and their type.
-	Type GetSchemaAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetSchemaAnalysisRuleHeaders struct {
+type GetSchemaAnalysisRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type GetSchemaAnalysisRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSchemaAnalysisRuleRequest struct {
-	PathParams GetSchemaAnalysisRulePathParams
-	Headers    GetSchemaAnalysisRuleHeaders
+	// A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
+	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
+	// The name of the schema to retrieve the analysis rule for.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The type of the schema analysis rule to retrieve. Schema analysis rules are uniquely identified by a combination of the collaboration, the schema name, and their type.
+	Type GetSchemaAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=type"`
 }
 
 type GetSchemaAnalysisRuleResponse struct {

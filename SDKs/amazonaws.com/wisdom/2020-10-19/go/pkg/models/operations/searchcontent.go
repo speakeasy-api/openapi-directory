@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchContentPathParams struct {
-	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
-}
-
-type SearchContentQueryParams struct {
-	// The maximum number of results to return per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type SearchContentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SearchContentRequestBodySearchExpression - The search expression.
 type SearchContentRequestBodySearchExpression struct {
 	Filters []shared.Filter `json:"filters,omitempty"`
@@ -40,10 +18,20 @@ type SearchContentRequestBody struct {
 }
 
 type SearchContentRequest struct {
-	PathParams  SearchContentPathParams
-	QueryParams SearchContentQueryParams
-	Headers     SearchContentHeaders
-	Request     SearchContentRequestBody `request:"mediaType=application/json"`
+	RequestBody       SearchContentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
+	// The maximum number of results to return per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type SearchContentResponse struct {

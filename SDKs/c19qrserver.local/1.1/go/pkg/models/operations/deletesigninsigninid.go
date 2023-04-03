@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSigninSigninIDPathParams struct {
+type DeleteSigninSigninIDRequest struct {
 	// The ID of the signin record to be deleted.
 	SigninID int64 `pathParam:"style=simple,explode=false,name=signinId"`
-}
-
-type DeleteSigninSigninIDRequest struct {
-	PathParams DeleteSigninSigninIDPathParams
 }
 
 type DeleteSigninSigninIDResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryObjectsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=limit"`
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-}
-
 // QueryObjectsXAmzTargetEnum
 type QueryObjectsXAmzTargetEnum string
 
@@ -37,7 +30,8 @@ func (e *QueryObjectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type QueryObjectsHeaders struct {
+type QueryObjectsRequest struct {
+	QueryObjectsInput shared.QueryObjectsInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +40,10 @@ type QueryObjectsHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        QueryObjectsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type QueryObjectsRequest struct {
-	QueryParams QueryObjectsQueryParams
-	Headers     QueryObjectsHeaders
-	Request     shared.QueryObjectsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=limit"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
 }
 
 type QueryObjectsResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GsiDispatchQueryParams struct {
+type GsiDispatchRequest struct {
 	// Any valid Stromkonto account (address).
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Zipcode (Postleitzahl) of a city in Germany.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GsiDispatchRequest struct {
-	QueryParams GsiDispatchQueryParams
 }
 
 // GsiDispatch200ApplicationJSONTimeframe - Evaluated timeframe for this request

@@ -51,7 +51,7 @@ func (e *GETBacktrackDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETBacktrackDBClusterQueryParams struct {
+type GETBacktrackDBClusterRequest struct {
 	Action GETBacktrackDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The timestamp of the time to backtrack the DB cluster to, specified in ISO 8601 format. For more information about ISO 8601, see the <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601 Wikipedia page.</a> </p> <note> <p>If the specified time isn't a consistent time for the DB cluster, Aurora automatically chooses the nearest possible consistent time for the DB cluster.</p> </note> <p>Constraints:</p> <ul> <li> <p>Must contain a valid ISO 8601 timestamp.</p> </li> <li> <p>Can't contain a timestamp set in the future.</p> </li> </ul> <p>Example: <code>2017-07-08T18:00Z</code> </p>
 	BacktrackTo time.Time `queryParam:"style=form,explode=true,name=BacktrackTo"`
@@ -62,21 +62,13 @@ type GETBacktrackDBClusterQueryParams struct {
 	// A value that indicates whether to backtrack the DB cluster to the earliest possible backtrack time when <i>BacktrackTo</i> is set to a timestamp earlier than the earliest backtrack time. When this parameter is disabled and <i>BacktrackTo</i> is set to a timestamp earlier than the earliest backtrack time, an error occurs.
 	UseEarliestTimeOnPointInTimeUnavailable *bool                            `queryParam:"style=form,explode=true,name=UseEarliestTimeOnPointInTimeUnavailable"`
 	Version                                 GETBacktrackDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETBacktrackDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETBacktrackDBClusterRequest struct {
-	QueryParams GETBacktrackDBClusterQueryParams
-	Headers     GETBacktrackDBClusterHeaders
+	XAmzAlgorithm                           *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                       *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                          *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                       *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                           *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                       *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETBacktrackDBClusterResponse struct {

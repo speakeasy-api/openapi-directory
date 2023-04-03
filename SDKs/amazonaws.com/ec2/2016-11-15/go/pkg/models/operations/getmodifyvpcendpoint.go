@@ -84,7 +84,7 @@ func (e *GETModifyVpcEndpointVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyVpcEndpointQueryParams struct {
+type GETModifyVpcEndpointRequest struct {
 	Action GETModifyVpcEndpointActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// (Gateway endpoint) The IDs of the route tables to associate with the endpoint.
 	AddRouteTableID []string `queryParam:"style=form,explode=true,name=AddRouteTableId"`
@@ -112,10 +112,7 @@ type GETModifyVpcEndpointQueryParams struct {
 	ResetPolicy *bool                           `queryParam:"style=form,explode=true,name=ResetPolicy"`
 	Version     GETModifyVpcEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the endpoint.
-	VpcEndpointID string `queryParam:"style=form,explode=true,name=VpcEndpointId"`
-}
-
-type GETModifyVpcEndpointHeaders struct {
+	VpcEndpointID     string  `queryParam:"style=form,explode=true,name=VpcEndpointId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -123,11 +120,6 @@ type GETModifyVpcEndpointHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpcEndpointRequest struct {
-	QueryParams GETModifyVpcEndpointQueryParams
-	Headers     GETModifyVpcEndpointHeaders
 }
 
 type GETModifyVpcEndpointResponse struct {

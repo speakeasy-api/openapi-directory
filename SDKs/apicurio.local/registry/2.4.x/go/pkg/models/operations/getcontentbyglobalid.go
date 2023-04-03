@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContentByGlobalIDPathParams struct {
-	// Global identifier for an artifact version.
-	GlobalID int64 `pathParam:"style=simple,explode=false,name=globalId"`
-}
-
-type GetContentByGlobalIDQueryParams struct {
+type GetContentByGlobalIDRequest struct {
 	// Allows the user to specify if the content should be dereferenced when being returned
 	Dereference *bool `queryParam:"style=form,explode=true,name=dereference"`
-}
-
-type GetContentByGlobalIDRequest struct {
-	PathParams  GetContentByGlobalIDPathParams
-	QueryParams GetContentByGlobalIDQueryParams
+	// Global identifier for an artifact version.
+	GlobalID int64 `pathParam:"style=simple,explode=false,name=globalId"`
 }
 
 type GetContentByGlobalIDResponse struct {

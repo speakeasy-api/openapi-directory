@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReverseReplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ReverseReplicationRequestBody struct {
 	// The ID of the Recovery Instance that we want to reverse the replication for.
 	RecoveryInstanceID string `json:"recoveryInstanceID"`
 }
 
 type ReverseReplicationRequest struct {
-	Headers ReverseReplicationHeaders
-	Request ReverseReplicationRequestBody `request:"mediaType=application/json"`
+	RequestBody       ReverseReplicationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ReverseReplicationResponse struct {

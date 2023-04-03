@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostConfigApacheSlingGetServletQueryParams struct {
+type PostConfigApacheSlingGetServletRequest struct {
 	EnableHTML                   *bool   `queryParam:"style=form,explode=true,name=enable.html"`
 	EnableHTMLAtTypeHint         *string `queryParam:"style=form,explode=true,name=enable.html@TypeHint"`
 	EnableTxt                    *bool   `queryParam:"style=form,explode=true,name=enable.txt"`
@@ -15,10 +15,6 @@ type PostConfigApacheSlingGetServletQueryParams struct {
 	EnableXMLAtTypeHint          *string `queryParam:"style=form,explode=true,name=enable.xml@TypeHint"`
 	JSONMaximumresults           *string `queryParam:"style=form,explode=true,name=json.maximumresults"`
 	JSONMaximumresultsAtTypeHint *string `queryParam:"style=form,explode=true,name=json.maximumresults@TypeHint"`
-}
-
-type PostConfigApacheSlingGetServletRequest struct {
-	QueryParams PostConfigApacheSlingGetServletQueryParams
 }
 
 type PostConfigApacheSlingGetServletResponse struct {

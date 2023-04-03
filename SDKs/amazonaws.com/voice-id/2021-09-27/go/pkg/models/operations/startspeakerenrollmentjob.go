@@ -30,20 +30,16 @@ func (e *StartSpeakerEnrollmentJobXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type StartSpeakerEnrollmentJobHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartSpeakerEnrollmentJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartSpeakerEnrollmentJobRequest struct {
-	Headers StartSpeakerEnrollmentJobHeaders
-	Request shared.StartSpeakerEnrollmentJobRequest `request:"mediaType=application/json"`
+	StartSpeakerEnrollmentJobRequest shared.StartSpeakerEnrollmentJobRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                         *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                       StartSpeakerEnrollmentJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartSpeakerEnrollmentJobResponse struct {

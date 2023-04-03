@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConfiguredTableAssociationPathParams struct {
-	// The unique identifier for the configured table association to update. Currently accepts the configured table association ID.
-	ConfiguredTableAssociationIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableAssociationIdentifier"`
-	// The unique ID for the membership that the configured table association belongs to.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
-type UpdateConfiguredTableAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateConfiguredTableAssociationRequestBody struct {
 	// A new description for the configured table association.
 	Description *string `json:"description,omitempty"`
@@ -32,9 +15,18 @@ type UpdateConfiguredTableAssociationRequestBody struct {
 }
 
 type UpdateConfiguredTableAssociationRequest struct {
-	PathParams UpdateConfiguredTableAssociationPathParams
-	Headers    UpdateConfiguredTableAssociationHeaders
-	Request    UpdateConfiguredTableAssociationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateConfiguredTableAssociationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier for the configured table association to update. Currently accepts the configured table association ID.
+	ConfiguredTableAssociationIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableAssociationIdentifier"`
+	// The unique ID for the membership that the configured table association belongs to.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
 }
 
 type UpdateConfiguredTableAssociationResponse struct {

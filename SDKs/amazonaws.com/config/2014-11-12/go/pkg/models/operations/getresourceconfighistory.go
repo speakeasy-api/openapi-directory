@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourceConfigHistoryQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // GetResourceConfigHistoryXAmzTargetEnum
 type GetResourceConfigHistoryXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *GetResourceConfigHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetResourceConfigHistoryHeaders struct {
-	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetResourceConfigHistoryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetResourceConfigHistoryRequest struct {
-	QueryParams GetResourceConfigHistoryQueryParams
-	Headers     GetResourceConfigHistoryHeaders
-	Request     shared.GetResourceConfigHistoryRequest `request:"mediaType=application/json"`
+	GetResourceConfigHistoryRequest shared.GetResourceConfigHistoryRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      GetResourceConfigHistoryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=limit"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetResourceConfigHistoryResponse struct {

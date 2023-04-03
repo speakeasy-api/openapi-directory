@@ -8,17 +8,13 @@ import (
 )
 
 type StartVoiceBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type StartVoiceBroadcastPathParams struct {
-	// An id of voice broadcast to start
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type StartVoiceBroadcastRequest struct {
-	PathParams StartVoiceBroadcastPathParams
-	Security   StartVoiceBroadcastSecurity
+	// An id of voice broadcast to start
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StartVoiceBroadcastResponse struct {

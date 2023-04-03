@@ -30,20 +30,16 @@ func (e *PutPermissionsBoundaryToPermissionSetXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type PutPermissionsBoundaryToPermissionSetHeaders struct {
-	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        PutPermissionsBoundaryToPermissionSetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type PutPermissionsBoundaryToPermissionSetRequest struct {
-	Headers PutPermissionsBoundaryToPermissionSetHeaders
-	Request shared.PutPermissionsBoundaryToPermissionSetRequest `request:"mediaType=application/json"`
+	PutPermissionsBoundaryToPermissionSetRequest shared.PutPermissionsBoundaryToPermissionSetRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                                *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                            *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                               *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                     *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                            *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                                *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                            *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                                   PutPermissionsBoundaryToPermissionSetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type PutPermissionsBoundaryToPermissionSetResponse struct {

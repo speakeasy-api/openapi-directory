@@ -7,19 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSpacesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListSpacesRequestBody struct {
 	// A token returned from a call to this API to indicate the next batch of results to return, if any.
 	NextToken *string `json:"nextToken,omitempty"`
 }
 
 type ListSpacesRequest struct {
-	QueryParams ListSpacesQueryParams
-	Request     ListSpacesRequestBody `request:"mediaType=application/json"`
+	RequestBody ListSpacesRequestBody `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSpacesResponse struct {

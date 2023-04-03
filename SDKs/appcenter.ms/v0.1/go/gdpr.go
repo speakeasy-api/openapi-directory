@@ -31,11 +31,11 @@ func newGdpr(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 	}
 }
 
-func (s *gdpr) DataSubjectRightCancelDeleteRequest(ctx context.Context, request operations.DataSubjectRightCancelDeleteRequestRequest) (*operations.DataSubjectRightCancelDeleteRequestResponse, error) {
+func (s *gdpr) DataSubjectRightCancelDeleteRequest(ctx context.Context, request operations.DataSubjectRightCancelDeleteRequestRequest, security operations.DataSubjectRightCancelDeleteRequestSecurity) (*operations.DataSubjectRightCancelDeleteRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/delete/{token}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/delete/{token}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -47,7 +47,7 @@ func (s *gdpr) DataSubjectRightCancelDeleteRequest(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -102,16 +102,16 @@ func (s *gdpr) DataSubjectRightCancelDeleteRequest(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *gdpr) DataSubjectRightCancelExportRequest(ctx context.Context, request operations.DataSubjectRightCancelExportRequestRequest) (*operations.DataSubjectRightCancelExportRequestResponse, error) {
+func (s *gdpr) DataSubjectRightCancelExportRequest(ctx context.Context, request operations.DataSubjectRightCancelExportRequestRequest, security operations.DataSubjectRightCancelExportRequestSecurity) (*operations.DataSubjectRightCancelExportRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/export/{token}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/export/{token}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *gdpr) DataSubjectRightCancelExportRequest(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *gdpr) DataSubjectRightDeleteRequest(ctx context.Context, request operations.DataSubjectRightDeleteRequestRequest) (*operations.DataSubjectRightDeleteRequestResponse, error) {
+func (s *gdpr) DataSubjectRightDeleteRequest(ctx context.Context) (*operations.DataSubjectRightDeleteRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/dsr/delete"
 
@@ -175,7 +175,7 @@ func (s *gdpr) DataSubjectRightDeleteRequest(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -220,20 +220,20 @@ func (s *gdpr) DataSubjectRightDeleteRequest(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *gdpr) DataSubjectRightDeleteStatusRequest(ctx context.Context, request operations.DataSubjectRightDeleteStatusRequestRequest) (*operations.DataSubjectRightDeleteStatusRequestResponse, error) {
+func (s *gdpr) DataSubjectRightDeleteStatusRequest(ctx context.Context, request operations.DataSubjectRightDeleteStatusRequestRequest, security operations.DataSubjectRightDeleteStatusRequestSecurity) (*operations.DataSubjectRightDeleteStatusRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/delete/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/delete/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -276,7 +276,7 @@ func (s *gdpr) DataSubjectRightDeleteStatusRequest(ctx context.Context, request 
 
 	return res, nil
 }
-func (s *gdpr) DataSubjectRightExportRequest(ctx context.Context, request operations.DataSubjectRightExportRequestRequest) (*operations.DataSubjectRightExportRequestResponse, error) {
+func (s *gdpr) DataSubjectRightExportRequest(ctx context.Context) (*operations.DataSubjectRightExportRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/dsr/export"
 
@@ -285,7 +285,7 @@ func (s *gdpr) DataSubjectRightExportRequest(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -330,16 +330,16 @@ func (s *gdpr) DataSubjectRightExportRequest(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *gdpr) DataSubjectRightExportStatusRequest(ctx context.Context, request operations.DataSubjectRightExportStatusRequestRequest) (*operations.DataSubjectRightExportStatusRequestResponse, error) {
+func (s *gdpr) DataSubjectRightExportStatusRequest(ctx context.Context, request operations.DataSubjectRightExportStatusRequestRequest, security operations.DataSubjectRightExportStatusRequestSecurity) (*operations.DataSubjectRightExportStatusRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/export/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/dsr/export/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

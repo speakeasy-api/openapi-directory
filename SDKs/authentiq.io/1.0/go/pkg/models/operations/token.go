@@ -7,12 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TokenHeaders struct {
-	// HTTP Basic authorization header.
-	//
-	Authorization *string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type TokenRequestBody struct {
 	// The registered client ID.
 	//
@@ -32,8 +26,10 @@ type TokenRequestBody struct {
 }
 
 type TokenRequest struct {
-	Headers TokenHeaders
-	Request TokenRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// HTTP Basic authorization header.
+	//
+	Authorization *string          `header:"style=simple,explode=false,name=Authorization"`
+	RequestBody   TokenRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type TokenResponse struct {

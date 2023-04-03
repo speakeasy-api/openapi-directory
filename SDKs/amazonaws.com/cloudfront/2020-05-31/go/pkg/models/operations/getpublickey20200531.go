@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetPublicKey20200531PathParams struct {
+type GetPublicKey20200531Request struct {
 	// The identifier of the public key you are getting.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetPublicKey20200531Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetPublicKey20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetPublicKey20200531Request struct {
-	PathParams GetPublicKey20200531PathParams
-	Headers    GetPublicKey20200531Headers
 }
 
 type GetPublicKey20200531Response struct {

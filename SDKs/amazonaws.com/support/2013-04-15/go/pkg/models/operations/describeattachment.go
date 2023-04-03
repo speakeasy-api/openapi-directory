@@ -30,20 +30,16 @@ func (e *DescribeAttachmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeAttachmentHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeAttachmentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeAttachmentRequest struct {
-	Headers DescribeAttachmentHeaders
-	Request shared.DescribeAttachmentRequest `request:"mediaType=application/json"`
+	DescribeAttachmentRequest shared.DescribeAttachmentRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                DescribeAttachmentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeAttachmentResponse struct {

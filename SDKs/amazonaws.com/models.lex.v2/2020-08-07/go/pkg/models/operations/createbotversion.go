@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBotVersionPathParams struct {
-	// The identifier of the bot to create the version for.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type CreateBotVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateBotVersionRequestBody struct {
 	// Specifies the locales that Amazon Lex adds to this version. You can choose the <code>Draft</code> version or any other previously published version for each locale. When you specify a source version, the locale data is copied from the source version to the new version.
 	BotVersionLocaleSpecification map[string]shared.BotVersionLocaleDetails `json:"botVersionLocaleSpecification"`
@@ -30,9 +15,16 @@ type CreateBotVersionRequestBody struct {
 }
 
 type CreateBotVersionRequest struct {
-	PathParams CreateBotVersionPathParams
-	Headers    CreateBotVersionHeaders
-	Request    CreateBotVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBotVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot to create the version for.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 }
 
 type CreateBotVersionResponse struct {

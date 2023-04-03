@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetUserStoreRecommendationsQueryParams struct {
+type GetUserStoreRecommendationsRequest struct {
 	// The BBC-id cookie value
 	IdentityCookie float64 `queryParam:"style=form,explode=true,name=identity_cookie"`
-}
-
-type GetUserStoreRecommendationsRequest struct {
-	QueryParams GetUserStoreRecommendationsQueryParams
 }
 
 type GetUserStoreRecommendationsResponse struct {

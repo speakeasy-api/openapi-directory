@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEloRatingsQueryParams struct {
+type GetEloRatingsRequest struct {
 	// Conference filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Team filter
@@ -16,10 +16,6 @@ type GetEloRatingsQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Season filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetEloRatingsRequest struct {
-	QueryParams GetEloRatingsQueryParams
 }
 
 type GetEloRatingsResponse struct {

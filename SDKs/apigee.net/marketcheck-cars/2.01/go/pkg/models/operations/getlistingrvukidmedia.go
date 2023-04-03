@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingRvUkIDMediaPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingRvUkIDMediaQueryParams struct {
+type GetListingRvUkIDMediaRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetListingRvUkIDMediaRequest struct {
-	PathParams  GetListingRvUkIDMediaPathParams
-	QueryParams GetListingRvUkIDMediaQueryParams
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetListingRvUkIDMediaResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPostGuestJSONPathParams struct {
+type AccountPostGuestJSONRequest struct {
+	// Guest object with field updated
+	APICoreDtoAccountingGuest shared.APICoreDtoAccountingGuest `request:"mediaType=application/json"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
-}
-
-type AccountPostGuestJSONRequest struct {
-	PathParams AccountPostGuestJSONPathParams
-	// Guest object with field updated
-	Request shared.APICoreDtoAccountingGuest `request:"mediaType=application/json"`
 }
 
 type AccountPostGuestJSONResponse struct {

@@ -8,12 +8,7 @@ import (
 )
 
 type PostGetStoresUnderAccountSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostGetStoresUnderAccountRequest struct {
-	Request  *shared.GetStoresUnderAccountRequest `request:"mediaType=application/json"`
-	Security PostGetStoresUnderAccountSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 type PostGetStoresUnderAccountResponse struct {

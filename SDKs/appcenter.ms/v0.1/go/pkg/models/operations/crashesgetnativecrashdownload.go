@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CrashesGetNativeCrashDownloadSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashesGetNativeCrashDownloadPathParams struct {
+type CrashesGetNativeCrashDownloadRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// id of a specific group
@@ -20,11 +19,6 @@ type CrashesGetNativeCrashDownloadPathParams struct {
 	CrashID string `pathParam:"style=simple,explode=false,name=crash_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashesGetNativeCrashDownloadRequest struct {
-	PathParams CrashesGetNativeCrashDownloadPathParams
-	Security   CrashesGetNativeCrashDownloadSecurity
 }
 
 // CrashesGetNativeCrashDownloadDefaultApplicationJSON - Error

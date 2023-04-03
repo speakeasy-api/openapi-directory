@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConnectorsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListConnectorsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListConnectorsRequestBody struct {
 	// Specifies the maximum number of items that should be returned in the result set. The default for <code>maxResults</code> is 20 (for all paginated API operations).
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -32,9 +15,18 @@ type ListConnectorsRequestBody struct {
 }
 
 type ListConnectorsRequest struct {
-	QueryParams ListConnectorsQueryParams
-	Headers     ListConnectorsHeaders
-	Request     ListConnectorsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListConnectorsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListConnectorsResponse struct {

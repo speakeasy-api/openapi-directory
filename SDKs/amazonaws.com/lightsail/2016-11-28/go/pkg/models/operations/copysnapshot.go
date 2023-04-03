@@ -30,20 +30,16 @@ func (e *CopySnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CopySnapshotHeaders struct {
-	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CopySnapshotXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CopySnapshotRequest struct {
-	Headers CopySnapshotHeaders
-	Request shared.CopySnapshotRequest `request:"mediaType=application/json"`
+	CopySnapshotRequest shared.CopySnapshotRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm       *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget          CopySnapshotXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CopySnapshotResponse struct {

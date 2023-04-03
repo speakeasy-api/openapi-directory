@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdatePipelineVariableForWorkspacePathParams struct {
+type UpdatePipelineVariableForWorkspaceRequest struct {
+	// The updated variable.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The UUID of the variable.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type UpdatePipelineVariableForWorkspaceRequest struct {
-	PathParams UpdatePipelineVariableForWorkspacePathParams
-	// The updated variable.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdatePipelineVariableForWorkspaceResponse struct {

@@ -34,20 +34,20 @@ func newApp(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // AppGetApplicationAPIUsage - Get API usage by application for time frame specified. You can go as far back as 30 days ago, and can ask for up to a 48 hour window of time in a single request. You must be authenticated with at least the ReadUserData permission to access this endpoint.
-func (s *app) AppGetApplicationAPIUsage(ctx context.Context, request operations.AppGetApplicationAPIUsageRequest) (*operations.AppGetApplicationAPIUsageResponse, error) {
+func (s *app) AppGetApplicationAPIUsage(ctx context.Context, request operations.AppGetApplicationAPIUsageRequest, security operations.AppGetApplicationAPIUsageSecurity) (*operations.AppGetApplicationAPIUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/App/ApiUsage/{applicationId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/App/ApiUsage/{applicationId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

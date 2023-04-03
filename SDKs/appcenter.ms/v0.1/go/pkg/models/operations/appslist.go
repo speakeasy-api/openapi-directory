@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppsListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // AppsListDollarOrderByEnum - The name of the attribute by which to order the response by. By default, apps are in order of creation. All results are ordered in ascending order.
@@ -37,14 +36,9 @@ func (e *AppsListDollarOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AppsListQueryParams struct {
+type AppsListRequest struct {
 	// The name of the attribute by which to order the response by. By default, apps are in order of creation. All results are ordered in ascending order.
 	DollarOrderBy *AppsListDollarOrderByEnum `queryParam:"style=form,explode=true,name=$orderBy"`
-}
-
-type AppsListRequest struct {
-	QueryParams AppsListQueryParams
-	Security    AppsListSecurity
 }
 
 type AppsListDefaultApplicationJSONErrorCodeEnum string

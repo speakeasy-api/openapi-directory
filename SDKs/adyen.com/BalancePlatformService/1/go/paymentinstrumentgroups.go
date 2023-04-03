@@ -34,16 +34,16 @@ func newPaymentInstrumentGroups(defaultClient, securityClient HTTPClient, server
 
 // GetPaymentInstrumentGroupsID - Get a payment instrument group
 // Returns the details of a payment instrument group.
-func (s *paymentInstrumentGroups) GetPaymentInstrumentGroupsID(ctx context.Context, request operations.GetPaymentInstrumentGroupsIDRequest) (*operations.GetPaymentInstrumentGroupsIDResponse, error) {
+func (s *paymentInstrumentGroups) GetPaymentInstrumentGroupsID(ctx context.Context, request operations.GetPaymentInstrumentGroupsIDRequest, security operations.GetPaymentInstrumentGroupsIDSecurity) (*operations.GetPaymentInstrumentGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstrumentGroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstrumentGroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *paymentInstrumentGroups) GetPaymentInstrumentGroupsID(ctx context.Conte
 
 // GetPaymentInstrumentGroupsIDTransactionRules - Get all transaction rules for a payment instrument group
 // Returns a list of all the transaction rules associated with a payment instrument group.
-func (s *paymentInstrumentGroups) GetPaymentInstrumentGroupsIDTransactionRules(ctx context.Context, request operations.GetPaymentInstrumentGroupsIDTransactionRulesRequest) (*operations.GetPaymentInstrumentGroupsIDTransactionRulesResponse, error) {
+func (s *paymentInstrumentGroups) GetPaymentInstrumentGroupsIDTransactionRules(ctx context.Context, request operations.GetPaymentInstrumentGroupsIDTransactionRulesRequest, security operations.GetPaymentInstrumentGroupsIDTransactionRulesSecurity) (*operations.GetPaymentInstrumentGroupsIDTransactionRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstrumentGroups/{id}/transactionRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstrumentGroups/{id}/transactionRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,7 +160,7 @@ func (s *paymentInstrumentGroups) GetPaymentInstrumentGroupsIDTransactionRules(c
 
 // PostPaymentInstrumentGroups - Create a payment instrument group
 // Creates a payment instrument group to associate and group payment instrument resources together. You can apply a transaction rule to a payment instrument group.
-func (s *paymentInstrumentGroups) PostPaymentInstrumentGroups(ctx context.Context, request operations.PostPaymentInstrumentGroupsRequest) (*operations.PostPaymentInstrumentGroupsResponse, error) {
+func (s *paymentInstrumentGroups) PostPaymentInstrumentGroups(ctx context.Context, request shared.PaymentInstrumentGroupInfo, security operations.PostPaymentInstrumentGroupsSecurity) (*operations.PostPaymentInstrumentGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/paymentInstrumentGroups"
 
@@ -176,7 +176,7 @@ func (s *paymentInstrumentGroups) PostPaymentInstrumentGroups(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

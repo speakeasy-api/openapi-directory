@@ -34,7 +34,7 @@ func newAdministrative(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // DoctorsList - Retrieve or search doctors within practice group
-func (s *administrative) DoctorsList(ctx context.Context, request operations.DoctorsListRequest) (*operations.DoctorsListResponse, error) {
+func (s *administrative) DoctorsList(ctx context.Context, request operations.DoctorsListRequest, security operations.DoctorsListSecurity) (*operations.DoctorsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/doctors"
 
@@ -43,11 +43,11 @@ func (s *administrative) DoctorsList(ctx context.Context, request operations.Doc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,20 +93,20 @@ func (s *administrative) DoctorsList(ctx context.Context, request operations.Doc
 }
 
 // DoctorsRead - Retrieve an existing dcotor
-func (s *administrative) DoctorsRead(ctx context.Context, request operations.DoctorsReadRequest) (*operations.DoctorsReadResponse, error) {
+func (s *administrative) DoctorsRead(ctx context.Context, request operations.DoctorsReadRequest, security operations.DoctorsReadSecurity) (*operations.DoctorsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/doctors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/doctors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *administrative) DoctorsRead(ctx context.Context, request operations.Doc
 }
 
 // UserGroupsList - Retrieve or search user groups
-func (s *administrative) UserGroupsList(ctx context.Context, request operations.UserGroupsListRequest) (*operations.UserGroupsListResponse, error) {
+func (s *administrative) UserGroupsList(ctx context.Context, request operations.UserGroupsListRequest, security operations.UserGroupsListSecurity) (*operations.UserGroupsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/user_groups"
 
@@ -161,11 +161,11 @@ func (s *administrative) UserGroupsList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,20 +211,20 @@ func (s *administrative) UserGroupsList(ctx context.Context, request operations.
 }
 
 // UserGroupsRead - Retrieve an existing user group
-func (s *administrative) UserGroupsRead(ctx context.Context, request operations.UserGroupsReadRequest) (*operations.UserGroupsReadResponse, error) {
+func (s *administrative) UserGroupsRead(ctx context.Context, request operations.UserGroupsReadRequest, security operations.UserGroupsReadSecurity) (*operations.UserGroupsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/user_groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/user_groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,7 +270,7 @@ func (s *administrative) UserGroupsRead(ctx context.Context, request operations.
 }
 
 // UsersList - Retrieve or search users, `/api/users/current` can be used to identify logged in user, it will redirect to `/api/users/{current_user_id}`
-func (s *administrative) UsersList(ctx context.Context, request operations.UsersListRequest) (*operations.UsersListResponse, error) {
+func (s *administrative) UsersList(ctx context.Context, request operations.UsersListRequest, security operations.UsersListSecurity) (*operations.UsersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/users"
 
@@ -279,11 +279,11 @@ func (s *administrative) UsersList(ctx context.Context, request operations.Users
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -329,20 +329,20 @@ func (s *administrative) UsersList(ctx context.Context, request operations.Users
 }
 
 // UsersRead - Retrieve an existing user, `/api/users/current` can be used to identify logged in user, it will redirect to `/api/users/{current_user_id}`
-func (s *administrative) UsersRead(ctx context.Context, request operations.UsersReadRequest) (*operations.UsersReadResponse, error) {
+func (s *administrative) UsersRead(ctx context.Context, request operations.UsersReadRequest, security operations.UsersReadSecurity) (*operations.UsersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

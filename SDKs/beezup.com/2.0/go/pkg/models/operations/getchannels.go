@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelsPathParams struct {
-	// The country iso code alpha 3 based on this: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Decoding_table \
-	// To know which country are available you have to use the operation: GetChannelsByCountry
-	//
-	CountryIsoCode string `pathParam:"style=simple,explode=false,name=countryIsoCode"`
-}
-
-type GetChannelsHeaders struct {
+type GetChannelsRequest struct {
 	// Allows the client to indicate whether it accepts a compressed encoding to reduce traffic size.
 	AcceptEncoding []string `header:"style=simple,explode=false,name=Accept-Encoding"`
 	// ETag value to identify the last known version of requested resource.\
@@ -23,11 +16,10 @@ type GetChannelsHeaders struct {
 	// For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
 	//
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetChannelsRequest struct {
-	PathParams GetChannelsPathParams
-	Headers    GetChannelsHeaders
+	// The country iso code alpha 3 based on this: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Decoding_table \
+	// To know which country are available you have to use the operation: GetChannelsByCountry
+	//
+	CountryIsoCode string `pathParam:"style=simple,explode=false,name=countryIsoCode"`
 }
 
 type GetChannelsResponse struct {

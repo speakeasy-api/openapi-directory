@@ -74,30 +74,22 @@ func (e *GETModifyAvailabilityZoneGroupVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETModifyAvailabilityZoneGroupQueryParams struct {
+type GETModifyAvailabilityZoneGroupRequest struct {
 	Action GETModifyAvailabilityZoneGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The name of the Availability Zone group, Local Zone group, or Wavelength Zone group.
 	GroupName string `queryParam:"style=form,explode=true,name=GroupName"`
 	// Indicates whether you are opted in to the Local Zone group or Wavelength Zone group. The only valid value is <code>opted-in</code>. You must contact <a href="https://console.aws.amazon.com/support/home#/case/create%3FissueType=customer-service%26serviceCode=general-info%26getting-started%26categoryCode=using-aws%26services">Amazon Web Services Support</a> to opt out of a Local Zone or Wavelength Zone group.
-	OptInStatus GETModifyAvailabilityZoneGroupOptInStatusEnum `queryParam:"style=form,explode=true,name=OptInStatus"`
-	Version     GETModifyAvailabilityZoneGroupVersionEnum     `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyAvailabilityZoneGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyAvailabilityZoneGroupRequest struct {
-	QueryParams GETModifyAvailabilityZoneGroupQueryParams
-	Headers     GETModifyAvailabilityZoneGroupHeaders
+	OptInStatus       GETModifyAvailabilityZoneGroupOptInStatusEnum `queryParam:"style=form,explode=true,name=OptInStatus"`
+	Version           GETModifyAvailabilityZoneGroupVersionEnum     `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyAvailabilityZoneGroupResponse struct {

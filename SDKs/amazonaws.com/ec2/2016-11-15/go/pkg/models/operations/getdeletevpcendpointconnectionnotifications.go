@@ -50,28 +50,20 @@ func (e *GETDeleteVpcEndpointConnectionNotificationsVersionEnum) UnmarshalJSON(d
 	}
 }
 
-type GETDeleteVpcEndpointConnectionNotificationsQueryParams struct {
+type GETDeleteVpcEndpointConnectionNotificationsRequest struct {
 	Action GETDeleteVpcEndpointConnectionNotificationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IDs of the notifications.
 	ConnectionNotificationID []string `queryParam:"style=form,explode=true,name=ConnectionNotificationId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                                  `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETDeleteVpcEndpointConnectionNotificationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteVpcEndpointConnectionNotificationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteVpcEndpointConnectionNotificationsRequest struct {
-	QueryParams GETDeleteVpcEndpointConnectionNotificationsQueryParams
-	Headers     GETDeleteVpcEndpointConnectionNotificationsHeaders
+	DryRun            *bool                                                  `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETDeleteVpcEndpointConnectionNotificationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteVpcEndpointConnectionNotificationsResponse struct {

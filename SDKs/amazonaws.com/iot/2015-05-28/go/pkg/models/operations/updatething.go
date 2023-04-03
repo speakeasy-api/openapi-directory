@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateThingPathParams struct {
-	// <p>The name of the thing to update.</p> <p>You can't change a thing's name. To change a thing's name, you must create a new thing, give it the new name, and then delete the old thing.</p>
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type UpdateThingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateThingRequestBodyAttributePayload - The attribute payload.
 type UpdateThingRequestBodyAttributePayload struct {
 	Attributes map[string]string `json:"attributes,omitempty"`
@@ -39,9 +24,16 @@ type UpdateThingRequestBody struct {
 }
 
 type UpdateThingRequest struct {
-	PathParams UpdateThingPathParams
-	Headers    UpdateThingHeaders
-	Request    UpdateThingRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateThingRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>The name of the thing to update.</p> <p>You can't change a thing's name. To change a thing's name, you must create a new thing, give it the new name, and then delete the old thing.</p>
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type UpdateThingResponse struct {

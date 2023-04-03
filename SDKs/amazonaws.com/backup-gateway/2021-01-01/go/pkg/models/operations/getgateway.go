@@ -30,7 +30,8 @@ func (e *GetGatewayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGatewayHeaders struct {
+type GetGatewayRequest struct {
+	GetGatewayInput   shared.GetGatewayInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetGatewayHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetGatewayXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetGatewayRequest struct {
-	Headers GetGatewayHeaders
-	Request shared.GetGatewayInput `request:"mediaType=application/json"`
 }
 
 type GetGatewayResponse struct {

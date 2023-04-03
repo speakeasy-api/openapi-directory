@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCertificatePathParams struct {
-	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type DeleteCertificateQueryParams struct {
-	// Forces the deletion of a certificate if it is inactive and is not attached to an IoT thing.
-	ForceDelete *bool `queryParam:"style=form,explode=true,name=forceDelete"`
-}
-
-type DeleteCertificateHeaders struct {
+type DeleteCertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteCertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCertificateRequest struct {
-	PathParams  DeleteCertificatePathParams
-	QueryParams DeleteCertificateQueryParams
-	Headers     DeleteCertificateHeaders
+	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
+	// Forces the deletion of a certificate if it is inactive and is not attached to an IoT thing.
+	ForceDelete *bool `queryParam:"style=form,explode=true,name=forceDelete"`
 }
 
 type DeleteCertificateResponse struct {

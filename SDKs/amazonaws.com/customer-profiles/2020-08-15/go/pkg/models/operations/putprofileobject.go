@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutProfileObjectPathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type PutProfileObjectHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutProfileObjectRequestBody struct {
 	// A string that is serialized from a JSON object.
 	Object string `json:"Object"`
@@ -30,9 +15,16 @@ type PutProfileObjectRequestBody struct {
 }
 
 type PutProfileObjectRequest struct {
-	PathParams PutProfileObjectPathParams
-	Headers    PutProfileObjectHeaders
-	Request    PutProfileObjectRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName        string                      `pathParam:"style=simple,explode=false,name=DomainName"`
+	RequestBody       PutProfileObjectRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutProfileObjectResponse struct {

@@ -8,13 +8,8 @@ import (
 )
 
 type PostGetNotificationConfigurationListSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostGetNotificationConfigurationListRequest struct {
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostGetNotificationConfigurationListSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostGetNotificationConfigurationListResponse struct {

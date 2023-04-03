@@ -6,38 +6,30 @@ import (
 	"net/http"
 )
 
-type UploadMultipartPartPathParams struct {
-	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The upload ID of the multipart upload.
-	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
-	// The name of the vault.
-	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
-}
-
-type UploadMultipartPartHeaders struct {
-	// Identifies the range of bytes in the assembled archive that will be uploaded in this part. Amazon S3 Glacier uses this information to assemble the archive in the proper sequence. The format of this header follows RFC 2616. An example header is Content-Range:bytes 0-4194303/*.
-	ContentRange      *string `header:"style=simple,explode=false,name=Content-Range"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The SHA256 tree hash of the data being uploaded.
-	XAmzSha256TreeHash *string `header:"style=simple,explode=false,name=x-amz-sha256-tree-hash"`
-}
-
 type UploadMultipartPartRequestBody struct {
 	// The data to upload.
 	Body *string `json:"body,omitempty"`
 }
 
 type UploadMultipartPartRequest struct {
-	PathParams UploadMultipartPartPathParams
-	Headers    UploadMultipartPartHeaders
-	Request    UploadMultipartPartRequestBody `request:"mediaType=application/json"`
+	// Identifies the range of bytes in the assembled archive that will be uploaded in this part. Amazon S3 Glacier uses this information to assemble the archive in the proper sequence. The format of this header follows RFC 2616. An example header is Content-Range:bytes 0-4194303/*.
+	ContentRange      *string                        `header:"style=simple,explode=false,name=Content-Range"`
+	RequestBody       UploadMultipartPartRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	// The upload ID of the multipart upload.
+	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
+	// The name of the vault.
+	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
+	// The SHA256 tree hash of the data being uploaded.
+	XAmzSha256TreeHash *string `header:"style=simple,explode=false,name=x-amz-sha256-tree-hash"`
 }
 
 type UploadMultipartPartResponse struct {

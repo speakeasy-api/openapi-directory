@@ -30,7 +30,7 @@ func (e *DescribeLocationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeLocationsHeaders struct {
+type DescribeLocationsRequest struct {
 	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type DescribeLocationsHeaders struct {
 	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeLocationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeLocationsRequest struct {
-	Headers DescribeLocationsHeaders
 }
 
 type DescribeLocationsResponse struct {

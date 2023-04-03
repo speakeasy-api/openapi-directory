@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type QueryDbQueryParams struct {
+type QueryDbRequest struct {
 	// Query (contact name, dns, domain etc)
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type QueryDbRequest struct {
-	QueryParams QueryDbQueryParams
 }
 
 type QueryDbResponse struct {

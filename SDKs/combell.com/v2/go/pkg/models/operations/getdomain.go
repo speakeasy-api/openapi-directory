@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type GetDomainQueryParams struct {
-	// The domain name
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type GetDomainRequest struct {
-	PathParams  GetDomainPathParams
-	QueryParams GetDomainQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The domain name
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type GetDomainResponse struct {

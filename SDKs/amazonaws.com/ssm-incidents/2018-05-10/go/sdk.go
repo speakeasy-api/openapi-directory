@@ -116,7 +116,7 @@ func (s *SDK) CreateReplicationSet(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createReplicationSet"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateReplicationSet(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -232,7 +232,7 @@ func (s *SDK) CreateResponsePlan(ctx context.Context, request operations.CreateR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createResponsePlan"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *SDK) CreateResponsePlan(ctx context.Context, request operations.CreateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -348,7 +348,7 @@ func (s *SDK) CreateTimelineEvent(ctx context.Context, request operations.Create
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createTimelineEvent"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -363,7 +363,7 @@ func (s *SDK) CreateTimelineEvent(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -464,7 +464,7 @@ func (s *SDK) DeleteIncidentRecord(ctx context.Context, request operations.Delet
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteIncidentRecord"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -479,7 +479,7 @@ func (s *SDK) DeleteIncidentRecord(ctx context.Context, request operations.Delet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -565,9 +565,9 @@ func (s *SDK) DeleteReplicationSet(ctx context.Context, request operations.Delet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -660,7 +660,7 @@ func (s *SDK) DeleteResourcePolicy(ctx context.Context, request operations.Delet
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteResourcePolicy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -675,7 +675,7 @@ func (s *SDK) DeleteResourcePolicy(ctx context.Context, request operations.Delet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -766,7 +766,7 @@ func (s *SDK) DeleteResponsePlan(ctx context.Context, request operations.DeleteR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteResponsePlan"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -781,7 +781,7 @@ func (s *SDK) DeleteResponsePlan(ctx context.Context, request operations.DeleteR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -862,7 +862,7 @@ func (s *SDK) DeleteTimelineEvent(ctx context.Context, request operations.Delete
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteTimelineEvent"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -877,7 +877,7 @@ func (s *SDK) DeleteTimelineEvent(ctx context.Context, request operations.Delete
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -963,9 +963,9 @@ func (s *SDK) GetIncidentRecord(ctx context.Context, request operations.GetIncid
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1063,9 +1063,9 @@ func (s *SDK) GetReplicationSet(ctx context.Context, request operations.GetRepli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1158,7 +1158,7 @@ func (s *SDK) GetResourcePolicies(ctx context.Context, request operations.GetRes
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getResourcePolicies#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1173,9 +1173,9 @@ func (s *SDK) GetResourcePolicies(ctx context.Context, request operations.GetRes
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1273,9 +1273,9 @@ func (s *SDK) GetResponsePlan(ctx context.Context, request operations.GetRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1373,9 +1373,9 @@ func (s *SDK) GetTimelineEvent(ctx context.Context, request operations.GetTimeli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1468,7 +1468,7 @@ func (s *SDK) ListIncidentRecords(ctx context.Context, request operations.ListIn
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listIncidentRecords"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1483,9 +1483,9 @@ func (s *SDK) ListIncidentRecords(ctx context.Context, request operations.ListIn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1568,7 +1568,7 @@ func (s *SDK) ListRelatedItems(ctx context.Context, request operations.ListRelat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listRelatedItems"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1583,9 +1583,9 @@ func (s *SDK) ListRelatedItems(ctx context.Context, request operations.ListRelat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1668,7 +1668,7 @@ func (s *SDK) ListReplicationSets(ctx context.Context, request operations.ListRe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listReplicationSets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1683,9 +1683,9 @@ func (s *SDK) ListReplicationSets(ctx context.Context, request operations.ListRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1768,7 +1768,7 @@ func (s *SDK) ListResponsePlans(ctx context.Context, request operations.ListResp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listResponsePlans"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1783,9 +1783,9 @@ func (s *SDK) ListResponsePlans(ctx context.Context, request operations.ListResp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1866,14 +1866,14 @@ func (s *SDK) ListResponsePlans(ctx context.Context, request operations.ListResp
 // ListTagsForResource - Lists the tags that are attached to the specified response plan.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1964,7 +1964,7 @@ func (s *SDK) ListTimelineEvents(ctx context.Context, request operations.ListTim
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listTimelineEvents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1979,9 +1979,9 @@ func (s *SDK) ListTimelineEvents(ctx context.Context, request operations.ListTim
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2064,7 +2064,7 @@ func (s *SDK) PutResourcePolicy(ctx context.Context, request operations.PutResou
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/putResourcePolicy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2079,7 +2079,7 @@ func (s *SDK) PutResourcePolicy(ctx context.Context, request operations.PutResou
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2170,7 +2170,7 @@ func (s *SDK) StartIncident(ctx context.Context, request operations.StartInciden
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/startIncident"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2185,7 +2185,7 @@ func (s *SDK) StartIncident(ctx context.Context, request operations.StartInciden
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2284,9 +2284,9 @@ func (s *SDK) StartIncident(ctx context.Context, request operations.StartInciden
 // TagResource - Adds a tag to a response plan.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2301,7 +2301,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2410,16 +2410,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes a tag from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2522,7 +2522,7 @@ func (s *SDK) UpdateDeletionProtection(ctx context.Context, request operations.U
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateDeletionProtection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2537,7 +2537,7 @@ func (s *SDK) UpdateDeletionProtection(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2628,7 +2628,7 @@ func (s *SDK) UpdateIncidentRecord(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateIncidentRecord"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2643,7 +2643,7 @@ func (s *SDK) UpdateIncidentRecord(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2744,7 +2744,7 @@ func (s *SDK) UpdateRelatedItems(ctx context.Context, request operations.UpdateR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateRelatedItems"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2759,7 +2759,7 @@ func (s *SDK) UpdateRelatedItems(ctx context.Context, request operations.UpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2860,7 +2860,7 @@ func (s *SDK) UpdateReplicationSet(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateReplicationSet"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2875,7 +2875,7 @@ func (s *SDK) UpdateReplicationSet(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2976,7 +2976,7 @@ func (s *SDK) UpdateResponsePlan(ctx context.Context, request operations.UpdateR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateResponsePlan"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2991,7 +2991,7 @@ func (s *SDK) UpdateResponsePlan(ctx context.Context, request operations.UpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3092,7 +3092,7 @@ func (s *SDK) UpdateTimelineEvent(ctx context.Context, request operations.Update
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateTimelineEvent"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3107,7 +3107,7 @@ func (s *SDK) UpdateTimelineEvent(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteUserSettingsPathParams struct {
-	// The ARN of the user settings.
-	UserSettingsArn string `pathParam:"style=simple,explode=false,name=userSettingsArn"`
-}
-
-type DeleteUserSettingsHeaders struct {
+type DeleteUserSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteUserSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteUserSettingsRequest struct {
-	PathParams DeleteUserSettingsPathParams
-	Headers    DeleteUserSettingsHeaders
+	// The ARN of the user settings.
+	UserSettingsArn string `pathParam:"style=simple,explode=false,name=userSettingsArn"`
 }
 
 type DeleteUserSettingsResponse struct {

@@ -50,7 +50,6 @@ pkg/models/shared/simpleformfieldoption.go
 pkg/models/shared/formfieldoptiongroup.go
 pkg/models/shared/authtypeenum.go
 pkg/models/shared/badrequestresponse.go
-pkg/models/shared/security.go
 pkg/models/shared/updateconnectionresponse.go
 pkg/models/shared/createconnectionresponse.go
 pkg/models/shared/getconnectionsresponse.go
@@ -74,4 +73,5 @@ pkg/models/shared/logsfilter.go
 pkg/models/shared/createsessionresponse.go
 pkg/models/shared/session.go
 pkg/models/shared/unifiedapiidenum.go
+pkg/models/shared/security.go
 USAGE.md

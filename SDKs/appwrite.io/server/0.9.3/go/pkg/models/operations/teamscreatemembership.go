@@ -8,14 +8,9 @@ import (
 )
 
 type TeamsCreateMembershipSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsCreateMembershipPathParams struct {
-	// Team unique ID.
-	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type TeamsCreateMembershipRequestBody struct {
@@ -30,9 +25,9 @@ type TeamsCreateMembershipRequestBody struct {
 }
 
 type TeamsCreateMembershipRequest struct {
-	PathParams TeamsCreateMembershipPathParams
-	Request    *TeamsCreateMembershipRequestBody `request:"mediaType=application/json"`
-	Security   TeamsCreateMembershipSecurity
+	RequestBody *TeamsCreateMembershipRequestBody `request:"mediaType=application/json"`
+	// Team unique ID.
+	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
 type TeamsCreateMembershipResponse struct {

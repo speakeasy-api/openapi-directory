@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetScheduleByChannelPathParams struct {
+type GetScheduleByChannelRequest struct {
+	// Whether to return all, or available programmes
+	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The channel identifier to limit results to.
 	Channel string `pathParam:"style=simple,explode=false,name=channel"`
 	// The date to return the schedule for, yyyy-mm-dd format
 	Date string `pathParam:"style=simple,explode=false,name=date"`
-}
-
-type GetScheduleByChannelQueryParams struct {
-	// Whether to return all, or available programmes
-	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetScheduleByChannelRequest struct {
-	PathParams  GetScheduleByChannelPathParams
-	QueryParams GetScheduleByChannelQueryParams
 }
 
 type GetScheduleByChannelResponse struct {

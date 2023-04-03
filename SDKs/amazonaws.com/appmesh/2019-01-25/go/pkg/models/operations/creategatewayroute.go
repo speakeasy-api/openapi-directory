@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGatewayRoutePathParams struct {
-	// The name of the service mesh to create the gateway route in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual gateway to associate the gateway route with. If the virtual gateway is in a shared mesh, then you must be the owner of the virtual gateway resource.
-	VirtualGatewayName string `pathParam:"style=simple,explode=false,name=virtualGatewayName"`
-}
-
-type CreateGatewayRouteQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type CreateGatewayRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateGatewayRouteRequestBodySpec - An object that represents a gateway route specification. Specify one gateway route type.
 type CreateGatewayRouteRequestBodySpec struct {
 	GrpcRoute  *shared.GrpcGatewayRoute `json:"grpcRoute,omitempty"`
@@ -49,10 +27,20 @@ type CreateGatewayRouteRequestBody struct {
 }
 
 type CreateGatewayRouteRequest struct {
-	PathParams  CreateGatewayRoutePathParams
-	QueryParams CreateGatewayRouteQueryParams
-	Headers     CreateGatewayRouteHeaders
-	Request     CreateGatewayRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateGatewayRouteRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh to create the gateway route in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the virtual gateway to associate the gateway route with. If the virtual gateway is in a shared mesh, then you must be the owner of the virtual gateway resource.
+	VirtualGatewayName string `pathParam:"style=simple,explode=false,name=virtualGatewayName"`
 }
 
 type CreateGatewayRouteResponse struct {

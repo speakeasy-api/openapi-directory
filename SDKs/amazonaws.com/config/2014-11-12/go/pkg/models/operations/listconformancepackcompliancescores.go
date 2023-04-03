@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConformancePackComplianceScoresQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListConformancePackComplianceScoresXAmzTargetEnum
 type ListConformancePackComplianceScoresXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListConformancePackComplianceScoresXAmzTargetEnum) UnmarshalJSON(data [
 	}
 }
 
-type ListConformancePackComplianceScoresHeaders struct {
+type ListConformancePackComplianceScoresRequest struct {
+	// Pagination limit
+	Limit                                      *string                                           `queryParam:"style=form,explode=true,name=Limit"`
+	ListConformancePackComplianceScoresRequest shared.ListConformancePackComplianceScoresRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListConformancePackComplianceScoresHeaders struct {
 	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListConformancePackComplianceScoresXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListConformancePackComplianceScoresRequest struct {
-	QueryParams ListConformancePackComplianceScoresQueryParams
-	Headers     ListConformancePackComplianceScoresHeaders
-	Request     shared.ListConformancePackComplianceScoresRequest `request:"mediaType=application/json"`
 }
 
 type ListConformancePackComplianceScoresResponse struct {

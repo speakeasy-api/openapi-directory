@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDNSDomainNameRecordsRecordIDPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	RecordID string `pathParam:"style=simple,explode=false,name=recordId"`
-}
-
-type PutDNSDomainNameRecordsRecordIDQueryParams struct {
-	// The domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// The id of the record.
-	RecordID string `queryParam:"style=form,explode=true,name=record_id"`
-}
-
 type PutDNSDomainNameRecordsRecordIDRequest struct {
-	PathParams  PutDNSDomainNameRecordsRecordIDPathParams
-	QueryParams PutDNSDomainNameRecordsRecordIDQueryParams
 	// The record with updated values.
-	Request *shared.DNSRecord `request:"mediaType=application/json"`
+	DNSRecord *shared.DNSRecord `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	RecordIDPathParameter string `pathParam:"style=simple,explode=false,name=recordId"`
+	// The id of the record.
+	RecordIDQueryParameter string `queryParam:"style=form,explode=true,name=record_id"`
 }
 
 type PutDNSDomainNameRecordsRecordIDResponse struct {

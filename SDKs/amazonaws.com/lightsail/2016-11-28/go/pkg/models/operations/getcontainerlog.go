@@ -30,20 +30,16 @@ func (e *GetContainerLogXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetContainerLogHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetContainerLogXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetContainerLogRequest struct {
-	Headers GetContainerLogHeaders
-	Request shared.GetContainerLogRequest `request:"mediaType=application/json"`
+	GetContainerLogRequest shared.GetContainerLogRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             GetContainerLogXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetContainerLogResponse struct {

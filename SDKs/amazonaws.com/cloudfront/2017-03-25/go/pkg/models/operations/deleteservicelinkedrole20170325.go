@@ -6,11 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteServiceLinkedRole20170325PathParams struct {
-	RoleName string `pathParam:"style=simple,explode=false,name=RoleName"`
-}
-
-type DeleteServiceLinkedRole20170325Headers struct {
+type DeleteServiceLinkedRole20170325Request struct {
+	RoleName          string  `pathParam:"style=simple,explode=false,name=RoleName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -18,11 +15,6 @@ type DeleteServiceLinkedRole20170325Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteServiceLinkedRole20170325Request struct {
-	PathParams DeleteServiceLinkedRole20170325PathParams
-	Headers    DeleteServiceLinkedRole20170325Headers
 }
 
 type DeleteServiceLinkedRole20170325Response struct {

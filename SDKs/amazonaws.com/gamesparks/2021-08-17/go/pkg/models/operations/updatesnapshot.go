@@ -7,14 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSnapshotPathParams struct {
-	// The name of the game.
-	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-	// The identifier of the snapshot.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=SnapshotId"`
+type UpdateSnapshotRequestBody struct {
+	// The description of the snapshot.
+	Description *string `json:"Description,omitempty"`
 }
 
-type UpdateSnapshotHeaders struct {
+type UpdateSnapshotRequest struct {
+	// The name of the game.
+	GameName    string                    `pathParam:"style=simple,explode=false,name=GameName"`
+	RequestBody UpdateSnapshotRequestBody `request:"mediaType=application/json"`
+	// The identifier of the snapshot.
+	SnapshotID        string  `pathParam:"style=simple,explode=false,name=SnapshotId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,17 +25,6 @@ type UpdateSnapshotHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UpdateSnapshotRequestBody struct {
-	// The description of the snapshot.
-	Description *string `json:"Description,omitempty"`
-}
-
-type UpdateSnapshotRequest struct {
-	PathParams UpdateSnapshotPathParams
-	Headers    UpdateSnapshotHeaders
-	Request    UpdateSnapshotRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateSnapshotResponse struct {

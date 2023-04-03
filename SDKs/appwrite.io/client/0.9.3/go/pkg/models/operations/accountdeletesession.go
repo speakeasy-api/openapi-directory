@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AccountDeleteSessionSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AccountDeleteSessionPathParams struct {
-	// Session unique ID. Use the string 'current' to delete the current device session.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountDeleteSessionRequest struct {
-	PathParams AccountDeleteSessionPathParams
-	Security   AccountDeleteSessionSecurity
+	// Session unique ID. Use the string 'current' to delete the current device session.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type AccountDeleteSessionResponse struct {

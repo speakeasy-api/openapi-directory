@@ -35,7 +35,7 @@ func newEcosystem(defaultClient, securityClient HTTPClient, serverURL, language,
 // Get ecosystem
 func (s *ecosystem) EcosystemsOne(ctx context.Context, request operations.EcosystemsOneRequest) (*operations.EcosystemsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

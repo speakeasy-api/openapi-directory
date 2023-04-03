@@ -51,9 +51,9 @@ func newVersions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * A server error occurred (HTTP error `500`)
 func (s *versions) CreateArtifactVersionJSON(ctx context.Context, request operations.CreateArtifactVersionJSONRequest) (*operations.CreateArtifactVersionJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,7 +68,7 @@ func (s *versions) CreateArtifactVersionJSON(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,9 +144,9 @@ func (s *versions) CreateArtifactVersionJSON(ctx context.Context, request operat
 // * A server error occurred (HTTP error `500`)
 func (s *versions) CreateArtifactVersionRaw(ctx context.Context, request operations.CreateArtifactVersionRawRequest) (*operations.CreateArtifactVersionRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -161,7 +161,7 @@ func (s *versions) CreateArtifactVersionRaw(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -232,14 +232,14 @@ func (s *versions) CreateArtifactVersionRaw(ctx context.Context, request operati
 // * A server error occurred (HTTP error `500`)
 func (s *versions) GetArtifactVersion(ctx context.Context, request operations.GetArtifactVersionRequest) (*operations.GetArtifactVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -302,7 +302,7 @@ func (s *versions) GetArtifactVersion(ctx context.Context, request operations.Ge
 // * A server error occurred (HTTP error `500`)
 func (s *versions) GetArtifactVersionReferences(ctx context.Context, request operations.GetArtifactVersionReferencesRequest) (*operations.GetArtifactVersionReferencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/references", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/references", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -364,14 +364,14 @@ func (s *versions) GetArtifactVersionReferences(ctx context.Context, request ope
 // * A server error occurred (HTTP error `500`)
 func (s *versions) ListArtifactVersions(ctx context.Context, request operations.ListArtifactVersionsRequest) (*operations.ListArtifactVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -432,9 +432,9 @@ func (s *versions) ListArtifactVersions(ctx context.Context, request operations.
 // * A server error occurred (HTTP error `500`)
 func (s *versions) UpdateArtifactVersionState(ctx context.Context, request operations.UpdateArtifactVersionStateRequest) (*operations.UpdateArtifactVersionStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/state", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateState", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

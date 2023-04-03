@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDatalakeAutoEnableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteDatalakeAutoEnableRequestBody struct {
 	// Remove automatic enablement of configuration settings for new member accounts in Security Lake.
 	RemoveFromConfigurationForNewAccounts []shared.AutoEnableNewRegionConfiguration `json:"removeFromConfigurationForNewAccounts"`
 }
 
 type DeleteDatalakeAutoEnableRequest struct {
-	Headers DeleteDatalakeAutoEnableHeaders
-	Request DeleteDatalakeAutoEnableRequestBody `request:"mediaType=application/json"`
+	RequestBody       DeleteDatalakeAutoEnableRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteDatalakeAutoEnableResponse struct {

@@ -50,28 +50,20 @@ func (e *GETListChangeSetsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListChangeSetsQueryParams struct {
+type GETListChangeSetsRequest struct {
 	Action GETListChangeSetsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A string (provided by the <a>ListChangeSets</a> response output) that identifies the next page of change sets that you want to retrieve.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The name or the Amazon Resource Name (ARN) of the stack for which you want to list change sets.
-	StackName string                       `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETListChangeSetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListChangeSetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListChangeSetsRequest struct {
-	QueryParams GETListChangeSetsQueryParams
-	Headers     GETListChangeSetsHeaders
+	StackName         string                       `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETListChangeSetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListChangeSetsResponse struct {

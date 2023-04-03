@@ -30,7 +30,8 @@ func (e *GetConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetConfigHeaders struct {
+type GetConfigRequest struct {
+	GetConfigRequest  shared.GetConfigRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetConfigHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetConfigXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetConfigRequest struct {
-	Headers GetConfigHeaders
-	Request shared.GetConfigRequest `request:"mediaType=application/json"`
 }
 
 type GetConfigResponse struct {

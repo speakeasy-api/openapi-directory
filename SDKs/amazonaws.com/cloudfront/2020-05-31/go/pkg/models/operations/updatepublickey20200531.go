@@ -6,23 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdatePublicKey20200531PathParams struct {
-	// The identifier of the public key that you are updating.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdatePublicKey20200531Headers struct {
-	// The value of the <code>ETag</code> header that you received when retrieving the public key to update. For example: <code>E2QWRUHAPOMQZL</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdatePublicKey20200531RequestBodyPublicKeyConfig - Configuration information about a public key that you can use with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">signed URLs and signed cookies</a>, or with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html">field-level encryption</a>.
 type UpdatePublicKey20200531RequestBodyPublicKeyConfig struct {
 	CallerReference *string
@@ -37,9 +20,18 @@ type UpdatePublicKey20200531RequestBody struct {
 }
 
 type UpdatePublicKey20200531Request struct {
-	PathParams UpdatePublicKey20200531PathParams
-	Headers    UpdatePublicKey20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The identifier of the public key that you are updating.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The value of the <code>ETag</code> header that you received when retrieving the public key to update. For example: <code>E2QWRUHAPOMQZL</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdatePublicKey20200531Response struct {

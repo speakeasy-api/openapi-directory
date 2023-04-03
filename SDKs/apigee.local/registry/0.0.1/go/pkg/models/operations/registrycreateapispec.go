@@ -7,26 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryCreateAPISpecPathParams struct {
+type RegistryCreateAPISpecRequest struct {
+	APISpecInput shared.APISpecInput `request:"mediaType=application/json"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
+	// Required. The ID to use for the spec, which will become the final component of the spec's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+	APISpecID *string `queryParam:"style=form,explode=true,name=apiSpecId"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// The version id.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryCreateAPISpecQueryParams struct {
-	// Required. The ID to use for the spec, which will become the final component of the spec's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
-	APISpecID *string `queryParam:"style=form,explode=true,name=apiSpecId"`
-}
-
-type RegistryCreateAPISpecRequest struct {
-	PathParams  RegistryCreateAPISpecPathParams
-	QueryParams RegistryCreateAPISpecQueryParams
-	Request     shared.APISpecInput `request:"mediaType=application/json"`
 }
 
 type RegistryCreateAPISpecResponse struct {

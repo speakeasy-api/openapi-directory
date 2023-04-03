@@ -7,30 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBackendJobsPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment.
-	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
-}
-
-type ListBackendJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListBackendJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListBackendJobsRequestBody struct {
 	// The ID for the job.
 	JobID *string `json:"jobId,omitempty"`
@@ -45,10 +21,22 @@ type ListBackendJobsRequestBody struct {
 }
 
 type ListBackendJobsRequest struct {
-	PathParams  ListBackendJobsPathParams
-	QueryParams ListBackendJobsQueryParams
-	Headers     ListBackendJobsHeaders
-	Request     ListBackendJobsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                    `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListBackendJobsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment.
+	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
 }
 
 type ListBackendJobsResponse struct {

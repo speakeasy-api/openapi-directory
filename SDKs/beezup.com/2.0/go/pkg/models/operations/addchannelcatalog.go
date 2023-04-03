@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddChannelCatalogRequest struct {
-	Request shared.AddChannelCatalogRequest `request:"mediaType=application/json"`
-}
-
 type AddChannelCatalogResponse struct {
 	// StoreId not found or not authorized
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

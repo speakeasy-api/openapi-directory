@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContributionsIDModeratePathParams struct {
+type PostContributionsIDModerateRequest struct {
+	// A moderation action
+	ModerationHistoryItemSubmission shared.ModerationHistoryItemSubmission `request:"mediaType=application/json"`
 	// Id of the contribution to moderate
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostContributionsIDModerateRequest struct {
-	PathParams PostContributionsIDModeratePathParams
-	// A moderation action
-	Request shared.ModerationHistoryItemSubmission `request:"mediaType=application/json"`
 }
 
 type PostContributionsIDModerateResponse struct {

@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateClusterSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateClusterSnapshotRequestBody struct {
 	// The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
 	ClusterArn string `json:"clusterArn"`
@@ -27,8 +17,14 @@ type CreateClusterSnapshotRequestBody struct {
 }
 
 type CreateClusterSnapshotRequest struct {
-	Headers CreateClusterSnapshotHeaders
-	Request CreateClusterSnapshotRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateClusterSnapshotRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateClusterSnapshotResponse struct {

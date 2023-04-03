@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConfigurationSetsQueryParams struct {
+type ListConfigurationSetsRequest struct {
 	// A token returned from a previous call to <code>ListConfigurationSets</code> to indicate the position in the list of configuration sets.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The number of results to show in a single call to <code>ListConfigurationSets</code>. If the number of results is larger than the number you specified in this parameter, then the response includes a <code>NextToken</code> element, which you can use to obtain additional results.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
-}
-
-type ListConfigurationSetsHeaders struct {
+	PageSize          *int64  `queryParam:"style=form,explode=true,name=PageSize"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListConfigurationSetsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConfigurationSetsRequest struct {
-	QueryParams ListConfigurationSetsQueryParams
-	Headers     ListConfigurationSetsHeaders
 }
 
 type ListConfigurationSetsResponse struct {

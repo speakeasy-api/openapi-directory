@@ -94,7 +94,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // PostMakePdf - Generate a PDF from HTML or URL.
-func (s *SDK) PostMakePdf(ctx context.Context, request operations.PostMakePdfRequest) (*operations.PostMakePdfResponse, error) {
+func (s *SDK) PostMakePdf(ctx context.Context, request operations.PostMakePdfRequestBody) (*operations.PostMakePdfResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/make-pdf"
 

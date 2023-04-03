@@ -29,12 +29,8 @@ func (e *ListCategoriesIncludeSubcategoriesEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type ListCategoriesQueryParams struct {
-	IncludeSubcategories *ListCategoriesIncludeSubcategoriesEnum `queryParam:"style=form,explode=true,name=include_subcategories"`
-}
-
 type ListCategoriesRequest struct {
-	QueryParams ListCategoriesQueryParams
+	IncludeSubcategories *ListCategoriesIncludeSubcategoriesEnum `queryParam:"style=form,explode=true,name=include_subcategories"`
 }
 
 type ListCategories200ApplicationJSONCategoryListCategories struct {

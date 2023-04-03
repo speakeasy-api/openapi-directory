@@ -50,25 +50,17 @@ func (e *POSTDisableAddressTransferVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTDisableAddressTransferQueryParams struct {
-	Action  POSTDisableAddressTransferActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisableAddressTransferVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisableAddressTransferHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisableAddressTransferRequest struct {
-	QueryParams POSTDisableAddressTransferQueryParams
-	Headers     POSTDisableAddressTransferHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisableAddressTransferActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTDisableAddressTransferVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisableAddressTransferResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTDeleteVirtualMFADeviceVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTDeleteVirtualMFADeviceQueryParams struct {
-	Action  POSTDeleteVirtualMFADeviceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteVirtualMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteVirtualMFADeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteVirtualMFADeviceRequest struct {
-	QueryParams POSTDeleteVirtualMFADeviceQueryParams
-	Headers     POSTDeleteVirtualMFADeviceHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteVirtualMFADeviceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTDeleteVirtualMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteVirtualMFADeviceResponse struct {

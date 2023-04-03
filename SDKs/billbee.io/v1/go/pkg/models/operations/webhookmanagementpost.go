@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WebHookManagementPostRequest struct {
-	// The webhook to create. Attach ?noecho to the uri to prevent echo test.
-	Request shared.RechnungsdruckWebAppControllersAPIWebHookAPIModel `request:"mediaType=application/json"`
-}
-
 type WebHookManagementPostResponse struct {
 	ContentType string
 	// OK

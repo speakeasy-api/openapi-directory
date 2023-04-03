@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConferenceSPRatingsQueryParams struct {
+type GetConferenceSPRatingsRequest struct {
 	// Conference abbreviation filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Season filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetConferenceSPRatingsRequest struct {
-	QueryParams GetConferenceSPRatingsQueryParams
 }
 
 type GetConferenceSPRatingsResponse struct {

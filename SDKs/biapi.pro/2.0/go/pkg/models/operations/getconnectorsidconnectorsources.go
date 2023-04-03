@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConnectorsIDConnectorSourcesPathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-}
-
-type GetConnectorsIDConnectorSourcesQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetConnectorsIDConnectorSourcesRequest struct {
-	PathParams  GetConnectorsIDConnectorSourcesPathParams
-	QueryParams GetConnectorsIDConnectorSourcesQueryParams
+	Expand      *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64   `pathParam:"style=simple,explode=false,name=id_connector"`
 }
 
 // GetConnectorsIDConnectorSources200ApplicationJSON - sources

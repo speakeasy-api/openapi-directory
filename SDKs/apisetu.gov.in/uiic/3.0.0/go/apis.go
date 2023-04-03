@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Cripc - Insurance Policy - Car
 // API to verify Insurance Policy - Car.
-func (s *apIs) Cripc(ctx context.Context, request operations.CripcRequest) (*operations.CripcResponse, error) {
+func (s *apIs) Cripc(ctx context.Context, request operations.CripcRequestBody, security operations.CripcSecurity) (*operations.CripcResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cripc/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Cripc(ctx context.Context, request operations.CripcRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Cripc(ctx context.Context, request operations.CripcRequest) (*ope
 
 // Twipc - Insurance Policy - Two Wheeler
 // API to verify Insurance Policy - Two Wheeler.
-func (s *apIs) Twipc(ctx context.Context, request operations.TwipcRequest) (*operations.TwipcResponse, error) {
+func (s *apIs) Twipc(ctx context.Context, request operations.TwipcRequestBody, security operations.TwipcSecurity) (*operations.TwipcResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/twipc/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Twipc(ctx context.Context, request operations.TwipcRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

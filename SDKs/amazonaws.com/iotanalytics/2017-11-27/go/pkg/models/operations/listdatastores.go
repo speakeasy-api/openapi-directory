@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDatastoresQueryParams struct {
-	// <p>The maximum number of results to return in this request.</p> <p>The default value is 100.</p>
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListDatastoresHeaders struct {
+type ListDatastoresRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListDatastoresHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDatastoresRequest struct {
-	QueryParams ListDatastoresQueryParams
-	Headers     ListDatastoresHeaders
+	// <p>The maximum number of results to return in this request.</p> <p>The default value is 100.</p>
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListDatastoresResponse struct {

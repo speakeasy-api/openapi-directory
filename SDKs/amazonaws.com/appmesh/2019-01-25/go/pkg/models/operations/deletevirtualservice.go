@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteVirtualServicePathParams struct {
-	// The name of the service mesh to delete the virtual service in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual service to delete.
-	VirtualServiceName string `pathParam:"style=simple,explode=false,name=virtualServiceName"`
-}
-
-type DeleteVirtualServiceQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type DeleteVirtualServiceHeaders struct {
+type DeleteVirtualServiceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteVirtualServiceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVirtualServiceRequest struct {
-	PathParams  DeleteVirtualServicePathParams
-	QueryParams DeleteVirtualServiceQueryParams
-	Headers     DeleteVirtualServiceHeaders
+	// The name of the service mesh to delete the virtual service in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the virtual service to delete.
+	VirtualServiceName string `pathParam:"style=simple,explode=false,name=virtualServiceName"`
 }
 
 type DeleteVirtualServiceResponse struct {

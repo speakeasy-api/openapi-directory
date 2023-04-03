@@ -7,17 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLensReviewsPathParams struct {
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
-type ListLensReviewsQueryParams struct {
-	MaxResults      *int64  `queryParam:"style=form,explode=true,name=MaxResults"`
-	MilestoneNumber *int64  `queryParam:"style=form,explode=true,name=MilestoneNumber"`
-	NextToken       *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListLensReviewsHeaders struct {
+type ListLensReviewsRequest struct {
+	MaxResults        *int64  `queryParam:"style=form,explode=true,name=MaxResults"`
+	MilestoneNumber   *int64  `queryParam:"style=form,explode=true,name=MilestoneNumber"`
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
+	WorkloadID        string  `pathParam:"style=simple,explode=false,name=WorkloadId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +19,6 @@ type ListLensReviewsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLensReviewsRequest struct {
-	PathParams  ListLensReviewsPathParams
-	QueryParams ListLensReviewsQueryParams
-	Headers     ListLensReviewsHeaders
 }
 
 type ListLensReviewsResponse struct {

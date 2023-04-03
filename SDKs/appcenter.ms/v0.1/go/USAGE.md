@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.UsersGetUserMetadataRequest{
-        Security: operations.UsersGetUserMetadataSecurity{
-            APIToken: shared.SchemeAPIToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Account.UsersGetUserMetadata(ctx, req)
+    res, err := s.Account.UsersGetUserMetadata(ctx)
     if err != nil {
         log.Fatal(err)
     }

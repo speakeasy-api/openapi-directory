@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionPathParams struct {
+type GetSubscriptionRequest struct {
 	// The name of the space.
 	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type GetSubscriptionRequest struct {
-	PathParams GetSubscriptionPathParams
 }
 
 type GetSubscriptionResponse struct {

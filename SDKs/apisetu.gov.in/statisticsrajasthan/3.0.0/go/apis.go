@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Btcer - Birth Certificate
 // API to verify Birth Certificate.
-func (s *apIs) Btcer(ctx context.Context, request operations.BtcerRequest) (*operations.BtcerResponse, error) {
+func (s *apIs) Btcer(ctx context.Context, request operations.BtcerRequestBody, security operations.BtcerSecurity) (*operations.BtcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/btcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Btcer(ctx context.Context, request operations.BtcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Btcer(ctx context.Context, request operations.BtcerRequest) (*ope
 
 // Dtcer - Death Certificate
 // API to verify Death Certificate.
-func (s *apIs) Dtcer(ctx context.Context, request operations.DtcerRequest) (*operations.DtcerResponse, error) {
+func (s *apIs) Dtcer(ctx context.Context, request operations.DtcerRequestBody, security operations.DtcerSecurity) (*operations.DtcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dtcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Dtcer(ctx context.Context, request operations.DtcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Dtcer(ctx context.Context, request operations.DtcerRequest) (*ope
 
 // Rmcer - Marriage Certificate
 // API to verify Marriage Certificate.
-func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequest) (*operations.RmcerResponse, error) {
+func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequestBody, security operations.RmcerSecurity) (*operations.RmcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rmcer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

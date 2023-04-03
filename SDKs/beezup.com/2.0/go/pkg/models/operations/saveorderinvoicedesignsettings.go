@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveOrderInvoiceDesignSettingsRequest struct {
-	Request shared.OrderInvoiceDesignSettings `request:"mediaType=application/json"`
-}
-
 type SaveOrderInvoiceDesignSettingsResponse struct {
 	// Occurs when something goes wrong
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteVaultItemSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type DeleteVaultItemPathParams struct {
+type DeleteVaultItemRequest struct {
 	// The UUID of the Item to update
 	ItemUUID string `pathParam:"style=simple,explode=false,name=itemUuid"`
 	// The UUID of the Vault the item is in
 	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type DeleteVaultItemRequest struct {
-	PathParams DeleteVaultItemPathParams
-	Security   DeleteVaultItemSecurity
 }
 
 type DeleteVaultItemResponse struct {

@@ -13,33 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateFileSystemAliasesRequest{
-        Headers: operations.AssociateFileSystemAliasesHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases",
-        },
-        Request: shared.AssociateFileSystemAliasesRequest{
+        AssociateFileSystemAliasesRequest: shared.AssociateFileSystemAliasesRequest{
             Aliases: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            ClientRequestToken: "iure",
-            FileSystemID: "magnam",
+            ClientRequestToken: "unde",
+            FileSystemID: "nulla",
         },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
+        XAmzTarget: "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases",
     }
 
     ctx := context.Background()

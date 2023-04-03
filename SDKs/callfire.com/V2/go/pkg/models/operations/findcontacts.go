@@ -8,10 +8,11 @@ import (
 )
 
 type FindContactsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindContactsQueryParams struct {
+type FindContactsRequest struct {
 	// Filters contacts by a particular contact list
 	ContactListID *int64 `queryParam:"style=form,explode=true,name=contactListId"`
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
@@ -28,11 +29,6 @@ type FindContactsQueryParams struct {
 	PropertyName *string `queryParam:"style=form,explode=true,name=propertyName"`
 	// Value of a contact property to search by
 	PropertyValue *string `queryParam:"style=form,explode=true,name=propertyValue"`
-}
-
-type FindContactsRequest struct {
-	QueryParams FindContactsQueryParams
-	Security    FindContactsSecurity
 }
 
 type FindContactsResponse struct {

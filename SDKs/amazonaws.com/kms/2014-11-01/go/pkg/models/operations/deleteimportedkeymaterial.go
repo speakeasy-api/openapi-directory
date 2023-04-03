@@ -30,20 +30,16 @@ func (e *DeleteImportedKeyMaterialXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DeleteImportedKeyMaterialHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteImportedKeyMaterialXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteImportedKeyMaterialRequest struct {
-	Headers DeleteImportedKeyMaterialHeaders
-	Request shared.DeleteImportedKeyMaterialRequest `request:"mediaType=application/json"`
+	DeleteImportedKeyMaterialRequest shared.DeleteImportedKeyMaterialRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                         *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                       DeleteImportedKeyMaterialXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteImportedKeyMaterialResponse struct {

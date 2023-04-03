@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListChangeSetsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListChangeSetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListChangeSetsRequestBodySort - An object that contains two attributes, <code>SortBy</code> and <code>SortOrder</code>.
 type ListChangeSetsRequestBodySort struct {
 	SortBy    *string               `json:"SortBy,omitempty"`
@@ -44,9 +27,18 @@ type ListChangeSetsRequestBody struct {
 }
 
 type ListChangeSetsRequest struct {
-	QueryParams ListChangeSetsQueryParams
-	Headers     ListChangeSetsHeaders
-	Request     ListChangeSetsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                   `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListChangeSetsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListChangeSetsResponse struct {

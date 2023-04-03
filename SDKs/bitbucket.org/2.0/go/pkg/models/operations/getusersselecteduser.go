@@ -8,21 +8,16 @@ import (
 )
 
 type GetUsersSelectedUserSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetUsersSelectedUserPathParams struct {
+type GetUsersSelectedUserRequest struct {
 	// This can either be the UUID of the account, surrounded by curly-braces, for
 	// example: `{account UUID}`, OR an Atlassian Account ID.
 	//
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type GetUsersSelectedUserRequest struct {
-	PathParams GetUsersSelectedUserPathParams
-	Security   GetUsersSelectedUserSecurity
 }
 
 type GetUsersSelectedUserResponse struct {

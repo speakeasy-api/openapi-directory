@@ -30,7 +30,8 @@ func (e *GetServiceSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetServiceSettingsHeaders struct {
+type GetServiceSettingsRequest struct {
+	RequestBody       map[string]interface{}           `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetServiceSettingsHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetServiceSettingsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetServiceSettingsRequest struct {
-	Headers GetServiceSettingsHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetServiceSettingsResponse struct {

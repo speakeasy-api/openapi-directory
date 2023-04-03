@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type DeleteAddressRequest struct {
-	Headers DeleteAddressHeaders
-	Request shared.DeleteAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization        string                      `header:"style=simple,explode=false,name=Authorization"`
+	DeleteAddressRequest shared.DeleteAddressRequest `request:"mediaType=application/json"`
 }
 
 type DeleteAddressResponse struct {

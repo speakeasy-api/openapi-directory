@@ -10,8 +10,8 @@ import (
 )
 
 type TapcnSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type TapcnRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type TapcnRequestBody struct {
 	Format TapcnRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type TapcnRequest struct {
-	// Request format
-	Request  *TapcnRequestBody `request:"mediaType=application/json"`
-	Security TapcnSecurity
 }
 
 type Tapcn504ApplicationJSONErrorEnum string

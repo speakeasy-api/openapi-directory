@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSiteAddressPathParams struct {
-	//  The ID or the Amazon Resource Name (ARN) of the site.
-	SiteID string `pathParam:"style=simple,explode=false,name=SiteId"`
-}
-
 // GetSiteAddressAddressTypeEnum - The type of the address you request.
 type GetSiteAddressAddressTypeEnum string
 
@@ -38,12 +33,11 @@ func (e *GetSiteAddressAddressTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSiteAddressQueryParams struct {
+type GetSiteAddressRequest struct {
 	// The type of the address you request.
 	AddressType GetSiteAddressAddressTypeEnum `queryParam:"style=form,explode=true,name=AddressType"`
-}
-
-type GetSiteAddressHeaders struct {
+	//  The ID or the Amazon Resource Name (ARN) of the site.
+	SiteID            string  `pathParam:"style=simple,explode=false,name=SiteId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -51,12 +45,6 @@ type GetSiteAddressHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSiteAddressRequest struct {
-	PathParams  GetSiteAddressPathParams
-	QueryParams GetSiteAddressQueryParams
-	Headers     GetSiteAddressHeaders
 }
 
 type GetSiteAddressResponse struct {

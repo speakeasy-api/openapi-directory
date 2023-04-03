@@ -33,7 +33,7 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // GetUserStorePurchases - Get user store purchases
 // Get user store purchases
-func (s *user) GetUserStorePurchases(ctx context.Context, request operations.GetUserStorePurchasesRequest) (*operations.GetUserStorePurchasesResponse, error) {
+func (s *user) GetUserStorePurchases(ctx context.Context, request operations.GetUserStorePurchasesRequest, security operations.GetUserStorePurchasesSecurity) (*operations.GetUserStorePurchasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/purchases"
 
@@ -42,11 +42,11 @@ func (s *user) GetUserStorePurchases(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *user) GetUserStoreRecommendations(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -140,7 +140,7 @@ func (s *user) GetUserWatching(ctx context.Context, request operations.GetUserWa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

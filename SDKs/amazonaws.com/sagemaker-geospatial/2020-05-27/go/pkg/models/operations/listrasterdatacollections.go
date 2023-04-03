@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRasterDataCollectionsQueryParams struct {
+type ListRasterDataCollectionsRequest struct {
 	// The total number of items to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// If the previous response was truncated, you receive this token. Use it in your next request to receive the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListRasterDataCollectionsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListRasterDataCollectionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRasterDataCollectionsRequest struct {
-	QueryParams ListRasterDataCollectionsQueryParams
-	Headers     ListRasterDataCollectionsHeaders
 }
 
 type ListRasterDataCollectionsResponse struct {

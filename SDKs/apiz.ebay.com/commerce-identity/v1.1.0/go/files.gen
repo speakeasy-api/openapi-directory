@@ -19,5 +19,4 @@ pkg/models/shared/phone.go
 pkg/models/shared/address.go
 pkg/models/shared/businessaccount.go
 pkg/models/shared/contact.go
-pkg/models/shared/security.go
 USAGE.md

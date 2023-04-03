@@ -107,7 +107,7 @@ func (e *GETListEntitiesForPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListEntitiesForPolicyQueryParams struct {
+type GETListEntitiesForPolicyRequest struct {
 	Action GETListEntitiesForPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The entity type to use for filtering the results.</p> <p>For example, when <code>EntityFilter</code> is <code>Role</code>, only the roles that are attached to the specified policy are returned. This parameter is optional. If it is not included, all attached entities (users, groups, and roles) are returned. The argument for this parameter must be one of the valid values listed below.</p>
 	EntityFilter *GETListEntitiesForPolicyEntityFilterEnum `queryParam:"style=form,explode=true,name=EntityFilter"`
@@ -122,21 +122,13 @@ type GETListEntitiesForPolicyQueryParams struct {
 	// <p>The policy usage method to use for filtering the results.</p> <p>To list only permissions policies, set <code>PolicyUsageFilter</code> to <code>PermissionsPolicy</code>. To list only the policies used to set permissions boundaries, set the value to <code>PermissionsBoundary</code>.</p> <p>This parameter is optional. If it is not included, all policies are returned. </p>
 	PolicyUsageFilter *GETListEntitiesForPolicyPolicyUsageFilterEnum `queryParam:"style=form,explode=true,name=PolicyUsageFilter"`
 	Version           GETListEntitiesForPolicyVersionEnum            `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListEntitiesForPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListEntitiesForPolicyRequest struct {
-	QueryParams GETListEntitiesForPolicyQueryParams
-	Headers     GETListEntitiesForPolicyHeaders
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListEntitiesForPolicyResponse struct {

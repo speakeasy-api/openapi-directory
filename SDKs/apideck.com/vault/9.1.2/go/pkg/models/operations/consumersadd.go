@@ -8,18 +8,13 @@ import (
 )
 
 type ConsumersAddSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ConsumersAddHeaders struct {
-	// The ID of your Unify application
-	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ConsumersAddRequest struct {
-	Headers  ConsumersAddHeaders
-	Request  shared.ConsumerInput `request:"mediaType=application/json"`
-	Security ConsumersAddSecurity
+	ConsumerInput shared.ConsumerInput `request:"mediaType=application/json"`
+	// The ID of your Unify application
+	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 }
 
 type ConsumersAddResponse struct {

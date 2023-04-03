@@ -50,25 +50,17 @@ func (e *POSTDeleteVpcVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteVpcQueryParams struct {
-	Action  POSTDeleteVpcActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteVpcVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteVpcHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteVpcRequest struct {
-	QueryParams POSTDeleteVpcQueryParams
-	Headers     POSTDeleteVpcHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteVpcActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                   `request:"mediaType=text/xml"`
+	Version           POSTDeleteVpcVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteVpcResponse struct {

@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestEmergencyMfaCodePathParams struct {
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RequestEmergencyMfaCodeHeaders struct {
+type RequestEmergencyMfaCodeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestEmergencyMfaCodeRequest struct {
-	PathParams RequestEmergencyMfaCodePathParams
-	Headers    RequestEmergencyMfaCodeHeaders
+	UserID        int64   `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type RequestEmergencyMfaCodeResponse struct {

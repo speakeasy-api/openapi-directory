@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveNodesHeaders struct {
+type RemoveNodesRequest struct {
+	DeleteNodesRequest shared.DeleteNodesRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveNodesRequest struct {
-	Headers RemoveNodesHeaders
-	Request shared.DeleteNodesRequest `request:"mediaType=application/json"`
 }
 
 type RemoveNodesResponse struct {

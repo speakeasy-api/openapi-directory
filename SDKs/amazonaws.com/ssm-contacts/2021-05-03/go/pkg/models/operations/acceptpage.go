@@ -30,7 +30,8 @@ func (e *AcceptPageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AcceptPageHeaders struct {
+type AcceptPageRequest struct {
+	AcceptPageRequest shared.AcceptPageRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type AcceptPageHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        AcceptPageXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type AcceptPageRequest struct {
-	Headers AcceptPageHeaders
-	Request shared.AcceptPageRequest `request:"mediaType=application/json"`
 }
 
 type AcceptPageResponse struct {

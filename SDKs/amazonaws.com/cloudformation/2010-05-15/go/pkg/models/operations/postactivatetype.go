@@ -50,25 +50,17 @@ func (e *POSTActivateTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTActivateTypeQueryParams struct {
-	Action  POSTActivateTypeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTActivateTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTActivateTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTActivateTypeRequest struct {
-	QueryParams POSTActivateTypeQueryParams
-	Headers     POSTActivateTypeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTActivateTypeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                      `request:"mediaType=text/xml"`
+	Version           POSTActivateTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTActivateTypeResponse struct {

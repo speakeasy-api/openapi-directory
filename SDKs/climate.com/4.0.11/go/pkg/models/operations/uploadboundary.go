@@ -8,13 +8,8 @@ import (
 )
 
 type UploadBoundarySecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type UploadBoundaryRequest struct {
-	Request  *shared.BoundaryUpload `request:"mediaType=application/json"`
-	Security UploadBoundarySecurity
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UploadBoundaryResponse struct {

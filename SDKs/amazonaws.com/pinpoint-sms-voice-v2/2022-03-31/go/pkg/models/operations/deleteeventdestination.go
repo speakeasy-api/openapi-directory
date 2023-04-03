@@ -30,20 +30,16 @@ func (e *DeleteEventDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type DeleteEventDestinationHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteEventDestinationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteEventDestinationRequest struct {
-	Headers DeleteEventDestinationHeaders
-	Request shared.DeleteEventDestinationRequest `request:"mediaType=application/json"`
+	DeleteEventDestinationRequest shared.DeleteEventDestinationRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    DeleteEventDestinationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteEventDestinationResponse struct {

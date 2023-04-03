@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCostEstimationQueryParams struct {
+type GetCostEstimationRequest struct {
 	// The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetCostEstimationHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetCostEstimationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCostEstimationRequest struct {
-	QueryParams GetCostEstimationQueryParams
-	Headers     GetCostEstimationHeaders
 }
 
 type GetCostEstimationResponse struct {

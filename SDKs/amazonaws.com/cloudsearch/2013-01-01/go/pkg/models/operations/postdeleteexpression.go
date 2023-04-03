@@ -50,25 +50,17 @@ func (e *POSTDeleteExpressionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteExpressionQueryParams struct {
-	Action  POSTDeleteExpressionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteExpressionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteExpressionRequest struct {
-	QueryParams POSTDeleteExpressionQueryParams
-	Headers     POSTDeleteExpressionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteExpressionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTDeleteExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteExpressionResponse struct {

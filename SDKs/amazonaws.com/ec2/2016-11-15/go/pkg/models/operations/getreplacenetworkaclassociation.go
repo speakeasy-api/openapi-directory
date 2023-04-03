@@ -50,30 +50,22 @@ func (e *GETReplaceNetworkACLAssociationVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETReplaceNetworkACLAssociationQueryParams struct {
+type GETReplaceNetworkACLAssociationRequest struct {
 	Action GETReplaceNetworkACLAssociationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the current association between the original network ACL and the subnet.
 	AssociationID string `queryParam:"style=form,explode=true,name=AssociationId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the new network ACL to associate with the subnet.
-	NetworkACLID string                                     `queryParam:"style=form,explode=true,name=NetworkAclId"`
-	Version      GETReplaceNetworkACLAssociationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReplaceNetworkACLAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReplaceNetworkACLAssociationRequest struct {
-	QueryParams GETReplaceNetworkACLAssociationQueryParams
-	Headers     GETReplaceNetworkACLAssociationHeaders
+	NetworkACLID      string                                     `queryParam:"style=form,explode=true,name=NetworkAclId"`
+	Version           GETReplaceNetworkACLAssociationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReplaceNetworkACLAssociationResponse struct {

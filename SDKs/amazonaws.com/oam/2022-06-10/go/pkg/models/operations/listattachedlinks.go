@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAttachedLinksQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListAttachedLinksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListAttachedLinksRequestBody struct {
 	// Limits the number of returned links to the specified number.
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -34,9 +17,18 @@ type ListAttachedLinksRequestBody struct {
 }
 
 type ListAttachedLinksRequest struct {
-	QueryParams ListAttachedLinksQueryParams
-	Headers     ListAttachedLinksHeaders
-	Request     ListAttachedLinksRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                      `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListAttachedLinksRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListAttachedLinksResponse struct {

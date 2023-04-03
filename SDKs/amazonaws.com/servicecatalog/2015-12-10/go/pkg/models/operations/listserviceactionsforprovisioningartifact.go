@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServiceActionsForProvisioningArtifactQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // ListServiceActionsForProvisioningArtifactXAmzTargetEnum
 type ListServiceActionsForProvisioningArtifactXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListServiceActionsForProvisioningArtifactXAmzTargetEnum) UnmarshalJSON(
 	}
 }
 
-type ListServiceActionsForProvisioningArtifactHeaders struct {
+type ListServiceActionsForProvisioningArtifactRequest struct {
+	ListServiceActionsForProvisioningArtifactInput shared.ListServiceActionsForProvisioningArtifactInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken         *string                                                 `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListServiceActionsForProvisioningArtifactHeaders struct {
 	XAmzSignature     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListServiceActionsForProvisioningArtifactXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListServiceActionsForProvisioningArtifactRequest struct {
-	QueryParams ListServiceActionsForProvisioningArtifactQueryParams
-	Headers     ListServiceActionsForProvisioningArtifactHeaders
-	Request     shared.ListServiceActionsForProvisioningArtifactInput `request:"mediaType=application/json"`
 }
 
 type ListServiceActionsForProvisioningArtifactResponse struct {

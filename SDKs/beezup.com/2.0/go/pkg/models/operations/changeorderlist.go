@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeOrderListPathParams struct {
+type ChangeOrderListRequest struct {
+	ChangeOrderListRequest shared.ChangeOrderListRequest `request:"mediaType=application/json"`
 	// The Order change type
 	ChangeOrderType string `pathParam:"style=simple,explode=false,name=changeOrderType"`
-}
-
-type ChangeOrderListQueryParams struct {
 	// If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
 	TestMode *bool `queryParam:"style=form,explode=true,name=testMode"`
 	// Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
 	UserName string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type ChangeOrderListRequest struct {
-	PathParams  ChangeOrderListPathParams
-	QueryParams ChangeOrderListQueryParams
-	Request     shared.ChangeOrderListRequest `request:"mediaType=application/json"`
 }
 
 type ChangeOrderListResponse struct {

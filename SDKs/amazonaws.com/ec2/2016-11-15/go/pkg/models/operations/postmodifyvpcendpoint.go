@@ -50,25 +50,17 @@ func (e *POSTModifyVpcEndpointVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTModifyVpcEndpointQueryParams struct {
-	Action  POSTModifyVpcEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyVpcEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyVpcEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyVpcEndpointRequest struct {
-	QueryParams POSTModifyVpcEndpointQueryParams
-	Headers     POSTModifyVpcEndpointHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyVpcEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                           `request:"mediaType=text/xml"`
+	Version           POSTModifyVpcEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyVpcEndpointResponse struct {

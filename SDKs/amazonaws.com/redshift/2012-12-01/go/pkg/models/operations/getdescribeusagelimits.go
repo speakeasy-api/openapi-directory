@@ -77,7 +77,7 @@ func (e *GETDescribeUsageLimitsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeUsageLimitsQueryParams struct {
+type GETDescribeUsageLimitsRequest struct {
 	Action GETDescribeUsageLimitsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the cluster for which you want to describe usage limits.
 	ClusterIdentifier *string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -92,23 +92,15 @@ type GETDescribeUsageLimitsQueryParams struct {
 	// A tag value or values for which you want to return all matching usage limit objects that are associated with the specified tag value or values. For example, suppose that you have parameter groups that are tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with the usage limit objects that have either or both of these tag values associated with them.
 	TagValues []string `queryParam:"style=form,explode=true,name=TagValues"`
 	// The identifier of the usage limit to describe.
-	UsageLimitID *string                           `queryParam:"style=form,explode=true,name=UsageLimitId"`
-	Version      GETDescribeUsageLimitsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeUsageLimitsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeUsageLimitsRequest struct {
-	QueryParams GETDescribeUsageLimitsQueryParams
-	Headers     GETDescribeUsageLimitsHeaders
+	UsageLimitID      *string                           `queryParam:"style=form,explode=true,name=UsageLimitId"`
+	Version           GETDescribeUsageLimitsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeUsageLimitsResponse struct {

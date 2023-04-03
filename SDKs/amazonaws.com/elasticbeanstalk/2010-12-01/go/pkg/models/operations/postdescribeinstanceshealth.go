@@ -50,25 +50,17 @@ func (e *POSTDescribeInstancesHealthVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTDescribeInstancesHealthQueryParams struct {
-	Action  POSTDescribeInstancesHealthActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeInstancesHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeInstancesHealthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeInstancesHealthRequest struct {
-	QueryParams POSTDescribeInstancesHealthQueryParams
-	Headers     POSTDescribeInstancesHealthHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeInstancesHealthActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTDescribeInstancesHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeInstancesHealthResponse struct {

@@ -44,7 +44,7 @@ func (s *search) SearchArtifacts(ctx context.Context, request operations.SearchA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -99,7 +99,7 @@ func (s *search) SearchArtifactsByContent(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search/artifacts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -114,7 +114,7 @@ func (s *search) SearchArtifactsByContent(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

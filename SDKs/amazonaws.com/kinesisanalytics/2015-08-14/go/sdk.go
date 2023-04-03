@@ -116,7 +116,7 @@ func (s *SDK) AddApplicationCloudWatchLoggingOption(ctx context.Context, request
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddApplicationCloudWatchLoggingOptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AddApplicationCloudWatchLoggingOption(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -222,7 +222,7 @@ func (s *SDK) AddApplicationInput(ctx context.Context, request operations.AddApp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.AddApplicationInput"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddApplicationInputRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -237,7 +237,7 @@ func (s *SDK) AddApplicationInput(ctx context.Context, request operations.AddApp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -338,7 +338,7 @@ func (s *SDK) AddApplicationInputProcessingConfiguration(ctx context.Context, re
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.AddApplicationInputProcessingConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddApplicationInputProcessingConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -353,7 +353,7 @@ func (s *SDK) AddApplicationInputProcessingConfiguration(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -444,7 +444,7 @@ func (s *SDK) AddApplicationOutput(ctx context.Context, request operations.AddAp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.AddApplicationOutput"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddApplicationOutputRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -459,7 +459,7 @@ func (s *SDK) AddApplicationOutput(ctx context.Context, request operations.AddAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -550,7 +550,7 @@ func (s *SDK) AddApplicationReferenceDataSource(ctx context.Context, request ope
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.AddApplicationReferenceDataSource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddApplicationReferenceDataSourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -565,7 +565,7 @@ func (s *SDK) AddApplicationReferenceDataSource(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -656,7 +656,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.CreateApplication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -671,7 +671,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -772,7 +772,7 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DeleteApplication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -787,7 +787,7 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -868,7 +868,7 @@ func (s *SDK) DeleteApplicationCloudWatchLoggingOption(ctx context.Context, requ
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DeleteApplicationCloudWatchLoggingOption"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteApplicationCloudWatchLoggingOptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -883,7 +883,7 @@ func (s *SDK) DeleteApplicationCloudWatchLoggingOption(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -974,7 +974,7 @@ func (s *SDK) DeleteApplicationInputProcessingConfiguration(ctx context.Context,
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DeleteApplicationInputProcessingConfiguration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteApplicationInputProcessingConfigurationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -989,7 +989,7 @@ func (s *SDK) DeleteApplicationInputProcessingConfiguration(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1080,7 +1080,7 @@ func (s *SDK) DeleteApplicationOutput(ctx context.Context, request operations.De
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DeleteApplicationOutput"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteApplicationOutputRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1095,7 +1095,7 @@ func (s *SDK) DeleteApplicationOutput(ctx context.Context, request operations.De
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1186,7 +1186,7 @@ func (s *SDK) DeleteApplicationReferenceDataSource(ctx context.Context, request 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DeleteApplicationReferenceDataSource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteApplicationReferenceDataSourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1201,7 +1201,7 @@ func (s *SDK) DeleteApplicationReferenceDataSource(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1292,7 +1292,7 @@ func (s *SDK) DescribeApplication(ctx context.Context, request operations.Descri
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DescribeApplication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DescribeApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1307,7 +1307,7 @@ func (s *SDK) DescribeApplication(ctx context.Context, request operations.Descri
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1368,7 +1368,7 @@ func (s *SDK) DiscoverInputSchema(ctx context.Context, request operations.Discov
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.DiscoverInputSchema"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiscoverInputSchemaRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1383,7 +1383,7 @@ func (s *SDK) DiscoverInputSchema(ctx context.Context, request operations.Discov
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1464,7 +1464,7 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.ListApplications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListApplicationsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1479,7 +1479,7 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1520,7 +1520,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.ListTagsForResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListTagsForResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1535,7 +1535,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1606,7 +1606,7 @@ func (s *SDK) StartApplication(ctx context.Context, request operations.StartAppl
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.StartApplication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1621,7 +1621,7 @@ func (s *SDK) StartApplication(ctx context.Context, request operations.StartAppl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1712,7 +1712,7 @@ func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplic
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.StopApplication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StopApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1727,7 +1727,7 @@ func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1798,7 +1798,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.TagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1813,7 +1813,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1904,7 +1904,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.UntagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UntagResourceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1919,7 +1919,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2010,7 +2010,7 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=KinesisAnalytics_20150814.UpdateApplication"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateApplicationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2025,7 +2025,7 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

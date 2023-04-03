@@ -8,19 +8,14 @@ import (
 )
 
 type TokensGetBungieRewardsForPlatformUserSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TokensGetBungieRewardsForPlatformUserPathParams struct {
+type TokensGetBungieRewardsForPlatformUserRequest struct {
 	// users platform membershipId for requested user rewards. If not self, elevated permissions are required.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// The target Destiny 2 membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type TokensGetBungieRewardsForPlatformUserRequest struct {
-	PathParams TokensGetBungieRewardsForPlatformUserPathParams
-	Security   TokensGetBungieRewardsForPlatformUserSecurity
 }
 
 // TokensGetBungieRewardsForPlatformUser200Wildcard - Look at the Response property for more information about the nature of this response

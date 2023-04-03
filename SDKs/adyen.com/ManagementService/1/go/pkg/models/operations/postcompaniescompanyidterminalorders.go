@@ -8,19 +8,14 @@ import (
 )
 
 type PostCompaniesCompanyIDTerminalOrdersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCompaniesCompanyIDTerminalOrdersPathParams struct {
-	// The unique identifier of the company account.
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostCompaniesCompanyIDTerminalOrdersRequest struct {
-	PathParams PostCompaniesCompanyIDTerminalOrdersPathParams
-	Request    *shared.TerminalOrderRequest `request:"mediaType=application/json"`
-	Security   PostCompaniesCompanyIDTerminalOrdersSecurity
+	TerminalOrderRequest *shared.TerminalOrderRequest `request:"mediaType=application/json"`
+	// The unique identifier of the company account.
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 }
 
 type PostCompaniesCompanyIDTerminalOrdersResponse struct {

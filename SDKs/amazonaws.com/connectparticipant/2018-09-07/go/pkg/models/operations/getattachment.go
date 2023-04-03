@@ -7,8 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAttachmentHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+type GetAttachmentRequestBody struct {
+	// A unique identifier for the attachment.
+	AttachmentID string `json:"AttachmentId"`
+}
+
+type GetAttachmentRequest struct {
+	RequestBody   GetAttachmentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	// The authentication token associated with the participant's connection.
 	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
@@ -17,16 +23,6 @@ type GetAttachmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAttachmentRequestBody struct {
-	// A unique identifier for the attachment.
-	AttachmentID string `json:"AttachmentId"`
-}
-
-type GetAttachmentRequest struct {
-	Headers GetAttachmentHeaders
-	Request GetAttachmentRequestBody `request:"mediaType=application/json"`
 }
 
 type GetAttachmentResponse struct {

@@ -30,20 +30,16 @@ func (e *UpdateConstraintXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateConstraintHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateConstraintXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateConstraintRequest struct {
-	Headers UpdateConstraintHeaders
-	Request shared.UpdateConstraintInput `request:"mediaType=application/json"`
+	UpdateConstraintInput shared.UpdateConstraintInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            UpdateConstraintXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateConstraintResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetWorkflowInAttemptRequest struct {
-	Request shared.SetWorkflowInAttemptRequestBody `request:"mediaType=application/json"`
-}
-
 type SetWorkflowInAttemptResponse struct {
 	ContentType string
 	// Successful Operation

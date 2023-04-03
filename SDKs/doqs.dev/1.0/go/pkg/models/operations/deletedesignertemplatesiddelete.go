@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDesignerTemplatesIDDeletePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteDesignerTemplatesIDDeleteRequest struct {
-	PathParams DeleteDesignerTemplatesIDDeletePathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteDesignerTemplatesIDDeleteResponse struct {

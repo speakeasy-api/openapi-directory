@@ -74,30 +74,22 @@ func (e *GETRetrieveEnvironmentInfoVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETRetrieveEnvironmentInfoQueryParams struct {
+type GETRetrieveEnvironmentInfoRequest struct {
 	Action GETRetrieveEnvironmentInfoActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ID of the data's environment.</p> <p>If no such environment is found, returns an <code>InvalidParameterValue</code> error.</p> <p>Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error.</p>
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=EnvironmentId"`
 	// <p>The name of the data's environment.</p> <p> If no such environment is found, returns an <code>InvalidParameterValue</code> error. </p> <p> Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
 	EnvironmentName *string `queryParam:"style=form,explode=true,name=EnvironmentName"`
 	// The type of information to retrieve.
-	InfoType GETRetrieveEnvironmentInfoInfoTypeEnum `queryParam:"style=form,explode=true,name=InfoType"`
-	Version  GETRetrieveEnvironmentInfoVersionEnum  `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRetrieveEnvironmentInfoHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRetrieveEnvironmentInfoRequest struct {
-	QueryParams GETRetrieveEnvironmentInfoQueryParams
-	Headers     GETRetrieveEnvironmentInfoHeaders
+	InfoType          GETRetrieveEnvironmentInfoInfoTypeEnum `queryParam:"style=form,explode=true,name=InfoType"`
+	Version           GETRetrieveEnvironmentInfoVersionEnum  `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRetrieveEnvironmentInfoResponse struct {

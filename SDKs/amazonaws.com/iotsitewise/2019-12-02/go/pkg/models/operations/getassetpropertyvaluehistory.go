@@ -34,7 +34,14 @@ func (e *GetAssetPropertyValueHistoryTimeOrderingEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetAssetPropertyValueHistoryQueryParams struct {
+type GetAssetPropertyValueHistoryRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The ID of the asset.
 	AssetID *string `queryParam:"style=form,explode=true,name=assetId"`
 	// The inclusive end of the range from which to query historical data, expressed in seconds in Unix epoch time.
@@ -53,21 +60,6 @@ type GetAssetPropertyValueHistoryQueryParams struct {
 	StartDate *time.Time `queryParam:"style=form,explode=true,name=startDate"`
 	// <p>The chronological sorting order of the requested information.</p> <p>Default: <code>ASCENDING</code> </p>
 	TimeOrdering *GetAssetPropertyValueHistoryTimeOrderingEnum `queryParam:"style=form,explode=true,name=timeOrdering"`
-}
-
-type GetAssetPropertyValueHistoryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAssetPropertyValueHistoryRequest struct {
-	QueryParams GetAssetPropertyValueHistoryQueryParams
-	Headers     GetAssetPropertyValueHistoryHeaders
 }
 
 type GetAssetPropertyValueHistoryResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDescribeApplicationVersionsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDescribeApplicationVersionsQueryParams struct {
+type GETDescribeApplicationVersionsRequest struct {
 	Action GETDescribeApplicationVersionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Specify an application name to show only application versions for that application.
 	ApplicationName *string `queryParam:"style=form,explode=true,name=ApplicationName"`
@@ -60,22 +60,14 @@ type GETDescribeApplicationVersionsQueryParams struct {
 	NextToken *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	Version   GETDescribeApplicationVersionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// Specify a version label to show a specific application version.
-	VersionLabels []string `queryParam:"style=form,explode=true,name=VersionLabels"`
-}
-
-type GETDescribeApplicationVersionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeApplicationVersionsRequest struct {
-	QueryParams GETDescribeApplicationVersionsQueryParams
-	Headers     GETDescribeApplicationVersionsHeaders
+	VersionLabels     []string `queryParam:"style=form,explode=true,name=VersionLabels"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeApplicationVersionsResponse struct {

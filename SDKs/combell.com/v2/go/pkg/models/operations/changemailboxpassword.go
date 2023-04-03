@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeMailboxPasswordPathParams struct {
-	// Automatically added
-	MailboxName string `pathParam:"style=simple,explode=false,name=mailboxName"`
-}
-
-type ChangeMailboxPasswordQueryParams struct {
-	// Mailbox name.
-	MailboxName string `queryParam:"style=form,explode=true,name=mailbox_name"`
-}
-
 type ChangeMailboxPasswordRequest struct {
-	PathParams  ChangeMailboxPasswordPathParams
-	QueryParams ChangeMailboxPasswordQueryParams
 	// Contains the new password.
-	Request *shared.UpdateMailboxPasswordRequest `request:"mediaType=application/json"`
+	UpdateMailboxPasswordRequest *shared.UpdateMailboxPasswordRequest `request:"mediaType=application/json"`
+	// Automatically added
+	MailboxNamePathParameter string `pathParam:"style=simple,explode=false,name=mailboxName"`
+	// Mailbox name.
+	MailboxNameQueryParameter string `queryParam:"style=form,explode=true,name=mailbox_name"`
 }
 
 type ChangeMailboxPasswordResponse struct {

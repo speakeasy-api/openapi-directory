@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReferencesByContentIDPathParams struct {
+type ReferencesByContentIDRequest struct {
 	// Global identifier for a single artifact content.
 	ContentID int64 `pathParam:"style=simple,explode=false,name=contentId"`
-}
-
-type ReferencesByContentIDRequest struct {
-	PathParams ReferencesByContentIDPathParams
 }
 
 type ReferencesByContentIDResponse struct {

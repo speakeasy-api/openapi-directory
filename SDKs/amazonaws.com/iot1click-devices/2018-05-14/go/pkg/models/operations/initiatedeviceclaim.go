@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InitiateDeviceClaimPathParams struct {
-	// The unique identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type InitiateDeviceClaimHeaders struct {
+type InitiateDeviceClaimRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type InitiateDeviceClaimHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type InitiateDeviceClaimRequest struct {
-	PathParams InitiateDeviceClaimPathParams
-	Headers    InitiateDeviceClaimHeaders
+	// The unique identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type InitiateDeviceClaimResponse struct {

@@ -14,12 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteClientsIDClientRequest{
-        PathParams: operations.DeleteClientsIDClientPathParams{
-            IDClient: 548814,
-        },
-        QueryParams: operations.DeleteClientsIDClientQueryParams{
-            Expand: "provident",
-        },
+        Expand: "corrupti",
+        IDClient: 592845,
     }
 
     ctx := context.Background()

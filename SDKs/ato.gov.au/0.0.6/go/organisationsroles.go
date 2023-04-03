@@ -49,14 +49,14 @@ func newOrganisationsRoles(defaultClient, securityClient HTTPClient, serverURL, 
 // Delete a role
 func (s *organisationsRoles) DeleteOrganisationsPartyIDRolesRoleID(ctx context.Context, request operations.DeleteOrganisationsPartyIDRolesRoleIDRequest) (*operations.DeleteOrganisationsPartyIDRolesRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -106,14 +106,14 @@ func (s *organisationsRoles) DeleteOrganisationsPartyIDRolesRoleID(ctx context.C
 // GetOrganisationsPartyIDRoles - Retrieve a list of roles
 func (s *organisationsRoles) GetOrganisationsPartyIDRoles(ctx context.Context, request operations.GetOrganisationsPartyIDRolesRequest) (*operations.GetOrganisationsPartyIDRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -175,14 +175,14 @@ func (s *organisationsRoles) GetOrganisationsPartyIDRoles(ctx context.Context, r
 // Retrieve a role
 func (s *organisationsRoles) GetOrganisationsPartyIDRolesRoleID(ctx context.Context, request operations.GetOrganisationsPartyIDRolesRoleIDRequest) (*operations.GetOrganisationsPartyIDRolesRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles/{roleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -242,9 +242,9 @@ func (s *organisationsRoles) GetOrganisationsPartyIDRolesRoleID(ctx context.Cont
 // Create a role
 func (s *organisationsRoles) PostOrganisationsPartyIDRoles(ctx context.Context, request operations.PostOrganisationsPartyIDRolesRequest) (*operations.PostOrganisationsPartyIDRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartyRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -259,7 +259,7 @@ func (s *organisationsRoles) PostOrganisationsPartyIDRoles(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -321,9 +321,9 @@ func (s *organisationsRoles) PostOrganisationsPartyIDRoles(ctx context.Context, 
 // Update a role
 func (s *organisationsRoles) PutOrganisationsPartyIDRolesRoleID(ctx context.Context, request operations.PutOrganisationsPartyIDRolesRoleIDRequest) (*operations.PutOrganisationsPartyIDRolesRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles/{roleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/roles/{roleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartyRoleInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,7 +338,7 @@ func (s *organisationsRoles) PutOrganisationsPartyIDRolesRoleID(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

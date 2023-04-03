@@ -8,19 +8,12 @@ import (
 )
 
 type GetWorkspacesWorkspacePermissionsRepositoriesSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetWorkspacesWorkspacePermissionsRepositoriesPathParams struct {
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetWorkspacesWorkspacePermissionsRepositoriesQueryParams struct {
+type GetWorkspacesWorkspacePermissionsRepositoriesRequest struct {
 	// Query string to narrow down the response as per
 	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
@@ -28,12 +21,10 @@ type GetWorkspacesWorkspacePermissionsRepositoriesQueryParams struct {
 	// [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetWorkspacesWorkspacePermissionsRepositoriesRequest struct {
-	PathParams  GetWorkspacesWorkspacePermissionsRepositoriesPathParams
-	QueryParams GetWorkspacesWorkspacePermissionsRepositoriesQueryParams
-	Security    GetWorkspacesWorkspacePermissionsRepositoriesSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetWorkspacesWorkspacePermissionsRepositoriesResponse struct {

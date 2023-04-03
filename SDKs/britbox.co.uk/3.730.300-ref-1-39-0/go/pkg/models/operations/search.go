@@ -38,7 +38,7 @@ func (e *SearchIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchQueryParams struct {
+type SearchRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -107,10 +107,6 @@ type SearchQueryParams struct {
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
 	// The search term to query.
 	Term string `queryParam:"style=form,explode=true,name=term"`
-}
-
-type SearchRequest struct {
-	QueryParams SearchQueryParams
 }
 
 type SearchResponse struct {

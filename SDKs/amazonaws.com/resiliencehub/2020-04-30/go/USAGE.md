@@ -13,57 +13,68 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddDraftAppVersionResourceMappingsRequest{
-        Headers: operations.AddDraftAppVersionResourceMappingsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.AddDraftAppVersionResourceMappingsRequestBody{
-            AppArn: "illum",
+        RequestBody: operations.AddDraftAppVersionResourceMappingsRequestBody{
+            AppArn: "corrupti",
             ResourceMappings: []shared.ResourceMapping{
                 shared.ResourceMapping{
-                    AppRegistryAppName: "error",
-                    EksSourceName: "deserunt",
-                    LogicalStackName: "suscipit",
-                    MappingType: "AppRegistryApp",
+                    AppRegistryAppName: "distinctio",
+                    EksSourceName: "quibusdam",
+                    LogicalStackName: "unde",
+                    MappingType: "EKS",
                     PhysicalResourceID: shared.PhysicalResourceID{
-                        AwsAccountID: "magnam",
-                        AwsRegion: "debitis",
-                        Identifier: "ipsa",
+                        AwsAccountID: "corrupti",
+                        AwsRegion: "illum",
+                        Identifier: "vel",
                         Type: "Native",
                     },
-                    ResourceGroupName: "tempora",
+                    ResourceGroupName: "deserunt",
                     ResourceName: "suscipit",
-                    TerraformSourceName: "molestiae",
+                    TerraformSourceName: "iure",
                 },
                 shared.ResourceMapping{
-                    AppRegistryAppName: "minus",
-                    EksSourceName: "placeat",
-                    LogicalStackName: "voluptatum",
-                    MappingType: "AppRegistryApp",
+                    AppRegistryAppName: "magnam",
+                    EksSourceName: "debitis",
+                    LogicalStackName: "ipsa",
+                    MappingType: "EKS",
                     PhysicalResourceID: shared.PhysicalResourceID{
-                        AwsAccountID: "excepturi",
-                        AwsRegion: "nisi",
-                        Identifier: "recusandae",
+                        AwsAccountID: "tempora",
+                        AwsRegion: "suscipit",
+                        Identifier: "molestiae",
                         Type: "Native",
                     },
-                    ResourceGroupName: "ab",
-                    ResourceName: "quis",
-                    TerraformSourceName: "veritatis",
+                    ResourceGroupName: "placeat",
+                    ResourceName: "voluptatum",
+                    TerraformSourceName: "iusto",
+                },
+                shared.ResourceMapping{
+                    AppRegistryAppName: "excepturi",
+                    EksSourceName: "nisi",
+                    LogicalStackName: "recusandae",
+                    MappingType: "EKS",
+                    PhysicalResourceID: shared.PhysicalResourceID{
+                        AwsAccountID: "ab",
+                        AwsRegion: "quis",
+                        Identifier: "veritatis",
+                        Type: "Native",
+                    },
+                    ResourceGroupName: "perferendis",
+                    ResourceName: "ipsam",
+                    TerraformSourceName: "repellendus",
                 },
             },
         },
+        XAmzAlgorithm: "sapiente",
+        XAmzContentSha256: "quo",
+        XAmzCredential: "odit",
+        XAmzDate: "at",
+        XAmzSecurityToken: "at",
+        XAmzSignature: "maiores",
+        XAmzSignedHeaders: "molestiae",
     }
 
     ctx := context.Background()

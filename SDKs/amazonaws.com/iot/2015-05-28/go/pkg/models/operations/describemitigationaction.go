@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMitigationActionPathParams struct {
-	// The friendly name that uniquely identifies the mitigation action.
-	ActionName string `pathParam:"style=simple,explode=false,name=actionName"`
-}
-
-type DescribeMitigationActionHeaders struct {
+type DescribeMitigationActionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeMitigationActionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeMitigationActionRequest struct {
-	PathParams DescribeMitigationActionPathParams
-	Headers    DescribeMitigationActionHeaders
+	// The friendly name that uniquely identifies the mitigation action.
+	ActionName string `pathParam:"style=simple,explode=false,name=actionName"`
 }
 
 type DescribeMitigationActionResponse struct {

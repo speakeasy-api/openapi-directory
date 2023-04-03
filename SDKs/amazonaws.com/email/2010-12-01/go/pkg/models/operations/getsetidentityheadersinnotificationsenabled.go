@@ -77,30 +77,22 @@ func (e *GETSetIdentityHeadersInNotificationsEnabledVersionEnum) UnmarshalJSON(d
 	}
 }
 
-type GETSetIdentityHeadersInNotificationsEnabledQueryParams struct {
+type GETSetIdentityHeadersInNotificationsEnabledRequest struct {
 	Action GETSetIdentityHeadersInNotificationsEnabledActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Sets whether Amazon SES includes the original email headers in Amazon SNS notifications of the specified notification type. A value of <code>true</code> specifies that Amazon SES will include headers in notifications, and a value of <code>false</code> specifies that Amazon SES will not include headers in notifications.</p> <p>This value can only be set when <code>NotificationType</code> is already set to use a particular Amazon SNS topic.</p>
 	Enabled bool `queryParam:"style=form,explode=true,name=Enabled"`
 	// The identity for which to enable or disable headers in notifications. Examples: <code>user@example.com</code>, <code>example.com</code>.
 	Identity string `queryParam:"style=form,explode=true,name=Identity"`
 	// The notification type for which to enable or disable headers in notifications.
-	NotificationType GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum `queryParam:"style=form,explode=true,name=NotificationType"`
-	Version          GETSetIdentityHeadersInNotificationsEnabledVersionEnum          `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetIdentityHeadersInNotificationsEnabledHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetIdentityHeadersInNotificationsEnabledRequest struct {
-	QueryParams GETSetIdentityHeadersInNotificationsEnabledQueryParams
-	Headers     GETSetIdentityHeadersInNotificationsEnabledHeaders
+	NotificationType  GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum `queryParam:"style=form,explode=true,name=NotificationType"`
+	Version           GETSetIdentityHeadersInNotificationsEnabledVersionEnum          `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetIdentityHeadersInNotificationsEnabledResponse struct {

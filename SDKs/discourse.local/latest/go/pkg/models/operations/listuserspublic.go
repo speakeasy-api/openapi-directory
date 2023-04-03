@@ -104,15 +104,11 @@ func (e *ListUsersPublicPeriodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListUsersPublicQueryParams struct {
+type ListUsersPublicRequest struct {
 	Asc    *ListUsersPublicAscEnum   `queryParam:"style=form,explode=true,name=asc"`
 	Order  ListUsersPublicOrderEnum  `queryParam:"style=form,explode=true,name=order"`
 	Page   *int64                    `queryParam:"style=form,explode=true,name=page"`
 	Period ListUsersPublicPeriodEnum `queryParam:"style=form,explode=true,name=period"`
-}
-
-type ListUsersPublicRequest struct {
-	QueryParams ListUsersPublicQueryParams
 }
 
 type ListUsersPublic200ApplicationJSONDirectoryItemsUser struct {

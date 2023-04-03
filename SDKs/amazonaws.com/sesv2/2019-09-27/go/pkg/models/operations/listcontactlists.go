@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListContactListsQueryParams struct {
+type ListContactListsRequest struct {
 	// A string token indicating that there might be additional contact lists available to be listed. Use the token provided in the Response to use in the subsequent call to ListContactLists with the same parameters to retrieve the next page of contact lists.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// Maximum number of contact lists to return at once. Use this parameter to paginate results. If additional contact lists exist beyond the specified limit, the <code>NextToken</code> element is sent in the response. Use the <code>NextToken</code> value in subsequent requests to retrieve additional lists.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
-}
-
-type ListContactListsHeaders struct {
+	PageSize          *int64  `queryParam:"style=form,explode=true,name=PageSize"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListContactListsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListContactListsRequest struct {
-	QueryParams ListContactListsQueryParams
-	Headers     ListContactListsHeaders
 }
 
 type ListContactListsResponse struct {

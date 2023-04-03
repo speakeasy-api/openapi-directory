@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesAddStoreSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReleasesAddStorePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the release
-	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ReleasesAddStoreRequestBody - The release information.
@@ -29,10 +19,14 @@ type ReleasesAddStoreRequestBody struct {
 }
 
 type ReleasesAddStoreRequest struct {
-	PathParams ReleasesAddStorePathParams
 	// The release information.
-	Request  ReleasesAddStoreRequestBody `request:"mediaType=application/json"`
-	Security ReleasesAddStoreSecurity
+	RequestBody ReleasesAddStoreRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the release
+	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
 }
 
 type ReleasesAddStore404ApplicationJSONCodeEnum string

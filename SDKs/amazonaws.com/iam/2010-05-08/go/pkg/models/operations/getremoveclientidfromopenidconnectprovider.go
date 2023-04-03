@@ -50,28 +50,20 @@ func (e *GETRemoveClientIDFromOpenIDConnectProviderVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETRemoveClientIDFromOpenIDConnectProviderQueryParams struct {
+type GETRemoveClientIDFromOpenIDConnectProviderRequest struct {
 	Action GETRemoveClientIDFromOpenIDConnectProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The client ID (also known as audience) to remove from the IAM OIDC provider resource. For more information about client IDs, see <a>CreateOpenIDConnectProvider</a>.
 	ClientID string `queryParam:"style=form,explode=true,name=ClientID"`
 	// <p>The Amazon Resource Name (ARN) of the IAM OIDC provider resource to remove the client ID from. You can get a list of OIDC provider ARNs by using the <a>ListOpenIDConnectProviders</a> operation.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
 	OpenIDConnectProviderArn string                                                `queryParam:"style=form,explode=true,name=OpenIDConnectProviderArn"`
 	Version                  GETRemoveClientIDFromOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemoveClientIDFromOpenIDConnectProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRemoveClientIDFromOpenIDConnectProviderRequest struct {
-	QueryParams GETRemoveClientIDFromOpenIDConnectProviderQueryParams
-	Headers     GETRemoveClientIDFromOpenIDConnectProviderHeaders
+	XAmzAlgorithm            *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemoveClientIDFromOpenIDConnectProviderResponse struct {

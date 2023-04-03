@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Alltr - Allotment Letter
 // API to verify Allotment Letter.
-func (s *apIs) Alltr(ctx context.Context, request operations.AlltrRequest) (*operations.AlltrResponse, error) {
+func (s *apIs) Alltr(ctx context.Context, request operations.AlltrRequestBody, security operations.AlltrSecurity) (*operations.AlltrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alltr/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Alltr(ctx context.Context, request operations.AlltrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Alltr(ctx context.Context, request operations.AlltrRequest) (*ope
 
 // Bknoc - NOC For Banks
 // API to verify NOC For Banks.
-func (s *apIs) Bknoc(ctx context.Context, request operations.BknocRequest) (*operations.BknocResponse, error) {
+func (s *apIs) Bknoc(ctx context.Context, request operations.BknocRequestBody, security operations.BknocSecurity) (*operations.BknocResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bknoc/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Bknoc(ctx context.Context, request operations.BknocRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Bknoc(ctx context.Context, request operations.BknocRequest) (*ope
 
 // Bpcer - Building Plan
 // API to verify Building Plan.
-func (s *apIs) Bpcer(ctx context.Context, request operations.BpcerRequest) (*operations.BpcerResponse, error) {
+func (s *apIs) Bpcer(ctx context.Context, request operations.BpcerRequestBody, security operations.BpcerSecurity) (*operations.BpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bpcer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Bpcer(ctx context.Context, request operations.BpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *apIs) Bpcer(ctx context.Context, request operations.BpcerRequest) (*ope
 
 // Cfltr - Confirmatory Letter
 // API to verify Confirmatory Letter.
-func (s *apIs) Cfltr(ctx context.Context, request operations.CfltrRequest) (*operations.CfltrResponse, error) {
+func (s *apIs) Cfltr(ctx context.Context, request operations.CfltrRequestBody, security operations.CfltrSecurity) (*operations.CfltrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cfltr/certificate"
 
@@ -388,7 +388,7 @@ func (s *apIs) Cfltr(ctx context.Context, request operations.CfltrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,7 +485,7 @@ func (s *apIs) Cfltr(ctx context.Context, request operations.CfltrRequest) (*ope
 
 // Lcsag - Lease cum Sale Agreement
 // API to verify Lease cum Sale Agreement.
-func (s *apIs) Lcsag(ctx context.Context, request operations.LcsagRequest) (*operations.LcsagResponse, error) {
+func (s *apIs) Lcsag(ctx context.Context, request operations.LcsagRequestBody, security operations.LcsagSecurity) (*operations.LcsagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/lcsag/certificate"
 
@@ -501,7 +501,7 @@ func (s *apIs) Lcsag(ctx context.Context, request operations.LcsagRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -598,7 +598,7 @@ func (s *apIs) Lcsag(ctx context.Context, request operations.LcsagRequest) (*ope
 
 // Pscer - Possession Certificate
 // API to verify Possession Certificate.
-func (s *apIs) Pscer(ctx context.Context, request operations.PscerRequest) (*operations.PscerResponse, error) {
+func (s *apIs) Pscer(ctx context.Context, request operations.PscerRequestBody, security operations.PscerSecurity) (*operations.PscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pscer/certificate"
 
@@ -614,7 +614,7 @@ func (s *apIs) Pscer(ctx context.Context, request operations.PscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -711,7 +711,7 @@ func (s *apIs) Pscer(ctx context.Context, request operations.PscerRequest) (*ope
 
 // Psnoc - NOC for New Power Supply
 // API to verify NOC for New Power Supply.
-func (s *apIs) Psnoc(ctx context.Context, request operations.PsnocRequest) (*operations.PsnocResponse, error) {
+func (s *apIs) Psnoc(ctx context.Context, request operations.PsnocRequestBody, security operations.PsnocSecurity) (*operations.PsnocResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/psnoc/certificate"
 
@@ -727,7 +727,7 @@ func (s *apIs) Psnoc(ctx context.Context, request operations.PsnocRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -824,7 +824,7 @@ func (s *apIs) Psnoc(ctx context.Context, request operations.PsnocRequest) (*ope
 
 // Wtrbl - Water Bill/ Connection
 // API to verify Water Bill/ Connection.
-func (s *apIs) Wtrbl(ctx context.Context, request operations.WtrblRequest) (*operations.WtrblResponse, error) {
+func (s *apIs) Wtrbl(ctx context.Context, request operations.WtrblRequestBody, security operations.WtrblSecurity) (*operations.WtrblResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wtrbl/certificate"
 
@@ -840,7 +840,7 @@ func (s *apIs) Wtrbl(ctx context.Context, request operations.WtrblRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

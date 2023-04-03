@@ -50,26 +50,18 @@ func (e *GETGETSAMLProviderVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETSAMLProviderQueryParams struct {
+type GETGETSAMLProviderRequest struct {
 	Action GETGETSAMLProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the SAML provider resource object in IAM to get information about.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
-	SAMLProviderArn string                        `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
-	Version         GETGETSAMLProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETSAMLProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETSAMLProviderRequest struct {
-	QueryParams GETGETSAMLProviderQueryParams
-	Headers     GETGETSAMLProviderHeaders
+	SAMLProviderArn   string                        `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
+	Version           GETGETSAMLProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETSAMLProviderResponse struct {

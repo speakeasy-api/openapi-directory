@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Apikey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DeleteProjectUsernameProjectBuildCacheRequest{
-        PathParams: operations.DeleteProjectUsernameProjectBuildCachePathParams{
-            Project: "corrupti",
-            Username: "Larue_Rau85",
-        },
+        Project: "corrupti",
+        Username: "Larue_Rau85",
     }
 
     ctx := context.Background()

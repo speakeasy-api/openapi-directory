@@ -43,7 +43,7 @@ func (s *meteringDecorator) MeteringGet(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,7 +83,7 @@ func (s *meteringDecorator) MeteringGet(ctx context.Context, request operations.
 
 // MeteringPost - Meter Reading
 // Post meter reading and get it decorated. Best practice is to first create a new Stromkonto with the register method and choose a nice secret to protect updates. Now regularly send updates to get readings (consumption) split into green power (1.8.1) and grey power (1.8.2).
-func (s *meteringDecorator) MeteringPost(ctx context.Context, request operations.MeteringPostRequest) (*operations.MeteringPostResponse, error) {
+func (s *meteringDecorator) MeteringPost(ctx context.Context, request operations.MeteringPostRequestBody) (*operations.MeteringPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/metering/reading"
 

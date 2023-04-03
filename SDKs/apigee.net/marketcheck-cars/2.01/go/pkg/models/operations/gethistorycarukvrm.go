@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHistoryCarUkVrmPathParams struct {
-	// The VRM to identify the car.
-	Vrm string `pathParam:"style=simple,explode=false,name=vrm"`
-}
-
-type GetHistoryCarUkVrmQueryParams struct {
+type GetHistoryCarUkVrmRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Flag to indicate whether to include duplicate historical records as well in the response
@@ -21,11 +16,8 @@ type GetHistoryCarUkVrmQueryParams struct {
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// Sort order - asc or desc. Default sort order is asc
 	SortOrder *shared.SortOrderEnum `queryParam:"style=form,explode=true,name=sort_order"`
-}
-
-type GetHistoryCarUkVrmRequest struct {
-	PathParams  GetHistoryCarUkVrmPathParams
-	QueryParams GetHistoryCarUkVrmQueryParams
+	// The VRM to identify the car.
+	Vrm string `pathParam:"style=simple,explode=false,name=vrm"`
 }
 
 type GetHistoryCarUkVrmResponse struct {

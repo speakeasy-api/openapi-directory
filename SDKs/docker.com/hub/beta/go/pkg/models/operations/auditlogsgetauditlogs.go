@@ -8,12 +8,9 @@ import (
 	"time"
 )
 
-type AuditLogsGetAuditLogsPathParams struct {
+type AuditLogsGetAuditLogsRequest struct {
 	// Namespace to query audit logs for.
 	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type AuditLogsGetAuditLogsQueryParams struct {
 	// action name one of ["repo.tag.push", ...]. Optional parameter to filter specific audit log actions.
 	Action *string `queryParam:"style=form,explode=true,name=action"`
 	// actor name. Optional parameter to filter audit log events to the specific user who triggered the event.
@@ -28,11 +25,6 @@ type AuditLogsGetAuditLogsQueryParams struct {
 	PageSize *int `queryParam:"style=form,explode=true,name=page_size"`
 	// End of the time window you wish to query audit events for.
 	To *time.Time `queryParam:"style=form,explode=true,name=to"`
-}
-
-type AuditLogsGetAuditLogsRequest struct {
-	PathParams  AuditLogsGetAuditLogsPathParams
-	QueryParams AuditLogsGetAuditLogsQueryParams
 }
 
 type AuditLogsGetAuditLogsResponse struct {

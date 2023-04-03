@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchResourcesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type SearchResourcesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SearchResourcesRequestBodyBucketCriteria - Specifies property- and tag-based conditions that define filter criteria for including or excluding S3 buckets from the query results. Exclude conditions take precedence over include conditions.
 type SearchResourcesRequestBodyBucketCriteria struct {
 	Excludes *shared.SearchResourcesCriteriaBlock `json:"excludes,omitempty"`
@@ -48,9 +31,18 @@ type SearchResourcesRequestBody struct {
 }
 
 type SearchResourcesRequest struct {
-	QueryParams SearchResourcesQueryParams
-	Headers     SearchResourcesHeaders
-	Request     SearchResourcesRequestBody `request:"mediaType=application/json"`
+	RequestBody       SearchResourcesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type SearchResourcesResponse struct {

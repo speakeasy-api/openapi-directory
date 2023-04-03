@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCustomMetricPathParams struct {
-	//  The name of the custom metric. Cannot be updated.
-	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
-}
-
-type UpdateCustomMetricHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateCustomMetricRequestBody struct {
 	//  Field represents a friendly name in the console for the custom metric, it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated.
 	DisplayName string `json:"displayName"`
 }
 
 type UpdateCustomMetricRequest struct {
-	PathParams UpdateCustomMetricPathParams
-	Headers    UpdateCustomMetricHeaders
-	Request    UpdateCustomMetricRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateCustomMetricRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The name of the custom metric. Cannot be updated.
+	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
 }
 
 type UpdateCustomMetricResponse struct {

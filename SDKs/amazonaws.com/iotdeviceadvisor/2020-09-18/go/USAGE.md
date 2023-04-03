@@ -13,48 +13,46 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateSuiteDefinitionRequest{
-        Headers: operations.CreateSuiteDefinitionHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateSuiteDefinitionRequestBody{
+        RequestBody: operations.CreateSuiteDefinitionRequestBody{
             SuiteDefinitionConfiguration: operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration{
-                DevicePermissionRoleArn: "illum",
+                DevicePermissionRoleArn: "corrupti",
                 Devices: []shared.DeviceUnderTest{
                     shared.DeviceUnderTest{
-                        CertificateArn: "error",
-                        ThingArn: "deserunt",
+                        CertificateArn: "distinctio",
+                        ThingArn: "quibusdam",
                     },
                     shared.DeviceUnderTest{
-                        CertificateArn: "suscipit",
-                        ThingArn: "iure",
+                        CertificateArn: "unde",
+                        ThingArn: "nulla",
+                    },
+                    shared.DeviceUnderTest{
+                        CertificateArn: "corrupti",
+                        ThingArn: "illum",
                     },
                 },
                 IntendedForQualification: false,
                 IsLongDurationTest: false,
                 Protocol: "MqttV3_1_1",
-                RootGroup: "debitis",
-                SuiteDefinitionName: "ipsa",
+                RootGroup: "error",
+                SuiteDefinitionName: "deserunt",
             },
             Tags: map[string]string{
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
-                "iusto": "excepturi",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
         },
+        XAmzAlgorithm: "delectus",
+        XAmzContentSha256: "tempora",
+        XAmzCredential: "suscipit",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "minus",
+        XAmzSignature: "placeat",
+        XAmzSignedHeaders: "voluptatum",
     }
 
     ctx := context.Background()

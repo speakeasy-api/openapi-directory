@@ -12,37 +12,23 @@ var UploadSessionsFinishServerList = []string{
 }
 
 type UploadSessionsFinishSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type UploadSessionsFinishPathParams struct {
-	// ID of the record you are acting upon.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UploadSessionsFinishQueryParams struct {
-	// Include raw response. Mostly used for debugging purposes
-	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type UploadSessionsFinishHeaders struct {
+type UploadSessionsFinishRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest)
 	Digest *string `header:"style=simple,explode=false,name=digest"`
+	// ID of the record you are acting upon.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Include raw response. Mostly used for debugging purposes
+	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type UploadSessionsFinishRequest struct {
-	PathParams  UploadSessionsFinishPathParams
-	QueryParams UploadSessionsFinishQueryParams
-	Headers     UploadSessionsFinishHeaders
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    UploadSessionsFinishSecurity
-	ServerURL   *string
 }
 
 type UploadSessionsFinishResponse struct {

@@ -50,26 +50,18 @@ func (e *GETStopDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON(
 	}
 }
 
-type GETStopDBInstanceAutomatedBackupsReplicationQueryParams struct {
+type GETStopDBInstanceAutomatedBackupsReplicationRequest struct {
 	Action GETStopDBInstanceAutomatedBackupsReplicationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the source DB instance for which to stop replicating automate backups, for example, <code>arn:aws:rds:us-west-2:123456789012:db:mydatabase</code>.
 	SourceDBInstanceArn string                                                  `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
 	Version             GETStopDBInstanceAutomatedBackupsReplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStopDBInstanceAutomatedBackupsReplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStopDBInstanceAutomatedBackupsReplicationRequest struct {
-	QueryParams GETStopDBInstanceAutomatedBackupsReplicationQueryParams
-	Headers     GETStopDBInstanceAutomatedBackupsReplicationHeaders
+	XAmzAlgorithm       *string                                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStopDBInstanceAutomatedBackupsReplicationResponse struct {

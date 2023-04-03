@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMembersQueryParams struct {
+type ListMembersRequest struct {
 	// The maximum number of items to return in the response.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that is required for pagination. On your first call to the <code>ListMembers</code> operation, set the value of this parameter to <code>NULL</code>.</p> <p>For subsequent calls to the operation, to continue listing data, set the value of this parameter to the value returned from the previous response.</p>
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// <p>Specifies which member accounts to include in the response based on their relationship status with the administrator account. The default value is <code>TRUE</code>.</p> <p>If <code>OnlyAssociated</code> is set to <code>TRUE</code>, the response includes member accounts whose relationship status with the administrator account is set to <code>ENABLED</code>.</p> <p>If <code>OnlyAssociated</code> is set to <code>FALSE</code>, the response includes all existing member accounts. </p>
-	OnlyAssociated *bool `queryParam:"style=form,explode=true,name=OnlyAssociated"`
-}
-
-type ListMembersHeaders struct {
+	OnlyAssociated    *bool   `queryParam:"style=form,explode=true,name=OnlyAssociated"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type ListMembersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListMembersRequest struct {
-	QueryParams ListMembersQueryParams
-	Headers     ListMembersHeaders
 }
 
 type ListMembersResponse struct {

@@ -9,6 +9,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// GetObjectInformationRequestBodyObjectReference - The reference that identifies an object.
+type GetObjectInformationRequestBodyObjectReference struct {
+	Selector *string `json:"Selector,omitempty"`
+}
+
+type GetObjectInformationRequestBody struct {
+	// The reference that identifies an object.
+	ObjectReference GetObjectInformationRequestBodyObjectReference `json:"ObjectReference"`
+}
+
 // GetObjectInformationXAmzConsistencyLevelEnum - The consistency level at which to retrieve the object information.
 type GetObjectInformationXAmzConsistencyLevelEnum string
 
@@ -33,33 +43,19 @@ func (e *GetObjectInformationXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetObjectInformationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+type GetObjectInformationRequest struct {
+	RequestBody       GetObjectInformationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The consistency level at which to retrieve the object information.
 	XAmzConsistencyLevel *GetObjectInformationXAmzConsistencyLevelEnum `header:"style=simple,explode=false,name=x-amz-consistency-level"`
 	// The ARN of the directory being retrieved.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-// GetObjectInformationRequestBodyObjectReference - The reference that identifies an object.
-type GetObjectInformationRequestBodyObjectReference struct {
-	Selector *string `json:"Selector,omitempty"`
-}
-
-type GetObjectInformationRequestBody struct {
-	// The reference that identifies an object.
-	ObjectReference GetObjectInformationRequestBodyObjectReference `json:"ObjectReference"`
-}
-
-type GetObjectInformationRequest struct {
-	Headers GetObjectInformationHeaders
-	Request GetObjectInformationRequestBody `request:"mediaType=application/json"`
 }
 
 type GetObjectInformationResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsPutRequest struct {
-	// The body of the datapoint
-	Request shared.APICoreDtoDatapointsDatapoint `request:"mediaType=application/json"`
-}
-
 type DataPointsPutResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

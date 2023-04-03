@@ -34,7 +34,7 @@ func newCustomerRights(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetRights - Get store's rights
 func (s *customerRights) GetRights(ctx context.Context, request operations.GetRightsRequest) (*operations.GetRightsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/rights", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/rights", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

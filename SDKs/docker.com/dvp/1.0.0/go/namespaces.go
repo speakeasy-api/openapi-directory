@@ -35,7 +35,7 @@ func newNamespaces(defaultClient, securityClient HTTPClient, serverURL, language
 // Gets a list of URLs that can be used to download the pull data for the given namespace and timespan
 func (s *namespaces) GetNamespaceDataByTimespan(ctx context.Context, request operations.GetNamespaceDataByTimespanRequest) (*operations.GetNamespaceDataByTimespanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}/{dataview}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}/{dataview}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *namespaces) GetNamespaceDataByTimespan(ctx context.Context, request ope
 // Gets info about data for the given namespace and timespan
 func (s *namespaces) GetNamespaceTimespanMetadata(ctx context.Context, request operations.GetNamespaceTimespanMetadataRequest) (*operations.GetNamespaceTimespanMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *namespaces) GetNamespaceTimespanMetadata(ctx context.Context, request o
 // Gets a list of timespans of the given type that have data for the given namespace and year
 func (s *namespaces) GetNamespaceTimespans(ctx context.Context, request operations.GetNamespaceTimespansRequest) (*operations.GetNamespaceTimespansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *namespaces) GetNamespaceTimespans(ctx context.Context, request operatio
 // Gets a list of years that have data for the given namespace
 func (s *namespaces) GetNamespaceYears(ctx context.Context, request operations.GetNamespaceYearsRequest) (*operations.GetNamespaceYearsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}/pulls/exports/years", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

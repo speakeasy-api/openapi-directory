@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDataflowEndpointGroupsQueryParams struct {
-	// Maximum number of dataflow endpoint groups returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Next token returned in the request of a previous <code>ListDataflowEndpointGroups</code> call. Used to get the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListDataflowEndpointGroupsHeaders struct {
+type ListDataflowEndpointGroupsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListDataflowEndpointGroupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDataflowEndpointGroupsRequest struct {
-	QueryParams ListDataflowEndpointGroupsQueryParams
-	Headers     ListDataflowEndpointGroupsHeaders
+	// Maximum number of dataflow endpoint groups returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Next token returned in the request of a previous <code>ListDataflowEndpointGroups</code> call. Used to get the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListDataflowEndpointGroupsResponse struct {

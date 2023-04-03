@@ -34,7 +34,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostCreatePermit - Create new permits linked to a recurring contract.
 // Create permits for a recurring contract, including support for defining restrictions.
-func (s *general) PostCreatePermit(ctx context.Context, request operations.PostCreatePermitRequest) (*operations.PostCreatePermitResponse, error) {
+func (s *general) PostCreatePermit(ctx context.Context, request shared.CreatePermitRequest, security operations.PostCreatePermitSecurity) (*operations.PostCreatePermitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createPermit"
 
@@ -50,7 +50,7 @@ func (s *general) PostCreatePermit(ctx context.Context, request operations.PostC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *general) PostCreatePermit(ctx context.Context, request operations.PostC
 // Disables stored payment details to stop charging a shopper with this particular recurring detail ID.
 //
 // For more information, refer to [Disable stored details](https://docs.adyen.com/classic-integration/recurring-payments/disable-stored-details/).
-func (s *general) PostDisable(ctx context.Context, request operations.PostDisableRequest) (*operations.PostDisableResponse, error) {
+func (s *general) PostDisable(ctx context.Context, request shared.DisableRequest, security operations.PostDisableSecurity) (*operations.PostDisableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disable"
 
@@ -122,7 +122,7 @@ func (s *general) PostDisable(ctx context.Context, request operations.PostDisabl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *general) PostDisable(ctx context.Context, request operations.PostDisabl
 
 // PostDisablePermit - Disable an existing permit.
 // Disable a permit that was previously linked to a recurringDetailReference.
-func (s *general) PostDisablePermit(ctx context.Context, request operations.PostDisablePermitRequest) (*operations.PostDisablePermitResponse, error) {
+func (s *general) PostDisablePermit(ctx context.Context, request shared.DisablePermitRequest, security operations.PostDisablePermitSecurity) (*operations.PostDisablePermitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disablePermit"
 
@@ -192,7 +192,7 @@ func (s *general) PostDisablePermit(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,7 +248,7 @@ func (s *general) PostDisablePermit(ctx context.Context, request operations.Post
 // Lists the stored payment details for a shopper, if there are any available. The recurring detail ID can be used with a regular authorisation request to charge the shopper. A summary of the payment detail is returned for presentation to the shopper.
 //
 // For more information, refer to [Retrieve stored details](https://docs.adyen.com/classic-integration/recurring-payments/retrieve-stored-details/).
-func (s *general) PostListRecurringDetails(ctx context.Context, request operations.PostListRecurringDetailsRequest) (*operations.PostListRecurringDetailsResponse, error) {
+func (s *general) PostListRecurringDetails(ctx context.Context, request shared.RecurringDetailsRequest, security operations.PostListRecurringDetailsSecurity) (*operations.PostListRecurringDetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listRecurringDetails"
 
@@ -264,7 +264,7 @@ func (s *general) PostListRecurringDetails(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -318,7 +318,7 @@ func (s *general) PostListRecurringDetails(ctx context.Context, request operatio
 
 // PostNotifyShopper - Ask issuer to notify the shopper
 // Sends a request to the issuer so they can inform the shopper about the upcoming recurring payment. This endpoint is used only for local acquiring in India. For more information, refer to [Recurring card payments in India](https://docs.adyen.com/payment-methods/cards/cards-recurring-india).
-func (s *general) PostNotifyShopper(ctx context.Context, request operations.PostNotifyShopperRequest) (*operations.PostNotifyShopperResponse, error) {
+func (s *general) PostNotifyShopper(ctx context.Context, request shared.NotifyShopperRequest, security operations.PostNotifyShopperSecurity) (*operations.PostNotifyShopperResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifyShopper"
 
@@ -334,7 +334,7 @@ func (s *general) PostNotifyShopper(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,7 +390,7 @@ func (s *general) PostNotifyShopper(ctx context.Context, request operations.Post
 // When making the API call, you can submit either the credit card information, or the recurring detail reference and the shopper reference:
 // * If the card information is provided, all the sub-fields for `card` are mandatory.
 // * If the recurring detail reference is provided, the fields for `shopperReference` and `selectedRecurringDetailReference` are mandatory.
-func (s *general) PostScheduleAccountUpdater(ctx context.Context, request operations.PostScheduleAccountUpdaterRequest) (*operations.PostScheduleAccountUpdaterResponse, error) {
+func (s *general) PostScheduleAccountUpdater(ctx context.Context, request shared.ScheduleAccountUpdaterRequest, security operations.PostScheduleAccountUpdaterSecurity) (*operations.PostScheduleAccountUpdaterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/scheduleAccountUpdater"
 
@@ -406,7 +406,7 @@ func (s *general) PostScheduleAccountUpdater(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

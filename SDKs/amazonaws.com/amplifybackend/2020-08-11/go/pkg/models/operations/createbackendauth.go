@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBackendAuthPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type CreateBackendAuthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum - Defines whether you want to configure only authentication or both authentication and authorization settings.
 type CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum string
 
@@ -283,9 +268,16 @@ type CreateBackendAuthRequestBody struct {
 }
 
 type CreateBackendAuthRequest struct {
-	PathParams CreateBackendAuthPathParams
-	Headers    CreateBackendAuthHeaders
-	Request    CreateBackendAuthRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBackendAuthRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type CreateBackendAuthResponse struct {

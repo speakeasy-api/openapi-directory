@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetIdentityPoolConfigurationPathParams struct {
-	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. This is the ID of the pool to modify.
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type SetIdentityPoolConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SetIdentityPoolConfigurationRequestBodyCognitoStreams - Configuration options for configure Cognito streams.
 type SetIdentityPoolConfigurationRequestBodyCognitoStreams struct {
 	RoleArn         *string                     `json:"RoleArn,omitempty"`
@@ -43,9 +28,16 @@ type SetIdentityPoolConfigurationRequestBody struct {
 }
 
 type SetIdentityPoolConfigurationRequest struct {
-	PathParams SetIdentityPoolConfigurationPathParams
-	Headers    SetIdentityPoolConfigurationHeaders
-	Request    SetIdentityPoolConfigurationRequestBody `request:"mediaType=application/json"`
+	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. This is the ID of the pool to modify.
+	IdentityPoolID    string                                  `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
+	RequestBody       SetIdentityPoolConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SetIdentityPoolConfigurationResponse struct {

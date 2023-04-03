@@ -8,23 +8,14 @@ import (
 )
 
 type ConsumersOneSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ConsumersOnePathParams struct {
-	// ID of the consumer to return
-	ConsumerID string `pathParam:"style=simple,explode=false,name=consumer_id"`
-}
-
-type ConsumersOneHeaders struct {
-	// The ID of your Unify application
-	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ConsumersOneRequest struct {
-	PathParams ConsumersOnePathParams
-	Headers    ConsumersOneHeaders
-	Security   ConsumersOneSecurity
+	// ID of the consumer to return
+	ConsumerID string `pathParam:"style=simple,explode=false,name=consumer_id"`
+	// The ID of your Unify application
+	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 }
 
 type ConsumersOneResponse struct {

@@ -50,7 +50,7 @@ func (e *GETBatchStopUpdateActionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETBatchStopUpdateActionQueryParams struct {
+type GETBatchStopUpdateActionRequest struct {
 	Action GETBatchStopUpdateActionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cache cluster IDs
 	CacheClusterIds []string `queryParam:"style=form,explode=true,name=CacheClusterIds"`
@@ -59,21 +59,13 @@ type GETBatchStopUpdateActionQueryParams struct {
 	// The unique ID of the service update
 	ServiceUpdateName string                              `queryParam:"style=form,explode=true,name=ServiceUpdateName"`
 	Version           GETBatchStopUpdateActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETBatchStopUpdateActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETBatchStopUpdateActionRequest struct {
-	QueryParams GETBatchStopUpdateActionQueryParams
-	Headers     GETBatchStopUpdateActionHeaders
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETBatchStopUpdateActionResponse struct {

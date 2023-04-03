@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetComponentPolicyQueryParams struct {
-	// The Amazon Resource Name (ARN) of the component whose policy you want to retrieve.
-	ComponentArn string `queryParam:"style=form,explode=true,name=componentArn"`
-}
-
-type GetComponentPolicyHeaders struct {
+type GetComponentPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetComponentPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetComponentPolicyRequest struct {
-	QueryParams GetComponentPolicyQueryParams
-	Headers     GetComponentPolicyHeaders
+	// The Amazon Resource Name (ARN) of the component whose policy you want to retrieve.
+	ComponentArn string `queryParam:"style=form,explode=true,name=componentArn"`
 }
 
 type GetComponentPolicyResponse struct {

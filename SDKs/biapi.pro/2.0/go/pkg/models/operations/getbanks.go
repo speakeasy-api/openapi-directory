@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBanksQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetBanksRequest struct {
-	QueryParams GetBanksQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 // GetBanks200ApplicationJSON - banks

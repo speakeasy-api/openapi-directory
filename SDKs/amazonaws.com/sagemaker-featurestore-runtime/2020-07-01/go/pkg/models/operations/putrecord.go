@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRecordPathParams struct {
-	// The name of the feature group that you want to insert the record into.
-	FeatureGroupName string `pathParam:"style=simple,explode=false,name=FeatureGroupName"`
-}
-
-type PutRecordHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutRecordRequestBody struct {
 	// <p>List of FeatureValues to be inserted. This will be a full over-write. If you only want to update few of the feature values, do the following:</p> <ul> <li> <p>Use <code>GetRecord</code> to retrieve the latest record.</p> </li> <li> <p>Update the record returned from <code>GetRecord</code>. </p> </li> <li> <p>Use <code>PutRecord</code> to update feature values.</p> </li> </ul>
 	Record []shared.FeatureValue `json:"Record"`
@@ -30,9 +15,16 @@ type PutRecordRequestBody struct {
 }
 
 type PutRecordRequest struct {
-	PathParams PutRecordPathParams
-	Headers    PutRecordHeaders
-	Request    PutRecordRequestBody `request:"mediaType=application/json"`
+	// The name of the feature group that you want to insert the record into.
+	FeatureGroupName  string               `pathParam:"style=simple,explode=false,name=FeatureGroupName"`
+	RequestBody       PutRecordRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutRecordResponse struct {

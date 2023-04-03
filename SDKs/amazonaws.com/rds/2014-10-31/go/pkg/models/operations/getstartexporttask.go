@@ -50,7 +50,7 @@ func (e *GETStartExportTaskVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStartExportTaskQueryParams struct {
+type GETStartExportTaskRequest struct {
 	Action GETStartExportTaskActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is exported. Valid values are the following:</p> <ul> <li> <p> <code>database</code> - Export all the data from a specified database.</p> </li> <li> <p> <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.</p> </li> <li> <p> <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li> <li> <p> <code>database.schema.table</code> <i>table-name</i> - Export a table of the database schema. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li> </ul>
 	ExportOnly []string `queryParam:"style=form,explode=true,name=ExportOnly"`
@@ -65,23 +65,15 @@ type GETStartExportTaskQueryParams struct {
 	// The Amazon S3 bucket prefix to use as the file name and path of the exported data.
 	S3Prefix *string `queryParam:"style=form,explode=true,name=S3Prefix"`
 	// The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
-	SourceArn string                        `queryParam:"style=form,explode=true,name=SourceArn"`
-	Version   GETStartExportTaskVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStartExportTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStartExportTaskRequest struct {
-	QueryParams GETStartExportTaskQueryParams
-	Headers     GETStartExportTaskHeaders
+	SourceArn         string                        `queryParam:"style=form,explode=true,name=SourceArn"`
+	Version           GETStartExportTaskVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStartExportTaskResponse struct {

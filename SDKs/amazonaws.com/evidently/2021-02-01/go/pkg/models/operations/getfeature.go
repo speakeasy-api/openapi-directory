@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFeaturePathParams struct {
-	// The name of the feature that you want to retrieve information for.
-	Feature string `pathParam:"style=simple,explode=false,name=feature"`
-	// The name or ARN of the project that contains the feature.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type GetFeatureHeaders struct {
+type GetFeatureRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetFeatureHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetFeatureRequest struct {
-	PathParams GetFeaturePathParams
-	Headers    GetFeatureHeaders
+	// The name of the feature that you want to retrieve information for.
+	Feature string `pathParam:"style=simple,explode=false,name=feature"`
+	// The name or ARN of the project that contains the feature.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type GetFeatureResponse struct {

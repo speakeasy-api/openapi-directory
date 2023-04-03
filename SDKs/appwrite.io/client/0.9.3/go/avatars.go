@@ -34,20 +34,20 @@ func newAvatars(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // AvatarsGetBrowser - Get Browser Icon
 // You can use this endpoint to show different browser icons to your users. The code argument receives the browser code as it appears in your user /account/sessions endpoint. Use width, height and quality arguments to change the output settings.
-func (s *avatars) AvatarsGetBrowser(ctx context.Context, request operations.AvatarsGetBrowserRequest) (*operations.AvatarsGetBrowserResponse, error) {
+func (s *avatars) AvatarsGetBrowser(ctx context.Context, request operations.AvatarsGetBrowserRequest, security operations.AvatarsGetBrowserSecurity) (*operations.AvatarsGetBrowserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/avatars/browsers/{code}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/avatars/browsers/{code}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -74,20 +74,20 @@ func (s *avatars) AvatarsGetBrowser(ctx context.Context, request operations.Avat
 
 // AvatarsGetCreditCard - Get Credit Card Icon
 // The credit card endpoint will return you the icon of the credit card provider you need. Use width, height and quality arguments to change the output settings.
-func (s *avatars) AvatarsGetCreditCard(ctx context.Context, request operations.AvatarsGetCreditCardRequest) (*operations.AvatarsGetCreditCardResponse, error) {
+func (s *avatars) AvatarsGetCreditCard(ctx context.Context, request operations.AvatarsGetCreditCardRequest, security operations.AvatarsGetCreditCardSecurity) (*operations.AvatarsGetCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/avatars/credit-cards/{code}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/avatars/credit-cards/{code}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -114,7 +114,7 @@ func (s *avatars) AvatarsGetCreditCard(ctx context.Context, request operations.A
 
 // AvatarsGetFavicon - Get Favicon
 // Use this endpoint to fetch the favorite icon (AKA favicon) of any remote website URL.
-func (s *avatars) AvatarsGetFavicon(ctx context.Context, request operations.AvatarsGetFaviconRequest) (*operations.AvatarsGetFaviconResponse, error) {
+func (s *avatars) AvatarsGetFavicon(ctx context.Context, request operations.AvatarsGetFaviconRequest, security operations.AvatarsGetFaviconSecurity) (*operations.AvatarsGetFaviconResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/avatars/favicon"
 
@@ -123,11 +123,11 @@ func (s *avatars) AvatarsGetFavicon(ctx context.Context, request operations.Avat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -154,20 +154,20 @@ func (s *avatars) AvatarsGetFavicon(ctx context.Context, request operations.Avat
 
 // AvatarsGetFlag - Get Country Flag
 // You can use this endpoint to show different country flags icons to your users. The code argument receives the 2 letter country code. Use width, height and quality arguments to change the output settings.
-func (s *avatars) AvatarsGetFlag(ctx context.Context, request operations.AvatarsGetFlagRequest) (*operations.AvatarsGetFlagResponse, error) {
+func (s *avatars) AvatarsGetFlag(ctx context.Context, request operations.AvatarsGetFlagRequest, security operations.AvatarsGetFlagSecurity) (*operations.AvatarsGetFlagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/avatars/flags/{code}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/avatars/flags/{code}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -194,7 +194,7 @@ func (s *avatars) AvatarsGetFlag(ctx context.Context, request operations.Avatars
 
 // AvatarsGetImage - Get Image from URL
 // Use this endpoint to fetch a remote image URL and crop it to any image size you want. This endpoint is very useful if you need to crop and display remote images in your app or in case you want to make sure a 3rd party image is properly served using a TLS protocol.
-func (s *avatars) AvatarsGetImage(ctx context.Context, request operations.AvatarsGetImageRequest) (*operations.AvatarsGetImageResponse, error) {
+func (s *avatars) AvatarsGetImage(ctx context.Context, request operations.AvatarsGetImageRequest, security operations.AvatarsGetImageSecurity) (*operations.AvatarsGetImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/avatars/image"
 
@@ -203,11 +203,11 @@ func (s *avatars) AvatarsGetImage(ctx context.Context, request operations.Avatar
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *avatars) AvatarsGetImage(ctx context.Context, request operations.Avatar
 // Use this endpoint to show your user initials avatar icon on your website or app. By default, this route will try to print your logged-in user name or email initials. You can also overwrite the user name if you pass the 'name' parameter. If no name is given and no user is logged, an empty avatar will be returned.
 //
 // You can use the color and background params to change the avatar colors. By default, a random theme will be selected. The random theme will persist for the user's initials when reloading the same theme will always return for the same initials.
-func (s *avatars) AvatarsGetInitials(ctx context.Context, request operations.AvatarsGetInitialsRequest) (*operations.AvatarsGetInitialsResponse, error) {
+func (s *avatars) AvatarsGetInitials(ctx context.Context, request operations.AvatarsGetInitialsRequest, security operations.AvatarsGetInitialsSecurity) (*operations.AvatarsGetInitialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/avatars/initials"
 
@@ -245,11 +245,11 @@ func (s *avatars) AvatarsGetInitials(ctx context.Context, request operations.Ava
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -276,7 +276,7 @@ func (s *avatars) AvatarsGetInitials(ctx context.Context, request operations.Ava
 
 // AvatarsGetQR - Get QR Code
 // Converts a given plain text to a QR code image. You can use the query parameters to change the size and style of the resulting image.
-func (s *avatars) AvatarsGetQR(ctx context.Context, request operations.AvatarsGetQRRequest) (*operations.AvatarsGetQRResponse, error) {
+func (s *avatars) AvatarsGetQR(ctx context.Context, request operations.AvatarsGetQRRequest, security operations.AvatarsGetQRSecurity) (*operations.AvatarsGetQRResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/avatars/qr"
 
@@ -285,11 +285,11 @@ func (s *avatars) AvatarsGetQR(ctx context.Context, request operations.AvatarsGe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

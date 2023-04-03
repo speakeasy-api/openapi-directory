@@ -50,25 +50,17 @@ func (e *POSTDescribeStackSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeStackSetQueryParams struct {
-	Action  POSTDescribeStackSetActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeStackSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeStackSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeStackSetRequest struct {
-	QueryParams POSTDescribeStackSetQueryParams
-	Headers     POSTDescribeStackSetHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeStackSetActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTDescribeStackSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeStackSetResponse struct {

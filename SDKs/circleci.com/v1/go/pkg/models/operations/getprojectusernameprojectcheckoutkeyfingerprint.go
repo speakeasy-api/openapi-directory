@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectUsernameProjectCheckoutKeyFingerprintPathParams struct {
+type GetProjectUsernameProjectCheckoutKeyFingerprintRequest struct {
 	// XXXXXXXXXX
 	//
 	Fingerprint string `pathParam:"style=simple,explode=false,name=fingerprint"`
@@ -17,10 +17,6 @@ type GetProjectUsernameProjectCheckoutKeyFingerprintPathParams struct {
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetProjectUsernameProjectCheckoutKeyFingerprintRequest struct {
-	PathParams GetProjectUsernameProjectCheckoutKeyFingerprintPathParams
 }
 
 type GetProjectUsernameProjectCheckoutKeyFingerprintResponse struct {

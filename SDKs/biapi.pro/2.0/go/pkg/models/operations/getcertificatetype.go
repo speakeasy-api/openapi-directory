@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCertificateTypePathParams struct {
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetCertificateTypeQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetCertificateTypeRequest struct {
-	PathParams  GetCertificateTypePathParams
-	QueryParams GetCertificateTypeQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+	Type   string  `pathParam:"style=simple,explode=false,name=type"`
 }
 
 type GetCertificateTypeResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type ClcerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type ClcerRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type ClcerRequestBody struct {
 	Format ClcerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type ClcerRequest struct {
-	// Request format
-	Request  *ClcerRequestBody `request:"mediaType=application/json"`
-	Security ClcerSecurity
 }
 
 type Clcer504ApplicationJSONErrorEnum string

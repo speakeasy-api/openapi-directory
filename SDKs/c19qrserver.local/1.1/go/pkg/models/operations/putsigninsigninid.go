@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSigninSigninIDPathParams struct {
+type PutSigninSigninIDRequest struct {
+	Signin *shared.Signin `request:"mediaType=application/json"`
 	// The ID of the signin record to be retrieved.
 	SigninID int64 `pathParam:"style=simple,explode=false,name=signinId"`
-}
-
-type PutSigninSigninIDRequest struct {
-	PathParams PutSigninSigninIDPathParams
-	Request    *shared.Signin `request:"mediaType=application/json"`
 }
 
 type PutSigninSigninIDResponse struct {

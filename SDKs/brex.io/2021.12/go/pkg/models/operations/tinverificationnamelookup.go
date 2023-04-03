@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TinVerificationNameLookupSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TinVerificationNameLookupQueryParams struct {
-	// Nine letter TIN number with or without hyphens
-	Tin string `queryParam:"style=form,explode=true,name=tin"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type TinVerificationNameLookupRequest struct {
-	QueryParams TinVerificationNameLookupQueryParams
-	Security    TinVerificationNameLookupSecurity
+	// Nine letter TIN number with or without hyphens
+	Tin string `queryParam:"style=form,explode=true,name=tin"`
 }
 
 // TinVerificationNameLookupDefaultApplicationJSON - Detailed information about the error

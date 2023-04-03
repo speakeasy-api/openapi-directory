@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserDetailsQueryParams struct {
+type GetUserDetailsRequest struct {
 	// The system-generated unique ID of the user.
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 	// The name of the user as displayed in Amazon CodeCatalyst.
 	UserName *string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type GetUserDetailsRequest struct {
-	QueryParams GetUserDetailsQueryParams
 }
 
 type GetUserDetailsResponse struct {

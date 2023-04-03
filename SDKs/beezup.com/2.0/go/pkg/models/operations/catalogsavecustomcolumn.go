@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogSaveCustomColumnPathParams struct {
+type CatalogSaveCustomColumnRequest struct {
 	// The custom column identifier
-	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
+	ColumnID                  string                           `pathParam:"style=simple,explode=false,name=columnId"`
+	CreateCustomColumnRequest shared.CreateCustomColumnRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogSaveCustomColumnRequest struct {
-	PathParams CatalogSaveCustomColumnPathParams
-	Request    shared.CreateCustomColumnRequest `request:"mediaType=application/json"`
 }
 
 type CatalogSaveCustomColumnResponse struct {

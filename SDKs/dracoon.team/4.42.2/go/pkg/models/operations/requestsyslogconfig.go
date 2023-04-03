@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestSyslogConfigHeaders struct {
+type RequestSyslogConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestSyslogConfigRequest struct {
-	Headers RequestSyslogConfigHeaders
 }
 
 type RequestSyslogConfigResponse struct {

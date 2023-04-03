@@ -8,8 +8,8 @@ import (
 )
 
 type FunctionsCreateSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type FunctionsCreateRequestBody struct {
@@ -27,11 +27,6 @@ type FunctionsCreateRequestBody struct {
 	Timeout *int64 `json:"timeout,omitempty"`
 	// Key-value JSON object.
 	Vars map[string]interface{} `json:"vars,omitempty"`
-}
-
-type FunctionsCreateRequest struct {
-	Request  *FunctionsCreateRequestBody `request:"mediaType=application/json"`
-	Security FunctionsCreateSecurity
 }
 
 type FunctionsCreateResponse struct {

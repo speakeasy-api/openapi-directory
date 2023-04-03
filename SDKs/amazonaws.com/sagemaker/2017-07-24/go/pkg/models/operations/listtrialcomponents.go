@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTrialComponentsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListTrialComponentsXAmzTargetEnum
 type ListTrialComponentsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListTrialComponentsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTrialComponentsHeaders struct {
+type ListTrialComponentsRequest struct {
+	ListTrialComponentsRequest shared.ListTrialComponentsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListTrialComponentsHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTrialComponentsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTrialComponentsRequest struct {
-	QueryParams ListTrialComponentsQueryParams
-	Headers     ListTrialComponentsHeaders
-	Request     shared.ListTrialComponentsRequest `request:"mediaType=application/json"`
 }
 
 type ListTrialComponentsResponse struct {

@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRevealConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateRevealConfigurationRequestBodyConfiguration - Specifies the configuration settings for retrieving occurrences of sensitive data reported by findings, and the status of the configuration for an Amazon Macie account. When you enable the configuration for the first time, your request must specify an Key Management Service (KMS) key. Otherwise, an error occurs. Macie uses the specified key to encrypt the sensitive data that you retrieve.
 type UpdateRevealConfigurationRequestBodyConfiguration struct {
 	KmsKeyID *string                  `json:"kmsKeyId,omitempty"`
@@ -29,8 +19,14 @@ type UpdateRevealConfigurationRequestBody struct {
 }
 
 type UpdateRevealConfigurationRequest struct {
-	Headers UpdateRevealConfigurationHeaders
-	Request UpdateRevealConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateRevealConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateRevealConfigurationResponse struct {

@@ -11,11 +11,6 @@ import (
 	"time"
 )
 
-type SearchTasksForWorkspacePathParams struct {
-	// Globally unique identifier for the workspace or organization.
-	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
-}
-
 // SearchTasksForWorkspaceResourceSubtypeEnum - Filters results by the task's resource_subtype
 type SearchTasksForWorkspaceResourceSubtypeEnum string
 
@@ -73,7 +68,7 @@ func (e *SearchTasksForWorkspaceSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchTasksForWorkspaceQueryParams struct {
+type SearchTasksForWorkspaceRequest struct {
 	// Comma-separated list of user identifiers
 	AssignedByAny *string `queryParam:"style=form,explode=true,name=assigned_by.any"`
 	// Comma-separated list of user identifiers
@@ -185,11 +180,8 @@ type SearchTasksForWorkspaceQueryParams struct {
 	TeamsAny *string `queryParam:"style=form,explode=true,name=teams.any"`
 	// Performs full-text search on both task name and description
 	Text *string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type SearchTasksForWorkspaceRequest struct {
-	PathParams  SearchTasksForWorkspacePathParams
-	QueryParams SearchTasksForWorkspaceQueryParams
+	// Globally unique identifier for the workspace or organization.
+	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
 }
 
 // SearchTasksForWorkspace200ApplicationJSON - Successfully retrieved the section's tasks.

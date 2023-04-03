@@ -116,7 +116,7 @@ func (s *SDK) AssociateServiceRoleToAccount(ctx context.Context, request operati
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/greengrass/servicerole"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateServiceRoleToAccount(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -190,9 +190,9 @@ func (s *SDK) AssociateServiceRoleToAccount(ctx context.Context, request operati
 // BatchAssociateClientDeviceWithCoreDevice - <p>Associates a list of client devices with a core device. Use this API operation to specify which client devices can discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT Greengrass to retrieve associated core devices' connectivity information and certificates. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure cloud discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p> <note> <p>Client devices are local IoT devices that connect to and communicate with an IoT Greengrass core device over MQTT. You can connect client devices to a core device to sync MQTT messages and data to Amazon Web Services IoT Core and interact with client devices in Greengrass components. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/interact-with-local-iot-devices.html">Interact with local IoT devices</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p> </note>
 func (s *SDK) BatchAssociateClientDeviceWithCoreDevice(ctx context.Context, request operations.BatchAssociateClientDeviceWithCoreDeviceRequest) (*operations.BatchAssociateClientDeviceWithCoreDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/associateClientDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/associateClientDevices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *SDK) BatchAssociateClientDeviceWithCoreDevice(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -296,9 +296,9 @@ func (s *SDK) BatchAssociateClientDeviceWithCoreDevice(ctx context.Context, requ
 // BatchDisassociateClientDeviceFromCoreDevice - Disassociates a list of client devices from a core device. After you disassociate a client device from a core device, the client device won't be able to use cloud discovery to retrieve the core device's connectivity information and certificates.
 func (s *SDK) BatchDisassociateClientDeviceFromCoreDevice(ctx context.Context, request operations.BatchDisassociateClientDeviceFromCoreDeviceRequest) (*operations.BatchDisassociateClientDeviceFromCoreDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/disassociateClientDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/disassociateClientDevices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -313,7 +313,7 @@ func (s *SDK) BatchDisassociateClientDeviceFromCoreDevice(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -402,14 +402,14 @@ func (s *SDK) BatchDisassociateClientDeviceFromCoreDevice(ctx context.Context, r
 // CancelDeployment - Cancels a deployment. This operation cancels the deployment for devices that haven't yet received it. If a device already received the deployment, this operation doesn't change anything for that device.
 func (s *SDK) CancelDeployment(ctx context.Context, request operations.CancelDeploymentRequest) (*operations.CancelDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/deployments/{deploymentId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/deployments/{deploymentId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -510,7 +510,7 @@ func (s *SDK) CreateComponentVersion(ctx context.Context, request operations.Cre
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/greengrass/v2/createComponentVersion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -525,7 +525,7 @@ func (s *SDK) CreateComponentVersion(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -636,7 +636,7 @@ func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDep
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/greengrass/v2/deployments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -651,7 +651,7 @@ func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDep
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -760,14 +760,14 @@ func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDep
 // DeleteComponent - <p>Deletes a version of a component from IoT Greengrass.</p> <note> <p>This operation deletes the component's recipe and artifacts. As a result, deployments that refer to this component version will fail. If you have deployments that use this component version, you can remove the component from the deployment or update the deployment to use a valid version.</p> </note>
 func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComponentRequest) (*operations.DeleteComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -857,14 +857,14 @@ func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComp
 // DeleteCoreDevice - Deletes a Greengrass core device, which is an IoT thing. This operation removes the core device from the list of core devices. This operation doesn't delete the IoT thing. For more information about how to delete the IoT thing, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteThing.html">DeleteThing</a> in the <i>IoT API Reference</i>.
 func (s *SDK) DeleteCoreDevice(ctx context.Context, request operations.DeleteCoreDeviceRequest) (*operations.DeleteCoreDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -954,14 +954,14 @@ func (s *SDK) DeleteCoreDevice(ctx context.Context, request operations.DeleteCor
 // DeleteDeployment - <p>Deletes a deployment. To delete an active deployment, you must first cancel it. For more information, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CancelDeployment.html">CancelDeployment</a>.</p> <p>Deleting a deployment doesn't affect core devices that run that deployment, because core devices store the deployment's configuration on the device. Additionally, core devices can roll back to a previous deployment that has been deleted.</p>
 func (s *SDK) DeleteDeployment(ctx context.Context, request operations.DeleteDeploymentRequest) (*operations.DeleteDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/deployments/{deploymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/deployments/{deploymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1051,14 +1051,14 @@ func (s *SDK) DeleteDeployment(ctx context.Context, request operations.DeleteDep
 // DescribeComponent - Retrieves metadata for a version of a component.
 func (s *SDK) DescribeComponent(ctx context.Context, request operations.DescribeComponentRequest) (*operations.DescribeComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}/metadata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1154,7 +1154,7 @@ func (s *SDK) DisassociateServiceRoleFromAccount(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1203,16 +1203,16 @@ func (s *SDK) DisassociateServiceRoleFromAccount(ctx context.Context, request op
 // GetComponent - Gets the recipe for a version of a component.
 func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentRequest) (*operations.GetComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1303,14 +1303,14 @@ func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentR
 // GetComponentVersionArtifact - Gets the pre-signed URL to download a public or a Lambda component artifact. Core devices call this operation to identify the URL that they can use to download an artifact to install.
 func (s *SDK) GetComponentVersionArtifact(ctx context.Context, request operations.GetComponentVersionArtifactRequest) (*operations.GetComponentVersionArtifactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}/artifacts/{artifactName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}/artifacts/{artifactName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1399,14 +1399,14 @@ func (s *SDK) GetComponentVersionArtifact(ctx context.Context, request operation
 // GetConnectivityInfo - <p>Retrieves connectivity information for a Greengrass core device.</p> <p>Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the core device. When a client device calls the <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">IoT Greengrass discovery API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can connect. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.</p>
 func (s *SDK) GetConnectivityInfo(ctx context.Context, request operations.GetConnectivityInfoRequest) (*operations.GetConnectivityInfoResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/things/{thingName}/connectivityInfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/things/{thingName}/connectivityInfo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1465,14 +1465,14 @@ func (s *SDK) GetConnectivityInfo(ctx context.Context, request operations.GetCon
 // GetCoreDevice - <p>Retrieves metadata for a Greengrass core device.</p> <note> <p>IoT Greengrass relies on individual devices to send status updates to the Amazon Web Services Cloud. If the IoT Greengrass Core software isn't running on the device, or if device isn't connected to the Amazon Web Services Cloud, then the reported status of that device might not reflect its current status. The status timestamp indicates when the device status was last updated.</p> <p>Core devices send status updates at the following times:</p> <ul> <li> <p>When the IoT Greengrass Core software starts</p> </li> <li> <p>When the core device receives a deployment from the Amazon Web Services Cloud</p> </li> <li> <p>When the status of any component on the core device becomes <code>BROKEN</code> </p> </li> <li> <p>At a <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html#greengrass-nucleus-component-configuration-fss">regular interval that you can configure</a>, which defaults to 24 hours</p> </li> <li> <p>For IoT Greengrass Core v2.7.0, the core device sends status updates upon local deployment and cloud deployment</p> </li> </ul> </note>
 func (s *SDK) GetCoreDevice(ctx context.Context, request operations.GetCoreDeviceRequest) (*operations.GetCoreDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1561,14 +1561,14 @@ func (s *SDK) GetCoreDevice(ctx context.Context, request operations.GetCoreDevic
 // GetDeployment - Gets a deployment. Deployments define the components that run on Greengrass core devices.
 func (s *SDK) GetDeployment(ctx context.Context, request operations.GetDeploymentRequest) (*operations.GetDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/deployments/{deploymentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/deployments/{deploymentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1664,7 +1664,7 @@ func (s *SDK) GetServiceRoleForAccount(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1713,16 +1713,16 @@ func (s *SDK) GetServiceRoleForAccount(ctx context.Context, request operations.G
 // ListClientDevicesAssociatedWithCoreDevice - Retrieves a paginated list of client devices that are associated with a core device.
 func (s *SDK) ListClientDevicesAssociatedWithCoreDevice(ctx context.Context, request operations.ListClientDevicesAssociatedWithCoreDeviceRequest) (*operations.ListClientDevicesAssociatedWithCoreDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/associatedClientDevices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/associatedClientDevices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1813,16 +1813,16 @@ func (s *SDK) ListClientDevicesAssociatedWithCoreDevice(ctx context.Context, req
 // ListComponentVersions - Retrieves a paginated list of all versions for a component. Greater versions are listed first.
 func (s *SDK) ListComponentVersions(ctx context.Context, request operations.ListComponentVersionsRequest) (*operations.ListComponentVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/components/{arn}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1920,9 +1920,9 @@ func (s *SDK) ListComponents(ctx context.Context, request operations.ListCompone
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2020,9 +2020,9 @@ func (s *SDK) ListCoreDevices(ctx context.Context, request operations.ListCoreDe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2110,9 +2110,9 @@ func (s *SDK) ListDeployments(ctx context.Context, request operations.ListDeploy
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2193,16 +2193,16 @@ func (s *SDK) ListDeployments(ctx context.Context, request operations.ListDeploy
 // ListEffectiveDeployments - Retrieves a paginated list of deployment jobs that IoT Greengrass sends to Greengrass core devices.
 func (s *SDK) ListEffectiveDeployments(ctx context.Context, request operations.ListEffectiveDeploymentsRequest) (*operations.ListEffectiveDeploymentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/effectiveDeployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/effectiveDeployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2293,16 +2293,16 @@ func (s *SDK) ListEffectiveDeployments(ctx context.Context, request operations.L
 // ListInstalledComponents - <p>Retrieves a paginated list of the components that a Greengrass core device runs. By default, this list doesn't include components that are deployed as dependencies of other components. To include dependencies in the response, set the <code>topologyFilter</code> parameter to <code>ALL</code>.</p> <note> <p>IoT Greengrass relies on individual devices to send status updates to the Amazon Web Services Cloud. If the IoT Greengrass Core software isn't running on the device, or if device isn't connected to the Amazon Web Services Cloud, then the reported status of that device might not reflect its current status. The status timestamp indicates when the device status was last updated.</p> <p>Core devices send status updates at the following times:</p> <ul> <li> <p>When the IoT Greengrass Core software starts</p> </li> <li> <p>When the core device receives a deployment from the Amazon Web Services Cloud</p> </li> <li> <p>When the status of any component on the core device becomes <code>BROKEN</code> </p> </li> <li> <p>At a <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html#greengrass-nucleus-component-configuration-fss">regular interval that you can configure</a>, which defaults to 24 hours</p> </li> <li> <p>For IoT Greengrass Core v2.7.0, the core device sends status updates upon local deployment and cloud deployment</p> </li> </ul> </note>
 func (s *SDK) ListInstalledComponents(ctx context.Context, request operations.ListInstalledComponentsRequest) (*operations.ListInstalledComponentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/installedComponents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/v2/coreDevices/{coreDeviceThingName}/installedComponents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2393,14 +2393,14 @@ func (s *SDK) ListInstalledComponents(ctx context.Context, request operations.Li
 // ListTagsForResource - Retrieves the list of tags for an IoT Greengrass resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2471,7 +2471,7 @@ func (s *SDK) ResolveComponentCandidates(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/greengrass/v2/resolveComponentCandidates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2486,7 +2486,7 @@ func (s *SDK) ResolveComponentCandidates(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2585,9 +2585,9 @@ func (s *SDK) ResolveComponentCandidates(ctx context.Context, request operations
 // TagResource - Adds tags to an IoT Greengrass resource. If a tag already exists for the resource, this operation updates the tag's value.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2602,7 +2602,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2671,16 +2671,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes a tag from an IoT Greengrass resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2751,9 +2751,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateConnectivityInfo - <p>Updates connectivity information for a Greengrass core device.</p> <p>Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the core device. When a client device calls the <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">IoT Greengrass discovery API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can connect. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.</p>
 func (s *SDK) UpdateConnectivityInfo(ctx context.Context, request operations.UpdateConnectivityInfoRequest) (*operations.UpdateConnectivityInfoResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/greengrass/things/{thingName}/connectivityInfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/greengrass/things/{thingName}/connectivityInfo", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2768,7 +2768,7 @@ func (s *SDK) UpdateConnectivityInfo(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

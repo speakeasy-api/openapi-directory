@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PingUserHeaders struct {
+type PingUserRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type PingUserRequest struct {
-	Headers PingUserHeaders
 }
 
 type PingUserResponse struct {

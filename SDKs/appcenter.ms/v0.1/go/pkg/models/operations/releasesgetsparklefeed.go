@@ -8,13 +8,9 @@ import (
 	"net/http"
 )
 
-type ReleasesGetSparkleFeedPathParams struct {
+type ReleasesGetSparkleFeedRequest struct {
 	// The secret of the application.
 	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
-}
-
-type ReleasesGetSparkleFeedRequest struct {
-	PathParams ReleasesGetSparkleFeedPathParams
 }
 
 type ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum string

@@ -8,19 +8,14 @@ import (
 )
 
 type PatchStoresStoreIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchStoresStoreIDPathParams struct {
-	// The unique identifier of the store.
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchStoresStoreIDRequest struct {
-	PathParams PatchStoresStoreIDPathParams
-	Request    *shared.UpdateStoreRequest `request:"mediaType=application/json"`
-	Security   PatchStoresStoreIDSecurity
+	UpdateStoreRequest *shared.UpdateStoreRequest `request:"mediaType=application/json"`
+	// The unique identifier of the store.
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type PatchStoresStoreIDResponse struct {

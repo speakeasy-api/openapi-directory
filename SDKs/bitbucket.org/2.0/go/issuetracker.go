@@ -42,16 +42,16 @@ func newIssueTracker(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID - Delete an issue
 // Deletes the specified issue. This requires write access to the
 // repository.
-func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
+func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,16 +99,16 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx cont
 
 // DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath - Delete an attachment for an issue
 // Deletes an attachment.
-func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
+func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,16 +147,16 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmen
 
 // DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Delete a comment on an issue
 // Deletes the specified comment.
-func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
+func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,16 +183,16 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsC
 
 // DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Remove vote for an issue
 // Retract your vote.
-func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
+func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -228,16 +228,16 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx 
 
 // DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Stop watching an issue
 // Stop watching this issue.
-func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
+func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,16 +280,16 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponents(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponents(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugComponentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,16 +335,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponents(ctx context.Co
 
 // GetRepositoriesWorkspaceRepoSlugComponentsComponentID - Get a component for issues
 // Returns the specified issue tracker component object.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,16 +390,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx
 
 // GetRepositoriesWorkspaceRepoSlugIssues - List issues
 // Returns the issues in the issue tracker.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -473,16 +473,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Contex
 //	}
 //
 // Once the job has successfully completed, it returns a stream of the zip file.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZip(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZip(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export/{repo_name}-issues-{task_id}.zip", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export/{repo_name}-issues-{task_id}.zip", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -556,16 +556,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssue
 // Once it starts running, it is a 202 response with status STARTED and progress filled.
 //
 // After it is finished, it becomes a 200 response with status SUCCESS or FAILURE.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesImportSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -617,16 +617,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.
 
 // GetRepositoriesWorkspaceRepoSlugIssuesIssueID - Get an issue
 // Returns the specified issue.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -681,16 +681,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context
 // actual contents.
 //
 // The files are always ordered by their upload date.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -744,16 +744,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(
 //
 // The redirect URL contains a one-time token that has a limited lifetime.
 // As a result, the link should not be persisted, stored, or shared.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -921,20 +921,20 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsP
 //
 // The `changes.assignee` field is deprecated will disappear in the
 // future. Use `changes.assignee_account_id` instead.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -983,16 +983,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx 
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes/{change_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes/{change_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1045,20 +1045,20 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChang
 //
 // This endpoint also supports filtering and sorting of the results. See
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1094,16 +1094,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx
 
 // GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Get a comment on an issue
 // Returns the specified issue comment object.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1141,16 +1141,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 // Check whether the authenticated user has voted for this issue.
 // A 204 status code indicates that the user has voted, while a 404
 // implies they haven't.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1191,16 +1191,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx con
 // GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Check if current user is watching a issue
 // Indicated whether or not the authenticated user is watching this
 // issue.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1243,16 +1243,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx co
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestones(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestones(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest, security operations.GetRepositoriesWorkspaceRepoSlugMilestonesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1298,16 +1298,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestones(ctx context.Co
 
 // GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID - Get a milestone
 // Returns the specified issue tracker milestone object.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1356,16 +1356,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest, security operations.GetRepositoriesWorkspaceRepoSlugVersionsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1411,16 +1411,16 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersions(ctx context.Cont
 
 // GetRepositoriesWorkspaceRepoSlugVersionsVersionID - Get a defined version for issues
 // Returns the specified issue tracker version object.
-func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDResponse, error) {
+func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1472,11 +1472,11 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx con
 // has appropriate authorization.
 //
 // The authenticated user is used for the issue's `reporter` field.
-func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
+func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1491,7 +1491,7 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1551,11 +1551,11 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Conte
 //
 // When the job has been accepted, it will return a 202 (Accepted) along with a unique url to this job in the
 // 'Location' response header. This url is the endpoint for where the user can obtain their zip files."
-func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse, error) {
+func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1567,7 +1567,7 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1632,16 +1632,16 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context
 //	}
 //
 // ```
-func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse, error) {
+func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesImportSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1699,16 +1699,16 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesImport(ctx context
 //
 // When a file is uploaded with the same name as an existing attachment,
 // then the existing file will be replaced.
-func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsResponse, error) {
+func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1789,11 +1789,11 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments
 // This call requires authentication. Private repositories or private
 // issue trackers require the caller to authenticate with an account that
 // has appropriate authorization.
-func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesRequest) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesResponse, error) {
+func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1808,7 +1808,7 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1869,11 +1869,11 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx
 //	  -d '{"content": {"raw": "Lorem ipsum."}}'
 //
 // ```
-func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
+func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1888,7 +1888,7 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1954,16 +1954,16 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ct
 // Each time an issue is edited in the UI or through the API, an immutable
 // change record is created under the `/issues/123/changes` endpoint. It
 // also has a comment associated with the change.
-func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
+func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2021,11 +2021,11 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context
 //	  -d '{"content": {"raw": "Lorem ipsum."}'
 //
 // ```
-func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
+func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2040,7 +2040,7 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2089,16 +2089,16 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 //
 // To cast your vote, do an empty PUT. The 204 status code indicates that
 // the operation was successful.
-func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
+func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2141,16 +2141,16 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx con
 //
 // To start watching this issue, do an empty PUT. The 204 status code
 // indicates that the operation was successful.
-func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
+func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

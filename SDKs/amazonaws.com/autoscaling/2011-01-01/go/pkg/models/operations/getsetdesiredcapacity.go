@@ -50,30 +50,22 @@ func (e *GETSetDesiredCapacityVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetDesiredCapacityQueryParams struct {
+type GETSetDesiredCapacityRequest struct {
 	Action GETSetDesiredCapacityActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The desired capacity is the initial capacity of the Auto Scaling group after this operation completes and the capacity it attempts to maintain.
 	DesiredCapacity int64 `queryParam:"style=form,explode=true,name=DesiredCapacity"`
 	// Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before initiating a scaling activity to set your Auto Scaling group to its new capacity. By default, Amazon EC2 Auto Scaling does not honor the cooldown period during manual scaling activities.
-	HonorCooldown *bool                            `queryParam:"style=form,explode=true,name=HonorCooldown"`
-	Version       GETSetDesiredCapacityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetDesiredCapacityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetDesiredCapacityRequest struct {
-	QueryParams GETSetDesiredCapacityQueryParams
-	Headers     GETSetDesiredCapacityHeaders
+	HonorCooldown     *bool                            `queryParam:"style=form,explode=true,name=HonorCooldown"`
+	Version           GETSetDesiredCapacityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetDesiredCapacityResponse struct {

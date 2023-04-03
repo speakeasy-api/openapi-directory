@@ -36,9 +36,9 @@ func newMailboxes(defaultClient, securityClient HTTPClient, serverURL, language,
 // ChangeMailboxPassword - Change password for mailbox
 func (s *mailboxes) ChangeMailboxPassword(ctx context.Context, request operations.ChangeMailboxPasswordRequest) (*operations.ChangeMailboxPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMailboxPasswordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *mailboxes) ChangeMailboxPassword(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,9 +82,9 @@ func (s *mailboxes) ChangeMailboxPassword(ctx context.Context, request operation
 // ConfigureMailboxAutoForward - Configure auto-forward for mailbox
 func (s *mailboxes) ConfigureMailboxAutoForward(ctx context.Context, request operations.ConfigureMailboxAutoForwardRequest) (*operations.ConfigureMailboxAutoForwardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoforward", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoforward", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AutoForward", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *mailboxes) ConfigureMailboxAutoForward(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -128,9 +128,9 @@ func (s *mailboxes) ConfigureMailboxAutoForward(ctx context.Context, request ope
 // ConfigureMailboxAutoReply - Configure auto-reply for mailbox
 func (s *mailboxes) ConfigureMailboxAutoReply(ctx context.Context, request operations.ConfigureMailboxAutoReplyRequest) (*operations.ConfigureMailboxAutoReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoreply", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoreply", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AutoReply", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -142,7 +142,7 @@ func (s *mailboxes) ConfigureMailboxAutoReply(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,7 +172,7 @@ func (s *mailboxes) ConfigureMailboxAutoReply(ctx context.Context, request opera
 }
 
 // CreateMailbox - Create a new mailbox.
-func (s *mailboxes) CreateMailbox(ctx context.Context, request operations.CreateMailboxRequest) (*operations.CreateMailboxResponse, error) {
+func (s *mailboxes) CreateMailbox(ctx context.Context, request shared.CreateMailboxRequest) (*operations.CreateMailboxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mailboxes"
 
@@ -217,14 +217,14 @@ func (s *mailboxes) CreateMailbox(ctx context.Context, request operations.Create
 // DeleteMailbox - Delete a mailbox
 func (s *mailboxes) DeleteMailbox(ctx context.Context, request operations.DeleteMailboxRequest) (*operations.DeleteMailboxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -258,14 +258,14 @@ func (s *mailboxes) DeleteMailbox(ctx context.Context, request operations.Delete
 // GetMailbox - Get a specific mailbox
 func (s *mailboxes) GetMailbox(ctx context.Context, request operations.GetMailboxRequest) (*operations.GetMailboxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -314,7 +314,7 @@ func (s *mailboxes) GetMailboxes(ctx context.Context, request operations.GetMail
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

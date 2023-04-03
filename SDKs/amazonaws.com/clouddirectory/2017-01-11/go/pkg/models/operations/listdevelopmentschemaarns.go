@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDevelopmentSchemaArnsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListDevelopmentSchemaArnsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListDevelopmentSchemaArnsRequestBody struct {
 	// The maximum number of results to retrieve.
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -32,9 +15,18 @@ type ListDevelopmentSchemaArnsRequestBody struct {
 }
 
 type ListDevelopmentSchemaArnsRequest struct {
-	QueryParams ListDevelopmentSchemaArnsQueryParams
-	Headers     ListDevelopmentSchemaArnsHeaders
-	Request     ListDevelopmentSchemaArnsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListDevelopmentSchemaArnsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListDevelopmentSchemaArnsResponse struct {

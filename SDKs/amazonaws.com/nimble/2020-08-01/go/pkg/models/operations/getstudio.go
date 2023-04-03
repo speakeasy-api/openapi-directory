@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStudioPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetStudioHeaders struct {
+type GetStudioRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetStudioHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStudioRequest struct {
-	PathParams GetStudioPathParams
-	Headers    GetStudioHeaders
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetStudioResponse struct {

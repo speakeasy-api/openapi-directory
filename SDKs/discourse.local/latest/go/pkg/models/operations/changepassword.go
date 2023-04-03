@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type ChangePasswordPathParams struct {
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
 type ChangePasswordRequestBody struct {
 	Password string `json:"password"`
 	Username string `json:"username"`
 }
 
 type ChangePasswordRequest struct {
-	PathParams ChangePasswordPathParams
-	Request    *ChangePasswordRequestBody `request:"mediaType=application/json"`
+	RequestBody *ChangePasswordRequestBody `request:"mediaType=application/json"`
+	Token       string                     `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type ChangePasswordResponse struct {

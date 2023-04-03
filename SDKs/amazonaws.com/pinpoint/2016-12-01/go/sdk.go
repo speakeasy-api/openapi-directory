@@ -116,7 +116,7 @@ func (s *SDK) CreateApp(ctx context.Context, request operations.CreateAppRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/apps"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateApp(ctx context.Context, request operations.CreateAppRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -240,9 +240,9 @@ func (s *SDK) CreateApp(ctx context.Context, request operations.CreateAppRequest
 // CreateCampaign - Creates a new campaign for an application or updates the settings of an existing campaign for an application.
 func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampaignRequest) (*operations.CreateCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -366,9 +366,9 @@ func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampa
 // CreateEmailTemplate - Creates a message template for messages that are sent through the email channel.
 func (s *SDK) CreateEmailTemplate(ctx context.Context, request operations.CreateEmailTemplateRequest) (*operations.CreateEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *SDK) CreateEmailTemplate(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -472,9 +472,9 @@ func (s *SDK) CreateEmailTemplate(ctx context.Context, request operations.Create
 // CreateExportJob - Creates an export job for an application.
 func (s *SDK) CreateExportJob(ctx context.Context, request operations.CreateExportJobRequest) (*operations.CreateExportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -489,7 +489,7 @@ func (s *SDK) CreateExportJob(ctx context.Context, request operations.CreateExpo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -598,9 +598,9 @@ func (s *SDK) CreateExportJob(ctx context.Context, request operations.CreateExpo
 // CreateImportJob - Creates an import job for an application.
 func (s *SDK) CreateImportJob(ctx context.Context, request operations.CreateImportJobRequest) (*operations.CreateImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -615,7 +615,7 @@ func (s *SDK) CreateImportJob(ctx context.Context, request operations.CreateImpo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -724,9 +724,9 @@ func (s *SDK) CreateImportJob(ctx context.Context, request operations.CreateImpo
 // CreateInAppTemplate - Creates a new message template for messages using the in-app message channel.
 func (s *SDK) CreateInAppTemplate(ctx context.Context, request operations.CreateInAppTemplateRequest) (*operations.CreateInAppTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -741,7 +741,7 @@ func (s *SDK) CreateInAppTemplate(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -830,9 +830,9 @@ func (s *SDK) CreateInAppTemplate(ctx context.Context, request operations.Create
 // CreateJourney - Creates a journey for an application.
 func (s *SDK) CreateJourney(ctx context.Context, request operations.CreateJourneyRequest) (*operations.CreateJourneyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -847,7 +847,7 @@ func (s *SDK) CreateJourney(ctx context.Context, request operations.CreateJourne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -956,9 +956,9 @@ func (s *SDK) CreateJourney(ctx context.Context, request operations.CreateJourne
 // CreatePushTemplate - Creates a message template for messages that are sent through a push notification channel.
 func (s *SDK) CreatePushTemplate(ctx context.Context, request operations.CreatePushTemplateRequest) (*operations.CreatePushTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -973,7 +973,7 @@ func (s *SDK) CreatePushTemplate(ctx context.Context, request operations.CreateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1064,7 +1064,7 @@ func (s *SDK) CreateRecommenderConfiguration(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/recommenders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1079,7 +1079,7 @@ func (s *SDK) CreateRecommenderConfiguration(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1188,9 +1188,9 @@ func (s *SDK) CreateRecommenderConfiguration(ctx context.Context, request operat
 // CreateSegment - Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application.
 func (s *SDK) CreateSegment(ctx context.Context, request operations.CreateSegmentRequest) (*operations.CreateSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1205,7 +1205,7 @@ func (s *SDK) CreateSegment(ctx context.Context, request operations.CreateSegmen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1314,9 +1314,9 @@ func (s *SDK) CreateSegment(ctx context.Context, request operations.CreateSegmen
 // CreateSmsTemplate - Creates a message template for messages that are sent through the SMS channel.
 func (s *SDK) CreateSmsTemplate(ctx context.Context, request operations.CreateSmsTemplateRequest) (*operations.CreateSmsTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1331,7 +1331,7 @@ func (s *SDK) CreateSmsTemplate(ctx context.Context, request operations.CreateSm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1420,9 +1420,9 @@ func (s *SDK) CreateSmsTemplate(ctx context.Context, request operations.CreateSm
 // CreateVoiceTemplate - Creates a message template for messages that are sent through the voice channel.
 func (s *SDK) CreateVoiceTemplate(ctx context.Context, request operations.CreateVoiceTemplateRequest) (*operations.CreateVoiceTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1437,7 +1437,7 @@ func (s *SDK) CreateVoiceTemplate(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1526,14 +1526,14 @@ func (s *SDK) CreateVoiceTemplate(ctx context.Context, request operations.Create
 // DeleteAdmChannel - Disables the ADM channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteAdmChannel(ctx context.Context, request operations.DeleteAdmChannelRequest) (*operations.DeleteAdmChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/adm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/adm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1642,14 +1642,14 @@ func (s *SDK) DeleteAdmChannel(ctx context.Context, request operations.DeleteAdm
 // DeleteApnsChannel - Disables the APNs channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteApnsChannel(ctx context.Context, request operations.DeleteApnsChannelRequest) (*operations.DeleteApnsChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1758,14 +1758,14 @@ func (s *SDK) DeleteApnsChannel(ctx context.Context, request operations.DeleteAp
 // DeleteApnsSandboxChannel - Disables the APNs sandbox channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteApnsSandboxChannel(ctx context.Context, request operations.DeleteApnsSandboxChannelRequest) (*operations.DeleteApnsSandboxChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_sandbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_sandbox", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1874,14 +1874,14 @@ func (s *SDK) DeleteApnsSandboxChannel(ctx context.Context, request operations.D
 // DeleteApnsVoipChannel - Disables the APNs VoIP channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteApnsVoipChannel(ctx context.Context, request operations.DeleteApnsVoipChannelRequest) (*operations.DeleteApnsVoipChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1990,14 +1990,14 @@ func (s *SDK) DeleteApnsVoipChannel(ctx context.Context, request operations.Dele
 // DeleteApnsVoipSandboxChannel - Disables the APNs VoIP sandbox channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteApnsVoipSandboxChannel(ctx context.Context, request operations.DeleteApnsVoipSandboxChannelRequest) (*operations.DeleteApnsVoipSandboxChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip_sandbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip_sandbox", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2106,14 +2106,14 @@ func (s *SDK) DeleteApnsVoipSandboxChannel(ctx context.Context, request operatio
 // DeleteApp - Deletes an application.
 func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest) (*operations.DeleteAppResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2222,14 +2222,14 @@ func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest
 // DeleteBaiduChannel - Disables the Baidu channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteBaiduChannel(ctx context.Context, request operations.DeleteBaiduChannelRequest) (*operations.DeleteBaiduChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/baidu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/baidu", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2338,14 +2338,14 @@ func (s *SDK) DeleteBaiduChannel(ctx context.Context, request operations.DeleteB
 // DeleteCampaign - Deletes a campaign from an application.
 func (s *SDK) DeleteCampaign(ctx context.Context, request operations.DeleteCampaignRequest) (*operations.DeleteCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2454,14 +2454,14 @@ func (s *SDK) DeleteCampaign(ctx context.Context, request operations.DeleteCampa
 // DeleteEmailChannel - Disables the email channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteEmailChannel(ctx context.Context, request operations.DeleteEmailChannelRequest) (*operations.DeleteEmailChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/email", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2570,16 +2570,16 @@ func (s *SDK) DeleteEmailChannel(ctx context.Context, request operations.DeleteE
 // DeleteEmailTemplate - Deletes a message template for messages that were sent through the email channel.
 func (s *SDK) DeleteEmailTemplate(ctx context.Context, request operations.DeleteEmailTemplateRequest) (*operations.DeleteEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2690,14 +2690,14 @@ func (s *SDK) DeleteEmailTemplate(ctx context.Context, request operations.Delete
 // DeleteEndpoint - Deletes an endpoint from an application.
 func (s *SDK) DeleteEndpoint(ctx context.Context, request operations.DeleteEndpointRequest) (*operations.DeleteEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2806,14 +2806,14 @@ func (s *SDK) DeleteEndpoint(ctx context.Context, request operations.DeleteEndpo
 // DeleteEventStream - Deletes the event stream for an application.
 func (s *SDK) DeleteEventStream(ctx context.Context, request operations.DeleteEventStreamRequest) (*operations.DeleteEventStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/eventstream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/eventstream", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2922,14 +2922,14 @@ func (s *SDK) DeleteEventStream(ctx context.Context, request operations.DeleteEv
 // DeleteGcmChannel - Disables the GCM channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteGcmChannel(ctx context.Context, request operations.DeleteGcmChannelRequest) (*operations.DeleteGcmChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/gcm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/gcm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3038,16 +3038,16 @@ func (s *SDK) DeleteGcmChannel(ctx context.Context, request operations.DeleteGcm
 // DeleteInAppTemplate - Deletes a message template for messages sent using the in-app message channel.
 func (s *SDK) DeleteInAppTemplate(ctx context.Context, request operations.DeleteInAppTemplateRequest) (*operations.DeleteInAppTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3158,14 +3158,14 @@ func (s *SDK) DeleteInAppTemplate(ctx context.Context, request operations.Delete
 // DeleteJourney - Deletes a journey from an application.
 func (s *SDK) DeleteJourney(ctx context.Context, request operations.DeleteJourneyRequest) (*operations.DeleteJourneyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3274,16 +3274,16 @@ func (s *SDK) DeleteJourney(ctx context.Context, request operations.DeleteJourne
 // DeletePushTemplate - Deletes a message template for messages that were sent through a push notification channel.
 func (s *SDK) DeletePushTemplate(ctx context.Context, request operations.DeletePushTemplateRequest) (*operations.DeletePushTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3394,14 +3394,14 @@ func (s *SDK) DeletePushTemplate(ctx context.Context, request operations.DeleteP
 // DeleteRecommenderConfiguration - Deletes an Amazon Pinpoint configuration for a recommender model.
 func (s *SDK) DeleteRecommenderConfiguration(ctx context.Context, request operations.DeleteRecommenderConfigurationRequest) (*operations.DeleteRecommenderConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/recommenders/{recommender-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/recommenders/{recommender-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3510,14 +3510,14 @@ func (s *SDK) DeleteRecommenderConfiguration(ctx context.Context, request operat
 // DeleteSegment - Deletes a segment from an application.
 func (s *SDK) DeleteSegment(ctx context.Context, request operations.DeleteSegmentRequest) (*operations.DeleteSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3626,14 +3626,14 @@ func (s *SDK) DeleteSegment(ctx context.Context, request operations.DeleteSegmen
 // DeleteSmsChannel - Disables the SMS channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteSmsChannel(ctx context.Context, request operations.DeleteSmsChannelRequest) (*operations.DeleteSmsChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/sms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3742,16 +3742,16 @@ func (s *SDK) DeleteSmsChannel(ctx context.Context, request operations.DeleteSms
 // DeleteSmsTemplate - Deletes a message template for messages that were sent through the SMS channel.
 func (s *SDK) DeleteSmsTemplate(ctx context.Context, request operations.DeleteSmsTemplateRequest) (*operations.DeleteSmsTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3862,14 +3862,14 @@ func (s *SDK) DeleteSmsTemplate(ctx context.Context, request operations.DeleteSm
 // DeleteUserEndpoints - Deletes all the endpoints that are associated with a specific user ID.
 func (s *SDK) DeleteUserEndpoints(ctx context.Context, request operations.DeleteUserEndpointsRequest) (*operations.DeleteUserEndpointsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/users/{user-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/users/{user-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3978,14 +3978,14 @@ func (s *SDK) DeleteUserEndpoints(ctx context.Context, request operations.Delete
 // DeleteVoiceChannel - Disables the voice channel for an application and deletes any existing settings for the channel.
 func (s *SDK) DeleteVoiceChannel(ctx context.Context, request operations.DeleteVoiceChannelRequest) (*operations.DeleteVoiceChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/voice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4094,16 +4094,16 @@ func (s *SDK) DeleteVoiceChannel(ctx context.Context, request operations.DeleteV
 // DeleteVoiceTemplate - Deletes a message template for messages that were sent through the voice channel.
 func (s *SDK) DeleteVoiceTemplate(ctx context.Context, request operations.DeleteVoiceTemplateRequest) (*operations.DeleteVoiceTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4214,14 +4214,14 @@ func (s *SDK) DeleteVoiceTemplate(ctx context.Context, request operations.Delete
 // GetAdmChannel - Retrieves information about the status and settings of the ADM channel for an application.
 func (s *SDK) GetAdmChannel(ctx context.Context, request operations.GetAdmChannelRequest) (*operations.GetAdmChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/adm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/adm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4330,14 +4330,14 @@ func (s *SDK) GetAdmChannel(ctx context.Context, request operations.GetAdmChanne
 // GetApnsChannel - Retrieves information about the status and settings of the APNs channel for an application.
 func (s *SDK) GetApnsChannel(ctx context.Context, request operations.GetApnsChannelRequest) (*operations.GetApnsChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4446,14 +4446,14 @@ func (s *SDK) GetApnsChannel(ctx context.Context, request operations.GetApnsChan
 // GetApnsSandboxChannel - Retrieves information about the status and settings of the APNs sandbox channel for an application.
 func (s *SDK) GetApnsSandboxChannel(ctx context.Context, request operations.GetApnsSandboxChannelRequest) (*operations.GetApnsSandboxChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_sandbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_sandbox", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4562,14 +4562,14 @@ func (s *SDK) GetApnsSandboxChannel(ctx context.Context, request operations.GetA
 // GetApnsVoipChannel - Retrieves information about the status and settings of the APNs VoIP channel for an application.
 func (s *SDK) GetApnsVoipChannel(ctx context.Context, request operations.GetApnsVoipChannelRequest) (*operations.GetApnsVoipChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4678,14 +4678,14 @@ func (s *SDK) GetApnsVoipChannel(ctx context.Context, request operations.GetApns
 // GetApnsVoipSandboxChannel - Retrieves information about the status and settings of the APNs VoIP sandbox channel for an application.
 func (s *SDK) GetApnsVoipSandboxChannel(ctx context.Context, request operations.GetApnsVoipSandboxChannelRequest) (*operations.GetApnsVoipSandboxChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip_sandbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip_sandbox", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4794,14 +4794,14 @@ func (s *SDK) GetApnsVoipSandboxChannel(ctx context.Context, request operations.
 // GetApp - Retrieves information about an application.
 func (s *SDK) GetApp(ctx context.Context, request operations.GetAppRequest) (*operations.GetAppResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4910,16 +4910,16 @@ func (s *SDK) GetApp(ctx context.Context, request operations.GetAppRequest) (*op
 // GetApplicationDateRangeKpi - Retrieves (queries) pre-aggregated data for a standard metric that applies to an application.
 func (s *SDK) GetApplicationDateRangeKpi(ctx context.Context, request operations.GetApplicationDateRangeKpiRequest) (*operations.GetApplicationDateRangeKpiResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/kpis/daterange/{kpi-name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/kpis/daterange/{kpi-name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5030,14 +5030,14 @@ func (s *SDK) GetApplicationDateRangeKpi(ctx context.Context, request operations
 // GetApplicationSettings - Retrieves information about the settings for an application.
 func (s *SDK) GetApplicationSettings(ctx context.Context, request operations.GetApplicationSettingsRequest) (*operations.GetApplicationSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5153,9 +5153,9 @@ func (s *SDK) GetApps(ctx context.Context, request operations.GetAppsRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5266,14 +5266,14 @@ func (s *SDK) GetApps(ctx context.Context, request operations.GetAppsRequest) (*
 // GetBaiduChannel - Retrieves information about the status and settings of the Baidu channel for an application.
 func (s *SDK) GetBaiduChannel(ctx context.Context, request operations.GetBaiduChannelRequest) (*operations.GetBaiduChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/baidu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/baidu", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5382,14 +5382,14 @@ func (s *SDK) GetBaiduChannel(ctx context.Context, request operations.GetBaiduCh
 // GetCampaign - Retrieves information about the status, configuration, and other settings for a campaign.
 func (s *SDK) GetCampaign(ctx context.Context, request operations.GetCampaignRequest) (*operations.GetCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5498,16 +5498,16 @@ func (s *SDK) GetCampaign(ctx context.Context, request operations.GetCampaignReq
 // GetCampaignActivities - Retrieves information about all the activities for a campaign.
 func (s *SDK) GetCampaignActivities(ctx context.Context, request operations.GetCampaignActivitiesRequest) (*operations.GetCampaignActivitiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/activities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/activities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5618,16 +5618,16 @@ func (s *SDK) GetCampaignActivities(ctx context.Context, request operations.GetC
 // GetCampaignDateRangeKpi - Retrieves (queries) pre-aggregated data for a standard metric that applies to a campaign.
 func (s *SDK) GetCampaignDateRangeKpi(ctx context.Context, request operations.GetCampaignDateRangeKpiRequest) (*operations.GetCampaignDateRangeKpiResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/kpis/daterange/{kpi-name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/kpis/daterange/{kpi-name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5738,14 +5738,14 @@ func (s *SDK) GetCampaignDateRangeKpi(ctx context.Context, request operations.Ge
 // GetCampaignVersion - Retrieves information about the status, configuration, and other settings for a specific version of a campaign.
 func (s *SDK) GetCampaignVersion(ctx context.Context, request operations.GetCampaignVersionRequest) (*operations.GetCampaignVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/versions/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/versions/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5854,16 +5854,16 @@ func (s *SDK) GetCampaignVersion(ctx context.Context, request operations.GetCamp
 // GetCampaignVersions - Retrieves information about the status, configuration, and other settings for all versions of a campaign.
 func (s *SDK) GetCampaignVersions(ctx context.Context, request operations.GetCampaignVersionsRequest) (*operations.GetCampaignVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5974,16 +5974,16 @@ func (s *SDK) GetCampaignVersions(ctx context.Context, request operations.GetCam
 // GetCampaigns - Retrieves information about the status, configuration, and other settings for all the campaigns that are associated with an application.
 func (s *SDK) GetCampaigns(ctx context.Context, request operations.GetCampaignsRequest) (*operations.GetCampaignsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6094,14 +6094,14 @@ func (s *SDK) GetCampaigns(ctx context.Context, request operations.GetCampaignsR
 // GetChannels - Retrieves information about the history and status of each channel for an application.
 func (s *SDK) GetChannels(ctx context.Context, request operations.GetChannelsRequest) (*operations.GetChannelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6210,14 +6210,14 @@ func (s *SDK) GetChannels(ctx context.Context, request operations.GetChannelsReq
 // GetEmailChannel - Retrieves information about the status and settings of the email channel for an application.
 func (s *SDK) GetEmailChannel(ctx context.Context, request operations.GetEmailChannelRequest) (*operations.GetEmailChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/email", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6326,16 +6326,16 @@ func (s *SDK) GetEmailChannel(ctx context.Context, request operations.GetEmailCh
 // GetEmailTemplate - Retrieves the content and settings of a message template for messages that are sent through the email channel.
 func (s *SDK) GetEmailTemplate(ctx context.Context, request operations.GetEmailTemplateRequest) (*operations.GetEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6446,14 +6446,14 @@ func (s *SDK) GetEmailTemplate(ctx context.Context, request operations.GetEmailT
 // GetEndpoint - Retrieves information about the settings and attributes of a specific endpoint for an application.
 func (s *SDK) GetEndpoint(ctx context.Context, request operations.GetEndpointRequest) (*operations.GetEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6562,14 +6562,14 @@ func (s *SDK) GetEndpoint(ctx context.Context, request operations.GetEndpointReq
 // GetEventStream - Retrieves information about the event stream settings for an application.
 func (s *SDK) GetEventStream(ctx context.Context, request operations.GetEventStreamRequest) (*operations.GetEventStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/eventstream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/eventstream", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6678,14 +6678,14 @@ func (s *SDK) GetEventStream(ctx context.Context, request operations.GetEventStr
 // GetExportJob - Retrieves information about the status and settings of a specific export job for an application.
 func (s *SDK) GetExportJob(ctx context.Context, request operations.GetExportJobRequest) (*operations.GetExportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/export/{job-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/export/{job-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6794,16 +6794,16 @@ func (s *SDK) GetExportJob(ctx context.Context, request operations.GetExportJobR
 // GetExportJobs - Retrieves information about the status and settings of all the export jobs for an application.
 func (s *SDK) GetExportJobs(ctx context.Context, request operations.GetExportJobsRequest) (*operations.GetExportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6914,14 +6914,14 @@ func (s *SDK) GetExportJobs(ctx context.Context, request operations.GetExportJob
 // GetGcmChannel - Retrieves information about the status and settings of the GCM channel for an application.
 func (s *SDK) GetGcmChannel(ctx context.Context, request operations.GetGcmChannelRequest) (*operations.GetGcmChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/gcm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/gcm", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7030,14 +7030,14 @@ func (s *SDK) GetGcmChannel(ctx context.Context, request operations.GetGcmChanne
 // GetImportJob - Retrieves information about the status and settings of a specific import job for an application.
 func (s *SDK) GetImportJob(ctx context.Context, request operations.GetImportJobRequest) (*operations.GetImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/import/{job-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/import/{job-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7146,16 +7146,16 @@ func (s *SDK) GetImportJob(ctx context.Context, request operations.GetImportJobR
 // GetImportJobs - Retrieves information about the status and settings of all the import jobs for an application.
 func (s *SDK) GetImportJobs(ctx context.Context, request operations.GetImportJobsRequest) (*operations.GetImportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/jobs/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7266,14 +7266,14 @@ func (s *SDK) GetImportJobs(ctx context.Context, request operations.GetImportJob
 // GetInAppMessages - Retrieves the in-app messages targeted for the provided endpoint ID.
 func (s *SDK) GetInAppMessages(ctx context.Context, request operations.GetInAppMessagesRequest) (*operations.GetInAppMessagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}/inappmessages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}/inappmessages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7382,16 +7382,16 @@ func (s *SDK) GetInAppMessages(ctx context.Context, request operations.GetInAppM
 // GetInAppTemplate - Retrieves the content and settings of a message template for messages sent through the in-app channel.
 func (s *SDK) GetInAppTemplate(ctx context.Context, request operations.GetInAppTemplateRequest) (*operations.GetInAppTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7502,14 +7502,14 @@ func (s *SDK) GetInAppTemplate(ctx context.Context, request operations.GetInAppT
 // GetJourney - Retrieves information about the status, configuration, and other settings for a journey.
 func (s *SDK) GetJourney(ctx context.Context, request operations.GetJourneyRequest) (*operations.GetJourneyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7618,16 +7618,16 @@ func (s *SDK) GetJourney(ctx context.Context, request operations.GetJourneyReque
 // GetJourneyDateRangeKpi - Retrieves (queries) pre-aggregated data for a standard engagement metric that applies to a journey.
 func (s *SDK) GetJourneyDateRangeKpi(ctx context.Context, request operations.GetJourneyDateRangeKpiRequest) (*operations.GetJourneyDateRangeKpiResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/kpis/daterange/{kpi-name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/kpis/daterange/{kpi-name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7738,16 +7738,16 @@ func (s *SDK) GetJourneyDateRangeKpi(ctx context.Context, request operations.Get
 // GetJourneyExecutionActivityMetrics - Retrieves (queries) pre-aggregated data for a standard execution metric that applies to a journey activity.
 func (s *SDK) GetJourneyExecutionActivityMetrics(ctx context.Context, request operations.GetJourneyExecutionActivityMetricsRequest) (*operations.GetJourneyExecutionActivityMetricsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/activities/{journey-activity-id}/execution-metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/activities/{journey-activity-id}/execution-metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7858,16 +7858,16 @@ func (s *SDK) GetJourneyExecutionActivityMetrics(ctx context.Context, request op
 // GetJourneyExecutionMetrics - Retrieves (queries) pre-aggregated data for a standard execution metric that applies to a journey.
 func (s *SDK) GetJourneyExecutionMetrics(ctx context.Context, request operations.GetJourneyExecutionMetricsRequest) (*operations.GetJourneyExecutionMetricsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/execution-metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/execution-metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7978,16 +7978,16 @@ func (s *SDK) GetJourneyExecutionMetrics(ctx context.Context, request operations
 // GetPushTemplate - Retrieves the content and settings of a message template for messages that are sent through a push notification channel.
 func (s *SDK) GetPushTemplate(ctx context.Context, request operations.GetPushTemplateRequest) (*operations.GetPushTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8098,14 +8098,14 @@ func (s *SDK) GetPushTemplate(ctx context.Context, request operations.GetPushTem
 // GetRecommenderConfiguration - Retrieves information about an Amazon Pinpoint configuration for a recommender model.
 func (s *SDK) GetRecommenderConfiguration(ctx context.Context, request operations.GetRecommenderConfigurationRequest) (*operations.GetRecommenderConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/recommenders/{recommender-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/recommenders/{recommender-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8221,9 +8221,9 @@ func (s *SDK) GetRecommenderConfigurations(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8334,14 +8334,14 @@ func (s *SDK) GetRecommenderConfigurations(ctx context.Context, request operatio
 // GetSegment - Retrieves information about the configuration, dimension, and other settings for a specific segment that's associated with an application.
 func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentRequest) (*operations.GetSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8450,16 +8450,16 @@ func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentReque
 // GetSegmentExportJobs - Retrieves information about the status and settings of the export jobs for a segment.
 func (s *SDK) GetSegmentExportJobs(ctx context.Context, request operations.GetSegmentExportJobsRequest) (*operations.GetSegmentExportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/jobs/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/jobs/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8570,16 +8570,16 @@ func (s *SDK) GetSegmentExportJobs(ctx context.Context, request operations.GetSe
 // GetSegmentImportJobs - Retrieves information about the status and settings of the import jobs for a segment.
 func (s *SDK) GetSegmentImportJobs(ctx context.Context, request operations.GetSegmentImportJobsRequest) (*operations.GetSegmentImportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/jobs/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/jobs/import", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8690,14 +8690,14 @@ func (s *SDK) GetSegmentImportJobs(ctx context.Context, request operations.GetSe
 // GetSegmentVersion - Retrieves information about the configuration, dimension, and other settings for a specific version of a segment that's associated with an application.
 func (s *SDK) GetSegmentVersion(ctx context.Context, request operations.GetSegmentVersionRequest) (*operations.GetSegmentVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/versions/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/versions/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8806,16 +8806,16 @@ func (s *SDK) GetSegmentVersion(ctx context.Context, request operations.GetSegme
 // GetSegmentVersions - Retrieves information about the configuration, dimension, and other settings for all the versions of a specific segment that's associated with an application.
 func (s *SDK) GetSegmentVersions(ctx context.Context, request operations.GetSegmentVersionsRequest) (*operations.GetSegmentVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8926,16 +8926,16 @@ func (s *SDK) GetSegmentVersions(ctx context.Context, request operations.GetSegm
 // GetSegments - Retrieves information about the configuration, dimension, and other settings for all the segments that are associated with an application.
 func (s *SDK) GetSegments(ctx context.Context, request operations.GetSegmentsRequest) (*operations.GetSegmentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9046,14 +9046,14 @@ func (s *SDK) GetSegments(ctx context.Context, request operations.GetSegmentsReq
 // GetSmsChannel - Retrieves information about the status and settings of the SMS channel for an application.
 func (s *SDK) GetSmsChannel(ctx context.Context, request operations.GetSmsChannelRequest) (*operations.GetSmsChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/sms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9162,16 +9162,16 @@ func (s *SDK) GetSmsChannel(ctx context.Context, request operations.GetSmsChanne
 // GetSmsTemplate - Retrieves the content and settings of a message template for messages that are sent through the SMS channel.
 func (s *SDK) GetSmsTemplate(ctx context.Context, request operations.GetSmsTemplateRequest) (*operations.GetSmsTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9282,14 +9282,14 @@ func (s *SDK) GetSmsTemplate(ctx context.Context, request operations.GetSmsTempl
 // GetUserEndpoints - Retrieves information about all the endpoints that are associated with a specific user ID.
 func (s *SDK) GetUserEndpoints(ctx context.Context, request operations.GetUserEndpointsRequest) (*operations.GetUserEndpointsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/users/{user-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/users/{user-id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9398,14 +9398,14 @@ func (s *SDK) GetUserEndpoints(ctx context.Context, request operations.GetUserEn
 // GetVoiceChannel - Retrieves information about the status and settings of the voice channel for an application.
 func (s *SDK) GetVoiceChannel(ctx context.Context, request operations.GetVoiceChannelRequest) (*operations.GetVoiceChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/voice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9514,16 +9514,16 @@ func (s *SDK) GetVoiceChannel(ctx context.Context, request operations.GetVoiceCh
 // GetVoiceTemplate - Retrieves the content and settings of a message template for messages that are sent through the voice channel.
 func (s *SDK) GetVoiceTemplate(ctx context.Context, request operations.GetVoiceTemplateRequest) (*operations.GetVoiceTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9634,16 +9634,16 @@ func (s *SDK) GetVoiceTemplate(ctx context.Context, request operations.GetVoiceT
 // ListJourneys - Retrieves information about the status, configuration, and other settings for all the journeys that are associated with an application.
 func (s *SDK) ListJourneys(ctx context.Context, request operations.ListJourneysRequest) (*operations.ListJourneysResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9754,14 +9754,14 @@ func (s *SDK) ListJourneys(ctx context.Context, request operations.ListJourneysR
 // ListTagsForResource - Retrieves all the tags (keys and values) that are associated with an application, campaign, message template, or segment.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resource-arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resource-arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9800,16 +9800,16 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTemplateVersions - Retrieves information about all the versions of a specific message template.
 func (s *SDK) ListTemplateVersions(ctx context.Context, request operations.ListTemplateVersionsRequest) (*operations.ListTemplateVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/{template-type}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/{template-type}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9927,9 +9927,9 @@ func (s *SDK) ListTemplates(ctx context.Context, request operations.ListTemplate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10022,7 +10022,7 @@ func (s *SDK) PhoneNumberValidate(ctx context.Context, request operations.PhoneN
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/phone/number/validate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10037,7 +10037,7 @@ func (s *SDK) PhoneNumberValidate(ctx context.Context, request operations.PhoneN
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10146,9 +10146,9 @@ func (s *SDK) PhoneNumberValidate(ctx context.Context, request operations.PhoneN
 // PutEventStream - Creates a new event stream for an application or updates the settings of an existing event stream for an application.
 func (s *SDK) PutEventStream(ctx context.Context, request operations.PutEventStreamRequest) (*operations.PutEventStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/eventstream", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/eventstream", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10163,7 +10163,7 @@ func (s *SDK) PutEventStream(ctx context.Context, request operations.PutEventStr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10272,9 +10272,9 @@ func (s *SDK) PutEventStream(ctx context.Context, request operations.PutEventStr
 // PutEvents - Creates a new event to record for endpoints, or creates or updates endpoint data that existing events are associated with.
 func (s *SDK) PutEvents(ctx context.Context, request operations.PutEventsRequest) (*operations.PutEventsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10289,7 +10289,7 @@ func (s *SDK) PutEvents(ctx context.Context, request operations.PutEventsRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10398,9 +10398,9 @@ func (s *SDK) PutEvents(ctx context.Context, request operations.PutEventsRequest
 // RemoveAttributes - Removes one or more attributes, of the same attribute type, from all the endpoints that are associated with an application.
 func (s *SDK) RemoveAttributes(ctx context.Context, request operations.RemoveAttributesRequest) (*operations.RemoveAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/attributes/{attribute-type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/attributes/{attribute-type}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10415,7 +10415,7 @@ func (s *SDK) RemoveAttributes(ctx context.Context, request operations.RemoveAtt
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10524,9 +10524,9 @@ func (s *SDK) RemoveAttributes(ctx context.Context, request operations.RemoveAtt
 // SendMessages - Creates and sends a direct message.
 func (s *SDK) SendMessages(ctx context.Context, request operations.SendMessagesRequest) (*operations.SendMessagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10541,7 +10541,7 @@ func (s *SDK) SendMessages(ctx context.Context, request operations.SendMessagesR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10650,9 +10650,9 @@ func (s *SDK) SendMessages(ctx context.Context, request operations.SendMessagesR
 // SendOTPMessage - Send an OTP message
 func (s *SDK) SendOTPMessage(ctx context.Context, request operations.SendOTPMessageRequest) (*operations.SendOTPMessageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/otp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/otp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10667,7 +10667,7 @@ func (s *SDK) SendOTPMessage(ctx context.Context, request operations.SendOTPMess
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10776,9 +10776,9 @@ func (s *SDK) SendOTPMessage(ctx context.Context, request operations.SendOTPMess
 // SendUsersMessages - Creates and sends a message to a list of users.
 func (s *SDK) SendUsersMessages(ctx context.Context, request operations.SendUsersMessagesRequest) (*operations.SendUsersMessagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/users-messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/users-messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10793,7 +10793,7 @@ func (s *SDK) SendUsersMessages(ctx context.Context, request operations.SendUser
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10902,9 +10902,9 @@ func (s *SDK) SendUsersMessages(ctx context.Context, request operations.SendUser
 // TagResource - Adds one or more tags (keys and values) to an application, campaign, message template, or segment.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resource-arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resource-arn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -10919,7 +10919,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10949,16 +10949,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes one or more tags (keys and values) from an application, campaign, message template, or segment.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resource-arn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resource-arn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10990,9 +10990,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAdmChannel - Enables the ADM channel for an application or updates the status and settings of the ADM channel for an application.
 func (s *SDK) UpdateAdmChannel(ctx context.Context, request operations.UpdateAdmChannelRequest) (*operations.UpdateAdmChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/adm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/adm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11007,7 +11007,7 @@ func (s *SDK) UpdateAdmChannel(ctx context.Context, request operations.UpdateAdm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11116,9 +11116,9 @@ func (s *SDK) UpdateAdmChannel(ctx context.Context, request operations.UpdateAdm
 // UpdateApnsChannel - Enables the APNs channel for an application or updates the status and settings of the APNs channel for an application.
 func (s *SDK) UpdateApnsChannel(ctx context.Context, request operations.UpdateApnsChannelRequest) (*operations.UpdateApnsChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11133,7 +11133,7 @@ func (s *SDK) UpdateApnsChannel(ctx context.Context, request operations.UpdateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11242,9 +11242,9 @@ func (s *SDK) UpdateApnsChannel(ctx context.Context, request operations.UpdateAp
 // UpdateApnsSandboxChannel - Enables the APNs sandbox channel for an application or updates the status and settings of the APNs sandbox channel for an application.
 func (s *SDK) UpdateApnsSandboxChannel(ctx context.Context, request operations.UpdateApnsSandboxChannelRequest) (*operations.UpdateApnsSandboxChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_sandbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_sandbox", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11259,7 +11259,7 @@ func (s *SDK) UpdateApnsSandboxChannel(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11368,9 +11368,9 @@ func (s *SDK) UpdateApnsSandboxChannel(ctx context.Context, request operations.U
 // UpdateApnsVoipChannel - Enables the APNs VoIP channel for an application or updates the status and settings of the APNs VoIP channel for an application.
 func (s *SDK) UpdateApnsVoipChannel(ctx context.Context, request operations.UpdateApnsVoipChannelRequest) (*operations.UpdateApnsVoipChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11385,7 +11385,7 @@ func (s *SDK) UpdateApnsVoipChannel(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11494,9 +11494,9 @@ func (s *SDK) UpdateApnsVoipChannel(ctx context.Context, request operations.Upda
 // UpdateApnsVoipSandboxChannel - Enables the APNs VoIP sandbox channel for an application or updates the status and settings of the APNs VoIP sandbox channel for an application.
 func (s *SDK) UpdateApnsVoipSandboxChannel(ctx context.Context, request operations.UpdateApnsVoipSandboxChannelRequest) (*operations.UpdateApnsVoipSandboxChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip_sandbox", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/apns_voip_sandbox", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11511,7 +11511,7 @@ func (s *SDK) UpdateApnsVoipSandboxChannel(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11620,9 +11620,9 @@ func (s *SDK) UpdateApnsVoipSandboxChannel(ctx context.Context, request operatio
 // UpdateApplicationSettings - Updates the settings for an application.
 func (s *SDK) UpdateApplicationSettings(ctx context.Context, request operations.UpdateApplicationSettingsRequest) (*operations.UpdateApplicationSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11637,7 +11637,7 @@ func (s *SDK) UpdateApplicationSettings(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11746,9 +11746,9 @@ func (s *SDK) UpdateApplicationSettings(ctx context.Context, request operations.
 // UpdateBaiduChannel - Enables the Baidu channel for an application or updates the status and settings of the Baidu channel for an application.
 func (s *SDK) UpdateBaiduChannel(ctx context.Context, request operations.UpdateBaiduChannelRequest) (*operations.UpdateBaiduChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/baidu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/baidu", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11763,7 +11763,7 @@ func (s *SDK) UpdateBaiduChannel(ctx context.Context, request operations.UpdateB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11872,9 +11872,9 @@ func (s *SDK) UpdateBaiduChannel(ctx context.Context, request operations.UpdateB
 // UpdateCampaign - Updates the configuration and other settings for a campaign.
 func (s *SDK) UpdateCampaign(ctx context.Context, request operations.UpdateCampaignRequest) (*operations.UpdateCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/campaigns/{campaign-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11889,7 +11889,7 @@ func (s *SDK) UpdateCampaign(ctx context.Context, request operations.UpdateCampa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11998,9 +11998,9 @@ func (s *SDK) UpdateCampaign(ctx context.Context, request operations.UpdateCampa
 // UpdateEmailChannel - Enables the email channel for an application or updates the status and settings of the email channel for an application.
 func (s *SDK) UpdateEmailChannel(ctx context.Context, request operations.UpdateEmailChannelRequest) (*operations.UpdateEmailChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12015,7 +12015,7 @@ func (s *SDK) UpdateEmailChannel(ctx context.Context, request operations.UpdateE
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12124,9 +12124,9 @@ func (s *SDK) UpdateEmailChannel(ctx context.Context, request operations.UpdateE
 // UpdateEmailTemplate - Updates an existing message template for messages that are sent through the email channel.
 func (s *SDK) UpdateEmailTemplate(ctx context.Context, request operations.UpdateEmailTemplateRequest) (*operations.UpdateEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12141,9 +12141,9 @@ func (s *SDK) UpdateEmailTemplate(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -12254,9 +12254,9 @@ func (s *SDK) UpdateEmailTemplate(ctx context.Context, request operations.Update
 // UpdateEndpoint - Creates a new endpoint for an application or updates the settings and attributes of an existing endpoint for an application. You can also use this operation to define custom attributes for an endpoint. If an update includes one or more values for a custom attribute, Amazon Pinpoint replaces (overwrites) any existing values with the new values.
 func (s *SDK) UpdateEndpoint(ctx context.Context, request operations.UpdateEndpointRequest) (*operations.UpdateEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints/{endpoint-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12271,7 +12271,7 @@ func (s *SDK) UpdateEndpoint(ctx context.Context, request operations.UpdateEndpo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12380,9 +12380,9 @@ func (s *SDK) UpdateEndpoint(ctx context.Context, request operations.UpdateEndpo
 // UpdateEndpointsBatch - Creates a new batch of endpoints for an application or updates the settings and attributes of a batch of existing endpoints for an application. You can also use this operation to define custom attributes for a batch of endpoints. If an update includes one or more values for a custom attribute, Amazon Pinpoint replaces (overwrites) any existing values with the new values.
 func (s *SDK) UpdateEndpointsBatch(ctx context.Context, request operations.UpdateEndpointsBatchRequest) (*operations.UpdateEndpointsBatchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/endpoints", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12397,7 +12397,7 @@ func (s *SDK) UpdateEndpointsBatch(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12506,9 +12506,9 @@ func (s *SDK) UpdateEndpointsBatch(ctx context.Context, request operations.Updat
 // UpdateGcmChannel - Enables the GCM channel for an application or updates the status and settings of the GCM channel for an application.
 func (s *SDK) UpdateGcmChannel(ctx context.Context, request operations.UpdateGcmChannelRequest) (*operations.UpdateGcmChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/gcm", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/gcm", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12523,7 +12523,7 @@ func (s *SDK) UpdateGcmChannel(ctx context.Context, request operations.UpdateGcm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12632,9 +12632,9 @@ func (s *SDK) UpdateGcmChannel(ctx context.Context, request operations.UpdateGcm
 // UpdateInAppTemplate - Updates an existing message template for messages sent through the in-app message channel.
 func (s *SDK) UpdateInAppTemplate(ctx context.Context, request operations.UpdateInAppTemplateRequest) (*operations.UpdateInAppTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/inapp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12649,9 +12649,9 @@ func (s *SDK) UpdateInAppTemplate(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -12762,9 +12762,9 @@ func (s *SDK) UpdateInAppTemplate(ctx context.Context, request operations.Update
 // UpdateJourney - Updates the configuration and other settings for a journey.
 func (s *SDK) UpdateJourney(ctx context.Context, request operations.UpdateJourneyRequest) (*operations.UpdateJourneyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12779,7 +12779,7 @@ func (s *SDK) UpdateJourney(ctx context.Context, request operations.UpdateJourne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12898,9 +12898,9 @@ func (s *SDK) UpdateJourney(ctx context.Context, request operations.UpdateJourne
 // UpdateJourneyState - Cancels (stops) an active journey.
 func (s *SDK) UpdateJourneyState(ctx context.Context, request operations.UpdateJourneyStateRequest) (*operations.UpdateJourneyStateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/journeys/{journey-id}/state", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12915,7 +12915,7 @@ func (s *SDK) UpdateJourneyState(ctx context.Context, request operations.UpdateJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13024,9 +13024,9 @@ func (s *SDK) UpdateJourneyState(ctx context.Context, request operations.UpdateJ
 // UpdatePushTemplate - Updates an existing message template for messages that are sent through a push notification channel.
 func (s *SDK) UpdatePushTemplate(ctx context.Context, request operations.UpdatePushTemplateRequest) (*operations.UpdatePushTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/push", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13041,9 +13041,9 @@ func (s *SDK) UpdatePushTemplate(ctx context.Context, request operations.UpdateP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13154,9 +13154,9 @@ func (s *SDK) UpdatePushTemplate(ctx context.Context, request operations.UpdateP
 // UpdateRecommenderConfiguration - Updates an Amazon Pinpoint configuration for a recommender model.
 func (s *SDK) UpdateRecommenderConfiguration(ctx context.Context, request operations.UpdateRecommenderConfigurationRequest) (*operations.UpdateRecommenderConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/recommenders/{recommender-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/recommenders/{recommender-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13171,7 +13171,7 @@ func (s *SDK) UpdateRecommenderConfiguration(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13280,9 +13280,9 @@ func (s *SDK) UpdateRecommenderConfiguration(ctx context.Context, request operat
 // UpdateSegment - Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application.
 func (s *SDK) UpdateSegment(ctx context.Context, request operations.UpdateSegmentRequest) (*operations.UpdateSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/segments/{segment-id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13297,7 +13297,7 @@ func (s *SDK) UpdateSegment(ctx context.Context, request operations.UpdateSegmen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13406,9 +13406,9 @@ func (s *SDK) UpdateSegment(ctx context.Context, request operations.UpdateSegmen
 // UpdateSmsChannel - Enables the SMS channel for an application or updates the status and settings of the SMS channel for an application.
 func (s *SDK) UpdateSmsChannel(ctx context.Context, request operations.UpdateSmsChannelRequest) (*operations.UpdateSmsChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/sms", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13423,7 +13423,7 @@ func (s *SDK) UpdateSmsChannel(ctx context.Context, request operations.UpdateSms
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13532,9 +13532,9 @@ func (s *SDK) UpdateSmsChannel(ctx context.Context, request operations.UpdateSms
 // UpdateSmsTemplate - Updates an existing message template for messages that are sent through the SMS channel.
 func (s *SDK) UpdateSmsTemplate(ctx context.Context, request operations.UpdateSmsTemplateRequest) (*operations.UpdateSmsTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/sms", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13549,9 +13549,9 @@ func (s *SDK) UpdateSmsTemplate(ctx context.Context, request operations.UpdateSm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13662,9 +13662,9 @@ func (s *SDK) UpdateSmsTemplate(ctx context.Context, request operations.UpdateSm
 // UpdateTemplateActiveVersion - Changes the status of a specific version of a message template to <i>active</i>.
 func (s *SDK) UpdateTemplateActiveVersion(ctx context.Context, request operations.UpdateTemplateActiveVersionRequest) (*operations.UpdateTemplateActiveVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/{template-type}/active-version", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/{template-type}/active-version", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13679,7 +13679,7 @@ func (s *SDK) UpdateTemplateActiveVersion(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13788,9 +13788,9 @@ func (s *SDK) UpdateTemplateActiveVersion(ctx context.Context, request operation
 // UpdateVoiceChannel - Enables the voice channel for an application or updates the status and settings of the voice channel for an application.
 func (s *SDK) UpdateVoiceChannel(ctx context.Context, request operations.UpdateVoiceChannelRequest) (*operations.UpdateVoiceChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/channels/voice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13805,7 +13805,7 @@ func (s *SDK) UpdateVoiceChannel(ctx context.Context, request operations.UpdateV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13914,9 +13914,9 @@ func (s *SDK) UpdateVoiceChannel(ctx context.Context, request operations.UpdateV
 // UpdateVoiceTemplate - Updates an existing message template for messages that are sent through the voice channel.
 func (s *SDK) UpdateVoiceTemplate(ctx context.Context, request operations.UpdateVoiceTemplateRequest) (*operations.UpdateVoiceTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/templates/{template-name}/voice", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13931,9 +13931,9 @@ func (s *SDK) UpdateVoiceTemplate(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14044,9 +14044,9 @@ func (s *SDK) UpdateVoiceTemplate(ctx context.Context, request operations.Update
 // VerifyOTPMessage - Verify an OTP
 func (s *SDK) VerifyOTPMessage(ctx context.Context, request operations.VerifyOTPMessageRequest) (*operations.VerifyOTPMessageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/verify-otp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apps/{application-id}/verify-otp", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -14061,7 +14061,7 @@ func (s *SDK) VerifyOTPMessage(ctx context.Context, request operations.VerifyOTP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

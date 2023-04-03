@@ -30,20 +30,16 @@ func (e *DeleteProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteProfileHeaders struct {
-	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteProfileXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteProfileRequest struct {
-	Headers DeleteProfileHeaders
-	Request shared.DeleteProfileRequest `request:"mediaType=application/json"`
+	DeleteProfileRequest shared.DeleteProfileRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget           DeleteProfileXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteProfileResponse struct {

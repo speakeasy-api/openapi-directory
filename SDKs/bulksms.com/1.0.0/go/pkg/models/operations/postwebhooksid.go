@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostWebhooksIDPathParams struct {
-	// The `id` of the webhook
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostWebhooksIDRequest struct {
-	PathParams PostWebhooksIDPathParams
 	// Contains the new property values for the webhook
 	//
-	Request shared.WebhookEntry `request:"mediaType=application/json"`
+	WebhookEntry shared.WebhookEntry `request:"mediaType=application/json"`
+	// The `id` of the webhook
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostWebhooksIDResponse struct {

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFieldLevelEncryptionProfile20181105PathParams struct {
+type DeleteFieldLevelEncryptionProfile20181105Request struct {
 	// Request the ID of the profile you want to delete from CloudFront.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteFieldLevelEncryptionProfile20181105Headers struct {
 	// The value of the <code>ETag</code> header that you received when retrieving the profile to delete. For example: <code>E2QWRUHAPOMQZL</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteFieldLevelEncryptionProfile20181105Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFieldLevelEncryptionProfile20181105Request struct {
-	PathParams DeleteFieldLevelEncryptionProfile20181105PathParams
-	Headers    DeleteFieldLevelEncryptionProfile20181105Headers
 }
 
 type DeleteFieldLevelEncryptionProfile20181105Response struct {

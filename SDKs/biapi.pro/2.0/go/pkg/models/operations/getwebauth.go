@@ -17,10 +17,6 @@ type GetWebauthRequestBody struct {
 	State *string `multipartForm:"name=state"`
 }
 
-type GetWebauthRequest struct {
-	Request *GetWebauthRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type GetWebauthResponse struct {
 	ContentType string
 	StatusCode  int

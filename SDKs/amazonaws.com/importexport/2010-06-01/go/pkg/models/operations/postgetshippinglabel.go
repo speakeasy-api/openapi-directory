@@ -71,20 +71,16 @@ func (e *POSTGetShippingLabelVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetShippingLabelQueryParams struct {
+type POSTGetShippingLabelRequest struct {
 	AWSAccessKeyID   string                            `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTGetShippingLabelActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        POSTGetShippingLabelOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody      []byte                            `request:"mediaType=text/xml"`
 	Signature        string                            `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                            `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                            `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                            `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTGetShippingLabelVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetShippingLabelRequest struct {
-	QueryParams POSTGetShippingLabelQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTGetShippingLabelResponse struct {

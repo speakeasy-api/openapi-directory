@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostConfigAemHealthCheckServletQueryParams struct {
+type PostConfigAemHealthCheckServletRequest struct {
 	BundlesIgnored           []string `queryParam:"style=form,explode=true,name=bundles.ignored"`
 	BundlesIgnoredAtTypeHint *string  `queryParam:"style=form,explode=true,name=bundles.ignored@TypeHint"`
-}
-
-type PostConfigAemHealthCheckServletRequest struct {
-	QueryParams PostConfigAemHealthCheckServletQueryParams
 }
 
 type PostConfigAemHealthCheckServletResponse struct {

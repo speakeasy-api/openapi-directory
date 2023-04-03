@@ -50,7 +50,7 @@ func (e *GETCreateDomainVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateDomainQueryParams struct {
+type GETCreateDomainRequest struct {
 	AWSAccessKeyID string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETCreateDomainActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the domain to create. The name can range between 3 and 255 characters and can contain the following characters: a-z, A-Z, 0-9, '_', '-', and '.'.
@@ -60,10 +60,6 @@ type GETCreateDomainQueryParams struct {
 	SignatureVersion string                     `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                     `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETCreateDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateDomainRequest struct {
-	QueryParams GETCreateDomainQueryParams
 }
 
 type GETCreateDomainResponse struct {

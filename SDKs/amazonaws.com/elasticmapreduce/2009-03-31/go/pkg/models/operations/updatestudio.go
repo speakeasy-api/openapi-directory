@@ -30,7 +30,8 @@ func (e *UpdateStudioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateStudioHeaders struct {
+type UpdateStudioRequest struct {
+	UpdateStudioInput shared.UpdateStudioInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type UpdateStudioHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        UpdateStudioXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type UpdateStudioRequest struct {
-	Headers UpdateStudioHeaders
-	Request shared.UpdateStudioInput `request:"mediaType=application/json"`
 }
 
 type UpdateStudioResponse struct {

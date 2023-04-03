@@ -33,7 +33,7 @@ func newCustomerStores(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // CreateStore - Create a new store
-func (s *customerStores) CreateStore(ctx context.Context, request operations.CreateStoreRequest) (*operations.CreateStoreResponse, error) {
+func (s *customerStores) CreateStore(ctx context.Context, request shared.CreateStoreRequest) (*operations.CreateStoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/stores"
 
@@ -111,7 +111,7 @@ func (s *customerStores) CreateStore(ctx context.Context, request operations.Cre
 // DeleteStore - Delete a store
 func (s *customerStores) DeleteStore(ctx context.Context, request operations.DeleteStoreRequest) (*operations.DeleteStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -158,14 +158,14 @@ func (s *customerStores) DeleteStore(ctx context.Context, request operations.Del
 // GetStore - Get store's information
 func (s *customerStores) GetStore(ctx context.Context, request operations.GetStoreRequest) (*operations.GetStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -226,7 +226,7 @@ func (s *customerStores) GetStores(ctx context.Context, request operations.GetSt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -279,9 +279,9 @@ func (s *customerStores) GetStores(ctx context.Context, request operations.GetSt
 // Update some store's information. FYI, you cannot change the country.
 func (s *customerStores) UpdateStore(ctx context.Context, request operations.UpdateStoreRequest) (*operations.UpdateStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateStoreRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

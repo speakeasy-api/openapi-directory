@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type PutEmailIdentityDkimAttributesPathParams struct {
-	// The email identity that you want to change the DKIM settings for.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-}
-
-type PutEmailIdentityDkimAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutEmailIdentityDkimAttributesRequestBody struct {
 	// <p>Sets the DKIM signing configuration for the identity.</p> <p>When you set this value <code>true</code>, then the messages that Amazon Pinpoint sends from the identity are DKIM-signed. When you set this value to <code>false</code>, then the messages that Amazon Pinpoint sends from the identity aren't DKIM-signed.</p>
 	SigningEnabled *bool `json:"SigningEnabled,omitempty"`
 }
 
 type PutEmailIdentityDkimAttributesRequest struct {
-	PathParams PutEmailIdentityDkimAttributesPathParams
-	Headers    PutEmailIdentityDkimAttributesHeaders
-	Request    PutEmailIdentityDkimAttributesRequestBody `request:"mediaType=application/json"`
+	// The email identity that you want to change the DKIM settings for.
+	EmailIdentity     string                                    `pathParam:"style=simple,explode=false,name=EmailIdentity"`
+	RequestBody       PutEmailIdentityDkimAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutEmailIdentityDkimAttributesResponse struct {

@@ -50,29 +50,21 @@ func (e *POSTListAttachedRolePoliciesVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTListAttachedRolePoliciesQueryParams struct {
+type POSTListAttachedRolePoliciesRequest struct {
 	Action POSTListAttachedRolePoliciesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Pagination limit
-	MaxItems *string                                 `queryParam:"style=form,explode=true,name=MaxItems"`
-	Version  POSTListAttachedRolePoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListAttachedRolePoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTListAttachedRolePoliciesRequest struct {
-	QueryParams POSTListAttachedRolePoliciesQueryParams
-	Headers     POSTListAttachedRolePoliciesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	MaxItems          *string                                 `queryParam:"style=form,explode=true,name=MaxItems"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTListAttachedRolePoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListAttachedRolePoliciesResponse struct {

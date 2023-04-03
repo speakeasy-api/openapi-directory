@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutItemsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutItemsRequestBody struct {
 	// The Amazon Resource Name (ARN) of the Items dataset you are adding the item or items to.
 	DatasetArn string `json:"datasetArn"`
@@ -25,8 +15,14 @@ type PutItemsRequestBody struct {
 }
 
 type PutItemsRequest struct {
-	Headers PutItemsHeaders
-	Request PutItemsRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutItemsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutItemsResponse struct {

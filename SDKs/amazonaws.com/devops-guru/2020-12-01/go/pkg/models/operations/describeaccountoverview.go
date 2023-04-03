@@ -8,16 +8,6 @@ import (
 	"time"
 )
 
-type DescribeAccountOverviewHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DescribeAccountOverviewRequestBody struct {
 	//  The start of the time range passed in. The start time granularity is at the day level. The floor of the start time is used. Returned information occurred after this day.
 	FromTime time.Time `json:"FromTime"`
@@ -26,8 +16,14 @@ type DescribeAccountOverviewRequestBody struct {
 }
 
 type DescribeAccountOverviewRequest struct {
-	Headers DescribeAccountOverviewHeaders
-	Request DescribeAccountOverviewRequestBody `request:"mediaType=application/json"`
+	RequestBody       DescribeAccountOverviewRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DescribeAccountOverviewResponse struct {

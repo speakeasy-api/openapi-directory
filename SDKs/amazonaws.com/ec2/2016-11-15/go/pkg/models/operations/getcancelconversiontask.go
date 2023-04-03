@@ -50,30 +50,22 @@ func (e *GETCancelConversionTaskVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCancelConversionTaskQueryParams struct {
+type GETCancelConversionTaskRequest struct {
 	Action GETCancelConversionTaskActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the conversion task.
 	ConversionTaskID string `queryParam:"style=form,explode=true,name=ConversionTaskId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The reason for canceling the conversion task.
-	ReasonMessage *string                            `queryParam:"style=form,explode=true,name=ReasonMessage"`
-	Version       GETCancelConversionTaskVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelConversionTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCancelConversionTaskRequest struct {
-	QueryParams GETCancelConversionTaskQueryParams
-	Headers     GETCancelConversionTaskHeaders
+	ReasonMessage     *string                            `queryParam:"style=form,explode=true,name=ReasonMessage"`
+	Version           GETCancelConversionTaskVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCancelConversionTaskResponse struct {

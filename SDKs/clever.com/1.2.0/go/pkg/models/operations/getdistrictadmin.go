@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDistrictAdminPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetDistrictAdminRequest struct {
-	PathParams GetDistrictAdminPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetDistrictAdminResponse struct {

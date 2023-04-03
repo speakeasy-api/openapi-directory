@@ -9,25 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopStreamingSessionPathParams struct {
-	// The streaming session ID for the <code>StopStreamingSessionRequest</code>.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-	// The studioId for the StopStreamingSessionRequest.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type StopStreamingSessionHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
-	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StopStreamingSessionRequestBodyVolumeRetentionModeEnum - Adds additional instructions to a streaming session stop action to either retain the EBS volumes or delete the EBS volumes.
 type StopStreamingSessionRequestBodyVolumeRetentionModeEnum string
 
@@ -58,9 +39,20 @@ type StopStreamingSessionRequestBody struct {
 }
 
 type StopStreamingSessionRequest struct {
-	PathParams StopStreamingSessionPathParams
-	Headers    StopStreamingSessionHeaders
-	Request    StopStreamingSessionRequestBody `request:"mediaType=application/json"`
+	RequestBody   StopStreamingSessionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
+	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The streaming session ID for the <code>StopStreamingSessionRequest</code>.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	// The studioId for the StopStreamingSessionRequest.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type StopStreamingSessionResponse struct {

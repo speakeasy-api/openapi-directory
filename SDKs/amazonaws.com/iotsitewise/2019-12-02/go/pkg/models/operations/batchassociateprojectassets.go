@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchAssociateProjectAssetsPathParams struct {
-	// The ID of the project to which to associate the assets.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type BatchAssociateProjectAssetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchAssociateProjectAssetsRequestBody struct {
 	// The IDs of the assets to be associated to the project.
 	AssetIds []string `json:"assetIds"`
@@ -30,9 +15,16 @@ type BatchAssociateProjectAssetsRequestBody struct {
 }
 
 type BatchAssociateProjectAssetsRequest struct {
-	PathParams BatchAssociateProjectAssetsPathParams
-	Headers    BatchAssociateProjectAssetsHeaders
-	Request    BatchAssociateProjectAssetsRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchAssociateProjectAssetsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the project to which to associate the assets.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type BatchAssociateProjectAssetsResponse struct {

@@ -9,10 +9,10 @@ import (
 )
 
 type GetTransactionsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
-type GetTransactionsQueryParams struct {
+type GetTransactionsRequest struct {
 	// Unique identifier of the [account holder](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/get/accountHolders/{id}__queryParam_id).
 	AccountHolderID *string `queryParam:"style=form,explode=true,name=accountHolderId"`
 	// Unique identifier of the [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/get/balanceAccounts/{id}__queryParam_id).
@@ -29,11 +29,6 @@ type GetTransactionsQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/balanceplatform/latest/get/paymentInstruments/_id_).
 	PaymentInstrumentID *string `queryParam:"style=form,explode=true,name=paymentInstrumentId"`
-}
-
-type GetTransactionsRequest struct {
-	QueryParams GetTransactionsQueryParams
-	Security    GetTransactionsSecurity
 }
 
 type GetTransactionsResponse struct {

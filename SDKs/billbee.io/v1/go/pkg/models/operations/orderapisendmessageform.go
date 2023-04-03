@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPISendMessageFormPathParams struct {
+type OrderAPISendMessageFormRequest struct {
+	// The message model
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel `request:"mediaType=application/x-www-form-urlencoded"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPISendMessageFormRequest struct {
-	PathParams OrderAPISendMessageFormPathParams
-	// The message model
-	Request shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type OrderAPISendMessageFormResponse struct {

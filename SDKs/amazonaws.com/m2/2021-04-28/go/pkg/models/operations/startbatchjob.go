@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartBatchJobPathParams struct {
-	// The unique identifier of the application associated with this batch job.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type StartBatchJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartBatchJobRequestBodyBatchJobIdentifier - Identifies a specific batch job.
 type StartBatchJobRequestBodyBatchJobIdentifier struct {
 	FileBatchJobIdentifier   *shared.FileBatchJobIdentifier   `json:"fileBatchJobIdentifier,omitempty"`
@@ -36,9 +21,16 @@ type StartBatchJobRequestBody struct {
 }
 
 type StartBatchJobRequest struct {
-	PathParams StartBatchJobPathParams
-	Headers    StartBatchJobHeaders
-	Request    StartBatchJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartBatchJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the application associated with this batch job.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 }
 
 type StartBatchJobResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTemplatesDesignerTemplatesIDGetPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type ListTemplatesDesignerTemplatesIDGetRequest struct {
-	PathParams ListTemplatesDesignerTemplatesIDGetPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ListTemplatesDesignerTemplatesIDGetResponse struct {

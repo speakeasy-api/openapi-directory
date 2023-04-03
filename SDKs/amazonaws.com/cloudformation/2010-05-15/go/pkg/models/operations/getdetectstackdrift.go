@@ -50,28 +50,20 @@ func (e *GETDetectStackDriftVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDetectStackDriftQueryParams struct {
+type GETDetectStackDriftRequest struct {
 	Action GETDetectStackDriftActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The logical names of any resources you want to use as filters.
 	LogicalResourceIds []string `queryParam:"style=form,explode=true,name=LogicalResourceIds"`
 	// The name of the stack for which you want to detect drift.
-	StackName string                         `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETDetectStackDriftVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDetectStackDriftHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDetectStackDriftRequest struct {
-	QueryParams GETDetectStackDriftQueryParams
-	Headers     GETDetectStackDriftHeaders
+	StackName         string                         `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETDetectStackDriftVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDetectStackDriftResponse struct {

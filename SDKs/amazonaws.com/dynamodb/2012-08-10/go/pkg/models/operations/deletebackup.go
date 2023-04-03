@@ -30,7 +30,8 @@ func (e *DeleteBackupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteBackupHeaders struct {
+type DeleteBackupRequest struct {
+	DeleteBackupInput shared.DeleteBackupInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteBackupHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteBackupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteBackupRequest struct {
-	Headers DeleteBackupHeaders
-	Request shared.DeleteBackupInput `request:"mediaType=application/json"`
 }
 
 type DeleteBackupResponse struct {

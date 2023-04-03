@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccountSettingsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListAccountSettingsXAmzTargetEnum
 type ListAccountSettingsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListAccountSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAccountSettingsHeaders struct {
-	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListAccountSettingsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListAccountSettingsRequest struct {
-	QueryParams ListAccountSettingsQueryParams
-	Headers     ListAccountSettingsHeaders
-	Request     shared.ListAccountSettingsRequest `request:"mediaType=application/json"`
+	ListAccountSettingsRequest shared.ListAccountSettingsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 ListAccountSettingsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAccountSettingsResponse struct {

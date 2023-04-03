@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETDeleteQueuePathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETDeleteQueueActionEnum
 type GETDeleteQueueActionEnum string
 
@@ -57,25 +50,20 @@ func (e *GETDeleteQueueVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteQueueQueryParams struct {
-	Action  GETDeleteQueueActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version GETDeleteQueueVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteQueueHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETDeleteQueueRequest struct {
-	PathParams  GETDeleteQueuePathParams
-	QueryParams GETDeleteQueueQueryParams
-	Headers     GETDeleteQueueHeaders
+	// The AWS account number
+	AccountNumber int64                    `pathParam:"style=simple,explode=false,name=AccountNumber"`
+	Action        GETDeleteQueueActionEnum `queryParam:"style=form,explode=true,name=Action"`
+	// The name of the queue
+	QueueName         string                    `pathParam:"style=simple,explode=false,name=QueueName"`
+	Version           GETDeleteQueueVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteQueueResponse struct {

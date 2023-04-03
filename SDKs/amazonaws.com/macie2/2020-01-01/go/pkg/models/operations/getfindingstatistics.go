@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFindingStatisticsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // GetFindingStatisticsRequestBodyFindingCriteria - Specifies, as a map, one or more property-based conditions that filter the results of a query for findings.
 type GetFindingStatisticsRequestBodyFindingCriteria struct {
 	Criterion map[string]shared.CriterionAdditionalProperties `json:"criterion,omitempty"`
@@ -72,8 +62,14 @@ type GetFindingStatisticsRequestBody struct {
 }
 
 type GetFindingStatisticsRequest struct {
-	Headers GetFindingStatisticsHeaders
-	Request GetFindingStatisticsRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetFindingStatisticsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetFindingStatisticsResponse struct {

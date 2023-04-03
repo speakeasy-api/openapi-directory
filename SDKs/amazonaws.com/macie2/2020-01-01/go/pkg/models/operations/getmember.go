@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMemberPathParams struct {
-	// The unique identifier for the Amazon Macie resource that the request applies to.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetMemberHeaders struct {
+type GetMemberRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetMemberHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMemberRequest struct {
-	PathParams GetMemberPathParams
-	Headers    GetMemberHeaders
+	// The unique identifier for the Amazon Macie resource that the request applies to.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetMemberResponse struct {

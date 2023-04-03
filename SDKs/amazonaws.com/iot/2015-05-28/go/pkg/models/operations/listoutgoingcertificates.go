@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOutgoingCertificatesQueryParams struct {
-	// Specifies the order for results. If True, the results are returned in ascending order, based on the creation date.
-	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
-	// The marker for the next set of results.
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-	// The result page size.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListOutgoingCertificatesHeaders struct {
+type ListOutgoingCertificatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListOutgoingCertificatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListOutgoingCertificatesRequest struct {
-	QueryParams ListOutgoingCertificatesQueryParams
-	Headers     ListOutgoingCertificatesHeaders
+	// Specifies the order for results. If True, the results are returned in ascending order, based on the creation date.
+	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
+	// The marker for the next set of results.
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
+	// The result page size.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type ListOutgoingCertificatesResponse struct {

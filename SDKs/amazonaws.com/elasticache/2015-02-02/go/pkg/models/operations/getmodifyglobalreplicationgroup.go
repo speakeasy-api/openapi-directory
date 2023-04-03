@@ -50,7 +50,7 @@ func (e *GETModifyGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETModifyGlobalReplicationGroupQueryParams struct {
+type GETModifyGlobalReplicationGroupRequest struct {
 	Action GETModifyGlobalReplicationGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// This parameter causes the modifications in this request and any pending modifications to be applied, asynchronously and as soon as possible. Modifications to Global Replication Groups cannot be requested to be applied in PreferredMaintenceWindow.
 	ApplyImmediately bool `queryParam:"style=form,explode=true,name=ApplyImmediately"`
@@ -67,21 +67,13 @@ type GETModifyGlobalReplicationGroupQueryParams struct {
 	// The name of the Global datastore
 	GlobalReplicationGroupID string                                     `queryParam:"style=form,explode=true,name=GlobalReplicationGroupId"`
 	Version                  GETModifyGlobalReplicationGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyGlobalReplicationGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyGlobalReplicationGroupRequest struct {
-	QueryParams GETModifyGlobalReplicationGroupQueryParams
-	Headers     GETModifyGlobalReplicationGroupHeaders
+	XAmzAlgorithm            *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyGlobalReplicationGroupResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBatchJobExecutionPathParams struct {
-	// The identifier of the application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-	// The unique identifier of the batch job execution.
-	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
-}
-
-type GetBatchJobExecutionHeaders struct {
+type GetBatchJobExecutionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetBatchJobExecutionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetBatchJobExecutionRequest struct {
-	PathParams GetBatchJobExecutionPathParams
-	Headers    GetBatchJobExecutionHeaders
+	// The identifier of the application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The unique identifier of the batch job execution.
+	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 }
 
 type GetBatchJobExecutionResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTApplyPendingMaintenanceActionVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTApplyPendingMaintenanceActionQueryParams struct {
-	Action  POSTApplyPendingMaintenanceActionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTApplyPendingMaintenanceActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTApplyPendingMaintenanceActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTApplyPendingMaintenanceActionRequest struct {
-	QueryParams POSTApplyPendingMaintenanceActionQueryParams
-	Headers     POSTApplyPendingMaintenanceActionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTApplyPendingMaintenanceActionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTApplyPendingMaintenanceActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTApplyPendingMaintenanceActionResponse struct {

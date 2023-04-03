@@ -34,16 +34,16 @@ func newDistribute(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AppleMappingTestFlightGroups - Fetch all apple test flight groups
-func (s *distribute) AppleMappingTestFlightGroups(ctx context.Context, request operations.AppleMappingTestFlightGroupsRequest) (*operations.AppleMappingTestFlightGroupsResponse, error) {
+func (s *distribute) AppleMappingTestFlightGroups(ctx context.Context, request operations.AppleMappingTestFlightGroupsRequest, security operations.AppleMappingTestFlightGroupsSecurity) (*operations.AppleMappingTestFlightGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *distribute) AppleMappingTestFlightGroups(ctx context.Context, request o
 }
 
 // AppleMappingCreate - Create a mapping for an existing app in apple store for the specified application.
-func (s *distribute) AppleMappingCreate(ctx context.Context, request operations.AppleMappingCreateRequest) (*operations.AppleMappingCreateResponse, error) {
+func (s *distribute) AppleMappingCreate(ctx context.Context, request operations.AppleMappingCreateRequest, security operations.AppleMappingCreateSecurity) (*operations.AppleMappingCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,7 +107,7 @@ func (s *distribute) AppleMappingCreate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,11 +152,11 @@ func (s *distribute) AppleMappingCreate(ctx context.Context, request operations.
 }
 
 // AppleMappingDelete - Delete mapping of apple app to an existing app in apple store.
-func (s *distribute) AppleMappingDelete(ctx context.Context, request operations.AppleMappingDeleteRequest) (*operations.AppleMappingDeleteResponse, error) {
+func (s *distribute) AppleMappingDelete(ctx context.Context, request operations.AppleMappingDeleteRequest, security operations.AppleMappingDeleteSecurity) (*operations.AppleMappingDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +168,7 @@ func (s *distribute) AppleMappingDelete(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -204,16 +204,16 @@ func (s *distribute) AppleMappingDelete(ctx context.Context, request operations.
 }
 
 // AppleMappingGet - Get mapping of apple app to an existing app in apple store.
-func (s *distribute) AppleMappingGet(ctx context.Context, request operations.AppleMappingGetRequest) (*operations.AppleMappingGetResponse, error) {
+func (s *distribute) AppleMappingGet(ctx context.Context, request operations.AppleMappingGetRequest, security operations.AppleMappingGetSecurity) (*operations.AppleMappingGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,16 +258,16 @@ func (s *distribute) AppleMappingGet(ctx context.Context, request operations.App
 }
 
 // DevicesDeviceDetails - Returns the device details.
-func (s *distribute) DevicesDeviceDetails(ctx context.Context, request operations.DevicesDeviceDetailsRequest) (*operations.DevicesDeviceDetailsResponse, error) {
+func (s *distribute) DevicesDeviceDetails(ctx context.Context, request operations.DevicesDeviceDetailsRequest, security operations.DevicesDeviceDetailsSecurity) (*operations.DevicesDeviceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -332,20 +332,20 @@ func (s *distribute) DevicesDeviceDetails(ctx context.Context, request operation
 }
 
 // DevicesGetReleaseUpdateDevicesStatus - Returns the resign status to the caller
-func (s *distribute) DevicesGetReleaseUpdateDevicesStatus(ctx context.Context, request operations.DevicesGetReleaseUpdateDevicesStatusRequest) (*operations.DevicesGetReleaseUpdateDevicesStatusResponse, error) {
+func (s *distribute) DevicesGetReleaseUpdateDevicesStatus(ctx context.Context, request operations.DevicesGetReleaseUpdateDevicesStatusRequest, security operations.DevicesGetReleaseUpdateDevicesStatusSecurity) (*operations.DevicesGetReleaseUpdateDevicesStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/update_devices/{resign_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/update_devices/{resign_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -400,20 +400,20 @@ func (s *distribute) DevicesGetReleaseUpdateDevicesStatus(ctx context.Context, r
 }
 
 // DevicesList - Returns all devices associated with the given distribution group
-func (s *distribute) DevicesList(ctx context.Context, request operations.DevicesListRequest) (*operations.DevicesListResponse, error) {
+func (s *distribute) DevicesList(ctx context.Context, request operations.DevicesListRequest, security operations.DevicesListSecurity) (*operations.DevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -468,20 +468,20 @@ func (s *distribute) DevicesList(ctx context.Context, request operations.Devices
 }
 
 // DevicesListCsvFormat - Returns all devices associated with the given distribution group.
-func (s *distribute) DevicesListCsvFormat(ctx context.Context, request operations.DevicesListCsvFormatRequest) (*operations.DevicesListCsvFormatResponse, error) {
+func (s *distribute) DevicesListCsvFormat(ctx context.Context, request operations.DevicesListCsvFormatRequest, security operations.DevicesListCsvFormatSecurity) (*operations.DevicesListCsvFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices/download_devices_list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices/download_devices_list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -521,11 +521,11 @@ func (s *distribute) DevicesListCsvFormat(ctx context.Context, request operation
 }
 
 // DevicesRegisterUserForDevice - Registers a user for an existing device
-func (s *distribute) DevicesRegisterUserForDevice(ctx context.Context, request operations.DevicesRegisterUserForDeviceRequest) (*operations.DevicesRegisterUserForDeviceResponse, error) {
+func (s *distribute) DevicesRegisterUserForDevice(ctx context.Context, request operations.DevicesRegisterUserForDeviceRequest, security operations.DevicesRegisterUserForDeviceSecurity) (*operations.DevicesRegisterUserForDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/users/{user_id}/devices/register", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/users/{user_id}/devices/register", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -540,7 +540,7 @@ func (s *distribute) DevicesRegisterUserForDevice(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -585,16 +585,16 @@ func (s *distribute) DevicesRegisterUserForDevice(ctx context.Context, request o
 }
 
 // DevicesRemoveUserDevice - Removes an existing device from a user
-func (s *distribute) DevicesRemoveUserDevice(ctx context.Context, request operations.DevicesRemoveUserDeviceRequest) (*operations.DevicesRemoveUserDeviceResponse, error) {
+func (s *distribute) DevicesRemoveUserDevice(ctx context.Context, request operations.DevicesRemoveUserDeviceRequest, security operations.DevicesRemoveUserDeviceSecurity) (*operations.DevicesRemoveUserDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -640,7 +640,7 @@ func (s *distribute) DevicesRemoveUserDevice(ctx context.Context, request operat
 }
 
 // DevicesUserDevicesList - Returns all devices associated with the given user.
-func (s *distribute) DevicesUserDevicesList(ctx context.Context, request operations.DevicesUserDevicesListRequest) (*operations.DevicesUserDevicesListResponse, error) {
+func (s *distribute) DevicesUserDevicesList(ctx context.Context) (*operations.DevicesUserDevicesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/devices"
 
@@ -649,7 +649,7 @@ func (s *distribute) DevicesUserDevicesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -706,9 +706,9 @@ func (s *distribute) DevicesUserDevicesList(ctx context.Context, request operati
 // DistibutionReleasesInstallAnalytics - Notify download(s) for the provided distribution release(s).
 func (s *distribute) DistibutionReleasesInstallAnalytics(ctx context.Context, request operations.DistibutionReleasesInstallAnalyticsRequest) (*operations.DistibutionReleasesInstallAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{owner_name}/{app_name}/install_analytics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{owner_name}/{app_name}/install_analytics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -749,16 +749,16 @@ func (s *distribute) DistibutionReleasesInstallAnalytics(ctx context.Context, re
 }
 
 // ProvisioningProfile - Return information about the provisioning profile. Only available for iOS.
-func (s *distribute) ProvisioningProfile(ctx context.Context, request operations.ProvisioningProfileRequest) (*operations.ProvisioningProfileResponse, error) {
+func (s *distribute) ProvisioningProfile(ctx context.Context, request operations.ProvisioningProfileRequest, security operations.ProvisioningProfileSecurity) (*operations.ProvisioningProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/provisioning_profile", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/provisioning_profile", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -803,11 +803,11 @@ func (s *distribute) ProvisioningProfile(ctx context.Context, request operations
 }
 
 // ReleasesAddDistributionGroup - Distributes a release to a group
-func (s *distribute) ReleasesAddDistributionGroup(ctx context.Context, request operations.ReleasesAddDistributionGroupRequest) (*operations.ReleasesAddDistributionGroupResponse, error) {
+func (s *distribute) ReleasesAddDistributionGroup(ctx context.Context, request operations.ReleasesAddDistributionGroupRequest, security operations.ReleasesAddDistributionGroupSecurity) (*operations.ReleasesAddDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -822,7 +822,7 @@ func (s *distribute) ReleasesAddDistributionGroup(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,11 +877,11 @@ func (s *distribute) ReleasesAddDistributionGroup(ctx context.Context, request o
 }
 
 // ReleasesAddStore - Distributes a release to a store
-func (s *distribute) ReleasesAddStore(ctx context.Context, request operations.ReleasesAddStoreRequest) (*operations.ReleasesAddStoreResponse, error) {
+func (s *distribute) ReleasesAddStore(ctx context.Context, request operations.ReleasesAddStoreRequest, security operations.ReleasesAddStoreSecurity) (*operations.ReleasesAddStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -896,7 +896,7 @@ func (s *distribute) ReleasesAddStore(ctx context.Context, request operations.Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -951,11 +951,11 @@ func (s *distribute) ReleasesAddStore(ctx context.Context, request operations.Re
 }
 
 // ReleasesAddTesters - Distributes a release to a user
-func (s *distribute) ReleasesAddTesters(ctx context.Context, request operations.ReleasesAddTestersRequest) (*operations.ReleasesAddTestersResponse, error) {
+func (s *distribute) ReleasesAddTesters(ctx context.Context, request operations.ReleasesAddTestersRequest, security operations.ReleasesAddTestersSecurity) (*operations.ReleasesAddTestersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -970,7 +970,7 @@ func (s *distribute) ReleasesAddTesters(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1025,20 +1025,20 @@ func (s *distribute) ReleasesAddTesters(ctx context.Context, request operations.
 }
 
 // ReleasesAvailableToTester - Return detailed information about releases avaiable to a tester.
-func (s *distribute) ReleasesAvailableToTester(ctx context.Context, request operations.ReleasesAvailableToTesterRequest) (*operations.ReleasesAvailableToTesterResponse, error) {
+func (s *distribute) ReleasesAvailableToTester(ctx context.Context, request operations.ReleasesAvailableToTesterRequest, security operations.ReleasesAvailableToTesterSecurity) (*operations.ReleasesAvailableToTesterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1073,11 +1073,11 @@ func (s *distribute) ReleasesAvailableToTester(ctx context.Context, request oper
 }
 
 // ReleasesCreateReleaseUpload - Initiate a new release upload. This API is part of multi-step upload process.
-func (s *distribute) ReleasesCreateReleaseUpload(ctx context.Context, request operations.ReleasesCreateReleaseUploadRequest) (*operations.ReleasesCreateReleaseUploadResponse, error) {
+func (s *distribute) ReleasesCreateReleaseUpload(ctx context.Context, request operations.ReleasesCreateReleaseUploadRequest, security operations.ReleasesCreateReleaseUploadSecurity) (*operations.ReleasesCreateReleaseUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1089,7 +1089,7 @@ func (s *distribute) ReleasesCreateReleaseUpload(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1144,16 +1144,16 @@ func (s *distribute) ReleasesCreateReleaseUpload(ctx context.Context, request op
 }
 
 // ReleasesDelete - Deletes a release.
-func (s *distribute) ReleasesDelete(ctx context.Context, request operations.ReleasesDeleteRequest) (*operations.ReleasesDeleteResponse, error) {
+func (s *distribute) ReleasesDelete(ctx context.Context, request operations.ReleasesDeleteRequest, security operations.ReleasesDeleteSecurity) (*operations.ReleasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1199,16 +1199,16 @@ func (s *distribute) ReleasesDelete(ctx context.Context, request operations.Rele
 }
 
 // ReleasesDeleteDistributionGroup - Delete the given distribution group from the release
-func (s *distribute) ReleasesDeleteDistributionGroup(ctx context.Context, request operations.ReleasesDeleteDistributionGroupRequest) (*operations.ReleasesDeleteDistributionGroupResponse, error) {
+func (s *distribute) ReleasesDeleteDistributionGroup(ctx context.Context, request operations.ReleasesDeleteDistributionGroupRequest, security operations.ReleasesDeleteDistributionGroupSecurity) (*operations.ReleasesDeleteDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1244,16 +1244,16 @@ func (s *distribute) ReleasesDeleteDistributionGroup(ctx context.Context, reques
 }
 
 // ReleasesDeleteDistributionStore - Delete the given distribution store from the release
-func (s *distribute) ReleasesDeleteDistributionStore(ctx context.Context, request operations.ReleasesDeleteDistributionStoreRequest) (*operations.ReleasesDeleteDistributionStoreResponse, error) {
+func (s *distribute) ReleasesDeleteDistributionStore(ctx context.Context, request operations.ReleasesDeleteDistributionStoreRequest, security operations.ReleasesDeleteDistributionStoreSecurity) (*operations.ReleasesDeleteDistributionStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores/{store_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores/{store_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1289,16 +1289,16 @@ func (s *distribute) ReleasesDeleteDistributionStore(ctx context.Context, reques
 }
 
 // ReleasesDeleteDistributionTester - Delete the given tester from the release
-func (s *distribute) ReleasesDeleteDistributionTester(ctx context.Context, request operations.ReleasesDeleteDistributionTesterRequest) (*operations.ReleasesDeleteDistributionTesterResponse, error) {
+func (s *distribute) ReleasesDeleteDistributionTester(ctx context.Context, request operations.ReleasesDeleteDistributionTesterRequest, security operations.ReleasesDeleteDistributionTesterSecurity) (*operations.ReleasesDeleteDistributionTesterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1334,16 +1334,16 @@ func (s *distribute) ReleasesDeleteDistributionTester(ctx context.Context, reque
 }
 
 // ReleasesDeleteTesterFromDestinations - Delete the given tester from the all releases
-func (s *distribute) ReleasesDeleteTesterFromDestinations(ctx context.Context, request operations.ReleasesDeleteTesterFromDestinationsRequest) (*operations.ReleasesDeleteTesterFromDestinationsResponse, error) {
+func (s *distribute) ReleasesDeleteTesterFromDestinations(ctx context.Context, request operations.ReleasesDeleteTesterFromDestinationsRequest, security operations.ReleasesDeleteTesterFromDestinationsSecurity) (*operations.ReleasesDeleteTesterFromDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers/{tester_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers/{tester_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1379,16 +1379,16 @@ func (s *distribute) ReleasesDeleteTesterFromDestinations(ctx context.Context, r
 }
 
 // ReleasesDeleteWithDistributionGroupID - Deletes a release with id 'release_id' in a given distribution group.
-func (s *distribute) ReleasesDeleteWithDistributionGroupID(ctx context.Context, request operations.ReleasesDeleteWithDistributionGroupIDRequest) (*operations.ReleasesDeleteWithDistributionGroupIDResponse, error) {
+func (s *distribute) ReleasesDeleteWithDistributionGroupID(ctx context.Context, request operations.ReleasesDeleteWithDistributionGroupIDRequest, security operations.ReleasesDeleteWithDistributionGroupIDSecurity) (*operations.ReleasesDeleteWithDistributionGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1418,14 +1418,14 @@ func (s *distribute) ReleasesDeleteWithDistributionGroupID(ctx context.Context, 
 // ReleasesGetIosManifest - Returns the manifest.plist in XML format for installing the release on a device. Only available for iOS.
 func (s *distribute) ReleasesGetIosManifest(ctx context.Context, request operations.ReleasesGetIosManifestRequest) (*operations.ReleasesGetIosManifestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{app_id}/releases/{release_id}/ios_manifest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{app_id}/releases/{release_id}/ios_manifest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1485,20 +1485,20 @@ func (s *distribute) ReleasesGetIosManifest(ctx context.Context, request operati
 }
 
 // ReleasesGetLatestByDistributionGroup - Return detailed information about a distributed release in a given distribution group.
-func (s *distribute) ReleasesGetLatestByDistributionGroup(ctx context.Context, request operations.ReleasesGetLatestByDistributionGroupRequest) (*operations.ReleasesGetLatestByDistributionGroupResponse, error) {
+func (s *distribute) ReleasesGetLatestByDistributionGroup(ctx context.Context, request operations.ReleasesGetLatestByDistributionGroupRequest, security operations.ReleasesGetLatestByDistributionGroupSecurity) (*operations.ReleasesGetLatestByDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1553,20 +1553,20 @@ func (s *distribute) ReleasesGetLatestByDistributionGroup(ctx context.Context, r
 }
 
 // ReleasesGetLatestByHash - If 'latest' is not specified then it will return the specified release if it's enabled. If 'latest' is specified, regardless of whether a release hash is provided, the latest enabled release is returned.
-func (s *distribute) ReleasesGetLatestByHash(ctx context.Context, request operations.ReleasesGetLatestByHashRequest) (*operations.ReleasesGetLatestByHashResponse, error) {
+func (s *distribute) ReleasesGetLatestByHash(ctx context.Context, request operations.ReleasesGetLatestByHashRequest, security operations.ReleasesGetLatestByHashSecurity) (*operations.ReleasesGetLatestByHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/{release_hash}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/{release_hash}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1613,14 +1613,14 @@ func (s *distribute) ReleasesGetLatestByHash(ctx context.Context, request operat
 // ReleasesGetLatestByPublicDistributionGroup - Get a release with 'latest' for the given public group.
 func (s *distribute) ReleasesGetLatestByPublicDistributionGroup(ctx context.Context, request operations.ReleasesGetLatestByPublicDistributionGroupRequest) (*operations.ReleasesGetLatestByPublicDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/distribution_groups/{distribution_group_id}/releases/latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/distribution_groups/{distribution_group_id}/releases/latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1679,20 +1679,20 @@ func (s *distribute) ReleasesGetLatestByPublicDistributionGroup(ctx context.Cont
 }
 
 // ReleasesGetLatestByUser - Get a release with id `release_id`. If `release_id` is `latest`, return the latest release that was distributed to the current user (from all the distribution groups).
-func (s *distribute) ReleasesGetLatestByUser(ctx context.Context, request operations.ReleasesGetLatestByUserRequest) (*operations.ReleasesGetLatestByUserResponse, error) {
+func (s *distribute) ReleasesGetLatestByUser(ctx context.Context, request operations.ReleasesGetLatestByUserRequest, security operations.ReleasesGetLatestByUserSecurity) (*operations.ReleasesGetLatestByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1747,20 +1747,20 @@ func (s *distribute) ReleasesGetLatestByUser(ctx context.Context, request operat
 }
 
 // ReleasesGetLatestPrivateRelease - Get the latest release distributed to a private group the given user is a member of for the given app.
-func (s *distribute) ReleasesGetLatestPrivateRelease(ctx context.Context, request operations.ReleasesGetLatestPrivateReleaseRequest) (*operations.ReleasesGetLatestPrivateReleaseResponse, error) {
+func (s *distribute) ReleasesGetLatestPrivateRelease(ctx context.Context, request operations.ReleasesGetLatestPrivateReleaseRequest, security operations.ReleasesGetLatestPrivateReleaseSecurity) (*operations.ReleasesGetLatestPrivateReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/private/latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/private/latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1807,7 +1807,7 @@ func (s *distribute) ReleasesGetLatestPrivateRelease(ctx context.Context, reques
 // ReleasesGetLatestPublicRelease - Get the latest public release for the given app.
 func (s *distribute) ReleasesGetLatestPublicRelease(ctx context.Context, request operations.ReleasesGetLatestPublicReleaseRequest) (*operations.ReleasesGetLatestPublicReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1861,7 +1861,7 @@ func (s *distribute) ReleasesGetLatestPublicRelease(ctx context.Context, request
 // ReleasesGetPublicGroupsForReleaseByHash - Get all public distribution groups that a given release has been distributed to
 func (s *distribute) ReleasesGetPublicGroupsForReleaseByHash(ctx context.Context, request operations.ReleasesGetPublicGroupsForReleaseByHashRequest) (*operations.ReleasesGetPublicGroupsForReleaseByHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/{release_hash}/public_distribution_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/{release_hash}/public_distribution_groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1913,16 +1913,16 @@ func (s *distribute) ReleasesGetPublicGroupsForReleaseByHash(ctx context.Context
 }
 
 // ReleasesGetReleaseUploadStatus - Get the current status of the release upload.
-func (s *distribute) ReleasesGetReleaseUploadStatus(ctx context.Context, request operations.ReleasesGetReleaseUploadStatusRequest) (*operations.ReleasesGetReleaseUploadStatusResponse, error) {
+func (s *distribute) ReleasesGetReleaseUploadStatus(ctx context.Context, request operations.ReleasesGetReleaseUploadStatusRequest, security operations.ReleasesGetReleaseUploadStatusSecurity) (*operations.ReleasesGetReleaseUploadStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1979,7 +1979,7 @@ func (s *distribute) ReleasesGetReleaseUploadStatus(ctx context.Context, request
 // ReleasesGetSparkleFeed - Gets the sparkle feed of the releases that are distributed to all the public distribution groups.
 func (s *distribute) ReleasesGetSparkleFeed(ctx context.Context, request operations.ReleasesGetSparkleFeedRequest) (*operations.ReleasesGetSparkleFeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sparkle/apps/{app_secret}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sparkle/apps/{app_secret}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2022,20 +2022,20 @@ func (s *distribute) ReleasesGetSparkleFeed(ctx context.Context, request operati
 }
 
 // ReleasesList - Return basic information about releases.
-func (s *distribute) ReleasesList(ctx context.Context, request operations.ReleasesListRequest) (*operations.ReleasesListResponse, error) {
+func (s *distribute) ReleasesList(ctx context.Context, request operations.ReleasesListRequest, security operations.ReleasesListSecurity) (*operations.ReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2070,16 +2070,16 @@ func (s *distribute) ReleasesList(ctx context.Context, request operations.Releas
 }
 
 // ReleasesListByDistributionGroup - Return basic information about distributed releases in a given distribution group.
-func (s *distribute) ReleasesListByDistributionGroup(ctx context.Context, request operations.ReleasesListByDistributionGroupRequest) (*operations.ReleasesListByDistributionGroupResponse, error) {
+func (s *distribute) ReleasesListByDistributionGroup(ctx context.Context, request operations.ReleasesListByDistributionGroupRequest, security operations.ReleasesListByDistributionGroupSecurity) (*operations.ReleasesListByDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2124,16 +2124,16 @@ func (s *distribute) ReleasesListByDistributionGroup(ctx context.Context, reques
 }
 
 // ReleasesListLatest - Get the latest release from every distribution group associated with an application.
-func (s *distribute) ReleasesListLatest(ctx context.Context, request operations.ReleasesListLatestRequest) (*operations.ReleasesListLatestResponse, error) {
+func (s *distribute) ReleasesListLatest(ctx context.Context, request operations.ReleasesListLatestRequest, security operations.ReleasesListLatestSecurity) (*operations.ReleasesListLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/recent_releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/recent_releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2168,11 +2168,11 @@ func (s *distribute) ReleasesListLatest(ctx context.Context, request operations.
 }
 
 // ReleasesPutDistributionGroup - Update details about the specified distribution group associated with the release
-func (s *distribute) ReleasesPutDistributionGroup(ctx context.Context, request operations.ReleasesPutDistributionGroupRequest) (*operations.ReleasesPutDistributionGroupResponse, error) {
+func (s *distribute) ReleasesPutDistributionGroup(ctx context.Context, request operations.ReleasesPutDistributionGroupRequest, security operations.ReleasesPutDistributionGroupSecurity) (*operations.ReleasesPutDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2184,7 +2184,7 @@ func (s *distribute) ReleasesPutDistributionGroup(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2220,11 +2220,11 @@ func (s *distribute) ReleasesPutDistributionGroup(ctx context.Context, request o
 }
 
 // ReleasesPutDistributionTester - Update details about the specified tester associated with the release
-func (s *distribute) ReleasesPutDistributionTester(ctx context.Context, request operations.ReleasesPutDistributionTesterRequest) (*operations.ReleasesPutDistributionTesterResponse, error) {
+func (s *distribute) ReleasesPutDistributionTester(ctx context.Context, request operations.ReleasesPutDistributionTesterRequest, security operations.ReleasesPutDistributionTesterSecurity) (*operations.ReleasesPutDistributionTesterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2236,7 +2236,7 @@ func (s *distribute) ReleasesPutDistributionTester(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2272,11 +2272,11 @@ func (s *distribute) ReleasesPutDistributionTester(ctx context.Context, request 
 }
 
 // ReleasesUpdate - Updates a release.
-func (s *distribute) ReleasesUpdate(ctx context.Context, request operations.ReleasesUpdateRequest) (*operations.ReleasesUpdateResponse, error) {
+func (s *distribute) ReleasesUpdate(ctx context.Context, request operations.ReleasesUpdateRequest, security operations.ReleasesUpdateSecurity) (*operations.ReleasesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2291,7 +2291,7 @@ func (s *distribute) ReleasesUpdate(ctx context.Context, request operations.Rele
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2346,11 +2346,11 @@ func (s *distribute) ReleasesUpdate(ctx context.Context, request operations.Rele
 }
 
 // ReleasesUpdateDetails - Update details of a release.
-func (s *distribute) ReleasesUpdateDetails(ctx context.Context, request operations.ReleasesUpdateDetailsRequest) (*operations.ReleasesUpdateDetailsResponse, error) {
+func (s *distribute) ReleasesUpdateDetails(ctx context.Context, request operations.ReleasesUpdateDetailsRequest, security operations.ReleasesUpdateDetailsSecurity) (*operations.ReleasesUpdateDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2365,7 +2365,7 @@ func (s *distribute) ReleasesUpdateDetails(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2420,11 +2420,11 @@ func (s *distribute) ReleasesUpdateDetails(ctx context.Context, request operatio
 }
 
 // ReleasesUpdateReleaseUploadStatus - Update the current status of the release upload.
-func (s *distribute) ReleasesUpdateReleaseUploadStatus(ctx context.Context, request operations.ReleasesUpdateReleaseUploadStatusRequest) (*operations.ReleasesUpdateReleaseUploadStatusResponse, error) {
+func (s *distribute) ReleasesUpdateReleaseUploadStatus(ctx context.Context, request operations.ReleasesUpdateReleaseUploadStatusRequest, security operations.ReleasesUpdateReleaseUploadStatusSecurity) (*operations.ReleasesUpdateReleaseUploadStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2439,11 +2439,11 @@ func (s *distribute) ReleasesUpdateReleaseUploadStatus(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2498,16 +2498,16 @@ func (s *distribute) ReleasesUpdateReleaseUploadStatus(ctx context.Context, requ
 }
 
 // StoreNotificationsGetNotificationByAppID - Application specific store service status
-func (s *distribute) StoreNotificationsGetNotificationByAppID(ctx context.Context, request operations.StoreNotificationsGetNotificationByAppIDRequest) (*operations.StoreNotificationsGetNotificationByAppIDResponse, error) {
+func (s *distribute) StoreNotificationsGetNotificationByAppID(ctx context.Context, request operations.StoreNotificationsGetNotificationByAppIDRequest, security operations.StoreNotificationsGetNotificationByAppIDSecurity) (*operations.StoreNotificationsGetNotificationByAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/store_service_status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/store_service_status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2552,16 +2552,16 @@ func (s *distribute) StoreNotificationsGetNotificationByAppID(ctx context.Contex
 }
 
 // StoreReleasePublishLogsGet - Returns publish logs for a particular release published to a particular store
-func (s *distribute) StoreReleasePublishLogsGet(ctx context.Context, request operations.StoreReleasePublishLogsGetRequest) (*operations.StoreReleasePublishLogsGetResponse, error) {
+func (s *distribute) StoreReleasePublishLogsGet(ctx context.Context, request operations.StoreReleasePublishLogsGetRequest, security operations.StoreReleasePublishLogsGetSecurity) (*operations.StoreReleasePublishLogsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2597,11 +2597,11 @@ func (s *distribute) StoreReleasePublishLogsGet(ctx context.Context, request ope
 }
 
 // StoreReleasesDelete - delete the release with release Id
-func (s *distribute) StoreReleasesDelete(ctx context.Context, request operations.StoreReleasesDeleteRequest) (*operations.StoreReleasesDeleteResponse, error) {
+func (s *distribute) StoreReleasesDelete(ctx context.Context, request operations.StoreReleasesDeleteRequest, security operations.StoreReleasesDeleteSecurity) (*operations.StoreReleasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2613,7 +2613,7 @@ func (s *distribute) StoreReleasesDelete(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2649,16 +2649,16 @@ func (s *distribute) StoreReleasesDelete(ctx context.Context, request operations
 }
 
 // StoreReleasesGet - Return releases published in a store for releaseId and storeId
-func (s *distribute) StoreReleasesGet(ctx context.Context, request operations.StoreReleasesGetRequest) (*operations.StoreReleasesGetResponse, error) {
+func (s *distribute) StoreReleasesGet(ctx context.Context, request operations.StoreReleasesGetRequest, security operations.StoreReleasesGetSecurity) (*operations.StoreReleasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2703,16 +2703,16 @@ func (s *distribute) StoreReleasesGet(ctx context.Context, request operations.St
 }
 
 // StoreReleasesGetLatest - Returns the latest release published in a store.
-func (s *distribute) StoreReleasesGetLatest(ctx context.Context, request operations.StoreReleasesGetLatestRequest) (*operations.StoreReleasesGetLatestResponse, error) {
+func (s *distribute) StoreReleasesGetLatest(ctx context.Context, request operations.StoreReleasesGetLatestRequest, security operations.StoreReleasesGetLatestSecurity) (*operations.StoreReleasesGetLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/latest_release", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/latest_release", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2757,16 +2757,16 @@ func (s *distribute) StoreReleasesGetLatest(ctx context.Context, request operati
 }
 
 // StoreReleasesGetPublishError - Return the Error Details of release which failed in publishing.
-func (s *distribute) StoreReleasesGetPublishError(ctx context.Context, request operations.StoreReleasesGetPublishErrorRequest) (*operations.StoreReleasesGetPublishErrorResponse, error) {
+func (s *distribute) StoreReleasesGetPublishError(ctx context.Context, request operations.StoreReleasesGetPublishErrorRequest, security operations.StoreReleasesGetPublishErrorSecurity) (*operations.StoreReleasesGetPublishErrorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_error_details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_error_details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2811,16 +2811,16 @@ func (s *distribute) StoreReleasesGetPublishError(ctx context.Context, request o
 }
 
 // StoreReleasesGetRealTimeStatusByReleaseID - Return the Real time Status publishing of release from store.
-func (s *distribute) StoreReleasesGetRealTimeStatusByReleaseID(ctx context.Context, request operations.StoreReleasesGetRealTimeStatusByReleaseIDRequest) (*operations.StoreReleasesGetRealTimeStatusByReleaseIDResponse, error) {
+func (s *distribute) StoreReleasesGetRealTimeStatusByReleaseID(ctx context.Context, request operations.StoreReleasesGetRealTimeStatusByReleaseIDRequest, security operations.StoreReleasesGetRealTimeStatusByReleaseIDSecurity) (*operations.StoreReleasesGetRealTimeStatusByReleaseIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/realtimestatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/realtimestatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2865,16 +2865,16 @@ func (s *distribute) StoreReleasesGetRealTimeStatusByReleaseID(ctx context.Conte
 }
 
 // StoreReleasesList - Return all releases published  in a store
-func (s *distribute) StoreReleasesList(ctx context.Context, request operations.StoreReleasesListRequest) (*operations.StoreReleasesListResponse, error) {
+func (s *distribute) StoreReleasesList(ctx context.Context, request operations.StoreReleasesListRequest, security operations.StoreReleasesListSecurity) (*operations.StoreReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2919,11 +2919,11 @@ func (s *distribute) StoreReleasesList(ctx context.Context, request operations.S
 }
 
 // StoresCreate - Create a new external store for the specified application.
-func (s *distribute) StoresCreate(ctx context.Context, request operations.StoresCreateRequest) (*operations.StoresCreateResponse, error) {
+func (s *distribute) StoresCreate(ctx context.Context, request operations.StoresCreateRequest, security operations.StoresCreateSecurity) (*operations.StoresCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2938,7 +2938,7 @@ func (s *distribute) StoresCreate(ctx context.Context, request operations.Stores
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2983,11 +2983,11 @@ func (s *distribute) StoresCreate(ctx context.Context, request operations.Stores
 }
 
 // StoresDelete - delete the store based on specific store name.
-func (s *distribute) StoresDelete(ctx context.Context, request operations.StoresDeleteRequest) (*operations.StoresDeleteResponse, error) {
+func (s *distribute) StoresDelete(ctx context.Context, request operations.StoresDeleteRequest, security operations.StoresDeleteSecurity) (*operations.StoresDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2999,7 +2999,7 @@ func (s *distribute) StoresDelete(ctx context.Context, request operations.Stores
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3035,16 +3035,16 @@ func (s *distribute) StoresDelete(ctx context.Context, request operations.Stores
 }
 
 // StoresGet - Return the store details for specified store name.
-func (s *distribute) StoresGet(ctx context.Context, request operations.StoresGetRequest) (*operations.StoresGetResponse, error) {
+func (s *distribute) StoresGet(ctx context.Context, request operations.StoresGetRequest, security operations.StoresGetSecurity) (*operations.StoresGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3089,16 +3089,16 @@ func (s *distribute) StoresGet(ctx context.Context, request operations.StoresGet
 }
 
 // StoresList - Get all the store details from Storage store table for a particular application.
-func (s *distribute) StoresList(ctx context.Context, request operations.StoresListRequest) (*operations.StoresListResponse, error) {
+func (s *distribute) StoresList(ctx context.Context, request operations.StoresListRequest, security operations.StoresListSecurity) (*operations.StoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3133,11 +3133,11 @@ func (s *distribute) StoresList(ctx context.Context, request operations.StoresLi
 }
 
 // StoresPatch - Update the store.
-func (s *distribute) StoresPatch(ctx context.Context, request operations.StoresPatchRequest) (*operations.StoresPatchResponse, error) {
+func (s *distribute) StoresPatch(ctx context.Context, request operations.StoresPatchRequest, security operations.StoresPatchSecurity) (*operations.StoresPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3152,7 +3152,7 @@ func (s *distribute) StoresPatch(ctx context.Context, request operations.StoresP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

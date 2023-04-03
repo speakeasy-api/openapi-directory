@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutIPBlacklistFormRequest struct {
-	// The entry to add
-	Request shared.APICoreDtoAccountingIPBlacklistEntry `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type AccountPutIPBlacklistFormResponse struct {
 	APICoreDtoAccountingIPBlacklistEntry *shared.APICoreDtoAccountingIPBlacklistEntry
 	Body                                 []byte

@@ -8,21 +8,16 @@ import (
 )
 
 type PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidPathParams struct {
+type PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidRequest struct {
+	AcceptTermsOfServiceRequest *shared.AcceptTermsOfServiceRequest `request:"mediaType=application/json"`
 	// The unique identifier of the legal entity.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The unique identifier of the Terms of Service document.
 	Termsofservicedocumentid string `pathParam:"style=simple,explode=false,name=termsofservicedocumentid"`
-}
-
-type PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidRequest struct {
-	PathParams PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidPathParams
-	Request    *shared.AcceptTermsOfServiceRequest `request:"mediaType=application/json"`
-	Security   PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidSecurity
 }
 
 type PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidResponse struct {

@@ -13,48 +13,44 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateCampaignRequest{
-        Headers: operations.CreateCampaignHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateCampaignRequestBody{
-            ConnectInstanceID: "illum",
+        RequestBody: operations.CreateCampaignRequestBody{
+            ConnectInstanceID: "corrupti",
             DialerConfig: operations.CreateCampaignRequestBodyDialerConfig{
                 PredictiveDialerConfig: &shared.PredictiveDialerConfig{
-                    BandwidthAllocation: 4236.55,
+                    BandwidthAllocation: 5928.45,
                 },
                 ProgressiveDialerConfig: &shared.ProgressiveDialerConfig{
-                    BandwidthAllocation: 6235.64,
+                    BandwidthAllocation: 7151.9,
                 },
             },
-            Name: "deserunt",
+            Name: "quibusdam",
             OutboundCallConfig: operations.CreateCampaignRequestBodyOutboundCallConfig{
                 AnswerMachineDetectionConfig: &shared.AnswerMachineDetectionConfig{
                     EnableAnswerMachineDetection: false,
                 },
-                ConnectContactFlowID: "suscipit",
-                ConnectQueueID: "iure",
-                ConnectSourcePhoneNumber: "magnam",
+                ConnectContactFlowID: "unde",
+                ConnectQueueID: "nulla",
+                ConnectSourcePhoneNumber: "corrupti",
             },
             Tags: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
         },
+        XAmzAlgorithm: "delectus",
+        XAmzContentSha256: "tempora",
+        XAmzCredential: "suscipit",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "minus",
+        XAmzSignature: "placeat",
+        XAmzSignedHeaders: "voluptatum",
     }
 
     ctx := context.Background()

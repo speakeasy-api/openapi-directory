@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubscribeUploadSharesHeaders struct {
+type SubscribeUploadSharesRequest struct {
+	UpdateSubscriptionsBulkRequest shared.UpdateSubscriptionsBulkRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type SubscribeUploadSharesRequest struct {
-	Headers SubscribeUploadSharesHeaders
-	Request shared.UpdateSubscriptionsBulkRequest `request:"mediaType=application/json"`
 }
 
 type SubscribeUploadSharesResponse struct {

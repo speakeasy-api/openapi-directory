@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportProjectPathParams struct {
-	//  Unique project identifier.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type ExportProjectHeaders struct {
+type ExportProjectRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type ExportProjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ExportProjectRequest struct {
-	PathParams ExportProjectPathParams
-	Headers    ExportProjectHeaders
+	//  Unique project identifier.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type ExportProjectResponse struct {

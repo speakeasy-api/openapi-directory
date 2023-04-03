@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeletePipelineVariableForTeamPathParams struct {
+type DeletePipelineVariableForTeamRequest struct {
 	// The account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
 	// The UUID of the variable to delete.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
-}
-
-type DeletePipelineVariableForTeamRequest struct {
-	PathParams DeletePipelineVariableForTeamPathParams
 }
 
 type DeletePipelineVariableForTeamResponse struct {

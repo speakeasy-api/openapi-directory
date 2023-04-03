@@ -50,26 +50,18 @@ func (e *GETGETPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETPolicyQueryParams struct {
+type GETGETPolicyRequest struct {
 	Action GETGETPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the managed policy that you want information about.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
-	PolicyArn string                  `queryParam:"style=form,explode=true,name=PolicyArn"`
-	Version   GETGETPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETPolicyRequest struct {
-	QueryParams GETGETPolicyQueryParams
-	Headers     GETGETPolicyHeaders
+	PolicyArn         string                  `queryParam:"style=form,explode=true,name=PolicyArn"`
+	Version           GETGETPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETPolicyResponse struct {

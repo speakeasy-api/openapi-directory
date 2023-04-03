@@ -30,7 +30,8 @@ func (e *ListStreamsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListStreamsHeaders struct {
+type ListStreamsRequest struct {
+	ListStreamsInput  shared.ListStreamsInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ListStreamsHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListStreamsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListStreamsRequest struct {
-	Headers ListStreamsHeaders
-	Request shared.ListStreamsInput `request:"mediaType=application/json"`
 }
 
 type ListStreamsResponse struct {

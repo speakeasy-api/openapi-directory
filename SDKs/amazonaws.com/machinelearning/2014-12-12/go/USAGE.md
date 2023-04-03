@@ -13,41 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddTagsRequest{
-        Headers: operations.AddTagsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AmazonML_20141212.AddTags",
-        },
-        Request: shared.AddTagsInput{
-            ResourceID: "illum",
-            ResourceType: "DataSource",
+        AddTagsInput: shared.AddTagsInput{
+            ResourceID: "corrupti",
+            ResourceType: "Evaluation",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "deserunt",
-                    Value: "suscipit",
+                    Key: "quibusdam",
+                    Value: "unde",
                 },
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "illum",
+                    Value: "vel",
                 },
             },
         },
+        XAmzAlgorithm: "error",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "suscipit",
+        XAmzDate: "iure",
+        XAmzSecurityToken: "magnam",
+        XAmzSignature: "debitis",
+        XAmzSignedHeaders: "ipsa",
+        XAmzTarget: "AmazonML_20141212.AddTags",
     }
 
     ctx := context.Background()

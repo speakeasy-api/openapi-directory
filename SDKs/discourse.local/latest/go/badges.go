@@ -76,7 +76,7 @@ func (s *badges) AdminListBadges(ctx context.Context) (*operations.AdminListBadg
 }
 
 // CreateBadge - Create badge
-func (s *badges) CreateBadge(ctx context.Context, request operations.CreateBadgeRequest) (*operations.CreateBadgeResponse, error) {
+func (s *badges) CreateBadge(ctx context.Context, request operations.CreateBadgeRequestBody) (*operations.CreateBadgeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/badges.json"
 
@@ -129,7 +129,7 @@ func (s *badges) CreateBadge(ctx context.Context, request operations.CreateBadge
 // DeleteBadge - Delete badge
 func (s *badges) DeleteBadge(ctx context.Context, request operations.DeleteBadgeRequest) (*operations.DeleteBadgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/badges/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/badges/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -164,7 +164,7 @@ func (s *badges) DeleteBadge(ctx context.Context, request operations.DeleteBadge
 // ListUserBadges - List badges for a user
 func (s *badges) ListUserBadges(ctx context.Context, request operations.ListUserBadgesRequest) (*operations.ListUserBadgesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user-badges/{username}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user-badges/{username}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,9 +208,9 @@ func (s *badges) ListUserBadges(ctx context.Context, request operations.ListUser
 // UpdateBadge - Update badge
 func (s *badges) UpdateBadge(ctx context.Context, request operations.UpdateBadgeRequest) (*operations.UpdateBadgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/badges/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/badges/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

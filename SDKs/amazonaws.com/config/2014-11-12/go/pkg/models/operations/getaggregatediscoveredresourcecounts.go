@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAggregateDiscoveredResourceCountsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetAggregateDiscoveredResourceCountsXAmzTargetEnum
 type GetAggregateDiscoveredResourceCountsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetAggregateDiscoveredResourceCountsXAmzTargetEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetAggregateDiscoveredResourceCountsHeaders struct {
+type GetAggregateDiscoveredResourceCountsRequest struct {
+	GetAggregateDiscoveredResourceCountsRequest shared.GetAggregateDiscoveredResourceCountsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetAggregateDiscoveredResourceCountsHeaders struct {
 	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetAggregateDiscoveredResourceCountsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetAggregateDiscoveredResourceCountsRequest struct {
-	QueryParams GetAggregateDiscoveredResourceCountsQueryParams
-	Headers     GetAggregateDiscoveredResourceCountsHeaders
-	Request     shared.GetAggregateDiscoveredResourceCountsRequest `request:"mediaType=application/json"`
 }
 
 type GetAggregateDiscoveredResourceCountsResponse struct {

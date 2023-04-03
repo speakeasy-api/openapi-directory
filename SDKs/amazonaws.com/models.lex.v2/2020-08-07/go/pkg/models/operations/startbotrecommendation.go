@@ -7,25 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartBotRecommendationPathParams struct {
-	// The unique identifier of the bot containing the bot recommendation.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot containing the bot recommendation.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale of the bot recommendation to start. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type StartBotRecommendationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartBotRecommendationRequestBodyEncryptionSetting - The object representing the passwords that were used to encrypt the data related to the bot recommendation, as well as the KMS key ARN used to encrypt the associated metadata.
 type StartBotRecommendationRequestBodyEncryptionSetting struct {
 	AssociatedTranscriptsPassword *string `json:"associatedTranscriptsPassword,omitempty"`
@@ -46,9 +27,20 @@ type StartBotRecommendationRequestBody struct {
 }
 
 type StartBotRecommendationRequest struct {
-	PathParams StartBotRecommendationPathParams
-	Headers    StartBotRecommendationHeaders
-	Request    StartBotRecommendationRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartBotRecommendationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the bot containing the bot recommendation.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot containing the bot recommendation.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale of the bot recommendation to start. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type StartBotRecommendationResponse struct {

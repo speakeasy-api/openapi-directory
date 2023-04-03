@@ -34,11 +34,11 @@ func newFunctions(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // FunctionsCreateExecution - Create Execution
 // Trigger a function execution. The returned object will return you the current execution status. You can ping the `Get Execution` endpoint to get updates on the current execution status. Once this endpoint is called, your function execution process will start asynchronously.
-func (s *functions) FunctionsCreateExecution(ctx context.Context, request operations.FunctionsCreateExecutionRequest) (*operations.FunctionsCreateExecutionResponse, error) {
+func (s *functions) FunctionsCreateExecution(ctx context.Context, request operations.FunctionsCreateExecutionRequest, security operations.FunctionsCreateExecutionSecurity) (*operations.FunctionsCreateExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *functions) FunctionsCreateExecution(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *functions) FunctionsCreateExecution(ctx context.Context, request operat
 
 // FunctionsGetExecution - Get Execution
 // Get a function execution log by its unique ID.
-func (s *functions) FunctionsGetExecution(ctx context.Context, request operations.FunctionsGetExecutionRequest) (*operations.FunctionsGetExecutionResponse, error) {
+func (s *functions) FunctionsGetExecution(ctx context.Context, request operations.FunctionsGetExecutionRequest, security operations.FunctionsGetExecutionSecurity) (*operations.FunctionsGetExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -131,20 +131,20 @@ func (s *functions) FunctionsGetExecution(ctx context.Context, request operation
 
 // FunctionsListExecutions - List Executions
 // Get a list of all the current user function execution logs. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's executions. [Learn more about different API modes](/docs/admin).
-func (s *functions) FunctionsListExecutions(ctx context.Context, request operations.FunctionsListExecutionsRequest) (*operations.FunctionsListExecutionsResponse, error) {
+func (s *functions) FunctionsListExecutions(ctx context.Context, request operations.FunctionsListExecutionsRequest, security operations.FunctionsListExecutionsSecurity) (*operations.FunctionsListExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

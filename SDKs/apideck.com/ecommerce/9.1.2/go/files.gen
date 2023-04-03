@@ -38,7 +38,6 @@ pkg/models/shared/email.go
 pkg/models/shared/currencyenum.go
 pkg/models/shared/badrequestresponse.go
 pkg/models/shared/ecommercecustomersfilter.go
-pkg/models/shared/security.go
 pkg/models/shared/getecommercecustomerresponse.go
 pkg/models/shared/getecommerceordersresponse.go
 pkg/models/shared/ecommerceorder.go
@@ -54,4 +53,5 @@ pkg/models/shared/ecommerceproduct.go
 pkg/models/shared/getproductresponse.go
 pkg/models/shared/getstoreresponse.go
 pkg/models/shared/ecommercestore.go
+pkg/models/shared/security.go
 USAGE.md

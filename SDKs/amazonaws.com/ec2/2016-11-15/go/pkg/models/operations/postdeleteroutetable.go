@@ -50,25 +50,17 @@ func (e *POSTDeleteRouteTableVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteRouteTableQueryParams struct {
-	Action  POSTDeleteRouteTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteRouteTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteRouteTableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteRouteTableRequest struct {
-	QueryParams POSTDeleteRouteTableQueryParams
-	Headers     POSTDeleteRouteTableHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteRouteTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTDeleteRouteTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteRouteTableResponse struct {

@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConnectorEntitiesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListConnectorEntitiesRequestBodyConnectorTypeEnum -  The type of connector, such as Salesforce, Amplitude, and so on.
 type ListConnectorEntitiesRequestBodyConnectorTypeEnum string
 
@@ -125,8 +115,14 @@ type ListConnectorEntitiesRequestBody struct {
 }
 
 type ListConnectorEntitiesRequest struct {
-	Headers ListConnectorEntitiesHeaders
-	Request ListConnectorEntitiesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListConnectorEntitiesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListConnectorEntitiesResponse struct {

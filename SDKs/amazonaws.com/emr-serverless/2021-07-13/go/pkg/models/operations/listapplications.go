@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListApplicationsQueryParams struct {
-	// The maximum number of applications that can be listed.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of application results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// An optional filter for application states. Note that if this filter contains multiple states, the resulting list will be grouped by the state.
-	States []shared.ApplicationStateEnum `queryParam:"style=form,explode=true,name=states"`
-}
-
-type ListApplicationsHeaders struct {
+type ListApplicationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListApplicationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListApplicationsRequest struct {
-	QueryParams ListApplicationsQueryParams
-	Headers     ListApplicationsHeaders
+	// The maximum number of applications that can be listed.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of application results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// An optional filter for application states. Note that if this filter contains multiple states, the resulting list will be grouped by the state.
+	States []shared.ApplicationStateEnum `queryParam:"style=form,explode=true,name=states"`
 }
 
 type ListApplicationsResponse struct {

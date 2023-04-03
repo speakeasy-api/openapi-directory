@@ -36,7 +36,7 @@ func newAssignment(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteAssignmentsID - Delete this assignment and all of it's contributions
 func (s *assignment) DeleteAssignmentsID(ctx context.Context, request operations.DeleteAssignmentsIDRequest) (*operations.DeleteAssignmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *assignment) GetAssignments(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,7 +125,7 @@ func (s *assignment) GetAssignments(ctx context.Context, request operations.GetA
 // GetAssignmentsID - Get a single assigment by id
 func (s *assignment) GetAssignmentsID(ctx context.Context, request operations.GetAssignmentsIDRequest) (*operations.GetAssignmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *assignment) GetAssignmentsID(ctx context.Context, request operations.Ge
 }
 
 // PostAssignments - Create a new assignment
-func (s *assignment) PostAssignments(ctx context.Context, request operations.PostAssignmentsRequest) (*operations.PostAssignmentsResponse, error) {
+func (s *assignment) PostAssignments(ctx context.Context, request shared.AssignmentSubmission) (*operations.PostAssignmentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assignments"
 

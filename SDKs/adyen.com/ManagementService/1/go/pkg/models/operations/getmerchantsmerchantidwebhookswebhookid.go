@@ -8,20 +8,15 @@ import (
 )
 
 type GetMerchantsMerchantIDWebhooksWebhookIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetMerchantsMerchantIDWebhooksWebhookIDPathParams struct {
+type GetMerchantsMerchantIDWebhooksWebhookIDRequest struct {
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// Unique identifier of the webhook configuration.
 	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type GetMerchantsMerchantIDWebhooksWebhookIDRequest struct {
-	PathParams GetMerchantsMerchantIDWebhooksWebhookIDPathParams
-	Security   GetMerchantsMerchantIDWebhooksWebhookIDSecurity
 }
 
 type GetMerchantsMerchantIDWebhooksWebhookIDResponse struct {

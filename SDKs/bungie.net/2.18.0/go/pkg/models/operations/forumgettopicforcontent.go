@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ForumGetTopicForContentPathParams struct {
-	ContentID int64 `pathParam:"style=simple,explode=false,name=contentId"`
-}
-
 type ForumGetTopicForContentRequest struct {
-	PathParams ForumGetTopicForContentPathParams
+	ContentID int64 `pathParam:"style=simple,explode=false,name=contentId"`
 }
 
 // ForumGetTopicForContent200Wildcard - Look at the Response property for more information about the nature of this response

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MigrateLegacyTrackingChannelCatalogPathParams struct {
+type MigrateLegacyTrackingChannelCatalogRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type MigrateLegacyTrackingChannelCatalogRequest struct {
-	PathParams MigrateLegacyTrackingChannelCatalogPathParams
 }
 
 type MigrateLegacyTrackingChannelCatalogResponse struct {

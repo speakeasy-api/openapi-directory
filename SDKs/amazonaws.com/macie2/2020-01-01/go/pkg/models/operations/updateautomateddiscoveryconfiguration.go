@@ -8,16 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateAutomatedDiscoveryConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAutomatedDiscoveryConfigurationRequestBodyStatusEnum - The status of the automated sensitive data discovery configuration for an Amazon Macie account. Valid values are:
 type UpdateAutomatedDiscoveryConfigurationRequestBodyStatusEnum string
 
@@ -48,8 +38,14 @@ type UpdateAutomatedDiscoveryConfigurationRequestBody struct {
 }
 
 type UpdateAutomatedDiscoveryConfigurationRequest struct {
-	Headers UpdateAutomatedDiscoveryConfigurationHeaders
-	Request UpdateAutomatedDiscoveryConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAutomatedDiscoveryConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateAutomatedDiscoveryConfigurationResponse struct {

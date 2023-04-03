@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGroupVersionPathParams struct {
-	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type CreateGroupVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 type CreateGroupVersionRequestBody struct {
 	// The ARN of the connector definition version for this group.
 	ConnectorDefinitionVersionArn *string `json:"ConnectorDefinitionVersionArn,omitempty"`
@@ -42,9 +25,18 @@ type CreateGroupVersionRequestBody struct {
 }
 
 type CreateGroupVersionRequest struct {
-	PathParams CreateGroupVersionPathParams
-	Headers    CreateGroupVersionHeaders
-	Request    CreateGroupVersionRequestBody `request:"mediaType=application/json"`
+	// The ID of the Greengrass group.
+	GroupID           string                        `pathParam:"style=simple,explode=false,name=GroupId"`
+	RequestBody       CreateGroupVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateGroupVersionResponse struct {

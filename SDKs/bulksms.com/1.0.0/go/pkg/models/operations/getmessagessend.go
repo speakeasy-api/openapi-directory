@@ -8,21 +8,17 @@ import (
 )
 
 type GetMessagesSendSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetMessagesSendQueryParams struct {
+type GetMessagesSendRequest struct {
 	// The text you want to send.
 	Body string `queryParam:"style=form,explode=true,name=body"`
 	// Refer to the `deduplication-id` parameter.
 	DeduplicationID *int64 `queryParam:"style=form,explode=true,name=deduplication-id"`
 	// The phone number of the recipient.
 	To string `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetMessagesSendRequest struct {
-	QueryParams GetMessagesSendQueryParams
-	Security    GetMessagesSendSecurity
 }
 
 type GetMessagesSendResponse struct {

@@ -45,7 +45,7 @@ func newGlobalRules(defaultClient, securityClient HTTPClient, serverURL, languag
 // * The rule type is unknown (HTTP error `400`)
 // * The rule already exists (HTTP error `409`)
 // * A server error occurred (HTTP error `500`)
-func (s *globalRules) CreateGlobalRule(ctx context.Context, request operations.CreateGlobalRuleRequest) (*operations.CreateGlobalRuleResponse, error) {
+func (s *globalRules) CreateGlobalRule(ctx context.Context, request shared.Rule) (*operations.CreateGlobalRuleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rules"
 
@@ -165,7 +165,7 @@ func (s *globalRules) DeleteAllGlobalRules(ctx context.Context) (*operations.Del
 // * A server error occurred (HTTP error `500`)
 func (s *globalRules) DeleteGlobalRule(ctx context.Context, request operations.DeleteGlobalRuleRequest) (*operations.DeleteGlobalRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -219,7 +219,7 @@ func (s *globalRules) DeleteGlobalRule(ctx context.Context, request operations.D
 // * A server error occurred (HTTP error `500`)
 func (s *globalRules) GetGlobalRuleConfig(ctx context.Context, request operations.GetGlobalRuleConfigRequest) (*operations.GetGlobalRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -341,9 +341,9 @@ func (s *globalRules) ListGlobalRules(ctx context.Context) (*operations.ListGlob
 // * A server error occurred (HTTP error `500`)
 func (s *globalRules) UpdateGlobalRuleConfig(ctx context.Context, request operations.UpdateGlobalRuleConfigRequest) (*operations.UpdateGlobalRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Rule1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

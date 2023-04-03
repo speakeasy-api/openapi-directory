@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteProjectUsernameProjectBuildCachePathParams struct {
+type DeleteProjectUsernameProjectBuildCacheRequest struct {
 	// XXXXXXXXX
 	//
 	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type DeleteProjectUsernameProjectBuildCacheRequest struct {
-	PathParams DeleteProjectUsernameProjectBuildCachePathParams
 }
 
 // DeleteProjectUsernameProjectBuildCache200ApplicationJSON - status message

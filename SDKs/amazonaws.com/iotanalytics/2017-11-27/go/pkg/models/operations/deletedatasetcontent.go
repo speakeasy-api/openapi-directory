@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDatasetContentPathParams struct {
-	// The name of the dataset whose content is deleted.
-	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
-}
-
-type DeleteDatasetContentQueryParams struct {
-	// The version of the dataset whose content is deleted. You can also use the strings "$LATEST" or "$LATEST_SUCCEEDED" to delete the latest or latest successfully completed data set. If not specified, "$LATEST_SUCCEEDED" is the default.
-	VersionID *string `queryParam:"style=form,explode=true,name=versionId"`
-}
-
-type DeleteDatasetContentHeaders struct {
+type DeleteDatasetContentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteDatasetContentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDatasetContentRequest struct {
-	PathParams  DeleteDatasetContentPathParams
-	QueryParams DeleteDatasetContentQueryParams
-	Headers     DeleteDatasetContentHeaders
+	// The name of the dataset whose content is deleted.
+	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
+	// The version of the dataset whose content is deleted. You can also use the strings "$LATEST" or "$LATEST_SUCCEEDED" to delete the latest or latest successfully completed data set. If not specified, "$LATEST_SUCCEEDED" is the default.
+	VersionID *string `queryParam:"style=form,explode=true,name=versionId"`
 }
 
 type DeleteDatasetContentResponse struct {

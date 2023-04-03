@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeWorkspaceAuthenticationPathParams struct {
-	// The ID of the workspace to return authentication information about.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DescribeWorkspaceAuthenticationHeaders struct {
+type DescribeWorkspaceAuthenticationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeWorkspaceAuthenticationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeWorkspaceAuthenticationRequest struct {
-	PathParams DescribeWorkspaceAuthenticationPathParams
-	Headers    DescribeWorkspaceAuthenticationHeaders
+	// The ID of the workspace to return authentication information about.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DescribeWorkspaceAuthenticationResponse struct {

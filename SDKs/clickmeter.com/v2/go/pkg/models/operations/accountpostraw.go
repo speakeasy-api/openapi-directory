@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPostRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AccountPostRawResponse struct {
 	APICoreDtoAccountingUser *shared.APICoreDtoAccountingUser
 	Body                     []byte

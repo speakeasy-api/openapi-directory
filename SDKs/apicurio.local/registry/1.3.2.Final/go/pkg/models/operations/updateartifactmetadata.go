@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateArtifactMetaDataPathParams struct {
+type UpdateArtifactMetaDataRequest struct {
+	// Updated artifact metadata.
+	RequestBody []byte `request:"mediaType=*/*"`
 	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
-type UpdateArtifactMetaDataRequest struct {
-	PathParams UpdateArtifactMetaDataPathParams
-	// Updated artifact metadata.
-	Request []byte `request:"mediaType=*/*"`
 }
 
 type UpdateArtifactMetaDataResponse struct {

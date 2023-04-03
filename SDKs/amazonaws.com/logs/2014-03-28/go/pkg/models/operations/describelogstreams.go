@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeLogStreamsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // DescribeLogStreamsXAmzTargetEnum
 type DescribeLogStreamsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *DescribeLogStreamsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeLogStreamsHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeLogStreamsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeLogStreamsRequest struct {
-	QueryParams DescribeLogStreamsQueryParams
-	Headers     DescribeLogStreamsHeaders
-	Request     shared.DescribeLogStreamsRequest `request:"mediaType=application/json"`
+	DescribeLogStreamsRequest shared.DescribeLogStreamsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                DescribeLogStreamsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=limit"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type DescribeLogStreamsResponse struct {

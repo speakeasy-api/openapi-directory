@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamsForUserPathParams struct {
-	// A string identifying a user. This can either be the string "me", an email, or the gid of a user.
-	UserGid string `pathParam:"style=simple,explode=false,name=user_gid"`
-}
-
-type GetTeamsForUserQueryParams struct {
+type GetTeamsForUserRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -29,11 +24,8 @@ type GetTeamsForUserQueryParams struct {
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
 	// The workspace or organization to filter teams on.
 	Organization string `queryParam:"style=form,explode=true,name=organization"`
-}
-
-type GetTeamsForUserRequest struct {
-	PathParams  GetTeamsForUserPathParams
-	QueryParams GetTeamsForUserQueryParams
+	// A string identifying a user. This can either be the string "me", an email, or the gid of a user.
+	UserGid string `pathParam:"style=simple,explode=false,name=user_gid"`
 }
 
 // GetTeamsForUser200ApplicationJSON - Returns the team records for all teams in the organization or workspace to which the given user is assigned.

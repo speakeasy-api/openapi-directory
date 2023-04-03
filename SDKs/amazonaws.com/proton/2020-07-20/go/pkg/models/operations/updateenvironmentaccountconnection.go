@@ -30,20 +30,16 @@ func (e *UpdateEnvironmentAccountConnectionXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type UpdateEnvironmentAccountConnectionHeaders struct {
-	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateEnvironmentAccountConnectionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateEnvironmentAccountConnectionRequest struct {
-	Headers UpdateEnvironmentAccountConnectionHeaders
-	Request shared.UpdateEnvironmentAccountConnectionInput `request:"mediaType=application/json"`
+	UpdateEnvironmentAccountConnectionInput shared.UpdateEnvironmentAccountConnectionInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                           *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                       *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                          *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                       *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                           *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                       *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                              UpdateEnvironmentAccountConnectionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateEnvironmentAccountConnectionResponse struct {

@@ -108,7 +108,7 @@ func New(opts ...SDKOption) *SDK {
 // DeleteProjectUsernameProjectBuildCache - Clears the cache for a project.
 func (s *SDK) DeleteProjectUsernameProjectBuildCache(ctx context.Context, request operations.DeleteProjectUsernameProjectBuildCacheRequest) (*operations.DeleteProjectUsernameProjectBuildCacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/build-cache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/build-cache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *SDK) DeleteProjectUsernameProjectBuildCache(ctx context.Context, reques
 // DeleteProjectUsernameProjectCheckoutKeyFingerprint - Delete a checkout key.
 func (s *SDK) DeleteProjectUsernameProjectCheckoutKeyFingerprint(ctx context.Context, request operations.DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest) (*operations.DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key/{fingerprint}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key/{fingerprint}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -196,7 +196,7 @@ func (s *SDK) DeleteProjectUsernameProjectCheckoutKeyFingerprint(ctx context.Con
 // DeleteProjectUsernameProjectEnvvarName - Deletes the environment variable named ':name'
 func (s *SDK) DeleteProjectUsernameProjectEnvvarName(ctx context.Context, request operations.DeleteProjectUsernameProjectEnvvarNameRequest) (*operations.DeleteProjectUsernameProjectEnvvarNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -284,14 +284,14 @@ func (s *SDK) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 // GetProjectUsernameProject - Build summary for each of the last 30 builds for a single git repo.
 func (s *SDK) GetProjectUsernameProject(ctx context.Context, request operations.GetProjectUsernameProjectRequest) (*operations.GetProjectUsernameProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -332,7 +332,7 @@ func (s *SDK) GetProjectUsernameProject(ctx context.Context, request operations.
 // GetProjectUsernameProjectCheckoutKey - Lists checkout keys.
 func (s *SDK) GetProjectUsernameProjectCheckoutKey(ctx context.Context, request operations.GetProjectUsernameProjectCheckoutKeyRequest) (*operations.GetProjectUsernameProjectCheckoutKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -376,7 +376,7 @@ func (s *SDK) GetProjectUsernameProjectCheckoutKey(ctx context.Context, request 
 // GetProjectUsernameProjectCheckoutKeyFingerprint - Get a checkout key.
 func (s *SDK) GetProjectUsernameProjectCheckoutKeyFingerprint(ctx context.Context, request operations.GetProjectUsernameProjectCheckoutKeyFingerprintRequest) (*operations.GetProjectUsernameProjectCheckoutKeyFingerprintResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key/{fingerprint}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key/{fingerprint}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -420,7 +420,7 @@ func (s *SDK) GetProjectUsernameProjectCheckoutKeyFingerprint(ctx context.Contex
 // GetProjectUsernameProjectEnvvar - Lists the environment variables for :project
 func (s *SDK) GetProjectUsernameProjectEnvvar(ctx context.Context, request operations.GetProjectUsernameProjectEnvvarRequest) (*operations.GetProjectUsernameProjectEnvvarResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -464,7 +464,7 @@ func (s *SDK) GetProjectUsernameProjectEnvvar(ctx context.Context, request opera
 // GetProjectUsernameProjectEnvvarName - Gets the hidden value of environment variable :name
 func (s *SDK) GetProjectUsernameProjectEnvvarName(ctx context.Context, request operations.GetProjectUsernameProjectEnvvarNameRequest) (*operations.GetProjectUsernameProjectEnvvarNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -509,7 +509,7 @@ func (s *SDK) GetProjectUsernameProjectEnvvarName(ctx context.Context, request o
 // This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
 func (s *SDK) GetProjectUsernameProjectBuildNum(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumRequest) (*operations.GetProjectUsernameProjectBuildNumResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -553,7 +553,7 @@ func (s *SDK) GetProjectUsernameProjectBuildNum(ctx context.Context, request ope
 // GetProjectUsernameProjectBuildNumArtifacts - List the artifacts produced by a given build.
 func (s *SDK) GetProjectUsernameProjectBuildNumArtifacts(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumArtifactsRequest) (*operations.GetProjectUsernameProjectBuildNumArtifactsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/artifacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/artifacts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -598,7 +598,7 @@ func (s *SDK) GetProjectUsernameProjectBuildNumArtifacts(ctx context.Context, re
 // Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
 func (s *SDK) GetProjectUsernameProjectBuildNumTests(ctx context.Context, request operations.GetProjectUsernameProjectBuildNumTestsRequest) (*operations.GetProjectUsernameProjectBuildNumTestsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/tests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/tests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -693,7 +693,7 @@ func (s *SDK) GetRecentBuilds(ctx context.Context, request operations.GetRecentB
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -734,9 +734,9 @@ func (s *SDK) GetRecentBuilds(ctx context.Context, request operations.GetRecentB
 // PostProjectUsernameProject - Triggers a new build, returns a summary of the build.
 func (s *SDK) PostProjectUsernameProject(ctx context.Context, request operations.PostProjectUsernameProjectRequest) (*operations.PostProjectUsernameProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -786,9 +786,9 @@ func (s *SDK) PostProjectUsernameProject(ctx context.Context, request operations
 // Only usable with a user API token.
 func (s *SDK) PostProjectUsernameProjectCheckoutKey(ctx context.Context, request operations.PostProjectUsernameProjectCheckoutKeyRequest) (*operations.PostProjectUsernameProjectCheckoutKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/checkout-key", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -837,7 +837,7 @@ func (s *SDK) PostProjectUsernameProjectCheckoutKey(ctx context.Context, request
 // PostProjectUsernameProjectEnvvar - Creates a new environment variable
 func (s *SDK) PostProjectUsernameProjectEnvvar(ctx context.Context, request operations.PostProjectUsernameProjectEnvvarRequest) (*operations.PostProjectUsernameProjectEnvvarResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/envvar", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -881,9 +881,9 @@ func (s *SDK) PostProjectUsernameProjectEnvvar(ctx context.Context, request oper
 // PostProjectUsernameProjectSSHKey - Create an ssh key used to access external systems that require SSH key-based authentication
 func (s *SDK) PostProjectUsernameProjectSSHKey(ctx context.Context, request operations.PostProjectUsernameProjectSSHKeyRequest) (*operations.PostProjectUsernameProjectSSHKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/ssh-key", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/ssh-key", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -898,7 +898,7 @@ func (s *SDK) PostProjectUsernameProjectSSHKey(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -940,9 +940,9 @@ func (s *SDK) PostProjectUsernameProjectSSHKey(ctx context.Context, request oper
 // Note: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)
 func (s *SDK) PostProjectUsernameProjectTreeBranch(ctx context.Context, request operations.PostProjectUsernameProjectTreeBranchRequest) (*operations.PostProjectUsernameProjectTreeBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/tree/{branch}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/tree/{branch}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -993,7 +993,7 @@ func (s *SDK) PostProjectUsernameProjectTreeBranch(ctx context.Context, request 
 // PostProjectUsernameProjectBuildNumCancel - Cancels the build, returns a summary of the build.
 func (s *SDK) PostProjectUsernameProjectBuildNumCancel(ctx context.Context, request operations.PostProjectUsernameProjectBuildNumCancelRequest) (*operations.PostProjectUsernameProjectBuildNumCancelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1037,7 +1037,7 @@ func (s *SDK) PostProjectUsernameProjectBuildNumCancel(ctx context.Context, requ
 // PostProjectUsernameProjectBuildNumRetry - Retries the build, returns a summary of the new build.
 func (s *SDK) PostProjectUsernameProjectBuildNumRetry(ctx context.Context, request operations.PostProjectUsernameProjectBuildNumRetryRequest) (*operations.PostProjectUsernameProjectBuildNumRetryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/retry", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project/{username}/{project}/{build_num}/retry", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

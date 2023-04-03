@@ -6,23 +6,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppAPITokensListSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type AppAPITokensListPathParams struct {
+type AppAPITokensListRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AppAPITokensListRequest struct {
-	PathParams AppAPITokensListPathParams
-	Security   AppAPITokensListSecurity
 }
 
 type AppAPITokensList401ApplicationJSONErrorCodeEnum string

@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestCreateDeviceSetOfOwnerSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestCreateDeviceSetOfOwnerPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation - The name of the device set and the list of device IDs
@@ -27,9 +19,11 @@ type TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation struct {
 }
 
 type TestCreateDeviceSetOfOwnerRequest struct {
-	PathParams TestCreateDeviceSetOfOwnerPathParams
-	Request    TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation `request:"mediaType=application/json"`
-	Security   TestCreateDeviceSetOfOwnerSecurity
+	RequestBody TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // TestCreateDeviceSetOfOwnerTestCloudErrorDetails - Details of a failed operation

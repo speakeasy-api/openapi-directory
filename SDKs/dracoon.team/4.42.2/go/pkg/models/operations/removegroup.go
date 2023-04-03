@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveGroupPathParams struct {
-	// Group ID
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type RemoveGroupHeaders struct {
+type RemoveGroupRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveGroupRequest struct {
-	PathParams RemoveGroupPathParams
-	Headers    RemoveGroupHeaders
+	// Group ID
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type RemoveGroupResponse struct {

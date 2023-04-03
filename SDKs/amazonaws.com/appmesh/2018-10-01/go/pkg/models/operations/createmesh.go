@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateMeshHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateMeshRequestBody struct {
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the
 	// request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
@@ -26,8 +16,14 @@ type CreateMeshRequestBody struct {
 }
 
 type CreateMeshRequest struct {
-	Headers CreateMeshHeaders
-	Request CreateMeshRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateMeshRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateMeshResponse struct {

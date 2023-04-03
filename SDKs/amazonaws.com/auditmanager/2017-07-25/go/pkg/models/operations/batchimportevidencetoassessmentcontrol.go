@@ -7,34 +7,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchImportEvidenceToAssessmentControlPathParams struct {
-	//  The identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-	//  The identifier for the control.
-	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
-	//  The identifier for the control set.
-	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
-}
-
-type BatchImportEvidenceToAssessmentControlHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchImportEvidenceToAssessmentControlRequestBody struct {
 	//  The list of manual evidence objects.
 	ManualEvidence []shared.ManualEvidence `json:"manualEvidence"`
 }
 
 type BatchImportEvidenceToAssessmentControlRequest struct {
-	PathParams BatchImportEvidenceToAssessmentControlPathParams
-	Headers    BatchImportEvidenceToAssessmentControlHeaders
-	Request    BatchImportEvidenceToAssessmentControlRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchImportEvidenceToAssessmentControlRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
+	//  The identifier for the control.
+	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
+	//  The identifier for the control set.
+	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
 }
 
 type BatchImportEvidenceToAssessmentControlResponse struct {

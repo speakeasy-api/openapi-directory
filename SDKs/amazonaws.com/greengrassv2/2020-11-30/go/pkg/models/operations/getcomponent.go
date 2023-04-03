@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetComponentPathParams struct {
-	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.
-	Arn string `pathParam:"style=simple,explode=false,name=arn"`
-}
-
 // GetComponentRecipeOutputFormatEnum - The format of the recipe.
 type GetComponentRecipeOutputFormatEnum string
 
@@ -38,12 +33,7 @@ func (e *GetComponentRecipeOutputFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetComponentQueryParams struct {
-	// The format of the recipe.
-	RecipeOutputFormat *GetComponentRecipeOutputFormatEnum `queryParam:"style=form,explode=true,name=recipeOutputFormat"`
-}
-
-type GetComponentHeaders struct {
+type GetComponentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -51,12 +41,10 @@ type GetComponentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetComponentRequest struct {
-	PathParams  GetComponentPathParams
-	QueryParams GetComponentQueryParams
-	Headers     GetComponentHeaders
+	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.
+	Arn string `pathParam:"style=simple,explode=false,name=arn"`
+	// The format of the recipe.
+	RecipeOutputFormat *GetComponentRecipeOutputFormatEnum `queryParam:"style=form,explode=true,name=recipeOutputFormat"`
 }
 
 type GetComponentResponse struct {

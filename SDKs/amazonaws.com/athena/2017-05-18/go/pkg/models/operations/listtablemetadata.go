@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTableMetadataQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListTableMetadataXAmzTargetEnum
 type ListTableMetadataXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListTableMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTableMetadataHeaders struct {
+type ListTableMetadataRequest struct {
+	ListTableMetadataInput shared.ListTableMetadataInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListTableMetadataHeaders struct {
 	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTableMetadataXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTableMetadataRequest struct {
-	QueryParams ListTableMetadataQueryParams
-	Headers     ListTableMetadataHeaders
-	Request     shared.ListTableMetadataInput `request:"mediaType=application/json"`
 }
 
 type ListTableMetadataResponse struct {

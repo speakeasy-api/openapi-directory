@@ -50,26 +50,18 @@ func (e *GETDescribeLoggingStatusVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeLoggingStatusQueryParams struct {
+type GETDescribeLoggingStatusRequest struct {
 	Action GETDescribeLoggingStatusActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identifier of the cluster from which to get the logging status.</p> <p>Example: <code>examplecluster</code> </p>
 	ClusterIdentifier string                              `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETDescribeLoggingStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeLoggingStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeLoggingStatusRequest struct {
-	QueryParams GETDescribeLoggingStatusQueryParams
-	Headers     GETDescribeLoggingStatusHeaders
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeLoggingStatusResponse struct {

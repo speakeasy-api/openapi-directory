@@ -13,39 +13,35 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcceptDirectConnectGatewayAssociationProposalRequest{
-        Headers: operations.AcceptDirectConnectGatewayAssociationProposalHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
-        },
-        Request: shared.AcceptDirectConnectGatewayAssociationProposalRequest{
-            AssociatedGatewayOwnerAccount: "illum",
-            DirectConnectGatewayID: "vel",
+        AcceptDirectConnectGatewayAssociationProposalRequest: shared.AcceptDirectConnectGatewayAssociationProposalRequest{
+            AssociatedGatewayOwnerAccount: "corrupti",
+            DirectConnectGatewayID: "provident",
             OverrideAllowedPrefixesToDirectConnectGateway: []shared.RouteFilterPrefix{
                 shared.RouteFilterPrefix{
-                    Cidr: "deserunt",
+                    Cidr: "quibusdam",
                 },
                 shared.RouteFilterPrefix{
-                    Cidr: "suscipit",
+                    Cidr: "unde",
                 },
                 shared.RouteFilterPrefix{
-                    Cidr: "iure",
+                    Cidr: "nulla",
                 },
             },
-            ProposalID: "magnam",
+            ProposalID: "corrupti",
         },
+        XAmzAlgorithm: "illum",
+        XAmzContentSha256: "vel",
+        XAmzCredential: "error",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "magnam",
+        XAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
     }
 
     ctx := context.Background()

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetUserPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetUserRequest struct {
-	PathParams GetUserPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetUserResponse struct {

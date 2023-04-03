@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type UntagResourcePathParams struct {
+type UntagResourceRequest struct {
 	// The ARN of the resource to remove the tags from.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=ResourceArn"`
-}
-
-type UntagResourceQueryParams struct {
-	// The tag keys associated with the tags to remove from the resource. You can remove up to 50 tags at a time.
-	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
-}
-
-type UntagResourceHeaders struct {
+	ResourceArn       string  `pathParam:"style=simple,explode=false,name=ResourceArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +16,8 @@ type UntagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UntagResourceRequest struct {
-	PathParams  UntagResourcePathParams
-	QueryParams UntagResourceQueryParams
-	Headers     UntagResourceHeaders
+	// The tag keys associated with the tags to remove from the resource. You can remove up to 50 tags at a time.
+	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
 }
 
 type UntagResourceResponse struct {

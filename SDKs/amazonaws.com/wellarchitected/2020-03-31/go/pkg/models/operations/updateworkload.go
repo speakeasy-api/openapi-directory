@@ -9,20 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWorkloadPathParams struct {
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
-type UpdateWorkloadHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateWorkloadRequestBodyDiscoveryConfig - Discovery configuration associated to the workload.
 type UpdateWorkloadRequestBodyDiscoveryConfig struct {
 	TrustedAdvisorIntegrationStatus *shared.TrustedAdvisorIntegrationStatusEnum `json:"TrustedAdvisorIntegrationStatus,omitempty"`
@@ -121,9 +107,15 @@ type UpdateWorkloadRequestBody struct {
 }
 
 type UpdateWorkloadRequest struct {
-	PathParams UpdateWorkloadPathParams
-	Headers    UpdateWorkloadHeaders
-	Request    UpdateWorkloadRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateWorkloadRequestBody `request:"mediaType=application/json"`
+	WorkloadID        string                    `pathParam:"style=simple,explode=false,name=WorkloadId"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateWorkloadResponse struct {

@@ -53,7 +53,7 @@ func (e *GetAppConfigIncludeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAppConfigQueryParams struct {
+type GetAppConfigRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -101,10 +101,6 @@ type GetAppConfigQueryParams struct {
 	// Classification system to load in case include = classification.
 	//
 	System *string `queryParam:"style=form,explode=true,name=system"`
-}
-
-type GetAppConfigRequest struct {
-	QueryParams GetAppConfigQueryParams
 }
 
 type GetAppConfigResponse struct {

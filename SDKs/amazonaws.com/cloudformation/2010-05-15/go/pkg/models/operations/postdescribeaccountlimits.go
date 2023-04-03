@@ -50,27 +50,19 @@ func (e *POSTDescribeAccountLimitsVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type POSTDescribeAccountLimitsQueryParams struct {
+type POSTDescribeAccountLimitsRequest struct {
 	Action POSTDescribeAccountLimitsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
-	NextToken *string                              `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTDescribeAccountLimitsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeAccountLimitsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeAccountLimitsRequest struct {
-	QueryParams POSTDescribeAccountLimitsQueryParams
-	Headers     POSTDescribeAccountLimitsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                               `request:"mediaType=text/xml"`
+	Version           POSTDescribeAccountLimitsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeAccountLimitsResponse struct {

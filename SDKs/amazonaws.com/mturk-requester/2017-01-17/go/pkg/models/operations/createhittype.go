@@ -30,20 +30,16 @@ func (e *CreateHITTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateHITTypeHeaders struct {
-	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateHITTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateHITTypeRequest struct {
-	Headers CreateHITTypeHeaders
-	Request shared.CreateHITTypeRequest `request:"mediaType=application/json"`
+	CreateHITTypeRequest shared.CreateHITTypeRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget           CreateHITTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateHITTypeResponse struct {

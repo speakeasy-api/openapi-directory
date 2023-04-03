@@ -14,10 +14,6 @@ type CreateBadgeRequestBody struct {
 	Name string `json:"name"`
 }
 
-type CreateBadgeRequest struct {
-	Request *CreateBadgeRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateBadge200ApplicationJSONBadge struct {
 	AllowTitle        bool   `json:"allow_title"`
 	AutoRevoke        bool   `json:"auto_revoke"`

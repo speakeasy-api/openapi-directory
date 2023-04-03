@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangePhpVersionPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ChangePhpVersionQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ChangePhpVersionRequest struct {
-	PathParams  ChangePhpVersionPathParams
-	QueryParams ChangePhpVersionQueryParams
 	// The new PHP version.
-	Request *shared.PhpVersion `request:"mediaType=application/json"`
+	PhpVersion *shared.PhpVersion `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ChangePhpVersionResponse struct {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeliverabilityTestReportPathParams struct {
+type GetDeliverabilityTestReportRequest struct {
 	// A unique string that identifies the predictive inbox placement test.
-	ReportID string `pathParam:"style=simple,explode=false,name=ReportId"`
-}
-
-type GetDeliverabilityTestReportHeaders struct {
+	ReportID          string  `pathParam:"style=simple,explode=false,name=ReportId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetDeliverabilityTestReportHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDeliverabilityTestReportRequest struct {
-	PathParams GetDeliverabilityTestReportPathParams
-	Headers    GetDeliverabilityTestReportHeaders
 }
 
 type GetDeliverabilityTestReportResponse struct {

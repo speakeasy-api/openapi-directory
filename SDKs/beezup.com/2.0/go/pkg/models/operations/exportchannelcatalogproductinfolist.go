@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportChannelCatalogProductInfoListPathParams struct {
+type ExportChannelCatalogProductInfoListRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type ExportChannelCatalogProductInfoListQueryParams struct {
 	// The file type of the exportation
 	Format shared.ExportFormatInQueryGeneralParameterEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type ExportChannelCatalogProductInfoListRequest struct {
-	PathParams  ExportChannelCatalogProductInfoListPathParams
-	QueryParams ExportChannelCatalogProductInfoListQueryParams
 	// The channel catalog product list filter
-	Request shared.GetChannelCatalogProductInfoListRequest `request:"mediaType=application/json"`
+	GetChannelCatalogProductInfoListRequest shared.GetChannelCatalogProductInfoListRequest `request:"mediaType=application/json"`
 }
 
 type ExportChannelCatalogProductInfoListResponse struct {

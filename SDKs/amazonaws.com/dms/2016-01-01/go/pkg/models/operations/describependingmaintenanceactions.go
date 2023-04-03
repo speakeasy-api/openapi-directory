@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribePendingMaintenanceActionsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribePendingMaintenanceActionsXAmzTargetEnum
 type DescribePendingMaintenanceActionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribePendingMaintenanceActionsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DescribePendingMaintenanceActionsHeaders struct {
+type DescribePendingMaintenanceActionsRequest struct {
+	DescribePendingMaintenanceActionsMessage shared.DescribePendingMaintenanceActionsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                         `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribePendingMaintenanceActionsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribePendingMaintenanceActionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribePendingMaintenanceActionsRequest struct {
-	QueryParams DescribePendingMaintenanceActionsQueryParams
-	Headers     DescribePendingMaintenanceActionsHeaders
-	Request     shared.DescribePendingMaintenanceActionsMessage `request:"mediaType=application/json"`
 }
 
 type DescribePendingMaintenanceActionsResponse struct {

@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BuildsUpdatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The build ID
-	BuildID int64 `pathParam:"style=simple,explode=false,name=build_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BuildsUpdateRequestBodyStatusEnum - The build status; used to cancel builds
@@ -49,9 +39,13 @@ type BuildsUpdateRequestBody struct {
 }
 
 type BuildsUpdateRequest struct {
-	PathParams BuildsUpdatePathParams
-	Request    BuildsUpdateRequestBody `request:"mediaType=application/json"`
-	Security   BuildsUpdateSecurity
+	RequestBody BuildsUpdateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The build ID
+	BuildID int64 `pathParam:"style=simple,explode=false,name=build_id"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // BuildsUpdate200ApplicationJSON - Success

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureChannelCatalogCostSettingsPathParams struct {
-	// The channel catalog identifier
-	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
 type ConfigureChannelCatalogCostSettingsRequest struct {
-	PathParams ConfigureChannelCatalogCostSettingsPathParams
-	Request    shared.CostSettings `request:"mediaType=application/json"`
+	// The channel catalog identifier
+	ChannelCatalogID string              `pathParam:"style=simple,explode=false,name=channelCatalogId"`
+	CostSettings     shared.CostSettings `request:"mediaType=application/json"`
 }
 
 type ConfigureChannelCatalogCostSettingsResponse struct {

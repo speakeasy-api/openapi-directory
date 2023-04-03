@@ -33,13 +33,9 @@ func (e *DeleteGlobalRuleRuleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteGlobalRulePathParams struct {
+type DeleteGlobalRuleRequest struct {
 	// The unique name/type of a rule.
 	Rule DeleteGlobalRuleRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
-type DeleteGlobalRuleRequest struct {
-	PathParams DeleteGlobalRulePathParams
 }
 
 type DeleteGlobalRuleResponse struct {

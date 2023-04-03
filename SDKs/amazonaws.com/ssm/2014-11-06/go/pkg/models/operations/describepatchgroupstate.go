@@ -30,20 +30,16 @@ func (e *DescribePatchGroupStateXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type DescribePatchGroupStateHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribePatchGroupStateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribePatchGroupStateRequest struct {
-	Headers DescribePatchGroupStateHeaders
-	Request shared.DescribePatchGroupStateRequest `request:"mediaType=application/json"`
+	DescribePatchGroupStateRequest shared.DescribePatchGroupStateRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     DescribePatchGroupStateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribePatchGroupStateResponse struct {

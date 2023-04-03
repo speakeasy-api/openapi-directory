@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetClassificationsAddressTypesRequest{
-        Headers: operations.GetClassificationsAddressTypesHeaders{
-            APIKey: "corrupti",
-        },
+        APIKey: "corrupti",
     }
 
     ctx := context.Background()

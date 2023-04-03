@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSegmentPathParams struct {
+type UpdateSegmentRequest struct {
+	UpdateSegmentModel shared.UpdateSegmentModel `request:"mediaType=application/json"`
 	// The identifier of the Segment.
 	SegmentID string `pathParam:"style=simple,explode=false,name=segmentId"`
-}
-
-type UpdateSegmentRequest struct {
-	PathParams UpdateSegmentPathParams
-	Request    shared.UpdateSegmentModel `request:"mediaType=application/json"`
 }
 
 type UpdateSegmentResponse struct {

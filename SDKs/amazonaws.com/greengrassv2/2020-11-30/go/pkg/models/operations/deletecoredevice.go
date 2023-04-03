@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCoreDevicePathParams struct {
-	// The name of the core device. This is also the name of the IoT thing.
-	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
-}
-
-type DeleteCoreDeviceHeaders struct {
+type DeleteCoreDeviceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteCoreDeviceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCoreDeviceRequest struct {
-	PathParams DeleteCoreDevicePathParams
-	Headers    DeleteCoreDeviceHeaders
+	// The name of the core device. This is also the name of the IoT thing.
+	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
 }
 
 type DeleteCoreDeviceResponse struct {

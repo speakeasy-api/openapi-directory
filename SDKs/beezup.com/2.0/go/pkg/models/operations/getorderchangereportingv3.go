@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderChangeReportingV3PathParams struct {
+type GetOrderChangeReportingV3Request struct {
 	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
@@ -15,10 +15,6 @@ type GetOrderChangeReportingV3PathParams struct {
 	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
 	// The order change execution id
 	OrderChangeExecutionUUID string `pathParam:"style=simple,explode=false,name=orderChangeExecutionUUID"`
-}
-
-type GetOrderChangeReportingV3Request struct {
-	PathParams GetOrderChangeReportingV3PathParams
 }
 
 type GetOrderChangeReportingV3Response struct {

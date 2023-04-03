@@ -7,25 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LookupPolicyQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type LookupPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The Amazon Resource Name (ARN) that is associated with the <a>Directory</a>. For more information, see <a>arns</a>.
-	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
 // LookupPolicyRequestBodyObjectReference - The reference that identifies an object.
 type LookupPolicyRequestBodyObjectReference struct {
 	Selector *string `json:"Selector,omitempty"`
@@ -41,9 +22,20 @@ type LookupPolicyRequestBody struct {
 }
 
 type LookupPolicyRequest struct {
-	QueryParams LookupPolicyQueryParams
-	Headers     LookupPolicyHeaders
-	Request     LookupPolicyRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                 `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       LookupPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) that is associated with the <a>Directory</a>. For more information, see <a>arns</a>.
+	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
 }
 
 type LookupPolicyResponse struct {

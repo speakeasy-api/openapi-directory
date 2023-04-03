@@ -50,30 +50,22 @@ func (e *GETSetLoadBalancerPoliciesForBackendServerVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETSetLoadBalancerPoliciesForBackendServerQueryParams struct {
+type GETSetLoadBalancerPoliciesForBackendServerRequest struct {
 	Action GETSetLoadBalancerPoliciesForBackendServerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The port number associated with the EC2 instance.
 	InstancePort int64 `queryParam:"style=form,explode=true,name=InstancePort"`
 	// The name of the load balancer.
 	LoadBalancerName string `queryParam:"style=form,explode=true,name=LoadBalancerName"`
 	// The names of the policies. If the list is empty, then all current polices are removed from the EC2 instance.
-	PolicyNames []string                                              `queryParam:"style=form,explode=true,name=PolicyNames"`
-	Version     GETSetLoadBalancerPoliciesForBackendServerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetLoadBalancerPoliciesForBackendServerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetLoadBalancerPoliciesForBackendServerRequest struct {
-	QueryParams GETSetLoadBalancerPoliciesForBackendServerQueryParams
-	Headers     GETSetLoadBalancerPoliciesForBackendServerHeaders
+	PolicyNames       []string                                              `queryParam:"style=form,explode=true,name=PolicyNames"`
+	Version           GETSetLoadBalancerPoliciesForBackendServerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetLoadBalancerPoliciesForBackendServerResponse struct {

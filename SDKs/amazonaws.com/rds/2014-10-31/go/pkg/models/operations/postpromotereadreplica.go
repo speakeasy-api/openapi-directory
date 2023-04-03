@@ -50,25 +50,17 @@ func (e *POSTPromoteReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTPromoteReadReplicaQueryParams struct {
-	Action  POSTPromoteReadReplicaActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTPromoteReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTPromoteReadReplicaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTPromoteReadReplicaRequest struct {
-	QueryParams POSTPromoteReadReplicaQueryParams
-	Headers     POSTPromoteReadReplicaHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTPromoteReadReplicaActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTPromoteReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTPromoteReadReplicaResponse struct {

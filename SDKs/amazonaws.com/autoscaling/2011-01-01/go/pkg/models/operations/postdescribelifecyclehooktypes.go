@@ -50,24 +50,16 @@ func (e *POSTDescribeLifecycleHookTypesVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTDescribeLifecycleHookTypesQueryParams struct {
-	Action  POSTDescribeLifecycleHookTypesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeLifecycleHookTypesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeLifecycleHookTypesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeLifecycleHookTypesRequest struct {
-	QueryParams POSTDescribeLifecycleHookTypesQueryParams
-	Headers     POSTDescribeLifecycleHookTypesHeaders
+	Action            POSTDescribeLifecycleHookTypesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           POSTDescribeLifecycleHookTypesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeLifecycleHookTypesResponse struct {

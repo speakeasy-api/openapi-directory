@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteReplicationSetQueryParams struct {
-	// The Amazon Resource Name (ARN) of the replication set you're deleting.
-	Arn string `queryParam:"style=form,explode=true,name=arn"`
-}
-
-type DeleteReplicationSetHeaders struct {
+type DeleteReplicationSetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteReplicationSetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteReplicationSetRequest struct {
-	QueryParams DeleteReplicationSetQueryParams
-	Headers     DeleteReplicationSetHeaders
+	// The Amazon Resource Name (ARN) of the replication set you're deleting.
+	Arn string `queryParam:"style=form,explode=true,name=arn"`
 }
 
 type DeleteReplicationSetResponse struct {

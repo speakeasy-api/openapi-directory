@@ -8,17 +8,12 @@ import (
 )
 
 type GetTransactionsIDSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetTransactionsIDPathParams struct {
-	// Unique identifier of the transaction.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 type GetTransactionsIDRequest struct {
-	PathParams GetTransactionsIDPathParams
-	Security   GetTransactionsIDSecurity
+	// Unique identifier of the transaction.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetTransactionsIDResponse struct {

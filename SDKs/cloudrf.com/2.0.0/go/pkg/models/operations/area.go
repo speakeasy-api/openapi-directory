@@ -8,7 +8,7 @@ import (
 )
 
 type AreaSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 // AreaRequestBody - A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
@@ -23,12 +23,6 @@ type AreaRequestBody struct {
 	// Site name
 	Site        *string             `json:"site,omitempty"`
 	Transmitter *shared.Transmitter `json:"transmitter,omitempty"`
-}
-
-type AreaRequest struct {
-	// A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
-	Request  AreaRequestBody `request:"mediaType=application/json"`
-	Security AreaSecurity
 }
 
 type AreaResponse struct {

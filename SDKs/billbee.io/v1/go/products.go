@@ -34,7 +34,7 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // ArticleCreateArticle - Creates a new product
-func (s *products) ArticleCreateArticle(ctx context.Context, request operations.ArticleCreateArticleRequest) (*operations.ArticleCreateArticleResponse, error) {
+func (s *products) ArticleCreateArticle(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput) (*operations.ArticleCreateArticleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products"
 
@@ -97,7 +97,7 @@ func (s *products) ArticleCreateArticle(ctx context.Context, request operations.
 // ArticleDeleteArticle - Deletes a product
 func (s *products) ArticleDeleteArticle(ctx context.Context, request operations.ArticleDeleteArticleRequest) (*operations.ArticleDeleteArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -148,7 +148,7 @@ func (s *products) ArticleDeleteArticle(ctx context.Context, request operations.
 // ArticleDeleteImage - Deletes a single image by id
 func (s *products) ArticleDeleteImage(ctx context.Context, request operations.ArticleDeleteImageRequest) (*operations.ArticleDeleteImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -199,7 +199,7 @@ func (s *products) ArticleDeleteImage(ctx context.Context, request operations.Ar
 // ArticleDeleteImageFromProduct - Deletes a single image from a product
 func (s *products) ArticleDeleteImageFromProduct(ctx context.Context, request operations.ArticleDeleteImageFromProductRequest) (*operations.ArticleDeleteImageFromProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -250,14 +250,14 @@ func (s *products) ArticleDeleteImageFromProduct(ctx context.Context, request op
 // ArticleGetArticle - Queries a single article by id or by sku
 func (s *products) ArticleGetArticle(ctx context.Context, request operations.ArticleGetArticleRequest) (*operations.ArticleGetArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -356,7 +356,7 @@ func (s *products) ArticleGetCategory(ctx context.Context) (*operations.ArticleG
 // ArticleGetCustomField - Queries a single custom field
 func (s *products) ArticleGetCustomField(ctx context.Context, request operations.ArticleGetCustomFieldRequest) (*operations.ArticleGetCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/custom-fields/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/custom-fields/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -428,7 +428,7 @@ func (s *products) ArticleGetCustomFields(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -490,7 +490,7 @@ func (s *products) ArticleGetCustomFields(ctx context.Context, request operation
 // ArticleGetImage - Returns a single image by id
 func (s *products) ArticleGetImage(ctx context.Context, request operations.ArticleGetImageRequest) (*operations.ArticleGetImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -555,7 +555,7 @@ func (s *products) ArticleGetImage(ctx context.Context, request operations.Artic
 // ArticleGetImageFromProduct - Returns a single image by id
 func (s *products) ArticleGetImageFromProduct(ctx context.Context, request operations.ArticleGetImageFromProductRequest) (*operations.ArticleGetImageFromProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -620,7 +620,7 @@ func (s *products) ArticleGetImageFromProduct(ctx context.Context, request opera
 // ArticleGetImages - Returns a list of all images of the product
 func (s *products) ArticleGetImages(ctx context.Context, request operations.ArticleGetImagesRequest) (*operations.ArticleGetImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -692,7 +692,7 @@ func (s *products) ArticleGetList(ctx context.Context, request operations.Articl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -798,7 +798,7 @@ func (s *products) ArticleGetReservedAmount(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -925,9 +925,9 @@ func (s *products) ArticleGetStocks(ctx context.Context) (*operations.ArticleGet
 // ArticlePatchArticle - Updates one or more fields of a product
 func (s *products) ArticlePatchArticle(ctx context.Context, request operations.ArticlePatchArticleRequest) (*operations.ArticlePatchArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -986,9 +986,9 @@ func (s *products) ArticlePatchArticle(ctx context.Context, request operations.A
 // ArticlePutImageForm - Add or update an existing image of a product
 func (s *products) ArticlePutImageForm(ctx context.Context, request operations.ArticlePutImageFormRequest) (*operations.ArticlePutImageFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1061,9 +1061,9 @@ func (s *products) ArticlePutImageForm(ctx context.Context, request operations.A
 // ArticlePutImageJSON - Add or update an existing image of a product
 func (s *products) ArticlePutImageJSON(ctx context.Context, request operations.ArticlePutImageJSONRequest) (*operations.ArticlePutImageJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1136,9 +1136,9 @@ func (s *products) ArticlePutImageJSON(ctx context.Context, request operations.A
 // ArticlePutImageRaw - Add or update an existing image of a product
 func (s *products) ArticlePutImageRaw(ctx context.Context, request operations.ArticlePutImageRawRequest) (*operations.ArticlePutImageRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1209,7 +1209,7 @@ func (s *products) ArticlePutImageRaw(ctx context.Context, request operations.Ar
 }
 
 // ArticleUpdateStockCodeForm - Update the stock code of an article
-func (s *products) ArticleUpdateStockCodeForm(ctx context.Context, request operations.ArticleUpdateStockCodeFormRequest) (*operations.ArticleUpdateStockCodeFormResponse, error) {
+func (s *products) ArticleUpdateStockCodeForm(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel) (*operations.ArticleUpdateStockCodeFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products/updatestockcode"
 
@@ -1284,7 +1284,7 @@ func (s *products) ArticleUpdateStockCodeForm(ctx context.Context, request opera
 }
 
 // ArticleUpdateStockCodeJSON - Update the stock code of an article
-func (s *products) ArticleUpdateStockCodeJSON(ctx context.Context, request operations.ArticleUpdateStockCodeJSONRequest) (*operations.ArticleUpdateStockCodeJSONResponse, error) {
+func (s *products) ArticleUpdateStockCodeJSON(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel) (*operations.ArticleUpdateStockCodeJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products/updatestockcode"
 
@@ -1359,7 +1359,7 @@ func (s *products) ArticleUpdateStockCodeJSON(ctx context.Context, request opera
 }
 
 // ArticleUpdateStockCodeRaw - Update the stock code of an article
-func (s *products) ArticleUpdateStockCodeRaw(ctx context.Context, request operations.ArticleUpdateStockCodeRawRequest) (*operations.ArticleUpdateStockCodeRawResponse, error) {
+func (s *products) ArticleUpdateStockCodeRaw(ctx context.Context, request []byte) (*operations.ArticleUpdateStockCodeRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products/updatestockcode"
 
@@ -1435,7 +1435,7 @@ func (s *products) ArticleUpdateStockCodeRaw(ctx context.Context, request operat
 
 // ArticleUpdateStockForm - Update the stock qty of an article
 // The article is specified by sku. You have to send the absolute value for the current stock
-func (s *products) ArticleUpdateStockForm(ctx context.Context, request operations.ArticleUpdateStockFormRequest) (*operations.ArticleUpdateStockFormResponse, error) {
+func (s *products) ArticleUpdateStockForm(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel) (*operations.ArticleUpdateStockFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products/updatestock"
 
@@ -1511,7 +1511,7 @@ func (s *products) ArticleUpdateStockForm(ctx context.Context, request operation
 
 // ArticleUpdateStockJSON - Update the stock qty of an article
 // The article is specified by sku. You have to send the absolute value for the current stock
-func (s *products) ArticleUpdateStockJSON(ctx context.Context, request operations.ArticleUpdateStockJSONRequest) (*operations.ArticleUpdateStockJSONResponse, error) {
+func (s *products) ArticleUpdateStockJSON(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel) (*operations.ArticleUpdateStockJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products/updatestock"
 
@@ -1587,7 +1587,7 @@ func (s *products) ArticleUpdateStockJSON(ctx context.Context, request operation
 
 // ArticleUpdateStockRaw - Update the stock qty of an article
 // The article is specified by sku. You have to send the absolute value for the current stock
-func (s *products) ArticleUpdateStockRaw(ctx context.Context, request operations.ArticleUpdateStockRawRequest) (*operations.ArticleUpdateStockRawResponse, error) {
+func (s *products) ArticleUpdateStockRaw(ctx context.Context, request []byte) (*operations.ArticleUpdateStockRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/products/updatestock"
 
@@ -1664,7 +1664,7 @@ func (s *products) ArticleUpdateStockRaw(ctx context.Context, request operations
 // SearchSearchForm - Search for products, customers and orders.
 // Type can be "order", "product" and / or "customer"
 // Term can contains lucene query syntax
-func (s *products) SearchSearchForm(ctx context.Context, request operations.SearchSearchFormRequest) (*operations.SearchSearchFormResponse, error) {
+func (s *products) SearchSearchForm(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPISearchControllerSearchModel) (*operations.SearchSearchFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/search"
 
@@ -1741,7 +1741,7 @@ func (s *products) SearchSearchForm(ctx context.Context, request operations.Sear
 // SearchSearchJSON - Search for products, customers and orders.
 // Type can be "order", "product" and / or "customer"
 // Term can contains lucene query syntax
-func (s *products) SearchSearchJSON(ctx context.Context, request operations.SearchSearchJSONRequest) (*operations.SearchSearchJSONResponse, error) {
+func (s *products) SearchSearchJSON(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPISearchControllerSearchModel) (*operations.SearchSearchJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/search"
 
@@ -1818,7 +1818,7 @@ func (s *products) SearchSearchJSON(ctx context.Context, request operations.Sear
 // SearchSearchRaw - Search for products, customers and orders.
 // Type can be "order", "product" and / or "customer"
 // Term can contains lucene query syntax
-func (s *products) SearchSearchRaw(ctx context.Context, request operations.SearchSearchRawRequest) (*operations.SearchSearchRawResponse, error) {
+func (s *products) SearchSearchRaw(ctx context.Context, request []byte) (*operations.SearchSearchRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/search"
 

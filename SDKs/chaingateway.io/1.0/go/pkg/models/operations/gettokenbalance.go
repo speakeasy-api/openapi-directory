@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTokenBalanceHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type GetTokenBalanceRequest struct {
-	Headers GetTokenBalanceHeaders
-	Request shared.GetTokenBalanceRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	GetTokenBalanceRequest shared.GetTokenBalanceRequest `request:"mediaType=application/json"`
 }
 
 type GetTokenBalanceResponse struct {

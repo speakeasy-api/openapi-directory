@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETListQueueTagsPathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETListQueueTagsActionEnum
 type GETListQueueTagsActionEnum string
 
@@ -57,25 +50,20 @@ func (e *GETListQueueTagsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListQueueTagsQueryParams struct {
-	Action  GETListQueueTagsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version GETListQueueTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListQueueTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETListQueueTagsRequest struct {
-	PathParams  GETListQueueTagsPathParams
-	QueryParams GETListQueueTagsQueryParams
-	Headers     GETListQueueTagsHeaders
+	// The AWS account number
+	AccountNumber int64                      `pathParam:"style=simple,explode=false,name=AccountNumber"`
+	Action        GETListQueueTagsActionEnum `queryParam:"style=form,explode=true,name=Action"`
+	// The name of the queue
+	QueueName         string                      `pathParam:"style=simple,explode=false,name=QueueName"`
+	Version           GETListQueueTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListQueueTagsResponse struct {

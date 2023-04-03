@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConfiguredTableAssociationsPathParams struct {
-	// A unique identifier for the membership to list configured table associations for. Currently accepts the membership ID.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
-type ListConfiguredTableAssociationsQueryParams struct {
-	// The maximum size of the results that is returned per call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token value retrieved from a previous call to access the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListConfiguredTableAssociationsHeaders struct {
+type ListConfiguredTableAssociationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListConfiguredTableAssociationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConfiguredTableAssociationsRequest struct {
-	PathParams  ListConfiguredTableAssociationsPathParams
-	QueryParams ListConfiguredTableAssociationsQueryParams
-	Headers     ListConfiguredTableAssociationsHeaders
+	// The maximum size of the results that is returned per call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A unique identifier for the membership to list configured table associations for. Currently accepts the membership ID.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
+	// The token value retrieved from a previous call to access the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListConfiguredTableAssociationsResponse struct {

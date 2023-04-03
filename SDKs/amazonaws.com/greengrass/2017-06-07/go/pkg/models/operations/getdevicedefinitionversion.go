@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeviceDefinitionVersionPathParams struct {
+type GetDeviceDefinitionVersionRequest struct {
 	// The ID of the device definition.
 	DeviceDefinitionID string `pathParam:"style=simple,explode=false,name=DeviceDefinitionId"`
 	// The ID of the device definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListDeviceDefinitionVersions'' requests. If the version is the last one that was associated with a device definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
 	DeviceDefinitionVersionID string `pathParam:"style=simple,explode=false,name=DeviceDefinitionVersionId"`
-}
-
-type GetDeviceDefinitionVersionQueryParams struct {
 	// The token for the next set of results, or ''null'' if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetDeviceDefinitionVersionHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type GetDeviceDefinitionVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDeviceDefinitionVersionRequest struct {
-	PathParams  GetDeviceDefinitionVersionPathParams
-	QueryParams GetDeviceDefinitionVersionQueryParams
-	Headers     GetDeviceDefinitionVersionHeaders
 }
 
 type GetDeviceDefinitionVersionResponse struct {

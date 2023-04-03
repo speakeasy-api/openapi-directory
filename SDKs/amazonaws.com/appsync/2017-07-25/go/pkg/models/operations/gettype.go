@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTypePathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The type name.
-	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
-}
-
 // GetTypeFormatEnum - The type format: SDL or JSON.
 type GetTypeFormatEnum string
 
@@ -40,12 +33,7 @@ func (e *GetTypeFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTypeQueryParams struct {
-	// The type format: SDL or JSON.
-	Format GetTypeFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetTypeHeaders struct {
+type GetTypeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -53,12 +41,12 @@ type GetTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTypeRequest struct {
-	PathParams  GetTypePathParams
-	QueryParams GetTypeQueryParams
-	Headers     GetTypeHeaders
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The type format: SDL or JSON.
+	Format GetTypeFormatEnum `queryParam:"style=form,explode=true,name=format"`
+	// The type name.
+	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
 }
 
 type GetTypeResponse struct {

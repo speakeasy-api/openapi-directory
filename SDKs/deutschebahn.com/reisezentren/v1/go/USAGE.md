@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetReisezentrenRequest{
-        QueryParams: operations.GetReisezentrenQueryParams{
-            Name: "corrupti",
-        },
+        Name: "corrupti",
     }
 
     ctx := context.Background()

@@ -42,9 +42,9 @@ func newStories(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Returns the full record for the new story added to the task.
 func (s *stories) CreateStoryForTask(ctx context.Context, request operations.CreateStoryForTaskRequest) (*operations.CreateStoryForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/stories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/stories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -59,7 +59,7 @@ func (s *stories) CreateStoryForTask(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -121,14 +121,14 @@ func (s *stories) CreateStoryForTask(ctx context.Context, request operations.Cre
 // Returns an empty data record.
 func (s *stories) DeleteStory(ctx context.Context, request operations.DeleteStoryRequest) (*operations.DeleteStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -188,14 +188,14 @@ func (s *stories) DeleteStory(ctx context.Context, request operations.DeleteStor
 // Returns the compact records for all stories on the task.
 func (s *stories) GetStoriesForTask(ctx context.Context, request operations.GetStoriesForTaskRequest) (*operations.GetStoriesForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/stories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/stories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -255,14 +255,14 @@ func (s *stories) GetStoriesForTask(ctx context.Context, request operations.GetS
 // Returns the full record for a single story.
 func (s *stories) GetStory(ctx context.Context, request operations.GetStoryRequest) (*operations.GetStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -322,9 +322,9 @@ func (s *stories) GetStory(ctx context.Context, request operations.GetStoryReque
 // Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.
 func (s *stories) UpdateStory(ctx context.Context, request operations.UpdateStoryRequest) (*operations.UpdateStoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stories/{story_gid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -339,7 +339,7 @@ func (s *stories) UpdateStory(ctx context.Context, request operations.UpdateStor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

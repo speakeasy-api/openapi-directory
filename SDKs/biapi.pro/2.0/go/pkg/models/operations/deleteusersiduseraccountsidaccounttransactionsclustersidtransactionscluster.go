@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterPathParams struct {
-	IDAccount             int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDTransactionscluster int64 `pathParam:"style=simple,explode=false,name=id_transactionscluster"`
+type DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest struct {
+	Expand                *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount             int64   `pathParam:"style=simple,explode=false,name=id_account"`
+	IDTransactionscluster int64   `pathParam:"style=simple,explode=false,name=id_transactionscluster"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest struct {
-	PathParams  DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterPathParams
-	QueryParams DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterQueryParams
 }
 
 type DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterResponse struct {

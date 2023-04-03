@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetPipelineStepForRepositoryPathParams struct {
+type GetPipelineStepForRepositoryRequest struct {
 	// The UUID of the pipeline.
 	PipelineUUID string `pathParam:"style=simple,explode=false,name=pipeline_uuid"`
 	// The repository.
@@ -15,10 +15,6 @@ type GetPipelineStepForRepositoryPathParams struct {
 	StepUUID string `pathParam:"style=simple,explode=false,name=step_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetPipelineStepForRepositoryRequest struct {
-	PathParams GetPipelineStepForRepositoryPathParams
 }
 
 type GetPipelineStepForRepositoryResponse struct {

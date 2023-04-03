@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFileSystemPathParams struct {
+type DeleteFileSystemRequest struct {
 	// The ID of the file system you want to delete.
-	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type DeleteFileSystemHeaders struct {
+	FileSystemID      string  `pathParam:"style=simple,explode=false,name=FileSystemId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteFileSystemHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFileSystemRequest struct {
-	PathParams DeleteFileSystemPathParams
-	Headers    DeleteFileSystemHeaders
 }
 
 type DeleteFileSystemResponse struct {

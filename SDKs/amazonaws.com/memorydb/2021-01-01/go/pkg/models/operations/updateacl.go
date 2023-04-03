@@ -30,7 +30,8 @@ func (e *UpdateACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateACLHeaders struct {
+type UpdateACLRequest struct {
+	UpdateACLRequest  shared.UpdateACLRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type UpdateACLHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        UpdateACLXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type UpdateACLRequest struct {
-	Headers UpdateACLHeaders
-	Request shared.UpdateACLRequest `request:"mediaType=application/json"`
 }
 
 type UpdateACLResponse struct {

@@ -50,26 +50,18 @@ func (e *GETGETAccessKeyLastUsedVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETAccessKeyLastUsedQueryParams struct {
-	// <p>The identifier of an access key.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
-	AccessKeyID string                             `queryParam:"style=form,explode=true,name=AccessKeyId"`
-	Action      GETGETAccessKeyLastUsedActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version     GETGETAccessKeyLastUsedVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETAccessKeyLastUsedHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETGETAccessKeyLastUsedRequest struct {
-	QueryParams GETGETAccessKeyLastUsedQueryParams
-	Headers     GETGETAccessKeyLastUsedHeaders
+	// <p>The identifier of an access key.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
+	AccessKeyID       string                             `queryParam:"style=form,explode=true,name=AccessKeyId"`
+	Action            GETGETAccessKeyLastUsedActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           GETGETAccessKeyLastUsedVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETAccessKeyLastUsedResponse struct {

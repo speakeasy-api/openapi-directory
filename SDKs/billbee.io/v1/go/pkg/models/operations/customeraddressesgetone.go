@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddressesGetOnePathParams struct {
+type CustomerAddressesGetOneRequest struct {
 	// The id of the address to query
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerAddressesGetOneRequest struct {
-	PathParams CustomerAddressesGetOnePathParams
 }
 
 type CustomerAddressesGetOneResponse struct {

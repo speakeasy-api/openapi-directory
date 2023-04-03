@@ -116,7 +116,7 @@ func (s *SDK) CreateConnector(ctx context.Context, request operations.CreateConn
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/connectors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateConnector(ctx context.Context, request operations.CreateConn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -252,7 +252,7 @@ func (s *SDK) CreateCustomPlugin(ctx context.Context, request operations.CreateC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/custom-plugins"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -267,7 +267,7 @@ func (s *SDK) CreateCustomPlugin(ctx context.Context, request operations.CreateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -388,7 +388,7 @@ func (s *SDK) CreateWorkerConfiguration(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/worker-configurations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -403,7 +403,7 @@ func (s *SDK) CreateWorkerConfiguration(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -522,16 +522,16 @@ func (s *SDK) CreateWorkerConfiguration(ctx context.Context, request operations.
 // DeleteConnector - Deletes the specified connector.
 func (s *SDK) DeleteConnector(ctx context.Context, request operations.DeleteConnectorRequest) (*operations.DeleteConnectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -642,14 +642,14 @@ func (s *SDK) DeleteConnector(ctx context.Context, request operations.DeleteConn
 // DeleteCustomPlugin - Deletes a custom plugin.
 func (s *SDK) DeleteCustomPlugin(ctx context.Context, request operations.DeleteCustomPluginRequest) (*operations.DeleteCustomPluginResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -758,14 +758,14 @@ func (s *SDK) DeleteCustomPlugin(ctx context.Context, request operations.DeleteC
 // DescribeConnector - Returns summary information about the connector.
 func (s *SDK) DescribeConnector(ctx context.Context, request operations.DescribeConnectorRequest) (*operations.DescribeConnectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -874,14 +874,14 @@ func (s *SDK) DescribeConnector(ctx context.Context, request operations.Describe
 // DescribeCustomPlugin - A summary description of the custom plugin.
 func (s *SDK) DescribeCustomPlugin(ctx context.Context, request operations.DescribeCustomPluginRequest) (*operations.DescribeCustomPluginResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -990,14 +990,14 @@ func (s *SDK) DescribeCustomPlugin(ctx context.Context, request operations.Descr
 // DescribeWorkerConfiguration - Returns information about a worker configuration.
 func (s *SDK) DescribeWorkerConfiguration(ctx context.Context, request operations.DescribeWorkerConfigurationRequest) (*operations.DescribeWorkerConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/worker-configurations/{workerConfigurationArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/worker-configurations/{workerConfigurationArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1113,9 +1113,9 @@ func (s *SDK) ListConnectors(ctx context.Context, request operations.ListConnect
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1233,9 +1233,9 @@ func (s *SDK) ListCustomPlugins(ctx context.Context, request operations.ListCust
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1353,9 +1353,9 @@ func (s *SDK) ListWorkerConfigurations(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1466,9 +1466,9 @@ func (s *SDK) ListWorkerConfigurations(ctx context.Context, request operations.L
 // UpdateConnector - Updates the specified connector.
 func (s *SDK) UpdateConnector(ctx context.Context, request operations.UpdateConnectorRequest) (*operations.UpdateConnectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}#currentVersion", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}#currentVersion", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1483,9 +1483,9 @@ func (s *SDK) UpdateConnector(ctx context.Context, request operations.UpdateConn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

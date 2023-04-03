@@ -116,7 +116,7 @@ func (s *SDK) GetDeployments(ctx context.Context, request operations.GetDeployme
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetDeployments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) GetDeployments(ctx context.Context, request operations.GetDeployme
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -182,7 +182,7 @@ func (s *SDK) GetDeviceRegistration(ctx context.Context, request operations.GetD
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetDeviceRegistration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,7 +197,7 @@ func (s *SDK) GetDeviceRegistration(ctx context.Context, request operations.GetD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -248,7 +248,7 @@ func (s *SDK) SendHeartbeat(ctx context.Context, request operations.SendHeartbea
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/SendHeartbeat"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -263,7 +263,7 @@ func (s *SDK) SendHeartbeat(ctx context.Context, request operations.SendHeartbea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

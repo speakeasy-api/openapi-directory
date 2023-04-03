@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateVirtualGatewayPathParams struct {
-	// The name of the service mesh that the virtual gateway resides in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual gateway to update.
-	VirtualGatewayName string `pathParam:"style=simple,explode=false,name=virtualGatewayName"`
-}
-
-type UpdateVirtualGatewayQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type UpdateVirtualGatewayHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateVirtualGatewayRequestBodySpec - An object that represents the specification of a service mesh resource.
 type UpdateVirtualGatewayRequestBodySpec struct {
 	BackendDefaults *shared.VirtualGatewayBackendDefaults `json:"backendDefaults,omitempty"`
@@ -45,10 +23,20 @@ type UpdateVirtualGatewayRequestBody struct {
 }
 
 type UpdateVirtualGatewayRequest struct {
-	PathParams  UpdateVirtualGatewayPathParams
-	QueryParams UpdateVirtualGatewayQueryParams
-	Headers     UpdateVirtualGatewayHeaders
-	Request     UpdateVirtualGatewayRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateVirtualGatewayRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh that the virtual gateway resides in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the virtual gateway to update.
+	VirtualGatewayName string `pathParam:"style=simple,explode=false,name=virtualGatewayName"`
 }
 
 type UpdateVirtualGatewayResponse struct {

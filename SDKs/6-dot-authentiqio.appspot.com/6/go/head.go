@@ -35,7 +35,7 @@ func newHead(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // HeadKeyPK - HEAD info on Authentiq ID
 func (s *head) HeadKeyPK(ctx context.Context, request operations.HeadKeyPKRequest) (*operations.HeadKeyPKResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *head) HeadKeyPK(ctx context.Context, request operations.HeadKeyPKReques
 // SignRetrieveHead - HEAD to get the status of a verification job
 func (s *head) SignRetrieveHead(ctx context.Context, request operations.SignRetrieveHeadRequest) (*operations.SignRetrieveHeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {

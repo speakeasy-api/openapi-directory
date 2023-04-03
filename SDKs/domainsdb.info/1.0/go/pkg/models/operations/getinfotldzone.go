@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInfoTldZonePathParams struct {
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type GetInfoTldZoneQueryParams struct {
+type GetInfoTldZoneRequest struct {
 	// Results per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search page to request
 	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetInfoTldZoneRequest struct {
-	PathParams  GetInfoTldZonePathParams
-	QueryParams GetInfoTldZoneQueryParams
+	Zone string  `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type GetInfoTldZoneResponse struct {

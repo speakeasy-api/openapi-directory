@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBotLocalePathParams struct {
-	// The identifier of the bot associated with the locale.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The identifier of the version of the bot associated with the locale.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The unique identifier of the locale to describe. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type DescribeBotLocaleHeaders struct {
+type DescribeBotLocaleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DescribeBotLocaleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBotLocaleRequest struct {
-	PathParams DescribeBotLocalePathParams
-	Headers    DescribeBotLocaleHeaders
+	// The identifier of the bot associated with the locale.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The identifier of the version of the bot associated with the locale.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The unique identifier of the locale to describe. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type DescribeBotLocaleResponse struct {

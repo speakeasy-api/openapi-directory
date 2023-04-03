@@ -30,7 +30,8 @@ func (e *CreateFleetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateFleetHeaders struct {
+type CreateFleetRequest struct {
+	CreateFleetInput  shared.CreateFleetInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateFleetHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateFleetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateFleetRequest struct {
-	Headers CreateFleetHeaders
-	Request shared.CreateFleetInput `request:"mediaType=application/json"`
 }
 
 type CreateFleetResponse struct {

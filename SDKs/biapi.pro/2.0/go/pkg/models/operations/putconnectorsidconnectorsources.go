@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConnectorsIDConnectorSourcesPathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-}
-
-type PutConnectorsIDConnectorSourcesQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutConnectorsIDConnectorSourcesRequestBody struct {
 	// list (json format) of capabilities the sources will be disabled for
 	DisabledCapabilities *string `multipartForm:"name=disabled_capabilities"`
@@ -23,9 +15,9 @@ type PutConnectorsIDConnectorSourcesRequestBody struct {
 }
 
 type PutConnectorsIDConnectorSourcesRequest struct {
-	PathParams  PutConnectorsIDConnectorSourcesPathParams
-	QueryParams PutConnectorsIDConnectorSourcesQueryParams
-	Request     *PutConnectorsIDConnectorSourcesRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutConnectorsIDConnectorSourcesRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                                     `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64                                       `pathParam:"style=simple,explode=false,name=id_connector"`
 }
 
 type PutConnectorsIDConnectorSourcesResponse struct {

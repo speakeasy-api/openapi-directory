@@ -50,16 +50,13 @@ func (e *GETDisableVpcClassicLinkVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDisableVpcClassicLinkQueryParams struct {
+type GETDisableVpcClassicLinkRequest struct {
 	Action GETDisableVpcClassicLinkActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun  *bool                               `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETDisableVpcClassicLinkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDisableVpcClassicLinkHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -67,11 +64,6 @@ type GETDisableVpcClassicLinkHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableVpcClassicLinkRequest struct {
-	QueryParams GETDisableVpcClassicLinkQueryParams
-	Headers     GETDisableVpcClassicLinkHeaders
 }
 
 type GETDisableVpcClassicLinkResponse struct {

@@ -8,12 +8,14 @@ import (
 	"time"
 )
 
-type ListManagedEndpointsPathParams struct {
-	// The ID of the virtual cluster.
-	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
-}
-
-type ListManagedEndpointsQueryParams struct {
+type ListManagedEndpointsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  The date and time after which the endpoints are created.
 	CreatedAfter *time.Time `queryParam:"style=form,explode=true,name=createdAfter"`
 	// The date and time before which the endpoints are created.
@@ -26,22 +28,8 @@ type ListManagedEndpointsQueryParams struct {
 	States []shared.EndpointStateEnum `queryParam:"style=form,explode=true,name=states"`
 	// The types of the managed endpoints.
 	Types []string `queryParam:"style=form,explode=true,name=types"`
-}
-
-type ListManagedEndpointsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListManagedEndpointsRequest struct {
-	PathParams  ListManagedEndpointsPathParams
-	QueryParams ListManagedEndpointsQueryParams
-	Headers     ListManagedEndpointsHeaders
+	// The ID of the virtual cluster.
+	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
 }
 
 type ListManagedEndpointsResponse struct {

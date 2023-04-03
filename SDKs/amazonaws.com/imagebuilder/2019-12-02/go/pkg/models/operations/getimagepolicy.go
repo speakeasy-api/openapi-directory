@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImagePolicyQueryParams struct {
-	// The Amazon Resource Name (ARN) of the image whose policy you want to retrieve.
-	ImageArn string `queryParam:"style=form,explode=true,name=imageArn"`
-}
-
-type GetImagePolicyHeaders struct {
+type GetImagePolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetImagePolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetImagePolicyRequest struct {
-	QueryParams GetImagePolicyQueryParams
-	Headers     GetImagePolicyHeaders
+	// The Amazon Resource Name (ARN) of the image whose policy you want to retrieve.
+	ImageArn string `queryParam:"style=form,explode=true,name=imageArn"`
 }
 
 type GetImagePolicyResponse struct {

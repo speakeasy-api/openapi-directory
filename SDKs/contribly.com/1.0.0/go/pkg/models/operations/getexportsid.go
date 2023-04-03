@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExportsIDPathParams struct {
+type GetExportsIDRequest struct {
 	// Id of the export job to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetExportsIDRequest struct {
-	PathParams GetExportsIDPathParams
 }
 
 type GetExportsIDResponse struct {

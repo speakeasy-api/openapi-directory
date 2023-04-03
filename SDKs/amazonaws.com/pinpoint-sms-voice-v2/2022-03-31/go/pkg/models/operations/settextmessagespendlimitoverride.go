@@ -30,20 +30,16 @@ func (e *SetTextMessageSpendLimitOverrideXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type SetTextMessageSpendLimitOverrideHeaders struct {
-	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        SetTextMessageSpendLimitOverrideXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type SetTextMessageSpendLimitOverrideRequest struct {
-	Headers SetTextMessageSpendLimitOverrideHeaders
-	Request shared.SetTextMessageSpendLimitOverrideRequest `request:"mediaType=application/json"`
+	SetTextMessageSpendLimitOverrideRequest shared.SetTextMessageSpendLimitOverrideRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                          *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                       *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                              SetTextMessageSpendLimitOverrideXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type SetTextMessageSpendLimitOverrideResponse struct {

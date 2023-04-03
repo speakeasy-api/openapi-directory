@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type SuspendUserPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type SuspendUserRequestBody struct {
 	// Will send an email with this message when present
 	Message      *string `json:"message,omitempty"`
@@ -19,8 +15,8 @@ type SuspendUserRequestBody struct {
 }
 
 type SuspendUserRequest struct {
-	PathParams SuspendUserPathParams
-	Request    *SuspendUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *SuspendUserRequestBody `request:"mediaType=application/json"`
+	ID          int64                   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SuspendUser200ApplicationJSONSuspensionSuspendedBy struct {

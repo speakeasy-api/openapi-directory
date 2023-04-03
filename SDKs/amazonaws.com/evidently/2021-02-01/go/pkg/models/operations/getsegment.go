@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSegmentPathParams struct {
-	// The ARN of the segment to return information for.
-	Segment string `pathParam:"style=simple,explode=false,name=segment"`
-}
-
-type GetSegmentHeaders struct {
+type GetSegmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetSegmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSegmentRequest struct {
-	PathParams GetSegmentPathParams
-	Headers    GetSegmentHeaders
+	// The ARN of the segment to return information for.
+	Segment string `pathParam:"style=simple,explode=false,name=segment"`
 }
 
 type GetSegmentResponse struct {

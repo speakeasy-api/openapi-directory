@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMaintenanceWindowTargetsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeMaintenanceWindowTargetsXAmzTargetEnum
 type DescribeMaintenanceWindowTargetsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeMaintenanceWindowTargetsXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type DescribeMaintenanceWindowTargetsHeaders struct {
+type DescribeMaintenanceWindowTargetsRequest struct {
+	DescribeMaintenanceWindowTargetsRequest shared.DescribeMaintenanceWindowTargetsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeMaintenanceWindowTargetsHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeMaintenanceWindowTargetsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeMaintenanceWindowTargetsRequest struct {
-	QueryParams DescribeMaintenanceWindowTargetsQueryParams
-	Headers     DescribeMaintenanceWindowTargetsHeaders
-	Request     shared.DescribeMaintenanceWindowTargetsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeMaintenanceWindowTargetsResponse struct {

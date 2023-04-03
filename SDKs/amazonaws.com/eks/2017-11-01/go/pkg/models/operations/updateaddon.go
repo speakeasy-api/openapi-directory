@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAddonPathParams struct {
-	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
-	AddonName string `pathParam:"style=simple,explode=false,name=addonName"`
-	// The name of the cluster.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type UpdateAddonHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAddonRequestBodyResolveConflictsEnum - <p>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Conflicts are handled based on the option you choose:</p> <ul> <li> <p> <b>None</b> – Amazon EKS doesn't change the value. The update might fail.</p> </li> <li> <p> <b>Overwrite</b> – Amazon EKS overwrites the changed value back to the Amazon EKS default value.</p> </li> <li> <p> <b>Preserve</b> – Amazon EKS preserves the value. If you choose this option, we recommend that you test any field and value changes on a non-production cluster before updating the add-on on your production cluster.</p> </li> </ul>
 type UpdateAddonRequestBodyResolveConflictsEnum string
 
@@ -67,9 +50,18 @@ type UpdateAddonRequestBody struct {
 }
 
 type UpdateAddonRequest struct {
-	PathParams UpdateAddonPathParams
-	Headers    UpdateAddonHeaders
-	Request    UpdateAddonRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAddonRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
+	AddonName string `pathParam:"style=simple,explode=false,name=addonName"`
+	// The name of the cluster.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type UpdateAddonResponse struct {

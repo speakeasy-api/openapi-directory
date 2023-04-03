@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReferenceImportJobPathParams struct {
-	// The job's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The job's reference store ID.
-	ReferenceStoreID string `pathParam:"style=simple,explode=false,name=referenceStoreId"`
-}
-
-type GetReferenceImportJobHeaders struct {
+type GetReferenceImportJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetReferenceImportJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReferenceImportJobRequest struct {
-	PathParams GetReferenceImportJobPathParams
-	Headers    GetReferenceImportJobHeaders
+	// The job's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The job's reference store ID.
+	ReferenceStoreID string `pathParam:"style=simple,explode=false,name=referenceStoreId"`
 }
 
 type GetReferenceImportJobResponse struct {

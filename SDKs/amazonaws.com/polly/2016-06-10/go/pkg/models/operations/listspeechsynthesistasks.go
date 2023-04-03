@@ -39,28 +39,20 @@ func (e *ListSpeechSynthesisTasksStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSpeechSynthesisTasksQueryParams struct {
+type ListSpeechSynthesisTasksRequest struct {
 	// Maximum number of speech synthesis tasks returned in a List operation.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The pagination token to use in the next request to continue the listing of speech synthesis tasks.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// Status of the speech synthesis tasks returned in a List operation
-	Status *ListSpeechSynthesisTasksStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListSpeechSynthesisTasksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSpeechSynthesisTasksRequest struct {
-	QueryParams ListSpeechSynthesisTasksQueryParams
-	Headers     ListSpeechSynthesisTasksHeaders
+	Status            *ListSpeechSynthesisTasksStatusEnum `queryParam:"style=form,explode=true,name=Status"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListSpeechSynthesisTasksResponse struct {

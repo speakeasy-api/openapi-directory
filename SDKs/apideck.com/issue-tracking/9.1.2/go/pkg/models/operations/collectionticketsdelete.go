@@ -8,35 +8,22 @@ import (
 )
 
 type CollectionTicketsDeleteSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type CollectionTicketsDeletePathParams struct {
+type CollectionTicketsDeleteRequest struct {
 	// The collection ID
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-	// ID of the ticket you are acting upon.
-	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
-}
-
-type CollectionTicketsDeleteQueryParams struct {
 	// Include raw response. Mostly used for debugging purposes
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type CollectionTicketsDeleteHeaders struct {
+	// ID of the ticket you are acting upon.
+	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type CollectionTicketsDeleteRequest struct {
-	PathParams  CollectionTicketsDeletePathParams
-	QueryParams CollectionTicketsDeleteQueryParams
-	Headers     CollectionTicketsDeleteHeaders
-	Security    CollectionTicketsDeleteSecurity
 }
 
 type CollectionTicketsDeleteResponse struct {

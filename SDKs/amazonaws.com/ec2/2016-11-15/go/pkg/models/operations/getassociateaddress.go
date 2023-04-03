@@ -50,7 +50,7 @@ func (e *GETAssociateAddressVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAssociateAddressQueryParams struct {
+type GETAssociateAddressRequest struct {
 	Action GETAssociateAddressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// [EC2-VPC] The allocation ID. This is required for EC2-VPC.
 	AllocationID *string `queryParam:"style=form,explode=true,name=AllocationId"`
@@ -65,23 +65,15 @@ type GETAssociateAddressQueryParams struct {
 	// [EC2-VPC] The primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 	PrivateIPAddress *string `queryParam:"style=form,explode=true,name=PrivateIpAddress"`
 	// [EC2-Classic] The Elastic IP address to associate with the instance. This is required for EC2-Classic.
-	PublicIP *string                        `queryParam:"style=form,explode=true,name=PublicIp"`
-	Version  GETAssociateAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssociateAddressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateAddressRequest struct {
-	QueryParams GETAssociateAddressQueryParams
-	Headers     GETAssociateAddressHeaders
+	PublicIP          *string                        `queryParam:"style=form,explode=true,name=PublicIp"`
+	Version           GETAssociateAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssociateAddressResponse struct {

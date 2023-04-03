@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlayerGamePPAQueryParams struct {
+type GetPlayerGamePPARequest struct {
 	// Filter to remove garbage time plays from calculations
 	ExcludeGarbageTime *bool `queryParam:"style=form,explode=true,name=excludeGarbageTime"`
 	// Player id filter
@@ -24,10 +24,6 @@ type GetPlayerGamePPAQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPlayerGamePPARequest struct {
-	QueryParams GetPlayerGamePPAQueryParams
 }
 
 type GetPlayerGamePPAResponse struct {

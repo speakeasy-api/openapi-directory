@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type ListPostsQueryParams struct {
-	// Load posts with an id lower than this value. Useful for pagination.
-	Before *string `queryParam:"style=form,explode=true,name=before"`
-}
-
-type ListPostsHeaders struct {
+type ListPostsRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type ListPostsRequest struct {
-	QueryParams ListPostsQueryParams
-	Headers     ListPostsHeaders
+	// Load posts with an id lower than this value. Useful for pagination.
+	Before *string `queryParam:"style=form,explode=true,name=before"`
 }
 
 type ListPosts200ApplicationJSONLatestPostsActionsSummary struct {

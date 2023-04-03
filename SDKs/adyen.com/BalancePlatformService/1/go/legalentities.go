@@ -34,16 +34,16 @@ func newLegalEntities(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GetLegalEntitiesID - Get a legal entity
 // Returns a legal entity.
-func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operations.GetLegalEntitiesIDRequest) (*operations.GetLegalEntitiesIDResponse, error) {
+func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operations.GetLegalEntitiesIDRequest, security operations.GetLegalEntitiesIDSecurity) (*operations.GetLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,11 +99,11 @@ func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operatio
 // Updates a legal entity.
 //
 //	>To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
-func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operations.PatchLegalEntitiesIDRequest) (*operations.PatchLegalEntitiesIDResponse, error) {
+func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operations.PatchLegalEntitiesIDRequest, security operations.PatchLegalEntitiesIDSecurity) (*operations.PatchLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LegalEntityInfoInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -115,7 +115,7 @@ func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operat
 // Creates a legal entity.
 //
 // This resource contains information about the user that will be onboarded in your platform. Adyen uses this information to perform verification checks as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
-func (s *legalEntities) PostLegalEntities(ctx context.Context, request operations.PostLegalEntitiesRequest) (*operations.PostLegalEntitiesResponse, error) {
+func (s *legalEntities) PostLegalEntities(ctx context.Context, request shared.LegalEntityInfoRequiredTypeInput, security operations.PostLegalEntitiesSecurity) (*operations.PostLegalEntitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/legalEntities"
 
@@ -187,7 +187,7 @@ func (s *legalEntities) PostLegalEntities(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

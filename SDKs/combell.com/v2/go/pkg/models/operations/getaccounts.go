@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountsQueryParams struct {
+type GetAccountsRequest struct {
 	// Filters the list, returning only accounts containing the specified asset type.
 	AssetType *shared.AssetTypeEnum `queryParam:"style=form,explode=true,name=asset_type"`
 	// Return only accounts, matching the specified identifier.
@@ -16,10 +16,6 @@ type GetAccountsQueryParams struct {
 	Skip *int `queryParam:"style=form,explode=true,name=skip"`
 	// The number of items to return in the resultset. The returned count can be equal or less than this number.
 	Take *int `queryParam:"style=form,explode=true,name=take"`
-}
-
-type GetAccountsRequest struct {
-	QueryParams GetAccountsQueryParams
 }
 
 type GetAccountsResponse struct {

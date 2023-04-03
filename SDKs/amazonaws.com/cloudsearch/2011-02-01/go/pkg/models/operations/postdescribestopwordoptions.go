@@ -50,25 +50,17 @@ func (e *POSTDescribeStopwordOptionsVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTDescribeStopwordOptionsQueryParams struct {
-	Action  POSTDescribeStopwordOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeStopwordOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeStopwordOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeStopwordOptionsRequest struct {
-	QueryParams POSTDescribeStopwordOptionsQueryParams
-	Headers     POSTDescribeStopwordOptionsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeStopwordOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTDescribeStopwordOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeStopwordOptionsResponse struct {

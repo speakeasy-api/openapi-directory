@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.InterferenceRequest{
-        Security: operations.InterferenceSecurity{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.InterferenceQueryParams{
-            Name: "corrupti",
-            Network: "provident",
-        },
+        Name: "corrupti",
+        Network: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Analyse.Interference(ctx, req)
+    res, err := s.Analyse.Interference(ctx, req, operations.InterferenceSecurity{
+        APIKeyAuth: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

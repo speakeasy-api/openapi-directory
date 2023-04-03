@@ -33,14 +33,14 @@ func newFastestAndNextDepartures(defaultClient, securityClient HTTPClient, serve
 // GetFastestDeparturesByCRS - getFastestDeparturesByCRS is used to get the fastest next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place.
 func (s *fastestAndNextDepartures) GetFastestDeparturesByCRS(ctx context.Context, request operations.GetFastestDeparturesByCRSRequest) (*operations.GetFastestDeparturesByCRSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getFastestDeparturesByCRS/{CRS}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getFastestDeparturesByCRS/{CRS}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *fastestAndNextDepartures) GetFastestDeparturesByCRS(ctx context.Context
 // GetNextDeparturesByCRS - getNextDeparturesByCRS is used to get the next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place. This will return the next departures for each of the filterList stations specified. It may not return the fastest next service. To get the fastest next service use the getFastestDeparturesByCRS endpoint.
 func (s *fastestAndNextDepartures) GetNextDeparturesByCRS(ctx context.Context, request operations.GetNextDeparturesByCRSRequest) (*operations.GetNextDeparturesByCRSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getNextDeparturesByCRS/{CRS}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getNextDeparturesByCRS/{CRS}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

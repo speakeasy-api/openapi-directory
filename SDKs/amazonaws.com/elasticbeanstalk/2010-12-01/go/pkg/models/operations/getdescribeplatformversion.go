@@ -50,26 +50,18 @@ func (e *GETDescribePlatformVersionVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribePlatformVersionQueryParams struct {
+type GETDescribePlatformVersionRequest struct {
 	Action GETDescribePlatformVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ARN of the platform version.
-	PlatformArn *string                               `queryParam:"style=form,explode=true,name=PlatformArn"`
-	Version     GETDescribePlatformVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribePlatformVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribePlatformVersionRequest struct {
-	QueryParams GETDescribePlatformVersionQueryParams
-	Headers     GETDescribePlatformVersionHeaders
+	PlatformArn       *string                               `queryParam:"style=form,explode=true,name=PlatformArn"`
+	Version           GETDescribePlatformVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribePlatformVersionResponse struct {

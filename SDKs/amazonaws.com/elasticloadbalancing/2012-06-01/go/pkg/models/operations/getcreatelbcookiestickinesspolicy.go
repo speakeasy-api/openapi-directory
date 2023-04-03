@@ -50,30 +50,22 @@ func (e *GETCreateLBCookieStickinessPolicyVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETCreateLBCookieStickinessPolicyQueryParams struct {
+type GETCreateLBCookieStickinessPolicyRequest struct {
 	Action GETCreateLBCookieStickinessPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The time period, in seconds, after which the cookie should be considered stale. If you do not specify this parameter, the default value is 0, which indicates that the sticky session should last for the duration of the browser session.
 	CookieExpirationPeriod *int64 `queryParam:"style=form,explode=true,name=CookieExpirationPeriod"`
 	// The name of the load balancer.
 	LoadBalancerName string `queryParam:"style=form,explode=true,name=LoadBalancerName"`
 	// The name of the policy being created. Policy names must consist of alphanumeric characters and dashes (-). This name must be unique within the set of policies for this load balancer.
-	PolicyName string                                       `queryParam:"style=form,explode=true,name=PolicyName"`
-	Version    GETCreateLBCookieStickinessPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateLBCookieStickinessPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateLBCookieStickinessPolicyRequest struct {
-	QueryParams GETCreateLBCookieStickinessPolicyQueryParams
-	Headers     GETCreateLBCookieStickinessPolicyHeaders
+	PolicyName        string                                       `queryParam:"style=form,explode=true,name=PolicyName"`
+	Version           GETCreateLBCookieStickinessPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateLBCookieStickinessPolicyResponse struct {

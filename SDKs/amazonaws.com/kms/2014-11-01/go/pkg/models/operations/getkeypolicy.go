@@ -30,20 +30,16 @@ func (e *GetKeyPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetKeyPolicyHeaders struct {
-	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetKeyPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetKeyPolicyRequest struct {
-	Headers GetKeyPolicyHeaders
-	Request shared.GetKeyPolicyRequest `request:"mediaType=application/json"`
+	GetKeyPolicyRequest shared.GetKeyPolicyRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm       *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget          GetKeyPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetKeyPolicyResponse struct {

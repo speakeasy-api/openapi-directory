@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsPatchGroupRawPathParams struct {
+type TagsPatchGroupRawRequest struct {
+	// The body patch
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the tag
 	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type TagsPatchGroupRawRequest struct {
-	PathParams TagsPatchGroupRawPathParams
-	// The body patch
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type TagsPatchGroupRawResponse struct {

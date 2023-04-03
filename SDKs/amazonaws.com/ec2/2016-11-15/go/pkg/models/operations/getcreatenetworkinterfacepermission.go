@@ -74,7 +74,7 @@ func (e *GETCreateNetworkInterfacePermissionVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GETCreateNetworkInterfacePermissionQueryParams struct {
+type GETCreateNetworkInterfacePermissionRequest struct {
 	Action GETCreateNetworkInterfacePermissionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Web Services account ID.
 	AwsAccountID *string `queryParam:"style=form,explode=true,name=AwsAccountId"`
@@ -85,23 +85,15 @@ type GETCreateNetworkInterfacePermissionQueryParams struct {
 	// The ID of the network interface.
 	NetworkInterfaceID string `queryParam:"style=form,explode=true,name=NetworkInterfaceId"`
 	// The type of permission to grant.
-	Permission GETCreateNetworkInterfacePermissionPermissionEnum `queryParam:"style=form,explode=true,name=Permission"`
-	Version    GETCreateNetworkInterfacePermissionVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateNetworkInterfacePermissionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateNetworkInterfacePermissionRequest struct {
-	QueryParams GETCreateNetworkInterfacePermissionQueryParams
-	Headers     GETCreateNetworkInterfacePermissionHeaders
+	Permission        GETCreateNetworkInterfacePermissionPermissionEnum `queryParam:"style=form,explode=true,name=Permission"`
+	Version           GETCreateNetworkInterfacePermissionVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateNetworkInterfacePermissionResponse struct {

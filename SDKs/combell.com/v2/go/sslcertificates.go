@@ -37,14 +37,14 @@ func newSSLCertificates(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns the certifcate as binary data with the content-type and the filename information in the response headers.
 func (s *sslCertificates) DownloadCertificate(ctx context.Context, request operations.DownloadCertificateRequest) (*operations.DownloadCertificateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,14 +86,14 @@ func (s *sslCertificates) DownloadCertificate(ctx context.Context, request opera
 // GetSslCertificate - Detail of a SSL certificate
 func (s *sslCertificates) GetSslCertificate(ctx context.Context, request operations.GetSslCertificateRequest) (*operations.GetSslCertificateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -141,7 +141,7 @@ func (s *sslCertificates) GetSslCertificates(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

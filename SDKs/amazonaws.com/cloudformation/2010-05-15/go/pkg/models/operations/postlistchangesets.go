@@ -50,27 +50,19 @@ func (e *POSTListChangeSetsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListChangeSetsQueryParams struct {
+type POSTListChangeSetsRequest struct {
 	Action POSTListChangeSetsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
-	NextToken *string                       `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTListChangeSetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListChangeSetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTListChangeSetsRequest struct {
-	QueryParams POSTListChangeSetsQueryParams
-	Headers     POSTListChangeSetsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                        `request:"mediaType=text/xml"`
+	Version           POSTListChangeSetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListChangeSetsResponse struct {

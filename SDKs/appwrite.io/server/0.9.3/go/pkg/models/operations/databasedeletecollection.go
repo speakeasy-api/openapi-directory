@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DatabaseDeleteCollectionSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DatabaseDeleteCollectionPathParams struct {
-	// Collection unique ID.
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type DatabaseDeleteCollectionRequest struct {
-	PathParams DatabaseDeleteCollectionPathParams
-	Security   DatabaseDeleteCollectionSecurity
+	// Collection unique ID.
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 }
 
 type DatabaseDeleteCollectionResponse struct {

@@ -33,7 +33,7 @@ func newAnalyse(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // Interference - Find the best server for overlapping coverage
 // Merge and analyse sites within a network channel to determine the best server at a given location. Each site will be dynamically allocated a monochrome colour from a palette and the strongest signal promoted at a given location.
-func (s *analyse) Interference(ctx context.Context, request operations.InterferenceRequest) (*operations.InterferenceResponse, error) {
+func (s *analyse) Interference(ctx context.Context, request operations.InterferenceRequest, security operations.InterferenceSecurity) (*operations.InterferenceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/interference"
 
@@ -42,11 +42,11 @@ func (s *analyse) Interference(ctx context.Context, request operations.Interfere
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -73,7 +73,7 @@ func (s *analyse) Interference(ctx context.Context, request operations.Interfere
 
 // Mesh - Merge sites into a super layer.
 // A merge of 'area' calculations for a network to create a single super layer. Stronger signals are promoted over weaker ones. The same colour key must be used.
-func (s *analyse) Mesh(ctx context.Context, request operations.MeshRequest) (*operations.MeshResponse, error) {
+func (s *analyse) Mesh(ctx context.Context, request operations.MeshRequest, security operations.MeshSecurity) (*operations.MeshResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mesh"
 
@@ -82,11 +82,11 @@ func (s *analyse) Mesh(ctx context.Context, request operations.MeshRequest) (*op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -113,7 +113,7 @@ func (s *analyse) Mesh(ctx context.Context, request operations.MeshRequest) (*op
 
 // Network - Find the best server for somewhere
 // Query your network to find the best server(s) for a given receiver/customer location. A previously generated network is required.
-func (s *analyse) Network(ctx context.Context, request operations.NetworkRequest) (*operations.NetworkResponse, error) {
+func (s *analyse) Network(ctx context.Context, request operations.NetworkRequest, security operations.NetworkSecurity) (*operations.NetworkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/network"
 
@@ -122,11 +122,11 @@ func (s *analyse) Network(ctx context.Context, request operations.NetworkRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

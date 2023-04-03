@@ -33,7 +33,14 @@ func (e *ListDeploymentsHistoryFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListDeploymentsQueryParams struct {
+type ListDeploymentsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// <p>The filter for the list of deployments. Choose one of the following options:</p> <ul> <li> <p> <code>ALL</code> – The list includes all deployments.</p> </li> <li> <p> <code>LATEST_ONLY</code> – The list includes only the latest revision of each deployment.</p> </li> </ul> <p>Default: <code>LATEST_ONLY</code> </p>
 	HistoryFilter *ListDeploymentsHistoryFilterEnum `queryParam:"style=form,explode=true,name=historyFilter"`
 	// The maximum number of results to be returned per paginated request.
@@ -44,21 +51,6 @@ type ListDeploymentsQueryParams struct {
 	ParentTargetArn *string `queryParam:"style=form,explode=true,name=parentTargetArn"`
 	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target IoT thing or thing group.
 	TargetArn *string `queryParam:"style=form,explode=true,name=targetArn"`
-}
-
-type ListDeploymentsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDeploymentsRequest struct {
-	QueryParams ListDeploymentsQueryParams
-	Headers     ListDeploymentsHeaders
 }
 
 type ListDeploymentsResponse struct {

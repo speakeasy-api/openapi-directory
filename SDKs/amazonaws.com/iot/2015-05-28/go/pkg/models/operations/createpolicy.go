@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePolicyPathParams struct {
-	// The policy name.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type CreatePolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreatePolicyRequestBody struct {
 	// The JSON document that describes the policy. <b>policyDocument</b> must have a minimum length of 1, with a maximum length of 2048, excluding whitespace.
 	PolicyDocument string `json:"policyDocument"`
@@ -30,9 +15,16 @@ type CreatePolicyRequestBody struct {
 }
 
 type CreatePolicyRequest struct {
-	PathParams CreatePolicyPathParams
-	Headers    CreatePolicyHeaders
-	Request    CreatePolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreatePolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The policy name.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 }
 
 type CreatePolicyResponse struct {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInsightResultsPathParams struct {
+type GetInsightResultsRequest struct {
 	// The ARN of the insight for which to return results.
-	InsightArn string `pathParam:"style=simple,explode=false,name=InsightArn"`
-}
-
-type GetInsightResultsHeaders struct {
+	InsightArn        string  `pathParam:"style=simple,explode=false,name=InsightArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetInsightResultsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetInsightResultsRequest struct {
-	PathParams GetInsightResultsPathParams
-	Headers    GetInsightResultsHeaders
 }
 
 type GetInsightResultsResponse struct {

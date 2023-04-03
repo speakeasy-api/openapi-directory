@@ -50,28 +50,20 @@ func (e *GETTestFailoverVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETTestFailoverQueryParams struct {
+type GETTestFailoverRequest struct {
 	Action GETTestFailoverActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the node group (called shard in the console) in this replication group on which automatic failover is to be tested. You may test automatic failover on up to 5 node groups in any rolling 24-hour period.
 	NodeGroupID string `queryParam:"style=form,explode=true,name=NodeGroupId"`
 	// The name of the replication group (console: cluster) whose automatic failover is being tested by this operation.
 	ReplicationGroupID string                     `queryParam:"style=form,explode=true,name=ReplicationGroupId"`
 	Version            GETTestFailoverVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETTestFailoverHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETTestFailoverRequest struct {
-	QueryParams GETTestFailoverQueryParams
-	Headers     GETTestFailoverHeaders
+	XAmzAlgorithm      *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETTestFailoverResponse struct {

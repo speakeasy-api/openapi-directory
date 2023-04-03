@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDocumentFromProformaPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type CreateDocumentFromProformaRequest struct {
-	PathParams CreateDocumentFromProformaPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type CreateDocumentFromProformaResponse struct {

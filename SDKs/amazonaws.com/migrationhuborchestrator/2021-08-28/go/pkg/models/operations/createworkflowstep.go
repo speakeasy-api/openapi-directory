@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWorkflowStepHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateWorkflowStepRequestBodyStepActionTypeEnum - The action type of the step. You must run and update the status of a manual step for the workflow to continue after the completion of the step.
 type CreateWorkflowStepRequestBodyStepActionTypeEnum string
 
@@ -76,8 +66,14 @@ type CreateWorkflowStepRequestBody struct {
 }
 
 type CreateWorkflowStepRequest struct {
-	Headers CreateWorkflowStepHeaders
-	Request CreateWorkflowStepRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateWorkflowStepRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateWorkflowStepResponse struct {

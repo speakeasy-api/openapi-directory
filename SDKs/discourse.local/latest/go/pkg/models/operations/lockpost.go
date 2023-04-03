@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type LockPostPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type LockPostHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type LockPostRequestBody struct {
 	Locked string `json:"locked"`
 }
 
 type LockPostRequest struct {
-	PathParams LockPostPathParams
-	Headers    LockPostHeaders
-	Request    *LockPostRequestBody `request:"mediaType=application/json"`
+	APIKey      string               `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string               `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *LockPostRequestBody `request:"mediaType=application/json"`
+	ID          string               `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // LockPost200ApplicationJSON - post updated

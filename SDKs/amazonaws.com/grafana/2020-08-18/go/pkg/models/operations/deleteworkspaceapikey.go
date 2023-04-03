@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteWorkspaceAPIKeyPathParams struct {
-	// The name of the API key to delete.
-	KeyName string `pathParam:"style=simple,explode=false,name=keyName"`
-	// The ID of the workspace to delete.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteWorkspaceAPIKeyHeaders struct {
+type DeleteWorkspaceAPIKeyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteWorkspaceAPIKeyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteWorkspaceAPIKeyRequest struct {
-	PathParams DeleteWorkspaceAPIKeyPathParams
-	Headers    DeleteWorkspaceAPIKeyHeaders
+	// The name of the API key to delete.
+	KeyName string `pathParam:"style=simple,explode=false,name=keyName"`
+	// The ID of the workspace to delete.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteWorkspaceAPIKeyResponse struct {

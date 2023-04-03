@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAPIPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
-type UpdateAPIHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAPIRequestBodyCorsConfiguration - Represents a CORS configuration. Supported only for HTTP APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html">Configuring CORS</a> for more information.
 type UpdateAPIRequestBodyCorsConfiguration struct {
 	AllowCredentials *bool    `json:"AllowCredentials,omitempty"`
@@ -58,9 +43,16 @@ type UpdateAPIRequestBody struct {
 }
 
 type UpdateAPIRequest struct {
-	PathParams UpdateAPIPathParams
-	Headers    UpdateAPIHeaders
-	Request    UpdateAPIRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAPIRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
 }
 
 type UpdateAPIResponse struct {

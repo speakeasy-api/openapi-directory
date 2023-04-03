@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecallHistoryPathParams struct {
-	// The VIN to identify the car. Must be a valid 17 char VIN
-	Vin string `pathParam:"style=simple,explode=false,name=vin"`
-}
-
-type GetRecallHistoryQueryParams struct {
+type GetRecallHistoryRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Page number to fetch the results for the given criteria. Default is 1.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetRecallHistoryRequest struct {
-	PathParams  GetRecallHistoryPathParams
-	QueryParams GetRecallHistoryQueryParams
+	// The VIN to identify the car. Must be a valid 17 char VIN
+	Vin string `pathParam:"style=simple,explode=false,name=vin"`
 }
 
 type GetRecallHistoryResponse struct {

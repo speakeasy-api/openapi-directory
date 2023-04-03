@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeReplicationInstanceTaskLogsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeReplicationInstanceTaskLogsXAmzTargetEnum
 type DescribeReplicationInstanceTaskLogsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeReplicationInstanceTaskLogsXAmzTargetEnum) UnmarshalJSON(data [
 	}
 }
 
-type DescribeReplicationInstanceTaskLogsHeaders struct {
+type DescribeReplicationInstanceTaskLogsRequest struct {
+	DescribeReplicationInstanceTaskLogsMessage shared.DescribeReplicationInstanceTaskLogsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                           `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeReplicationInstanceTaskLogsHeaders struct {
 	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeReplicationInstanceTaskLogsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeReplicationInstanceTaskLogsRequest struct {
-	QueryParams DescribeReplicationInstanceTaskLogsQueryParams
-	Headers     DescribeReplicationInstanceTaskLogsHeaders
-	Request     shared.DescribeReplicationInstanceTaskLogsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeReplicationInstanceTaskLogsResponse struct {

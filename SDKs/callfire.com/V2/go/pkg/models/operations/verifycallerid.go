@@ -8,19 +8,15 @@ import (
 )
 
 type VerifyCallerIDSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type VerifyCallerIDPathParams struct {
-	// A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
-	Callerid string `pathParam:"style=simple,explode=false,name=callerid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type VerifyCallerIDRequest struct {
-	PathParams VerifyCallerIDPathParams
 	// request
-	Request  *shared.CallerIDVerificationRequest `request:"mediaType=application/json"`
-	Security VerifyCallerIDSecurity
+	CallerIDVerificationRequest *shared.CallerIDVerificationRequest `request:"mediaType=application/json"`
+	// A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
+	Callerid string `pathParam:"style=simple,explode=false,name=callerid"`
 }
 
 type VerifyCallerIDResponse struct {

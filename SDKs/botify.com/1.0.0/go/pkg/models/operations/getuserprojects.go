@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserProjectsPathParams struct {
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetUserProjectsQueryParams struct {
+type GetUserProjectsRequest struct {
 	// Page Number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Page Size
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetUserProjectsRequest struct {
-	PathParams  GetUserProjectsPathParams
-	QueryParams GetUserProjectsQueryParams
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetUserProjects200ApplicationJSON - Successful operation

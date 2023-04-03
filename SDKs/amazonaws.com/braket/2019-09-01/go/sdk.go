@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CancelJob - Cancels an Amazon Braket job.
 func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest) (*operations.CancelJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/job/{jobArn}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/job/{jobArn}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -220,9 +220,9 @@ func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest
 // CancelQuantumTask - Cancels the specified task.
 func (s *SDK) CancelQuantumTask(ctx context.Context, request operations.CancelQuantumTaskRequest) (*operations.CancelQuantumTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quantum-task/{quantumTaskArn}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quantum-task/{quantumTaskArn}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -237,7 +237,7 @@ func (s *SDK) CancelQuantumTask(ctx context.Context, request operations.CancelQu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -338,7 +338,7 @@ func (s *SDK) CreateJob(ctx context.Context, request operations.CreateJobRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/job"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -353,7 +353,7 @@ func (s *SDK) CreateJob(ctx context.Context, request operations.CreateJobRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -464,7 +464,7 @@ func (s *SDK) CreateQuantumTask(ctx context.Context, request operations.CreateQu
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quantum-task"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -479,7 +479,7 @@ func (s *SDK) CreateQuantumTask(ctx context.Context, request operations.CreateQu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -588,14 +588,14 @@ func (s *SDK) CreateQuantumTask(ctx context.Context, request operations.CreateQu
 // GetDevice - <p>Retrieves the devices available in Amazon Braket.</p> <note> <p>For backwards compatibility with older versions of BraketSchemas, OpenQASM information is omitted from GetDevice API calls. To get this information the user-agent needs to present a recent version of the BraketSchemas (1.8.0 or later). The Braket SDK automatically reports this for you. If you do not see OpenQASM results in the GetDevice response when using a Braket SDK, you may need to set AWS_EXECUTION_ENV environment variable to configure user-agent. See the code examples provided below for how to do this for the AWS CLI, Boto3, and the Go, Java, and JavaScript/TypeScript SDKs.</p> </note>
 func (s *SDK) GetDevice(ctx context.Context, request operations.GetDeviceRequest) (*operations.GetDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/device/{deviceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/device/{deviceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -684,14 +684,14 @@ func (s *SDK) GetDevice(ctx context.Context, request operations.GetDeviceRequest
 // GetJob - Retrieves the specified Amazon Braket job.
 func (s *SDK) GetJob(ctx context.Context, request operations.GetJobRequest) (*operations.GetJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/job/{jobArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/job/{jobArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -780,14 +780,14 @@ func (s *SDK) GetJob(ctx context.Context, request operations.GetJobRequest) (*op
 // GetQuantumTask - Retrieves the specified quantum task.
 func (s *SDK) GetQuantumTask(ctx context.Context, request operations.GetQuantumTaskRequest) (*operations.GetQuantumTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quantum-task/{quantumTaskArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/quantum-task/{quantumTaskArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -876,14 +876,14 @@ func (s *SDK) GetQuantumTask(ctx context.Context, request operations.GetQuantumT
 // ListTagsForResource - Shows the tags associated with this resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -954,7 +954,7 @@ func (s *SDK) SearchDevices(ctx context.Context, request operations.SearchDevice
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/devices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -969,9 +969,9 @@ func (s *SDK) SearchDevices(ctx context.Context, request operations.SearchDevice
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1054,7 +1054,7 @@ func (s *SDK) SearchJobs(ctx context.Context, request operations.SearchJobsReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1069,9 +1069,9 @@ func (s *SDK) SearchJobs(ctx context.Context, request operations.SearchJobsReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1154,7 +1154,7 @@ func (s *SDK) SearchQuantumTasks(ctx context.Context, request operations.SearchQ
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quantum-tasks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1169,9 +1169,9 @@ func (s *SDK) SearchQuantumTasks(ctx context.Context, request operations.SearchQ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1252,9 +1252,9 @@ func (s *SDK) SearchQuantumTasks(ctx context.Context, request operations.SearchQ
 // TagResource - Add a tag to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1269,7 +1269,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1338,16 +1338,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Remove tags from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

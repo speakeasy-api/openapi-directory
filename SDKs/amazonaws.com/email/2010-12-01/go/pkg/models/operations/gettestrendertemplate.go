@@ -50,28 +50,20 @@ func (e *GETTestRenderTemplateVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETTestRenderTemplateQueryParams struct {
+type GETTestRenderTemplateRequest struct {
 	Action GETTestRenderTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A list of replacement values to apply to the template. This parameter is a JSON object, typically consisting of key-value pairs in which the keys correspond to replacement tags in the email template.
 	TemplateData string `queryParam:"style=form,explode=true,name=TemplateData"`
 	// The name of the template that you want to render.
-	TemplateName string                           `queryParam:"style=form,explode=true,name=TemplateName"`
-	Version      GETTestRenderTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETTestRenderTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETTestRenderTemplateRequest struct {
-	QueryParams GETTestRenderTemplateQueryParams
-	Headers     GETTestRenderTemplateHeaders
+	TemplateName      string                           `queryParam:"style=form,explode=true,name=TemplateName"`
+	Version           GETTestRenderTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETTestRenderTemplateResponse struct {

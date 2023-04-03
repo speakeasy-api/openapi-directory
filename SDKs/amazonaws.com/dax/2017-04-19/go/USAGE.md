@@ -13,68 +13,53 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateClusterRequest{
-        Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AmazonDAXV3.CreateCluster",
-        },
-        Request: shared.CreateClusterRequest{
+        CreateClusterRequest: shared.CreateClusterRequest{
             AvailabilityZones: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            ClusterEndpointEncryptionType: "NONE",
-            ClusterName: "magnam",
-            Description: "debitis",
-            IamRoleArn: "ipsa",
-            NodeType: "delectus",
-            NotificationTopicArn: "tempora",
-            ParameterGroupName: "suscipit",
-            PreferredMaintenanceWindow: "molestiae",
-            ReplicationFactor: 791725,
+            ClusterEndpointEncryptionType: "TLS",
+            ClusterName: "nulla",
+            Description: "corrupti",
+            IamRoleArn: "illum",
+            NodeType: "vel",
+            NotificationTopicArn: "error",
+            ParameterGroupName: "deserunt",
+            PreferredMaintenanceWindow: "suscipit",
+            ReplicationFactor: 437587,
             SSESpecification: &shared.SSESpecification{
                 Enabled: false,
             },
             SecurityGroupIds: []string{
-                "voluptatum",
-                "iusto",
-                "excepturi",
-                "nisi",
+                "debitis",
+                "ipsa",
             },
-            SubnetGroupName: "recusandae",
+            SubnetGroupName: "delectus",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "ab",
-                    Value: "quis",
+                    Key: "suscipit",
+                    Value: "molestiae",
                 },
                 shared.Tag{
-                    Key: "veritatis",
-                    Value: "deserunt",
-                },
-                shared.Tag{
-                    Key: "perferendis",
-                    Value: "ipsam",
-                },
-                shared.Tag{
-                    Key: "repellendus",
-                    Value: "sapiente",
+                    Key: "minus",
+                    Value: "placeat",
                 },
             },
         },
+        XAmzAlgorithm: "voluptatum",
+        XAmzContentSha256: "iusto",
+        XAmzCredential: "excepturi",
+        XAmzDate: "nisi",
+        XAmzSecurityToken: "recusandae",
+        XAmzSignature: "temporibus",
+        XAmzSignedHeaders: "ab",
+        XAmzTarget: "AmazonDAXV3.CreateCluster",
     }
 
     ctx := context.Background()

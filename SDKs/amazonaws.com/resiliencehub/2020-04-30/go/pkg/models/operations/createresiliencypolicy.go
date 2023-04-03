@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateResiliencyPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum - Specifies a high-level geographical location constraint for where your resilience policy data can be stored.
 type CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum string
 
@@ -97,8 +87,14 @@ type CreateResiliencyPolicyRequestBody struct {
 }
 
 type CreateResiliencyPolicyRequest struct {
-	Headers CreateResiliencyPolicyHeaders
-	Request CreateResiliencyPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateResiliencyPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateResiliencyPolicyResponse struct {

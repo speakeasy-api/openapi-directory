@@ -33,7 +33,7 @@ func (e *GetV2Scim20UsersSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetV2Scim20UsersQueryParams struct {
+type GetV2Scim20UsersRequest struct {
 	// Comma delimited list of attributes to limit to in the response.
 	Attributes *string `queryParam:"style=form,explode=true,name=attributes"`
 	Count      *int64  `queryParam:"style=form,explode=true,name=count"`
@@ -42,10 +42,6 @@ type GetV2Scim20UsersQueryParams struct {
 	SortBy     *string                        `queryParam:"style=form,explode=true,name=sortBy"`
 	SortOrder  *GetV2Scim20UsersSortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
 	StartIndex *int64                         `queryParam:"style=form,explode=true,name=startIndex"`
-}
-
-type GetV2Scim20UsersRequest struct {
-	QueryParams GetV2Scim20UsersQueryParams
 }
 
 // GetV2Scim20Users500ApplicationScimPlusJSON - Internal Error

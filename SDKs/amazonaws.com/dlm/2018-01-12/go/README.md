@@ -24,159 +24,171 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateLifecyclePolicyRequest{
-        Headers: operations.CreateLifecyclePolicyHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateLifecyclePolicyRequestBody{
-            Description: "illum",
-            ExecutionRoleArn: "vel",
+        RequestBody: operations.CreateLifecyclePolicyRequestBody{
+            Description: "corrupti",
+            ExecutionRoleArn: "provident",
             PolicyDetails: operations.CreateLifecyclePolicyRequestBodyPolicyDetails{
                 Actions: []shared.Action{
                     shared.Action{
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "suscipit",
+                                    CmkArn: "unde",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 437587,
-                                    IntervalUnit: "WEEKS",
+                                    Interval: 857946,
+                                    IntervalUnit: "MONTHS",
                                 },
-                                Target: "debitis",
+                                Target: "illum",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "ipsa",
+                                    CmkArn: "vel",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 963663,
-                                    IntervalUnit: "WEEKS",
+                                    Interval: 623564,
+                                    IntervalUnit: "MONTHS",
                                 },
                                 Target: "suscipit",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "molestiae",
+                                    CmkArn: "iure",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 791725,
+                                    Interval: 297534,
                                     IntervalUnit: "YEARS",
                                 },
-                                Target: "voluptatum",
+                                Target: "ipsa",
+                            },
+                            shared.CrossRegionCopyAction{
+                                EncryptionConfiguration: shared.EncryptionConfiguration{
+                                    CmkArn: "delectus",
+                                    Encrypted: false,
+                                },
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: 272656,
+                                    IntervalUnit: "WEEKS",
+                                },
+                                Target: "molestiae",
                             },
                         },
-                        Name: "iusto",
+                        Name: "minus",
                     },
                     shared.Action{
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "nisi",
+                                    CmkArn: "voluptatum",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 925597,
-                                    IntervalUnit: "YEARS",
-                                },
-                                Target: "ab",
-                            },
-                            shared.CrossRegionCopyAction{
-                                EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "quis",
-                                    Encrypted: false,
-                                },
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 87129,
+                                    Interval: 479977,
                                     IntervalUnit: "MONTHS",
                                 },
-                                Target: "perferendis",
+                                Target: "nisi",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "ipsam",
+                                    CmkArn: "recusandae",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 832620,
+                                    Interval: 836079,
+                                    IntervalUnit: "DAYS",
+                                },
+                                Target: "quis",
+                            },
+                            shared.CrossRegionCopyAction{
+                                EncryptionConfiguration: shared.EncryptionConfiguration{
+                                    CmkArn: "veritatis",
+                                    Encrypted: false,
+                                },
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: 648172,
+                                    IntervalUnit: "DAYS",
+                                },
+                                Target: "ipsam",
+                            },
+                            shared.CrossRegionCopyAction{
+                                EncryptionConfiguration: shared.EncryptionConfiguration{
+                                    CmkArn: "repellendus",
+                                    Encrypted: false,
+                                },
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: 957156,
                                     IntervalUnit: "YEARS",
                                 },
-                                Target: "quo",
+                                Target: "odit",
                             },
                         },
-                        Name: "odit",
+                        Name: "at",
                     },
                     shared.Action{
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "at",
+                                    CmkArn: "maiores",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 978619,
-                                    IntervalUnit: "WEEKS",
+                                    Interval: 473608,
+                                    IntervalUnit: "YEARS",
                                 },
                                 Target: "quod",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "quod",
+                                    CmkArn: "esse",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 461479,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: 520478,
+                                    IntervalUnit: "YEARS",
                                 },
-                                Target: "porro",
+                                Target: "dolorum",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "dolorum",
+                                    CmkArn: "dicta",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 118274,
+                                    Interval: 720633,
                                     IntervalUnit: "MONTHS",
                                 },
-                                Target: "officia",
+                                Target: "occaecati",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "occaecati",
+                                    CmkArn: "fugit",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 143353,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: 537373,
+                                    IntervalUnit: "YEARS",
                                 },
-                                Target: "hic",
+                                Target: "optio",
                             },
                         },
-                        Name: "optio",
+                        Name: "totam",
                     },
                 },
                 EventSource: &shared.EventSource{
                     Parameters: &shared.EventParameters{
-                        DescriptionRegex: "totam",
+                        DescriptionRegex: "beatae",
                         EventType: "shareSnapshot",
                         SnapshotOwner: []string{
-                            "commodi",
+                            "molestiae",
+                            "modi",
                         },
                     },
                     Type: "MANAGED_CWE",
@@ -184,10 +196,6 @@ func main() {
                 Parameters: &shared.Parameters{
                     ExcludeBootVolume: false,
                     ExcludeDataVolumeTags: []shared.Tag{
-                        shared.Tag{
-                            Key: "modi",
-                            Value: "qui",
-                        },
                         shared.Tag{
                             Key: "impedit",
                             Value: "cum",
@@ -452,6 +460,13 @@ func main() {
                 "dolorum": "excepturi",
             },
         },
+        XAmzAlgorithm: "tempora",
+        XAmzContentSha256: "facilis",
+        XAmzCredential: "tempore",
+        XAmzDate: "labore",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "eum",
+        XAmzSignedHeaders: "non",
     }
 
     ctx := context.Background()
@@ -468,7 +483,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -482,4 +497,15 @@ func main() {
 * `UpdateLifecyclePolicy` - <p>Updates the specified lifecycle policy.</p> <p>For more information about updating a policy, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/view-modify-delete.html#modify">Modify lifecycle policies</a>.</p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

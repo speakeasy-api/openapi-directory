@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssociatedAssetsPathParams struct {
-	// The ID of the asset to query.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-}
-
 // ListAssociatedAssetsTraversalDirectionEnum - <p>The direction to list associated assets. Choose one of the following options:</p> <ul> <li> <p> <code>CHILD</code> – The list includes all child assets associated to the asset. The <code>hierarchyId</code> parameter is required if you choose <code>CHILD</code>.</p> </li> <li> <p> <code>PARENT</code> – The list includes the asset's parent asset.</p> </li> </ul> <p>Default: <code>CHILD</code> </p>
 type ListAssociatedAssetsTraversalDirectionEnum string
 
@@ -38,7 +33,16 @@ func (e *ListAssociatedAssetsTraversalDirectionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListAssociatedAssetsQueryParams struct {
+type ListAssociatedAssetsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the asset to query.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
 	// <p>The ID of the hierarchy by which child assets are associated to the asset. To find a hierarchy ID, use the <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAsset.html">DescribeAsset</a> or <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html">DescribeAssetModel</a> operations. This parameter is required if you choose <code>CHILD</code> for <code>traversalDirection</code>.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html">Asset hierarchies</a> in the <i>IoT SiteWise User Guide</i>.</p>
 	HierarchyID *string `queryParam:"style=form,explode=true,name=hierarchyId"`
 	// <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
@@ -47,22 +51,6 @@ type ListAssociatedAssetsQueryParams struct {
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 	// <p>The direction to list associated assets. Choose one of the following options:</p> <ul> <li> <p> <code>CHILD</code> – The list includes all child assets associated to the asset. The <code>hierarchyId</code> parameter is required if you choose <code>CHILD</code>.</p> </li> <li> <p> <code>PARENT</code> – The list includes the asset's parent asset.</p> </li> </ul> <p>Default: <code>CHILD</code> </p>
 	TraversalDirection *ListAssociatedAssetsTraversalDirectionEnum `queryParam:"style=form,explode=true,name=traversalDirection"`
-}
-
-type ListAssociatedAssetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssociatedAssetsRequest struct {
-	PathParams  ListAssociatedAssetsPathParams
-	QueryParams ListAssociatedAssetsQueryParams
-	Headers     ListAssociatedAssetsHeaders
 }
 
 type ListAssociatedAssetsResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListControlDomainInsightsQueryParams struct {
-	// Represents the maximum number of results on a page or for an API request call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The pagination token that's used to fetch the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListControlDomainInsightsHeaders struct {
+type ListControlDomainInsightsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListControlDomainInsightsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListControlDomainInsightsRequest struct {
-	QueryParams ListControlDomainInsightsQueryParams
-	Headers     ListControlDomainInsightsHeaders
+	// Represents the maximum number of results on a page or for an API request call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The pagination token that's used to fetch the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListControlDomainInsightsResponse struct {

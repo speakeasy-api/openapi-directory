@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeGameSessionsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeGameSessionsXAmzTargetEnum
 type DescribeGameSessionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeGameSessionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeGameSessionsHeaders struct {
+type DescribeGameSessionsRequest struct {
+	DescribeGameSessionsInput shared.DescribeGameSessionsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeGameSessionsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeGameSessionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeGameSessionsRequest struct {
-	QueryParams DescribeGameSessionsQueryParams
-	Headers     DescribeGameSessionsHeaders
-	Request     shared.DescribeGameSessionsInput `request:"mediaType=application/json"`
 }
 
 type DescribeGameSessionsResponse struct {

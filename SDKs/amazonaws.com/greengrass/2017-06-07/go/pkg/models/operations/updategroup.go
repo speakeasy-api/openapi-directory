@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type UpdateGroupPathParams struct {
-	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type UpdateGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateGroupRequestBody struct {
 	// The name of the definition.
 	Name *string `json:"Name,omitempty"`
 }
 
 type UpdateGroupRequest struct {
-	PathParams UpdateGroupPathParams
-	Headers    UpdateGroupHeaders
-	Request    UpdateGroupRequestBody `request:"mediaType=application/json"`
+	// The ID of the Greengrass group.
+	GroupID           string                 `pathParam:"style=simple,explode=false,name=GroupId"`
+	RequestBody       UpdateGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateGroupResponse struct {

@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type PepRetrieveSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PepRetrievePathParams struct {
-	// The id of the ordered Pep Sanction Check (id as returned by orderPepSanction call)
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // PepRetrieveAcceptEnum - The type (pdf or json) in which the check should be returned
@@ -43,15 +37,11 @@ func (e *PepRetrieveAcceptEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PepRetrieveHeaders struct {
+type PepRetrieveRequest struct {
 	// The type (pdf or json) in which the check should be returned
 	Accept *PepRetrieveAcceptEnum `header:"style=simple,explode=false,name=accept"`
-}
-
-type PepRetrieveRequest struct {
-	PathParams PepRetrievePathParams
-	Headers    PepRetrieveHeaders
-	Security   PepRetrieveSecurity
+	// The id of the ordered Pep Sanction Check (id as returned by orderPepSanction call)
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PepRetrieveDefaultApplicationJSON - Detailed information about the error

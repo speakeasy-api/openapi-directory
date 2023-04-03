@@ -30,7 +30,7 @@ func (e *ExportConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ExportConfigurationsHeaders struct {
+type ExportConfigurationsRequest struct {
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type ExportConfigurationsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ExportConfigurationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ExportConfigurationsRequest struct {
-	Headers ExportConfigurationsHeaders
 }
 
 type ExportConfigurationsResponse struct {

@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAuthorizerPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The authorizer identifier.
-	AuthorizerID string `pathParam:"style=simple,explode=false,name=authorizerId"`
-}
-
-type DeleteAuthorizerHeaders struct {
+type DeleteAuthorizerRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteAuthorizerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAuthorizerRequest struct {
-	PathParams DeleteAuthorizerPathParams
-	Headers    DeleteAuthorizerHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The authorizer identifier.
+	AuthorizerID string `pathParam:"style=simple,explode=false,name=authorizerId"`
 }
 
 type DeleteAuthorizerResponse struct {

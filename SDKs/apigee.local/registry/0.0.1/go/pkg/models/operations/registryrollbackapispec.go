@@ -7,7 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryRollbackAPISpecPathParams struct {
+type RegistryRollbackAPISpecRequest struct {
+	RollbackAPISpecRequest shared.RollbackAPISpecRequest `request:"mediaType=application/json"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The location id.
@@ -18,11 +19,6 @@ type RegistryRollbackAPISpecPathParams struct {
 	Spec string `pathParam:"style=simple,explode=false,name=spec"`
 	// The version id.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryRollbackAPISpecRequest struct {
-	PathParams RegistryRollbackAPISpecPathParams
-	Request    shared.RollbackAPISpecRequest `request:"mediaType=application/json"`
 }
 
 type RegistryRollbackAPISpecResponse struct {

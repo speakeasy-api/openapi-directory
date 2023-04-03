@@ -8,10 +8,10 @@ import (
 )
 
 type ClinicalNoteFieldValuesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClinicalNoteFieldValuesListQueryParams struct {
+type ClinicalNoteFieldValuesListRequest struct {
 	Appointment          *int64  `queryParam:"style=form,explode=true,name=appointment"`
 	ClinicalNoteField    *int64  `queryParam:"style=form,explode=true,name=clinical_note_field"`
 	ClinicalNoteTemplate *int64  `queryParam:"style=form,explode=true,name=clinical_note_template"`
@@ -19,11 +19,6 @@ type ClinicalNoteFieldValuesListQueryParams struct {
 	Doctor               *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	PageSize             *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Since                *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type ClinicalNoteFieldValuesListRequest struct {
-	QueryParams ClinicalNoteFieldValuesListQueryParams
-	Security    ClinicalNoteFieldValuesListSecurity
 }
 
 // ClinicalNoteFieldValuesList200ApplicationJSON - Paginated Result

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTagsForResourcePathParams struct {
+type ListTagsForResourceRequest struct {
 	// The Amazon Resource Name (ARN) of the resource you want to tag.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=ResourceArn"`
-}
-
-type ListTagsForResourceHeaders struct {
+	ResourceArn       string  `pathParam:"style=simple,explode=false,name=ResourceArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type ListTagsForResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTagsForResourceRequest struct {
-	PathParams ListTagsForResourcePathParams
-	Headers    ListTagsForResourceHeaders
 }
 
 type ListTagsForResourceResponse struct {

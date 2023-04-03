@@ -50,25 +50,17 @@ func (e *POSTAuthorizeClusterSecurityGroupIngressVersionEnum) UnmarshalJSON(data
 	}
 }
 
-type POSTAuthorizeClusterSecurityGroupIngressQueryParams struct {
-	Action  POSTAuthorizeClusterSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAuthorizeClusterSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAuthorizeClusterSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAuthorizeClusterSecurityGroupIngressRequest struct {
-	QueryParams POSTAuthorizeClusterSecurityGroupIngressQueryParams
-	Headers     POSTAuthorizeClusterSecurityGroupIngressHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAuthorizeClusterSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                              `request:"mediaType=text/xml"`
+	Version           POSTAuthorizeClusterSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAuthorizeClusterSecurityGroupIngressResponse struct {

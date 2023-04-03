@@ -54,7 +54,7 @@ func (s *attachments) CreateAttachmentForObject(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/attachments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AttachmentRequest", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -69,7 +69,7 @@ func (s *attachments) CreateAttachmentForObject(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,14 +131,14 @@ func (s *attachments) CreateAttachmentForObject(ctx context.Context, request ope
 // Returns an empty data record.
 func (s *attachments) DeleteAttachment(ctx context.Context, request operations.DeleteAttachmentRequest) (*operations.DeleteAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -198,14 +198,14 @@ func (s *attachments) DeleteAttachment(ctx context.Context, request operations.D
 // Get the full record for a single attachment.
 func (s *attachments) GetAttachment(ctx context.Context, request operations.GetAttachmentRequest) (*operations.GetAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -284,7 +284,7 @@ func (s *attachments) GetAttachmentsForObject(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

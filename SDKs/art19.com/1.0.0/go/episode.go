@@ -37,7 +37,7 @@ func newEpisode(defaultClient, securityClient HTTPClient, serverURL, language, s
 //
 // This API will only return episodes that your credential has permission to access, which may not be exclusive to
 // your account, depending on the filter(s) being used. Be careful to filter the results as needed.
-func (s *episode) GetEpisodes(ctx context.Context, request operations.GetEpisodesRequest) (*operations.GetEpisodesResponse, error) {
+func (s *episode) GetEpisodes(ctx context.Context, request operations.GetEpisodesRequest, security operations.GetEpisodesSecurity) (*operations.GetEpisodesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/episodes"
 
@@ -46,11 +46,11 @@ func (s *episode) GetEpisodes(ctx context.Context, request operations.GetEpisode
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -102,16 +102,16 @@ func (s *episode) GetEpisodes(ctx context.Context, request operations.GetEpisode
 }
 
 // GetEpisodesID - Get a specific episode
-func (s *episode) GetEpisodesID(ctx context.Context, request operations.GetEpisodesIDRequest) (*operations.GetEpisodesIDResponse, error) {
+func (s *episode) GetEpisodesID(ctx context.Context, request operations.GetEpisodesIDRequest, security operations.GetEpisodesIDSecurity) (*operations.GetEpisodesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,20 +155,20 @@ func (s *episode) GetEpisodesID(ctx context.Context, request operations.GetEpiso
 }
 
 // GetEpisodesIDNextSibling - Get the episode released right after the specified one
-func (s *episode) GetEpisodesIDNextSibling(ctx context.Context, request operations.GetEpisodesIDNextSiblingRequest) (*operations.GetEpisodesIDNextSiblingResponse, error) {
+func (s *episode) GetEpisodesIDNextSibling(ctx context.Context, request operations.GetEpisodesIDNextSiblingRequest, security operations.GetEpisodesIDNextSiblingSecurity) (*operations.GetEpisodesIDNextSiblingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/next_sibling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/next_sibling", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,20 +212,20 @@ func (s *episode) GetEpisodesIDNextSibling(ctx context.Context, request operatio
 }
 
 // GetEpisodesIDPreviousSibling - Get the episode released right before the specified one
-func (s *episode) GetEpisodesIDPreviousSibling(ctx context.Context, request operations.GetEpisodesIDPreviousSiblingRequest) (*operations.GetEpisodesIDPreviousSiblingResponse, error) {
+func (s *episode) GetEpisodesIDPreviousSibling(ctx context.Context, request operations.GetEpisodesIDPreviousSiblingRequest, security operations.GetEpisodesIDPreviousSiblingSecurity) (*operations.GetEpisodesIDPreviousSiblingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/previous_sibling", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/previous_sibling", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

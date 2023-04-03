@@ -50,7 +50,7 @@ func (e *GETDescribeStaleSecurityGroupsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDescribeStaleSecurityGroupsQueryParams struct {
+type GETDescribeStaleSecurityGroupsRequest struct {
 	Action GETDescribeStaleSecurityGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -60,10 +60,7 @@ type GETDescribeStaleSecurityGroupsQueryParams struct {
 	NextToken *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	Version   GETDescribeStaleSecurityGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDescribeStaleSecurityGroupsHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -71,11 +68,6 @@ type GETDescribeStaleSecurityGroupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeStaleSecurityGroupsRequest struct {
-	QueryParams GETDescribeStaleSecurityGroupsQueryParams
-	Headers     GETDescribeStaleSecurityGroupsHeaders
 }
 
 type GETDescribeStaleSecurityGroupsResponse struct {

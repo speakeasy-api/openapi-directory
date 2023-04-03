@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ApplyArchiveRuleRequest{
-        Headers: operations.ApplyArchiveRuleHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
+        RequestBody: operations.ApplyArchiveRuleRequestBody{
+            AnalyzerArn: "corrupti",
+            ClientToken: "provident",
+            RuleName: "distinctio",
         },
-        Request: operations.ApplyArchiveRuleRequestBody{
-            AnalyzerArn: "illum",
-            ClientToken: "vel",
-            RuleName: "error",
-        },
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
     }
 
     ctx := context.Background()

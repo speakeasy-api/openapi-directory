@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCasePathParams struct {
-	// A unique identifier of the case.
-	CaseID string `pathParam:"style=simple,explode=false,name=caseId"`
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-}
-
-type GetCaseQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetCaseHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetCaseRequestBody struct {
 	// A list of unique field identifiers.
 	Fields []shared.FieldIdentifier `json:"fields"`
@@ -37,10 +15,20 @@ type GetCaseRequestBody struct {
 }
 
 type GetCaseRequest struct {
-	PathParams  GetCasePathParams
-	QueryParams GetCaseQueryParams
-	Headers     GetCaseHeaders
-	Request     GetCaseRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetCaseRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier of the case.
+	CaseID string `pathParam:"style=simple,explode=false,name=caseId"`
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetCaseResponse struct {

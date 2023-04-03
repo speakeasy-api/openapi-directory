@@ -8,20 +8,15 @@ import (
 )
 
 type AppointmentTemplatesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppointmentTemplatesListQueryParams struct {
+type AppointmentTemplatesListRequest struct {
 	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Office   *int64  `queryParam:"style=form,explode=true,name=office"`
 	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Profile  *int64  `queryParam:"style=form,explode=true,name=profile"`
-}
-
-type AppointmentTemplatesListRequest struct {
-	QueryParams AppointmentTemplatesListQueryParams
-	Security    AppointmentTemplatesListSecurity
 }
 
 // AppointmentTemplatesList200ApplicationJSON - Paginated Result

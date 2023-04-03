@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupCertificateAuthorityPathParams struct {
+type GetGroupCertificateAuthorityRequest struct {
 	// The ID of the certificate authority.
 	CertificateAuthorityID string `pathParam:"style=simple,explode=false,name=CertificateAuthorityId"`
 	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type GetGroupCertificateAuthorityHeaders struct {
+	GroupID           string  `pathParam:"style=simple,explode=false,name=GroupId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetGroupCertificateAuthorityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGroupCertificateAuthorityRequest struct {
-	PathParams GetGroupCertificateAuthorityPathParams
-	Headers    GetGroupCertificateAuthorityHeaders
 }
 
 type GetGroupCertificateAuthorityResponse struct {

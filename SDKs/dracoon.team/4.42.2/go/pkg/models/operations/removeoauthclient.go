@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveOAuthClientPathParams struct {
-	// OAuth client ID
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type RemoveOAuthClientHeaders struct {
+type RemoveOAuthClientRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveOAuthClientRequest struct {
-	PathParams RemoveOAuthClientPathParams
-	Headers    RemoveOAuthClientHeaders
+	// OAuth client ID
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type RemoveOAuthClientResponse struct {

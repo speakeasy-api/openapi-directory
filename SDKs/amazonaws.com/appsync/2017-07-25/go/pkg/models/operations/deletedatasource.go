@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDataSourcePathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The name of the data source.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteDataSourceHeaders struct {
+type DeleteDataSourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteDataSourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDataSourceRequest struct {
-	PathParams DeleteDataSourcePathParams
-	Headers    DeleteDataSourceHeaders
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The name of the data source.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DeleteDataSourceResponse struct {

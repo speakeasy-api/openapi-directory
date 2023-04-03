@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeletePipelineVariableForWorkspacePathParams struct {
+type DeletePipelineVariableForWorkspaceRequest struct {
 	// The UUID of the variable to delete.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeletePipelineVariableForWorkspaceRequest struct {
-	PathParams DeletePipelineVariableForWorkspacePathParams
 }
 
 type DeletePipelineVariableForWorkspaceResponse struct {

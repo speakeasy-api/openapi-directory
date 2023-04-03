@@ -50,26 +50,18 @@ func (e *GETGETAccessKeyInfoVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETAccessKeyInfoQueryParams struct {
-	// <p>The identifier of an access key.</p> <p>This parameter allows (through its regex pattern) a string of characters that can consist of any upper- or lowercase letter or digit.</p>
-	AccessKeyID string                         `queryParam:"style=form,explode=true,name=AccessKeyId"`
-	Action      GETGETAccessKeyInfoActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version     GETGETAccessKeyInfoVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETAccessKeyInfoHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETGETAccessKeyInfoRequest struct {
-	QueryParams GETGETAccessKeyInfoQueryParams
-	Headers     GETGETAccessKeyInfoHeaders
+	// <p>The identifier of an access key.</p> <p>This parameter allows (through its regex pattern) a string of characters that can consist of any upper- or lowercase letter or digit.</p>
+	AccessKeyID       string                         `queryParam:"style=form,explode=true,name=AccessKeyId"`
+	Action            GETGETAccessKeyInfoActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           GETGETAccessKeyInfoVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETAccessKeyInfoResponse struct {

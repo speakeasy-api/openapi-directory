@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNotificationsContributionsIDPreviewPathParams struct {
+type GetNotificationsContributionsIDPreviewRequest struct {
 	// Id of the contribution to preview a notification for
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetNotificationsContributionsIDPreviewQueryParams struct {
 	// Type of message to preview.
 	Message string `queryParam:"style=form,explode=true,name=message"`
-}
-
-type GetNotificationsContributionsIDPreviewRequest struct {
-	PathParams  GetNotificationsContributionsIDPreviewPathParams
-	QueryParams GetNotificationsContributionsIDPreviewQueryParams
 }
 
 type GetNotificationsContributionsIDPreviewResponse struct {

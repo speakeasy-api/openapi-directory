@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticlePutImageRawPathParams struct {
+type ArticlePutImageRawRequest struct {
+	// The ArticleApiImageModel
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The image id. If you pass 0, the image will be added
 	ImageID int64 `pathParam:"style=simple,explode=false,name=imageId"`
 	// The product id
 	ProductID int64 `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ArticlePutImageRawRequest struct {
-	PathParams ArticlePutImageRawPathParams
-	// The ArticleApiImageModel
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type ArticlePutImageRawResponse struct {

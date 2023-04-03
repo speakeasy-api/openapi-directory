@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Kecer - Khatha Extract / Certificate
 // API to verify Khatha Extract / Certificate.
-func (s *apIs) Kecer(ctx context.Context, request operations.KecerRequest) (*operations.KecerResponse, error) {
+func (s *apIs) Kecer(ctx context.Context, request operations.KecerRequestBody, security operations.KecerSecurity) (*operations.KecerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kecer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Kecer(ctx context.Context, request operations.KecerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Kecer(ctx context.Context, request operations.KecerRequest) (*ope
 
 // Tapcn - New Tap Connection
 // API to verify New Tap Connection.
-func (s *apIs) Tapcn(ctx context.Context, request operations.TapcnRequest) (*operations.TapcnResponse, error) {
+func (s *apIs) Tapcn(ctx context.Context, request operations.TapcnRequestBody, security operations.TapcnSecurity) (*operations.TapcnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tapcn/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Tapcn(ctx context.Context, request operations.TapcnRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Tapcn(ctx context.Context, request operations.TapcnRequest) (*ope
 
 // Tdlcs - Trade License/ Certificate
 // API to verify Trade License/ Certificate.
-func (s *apIs) Tdlcs(ctx context.Context, request operations.TdlcsRequest) (*operations.TdlcsResponse, error) {
+func (s *apIs) Tdlcs(ctx context.Context, request operations.TdlcsRequestBody, security operations.TdlcsSecurity) (*operations.TdlcsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tdlcs/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Tdlcs(ctx context.Context, request operations.TdlcsRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *apIs) Tdlcs(ctx context.Context, request operations.TdlcsRequest) (*ope
 
 // Ugdcn - Jalanidhi - New UGD Connection
 // API to verify Jalanidhi - New UGD Connection.
-func (s *apIs) Ugdcn(ctx context.Context, request operations.UgdcnRequest) (*operations.UgdcnResponse, error) {
+func (s *apIs) Ugdcn(ctx context.Context, request operations.UgdcnRequestBody, security operations.UgdcnSecurity) (*operations.UgdcnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ugdcn/certificate"
 
@@ -388,7 +388,7 @@ func (s *apIs) Ugdcn(ctx context.Context, request operations.UgdcnRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

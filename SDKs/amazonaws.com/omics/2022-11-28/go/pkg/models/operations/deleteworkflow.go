@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteWorkflowPathParams struct {
-	// The workflow's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteWorkflowHeaders struct {
+type DeleteWorkflowRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteWorkflowHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteWorkflowRequest struct {
-	PathParams DeleteWorkflowPathParams
-	Headers    DeleteWorkflowHeaders
+	// The workflow's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteWorkflowResponse struct {

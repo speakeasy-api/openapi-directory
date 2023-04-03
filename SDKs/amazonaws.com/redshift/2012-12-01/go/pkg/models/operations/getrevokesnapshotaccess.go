@@ -50,7 +50,7 @@ func (e *GETRevokeSnapshotAccessVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRevokeSnapshotAccessQueryParams struct {
+type GETRevokeSnapshotAccessRequest struct {
 	// The identifier of the Amazon Web Services account that can no longer restore the specified snapshot.
 	AccountWithRestoreAccess string                            `queryParam:"style=form,explode=true,name=AccountWithRestoreAccess"`
 	Action                   GETRevokeSnapshotAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -61,21 +61,13 @@ type GETRevokeSnapshotAccessQueryParams struct {
 	// The identifier of the snapshot that the account can no longer access.
 	SnapshotIdentifier *string                            `queryParam:"style=form,explode=true,name=SnapshotIdentifier"`
 	Version            GETRevokeSnapshotAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRevokeSnapshotAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRevokeSnapshotAccessRequest struct {
-	QueryParams GETRevokeSnapshotAccessQueryParams
-	Headers     GETRevokeSnapshotAccessHeaders
+	XAmzAlgorithm      *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRevokeSnapshotAccessResponse struct {

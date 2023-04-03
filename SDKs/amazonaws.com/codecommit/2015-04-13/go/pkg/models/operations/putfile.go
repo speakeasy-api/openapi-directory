@@ -30,7 +30,8 @@ func (e *PutFileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutFileHeaders struct {
+type PutFileRequest struct {
+	PutFileInput      shared.PutFileInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type PutFileHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        PutFileXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type PutFileRequest struct {
-	Headers PutFileHeaders
-	Request shared.PutFileInput `request:"mediaType=application/json"`
 }
 
 type PutFileResponse struct {

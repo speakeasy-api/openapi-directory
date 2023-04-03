@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsAddAppsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsAddAppsPathParams struct {
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DistributionGroupsAddAppsRequestBodyApps struct {
@@ -30,10 +22,12 @@ type DistributionGroupsAddAppsRequestBody struct {
 }
 
 type DistributionGroupsAddAppsRequest struct {
-	PathParams DistributionGroupsAddAppsPathParams
 	// The name of the apps to be added to the distribution group. The apps have to be owned by the organization.
-	Request  DistributionGroupsAddAppsRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsAddAppsSecurity
+	RequestBody DistributionGroupsAddAppsRequestBody `request:"mediaType=application/json"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsAddAppsResponse struct {

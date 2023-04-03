@@ -7,19 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDUserConnectionsIDConnectionSourcesIDSourcePathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDSource     int64 `pathParam:"style=simple,explode=false,name=id_source"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserConnectionsIDConnectionSourcesIDSourceQueryParams struct {
-	// do the synchronization in background (to use with the sysynchronizenc parameter)
-	Background *bool   `queryParam:"style=form,explode=true,name=background"`
-	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 	// to enable or disable connector source
 	Disabled *bool `multipartForm:"name=disabled"`
@@ -28,9 +15,14 @@ type PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 }
 
 type PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest struct {
-	PathParams  PostUsersIDUserConnectionsIDConnectionSourcesIDSourcePathParams
-	QueryParams PostUsersIDUserConnectionsIDConnectionSourcesIDSourceQueryParams
-	Request     *PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	// do the synchronization in background (to use with the sysynchronizenc parameter)
+	Background   *bool   `queryParam:"style=form,explode=true,name=background"`
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDSource     int64   `pathParam:"style=simple,explode=false,name=id_source"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PostUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse struct {

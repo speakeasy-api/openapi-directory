@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClearAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type ClearAddressRequest struct {
-	Headers ClearAddressHeaders
-	Request shared.ClearAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization       string                     `header:"style=simple,explode=false,name=Authorization"`
+	ClearAddressRequest shared.ClearAddressRequest `request:"mediaType=application/json"`
 }
 
 type ClearAddressResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2AccessTokensQueryParams struct {
+type GetV2AccessTokensRequest struct {
 	Page     *float64 `queryParam:"style=form,explode=true,name=page"`
 	PageSize *float64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetV2AccessTokensRequest struct {
-	QueryParams GetV2AccessTokensQueryParams
 }
 
 type GetV2AccessTokensResponse struct {

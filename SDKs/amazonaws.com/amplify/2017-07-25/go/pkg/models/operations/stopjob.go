@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopJobPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The name for the branch, for the job.
-	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
-	//  The unique id for the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type StopJobHeaders struct {
+type StopJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type StopJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopJobRequest struct {
-	PathParams StopJobPathParams
-	Headers    StopJobHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name for the branch, for the job.
+	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
+	//  The unique id for the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type StopJobResponse struct {

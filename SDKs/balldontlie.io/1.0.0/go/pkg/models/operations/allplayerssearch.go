@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type AllPlayersSearchQueryParams struct {
-	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
 type AllPlayersSearchRequest struct {
-	QueryParams AllPlayersSearchQueryParams
+	Search *string `queryParam:"style=form,explode=true,name=search"`
 }
 
 type AllPlayersSearchResponse struct {

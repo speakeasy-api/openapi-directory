@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestNodePathParams struct {
-	// Node ID
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 // RequestNodeXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestNodeXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestNodeXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestNodeHeaders struct {
+type RequestNodeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestNodeXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestNodeRequest struct {
-	PathParams RequestNodePathParams
-	Headers    RequestNodeHeaders
+	// Node ID
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type RequestNodeResponse struct {

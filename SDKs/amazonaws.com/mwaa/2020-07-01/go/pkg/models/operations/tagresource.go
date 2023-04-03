@@ -6,12 +6,15 @@ import (
 	"net/http"
 )
 
-type TagResourcePathParams struct {
-	// The Amazon Resource Name (ARN) of the Amazon MWAA environment. For example, <code>arn:aws:airflow:us-east-1:123456789012:environment/MyMWAAEnvironment</code>.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=ResourceArn"`
+type TagResourceRequestBody struct {
+	// The key-value tag pairs you want to associate to your environment. For example, <code>"Environment": "Staging"</code>. To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
+	Tags map[string]string `json:"Tags"`
 }
 
-type TagResourceHeaders struct {
+type TagResourceRequest struct {
+	RequestBody TagResourceRequestBody `request:"mediaType=application/json"`
+	// The Amazon Resource Name (ARN) of the Amazon MWAA environment. For example, <code>arn:aws:airflow:us-east-1:123456789012:environment/MyMWAAEnvironment</code>.
+	ResourceArn       string  `pathParam:"style=simple,explode=false,name=ResourceArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,17 +22,6 @@ type TagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type TagResourceRequestBody struct {
-	// The key-value tag pairs you want to associate to your environment. For example, <code>"Environment": "Staging"</code>. To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
-	Tags map[string]string `json:"Tags"`
-}
-
-type TagResourceRequest struct {
-	PathParams TagResourcePathParams
-	Headers    TagResourceHeaders
-	Request    TagResourceRequestBody `request:"mediaType=application/json"`
 }
 
 type TagResourceResponse struct {

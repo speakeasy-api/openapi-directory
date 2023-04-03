@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLinksTopSubdomainsPathParams struct {
+type GetLinksTopSubdomainsRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetLinksTopSubdomainsQueryParams struct {
 	// Page Number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// Page Size
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetLinksTopSubdomainsRequest struct {
-	PathParams  GetLinksTopSubdomainsPathParams
-	QueryParams GetLinksTopSubdomainsQueryParams
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetLinksTopSubdomains200ApplicationJSON - Successful operation

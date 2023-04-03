@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetryPushOrdersPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type RetryPushOrdersRequest struct {
-	PathParams RetryPushOrdersPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RetryPushOrdersResponse struct {

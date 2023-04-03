@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGroupsQueryParams struct {
+type ListGroupsRequest struct {
 	// The number of groups to return.  Defaults to 20.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The number of groups to skip before starting the result set.  Defaults to 0.
@@ -20,10 +20,6 @@ type ListGroupsQueryParams struct {
 	// * `createdOn`
 	//
 	Orderby *shared.SortByEnum `queryParam:"style=form,explode=true,name=orderby"`
-}
-
-type ListGroupsRequest struct {
-	QueryParams ListGroupsQueryParams
 }
 
 type ListGroupsResponse struct {

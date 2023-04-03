@@ -7,34 +7,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchUpdateCustomVocabularyItemPathParams struct {
-	// The identifier of the bot associated with this custom vocabulary
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The identifier of the version of the bot associated with this custom vocabulary.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale where this custom vocabulary is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type BatchUpdateCustomVocabularyItemHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchUpdateCustomVocabularyItemRequestBody struct {
 	// A list of custom vocabulary items with updated fields. Each entry must contain a phrase and can optionally contain a displayAs and/or a weight.
 	CustomVocabularyItemList []shared.CustomVocabularyItem `json:"customVocabularyItemList"`
 }
 
 type BatchUpdateCustomVocabularyItemRequest struct {
-	PathParams BatchUpdateCustomVocabularyItemPathParams
-	Headers    BatchUpdateCustomVocabularyItemHeaders
-	Request    BatchUpdateCustomVocabularyItemRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchUpdateCustomVocabularyItemRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot associated with this custom vocabulary
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The identifier of the version of the bot associated with this custom vocabulary.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale where this custom vocabulary is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type BatchUpdateCustomVocabularyItemResponse struct {

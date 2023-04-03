@@ -4,32 +4,22 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type CompanyIDAnnouncementsSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
-type CompanyIDAnnouncementsPathParams struct {
-	// company hex ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CompanyIDAnnouncementsQueryParams struct {
+type CompanyIDAnnouncementsRequest struct {
 	// If this parameter is set to false, you will only receive ids, and no additional data about announcements and no hits to the metric will be counted. (and potentially minimizing your costs)
 	Data *bool `queryParam:"style=form,explode=true,name=data"`
+	// company hex ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// limit of announcements in response (default 10)
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// to paginate through results (default 0)
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type CompanyIDAnnouncementsRequest struct {
-	PathParams  CompanyIDAnnouncementsPathParams
-	QueryParams CompanyIDAnnouncementsQueryParams
-	Security    CompanyIDAnnouncementsSecurity
 }
 
 // CompanyIDAnnouncementsDefaultApplicationJSON - Detailed information about the error

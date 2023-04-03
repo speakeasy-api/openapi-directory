@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type DisassociateTrackerConsumerPathParams struct {
+type DisassociateTrackerConsumerRequest struct {
 	// <p>The Amazon Resource Name (ARN) for the geofence collection to be disassociated from the tracker resource. Used when you need to specify a resource across all Amazon Web Services. </p> <ul> <li> <p>Format example: <code>arn:aws:geo:region:account-id:geofence-collection/ExampleGeofenceCollectionConsumer</code> </p> </li> </ul>
 	ConsumerArn string `pathParam:"style=simple,explode=false,name=ConsumerArn"`
 	// The name of the tracker resource to be dissociated from the consumer.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
-}
-
-type DisassociateTrackerConsumerHeaders struct {
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type DisassociateTrackerConsumerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateTrackerConsumerRequest struct {
-	PathParams DisassociateTrackerConsumerPathParams
-	Headers    DisassociateTrackerConsumerHeaders
 }
 
 type DisassociateTrackerConsumerResponse struct {

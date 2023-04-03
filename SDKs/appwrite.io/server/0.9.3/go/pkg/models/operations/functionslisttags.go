@@ -8,16 +8,13 @@ import (
 )
 
 type FunctionsListTagsSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type FunctionsListTagsPathParams struct {
+type FunctionsListTagsRequest struct {
 	// Function unique ID.
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
-}
-
-type FunctionsListTagsQueryParams struct {
 	// Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Results offset. The default value is 0. Use this param to manage pagination.
@@ -26,12 +23,6 @@ type FunctionsListTagsQueryParams struct {
 	OrderType *string `queryParam:"style=form,explode=true,name=orderType"`
 	// Search term to filter your list results. Max length: 256 chars.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type FunctionsListTagsRequest struct {
-	PathParams  FunctionsListTagsPathParams
-	QueryParams FunctionsListTagsQueryParams
-	Security    FunctionsListTagsSecurity
 }
 
 type FunctionsListTagsResponse struct {

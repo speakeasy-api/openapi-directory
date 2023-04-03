@@ -8,13 +8,8 @@ import (
 )
 
 type CreateTextAutoReplySecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateTextAutoReplyRequest struct {
-	// TextAutoReply object, keyword or number should be specified with response message and text to match if needed
-	Request  *shared.TextAutoReply `request:"mediaType=application/json"`
-	Security CreateTextAutoReplySecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateTextAutoReplyResponse struct {

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateApnsSandboxChannelPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-}
-
-type UpdateApnsSandboxChannelHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest - Specifies the status and settings of the APNs (Apple Push Notification service) sandbox channel for an application.
 type UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest struct {
 	BundleID                    *string `json:"BundleId,omitempty"`
@@ -40,9 +25,16 @@ type UpdateApnsSandboxChannelRequestBody struct {
 }
 
 type UpdateApnsSandboxChannelRequest struct {
-	PathParams UpdateApnsSandboxChannelPathParams
-	Headers    UpdateApnsSandboxChannelHeaders
-	Request    UpdateApnsSandboxChannelRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateApnsSandboxChannelRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
 }
 
 type UpdateApnsSandboxChannelResponse struct {

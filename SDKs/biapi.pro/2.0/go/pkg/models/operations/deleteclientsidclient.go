@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteClientsIDClientPathParams struct {
-	IDClient int64 `pathParam:"style=simple,explode=false,name=id_client"`
-}
-
-type DeleteClientsIDClientQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type DeleteClientsIDClientRequest struct {
-	PathParams  DeleteClientsIDClientPathParams
-	QueryParams DeleteClientsIDClientQueryParams
+	Expand   *string `queryParam:"style=form,explode=true,name=expand"`
+	IDClient int64   `pathParam:"style=simple,explode=false,name=id_client"`
 }
 
 type DeleteClientsIDClientResponse struct {

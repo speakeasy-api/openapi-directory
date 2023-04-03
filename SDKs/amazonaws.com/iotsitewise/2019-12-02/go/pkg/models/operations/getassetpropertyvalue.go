@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssetPropertyValueQueryParams struct {
-	// The ID of the asset.
-	AssetID *string `queryParam:"style=form,explode=true,name=assetId"`
-	// The alias that identifies the property, such as an OPC-UA server data stream path (for example, <code>/company/windfarm/3/turbine/7/temperature</code>). For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html">Mapping industrial data streams to asset properties</a> in the <i>IoT SiteWise User Guide</i>.
-	PropertyAlias *string `queryParam:"style=form,explode=true,name=propertyAlias"`
-	// The ID of the asset property.
-	PropertyID *string `queryParam:"style=form,explode=true,name=propertyId"`
-}
-
-type GetAssetPropertyValueHeaders struct {
+type GetAssetPropertyValueRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetAssetPropertyValueHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAssetPropertyValueRequest struct {
-	QueryParams GetAssetPropertyValueQueryParams
-	Headers     GetAssetPropertyValueHeaders
+	// The ID of the asset.
+	AssetID *string `queryParam:"style=form,explode=true,name=assetId"`
+	// The alias that identifies the property, such as an OPC-UA server data stream path (for example, <code>/company/windfarm/3/turbine/7/temperature</code>). For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html">Mapping industrial data streams to asset properties</a> in the <i>IoT SiteWise User Guide</i>.
+	PropertyAlias *string `queryParam:"style=form,explode=true,name=propertyAlias"`
+	// The ID of the asset property.
+	PropertyID *string `queryParam:"style=form,explode=true,name=propertyId"`
 }
 
 type GetAssetPropertyValueResponse struct {

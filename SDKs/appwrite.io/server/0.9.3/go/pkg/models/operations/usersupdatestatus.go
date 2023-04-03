@@ -8,13 +8,8 @@ import (
 )
 
 type UsersUpdateStatusSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersUpdateStatusPathParams struct {
-	// User unique ID.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type UsersUpdateStatusRequestBody struct {
@@ -23,9 +18,9 @@ type UsersUpdateStatusRequestBody struct {
 }
 
 type UsersUpdateStatusRequest struct {
-	PathParams UsersUpdateStatusPathParams
-	Request    *UsersUpdateStatusRequestBody `request:"mediaType=application/json"`
-	Security   UsersUpdateStatusSecurity
+	RequestBody *UsersUpdateStatusRequestBody `request:"mediaType=application/json"`
+	// User unique ID.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UsersUpdateStatusResponse struct {

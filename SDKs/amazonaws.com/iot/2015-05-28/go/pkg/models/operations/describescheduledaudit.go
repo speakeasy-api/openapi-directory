@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeScheduledAuditPathParams struct {
-	// The name of the scheduled audit whose information you want to get.
-	ScheduledAuditName string `pathParam:"style=simple,explode=false,name=scheduledAuditName"`
-}
-
-type DescribeScheduledAuditHeaders struct {
+type DescribeScheduledAuditRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeScheduledAuditHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeScheduledAuditRequest struct {
-	PathParams DescribeScheduledAuditPathParams
-	Headers    DescribeScheduledAuditHeaders
+	// The name of the scheduled audit whose information you want to get.
+	ScheduledAuditName string `pathParam:"style=simple,explode=false,name=scheduledAuditName"`
 }
 
 type DescribeScheduledAuditResponse struct {

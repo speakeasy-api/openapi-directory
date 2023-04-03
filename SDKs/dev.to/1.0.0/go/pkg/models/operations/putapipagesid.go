@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutAPIPagesIDPathParams struct {
+type PutAPIPagesIDRequest struct {
+	Page *shared.Page `request:"mediaType=application/json"`
 	// The ID of the page.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PutAPIPagesIDRequest struct {
-	PathParams PutAPIPagesIDPathParams
-	Request    *shared.Page `request:"mediaType=application/json"`
 }
 
 type PutAPIPagesIDResponse struct {

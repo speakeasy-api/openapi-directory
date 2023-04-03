@@ -8,18 +8,13 @@ import (
 )
 
 type UsersGetSessionsSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersGetSessionsPathParams struct {
-	// User unique ID.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type UsersGetSessionsRequest struct {
-	PathParams UsersGetSessionsPathParams
-	Security   UsersGetSessionsSecurity
+	// User unique ID.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UsersGetSessionsResponse struct {

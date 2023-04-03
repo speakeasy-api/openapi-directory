@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPutDatapointPathParams struct {
+type GroupsPutDatapointRequest struct {
+	// The body of the datapoint
+	APICoreDtoDatapointsDatapoint shared.APICoreDtoDatapointsDatapoint `request:"mediaType=application/json"`
 	// The id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsPutDatapointRequest struct {
-	PathParams GroupsPutDatapointPathParams
-	// The body of the datapoint
-	Request shared.APICoreDtoDatapointsDatapoint `request:"mediaType=application/json"`
 }
 
 type GroupsPutDatapointResponse struct {

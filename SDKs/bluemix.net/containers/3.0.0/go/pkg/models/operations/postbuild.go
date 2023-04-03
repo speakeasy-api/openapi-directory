@@ -6,7 +6,13 @@ import (
 	"net/http"
 )
 
-type PostBuildQueryParams struct {
+type PostBuildRequest struct {
+	// Must be the content of a tar archive compressed with gzip. The archive must include a file called 'Dockerfile' at its root. It may include any number of other files which will be accessible in the build context.
+	RequestBody []byte `request:"mediaType=application/tar"`
+	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
+	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
+	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
 	// If you set the query parameter to `nocache=true`, `nocache=True`, or `nocache=1`, the cache will not be used to build your image. To use the cache, enter `nocache=false`, `nocache=False`, or `nocache=0`.
 	Nocache *bool `queryParam:"style=form,explode=true,name=nocache"`
 	// If set to pull=true, pull=True, or pull=1, then a newer version of the image is always attempted to be pulled even though an older version of the image exists locally. If set to pull=false, pull=False, or pull=0, then the local image will be used if one exists.
@@ -15,20 +21,6 @@ type PostBuildQueryParams struct {
 	Q *bool `queryParam:"style=form,explode=true,name=q"`
 	// Tag the image with the full path to your private Bluemix registry in the following format: `t=registry.ng.bluemix.net/<namespace>/<image_name>:<tag>`. This path is used to push the image to the private Bluemix registry after it is built.
 	T string `queryParam:"style=form,explode=true,name=t"`
-}
-
-type PostBuildHeaders struct {
-	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
-	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
-	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
-	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostBuildRequest struct {
-	QueryParams PostBuildQueryParams
-	Headers     PostBuildHeaders
-	// Must be the content of a tar archive compressed with gzip. The archive must include a file called 'Dockerfile' at its root. It may include any number of other files which will be accessible in the build context.
-	Request []byte `request:"mediaType=application/tar"`
 }
 
 type PostBuildResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUrlsExportStatusPathParams struct {
+type GetUrlsExportStatusRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Project's identifier
@@ -16,10 +16,6 @@ type GetUrlsExportStatusPathParams struct {
 	URLExportID string `pathParam:"style=simple,explode=false,name=url_export_id"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetUrlsExportStatusRequest struct {
-	PathParams GetUrlsExportStatusPathParams
 }
 
 type GetUrlsExportStatusResponse struct {

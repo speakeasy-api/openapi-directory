@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CashReceiptsPostRequest struct {
-	// Information of Cash Receipt to create.
-	Request shared.CashReceiptDto `request:"mediaType=application/json"`
-}
 
 type CashReceiptsPostResponse struct {
 	// OK

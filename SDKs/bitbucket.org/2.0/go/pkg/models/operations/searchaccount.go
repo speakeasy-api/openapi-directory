@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchAccountPathParams struct {
-	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
-	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type SearchAccountQueryParams struct {
+type SearchAccountRequest struct {
 	// Which page of the search results to retrieve
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// How many search results to retrieve per page
 	Pagelen *int `queryParam:"style=form,explode=true,name=pagelen"`
 	// The search query
 	SearchQuery string `queryParam:"style=form,explode=true,name=search_query"`
-}
-
-type SearchAccountRequest struct {
-	PathParams  SearchAccountPathParams
-	QueryParams SearchAccountQueryParams
+	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
 }
 
 type SearchAccountResponse struct {

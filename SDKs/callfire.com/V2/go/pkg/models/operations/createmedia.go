@@ -8,7 +8,8 @@ import (
 )
 
 type CreateMediaSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateMediaRequestBodyFile struct {
@@ -21,11 +22,6 @@ type CreateMediaRequestBody struct {
 	File CreateMediaRequestBodyFile `multipartForm:"file"`
 	// A name of a media file
 	Name *string `multipartForm:"name=name"`
-}
-
-type CreateMediaRequest struct {
-	Request  CreateMediaRequestBody `request:"mediaType=multipart/form-data"`
-	Security CreateMediaSecurity
 }
 
 type CreateMediaResponse struct {

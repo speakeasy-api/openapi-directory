@@ -30,20 +30,16 @@ func (e *PutResourceAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutResourceAttributesHeaders struct {
-	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        PutResourceAttributesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type PutResourceAttributesRequest struct {
-	Headers PutResourceAttributesHeaders
-	Request shared.PutResourceAttributesRequest `request:"mediaType=application/json"`
+	PutResourceAttributesRequest shared.PutResourceAttributesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   PutResourceAttributesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type PutResourceAttributesResponse struct {

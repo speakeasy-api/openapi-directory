@@ -50,29 +50,21 @@ func (e *POSTListServerCertificatesVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTListServerCertificatesQueryParams struct {
+type POSTListServerCertificatesRequest struct {
 	Action POSTListServerCertificatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Pagination limit
-	MaxItems *string                               `queryParam:"style=form,explode=true,name=MaxItems"`
-	Version  POSTListServerCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListServerCertificatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTListServerCertificatesRequest struct {
-	QueryParams POSTListServerCertificatesQueryParams
-	Headers     POSTListServerCertificatesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	MaxItems          *string                               `queryParam:"style=form,explode=true,name=MaxItems"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTListServerCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListServerCertificatesResponse struct {

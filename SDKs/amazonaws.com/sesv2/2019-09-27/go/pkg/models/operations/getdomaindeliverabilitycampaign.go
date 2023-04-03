@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainDeliverabilityCampaignPathParams struct {
+type GetDomainDeliverabilityCampaignRequest struct {
 	// The unique identifier for the campaign. The Deliverability dashboard automatically generates and assigns this identifier to a campaign.
-	CampaignID string `pathParam:"style=simple,explode=false,name=CampaignId"`
-}
-
-type GetDomainDeliverabilityCampaignHeaders struct {
+	CampaignID        string  `pathParam:"style=simple,explode=false,name=CampaignId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetDomainDeliverabilityCampaignHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDomainDeliverabilityCampaignRequest struct {
-	PathParams GetDomainDeliverabilityCampaignPathParams
-	Headers    GetDomainDeliverabilityCampaignHeaders
 }
 
 type GetDomainDeliverabilityCampaignResponse struct {

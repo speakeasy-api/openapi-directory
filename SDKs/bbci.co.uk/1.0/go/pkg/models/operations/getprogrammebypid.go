@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammeByPIDPathParams struct {
-	// The programme identifier.
-	Pid string `pathParam:"style=simple,explode=false,name=pid"`
-}
-
-type GetProgrammeByPIDQueryParams struct {
+type GetProgrammeByPIDRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// Request additional data in the output
 	Mixin *shared.MixinEnum `queryParam:"style=form,explode=true,name=mixin"`
+	// The programme identifier.
+	Pid string `pathParam:"style=simple,explode=false,name=pid"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetProgrammeByPIDRequest struct {
-	PathParams  GetProgrammeByPIDPathParams
-	QueryParams GetProgrammeByPIDQueryParams
 }
 
 type GetProgrammeByPIDResponse struct {

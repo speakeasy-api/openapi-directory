@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSwatchQueryParams struct {
+type GetSwatchRequest struct {
 	// The hex value of the color to retrieve without '#'
 	Color string `queryParam:"style=form,explode=false,name=color"`
 	// The name of the color
 	Name *string `queryParam:"style=form,explode=false,name=name"`
-}
-
-type GetSwatchRequest struct {
-	QueryParams GetSwatchQueryParams
 }
 
 type GetSwatchResponse struct {

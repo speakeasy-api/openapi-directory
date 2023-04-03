@@ -30,7 +30,8 @@ func (e *UpdateRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateRuleHeaders struct {
+type UpdateRuleRequest struct {
+	UpdateRuleRequest shared.UpdateRuleRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type UpdateRuleHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        UpdateRuleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type UpdateRuleRequest struct {
-	Headers UpdateRuleHeaders
-	Request shared.UpdateRuleRequest `request:"mediaType=application/json"`
 }
 
 type UpdateRuleResponse struct {

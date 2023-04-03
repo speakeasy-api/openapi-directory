@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBotLocalePathParams struct {
-	// The unique identifier of the bot that contains the locale.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot that contains the locale.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale that will be deleted. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type DeleteBotLocaleHeaders struct {
+type DeleteBotLocaleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DeleteBotLocaleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBotLocaleRequest struct {
-	PathParams DeleteBotLocalePathParams
-	Headers    DeleteBotLocaleHeaders
+	// The unique identifier of the bot that contains the locale.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot that contains the locale.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale that will be deleted. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type DeleteBotLocaleResponse struct {

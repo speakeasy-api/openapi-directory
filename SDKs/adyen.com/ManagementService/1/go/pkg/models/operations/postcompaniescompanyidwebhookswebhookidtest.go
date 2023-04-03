@@ -8,21 +8,16 @@ import (
 )
 
 type PostCompaniesCompanyIDWebhooksWebhookIDTestSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PostCompaniesCompanyIDWebhooksWebhookIDTestPathParams struct {
+type PostCompaniesCompanyIDWebhooksWebhookIDTestRequest struct {
+	TestCompanyWebhookRequest *shared.TestCompanyWebhookRequest `request:"mediaType=application/json"`
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Unique identifier of the webhook configuration.
 	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type PostCompaniesCompanyIDWebhooksWebhookIDTestRequest struct {
-	PathParams PostCompaniesCompanyIDWebhooksWebhookIDTestPathParams
-	Request    *shared.TestCompanyWebhookRequest `request:"mediaType=application/json"`
-	Security   PostCompaniesCompanyIDWebhooksWebhookIDTestSecurity
 }
 
 type PostCompaniesCompanyIDWebhooksWebhookIDTestResponse struct {

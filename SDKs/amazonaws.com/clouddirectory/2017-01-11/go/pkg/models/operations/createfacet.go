@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateFacetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The schema ARN in which the new <a>Facet</a> will be created. For more information, see <a>arns</a>.
-	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
 // CreateFacetRequestBodyFacetStyleEnum - There are two different styles that you can define on any given facet, <code>Static</code> and <code>Dynamic</code>. For static facets, all attributes must be defined in the schema. For dynamic facets, attributes can be defined during data plane operations.
 type CreateFacetRequestBodyFacetStyleEnum string
 
@@ -87,8 +75,16 @@ type CreateFacetRequestBody struct {
 }
 
 type CreateFacetRequest struct {
-	Headers CreateFacetHeaders
-	Request CreateFacetRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateFacetRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The schema ARN in which the new <a>Facet</a> will be created. For more information, see <a>arns</a>.
+	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
 }
 
 type CreateFacetResponse struct {

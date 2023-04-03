@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamRecordsQueryParams struct {
+type GetTeamRecordsRequest struct {
 	// Conference filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Team filter
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTeamRecordsRequest struct {
-	QueryParams GetTeamRecordsQueryParams
 }
 
 type GetTeamRecordsResponse struct {

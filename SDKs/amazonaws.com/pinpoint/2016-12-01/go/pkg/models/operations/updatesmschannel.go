@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSmsChannelPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-}
-
-type UpdateSmsChannelHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateSMSChannelRequestBodySMSChannelRequest - Specifies the status and settings of the SMS channel for an application.
 type UpdateSMSChannelRequestBodySMSChannelRequest struct {
 	Enabled   *bool   `json:"Enabled,omitempty"`
@@ -35,9 +20,16 @@ type UpdateSmsChannelRequestBody struct {
 }
 
 type UpdateSmsChannelRequest struct {
-	PathParams UpdateSmsChannelPathParams
-	Headers    UpdateSmsChannelHeaders
-	Request    UpdateSmsChannelRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSmsChannelRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
 }
 
 type UpdateSmsChannelResponse struct {

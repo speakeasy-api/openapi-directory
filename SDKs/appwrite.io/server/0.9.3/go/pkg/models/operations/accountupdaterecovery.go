@@ -8,8 +8,8 @@ import (
 )
 
 type AccountUpdateRecoverySecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountUpdateRecoveryRequestBody struct {
@@ -21,11 +21,6 @@ type AccountUpdateRecoveryRequestBody struct {
 	Secret string `json:"secret"`
 	// User account UID address.
 	UserID string `json:"userId"`
-}
-
-type AccountUpdateRecoveryRequest struct {
-	Request  *AccountUpdateRecoveryRequestBody `request:"mediaType=application/json"`
-	Security AccountUpdateRecoverySecurity
 }
 
 type AccountUpdateRecoveryResponse struct {

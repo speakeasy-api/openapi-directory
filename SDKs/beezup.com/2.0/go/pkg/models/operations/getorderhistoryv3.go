@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderHistoryV3PathParams struct {
+type GetOrderHistoryV3Request struct {
 	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
 	// The marketplace technical code
 	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type GetOrderHistoryV3Request struct {
-	PathParams GetOrderHistoryV3PathParams
 }
 
 type GetOrderHistoryV3Response struct {

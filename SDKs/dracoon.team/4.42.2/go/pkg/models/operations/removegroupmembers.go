@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveGroupMembersPathParams struct {
-	// Group ID
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 // RemoveGroupMembersXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RemoveGroupMembersXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *RemoveGroupMembersXSdsDateFormatEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type RemoveGroupMembersHeaders struct {
+type RemoveGroupMembersRequest struct {
+	ChangeGroupMembersRequest shared.ChangeGroupMembersRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RemoveGroupMembersXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RemoveGroupMembersRequest struct {
-	PathParams RemoveGroupMembersPathParams
-	Headers    RemoveGroupMembersHeaders
-	Request    shared.ChangeGroupMembersRequest `request:"mediaType=application/json"`
+	// Group ID
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type RemoveGroupMembersResponse struct {

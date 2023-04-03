@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppointmentTemplatesDeleteSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AppointmentTemplatesDeletePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AppointmentTemplatesDeleteQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Office  *int64 `queryParam:"style=form,explode=true,name=office"`
-	Profile *int64 `queryParam:"style=form,explode=true,name=profile"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppointmentTemplatesDeleteRequest struct {
-	PathParams  AppointmentTemplatesDeletePathParams
-	QueryParams AppointmentTemplatesDeleteQueryParams
-	Security    AppointmentTemplatesDeleteSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID      string `pathParam:"style=simple,explode=false,name=id"`
+	Office  *int64 `queryParam:"style=form,explode=true,name=office"`
+	Profile *int64 `queryParam:"style=form,explode=true,name=profile"`
 }
 
 type AppointmentTemplatesDeleteResponse struct {

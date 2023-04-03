@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetPostAndParentPathParams struct {
+type ForumGetPostAndParentRequest struct {
 	ChildPostID int64 `pathParam:"style=simple,explode=false,name=childPostId"`
-}
-
-type ForumGetPostAndParentQueryParams struct {
 	// If this value is not null or empty, banned posts are requested to be returned
 	Showbanned *string `queryParam:"style=form,explode=true,name=showbanned"`
-}
-
-type ForumGetPostAndParentRequest struct {
-	PathParams  ForumGetPostAndParentPathParams
-	QueryParams ForumGetPostAndParentQueryParams
 }
 
 // ForumGetPostAndParent200Wildcard - Look at the Response property for more information about the nature of this response

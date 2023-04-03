@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnforceLoginPasswordChangeHeaders struct {
+type EnforceLoginPasswordChangeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type EnforceLoginPasswordChangeRequest struct {
-	Headers EnforceLoginPasswordChangeHeaders
 }
 
 type EnforceLoginPasswordChangeResponse struct {

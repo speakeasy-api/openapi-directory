@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArchiveRulePathParams struct {
-	// The name of the analyzer to retrieve rules from.
-	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
-	// The name of the rule to retrieve.
-	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
-}
-
-type GetArchiveRuleHeaders struct {
+type GetArchiveRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetArchiveRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetArchiveRuleRequest struct {
-	PathParams GetArchiveRulePathParams
-	Headers    GetArchiveRuleHeaders
+	// The name of the analyzer to retrieve rules from.
+	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
+	// The name of the rule to retrieve.
+	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
 }
 
 type GetArchiveRuleResponse struct {

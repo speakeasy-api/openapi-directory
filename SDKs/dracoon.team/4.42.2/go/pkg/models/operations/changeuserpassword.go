@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeUserPasswordHeaders struct {
+type ChangeUserPasswordRequest struct {
+	ChangeUserPasswordRequest shared.ChangeUserPasswordRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ChangeUserPasswordRequest struct {
-	Headers ChangeUserPasswordHeaders
-	Request shared.ChangeUserPasswordRequest `request:"mediaType=application/json"`
 }
 
 type ChangeUserPassword400ApplicationJSONType string

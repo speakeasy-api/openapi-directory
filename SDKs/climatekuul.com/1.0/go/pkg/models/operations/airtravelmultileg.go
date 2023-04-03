@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 var AirtravelMultilegServerList = []string{
 	"http://api.climatekuul.com:8000/footprint",
-}
-
-type AirtravelMultilegRequest struct {
-	Request   shared.AirtravelMultilegRequest `request:"mediaType=application/json"`
-	ServerURL *string
 }
 
 type AirtravelMultilegResponse struct {

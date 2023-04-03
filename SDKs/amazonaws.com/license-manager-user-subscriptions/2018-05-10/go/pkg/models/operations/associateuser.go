@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateUserHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // AssociateUserRequestBodyIdentityProvider - Details about an identity provider.
 type AssociateUserRequestBodyIdentityProvider struct {
 	ActiveDirectoryIdentityProvider *shared.ActiveDirectoryIdentityProvider `json:"ActiveDirectoryIdentityProvider,omitempty"`
@@ -34,8 +24,14 @@ type AssociateUserRequestBody struct {
 }
 
 type AssociateUserRequest struct {
-	Headers AssociateUserHeaders
-	Request AssociateUserRequestBody `request:"mediaType=application/json"`
+	RequestBody       AssociateUserRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type AssociateUserResponse struct {

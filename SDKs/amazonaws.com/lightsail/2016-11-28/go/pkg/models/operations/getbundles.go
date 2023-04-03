@@ -30,7 +30,8 @@ func (e *GetBundlesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBundlesHeaders struct {
+type GetBundlesRequest struct {
+	GetBundlesRequest shared.GetBundlesRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetBundlesHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetBundlesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetBundlesRequest struct {
-	Headers GetBundlesHeaders
-	Request shared.GetBundlesRequest `request:"mediaType=application/json"`
 }
 
 type GetBundlesResponse struct {

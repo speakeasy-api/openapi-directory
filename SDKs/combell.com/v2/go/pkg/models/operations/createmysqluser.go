@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateMySQLUserPathParams struct {
-	// Automatically added
-	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-}
-
-type CreateMySQLUserQueryParams struct {
-	// Name of the database.
-	DatabaseName string `queryParam:"style=form,explode=true,name=database_name"`
-}
-
 type CreateMySQLUserRequest struct {
-	PathParams  CreateMySQLUserPathParams
-	QueryParams CreateMySQLUserQueryParams
-	Request     *shared.CreateMySQLUser `request:"mediaType=application/json"`
+	CreateMySQLUser *shared.CreateMySQLUser `request:"mediaType=application/json"`
+	// Automatically added
+	DatabaseNamePathParameter string `pathParam:"style=simple,explode=false,name=databaseName"`
+	// Name of the database.
+	DatabaseNameQueryParameter string `queryParam:"style=form,explode=true,name=database_name"`
 }
 
 type CreateMySQLUserResponse struct {

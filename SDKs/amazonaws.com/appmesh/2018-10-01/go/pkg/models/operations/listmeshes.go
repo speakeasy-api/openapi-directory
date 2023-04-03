@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMeshesQueryParams struct {
+type ListMeshesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of mesh results returned by <code>ListMeshes</code> in paginated
 	//          output. When this parameter is used, <code>ListMeshes</code> only returns
 	//             <code>limit</code> results in a single page along with a <code>nextToken</code> response
@@ -26,21 +33,6 @@ type ListMeshesQueryParams struct {
 	//                 retrieve the next items in a list and not for other programmatic purposes.</p>
 	//         </note>
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListMeshesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListMeshesRequest struct {
-	QueryParams ListMeshesQueryParams
-	Headers     ListMeshesHeaders
 }
 
 type ListMeshesResponse struct {

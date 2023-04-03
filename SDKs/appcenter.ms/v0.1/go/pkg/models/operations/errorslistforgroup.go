@@ -6,38 +6,28 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsListForGroupSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsListForGroupPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The id of the error group
-	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsListForGroupQueryParams struct {
-	// The maximum number of results to return. (0 will fetch all results till the max number.)
-	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
-	// Last date time in data in ISO 8601 date time format
-	End   *time.Time `queryParam:"style=form,explode=true,name=end"`
-	Model *string    `queryParam:"style=form,explode=true,name=model"`
-	Os    *string    `queryParam:"style=form,explode=true,name=os"`
-	// Start date time in data in ISO 8601 date time format
-	Start time.Time `queryParam:"style=form,explode=true,name=start"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type ErrorsListForGroupRequest struct {
-	PathParams  ErrorsListForGroupPathParams
-	QueryParams ErrorsListForGroupQueryParams
-	Security    ErrorsListForGroupSecurity
+	// The maximum number of results to return. (0 will fetch all results till the max number.)
+	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Last date time in data in ISO 8601 date time format
+	End *time.Time `queryParam:"style=form,explode=true,name=end"`
+	// The id of the error group
+	ErrorGroupID string  `pathParam:"style=simple,explode=false,name=errorGroupId"`
+	Model        *string `queryParam:"style=form,explode=true,name=model"`
+	Os           *string `queryParam:"style=form,explode=true,name=os"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// Start date time in data in ISO 8601 date time format
+	Start time.Time `queryParam:"style=form,explode=true,name=start"`
 }
 
 type ErrorsListForGroupDefaultApplicationJSONErrorCodeEnum string

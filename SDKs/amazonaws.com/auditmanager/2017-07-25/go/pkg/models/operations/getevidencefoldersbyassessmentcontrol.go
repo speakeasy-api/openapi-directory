@@ -7,23 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEvidenceFoldersByAssessmentControlPathParams struct {
-	//  The identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-	//  The identifier for the control.
-	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
-	//  The identifier for the control set.
-	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
-}
-
-type GetEvidenceFoldersByAssessmentControlQueryParams struct {
-	//  Represents the maximum number of results on a page or for an API request call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  The pagination token that's used to fetch the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetEvidenceFoldersByAssessmentControlHeaders struct {
+type GetEvidenceFoldersByAssessmentControlRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -31,12 +15,16 @@ type GetEvidenceFoldersByAssessmentControlHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEvidenceFoldersByAssessmentControlRequest struct {
-	PathParams  GetEvidenceFoldersByAssessmentControlPathParams
-	QueryParams GetEvidenceFoldersByAssessmentControlQueryParams
-	Headers     GetEvidenceFoldersByAssessmentControlHeaders
+	//  The identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
+	//  The identifier for the control.
+	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
+	//  The identifier for the control set.
+	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
+	//  Represents the maximum number of results on a page or for an API request call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  The pagination token that's used to fetch the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetEvidenceFoldersByAssessmentControlResponse struct {

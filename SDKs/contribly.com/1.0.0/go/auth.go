@@ -124,7 +124,7 @@ func (s *auth) GetScopes(ctx context.Context) (*operations.GetScopesResponse, er
 }
 
 // PostVerify - Verify token and return details of the owning user
-func (s *auth) PostVerify(ctx context.Context, request operations.PostVerifyRequest) (*operations.PostVerifyResponse, error) {
+func (s *auth) PostVerify(ctx context.Context) (*operations.PostVerifyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/verify"
 
@@ -133,7 +133,7 @@ func (s *auth) PostVerify(ctx context.Context, request operations.PostVerifyRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

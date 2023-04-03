@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsBatchPutRequest struct {
-	// A json containing the datapoints to create.
-	Request shared.APICoreRequestsDatapointsBatch `request:"mediaType=application/json"`
-}
-
 type DataPointsBatchPutResponse struct {
 	APICoreResponsesModifyBatchItemResponceAPICoreDtoDatapointsDatapointSystemInt64 *shared.APICoreResponsesModifyBatchItemResponceAPICoreDtoDatapointsDatapointSystemInt64
 	ContentType                                                                     string

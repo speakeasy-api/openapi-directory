@@ -30,20 +30,16 @@ func (e *CreateInferenceRecommendationsJobXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type CreateInferenceRecommendationsJobHeaders struct {
-	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateInferenceRecommendationsJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateInferenceRecommendationsJobRequest struct {
-	Headers CreateInferenceRecommendationsJobHeaders
-	Request shared.CreateInferenceRecommendationsJobRequest `request:"mediaType=application/json"`
+	CreateInferenceRecommendationsJobRequest shared.CreateInferenceRecommendationsJobRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                            *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                        *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                           *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                 *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                        *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                            *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                        *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                               CreateInferenceRecommendationsJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateInferenceRecommendationsJobResponse struct {

@@ -8,13 +8,8 @@ import (
 )
 
 type PostGet3dsAvailabilitySecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostGet3dsAvailabilityRequest struct {
-	Request  *shared.ThreeDSAvailabilityRequest `request:"mediaType=application/json"`
-	Security PostGet3dsAvailabilitySecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostGet3dsAvailabilityResponse struct {

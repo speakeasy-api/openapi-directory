@@ -30,25 +30,17 @@ func (e *GetLayerVersionByArnFindEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLayerVersionByArnQueryParams struct {
-	// The ARN of the layer version.
-	Arn  string                       `queryParam:"style=form,explode=true,name=Arn"`
-	Find GetLayerVersionByArnFindEnum `queryParam:"style=form,explode=true,name=find"`
-}
-
-type GetLayerVersionByArnHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetLayerVersionByArnRequest struct {
-	QueryParams GetLayerVersionByArnQueryParams
-	Headers     GetLayerVersionByArnHeaders
+	// The ARN of the layer version.
+	Arn               string                       `queryParam:"style=form,explode=true,name=Arn"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	Find              GetLayerVersionByArnFindEnum `queryParam:"style=form,explode=true,name=find"`
 }
 
 type GetLayerVersionByArnResponse struct {

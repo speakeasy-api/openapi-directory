@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestUpdateArtifactPathParams struct {
-	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
-	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
 // TestUpdateArtifactXRegistryArtifactTypeEnum - This header parameter can be used to indicate the type of the artifact being added.  Possible values include:
 // * Avro (`AVRO`)
 // * Protobuf (`PROTOBUF`)
@@ -75,24 +70,7 @@ func (e *TestUpdateArtifactXRegistryArtifactTypeEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type TestUpdateArtifactHeaders struct {
-	// This header parameter can be used to indicate the type of the artifact being added.  Possible values include:
-	// * Avro (`AVRO`)
-	// * Protobuf (`PROTOBUF`)
-	// * Protobuf File Descriptor (`PROTOBUF_FD`)
-	// * JSON Schema (`JSON`)
-	// * Kafka Connect (`KCONNECT`)
-	// * OpenAPI (`OPENAPI`)
-	// * AsyncAPI (`ASYNCAPI`)
-	// * GraphQL (`GRAPHQL`)
-	// * Web Services Description Language (`WSDL`)
-	// * XML Schema (`XSD`)
-	XRegistryArtifactType *TestUpdateArtifactXRegistryArtifactTypeEnum `header:"style=simple,explode=false,name=X-Registry-ArtifactType"`
-}
-
 type TestUpdateArtifactRequest struct {
-	PathParams TestUpdateArtifactPathParams
-	Headers    TestUpdateArtifactHeaders
 	// The content of the artifact being tested. This is often, but not always, JSON data
 	// representing one of the supported artifact types:
 	//
@@ -107,7 +85,21 @@ type TestUpdateArtifactRequest struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	//
-	Request []byte `request:"mediaType=*/*"`
+	RequestBody []byte `request:"mediaType=*/*"`
+	// This header parameter can be used to indicate the type of the artifact being added.  Possible values include:
+	// * Avro (`AVRO`)
+	// * Protobuf (`PROTOBUF`)
+	// * Protobuf File Descriptor (`PROTOBUF_FD`)
+	// * JSON Schema (`JSON`)
+	// * Kafka Connect (`KCONNECT`)
+	// * OpenAPI (`OPENAPI`)
+	// * AsyncAPI (`ASYNCAPI`)
+	// * GraphQL (`GRAPHQL`)
+	// * Web Services Description Language (`WSDL`)
+	// * XML Schema (`XSD`)
+	XRegistryArtifactType *TestUpdateArtifactXRegistryArtifactTypeEnum `header:"style=simple,explode=false,name=X-Registry-ArtifactType"`
+	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 }
 
 type TestUpdateArtifactResponse struct {

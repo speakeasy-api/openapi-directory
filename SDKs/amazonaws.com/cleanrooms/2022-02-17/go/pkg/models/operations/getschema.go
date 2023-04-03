@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSchemaPathParams struct {
-	// A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
-	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
-	// The name of the relation to retrieve the schema for.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetSchemaHeaders struct {
+type GetSchemaRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetSchemaHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSchemaRequest struct {
-	PathParams GetSchemaPathParams
-	Headers    GetSchemaHeaders
+	// A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
+	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
+	// The name of the relation to retrieve the schema for.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetSchemaResponse struct {

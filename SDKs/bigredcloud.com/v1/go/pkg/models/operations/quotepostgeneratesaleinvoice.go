@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type QuotePostGenerateSaleInvoiceRequest struct {
-	// Id of Quote to generate
-	Request shared.QuoteGeneratingInvoiceDto `request:"mediaType=application/json"`
-}
 
 type QuotePostGenerateSaleInvoiceResponse struct {
 	ContentType string

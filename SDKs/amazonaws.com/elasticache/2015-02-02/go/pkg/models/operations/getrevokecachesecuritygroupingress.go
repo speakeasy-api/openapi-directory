@@ -50,7 +50,7 @@ func (e *GETRevokeCacheSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETRevokeCacheSecurityGroupIngressQueryParams struct {
+type GETRevokeCacheSecurityGroupIngressRequest struct {
 	Action GETRevokeCacheSecurityGroupIngressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the cache security group to revoke ingress from.
 	CacheSecurityGroupName string `queryParam:"style=form,explode=true,name=CacheSecurityGroupName"`
@@ -59,21 +59,13 @@ type GETRevokeCacheSecurityGroupIngressQueryParams struct {
 	// The Amazon account number of the Amazon EC2 security group owner. Note that this is not the same thing as an Amazon access key ID - you must provide a valid Amazon account number for this parameter.
 	Ec2SecurityGroupOwnerID string                                        `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`
 	Version                 GETRevokeCacheSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRevokeCacheSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRevokeCacheSecurityGroupIngressRequest struct {
-	QueryParams GETRevokeCacheSecurityGroupIngressQueryParams
-	Headers     GETRevokeCacheSecurityGroupIngressHeaders
+	XAmzAlgorithm           *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRevokeCacheSecurityGroupIngressResponse struct {

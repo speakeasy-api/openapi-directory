@@ -8,31 +8,22 @@ import (
 )
 
 type ConnectionSettingsUpdateSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectionSettingsUpdatePathParams struct {
+type ConnectionSettingsUpdateRequest struct {
+	// Fields that need to be updated on the resource
+	ConnectionInput shared.ConnectionInput `request:"mediaType=application/json"`
 	// Resource Name
 	Resource string `pathParam:"style=simple,explode=false,name=resource"`
 	// Service ID of the resource to return
 	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
 	// Unified API
 	UnifiedAPI string `pathParam:"style=simple,explode=false,name=unified_api"`
-}
-
-type ConnectionSettingsUpdateHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
-}
-
-type ConnectionSettingsUpdateRequest struct {
-	PathParams ConnectionSettingsUpdatePathParams
-	Headers    ConnectionSettingsUpdateHeaders
-	// Fields that need to be updated on the resource
-	Request  shared.ConnectionInput `request:"mediaType=application/json"`
-	Security ConnectionSettingsUpdateSecurity
 }
 
 type ConnectionSettingsUpdateResponse struct {

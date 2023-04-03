@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type TagResourcePathParams struct {
-	// The ARN of the resource.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resource-arn"`
-}
-
-type TagResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type TagResourceRequestBody struct {
 	// <p>A collection of key/value pairs defining the resource tags. For example, {
 	//  "tags": {"key1": "value1", "key2": "value2"} }. For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
@@ -31,9 +16,16 @@ type TagResourceRequestBody struct {
 }
 
 type TagResourceRequest struct {
-	PathParams TagResourcePathParams
-	Headers    TagResourceHeaders
-	Request    TagResourceRequestBody `request:"mediaType=application/json"`
+	RequestBody       TagResourceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ARN of the resource.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resource-arn"`
 }
 
 type TagResourceResponse struct {

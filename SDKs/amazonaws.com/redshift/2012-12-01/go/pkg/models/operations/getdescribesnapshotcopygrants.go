@@ -50,7 +50,7 @@ func (e *GETDescribeSnapshotCopyGrantsVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDescribeSnapshotCopyGrantsQueryParams struct {
+type GETDescribeSnapshotCopyGrantsRequest struct {
 	Action GETDescribeSnapshotCopyGrantsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>An optional parameter that specifies the starting point to return a set of response records. When the results of a <code>DescribeSnapshotCopyGrant</code> request exceed the value specified in <code>MaxRecords</code>, Amazon Web Services returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request. </p> <p>Constraints: You can specify either the <b>SnapshotCopyGrantName</b> parameter or the <b>Marker</b> parameter, but not both. </p>
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -61,23 +61,15 @@ type GETDescribeSnapshotCopyGrantsQueryParams struct {
 	// A tag key or keys for which you want to return all matching resources that are associated with the specified key or keys. For example, suppose that you have resources tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with all resources that have either or both of these tag keys associated with them.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// A tag value or values for which you want to return all matching resources that are associated with the specified value or values. For example, suppose that you have resources tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with all resources that have either or both of these tag values associated with them.
-	TagValues []string                                 `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeSnapshotCopyGrantsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeSnapshotCopyGrantsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeSnapshotCopyGrantsRequest struct {
-	QueryParams GETDescribeSnapshotCopyGrantsQueryParams
-	Headers     GETDescribeSnapshotCopyGrantsHeaders
+	TagValues         []string                                 `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeSnapshotCopyGrantsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeSnapshotCopyGrantsResponse struct {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDataSetsPathParams struct {
-	// The unique identifier of the application for which you want to list the associated data sets.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type ListDataSetsQueryParams struct {
-	// The maximum number of objects to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A pagination token returned from a previous call to this operation. This specifies the next item to return. To return to the beginning of the list, exclude this parameter.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The prefix of the data set name, which you can use to filter the list of data sets.
-	Prefix *string `queryParam:"style=form,explode=true,name=prefix"`
-}
-
-type ListDataSetsHeaders struct {
+type ListDataSetsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListDataSetsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDataSetsRequest struct {
-	PathParams  ListDataSetsPathParams
-	QueryParams ListDataSetsQueryParams
-	Headers     ListDataSetsHeaders
+	// The unique identifier of the application for which you want to list the associated data sets.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The maximum number of objects to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A pagination token returned from a previous call to this operation. This specifies the next item to return. To return to the beginning of the list, exclude this parameter.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The prefix of the data set name, which you can use to filter the list of data sets.
+	Prefix *string `queryParam:"style=form,explode=true,name=prefix"`
 }
 
 type ListDataSetsResponse struct {

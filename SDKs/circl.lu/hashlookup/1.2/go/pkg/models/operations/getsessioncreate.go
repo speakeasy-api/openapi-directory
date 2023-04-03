@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetSessionCreatePathParams struct {
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 type GetSessionCreateRequest struct {
-	PathParams GetSessionCreatePathParams
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetSessionCreateResponse struct {

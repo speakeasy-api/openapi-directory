@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeSlotTypePathParams struct {
+type DescribeSlotTypeRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The identifier of the bot associated with the slot type.
 	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 	// The version of the bot associated with the slot type.
@@ -16,21 +23,6 @@ type DescribeSlotTypePathParams struct {
 	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 	// The identifier of the slot type.
 	SlotTypeID string `pathParam:"style=simple,explode=false,name=slotTypeId"`
-}
-
-type DescribeSlotTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeSlotTypeRequest struct {
-	PathParams DescribeSlotTypePathParams
-	Headers    DescribeSlotTypeHeaders
 }
 
 type DescribeSlotTypeResponse struct {

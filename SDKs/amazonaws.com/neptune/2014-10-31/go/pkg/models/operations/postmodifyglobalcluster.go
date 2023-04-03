@@ -50,25 +50,17 @@ func (e *POSTModifyGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTModifyGlobalClusterQueryParams struct {
-	Action  POSTModifyGlobalClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyGlobalClusterRequest struct {
-	QueryParams POSTModifyGlobalClusterQueryParams
-	Headers     POSTModifyGlobalClusterHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyGlobalClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTModifyGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyGlobalClusterResponse struct {

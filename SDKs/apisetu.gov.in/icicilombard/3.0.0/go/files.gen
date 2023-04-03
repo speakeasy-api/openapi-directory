@@ -20,5 +20,4 @@ pkg/models/operations/miipc.go
 pkg/models/operations/tripc.go
 pkg/models/operations/twipc.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

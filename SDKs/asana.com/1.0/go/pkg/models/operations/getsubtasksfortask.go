@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubtasksForTaskPathParams struct {
-	// The task to operate on.
-	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
-}
-
-type GetSubtasksForTaskQueryParams struct {
+type GetSubtasksForTaskRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,11 +22,8 @@ type GetSubtasksForTaskQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetSubtasksForTaskRequest struct {
-	PathParams  GetSubtasksForTaskPathParams
-	QueryParams GetSubtasksForTaskQueryParams
+	// The task to operate on.
+	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
 }
 
 // GetSubtasksForTask200ApplicationJSON - Successfully retrieved the specified task's subtasks.

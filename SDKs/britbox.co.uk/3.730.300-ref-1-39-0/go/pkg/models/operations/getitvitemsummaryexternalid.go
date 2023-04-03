@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItvItemsummaryExternalIDPathParams struct {
+type GetItvItemsummaryExternalIDRequest struct {
 	// The external identifier of the item.
 	ExternalID string `pathParam:"style=simple,explode=false,name=externalId"`
-}
-
-type GetItvItemsummaryExternalIDRequest struct {
-	PathParams GetItvItemsummaryExternalIDPathParams
 }
 
 type GetItvItemsummaryExternalIDResponse struct {

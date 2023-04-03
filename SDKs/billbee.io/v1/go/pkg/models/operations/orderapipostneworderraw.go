@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIPostNewOrderRawQueryParams struct {
+type OrderAPIPostNewOrderRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Deprecated, if orderData.ApiAccountId is set, it will be used instead of 'shopId'
 	ShopID *int64 `queryParam:"style=form,explode=true,name=shopId"`
-}
-
-type OrderAPIPostNewOrderRawRequest struct {
-	QueryParams OrderAPIPostNewOrderRawQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPIPostNewOrderRawResponse struct {

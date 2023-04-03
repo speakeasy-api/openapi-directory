@@ -7,28 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryUpdateAPIVersionPathParams struct {
+type RegistryUpdateAPIVersionRequest struct {
+	APIVersionInput shared.APIVersionInput `request:"mediaType=application/json"`
+	// If set to true, and the version is not found, a new version will be created. In this situation, `update_mask` is ignored.
+	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// The version id.
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryUpdateAPIVersionQueryParams struct {
-	// If set to true, and the version is not found, a new version will be created. In this situation, `update_mask` is ignored.
-	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// The list of fields to be updated. If omitted, all fields are updated that are set in the request message (fields set to default values are ignored). If a "*" is specified, all fields are updated, including fields that are unspecified/default in the request.
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
-}
-
-type RegistryUpdateAPIVersionRequest struct {
-	PathParams  RegistryUpdateAPIVersionPathParams
-	QueryParams RegistryUpdateAPIVersionQueryParams
-	Request     shared.APIVersionInput `request:"mediaType=application/json"`
+	// The version id.
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type RegistryUpdateAPIVersionResponse struct {

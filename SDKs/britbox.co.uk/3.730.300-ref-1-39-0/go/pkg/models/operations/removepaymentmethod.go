@@ -8,15 +8,10 @@ import (
 )
 
 type RemovePaymentMethodSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RemovePaymentMethodPathParams struct {
-	// The id of the payment method to remove.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RemovePaymentMethodQueryParams struct {
+type RemovePaymentMethodRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -39,6 +34,8 @@ type RemovePaymentMethodQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The id of the payment method to remove.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -51,12 +48,6 @@ type RemovePaymentMethodQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type RemovePaymentMethodRequest struct {
-	PathParams  RemovePaymentMethodPathParams
-	QueryParams RemovePaymentMethodQueryParams
-	Security    RemovePaymentMethodSecurity
 }
 
 type RemovePaymentMethodResponse struct {

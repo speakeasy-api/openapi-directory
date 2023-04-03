@@ -126,7 +126,7 @@ func (e *DataPointsGetStatisticsAggregatedSingleTypeEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DataPointsGetStatisticsAggregatedSingleQueryParams struct {
+type DataPointsGetStatisticsAggregatedSingleRequest struct {
 	// Is the datapoint is marked as favourite
 	Favourite *bool `queryParam:"style=form,explode=true,name=favourite"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
@@ -143,10 +143,6 @@ type DataPointsGetStatisticsAggregatedSingleQueryParams struct {
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
 	// Type of datapoint ("tl"/"tp")
 	Type *DataPointsGetStatisticsAggregatedSingleTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DataPointsGetStatisticsAggregatedSingleRequest struct {
-	QueryParams DataPointsGetStatisticsAggregatedSingleQueryParams
 }
 
 type DataPointsGetStatisticsAggregatedSingleResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type EpfscSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type EpfscRequestBodyCertificateParameters struct {
@@ -52,12 +52,6 @@ type EpfscRequestBody struct {
 	Format EpfscRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type EpfscRequest struct {
-	// Request format
-	Request  *EpfscRequestBody `request:"mediaType=application/json"`
-	Security EpfscSecurity
 }
 
 type Epfsc504ApplicationJSONErrorEnum string

@@ -50,28 +50,20 @@ func (e *GETListCustomVerificationEmailTemplatesVersionEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETListCustomVerificationEmailTemplatesQueryParams struct {
+type GETListCustomVerificationEmailTemplatesRequest struct {
 	Action GETListCustomVerificationEmailTemplatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The maximum number of custom verification email templates to return. This value must be at least 1 and less than or equal to 50. If you do not specify a value, or if you specify a value less than 1 or greater than 50, the operation will return up to 50 results.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// An array the contains the name and creation time stamp for each template in your Amazon SES account.
-	NextToken *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListCustomVerificationEmailTemplatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListCustomVerificationEmailTemplatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListCustomVerificationEmailTemplatesRequest struct {
-	QueryParams GETListCustomVerificationEmailTemplatesQueryParams
-	Headers     GETListCustomVerificationEmailTemplatesHeaders
+	NextToken         *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListCustomVerificationEmailTemplatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListCustomVerificationEmailTemplatesResponse struct {

@@ -10,13 +10,7 @@ import (
 )
 
 type GetNextPlaybackItemSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
-}
-
-type GetNextPlaybackItemPathParams struct {
-	// The identifier of the source item to base the next to watch item off.
-	//
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetNextPlaybackItemExpandEnum - If no value is specified no dependencies are expanded.
@@ -49,7 +43,7 @@ func (e *GetNextPlaybackItemExpandEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNextPlaybackItemQueryParams struct {
+type GetNextPlaybackItemRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// If no value is specified no dependencies are expanded.
@@ -83,6 +77,9 @@ type GetNextPlaybackItemQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the source item to base the next to watch item off.
+	//
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -101,12 +98,6 @@ type GetNextPlaybackItemQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetNextPlaybackItemRequest struct {
-	PathParams  GetNextPlaybackItemPathParams
-	QueryParams GetNextPlaybackItemQueryParams
-	Security    GetNextPlaybackItemSecurity
 }
 
 type GetNextPlaybackItemResponse struct {

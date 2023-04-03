@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsContractIDPathParams struct {
+type OptionsContractIDRequest struct {
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OptionsContractIDRequest struct {
-	PathParams OptionsContractIDPathParams
 }
 
 type OptionsContractIDResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExchangeRateHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type GetExchangeRateRequest struct {
-	Headers GetExchangeRateHeaders
-	Request shared.GetExchangeRateRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	GetExchangeRateRequest shared.GetExchangeRateRequest `request:"mediaType=application/json"`
 }
 
 type GetExchangeRateResponse struct {

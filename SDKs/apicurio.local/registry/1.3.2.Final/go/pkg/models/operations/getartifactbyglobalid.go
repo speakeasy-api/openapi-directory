@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetArtifactByGlobalIDPathParams struct {
+type GetArtifactByGlobalIDRequest struct {
 	// Global identifier for an artifact version.
 	GlobalID int64 `pathParam:"style=simple,explode=false,name=globalId"`
-}
-
-type GetArtifactByGlobalIDRequest struct {
-	PathParams GetArtifactByGlobalIDPathParams
 }
 
 type GetArtifactByGlobalIDResponse struct {

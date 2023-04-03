@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCollaborationPathParams struct {
-	// The identifier for the collaboration.
-	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
-}
-
-type UpdateCollaborationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateCollaborationRequestBody struct {
 	// A description of the collaboration.
 	Description *string `json:"description,omitempty"`
@@ -30,9 +15,16 @@ type UpdateCollaborationRequestBody struct {
 }
 
 type UpdateCollaborationRequest struct {
-	PathParams UpdateCollaborationPathParams
-	Headers    UpdateCollaborationHeaders
-	Request    UpdateCollaborationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateCollaborationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier for the collaboration.
+	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
 }
 
 type UpdateCollaborationResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAttemptNormalizationStatusesForJobRequest struct {
-	Request *shared.JobIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetAttemptNormalizationStatusesForJobResponse struct {
 	// Successful operation
 	AttemptNormalizationStatusReadList *shared.AttemptNormalizationStatusReadList

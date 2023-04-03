@@ -35,14 +35,14 @@ func newPublicChannelsPublicChannels(defaultClient, securityClient HTTPClient, s
 // GetChannels - The channel list for one country
 func (s *publicChannelsPublicChannels) GetChannels(ctx context.Context, request operations.GetChannelsRequest) (*operations.GetChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/public/channels/{countryIsoCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/public/channels/{countryIsoCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -104,7 +104,7 @@ func (s *publicChannelsPublicChannels) GetChannelsIndex(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

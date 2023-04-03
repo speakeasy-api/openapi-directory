@@ -8,21 +8,13 @@ import (
 	"net/http"
 )
 
-type ReleasesGetIosManifestPathParams struct {
+type ReleasesGetIosManifestRequest struct {
 	// The ID of the application
 	AppID string `pathParam:"style=simple,explode=false,name=app_id"`
 	// The release_id
 	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
-}
-
-type ReleasesGetIosManifestQueryParams struct {
 	// A hash that authorizes the download if it matches the release info.
 	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type ReleasesGetIosManifestRequest struct {
-	PathParams  ReleasesGetIosManifestPathParams
-	QueryParams ReleasesGetIosManifestQueryParams
 }
 
 type ReleasesGetIosManifest404ApplicationJSONCodeEnum string

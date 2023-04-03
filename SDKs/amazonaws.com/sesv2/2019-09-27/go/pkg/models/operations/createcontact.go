@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateContactPathParams struct {
-	// The name of the contact list to which the contact should be added.
-	ContactListName string `pathParam:"style=simple,explode=false,name=ContactListName"`
-}
-
-type CreateContactHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateContactRequestBody struct {
 	// The attribute data attached to a contact.
 	AttributesData *string `json:"AttributesData,omitempty"`
@@ -34,9 +19,16 @@ type CreateContactRequestBody struct {
 }
 
 type CreateContactRequest struct {
-	PathParams CreateContactPathParams
-	Headers    CreateContactHeaders
-	Request    CreateContactRequestBody `request:"mediaType=application/json"`
+	// The name of the contact list to which the contact should be added.
+	ContactListName   string                   `pathParam:"style=simple,explode=false,name=ContactListName"`
+	RequestBody       CreateContactRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateContactResponse struct {

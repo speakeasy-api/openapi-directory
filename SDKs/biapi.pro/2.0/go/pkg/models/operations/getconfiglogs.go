@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetConfigLogsQueryParams struct {
+type GetConfigLogsRequest struct {
 	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// maximum date of the change
 	MaxDate *types.Date `queryParam:"style=form,explode=true,name=max_date"`
@@ -18,10 +18,6 @@ type GetConfigLogsQueryParams struct {
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// type of change done on the configuration
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetConfigLogsRequest struct {
-	QueryParams GetConfigLogsQueryParams
 }
 
 // GetConfigLogs200ApplicationJSON - configlogs

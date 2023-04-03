@@ -93,7 +93,7 @@ func (e *GETDeleteStackInstancesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteStackInstancesQueryParams struct {
+type GETDeleteStackInstancesRequest struct {
 	// <p>[Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances for.</p> <p>You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.</p>
 	Accounts []string                          `queryParam:"style=form,explode=true,name=Accounts"`
 	Action   GETDeleteStackInstancesActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -110,23 +110,15 @@ type GETDeleteStackInstancesQueryParams struct {
 	// <p>Removes the stack instances from the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack or add an existing, saved stack to a new stack set.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options">Stack set operation options</a>.</p>
 	RetainStacks bool `queryParam:"style=form,explode=true,name=RetainStacks"`
 	// The name or unique ID of the stack set that you want to delete stack instances for.
-	StackSetName string                             `queryParam:"style=form,explode=true,name=StackSetName"`
-	Version      GETDeleteStackInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteStackInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteStackInstancesRequest struct {
-	QueryParams GETDeleteStackInstancesQueryParams
-	Headers     GETDeleteStackInstancesHeaders
+	StackSetName      string                             `queryParam:"style=form,explode=true,name=StackSetName"`
+	Version           GETDeleteStackInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteStackInstancesResponse struct {

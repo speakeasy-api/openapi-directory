@@ -8,12 +8,7 @@ import (
 )
 
 type PostAssignTerminalsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostAssignTerminalsRequest struct {
-	Request  *shared.AssignTerminalsRequest `request:"mediaType=application/json"`
-	Security PostAssignTerminalsSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 type PostAssignTerminalsResponse struct {

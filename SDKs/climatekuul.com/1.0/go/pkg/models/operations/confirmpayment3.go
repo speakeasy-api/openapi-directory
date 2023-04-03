@@ -23,11 +23,6 @@ type ConfirmPayment3RequestBody struct {
 	TransactionID string `form:"name=transaction_id"`
 }
 
-type ConfirmPayment3Request struct {
-	Request   *ConfirmPayment3RequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type ConfirmPayment3Response struct {
 	ContentType string
 	StatusCode  int

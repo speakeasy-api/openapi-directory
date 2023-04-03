@@ -33,22 +33,22 @@ func newTags(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // CollectionTagsAll - List Tags
 // List Tags
-func (s *tags) CollectionTagsAll(ctx context.Context, request operations.CollectionTagsAllRequest) (*operations.CollectionTagsAllResponse, error) {
+func (s *tags) CollectionTagsAll(ctx context.Context, request operations.CollectionTagsAllRequest, security operations.CollectionTagsAllSecurity) (*operations.CollectionTagsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

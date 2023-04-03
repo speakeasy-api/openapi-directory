@@ -10,8 +10,8 @@ import (
 )
 
 type LocerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type LocerRequestBodyCertificateParameters struct {
@@ -52,12 +52,6 @@ type LocerRequestBody struct {
 	Format LocerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type LocerRequest struct {
-	// Request format
-	Request  *LocerRequestBody `request:"mediaType=application/json"`
-	Security LocerSecurity
 }
 
 type Locer504ApplicationJSONErrorEnum string

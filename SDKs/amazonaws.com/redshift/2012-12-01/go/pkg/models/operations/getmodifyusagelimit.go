@@ -77,30 +77,22 @@ func (e *GETModifyUsageLimitVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyUsageLimitQueryParams struct {
+type GETModifyUsageLimitRequest struct {
 	Action GETModifyUsageLimitActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The new limit amount. For more information about this parameter, see <a>UsageLimit</a>.
 	Amount *int64 `queryParam:"style=form,explode=true,name=Amount"`
 	// The new action that Amazon Redshift takes when the limit is reached. For more information about this parameter, see <a>UsageLimit</a>.
 	BreachAction *GETModifyUsageLimitBreachActionEnum `queryParam:"style=form,explode=true,name=BreachAction"`
 	// The identifier of the usage limit to modify.
-	UsageLimitID string                         `queryParam:"style=form,explode=true,name=UsageLimitId"`
-	Version      GETModifyUsageLimitVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyUsageLimitHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyUsageLimitRequest struct {
-	QueryParams GETModifyUsageLimitQueryParams
-	Headers     GETModifyUsageLimitHeaders
+	UsageLimitID      string                         `queryParam:"style=form,explode=true,name=UsageLimitId"`
+	Version           GETModifyUsageLimitVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyUsageLimitResponse struct {

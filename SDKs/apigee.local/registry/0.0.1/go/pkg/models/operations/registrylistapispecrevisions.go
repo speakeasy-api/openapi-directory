@@ -7,29 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryListAPISpecRevisionsPathParams struct {
+type RegistryListAPISpecRevisionsRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
+	// The maximum number of revisions to return per page.
+	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
+	// The page token, received from a previous ListApiSpecRevisions call. Provide this to retrieve the subsequent page.
+	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// The spec id.
 	Spec string `pathParam:"style=simple,explode=false,name=spec"`
 	// The version id.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryListAPISpecRevisionsQueryParams struct {
-	// The maximum number of revisions to return per page.
-	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-	// The page token, received from a previous ListApiSpecRevisions call. Provide this to retrieve the subsequent page.
-	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
-}
-
-type RegistryListAPISpecRevisionsRequest struct {
-	PathParams  RegistryListAPISpecRevisionsPathParams
-	QueryParams RegistryListAPISpecRevisionsQueryParams
 }
 
 type RegistryListAPISpecRevisionsResponse struct {

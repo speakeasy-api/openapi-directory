@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSecurityProfilePathParams struct {
-	// The name of the security profile you want to update.
-	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
-}
-
-type UpdateSecurityProfileQueryParams struct {
-	// The expected version of the security profile. A new version is generated whenever the security profile is updated. If you specify a value that is different from the actual version, a <code>VersionConflictException</code> is thrown.
-	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
-}
-
-type UpdateSecurityProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateSecurityProfileRequestBody struct {
 	// <p> <i>Please use <a>UpdateSecurityProfileRequest$additionalMetricsToRetainV2</a> instead.</i> </p> <p>A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's <code>behaviors</code>, but it is also retained for any metric specified here. Can be used with custom metrics; cannot be used with dimensions.</p>
 	AdditionalMetricsToRetain []string `json:"additionalMetricsToRetain,omitempty"`
@@ -47,10 +27,18 @@ type UpdateSecurityProfileRequestBody struct {
 }
 
 type UpdateSecurityProfileRequest struct {
-	PathParams  UpdateSecurityProfilePathParams
-	QueryParams UpdateSecurityProfileQueryParams
-	Headers     UpdateSecurityProfileHeaders
-	Request     UpdateSecurityProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSecurityProfileRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The expected version of the security profile. A new version is generated whenever the security profile is updated. If you specify a value that is different from the actual version, a <code>VersionConflictException</code> is thrown.
+	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
+	// The name of the security profile you want to update.
+	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
 }
 
 type UpdateSecurityProfileResponse struct {

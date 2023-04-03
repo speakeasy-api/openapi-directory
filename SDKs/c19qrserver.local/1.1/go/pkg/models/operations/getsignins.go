@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSigninsQueryParams struct {
+type GetSigninsRequest struct {
 	// Return signins with IDs less than this value.
 	LessThan *int64 `queryParam:"style=form,explode=true,name=less_than"`
 	// Return this many objects
 	ReturnCount *int64 `queryParam:"style=form,explode=true,name=return_count"`
-}
-
-type GetSigninsRequest struct {
-	QueryParams GetSigninsQueryParams
 }
 
 type GetSigninsResponse struct {

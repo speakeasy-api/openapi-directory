@@ -13,43 +13,39 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CompareFacesRequest{
-        Headers: operations.CompareFacesHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "RekognitionService.CompareFaces",
-        },
-        Request: shared.CompareFacesRequest{
-            QualityFilter: "HIGH",
-            SimilarityThreshold: 4236.55,
+        CompareFacesRequest: shared.CompareFacesRequest{
+            QualityFilter: "LOW",
+            SimilarityThreshold: 5928.45,
             SourceImage: shared.Image{
-                Bytes: "error",
+                Bytes: "distinctio",
                 S3Object: &shared.S3Object{
-                    Bucket: "deserunt",
-                    Name: "suscipit",
-                    Version: "iure",
+                    Bucket: "quibusdam",
+                    Name: "unde",
+                    Version: "nulla",
                 },
             },
             TargetImage: shared.Image{
-                Bytes: "magnam",
+                Bytes: "corrupti",
                 S3Object: &shared.S3Object{
-                    Bucket: "debitis",
-                    Name: "ipsa",
-                    Version: "delectus",
+                    Bucket: "illum",
+                    Name: "vel",
+                    Version: "error",
                 },
             },
         },
+        XAmzAlgorithm: "deserunt",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "iure",
+        XAmzDate: "magnam",
+        XAmzSecurityToken: "debitis",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "delectus",
+        XAmzTarget: "RekognitionService.CompareFaces",
     }
 
     ctx := context.Background()

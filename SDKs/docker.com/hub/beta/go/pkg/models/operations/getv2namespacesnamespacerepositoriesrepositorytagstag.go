@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagPathParams struct {
+type GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest struct {
 	Namespace  string `pathParam:"style=simple,explode=false,name=namespace"`
 	Repository string `pathParam:"style=simple,explode=false,name=repository"`
 	Tag        string `pathParam:"style=simple,explode=false,name=tag"`
-}
-
-type GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest struct {
-	PathParams GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagPathParams
 }
 
 type GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse struct {

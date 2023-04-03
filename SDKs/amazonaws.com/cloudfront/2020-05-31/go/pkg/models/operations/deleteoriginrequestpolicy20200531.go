@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOriginRequestPolicy20200531PathParams struct {
+type DeleteOriginRequestPolicy20200531Request struct {
 	// The unique identifier for the origin request policy that you are deleting. To get the identifier, you can use <code>ListOriginRequestPolicies</code>.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteOriginRequestPolicy20200531Headers struct {
 	// The version of the origin request policy that you are deleting. The version is the origin request policy's <code>ETag</code> value, which you can get using <code>ListOriginRequestPolicies</code>, <code>GetOriginRequestPolicy</code>, or <code>GetOriginRequestPolicyConfig</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteOriginRequestPolicy20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteOriginRequestPolicy20200531Request struct {
-	PathParams DeleteOriginRequestPolicy20200531PathParams
-	Headers    DeleteOriginRequestPolicy20200531Headers
 }
 
 type DeleteOriginRequestPolicy20200531Response struct {

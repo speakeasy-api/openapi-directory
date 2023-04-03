@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type ListBatchJobExecutionsPathParams struct {
-	// The unique identifier of the application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
 // ListBatchJobExecutionsStatusEnum - The status of the batch job executions.
 type ListBatchJobExecutionsStatusEnum string
 
@@ -60,7 +55,16 @@ func (e *ListBatchJobExecutionsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListBatchJobExecutionsQueryParams struct {
+type ListBatchJobExecutionsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 	// The unique identifier of each batch job execution.
 	ExecutionIds []string `queryParam:"style=form,explode=true,name=executionIds"`
 	// The name of each batch job execution.
@@ -75,22 +79,6 @@ type ListBatchJobExecutionsQueryParams struct {
 	StartedBefore *time.Time `queryParam:"style=form,explode=true,name=startedBefore"`
 	// The status of the batch job executions.
 	Status *ListBatchJobExecutionsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListBatchJobExecutionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListBatchJobExecutionsRequest struct {
-	PathParams  ListBatchJobExecutionsPathParams
-	QueryParams ListBatchJobExecutionsQueryParams
-	Headers     ListBatchJobExecutionsHeaders
 }
 
 type ListBatchJobExecutionsResponse struct {

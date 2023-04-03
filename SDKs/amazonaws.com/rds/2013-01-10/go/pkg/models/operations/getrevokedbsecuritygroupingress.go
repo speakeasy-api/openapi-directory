@@ -50,7 +50,7 @@ func (e *GETRevokeDBSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETRevokeDBSecurityGroupIngressQueryParams struct {
+type GETRevokeDBSecurityGroupIngressRequest struct {
 	Action                  GETRevokeDBSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	Cidrip                  *string                                    `queryParam:"style=form,explode=true,name=CIDRIP"`
 	DBSecurityGroupName     string                                     `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
@@ -58,21 +58,13 @@ type GETRevokeDBSecurityGroupIngressQueryParams struct {
 	Ec2SecurityGroupName    *string                                    `queryParam:"style=form,explode=true,name=EC2SecurityGroupName"`
 	Ec2SecurityGroupOwnerID *string                                    `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`
 	Version                 GETRevokeDBSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRevokeDBSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRevokeDBSecurityGroupIngressRequest struct {
-	QueryParams GETRevokeDBSecurityGroupIngressQueryParams
-	Headers     GETRevokeDBSecurityGroupIngressHeaders
+	XAmzAlgorithm           *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRevokeDBSecurityGroupIngressResponse struct {

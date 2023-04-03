@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsErrorGroupsSearchSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsErrorGroupsSearchPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ErrorsErrorGroupsSearchOrderEnum - It controls the order of sorting
@@ -78,25 +70,23 @@ func (e *ErrorsErrorGroupsSearchSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ErrorsErrorGroupsSearchQueryParams struct {
+type ErrorsErrorGroupsSearchRequest struct {
 	// The offset (starting at 0) of the first result to return. This parameter along with limit is used to perform pagination.
 	DollarSkip *int64 `queryParam:"style=form,explode=true,name=$skip"`
 	// The maximum number of results to return
 	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// A filter as specified in OData notation
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// It controls the order of sorting
 	Order *ErrorsErrorGroupsSearchOrderEnum `queryParam:"style=form,explode=true,name=order"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// A query string
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// It controls the sort based on specified field
 	Sort *ErrorsErrorGroupsSearchSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ErrorsErrorGroupsSearchRequest struct {
-	PathParams  ErrorsErrorGroupsSearchPathParams
-	QueryParams ErrorsErrorGroupsSearchQueryParams
-	Security    ErrorsErrorGroupsSearchSecurity
 }
 
 type ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum string

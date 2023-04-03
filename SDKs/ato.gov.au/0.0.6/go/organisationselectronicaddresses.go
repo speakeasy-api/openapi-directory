@@ -40,14 +40,14 @@ func newOrganisationsElectronicAddresses(defaultClient, securityClient HTTPClien
 // Delete an electronic address
 func (s *organisationsElectronicAddresses) DeleteOrganisationsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.DeleteOrganisationsPartyIDElectronicAddressesAddressIDRequest) (*operations.DeleteOrganisationsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -97,14 +97,14 @@ func (s *organisationsElectronicAddresses) DeleteOrganisationsPartyIDElectronicA
 // GetOrganisationsPartyIDElectronicAddresses - Retrieve a list of electronic addresses
 func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddresses(ctx context.Context, request operations.GetOrganisationsPartyIDElectronicAddressesRequest) (*operations.GetOrganisationsPartyIDElectronicAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -166,14 +166,14 @@ func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddr
 // Retrieve an electronic address
 func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.GetOrganisationsPartyIDElectronicAddressesAddressIDRequest) (*operations.GetOrganisationsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -233,9 +233,9 @@ func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddr
 // Create an electronic address
 func (s *organisationsElectronicAddresses) PostOrganisationsPartyIDElectronicAddresses(ctx context.Context, request operations.PostOrganisationsPartyIDElectronicAddressesRequest) (*operations.PostOrganisationsPartyIDElectronicAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ElectronicAddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -250,7 +250,7 @@ func (s *organisationsElectronicAddresses) PostOrganisationsPartyIDElectronicAdd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -312,9 +312,9 @@ func (s *organisationsElectronicAddresses) PostOrganisationsPartyIDElectronicAdd
 // Update an electronic address
 func (s *organisationsElectronicAddresses) PutOrganisationsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.PutOrganisationsPartyIDElectronicAddressesAddressIDRequest) (*operations.PutOrganisationsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ElectronicAddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -329,7 +329,7 @@ func (s *organisationsElectronicAddresses) PutOrganisationsPartyIDElectronicAddr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

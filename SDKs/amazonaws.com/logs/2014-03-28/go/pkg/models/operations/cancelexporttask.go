@@ -30,20 +30,16 @@ func (e *CancelExportTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CancelExportTaskHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CancelExportTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CancelExportTaskRequest struct {
-	Headers CancelExportTaskHeaders
-	Request shared.CancelExportTaskRequest `request:"mediaType=application/json"`
+	CancelExportTaskRequest shared.CancelExportTaskRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              CancelExportTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CancelExportTaskResponse struct {

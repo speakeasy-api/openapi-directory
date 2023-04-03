@@ -35,15 +35,25 @@ func newUploadSessions(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // UploadSessionsAdd - Start Upload Session
 // Start an Upload Session. Upload sessions are used to upload large files, use the [Upload File](#operation/filesUpload) endpoint to upload smaller files (up to 100MB). Note that the base URL is upload.apideck.com instead of unify.apideck.com. For more information on uploads, refer to the [file upload guide](/guides/file-upload).
-func (s *uploadSessions) UploadSessionsAdd(ctx context.Context, request operations.UploadSessionsAddRequest) (*operations.UploadSessionsAddResponse, error) {
+func (s *uploadSessions) UploadSessionsAdd(ctx context.Context, request operations.UploadSessionsAddRequest, security operations.UploadSessionsAddSecurity, opts ...operations.Option) (*operations.UploadSessionsAddResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UploadSessionsAddServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/upload-sessions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUploadSessionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,13 +68,13 @@ func (s *uploadSessions) UploadSessionsAdd(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,22 +170,22 @@ func (s *uploadSessions) UploadSessionsAdd(ctx context.Context, request operatio
 
 // UploadSessionsDelete - Abort Upload Session
 // Abort Upload Session. Note that the base URL is upload.apideck.com instead of unify.apideck.com. For more information on uploads, refer to the [file upload guide](/guides/file-upload).
-func (s *uploadSessions) UploadSessionsDelete(ctx context.Context, request operations.UploadSessionsDeleteRequest) (*operations.UploadSessionsDeleteResponse, error) {
+func (s *uploadSessions) UploadSessionsDelete(ctx context.Context, request operations.UploadSessionsDeleteRequest, security operations.UploadSessionsDeleteSecurity) (*operations.UploadSessionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -271,15 +281,25 @@ func (s *uploadSessions) UploadSessionsDelete(ctx context.Context, request opera
 
 // UploadSessionsFinish - Finish Upload Session
 // Finish Upload Session. Only call this endpoint after all File parts have been uploaded to [Upload part of File](#operation/uploadSessionsUpload). Note that the base URL is upload.apideck.com instead of unify.apideck.com. For more information on uploads, refer to the [file upload guide](/guides/file-upload).
-func (s *uploadSessions) UploadSessionsFinish(ctx context.Context, request operations.UploadSessionsFinishRequest) (*operations.UploadSessionsFinishResponse, error) {
-	baseURL := operations.UploadSessionsFinishServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *uploadSessions) UploadSessionsFinish(ctx context.Context, request operations.UploadSessionsFinishRequest, security operations.UploadSessionsFinishSecurity, opts ...operations.Option) (*operations.UploadSessionsFinishResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}/finish", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UploadSessionsFinishServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}/finish", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,13 +311,13 @@ func (s *uploadSessions) UploadSessionsFinish(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -393,26 +413,36 @@ func (s *uploadSessions) UploadSessionsFinish(ctx context.Context, request opera
 
 // UploadSessionsOne - Get Upload Session
 // Get Upload Session. Use the `part_size` to split your file into parts. Upload the parts to the [Upload part of File](#operation/uploadSessionsUpload) endpoint. Note that the base URL is upload.apideck.com instead of unify.apideck.com. For more information on uploads, refer to the [file upload guide](/guides/file-upload).
-func (s *uploadSessions) UploadSessionsOne(ctx context.Context, request operations.UploadSessionsOneRequest) (*operations.UploadSessionsOneResponse, error) {
-	baseURL := operations.UploadSessionsOneServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *uploadSessions) UploadSessionsOne(ctx context.Context, request operations.UploadSessionsOneRequest, security operations.UploadSessionsOneSecurity, opts ...operations.Option) (*operations.UploadSessionsOneResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UploadSessionsOneServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
+
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -508,15 +538,25 @@ func (s *uploadSessions) UploadSessionsOne(ctx context.Context, request operatio
 
 // UploadSessionsUpload - Upload part of File to Upload Session
 // Upload part of File to Upload Session (max 100MB). Get `part_size` from [Get Upload Session](#operation/uploadSessionsOne) first. Every File part (except the last one) uploaded to this endpoint should have Content-Length equal to `part_size`. Note that the base URL is upload.apideck.com instead of unify.apideck.com. For more information on uploads, refer to the [file upload guide](/guides/file-upload).
-func (s *uploadSessions) UploadSessionsUpload(ctx context.Context, request operations.UploadSessionsUploadRequest) (*operations.UploadSessionsUploadResponse, error) {
-	baseURL := operations.UploadSessionsUploadServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+func (s *uploadSessions) UploadSessionsUpload(ctx context.Context, request operations.UploadSessionsUploadRequest, security operations.UploadSessionsUploadSecurity, opts ...operations.Option) (*operations.UploadSessionsUploadResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}", request.PathParams, nil)
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+	baseURL := operations.UploadSessionsUploadServerList[0]
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/upload-sessions/{id}", request, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -531,13 +571,13 @@ func (s *uploadSessions) UploadSessionsUpload(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

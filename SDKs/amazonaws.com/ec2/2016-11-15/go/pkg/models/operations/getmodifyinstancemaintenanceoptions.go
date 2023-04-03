@@ -74,30 +74,22 @@ func (e *GETModifyInstanceMaintenanceOptionsVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GETModifyInstanceMaintenanceOptionsQueryParams struct {
+type GETModifyInstanceMaintenanceOptionsRequest struct {
 	Action GETModifyInstanceMaintenanceOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Disables the automatic recovery behavior of your instance or sets it to default.
 	AutoRecovery *GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum `queryParam:"style=form,explode=true,name=AutoRecovery"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the instance.
-	InstanceID string                                         `queryParam:"style=form,explode=true,name=InstanceId"`
-	Version    GETModifyInstanceMaintenanceOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyInstanceMaintenanceOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyInstanceMaintenanceOptionsRequest struct {
-	QueryParams GETModifyInstanceMaintenanceOptionsQueryParams
-	Headers     GETModifyInstanceMaintenanceOptionsHeaders
+	InstanceID        string                                         `queryParam:"style=form,explode=true,name=InstanceId"`
+	Version           GETModifyInstanceMaintenanceOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyInstanceMaintenanceOptionsResponse struct {

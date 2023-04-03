@@ -31,7 +31,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-func (s *account) UsersGetUserMetadata(ctx context.Context, request operations.UsersGetUserMetadataRequest) (*operations.UsersGetUserMetadataResponse, error) {
+func (s *account) UsersGetUserMetadata(ctx context.Context) (*operations.UsersGetUserMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/metadata/optimizely"
 
@@ -40,7 +40,7 @@ func (s *account) UsersGetUserMetadata(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,16 +85,16 @@ func (s *account) UsersGetUserMetadata(ctx context.Context, request operations.U
 }
 
 // AppAPITokensDelete - Delete the App Api Token object with the specific ID
-func (s *account) AppAPITokensDelete(ctx context.Context, request operations.AppAPITokensDeleteRequest) (*operations.AppAPITokensDeleteResponse, error) {
+func (s *account) AppAPITokensDelete(ctx context.Context, request operations.AppAPITokensDeleteRequest, security operations.AppAPITokensDeleteSecurity) (*operations.AppAPITokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens/{api_token_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens/{api_token_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,16 +150,16 @@ func (s *account) AppAPITokensDelete(ctx context.Context, request operations.App
 }
 
 // AppAPITokensList - Returns App API tokens for the app
-func (s *account) AppAPITokensList(ctx context.Context, request operations.AppAPITokensListRequest) (*operations.AppAPITokensListResponse, error) {
+func (s *account) AppAPITokensList(ctx context.Context, request operations.AppAPITokensListRequest, security operations.AppAPITokensListSecurity) (*operations.AppAPITokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,11 +214,11 @@ func (s *account) AppAPITokensList(ctx context.Context, request operations.AppAP
 }
 
 // AppAPITokensNew - Creates a new App API token
-func (s *account) AppAPITokensNew(ctx context.Context, request operations.AppAPITokensNewRequest) (*operations.AppAPITokensNewResponse, error) {
+func (s *account) AppAPITokensNew(ctx context.Context, request operations.AppAPITokensNewRequest, security operations.AppAPITokensNewSecurity) (*operations.AppAPITokensNewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -230,7 +230,7 @@ func (s *account) AppAPITokensNew(ctx context.Context, request operations.AppAPI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,11 +285,11 @@ func (s *account) AppAPITokensNew(ctx context.Context, request operations.AppAPI
 }
 
 // AppInvitationsAccept - Accepts a pending invitation for the specified user
-func (s *account) AppInvitationsAccept(ctx context.Context, request operations.AppInvitationsAcceptRequest) (*operations.AppInvitationsAcceptResponse, error) {
+func (s *account) AppInvitationsAccept(ctx context.Context, request operations.AppInvitationsAcceptRequest, security operations.AppInvitationsAcceptSecurity) (*operations.AppInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/accept", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -301,7 +301,7 @@ func (s *account) AppInvitationsAccept(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -337,11 +337,11 @@ func (s *account) AppInvitationsAccept(ctx context.Context, request operations.A
 }
 
 // AppInvitationsCreate - Invites a new or existing user to an app
-func (s *account) AppInvitationsCreate(ctx context.Context, request operations.AppInvitationsCreateRequest) (*operations.AppInvitationsCreateResponse, error) {
+func (s *account) AppInvitationsCreate(ctx context.Context, request operations.AppInvitationsCreateRequest, security operations.AppInvitationsCreateSecurity) (*operations.AppInvitationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -353,7 +353,7 @@ func (s *account) AppInvitationsCreate(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *account) AppInvitationsCreate(ctx context.Context, request operations.A
 }
 
 // AppInvitationsCreateByEmail - Invites a new or existing user to an app
-func (s *account) AppInvitationsCreateByEmail(ctx context.Context, request operations.AppInvitationsCreateByEmailRequest) (*operations.AppInvitationsCreateByEmailResponse, error) {
+func (s *account) AppInvitationsCreateByEmail(ctx context.Context, request operations.AppInvitationsCreateByEmailRequest, security operations.AppInvitationsCreateByEmailSecurity) (*operations.AppInvitationsCreateByEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,7 +405,7 @@ func (s *account) AppInvitationsCreateByEmail(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -441,16 +441,16 @@ func (s *account) AppInvitationsCreateByEmail(ctx context.Context, request opera
 }
 
 // AppInvitationsDelete - Removes a user's invitation to an app
-func (s *account) AppInvitationsDelete(ctx context.Context, request operations.AppInvitationsDeleteRequest) (*operations.AppInvitationsDeleteResponse, error) {
+func (s *account) AppInvitationsDelete(ctx context.Context, request operations.AppInvitationsDeleteRequest, security operations.AppInvitationsDeleteSecurity) (*operations.AppInvitationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -486,16 +486,16 @@ func (s *account) AppInvitationsDelete(ctx context.Context, request operations.A
 }
 
 // AppInvitationsList - Gets the pending invitations for the app
-func (s *account) AppInvitationsList(ctx context.Context, request operations.AppInvitationsListRequest) (*operations.AppInvitationsListResponse, error) {
+func (s *account) AppInvitationsList(ctx context.Context, request operations.AppInvitationsListRequest, security operations.AppInvitationsListSecurity) (*operations.AppInvitationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,11 +540,11 @@ func (s *account) AppInvitationsList(ctx context.Context, request operations.App
 }
 
 // AppInvitationsReject - Rejects a pending invitation for the specified user
-func (s *account) AppInvitationsReject(ctx context.Context, request operations.AppInvitationsRejectRequest) (*operations.AppInvitationsRejectResponse, error) {
+func (s *account) AppInvitationsReject(ctx context.Context, request operations.AppInvitationsRejectRequest, security operations.AppInvitationsRejectSecurity) (*operations.AppInvitationsRejectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/reject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/reject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,7 +556,7 @@ func (s *account) AppInvitationsReject(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -592,11 +592,11 @@ func (s *account) AppInvitationsReject(ctx context.Context, request operations.A
 }
 
 // AppInvitationsUpdatePermissions - Update pending invitation permission
-func (s *account) AppInvitationsUpdatePermissions(ctx context.Context, request operations.AppInvitationsUpdatePermissionsRequest) (*operations.AppInvitationsUpdatePermissionsResponse, error) {
+func (s *account) AppInvitationsUpdatePermissions(ctx context.Context, request operations.AppInvitationsUpdatePermissionsRequest, security operations.AppInvitationsUpdatePermissionsSecurity) (*operations.AppInvitationsUpdatePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,7 +611,7 @@ func (s *account) AppInvitationsUpdatePermissions(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -647,7 +647,7 @@ func (s *account) AppInvitationsUpdatePermissions(ctx context.Context, request o
 }
 
 // AppsCreate - Creates a new app and returns it to the caller
-func (s *account) AppsCreate(ctx context.Context, request operations.AppsCreateRequest) (*operations.AppsCreateResponse, error) {
+func (s *account) AppsCreate(ctx context.Context, request operations.AppsCreateRequestBody, security operations.AppsCreateSecurity) (*operations.AppsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/apps"
 
@@ -666,7 +666,7 @@ func (s *account) AppsCreate(ctx context.Context, request operations.AppsCreateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -711,11 +711,11 @@ func (s *account) AppsCreate(ctx context.Context, request operations.AppsCreateR
 }
 
 // AppsCreateForOrg - Creates a new app for the organization and returns it to the caller
-func (s *account) AppsCreateForOrg(ctx context.Context, request operations.AppsCreateForOrgRequest) (*operations.AppsCreateForOrgResponse, error) {
+func (s *account) AppsCreateForOrg(ctx context.Context, request operations.AppsCreateForOrgRequest, security operations.AppsCreateForOrgSecurity) (*operations.AppsCreateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -730,7 +730,7 @@ func (s *account) AppsCreateForOrg(ctx context.Context, request operations.AppsC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -785,16 +785,16 @@ func (s *account) AppsCreateForOrg(ctx context.Context, request operations.AppsC
 }
 
 // AppsDelete - Delete an app
-func (s *account) AppsDelete(ctx context.Context, request operations.AppsDeleteRequest) (*operations.AppsDeleteResponse, error) {
+func (s *account) AppsDelete(ctx context.Context, request operations.AppsDeleteRequest, security operations.AppsDeleteSecurity) (*operations.AppsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -830,16 +830,16 @@ func (s *account) AppsDelete(ctx context.Context, request operations.AppsDeleteR
 }
 
 // AppsDeleteAvatar - Deletes the uploaded app avatar
-func (s *account) AppsDeleteAvatar(ctx context.Context, request operations.AppsDeleteAvatarRequest) (*operations.AppsDeleteAvatarResponse, error) {
+func (s *account) AppsDeleteAvatar(ctx context.Context, request operations.AppsDeleteAvatarRequest, security operations.AppsDeleteAvatarSecurity) (*operations.AppsDeleteAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -884,16 +884,16 @@ func (s *account) AppsDeleteAvatar(ctx context.Context, request operations.AppsD
 }
 
 // AppsGet - Return a specific app with the given app name which belongs to the given owner.
-func (s *account) AppsGet(ctx context.Context, request operations.AppsGetRequest) (*operations.AppsGetResponse, error) {
+func (s *account) AppsGet(ctx context.Context, request operations.AppsGetRequest, security operations.AppsGetSecurity) (*operations.AppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -938,16 +938,16 @@ func (s *account) AppsGet(ctx context.Context, request operations.AppsGetRequest
 }
 
 // AppsGetForOrgUser - Get a user apps information from an organization by name
-func (s *account) AppsGetForOrgUser(ctx context.Context, request operations.AppsGetForOrgUserRequest) (*operations.AppsGetForOrgUserResponse, error) {
+func (s *account) AppsGetForOrgUser(ctx context.Context, request operations.AppsGetForOrgUserRequest, security operations.AppsGetForOrgUserSecurity) (*operations.AppsGetForOrgUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}/apps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -992,16 +992,16 @@ func (s *account) AppsGetForOrgUser(ctx context.Context, request operations.Apps
 }
 
 // AppsGetTeams - Returns the details of all teams that have access to the app.
-func (s *account) AppsGetTeams(ctx context.Context, request operations.AppsGetTeamsRequest) (*operations.AppsGetTeamsResponse, error) {
+func (s *account) AppsGetTeams(ctx context.Context, request operations.AppsGetTeamsRequest, security operations.AppsGetTeamsSecurity) (*operations.AppsGetTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1046,7 +1046,7 @@ func (s *account) AppsGetTeams(ctx context.Context, request operations.AppsGetTe
 }
 
 // AppsList - Returns a list of apps
-func (s *account) AppsList(ctx context.Context, request operations.AppsListRequest) (*operations.AppsListResponse, error) {
+func (s *account) AppsList(ctx context.Context, request operations.AppsListRequest, security operations.AppsListSecurity) (*operations.AppsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/apps"
 
@@ -1055,11 +1055,11 @@ func (s *account) AppsList(ctx context.Context, request operations.AppsListReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1104,16 +1104,16 @@ func (s *account) AppsList(ctx context.Context, request operations.AppsListReque
 }
 
 // AppsListForOrg - Returns a list of apps for the organization
-func (s *account) AppsListForOrg(ctx context.Context, request operations.AppsListForOrgRequest) (*operations.AppsListForOrgResponse, error) {
+func (s *account) AppsListForOrg(ctx context.Context, request operations.AppsListForOrgRequest, security operations.AppsListForOrgSecurity) (*operations.AppsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1158,16 +1158,16 @@ func (s *account) AppsListForOrg(ctx context.Context, request operations.AppsLis
 }
 
 // AppsListTesters - Returns the testers associated with the app specified with the given app name which belongs to the given owner.
-func (s *account) AppsListTesters(ctx context.Context, request operations.AppsListTestersRequest) (*operations.AppsListTestersResponse, error) {
+func (s *account) AppsListTesters(ctx context.Context, request operations.AppsListTestersRequest, security operations.AppsListTestersSecurity) (*operations.AppsListTestersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1212,16 +1212,16 @@ func (s *account) AppsListTesters(ctx context.Context, request operations.AppsLi
 }
 
 // AppsRemoveUser - Removes the user from the app
-func (s *account) AppsRemoveUser(ctx context.Context, request operations.AppsRemoveUserRequest) (*operations.AppsRemoveUserResponse, error) {
+func (s *account) AppsRemoveUser(ctx context.Context, request operations.AppsRemoveUserRequest, security operations.AppsRemoveUserSecurity) (*operations.AppsRemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1257,11 +1257,11 @@ func (s *account) AppsRemoveUser(ctx context.Context, request operations.AppsRem
 }
 
 // AppsTransferOwnershipJSON - Transfers ownership of an app to a different user or organization
-func (s *account) AppsTransferOwnershipJSON(ctx context.Context, request operations.AppsTransferOwnershipJSONRequest) (*operations.AppsTransferOwnershipJSONResponse, error) {
+func (s *account) AppsTransferOwnershipJSON(ctx context.Context, request operations.AppsTransferOwnershipJSONRequest, security operations.AppsTransferOwnershipJSONSecurity) (*operations.AppsTransferOwnershipJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1273,7 +1273,7 @@ func (s *account) AppsTransferOwnershipJSON(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1318,11 +1318,11 @@ func (s *account) AppsTransferOwnershipJSON(ctx context.Context, request operati
 }
 
 // AppsTransferOwnershipRaw - Transfers ownership of an app to a different user or organization
-func (s *account) AppsTransferOwnershipRaw(ctx context.Context, request operations.AppsTransferOwnershipRawRequest) (*operations.AppsTransferOwnershipRawResponse, error) {
+func (s *account) AppsTransferOwnershipRaw(ctx context.Context, request operations.AppsTransferOwnershipRawRequest, security operations.AppsTransferOwnershipRawSecurity) (*operations.AppsTransferOwnershipRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1334,7 +1334,7 @@ func (s *account) AppsTransferOwnershipRaw(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1379,11 +1379,11 @@ func (s *account) AppsTransferOwnershipRaw(ctx context.Context, request operatio
 }
 
 // AppsTransferToOrg - Transfers ownership of an app to a new organization
-func (s *account) AppsTransferToOrg(ctx context.Context, request operations.AppsTransferToOrgRequest) (*operations.AppsTransferToOrgResponse, error) {
+func (s *account) AppsTransferToOrg(ctx context.Context, request operations.AppsTransferToOrgRequest, security operations.AppsTransferToOrgSecurity) (*operations.AppsTransferToOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer_to_org", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer_to_org", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1395,7 +1395,7 @@ func (s *account) AppsTransferToOrg(ctx context.Context, request operations.Apps
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1440,11 +1440,11 @@ func (s *account) AppsTransferToOrg(ctx context.Context, request operations.Apps
 }
 
 // AppsUpdate - Partially updates a single app
-func (s *account) AppsUpdate(ctx context.Context, request operations.AppsUpdateRequest) (*operations.AppsUpdateResponse, error) {
+func (s *account) AppsUpdate(ctx context.Context, request operations.AppsUpdateRequest, security operations.AppsUpdateSecurity) (*operations.AppsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1456,7 +1456,7 @@ func (s *account) AppsUpdate(ctx context.Context, request operations.AppsUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1501,11 +1501,11 @@ func (s *account) AppsUpdate(ctx context.Context, request operations.AppsUpdateR
 }
 
 // AppsUpdateAvatar - Sets the app avatar
-func (s *account) AppsUpdateAvatar(ctx context.Context, request operations.AppsUpdateAvatarRequest) (*operations.AppsUpdateAvatarResponse, error) {
+func (s *account) AppsUpdateAvatar(ctx context.Context, request operations.AppsUpdateAvatarRequest, security operations.AppsUpdateAvatarSecurity) (*operations.AppsUpdateAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1517,7 +1517,7 @@ func (s *account) AppsUpdateAvatar(ctx context.Context, request operations.AppsU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1562,11 +1562,11 @@ func (s *account) AppsUpdateAvatar(ctx context.Context, request operations.AppsU
 }
 
 // AppsUpdateUserPermissions - Update user permission for the app
-func (s *account) AppsUpdateUserPermissions(ctx context.Context, request operations.AppsUpdateUserPermissionsRequest) (*operations.AppsUpdateUserPermissionsResponse, error) {
+func (s *account) AppsUpdateUserPermissions(ctx context.Context, request operations.AppsUpdateUserPermissionsRequest, security operations.AppsUpdateUserPermissionsSecurity) (*operations.AppsUpdateUserPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1581,7 +1581,7 @@ func (s *account) AppsUpdateUserPermissions(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1617,16 +1617,16 @@ func (s *account) AppsUpdateUserPermissions(ctx context.Context, request operati
 }
 
 // AzureSubscriptionDeleteForApp - Delete the azure subscriptions for the app
-func (s *account) AzureSubscriptionDeleteForApp(ctx context.Context, request operations.AzureSubscriptionDeleteForAppRequest) (*operations.AzureSubscriptionDeleteForAppResponse, error) {
+func (s *account) AzureSubscriptionDeleteForApp(ctx context.Context, request operations.AzureSubscriptionDeleteForAppRequest, security operations.AzureSubscriptionDeleteForAppSecurity) (*operations.AzureSubscriptionDeleteForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions/{azure_subscription_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions/{azure_subscription_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1662,11 +1662,11 @@ func (s *account) AzureSubscriptionDeleteForApp(ctx context.Context, request ope
 }
 
 // AzureSubscriptionLinkForApp - Link azure subscription to an app
-func (s *account) AzureSubscriptionLinkForApp(ctx context.Context, request operations.AzureSubscriptionLinkForAppRequest) (*operations.AzureSubscriptionLinkForAppResponse, error) {
+func (s *account) AzureSubscriptionLinkForApp(ctx context.Context, request operations.AzureSubscriptionLinkForAppRequest, security operations.AzureSubscriptionLinkForAppSecurity) (*operations.AzureSubscriptionLinkForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1681,7 +1681,7 @@ func (s *account) AzureSubscriptionLinkForApp(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1717,16 +1717,16 @@ func (s *account) AzureSubscriptionLinkForApp(ctx context.Context, request opera
 }
 
 // AzureSubscriptionListForApp - Returns a list of azure subscriptions for the app
-func (s *account) AzureSubscriptionListForApp(ctx context.Context, request operations.AzureSubscriptionListForAppRequest) (*operations.AzureSubscriptionListForAppResponse, error) {
+func (s *account) AzureSubscriptionListForApp(ctx context.Context, request operations.AzureSubscriptionListForAppRequest, security operations.AzureSubscriptionListForAppSecurity) (*operations.AzureSubscriptionListForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1771,16 +1771,16 @@ func (s *account) AzureSubscriptionListForApp(ctx context.Context, request opera
 }
 
 // AzureSubscriptionListForOrg - Returns a list of azure subscriptions for the organization
-func (s *account) AzureSubscriptionListForOrg(ctx context.Context, request operations.AzureSubscriptionListForOrgRequest) (*operations.AzureSubscriptionListForOrgResponse, error) {
+func (s *account) AzureSubscriptionListForOrg(ctx context.Context, request operations.AzureSubscriptionListForOrgRequest, security operations.AzureSubscriptionListForOrgSecurity) (*operations.AzureSubscriptionListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/azure_subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/azure_subscriptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1825,7 +1825,7 @@ func (s *account) AzureSubscriptionListForOrg(ctx context.Context, request opera
 }
 
 // AzureSubscriptionListForUser - Returns a list of azure subscriptions for the user
-func (s *account) AzureSubscriptionListForUser(ctx context.Context, request operations.AzureSubscriptionListForUserRequest) (*operations.AzureSubscriptionListForUserResponse, error) {
+func (s *account) AzureSubscriptionListForUser(ctx context.Context) (*operations.AzureSubscriptionListForUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/azure_subscriptions"
 
@@ -1834,7 +1834,7 @@ func (s *account) AzureSubscriptionListForUser(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1879,7 +1879,7 @@ func (s *account) AzureSubscriptionListForUser(ctx context.Context, request oper
 }
 
 // DistributionGroupInvitationsAcceptAll - Accepts all pending invitations to distribution groups for the specified user
-func (s *account) DistributionGroupInvitationsAcceptAll(ctx context.Context, request operations.DistributionGroupInvitationsAcceptAllRequest) (*operations.DistributionGroupInvitationsAcceptAllResponse, error) {
+func (s *account) DistributionGroupInvitationsAcceptAll(ctx context.Context, request map[string]interface{}, security operations.DistributionGroupInvitationsAcceptAllSecurity) (*operations.DistributionGroupInvitationsAcceptAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/invitations/distribution_groups/accept"
 
@@ -1895,7 +1895,7 @@ func (s *account) DistributionGroupInvitationsAcceptAll(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1931,11 +1931,11 @@ func (s *account) DistributionGroupInvitationsAcceptAll(ctx context.Context, req
 }
 
 // DistributionGroupsAddApps - Add apps to distribution group in an org
-func (s *account) DistributionGroupsAddApps(ctx context.Context, request operations.DistributionGroupsAddAppsRequest) (*operations.DistributionGroupsAddAppsResponse, error) {
+func (s *account) DistributionGroupsAddApps(ctx context.Context, request operations.DistributionGroupsAddAppsRequest, security operations.DistributionGroupsAddAppsSecurity) (*operations.DistributionGroupsAddAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1950,7 +1950,7 @@ func (s *account) DistributionGroupsAddApps(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1976,11 +1976,11 @@ func (s *account) DistributionGroupsAddApps(ctx context.Context, request operati
 }
 
 // DistributionGroupsAddUser - Adds the members to the specified distribution group
-func (s *account) DistributionGroupsAddUser(ctx context.Context, request operations.DistributionGroupsAddUserRequest) (*operations.DistributionGroupsAddUserResponse, error) {
+func (s *account) DistributionGroupsAddUser(ctx context.Context, request operations.DistributionGroupsAddUserRequest, security operations.DistributionGroupsAddUserSecurity) (*operations.DistributionGroupsAddUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1995,7 +1995,7 @@ func (s *account) DistributionGroupsAddUser(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2040,11 +2040,11 @@ func (s *account) DistributionGroupsAddUser(ctx context.Context, request operati
 }
 
 // DistributionGroupsAddUsersForOrg - Accepts an array of user email addresses to get added to the specified group
-func (s *account) DistributionGroupsAddUsersForOrg(ctx context.Context, request operations.DistributionGroupsAddUsersForOrgRequest) (*operations.DistributionGroupsAddUsersForOrgResponse, error) {
+func (s *account) DistributionGroupsAddUsersForOrg(ctx context.Context, request operations.DistributionGroupsAddUsersForOrgRequest, security operations.DistributionGroupsAddUsersForOrgSecurity) (*operations.DistributionGroupsAddUsersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2059,7 +2059,7 @@ func (s *account) DistributionGroupsAddUsersForOrg(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2104,11 +2104,11 @@ func (s *account) DistributionGroupsAddUsersForOrg(ctx context.Context, request 
 }
 
 // DistributionGroupsBulkDeleteApps - Delete apps from distribution group in an org
-func (s *account) DistributionGroupsBulkDeleteApps(ctx context.Context, request operations.DistributionGroupsBulkDeleteAppsRequest) (*operations.DistributionGroupsBulkDeleteAppsResponse, error) {
+func (s *account) DistributionGroupsBulkDeleteApps(ctx context.Context, request operations.DistributionGroupsBulkDeleteAppsRequest, security operations.DistributionGroupsBulkDeleteAppsSecurity) (*operations.DistributionGroupsBulkDeleteAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps/bulk_delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps/bulk_delete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2123,7 +2123,7 @@ func (s *account) DistributionGroupsBulkDeleteApps(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2149,11 +2149,11 @@ func (s *account) DistributionGroupsBulkDeleteApps(ctx context.Context, request 
 }
 
 // DistributionGroupsBulkDeleteUsers - Delete testers from distribution group in an org
-func (s *account) DistributionGroupsBulkDeleteUsers(ctx context.Context, request operations.DistributionGroupsBulkDeleteUsersRequest) (*operations.DistributionGroupsBulkDeleteUsersResponse, error) {
+func (s *account) DistributionGroupsBulkDeleteUsers(ctx context.Context, request operations.DistributionGroupsBulkDeleteUsersRequest, security operations.DistributionGroupsBulkDeleteUsersSecurity) (*operations.DistributionGroupsBulkDeleteUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2168,7 +2168,7 @@ func (s *account) DistributionGroupsBulkDeleteUsers(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2194,11 +2194,11 @@ func (s *account) DistributionGroupsBulkDeleteUsers(ctx context.Context, request
 }
 
 // DistributionGroupsCreate - Creates a new distribution group and returns it to the caller
-func (s *account) DistributionGroupsCreate(ctx context.Context, request operations.DistributionGroupsCreateRequest) (*operations.DistributionGroupsCreateResponse, error) {
+func (s *account) DistributionGroupsCreate(ctx context.Context, request operations.DistributionGroupsCreateRequest, security operations.DistributionGroupsCreateSecurity) (*operations.DistributionGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2213,7 +2213,7 @@ func (s *account) DistributionGroupsCreate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2258,11 +2258,11 @@ func (s *account) DistributionGroupsCreate(ctx context.Context, request operatio
 }
 
 // DistributionGroupsCreateForOrg - Creates a disribution goup which can be shared across apps under an organization
-func (s *account) DistributionGroupsCreateForOrg(ctx context.Context, request operations.DistributionGroupsCreateForOrgRequest) (*operations.DistributionGroupsCreateForOrgResponse, error) {
+func (s *account) DistributionGroupsCreateForOrg(ctx context.Context, request operations.DistributionGroupsCreateForOrgRequest, security operations.DistributionGroupsCreateForOrgSecurity) (*operations.DistributionGroupsCreateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2277,7 +2277,7 @@ func (s *account) DistributionGroupsCreateForOrg(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2322,16 +2322,16 @@ func (s *account) DistributionGroupsCreateForOrg(ctx context.Context, request op
 }
 
 // DistributionGroupsDelete - Deletes a distribution group
-func (s *account) DistributionGroupsDelete(ctx context.Context, request operations.DistributionGroupsDeleteRequest) (*operations.DistributionGroupsDeleteResponse, error) {
+func (s *account) DistributionGroupsDelete(ctx context.Context, request operations.DistributionGroupsDeleteRequest, security operations.DistributionGroupsDeleteSecurity) (*operations.DistributionGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2367,16 +2367,16 @@ func (s *account) DistributionGroupsDelete(ctx context.Context, request operatio
 }
 
 // DistributionGroupsDeleteForOrg - Deletes a single distribution group from an org with a given distribution group name
-func (s *account) DistributionGroupsDeleteForOrg(ctx context.Context, request operations.DistributionGroupsDeleteForOrgRequest) (*operations.DistributionGroupsDeleteForOrgResponse, error) {
+func (s *account) DistributionGroupsDeleteForOrg(ctx context.Context, request operations.DistributionGroupsDeleteForOrgRequest, security operations.DistributionGroupsDeleteForOrgSecurity) (*operations.DistributionGroupsDeleteForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2412,20 +2412,20 @@ func (s *account) DistributionGroupsDeleteForOrg(ctx context.Context, request op
 }
 
 // DistributionGroupsDetailsForOrg - Returns a list of distribution groups with details for an organization
-func (s *account) DistributionGroupsDetailsForOrg(ctx context.Context, request operations.DistributionGroupsDetailsForOrgRequest) (*operations.DistributionGroupsDetailsForOrgResponse, error) {
+func (s *account) DistributionGroupsDetailsForOrg(ctx context.Context, request operations.DistributionGroupsDetailsForOrgRequest, security operations.DistributionGroupsDetailsForOrgSecurity) (*operations.DistributionGroupsDetailsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups_details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups_details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2470,16 +2470,16 @@ func (s *account) DistributionGroupsDetailsForOrg(ctx context.Context, request o
 }
 
 // DistributionGroupsGet - Returns a single distribution group for a given distribution group name
-func (s *account) DistributionGroupsGet(ctx context.Context, request operations.DistributionGroupsGetRequest) (*operations.DistributionGroupsGetResponse, error) {
+func (s *account) DistributionGroupsGet(ctx context.Context, request operations.DistributionGroupsGetRequest, security operations.DistributionGroupsGetSecurity) (*operations.DistributionGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2524,16 +2524,16 @@ func (s *account) DistributionGroupsGet(ctx context.Context, request operations.
 }
 
 // DistributionGroupsGetApps - Get apps from a distribution group in an org
-func (s *account) DistributionGroupsGetApps(ctx context.Context, request operations.DistributionGroupsGetAppsRequest) (*operations.DistributionGroupsGetAppsResponse, error) {
+func (s *account) DistributionGroupsGetApps(ctx context.Context, request operations.DistributionGroupsGetAppsRequest, security operations.DistributionGroupsGetAppsSecurity) (*operations.DistributionGroupsGetAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2568,16 +2568,16 @@ func (s *account) DistributionGroupsGetApps(ctx context.Context, request operati
 }
 
 // DistributionGroupsGetForOrg - Returns a single distribution group in org for a given distribution group name
-func (s *account) DistributionGroupsGetForOrg(ctx context.Context, request operations.DistributionGroupsGetForOrgRequest) (*operations.DistributionGroupsGetForOrgResponse, error) {
+func (s *account) DistributionGroupsGetForOrg(ctx context.Context, request operations.DistributionGroupsGetForOrgRequest, security operations.DistributionGroupsGetForOrgSecurity) (*operations.DistributionGroupsGetForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2622,16 +2622,16 @@ func (s *account) DistributionGroupsGetForOrg(ctx context.Context, request opera
 }
 
 // DistributionGroupsList - Returns a list of distribution groups in the app specified
-func (s *account) DistributionGroupsList(ctx context.Context, request operations.DistributionGroupsListRequest) (*operations.DistributionGroupsListResponse, error) {
+func (s *account) DistributionGroupsList(ctx context.Context, request operations.DistributionGroupsListRequest, security operations.DistributionGroupsListSecurity) (*operations.DistributionGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2676,16 +2676,16 @@ func (s *account) DistributionGroupsList(ctx context.Context, request operations
 }
 
 // DistributionGroupsListAllTestersForOrg - Returns a unique list of users including the whole organization members plus testers in any shared group of that org
-func (s *account) DistributionGroupsListAllTestersForOrg(ctx context.Context, request operations.DistributionGroupsListAllTestersForOrgRequest) (*operations.DistributionGroupsListAllTestersForOrgResponse, error) {
+func (s *account) DistributionGroupsListAllTestersForOrg(ctx context.Context, request operations.DistributionGroupsListAllTestersForOrgRequest, security operations.DistributionGroupsListAllTestersForOrgSecurity) (*operations.DistributionGroupsListAllTestersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/testers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/testers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2730,16 +2730,16 @@ func (s *account) DistributionGroupsListAllTestersForOrg(ctx context.Context, re
 }
 
 // DistributionGroupsListForOrg - Returns a list of distribution groups in the org specified
-func (s *account) DistributionGroupsListForOrg(ctx context.Context, request operations.DistributionGroupsListForOrgRequest) (*operations.DistributionGroupsListForOrgResponse, error) {
+func (s *account) DistributionGroupsListForOrg(ctx context.Context, request operations.DistributionGroupsListForOrgRequest, security operations.DistributionGroupsListForOrgSecurity) (*operations.DistributionGroupsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2784,20 +2784,20 @@ func (s *account) DistributionGroupsListForOrg(ctx context.Context, request oper
 }
 
 // DistributionGroupsListUsers - Returns a list of member details in the distribution group specified
-func (s *account) DistributionGroupsListUsers(ctx context.Context, request operations.DistributionGroupsListUsersRequest) (*operations.DistributionGroupsListUsersResponse, error) {
+func (s *account) DistributionGroupsListUsers(ctx context.Context, request operations.DistributionGroupsListUsersRequest, security operations.DistributionGroupsListUsersSecurity) (*operations.DistributionGroupsListUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2842,16 +2842,16 @@ func (s *account) DistributionGroupsListUsers(ctx context.Context, request opera
 }
 
 // DistributionGroupsListUsersForOrg - Returns a list of member in the distribution group specified
-func (s *account) DistributionGroupsListUsersForOrg(ctx context.Context, request operations.DistributionGroupsListUsersForOrgRequest) (*operations.DistributionGroupsListUsersForOrgResponse, error) {
+func (s *account) DistributionGroupsListUsersForOrg(ctx context.Context, request operations.DistributionGroupsListUsersForOrgRequest, security operations.DistributionGroupsListUsersForOrgSecurity) (*operations.DistributionGroupsListUsersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2896,11 +2896,11 @@ func (s *account) DistributionGroupsListUsersForOrg(ctx context.Context, request
 }
 
 // DistributionGroupsPatchForOrg - Update one given distribution group name in an org
-func (s *account) DistributionGroupsPatchForOrg(ctx context.Context, request operations.DistributionGroupsPatchForOrgRequest) (*operations.DistributionGroupsPatchForOrgResponse, error) {
+func (s *account) DistributionGroupsPatchForOrg(ctx context.Context, request operations.DistributionGroupsPatchForOrgRequest, security operations.DistributionGroupsPatchForOrgSecurity) (*operations.DistributionGroupsPatchForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2912,7 +2912,7 @@ func (s *account) DistributionGroupsPatchForOrg(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2957,11 +2957,11 @@ func (s *account) DistributionGroupsPatchForOrg(ctx context.Context, request ope
 }
 
 // DistributionGroupsRemoveUser - Remove the users from the distribution group
-func (s *account) DistributionGroupsRemoveUser(ctx context.Context, request operations.DistributionGroupsRemoveUserRequest) (*operations.DistributionGroupsRemoveUserResponse, error) {
+func (s *account) DistributionGroupsRemoveUser(ctx context.Context, request operations.DistributionGroupsRemoveUserRequest, security operations.DistributionGroupsRemoveUserSecurity) (*operations.DistributionGroupsRemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2976,7 +2976,7 @@ func (s *account) DistributionGroupsRemoveUser(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3021,11 +3021,11 @@ func (s *account) DistributionGroupsRemoveUser(ctx context.Context, request oper
 }
 
 // DistributionGroupsResendInvite - Resend distribution group app invite notification to previously invited testers
-func (s *account) DistributionGroupsResendInvite(ctx context.Context, request operations.DistributionGroupsResendInviteRequest) (*operations.DistributionGroupsResendInviteResponse, error) {
+func (s *account) DistributionGroupsResendInvite(ctx context.Context, request operations.DistributionGroupsResendInviteRequest, security operations.DistributionGroupsResendInviteSecurity) (*operations.DistributionGroupsResendInviteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/resend_invite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/resend_invite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3040,7 +3040,7 @@ func (s *account) DistributionGroupsResendInvite(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3076,11 +3076,11 @@ func (s *account) DistributionGroupsResendInvite(ctx context.Context, request op
 }
 
 // DistributionGroupsResendSharedInvite - Resend shared distribution group invite notification to previously invited testers
-func (s *account) DistributionGroupsResendSharedInvite(ctx context.Context, request operations.DistributionGroupsResendSharedInviteRequest) (*operations.DistributionGroupsResendSharedInviteResponse, error) {
+func (s *account) DistributionGroupsResendSharedInvite(ctx context.Context, request operations.DistributionGroupsResendSharedInviteRequest, security operations.DistributionGroupsResendSharedInviteSecurity) (*operations.DistributionGroupsResendSharedInviteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/resend_invite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/resend_invite", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3095,7 +3095,7 @@ func (s *account) DistributionGroupsResendSharedInvite(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3131,11 +3131,11 @@ func (s *account) DistributionGroupsResendSharedInvite(ctx context.Context, requ
 }
 
 // DistributionGroupsUpdate - Updates the attributes of distribution group
-func (s *account) DistributionGroupsUpdate(ctx context.Context, request operations.DistributionGroupsUpdateRequest) (*operations.DistributionGroupsUpdateResponse, error) {
+func (s *account) DistributionGroupsUpdate(ctx context.Context, request operations.DistributionGroupsUpdateRequest, security operations.DistributionGroupsUpdateSecurity) (*operations.DistributionGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3150,7 +3150,7 @@ func (s *account) DistributionGroupsUpdate(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3195,7 +3195,7 @@ func (s *account) DistributionGroupsUpdate(ctx context.Context, request operatio
 }
 
 // InvitationsSent - Returns all invitations sent by the caller
-func (s *account) InvitationsSent(ctx context.Context, request operations.InvitationsSentRequest) (*operations.InvitationsSentResponse, error) {
+func (s *account) InvitationsSent(ctx context.Context) (*operations.InvitationsSentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/invitations/sent"
 
@@ -3204,7 +3204,7 @@ func (s *account) InvitationsSent(ctx context.Context, request operations.Invita
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3249,11 +3249,11 @@ func (s *account) InvitationsSent(ctx context.Context, request operations.Invita
 }
 
 // OrgInvitations - Removes a user's invitation to an organization
-func (s *account) OrgInvitations(ctx context.Context, request operations.OrgInvitationsRequest) (*operations.OrgInvitationsResponse, error) {
+func (s *account) OrgInvitations(ctx context.Context, request operations.OrgInvitationsRequest, security operations.OrgInvitationsSecurity) (*operations.OrgInvitationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/revoke", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/revoke", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3265,7 +3265,7 @@ func (s *account) OrgInvitations(ctx context.Context, request operations.OrgInvi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3301,11 +3301,11 @@ func (s *account) OrgInvitations(ctx context.Context, request operations.OrgInvi
 }
 
 // OrgInvitationsAccept - Accepts a pending organization invitation for the specified user
-func (s *account) OrgInvitationsAccept(ctx context.Context, request operations.OrgInvitationsAcceptRequest) (*operations.OrgInvitationsAcceptResponse, error) {
+func (s *account) OrgInvitationsAccept(ctx context.Context, request operations.OrgInvitationsAcceptRequest, security operations.OrgInvitationsAcceptSecurity) (*operations.OrgInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/accept", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/accept", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3317,7 +3317,7 @@ func (s *account) OrgInvitationsAccept(ctx context.Context, request operations.O
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3353,11 +3353,11 @@ func (s *account) OrgInvitationsAccept(ctx context.Context, request operations.O
 }
 
 // OrgInvitationsCreate - Invites a new or existing user to an organization
-func (s *account) OrgInvitationsCreate(ctx context.Context, request operations.OrgInvitationsCreateRequest) (*operations.OrgInvitationsCreateResponse, error) {
+func (s *account) OrgInvitationsCreate(ctx context.Context, request operations.OrgInvitationsCreateRequest, security operations.OrgInvitationsCreateSecurity) (*operations.OrgInvitationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3372,7 +3372,7 @@ func (s *account) OrgInvitationsCreate(ctx context.Context, request operations.O
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3408,11 +3408,11 @@ func (s *account) OrgInvitationsCreate(ctx context.Context, request operations.O
 }
 
 // OrgInvitationsDelete - Removes a user's invitation to an organization
-func (s *account) OrgInvitationsDelete(ctx context.Context, request operations.OrgInvitationsDeleteRequest) (*operations.OrgInvitationsDeleteResponse, error) {
+func (s *account) OrgInvitationsDelete(ctx context.Context, request operations.OrgInvitationsDeleteRequest, security operations.OrgInvitationsDeleteSecurity) (*operations.OrgInvitationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3427,7 +3427,7 @@ func (s *account) OrgInvitationsDelete(ctx context.Context, request operations.O
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3463,16 +3463,16 @@ func (s *account) OrgInvitationsDelete(ctx context.Context, request operations.O
 }
 
 // OrgInvitationsListPending - Gets the pending invitations for the organization
-func (s *account) OrgInvitationsListPending(ctx context.Context, request operations.OrgInvitationsListPendingRequest) (*operations.OrgInvitationsListPendingResponse, error) {
+func (s *account) OrgInvitationsListPending(ctx context.Context, request operations.OrgInvitationsListPendingRequest, security operations.OrgInvitationsListPendingSecurity) (*operations.OrgInvitationsListPendingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3517,11 +3517,11 @@ func (s *account) OrgInvitationsListPending(ctx context.Context, request operati
 }
 
 // OrgInvitationsReject - Rejects a pending organization invitation
-func (s *account) OrgInvitationsReject(ctx context.Context, request operations.OrgInvitationsRejectRequest) (*operations.OrgInvitationsRejectResponse, error) {
+func (s *account) OrgInvitationsReject(ctx context.Context, request operations.OrgInvitationsRejectRequest, security operations.OrgInvitationsRejectSecurity) (*operations.OrgInvitationsRejectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/reject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/reject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3533,7 +3533,7 @@ func (s *account) OrgInvitationsReject(ctx context.Context, request operations.O
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3569,11 +3569,11 @@ func (s *account) OrgInvitationsReject(ctx context.Context, request operations.O
 }
 
 // OrgInvitationsSendNewInvitation - Cancels an existing organization invitation for the user and sends a new one
-func (s *account) OrgInvitationsSendNewInvitation(ctx context.Context, request operations.OrgInvitationsSendNewInvitationRequest) (*operations.OrgInvitationsSendNewInvitationResponse, error) {
+func (s *account) OrgInvitationsSendNewInvitation(ctx context.Context, request operations.OrgInvitationsSendNewInvitationRequest, security operations.OrgInvitationsSendNewInvitationSecurity) (*operations.OrgInvitationsSendNewInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/resend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/resend", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3585,7 +3585,7 @@ func (s *account) OrgInvitationsSendNewInvitation(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3621,11 +3621,11 @@ func (s *account) OrgInvitationsSendNewInvitation(ctx context.Context, request o
 }
 
 // OrgInvitationsUpdate - Allows the role of an invited user to be changed
-func (s *account) OrgInvitationsUpdate(ctx context.Context, request operations.OrgInvitationsUpdateRequest) (*operations.OrgInvitationsUpdateResponse, error) {
+func (s *account) OrgInvitationsUpdate(ctx context.Context, request operations.OrgInvitationsUpdateRequest, security operations.OrgInvitationsUpdateSecurity) (*operations.OrgInvitationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3640,7 +3640,7 @@ func (s *account) OrgInvitationsUpdate(ctx context.Context, request operations.O
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3676,16 +3676,16 @@ func (s *account) OrgInvitationsUpdate(ctx context.Context, request operations.O
 }
 
 // OrganizationDeleteAvatar - Deletes the uploaded organization avatar
-func (s *account) OrganizationDeleteAvatar(ctx context.Context, request operations.OrganizationDeleteAvatarRequest) (*operations.OrganizationDeleteAvatarResponse, error) {
+func (s *account) OrganizationDeleteAvatar(ctx context.Context, request operations.OrganizationDeleteAvatarRequest, security operations.OrganizationDeleteAvatarSecurity) (*operations.OrganizationDeleteAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3730,11 +3730,11 @@ func (s *account) OrganizationDeleteAvatar(ctx context.Context, request operatio
 }
 
 // OrganizationUpdateAvatar - Sets the organization avatar
-func (s *account) OrganizationUpdateAvatar(ctx context.Context, request operations.OrganizationUpdateAvatarRequest) (*operations.OrganizationUpdateAvatarResponse, error) {
+func (s *account) OrganizationUpdateAvatar(ctx context.Context, request operations.OrganizationUpdateAvatarRequest, security operations.OrganizationUpdateAvatarSecurity) (*operations.OrganizationUpdateAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3746,7 +3746,7 @@ func (s *account) OrganizationUpdateAvatar(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3791,7 +3791,7 @@ func (s *account) OrganizationUpdateAvatar(ctx context.Context, request operatio
 }
 
 // OrganizationsCreateOrUpdate - Creates a new organization and returns it to the caller
-func (s *account) OrganizationsCreateOrUpdate(ctx context.Context, request operations.OrganizationsCreateOrUpdateRequest) (*operations.OrganizationsCreateOrUpdateResponse, error) {
+func (s *account) OrganizationsCreateOrUpdate(ctx context.Context, request operations.OrganizationsCreateOrUpdateRequestBody, security operations.OrganizationsCreateOrUpdateSecurity) (*operations.OrganizationsCreateOrUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/orgs"
 
@@ -3810,7 +3810,7 @@ func (s *account) OrganizationsCreateOrUpdate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3855,16 +3855,16 @@ func (s *account) OrganizationsCreateOrUpdate(ctx context.Context, request opera
 }
 
 // OrganizationsDelete - Deletes a single organization
-func (s *account) OrganizationsDelete(ctx context.Context, request operations.OrganizationsDeleteRequest) (*operations.OrganizationsDeleteResponse, error) {
+func (s *account) OrganizationsDelete(ctx context.Context, request operations.OrganizationsDeleteRequest, security operations.OrganizationsDeleteSecurity) (*operations.OrganizationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3900,16 +3900,16 @@ func (s *account) OrganizationsDelete(ctx context.Context, request operations.Or
 }
 
 // OrganizationsGet - Returns the details of a single organization
-func (s *account) OrganizationsGet(ctx context.Context, request operations.OrganizationsGetRequest) (*operations.OrganizationsGetResponse, error) {
+func (s *account) OrganizationsGet(ctx context.Context, request operations.OrganizationsGetRequest, security operations.OrganizationsGetSecurity) (*operations.OrganizationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3954,7 +3954,7 @@ func (s *account) OrganizationsGet(ctx context.Context, request operations.Organ
 }
 
 // OrganizationsList - Returns a list of organizations the requesting user has access to
-func (s *account) OrganizationsList(ctx context.Context, request operations.OrganizationsListRequest) (*operations.OrganizationsListResponse, error) {
+func (s *account) OrganizationsList(ctx context.Context) (*operations.OrganizationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/orgs"
 
@@ -3963,7 +3963,7 @@ func (s *account) OrganizationsList(ctx context.Context, request operations.Orga
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4008,7 +4008,7 @@ func (s *account) OrganizationsList(ctx context.Context, request operations.Orga
 }
 
 // OrganizationsListAdministered - Returns a list organizations in which the requesting user is an admin
-func (s *account) OrganizationsListAdministered(ctx context.Context, request operations.OrganizationsListAdministeredRequest) (*operations.OrganizationsListAdministeredResponse, error) {
+func (s *account) OrganizationsListAdministered(ctx context.Context) (*operations.OrganizationsListAdministeredResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/administeredOrgs"
 
@@ -4017,7 +4017,7 @@ func (s *account) OrganizationsListAdministered(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4062,11 +4062,11 @@ func (s *account) OrganizationsListAdministered(ctx context.Context, request ope
 }
 
 // OrganizationsUpdate - Returns a list of organizations the requesting user has access to
-func (s *account) OrganizationsUpdate(ctx context.Context, request operations.OrganizationsUpdateRequest) (*operations.OrganizationsUpdateResponse, error) {
+func (s *account) OrganizationsUpdate(ctx context.Context, request operations.OrganizationsUpdateRequest, security operations.OrganizationsUpdateSecurity) (*operations.OrganizationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4081,7 +4081,7 @@ func (s *account) OrganizationsUpdate(ctx context.Context, request operations.Or
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4126,7 +4126,7 @@ func (s *account) OrganizationsUpdate(ctx context.Context, request operations.Or
 }
 
 // SharedconnectionConnections - Gets all service connections of the service type for GDPR export.
-func (s *account) SharedconnectionConnections(ctx context.Context, request operations.SharedconnectionConnectionsRequest) (*operations.SharedconnectionConnectionsResponse, error) {
+func (s *account) SharedconnectionConnections(ctx context.Context) (*operations.SharedconnectionConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/export/serviceConnections"
 
@@ -4135,7 +4135,7 @@ func (s *account) SharedconnectionConnections(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4180,11 +4180,11 @@ func (s *account) SharedconnectionConnections(ctx context.Context, request opera
 }
 
 // TeamsAddApp - Adds an app to a team
-func (s *account) TeamsAddApp(ctx context.Context, request operations.TeamsAddAppRequest) (*operations.TeamsAddAppResponse, error) {
+func (s *account) TeamsAddApp(ctx context.Context, request operations.TeamsAddAppRequest, security operations.TeamsAddAppSecurity) (*operations.TeamsAddAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4199,7 +4199,7 @@ func (s *account) TeamsAddApp(ctx context.Context, request operations.TeamsAddAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4244,11 +4244,11 @@ func (s *account) TeamsAddApp(ctx context.Context, request operations.TeamsAddAp
 }
 
 // TeamsAddUser - Adds a new user to a team that is owned by an organization
-func (s *account) TeamsAddUser(ctx context.Context, request operations.TeamsAddUserRequest) (*operations.TeamsAddUserResponse, error) {
+func (s *account) TeamsAddUser(ctx context.Context, request operations.TeamsAddUserRequest, security operations.TeamsAddUserSecurity) (*operations.TeamsAddUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4263,7 +4263,7 @@ func (s *account) TeamsAddUser(ctx context.Context, request operations.TeamsAddU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4308,11 +4308,11 @@ func (s *account) TeamsAddUser(ctx context.Context, request operations.TeamsAddU
 }
 
 // TeamsCreateTeam - Creates a team and returns it
-func (s *account) TeamsCreateTeam(ctx context.Context, request operations.TeamsCreateTeamRequest) (*operations.TeamsCreateTeamResponse, error) {
+func (s *account) TeamsCreateTeam(ctx context.Context, request operations.TeamsCreateTeamRequest, security operations.TeamsCreateTeamSecurity) (*operations.TeamsCreateTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4327,7 +4327,7 @@ func (s *account) TeamsCreateTeam(ctx context.Context, request operations.TeamsC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4372,16 +4372,16 @@ func (s *account) TeamsCreateTeam(ctx context.Context, request operations.TeamsC
 }
 
 // TeamsDelete - Deletes a single team
-func (s *account) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest) (*operations.TeamsDeleteResponse, error) {
+func (s *account) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest, security operations.TeamsDeleteSecurity) (*operations.TeamsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4417,16 +4417,16 @@ func (s *account) TeamsDelete(ctx context.Context, request operations.TeamsDelet
 }
 
 // TeamsGetTeam - Returns the details of a single team
-func (s *account) TeamsGetTeam(ctx context.Context, request operations.TeamsGetTeamRequest) (*operations.TeamsGetTeamResponse, error) {
+func (s *account) TeamsGetTeam(ctx context.Context, request operations.TeamsGetTeamRequest, security operations.TeamsGetTeamSecurity) (*operations.TeamsGetTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4471,16 +4471,16 @@ func (s *account) TeamsGetTeam(ctx context.Context, request operations.TeamsGetT
 }
 
 // TeamsGetUsers - Returns the users of a team which is owned by an organization
-func (s *account) TeamsGetUsers(ctx context.Context, request operations.TeamsGetUsersRequest) (*operations.TeamsGetUsersResponse, error) {
+func (s *account) TeamsGetUsers(ctx context.Context, request operations.TeamsGetUsersRequest, security operations.TeamsGetUsersSecurity) (*operations.TeamsGetUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4525,16 +4525,16 @@ func (s *account) TeamsGetUsers(ctx context.Context, request operations.TeamsGet
 }
 
 // TeamsListAll - Returns the list of all teams in this org
-func (s *account) TeamsListAll(ctx context.Context, request operations.TeamsListAllRequest) (*operations.TeamsListAllResponse, error) {
+func (s *account) TeamsListAll(ctx context.Context, request operations.TeamsListAllRequest, security operations.TeamsListAllSecurity) (*operations.TeamsListAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4579,16 +4579,16 @@ func (s *account) TeamsListAll(ctx context.Context, request operations.TeamsList
 }
 
 // TeamsListApps - Returns the apps a team has access to
-func (s *account) TeamsListApps(ctx context.Context, request operations.TeamsListAppsRequest) (*operations.TeamsListAppsResponse, error) {
+func (s *account) TeamsListApps(ctx context.Context, request operations.TeamsListAppsRequest, security operations.TeamsListAppsSecurity) (*operations.TeamsListAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4633,16 +4633,16 @@ func (s *account) TeamsListApps(ctx context.Context, request operations.TeamsLis
 }
 
 // TeamsRemoveApp - Removes an app from a team
-func (s *account) TeamsRemoveApp(ctx context.Context, request operations.TeamsRemoveAppRequest) (*operations.TeamsRemoveAppResponse, error) {
+func (s *account) TeamsRemoveApp(ctx context.Context, request operations.TeamsRemoveAppRequest, security operations.TeamsRemoveAppSecurity) (*operations.TeamsRemoveAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4678,16 +4678,16 @@ func (s *account) TeamsRemoveApp(ctx context.Context, request operations.TeamsRe
 }
 
 // TeamsRemoveUser - Removes a user from a team that is owned by an organization
-func (s *account) TeamsRemoveUser(ctx context.Context, request operations.TeamsRemoveUserRequest) (*operations.TeamsRemoveUserResponse, error) {
+func (s *account) TeamsRemoveUser(ctx context.Context, request operations.TeamsRemoveUserRequest, security operations.TeamsRemoveUserSecurity) (*operations.TeamsRemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users/{user_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users/{user_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4723,11 +4723,11 @@ func (s *account) TeamsRemoveUser(ctx context.Context, request operations.TeamsR
 }
 
 // TeamsUpdate - Updates a single team
-func (s *account) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest) (*operations.TeamsUpdateResponse, error) {
+func (s *account) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest, security operations.TeamsUpdateSecurity) (*operations.TeamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4742,7 +4742,7 @@ func (s *account) TeamsUpdate(ctx context.Context, request operations.TeamsUpdat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4787,11 +4787,11 @@ func (s *account) TeamsUpdate(ctx context.Context, request operations.TeamsUpdat
 }
 
 // TeamsUpdatePermissions - Updates the permissions the team has to the app
-func (s *account) TeamsUpdatePermissions(ctx context.Context, request operations.TeamsUpdatePermissionsRequest) (*operations.TeamsUpdatePermissionsResponse, error) {
+func (s *account) TeamsUpdatePermissions(ctx context.Context, request operations.TeamsUpdatePermissionsRequest, security operations.TeamsUpdatePermissionsSecurity) (*operations.TeamsUpdatePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4806,7 +4806,7 @@ func (s *account) TeamsUpdatePermissions(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4851,16 +4851,16 @@ func (s *account) TeamsUpdatePermissions(ctx context.Context, request operations
 }
 
 // UserAPITokensDelete - Delete the user api_token object with the specific id
-func (s *account) UserAPITokensDelete(ctx context.Context, request operations.UserAPITokensDeleteRequest) (*operations.UserAPITokensDeleteResponse, error) {
+func (s *account) UserAPITokensDelete(ctx context.Context, request operations.UserAPITokensDeleteRequest, security operations.UserAPITokensDeleteSecurity) (*operations.UserAPITokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/api_tokens/{api_token_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/api_tokens/{api_token_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4916,7 +4916,7 @@ func (s *account) UserAPITokensDelete(ctx context.Context, request operations.Us
 }
 
 // UserAPITokensList - Returns api tokens for the authenticated user
-func (s *account) UserAPITokensList(ctx context.Context, request operations.UserAPITokensListRequest) (*operations.UserAPITokensListResponse, error) {
+func (s *account) UserAPITokensList(ctx context.Context) (*operations.UserAPITokensListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/api_tokens"
 
@@ -4925,7 +4925,7 @@ func (s *account) UserAPITokensList(ctx context.Context, request operations.User
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4980,7 +4980,7 @@ func (s *account) UserAPITokensList(ctx context.Context, request operations.User
 }
 
 // UserAPITokensNew - Creates a new User API token
-func (s *account) UserAPITokensNew(ctx context.Context, request operations.UserAPITokensNewRequest) (*operations.UserAPITokensNewResponse, error) {
+func (s *account) UserAPITokensNew(ctx context.Context, request operations.UserAPITokensNewRequestBody, security operations.UserAPITokensNewSecurity) (*operations.UserAPITokensNewResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/api_tokens"
 
@@ -4996,7 +4996,7 @@ func (s *account) UserAPITokensNew(ctx context.Context, request operations.UserA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5051,7 +5051,7 @@ func (s *account) UserAPITokensNew(ctx context.Context, request operations.UserA
 }
 
 // UsersGet - Returns the user profile data
-func (s *account) UsersGet(ctx context.Context, request operations.UsersGetRequest) (*operations.UsersGetResponse, error) {
+func (s *account) UsersGet(ctx context.Context) (*operations.UsersGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user"
 
@@ -5060,7 +5060,7 @@ func (s *account) UsersGet(ctx context.Context, request operations.UsersGetReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5105,16 +5105,16 @@ func (s *account) UsersGet(ctx context.Context, request operations.UsersGetReque
 }
 
 // UsersGetForOrg - Get a user information from an organization by name - if there is explicit permission return it, if not if not return highest implicit permission
-func (s *account) UsersGetForOrg(ctx context.Context, request operations.UsersGetForOrgRequest) (*operations.UsersGetForOrgResponse, error) {
+func (s *account) UsersGetForOrg(ctx context.Context, request operations.UsersGetForOrgRequest, security operations.UsersGetForOrgSecurity) (*operations.UsersGetForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5159,16 +5159,16 @@ func (s *account) UsersGetForOrg(ctx context.Context, request operations.UsersGe
 }
 
 // UsersList - Returns the users associated with the app specified with the given app name which belongs to the given owner.
-func (s *account) UsersList(ctx context.Context, request operations.UsersListRequest) (*operations.UsersListResponse, error) {
+func (s *account) UsersList(ctx context.Context, request operations.UsersListRequest, security operations.UsersListSecurity) (*operations.UsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5213,16 +5213,16 @@ func (s *account) UsersList(ctx context.Context, request operations.UsersListReq
 }
 
 // UsersListForOrg - Returns a list of users that belong to an organization
-func (s *account) UsersListForOrg(ctx context.Context, request operations.UsersListForOrgRequest) (*operations.UsersListForOrgResponse, error) {
+func (s *account) UsersListForOrg(ctx context.Context, request operations.UsersListForOrgRequest, security operations.UsersListForOrgSecurity) (*operations.UsersListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5267,16 +5267,16 @@ func (s *account) UsersListForOrg(ctx context.Context, request operations.UsersL
 }
 
 // UsersRemoveFromOrg - Removes a user from an organization.
-func (s *account) UsersRemoveFromOrg(ctx context.Context, request operations.UsersRemoveFromOrgRequest) (*operations.UsersRemoveFromOrgResponse, error) {
+func (s *account) UsersRemoveFromOrg(ctx context.Context, request operations.UsersRemoveFromOrgRequest, security operations.UsersRemoveFromOrgSecurity) (*operations.UsersRemoveFromOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5312,7 +5312,7 @@ func (s *account) UsersRemoveFromOrg(ctx context.Context, request operations.Use
 }
 
 // UsersUpdate - Updates the user profile and returns the updated user data
-func (s *account) UsersUpdate(ctx context.Context, request operations.UsersUpdateRequest) (*operations.UsersUpdateResponse, error) {
+func (s *account) UsersUpdate(ctx context.Context, request operations.UsersUpdateRequestBody, security operations.UsersUpdateSecurity) (*operations.UsersUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user"
 
@@ -5331,7 +5331,7 @@ func (s *account) UsersUpdate(ctx context.Context, request operations.UsersUpdat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5376,11 +5376,11 @@ func (s *account) UsersUpdate(ctx context.Context, request operations.UsersUpdat
 }
 
 // UsersUpdateOrgRole - Updates the given organization user
-func (s *account) UsersUpdateOrgRole(ctx context.Context, request operations.UsersUpdateOrgRoleRequest) (*operations.UsersUpdateOrgRoleResponse, error) {
+func (s *account) UsersUpdateOrgRole(ctx context.Context, request operations.UsersUpdateOrgRoleRequest, security operations.UsersUpdateOrgRoleSecurity) (*operations.UsersUpdateOrgRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5395,7 +5395,7 @@ func (s *account) UsersUpdateOrgRole(ctx context.Context, request operations.Use
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

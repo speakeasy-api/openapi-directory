@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDataSourcePathParams struct {
-	// The API ID for the GraphQL API for the <code>DataSource</code>.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
-type CreateDataSourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateDataSourceRequestBodyDynamodbConfig - Describes an Amazon DynamoDB data source configuration.
 type CreateDataSourceRequestBodyDynamodbConfig struct {
 	AwsRegion            *string                 `json:"awsRegion,omitempty"`
@@ -135,9 +120,16 @@ type CreateDataSourceRequestBody struct {
 }
 
 type CreateDataSourceRequest struct {
-	PathParams CreateDataSourcePathParams
-	Headers    CreateDataSourceHeaders
-	Request    CreateDataSourceRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDataSourceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API ID for the GraphQL API for the <code>DataSource</code>.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
 }
 
 type CreateDataSourceResponse struct {

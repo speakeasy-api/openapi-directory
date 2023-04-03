@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SalesRepPostRequest struct {
-	// Information of Sale Rep to create.
-	Request shared.SaleRepsDto `request:"mediaType=application/json"`
-}
 
 type SalesRepPostResponse struct {
 	ContentType string

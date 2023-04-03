@@ -8,29 +8,20 @@ import (
 )
 
 type CrashesGetStacktraceSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashesGetStacktracePathParams struct {
+type CrashesGetStacktraceRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// id of a specific group
 	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
 	// id of a specific crash
 	CrashID string `pathParam:"style=simple,explode=false,name=crash_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashesGetStacktraceQueryParams struct {
 	// true if the stacktrace should be only the relevant thread / exception. Default is false
 	GroupingOnly *bool `queryParam:"style=form,explode=true,name=grouping_only"`
-}
-
-type CrashesGetStacktraceRequest struct {
-	PathParams  CrashesGetStacktracePathParams
-	QueryParams CrashesGetStacktraceQueryParams
-	Security    CrashesGetStacktraceSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CrashesGetStacktraceDefaultApplicationJSON - Error

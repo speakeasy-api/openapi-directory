@@ -36,7 +36,7 @@ func newForm(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DeleteFormsID - Delete this form and all of it's responses.
 func (s *form) DeleteFormsID(ctx context.Context, request operations.DeleteFormsIDRequest) (*operations.DeleteFormsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *form) GetFormResponses(ctx context.Context, request operations.GetFormR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -123,7 +123,7 @@ func (s *form) GetFormResponses(ctx context.Context, request operations.GetFormR
 // GetFormResponsesID - Get a single form response by id
 func (s *form) GetFormResponsesID(ctx context.Context, request operations.GetFormResponsesIDRequest) (*operations.GetFormResponsesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form-responses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/form-responses/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +175,7 @@ func (s *form) GetForms(ctx context.Context, request operations.GetFormsRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -218,7 +218,7 @@ func (s *form) GetForms(ctx context.Context, request operations.GetFormsRequest)
 // GetFormsID - Get a single form by id
 func (s *form) GetFormsID(ctx context.Context, request operations.GetFormsIDRequest) (*operations.GetFormsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *form) GetFormsID(ctx context.Context, request operations.GetFormsIDRequ
 }
 
 // PostFormResponses - Submit a response to a form
-func (s *form) PostFormResponses(ctx context.Context, request operations.PostFormResponsesRequest) (*operations.PostFormResponsesResponse, error) {
+func (s *form) PostFormResponses(ctx context.Context, request shared.FormResponseSubmission) (*operations.PostFormResponsesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/form-responses"
 
@@ -315,7 +315,7 @@ func (s *form) PostFormResponses(ctx context.Context, request operations.PostFor
 }
 
 // PostForms - Create a form
-func (s *form) PostForms(ctx context.Context, request operations.PostFormsRequest) (*operations.PostFormsResponse, error) {
+func (s *form) PostForms(ctx context.Context, request shared.FormSubmission) (*operations.PostFormsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/forms"
 

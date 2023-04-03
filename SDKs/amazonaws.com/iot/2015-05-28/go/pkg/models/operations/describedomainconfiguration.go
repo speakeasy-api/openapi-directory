@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDomainConfigurationPathParams struct {
-	// The name of the domain configuration.
-	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
-}
-
-type DescribeDomainConfigurationHeaders struct {
+type DescribeDomainConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeDomainConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDomainConfigurationRequest struct {
-	PathParams DescribeDomainConfigurationPathParams
-	Headers    DescribeDomainConfigurationHeaders
+	// The name of the domain configuration.
+	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
 }
 
 type DescribeDomainConfigurationResponse struct {

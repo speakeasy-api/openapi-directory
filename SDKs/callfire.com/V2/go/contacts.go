@@ -34,11 +34,11 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // AddContactListItems - Add contacts to a contact list
 // Adds contacts to a contact list. Available contact sources are: list of the contact entities, list of ids of existing contacts in user's account, list of phone numbers in E.164 format (11-digits)
-func (s *contacts) AddContactListItems(ctx context.Context, request operations.AddContactListItemsRequest) (*operations.AddContactListItemsResponse, error) {
+func (s *contacts) AddContactListItems(ctx context.Context, request operations.AddContactListItemsRequest, security operations.AddContactListItemsSecurity) (*operations.AddContactListItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddContactListContactsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *contacts) AddContactListItems(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *contacts) AddContactListItems(ctx context.Context, request operations.A
 
 // AddDoNotContacts - Add do not contact (dnc) numbers
 // Add or update a list of Do Not Contact (DNC) contact entries. Can toggle whether the DNCs are enabled for calls/texts.
-func (s *contacts) AddDoNotContacts(ctx context.Context, request operations.AddDoNotContactsRequest) (*operations.AddDoNotContactsResponse, error) {
+func (s *contacts) AddDoNotContacts(ctx context.Context, request shared.AddDoNotContactRequest, security operations.AddDoNotContactsSecurity) (*operations.AddDoNotContactsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts/dncs"
 
@@ -110,7 +110,7 @@ func (s *contacts) AddDoNotContacts(ctx context.Context, request operations.AddD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -154,11 +154,11 @@ func (s *contacts) AddDoNotContacts(ctx context.Context, request operations.AddD
 
 // CreateContactList - Create contact lists
 // Creates a contact list for use with campaigns using 1 of 3 inputs. A List of Contact objects, a list of String E.164 numbers, or a list of CallFire contactIds can be used as the data source for the created contact list. After contact list is added into the CallFire system, contact lists goes through seven system safeguards that check the accuracy and consistency of the data. For example, our system checks that contact number is formatted correctly, is valid, is not duplicated in another contact list, or is not added on a specific DNC list. You can configure to keep/merge or remove contacts which do not complies these rules. If contacts were not added to a contact list after the validation, this means the data needs to be properly formatted and corrected before calling this API
-func (s *contacts) CreateContactList(ctx context.Context, request operations.CreateContactListRequest) (*operations.CreateContactListResponse, error) {
+func (s *contacts) CreateContactList(ctx context.Context, request operations.CreateContactListRequest, security operations.CreateContactListSecurity) (*operations.CreateContactListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts/lists"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContactListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -170,11 +170,11 @@ func (s *contacts) CreateContactList(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -228,7 +228,7 @@ func (s *contacts) CreateContactList(ctx context.Context, request operations.Cre
 
 // CreateContactListFromFile - Create contact list from file
 // Creates a contact list to be used with campaigns through uploading a .csv file. Returns the id of created list
-func (s *contacts) CreateContactListFromFile(ctx context.Context, request operations.CreateContactListFromFileRequest) (*operations.CreateContactListFromFileResponse, error) {
+func (s *contacts) CreateContactListFromFile(ctx context.Context, request operations.CreateContactListFromFileRequestBody, security operations.CreateContactListFromFileSecurity) (*operations.CreateContactListFromFileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts/lists/upload"
 
@@ -247,7 +247,7 @@ func (s *contacts) CreateContactListFromFile(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,7 +301,7 @@ func (s *contacts) CreateContactListFromFile(ctx context.Context, request operat
 
 // CreateContacts - Create contacts
 // Creates contacts in CallFire system. Only values from the next list can be used as external system parameter in contact creation: **NATION_BUILDER, SALES_FORCE_CONTACTS, SALES_FORCE_LEADS, SALES_FORCE_REPORTS, ZOHO, MAIL_CHIMP**. See [contacts validation rules](https://www.callfire.com/help/docs/getting-started/managing-contacts/validating-contacts#section1)
-func (s *contacts) CreateContacts(ctx context.Context, request operations.CreateContactsRequest) (*operations.CreateContactsResponse, error) {
+func (s *contacts) CreateContacts(ctx context.Context, request []shared.Contact, security operations.CreateContactsSecurity) (*operations.CreateContactsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts"
 
@@ -317,7 +317,7 @@ func (s *contacts) CreateContacts(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -371,16 +371,16 @@ func (s *contacts) CreateContacts(ctx context.Context, request operations.Create
 
 // DeleteContact - Delete a contact
 // Deletes a contact instance from account
-func (s *contacts) DeleteContact(ctx context.Context, request operations.DeleteContactRequest) (*operations.DeleteContactResponse, error) {
+func (s *contacts) DeleteContact(ctx context.Context, request operations.DeleteContactRequest, security operations.DeleteContactSecurity) (*operations.DeleteContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -424,16 +424,16 @@ func (s *contacts) DeleteContact(ctx context.Context, request operations.DeleteC
 
 // DeleteContactList - Delete a contact list
 // Deletes a contact list, included contacts will not be deleted.
-func (s *contacts) DeleteContactList(ctx context.Context, request operations.DeleteContactListRequest) (*operations.DeleteContactListResponse, error) {
+func (s *contacts) DeleteContactList(ctx context.Context, request operations.DeleteContactListRequest, security operations.DeleteContactListSecurity) (*operations.DeleteContactListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -477,16 +477,16 @@ func (s *contacts) DeleteContactList(ctx context.Context, request operations.Del
 
 // DeleteDoNotContact - Delete do not contact (dnc) number. If number contains commas treat as list of numbers
 // Delete a Do Not Contact (DNC) contact entry.
-func (s *contacts) DeleteDoNotContact(ctx context.Context, request operations.DeleteDoNotContactRequest) (*operations.DeleteDoNotContactResponse, error) {
+func (s *contacts) DeleteDoNotContact(ctx context.Context, request operations.DeleteDoNotContactRequest, security operations.DeleteDoNotContactSecurity) (*operations.DeleteDoNotContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -530,16 +530,16 @@ func (s *contacts) DeleteDoNotContact(ctx context.Context, request operations.De
 
 // DeleteDoNotContactsBySource - Delete do not contact (dnc) numbers contained in source.
 // Delete Do Not Contact (DNC) contact entries contained in source.
-func (s *contacts) DeleteDoNotContactsBySource(ctx context.Context, request operations.DeleteDoNotContactsBySourceRequest) (*operations.DeleteDoNotContactsBySourceResponse, error) {
+func (s *contacts) DeleteDoNotContactsBySource(ctx context.Context, request operations.DeleteDoNotContactsBySourceRequest, security operations.DeleteDoNotContactsBySourceSecurity) (*operations.DeleteDoNotContactsBySourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/sources/{source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/sources/{source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -583,7 +583,7 @@ func (s *contacts) DeleteDoNotContactsBySource(ctx context.Context, request oper
 
 // FindContactLists - Find contact lists
 // Searches for all contact lists which are available for the current user. Returns a paged list of contact lists
-func (s *contacts) FindContactLists(ctx context.Context, request operations.FindContactListsRequest) (*operations.FindContactListsResponse, error) {
+func (s *contacts) FindContactLists(ctx context.Context, request operations.FindContactListsRequest, security operations.FindContactListsSecurity) (*operations.FindContactListsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts/lists"
 
@@ -592,11 +592,11 @@ func (s *contacts) FindContactLists(ctx context.Context, request operations.Find
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,7 +650,7 @@ func (s *contacts) FindContactLists(ctx context.Context, request operations.Find
 
 // FindContacts - Find contacts
 // Find user's contacts by id, contact list, or on any property name. Returns a paged list of contacts
-func (s *contacts) FindContacts(ctx context.Context, request operations.FindContactsRequest) (*operations.FindContactsResponse, error) {
+func (s *contacts) FindContacts(ctx context.Context, request operations.FindContactsRequest, security operations.FindContactsSecurity) (*operations.FindContactsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts"
 
@@ -659,11 +659,11 @@ func (s *contacts) FindContacts(ctx context.Context, request operations.FindCont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -717,7 +717,7 @@ func (s *contacts) FindContacts(ctx context.Context, request operations.FindCont
 
 // FindDoNotContacts - Find do not contact (dnc) items
 // Searches for all Do Not Contact (DNC) objects created by user. These DoNotContact entries only affect calls/texts/campaigns on this account. Returns a paged list of DoNotContact objects
-func (s *contacts) FindDoNotContacts(ctx context.Context, request operations.FindDoNotContactsRequest) (*operations.FindDoNotContactsResponse, error) {
+func (s *contacts) FindDoNotContacts(ctx context.Context, request operations.FindDoNotContactsRequest, security operations.FindDoNotContactsSecurity) (*operations.FindDoNotContactsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts/dncs"
 
@@ -726,11 +726,11 @@ func (s *contacts) FindDoNotContacts(ctx context.Context, request operations.Fin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -784,20 +784,20 @@ func (s *contacts) FindDoNotContacts(ctx context.Context, request operations.Fin
 
 // GetContact - Find a specific contact
 // Returns a Contact instance for a given contact id. Deleted contacts can be still retrieved but will be marked as deleted. Deleted contacts will not be shown in search request.
-func (s *contacts) GetContact(ctx context.Context, request operations.GetContactRequest) (*operations.GetContactResponse, error) {
+func (s *contacts) GetContact(ctx context.Context, request operations.GetContactRequest, security operations.GetContactSecurity) (*operations.GetContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -851,20 +851,20 @@ func (s *contacts) GetContact(ctx context.Context, request operations.GetContact
 
 // GetContactHistory - Find a contact's history
 // Searches for all texts and calls attributed to a contact. Returns a list of calls and texts a contact has been involved with
-func (s *contacts) GetContactHistory(ctx context.Context, request operations.GetContactHistoryRequest) (*operations.GetContactHistoryResponse, error) {
+func (s *contacts) GetContactHistory(ctx context.Context, request operations.GetContactHistoryRequest, security operations.GetContactHistorySecurity) (*operations.GetContactHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,20 +918,20 @@ func (s *contacts) GetContactHistory(ctx context.Context, request operations.Get
 
 // GetContactList - Find a specific contact list
 // Returns a single ContactList instance for a given contact list id
-func (s *contacts) GetContactList(ctx context.Context, request operations.GetContactListRequest) (*operations.GetContactListResponse, error) {
+func (s *contacts) GetContactList(ctx context.Context, request operations.GetContactListRequest, security operations.GetContactListSecurity) (*operations.GetContactListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -985,20 +985,20 @@ func (s *contacts) GetContactList(ctx context.Context, request operations.GetCon
 
 // GetContactListItems - Find contacts in a contact list
 // Searches for all entries in a contact list with specified id. Returns a paged list of contact entries
-func (s *contacts) GetContactListItems(ctx context.Context, request operations.GetContactListItemsRequest) (*operations.GetContactListItemsResponse, error) {
+func (s *contacts) GetContactListItems(ctx context.Context, request operations.GetContactListItemsRequest, security operations.GetContactListItemsSecurity) (*operations.GetContactListItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1052,16 +1052,16 @@ func (s *contacts) GetContactListItems(ctx context.Context, request operations.G
 
 // GetDoNotContact - Get do not contact (dnc)
 // Get Do Not Contact (DNC) object create by user. This DoNotContact entry only affects calls/texts/campaigns on this account.
-func (s *contacts) GetDoNotContact(ctx context.Context, request operations.GetDoNotContactRequest) (*operations.GetDoNotContactResponse, error) {
+func (s *contacts) GetDoNotContact(ctx context.Context, request operations.GetDoNotContactRequest, security operations.GetDoNotContactSecurity) (*operations.GetDoNotContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1115,20 +1115,20 @@ func (s *contacts) GetDoNotContact(ctx context.Context, request operations.GetDo
 
 // GetUniversalDoNotContacts - Find universal do not contacts (udnc) associated with toNumber
 // Searches for a UniversalDoNotContact object for a given phone number. Shows whether inbound/outbound actions are allowed for a given number
-func (s *contacts) GetUniversalDoNotContacts(ctx context.Context, request operations.GetUniversalDoNotContactsRequest) (*operations.GetUniversalDoNotContactsResponse, error) {
+func (s *contacts) GetUniversalDoNotContacts(ctx context.Context, request operations.GetUniversalDoNotContactsRequest, security operations.GetUniversalDoNotContactsSecurity) (*operations.GetUniversalDoNotContactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/universals/{toNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/universals/{toNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1182,16 +1182,16 @@ func (s *contacts) GetUniversalDoNotContacts(ctx context.Context, request operat
 
 // RemoveContactListItem - Delete a contact from a contact list
 // Deletes a single contact from a contact list
-func (s *contacts) RemoveContactListItem(ctx context.Context, request operations.RemoveContactListItemRequest) (*operations.RemoveContactListItemResponse, error) {
+func (s *contacts) RemoveContactListItem(ctx context.Context, request operations.RemoveContactListItemRequest, security operations.RemoveContactListItemSecurity) (*operations.RemoveContactListItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1235,20 +1235,20 @@ func (s *contacts) RemoveContactListItem(ctx context.Context, request operations
 
 // RemoveContactListItems - Delete contacts from a contact list
 // Deletes contacts from a contact list. List the contact ids in request to delete multiple contacts with one request.
-func (s *contacts) RemoveContactListItems(ctx context.Context, request operations.RemoveContactListItemsRequest) (*operations.RemoveContactListItemsResponse, error) {
+func (s *contacts) RemoveContactListItems(ctx context.Context, request operations.RemoveContactListItemsRequest, security operations.RemoveContactListItemsSecurity) (*operations.RemoveContactListItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1292,11 +1292,11 @@ func (s *contacts) RemoveContactListItems(ctx context.Context, request operation
 
 // UpdateContact - Update a contact
 // Updates a single contact instance with id specified. See [contact validation rules](https://www.callfire.com/help/docs/getting-started/managing-contacts/validating-contacts#section1)
-func (s *contacts) UpdateContact(ctx context.Context, request operations.UpdateContactRequest) (*operations.UpdateContactResponse, error) {
+func (s *contacts) UpdateContact(ctx context.Context, request operations.UpdateContactRequest, security operations.UpdateContactSecurity) (*operations.UpdateContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Contact", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1308,7 +1308,7 @@ func (s *contacts) UpdateContact(ctx context.Context, request operations.UpdateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1352,11 +1352,11 @@ func (s *contacts) UpdateContact(ctx context.Context, request operations.UpdateC
 
 // UpdateContactList - Update a contact list
 // Updates contact list instance.
-func (s *contacts) UpdateContactList(ctx context.Context, request operations.UpdateContactListRequest) (*operations.UpdateContactListResponse, error) {
+func (s *contacts) UpdateContactList(ctx context.Context, request operations.UpdateContactListRequest, security operations.UpdateContactListSecurity) (*operations.UpdateContactListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/lists/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateContactListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1368,7 +1368,7 @@ func (s *contacts) UpdateContactList(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1412,11 +1412,11 @@ func (s *contacts) UpdateContactList(ctx context.Context, request operations.Upd
 
 // UpdateDoNotContact - Update an individual do not contact (dnc) number
 // Update a Do Not Contact (DNC) contact entry. Can toggle whether the DNC is enabled for calls/texts.
-func (s *contacts) UpdateDoNotContact(ctx context.Context, request operations.UpdateDoNotContactRequest) (*operations.UpdateDoNotContactResponse, error) {
+func (s *contacts) UpdateDoNotContact(ctx context.Context, request operations.UpdateDoNotContactRequest, security operations.UpdateDoNotContactSecurity) (*operations.UpdateDoNotContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/dncs/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DoNotContactInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1428,7 +1428,7 @@ func (s *contacts) UpdateDoNotContact(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

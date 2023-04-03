@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssessmentPathParams struct {
-	//  The <code>assessmentid</code> returned by <a>StartAssessment</a>.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAssessmentHeaders struct {
+type GetAssessmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetAssessmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAssessmentRequest struct {
-	PathParams GetAssessmentPathParams
-	Headers    GetAssessmentHeaders
+	//  The <code>assessmentid</code> returned by <a>StartAssessment</a>.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAssessmentResponse struct {

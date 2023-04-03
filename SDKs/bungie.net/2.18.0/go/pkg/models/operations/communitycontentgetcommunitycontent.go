@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CommunityContentGetCommunityContentPathParams struct {
+type CommunityContentGetCommunityContentRequest struct {
 	// The type of media to get
 	MediaFilter int `pathParam:"style=simple,explode=false,name=mediaFilter"`
 	// Zero based page
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// The sort mode.
 	Sort int64 `pathParam:"style=simple,explode=false,name=sort"`
-}
-
-type CommunityContentGetCommunityContentRequest struct {
-	PathParams CommunityContentGetCommunityContentPathParams
 }
 
 // CommunityContentGetCommunityContent200Wildcard - Look at the Response property for more information about the nature of this response

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GeneratePresignedUrlsPublicPathParams struct {
-	// Access key
-	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
 // GeneratePresignedUrlsPublicXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type GeneratePresignedUrlsPublicXSdsDateFormatEnum string
 
@@ -49,15 +42,14 @@ func (e *GeneratePresignedUrlsPublicXSdsDateFormatEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GeneratePresignedUrlsPublicHeaders struct {
+type GeneratePresignedUrlsPublicRequest struct {
+	GeneratePresignedUrlsRequest shared.GeneratePresignedUrlsRequest `request:"mediaType=application/json"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *GeneratePresignedUrlsPublicXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type GeneratePresignedUrlsPublicRequest struct {
-	PathParams GeneratePresignedUrlsPublicPathParams
-	Headers    GeneratePresignedUrlsPublicHeaders
-	Request    shared.GeneratePresignedUrlsRequest `request:"mediaType=application/json"`
+	// Access key
+	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type GeneratePresignedUrlsPublicResponse struct {

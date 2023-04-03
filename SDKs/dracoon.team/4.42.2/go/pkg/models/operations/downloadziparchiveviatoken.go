@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DownloadZipArchiveViaTokenPathParams struct {
+type DownloadZipArchiveViaTokenRequest struct {
 	// Download token
 	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type DownloadZipArchiveViaTokenRequest struct {
-	PathParams DownloadZipArchiveViaTokenPathParams
 }
 
 type DownloadZipArchiveViaTokenResponse struct {

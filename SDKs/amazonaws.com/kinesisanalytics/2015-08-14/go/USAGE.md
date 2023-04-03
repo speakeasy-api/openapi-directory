@@ -13,31 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddApplicationCloudWatchLoggingOptionRequest{
-        Headers: operations.AddApplicationCloudWatchLoggingOptionHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption",
-        },
-        Request: shared.AddApplicationCloudWatchLoggingOptionRequest{
-            ApplicationName: "illum",
+        AddApplicationCloudWatchLoggingOptionRequest: shared.AddApplicationCloudWatchLoggingOptionRequest{
+            ApplicationName: "corrupti",
             CloudWatchLoggingOption: shared.CloudWatchLoggingOption{
-                LogStreamARN: "vel",
-                RoleARN: "error",
+                LogStreamARN: "provident",
+                RoleARN: "distinctio",
             },
-            CurrentApplicationVersionID: 645894,
+            CurrentApplicationVersionID: 844266,
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption",
     }
 
     ctx := context.Background()

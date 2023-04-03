@@ -8,19 +8,14 @@ import (
 )
 
 type PatchCompaniesCompanyIDTerminalSettingsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchCompaniesCompanyIDTerminalSettingsPathParams struct {
-	// The unique identifier of the company account.
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchCompaniesCompanyIDTerminalSettingsRequest struct {
-	PathParams PatchCompaniesCompanyIDTerminalSettingsPathParams
-	Request    *shared.TerminalSettings `request:"mediaType=application/json"`
-	Security   PatchCompaniesCompanyIDTerminalSettingsSecurity
+	TerminalSettings *shared.TerminalSettings `request:"mediaType=application/json"`
+	// The unique identifier of the company account.
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 }
 
 type PatchCompaniesCompanyIDTerminalSettingsResponse struct {

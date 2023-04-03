@@ -34,7 +34,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostChangeStatus - Changes the status of the payment method.
 // Changes the status of the provided payment method to the specified status.
-func (s *general) PostChangeStatus(ctx context.Context, request operations.PostChangeStatusRequest) (*operations.PostChangeStatusResponse, error) {
+func (s *general) PostChangeStatus(ctx context.Context, request shared.StoredValueStatusChangeRequest, security operations.PostChangeStatusSecurity) (*operations.PostChangeStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/changeStatus"
 
@@ -50,7 +50,7 @@ func (s *general) PostChangeStatus(ctx context.Context, request operations.PostC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *general) PostChangeStatus(ctx context.Context, request operations.PostC
 
 // PostCheckBalance - Checks the balance.
 // Checks the balance of the provided payment method.
-func (s *general) PostCheckBalance(ctx context.Context, request operations.PostCheckBalanceRequest) (*operations.PostCheckBalanceResponse, error) {
+func (s *general) PostCheckBalance(ctx context.Context, request shared.StoredValueBalanceCheckRequest, security operations.PostCheckBalanceSecurity) (*operations.PostCheckBalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/checkBalance"
 
@@ -118,7 +118,7 @@ func (s *general) PostCheckBalance(ctx context.Context, request operations.PostC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *general) PostCheckBalance(ctx context.Context, request operations.PostC
 
 // PostIssue - Issues a new card.
 // Issues a new card of the given payment method.
-func (s *general) PostIssue(ctx context.Context, request operations.PostIssueRequest) (*operations.PostIssueResponse, error) {
+func (s *general) PostIssue(ctx context.Context, request shared.StoredValueIssueRequest, security operations.PostIssueSecurity) (*operations.PostIssueResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/issue"
 
@@ -186,7 +186,7 @@ func (s *general) PostIssue(ctx context.Context, request operations.PostIssueReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,7 +238,7 @@ func (s *general) PostIssue(ctx context.Context, request operations.PostIssueReq
 
 // PostLoad - Loads the payment method.
 // Loads the payment method with the specified funds.
-func (s *general) PostLoad(ctx context.Context, request operations.PostLoadRequest) (*operations.PostLoadResponse, error) {
+func (s *general) PostLoad(ctx context.Context, request shared.StoredValueLoadRequest, security operations.PostLoadSecurity) (*operations.PostLoadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/load"
 
@@ -254,7 +254,7 @@ func (s *general) PostLoad(ctx context.Context, request operations.PostLoadReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *general) PostLoad(ctx context.Context, request operations.PostLoadReque
 
 // PostMergeBalance - Merge the balance of two cards.
 // Increases the balance of the paymentmethod by the full amount left on the source paymentmethod
-func (s *general) PostMergeBalance(ctx context.Context, request operations.PostMergeBalanceRequest) (*operations.PostMergeBalanceResponse, error) {
+func (s *general) PostMergeBalance(ctx context.Context, request shared.StoredValueBalanceMergeRequest, security operations.PostMergeBalanceSecurity) (*operations.PostMergeBalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mergeBalance"
 
@@ -322,7 +322,7 @@ func (s *general) PostMergeBalance(ctx context.Context, request operations.PostM
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -374,7 +374,7 @@ func (s *general) PostMergeBalance(ctx context.Context, request operations.PostM
 
 // PostVoidTransaction - Voids a transaction.
 // Voids the referenced stored value transaction.
-func (s *general) PostVoidTransaction(ctx context.Context, request operations.PostVoidTransactionRequest) (*operations.PostVoidTransactionResponse, error) {
+func (s *general) PostVoidTransaction(ctx context.Context, request shared.StoredValueVoidRequest, security operations.PostVoidTransactionSecurity) (*operations.PostVoidTransactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/voidTransaction"
 
@@ -390,7 +390,7 @@ func (s *general) PostVoidTransaction(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

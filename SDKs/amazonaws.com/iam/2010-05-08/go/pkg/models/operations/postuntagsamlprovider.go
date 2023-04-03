@@ -50,25 +50,17 @@ func (e *POSTUntagSAMLProviderVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTUntagSAMLProviderQueryParams struct {
-	Action  POSTUntagSAMLProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUntagSAMLProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUntagSAMLProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUntagSAMLProviderRequest struct {
-	QueryParams POSTUntagSAMLProviderQueryParams
-	Headers     POSTUntagSAMLProviderHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUntagSAMLProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                           `request:"mediaType=text/xml"`
+	Version           POSTUntagSAMLProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUntagSAMLProviderResponse struct {

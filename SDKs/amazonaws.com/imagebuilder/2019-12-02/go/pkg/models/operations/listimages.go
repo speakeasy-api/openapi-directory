@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListImagesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListImagesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListImagesRequestBodyOwnerEnum - The owner defines which images you want to list. By default, this request will only show images owned by your account. You can use this field to specify if you want to view images owned by yourself, by Amazon, or those images that have been shared with you by other customers.
 type ListImagesRequestBodyOwnerEnum string
 
@@ -72,9 +55,18 @@ type ListImagesRequestBody struct {
 }
 
 type ListImagesRequest struct {
-	QueryParams ListImagesQueryParams
-	Headers     ListImagesHeaders
-	Request     ListImagesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListImagesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListImagesResponse struct {

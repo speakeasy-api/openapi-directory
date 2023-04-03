@@ -13,88 +13,69 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddCustomAttributesRequest{
-        Headers: operations.AddCustomAttributesHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
-        },
-        Request: shared.AddCustomAttributesRequest{
+        AddCustomAttributesRequest: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Number",
+                    AttributeDataType: "DateTime",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "error",
+                    Name: "distinctio",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "deserunt",
-                        MinValue: "suscipit",
+                        MaxValue: "quibusdam",
+                        MinValue: "unde",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "iure",
-                        MinLength: "magnam",
+                        MaxLength: "nulla",
+                        MinLength: "corrupti",
                     },
                 },
                 shared.SchemaAttributeType{
                     AttributeDataType: "Boolean",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "ipsa",
+                    Name: "vel",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "delectus",
-                        MinValue: "tempora",
+                        MaxValue: "error",
+                        MinValue: "deserunt",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
                         MaxLength: "suscipit",
-                        MinLength: "molestiae",
+                        MinLength: "iure",
                     },
                 },
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Boolean",
+                    AttributeDataType: "Number",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "placeat",
+                    Name: "debitis",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "voluptatum",
-                        MinValue: "iusto",
+                        MaxValue: "ipsa",
+                        MinValue: "delectus",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "excepturi",
-                        MinLength: "nisi",
-                    },
-                },
-                shared.SchemaAttributeType{
-                    AttributeDataType: "Boolean",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: false,
-                    Name: "temporibus",
-                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "ab",
-                        MinValue: "quis",
-                    },
-                    Required: false,
-                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "veritatis",
-                        MinLength: "deserunt",
+                        MaxLength: "tempora",
+                        MinLength: "suscipit",
                     },
                 },
             },
-            UserPoolID: "perferendis",
+            UserPoolID: "molestiae",
         },
+        XAmzAlgorithm: "minus",
+        XAmzContentSha256: "placeat",
+        XAmzCredential: "voluptatum",
+        XAmzDate: "iusto",
+        XAmzSecurityToken: "excepturi",
+        XAmzSignature: "nisi",
+        XAmzSignedHeaders: "recusandae",
+        XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
     }
 
     ctx := context.Background()

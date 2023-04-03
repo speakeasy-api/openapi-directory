@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDealerMotorcycleIDPathParams struct {
-	// Dealer id to get all the dealer info attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDealerMotorcycleIDQueryParams struct {
+type GetDealerMotorcycleIDRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
+	// Dealer id to get all the dealer info attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// boolean param to include site providers name in response
 	Provider *bool `queryParam:"style=form,explode=true,name=provider"`
-}
-
-type GetDealerMotorcycleIDRequest struct {
-	PathParams  GetDealerMotorcycleIDPathParams
-	QueryParams GetDealerMotorcycleIDQueryParams
 }
 
 type GetDealerMotorcycleIDResponse struct {

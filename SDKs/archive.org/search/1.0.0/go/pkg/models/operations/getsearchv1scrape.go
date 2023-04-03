@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchV1ScrapeQueryParams struct {
+type GetSearchV1ScrapeRequest struct {
 	// Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Cursor for scrolling (used for subsequent calls)
@@ -22,10 +22,6 @@ type GetSearchV1ScrapeQueryParams struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Request total only; do not return hits
 	TotalOnly *bool `queryParam:"style=form,explode=true,name=total_only"`
-}
-
-type GetSearchV1ScrapeRequest struct {
-	QueryParams GetSearchV1ScrapeQueryParams
 }
 
 type GetSearchV1ScrapeResponse struct {

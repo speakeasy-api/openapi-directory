@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CreateCliToken - Creates a CLI token for the Airflow CLI. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-cli.html">Creating an Apache Airflow CLI token</a>.
 func (s *SDK) CreateCliToken(ctx context.Context, request operations.CreateCliTokenRequest) (*operations.CreateCliTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clitoken/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clitoken/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -170,9 +170,9 @@ func (s *SDK) CreateCliToken(ctx context.Context, request operations.CreateCliTo
 // CreateEnvironment - Creates an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 func (s *SDK) CreateEnvironment(ctx context.Context, request operations.CreateEnvironmentRequest) (*operations.CreateEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -187,7 +187,7 @@ func (s *SDK) CreateEnvironment(ctx context.Context, request operations.CreateEn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -246,14 +246,14 @@ func (s *SDK) CreateEnvironment(ctx context.Context, request operations.CreateEn
 // CreateWebLoginToken - Creates a web login token for the Airflow Web UI. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-web.html">Creating an Apache Airflow web login token</a>.
 func (s *SDK) CreateWebLoginToken(ctx context.Context, request operations.CreateWebLoginTokenRequest) (*operations.CreateWebLoginTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webtoken/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webtoken/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -332,14 +332,14 @@ func (s *SDK) CreateWebLoginToken(ctx context.Context, request operations.Create
 // DeleteEnvironment - Deletes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 func (s *SDK) DeleteEnvironment(ctx context.Context, request operations.DeleteEnvironmentRequest) (*operations.DeleteEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -408,14 +408,14 @@ func (s *SDK) DeleteEnvironment(ctx context.Context, request operations.DeleteEn
 // GetEnvironment - Describes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 func (s *SDK) GetEnvironment(ctx context.Context, request operations.GetEnvironmentRequest) (*operations.GetEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -491,9 +491,9 @@ func (s *SDK) ListEnvironments(ctx context.Context, request operations.ListEnvir
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -554,14 +554,14 @@ func (s *SDK) ListEnvironments(ctx context.Context, request operations.ListEnvir
 // ListTagsForResource - Lists the key-value tag pairs associated to the Amazon Managed Workflows for Apache Airflow (MWAA) environment. For example, <code>"Environment": "Staging"</code>.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -630,9 +630,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // PublishMetrics -  <b>Internal only</b>. Publishes environment health metrics to Amazon CloudWatch.
 func (s *SDK) PublishMetrics(ctx context.Context, request operations.PublishMetricsRequest) (*operations.PublishMetricsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metrics/environments/{EnvironmentName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/metrics/environments/{EnvironmentName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -647,7 +647,7 @@ func (s *SDK) PublishMetrics(ctx context.Context, request operations.PublishMetr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -706,9 +706,9 @@ func (s *SDK) PublishMetrics(ctx context.Context, request operations.PublishMetr
 // TagResource - Associates key-value tag pairs to your Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -723,7 +723,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -792,16 +792,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes key-value tag pairs associated to your Amazon Managed Workflows for Apache Airflow (MWAA) environment. For example, <code>"Environment": "Staging"</code>.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -872,9 +872,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateEnvironment - Updates an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 func (s *SDK) UpdateEnvironment(ctx context.Context, request operations.UpdateEnvironmentRequest) (*operations.UpdateEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/environments/{Name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -889,7 +889,7 @@ func (s *SDK) UpdateEnvironment(ctx context.Context, request operations.UpdateEn
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

@@ -6,29 +6,17 @@ import (
 	"net/http"
 )
 
-type DownloadFileViaTokenPathParams struct {
-	// Download token
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type DownloadFileViaTokenQueryParams struct {
-	// Always return `application/octet-stream` instead of specific mimetype
-	GenericMimetype *bool `queryParam:"style=form,explode=true,name=generic_mimetype"`
-	// Use Content-Disposition: `inline` instead of `attachment`
-	Inline *bool `queryParam:"style=form,explode=true,name=inline"`
-}
-
-type DownloadFileViaTokenHeaders struct {
+type DownloadFileViaTokenRequest struct {
 	// Range
 	//
 	// e.g. `bytes=0-999`
 	Range *string `header:"style=simple,explode=false,name=Range"`
-}
-
-type DownloadFileViaTokenRequest struct {
-	PathParams  DownloadFileViaTokenPathParams
-	QueryParams DownloadFileViaTokenQueryParams
-	Headers     DownloadFileViaTokenHeaders
+	// Always return `application/octet-stream` instead of specific mimetype
+	GenericMimetype *bool `queryParam:"style=form,explode=true,name=generic_mimetype"`
+	// Use Content-Disposition: `inline` instead of `attachment`
+	Inline *bool `queryParam:"style=form,explode=true,name=inline"`
+	// Download token
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type DownloadFileViaTokenResponse struct {

@@ -34,7 +34,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CreateAccount - Create a new account
 // The creation of an account requires some background processing. There is no instant feedback of the creation status.
-func (s *accounts) CreateAccount(ctx context.Context, request operations.CreateAccountRequest) (*operations.CreateAccountResponse, error) {
+func (s *accounts) CreateAccount(ctx context.Context, request shared.CreateAccount) (*operations.CreateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
@@ -88,14 +88,14 @@ func (s *accounts) CreateAccount(ctx context.Context, request operations.CreateA
 // GetAccount - Get a specific account
 func (s *accounts) GetAccount(ctx context.Context, request operations.GetAccountRequest) (*operations.GetAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -143,7 +143,7 @@ func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccoun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

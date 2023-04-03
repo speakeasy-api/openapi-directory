@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTemplatesDesignerTemplatesGetQueryParams struct {
+type ListTemplatesDesignerTemplatesGetRequest struct {
 	Limit  *int64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListTemplatesDesignerTemplatesGetRequest struct {
-	QueryParams ListTemplatesDesignerTemplatesGetQueryParams
 }
 
 type ListTemplatesDesignerTemplatesGetResponse struct {

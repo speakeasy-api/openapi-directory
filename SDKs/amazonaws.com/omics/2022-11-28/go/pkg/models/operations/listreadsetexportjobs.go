@@ -8,28 +8,6 @@ import (
 	"time"
 )
 
-type ListReadSetExportJobsPathParams struct {
-	// The jobs' sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
-type ListReadSetExportJobsQueryParams struct {
-	// The maximum number of jobs to return in one page of results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Specify the pagination token from a previous request to retrieve the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListReadSetExportJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListReadSetExportJobsRequestBodyFilter - An read set export job filter.
 type ListReadSetExportJobsRequestBodyFilter struct {
 	CreatedAfter  *time.Time                         `json:"createdAfter,omitempty"`
@@ -43,10 +21,20 @@ type ListReadSetExportJobsRequestBody struct {
 }
 
 type ListReadSetExportJobsRequest struct {
-	PathParams  ListReadSetExportJobsPathParams
-	QueryParams ListReadSetExportJobsQueryParams
-	Headers     ListReadSetExportJobsHeaders
-	Request     ListReadSetExportJobsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListReadSetExportJobsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The maximum number of jobs to return in one page of results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Specify the pagination token from a previous request to retrieve the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The jobs' sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type ListReadSetExportJobsResponse struct {

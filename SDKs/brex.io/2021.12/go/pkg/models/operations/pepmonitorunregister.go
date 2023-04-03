@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type PepMonitorUnregisterSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PepMonitorUnregisterPathParams struct {
-	// The identifier of the Monitor
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type PepMonitorUnregisterRequest struct {
-	PathParams PepMonitorUnregisterPathParams
-	Security   PepMonitorUnregisterSecurity
+	// The identifier of the Monitor
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PepMonitorUnregisterDefaultApplicationJSON - Detailed information about the error

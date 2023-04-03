@@ -8,13 +8,8 @@ import (
 )
 
 type TeamsUpdateSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsUpdatePathParams struct {
-	// Team unique ID.
-	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type TeamsUpdateRequestBody struct {
@@ -23,9 +18,9 @@ type TeamsUpdateRequestBody struct {
 }
 
 type TeamsUpdateRequest struct {
-	PathParams TeamsUpdatePathParams
-	Request    *TeamsUpdateRequestBody `request:"mediaType=application/json"`
-	Security   TeamsUpdateSecurity
+	RequestBody *TeamsUpdateRequestBody `request:"mediaType=application/json"`
+	// Team unique ID.
+	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
 type TeamsUpdateResponse struct {

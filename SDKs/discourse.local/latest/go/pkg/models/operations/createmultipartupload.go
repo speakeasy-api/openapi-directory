@@ -55,10 +55,6 @@ type CreateMultipartUploadRequestBody struct {
 	UploadType CreateMultipartUploadRequestBodyUploadTypeEnum `json:"upload_type"`
 }
 
-type CreateMultipartUploadRequest struct {
-	Request *CreateMultipartUploadRequestBody `request:"mediaType=application/json"`
-}
-
 // CreateMultipartUpload200ApplicationJSON - external upload initialized
 type CreateMultipartUpload200ApplicationJSON struct {
 	// The identifier of the multipart upload in the external

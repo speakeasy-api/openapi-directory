@@ -34,7 +34,7 @@ func newHostedOnboarding(defaultClient, securityClient HTTPClient, serverURL, la
 
 // GetThemes - Get a list of hosted onboarding page themes
 // Returns a list of hosted onboarding page themes.
-func (s *hostedOnboarding) GetThemes(ctx context.Context, request operations.GetThemesRequest) (*operations.GetThemesResponse, error) {
+func (s *hostedOnboarding) GetThemes(ctx context.Context) (*operations.GetThemesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/themes"
 
@@ -43,7 +43,7 @@ func (s *hostedOnboarding) GetThemes(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *hostedOnboarding) GetThemes(ctx context.Context, request operations.Get
 
 // GetThemesID - Get an onboarding link theme
 // Returns the details of the theme identified in the path.
-func (s *hostedOnboarding) GetThemesID(ctx context.Context, request operations.GetThemesIDRequest) (*operations.GetThemesIDResponse, error) {
+func (s *hostedOnboarding) GetThemesID(ctx context.Context, request operations.GetThemesIDRequest, security operations.GetThemesIDSecurity) (*operations.GetThemesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/themes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/themes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,11 +160,11 @@ func (s *hostedOnboarding) GetThemesID(ctx context.Context, request operations.G
 
 // PostLegalEntitiesIDOnboardingLinks - Get a link to an Adyen-hosted onboarding page
 // Returns a link to an Adyen-hosted onboarding page where you need to redirect your user.
-func (s *hostedOnboarding) PostLegalEntitiesIDOnboardingLinks(ctx context.Context, request operations.PostLegalEntitiesIDOnboardingLinksRequest) (*operations.PostLegalEntitiesIDOnboardingLinksResponse, error) {
+func (s *hostedOnboarding) PostLegalEntitiesIDOnboardingLinks(ctx context.Context, request operations.PostLegalEntitiesIDOnboardingLinksRequest, security operations.PostLegalEntitiesIDOnboardingLinksSecurity) (*operations.PostLegalEntitiesIDOnboardingLinksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/onboardingLinks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/onboardingLinks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OnboardingLinkInfo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,7 +176,7 @@ func (s *hostedOnboarding) PostLegalEntitiesIDOnboardingLinks(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

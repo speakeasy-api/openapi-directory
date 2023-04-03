@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOriginKeysRequest struct {
-	Request *shared.CheckoutUtilityRequest `request:"mediaType=application/json"`
-}
-
 type PostOriginKeysResponse struct {
 	// OK - the request has succeeded.
 	CheckoutUtilityResponse *shared.CheckoutUtilityResponse

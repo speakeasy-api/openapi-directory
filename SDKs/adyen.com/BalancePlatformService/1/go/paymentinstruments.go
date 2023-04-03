@@ -34,16 +34,16 @@ func newPaymentInstruments(defaultClient, securityClient HTTPClient, serverURL, 
 
 // GetPaymentInstrumentsID - Get a payment instrument
 // Returns the details of a payment instrument.
-func (s *paymentInstruments) GetPaymentInstrumentsID(ctx context.Context, request operations.GetPaymentInstrumentsIDRequest) (*operations.GetPaymentInstrumentsIDResponse, error) {
+func (s *paymentInstruments) GetPaymentInstrumentsID(ctx context.Context, request operations.GetPaymentInstrumentsIDRequest, security operations.GetPaymentInstrumentsIDSecurity) (*operations.GetPaymentInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *paymentInstruments) GetPaymentInstrumentsID(ctx context.Context, reques
 
 // GetPaymentInstrumentsIDReveal - Get the reveal information of a payment instrument
 // Returns the reveal information of a payment instrument.
-func (s *paymentInstruments) GetPaymentInstrumentsIDReveal(ctx context.Context, request operations.GetPaymentInstrumentsIDRevealRequest) (*operations.GetPaymentInstrumentsIDRevealResponse, error) {
+func (s *paymentInstruments) GetPaymentInstrumentsIDReveal(ctx context.Context, request operations.GetPaymentInstrumentsIDRevealRequest, security operations.GetPaymentInstrumentsIDRevealSecurity) (*operations.GetPaymentInstrumentsIDRevealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/reveal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/reveal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,16 +160,16 @@ func (s *paymentInstruments) GetPaymentInstrumentsIDReveal(ctx context.Context, 
 
 // GetPaymentInstrumentsIDTransactionRules - Get all transaction rules for a payment instrument
 // Returns a list of transaction rules associated with a payment instrument.
-func (s *paymentInstruments) GetPaymentInstrumentsIDTransactionRules(ctx context.Context, request operations.GetPaymentInstrumentsIDTransactionRulesRequest) (*operations.GetPaymentInstrumentsIDTransactionRulesResponse, error) {
+func (s *paymentInstruments) GetPaymentInstrumentsIDTransactionRules(ctx context.Context, request operations.GetPaymentInstrumentsIDTransactionRulesRequest, security operations.GetPaymentInstrumentsIDTransactionRulesSecurity) (*operations.GetPaymentInstrumentsIDTransactionRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/transactionRules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/transactionRules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,11 +223,11 @@ func (s *paymentInstruments) GetPaymentInstrumentsIDTransactionRules(ctx context
 
 // PatchPaymentInstrumentsID - Update a payment instrument
 // Updates a payment instrument. Once a payment instrument is already active, you can only update its status. However, for cards created with **inactive** status, you can still update the balance account associated with the card.
-func (s *paymentInstruments) PatchPaymentInstrumentsID(ctx context.Context, request operations.PatchPaymentInstrumentsIDRequest) (*operations.PatchPaymentInstrumentsIDResponse, error) {
+func (s *paymentInstruments) PatchPaymentInstrumentsID(ctx context.Context, request operations.PatchPaymentInstrumentsIDRequest, security operations.PatchPaymentInstrumentsIDSecurity) (*operations.PatchPaymentInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentInstrumentUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,7 +239,7 @@ func (s *paymentInstruments) PatchPaymentInstrumentsID(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -295,7 +295,7 @@ func (s *paymentInstruments) PatchPaymentInstrumentsID(ctx context.Context, requ
 // Creates a payment instrument to issue a physical card, a virtual card, or a business account to your user.
 //
 //	For more information, refer to [Issue cards](https://docs.adyen.com/issuing/create-cards) or [Issue business accounts](https://docs.adyen.com/marketplaces-and-platforms/business-accounts).
-func (s *paymentInstruments) PostPaymentInstruments(ctx context.Context, request operations.PostPaymentInstrumentsRequest) (*operations.PostPaymentInstrumentsResponse, error) {
+func (s *paymentInstruments) PostPaymentInstruments(ctx context.Context, request shared.PaymentInstrumentInfo, security operations.PostPaymentInstrumentsSecurity) (*operations.PostPaymentInstrumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/paymentInstruments"
 
@@ -311,7 +311,7 @@ func (s *paymentInstruments) PostPaymentInstruments(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

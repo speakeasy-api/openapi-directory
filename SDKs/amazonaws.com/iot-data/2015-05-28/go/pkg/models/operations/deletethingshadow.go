@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteThingShadowPathParams struct {
-	// The name of the thing.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type DeleteThingShadowQueryParams struct {
-	// The name of the shadow.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type DeleteThingShadowHeaders struct {
+type DeleteThingShadowRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteThingShadowHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteThingShadowRequest struct {
-	PathParams  DeleteThingShadowPathParams
-	QueryParams DeleteThingShadowQueryParams
-	Headers     DeleteThingShadowHeaders
+	// The name of the shadow.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// The name of the thing.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type DeleteThingShadowResponse struct {

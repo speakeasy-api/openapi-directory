@@ -13,25 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DeleteEarthObservationJobRequest{
-        PathParams: operations.DeleteEarthObservationJobPathParams{
-            Arn: "corrupti",
-        },
-        Headers: operations.DeleteEarthObservationJobHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
+        Arn: "corrupti",
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
     }
 
     ctx := context.Background()

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SegmentAnalyticsQueryParams struct {
+type SegmentAnalyticsRequest struct {
 	// (Optional) DateTime (ISO 8601 string)
 	//
 	// Point in time when the data series should end - defaults to time of the request.
@@ -19,10 +19,6 @@ type SegmentAnalyticsQueryParams struct {
 	//
 	// Segment API identifier.
 	SegmentID *string `queryParam:"style=form,explode=true,name=segment_id"`
-}
-
-type SegmentAnalyticsRequest struct {
-	QueryParams SegmentAnalyticsQueryParams
 }
 
 type SegmentAnalyticsResponse struct {

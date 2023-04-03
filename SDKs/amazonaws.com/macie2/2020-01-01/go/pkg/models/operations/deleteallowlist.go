@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAllowListPathParams struct {
-	// The unique identifier for the Amazon Macie resource that the request applies to.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAllowListQueryParams struct {
-	// <p>Specifies whether to force deletion of the allow list, even if active classification jobs are configured to use the list.</p> <p>When you try to delete an allow list, Amazon Macie checks for classification jobs that use the list and have a status other than COMPLETE or CANCELLED. By default, Macie rejects your request if any jobs meet these criteria. To skip these checks and delete the list, set this value to true. To delete the list only if no active jobs are configured to use it, set this value to false.</p>
-	IgnoreJobChecks *string `queryParam:"style=form,explode=true,name=ignoreJobChecks"`
-}
-
-type DeleteAllowListHeaders struct {
+type DeleteAllowListRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteAllowListHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAllowListRequest struct {
-	PathParams  DeleteAllowListPathParams
-	QueryParams DeleteAllowListQueryParams
-	Headers     DeleteAllowListHeaders
+	// The unique identifier for the Amazon Macie resource that the request applies to.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// <p>Specifies whether to force deletion of the allow list, even if active classification jobs are configured to use the list.</p> <p>When you try to delete an allow list, Amazon Macie checks for classification jobs that use the list and have a status other than COMPLETE or CANCELLED. By default, Macie rejects your request if any jobs meet these criteria. To skip these checks and delete the list, set this value to true. To delete the list only if no active jobs are configured to use it, set this value to false.</p>
+	IgnoreJobChecks *string `queryParam:"style=form,explode=true,name=ignoreJobChecks"`
 }
 
 type DeleteAllowListResponse struct {

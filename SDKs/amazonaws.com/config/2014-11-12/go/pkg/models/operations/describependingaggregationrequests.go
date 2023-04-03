@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribePendingAggregationRequestsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribePendingAggregationRequestsXAmzTargetEnum
 type DescribePendingAggregationRequestsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribePendingAggregationRequestsXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type DescribePendingAggregationRequestsHeaders struct {
+type DescribePendingAggregationRequestsRequest struct {
+	DescribePendingAggregationRequestsRequest shared.DescribePendingAggregationRequestsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribePendingAggregationRequestsHeaders struct {
 	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribePendingAggregationRequestsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribePendingAggregationRequestsRequest struct {
-	QueryParams DescribePendingAggregationRequestsQueryParams
-	Headers     DescribePendingAggregationRequestsHeaders
-	Request     shared.DescribePendingAggregationRequestsRequest `request:"mediaType=application/json"`
 }
 
 type DescribePendingAggregationRequestsResponse struct {

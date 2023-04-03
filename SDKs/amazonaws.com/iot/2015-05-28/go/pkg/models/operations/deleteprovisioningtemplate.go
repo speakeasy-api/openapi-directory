@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteProvisioningTemplatePathParams struct {
-	// The name of the fleet provision template to delete.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type DeleteProvisioningTemplateHeaders struct {
+type DeleteProvisioningTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteProvisioningTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteProvisioningTemplateRequest struct {
-	PathParams DeleteProvisioningTemplatePathParams
-	Headers    DeleteProvisioningTemplateHeaders
+	// The name of the fleet provision template to delete.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
 }
 
 type DeleteProvisioningTemplateResponse struct {

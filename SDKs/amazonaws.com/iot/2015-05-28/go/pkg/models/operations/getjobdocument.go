@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJobDocumentPathParams struct {
-	// The unique identifier you assigned to this job when it was created.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetJobDocumentHeaders struct {
+type GetJobDocumentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetJobDocumentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetJobDocumentRequest struct {
-	PathParams GetJobDocumentPathParams
-	Headers    GetJobDocumentHeaders
+	// The unique identifier you assigned to this job when it was created.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type GetJobDocumentResponse struct {

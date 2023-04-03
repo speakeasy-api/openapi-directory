@@ -8,24 +8,15 @@ import (
 )
 
 type InventoryVaccinesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type InventoryVaccinesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type InventoryVaccinesReadQueryParams struct {
-	CvxCode *string `queryParam:"style=form,explode=true,name=cvx_code"`
-	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	Since   *string `queryParam:"style=form,explode=true,name=since"`
-	Status  *string `queryParam:"style=form,explode=true,name=status"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type InventoryVaccinesReadRequest struct {
-	PathParams  InventoryVaccinesReadPathParams
-	QueryParams InventoryVaccinesReadQueryParams
-	Security    InventoryVaccinesReadSecurity
+	CvxCode *string `queryParam:"style=form,explode=true,name=cvx_code"`
+	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	Since   *string `queryParam:"style=form,explode=true,name=since"`
+	Status  *string `queryParam:"style=form,explode=true,name=status"`
 }
 
 type InventoryVaccinesReadResponse struct {

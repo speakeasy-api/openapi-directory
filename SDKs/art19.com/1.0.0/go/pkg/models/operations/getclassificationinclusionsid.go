@@ -8,17 +8,12 @@ import (
 )
 
 type GetClassificationInclusionsIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetClassificationInclusionsIDPathParams struct {
-	// The ID of the classification inclusion resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetClassificationInclusionsIDRequest struct {
-	PathParams GetClassificationInclusionsIDPathParams
-	Security   GetClassificationInclusionsIDSecurity
+	// The ID of the classification inclusion resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetClassificationInclusionsID200ApplicationVndAPIPlusJSON - Success

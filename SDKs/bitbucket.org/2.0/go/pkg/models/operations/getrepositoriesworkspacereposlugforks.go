@@ -10,20 +10,9 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugForksSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugForksPathParams struct {
-	// This can either be the repository slug or the UUID of the repository,
-	// surrounded by curly-braces, for example: `{repository UUID}`.
-	//
-	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetRepositoriesWorkspaceRepoSlugForksRoleEnum - Filters the result based on the authenticated user's role on each repository.
@@ -61,10 +50,14 @@ func (e *GetRepositoriesWorkspaceRepoSlugForksRoleEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetRepositoriesWorkspaceRepoSlugForksQueryParams struct {
+type GetRepositoriesWorkspaceRepoSlugForksRequest struct {
 	// Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
+	// This can either be the repository slug or the UUID of the repository,
+	// surrounded by curly-braces, for example: `{repository UUID}`.
+	//
+	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// Filters the result based on the authenticated user's role on each repository.
 	//
 	// * **member**: returns repositories to which the user has explicit read access
@@ -76,12 +69,10 @@ type GetRepositoriesWorkspaceRepoSlugForksQueryParams struct {
 	// Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugForksRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugForksPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugForksQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugForksSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugForksResponse struct {

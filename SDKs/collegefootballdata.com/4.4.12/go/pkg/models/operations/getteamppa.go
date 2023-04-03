@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamPPAQueryParams struct {
+type GetTeamPPARequest struct {
 	// Conference filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Filter to remove garbage time plays from calculations
@@ -16,10 +16,6 @@ type GetTeamPPAQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter (required if team not specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTeamPPARequest struct {
-	QueryParams GetTeamPPAQueryParams
 }
 
 type GetTeamPPAResponse struct {

@@ -30,20 +30,16 @@ func (e *DeleteStreamProcessorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteStreamProcessorHeaders struct {
-	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteStreamProcessorXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteStreamProcessorRequest struct {
-	Headers DeleteStreamProcessorHeaders
-	Request shared.DeleteStreamProcessorRequest `request:"mediaType=application/json"`
+	DeleteStreamProcessorRequest shared.DeleteStreamProcessorRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   DeleteStreamProcessorXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteStreamProcessorResponse struct {

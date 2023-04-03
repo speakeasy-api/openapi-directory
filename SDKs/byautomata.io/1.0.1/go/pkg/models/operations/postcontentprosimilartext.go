@@ -13,11 +13,6 @@ type PostContentproSimilarTextRequestBody struct {
 	Text string `json:"text"`
 }
 
-type PostContentproSimilarTextRequest struct {
-	// We'll provide information about related companies and articles based on the text you provide.
-	Request PostContentproSimilarTextRequestBody `request:"mediaType=application/json"`
-}
-
 type PostContentproSimilarText200ApplicationJSONData struct {
 	Article  *shared.Article            `json:"article,omitempty"`
 	Company  *shared.ContentProCompany  `json:"company,omitempty"`

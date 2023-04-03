@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDocumentClassifierSummariesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDocumentClassifierSummariesXAmzTargetEnum
 type ListDocumentClassifierSummariesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDocumentClassifierSummariesXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListDocumentClassifierSummariesHeaders struct {
+type ListDocumentClassifierSummariesRequest struct {
+	ListDocumentClassifierSummariesRequest shared.ListDocumentClassifierSummariesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDocumentClassifierSummariesHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDocumentClassifierSummariesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDocumentClassifierSummariesRequest struct {
-	QueryParams ListDocumentClassifierSummariesQueryParams
-	Headers     ListDocumentClassifierSummariesHeaders
-	Request     shared.ListDocumentClassifierSummariesRequest `request:"mediaType=application/json"`
 }
 
 type ListDocumentClassifierSummariesResponse struct {

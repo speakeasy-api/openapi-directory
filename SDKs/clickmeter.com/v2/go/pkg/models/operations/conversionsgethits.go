@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsGetHitsPathParams struct {
-	// Id of the conversion
-	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
 // ConversionsGetHitsFilterEnum - Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 type ConversionsGetHitsFilterEnum string
 
@@ -92,7 +87,9 @@ func (e *ConversionsGetHitsTimeframeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ConversionsGetHitsQueryParams struct {
+type ConversionsGetHitsRequest struct {
+	// Id of the conversion
+	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
 	// Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 	Filter *ConversionsGetHitsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
@@ -105,11 +102,6 @@ type ConversionsGetHitsQueryParams struct {
 	Timeframe ConversionsGetHitsTimeframeEnum `queryParam:"style=form,explode=true,name=timeframe"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type ConversionsGetHitsRequest struct {
-	PathParams  ConversionsGetHitsPathParams
-	QueryParams ConversionsGetHitsQueryParams
 }
 
 type ConversionsGetHitsResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFormsIDPathParams struct {
+type GetFormsIDRequest struct {
 	// Id of the form to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetFormsIDRequest struct {
-	PathParams GetFormsIDPathParams
 }
 
 type GetFormsIDResponse struct {

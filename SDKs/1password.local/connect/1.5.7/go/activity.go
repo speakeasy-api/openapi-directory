@@ -34,7 +34,7 @@ func newActivity(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // GetAPIActivity - Retrieve a list of API Requests that have been made.
-func (s *activity) GetAPIActivity(ctx context.Context, request operations.GetAPIActivityRequest) (*operations.GetAPIActivityResponse, error) {
+func (s *activity) GetAPIActivity(ctx context.Context, request operations.GetAPIActivityRequest, security operations.GetAPIActivitySecurity) (*operations.GetAPIActivityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/activity"
 
@@ -43,11 +43,11 @@ func (s *activity) GetAPIActivity(ctx context.Context, request operations.GetAPI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

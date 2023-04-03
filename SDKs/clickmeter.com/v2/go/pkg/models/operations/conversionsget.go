@@ -33,7 +33,7 @@ func (e *ConversionsGetStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ConversionsGetQueryParams struct {
+type ConversionsGetRequest struct {
 	// Exclude conversions created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude conversions created after this date (YYYYMMDD)
@@ -46,10 +46,6 @@ type ConversionsGetQueryParams struct {
 	Status *ConversionsGetStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
-}
-
-type ConversionsGetRequest struct {
-	QueryParams ConversionsGetQueryParams
 }
 
 type ConversionsGetResponse struct {

@@ -53,7 +53,7 @@ func newFeatureFlagAndSettingValues(defaultClient, securityClient HTTPClient, se
 // evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
 func (s *featureFlagAndSettingValues) GetSettingValue(ctx context.Context, request operations.GetSettingValueRequest) (*operations.GetSettingValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +122,7 @@ func (s *featureFlagAndSettingValues) GetSettingValue(ctx context.Context, reque
 // evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
 func (s *featureFlagAndSettingValues) GetSettingValues(ctx context.Context, request operations.GetSettingValuesRequest) (*operations.GetSettingValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -230,9 +230,9 @@ func (s *featureFlagAndSettingValues) GetSettingValues(ctx context.Context, requ
 // - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
 func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, request operations.ReplaceSettingValueRequest) (*operations.ReplaceSettingValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSettingValueModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -367,9 +367,9 @@ func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, r
 // - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
 func (s *featureFlagAndSettingValues) UpdateSettingValue(ctx context.Context, request operations.UpdateSettingValueRequest) (*operations.UpdateSettingValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JSONPatchInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -384,7 +384,7 @@ func (s *featureFlagAndSettingValues) UpdateSettingValue(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

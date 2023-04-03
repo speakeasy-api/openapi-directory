@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.KeywordSearchRequest{
-        QueryParams: operations.KeywordSearchQueryParams{
-            DomainCode: "corrupti",
-            Keyword: "provident",
-            NumberOfProducts: 715190,
-            SortBy: "quibusdam",
-        },
+        DomainCode: "corrupti",
+        Keyword: "provident",
+        NumberOfProducts: 715190,
+        SortBy: "quibusdam",
     }
 
     ctx := context.Background()

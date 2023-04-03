@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingCarUkIDExtraPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingCarUkIDExtraQueryParams struct {
+type GetListingCarUkIDExtraRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetListingCarUkIDExtraRequest struct {
-	PathParams  GetListingCarUkIDExtraPathParams
-	QueryParams GetListingCarUkIDExtraQueryParams
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetListingCarUkIDExtraResponse struct {

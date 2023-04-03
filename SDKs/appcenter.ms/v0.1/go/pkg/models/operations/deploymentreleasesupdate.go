@@ -6,22 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeploymentReleasesUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeploymentReleasesUpdatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// deployment name
-	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// release label
-	ReleaseLabel string `pathParam:"style=simple,explode=false,name=release_label"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DeploymentReleasesUpdateRequestBody - Release modification. All fields are optional and only provided fields will get updated.
@@ -34,10 +22,16 @@ type DeploymentReleasesUpdateRequestBody struct {
 }
 
 type DeploymentReleasesUpdateRequest struct {
-	PathParams DeploymentReleasesUpdatePathParams
 	// Release modification. All fields are optional and only provided fields will get updated.
-	Request  DeploymentReleasesUpdateRequestBody `request:"mediaType=application/json"`
-	Security DeploymentReleasesUpdateSecurity
+	RequestBody DeploymentReleasesUpdateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// deployment name
+	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// release label
+	ReleaseLabel string `pathParam:"style=simple,explode=false,name=release_label"`
 }
 
 // DeploymentReleasesUpdateDefaultApplicationJSON - Error

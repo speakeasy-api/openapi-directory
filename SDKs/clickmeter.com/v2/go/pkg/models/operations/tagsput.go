@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsPutRequest struct {
-	// The body of the tag
-	Request shared.APICoreDtoTagsTag `request:"mediaType=application/json"`
-}
-
 type TagsPutResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

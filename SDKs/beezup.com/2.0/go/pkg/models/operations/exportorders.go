@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportOrdersRequest struct {
-	Request shared.ExportOrderListRequest `request:"mediaType=application/json"`
-}
-
 type ExportOrdersResponse struct {
 	// Could not process request for given parameters values. Please check error message for more details.
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

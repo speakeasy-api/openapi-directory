@@ -43,14 +43,14 @@ func newProjectTemplates(defaultClient, securityClient HTTPClient, serverURL, la
 // Returns the complete project template record for a single project template.
 func (s *projectTemplates) GetProjectTemplate(ctx context.Context, request operations.GetProjectTemplateRequest) (*operations.GetProjectTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -117,7 +117,7 @@ func (s *projectTemplates) GetProjectTemplates(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -177,14 +177,14 @@ func (s *projectTemplates) GetProjectTemplates(ctx context.Context, request oper
 // Returns the compact project template records for all project templates in the team.
 func (s *projectTemplates) GetProjectTemplatesForTeam(ctx context.Context, request operations.GetProjectTemplatesForTeamRequest) (*operations.GetProjectTemplatesForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/project_templates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/project_templates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -248,9 +248,9 @@ func (s *projectTemplates) GetProjectTemplatesForTeam(ctx context.Context, reque
 // _Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/docs/workspace) parameter._
 func (s *projectTemplates) InstantiateProject(ctx context.Context, request operations.InstantiateProjectRequest) (*operations.InstantiateProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}/instantiateProject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}/instantiateProject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -262,7 +262,7 @@ func (s *projectTemplates) InstantiateProject(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

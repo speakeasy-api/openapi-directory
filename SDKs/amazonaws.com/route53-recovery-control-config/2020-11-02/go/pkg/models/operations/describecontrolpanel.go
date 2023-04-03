@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeControlPanelPathParams struct {
+type DescribeControlPanelRequest struct {
 	// The Amazon Resource Name (ARN) of the control panel.
-	ControlPanelArn string `pathParam:"style=simple,explode=false,name=ControlPanelArn"`
-}
-
-type DescribeControlPanelHeaders struct {
+	ControlPanelArn   string  `pathParam:"style=simple,explode=false,name=ControlPanelArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeControlPanelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeControlPanelRequest struct {
-	PathParams DescribeControlPanelPathParams
-	Headers    DescribeControlPanelHeaders
 }
 
 type DescribeControlPanelResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStoreReportByProductPathParams struct {
+type GetStoreReportByProductRequest struct {
+	ReportByProductRequest shared.ReportByProductRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetStoreReportByProductRequest struct {
-	PathParams GetStoreReportByProductPathParams
-	Request    shared.ReportByProductRequest `request:"mediaType=application/json"`
 }
 
 type GetStoreReportByProductResponse struct {

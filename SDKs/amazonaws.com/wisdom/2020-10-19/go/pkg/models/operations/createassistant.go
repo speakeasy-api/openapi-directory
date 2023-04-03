@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAssistantHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateAssistantRequestBodyServerSideEncryptionConfiguration - The KMS key used for encryption.
 type CreateAssistantRequestBodyServerSideEncryptionConfiguration struct {
 	KmsKeyID *string `json:"kmsKeyId,omitempty"`
@@ -61,8 +51,14 @@ type CreateAssistantRequestBody struct {
 }
 
 type CreateAssistantRequest struct {
-	Headers CreateAssistantHeaders
-	Request CreateAssistantRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateAssistantRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateAssistantResponse struct {

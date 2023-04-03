@@ -8,14 +8,8 @@ import (
 )
 
 type PostWebhooksSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostWebhooksRequest struct {
-	// Contains the property values for your new webhook
-	//
-	Request  shared.WebhookEntry `request:"mediaType=application/json"`
-	Security PostWebhooksSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostWebhooksResponse struct {

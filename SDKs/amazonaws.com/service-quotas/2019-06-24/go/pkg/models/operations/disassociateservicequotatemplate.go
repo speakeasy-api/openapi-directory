@@ -29,7 +29,8 @@ func (e *DisassociateServiceQuotaTemplateXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type DisassociateServiceQuotaTemplateHeaders struct {
+type DisassociateServiceQuotaTemplateRequest struct {
+	RequestBody       map[string]interface{}                         `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DisassociateServiceQuotaTemplateHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisassociateServiceQuotaTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisassociateServiceQuotaTemplateRequest struct {
-	Headers DisassociateServiceQuotaTemplateHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DisassociateServiceQuotaTemplateResponse struct {

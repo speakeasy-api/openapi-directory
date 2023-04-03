@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type QuoteDeletePathParams struct {
+type QuoteDeleteRequest struct {
 	// Id of Quote to remove.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type QuoteDeleteQueryParams struct {
 	// Timestamp of Quote to remove. Should be encoded in Base64.
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type QuoteDeleteRequest struct {
-	PathParams  QuoteDeletePathParams
-	QueryParams QuoteDeleteQueryParams
 }
 
 type QuoteDeleteResponse struct {

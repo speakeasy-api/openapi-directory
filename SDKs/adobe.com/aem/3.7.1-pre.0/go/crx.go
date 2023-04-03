@@ -203,7 +203,7 @@ func (s *crx) PostPackageService(ctx context.Context, request operations.PostPac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -243,9 +243,9 @@ func (s *crx) PostPackageService(ctx context.Context, request operations.PostPac
 }
 func (s *crx) PostPackageServiceJSON(ctx context.Context, request operations.PostPackageServiceJSONRequest) (*operations.PostPackageServiceJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crx/packmgr/service/.json/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crx/packmgr/service/.json/{path}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *crx) PostPackageServiceJSON(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -304,7 +304,7 @@ func (s *crx) PostPackageUpdate(ctx context.Context, request operations.PostPack
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -351,7 +351,7 @@ func (s *crx) PostSetPassword(ctx context.Context, request operations.PostSetPas
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

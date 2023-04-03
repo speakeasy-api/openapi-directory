@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGraphqlApisQueryParams struct {
-	// The maximum number of results that you want the request to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// An identifier that was returned from the previous call to this operation, which you can use to return the next set of items in the list.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListGraphqlApisHeaders struct {
+type ListGraphqlApisRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListGraphqlApisHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListGraphqlApisRequest struct {
-	QueryParams ListGraphqlApisQueryParams
-	Headers     ListGraphqlApisHeaders
+	// The maximum number of results that you want the request to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// An identifier that was returned from the previous call to this operation, which you can use to return the next set of items in the list.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListGraphqlApisResponse struct {

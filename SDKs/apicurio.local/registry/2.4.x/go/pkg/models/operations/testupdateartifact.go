@@ -7,15 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestUpdateArtifactPathParams struct {
-	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
 type TestUpdateArtifactRequest struct {
-	PathParams TestUpdateArtifactPathParams
 	// The content of the artifact being tested. This is often, but not always, JSON data
 	// representing one of the supported artifact types:
 	//
@@ -29,7 +21,11 @@ type TestUpdateArtifactRequest struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	//
-	Request []byte `request:"mediaType=*/*"`
+	RequestBody []byte `request:"mediaType=*/*"`
+	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
+	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type TestUpdateArtifactResponse struct {

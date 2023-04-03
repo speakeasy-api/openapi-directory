@@ -13,10 +13,6 @@ type TopicClassificationRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type TopicClassificationRequest struct {
-	Request *TopicClassificationRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type TopicClassificationResponse struct {
 	ContentType string
 	StatusCode  int

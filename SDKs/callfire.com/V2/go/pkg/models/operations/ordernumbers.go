@@ -8,19 +8,15 @@ import (
 )
 
 type OrderNumbersSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type OrderNumbersQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type OrderNumbersRequest struct {
-	QueryParams OrderNumbersQueryParams
 	// Request object contains a list of numbers to buy, you can filter the numbers by their region information: city, state, zipcode, etc
-	Request  *shared.NumberPurchaseRequest `request:"mediaType=application/json"`
-	Security OrderNumbersSecurity
+	NumberPurchaseRequest *shared.NumberPurchaseRequest `request:"mediaType=application/json"`
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 type OrderNumbersResponse struct {

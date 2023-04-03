@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostVolumesCreateQueryParams struct {
-	// The name of the file share that the volume is hosted on. File shares can have different storage sizes and IOPS based on the required workload. If this field is left blank, the volume is hosted on the default file share.
-	FsName *string `queryParam:"style=form,explode=true,name=fsName"`
-	// The name of the volume. The name must be unique for a space and can contain uppercase letters, lowercase letters, numbers, underscores (_), and hyphens (-).
-	Name string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type PostVolumesCreateHeaders struct {
+type PostVolumesCreateRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostVolumesCreateRequest struct {
-	QueryParams PostVolumesCreateQueryParams
-	Headers     PostVolumesCreateHeaders
+	// The name of the file share that the volume is hosted on. File shares can have different storage sizes and IOPS based on the required workload. If this field is left blank, the volume is hosted on the default file share.
+	FsName *string `queryParam:"style=form,explode=true,name=fsName"`
+	// The name of the volume. The name must be unique for a space and can contain uppercase letters, lowercase letters, numbers, underscores (_), and hyphens (-).
+	Name string `queryParam:"style=form,explode=true,name=name"`
 }
 
 type PostVolumesCreateResponse struct {

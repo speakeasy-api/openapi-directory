@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLaunchProfileMemberPathParams struct {
-	// The ID of the launch profile used to control access from the streaming session.
-	LaunchProfileID string `pathParam:"style=simple,explode=false,name=launchProfileId"`
-	// The principal ID. This currently supports a IAM Identity Center UserId.
-	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetLaunchProfileMemberHeaders struct {
+type GetLaunchProfileMemberRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetLaunchProfileMemberHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLaunchProfileMemberRequest struct {
-	PathParams GetLaunchProfileMemberPathParams
-	Headers    GetLaunchProfileMemberHeaders
+	// The ID of the launch profile used to control access from the streaming session.
+	LaunchProfileID string `pathParam:"style=simple,explode=false,name=launchProfileId"`
+	// The principal ID. This currently supports a IAM Identity Center UserId.
+	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetLaunchProfileMemberResponse struct {

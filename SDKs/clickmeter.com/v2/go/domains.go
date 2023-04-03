@@ -43,7 +43,7 @@ func (s *domains) DomainsCount(ctx context.Context, request operations.DomainsCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -108,7 +108,7 @@ func (s *domains) DomainsCount(ctx context.Context, request operations.DomainsCo
 // DomainsDelete - Delete a domain
 func (s *domains) DomainsDelete(ctx context.Context, request operations.DomainsDeleteRequest) (*operations.DomainsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -183,7 +183,7 @@ func (s *domains) DomainsGet(ctx context.Context, request operations.DomainsGetR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -232,7 +232,7 @@ func (s *domains) DomainsGet(ctx context.Context, request operations.DomainsGetR
 }
 
 // DomainsPutForm - Create a domain
-func (s *domains) DomainsPutForm(ctx context.Context, request operations.DomainsPutFormRequest) (*operations.DomainsPutFormResponse, error) {
+func (s *domains) DomainsPutForm(ctx context.Context, request shared.APICoreDtoDomainsDomain) (*operations.DomainsPutFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domains"
 
@@ -310,7 +310,7 @@ func (s *domains) DomainsPutForm(ctx context.Context, request operations.Domains
 }
 
 // DomainsPutJSON - Create a domain
-func (s *domains) DomainsPutJSON(ctx context.Context, request operations.DomainsPutJSONRequest) (*operations.DomainsPutJSONResponse, error) {
+func (s *domains) DomainsPutJSON(ctx context.Context, request shared.APICoreDtoDomainsDomain) (*operations.DomainsPutJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domains"
 
@@ -388,7 +388,7 @@ func (s *domains) DomainsPutJSON(ctx context.Context, request operations.Domains
 }
 
 // DomainsPutRaw - Create a domain
-func (s *domains) DomainsPutRaw(ctx context.Context, request operations.DomainsPutRawRequest) (*operations.DomainsPutRawResponse, error) {
+func (s *domains) DomainsPutRaw(ctx context.Context, request []byte) (*operations.DomainsPutRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domains"
 
@@ -468,9 +468,9 @@ func (s *domains) DomainsPutRaw(ctx context.Context, request operations.DomainsP
 // DomainsUpdateForm - Update a domain
 func (s *domains) DomainsUpdateForm(ctx context.Context, request operations.DomainsUpdateFormRequest) (*operations.DomainsUpdateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoDomainsDomain", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -546,9 +546,9 @@ func (s *domains) DomainsUpdateForm(ctx context.Context, request operations.Doma
 // DomainsUpdateJSON - Update a domain
 func (s *domains) DomainsUpdateJSON(ctx context.Context, request operations.DomainsUpdateJSONRequest) (*operations.DomainsUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoDomainsDomain", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -624,9 +624,9 @@ func (s *domains) DomainsUpdateJSON(ctx context.Context, request operations.Doma
 // DomainsUpdateRaw - Update a domain
 func (s *domains) DomainsUpdateRaw(ctx context.Context, request operations.DomainsUpdateRawRequest) (*operations.DomainsUpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -702,7 +702,7 @@ func (s *domains) DomainsUpdateRaw(ctx context.Context, request operations.Domai
 // GetDomainsID - Get a domain
 func (s *domains) GetDomainsID(ctx context.Context, request operations.GetDomainsIDRequest) (*operations.GetDomainsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

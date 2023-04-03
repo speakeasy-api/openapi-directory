@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsDeleteSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsDeletePathParams struct {
-	// Team unique ID.
-	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type TeamsDeleteRequest struct {
-	PathParams TeamsDeletePathParams
-	Security   TeamsDeleteSecurity
+	// Team unique ID.
+	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
 type TeamsDeleteResponse struct {

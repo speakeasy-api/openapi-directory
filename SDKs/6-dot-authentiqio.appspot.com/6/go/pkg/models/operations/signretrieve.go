@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SignRetrievePathParams struct {
+type SignRetrieveRequest struct {
 	// Job ID (20 chars)
 	Job string `pathParam:"style=simple,explode=false,name=job"`
-}
-
-type SignRetrieveRequest struct {
-	PathParams SignRetrievePathParams
 }
 
 // SignRetrieveJWT - Successful response (JWT)

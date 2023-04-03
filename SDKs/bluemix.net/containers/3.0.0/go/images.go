@@ -36,14 +36,14 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Remove a Docker image from the private Bluemix registry that is identified by the image ID (corresponding IBM Containers command: `cf ic rmi <image>`).
 func (s *images) DeleteImagesID(ctx context.Context, request operations.DeleteImagesIDRequest) (*operations.DeleteImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -87,7 +87,7 @@ func (s *images) GetImagesJSON(ctx context.Context, request operations.GetImages
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -130,14 +130,14 @@ func (s *images) GetImagesJSON(ctx context.Context, request operations.GetImages
 // This endpoint returns detailed information about a Docker image that is stored in the private Bluemix registry of an organization (corresponding IBM Containers command: `cf ic inspect <image_name_or_id>`).
 func (s *images) GetImagesNameOrIDJSON(ctx context.Context, request operations.GetImagesNameOrIDJSONRequest) (*operations.GetImagesNameOrIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{name_or_id}/json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/images/{name_or_id}/json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -186,7 +186,7 @@ func (s *images) PostBuild(ctx context.Context, request operations.PostBuildRequ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/build"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -201,9 +201,9 @@ func (s *images) PostBuild(ctx context.Context, request operations.PostBuildRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

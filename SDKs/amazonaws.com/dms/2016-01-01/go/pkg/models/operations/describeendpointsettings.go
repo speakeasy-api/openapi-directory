@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeEndpointSettingsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeEndpointSettingsXAmzTargetEnum
 type DescribeEndpointSettingsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeEndpointSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DescribeEndpointSettingsHeaders struct {
+type DescribeEndpointSettingsRequest struct {
+	DescribeEndpointSettingsMessage shared.DescribeEndpointSettingsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeEndpointSettingsHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeEndpointSettingsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeEndpointSettingsRequest struct {
-	QueryParams DescribeEndpointSettingsQueryParams
-	Headers     DescribeEndpointSettingsHeaders
-	Request     shared.DescribeEndpointSettingsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeEndpointSettingsResponse struct {

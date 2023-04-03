@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBotPathParams struct {
-	// The identifier of the bot to delete.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type DeleteBotQueryParams struct {
-	// By default, Amazon Lex checks if any other resource, such as an alias or bot network, is using the bot version before it is deleted and throws a <code>ResourceInUseException</code> exception if the bot is being used by another resource. Set this parameter to <code>true</code> to skip this check and remove the bot even if it is being used by another resource.
-	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
-}
-
-type DeleteBotHeaders struct {
+type DeleteBotRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteBotHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBotRequest struct {
-	PathParams  DeleteBotPathParams
-	QueryParams DeleteBotQueryParams
-	Headers     DeleteBotHeaders
+	// The identifier of the bot to delete.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// By default, Amazon Lex checks if any other resource, such as an alias or bot network, is using the bot version before it is deleted and throws a <code>ResourceInUseException</code> exception if the bot is being used by another resource. Set this parameter to <code>true</code> to skip this check and remove the bot even if it is being used by another resource.
+	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
 }
 
 type DeleteBotResponse struct {

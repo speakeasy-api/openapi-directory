@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDNSDomainNameRecordsPathParams struct {
+type GetDNSDomainNameRecordsRequest struct {
 	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type GetDNSDomainNameRecordsQueryParams struct {
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
 	// The domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 	// Filters records matching the record name. This filter only applies to lookups of A, CNAME, TXT, CAA, ALIAS and TLSA records.
 	RecordName *string `queryParam:"style=form,explode=true,name=record_name"`
 	// Filters records for the service. This filter only applies to lookups of SRV records.
@@ -25,11 +22,6 @@ type GetDNSDomainNameRecordsQueryParams struct {
 	Take *int `queryParam:"style=form,explode=true,name=take"`
 	// Filters records matching the type. Most other filters only apply when this filter is specified.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetDNSDomainNameRecordsRequest struct {
-	PathParams  GetDNSDomainNameRecordsPathParams
-	QueryParams GetDNSDomainNameRecordsQueryParams
 }
 
 type GetDNSDomainNameRecordsResponse struct {

@@ -8,21 +8,12 @@ import (
 )
 
 type AppointmentProfilesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AppointmentProfilesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AppointmentProfilesReadQueryParams struct {
-	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppointmentProfilesReadRequest struct {
-	PathParams  AppointmentProfilesReadPathParams
-	QueryParams AppointmentProfilesReadQueryParams
-	Security    AppointmentProfilesReadSecurity
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID     string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AppointmentProfilesReadResponse struct {

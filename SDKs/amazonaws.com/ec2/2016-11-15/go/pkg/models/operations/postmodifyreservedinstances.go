@@ -50,25 +50,17 @@ func (e *POSTModifyReservedInstancesVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTModifyReservedInstancesQueryParams struct {
-	Action  POSTModifyReservedInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyReservedInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyReservedInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyReservedInstancesRequest struct {
-	QueryParams POSTModifyReservedInstancesQueryParams
-	Headers     POSTModifyReservedInstancesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyReservedInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTModifyReservedInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyReservedInstancesResponse struct {

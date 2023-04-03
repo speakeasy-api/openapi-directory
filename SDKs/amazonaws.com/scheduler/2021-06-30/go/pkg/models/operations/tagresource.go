@@ -7,12 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagResourcePathParams struct {
-	// The Amazon Resource Name (ARN) of the schedule group that you are adding tags to.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=ResourceArn"`
+type TagResourceRequestBody struct {
+	// The list of tags to associate with the schedule group.
+	Tags []shared.Tag `json:"Tags"`
 }
 
-type TagResourceHeaders struct {
+type TagResourceRequest struct {
+	RequestBody TagResourceRequestBody `request:"mediaType=application/json"`
+	// The Amazon Resource Name (ARN) of the schedule group that you are adding tags to.
+	ResourceArn       string  `pathParam:"style=simple,explode=false,name=ResourceArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,17 +23,6 @@ type TagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type TagResourceRequestBody struct {
-	// The list of tags to associate with the schedule group.
-	Tags []shared.Tag `json:"Tags"`
-}
-
-type TagResourceRequest struct {
-	PathParams TagResourcePathParams
-	Headers    TagResourceHeaders
-	Request    TagResourceRequestBody `request:"mediaType=application/json"`
 }
 
 type TagResourceResponse struct {

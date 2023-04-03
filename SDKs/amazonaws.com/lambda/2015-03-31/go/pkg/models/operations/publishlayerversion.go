@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishLayerVersionPathParams struct {
-	// The name or Amazon Resource Name (ARN) of the layer.
-	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
-}
-
-type PublishLayerVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PublishLayerVersionRequestBodyContent - A ZIP archive that contains the contents of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. You can specify either an Amazon S3 location, or upload a layer archive directly.
 type PublishLayerVersionRequestBodyContent struct {
 	S3Bucket        *string `json:"S3Bucket,omitempty"`
@@ -44,9 +29,16 @@ type PublishLayerVersionRequestBody struct {
 }
 
 type PublishLayerVersionRequest struct {
-	PathParams PublishLayerVersionPathParams
-	Headers    PublishLayerVersionHeaders
-	Request    PublishLayerVersionRequestBody `request:"mediaType=application/json"`
+	// The name or Amazon Resource Name (ARN) of the layer.
+	LayerName         string                         `pathParam:"style=simple,explode=false,name=LayerName"`
+	RequestBody       PublishLayerVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PublishLayerVersionResponse struct {

@@ -48,12 +48,7 @@ func (e *GetSettingsAttributeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSettingsPathParams struct {
-	//  The list of setting attribute enum values.
-	Attribute GetSettingsAttributeEnum `pathParam:"style=simple,explode=false,name=attribute"`
-}
-
-type GetSettingsHeaders struct {
+type GetSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -61,11 +56,8 @@ type GetSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSettingsRequest struct {
-	PathParams GetSettingsPathParams
-	Headers    GetSettingsHeaders
+	//  The list of setting attribute enum values.
+	Attribute GetSettingsAttributeEnum `pathParam:"style=simple,explode=false,name=attribute"`
 }
 
 type GetSettingsResponse struct {

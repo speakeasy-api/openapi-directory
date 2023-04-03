@@ -14,10 +14,6 @@ type PostV2Scim20UsersRequestBody struct {
 	UserName string `json:"userName"`
 }
 
-type PostV2Scim20UsersRequest struct {
-	Request PostV2Scim20UsersRequestBody `request:"mediaType=application/scim+json"`
-}
-
 // PostV2Scim20Users500ApplicationScimPlusJSON - Internal Error
 type PostV2Scim20Users500ApplicationScimPlusJSON struct {
 	// Details about why the request failed.

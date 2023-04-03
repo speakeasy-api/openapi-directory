@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type DownloadBackupPathParams struct {
-	Filename string `pathParam:"style=simple,explode=false,name=filename"`
-}
-
-type DownloadBackupQueryParams struct {
-	Token string `queryParam:"style=form,explode=true,name=token"`
-}
-
 type DownloadBackupRequest struct {
-	PathParams  DownloadBackupPathParams
-	QueryParams DownloadBackupQueryParams
+	Filename string `pathParam:"style=simple,explode=false,name=filename"`
+	Token    string `queryParam:"style=form,explode=true,name=token"`
 }
 
 type DownloadBackupResponse struct {

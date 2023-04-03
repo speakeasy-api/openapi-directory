@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrganizationConformancePackDetailedStatusQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetOrganizationConformancePackDetailedStatusXAmzTargetEnum
 type GetOrganizationConformancePackDetailedStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetOrganizationConformancePackDetailedStatusXAmzTargetEnum) UnmarshalJS
 	}
 }
 
-type GetOrganizationConformancePackDetailedStatusHeaders struct {
+type GetOrganizationConformancePackDetailedStatusRequest struct {
+	GetOrganizationConformancePackDetailedStatusRequest shared.GetOrganizationConformancePackDetailedStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetOrganizationConformancePackDetailedStatusHeaders struct {
 	XAmzSignature     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetOrganizationConformancePackDetailedStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetOrganizationConformancePackDetailedStatusRequest struct {
-	QueryParams GetOrganizationConformancePackDetailedStatusQueryParams
-	Headers     GetOrganizationConformancePackDetailedStatusHeaders
-	Request     shared.GetOrganizationConformancePackDetailedStatusRequest `request:"mediaType=application/json"`
 }
 
 type GetOrganizationConformancePackDetailedStatusResponse struct {

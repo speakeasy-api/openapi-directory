@@ -6,14 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ErrorsErrorAttachmentLocationSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ErrorsErrorAttachmentLocationPathParams struct {
+type ErrorsErrorAttachmentLocationRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// Error attachment id.
@@ -22,11 +21,6 @@ type ErrorsErrorAttachmentLocationPathParams struct {
 	ErrorID string `pathParam:"style=simple,explode=false,name=errorId"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsErrorAttachmentLocationRequest struct {
-	PathParams ErrorsErrorAttachmentLocationPathParams
-	Security   ErrorsErrorAttachmentLocationSecurity
 }
 
 type ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum string

@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAuthorizerPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The authorizer identifier.
-	AuthorizerID string `pathParam:"style=simple,explode=false,name=authorizerId"`
-}
-
-type UpdateAuthorizerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAuthorizerRequestBodyAuthorizerTypeEnum - The authorizer type. Specify REQUEST for a Lambda function using incoming request parameters. Specify JWT to use JSON Web Tokens (supported only for HTTP APIs).
 type UpdateAuthorizerRequestBodyAuthorizerTypeEnum string
 
@@ -80,9 +63,18 @@ type UpdateAuthorizerRequestBody struct {
 }
 
 type UpdateAuthorizerRequest struct {
-	PathParams UpdateAuthorizerPathParams
-	Headers    UpdateAuthorizerHeaders
-	Request    UpdateAuthorizerRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAuthorizerRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The authorizer identifier.
+	AuthorizerID string `pathParam:"style=simple,explode=false,name=authorizerId"`
 }
 
 type UpdateAuthorizerResponse struct {

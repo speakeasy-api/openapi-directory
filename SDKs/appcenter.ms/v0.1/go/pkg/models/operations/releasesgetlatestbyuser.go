@@ -6,33 +6,23 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesGetLatestByUserSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesGetLatestByUserPathParams struct {
+type ReleasesGetLatestByUserRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The check if the request is from Install page
+	IsInstallPage *bool `queryParam:"style=form,explode=true,name=is_install_page"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The ID of the release, or `latest` to get the latest release from all the distribution groups assigned to the current user.
 	ReleaseID string `pathParam:"style=simple,explode=false,name=release_id"`
-}
-
-type ReleasesGetLatestByUserQueryParams struct {
-	// The check if the request is from Install page
-	IsInstallPage *bool `queryParam:"style=form,explode=true,name=is_install_page"`
 	// when supplied, this call will also check if the given UDID is provisioned. Will be ignored for non-iOS platforms. The value will be returned in the property is_udid_provisioned.
 	Udid *string `queryParam:"style=form,explode=true,name=udid"`
-}
-
-type ReleasesGetLatestByUserRequest struct {
-	PathParams  ReleasesGetLatestByUserPathParams
-	QueryParams ReleasesGetLatestByUserQueryParams
-	Security    ReleasesGetLatestByUserSecurity
 }
 
 type ReleasesGetLatestByUser404ApplicationJSONCodeEnum string

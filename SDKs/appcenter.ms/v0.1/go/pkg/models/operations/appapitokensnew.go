@@ -6,18 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppAPITokensNewSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
-}
-
-type AppAPITokensNewPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type AppAPITokensNewRequestBodyScopeEnum string
@@ -52,10 +45,12 @@ type AppAPITokensNewRequestBody struct {
 }
 
 type AppAPITokensNewRequest struct {
-	PathParams AppAPITokensNewPathParams
 	// Description of the token
-	Request  *AppAPITokensNewRequestBody `request:"mediaType=application/json"`
-	Security AppAPITokensNewSecurity
+	RequestBody *AppAPITokensNewRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type AppAPITokensNew401ApplicationJSONErrorCodeEnum string

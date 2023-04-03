@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectUsernameProjectEnvvarPathParams struct {
+type GetProjectUsernameProjectEnvvarRequest struct {
 	// XXXXXXXXX
 	//
 	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetProjectUsernameProjectEnvvarRequest struct {
-	PathParams GetProjectUsernameProjectEnvvarPathParams
 }
 
 type GetProjectUsernameProjectEnvvarResponse struct {

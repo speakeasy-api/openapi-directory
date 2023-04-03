@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureHttp2PathParams struct {
+type ConfigureHttp2Request struct {
+	Http2Configuration *shared.Http2Configuration `request:"mediaType=application/json"`
 	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	SiteName string `pathParam:"style=simple,explode=false,name=siteName"`
-}
-
-type ConfigureHttp2QueryParams struct {
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
 	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	SiteNamePathParameter string `pathParam:"style=simple,explode=false,name=siteName"`
 	// Site name where HTTP/2 should be configured.<br />
 	// For HTTP/2 to work correctly, the site must have ssl enabled.
-	SiteName string `queryParam:"style=form,explode=true,name=site_name"`
-}
-
-type ConfigureHttp2Request struct {
-	PathParams  ConfigureHttp2PathParams
-	QueryParams ConfigureHttp2QueryParams
-	Request     *shared.Http2Configuration `request:"mediaType=application/json"`
+	SiteNameQueryParameter string `queryParam:"style=form,explode=true,name=site_name"`
 }
 
 type ConfigureHttp2Response struct {

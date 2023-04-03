@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetUserHeaders struct {
+type GetUserRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type GetUserRequest struct {
-	PathParams GetUserPathParams
-	Headers    GetUserHeaders
+	Username    string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetUser200ApplicationJSONUserCustomFields struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetSubscriptionRequest struct {
-	PathParams GetSubscriptionPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSubscriptionResponse struct {

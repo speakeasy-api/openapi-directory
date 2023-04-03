@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestAlgorithmsHeaders struct {
+type RequestAlgorithmsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestAlgorithmsRequest struct {
-	Headers RequestAlgorithmsHeaders
 }
 
 type RequestAlgorithmsResponse struct {

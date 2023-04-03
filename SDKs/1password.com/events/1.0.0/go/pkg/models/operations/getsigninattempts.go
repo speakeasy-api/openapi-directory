@@ -11,7 +11,7 @@ import (
 )
 
 type GetSignInAttemptsSecurity struct {
-	Jwtsa shared.SchemeJwtsa `security:"scheme,type=http,subtype=bearer"`
+	Jwtsa string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetSignInAttemptsRequestBodyType string
@@ -80,11 +80,6 @@ func (u GetSignInAttemptsRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type GetSignInAttemptsRequest struct {
-	Request  *GetSignInAttemptsRequestBody `request:"mediaType=application/json"`
-	Security GetSignInAttemptsSecurity
 }
 
 // GetSignInAttempts200ApplicationJSON - Sign-in attempts response object

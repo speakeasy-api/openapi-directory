@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteThingPathParams struct {
-	// The name of the thing to delete.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type DeleteThingQueryParams struct {
-	// The expected version of the thing record in the registry. If the version of the record in the registry does not match the expected version specified in the request, the <code>DeleteThing</code> request is rejected with a <code>VersionConflictException</code>.
-	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
-}
-
-type DeleteThingHeaders struct {
+type DeleteThingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteThingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteThingRequest struct {
-	PathParams  DeleteThingPathParams
-	QueryParams DeleteThingQueryParams
-	Headers     DeleteThingHeaders
+	// The expected version of the thing record in the registry. If the version of the record in the registry does not match the expected version specified in the request, the <code>DeleteThing</code> request is rejected with a <code>VersionConflictException</code>.
+	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
+	// The name of the thing to delete.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type DeleteThingResponse struct {

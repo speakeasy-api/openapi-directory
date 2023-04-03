@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDomainConfigurationPathParams struct {
-	// The name of the domain configuration. This value must be unique to a region.
-	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
-}
-
-type CreateDomainConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateDomainConfigurationRequestBodyAuthorizerConfig - An object that specifies the authorization service for a domain.
 type CreateDomainConfigurationRequestBodyAuthorizerConfig struct {
 	AllowAuthorizerOverride *bool   `json:"allowAuthorizerOverride,omitempty"`
@@ -73,9 +58,16 @@ type CreateDomainConfigurationRequestBody struct {
 }
 
 type CreateDomainConfigurationRequest struct {
-	PathParams CreateDomainConfigurationPathParams
-	Headers    CreateDomainConfigurationHeaders
-	Request    CreateDomainConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDomainConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the domain configuration. This value must be unique to a region.
+	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
 }
 
 type CreateDomainConfigurationResponse struct {

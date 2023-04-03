@@ -36,7 +36,7 @@ func newReviewing(defaultClient, securityClient HTTPClient, serverURL, language,
 // Confirms a previously submitted payout.
 //
 // To cancel a payout, use the `/declineThirdParty` endpoint.
-func (s *reviewing) PostConfirmThirdParty(ctx context.Context, request operations.PostConfirmThirdPartyRequest) (*operations.PostConfirmThirdPartyResponse, error) {
+func (s *reviewing) PostConfirmThirdParty(ctx context.Context, request shared.ModifyRequest, security operations.PostConfirmThirdPartySecurity) (*operations.PostConfirmThirdPartyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/confirmThirdParty"
 
@@ -52,7 +52,7 @@ func (s *reviewing) PostConfirmThirdParty(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,7 +108,7 @@ func (s *reviewing) PostConfirmThirdParty(ctx context.Context, request operation
 // Cancels a previously submitted payout.
 //
 // To confirm and send a payout, use the `/confirmThirdParty` endpoint.
-func (s *reviewing) PostDeclineThirdParty(ctx context.Context, request operations.PostDeclineThirdPartyRequest) (*operations.PostDeclineThirdPartyResponse, error) {
+func (s *reviewing) PostDeclineThirdParty(ctx context.Context, request shared.ModifyRequest, security operations.PostDeclineThirdPartySecurity) (*operations.PostDeclineThirdPartyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/declineThirdParty"
 
@@ -124,7 +124,7 @@ func (s *reviewing) PostDeclineThirdParty(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

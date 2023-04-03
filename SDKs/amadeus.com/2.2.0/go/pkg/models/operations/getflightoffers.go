@@ -40,7 +40,7 @@ func (e *GetFlightOffersTravelClassEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFlightOffersQueryParams struct {
+type GetFlightOffersRequest struct {
 	// the number of adult travelers (age 12 or older on date of departure).
 	Adults int64 `queryParam:"style=form,explode=true,name=adults"`
 	// the number of child travelers (older than age 2 and younger than age 12 on date of departure) who will each have their own separate seat. If specified, this number should be greater than or equal to 0
@@ -75,10 +75,6 @@ type GetFlightOffersQueryParams struct {
 	ReturnDate *types.Date `queryParam:"style=form,explode=true,name=returnDate"`
 	// most of the flight time should be spent in a cabin of this quality or higher. The accepted travel class is economy, premium economy, business or first class. If no travel class is specified, the search considers any travel class
 	TravelClass *GetFlightOffersTravelClassEnum `queryParam:"style=form,explode=true,name=travelClass"`
-}
-
-type GetFlightOffersRequest struct {
-	QueryParams GetFlightOffersQueryParams
 }
 
 // GetFlightOffersSuccess - Successful Operation

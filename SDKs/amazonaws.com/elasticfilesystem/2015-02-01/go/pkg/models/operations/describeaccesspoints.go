@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAccessPointsQueryParams struct {
+type DescribeAccessPointsRequest struct {
 	// (Optional) Specifies an EFS access point to describe in the response; mutually exclusive with <code>FileSystemId</code>.
 	AccessPointID *string `queryParam:"style=form,explode=true,name=AccessPointId"`
 	// (Optional) If you provide a <code>FileSystemId</code>, EFS returns all access points for that file system; mutually exclusive with <code>AccessPointId</code>.
@@ -15,10 +15,7 @@ type DescribeAccessPointsQueryParams struct {
 	// (Optional) When retrieving all access points for a file system, you can optionally specify the <code>MaxItems</code> parameter to limit the number of objects returned in a response. The default value is 100.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	//  <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in the subsequent request to fetch the next page of access point descriptions.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type DescribeAccessPointsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,11 +23,6 @@ type DescribeAccessPointsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAccessPointsRequest struct {
-	QueryParams DescribeAccessPointsQueryParams
-	Headers     DescribeAccessPointsHeaders
 }
 
 type DescribeAccessPointsResponse struct {

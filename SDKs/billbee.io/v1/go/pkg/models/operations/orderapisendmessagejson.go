@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPISendMessageJSONPathParams struct {
+type OrderAPISendMessageJSONRequest struct {
+	// The message model
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel `request:"mediaType=application/json"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPISendMessageJSONRequest struct {
-	PathParams OrderAPISendMessageJSONPathParams
-	// The message model
-	Request shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel `request:"mediaType=application/json"`
 }
 
 type OrderAPISendMessageJSONResponse struct {

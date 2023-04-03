@@ -116,7 +116,6 @@ pkg/models/operations/usersupdateprefs.go
 pkg/models/operations/usersupdatestatus.go
 pkg/models/operations/usersupdateverification.go
 pkg/models/shared/token.go
-pkg/models/shared/security.go
 pkg/models/shared/user.go
 pkg/models/shared/loglist.go
 pkg/models/shared/log.go

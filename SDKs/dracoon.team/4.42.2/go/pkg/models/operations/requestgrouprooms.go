@@ -9,24 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestGroupRoomsPathParams struct {
-	// Group ID
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type RequestGroupRoomsQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
 // RequestGroupRoomsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestGroupRoomsXSdsDateFormatEnum string
 
@@ -60,17 +42,23 @@ func (e *RequestGroupRoomsXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestGroupRoomsHeaders struct {
+type RequestGroupRoomsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestGroupRoomsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestGroupRoomsRequest struct {
-	PathParams  RequestGroupRoomsPathParams
-	QueryParams RequestGroupRoomsQueryParams
-	Headers     RequestGroupRoomsHeaders
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Group ID
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 }
 
 type RequestGroupRoomsResponse struct {

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetTasksQueryParams struct {
+type GetTasksRequest struct {
 	// The assignee to filter tasks on. If searching for unassigned tasks, assignee.any = null can be specified.
 	// *Note: If you specify `assignee`, you must also specify the `workspace` to filter on.*
 	Assignee *string `queryParam:"style=form,explode=true,name=assignee"`
@@ -45,10 +45,6 @@ type GetTasksQueryParams struct {
 	// The workspace to filter tasks on.
 	// *Note: If you specify `workspace`, you must also specify the `assignee` to filter on.*
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetTasksRequest struct {
-	QueryParams GetTasksQueryParams
 }
 
 // GetTasks200ApplicationJSON - Successfully retrieved requested tasks.

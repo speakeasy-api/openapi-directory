@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerUpdateAddressRawPathParams struct {
+type CustomerUpdateAddressRawRequest struct {
+	// The updated address. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The id of the address
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerUpdateAddressRawRequest struct {
-	PathParams CustomerUpdateAddressRawPathParams
-	// The updated address. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type CustomerUpdateAddressRawResponse struct {

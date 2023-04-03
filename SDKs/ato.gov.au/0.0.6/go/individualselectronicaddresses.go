@@ -40,14 +40,14 @@ func newIndividualsElectronicAddresses(defaultClient, securityClient HTTPClient,
 // Delete an electronic address
 func (s *individualsElectronicAddresses) DeleteIndividualsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.DeleteIndividualsPartyIDElectronicAddressesAddressIDRequest) (*operations.DeleteIndividualsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -97,14 +97,14 @@ func (s *individualsElectronicAddresses) DeleteIndividualsPartyIDElectronicAddre
 // GetIndividualsPartyIDElectronicAddresses - Retrieve a list of electronic addresses
 func (s *individualsElectronicAddresses) GetIndividualsPartyIDElectronicAddresses(ctx context.Context, request operations.GetIndividualsPartyIDElectronicAddressesRequest) (*operations.GetIndividualsPartyIDElectronicAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -166,14 +166,14 @@ func (s *individualsElectronicAddresses) GetIndividualsPartyIDElectronicAddresse
 // Retrieve an electronic address
 func (s *individualsElectronicAddresses) GetIndividualsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.GetIndividualsPartyIDElectronicAddressesAddressIDRequest) (*operations.GetIndividualsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -233,9 +233,9 @@ func (s *individualsElectronicAddresses) GetIndividualsPartyIDElectronicAddresse
 // Create an electronic address
 func (s *individualsElectronicAddresses) PostIndividualsPartyIDElectronicAddresses(ctx context.Context, request operations.PostIndividualsPartyIDElectronicAddressesRequest) (*operations.PostIndividualsPartyIDElectronicAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ElectronicAddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -250,7 +250,7 @@ func (s *individualsElectronicAddresses) PostIndividualsPartyIDElectronicAddress
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -312,9 +312,9 @@ func (s *individualsElectronicAddresses) PostIndividualsPartyIDElectronicAddress
 // Update an electronic address
 func (s *individualsElectronicAddresses) PutIndividualsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.PutIndividualsPartyIDElectronicAddressesAddressIDRequest) (*operations.PutIndividualsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/electronic-addresses/{addressId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ElectronicAddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -329,7 +329,7 @@ func (s *individualsElectronicAddresses) PutIndividualsPartyIDElectronicAddresse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

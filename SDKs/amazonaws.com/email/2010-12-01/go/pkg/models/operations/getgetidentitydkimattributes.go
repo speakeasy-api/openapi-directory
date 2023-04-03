@@ -50,26 +50,18 @@ func (e *GETGETIdentityDkimAttributesVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETGETIdentityDkimAttributesQueryParams struct {
+type GETGETIdentityDkimAttributesRequest struct {
 	Action GETGETIdentityDkimAttributesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A list of one or more verified identities - email addresses, domains, or both.
-	Identities []string                                `queryParam:"style=form,explode=true,name=Identities"`
-	Version    GETGETIdentityDkimAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETIdentityDkimAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETIdentityDkimAttributesRequest struct {
-	QueryParams GETGETIdentityDkimAttributesQueryParams
-	Headers     GETGETIdentityDkimAttributesHeaders
+	Identities        []string                                `queryParam:"style=form,explode=true,name=Identities"`
+	Version           GETGETIdentityDkimAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETIdentityDkimAttributesResponse struct {

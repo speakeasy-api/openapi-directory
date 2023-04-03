@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetCustomFieldPathParams struct {
+type ArticleGetCustomFieldRequest struct {
 	// The id of the custom field to query
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ArticleGetCustomFieldRequest struct {
-	PathParams ArticleGetCustomFieldPathParams
 }
 
 type ArticleGetCustomFieldResponse struct {

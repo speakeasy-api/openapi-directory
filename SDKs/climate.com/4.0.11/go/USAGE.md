@@ -13,23 +13,18 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.FetchBoundariesRequest{
-        Security: operations.FetchBoundariesSecurity{
-            APIKey: &shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &shared.BoundariesQuery{
-            Ids: []string{
-                "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
-                "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
-                "b7392059-2939-46fe-a759-6eb10faaa235",
-            },
+    req := shared.BoundariesQuery{
+        Ids: []string{
+            "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+            "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+            "b7392059-2939-46fe-a759-6eb10faaa235",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Boundaries.FetchBoundaries(ctx, req)
+    res, err := s.Boundaries.FetchBoundaries(ctx, req, operations.FetchBoundariesSecurity{
+        APIKey: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

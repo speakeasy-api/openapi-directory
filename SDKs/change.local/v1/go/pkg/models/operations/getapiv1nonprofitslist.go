@@ -4,23 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1NonprofitsListSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetAPIV1NonprofitsListQueryParams struct {
+type GetAPIV1NonprofitsListRequest struct {
 	// A string to search.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// The page to return. This endpoint is paginated, and returns up to 30 nonprofits at a time.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetAPIV1NonprofitsListRequest struct {
-	QueryParams GetAPIV1NonprofitsListQueryParams
-	Security    GetAPIV1NonprofitsListSecurity
 }
 
 type GetAPIV1NonprofitsListResponse struct {

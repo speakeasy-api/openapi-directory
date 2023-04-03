@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBatchJobDefinitionsPathParams struct {
-	// The identifier of the application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type ListBatchJobDefinitionsQueryParams struct {
-	// The maximum number of batch job definitions to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A pagination token returned from a previous call to this operation. This specifies the next item to return. To return to the beginning of the list, exclude this parameter.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// If the batch job definition is a FileBatchJobDefinition, the prefix allows you to search on the file names of FileBatchJobDefinitions.
-	Prefix *string `queryParam:"style=form,explode=true,name=prefix"`
-}
-
-type ListBatchJobDefinitionsHeaders struct {
+type ListBatchJobDefinitionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListBatchJobDefinitionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListBatchJobDefinitionsRequest struct {
-	PathParams  ListBatchJobDefinitionsPathParams
-	QueryParams ListBatchJobDefinitionsQueryParams
-	Headers     ListBatchJobDefinitionsHeaders
+	// The identifier of the application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The maximum number of batch job definitions to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A pagination token returned from a previous call to this operation. This specifies the next item to return. To return to the beginning of the list, exclude this parameter.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// If the batch job definition is a FileBatchJobDefinition, the prefix allows you to search on the file names of FileBatchJobDefinitions.
+	Prefix *string `queryParam:"style=form,explode=true,name=prefix"`
 }
 
 type ListBatchJobDefinitionsResponse struct {

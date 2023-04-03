@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDevEnvironmentPathParams struct {
-	// The name of the project in the space.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
 // CreateDevEnvironmentRequestBodyInstanceTypeEnum - The Amazon EC2 instace type to use for the Dev Environment.
 type CreateDevEnvironmentRequestBodyInstanceTypeEnum string
 
@@ -69,8 +62,11 @@ type CreateDevEnvironmentRequestBody struct {
 }
 
 type CreateDevEnvironmentRequest struct {
-	PathParams CreateDevEnvironmentPathParams
-	Request    CreateDevEnvironmentRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateDevEnvironmentRequestBody `request:"mediaType=application/json"`
+	// The name of the project in the space.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type CreateDevEnvironmentResponse struct {

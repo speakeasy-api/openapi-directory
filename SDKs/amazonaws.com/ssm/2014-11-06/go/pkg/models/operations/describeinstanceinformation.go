@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeInstanceInformationQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeInstanceInformationXAmzTargetEnum
 type DescribeInstanceInformationXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeInstanceInformationXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type DescribeInstanceInformationHeaders struct {
+type DescribeInstanceInformationRequest struct {
+	DescribeInstanceInformationRequest shared.DescribeInstanceInformationRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeInstanceInformationHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeInstanceInformationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeInstanceInformationRequest struct {
-	QueryParams DescribeInstanceInformationQueryParams
-	Headers     DescribeInstanceInformationHeaders
-	Request     shared.DescribeInstanceInformationRequest `request:"mediaType=application/json"`
 }
 
 type DescribeInstanceInformationResponse struct {

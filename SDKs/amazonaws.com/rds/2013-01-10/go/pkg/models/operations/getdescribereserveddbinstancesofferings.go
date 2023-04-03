@@ -50,7 +50,7 @@ func (e *GETDescribeReservedDBInstancesOfferingsVersionEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETDescribeReservedDBInstancesOfferingsQueryParams struct {
+type GETDescribeReservedDBInstancesOfferingsRequest struct {
 	Action                        GETDescribeReservedDBInstancesOfferingsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBInstanceClass               *string                                            `queryParam:"style=form,explode=true,name=DBInstanceClass"`
 	Duration                      *string                                            `queryParam:"style=form,explode=true,name=Duration"`
@@ -61,21 +61,13 @@ type GETDescribeReservedDBInstancesOfferingsQueryParams struct {
 	ProductDescription            *string                                            `queryParam:"style=form,explode=true,name=ProductDescription"`
 	ReservedDBInstancesOfferingID *string                                            `queryParam:"style=form,explode=true,name=ReservedDBInstancesOfferingId"`
 	Version                       GETDescribeReservedDBInstancesOfferingsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeReservedDBInstancesOfferingsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeReservedDBInstancesOfferingsRequest struct {
-	QueryParams GETDescribeReservedDBInstancesOfferingsQueryParams
-	Headers     GETDescribeReservedDBInstancesOfferingsHeaders
+	XAmzAlgorithm                 *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeReservedDBInstancesOfferingsResponse struct {

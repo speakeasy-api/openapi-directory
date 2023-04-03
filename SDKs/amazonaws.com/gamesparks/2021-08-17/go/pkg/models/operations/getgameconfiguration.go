@@ -7,30 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGameConfigurationPathParams struct {
+type GetGameConfigurationRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-}
-
-type GetGameConfigurationQueryParams struct {
 	// The list of sections to return.
-	Sections []string `queryParam:"style=form,explode=true,name=Sections"`
-}
-
-type GetGameConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGameConfigurationRequest struct {
-	PathParams  GetGameConfigurationPathParams
-	QueryParams GetGameConfigurationQueryParams
-	Headers     GetGameConfigurationHeaders
+	Sections          []string `queryParam:"style=form,explode=true,name=Sections"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetGameConfigurationResponse struct {

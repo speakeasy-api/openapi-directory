@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Labrp - Clinical Laboratory Report
 // API to verify Clinical Laboratory Report.
-func (s *apIs) Labrp(ctx context.Context, request operations.LabrpRequest) (*operations.LabrpResponse, error) {
+func (s *apIs) Labrp(ctx context.Context, request operations.LabrpRequestBody, security operations.LabrpSecurity) (*operations.LabrpResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/labrp/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Labrp(ctx context.Context, request operations.LabrpRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

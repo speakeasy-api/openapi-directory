@@ -50,7 +50,7 @@ func (e *GETDescribeRulesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeRulesQueryParams struct {
+type GETDescribeRulesRequest struct {
 	Action GETDescribeRulesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the listener.
 	ListenerArn *string `queryParam:"style=form,explode=true,name=ListenerArn"`
@@ -59,23 +59,15 @@ type GETDescribeRulesQueryParams struct {
 	// The maximum number of results to return with this call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The Amazon Resource Names (ARN) of the rules.
-	RuleArns []string                    `queryParam:"style=form,explode=true,name=RuleArns"`
-	Version  GETDescribeRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeRulesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeRulesRequest struct {
-	QueryParams GETDescribeRulesQueryParams
-	Headers     GETDescribeRulesHeaders
+	RuleArns          []string                    `queryParam:"style=form,explode=true,name=RuleArns"`
+	Version           GETDescribeRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeRulesResponse struct {

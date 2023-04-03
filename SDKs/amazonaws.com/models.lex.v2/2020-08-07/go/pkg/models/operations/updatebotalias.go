@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateBotAliasPathParams struct {
-	// The unique identifier of the bot alias.
-	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
-	// The identifier of the bot with the updated alias.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type UpdateBotAliasHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateBotAliasRequestBodyConversationLogSettings - Configures conversation logging that saves audio, text, and metadata for the conversations with your users.
 type UpdateBotAliasRequestBodyConversationLogSettings struct {
 	AudioLogSettings []shared.AudioLogSetting `json:"audioLogSettings,omitempty"`
@@ -51,9 +34,18 @@ type UpdateBotAliasRequestBody struct {
 }
 
 type UpdateBotAliasRequest struct {
-	PathParams UpdateBotAliasPathParams
-	Headers    UpdateBotAliasHeaders
-	Request    UpdateBotAliasRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateBotAliasRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the bot alias.
+	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
+	// The identifier of the bot with the updated alias.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 }
 
 type UpdateBotAliasResponse struct {

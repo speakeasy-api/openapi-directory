@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CampaignAnalyticsQueryParams struct {
+type CampaignAnalyticsRequest struct {
 	// (Required) String
 	//
 	// Campaign API identifier
@@ -19,10 +19,6 @@ type CampaignAnalyticsQueryParams struct {
 	//
 	// Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive
 	Length *string `queryParam:"style=form,explode=true,name=length"`
-}
-
-type CampaignAnalyticsRequest struct {
-	QueryParams CampaignAnalyticsQueryParams
 }
 
 type CampaignAnalyticsResponse struct {

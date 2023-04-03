@@ -65,5 +65,4 @@ pkg/models/operations/postwalletaccount.go
 pkg/models/operations/postwalletaccountidcontract.go
 pkg/models/operations/postwalletaccountiderc20.go
 pkg/models/operations/postwalletaccountidpay.go
-pkg/models/shared/security.go
 USAGE.md

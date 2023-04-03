@@ -8,19 +8,15 @@ import (
 )
 
 type RemoveContactListItemSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type RemoveContactListItemPathParams struct {
+type RemoveContactListItemRequest struct {
 	// An id of a contact
 	ContactID int64 `pathParam:"style=simple,explode=false,name=contactId"`
 	// An id of a contact list
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RemoveContactListItemRequest struct {
-	PathParams RemoveContactListItemPathParams
-	Security   RemoveContactListItemSecurity
 }
 
 type RemoveContactListItemResponse struct {

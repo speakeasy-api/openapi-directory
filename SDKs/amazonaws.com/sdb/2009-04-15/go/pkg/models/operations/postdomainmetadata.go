@@ -50,19 +50,15 @@ func (e *POSTDomainMetadataVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDomainMetadataQueryParams struct {
+type POSTDomainMetadataRequest struct {
 	AWSAccessKeyID   string                        `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTDomainMetadataActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody      []byte                        `request:"mediaType=text/xml"`
 	Signature        string                        `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                        `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                        `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                        `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTDomainMetadataVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDomainMetadataRequest struct {
-	QueryParams POSTDomainMetadataQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTDomainMetadataResponse struct {

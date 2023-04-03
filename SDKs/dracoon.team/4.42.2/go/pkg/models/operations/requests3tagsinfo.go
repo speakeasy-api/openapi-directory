@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestS3TagsInfoHeaders struct {
+type RequestS3TagsInfoRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestS3TagsInfoRequest struct {
-	Headers RequestS3TagsInfoHeaders
 }
 
 type RequestS3TagsInfoResponse struct {

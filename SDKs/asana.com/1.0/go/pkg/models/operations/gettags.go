@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsQueryParams struct {
+type GetTagsRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -24,10 +24,6 @@ type GetTagsQueryParams struct {
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
 	// The workspace to filter tags on.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetTagsRequest struct {
-	QueryParams GetTagsQueryParams
 }
 
 // GetTags200ApplicationJSON - Successfully retrieved the specified set of tags.

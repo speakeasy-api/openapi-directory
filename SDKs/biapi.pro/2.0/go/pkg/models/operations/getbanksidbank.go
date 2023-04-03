@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBanksIDBankPathParams struct {
-	IDBank int64 `pathParam:"style=simple,explode=false,name=id_bank"`
-}
-
-type GetBanksIDBankQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetBanksIDBankRequest struct {
-	PathParams  GetBanksIDBankPathParams
-	QueryParams GetBanksIDBankQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+	IDBank int64   `pathParam:"style=simple,explode=false,name=id_bank"`
 }
 
 type GetBanksIDBankResponse struct {

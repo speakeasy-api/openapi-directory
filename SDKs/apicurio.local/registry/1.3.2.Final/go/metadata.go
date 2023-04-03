@@ -45,7 +45,7 @@ func newMetadata(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) DeleteArtifactVersionMetaData(ctx context.Context, request operations.DeleteArtifactVersionMetaDataRequest) (*operations.DeleteArtifactVersionMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/meta", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *metadata) DeleteArtifactVersionMetaData(ctx context.Context, request op
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactMetaData(ctx context.Context, request operations.GetArtifactMetaDataRequest) (*operations.GetArtifactMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/meta", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,9 +165,9 @@ func (s *metadata) GetArtifactMetaData(ctx context.Context, request operations.G
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactMetaDataByContent(ctx context.Context, request operations.GetArtifactMetaDataByContentRequest) (*operations.GetArtifactMetaDataByContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/meta", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -239,7 +239,7 @@ func (s *metadata) GetArtifactMetaDataByContent(ctx context.Context, request ope
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactMetaDataByGlobalID(ctx context.Context, request operations.GetArtifactMetaDataByGlobalIDRequest) (*operations.GetArtifactMetaDataByGlobalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/{globalId}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ids/{globalId}/meta", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,7 +304,7 @@ func (s *metadata) GetArtifactMetaDataByGlobalID(ctx context.Context, request op
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactVersionMetaData(ctx context.Context, request operations.GetArtifactVersionMetaDataRequest) (*operations.GetArtifactVersionMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/meta", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -367,9 +367,9 @@ func (s *metadata) GetArtifactVersionMetaData(ctx context.Context, request opera
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) UpdateArtifactMetaData(ctx context.Context, request operations.UpdateArtifactMetaDataRequest) (*operations.UpdateArtifactMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/meta", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -433,9 +433,9 @@ func (s *metadata) UpdateArtifactMetaData(ctx context.Context, request operation
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) UpdateArtifactVersionMetaData(ctx context.Context, request operations.UpdateArtifactVersionMetaDataRequest) (*operations.UpdateArtifactVersionMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/meta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/meta", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditableMetaData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

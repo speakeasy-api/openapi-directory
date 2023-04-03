@@ -50,7 +50,7 @@ func (e *GETModifyVpcEndpointConnectionNotificationVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETModifyVpcEndpointConnectionNotificationQueryParams struct {
+type GETModifyVpcEndpointConnectionNotificationRequest struct {
 	Action GETModifyVpcEndpointConnectionNotificationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The events for the endpoint. Valid values are <code>Accept</code>, <code>Connect</code>, <code>Delete</code>, and <code>Reject</code>.
 	ConnectionEvents []string `queryParam:"style=form,explode=true,name=ConnectionEvents"`
@@ -59,23 +59,15 @@ type GETModifyVpcEndpointConnectionNotificationQueryParams struct {
 	// The ID of the notification.
 	ConnectionNotificationID string `queryParam:"style=form,explode=true,name=ConnectionNotificationId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                                 `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETModifyVpcEndpointConnectionNotificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyVpcEndpointConnectionNotificationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpcEndpointConnectionNotificationRequest struct {
-	QueryParams GETModifyVpcEndpointConnectionNotificationQueryParams
-	Headers     GETModifyVpcEndpointConnectionNotificationHeaders
+	DryRun            *bool                                                 `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETModifyVpcEndpointConnectionNotificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyVpcEndpointConnectionNotificationResponse struct {

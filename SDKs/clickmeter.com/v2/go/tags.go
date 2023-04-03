@@ -43,7 +43,7 @@ func (s *tags) TagsCount(ctx context.Context, request operations.TagsCountReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -96,7 +96,7 @@ func (s *tags) TagsCount(ctx context.Context, request operations.TagsCountReques
 // TagsDelete - Delete a tag
 func (s *tags) TagsDelete(ctx context.Context, request operations.TagsDeleteRequest) (*operations.TagsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *tags) TagsDelete(ctx context.Context, request operations.TagsDeleteRequ
 // TagsDeleteRelatedDatapoints - Delete the association of this tag with all datapoints
 func (s *tags) TagsDeleteRelatedDatapoints(ctx context.Context, request operations.TagsDeleteRelatedDatapointsRequest) (*operations.TagsDeleteRelatedDatapointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -218,7 +218,7 @@ func (s *tags) TagsDeleteRelatedDatapoints(ctx context.Context, request operatio
 // TagsDeleteRelatedGroups - Delete the association of this tag with all groups
 func (s *tags) TagsDeleteRelatedGroups(ctx context.Context, request operations.TagsDeleteRelatedGroupsRequest) (*operations.TagsDeleteRelatedGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -293,7 +293,7 @@ func (s *tags) TagsGet(ctx context.Context, request operations.TagsGetRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -346,14 +346,14 @@ func (s *tags) TagsGet(ctx context.Context, request operations.TagsGetRequest) (
 // TagsGetDatapoints - List of all the datapoints associated to the user filtered by this tag
 func (s *tags) TagsGetDatapoints(ctx context.Context, request operations.TagsGetDatapointsRequest) (*operations.TagsGetDatapointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -406,14 +406,14 @@ func (s *tags) TagsGetDatapoints(ctx context.Context, request operations.TagsGet
 // TagsGetDatapointsCount - Count the datapoints associated to the user filtered by this tag
 func (s *tags) TagsGetDatapointsCount(ctx context.Context, request operations.TagsGetDatapointsCountRequest) (*operations.TagsGetDatapointsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -480,14 +480,14 @@ func (s *tags) TagsGetDatapointsCount(ctx context.Context, request operations.Ta
 // TagsGetGroups - List of all the groups associated to the user filtered by this tag.
 func (s *tags) TagsGetGroups(ctx context.Context, request operations.TagsGetGroupsRequest) (*operations.TagsGetGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -540,14 +540,14 @@ func (s *tags) TagsGetGroups(ctx context.Context, request operations.TagsGetGrou
 // TagsGetGroupsCount - Count the groups associated to the user filtered by this tag
 func (s *tags) TagsGetGroupsCount(ctx context.Context, request operations.TagsGetGroupsCountRequest) (*operations.TagsGetGroupsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -614,9 +614,9 @@ func (s *tags) TagsGetGroupsCount(ctx context.Context, request operations.TagsGe
 // TagsPatchDataPointForm - Associate/Deassociate a tag with a datapoint
 func (s *tags) TagsPatchDataPointForm(ctx context.Context, request operations.TagsPatchDataPointFormRequest) (*operations.TagsPatchDataPointFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPatchBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -694,9 +694,9 @@ func (s *tags) TagsPatchDataPointForm(ctx context.Context, request operations.Ta
 // TagsPatchDataPointJSON - Associate/Deassociate a tag with a datapoint
 func (s *tags) TagsPatchDataPointJSON(ctx context.Context, request operations.TagsPatchDataPointJSONRequest) (*operations.TagsPatchDataPointJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPatchBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -774,9 +774,9 @@ func (s *tags) TagsPatchDataPointJSON(ctx context.Context, request operations.Ta
 // TagsPatchDataPointRaw - Associate/Deassociate a tag with a datapoint
 func (s *tags) TagsPatchDataPointRaw(ctx context.Context, request operations.TagsPatchDataPointRawRequest) (*operations.TagsPatchDataPointRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/datapoints/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -854,9 +854,9 @@ func (s *tags) TagsPatchDataPointRaw(ctx context.Context, request operations.Tag
 // TagsPatchGroupForm - Associate/Deassociate a tag with a group
 func (s *tags) TagsPatchGroupForm(ctx context.Context, request operations.TagsPatchGroupFormRequest) (*operations.TagsPatchGroupFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPatchBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -934,9 +934,9 @@ func (s *tags) TagsPatchGroupForm(ctx context.Context, request operations.TagsPa
 // TagsPatchGroupJSON - Associate/Deassociate a tag with a group
 func (s *tags) TagsPatchGroupJSON(ctx context.Context, request operations.TagsPatchGroupJSONRequest) (*operations.TagsPatchGroupJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPatchBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1014,9 +1014,9 @@ func (s *tags) TagsPatchGroupJSON(ctx context.Context, request operations.TagsPa
 // TagsPatchGroupRaw - Associate/Deassociate a tag with a group
 func (s *tags) TagsPatchGroupRaw(ctx context.Context, request operations.TagsPatchGroupRawRequest) (*operations.TagsPatchGroupRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/groups/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1094,9 +1094,9 @@ func (s *tags) TagsPatchGroupRaw(ctx context.Context, request operations.TagsPat
 // TagsPatchTagNameForm - Fast patch a tag name
 func (s *tags) TagsPatchTagNameForm(ctx context.Context, request operations.TagsPatchTagNameFormRequest) (*operations.TagsPatchTagNameFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/name", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1172,9 +1172,9 @@ func (s *tags) TagsPatchTagNameForm(ctx context.Context, request operations.Tags
 // TagsPatchTagNameJSON - Fast patch a tag name
 func (s *tags) TagsPatchTagNameJSON(ctx context.Context, request operations.TagsPatchTagNameJSONRequest) (*operations.TagsPatchTagNameJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/name", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1250,9 +1250,9 @@ func (s *tags) TagsPatchTagNameJSON(ctx context.Context, request operations.Tags
 // TagsPatchTagNameRaw - Fast patch a tag name
 func (s *tags) TagsPatchTagNameRaw(ctx context.Context, request operations.TagsPatchTagNameRawRequest) (*operations.TagsPatchTagNameRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}/name", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1326,7 +1326,7 @@ func (s *tags) TagsPatchTagNameRaw(ctx context.Context, request operations.TagsP
 }
 
 // TagsPut - Create a tag
-func (s *tags) TagsPut(ctx context.Context, request operations.TagsPutRequest) (*operations.TagsPutResponse, error) {
+func (s *tags) TagsPut(ctx context.Context, request shared.APICoreDtoTagsTag) (*operations.TagsPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tags"
 
@@ -1408,7 +1408,7 @@ func (s *tags) TagsPut(ctx context.Context, request operations.TagsPutRequest) (
 // GetTagsTagID - Retrieve a tag
 func (s *tags) GetTagsTagID(ctx context.Context, request operations.GetTagsTagIDRequest) (*operations.GetTagsTagIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

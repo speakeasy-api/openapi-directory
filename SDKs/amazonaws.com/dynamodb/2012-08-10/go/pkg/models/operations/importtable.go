@@ -30,7 +30,8 @@ func (e *ImportTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ImportTableHeaders struct {
+type ImportTableRequest struct {
+	ImportTableInput  shared.ImportTableInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ImportTableHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ImportTableXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ImportTableRequest struct {
-	Headers ImportTableHeaders
-	Request shared.ImportTableInput `request:"mediaType=application/json"`
 }
 
 type ImportTableResponse struct {

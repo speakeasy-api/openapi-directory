@@ -50,25 +50,17 @@ func (e *POSTDeleteSSHPublicKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteSSHPublicKeyQueryParams struct {
-	Action  POSTDeleteSSHPublicKeyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteSSHPublicKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteSSHPublicKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteSSHPublicKeyRequest struct {
-	QueryParams POSTDeleteSSHPublicKeyQueryParams
-	Headers     POSTDeleteSSHPublicKeyHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteSSHPublicKeyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTDeleteSSHPublicKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteSSHPublicKeyResponse struct {

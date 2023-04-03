@@ -50,7 +50,7 @@ func (e *GETCreateRouteVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateRouteQueryParams struct {
+type GETCreateRouteRequest struct {
 	Action GETCreateRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ID of the carrier gateway.</p> <p>You can only use this option when the VPC contains a subnet which is associated with a Wavelength Zone.</p>
 	CarrierGatewayID *string `queryParam:"style=form,explode=true,name=CarrierGatewayId"`
@@ -85,21 +85,13 @@ type GETCreateRouteQueryParams struct {
 	VpcEndpointID *string `queryParam:"style=form,explode=true,name=VpcEndpointId"`
 	// The ID of a VPC peering connection.
 	VpcPeeringConnectionID *string `queryParam:"style=form,explode=true,name=VpcPeeringConnectionId"`
-}
-
-type GETCreateRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateRouteRequest struct {
-	QueryParams GETCreateRouteQueryParams
-	Headers     GETCreateRouteHeaders
+	XAmzAlgorithm          *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateRouteResponse struct {

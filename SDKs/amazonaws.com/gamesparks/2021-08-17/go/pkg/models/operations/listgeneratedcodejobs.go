@@ -7,21 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGeneratedCodeJobsPathParams struct {
+type ListGeneratedCodeJobsRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-	// The identifier of the snapshot.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=SnapshotId"`
-}
-
-type ListGeneratedCodeJobsQueryParams struct {
 	// <p>The maximum number of results to return.</p> <p> Use this parameter with NextToken to get results as a set of sequential pages. </p>
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that indicates the start of the next sequential page of results.</p> <p> Use the token that is returned with a previous call to this operation. To start at the beginning of the result set, do not specify a value. </p>
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListGeneratedCodeJobsHeaders struct {
+	// The identifier of the snapshot.
+	SnapshotID        string  `pathParam:"style=simple,explode=false,name=SnapshotId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +23,6 @@ type ListGeneratedCodeJobsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListGeneratedCodeJobsRequest struct {
-	PathParams  ListGeneratedCodeJobsPathParams
-	QueryParams ListGeneratedCodeJobsQueryParams
-	Headers     ListGeneratedCodeJobsHeaders
 }
 
 type ListGeneratedCodeJobsResponse struct {

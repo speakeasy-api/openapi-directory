@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDominantLanguageDetectionJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDominantLanguageDetectionJobsXAmzTargetEnum
 type ListDominantLanguageDetectionJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDominantLanguageDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type ListDominantLanguageDetectionJobsHeaders struct {
+type ListDominantLanguageDetectionJobsRequest struct {
+	ListDominantLanguageDetectionJobsRequest shared.ListDominantLanguageDetectionJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDominantLanguageDetectionJobsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDominantLanguageDetectionJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDominantLanguageDetectionJobsRequest struct {
-	QueryParams ListDominantLanguageDetectionJobsQueryParams
-	Headers     ListDominantLanguageDetectionJobsHeaders
-	Request     shared.ListDominantLanguageDetectionJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListDominantLanguageDetectionJobsResponse struct {

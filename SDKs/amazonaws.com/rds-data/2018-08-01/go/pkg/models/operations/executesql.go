@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExecuteSQLHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ExecuteSQLRequestBody struct {
 	// <p>The Amazon Resource Name (ARN) of the secret that enables access to the DB cluster. Enter the database user name and password for the credentials in the secret.</p> <p>For information about creating the secret, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a database secret</a>.</p>
 	AwsSecretStoreArn string `json:"awsSecretStoreArn"`
@@ -31,8 +21,14 @@ type ExecuteSQLRequestBody struct {
 }
 
 type ExecuteSQLRequest struct {
-	Headers ExecuteSQLHeaders
-	Request ExecuteSQLRequestBody `request:"mediaType=application/json"`
+	RequestBody       ExecuteSQLRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ExecuteSQLResponse struct {

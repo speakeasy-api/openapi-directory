@@ -50,30 +50,22 @@ func (e *GETModifyIpamScopeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyIpamScopeQueryParams struct {
+type GETModifyIpamScopeRequest struct {
 	Action GETModifyIpamScopeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The description of the scope you want to modify.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the scope you want to modify.
-	IpamScopeID string                        `queryParam:"style=form,explode=true,name=IpamScopeId"`
-	Version     GETModifyIpamScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyIpamScopeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyIpamScopeRequest struct {
-	QueryParams GETModifyIpamScopeQueryParams
-	Headers     GETModifyIpamScopeHeaders
+	IpamScopeID       string                        `queryParam:"style=form,explode=true,name=IpamScopeId"`
+	Version           GETModifyIpamScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyIpamScopeResponse struct {

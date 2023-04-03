@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDedicatedIPPoolPathParams struct {
+type GetDedicatedIPPoolRequest struct {
 	// The name of the dedicated IP pool to retrieve.
-	PoolName string `pathParam:"style=simple,explode=false,name=PoolName"`
-}
-
-type GetDedicatedIPPoolHeaders struct {
+	PoolName          string  `pathParam:"style=simple,explode=false,name=PoolName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetDedicatedIPPoolHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDedicatedIPPoolRequest struct {
-	PathParams GetDedicatedIPPoolPathParams
-	Headers    GetDedicatedIPPoolHeaders
 }
 
 type GetDedicatedIPPoolResponse struct {

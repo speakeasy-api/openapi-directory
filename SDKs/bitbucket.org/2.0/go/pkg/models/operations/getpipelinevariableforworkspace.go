@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPipelineVariableForWorkspacePathParams struct {
+type GetPipelineVariableForWorkspaceRequest struct {
 	// The UUID of the variable to retrieve.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetPipelineVariableForWorkspaceRequest struct {
-	PathParams GetPipelineVariableForWorkspacePathParams
 }
 
 type GetPipelineVariableForWorkspaceResponse struct {

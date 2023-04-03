@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMembershipPathParams struct {
-	// The unique identifier of the membership.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
-type UpdateMembershipHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateMembershipRequestBodyQueryLogStatusEnum - An indicator as to whether query logging has been enabled or disabled for the collaboration.
 type UpdateMembershipRequestBodyQueryLogStatusEnum string
 
@@ -54,9 +39,16 @@ type UpdateMembershipRequestBody struct {
 }
 
 type UpdateMembershipRequest struct {
-	PathParams UpdateMembershipPathParams
-	Headers    UpdateMembershipHeaders
-	Request    UpdateMembershipRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateMembershipRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the membership.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
 }
 
 type UpdateMembershipResponse struct {

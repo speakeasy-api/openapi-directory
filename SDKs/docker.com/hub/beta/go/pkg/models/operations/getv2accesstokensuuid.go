@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2AccessTokensUUIDPathParams struct {
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
-}
-
 type GetV2AccessTokensUUIDRequest struct {
-	PathParams GetV2AccessTokensUUIDPathParams
+	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 // GetV2AccessTokensUUID200ApplicationJSON - OK

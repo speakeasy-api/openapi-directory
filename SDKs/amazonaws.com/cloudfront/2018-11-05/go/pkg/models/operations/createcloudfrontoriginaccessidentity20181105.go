@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateCloudFrontOriginAccessIdentity20181105Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateCloudFrontOriginAccessIdentity20181105RequestBodyCloudFrontOriginAccessIdentityConfig - Origin access identity configuration. Send a <code>GET</code> request to the <code>/<i>CloudFront API version</i>/CloudFront/identity ID/config</code> resource.
 type CreateCloudFrontOriginAccessIdentity20181105RequestBodyCloudFrontOriginAccessIdentityConfig struct {
 	CallerReference *string
@@ -28,8 +18,14 @@ type CreateCloudFrontOriginAccessIdentity20181105RequestBody struct {
 }
 
 type CreateCloudFrontOriginAccessIdentity20181105Request struct {
-	Headers CreateCloudFrontOriginAccessIdentity20181105Headers
-	Request []byte `request:"mediaType=text/xml"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateCloudFrontOriginAccessIdentity20181105Response struct {

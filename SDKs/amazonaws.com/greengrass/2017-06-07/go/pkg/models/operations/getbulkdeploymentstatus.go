@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBulkDeploymentStatusPathParams struct {
+type GetBulkDeploymentStatusRequest struct {
 	// The ID of the bulk deployment.
-	BulkDeploymentID string `pathParam:"style=simple,explode=false,name=BulkDeploymentId"`
-}
-
-type GetBulkDeploymentStatusHeaders struct {
+	BulkDeploymentID  string  `pathParam:"style=simple,explode=false,name=BulkDeploymentId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetBulkDeploymentStatusHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetBulkDeploymentStatusRequest struct {
-	PathParams GetBulkDeploymentStatusPathParams
-	Headers    GetBulkDeploymentStatusHeaders
 }
 
 type GetBulkDeploymentStatusResponse struct {

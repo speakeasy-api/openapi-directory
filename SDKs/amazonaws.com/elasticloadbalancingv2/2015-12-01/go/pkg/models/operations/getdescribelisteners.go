@@ -50,7 +50,7 @@ func (e *GETDescribeListenersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeListenersQueryParams struct {
+type GETDescribeListenersRequest struct {
 	Action GETDescribeListenersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Names (ARN) of the listeners.
 	ListenerArns []string `queryParam:"style=form,explode=true,name=ListenerArns"`
@@ -59,23 +59,15 @@ type GETDescribeListenersQueryParams struct {
 	// The marker for the next set of results. (You received this marker from a previous call.)
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of results to return with this call.
-	PageSize *int64                          `queryParam:"style=form,explode=true,name=PageSize"`
-	Version  GETDescribeListenersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeListenersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeListenersRequest struct {
-	QueryParams GETDescribeListenersQueryParams
-	Headers     GETDescribeListenersHeaders
+	PageSize          *int64                          `queryParam:"style=form,explode=true,name=PageSize"`
+	Version           GETDescribeListenersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeListenersResponse struct {

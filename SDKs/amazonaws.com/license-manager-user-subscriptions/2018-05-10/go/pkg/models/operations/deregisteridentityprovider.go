@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeregisterIdentityProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // DeregisterIdentityProviderRequestBodyIdentityProvider - Details about an identity provider.
 type DeregisterIdentityProviderRequestBodyIdentityProvider struct {
 	ActiveDirectoryIdentityProvider *shared.ActiveDirectoryIdentityProvider `json:"ActiveDirectoryIdentityProvider,omitempty"`
@@ -30,8 +20,14 @@ type DeregisterIdentityProviderRequestBody struct {
 }
 
 type DeregisterIdentityProviderRequest struct {
-	Headers DeregisterIdentityProviderHeaders
-	Request DeregisterIdentityProviderRequestBody `request:"mediaType=application/json"`
+	RequestBody       DeregisterIdentityProviderRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeregisterIdentityProviderResponse struct {

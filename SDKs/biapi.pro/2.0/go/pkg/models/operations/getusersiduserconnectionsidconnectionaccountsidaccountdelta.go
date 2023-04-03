@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaPathParams struct {
+type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaRequest struct {
 	IDAccount    int64 `pathParam:"style=simple,explode=false,name=id_account"`
 	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaQueryParams struct {
 	// maximum date
 	MaxDate *types.Date `queryParam:"style=form,explode=true,name=max_date"`
 	// minimal date
 	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
 	// period to group logs
 	Period *string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaRequest struct {
-	PathParams  GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaPathParams
-	QueryParams GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaQueryParams
 }
 
 type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaResponse struct {

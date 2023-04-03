@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssumeDecoratedRoleWithSAMLHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AssumeDecoratedRoleWithSAMLRequestBody struct {
 	// The time period, between 900 and 43,200 seconds, for the timeout of the temporary credentials.
 	DurationSeconds *int64 `json:"DurationSeconds,omitempty"`
@@ -29,8 +19,14 @@ type AssumeDecoratedRoleWithSAMLRequestBody struct {
 }
 
 type AssumeDecoratedRoleWithSAMLRequest struct {
-	Headers AssumeDecoratedRoleWithSAMLHeaders
-	Request AssumeDecoratedRoleWithSAMLRequestBody `request:"mediaType=application/json"`
+	RequestBody       AssumeDecoratedRoleWithSAMLRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type AssumeDecoratedRoleWithSAMLResponse struct {

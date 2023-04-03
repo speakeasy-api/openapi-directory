@@ -34,9 +34,9 @@ func newChannelCatalogsCategories(defaultClient, securityClient HTTPClient, serv
 // ConfigureChannelCatalogCategory - Configure channel catalog category
 func (s *channelCatalogsCategories) ConfigureChannelCatalogCategory(ctx context.Context, request operations.ConfigureChannelCatalogCategoryRequest) (*operations.ConfigureChannelCatalogCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories/configure", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories/configure", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigureCategoryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -93,7 +93,7 @@ func (s *channelCatalogsCategories) ConfigureChannelCatalogCategory(ctx context.
 // DisableChannelCatalogCategoryMapping - Disable a channel catalog category mapping
 func (s *channelCatalogsCategories) DisableChannelCatalogCategoryMapping(ctx context.Context, request operations.DisableChannelCatalogCategoryMappingRequest) (*operations.DisableChannelCatalogCategoryMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories/disableMapping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories/disableMapping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *channelCatalogsCategories) DisableChannelCatalogCategoryMapping(ctx con
 // GetChannelCatalogCategories - Get channel catalog categories
 func (s *channelCatalogsCategories) GetChannelCatalogCategories(ctx context.Context, request operations.GetChannelCatalogCategoriesRequest) (*operations.GetChannelCatalogCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -196,7 +196,7 @@ func (s *channelCatalogsCategories) GetChannelCatalogCategories(ctx context.Cont
 // ReenableChannelCatalogCategoryMapping - Reenable a channel catalog category mapping
 func (s *channelCatalogsCategories) ReenableChannelCatalogCategoryMapping(ctx context.Context, request operations.ReenableChannelCatalogCategoryMappingRequest) (*operations.ReenableChannelCatalogCategoryMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories/reenableMapping", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/categories/reenableMapping", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

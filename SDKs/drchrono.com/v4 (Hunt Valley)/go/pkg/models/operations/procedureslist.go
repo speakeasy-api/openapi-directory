@@ -8,10 +8,10 @@ import (
 )
 
 type ProceduresListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ProceduresListQueryParams struct {
+type ProceduresListRequest struct {
 	Appointment *int64  `queryParam:"style=form,explode=true,name=appointment"`
 	Cursor      *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor      *int64  `queryParam:"style=form,explode=true,name=doctor"`
@@ -20,11 +20,6 @@ type ProceduresListQueryParams struct {
 	PageSize    *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Patient     *int64  `queryParam:"style=form,explode=true,name=patient"`
 	ServiceDate *string `queryParam:"style=form,explode=true,name=service_date"`
-}
-
-type ProceduresListRequest struct {
-	QueryParams ProceduresListQueryParams
-	Security    ProceduresListSecurity
 }
 
 // ProceduresList200ApplicationJSON - Paginated Result

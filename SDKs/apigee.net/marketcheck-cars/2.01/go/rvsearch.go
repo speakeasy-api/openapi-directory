@@ -36,14 +36,14 @@ func newRVSearch(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get a particular RV listing by its id
 func (s *rvSearch) GetListingRvUkID(ctx context.Context, request operations.GetListingRvUkIDRequest) (*operations.GetListingRvUkIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/uk/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/uk/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *rvSearch) GetListingRvUkID(ctx context.Context, request operations.GetL
 // Get RV listing options, features, seller comments
 func (s *rvSearch) GetListingRvUkIDExtra(ctx context.Context, request operations.GetListingRvUkIDExtraRequest) (*operations.GetListingRvUkIDExtraResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/uk/{id}/extra", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/uk/{id}/extra", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *rvSearch) GetListingRvUkIDExtra(ctx context.Context, request operations
 // Get listing media (photo, photos) by id
 func (s *rvSearch) GetListingRvUkIDMedia(ctx context.Context, request operations.GetListingRvUkIDMediaRequest) (*operations.GetListingRvUkIDMediaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/uk/{id}/media", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/uk/{id}/media", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -213,14 +213,14 @@ func (s *rvSearch) GetListingRvUkIDMedia(ctx context.Context, request operations
 // Get a particular RV listing by its id
 func (s *rvSearch) GetListingRvID(ctx context.Context, request operations.GetListingRvIDRequest) (*operations.GetListingRvIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -272,14 +272,14 @@ func (s *rvSearch) GetListingRvID(ctx context.Context, request operations.GetLis
 // Get RV listing options, features, seller comments
 func (s *rvSearch) GetListingRvIDExtra(ctx context.Context, request operations.GetListingRvIDExtraRequest) (*operations.GetListingRvIDExtraResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/{id}/extra", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/{id}/extra", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -331,14 +331,14 @@ func (s *rvSearch) GetListingRvIDExtra(ctx context.Context, request operations.G
 // Get listing media (photo, photos) by id
 func (s *rvSearch) GetListingRvIDMedia(ctx context.Context, request operations.GetListingRvIDMediaRequest) (*operations.GetListingRvIDMediaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/{id}/media", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/rv/{id}/media", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -409,7 +409,7 @@ func (s *rvSearch) GetSearchRvActive(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -468,7 +468,7 @@ func (s *rvSearch) GetSearchRvAutoComplete(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -539,7 +539,7 @@ func (s *rvSearch) GetSearchRvUkActive(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

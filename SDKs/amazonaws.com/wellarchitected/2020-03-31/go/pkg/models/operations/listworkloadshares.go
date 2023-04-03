@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkloadSharesPathParams struct {
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
 // ListWorkloadSharesStatusEnum - The status of a workload share.
 type ListWorkloadSharesStatusEnum string
 
@@ -55,30 +51,22 @@ func (e *ListWorkloadSharesStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListWorkloadSharesQueryParams struct {
+type ListWorkloadSharesRequest struct {
 	// The maximum number of results to return for this request.
 	MaxResults *int64  `queryParam:"style=form,explode=true,name=MaxResults"`
 	NextToken  *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the workload is shared.
 	SharedWithPrefix *string `queryParam:"style=form,explode=true,name=SharedWithPrefix"`
 	// The status of a workload share.
-	Status *ListWorkloadSharesStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListWorkloadSharesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWorkloadSharesRequest struct {
-	PathParams  ListWorkloadSharesPathParams
-	QueryParams ListWorkloadSharesQueryParams
-	Headers     ListWorkloadSharesHeaders
+	Status            *ListWorkloadSharesStatusEnum `queryParam:"style=form,explode=true,name=Status"`
+	WorkloadID        string                        `pathParam:"style=simple,explode=false,name=WorkloadId"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListWorkloadSharesResponse struct {

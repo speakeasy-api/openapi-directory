@@ -14,21 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetPayoutRequest{
-        Security: operations.GetPayoutSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.GetPayoutPathParams{
-            PayoutID: "corrupti",
-        },
-        Headers: operations.GetPayoutHeaders{
-            XEbayCMarketplaceID: "provident",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        PayoutID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Payout.GetPayout(ctx, req)
+    res, err := s.Payout.GetPayout(ctx, req, operations.GetPayoutSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

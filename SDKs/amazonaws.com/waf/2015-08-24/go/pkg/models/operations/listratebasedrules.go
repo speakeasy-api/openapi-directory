@@ -30,20 +30,16 @@ func (e *ListRateBasedRulesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListRateBasedRulesHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListRateBasedRulesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListRateBasedRulesRequest struct {
-	Headers ListRateBasedRulesHeaders
-	Request shared.ListRateBasedRulesRequest `request:"mediaType=application/json"`
+	ListRateBasedRulesRequest shared.ListRateBasedRulesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                ListRateBasedRulesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ListRateBasedRulesResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTCloneReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCloneReceiptRuleSetQueryParams struct {
-	Action  POSTCloneReceiptRuleSetActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCloneReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCloneReceiptRuleSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCloneReceiptRuleSetRequest struct {
-	QueryParams POSTCloneReceiptRuleSetQueryParams
-	Headers     POSTCloneReceiptRuleSetHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCloneReceiptRuleSetActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTCloneReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCloneReceiptRuleSetResponse struct {

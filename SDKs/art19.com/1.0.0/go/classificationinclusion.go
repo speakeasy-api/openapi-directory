@@ -41,7 +41,7 @@ func newClassificationInclusion(defaultClient, securityClient HTTPClient, server
 // - `classified_id` and `classified_type`
 // - `classified_id` and `classification_type`
 // - `classification_id` and `classified_type`
-func (s *classificationInclusion) GetClassificationInclusions(ctx context.Context, request operations.GetClassificationInclusionsRequest) (*operations.GetClassificationInclusionsResponse, error) {
+func (s *classificationInclusion) GetClassificationInclusions(ctx context.Context, request operations.GetClassificationInclusionsRequest, security operations.GetClassificationInclusionsSecurity) (*operations.GetClassificationInclusionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/classification_inclusions"
 
@@ -50,11 +50,11 @@ func (s *classificationInclusion) GetClassificationInclusions(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,16 +106,16 @@ func (s *classificationInclusion) GetClassificationInclusions(ctx context.Contex
 }
 
 // GetClassificationInclusionsID - Get a specific classification inclusion
-func (s *classificationInclusion) GetClassificationInclusionsID(ctx context.Context, request operations.GetClassificationInclusionsIDRequest) (*operations.GetClassificationInclusionsIDResponse, error) {
+func (s *classificationInclusion) GetClassificationInclusionsID(ctx context.Context, request operations.GetClassificationInclusionsIDRequest, security operations.GetClassificationInclusionsIDSecurity) (*operations.GetClassificationInclusionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classification_inclusions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classification_inclusions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

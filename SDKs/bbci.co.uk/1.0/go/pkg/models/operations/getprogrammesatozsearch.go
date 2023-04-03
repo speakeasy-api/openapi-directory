@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammesAtoZSearchPathParams struct {
-	// Letter to search by, a to z or the string '0-9'
-	Letter string `pathParam:"style=simple,explode=false,name=letter"`
-}
-
 // GetProgrammesAtoZSearchSortEnum - The sort order of the results.
 type GetProgrammesAtoZSearchSortEnum string
 
@@ -35,11 +30,13 @@ func (e *GetProgrammesAtoZSearchSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProgrammesAtoZSearchQueryParams struct {
+type GetProgrammesAtoZSearchRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The depth to return child entities.
 	InitialChildCount int64 `queryParam:"style=form,explode=true,name=initial_child_count"`
+	// Letter to search by, a to z or the string '0-9'
+	Letter string `pathParam:"style=simple,explode=false,name=letter"`
 	// The page index.
 	Page int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return.
@@ -50,11 +47,6 @@ type GetProgrammesAtoZSearchQueryParams struct {
 	Sort GetProgrammesAtoZSearchSortEnum `queryParam:"style=form,explode=true,name=sort"`
 	// Whether to sort ascending or descending
 	SortDirection shared.SortDirectionEnum `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetProgrammesAtoZSearchRequest struct {
-	PathParams  GetProgrammesAtoZSearchPathParams
-	QueryParams GetProgrammesAtoZSearchQueryParams
 }
 
 type GetProgrammesAtoZSearchResponse struct {

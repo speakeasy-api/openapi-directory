@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDetectorPathParams struct {
-	// The name of the detector model whose detectors (instances) you want information about.
-	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
-}
-
-type DescribeDetectorQueryParams struct {
-	// A filter used to limit results to detectors (instances) created because of the given key ID.
-	KeyValue *string `queryParam:"style=form,explode=true,name=keyValue"`
-}
-
-type DescribeDetectorHeaders struct {
+type DescribeDetectorRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeDetectorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDetectorRequest struct {
-	PathParams  DescribeDetectorPathParams
-	QueryParams DescribeDetectorQueryParams
-	Headers     DescribeDetectorHeaders
+	// The name of the detector model whose detectors (instances) you want information about.
+	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
+	// A filter used to limit results to detectors (instances) created because of the given key ID.
+	KeyValue *string `queryParam:"style=form,explode=true,name=keyValue"`
 }
 
 type DescribeDetectorResponse struct {

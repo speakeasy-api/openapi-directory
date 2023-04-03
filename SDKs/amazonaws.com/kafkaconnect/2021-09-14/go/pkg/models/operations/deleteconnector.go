@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteConnectorPathParams struct {
-	// The Amazon Resource Name (ARN) of the connector that you want to delete.
-	ConnectorArn string `pathParam:"style=simple,explode=false,name=connectorArn"`
-}
-
-type DeleteConnectorQueryParams struct {
-	// The current version of the connector that you want to delete.
-	CurrentVersion *string `queryParam:"style=form,explode=true,name=currentVersion"`
-}
-
-type DeleteConnectorHeaders struct {
+type DeleteConnectorRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteConnectorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteConnectorRequest struct {
-	PathParams  DeleteConnectorPathParams
-	QueryParams DeleteConnectorQueryParams
-	Headers     DeleteConnectorHeaders
+	// The Amazon Resource Name (ARN) of the connector that you want to delete.
+	ConnectorArn string `pathParam:"style=simple,explode=false,name=connectorArn"`
+	// The current version of the connector that you want to delete.
+	CurrentVersion *string `queryParam:"style=form,explode=true,name=currentVersion"`
 }
 
 type DeleteConnectorResponse struct {

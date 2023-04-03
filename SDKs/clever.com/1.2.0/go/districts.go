@@ -35,7 +35,7 @@ func newDistricts(defaultClient, securityClient HTTPClient, serverURL, language,
 // GetAdminsForDistrict - Returns the admins for a district
 func (s *districts) GetAdminsForDistrict(ctx context.Context, request operations.GetAdminsForDistrictRequest) (*operations.GetAdminsForDistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/admins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/admins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,14 +89,14 @@ func (s *districts) GetAdminsForDistrict(ctx context.Context, request operations
 // GetDistrict - Returns a specific district
 func (s *districts) GetDistrict(ctx context.Context, request operations.GetDistrictRequest) (*operations.GetDistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -147,7 +147,7 @@ func (s *districts) GetDistrict(ctx context.Context, request operations.GetDistr
 // GetDistrictStatus - Returns the status of the district
 func (s *districts) GetDistrictStatus(ctx context.Context, request operations.GetDistrictStatusRequest) (*operations.GetDistrictStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -245,14 +245,14 @@ func (s *districts) GetDistricts(ctx context.Context) (*operations.GetDistrictsR
 // GetSchoolsForDistrict - Returns the schools for a district
 func (s *districts) GetSchoolsForDistrict(ctx context.Context, request operations.GetSchoolsForDistrictRequest) (*operations.GetSchoolsForDistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/schools", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/schools", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -303,14 +303,14 @@ func (s *districts) GetSchoolsForDistrict(ctx context.Context, request operation
 // GetSectionsForDistrict - Returns the sections for a district
 func (s *districts) GetSectionsForDistrict(ctx context.Context, request operations.GetSectionsForDistrictRequest) (*operations.GetSectionsForDistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/sections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/sections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -361,14 +361,14 @@ func (s *districts) GetSectionsForDistrict(ctx context.Context, request operatio
 // GetStudentsForDistrict - Returns the students for a district
 func (s *districts) GetStudentsForDistrict(ctx context.Context, request operations.GetStudentsForDistrictRequest) (*operations.GetStudentsForDistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/students", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/students", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -419,14 +419,14 @@ func (s *districts) GetStudentsForDistrict(ctx context.Context, request operatio
 // GetTeachersForDistrict - Returns the teachers for a district
 func (s *districts) GetTeachersForDistrict(ctx context.Context, request operations.GetTeachersForDistrictRequest) (*operations.GetTeachersForDistrictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/teachers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/districts/{id}/teachers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

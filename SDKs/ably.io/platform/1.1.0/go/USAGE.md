@@ -21,16 +21,10 @@ func main() {
     )
 
     req := operations.RequestAccessTokenRequest{
-        PathParams: operations.RequestAccessTokenPathParams{
-            KeyName: "corrupti",
-        },
-        QueryParams: operations.RequestAccessTokenQueryParams{
-            Format: "msgpack",
-        },
-        Headers: operations.RequestAccessTokenHeaders{
-            XAblyVersion: "distinctio",
-        },
-        Request: &operations.RequestAccessTokenRequestBody{},
+        RequestBody: &operations.RequestAccessTokenRequestBody{},
+        XAblyVersion: "corrupti",
+        Format: "msgpack",
+        KeyName: "distinctio",
     }
 
     ctx := context.Background()

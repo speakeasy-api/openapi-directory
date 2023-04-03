@@ -80,7 +80,7 @@ func (e *GETDescribeNetworkInterfaceAttributeVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETDescribeNetworkInterfaceAttributeQueryParams struct {
+type GETDescribeNetworkInterfaceAttributeRequest struct {
 	Action GETDescribeNetworkInterfaceAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The attribute of the network interface. This parameter is required.
 	Attribute *GETDescribeNetworkInterfaceAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
@@ -89,21 +89,13 @@ type GETDescribeNetworkInterfaceAttributeQueryParams struct {
 	// The ID of the network interface.
 	NetworkInterfaceID string                                          `queryParam:"style=form,explode=true,name=NetworkInterfaceId"`
 	Version            GETDescribeNetworkInterfaceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeNetworkInterfaceAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeNetworkInterfaceAttributeRequest struct {
-	QueryParams GETDescribeNetworkInterfaceAttributeQueryParams
-	Headers     GETDescribeNetworkInterfaceAttributeHeaders
+	XAmzAlgorithm      *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeNetworkInterfaceAttributeResponse struct {

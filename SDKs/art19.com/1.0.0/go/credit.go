@@ -32,7 +32,7 @@ func newCredit(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetCredits - Get a list of credits
-func (s *credit) GetCredits(ctx context.Context, request operations.GetCreditsRequest) (*operations.GetCreditsResponse, error) {
+func (s *credit) GetCredits(ctx context.Context, request operations.GetCreditsRequest, security operations.GetCreditsSecurity) (*operations.GetCreditsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credits"
 
@@ -41,11 +41,11 @@ func (s *credit) GetCredits(ctx context.Context, request operations.GetCreditsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *credit) GetCredits(ctx context.Context, request operations.GetCreditsRe
 }
 
 // GetCreditsID - Get a specific credit
-func (s *credit) GetCreditsID(ctx context.Context, request operations.GetCreditsIDRequest) (*operations.GetCreditsIDResponse, error) {
+func (s *credit) GetCreditsID(ctx context.Context, request operations.GetCreditsIDRequest, security operations.GetCreditsIDSecurity) (*operations.GetCreditsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/credits/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/credits/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

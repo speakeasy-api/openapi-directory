@@ -8,20 +8,7 @@ import (
 )
 
 type ImageOcrPhotoRecognizeFormAdvancedSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ImageOcrPhotoRecognizeFormAdvancedHeaders struct {
-	// Bucket ID of the Configuration Bucket storing the form templates
-	BucketID *string `header:"style=simple,explode=false,name=bucketID"`
-	// Bucket Secret Key of the Configuration Bucket storing the form templates
-	BucketSecretKey *string `header:"style=simple,explode=false,name=bucketSecretKey"`
-	// Optional, diagnostics mode, default is 'false'.  Possible values are 'true' (will set DiagnosticImage to a diagnostic PNG image in the result), and 'false' (no diagnostics are enabled; this is recommended for best performance).
-	Diagnostics *string `header:"style=simple,explode=false,name=diagnostics"`
-	// Optional, preprocessing mode, default is 'Auto'.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to 'None' if you do not want to use automatic image unrotation and enhancement.
-	Preprocessing *string `header:"style=simple,explode=false,name=preprocessing"`
-	// Optional, enable advanced recognition mode by specifying 'Advanced', enable handwriting recognition by specifying 'EnableHandwriting'.  Default is disabled.
-	RecognitionMode *string `header:"style=simple,explode=false,name=recognitionMode"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=Apikey"`
 }
 
 type ImageOcrPhotoRecognizeFormAdvancedRequestBodyImageFile struct {
@@ -35,9 +22,17 @@ type ImageOcrPhotoRecognizeFormAdvancedRequestBody struct {
 }
 
 type ImageOcrPhotoRecognizeFormAdvancedRequest struct {
-	Headers  ImageOcrPhotoRecognizeFormAdvancedHeaders
-	Request  ImageOcrPhotoRecognizeFormAdvancedRequestBody `request:"mediaType=multipart/form-data"`
-	Security ImageOcrPhotoRecognizeFormAdvancedSecurity
+	RequestBody ImageOcrPhotoRecognizeFormAdvancedRequestBody `request:"mediaType=multipart/form-data"`
+	// Bucket ID of the Configuration Bucket storing the form templates
+	BucketID *string `header:"style=simple,explode=false,name=bucketID"`
+	// Bucket Secret Key of the Configuration Bucket storing the form templates
+	BucketSecretKey *string `header:"style=simple,explode=false,name=bucketSecretKey"`
+	// Optional, diagnostics mode, default is 'false'.  Possible values are 'true' (will set DiagnosticImage to a diagnostic PNG image in the result), and 'false' (no diagnostics are enabled; this is recommended for best performance).
+	Diagnostics *string `header:"style=simple,explode=false,name=diagnostics"`
+	// Optional, preprocessing mode, default is 'Auto'.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to 'None' if you do not want to use automatic image unrotation and enhancement.
+	Preprocessing *string `header:"style=simple,explode=false,name=preprocessing"`
+	// Optional, enable advanced recognition mode by specifying 'Advanced', enable handwriting recognition by specifying 'EnableHandwriting'.  Default is disabled.
+	RecognitionMode *string `header:"style=simple,explode=false,name=recognitionMode"`
 }
 
 type ImageOcrPhotoRecognizeFormAdvancedResponse struct {

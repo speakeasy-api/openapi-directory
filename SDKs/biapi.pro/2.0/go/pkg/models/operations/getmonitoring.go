@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetMonitoringQueryParams struct {
+type GetMonitoringRequest struct {
 	// number on days on which stats on synchronization have to be done per worker (Default: 1)
 	Period *int64 `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetMonitoringRequest struct {
-	QueryParams GetMonitoringQueryParams
 }
 
 type GetMonitoringResponse struct {

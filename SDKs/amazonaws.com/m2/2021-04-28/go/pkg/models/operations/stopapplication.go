@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type StopApplicationPathParams struct {
-	// The unique identifier of the application you want to stop.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type StopApplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type StopApplicationRequestBody struct {
 	// Stopping an application process can take a long time. Setting this parameter to true lets you force stop the application so you don't need to wait until the process finishes to apply another action on the application. The default value is false.
 	ForceStop *bool `json:"forceStop,omitempty"`
 }
 
 type StopApplicationRequest struct {
-	PathParams StopApplicationPathParams
-	Headers    StopApplicationHeaders
-	Request    StopApplicationRequestBody `request:"mediaType=application/json"`
+	RequestBody       StopApplicationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the application you want to stop.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 }
 
 type StopApplicationResponse struct {

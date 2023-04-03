@@ -50,25 +50,17 @@ func (e *POSTRecordHandlerProgressVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type POSTRecordHandlerProgressQueryParams struct {
-	Action  POSTRecordHandlerProgressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRecordHandlerProgressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRecordHandlerProgressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRecordHandlerProgressRequest struct {
-	QueryParams POSTRecordHandlerProgressQueryParams
-	Headers     POSTRecordHandlerProgressHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRecordHandlerProgressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                               `request:"mediaType=text/xml"`
+	Version           POSTRecordHandlerProgressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRecordHandlerProgressResponse struct {

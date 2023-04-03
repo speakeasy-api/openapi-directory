@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppInvitationsCreateByEmailSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AppInvitationsCreateByEmailPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The email of the user to invite
-	UserEmail string `pathParam:"style=simple,explode=false,name=user_email"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // AppInvitationsCreateByEmailRequestBodyRoleEnum - The role of the user to be added
@@ -56,10 +46,14 @@ type AppInvitationsCreateByEmailRequestBody struct {
 }
 
 type AppInvitationsCreateByEmailRequest struct {
-	PathParams AppInvitationsCreateByEmailPathParams
 	// The role of the user to be added
-	Request  *AppInvitationsCreateByEmailRequestBody `request:"mediaType=application/json"`
-	Security AppInvitationsCreateByEmailSecurity
+	RequestBody *AppInvitationsCreateByEmailRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The email of the user to invite
+	UserEmail string `pathParam:"style=simple,explode=false,name=user_email"`
 }
 
 type AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum string

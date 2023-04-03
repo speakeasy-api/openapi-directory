@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWebhooksAuthQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetWebhooksAuthRequest struct {
-	QueryParams GetWebhooksAuthQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 // GetWebhooksAuth200ApplicationJSON - authproviders

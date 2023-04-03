@@ -50,25 +50,17 @@ func (e *POSTCreateIpamScopeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateIpamScopeQueryParams struct {
-	Action  POSTCreateIpamScopeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateIpamScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateIpamScopeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateIpamScopeRequest struct {
-	QueryParams POSTCreateIpamScopeQueryParams
-	Headers     POSTCreateIpamScopeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateIpamScopeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                         `request:"mediaType=text/xml"`
+	Version           POSTCreateIpamScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateIpamScopeResponse struct {

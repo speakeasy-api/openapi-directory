@@ -7,26 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourceDefinitionVersionPathParams struct {
+type GetResourceDefinitionVersionRequest struct {
 	// The ID of the resource definition.
 	ResourceDefinitionID string `pathParam:"style=simple,explode=false,name=ResourceDefinitionId"`
 	// The ID of the resource definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListResourceDefinitionVersions'' requests. If the version is the last one that was associated with a resource definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
-	ResourceDefinitionVersionID string `pathParam:"style=simple,explode=false,name=ResourceDefinitionVersionId"`
-}
-
-type GetResourceDefinitionVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetResourceDefinitionVersionRequest struct {
-	PathParams GetResourceDefinitionVersionPathParams
-	Headers    GetResourceDefinitionVersionHeaders
+	ResourceDefinitionVersionID string  `pathParam:"style=simple,explode=false,name=ResourceDefinitionVersionId"`
+	XAmzAlgorithm               *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetResourceDefinitionVersionResponse struct {

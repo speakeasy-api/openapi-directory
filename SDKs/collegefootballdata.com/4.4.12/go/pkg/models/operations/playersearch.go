@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PlayerSearchQueryParams struct {
+type PlayerSearchRequest struct {
 	// Position abbreviation filter
 	Position *string `queryParam:"style=form,explode=true,name=position"`
 	// Term to search on
@@ -16,10 +16,6 @@ type PlayerSearchQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type PlayerSearchRequest struct {
-	QueryParams PlayerSearchQueryParams
 }
 
 type PlayerSearchResponse struct {

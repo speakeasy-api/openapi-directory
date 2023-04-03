@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateKeywordLeaseConfigSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateKeywordLeaseConfigPathParams struct {
-	// To update a keyword lease config
-	Keyword string `pathParam:"style=simple,explode=false,name=keyword"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateKeywordLeaseConfigRequest struct {
-	PathParams UpdateKeywordLeaseConfigPathParams
 	// The configuration of a keyword lease object.
-	Request  *shared.KeywordConfig `request:"mediaType=application/json"`
-	Security UpdateKeywordLeaseConfigSecurity
+	KeywordConfig *shared.KeywordConfig `request:"mediaType=application/json"`
+	// To update a keyword lease config
+	Keyword string `pathParam:"style=simple,explode=false,name=keyword"`
 }
 
 type UpdateKeywordLeaseConfigResponse struct {

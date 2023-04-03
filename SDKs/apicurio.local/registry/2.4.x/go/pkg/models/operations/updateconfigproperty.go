@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConfigPropertyPathParams struct {
+type UpdateConfigPropertyRequest struct {
+	UpdateConfigurationProperty shared.UpdateConfigurationProperty `request:"mediaType=application/json"`
 	// The name of a configuration property.
 	PropertyName string `pathParam:"style=simple,explode=false,name=propertyName"`
-}
-
-type UpdateConfigPropertyRequest struct {
-	PathParams UpdateConfigPropertyPathParams
-	Request    shared.UpdateConfigurationProperty `request:"mediaType=application/json"`
 }
 
 type UpdateConfigPropertyResponse struct {

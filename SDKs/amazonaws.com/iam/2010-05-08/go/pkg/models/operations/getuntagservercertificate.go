@@ -50,28 +50,20 @@ func (e *GETUntagServerCertificateVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETUntagServerCertificateQueryParams struct {
+type GETUntagServerCertificateRequest struct {
 	Action GETUntagServerCertificateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the IAM server certificate from which you want to remove tags.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	ServerCertificateName string `queryParam:"style=form,explode=true,name=ServerCertificateName"`
 	// A list of key names as a simple array of strings. The tags with matching keys are removed from the specified IAM server certificate.
-	TagKeys []string                             `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETUntagServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUntagServerCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUntagServerCertificateRequest struct {
-	QueryParams GETUntagServerCertificateQueryParams
-	Headers     GETUntagServerCertificateHeaders
+	TagKeys           []string                             `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETUntagServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUntagServerCertificateResponse struct {

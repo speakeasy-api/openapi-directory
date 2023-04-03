@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetDatapointsPathParams struct {
-	// Id of the group
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GroupsGetDatapointsSortDirectionEnum - Direction of sort "asc" or "desc"
 type GroupsGetDatapointsSortDirectionEnum string
 
@@ -92,11 +87,13 @@ func (e *GroupsGetDatapointsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroupsGetDatapointsQueryParams struct {
+type GroupsGetDatapointsRequest struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
 	CreatedBefore *string `queryParam:"style=form,explode=true,name=createdBefore"`
+	// Id of the group
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Maximum elements to retrieve. Default to 20 if not specified.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start when retrieving elements. Default is 0 if not specified.
@@ -115,11 +112,6 @@ type GroupsGetDatapointsQueryParams struct {
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Type of the datapoint ("tp"/"tl")
 	Type *GroupsGetDatapointsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GroupsGetDatapointsRequest struct {
-	PathParams  GroupsGetDatapointsPathParams
-	QueryParams GroupsGetDatapointsQueryParams
 }
 
 type GroupsGetDatapointsResponse struct {

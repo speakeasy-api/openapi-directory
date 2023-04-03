@@ -13,50 +13,40 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchAcknowledgeAlarmRequest{
-        Headers: operations.BatchAcknowledgeAlarmHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.BatchAcknowledgeAlarmRequestBody{
+        RequestBody: operations.BatchAcknowledgeAlarmRequestBody{
             AcknowledgeActionRequests: []shared.AcknowledgeAlarmActionRequest{
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "vel",
-                    KeyValue: "error",
-                    Note: "deserunt",
-                    RequestID: "suscipit",
+                    AlarmModelName: "provident",
+                    KeyValue: "distinctio",
+                    Note: "quibusdam",
+                    RequestID: "unde",
                 },
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "iure",
-                    KeyValue: "magnam",
-                    Note: "debitis",
-                    RequestID: "ipsa",
+                    AlarmModelName: "nulla",
+                    KeyValue: "corrupti",
+                    Note: "illum",
+                    RequestID: "vel",
                 },
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "delectus",
-                    KeyValue: "tempora",
+                    AlarmModelName: "error",
+                    KeyValue: "deserunt",
                     Note: "suscipit",
-                    RequestID: "molestiae",
-                },
-                shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "minus",
-                    KeyValue: "placeat",
-                    Note: "voluptatum",
-                    RequestID: "iusto",
+                    RequestID: "iure",
                 },
             },
         },
+        XAmzAlgorithm: "magnam",
+        XAmzContentSha256: "debitis",
+        XAmzCredential: "ipsa",
+        XAmzDate: "delectus",
+        XAmzSecurityToken: "tempora",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "molestiae",
     }
 
     ctx := context.Background()

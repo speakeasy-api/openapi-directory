@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrganizationMembersPathParams struct {
+type GetOrganizationMembersRequest struct {
 	// The identifier of the Organization.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
-type GetOrganizationMembersRequest struct {
-	PathParams GetOrganizationMembersPathParams
 }
 
 type GetOrganizationMembersResponse struct {

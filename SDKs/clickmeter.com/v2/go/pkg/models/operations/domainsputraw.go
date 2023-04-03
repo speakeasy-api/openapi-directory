@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsPutRawRequest struct {
-	// The domain to create
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type DomainsPutRawResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

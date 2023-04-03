@@ -6,26 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CrashGroupsGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashGroupsGetPathParams struct {
+type CrashGroupsGetRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// id of a specific group
 	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashGroupsGetRequest struct {
-	PathParams CrashGroupsGetPathParams
-	Security   CrashGroupsGetSecurity
 }
 
 // CrashGroupsGetDefaultApplicationJSON - Error

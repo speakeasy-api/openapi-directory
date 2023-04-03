@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSchedulingPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateSchedulingPolicyRequestBodyFairsharePolicy - The fair share policy for a scheduling policy.
 type UpdateSchedulingPolicyRequestBodyFairsharePolicy struct {
 	ComputeReservation *int64                   `json:"computeReservation,omitempty"`
@@ -32,8 +22,14 @@ type UpdateSchedulingPolicyRequestBody struct {
 }
 
 type UpdateSchedulingPolicyRequest struct {
-	Headers UpdateSchedulingPolicyHeaders
-	Request UpdateSchedulingPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSchedulingPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateSchedulingPolicyResponse struct {

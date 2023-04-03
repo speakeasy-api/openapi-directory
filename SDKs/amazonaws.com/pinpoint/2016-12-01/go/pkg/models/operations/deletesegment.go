@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSegmentPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-	// The unique identifier for the segment.
-	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
-}
-
-type DeleteSegmentHeaders struct {
+type DeleteSegmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteSegmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSegmentRequest struct {
-	PathParams DeleteSegmentPathParams
-	Headers    DeleteSegmentHeaders
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
+	// The unique identifier for the segment.
+	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
 }
 
 type DeleteSegmentResponse struct {

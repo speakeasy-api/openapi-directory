@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterCertificateQueryParams struct {
-	// <p>A boolean value that specifies if the certificate is set to active.</p> <p>Valid values: <code>ACTIVE | INACTIVE</code> </p>
-	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
-}
-
-type RegisterCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterCertificateRequestBodyStatusEnum - The status of the register certificate request. Valid values that you can use include <code>ACTIVE</code>, <code>INACTIVE</code>, and <code>REVOKED</code>.
 type RegisterCertificateRequestBodyStatusEnum string
 
@@ -70,9 +55,16 @@ type RegisterCertificateRequestBody struct {
 }
 
 type RegisterCertificateRequest struct {
-	QueryParams RegisterCertificateQueryParams
-	Headers     RegisterCertificateHeaders
-	Request     RegisterCertificateRequestBody `request:"mediaType=application/json"`
+	RequestBody       RegisterCertificateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>A boolean value that specifies if the certificate is set to active.</p> <p>Valid values: <code>ACTIVE | INACTIVE</code> </p>
+	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
 }
 
 type RegisterCertificateResponse struct {

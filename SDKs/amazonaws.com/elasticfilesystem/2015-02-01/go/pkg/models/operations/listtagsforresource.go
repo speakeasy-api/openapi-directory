@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTagsForResourcePathParams struct {
-	// Specifies the EFS resource you want to retrieve tags for. You can retrieve tags for EFS file systems and access points using this API endpoint.
-	ResourceID string `pathParam:"style=simple,explode=false,name=ResourceId"`
-}
-
-type ListTagsForResourceQueryParams struct {
+type ListTagsForResourceRequest struct {
 	// (Optional) Specifies the maximum number of tag objects to return in the response. The default value is 100.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// (Optional) You can use <code>NextToken</code> in a subsequent request to fetch the next page of access point descriptions if the response payload was paginated.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListTagsForResourceHeaders struct {
+	// Specifies the EFS resource you want to retrieve tags for. You can retrieve tags for EFS file systems and access points using this API endpoint.
+	ResourceID        string  `pathParam:"style=simple,explode=false,name=ResourceId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListTagsForResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTagsForResourceRequest struct {
-	PathParams  ListTagsForResourcePathParams
-	QueryParams ListTagsForResourceQueryParams
-	Headers     ListTagsForResourceHeaders
 }
 
 type ListTagsForResourceResponse struct {

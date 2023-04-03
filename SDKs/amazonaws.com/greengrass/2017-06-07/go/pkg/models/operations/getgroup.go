@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupPathParams struct {
+type GetGroupRequest struct {
 	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type GetGroupHeaders struct {
+	GroupID           string  `pathParam:"style=simple,explode=false,name=GroupId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGroupRequest struct {
-	PathParams GetGroupPathParams
-	Headers    GetGroupHeaders
 }
 
 type GetGroupResponse struct {

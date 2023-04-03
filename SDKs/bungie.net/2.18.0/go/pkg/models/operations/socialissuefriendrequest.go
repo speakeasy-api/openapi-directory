@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SocialIssueFriendRequestSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SocialIssueFriendRequestPathParams struct {
-	// The membership id of the user you wish to add.
-	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SocialIssueFriendRequestRequest struct {
-	PathParams SocialIssueFriendRequestPathParams
-	Security   SocialIssueFriendRequestSecurity
+	// The membership id of the user you wish to add.
+	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
 }
 
 // SocialIssueFriendRequest200Wildcard - Look at the Response property for more information about the nature of this response

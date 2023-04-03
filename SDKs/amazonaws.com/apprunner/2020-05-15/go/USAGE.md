@@ -13,28 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateCustomDomainRequest{
-        Headers: operations.AssociateCustomDomainHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AppRunner.AssociateCustomDomain",
-        },
-        Request: shared.AssociateCustomDomainRequest{
-            DomainName: "illum",
+        AssociateCustomDomainRequest: shared.AssociateCustomDomainRequest{
+            DomainName: "corrupti",
             EnableWWWSubdomain: false,
-            ServiceArn: "vel",
+            ServiceArn: "provident",
         },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "AppRunner.AssociateCustomDomain",
     }
 
     ctx := context.Background()

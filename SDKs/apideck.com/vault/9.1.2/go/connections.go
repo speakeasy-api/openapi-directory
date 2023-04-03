@@ -35,18 +35,18 @@ func newConnections(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // ConnectionSettingsAll - Get resource settings
 // This endpoint returns custom settings and their defaults required by connection for a given resource.
-func (s *connections) ConnectionSettingsAll(ctx context.Context, request operations.ConnectionSettingsAllRequest) (*operations.ConnectionSettingsAllResponse, error) {
+func (s *connections) ConnectionSettingsAll(ctx context.Context, request operations.ConnectionSettingsAllRequest, security operations.ConnectionSettingsAllSecurity) (*operations.ConnectionSettingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/{resource}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/{resource}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,11 +142,11 @@ func (s *connections) ConnectionSettingsAll(ctx context.Context, request operati
 
 // ConnectionSettingsUpdate - Update settings
 // Update default values for a connection's resource settings
-func (s *connections) ConnectionSettingsUpdate(ctx context.Context, request operations.ConnectionSettingsUpdateRequest) (*operations.ConnectionSettingsUpdateResponse, error) {
+func (s *connections) ConnectionSettingsUpdate(ctx context.Context, request operations.ConnectionSettingsUpdateRequest, security operations.ConnectionSettingsUpdateSecurity) (*operations.ConnectionSettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/{resource}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/{resource}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -161,9 +161,9 @@ func (s *connections) ConnectionSettingsUpdate(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,11 +259,11 @@ func (s *connections) ConnectionSettingsUpdate(ctx context.Context, request oper
 
 // ConnectionsAdd - Create connection
 // Create an authorized connection
-func (s *connections) ConnectionsAdd(ctx context.Context, request operations.ConnectionsAddRequest) (*operations.ConnectionsAddResponse, error) {
+func (s *connections) ConnectionsAdd(ctx context.Context, request operations.ConnectionsAddRequest, security operations.ConnectionsAddSecurity) (*operations.ConnectionsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,9 +278,9 @@ func (s *connections) ConnectionsAdd(ctx context.Context, request operations.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -378,7 +378,7 @@ func (s *connections) ConnectionsAdd(ctx context.Context, request operations.Con
 // This endpoint includes all the configured integrations and contains the required assets
 // to build an integrations page where your users can install integrations.
 // OAuth2 supported integrations will contain authorize and revoke links to handle the authentication flows.
-func (s *connections) ConnectionsAll(ctx context.Context, request operations.ConnectionsAllRequest) (*operations.ConnectionsAllResponse, error) {
+func (s *connections) ConnectionsAll(ctx context.Context, request operations.ConnectionsAllRequest, security operations.ConnectionsAllSecurity) (*operations.ConnectionsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vault/connections"
 
@@ -387,13 +387,13 @@ func (s *connections) ConnectionsAll(ctx context.Context, request operations.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -500,7 +500,7 @@ func (s *connections) ConnectionsCallback(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -591,18 +591,18 @@ func (s *connections) ConnectionsCallback(ctx context.Context, request operation
 
 // ConnectionsDelete - Deletes a connection
 // Deletes a connection
-func (s *connections) ConnectionsDelete(ctx context.Context, request operations.ConnectionsDeleteRequest) (*operations.ConnectionsDeleteResponse, error) {
+func (s *connections) ConnectionsDelete(ctx context.Context, request operations.ConnectionsDeleteRequest, security operations.ConnectionsDeleteSecurity) (*operations.ConnectionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -689,11 +689,11 @@ func (s *connections) ConnectionsDelete(ctx context.Context, request operations.
 
 // ConnectionsImport - Import connection
 // Import an authorized connection.
-func (s *connections) ConnectionsImport(ctx context.Context, request operations.ConnectionsImportRequest) (*operations.ConnectionsImportResponse, error) {
+func (s *connections) ConnectionsImport(ctx context.Context, request operations.ConnectionsImportRequest, security operations.ConnectionsImportSecurity) (*operations.ConnectionsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionImportData", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -708,9 +708,9 @@ func (s *connections) ConnectionsImport(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -806,18 +806,18 @@ func (s *connections) ConnectionsImport(ctx context.Context, request operations.
 
 // ConnectionsOne - Get connection
 // Get a connection
-func (s *connections) ConnectionsOne(ctx context.Context, request operations.ConnectionsOneRequest) (*operations.ConnectionsOneResponse, error) {
+func (s *connections) ConnectionsOne(ctx context.Context, request operations.ConnectionsOneRequest, security operations.ConnectionsOneSecurity) (*operations.ConnectionsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -921,14 +921,14 @@ func (s *connections) ConnectionsOne(ctx context.Context, request operations.Con
 // Vault handles the complete revoke flow for you and will redirect you to the dynamic redirect uri you have appended to the url in case this is missing the default redirect uri you have configured for your Unify application.
 func (s *connections) ConnectionsRevoke(ctx context.Context, request operations.ConnectionsRevokeRequest) (*operations.ConnectionsRevokeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/revoke/{service_id}/{application_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/revoke/{service_id}/{application_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1021,11 +1021,11 @@ func (s *connections) ConnectionsRevoke(ctx context.Context, request operations.
 // Get an access token for a connection and store it in Vault. Currently only supported for connections with the client_credentials OAuth grant type.
 //
 // Note that the access token will not be returned in the response. A 200 response code indicates a valid access token was stored on the connection.
-func (s *connections) ConnectionsToken(ctx context.Context, request operations.ConnectionsTokenRequest) (*operations.ConnectionsTokenResponse, error) {
+func (s *connections) ConnectionsToken(ctx context.Context, request operations.ConnectionsTokenRequest, security operations.ConnectionsTokenSecurity) (*operations.ConnectionsTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}/token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1037,9 +1037,9 @@ func (s *connections) ConnectionsToken(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1135,11 +1135,11 @@ func (s *connections) ConnectionsToken(ctx context.Context, request operations.C
 
 // ConnectionsUpdate - Update connection
 // Update a connection
-func (s *connections) ConnectionsUpdate(ctx context.Context, request operations.ConnectionsUpdateRequest) (*operations.ConnectionsUpdateResponse, error) {
+func (s *connections) ConnectionsUpdate(ctx context.Context, request operations.ConnectionsUpdateRequest, security operations.ConnectionsUpdateSecurity) (*operations.ConnectionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/connections/{unified_api}/{service_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1154,9 +1154,9 @@ func (s *connections) ConnectionsUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

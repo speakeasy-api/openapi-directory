@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ShipmentGetListQueryParams struct {
+type ShipmentGetListRequest struct {
 	// Specifies the newest shipment date to include in the response
 	CreatedAtMax *time.Time `queryParam:"style=form,explode=true,name=createdAtMax"`
 	// Specifies the oldest shipment date to include in the response
@@ -23,10 +23,6 @@ type ShipmentGetListQueryParams struct {
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// Get Shippings for the specified shipping provider only. <seealso cref="M:Rechnungsdruck.WebApp.Controllers.Api.ShipmentController.GetShippingproviders" />
 	ShippingProviderID *int64 `queryParam:"style=form,explode=true,name=shippingProviderId"`
-}
-
-type ShipmentGetListRequest struct {
-	QueryParams ShipmentGetListQueryParams
 }
 
 type ShipmentGetListResponse struct {

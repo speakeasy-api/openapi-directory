@@ -7,25 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcePoliciesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The Amazon Resource Name (ARN) of the response plan with the attached resource policy.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type GetResourcePoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetResourcePoliciesRequestBody struct {
 	// The maximum number of resource policies to display for each page of results.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -34,9 +15,20 @@ type GetResourcePoliciesRequestBody struct {
 }
 
 type GetResourcePoliciesRequest struct {
-	QueryParams GetResourcePoliciesQueryParams
-	Headers     GetResourcePoliciesHeaders
-	Request     GetResourcePoliciesRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetResourcePoliciesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The Amazon Resource Name (ARN) of the response plan with the attached resource policy.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type GetResourcePoliciesResponse struct {

@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGeofenceCollectionPathParams struct {
-	// The name of the geofence collection to update.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-}
-
-type UpdateGeofenceCollectionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateGeofenceCollectionRequestBodyPricingPlanEnum - No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
 type UpdateGeofenceCollectionRequestBodyPricingPlanEnum string
 
@@ -61,9 +46,16 @@ type UpdateGeofenceCollectionRequestBody struct {
 }
 
 type UpdateGeofenceCollectionRequest struct {
-	PathParams UpdateGeofenceCollectionPathParams
-	Headers    UpdateGeofenceCollectionHeaders
-	Request    UpdateGeofenceCollectionRequestBody `request:"mediaType=application/json"`
+	// The name of the geofence collection to update.
+	CollectionName    string                              `pathParam:"style=simple,explode=false,name=CollectionName"`
+	RequestBody       UpdateGeofenceCollectionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateGeofenceCollectionResponse struct {

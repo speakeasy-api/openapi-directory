@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAssistantAssociationPathParams struct {
-	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
-}
-
-type CreateAssistantAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateAssistantAssociationRequestBodyAssociation - The data that is input into Wisdom as a result of the assistant association.
 type CreateAssistantAssociationRequestBodyAssociation struct {
 	KnowledgeBaseID *string `json:"knowledgeBaseId,omitempty"`
@@ -62,9 +47,16 @@ type CreateAssistantAssociationRequestBody struct {
 }
 
 type CreateAssistantAssociationRequest struct {
-	PathParams CreateAssistantAssociationPathParams
-	Headers    CreateAssistantAssociationHeaders
-	Request    CreateAssistantAssociationRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateAssistantAssociationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
 }
 
 type CreateAssistantAssociationResponse struct {

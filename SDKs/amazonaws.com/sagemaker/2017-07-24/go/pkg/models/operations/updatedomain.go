@@ -30,20 +30,16 @@ func (e *UpdateDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateDomainHeaders struct {
-	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateDomainXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateDomainRequest struct {
-	Headers UpdateDomainHeaders
-	Request shared.UpdateDomainRequest `request:"mediaType=application/json"`
+	UpdateDomainRequest shared.UpdateDomainRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm       *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget          UpdateDomainXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateDomainResponse struct {

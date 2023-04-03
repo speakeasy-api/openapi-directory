@@ -8,13 +8,8 @@ import (
 )
 
 type FunctionsCreateExecutionSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type FunctionsCreateExecutionPathParams struct {
-	// Function unique ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type FunctionsCreateExecutionRequestBody struct {
@@ -23,9 +18,9 @@ type FunctionsCreateExecutionRequestBody struct {
 }
 
 type FunctionsCreateExecutionRequest struct {
-	PathParams FunctionsCreateExecutionPathParams
-	Request    *FunctionsCreateExecutionRequestBody `request:"mediaType=application/json"`
-	Security   FunctionsCreateExecutionSecurity
+	RequestBody *FunctionsCreateExecutionRequestBody `request:"mediaType=application/json"`
+	// Function unique ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type FunctionsCreateExecutionResponse struct {

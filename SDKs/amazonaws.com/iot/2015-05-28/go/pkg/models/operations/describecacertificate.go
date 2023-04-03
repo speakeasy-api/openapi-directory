@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeCACertificatePathParams struct {
-	// The CA certificate identifier.
-	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
-}
-
-type DescribeCACertificateHeaders struct {
+type DescribeCACertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeCACertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeCACertificateRequest struct {
-	PathParams DescribeCACertificatePathParams
-	Headers    DescribeCACertificateHeaders
+	// The CA certificate identifier.
+	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
 }
 
 type DescribeCACertificateResponse struct {

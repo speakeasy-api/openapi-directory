@@ -6,23 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateFieldPathParams struct {
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-	// The unique identifier of a field.
-	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
-}
-
-type UpdateFieldHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateFieldRequestBody struct {
 	// The description of a field.
 	Description *string `json:"description,omitempty"`
@@ -31,9 +14,18 @@ type UpdateFieldRequestBody struct {
 }
 
 type UpdateFieldRequest struct {
-	PathParams UpdateFieldPathParams
-	Headers    UpdateFieldHeaders
-	Request    UpdateFieldRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateFieldRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// The unique identifier of a field.
+	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
 }
 
 type UpdateFieldResponse struct {

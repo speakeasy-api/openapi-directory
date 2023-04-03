@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetProductBySkuPathParams struct {
-	// Your store identifier
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetProductBySkuQueryParams struct {
+type CatalogGetProductBySkuRequest struct {
 	// The product sku you want to get
 	Sku string `queryParam:"style=form,explode=true,name=sku"`
-}
-
-type CatalogGetProductBySkuRequest struct {
-	PathParams  CatalogGetProductBySkuPathParams
-	QueryParams CatalogGetProductBySkuQueryParams
+	// Your store identifier
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type CatalogGetProductBySkuResponse struct {

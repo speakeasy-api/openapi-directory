@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVolumesNameJSONPathParams struct {
-	// The name of the volume, for which you want to retrieve detailed information. Run `cf ic volume list` or call the `GET /volumes/json` endpoint to retrieve a list of all volumes that are available in your space.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetVolumesNameJSONHeaders struct {
+type GetVolumesNameJSONRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetVolumesNameJSONRequest struct {
-	PathParams GetVolumesNameJSONPathParams
-	Headers    GetVolumesNameJSONHeaders
+	// The name of the volume, for which you want to retrieve detailed information. Run `cf ic volume list` or call the `GET /volumes/json` endpoint to retrieve a list of all volumes that are available in your space.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetVolumesNameJSONResponse struct {

@@ -33,7 +33,7 @@ func newBlockedNumbers(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // GetBlockedNumbers - List blocked numbers
-func (s *blockedNumbers) GetBlockedNumbers(ctx context.Context, request operations.GetBlockedNumbersRequest) (*operations.GetBlockedNumbersResponse, error) {
+func (s *blockedNumbers) GetBlockedNumbers(ctx context.Context, request operations.GetBlockedNumbersRequest, security operations.GetBlockedNumbersSecurity) (*operations.GetBlockedNumbersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/blocked-numbers"
 
@@ -42,11 +42,11 @@ func (s *blockedNumbers) GetBlockedNumbers(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *blockedNumbers) GetBlockedNumbers(ctx context.Context, request operatio
 //
 // Sending a message to a blocked number will result in the message being assigned a status of
 // `FAILED.BLOCKED`. Messages sent to blocked numbers are billed to your account.
-func (s *blockedNumbers) PostBlockedNumbers(ctx context.Context, request operations.PostBlockedNumbersRequest) (*operations.PostBlockedNumbersResponse, error) {
+func (s *blockedNumbers) PostBlockedNumbers(ctx context.Context, request []string, security operations.PostBlockedNumbersSecurity) (*operations.PostBlockedNumbersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/blocked-numbers"
 
@@ -106,7 +106,7 @@ func (s *blockedNumbers) PostBlockedNumbers(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

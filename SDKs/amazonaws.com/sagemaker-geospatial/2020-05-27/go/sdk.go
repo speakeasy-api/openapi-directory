@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // DeleteEarthObservationJob - Use this operation to delete an Earth Observation job.
 func (s *SDK) DeleteEarthObservationJob(ctx context.Context, request operations.DeleteEarthObservationJobRequest) (*operations.DeleteEarthObservationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -220,14 +220,14 @@ func (s *SDK) DeleteEarthObservationJob(ctx context.Context, request operations.
 // DeleteVectorEnrichmentJob - Use this operation to delete a Vector Enrichment job.
 func (s *SDK) DeleteVectorEnrichmentJob(ctx context.Context, request operations.DeleteVectorEnrichmentJobRequest) (*operations.DeleteVectorEnrichmentJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -328,7 +328,7 @@ func (s *SDK) ExportEarthObservationJob(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export-earth-observation-job"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,7 +343,7 @@ func (s *SDK) ExportEarthObservationJob(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -454,7 +454,7 @@ func (s *SDK) ExportVectorEnrichmentJob(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export-vector-enrichment-jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -469,7 +469,7 @@ func (s *SDK) ExportVectorEnrichmentJob(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -578,14 +578,14 @@ func (s *SDK) ExportVectorEnrichmentJob(ctx context.Context, request operations.
 // GetEarthObservationJob - Get the details for a previously initiated Earth Observation job.
 func (s *SDK) GetEarthObservationJob(ctx context.Context, request operations.GetEarthObservationJobRequest) (*operations.GetEarthObservationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -674,14 +674,14 @@ func (s *SDK) GetEarthObservationJob(ctx context.Context, request operations.Get
 // GetRasterDataCollection - Use this operation to get details of a specific raster data collection.
 func (s *SDK) GetRasterDataCollection(ctx context.Context, request operations.GetRasterDataCollectionRequest) (*operations.GetRasterDataCollectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/raster-data-collection/{Arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/raster-data-collection/{Arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -770,16 +770,16 @@ func (s *SDK) GetRasterDataCollection(ctx context.Context, request operations.Ge
 // GetTile - Gets a web mercator tile for the given Earth Observation job.
 func (s *SDK) GetTile(ctx context.Context, request operations.GetTileRequest) (*operations.GetTileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tile/{z}/{x}/{y}#Arn&ImageAssets&Target", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tile/{z}/{x}/{y}#Arn&ImageAssets&Target", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -870,14 +870,14 @@ func (s *SDK) GetTile(ctx context.Context, request operations.GetTileRequest) (*
 // GetVectorEnrichmentJob - Retrieves details of a Vector Enrichment Job for a given job Amazon Resource Name (ARN).
 func (s *SDK) GetVectorEnrichmentJob(ctx context.Context, request operations.GetVectorEnrichmentJobRequest) (*operations.GetVectorEnrichmentJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -968,7 +968,7 @@ func (s *SDK) ListEarthObservationJobs(ctx context.Context, request operations.L
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-earth-observation-jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -983,9 +983,9 @@ func (s *SDK) ListEarthObservationJobs(ctx context.Context, request operations.L
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1083,9 +1083,9 @@ func (s *SDK) ListRasterDataCollections(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1176,14 +1176,14 @@ func (s *SDK) ListRasterDataCollections(ctx context.Context, request operations.
 // ListTagsForResource - Lists the tags attached to the resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1274,7 +1274,7 @@ func (s *SDK) ListVectorEnrichmentJobs(ctx context.Context, request operations.L
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-vector-enrichment-jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1289,9 +1289,9 @@ func (s *SDK) ListVectorEnrichmentJobs(ctx context.Context, request operations.L
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1384,7 +1384,7 @@ func (s *SDK) SearchRasterDataCollection(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search-raster-data-collection"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1399,9 +1399,9 @@ func (s *SDK) SearchRasterDataCollection(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1494,7 +1494,7 @@ func (s *SDK) StartEarthObservationJob(ctx context.Context, request operations.S
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/earth-observation-jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1509,7 +1509,7 @@ func (s *SDK) StartEarthObservationJob(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1620,7 +1620,7 @@ func (s *SDK) StartVectorEnrichmentJob(ctx context.Context, request operations.S
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vector-enrichment-jobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1635,7 +1635,7 @@ func (s *SDK) StartVectorEnrichmentJob(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1746,7 +1746,7 @@ func (s *SDK) StopEarthObservationJob(ctx context.Context, request operations.St
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/earth-observation-jobs/stop"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1761,7 +1761,7 @@ func (s *SDK) StopEarthObservationJob(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1862,7 +1862,7 @@ func (s *SDK) StopVectorEnrichmentJob(ctx context.Context, request operations.St
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vector-enrichment-jobs/stop"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1877,7 +1877,7 @@ func (s *SDK) StopVectorEnrichmentJob(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1976,9 +1976,9 @@ func (s *SDK) StopVectorEnrichmentJob(ctx context.Context, request operations.St
 // TagResource - The resource you want to tag.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1993,7 +1993,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2082,16 +2082,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - The resource you want to untag.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

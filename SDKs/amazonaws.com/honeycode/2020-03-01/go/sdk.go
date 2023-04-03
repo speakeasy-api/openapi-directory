@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // BatchCreateTableRows - <p> The BatchCreateTableRows API allows you to create one or more rows at the end of a table in a workbook. The API allows you to specify the values to set in some or all of the columns in the new rows. </p> <p> If a column is not explicitly set in a specific row, then the column level formula specified in the table will be applied to the new row. If there is no column level formula but the last row of the table has a formula, then that formula will be copied down to the new row. If there is no column level formula and no formula in the last row of the table, then that column will be left blank for the new rows. </p>
 func (s *SDK) BatchCreateTableRows(ctx context.Context, request operations.BatchCreateTableRowsRequest) (*operations.BatchCreateTableRowsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchcreate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchcreate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchCreateTableRows(ctx context.Context, request operations.Batch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -250,9 +250,9 @@ func (s *SDK) BatchCreateTableRows(ctx context.Context, request operations.Batch
 // BatchDeleteTableRows -  The BatchDeleteTableRows API allows you to delete one or more rows from a table in a workbook. You need to specify the ids of the rows that you want to delete from the table.
 func (s *SDK) BatchDeleteTableRows(ctx context.Context, request operations.BatchDeleteTableRowsRequest) (*operations.BatchDeleteTableRowsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchdelete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchdelete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -267,7 +267,7 @@ func (s *SDK) BatchDeleteTableRows(ctx context.Context, request operations.Batch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -376,9 +376,9 @@ func (s *SDK) BatchDeleteTableRows(ctx context.Context, request operations.Batch
 // BatchUpdateTableRows - <p> The BatchUpdateTableRows API allows you to update one or more rows in a table in a workbook. </p> <p> You can specify the values to set in some or all of the columns in the table for the specified rows. If a column is not explicitly specified in a particular row, then that column will not be updated for that row. To clear out the data in a specific cell, you need to set the value as an empty string (""). </p>
 func (s *SDK) BatchUpdateTableRows(ctx context.Context, request operations.BatchUpdateTableRowsRequest) (*operations.BatchUpdateTableRowsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchupdate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchupdate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -393,7 +393,7 @@ func (s *SDK) BatchUpdateTableRows(ctx context.Context, request operations.Batch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -502,9 +502,9 @@ func (s *SDK) BatchUpdateTableRows(ctx context.Context, request operations.Batch
 // BatchUpsertTableRows - <p> The BatchUpsertTableRows API allows you to upsert one or more rows in a table. The upsert operation takes a filter expression as input and evaluates it to find matching rows on the destination table. If matching rows are found, it will update the cells in the matching rows to new values specified in the request. If no matching rows are found, a new row is added at the end of the table and the cells in that row are set to the new values specified in the request. </p> <p> You can specify the values to set in some or all of the columns in the table for the matching or newly appended rows. If a column is not explicitly specified for a particular row, then that column will not be updated for that row. To clear out the data in a specific cell, you need to set the value as an empty string (""). </p>
 func (s *SDK) BatchUpsertTableRows(ctx context.Context, request operations.BatchUpsertTableRowsRequest) (*operations.BatchUpsertTableRowsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchupsert", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/batchupsert", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -519,7 +519,7 @@ func (s *SDK) BatchUpsertTableRows(ctx context.Context, request operations.Batch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -638,14 +638,14 @@ func (s *SDK) BatchUpsertTableRows(ctx context.Context, request operations.Batch
 // DescribeTableDataImportJob -  The DescribeTableDataImportJob API allows you to retrieve the status and details of a table data import job.
 func (s *SDK) DescribeTableDataImportJob(ctx context.Context, request operations.DescribeTableDataImportJobRequest) (*operations.DescribeTableDataImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/import/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/import/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -756,7 +756,7 @@ func (s *SDK) GetScreenData(ctx context.Context, request operations.GetScreenDat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/screendata"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -771,7 +771,7 @@ func (s *SDK) GetScreenData(ctx context.Context, request operations.GetScreenDat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -880,9 +880,9 @@ func (s *SDK) GetScreenData(ctx context.Context, request operations.GetScreenDat
 // InvokeScreenAutomation -  The InvokeScreenAutomation API allows invoking an action defined in a screen in a Honeycode app. The API allows setting local variables, which can then be used in the automation being invoked. This allows automating the Honeycode app interactions to write, update or delete data in the workbook.
 func (s *SDK) InvokeScreenAutomation(ctx context.Context, request operations.InvokeScreenAutomationRequest) (*operations.InvokeScreenAutomationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/apps/{appId}/screens/{screenId}/automations/{automationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/apps/{appId}/screens/{screenId}/automations/{automationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -897,7 +897,7 @@ func (s *SDK) InvokeScreenAutomation(ctx context.Context, request operations.Inv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1036,16 +1036,16 @@ func (s *SDK) InvokeScreenAutomation(ctx context.Context, request operations.Inv
 // ListTableColumns -  The ListTableColumns API allows you to retrieve a list of all the columns in a table in a workbook.
 func (s *SDK) ListTableColumns(ctx context.Context, request operations.ListTableColumnsRequest) (*operations.ListTableColumnsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/columns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/columns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1156,9 +1156,9 @@ func (s *SDK) ListTableColumns(ctx context.Context, request operations.ListTable
 // ListTableRows -  The ListTableRows API allows you to retrieve a list of all the rows in a table in a workbook.
 func (s *SDK) ListTableRows(ctx context.Context, request operations.ListTableRowsRequest) (*operations.ListTableRowsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/list", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1173,9 +1173,9 @@ func (s *SDK) ListTableRows(ctx context.Context, request operations.ListTableRow
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1286,16 +1286,16 @@ func (s *SDK) ListTableRows(ctx context.Context, request operations.ListTableRow
 // ListTables -  The ListTables API allows you to retrieve a list of all the tables in a workbook.
 func (s *SDK) ListTables(ctx context.Context, request operations.ListTablesRequest) (*operations.ListTablesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1406,14 +1406,14 @@ func (s *SDK) ListTables(ctx context.Context, request operations.ListTablesReque
 // ListTagsForResource -  The ListTagsForResource API allows you to return a resource's tags.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1522,9 +1522,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // QueryTableRows -  The QueryTableRows API allows you to use a filter formula to query for specific rows in a table.
 func (s *SDK) QueryTableRows(ctx context.Context, request operations.QueryTableRowsRequest) (*operations.QueryTableRowsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/query", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/rows/query", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1539,9 +1539,9 @@ func (s *SDK) QueryTableRows(ctx context.Context, request operations.QueryTableR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1652,9 +1652,9 @@ func (s *SDK) QueryTableRows(ctx context.Context, request operations.QueryTableR
 // StartTableDataImportJob -  The StartTableDataImportJob API allows you to start an import job on a table. This API will only return the id of the job that was started. To find out the status of the import request, you need to call the DescribeTableDataImportJob API.
 func (s *SDK) StartTableDataImportJob(ctx context.Context, request operations.StartTableDataImportJobRequest) (*operations.StartTableDataImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workbooks/{workbookId}/tables/{tableId}/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1669,7 +1669,7 @@ func (s *SDK) StartTableDataImportJob(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1788,9 +1788,9 @@ func (s *SDK) StartTableDataImportJob(ctx context.Context, request operations.St
 // TagResource -  The TagResource API allows you to add tags to an ARN-able resource. Resource includes workbook, table, screen and screen-automation.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1805,7 +1805,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1914,16 +1914,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource -  The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table, screen and screen-automation.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

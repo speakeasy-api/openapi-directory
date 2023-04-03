@@ -14,12 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.KeyRevokeRequest{
-        PathParams: operations.KeyRevokePathParams{
-            Pk: "corrupti",
-        },
-        QueryParams: operations.KeyRevokeQueryParams{
-            Secret: "provident",
-        },
+        Pk: "corrupti",
+        Secret: "provident",
     }
 
     ctx := context.Background()

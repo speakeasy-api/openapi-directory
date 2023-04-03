@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SublabsDeleteSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SublabsDeletePathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SublabsDeleteRequest struct {
-	PathParams SublabsDeletePathParams
-	Security   SublabsDeleteSecurity
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SublabsDeleteResponse struct {

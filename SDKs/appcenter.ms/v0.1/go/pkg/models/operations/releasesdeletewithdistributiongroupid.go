@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesDeleteWithDistributionGroupIDSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesDeleteWithDistributionGroupIDPathParams struct {
+type ReleasesDeleteWithDistributionGroupIDRequest struct {
 	// The name of the app
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the distribution group.
@@ -20,11 +19,6 @@ type ReleasesDeleteWithDistributionGroupIDPathParams struct {
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The ID identifying the unique release.
 	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
-}
-
-type ReleasesDeleteWithDistributionGroupIDRequest struct {
-	PathParams ReleasesDeleteWithDistributionGroupIDPathParams
-	Security   ReleasesDeleteWithDistributionGroupIDSecurity
 }
 
 type ReleasesDeleteWithDistributionGroupIDResponse struct {

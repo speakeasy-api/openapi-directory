@@ -50,7 +50,7 @@ func (e *GETCreateGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETCreateGlobalReplicationGroupQueryParams struct {
+type GETCreateGlobalReplicationGroupRequest struct {
 	Action GETCreateGlobalReplicationGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Provides details of the Global datastore
 	GlobalReplicationGroupDescription *string `queryParam:"style=form,explode=true,name=GlobalReplicationGroupDescription"`
@@ -59,21 +59,13 @@ type GETCreateGlobalReplicationGroupQueryParams struct {
 	// The name of the primary cluster that accepts writes and will replicate updates to the secondary cluster.
 	PrimaryReplicationGroupID string                                     `queryParam:"style=form,explode=true,name=PrimaryReplicationGroupId"`
 	Version                   GETCreateGlobalReplicationGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateGlobalReplicationGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateGlobalReplicationGroupRequest struct {
-	QueryParams GETCreateGlobalReplicationGroupQueryParams
-	Headers     GETCreateGlobalReplicationGroupHeaders
+	XAmzAlgorithm             *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateGlobalReplicationGroupResponse struct {

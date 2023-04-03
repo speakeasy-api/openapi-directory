@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrderAPIUpdateStateRawPathParams struct {
+type OrderAPIUpdateStateRawRequest struct {
+	// The data used to change the state
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The internal id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIUpdateStateRawRequest struct {
-	PathParams OrderAPIUpdateStateRawPathParams
-	// The data used to change the state
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPIUpdateStateRawResponse struct {

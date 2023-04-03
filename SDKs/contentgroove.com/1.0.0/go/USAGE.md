@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteAPIV1ClipsIDRequest{
-        Security: operations.DeleteAPIV1ClipsIDSecurity{
-            BearerHeader: shared.SchemeBearerHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.DeleteAPIV1ClipsIDPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.DeleteAPIV1ClipsID(ctx, req)
+    res, err := s.DeleteAPIV1ClipsID(ctx, req, operations.DeleteAPIV1ClipsIDSecurity{
+        BearerHeader: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

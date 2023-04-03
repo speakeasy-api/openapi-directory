@@ -50,7 +50,7 @@ func (e *GETModifyCurrentDBClusterCapacityVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETModifyCurrentDBClusterCapacityQueryParams struct {
+type GETModifyCurrentDBClusterCapacityRequest struct {
 	Action GETModifyCurrentDBClusterCapacityActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB cluster capacity.</p> <p>When you change the capacity of a paused Aurora Serverless v1 DB cluster, it automatically resumes.</p> <p>Constraints:</p> <ul> <li> <p>For Aurora MySQL, valid capacity values are <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>128</code>, and <code>256</code>.</p> </li> <li> <p>For Aurora PostgreSQL, valid capacity values are <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>192</code>, and <code>384</code>.</p> </li> </ul>
 	Capacity *int64 `queryParam:"style=form,explode=true,name=Capacity"`
@@ -59,23 +59,15 @@ type GETModifyCurrentDBClusterCapacityQueryParams struct {
 	// <p>The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless scaling before enforcing the timeout action. The default is 300.</p> <p>Specify a value between 10 and 600 seconds.</p>
 	SecondsBeforeTimeout *int64 `queryParam:"style=form,explode=true,name=SecondsBeforeTimeout"`
 	// <p>The action to take when the timeout is reached, either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.</p> <p> <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as possible.</p> <p> <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the timeout period.</p>
-	TimeoutAction *string                                      `queryParam:"style=form,explode=true,name=TimeoutAction"`
-	Version       GETModifyCurrentDBClusterCapacityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyCurrentDBClusterCapacityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyCurrentDBClusterCapacityRequest struct {
-	QueryParams GETModifyCurrentDBClusterCapacityQueryParams
-	Headers     GETModifyCurrentDBClusterCapacityHeaders
+	TimeoutAction     *string                                      `queryParam:"style=form,explode=true,name=TimeoutAction"`
+	Version           GETModifyCurrentDBClusterCapacityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyCurrentDBClusterCapacityResponse struct {

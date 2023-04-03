@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateNotificationConfigPathParams struct {
-	// Unique identifier for a notification configuration
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateNotificationConfigHeaders struct {
+type UpdateNotificationConfigRequest struct {
+	NotificationConfigChangeRequest shared.NotificationConfigChangeRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateNotificationConfigRequest struct {
-	PathParams UpdateNotificationConfigPathParams
-	Headers    UpdateNotificationConfigHeaders
-	Request    shared.NotificationConfigChangeRequest `request:"mediaType=application/json"`
+	// Unique identifier for a notification configuration
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateNotificationConfigResponse struct {

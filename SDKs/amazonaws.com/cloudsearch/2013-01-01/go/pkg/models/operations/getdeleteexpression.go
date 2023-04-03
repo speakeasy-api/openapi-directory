@@ -50,27 +50,19 @@ func (e *GETDeleteExpressionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteExpressionQueryParams struct {
+type GETDeleteExpressionRequest struct {
 	Action     GETDeleteExpressionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                        `queryParam:"style=form,explode=true,name=DomainName"`
 	// The name of the <code><a>Expression</a></code> to delete.
-	ExpressionName string                         `queryParam:"style=form,explode=true,name=ExpressionName"`
-	Version        GETDeleteExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteExpressionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteExpressionRequest struct {
-	QueryParams GETDeleteExpressionQueryParams
-	Headers     GETDeleteExpressionHeaders
+	ExpressionName    string                         `queryParam:"style=form,explode=true,name=ExpressionName"`
+	Version           GETDeleteExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteExpressionResponse struct {

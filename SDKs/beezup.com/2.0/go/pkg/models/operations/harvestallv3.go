@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type HarvestAllV3QueryParams struct {
+type HarvestAllV3Request struct {
 	// The StoreId to filter by
 	StoreID *string `queryParam:"style=form,explode=true,name=storeId"`
-}
-
-type HarvestAllV3Request struct {
-	QueryParams HarvestAllV3QueryParams
 }
 
 type HarvestAllV3Response struct {

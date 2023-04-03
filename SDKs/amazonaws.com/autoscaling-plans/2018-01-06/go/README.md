@@ -24,39 +24,39 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateScalingPlanRequest{
-        Headers: operations.CreateScalingPlanHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AnyScaleScalingPlannerFrontendService.CreateScalingPlan",
-        },
-        Request: shared.CreateScalingPlanRequest{
+        CreateScalingPlanRequest: shared.CreateScalingPlanRequest{
             ApplicationSource: shared.ApplicationSource{
-                CloudFormationStackARN: "illum",
+                CloudFormationStackARN: "corrupti",
                 TagFilters: []shared.TagFilter{
                     shared.TagFilter{
-                        Key: "error",
+                        Key: "distinctio",
                         Values: []string{
-                            "suscipit",
-                            "iure",
-                            "magnam",
+                            "unde",
+                            "nulla",
+                            "corrupti",
+                            "illum",
                         },
                     },
                     shared.TagFilter{
-                        Key: "debitis",
+                        Key: "vel",
                         Values: []string{
+                            "deserunt",
+                            "suscipit",
+                            "iure",
+                        },
+                    },
+                    shared.TagFilter{
+                        Key: "magnam",
+                        Values: []string{
+                            "ipsa",
                             "delectus",
+                            "tempora",
+                            "suscipit",
                         },
                     },
                 },
@@ -66,150 +66,131 @@ func main() {
                     CustomizedLoadMetricSpecification: &shared.CustomizedLoadMetricSpecification{
                         Dimensions: []shared.MetricDimension{
                             shared.MetricDimension{
-                                Name: "molestiae",
-                                Value: "minus",
-                            },
-                            shared.MetricDimension{
                                 Name: "placeat",
                                 Value: "voluptatum",
                             },
+                            shared.MetricDimension{
+                                Name: "iusto",
+                                Value: "excepturi",
+                            },
+                            shared.MetricDimension{
+                                Name: "nisi",
+                                Value: "recusandae",
+                            },
+                            shared.MetricDimension{
+                                Name: "temporibus",
+                                Value: "ab",
+                            },
                         },
-                        MetricName: "iusto",
-                        Namespace: "excepturi",
-                        Statistic: "Minimum",
-                        Unit: "recusandae",
+                        MetricName: "quis",
+                        Namespace: "veritatis",
+                        Statistic: "SampleCount",
+                        Unit: "perferendis",
                     },
                     DisableDynamicScaling: false,
-                    MaxCapacity: 836079,
-                    MinCapacity: 71036,
+                    MaxCapacity: 368241,
+                    MinCapacity: 832620,
                     PredefinedLoadMetricSpecification: &shared.PredefinedLoadMetricSpecification{
-                        PredefinedLoadMetricType: "ASGTotalNetworkIn",
-                        ResourceLabel: "veritatis",
+                        PredefinedLoadMetricType: "ALBTargetGroupRequestCount",
+                        ResourceLabel: "quo",
                     },
-                    PredictiveScalingMaxCapacityBehavior: "SetMaxCapacityToForecastCapacity",
-                    PredictiveScalingMaxCapacityBuffer: 20218,
-                    PredictiveScalingMode: "ForecastAndScale",
-                    ResourceID: "repellendus",
-                    ScalableDimension: "dynamodb:index:WriteCapacityUnits",
+                    PredictiveScalingMaxCapacityBehavior: "SetForecastCapacityToMaxCapacity",
+                    PredictiveScalingMaxCapacityBuffer: 870013,
+                    PredictiveScalingMode: "ForecastOnly",
+                    ResourceID: "maiores",
+                    ScalableDimension: "rds:cluster:ReadReplicaCount",
                     ScalingPolicyUpdateBehavior: "ReplaceExternalPolicies",
-                    ScheduledActionBufferTime: 140350,
-                    ServiceNamespace: "dynamodb",
+                    ScheduledActionBufferTime: 800911,
+                    ServiceNamespace: "ec2",
                     TargetTrackingConfigurations: []shared.TargetTrackingConfiguration{
                         shared.TargetTrackingConfiguration{
                             CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
                                 Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "molestiae",
-                                        Value: "quod",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "quod",
-                                        Value: "esse",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "totam",
-                                        Value: "porro",
-                                    },
-                                    shared.MetricDimension{
                                         Name: "dolorum",
                                         Value: "dicta",
                                     },
-                                },
-                                MetricName: "nam",
-                                Namespace: "officia",
-                                Statistic: "Maximum",
-                                Unit: "fugit",
-                            },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 537373,
-                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "EC2SpotFleetRequestAverageNetworkOut",
-                                ResourceLabel: "optio",
-                            },
-                            ScaleInCooldown: 521848,
-                            ScaleOutCooldown: 105907,
-                            TargetValue: 4146.62,
-                        },
-                        shared.TargetTrackingConfiguration{
-                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
-                                Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "modi",
-                                        Value: "qui",
+                                        Name: "nam",
+                                        Value: "officia",
                                     },
                                     shared.MetricDimension{
-                                        Name: "impedit",
-                                        Value: "cum",
+                                        Name: "occaecati",
+                                        Value: "fugit",
                                     },
-                                },
-                                MetricName: "esse",
-                                Namespace: "ipsum",
-                                Statistic: "Maximum",
-                                Unit: "aspernatur",
-                            },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 18789,
-                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "DynamoDBWriteCapacityUtilization",
-                                ResourceLabel: "natus",
-                            },
-                            ScaleInCooldown: 149675,
-                            ScaleOutCooldown: 612096,
-                            TargetValue: 2223.21,
-                        },
-                        shared.TargetTrackingConfiguration{
-                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
-                                Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "laboriosam",
+                                        Name: "deleniti",
                                         Value: "hic",
                                     },
+                                },
+                                MetricName: "optio",
+                                Namespace: "totam",
+                                Statistic: "Average",
+                                Unit: "commodi",
+                            },
+                            DisableScaleIn: false,
+                            EstimatedInstanceWarmup: 473600,
+                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
+                                PredefinedScalingMetricType: "DynamoDBReadCapacityUtilization",
+                                ResourceLabel: "qui",
+                            },
+                            ScaleInCooldown: 774234,
+                            ScaleOutCooldown: 736918,
+                            TargetValue: 4561.5,
+                        },
+                        shared.TargetTrackingConfiguration{
+                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
+                                Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "saepe",
-                                        Value: "fuga",
+                                        Name: "excepturi",
+                                        Value: "aspernatur",
                                     },
+                                },
+                                MetricName: "perferendis",
+                                Namespace: "ad",
+                                Statistic: "SampleCount",
+                                Unit: "sed",
+                            },
+                            DisableScaleIn: false,
+                            EstimatedInstanceWarmup: 612096,
+                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
+                                PredefinedScalingMetricType: "ASGAverageNetworkOut",
+                                ResourceLabel: "natus",
+                            },
+                            ScaleInCooldown: 386489,
+                            ScaleOutCooldown: 943749,
+                            TargetValue: 9025.99,
+                        },
+                        shared.TargetTrackingConfiguration{
+                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
+                                Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
                                         Name: "in",
                                         Value: "corporis",
                                     },
-                                },
-                                MetricName: "iste",
-                                Namespace: "iure",
-                                Statistic: "Sum",
-                                Unit: "quidem",
-                            },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 99280,
-                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "ASGAverageCPUUtilization",
-                                ResourceLabel: "reiciendis",
-                            },
-                            ScaleInCooldown: 666767,
-                            ScaleOutCooldown: 653140,
-                            TargetValue: 6706.38,
-                        },
-                        shared.TargetTrackingConfiguration{
-                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
-                                Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "dolorem",
-                                        Value: "corporis",
+                                        Name: "iste",
+                                        Value: "iure",
+                                    },
+                                    shared.MetricDimension{
+                                        Name: "saepe",
+                                        Value: "quidem",
                                     },
                                 },
-                                MetricName: "explicabo",
-                                Namespace: "nobis",
-                                Statistic: "Minimum",
-                                Unit: "omnis",
+                                MetricName: "architecto",
+                                Namespace: "ipsa",
+                                Statistic: "Sum",
+                                Unit: "est",
                             },
                             DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 363711,
+                            EstimatedInstanceWarmup: 653140,
                             PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "DynamoDBWriteCapacityUtilization",
-                                ResourceLabel: "excepturi",
+                                PredefinedScalingMetricType: "RDSReaderAverageCPUUtilization",
+                                ResourceLabel: "dolores",
                             },
-                            ScaleInCooldown: 38425,
-                            ScaleOutCooldown: 438601,
-                            TargetValue: 6342.74,
+                            ScaleInCooldown: 210382,
+                            ScaleOutCooldown: 358152,
+                            TargetValue: 1289.26,
                         },
                     },
                 },
@@ -217,152 +198,83 @@ func main() {
                     CustomizedLoadMetricSpecification: &shared.CustomizedLoadMetricSpecification{
                         Dimensions: []shared.MetricDimension{
                             shared.MetricDimension{
-                                Name: "sapiente",
-                                Value: "architecto",
+                                Name: "enim",
+                                Value: "omnis",
                             },
                             shared.MetricDimension{
-                                Name: "mollitia",
-                                Value: "dolorem",
+                                Name: "nemo",
+                                Value: "minima",
                             },
                             shared.MetricDimension{
-                                Name: "culpa",
-                                Value: "consequuntur",
+                                Name: "excepturi",
+                                Value: "accusantium",
                             },
                             shared.MetricDimension{
-                                Name: "repellat",
-                                Value: "mollitia",
+                                Name: "iure",
+                                Value: "culpa",
                             },
                         },
-                        MetricName: "occaecati",
-                        Namespace: "numquam",
-                        Statistic: "Maximum",
-                        Unit: "quam",
+                        MetricName: "doloribus",
+                        Namespace: "sapiente",
+                        Statistic: "Average",
+                        Unit: "mollitia",
                     },
                     DisableDynamicScaling: false,
-                    MaxCapacity: 474697,
-                    MinCapacity: 244425,
+                    MaxCapacity: 208876,
+                    MinCapacity: 635059,
                     PredefinedLoadMetricSpecification: &shared.PredefinedLoadMetricSpecification{
-                        PredefinedLoadMetricType: "ASGTotalNetworkOut",
-                        ResourceLabel: "quia",
+                        PredefinedLoadMetricType: "ASGTotalCPUUtilization",
+                        ResourceLabel: "repellat",
                     },
                     PredictiveScalingMaxCapacityBehavior: "SetMaxCapacityToForecastCapacity",
-                    PredictiveScalingMaxCapacityBuffer: 110375,
-                    PredictiveScalingMode: "ForecastOnly",
-                    ResourceID: "animi",
-                    ScalableDimension: "ec2:spot-fleet-request:TargetCapacity",
+                    PredictiveScalingMaxCapacityBuffer: 581850,
+                    PredictiveScalingMode: "ForecastAndScale",
+                    ResourceID: "commodi",
+                    ScalableDimension: "rds:cluster:ReadReplicaCount",
                     ScalingPolicyUpdateBehavior: "KeepExternalPolicies",
-                    ScheduledActionBufferTime: 778346,
-                    ServiceNamespace: "autoscaling",
+                    ScheduledActionBufferTime: 244425,
+                    ServiceNamespace: "rds",
                     TargetTrackingConfigurations: []shared.TargetTrackingConfiguration{
                         shared.TargetTrackingConfiguration{
                             CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
                                 Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "id",
-                                        Value: "possimus",
+                                        Name: "vitae",
+                                        Value: "laborum",
                                     },
                                     shared.MetricDimension{
-                                        Name: "aut",
-                                        Value: "quasi",
-                                    },
-                                },
-                                MetricName: "error",
-                                Namespace: "temporibus",
-                                Statistic: "SampleCount",
-                                Unit: "quasi",
-                            },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 971945,
-                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "EC2SpotFleetRequestAverageNetworkOut",
-                                ResourceLabel: "vero",
-                            },
-                            ScaleInCooldown: 468651,
-                            ScaleOutCooldown: 509624,
-                            TargetValue: 9767.62,
-                        },
-                        shared.TargetTrackingConfiguration{
-                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
-                                Dimensions: []shared.MetricDimension{
-                                    shared.MetricDimension{
-                                        Name: "omnis",
-                                        Value: "voluptate",
-                                    },
-                                },
-                                MetricName: "cum",
-                                Namespace: "perferendis",
-                                Statistic: "Average",
-                                Unit: "reprehenderit",
-                            },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 282807,
-                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "EC2SpotFleetRequestAverageNetworkOut",
-                                ResourceLabel: "dicta",
-                            },
-                            ScaleInCooldown: 359444,
-                            ScaleOutCooldown: 296140,
-                            TargetValue: 4808.94,
-                        },
-                        shared.TargetTrackingConfiguration{
-                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
-                                Dimensions: []shared.MetricDimension{
-                                    shared.MetricDimension{
-                                        Name: "harum",
+                                        Name: "animi",
                                         Value: "enim",
                                     },
                                 },
-                                MetricName: "accusamus",
-                                Namespace: "commodi",
-                                Statistic: "Sum",
-                                Unit: "quae",
+                                MetricName: "odit",
+                                Namespace: "quo",
+                                Statistic: "Average",
+                                Unit: "tenetur",
                             },
                             DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 216822,
+                            EstimatedInstanceWarmup: 368725,
                             PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "RDSReaderAverageDatabaseConnections",
-                                ResourceLabel: "molestias",
+                                PredefinedScalingMetricType: "RDSReaderAverageCPUUtilization",
+                                ResourceLabel: "possimus",
                             },
-                            ScaleInCooldown: 566602,
-                            ScaleOutCooldown: 865103,
-                            TargetValue: 2653.89,
-                        },
-                        shared.TargetTrackingConfiguration{
-                            CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
-                                Dimensions: []shared.MetricDimension{
-                                    shared.MetricDimension{
-                                        Name: "rem",
-                                        Value: "voluptates",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "quasi",
-                                        Value: "repudiandae",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "sint",
-                                        Value: "veritatis",
-                                    },
-                                },
-                                MetricName: "itaque",
-                                Namespace: "incidunt",
-                                Statistic: "Minimum",
-                                Unit: "consequatur",
-                            },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 667411,
-                            PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "EC2SpotFleetRequestAverageCPUUtilization",
-                                ResourceLabel: "explicabo",
-                            },
-                            ScaleInCooldown: 647174,
-                            ScaleOutCooldown: 716327,
-                            TargetValue: 8413.86,
+                            ScaleInCooldown: 13571,
+                            ScaleOutCooldown: 97101,
+                            TargetValue: 6228.46,
                         },
                     },
                 },
             },
-            ScalingPlanName: "labore",
+            ScalingPlanName: "temporibus",
         },
+        XAmzAlgorithm: "laborum",
+        XAmzContentSha256: "quasi",
+        XAmzCredential: "reiciendis",
+        XAmzDate: "voluptatibus",
+        XAmzSecurityToken: "vero",
+        XAmzSignature: "nihil",
+        XAmzSignedHeaders: "praesentium",
+        XAmzTarget: "AnyScaleScalingPlannerFrontendService.CreateScalingPlan",
     }
 
     ctx := context.Background()
@@ -379,7 +291,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -391,4 +303,15 @@ func main() {
 * `UpdateScalingPlan` - <p>Updates the specified scaling plan.</p> <p>You cannot update a scaling plan if it is in the process of being created, updated, or deleted.</p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddProfileKeyPathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type AddProfileKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AddProfileKeyRequestBody struct {
 	// A searchable identifier of a customer profile. The predefined keys you can use include: _account, _profileId, _assetId, _caseId, _orderId, _fullName, _phone, _email, _ctrContactId, _marketoLeadId, _salesforceAccountId, _salesforceContactId, _salesforceAssetId, _zendeskUserId, _zendeskExternalId, _zendeskTicketId, _serviceNowSystemId, _serviceNowIncidentId, _segmentUserId, _shopifyCustomerId, _shopifyOrderId.
 	KeyName string `json:"KeyName"`
@@ -32,9 +17,16 @@ type AddProfileKeyRequestBody struct {
 }
 
 type AddProfileKeyRequest struct {
-	PathParams AddProfileKeyPathParams
-	Headers    AddProfileKeyHeaders
-	Request    AddProfileKeyRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName        string                   `pathParam:"style=simple,explode=false,name=DomainName"`
+	RequestBody       AddProfileKeyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type AddProfileKeyResponse struct {

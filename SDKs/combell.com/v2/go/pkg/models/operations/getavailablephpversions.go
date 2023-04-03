@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAvailablePhpVersionsPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type GetAvailablePhpVersionsQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type GetAvailablePhpVersionsRequest struct {
-	PathParams  GetAvailablePhpVersionsPathParams
-	QueryParams GetAvailablePhpVersionsQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type GetAvailablePhpVersionsResponse struct {

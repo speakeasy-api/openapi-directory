@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutV2OrgsNameSettingsPathParams struct {
-	// Name of the organization.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 type PutV2OrgsNameSettingsRequestBodyRestrictedImages struct {
 	// Allow usage of official images if "enabled" is `true`.
 	AllowOfficialImages bool `json:"allow_official_images"`
@@ -26,8 +21,9 @@ type PutV2OrgsNameSettingsRequestBody struct {
 }
 
 type PutV2OrgsNameSettingsRequest struct {
-	PathParams PutV2OrgsNameSettingsPathParams
-	Request    PutV2OrgsNameSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody PutV2OrgsNameSettingsRequestBody `request:"mediaType=application/json"`
+	// Name of the organization.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type PutV2OrgsNameSettingsResponse struct {

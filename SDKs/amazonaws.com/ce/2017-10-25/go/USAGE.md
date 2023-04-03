@@ -13,39 +13,39 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAnomalyMonitorRequest{
-        Headers: operations.CreateAnomalyMonitorHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSInsightsIndexService.CreateAnomalyMonitor",
-        },
-        Request: shared.CreateAnomalyMonitorRequest{
+        CreateAnomalyMonitorRequest: shared.CreateAnomalyMonitorRequest{
             AnomalyMonitor: shared.AnomalyMonitor{
-                CreationDate: "illum",
-                DimensionalValueCount: 423655,
-                LastEvaluatedDate: "error",
-                LastUpdatedDate: "deserunt",
-                MonitorArn: "suscipit",
+                CreationDate: "corrupti",
+                DimensionalValueCount: 592845,
+                LastEvaluatedDate: "distinctio",
+                LastUpdatedDate: "quibusdam",
+                MonitorArn: "unde",
                 MonitorDimension: "SERVICE",
-                MonitorName: "iure",
+                MonitorName: "nulla",
                 MonitorSpecification: &shared.Expression{
                     And: []shared.Expression{
                         shared.Expression{},
                         shared.Expression{},
+                        shared.Expression{},
                     },
                     CostCategories: &shared.CostCategoryValues{
-                        Key: "debitis",
+                        Key: "illum",
+                        MatchOptions: []shared.MatchOptionEnum{
+                            "CONTAINS",
+                            "CASE_SENSITIVE",
+                        },
+                        Values: []string{
+                            "iure",
+                            "magnam",
+                        },
+                    },
+                    Dimensions: &shared.DimensionValues{
+                        Key: "AGREEMENT_END_DATE_TIME_BEFORE",
                         MatchOptions: []shared.MatchOptionEnum{
                             "GREATER_THAN_OR_EQUAL",
                         },
@@ -54,10 +54,16 @@ func main() {
                             "molestiae",
                         },
                     },
-                    Dimensions: &shared.DimensionValues{
-                        Key: "SAVINGS_PLANS_TYPE",
+                    Not: &shared.Expression{},
+                    Or: []shared.Expression{
+                        shared.Expression{},
+                        shared.Expression{},
+                        shared.Expression{},
+                        shared.Expression{},
+                    },
+                    Tags: &shared.TagValues{
+                        Key: "placeat",
                         MatchOptions: []shared.MatchOptionEnum{
-                            "CONTAINS",
                             "ENDS_WITH",
                             "CONTAINS",
                             "ENDS_WITH",
@@ -69,47 +75,24 @@ func main() {
                             "veritatis",
                         },
                     },
-                    Not: &shared.Expression{},
-                    Or: []shared.Expression{
-                        shared.Expression{},
-                        shared.Expression{},
-                        shared.Expression{},
-                    },
-                    Tags: &shared.TagValues{
-                        Key: "perferendis",
-                        MatchOptions: []shared.MatchOptionEnum{
-                            "CASE_INSENSITIVE",
-                            "GREATER_THAN_OR_EQUAL",
-                        },
-                        Values: []string{
-                            "odit",
-                            "at",
-                            "at",
-                            "maiores",
-                        },
-                    },
                 },
-                MonitorType: "DIMENSIONAL",
+                MonitorType: "CUSTOM",
             },
             ResourceTags: []shared.ResourceTag{
                 shared.ResourceTag{
-                    Key: "quod",
-                    Value: "esse",
-                },
-                shared.ResourceTag{
-                    Key: "totam",
-                    Value: "porro",
-                },
-                shared.ResourceTag{
-                    Key: "dolorum",
-                    Value: "dicta",
-                },
-                shared.ResourceTag{
-                    Key: "nam",
-                    Value: "officia",
+                    Key: "ipsam",
+                    Value: "repellendus",
                 },
             },
         },
+        XAmzAlgorithm: "sapiente",
+        XAmzContentSha256: "quo",
+        XAmzCredential: "odit",
+        XAmzDate: "at",
+        XAmzSecurityToken: "at",
+        XAmzSignature: "maiores",
+        XAmzSignedHeaders: "molestiae",
+        XAmzTarget: "AWSInsightsIndexService.CreateAnomalyMonitor",
     }
 
     ctx := context.Background()

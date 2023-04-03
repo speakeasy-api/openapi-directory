@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetStageRequestBody struct {
 	// ARN of the stage for which the information is to be retrieved.
 	Arn string `json:"arn"`
 }
 
 type GetStageRequest struct {
-	Headers GetStageHeaders
-	Request GetStageRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetStageRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetStageResponse struct {

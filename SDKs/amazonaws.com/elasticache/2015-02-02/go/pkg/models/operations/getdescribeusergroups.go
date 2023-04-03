@@ -50,30 +50,22 @@ func (e *GETDescribeUserGroupsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeUserGroupsQueryParams struct {
+type GETDescribeUserGroupsRequest struct {
 	Action GETDescribeUserGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. &gt;
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved.
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// The ID of the user group.
-	UserGroupID *string                          `queryParam:"style=form,explode=true,name=UserGroupId"`
-	Version     GETDescribeUserGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeUserGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeUserGroupsRequest struct {
-	QueryParams GETDescribeUserGroupsQueryParams
-	Headers     GETDescribeUserGroupsHeaders
+	UserGroupID       *string                          `queryParam:"style=form,explode=true,name=UserGroupId"`
+	Version           GETDescribeUserGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeUserGroupsResponse struct {

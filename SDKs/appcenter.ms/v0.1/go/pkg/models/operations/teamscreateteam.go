@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsCreateTeamSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsCreateTeamPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TeamsCreateTeamRequestBody - The information used to create the team
@@ -29,10 +23,10 @@ type TeamsCreateTeamRequestBody struct {
 }
 
 type TeamsCreateTeamRequest struct {
-	PathParams TeamsCreateTeamPathParams
 	// The information used to create the team
-	Request  TeamsCreateTeamRequestBody `request:"mediaType=application/json"`
-	Security TeamsCreateTeamSecurity
+	RequestBody TeamsCreateTeamRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum string

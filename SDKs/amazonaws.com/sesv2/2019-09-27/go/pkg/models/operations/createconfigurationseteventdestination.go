@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateConfigurationSetEventDestinationPathParams struct {
-	// The name of the configuration set .
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type CreateConfigurationSetEventDestinationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateConfigurationSetEventDestinationRequestBodyEventDestination - An object that defines the event destination. Specifically, it defines which services receive events from emails sent using the configuration set that the event destination is associated with. Also defines the types of events that are sent to the event destination.
 type CreateConfigurationSetEventDestinationRequestBodyEventDestination struct {
 	CloudWatchDestination      *shared.CloudWatchDestination      `json:"CloudWatchDestination,omitempty"`
@@ -40,9 +25,16 @@ type CreateConfigurationSetEventDestinationRequestBody struct {
 }
 
 type CreateConfigurationSetEventDestinationRequest struct {
-	PathParams CreateConfigurationSetEventDestinationPathParams
-	Headers    CreateConfigurationSetEventDestinationHeaders
-	Request    CreateConfigurationSetEventDestinationRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set .
+	ConfigurationSetName string                                            `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	RequestBody          CreateConfigurationSetEventDestinationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateConfigurationSetEventDestinationResponse struct {

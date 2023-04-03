@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestInvokeAuthorizerPathParams struct {
-	// The custom authorizer name.
-	AuthorizerName string `pathParam:"style=simple,explode=false,name=authorizerName"`
-}
-
-type TestInvokeAuthorizerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // TestInvokeAuthorizerRequestBodyHTTPContext - Specifies the HTTP context to use for the test authorizer request.
 type TestInvokeAuthorizerRequestBodyHTTPContext struct {
 	Headers     map[string]string `json:"headers,omitempty"`
@@ -54,9 +39,16 @@ type TestInvokeAuthorizerRequestBody struct {
 }
 
 type TestInvokeAuthorizerRequest struct {
-	PathParams TestInvokeAuthorizerPathParams
-	Headers    TestInvokeAuthorizerHeaders
-	Request    TestInvokeAuthorizerRequestBody `request:"mediaType=application/json"`
+	RequestBody       TestInvokeAuthorizerRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The custom authorizer name.
+	AuthorizerName string `pathParam:"style=simple,explode=false,name=authorizerName"`
 }
 
 type TestInvokeAuthorizerResponse struct {

@@ -50,26 +50,18 @@ func (e *GETDescribePublisherVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribePublisherQueryParams struct {
+type GETDescribePublisherRequest struct {
 	Action GETDescribePublisherActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ID of the extension publisher.</p> <p>If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher, <code>DescribePublisher</code> returns information about your own publisher account.</p>
-	PublisherID *string                         `queryParam:"style=form,explode=true,name=PublisherId"`
-	Version     GETDescribePublisherVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribePublisherHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribePublisherRequest struct {
-	QueryParams GETDescribePublisherQueryParams
-	Headers     GETDescribePublisherHeaders
+	PublisherID       *string                         `queryParam:"style=form,explode=true,name=PublisherId"`
+	Version           GETDescribePublisherVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribePublisherResponse struct {

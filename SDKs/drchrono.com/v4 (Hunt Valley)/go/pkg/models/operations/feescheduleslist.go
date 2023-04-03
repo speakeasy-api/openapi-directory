@@ -8,10 +8,10 @@ import (
 )
 
 type FeeSchedulesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FeeSchedulesListQueryParams struct {
+type FeeSchedulesListRequest struct {
 	Code     *string `queryParam:"style=form,explode=true,name=code"`
 	CodeType *string `queryParam:"style=form,explode=true,name=code_type"`
 	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
@@ -19,11 +19,6 @@ type FeeSchedulesListQueryParams struct {
 	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	PayerID  *string `queryParam:"style=form,explode=true,name=payer_id"`
 	Since    *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type FeeSchedulesListRequest struct {
-	QueryParams FeeSchedulesListQueryParams
-	Security    FeeSchedulesListSecurity
 }
 
 // FeeSchedulesList200ApplicationJSON - Paginated Result

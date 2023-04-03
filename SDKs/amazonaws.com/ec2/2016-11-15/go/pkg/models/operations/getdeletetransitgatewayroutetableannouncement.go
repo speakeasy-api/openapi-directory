@@ -50,28 +50,20 @@ func (e *GETDeleteTransitGatewayRouteTableAnnouncementVersionEnum) UnmarshalJSON
 	}
 }
 
-type GETDeleteTransitGatewayRouteTableAnnouncementQueryParams struct {
+type GETDeleteTransitGatewayRouteTableAnnouncementRequest struct {
 	Action GETDeleteTransitGatewayRouteTableAnnouncementActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The transit gateway route table ID that's being deleted.
 	TransitGatewayRouteTableAnnouncementID string                                                   `queryParam:"style=form,explode=true,name=TransitGatewayRouteTableAnnouncementId"`
 	Version                                GETDeleteTransitGatewayRouteTableAnnouncementVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteTransitGatewayRouteTableAnnouncementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteTransitGatewayRouteTableAnnouncementRequest struct {
-	QueryParams GETDeleteTransitGatewayRouteTableAnnouncementQueryParams
-	Headers     GETDeleteTransitGatewayRouteTableAnnouncementHeaders
+	XAmzAlgorithm                          *string                                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                      *string                                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                         *string                                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                               *string                                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                      *string                                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                          *string                                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                      *string                                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteTransitGatewayRouteTableAnnouncementResponse struct {

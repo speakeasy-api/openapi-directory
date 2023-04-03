@@ -30,20 +30,16 @@ func (e *ConvertRecoveryPointToSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ConvertRecoveryPointToSnapshotHeaders struct {
-	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ConvertRecoveryPointToSnapshotXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ConvertRecoveryPointToSnapshotRequest struct {
-	Headers ConvertRecoveryPointToSnapshotHeaders
-	Request shared.ConvertRecoveryPointToSnapshotRequest `request:"mediaType=application/json"`
+	ConvertRecoveryPointToSnapshotRequest shared.ConvertRecoveryPointToSnapshotRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                         *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                     *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                        *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                              *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                     *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                         *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                     *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                            ConvertRecoveryPointToSnapshotXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ConvertRecoveryPointToSnapshotResponse struct {

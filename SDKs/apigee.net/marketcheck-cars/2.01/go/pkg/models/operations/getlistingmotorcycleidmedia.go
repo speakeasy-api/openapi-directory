@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingMotorcycleIDMediaPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingMotorcycleIDMediaQueryParams struct {
+type GetListingMotorcycleIDMediaRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetListingMotorcycleIDMediaRequest struct {
-	PathParams  GetListingMotorcycleIDMediaPathParams
-	QueryParams GetListingMotorcycleIDMediaQueryParams
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetListingMotorcycleIDMediaResponse struct {

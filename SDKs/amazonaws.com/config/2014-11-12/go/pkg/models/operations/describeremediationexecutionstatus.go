@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeRemediationExecutionStatusQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeRemediationExecutionStatusXAmzTargetEnum
 type DescribeRemediationExecutionStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeRemediationExecutionStatusXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type DescribeRemediationExecutionStatusHeaders struct {
+type DescribeRemediationExecutionStatusRequest struct {
+	DescribeRemediationExecutionStatusRequest shared.DescribeRemediationExecutionStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeRemediationExecutionStatusHeaders struct {
 	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeRemediationExecutionStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeRemediationExecutionStatusRequest struct {
-	QueryParams DescribeRemediationExecutionStatusQueryParams
-	Headers     DescribeRemediationExecutionStatusHeaders
-	Request     shared.DescribeRemediationExecutionStatusRequest `request:"mediaType=application/json"`
 }
 
 type DescribeRemediationExecutionStatusResponse struct {

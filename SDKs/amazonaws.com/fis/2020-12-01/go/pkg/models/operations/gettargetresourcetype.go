@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTargetResourceTypePathParams struct {
-	// The resource type.
-	ResourceType string `pathParam:"style=simple,explode=false,name=resourceType"`
-}
-
-type GetTargetResourceTypeHeaders struct {
+type GetTargetResourceTypeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetTargetResourceTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTargetResourceTypeRequest struct {
-	PathParams GetTargetResourceTypePathParams
-	Headers    GetTargetResourceTypeHeaders
+	// The resource type.
+	ResourceType string `pathParam:"style=simple,explode=false,name=resourceType"`
 }
 
 type GetTargetResourceTypeResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type GetCreditsIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetCreditsIDPathParams struct {
-	// The ID of the credit resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetCreditsIDRequest struct {
-	PathParams GetCreditsIDPathParams
-	Security   GetCreditsIDSecurity
+	// The ID of the credit resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetCreditsID200ApplicationVndAPIPlusJSON - Success

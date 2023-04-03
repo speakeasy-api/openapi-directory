@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchGetAssetPropertyValueQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type BatchGetAssetPropertyValueHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchGetAssetPropertyValueRequestBody struct {
 	// The list of asset property value entries for the batch get request. You can specify up to 128 entries per request.
 	Entries []shared.BatchGetAssetPropertyValueEntry `json:"entries"`
@@ -30,9 +15,16 @@ type BatchGetAssetPropertyValueRequestBody struct {
 }
 
 type BatchGetAssetPropertyValueRequest struct {
-	QueryParams BatchGetAssetPropertyValueQueryParams
-	Headers     BatchGetAssetPropertyValueHeaders
-	Request     BatchGetAssetPropertyValueRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchGetAssetPropertyValueRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type BatchGetAssetPropertyValueResponse struct {

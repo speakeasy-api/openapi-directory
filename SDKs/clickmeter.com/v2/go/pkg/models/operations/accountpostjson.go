@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPostJSONRequest struct {
-	Request shared.APICoreDtoAccountingUser `request:"mediaType=application/json"`
-}
-
 type AccountPostJSONResponse struct {
 	APICoreDtoAccountingUser *shared.APICoreDtoAccountingUser
 	Body                     []byte

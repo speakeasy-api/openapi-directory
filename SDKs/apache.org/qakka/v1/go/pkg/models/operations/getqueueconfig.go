@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQueueConfigPathParams struct {
+type GetQueueConfigRequest struct {
 	// Name of Queue
 	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
-}
-
-type GetQueueConfigRequest struct {
-	PathParams GetQueueConfigPathParams
 }
 
 type GetQueueConfigResponse struct {

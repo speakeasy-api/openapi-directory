@@ -36,9 +36,9 @@ func newAnalyticsStatistics(defaultClient, securityClient HTTPClient, serverURL,
 // Get the report by category
 func (s *analyticsStatistics) GetStoreReportByCategory(ctx context.Context, request operations.GetStoreReportByCategoryRequest) (*operations.GetStoreReportByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/bycategory", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/bycategory", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportByCategoryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -105,9 +105,9 @@ func (s *analyticsStatistics) GetStoreReportByCategory(ctx context.Context, requ
 // Get the report by channel
 func (s *analyticsStatistics) GetStoreReportByChannel(ctx context.Context, request operations.GetStoreReportByChannelRequest) (*operations.GetStoreReportByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/bychannel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/bychannel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportByChannelRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -174,9 +174,9 @@ func (s *analyticsStatistics) GetStoreReportByChannel(ctx context.Context, reque
 // Get the report by day for a StoreId
 func (s *analyticsStatistics) GetStoreReportByDay(ctx context.Context, request operations.GetStoreReportByDayRequest) (*operations.GetStoreReportByDayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/byday", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/byday", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportByDayRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -241,7 +241,7 @@ func (s *analyticsStatistics) GetStoreReportByDay(ctx context.Context, request o
 
 // GetStoreReportByDayPerStore - Get the report by day for a StoreId
 // Get the report by day for a StoreId
-func (s *analyticsStatistics) GetStoreReportByDayPerStore(ctx context.Context, request operations.GetStoreReportByDayPerStoreRequest) (*operations.GetStoreReportByDayPerStoreResponse, error) {
+func (s *analyticsStatistics) GetStoreReportByDayPerStore(ctx context.Context, request shared.ReportByDayRequest) (*operations.GetStoreReportByDayPerStoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/analytics/reports/byday"
 
@@ -312,9 +312,9 @@ func (s *analyticsStatistics) GetStoreReportByDayPerStore(ctx context.Context, r
 // Get the report by product
 func (s *analyticsStatistics) GetStoreReportByProduct(ctx context.Context, request operations.GetStoreReportByProductRequest) (*operations.GetStoreReportByProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/byproduct", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/byproduct", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportByProductRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

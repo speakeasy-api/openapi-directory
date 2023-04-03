@@ -8,18 +8,13 @@ import (
 )
 
 type DeleteMeAllowedOriginsOriginIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteMeAllowedOriginsOriginIDPathParams struct {
-	// Unique identifier of the allowed origin.
-	OriginID string `pathParam:"style=simple,explode=false,name=originId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type DeleteMeAllowedOriginsOriginIDRequest struct {
-	PathParams DeleteMeAllowedOriginsOriginIDPathParams
-	Security   DeleteMeAllowedOriginsOriginIDSecurity
+	// Unique identifier of the allowed origin.
+	OriginID string `pathParam:"style=simple,explode=false,name=originId"`
 }
 
 type DeleteMeAllowedOriginsOriginIDResponse struct {

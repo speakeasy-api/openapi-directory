@@ -40,7 +40,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 //
 // * A server error occurred (HTTP error `500`)
 // * The group already exist (HTTP error `409`)
-func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroupRequest) (*operations.CreateGroupResponse, error) {
+func (s *groups) CreateGroup(ctx context.Context, request shared.CreateGroupMetaData) (*operations.CreateGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/groups"
 
@@ -114,7 +114,7 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 // * The group does not exist (HTTP error `404`)
 func (s *groups) DeleteGroupByID(ctx context.Context, request operations.DeleteGroupByIDRequest) (*operations.DeleteGroupByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -167,7 +167,7 @@ func (s *groups) DeleteGroupByID(ctx context.Context, request operations.DeleteG
 // * A server error occurred (HTTP error `500`)
 func (s *groups) GetGroupByID(ctx context.Context, request operations.GetGroupByIDRequest) (*operations.GetGroupByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +231,7 @@ func (s *groups) ListGroups(ctx context.Context, request operations.ListGroupsRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

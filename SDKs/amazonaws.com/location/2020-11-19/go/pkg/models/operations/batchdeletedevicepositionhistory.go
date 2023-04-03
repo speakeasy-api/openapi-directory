@@ -7,12 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchDeleteDevicePositionHistoryPathParams struct {
-	// The name of the tracker resource to delete the device position history from.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
+type BatchDeleteDevicePositionHistoryRequestBody struct {
+	// <p>Devices whose position history you want to delete.</p> <ul> <li> <p>For example, for two devices: <code>“DeviceIds” : [DeviceId1,DeviceId2]</code> </p> </li> </ul>
+	DeviceIds []string `json:"DeviceIds"`
 }
 
-type BatchDeleteDevicePositionHistoryHeaders struct {
+type BatchDeleteDevicePositionHistoryRequest struct {
+	RequestBody BatchDeleteDevicePositionHistoryRequestBody `request:"mediaType=application/json"`
+	// The name of the tracker resource to delete the device position history from.
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,17 +23,6 @@ type BatchDeleteDevicePositionHistoryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type BatchDeleteDevicePositionHistoryRequestBody struct {
-	// <p>Devices whose position history you want to delete.</p> <ul> <li> <p>For example, for two devices: <code>“DeviceIds” : [DeviceId1,DeviceId2]</code> </p> </li> </ul>
-	DeviceIds []string `json:"DeviceIds"`
-}
-
-type BatchDeleteDevicePositionHistoryRequest struct {
-	PathParams BatchDeleteDevicePositionHistoryPathParams
-	Headers    BatchDeleteDevicePositionHistoryHeaders
-	Request    BatchDeleteDevicePositionHistoryRequestBody `request:"mediaType=application/json"`
 }
 
 type BatchDeleteDevicePositionHistoryResponse struct {

@@ -36,15 +36,7 @@ func (e *ListDestinationsStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListDestinationsQueryParams struct {
-	MaxResults *int64  `queryParam:"style=form,explode=true,name=maxResults"`
-	NextToken  *string `queryParam:"style=form,explode=true,name=nextToken"`
-	Site       string  `queryParam:"style=form,explode=true,name=site"`
-	// State of the destination.
-	State *ListDestinationsStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ListDestinationsHeaders struct {
+type ListDestinationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -52,11 +44,11 @@ type ListDestinationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDestinationsRequest struct {
-	QueryParams ListDestinationsQueryParams
-	Headers     ListDestinationsHeaders
+	MaxResults        *int64  `queryParam:"style=form,explode=true,name=maxResults"`
+	NextToken         *string `queryParam:"style=form,explode=true,name=nextToken"`
+	Site              string  `queryParam:"style=form,explode=true,name=site"`
+	// State of the destination.
+	State *ListDestinationsStateEnum `queryParam:"style=form,explode=true,name=state"`
 }
 
 type ListDestinationsResponse struct {

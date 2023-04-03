@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteReportDefinitionPathParams struct {
-	// Required. ID of the report to delete.
-	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type DeleteReportDefinitionHeaders struct {
+type DeleteReportDefinitionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteReportDefinitionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteReportDefinitionRequest struct {
-	PathParams DeleteReportDefinitionPathParams
-	Headers    DeleteReportDefinitionHeaders
+	// Required. ID of the report to delete.
+	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 }
 
 type DeleteReportDefinitionResponse struct {

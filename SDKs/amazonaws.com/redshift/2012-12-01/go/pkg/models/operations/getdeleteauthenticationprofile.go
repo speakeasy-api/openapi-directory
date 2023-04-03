@@ -50,26 +50,18 @@ func (e *GETDeleteAuthenticationProfileVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDeleteAuthenticationProfileQueryParams struct {
+type GETDeleteAuthenticationProfileRequest struct {
 	Action GETDeleteAuthenticationProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the authentication profile to delete.
 	AuthenticationProfileName string                                    `queryParam:"style=form,explode=true,name=AuthenticationProfileName"`
 	Version                   GETDeleteAuthenticationProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteAuthenticationProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteAuthenticationProfileRequest struct {
-	QueryParams GETDeleteAuthenticationProfileQueryParams
-	Headers     GETDeleteAuthenticationProfileHeaders
+	XAmzAlgorithm             *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteAuthenticationProfileResponse struct {

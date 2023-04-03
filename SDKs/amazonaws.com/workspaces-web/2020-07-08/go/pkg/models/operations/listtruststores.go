@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTrustStoresQueryParams struct {
-	// The maximum number of results to be included in the next page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The pagination token used to retrieve the next page of results for this operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListTrustStoresHeaders struct {
+type ListTrustStoresRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListTrustStoresHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTrustStoresRequest struct {
-	QueryParams ListTrustStoresQueryParams
-	Headers     ListTrustStoresHeaders
+	// The maximum number of results to be included in the next page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The pagination token used to retrieve the next page of results for this operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListTrustStoresResponse struct {

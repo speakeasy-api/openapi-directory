@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupsIDPathParams struct {
+type GetGroupsIDRequest struct {
 	// The id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetGroupsIDRequest struct {
-	PathParams GetGroupsIDPathParams
 }
 
 type GetGroupsIDResponse struct {

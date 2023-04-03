@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendEthereumHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type SendEthereumRequest struct {
-	Headers SendEthereumHeaders
-	Request shared.SendEthereumRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization       string                     `header:"style=simple,explode=false,name=Authorization"`
+	SendEthereumRequest shared.SendEthereumRequest `request:"mediaType=application/json"`
 }
 
 type SendEthereumResponse struct {

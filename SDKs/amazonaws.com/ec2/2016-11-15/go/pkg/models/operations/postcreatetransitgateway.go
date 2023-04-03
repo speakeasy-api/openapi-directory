@@ -50,25 +50,17 @@ func (e *POSTCreateTransitGatewayVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateTransitGatewayQueryParams struct {
-	Action  POSTCreateTransitGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateTransitGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateTransitGatewayHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateTransitGatewayRequest struct {
-	QueryParams POSTCreateTransitGatewayQueryParams
-	Headers     POSTCreateTransitGatewayHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateTransitGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTCreateTransitGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateTransitGatewayResponse struct {

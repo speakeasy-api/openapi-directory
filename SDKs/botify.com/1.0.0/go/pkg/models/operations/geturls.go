@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUrlsPathParams struct {
-	// Analysis' identifier
-	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // GetUrlsAreaEnum - Analysis context to execute the query
 type GetUrlsAreaEnum string
 
@@ -48,19 +39,20 @@ func (e *GetUrlsAreaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUrlsQueryParams struct {
+type GetUrlsRequest struct {
+	UrlsQuery *shared.UrlsQuery `request:"mediaType=application/json"`
+	// Analysis' identifier
+	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Analysis context to execute the query
 	Area *GetUrlsAreaEnum `queryParam:"style=form,explode=true,name=area"`
 	// Page Number
 	Page *int `queryParam:"style=form,explode=true,name=page"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// Page Size
 	Size *int `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetUrlsRequest struct {
-	PathParams  GetUrlsPathParams
-	QueryParams GetUrlsQueryParams
-	Request     *shared.UrlsQuery `request:"mediaType=application/json"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetUrls200ApplicationJSON - Successful operation

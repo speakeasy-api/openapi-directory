@@ -30,20 +30,16 @@ func (e *GetBucketBundlesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBucketBundlesHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetBucketBundlesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetBucketBundlesRequest struct {
-	Headers GetBucketBundlesHeaders
-	Request shared.GetBucketBundlesRequest `request:"mediaType=application/json"`
+	GetBucketBundlesRequest shared.GetBucketBundlesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              GetBucketBundlesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetBucketBundlesResponse struct {

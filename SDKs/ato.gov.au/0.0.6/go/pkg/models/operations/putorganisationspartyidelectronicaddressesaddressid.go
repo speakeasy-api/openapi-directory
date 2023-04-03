@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutOrganisationsPartyIDElectronicAddressesAddressIDPathParams struct {
+type PutOrganisationsPartyIDElectronicAddressesAddressIDRequest struct {
 	// The address identifier.
 	AddressID string `pathParam:"style=simple,explode=false,name=addressId"`
-	// The party identifier.
-	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
-}
-
-type PutOrganisationsPartyIDElectronicAddressesAddressIDHeaders struct {
 	// The API key.
 	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type PutOrganisationsPartyIDElectronicAddressesAddressIDRequest struct {
-	PathParams PutOrganisationsPartyIDElectronicAddressesAddressIDPathParams
-	Headers    PutOrganisationsPartyIDElectronicAddressesAddressIDHeaders
 	// Electronic Address resource
-	Request shared.ElectronicAddressInput `request:"mediaType=application/json"`
+	ElectronicAddressInput shared.ElectronicAddressInput `request:"mediaType=application/json"`
+	// The party identifier.
+	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
 }
 
 type PutOrganisationsPartyIDElectronicAddressesAddressIDResponse struct {

@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTagsPathParams struct {
-	// The ID of the file system whose tags you want to modify (String). This operation modifies the tags only, not the file system.
-	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type CreateTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateTagsRequestBody struct {
 	// An array of <code>Tag</code> objects to add. Each <code>Tag</code> object is a key-value pair.
 	Tags []shared.Tag `json:"Tags"`
 }
 
 type CreateTagsRequest struct {
-	PathParams CreateTagsPathParams
-	Headers    CreateTagsHeaders
-	Request    CreateTagsRequestBody `request:"mediaType=application/json"`
+	// The ID of the file system whose tags you want to modify (String). This operation modifies the tags only, not the file system.
+	FileSystemID      string                `pathParam:"style=simple,explode=false,name=FileSystemId"`
+	RequestBody       CreateTagsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateTagsResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDistributionConfigurationQueryParams struct {
-	// The Amazon Resource Name (ARN) of the distribution configuration that you want to retrieve.
-	DistributionConfigurationArn string `queryParam:"style=form,explode=true,name=distributionConfigurationArn"`
-}
-
-type GetDistributionConfigurationHeaders struct {
+type GetDistributionConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetDistributionConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDistributionConfigurationRequest struct {
-	QueryParams GetDistributionConfigurationQueryParams
-	Headers     GetDistributionConfigurationHeaders
+	// The Amazon Resource Name (ARN) of the distribution configuration that you want to retrieve.
+	DistributionConfigurationArn string `queryParam:"style=form,explode=true,name=distributionConfigurationArn"`
 }
 
 type GetDistributionConfigurationResponse struct {

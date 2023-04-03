@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListInstalledComponentsPathParams struct {
-	// The name of the core device. This is also the name of the IoT thing.
-	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
-}
-
 // ListInstalledComponentsTopologyFilterEnum - <p>The filter for the list of components. Choose from the following options:</p> <ul> <li> <p> <code>ALL</code> – The list includes all components installed on the core device.</p> </li> <li> <p> <code>ROOT</code> – The list includes only <i>root</i> components, which are components that you specify in a deployment. When you choose this option, the list doesn't include components that the core device installs as dependencies of other components.</p> </li> </ul> <p>Default: <code>ROOT</code> </p>
 type ListInstalledComponentsTopologyFilterEnum string
 
@@ -38,16 +33,7 @@ func (e *ListInstalledComponentsTopologyFilterEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListInstalledComponentsQueryParams struct {
-	// The maximum number of results to be returned per paginated request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// <p>The filter for the list of components. Choose from the following options:</p> <ul> <li> <p> <code>ALL</code> – The list includes all components installed on the core device.</p> </li> <li> <p> <code>ROOT</code> – The list includes only <i>root</i> components, which are components that you specify in a deployment. When you choose this option, the list doesn't include components that the core device installs as dependencies of other components.</p> </li> </ul> <p>Default: <code>ROOT</code> </p>
-	TopologyFilter *ListInstalledComponentsTopologyFilterEnum `queryParam:"style=form,explode=true,name=topologyFilter"`
-}
-
-type ListInstalledComponentsHeaders struct {
+type ListInstalledComponentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -55,12 +41,14 @@ type ListInstalledComponentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListInstalledComponentsRequest struct {
-	PathParams  ListInstalledComponentsPathParams
-	QueryParams ListInstalledComponentsQueryParams
-	Headers     ListInstalledComponentsHeaders
+	// The name of the core device. This is also the name of the IoT thing.
+	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
+	// The maximum number of results to be returned per paginated request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// <p>The filter for the list of components. Choose from the following options:</p> <ul> <li> <p> <code>ALL</code> – The list includes all components installed on the core device.</p> </li> <li> <p> <code>ROOT</code> – The list includes only <i>root</i> components, which are components that you specify in a deployment. When you choose this option, the list doesn't include components that the core device installs as dependencies of other components.</p> </li> </ul> <p>Default: <code>ROOT</code> </p>
+	TopologyFilter *ListInstalledComponentsTopologyFilterEnum `queryParam:"style=form,explode=true,name=topologyFilter"`
 }
 
 type ListInstalledComponentsResponse struct {

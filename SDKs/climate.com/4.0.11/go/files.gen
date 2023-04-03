@@ -53,7 +53,6 @@ pkg/models/shared/point.go
 pkg/models/shared/area.go
 pkg/models/shared/geometry.go
 pkg/models/shared/boundariesquery.go
-pkg/models/shared/security.go
 pkg/models/shared/uploadedboundaryid.go
 pkg/models/shared/boundaryupload.go
 pkg/models/shared/exportcontents.go

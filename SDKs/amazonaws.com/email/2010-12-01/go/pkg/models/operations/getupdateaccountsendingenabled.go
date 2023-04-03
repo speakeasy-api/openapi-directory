@@ -50,26 +50,18 @@ func (e *GETUpdateAccountSendingEnabledVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETUpdateAccountSendingEnabledQueryParams struct {
+type GETUpdateAccountSendingEnabledRequest struct {
 	Action GETUpdateAccountSendingEnabledActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Describes whether email sending is enabled or disabled for your Amazon SES account in the current AWS Region.
-	Enabled *bool                                     `queryParam:"style=form,explode=true,name=Enabled"`
-	Version GETUpdateAccountSendingEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateAccountSendingEnabledHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateAccountSendingEnabledRequest struct {
-	QueryParams GETUpdateAccountSendingEnabledQueryParams
-	Headers     GETUpdateAccountSendingEnabledHeaders
+	Enabled           *bool                                     `queryParam:"style=form,explode=true,name=Enabled"`
+	Version           GETUpdateAccountSendingEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateAccountSendingEnabledResponse struct {

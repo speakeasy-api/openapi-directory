@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type SearchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type SearchRequestBody struct {
 	// <p>The maximum number of results that you want included on each page of the response. If you do not include this parameter, it defaults to a value appropriate to the operation. If additional items exist beyond those included in the current response, the <code>NextToken</code> response element is present and has a value (is not null). Include that value as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the results.</p> <note> <p>An API operation can return fewer results than the maximum even when there are more results available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the results.</p> </note>
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -36,9 +19,18 @@ type SearchRequestBody struct {
 }
 
 type SearchRequest struct {
-	QueryParams SearchQueryParams
-	Headers     SearchHeaders
-	Request     SearchRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string           `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       SearchRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SearchResponse struct {

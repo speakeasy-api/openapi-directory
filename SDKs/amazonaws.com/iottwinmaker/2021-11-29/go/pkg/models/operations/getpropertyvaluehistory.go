@@ -10,28 +10,6 @@ import (
 	"time"
 )
 
-type GetPropertyValueHistoryPathParams struct {
-	// The ID of the workspace.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type GetPropertyValueHistoryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetPropertyValueHistoryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // GetPropertyValueHistoryRequestBodyInterpolation - An object that specifies how to interpolate data in a list.
 type GetPropertyValueHistoryRequestBodyInterpolation struct {
 	InterpolationType *shared.InterpolationTypeEnum `json:"interpolationType,omitempty"`
@@ -92,10 +70,20 @@ type GetPropertyValueHistoryRequestBody struct {
 }
 
 type GetPropertyValueHistoryRequest struct {
-	PathParams  GetPropertyValueHistoryPathParams
-	QueryParams GetPropertyValueHistoryQueryParams
-	Headers     GetPropertyValueHistoryHeaders
-	Request     GetPropertyValueHistoryRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetPropertyValueHistoryRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ID of the workspace.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type GetPropertyValueHistoryResponse struct {

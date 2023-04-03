@@ -50,30 +50,22 @@ func (e *GETDeleteSecurityGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteSecurityGroupQueryParams struct {
+type GETDeleteSecurityGroupRequest struct {
 	Action GETDeleteSecurityGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the security group. Required for a nondefault VPC.
 	GroupID *string `queryParam:"style=form,explode=true,name=GroupId"`
 	// [EC2-Classic, default VPC] The name of the security group. You can specify either the security group name or the security group ID. For security groups in a nondefault VPC, you must specify the security group ID.
-	GroupName *string                           `queryParam:"style=form,explode=true,name=GroupName"`
-	Version   GETDeleteSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteSecurityGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteSecurityGroupRequest struct {
-	QueryParams GETDeleteSecurityGroupQueryParams
-	Headers     GETDeleteSecurityGroupHeaders
+	GroupName         *string                           `queryParam:"style=form,explode=true,name=GroupName"`
+	Version           GETDeleteSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteSecurityGroupResponse struct {

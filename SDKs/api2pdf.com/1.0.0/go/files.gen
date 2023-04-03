@@ -29,11 +29,11 @@ pkg/models/shared/apiresponsesuccess.go
 pkg/models/shared/apiresponsefailure.go
 pkg/models/shared/chromehtmltopdfrequest.go
 pkg/models/shared/chromeadvancedoptions.go
-pkg/models/shared/security.go
 pkg/models/shared/chromeurltopdfrequest.go
 pkg/models/shared/libreofficeconvertrequest.go
 pkg/models/shared/mergerequest.go
 pkg/models/shared/wkhtmltopdfhtmltopdfrequest.go
 pkg/models/shared/wkhtmltopdfadvancedoptions.go
 pkg/models/shared/wkhtmltopdfurltopdfrequest.go
+pkg/models/shared/security.go
 USAGE.md

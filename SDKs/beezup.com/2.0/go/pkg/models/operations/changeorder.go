@@ -7,36 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeOrderPathParams struct {
-	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
+type ChangeOrderRequest struct {
+	// ETag value to identify the last known version of requested resource.\
+	// To ensure that you are making a change on the lastest version of the resource.\
+	// For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+	//
+	IfMatch     string            `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody map[string]string `request:"mediaType=application/json"`
+	AccountID   int               `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
 	// The Order change type
 	ChangeOrderType string `pathParam:"style=simple,explode=false,name=changeOrderType"`
 	// The marketplace technical code
 	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type ChangeOrderQueryParams struct {
 	// If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
 	TestMode *bool `queryParam:"style=form,explode=true,name=testMode"`
 	// Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
 	UserName string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type ChangeOrderHeaders struct {
-	// ETag value to identify the last known version of requested resource.\
-	// To ensure that you are making a change on the lastest version of the resource.\
-	// For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
-	//
-	IfMatch string `header:"style=simple,explode=false,name=If-Match"`
-}
-
-type ChangeOrderRequest struct {
-	PathParams  ChangeOrderPathParams
-	QueryParams ChangeOrderQueryParams
-	Headers     ChangeOrderHeaders
-	Request     map[string]string `request:"mediaType=application/json"`
 }
 
 type ChangeOrderResponse struct {

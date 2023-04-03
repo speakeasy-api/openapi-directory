@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetProfilePathParams struct {
+type Destiny2GetProfileRequest struct {
+	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+	Components []int `queryParam:"style=form,explode=false,name=components"`
 	// Destiny membership ID.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetProfileQueryParams struct {
-	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
-	Components []int `queryParam:"style=form,explode=false,name=components"`
-}
-
-type Destiny2GetProfileRequest struct {
-	PathParams  Destiny2GetProfilePathParams
-	QueryParams Destiny2GetProfileQueryParams
 }
 
 // Destiny2GetProfile200Wildcard - The response for GetDestinyProfile, with components for character and item-level data.

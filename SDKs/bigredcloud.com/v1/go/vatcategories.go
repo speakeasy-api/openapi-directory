@@ -79,7 +79,7 @@ func (s *vatCategories) VatCategoriesGet(ctx context.Context) (*operations.VatCa
 }
 
 // VatCategoriesProcessVatRates - Process Vat Rates
-func (s *vatCategories) VatCategoriesProcessVatRates(ctx context.Context, request operations.VatCategoriesProcessVatRatesRequest) (*operations.VatCategoriesProcessVatRatesResponse, error) {
+func (s *vatCategories) VatCategoriesProcessVatRates(ctx context.Context, request []shared.VatRatesByVatCategoryDto) (*operations.VatCategoriesProcessVatRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/vatCategories/vatRates"
 

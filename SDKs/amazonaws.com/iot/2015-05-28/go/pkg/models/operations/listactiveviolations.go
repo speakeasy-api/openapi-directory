@@ -66,7 +66,14 @@ func (e *ListActiveViolationsVerificationStateEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListActiveViolationsQueryParams struct {
+type ListActiveViolationsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  The criteria for a behavior.
 	BehaviorCriteriaType *ListActiveViolationsBehaviorCriteriaTypeEnum `queryParam:"style=form,explode=true,name=behaviorCriteriaType"`
 	//  A list of all suppressed alerts.
@@ -81,21 +88,6 @@ type ListActiveViolationsQueryParams struct {
 	ThingName *string `queryParam:"style=form,explode=true,name=thingName"`
 	// The verification state of the violation (detect alarm).
 	VerificationState *ListActiveViolationsVerificationStateEnum `queryParam:"style=form,explode=true,name=verificationState"`
-}
-
-type ListActiveViolationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListActiveViolationsRequest struct {
-	QueryParams ListActiveViolationsQueryParams
-	Headers     ListActiveViolationsHeaders
 }
 
 type ListActiveViolationsResponse struct {

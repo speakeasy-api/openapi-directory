@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelCatalogExportationHistoryPathParams struct {
+type GetChannelCatalogExportationHistoryRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type GetChannelCatalogExportationHistoryQueryParams struct {
 	// The page number you want to get
 	PageNumber int `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The entry count you want to get
 	PageSize int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetChannelCatalogExportationHistoryRequest struct {
-	PathParams  GetChannelCatalogExportationHistoryPathParams
-	QueryParams GetChannelCatalogExportationHistoryQueryParams
 }
 
 type GetChannelCatalogExportationHistoryResponse struct {

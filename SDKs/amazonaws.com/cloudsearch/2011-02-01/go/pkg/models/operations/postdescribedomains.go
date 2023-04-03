@@ -50,25 +50,17 @@ func (e *POSTDescribeDomainsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeDomainsQueryParams struct {
-	Action  POSTDescribeDomainsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeDomainsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeDomainsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeDomainsRequest struct {
-	QueryParams POSTDescribeDomainsQueryParams
-	Headers     POSTDescribeDomainsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeDomainsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                         `request:"mediaType=text/xml"`
+	Version           POSTDescribeDomainsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeDomainsResponse struct {

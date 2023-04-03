@@ -50,24 +50,16 @@ func (e *POSTListVerifiedEmailAddressesVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTListVerifiedEmailAddressesQueryParams struct {
-	Action  POSTListVerifiedEmailAddressesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTListVerifiedEmailAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListVerifiedEmailAddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTListVerifiedEmailAddressesRequest struct {
-	QueryParams POSTListVerifiedEmailAddressesQueryParams
-	Headers     POSTListVerifiedEmailAddressesHeaders
+	Action            POSTListVerifiedEmailAddressesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           POSTListVerifiedEmailAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListVerifiedEmailAddressesResponse struct {

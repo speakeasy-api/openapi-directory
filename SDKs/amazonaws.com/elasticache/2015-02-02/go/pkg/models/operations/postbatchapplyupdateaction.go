@@ -50,25 +50,17 @@ func (e *POSTBatchApplyUpdateActionVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTBatchApplyUpdateActionQueryParams struct {
-	Action  POSTBatchApplyUpdateActionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTBatchApplyUpdateActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTBatchApplyUpdateActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTBatchApplyUpdateActionRequest struct {
-	QueryParams POSTBatchApplyUpdateActionQueryParams
-	Headers     POSTBatchApplyUpdateActionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTBatchApplyUpdateActionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTBatchApplyUpdateActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTBatchApplyUpdateActionResponse struct {

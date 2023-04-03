@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeConfigurationAggregatorSourcesStatusQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum
 type DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum) UnmarshalJS
 	}
 }
 
-type DescribeConfigurationAggregatorSourcesStatusHeaders struct {
+type DescribeConfigurationAggregatorSourcesStatusRequest struct {
+	DescribeConfigurationAggregatorSourcesStatusRequest shared.DescribeConfigurationAggregatorSourcesStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeConfigurationAggregatorSourcesStatusHeaders struct {
 	XAmzSignature     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeConfigurationAggregatorSourcesStatusRequest struct {
-	QueryParams DescribeConfigurationAggregatorSourcesStatusQueryParams
-	Headers     DescribeConfigurationAggregatorSourcesStatusHeaders
-	Request     shared.DescribeConfigurationAggregatorSourcesStatusRequest `request:"mediaType=application/json"`
 }
 
 type DescribeConfigurationAggregatorSourcesStatusResponse struct {

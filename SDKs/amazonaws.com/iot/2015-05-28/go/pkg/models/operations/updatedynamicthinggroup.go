@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDynamicThingGroupPathParams struct {
-	// The name of the dynamic thing group to update.
-	ThingGroupName string `pathParam:"style=simple,explode=false,name=thingGroupName"`
-}
-
-type UpdateDynamicThingGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateDynamicThingGroupRequestBodyThingGroupProperties - Thing group properties.
 type UpdateDynamicThingGroupRequestBodyThingGroupProperties struct {
 	AttributePayload      *shared.AttributePayload `json:"attributePayload,omitempty"`
@@ -42,9 +27,16 @@ type UpdateDynamicThingGroupRequestBody struct {
 }
 
 type UpdateDynamicThingGroupRequest struct {
-	PathParams UpdateDynamicThingGroupPathParams
-	Headers    UpdateDynamicThingGroupHeaders
-	Request    UpdateDynamicThingGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDynamicThingGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the dynamic thing group to update.
+	ThingGroupName string `pathParam:"style=simple,explode=false,name=thingGroupName"`
 }
 
 type UpdateDynamicThingGroupResponse struct {

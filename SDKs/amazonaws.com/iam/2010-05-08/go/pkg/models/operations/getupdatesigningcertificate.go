@@ -74,30 +74,22 @@ func (e *GETUpdateSigningCertificateVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETUpdateSigningCertificateQueryParams struct {
+type GETUpdateSigningCertificateRequest struct {
 	Action GETUpdateSigningCertificateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ID of the signing certificate you want to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	CertificateID string `queryParam:"style=form,explode=true,name=CertificateId"`
 	//  The status you want to assign to the certificate. <code>Active</code> means that the certificate can be used for programmatic calls to Amazon Web Services <code>Inactive</code> means that the certificate cannot be used.
 	Status GETUpdateSigningCertificateStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// <p>The name of the IAM user the signing certificate belongs to.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                                `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETUpdateSigningCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateSigningCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateSigningCertificateRequest struct {
-	QueryParams GETUpdateSigningCertificateQueryParams
-	Headers     GETUpdateSigningCertificateHeaders
+	UserName          *string                                `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETUpdateSigningCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateSigningCertificateResponse struct {

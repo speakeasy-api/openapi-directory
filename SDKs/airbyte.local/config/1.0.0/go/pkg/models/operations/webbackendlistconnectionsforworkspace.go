@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WebBackendListConnectionsForWorkspaceRequest struct {
-	Request shared.WebBackendConnectionListRequestBody `request:"mediaType=application/json"`
-}
-
 type WebBackendListConnectionsForWorkspaceResponse struct {
 	ContentType string
 	// Input failed validation

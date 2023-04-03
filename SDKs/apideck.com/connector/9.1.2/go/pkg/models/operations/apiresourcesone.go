@@ -8,25 +8,16 @@ import (
 )
 
 type APIResourcesOneSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type APIResourcesOnePathParams struct {
+type APIResourcesOneRequest struct {
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// ID of the resource you are acting upon.
 	ResourceID string `pathParam:"style=simple,explode=false,name=resource_id"`
-}
-
-type APIResourcesOneHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
-}
-
-type APIResourcesOneRequest struct {
-	PathParams APIResourcesOnePathParams
-	Headers    APIResourcesOneHeaders
-	Security   APIResourcesOneSecurity
 }
 
 type APIResourcesOneResponse struct {

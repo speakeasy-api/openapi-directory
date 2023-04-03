@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestDeleteTestSeriesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TestDeleteTestSeriesPathParams struct {
+type TestDeleteTestSeriesRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The slug of the test series
 	TestSeriesSlug string `pathParam:"style=simple,explode=false,name=test_series_slug"`
-}
-
-type TestDeleteTestSeriesRequest struct {
-	PathParams TestDeleteTestSeriesPathParams
-	Security   TestDeleteTestSeriesSecurity
 }
 
 type TestDeleteTestSeriesResponse struct {

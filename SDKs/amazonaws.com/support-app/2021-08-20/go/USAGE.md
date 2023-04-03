@@ -13,32 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateSlackChannelConfigurationRequest{
-        Headers: operations.CreateSlackChannelConfigurationHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateSlackChannelConfigurationRequestBody{
-            ChannelID: "illum",
-            ChannelName: "vel",
-            ChannelRoleArn: "error",
+        RequestBody: operations.CreateSlackChannelConfigurationRequestBody{
+            ChannelID: "corrupti",
+            ChannelName: "provident",
+            ChannelRoleArn: "distinctio",
             NotifyOnAddCorrespondenceToCase: false,
-            NotifyOnCaseSeverity: "all",
+            NotifyOnCaseSeverity: "high",
             NotifyOnCreateOrReopenCase: false,
             NotifyOnResolveCase: false,
-            TeamID: "suscipit",
+            TeamID: "unde",
         },
+        XAmzAlgorithm: "nulla",
+        XAmzContentSha256: "corrupti",
+        XAmzCredential: "illum",
+        XAmzDate: "vel",
+        XAmzSecurityToken: "error",
+        XAmzSignature: "deserunt",
+        XAmzSignedHeaders: "suscipit",
     }
 
     ctx := context.Background()

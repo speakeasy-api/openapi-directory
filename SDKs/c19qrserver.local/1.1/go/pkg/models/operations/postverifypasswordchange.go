@@ -15,11 +15,6 @@ type PostVerifyPasswordChangeSample struct {
 	Password *string `json:"password,omitempty"`
 }
 
-type PostVerifyPasswordChangeRequest struct {
-	// Password Reset Payload
-	Request PostVerifyPasswordChangeSample `request:"mediaType=application/json"`
-}
-
 type PostVerifyPasswordChangeResponse struct {
 	ContentType string
 	StatusCode  int

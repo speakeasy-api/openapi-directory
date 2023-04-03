@@ -50,25 +50,17 @@ func (e *POSTCreateTransitGatewayConnectPeerVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTCreateTransitGatewayConnectPeerQueryParams struct {
-	Action  POSTCreateTransitGatewayConnectPeerActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateTransitGatewayConnectPeerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateTransitGatewayConnectPeerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateTransitGatewayConnectPeerRequest struct {
-	QueryParams POSTCreateTransitGatewayConnectPeerQueryParams
-	Headers     POSTCreateTransitGatewayConnectPeerHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateTransitGatewayConnectPeerActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTCreateTransitGatewayConnectPeerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateTransitGatewayConnectPeerResponse struct {

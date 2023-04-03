@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWebhooksQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListWebhooksXAmzTargetEnum
 type ListWebhooksXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListWebhooksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListWebhooksHeaders struct {
+type ListWebhooksRequest struct {
+	ListWebhooksInput shared.ListWebhooksInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListWebhooksHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListWebhooksXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListWebhooksRequest struct {
-	QueryParams ListWebhooksQueryParams
-	Headers     ListWebhooksHeaders
-	Request     shared.ListWebhooksInput `request:"mediaType=application/json"`
 }
 
 type ListWebhooksResponse struct {

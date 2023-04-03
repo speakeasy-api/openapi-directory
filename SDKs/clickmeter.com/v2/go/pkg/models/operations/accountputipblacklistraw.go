@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutIPBlacklistRawRequest struct {
-	// The entry to add
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AccountPutIPBlacklistRawResponse struct {
 	APICoreDtoAccountingIPBlacklistEntry *shared.APICoreDtoAccountingIPBlacklistEntry
 	Body                                 []byte

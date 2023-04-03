@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConfigPathParams struct {
+type GetConfigRequest struct {
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-}
-
-type GetConfigRequest struct {
-	PathParams GetConfigPathParams
 }
 
 type GetConfigResponse struct {

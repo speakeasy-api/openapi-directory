@@ -13,26 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ActivateEventSourceRequest{
-        Headers: operations.ActivateEventSourceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSEvents.ActivateEventSource",
+        ActivateEventSourceRequest: shared.ActivateEventSourceRequest{
+            Name: "corrupti",
         },
-        Request: shared.ActivateEventSourceRequest{
-            Name: "illum",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        XAmzTarget: "AWSEvents.ActivateEventSource",
     }
 
     ctx := context.Background()

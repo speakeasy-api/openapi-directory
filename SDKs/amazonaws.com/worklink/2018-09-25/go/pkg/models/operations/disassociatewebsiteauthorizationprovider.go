@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type DisassociateWebsiteAuthorizationProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DisassociateWebsiteAuthorizationProviderRequestBody struct {
 	// A unique identifier for the authorization provider.
 	AuthorizationProviderID string `json:"AuthorizationProviderId"`
@@ -24,8 +14,14 @@ type DisassociateWebsiteAuthorizationProviderRequestBody struct {
 }
 
 type DisassociateWebsiteAuthorizationProviderRequest struct {
-	Headers DisassociateWebsiteAuthorizationProviderHeaders
-	Request DisassociateWebsiteAuthorizationProviderRequestBody `request:"mediaType=application/json"`
+	RequestBody       DisassociateWebsiteAuthorizationProviderRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DisassociateWebsiteAuthorizationProviderResponse struct {

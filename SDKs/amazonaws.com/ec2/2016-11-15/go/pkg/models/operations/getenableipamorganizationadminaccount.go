@@ -50,28 +50,20 @@ func (e *GETEnableIpamOrganizationAdminAccountVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETEnableIpamOrganizationAdminAccountQueryParams struct {
+type GETEnableIpamOrganizationAdminAccountRequest struct {
 	Action GETEnableIpamOrganizationAdminAccountActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Organizations member account ID that you want to enable as the IPAM account.
 	DelegatedAdminAccountID string `queryParam:"style=form,explode=true,name=DelegatedAdminAccountId"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                            `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETEnableIpamOrganizationAdminAccountVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableIpamOrganizationAdminAccountHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableIpamOrganizationAdminAccountRequest struct {
-	QueryParams GETEnableIpamOrganizationAdminAccountQueryParams
-	Headers     GETEnableIpamOrganizationAdminAccountHeaders
+	DryRun            *bool                                            `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETEnableIpamOrganizationAdminAccountVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableIpamOrganizationAdminAccountResponse struct {

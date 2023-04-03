@@ -16,5 +16,4 @@ pkg/models/operations/hscer.go
 pkg/models/operations/hsmgr.go
 pkg/models/operations/sscer.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

@@ -8,28 +8,6 @@ import (
 	"time"
 )
 
-type ListReadSetActivationJobsPathParams struct {
-	// The read set's sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
-type ListReadSetActivationJobsQueryParams struct {
-	// The maximum number of read set activation jobs to return in one page of results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Specify the pagination token from a previous request to retrieve the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListReadSetActivationJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListReadSetActivationJobsRequestBodyFilter - A read set activation job filter.
 type ListReadSetActivationJobsRequestBodyFilter struct {
 	CreatedAfter  *time.Time                             `json:"createdAfter,omitempty"`
@@ -43,10 +21,20 @@ type ListReadSetActivationJobsRequestBody struct {
 }
 
 type ListReadSetActivationJobsRequest struct {
-	PathParams  ListReadSetActivationJobsPathParams
-	QueryParams ListReadSetActivationJobsQueryParams
-	Headers     ListReadSetActivationJobsHeaders
-	Request     ListReadSetActivationJobsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListReadSetActivationJobsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The maximum number of read set activation jobs to return in one page of results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Specify the pagination token from a previous request to retrieve the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The read set's sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type ListReadSetActivationJobsResponse struct {

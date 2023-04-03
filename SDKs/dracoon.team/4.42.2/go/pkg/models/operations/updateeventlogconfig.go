@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEventlogConfigHeaders struct {
+type UpdateEventlogConfigRequest struct {
+	UpdateEventlogConfig shared.UpdateEventlogConfig `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateEventlogConfigRequest struct {
-	Headers UpdateEventlogConfigHeaders
-	Request shared.UpdateEventlogConfig `request:"mediaType=application/json"`
 }
 
 type UpdateEventlogConfigResponse struct {

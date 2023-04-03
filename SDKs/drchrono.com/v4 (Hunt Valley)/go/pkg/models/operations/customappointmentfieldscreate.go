@@ -8,16 +8,11 @@ import (
 )
 
 type CustomAppointmentFieldsCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CustomAppointmentFieldsCreateQueryParams struct {
-	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CustomAppointmentFieldsCreateRequest struct {
-	QueryParams CustomAppointmentFieldsCreateQueryParams
-	Security    CustomAppointmentFieldsCreateSecurity
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
 }
 
 type CustomAppointmentFieldsCreateResponse struct {

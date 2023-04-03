@@ -33,7 +33,14 @@ func (e *ListEnvironmentsEngineTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListEnvironmentsQueryParams struct {
+type ListEnvironmentsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The engine type for the runtime environment.
 	EngineType *ListEnvironmentsEngineTypeEnum `queryParam:"style=form,explode=true,name=engineType"`
 	// The maximum number of runtime environments to return.
@@ -42,21 +49,6 @@ type ListEnvironmentsQueryParams struct {
 	Names []string `queryParam:"style=form,explode=true,name=names"`
 	// A pagination token to control the number of runtime environments displayed in the list.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListEnvironmentsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEnvironmentsRequest struct {
-	QueryParams ListEnvironmentsQueryParams
-	Headers     ListEnvironmentsHeaders
 }
 
 type ListEnvironmentsResponse struct {

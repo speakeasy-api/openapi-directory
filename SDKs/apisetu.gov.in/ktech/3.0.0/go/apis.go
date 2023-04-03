@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Cocer - Company Related Certificate
 // API to verify Company Related Certificate.
-func (s *apIs) Cocer(ctx context.Context, request operations.CocerRequest) (*operations.CocerResponse, error) {
+func (s *apIs) Cocer(ctx context.Context, request operations.CocerRequestBody, security operations.CocerSecurity) (*operations.CocerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cocer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Cocer(ctx context.Context, request operations.CocerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Cocer(ctx context.Context, request operations.CocerRequest) (*ope
 
 // Rfcer - Registration Certificate of Firm/ Company
 // API to verify Registration Certificate of Firm/ Company.
-func (s *apIs) Rfcer(ctx context.Context, request operations.RfcerRequest) (*operations.RfcerResponse, error) {
+func (s *apIs) Rfcer(ctx context.Context, request operations.RfcerRequestBody, security operations.RfcerSecurity) (*operations.RfcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rfcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Rfcer(ctx context.Context, request operations.RfcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

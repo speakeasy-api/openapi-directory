@@ -50,27 +50,19 @@ func (e *GETDescribeIndexFieldsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeIndexFieldsQueryParams struct {
+type GETDescribeIndexFieldsRequest struct {
 	Action     GETDescribeIndexFieldsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                           `queryParam:"style=form,explode=true,name=DomainName"`
 	// Limits the <code>DescribeIndexFields</code> response to the specified fields.
-	FieldNames []string                          `queryParam:"style=form,explode=true,name=FieldNames"`
-	Version    GETDescribeIndexFieldsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeIndexFieldsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeIndexFieldsRequest struct {
-	QueryParams GETDescribeIndexFieldsQueryParams
-	Headers     GETDescribeIndexFieldsHeaders
+	FieldNames        []string                          `queryParam:"style=form,explode=true,name=FieldNames"`
+	Version           GETDescribeIndexFieldsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeIndexFieldsResponse struct {

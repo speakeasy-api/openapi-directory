@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFlowsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListFlowsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListFlowsRequestBody struct {
 	//  Specifies the maximum number of items that should be returned in the result set.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -32,9 +15,18 @@ type ListFlowsRequestBody struct {
 }
 
 type ListFlowsRequest struct {
-	QueryParams ListFlowsQueryParams
-	Headers     ListFlowsHeaders
-	Request     ListFlowsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListFlowsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListFlowsResponse struct {

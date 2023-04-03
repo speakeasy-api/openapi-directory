@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TokensApplyMissingPartnerOffersWithoutClaimSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TokensApplyMissingPartnerOffersWithoutClaimPathParams struct {
+type TokensApplyMissingPartnerOffersWithoutClaimRequest struct {
 	// The partner application identifier.
 	PartnerApplicationID int `pathParam:"style=simple,explode=false,name=partnerApplicationId"`
 	// The bungie.net user to apply missing offers to. If not self, elevated permissions are required.
 	TargetBnetMembershipID int64 `pathParam:"style=simple,explode=false,name=targetBnetMembershipId"`
-}
-
-type TokensApplyMissingPartnerOffersWithoutClaimRequest struct {
-	PathParams TokensApplyMissingPartnerOffersWithoutClaimPathParams
-	Security   TokensApplyMissingPartnerOffersWithoutClaimSecurity
 }
 
 // TokensApplyMissingPartnerOffersWithoutClaim200Wildcard - Look at the Response property for more information about the nature of this response

@@ -116,7 +116,7 @@ func (s *SDK) CreateAlarmModel(ctx context.Context, request operations.CreateAla
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alarm-models"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateAlarmModel(ctx context.Context, request operations.CreateAla
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -242,7 +242,7 @@ func (s *SDK) CreateDetectorModel(ctx context.Context, request operations.Create
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/detector-models"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) CreateDetectorModel(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -368,7 +368,7 @@ func (s *SDK) CreateInput(ctx context.Context, request operations.CreateInputReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/inputs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *SDK) CreateInput(ctx context.Context, request operations.CreateInputReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -472,14 +472,14 @@ func (s *SDK) CreateInput(ctx context.Context, request operations.CreateInputReq
 // DeleteAlarmModel - Deletes an alarm model. Any alarm instances that were created based on this alarm model are also deleted. This action can't be undone.
 func (s *SDK) DeleteAlarmModel(ctx context.Context, request operations.DeleteAlarmModelRequest) (*operations.DeleteAlarmModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -578,14 +578,14 @@ func (s *SDK) DeleteAlarmModel(ctx context.Context, request operations.DeleteAla
 // DeleteDetectorModel - Deletes a detector model. Any active instances of the detector model are also deleted.
 func (s *SDK) DeleteDetectorModel(ctx context.Context, request operations.DeleteDetectorModelRequest) (*operations.DeleteDetectorModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -684,14 +684,14 @@ func (s *SDK) DeleteDetectorModel(ctx context.Context, request operations.Delete
 // DeleteInput - Deletes an input.
 func (s *SDK) DeleteInput(ctx context.Context, request operations.DeleteInputRequest) (*operations.DeleteInputResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -790,16 +790,16 @@ func (s *SDK) DeleteInput(ctx context.Context, request operations.DeleteInputReq
 // DescribeAlarmModel - Retrieves information about an alarm model. If you don't specify a value for the <code>alarmModelVersion</code> parameter, the latest version is returned.
 func (s *SDK) DescribeAlarmModel(ctx context.Context, request operations.DescribeAlarmModelRequest) (*operations.DescribeAlarmModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -890,16 +890,16 @@ func (s *SDK) DescribeAlarmModel(ctx context.Context, request operations.Describ
 // DescribeDetectorModel - Describes a detector model. If the <code>version</code> parameter is not specified, information about the latest version is returned.
 func (s *SDK) DescribeDetectorModel(ctx context.Context, request operations.DescribeDetectorModelRequest) (*operations.DescribeDetectorModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -990,14 +990,14 @@ func (s *SDK) DescribeDetectorModel(ctx context.Context, request operations.Desc
 // DescribeDetectorModelAnalysis - <p>Retrieves runtime information about a detector model analysis.</p> <note> <p>After AWS IoT Events starts analyzing your detector model, you have up to 24 hours to retrieve the analysis results.</p> </note>
 func (s *SDK) DescribeDetectorModelAnalysis(ctx context.Context, request operations.DescribeDetectorModelAnalysisRequest) (*operations.DescribeDetectorModelAnalysisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1086,14 +1086,14 @@ func (s *SDK) DescribeDetectorModelAnalysis(ctx context.Context, request operati
 // DescribeInput - Describes an input.
 func (s *SDK) DescribeInput(ctx context.Context, request operations.DescribeInputRequest) (*operations.DescribeInputResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1189,7 +1189,7 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1288,16 +1288,16 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 // GetDetectorModelAnalysisResults - <p>Retrieves one or more analysis results of the detector model.</p> <note> <p>After AWS IoT Events starts analyzing your detector model, you have up to 24 hours to retrieve the analysis results.</p> </note>
 func (s *SDK) GetDetectorModelAnalysisResults(ctx context.Context, request operations.GetDetectorModelAnalysisResultsRequest) (*operations.GetDetectorModelAnalysisResultsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}/results", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}/results", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1388,16 +1388,16 @@ func (s *SDK) GetDetectorModelAnalysisResults(ctx context.Context, request opera
 // ListAlarmModelVersions - Lists all the versions of an alarm model. The operation returns only the metadata associated with each alarm model version.
 func (s *SDK) ListAlarmModelVersions(ctx context.Context, request operations.ListAlarmModelVersionsRequest) (*operations.ListAlarmModelVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1495,9 +1495,9 @@ func (s *SDK) ListAlarmModels(ctx context.Context, request operations.ListAlarmM
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1578,16 +1578,16 @@ func (s *SDK) ListAlarmModels(ctx context.Context, request operations.ListAlarmM
 // ListDetectorModelVersions - Lists all the versions of a detector model. Only the metadata associated with each detector model version is returned.
 func (s *SDK) ListDetectorModelVersions(ctx context.Context, request operations.ListDetectorModelVersionsRequest) (*operations.ListDetectorModelVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1685,9 +1685,9 @@ func (s *SDK) ListDetectorModels(ctx context.Context, request operations.ListDet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1770,7 +1770,7 @@ func (s *SDK) ListInputRoutings(ctx context.Context, request operations.ListInpu
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/input-routings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1785,7 +1785,7 @@ func (s *SDK) ListInputRoutings(ctx context.Context, request operations.ListInpu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1881,9 +1881,9 @@ func (s *SDK) ListInputs(ctx context.Context, request operations.ListInputsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1971,9 +1971,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2066,7 +2066,7 @@ func (s *SDK) PutLoggingOptions(ctx context.Context, request operations.PutLoggi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/logging"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2081,7 +2081,7 @@ func (s *SDK) PutLoggingOptions(ctx context.Context, request operations.PutLoggi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2173,7 +2173,7 @@ func (s *SDK) StartDetectorModelAnalysis(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/analysis/detector-models/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2188,7 +2188,7 @@ func (s *SDK) StartDetectorModelAnalysis(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2279,7 +2279,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tags#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2294,9 +2294,9 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2404,9 +2404,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2497,9 +2497,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAlarmModel - Updates an alarm model. Any alarms that were created based on the previous version are deleted and then created again as new data arrives.
 func (s *SDK) UpdateAlarmModel(ctx context.Context, request operations.UpdateAlarmModelRequest) (*operations.UpdateAlarmModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2514,7 +2514,7 @@ func (s *SDK) UpdateAlarmModel(ctx context.Context, request operations.UpdateAla
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2613,9 +2613,9 @@ func (s *SDK) UpdateAlarmModel(ctx context.Context, request operations.UpdateAla
 // UpdateDetectorModel - Updates a detector model. Detectors (instances) spawned by the previous version are deleted and then re-created as new inputs arrive.
 func (s *SDK) UpdateDetectorModel(ctx context.Context, request operations.UpdateDetectorModelRequest) (*operations.UpdateDetectorModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2630,7 +2630,7 @@ func (s *SDK) UpdateDetectorModel(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2729,9 +2729,9 @@ func (s *SDK) UpdateDetectorModel(ctx context.Context, request operations.Update
 // UpdateInput - Updates an input.
 func (s *SDK) UpdateInput(ctx context.Context, request operations.UpdateInputRequest) (*operations.UpdateInputResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2746,7 +2746,7 @@ func (s *SDK) UpdateInput(ctx context.Context, request operations.UpdateInputReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

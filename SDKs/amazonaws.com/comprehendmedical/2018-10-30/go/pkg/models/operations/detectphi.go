@@ -30,7 +30,8 @@ func (e *DetectPHIXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DetectPHIHeaders struct {
+type DetectPHIRequest struct {
+	DetectPHIRequest  shared.DetectPHIRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DetectPHIHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DetectPHIXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DetectPHIRequest struct {
-	Headers DetectPHIHeaders
-	Request shared.DetectPHIRequest `request:"mediaType=application/json"`
 }
 
 type DetectPHIResponse struct {

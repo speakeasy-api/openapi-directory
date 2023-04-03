@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDomainNamePathParams struct {
-	// The domain name.
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type UpdateDomainNameHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDomainNameRequestBody struct {
 	// A description of the <code>DomainName</code>.
 	Description *string `json:"description,omitempty"`
 }
 
 type UpdateDomainNameRequest struct {
-	PathParams UpdateDomainNamePathParams
-	Headers    UpdateDomainNameHeaders
-	Request    UpdateDomainNameRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDomainNameRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The domain name.
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
 }
 
 type UpdateDomainNameResponse struct {

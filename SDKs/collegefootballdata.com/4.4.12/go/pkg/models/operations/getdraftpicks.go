@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDraftPicksQueryParams struct {
+type GetDraftPicksRequest struct {
 	// Player college filter
 	College *string `queryParam:"style=form,explode=true,name=college"`
 	// College confrence abbreviation filter
@@ -18,10 +18,6 @@ type GetDraftPicksQueryParams struct {
 	Position *string `queryParam:"style=form,explode=true,name=position"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetDraftPicksRequest struct {
-	QueryParams GetDraftPicksQueryParams
 }
 
 type GetDraftPicksResponse struct {

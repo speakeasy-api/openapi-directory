@@ -8,13 +8,8 @@ import (
 )
 
 type PostRmmPreSignAttachmentSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostRmmPreSignAttachmentRequest struct {
-	// Describes the file to upload
-	Request  shared.PreSignRequest `request:"mediaType=application/json"`
-	Security PostRmmPreSignAttachmentSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostRmmPreSignAttachmentResponse struct {

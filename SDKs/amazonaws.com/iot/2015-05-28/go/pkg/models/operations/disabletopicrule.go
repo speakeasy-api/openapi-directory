@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DisableTopicRulePathParams struct {
-	// The name of the rule to disable.
-	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
-}
-
-type DisableTopicRuleHeaders struct {
+type DisableTopicRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DisableTopicRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisableTopicRuleRequest struct {
-	PathParams DisableTopicRulePathParams
-	Headers    DisableTopicRuleHeaders
+	// The name of the rule to disable.
+	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
 }
 
 type DisableTopicRuleResponse struct {

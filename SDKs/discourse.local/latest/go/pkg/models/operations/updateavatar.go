@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateAvatarPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type UpdateAvatarRequestBodyTypeEnum string
 
 const (
@@ -47,8 +43,8 @@ type UpdateAvatarRequestBody struct {
 }
 
 type UpdateAvatarRequest struct {
-	PathParams UpdateAvatarPathParams
-	Request    *UpdateAvatarRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateAvatarRequestBody `request:"mediaType=application/json"`
+	Username    string                   `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // UpdateAvatar200ApplicationJSON - avatar updated

@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateBrowserSettingsPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type AssociateBrowserSettingsQueryParams struct {
-	// The ARN of the browser settings.
-	BrowserSettingsArn string `queryParam:"style=form,explode=true,name=browserSettingsArn"`
-}
-
-type AssociateBrowserSettingsHeaders struct {
+type AssociateBrowserSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type AssociateBrowserSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateBrowserSettingsRequest struct {
-	PathParams  AssociateBrowserSettingsPathParams
-	QueryParams AssociateBrowserSettingsQueryParams
-	Headers     AssociateBrowserSettingsHeaders
+	// The ARN of the browser settings.
+	BrowserSettingsArn string `queryParam:"style=form,explode=true,name=browserSettingsArn"`
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
 }
 
 type AssociateBrowserSettingsResponse struct {

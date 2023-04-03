@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAddonPathParams struct {
-	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
-	AddonName string `pathParam:"style=simple,explode=false,name=addonName"`
-	// The name of the cluster.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DescribeAddonHeaders struct {
+type DescribeAddonRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeAddonHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAddonRequest struct {
-	PathParams DescribeAddonPathParams
-	Headers    DescribeAddonHeaders
+	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
+	AddonName string `pathParam:"style=simple,explode=false,name=addonName"`
+	// The name of the cluster.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DescribeAddonResponse struct {

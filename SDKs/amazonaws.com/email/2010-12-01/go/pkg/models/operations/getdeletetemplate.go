@@ -50,26 +50,18 @@ func (e *GETDeleteTemplateVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteTemplateQueryParams struct {
+type GETDeleteTemplateRequest struct {
 	Action GETDeleteTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the template to be deleted.
-	TemplateName string                       `queryParam:"style=form,explode=true,name=TemplateName"`
-	Version      GETDeleteTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteTemplateRequest struct {
-	QueryParams GETDeleteTemplateQueryParams
-	Headers     GETDeleteTemplateHeaders
+	TemplateName      string                       `queryParam:"style=form,explode=true,name=TemplateName"`
+	Version           GETDeleteTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteTemplateResponse struct {

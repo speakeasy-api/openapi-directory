@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeGuestUsersPoliciesConfigHeaders struct {
+type ChangeGuestUsersPoliciesConfigRequest struct {
+	UpdateGuestUsersPoliciesConfig shared.UpdateGuestUsersPoliciesConfig `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ChangeGuestUsersPoliciesConfigRequest struct {
-	Headers ChangeGuestUsersPoliciesConfigHeaders
-	Request shared.UpdateGuestUsersPoliciesConfig `request:"mediaType=application/json"`
 }
 
 type ChangeGuestUsersPoliciesConfigResponse struct {

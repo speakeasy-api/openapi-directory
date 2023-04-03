@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateNodeCommentPathParams struct {
-	// Comment ID
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-}
-
 // UpdateNodeCommentXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type UpdateNodeCommentXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *UpdateNodeCommentXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateNodeCommentHeaders struct {
+type UpdateNodeCommentRequest struct {
+	ChangeNodeCommentRequest shared.ChangeNodeCommentRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *UpdateNodeCommentXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type UpdateNodeCommentRequest struct {
-	PathParams UpdateNodeCommentPathParams
-	Headers    UpdateNodeCommentHeaders
-	Request    shared.ChangeNodeCommentRequest `request:"mediaType=application/json"`
+	// Comment ID
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 }
 
 type UpdateNodeCommentResponse struct {

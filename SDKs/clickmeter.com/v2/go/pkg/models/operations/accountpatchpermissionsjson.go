@@ -33,17 +33,13 @@ func (e *AccountPatchPermissionsJSONTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountPatchPermissionsJSONPathParams struct {
+type AccountPatchPermissionsJSONRequest struct {
+	// The patch permission request
+	APICoreRequestsPermissionPatchRequest shared.APICoreRequestsPermissionPatchRequest `request:"mediaType=application/json"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
 	// Can be "datapoint" or "group"
 	Type AccountPatchPermissionsJSONTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type AccountPatchPermissionsJSONRequest struct {
-	PathParams AccountPatchPermissionsJSONPathParams
-	// The patch permission request
-	Request shared.APICoreRequestsPermissionPatchRequest `request:"mediaType=application/json"`
 }
 
 type AccountPatchPermissionsJSONResponse struct {

@@ -34,11 +34,11 @@ func newMessages(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // MessagesAdd - Create Message
 // Create Message
-func (s *messages) MessagesAdd(ctx context.Context, request operations.MessagesAddRequest) (*operations.MessagesAddResponse, error) {
+func (s *messages) MessagesAdd(ctx context.Context, request operations.MessagesAddRequest, security operations.MessagesAddSecurity) (*operations.MessagesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sms/messages"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *messages) MessagesAdd(ctx context.Context, request operations.MessagesA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *messages) MessagesAdd(ctx context.Context, request operations.MessagesA
 
 // MessagesAll - List Messages
 // List Messages
-func (s *messages) MessagesAll(ctx context.Context, request operations.MessagesAllRequest) (*operations.MessagesAllResponse, error) {
+func (s *messages) MessagesAll(ctx context.Context, request operations.MessagesAllRequest, security operations.MessagesAllSecurity) (*operations.MessagesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sms/messages"
 
@@ -164,13 +164,13 @@ func (s *messages) MessagesAll(ctx context.Context, request operations.MessagesA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *messages) MessagesAll(ctx context.Context, request operations.MessagesA
 
 // MessagesDelete - Delete Message
 // Delete Message
-func (s *messages) MessagesDelete(ctx context.Context, request operations.MessagesDeleteRequest) (*operations.MessagesDeleteResponse, error) {
+func (s *messages) MessagesDelete(ctx context.Context, request operations.MessagesDeleteRequest, security operations.MessagesDeleteSecurity) (*operations.MessagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sms/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sms/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *messages) MessagesDelete(ctx context.Context, request operations.Messag
 
 // MessagesOne - Get Message
 // Get Message
-func (s *messages) MessagesOne(ctx context.Context, request operations.MessagesOneRequest) (*operations.MessagesOneResponse, error) {
+func (s *messages) MessagesOne(ctx context.Context, request operations.MessagesOneRequest, security operations.MessagesOneSecurity) (*operations.MessagesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sms/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sms/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *messages) MessagesOne(ctx context.Context, request operations.MessagesO
 
 // MessagesUpdate - Update Message
 // Update Message
-func (s *messages) MessagesUpdate(ctx context.Context, request operations.MessagesUpdateRequest) (*operations.MessagesUpdateResponse, error) {
+func (s *messages) MessagesUpdate(ctx context.Context, request operations.MessagesUpdateRequest, security operations.MessagesUpdateSecurity) (*operations.MessagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sms/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sms/messages/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *messages) MessagesUpdate(ctx context.Context, request operations.Messag
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAttributeGroupPathParams struct {
-	//  The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
-	AttributeGroup string `pathParam:"style=simple,explode=false,name=attributeGroup"`
-}
-
-type UpdateAttributeGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateAttributeGroupRequestBody struct {
 	// A JSON string in the form of nested key-value pairs that represent the attributes in the group and describes an application and its components.
 	Attributes *string `json:"attributes,omitempty"`
@@ -32,9 +17,16 @@ type UpdateAttributeGroupRequestBody struct {
 }
 
 type UpdateAttributeGroupRequest struct {
-	PathParams UpdateAttributeGroupPathParams
-	Headers    UpdateAttributeGroupHeaders
-	Request    UpdateAttributeGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAttributeGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
+	AttributeGroup string `pathParam:"style=simple,explode=false,name=attributeGroup"`
 }
 
 type UpdateAttributeGroupResponse struct {

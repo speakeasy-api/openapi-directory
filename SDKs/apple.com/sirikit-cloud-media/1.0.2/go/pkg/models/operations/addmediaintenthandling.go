@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddMediaIntentHandlingHeaders struct {
-	AcceptLanguage                 string   `header:"style=simple,explode=false,name=Accept-Language"`
-	RequestTimeout                 float64  `header:"style=simple,explode=false,name=Request-Timeout"`
-	UserAgent                      string   `header:"style=simple,explode=false,name=User-Agent"`
-	XApplecloudextensionRetryCount *float64 `header:"style=simple,explode=false,name=x-applecloudextension-retry-count"`
-	XApplecloudextensionSessionID  string   `header:"style=simple,explode=false,name=x-applecloudextension-session-id"`
-}
-
 type AddMediaIntentHandlingRequest struct {
-	Headers AddMediaIntentHandlingHeaders
-	Request []shared.AddMediaIntentHandlingInvocation `request:"mediaType=application/json"`
+	AcceptLanguage                 string                                    `header:"style=simple,explode=false,name=Accept-Language"`
+	RequestTimeout                 float64                                   `header:"style=simple,explode=false,name=Request-Timeout"`
+	RequestBody                    []shared.AddMediaIntentHandlingInvocation `request:"mediaType=application/json"`
+	UserAgent                      string                                    `header:"style=simple,explode=false,name=User-Agent"`
+	XApplecloudextensionRetryCount *float64                                  `header:"style=simple,explode=false,name=x-applecloudextension-retry-count"`
+	XApplecloudextensionSessionID  string                                    `header:"style=simple,explode=false,name=x-applecloudextension-session-id"`
 }
 
 type AddMediaIntentHandlingResponse struct {

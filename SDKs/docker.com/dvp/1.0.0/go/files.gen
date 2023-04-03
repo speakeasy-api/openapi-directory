@@ -45,3 +45,4 @@ pkg/models/shared/yeardata.go
 pkg/models/shared/yearmodel.go
 pkg/models/shared/security.go
 USAGE.md
+pkg/models/operations/options.go

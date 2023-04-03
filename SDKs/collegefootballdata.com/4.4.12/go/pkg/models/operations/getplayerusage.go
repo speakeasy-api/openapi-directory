@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlayerUsageQueryParams struct {
+type GetPlayerUsageRequest struct {
 	// Conference abbreviation filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Filter to remove garbage time plays from calculations
@@ -20,10 +20,6 @@ type GetPlayerUsageQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPlayerUsageRequest struct {
-	QueryParams GetPlayerUsageQueryParams
 }
 
 type GetPlayerUsageResponse struct {

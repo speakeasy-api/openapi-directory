@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServiceInstancesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListServiceInstancesXAmzTargetEnum
 type ListServiceInstancesXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListServiceInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListServiceInstancesHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListServiceInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListServiceInstancesRequest struct {
-	QueryParams ListServiceInstancesQueryParams
-	Headers     ListServiceInstancesHeaders
-	Request     shared.ListServiceInstancesInput `request:"mediaType=application/json"`
+	ListServiceInstancesInput shared.ListServiceInstancesInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                ListServiceInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListServiceInstancesResponse struct {

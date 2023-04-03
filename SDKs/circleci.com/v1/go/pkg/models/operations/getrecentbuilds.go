@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecentBuildsQueryParams struct {
+type GetRecentBuildsRequest struct {
 	// The number of builds to return. Maximum 100, defaults to 30.
 	//
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The API returns builds starting from this offset, defaults to 0.
 	//
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetRecentBuildsRequest struct {
-	QueryParams GetRecentBuildsQueryParams
 }
 
 type GetRecentBuildsResponse struct {

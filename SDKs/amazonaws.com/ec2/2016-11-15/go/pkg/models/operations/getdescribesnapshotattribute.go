@@ -74,30 +74,22 @@ func (e *GETDescribeSnapshotAttributeVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeSnapshotAttributeQueryParams struct {
+type GETDescribeSnapshotAttributeRequest struct {
 	Action GETDescribeSnapshotAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The snapshot attribute you would like to view.
 	Attribute GETDescribeSnapshotAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the EBS snapshot.
-	SnapshotID string                                  `queryParam:"style=form,explode=true,name=SnapshotId"`
-	Version    GETDescribeSnapshotAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeSnapshotAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeSnapshotAttributeRequest struct {
-	QueryParams GETDescribeSnapshotAttributeQueryParams
-	Headers     GETDescribeSnapshotAttributeHeaders
+	SnapshotID        string                                  `queryParam:"style=form,explode=true,name=SnapshotId"`
+	Version           GETDescribeSnapshotAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeSnapshotAttributeResponse struct {

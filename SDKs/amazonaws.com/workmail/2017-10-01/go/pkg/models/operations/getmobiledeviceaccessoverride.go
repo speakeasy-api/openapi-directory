@@ -30,20 +30,16 @@ func (e *GetMobileDeviceAccessOverrideXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetMobileDeviceAccessOverrideHeaders struct {
-	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetMobileDeviceAccessOverrideXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetMobileDeviceAccessOverrideRequest struct {
-	Headers GetMobileDeviceAccessOverrideHeaders
-	Request shared.GetMobileDeviceAccessOverrideRequest `request:"mediaType=application/json"`
+	GetMobileDeviceAccessOverrideRequest shared.GetMobileDeviceAccessOverrideRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                       *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                             *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                    *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                           GetMobileDeviceAccessOverrideXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetMobileDeviceAccessOverrideResponse struct {

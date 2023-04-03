@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUrlsDatamodelPathParams struct {
-	// Analysis' identifier
-	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // GetUrlsDatamodelAreaEnum
 type GetUrlsDatamodelAreaEnum string
 
@@ -48,13 +39,14 @@ func (e *GetUrlsDatamodelAreaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUrlsDatamodelQueryParams struct {
-	Area *GetUrlsDatamodelAreaEnum `queryParam:"style=form,explode=true,name=area"`
-}
-
 type GetUrlsDatamodelRequest struct {
-	PathParams  GetUrlsDatamodelPathParams
-	QueryParams GetUrlsDatamodelQueryParams
+	// Analysis' identifier
+	AnalysisSlug string                    `pathParam:"style=simple,explode=false,name=analysis_slug"`
+	Area         *GetUrlsDatamodelAreaEnum `queryParam:"style=form,explode=true,name=area"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetUrlsDatamodelResponse struct {

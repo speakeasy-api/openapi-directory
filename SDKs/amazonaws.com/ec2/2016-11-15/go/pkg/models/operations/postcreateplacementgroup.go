@@ -50,25 +50,17 @@ func (e *POSTCreatePlacementGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreatePlacementGroupQueryParams struct {
-	Action  POSTCreatePlacementGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreatePlacementGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreatePlacementGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreatePlacementGroupRequest struct {
-	QueryParams POSTCreatePlacementGroupQueryParams
-	Headers     POSTCreatePlacementGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreatePlacementGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTCreatePlacementGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreatePlacementGroupResponse struct {

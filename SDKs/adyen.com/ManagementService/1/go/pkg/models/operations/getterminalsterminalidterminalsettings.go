@@ -8,18 +8,13 @@ import (
 )
 
 type GetTerminalsTerminalIDTerminalSettingsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetTerminalsTerminalIDTerminalSettingsPathParams struct {
-	// The unique identifier of the payment terminal.
-	TerminalID string `pathParam:"style=simple,explode=false,name=terminalId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetTerminalsTerminalIDTerminalSettingsRequest struct {
-	PathParams GetTerminalsTerminalIDTerminalSettingsPathParams
-	Security   GetTerminalsTerminalIDTerminalSettingsSecurity
+	// The unique identifier of the payment terminal.
+	TerminalID string `pathParam:"style=simple,explode=false,name=terminalId"`
 }
 
 type GetTerminalsTerminalIDTerminalSettingsResponse struct {

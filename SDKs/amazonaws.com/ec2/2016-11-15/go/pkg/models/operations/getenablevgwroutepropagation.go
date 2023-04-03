@@ -50,30 +50,22 @@ func (e *GETEnableVgwRoutePropagationVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETEnableVgwRoutePropagationQueryParams struct {
+type GETEnableVgwRoutePropagationRequest struct {
 	Action GETEnableVgwRoutePropagationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the virtual private gateway that is attached to a VPC. The virtual private gateway must be attached to the same VPC that the routing tables are associated with.
 	GatewayID string `queryParam:"style=form,explode=true,name=GatewayId"`
 	// The ID of the route table. The routing table must be associated with the same VPC that the virtual private gateway is attached to.
-	RouteTableID string                                  `queryParam:"style=form,explode=true,name=RouteTableId"`
-	Version      GETEnableVgwRoutePropagationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableVgwRoutePropagationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableVgwRoutePropagationRequest struct {
-	QueryParams GETEnableVgwRoutePropagationQueryParams
-	Headers     GETEnableVgwRoutePropagationHeaders
+	RouteTableID      string                                  `queryParam:"style=form,explode=true,name=RouteTableId"`
+	Version           GETEnableVgwRoutePropagationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableVgwRoutePropagationResponse struct {

@@ -57,7 +57,7 @@ func (e *GETModifyUserVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyUserQueryParams struct {
+type GETModifyUserRequest struct {
 	// Access permissions string used for this user.
 	AccessString *string                 `queryParam:"style=form,explode=true,name=AccessString"`
 	Action       GETModifyUserActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -70,23 +70,15 @@ type GETModifyUserQueryParams struct {
 	// The passwords belonging to the user. You are allowed up to two.
 	Passwords []string `queryParam:"style=form,explode=true,name=Passwords"`
 	// The ID of the user.
-	UserID  string                   `queryParam:"style=form,explode=true,name=UserId"`
-	Version GETModifyUserVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyUserHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyUserRequest struct {
-	QueryParams GETModifyUserQueryParams
-	Headers     GETModifyUserHeaders
+	UserID            string                   `queryParam:"style=form,explode=true,name=UserId"`
+	Version           GETModifyUserVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyUserResponse struct {

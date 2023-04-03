@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCampaignSoundDataWavSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCampaignSoundDataWavPathParams struct {
-	// An id of a campaign sound
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetCampaignSoundDataWavRequest struct {
-	PathParams GetCampaignSoundDataWavPathParams
-	Security   GetCampaignSoundDataWavSecurity
+	// An id of a campaign sound
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetCampaignSoundDataWavResponse struct {

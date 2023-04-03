@@ -16,6 +16,5 @@ pkg/models/operations/drvlc.go
 pkg/models/operations/rvcer.go
 pkg/models/shared/drivinglicenseschema.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 pkg/models/shared/vehicleregistrationschema.go
 USAGE.md

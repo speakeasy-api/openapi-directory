@@ -10,7 +10,7 @@ import (
 )
 
 type PostReportsSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=x-functions-key"`
 }
 
 // PostReportsOptionEnum - Optional ways to process the request
@@ -46,7 +46,9 @@ func (e *PostReportsOptionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PostReportsQueryParams struct {
+type PostReportsRequest struct {
+	// The public health information being routed
+	RequestBody string `request:"mediaType=text/csv"`
 	// The client's name that matches the client name in metadata
 	Client string `queryParam:"style=form,explode=true,name=client"`
 	// Dynamic default values for an element. ':' or %3A is used to seperate element name and value
@@ -55,13 +57,6 @@ type PostReportsQueryParams struct {
 	Option *PostReportsOptionEnum `queryParam:"style=form,explode=true,name=option"`
 	// A comma speparated list of receiver names. Limit the list of possible receivers to these receivers.
 	RouteTo []string `queryParam:"style=form,explode=true,name=routeTo"`
-}
-
-type PostReportsRequest struct {
-	QueryParams PostReportsQueryParams
-	// The public health information being routed
-	Request  string `request:"mediaType=text/csv"`
-	Security PostReportsSecurity
 }
 
 type PostReportsResponse struct {

@@ -7,12 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGoalMetricPathParams struct {
-	// Globally unique identifier for the goal.
-	GoalGid string `pathParam:"style=simple,explode=false,name=goal_gid"`
+// UpdateGoalMetricRequestBodyInput - The updated fields for the goal metric.
+type UpdateGoalMetricRequestBodyInput struct {
+	Data *shared.GoalMetricCurrentValueRequestInput `json:"data,omitempty"`
 }
 
-type UpdateGoalMetricQueryParams struct {
+type UpdateGoalMetricRequest struct {
+	// The updated fields for the goal metric.
+	RequestBody UpdateGoalMetricRequestBodyInput `request:"mediaType=application/json"`
+	// Globally unique identifier for the goal.
+	GoalGid string `pathParam:"style=simple,explode=false,name=goal_gid"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +24,6 @@ type UpdateGoalMetricQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// UpdateGoalMetricRequestBodyInput - The updated fields for the goal metric.
-type UpdateGoalMetricRequestBodyInput struct {
-	Data *shared.GoalMetricCurrentValueRequestInput `json:"data,omitempty"`
-}
-
-type UpdateGoalMetricRequest struct {
-	PathParams  UpdateGoalMetricPathParams
-	QueryParams UpdateGoalMetricQueryParams
-	// The updated fields for the goal metric.
-	Request UpdateGoalMetricRequestBodyInput `request:"mediaType=application/json"`
 }
 
 // UpdateGoalMetric200ApplicationJSON - Successfully updated the goal metric.

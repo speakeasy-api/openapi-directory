@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAuthorizableKeystorePathParams struct {
+type GetAuthorizableKeystoreRequest struct {
 	AuthorizableID   string `pathParam:"style=simple,explode=false,name=authorizableId"`
 	IntermediatePath string `pathParam:"style=simple,explode=false,name=intermediatePath"`
-}
-
-type GetAuthorizableKeystoreRequest struct {
-	PathParams GetAuthorizableKeystorePathParams
 }
 
 type GetAuthorizableKeystoreResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTPutScheduledUpdateGroupActionVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTPutScheduledUpdateGroupActionQueryParams struct {
-	Action  POSTPutScheduledUpdateGroupActionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTPutScheduledUpdateGroupActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTPutScheduledUpdateGroupActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTPutScheduledUpdateGroupActionRequest struct {
-	QueryParams POSTPutScheduledUpdateGroupActionQueryParams
-	Headers     POSTPutScheduledUpdateGroupActionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTPutScheduledUpdateGroupActionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTPutScheduledUpdateGroupActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTPutScheduledUpdateGroupActionResponse struct {

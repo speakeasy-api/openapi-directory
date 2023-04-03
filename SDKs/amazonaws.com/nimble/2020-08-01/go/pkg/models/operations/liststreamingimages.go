@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStreamingImagesPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListStreamingImagesQueryParams struct {
-	// The token for the next set of results, or null if there are no more results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// Filter this request to streaming images with the given owner
-	Owner *string `queryParam:"style=form,explode=true,name=owner"`
-}
-
-type ListStreamingImagesHeaders struct {
+type ListStreamingImagesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListStreamingImagesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStreamingImagesRequest struct {
-	PathParams  ListStreamingImagesPathParams
-	QueryParams ListStreamingImagesQueryParams
-	Headers     ListStreamingImagesHeaders
+	// The token for the next set of results, or null if there are no more results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// Filter this request to streaming images with the given owner
+	Owner *string `queryParam:"style=form,explode=true,name=owner"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type ListStreamingImagesResponse struct {

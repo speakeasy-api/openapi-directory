@@ -74,7 +74,7 @@ func (e *GETDescribeStackInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeStackInstanceQueryParams struct {
+type GETDescribeStackInstanceRequest struct {
 	Action GETDescribeStackInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>[Service-managed permissions] Specifies whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account.</p> <p>By default, <code>SELF</code> is specified. Use <code>SELF</code> for stack sets with self-managed permissions.</p> <ul> <li> <p>If you are signed in to the management account, specify <code>SELF</code>.</p> </li> <li> <p>If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.</p> <p>Your Amazon Web Services account must be registered as a delegated administrator in the management account. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.</p> </li> </ul>
 	CallAs *GETDescribeStackInstanceCallAsEnum `queryParam:"style=form,explode=true,name=CallAs"`
@@ -83,23 +83,15 @@ type GETDescribeStackInstanceQueryParams struct {
 	// The name of a Region that's associated with this stack instance.
 	StackInstanceRegion string `queryParam:"style=form,explode=true,name=StackInstanceRegion"`
 	// The name or the unique stack ID of the stack set that you want to get stack instance information for.
-	StackSetName string                              `queryParam:"style=form,explode=true,name=StackSetName"`
-	Version      GETDescribeStackInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeStackInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeStackInstanceRequest struct {
-	QueryParams GETDescribeStackInstanceQueryParams
-	Headers     GETDescribeStackInstanceHeaders
+	StackSetName      string                              `queryParam:"style=form,explode=true,name=StackSetName"`
+	Version           GETDescribeStackInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeStackInstanceResponse struct {

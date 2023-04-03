@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvokeScreenAutomationPathParams struct {
-	// The ID of the app that contains the screen automation.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The ID of the automation action to be performed.
-	AutomationID string `pathParam:"style=simple,explode=false,name=automationId"`
-	// The ID of the screen that contains the screen automation.
-	ScreenID string `pathParam:"style=simple,explode=false,name=screenId"`
-	// The ID of the workbook that contains the screen automation.
-	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
-}
-
-type InvokeScreenAutomationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type InvokeScreenAutomationRequestBody struct {
 	// <p> The request token for performing the automation action. Request tokens help to identify duplicate requests. If a call times out or fails due to a transient error like a failed network connection, you can retry the call with the same request token. The service ensures that if the first call using that request token is successfully performed, the second call will return the response of the previous call rather than performing the action again. </p> <p> Note that request tokens are valid only for a few minutes. You cannot use request tokens to dedupe requests spanning hours or days. </p>
 	ClientRequestToken *string `json:"clientRequestToken,omitempty"`
@@ -38,9 +17,22 @@ type InvokeScreenAutomationRequestBody struct {
 }
 
 type InvokeScreenAutomationRequest struct {
-	PathParams InvokeScreenAutomationPathParams
-	Headers    InvokeScreenAutomationHeaders
-	Request    InvokeScreenAutomationRequestBody `request:"mediaType=application/json"`
+	RequestBody       InvokeScreenAutomationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the app that contains the screen automation.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The ID of the automation action to be performed.
+	AutomationID string `pathParam:"style=simple,explode=false,name=automationId"`
+	// The ID of the screen that contains the screen automation.
+	ScreenID string `pathParam:"style=simple,explode=false,name=screenId"`
+	// The ID of the workbook that contains the screen automation.
+	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
 }
 
 type InvokeScreenAutomationResponse struct {

@@ -9,9 +9,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutObjectPathParams struct {
-	// <p>The path (including the file name) where the object is stored in the container. Format: &lt;folder name&gt;/&lt;folder name&gt;/&lt;file name&gt;</p> <p>For example, to upload the file <code>mlaw.avi</code> to the folder path <code>premium\canada</code> in the container <code>movies</code>, enter the path <code>premium/canada/mlaw.avi</code>.</p> <p>Do not include the container name in this path.</p> <p>If the path includes any folders that don't exist yet, the service creates them. For example, suppose you have an existing <code>premium/usa</code> subfolder. If you specify <code>premium/canada</code>, the service creates a <code>canada</code> subfolder in the <code>premium</code> folder. You then have two subfolders, <code>usa</code> and <code>canada</code>, in the <code>premium</code> folder. </p> <p>There is no correlation between the path to the source and the path (folders) in the container in AWS Elemental MediaStore.</p> <p>For more information about folders and how they exist in a container, see the <a href="http://docs.aws.amazon.com/mediastore/latest/ug/">AWS Elemental MediaStore User Guide</a>.</p> <p>The file name is the name that is assigned to the file that you upload. The file can have the same name inside and outside of AWS Elemental MediaStore, or it can have the same name. The file name can include or omit an extension. </p>
-	Path string `pathParam:"style=simple,explode=false,name=Path"`
+type PutObjectRequestBody struct {
+	// The bytes to be stored.
+	Body string `json:"Body"`
 }
 
 // PutObjectXAmzStorageClassEnum - Indicates the storage class of a <code>Put</code> request. Defaults to high-performance temporal storage class, and objects are persisted into durable storage shortly after being received.
@@ -59,33 +59,25 @@ func (e *PutObjectXAmzUploadAvailabilityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutObjectHeaders struct {
+type PutObjectRequest struct {
 	// <p>An optional <code>CacheControl</code> header that allows the caller to control the object's cache behavior. Headers can be passed in as specified in the HTTP at <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</a>.</p> <p>Headers with a custom user-defined value are also accepted.</p>
 	CacheControl *string `header:"style=simple,explode=false,name=Cache-Control"`
 	// The content type of the object.
-	ContentType       *string `header:"style=simple,explode=false,name=Content-Type"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	ContentType *string `header:"style=simple,explode=false,name=Content-Type"`
+	// <p>The path (including the file name) where the object is stored in the container. Format: &lt;folder name&gt;/&lt;folder name&gt;/&lt;file name&gt;</p> <p>For example, to upload the file <code>mlaw.avi</code> to the folder path <code>premium\canada</code> in the container <code>movies</code>, enter the path <code>premium/canada/mlaw.avi</code>.</p> <p>Do not include the container name in this path.</p> <p>If the path includes any folders that don't exist yet, the service creates them. For example, suppose you have an existing <code>premium/usa</code> subfolder. If you specify <code>premium/canada</code>, the service creates a <code>canada</code> subfolder in the <code>premium</code> folder. You then have two subfolders, <code>usa</code> and <code>canada</code>, in the <code>premium</code> folder. </p> <p>There is no correlation between the path to the source and the path (folders) in the container in AWS Elemental MediaStore.</p> <p>For more information about folders and how they exist in a container, see the <a href="http://docs.aws.amazon.com/mediastore/latest/ug/">AWS Elemental MediaStore User Guide</a>.</p> <p>The file name is the name that is assigned to the file that you upload. The file can have the same name inside and outside of AWS Elemental MediaStore, or it can have the same name. The file name can include or omit an extension. </p>
+	Path              string               `pathParam:"style=simple,explode=false,name=Path"`
+	RequestBody       PutObjectRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// Indicates the storage class of a <code>Put</code> request. Defaults to high-performance temporal storage class, and objects are persisted into durable storage shortly after being received.
 	XAmzStorageClass *PutObjectXAmzStorageClassEnum `header:"style=simple,explode=false,name=x-amz-storage-class"`
 	// <p>Indicates the availability of an object while it is still uploading. If the value is set to <code>streaming</code>, the object is available for downloading after some initial buffering but before the object is uploaded completely. If the value is set to <code>standard</code>, the object is available for downloading only when it is uploaded completely. The default value for this header is <code>standard</code>.</p> <p>To use this header, you must also set the HTTP <code>Transfer-Encoding</code> header to <code>chunked</code>.</p>
 	XAmzUploadAvailability *PutObjectXAmzUploadAvailabilityEnum `header:"style=simple,explode=false,name=x-amz-upload-availability"`
-}
-
-type PutObjectRequestBody struct {
-	// The bytes to be stored.
-	Body string `json:"Body"`
-}
-
-type PutObjectRequest struct {
-	PathParams PutObjectPathParams
-	Headers    PutObjectHeaders
-	Request    PutObjectRequestBody `request:"mediaType=application/json"`
 }
 
 type PutObjectResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnclaimDevicePathParams struct {
-	// The unique identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type UnclaimDeviceHeaders struct {
+type UnclaimDeviceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type UnclaimDeviceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UnclaimDeviceRequest struct {
-	PathParams UnclaimDevicePathParams
-	Headers    UnclaimDeviceHeaders
+	// The unique identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type UnclaimDeviceResponse struct {

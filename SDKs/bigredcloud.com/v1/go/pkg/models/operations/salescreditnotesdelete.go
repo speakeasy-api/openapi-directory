@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type SalesCreditNotesDeletePathParams struct {
+type SalesCreditNotesDeleteRequest struct {
 	// Id of Sales Credit Note to remove.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SalesCreditNotesDeleteQueryParams struct {
 	// Timestamp of Sales Credit Note to remove. Should be encoded in Base64.
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type SalesCreditNotesDeleteRequest struct {
-	PathParams  SalesCreditNotesDeletePathParams
-	QueryParams SalesCreditNotesDeleteQueryParams
 }
 
 type SalesCreditNotesDeleteResponse struct {

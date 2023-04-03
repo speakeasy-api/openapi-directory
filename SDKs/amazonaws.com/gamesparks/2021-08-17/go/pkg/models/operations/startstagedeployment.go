@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartStageDeploymentPathParams struct {
-	// The name of the game.
-	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-	// The name of the stage to deploy the snapshot onto.
-	StageName string `pathParam:"style=simple,explode=false,name=StageName"`
-}
-
-type StartStageDeploymentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type StartStageDeploymentRequestBody struct {
 	//  A client-defined token. With an active client token in the request, this action is idempotent.
 	ClientToken *string `json:"ClientToken,omitempty"`
@@ -32,9 +15,18 @@ type StartStageDeploymentRequestBody struct {
 }
 
 type StartStageDeploymentRequest struct {
-	PathParams StartStageDeploymentPathParams
-	Headers    StartStageDeploymentHeaders
-	Request    StartStageDeploymentRequestBody `request:"mediaType=application/json"`
+	// The name of the game.
+	GameName    string                          `pathParam:"style=simple,explode=false,name=GameName"`
+	RequestBody StartStageDeploymentRequestBody `request:"mediaType=application/json"`
+	// The name of the stage to deploy the snapshot onto.
+	StageName         string  `pathParam:"style=simple,explode=false,name=StageName"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type StartStageDeploymentResponse struct {

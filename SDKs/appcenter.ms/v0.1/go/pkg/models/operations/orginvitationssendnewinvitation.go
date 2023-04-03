@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrgInvitationsSendNewInvitationSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrgInvitationsSendNewInvitationPathParams struct {
-	// The email address of the user to send the password reset mail to.
-	Email string `pathParam:"style=simple,explode=false,name=email"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // OrgInvitationsSendNewInvitationRequestBodyRoleEnum - The role of the user to be added
@@ -54,10 +46,12 @@ type OrgInvitationsSendNewInvitationRequestBody struct {
 }
 
 type OrgInvitationsSendNewInvitationRequest struct {
-	PathParams OrgInvitationsSendNewInvitationPathParams
 	// The role of the user to be added
-	Request  *OrgInvitationsSendNewInvitationRequestBody `request:"mediaType=application/json"`
-	Security OrgInvitationsSendNewInvitationSecurity
+	RequestBody *OrgInvitationsSendNewInvitationRequestBody `request:"mediaType=application/json"`
+	// The email address of the user to send the password reset mail to.
+	Email string `pathParam:"style=simple,explode=false,name=email"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum string

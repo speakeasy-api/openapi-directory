@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDeviceDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 // CreateDeviceDefinitionRequestBodyInitialVersion - Information about a device definition version.
 type CreateDeviceDefinitionRequestBodyInitialVersion struct {
 	Devices []shared.Device `json:"Devices,omitempty"`
@@ -34,8 +22,16 @@ type CreateDeviceDefinitionRequestBody struct {
 }
 
 type CreateDeviceDefinitionRequest struct {
-	Headers CreateDeviceDefinitionHeaders
-	Request CreateDeviceDefinitionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDeviceDefinitionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateDeviceDefinitionResponse struct {

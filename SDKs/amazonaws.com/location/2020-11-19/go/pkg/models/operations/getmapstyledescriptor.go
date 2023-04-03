@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMapStyleDescriptorPathParams struct {
+type GetMapStyleDescriptorRequest struct {
 	// The map resource to retrieve the style descriptor from.
-	MapName string `pathParam:"style=simple,explode=false,name=MapName"`
-}
-
-type GetMapStyleDescriptorQueryParams struct {
-	// The optional <a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html">API key</a> to authorize the request.
-	Key *string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetMapStyleDescriptorHeaders struct {
+	MapName           string  `pathParam:"style=simple,explode=false,name=MapName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +17,8 @@ type GetMapStyleDescriptorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMapStyleDescriptorRequest struct {
-	PathParams  GetMapStyleDescriptorPathParams
-	QueryParams GetMapStyleDescriptorQueryParams
-	Headers     GetMapStyleDescriptorHeaders
+	// The optional <a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html">API key</a> to authorize the request.
+	Key *string `queryParam:"style=form,explode=true,name=key"`
 }
 
 type GetMapStyleDescriptorResponse struct {

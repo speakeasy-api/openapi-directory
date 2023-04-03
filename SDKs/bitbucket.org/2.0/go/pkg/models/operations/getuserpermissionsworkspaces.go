@@ -8,12 +8,12 @@ import (
 )
 
 type GetUserPermissionsWorkspacesSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetUserPermissionsWorkspacesQueryParams struct {
+type GetUserPermissionsWorkspacesRequest struct {
 	// Query string to narrow down the response. See
 	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for details.
 	Q *string `queryParam:"style=form,explode=true,name=q"`
@@ -22,11 +22,6 @@ type GetUserPermissionsWorkspacesQueryParams struct {
 	// for details.
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetUserPermissionsWorkspacesRequest struct {
-	QueryParams GetUserPermissionsWorkspacesQueryParams
-	Security    GetUserPermissionsWorkspacesSecurity
 }
 
 type GetUserPermissionsWorkspacesResponse struct {

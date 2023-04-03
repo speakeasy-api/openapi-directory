@@ -30,20 +30,16 @@ func (e *DescribeTableReplicaAutoScalingXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DescribeTableReplicaAutoScalingHeaders struct {
-	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeTableReplicaAutoScalingXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeTableReplicaAutoScalingRequest struct {
-	Headers DescribeTableReplicaAutoScalingHeaders
-	Request shared.DescribeTableReplicaAutoScalingInput `request:"mediaType=application/json"`
+	DescribeTableReplicaAutoScalingInput shared.DescribeTableReplicaAutoScalingInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                        *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                    *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                       *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                             *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                    *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                        *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                    *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                           DescribeTableReplicaAutoScalingXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeTableReplicaAutoScalingResponse struct {

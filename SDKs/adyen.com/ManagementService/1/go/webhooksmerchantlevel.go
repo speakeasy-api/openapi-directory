@@ -36,16 +36,16 @@ func newWebhooksMerchantLevel(defaultClient, securityClient HTTPClient, serverUR
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) DeleteMerchantsMerchantIDWebhooksWebhookID(ctx context.Context, request operations.DeleteMerchantsMerchantIDWebhooksWebhookIDRequest) (*operations.DeleteMerchantsMerchantIDWebhooksWebhookIDResponse, error) {
+func (s *webhooksMerchantLevel) DeleteMerchantsMerchantIDWebhooksWebhookID(ctx context.Context, request operations.DeleteMerchantsMerchantIDWebhooksWebhookIDRequest, security operations.DeleteMerchantsMerchantIDWebhooksWebhookIDSecurity) (*operations.DeleteMerchantsMerchantIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,20 +94,20 @@ func (s *webhooksMerchantLevel) DeleteMerchantsMerchantIDWebhooksWebhookID(ctx c
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) GetMerchantsMerchantIDWebhooks(ctx context.Context, request operations.GetMerchantsMerchantIDWebhooksRequest) (*operations.GetMerchantsMerchantIDWebhooksResponse, error) {
+func (s *webhooksMerchantLevel) GetMerchantsMerchantIDWebhooks(ctx context.Context, request operations.GetMerchantsMerchantIDWebhooksRequest, security operations.GetMerchantsMerchantIDWebhooksSecurity) (*operations.GetMerchantsMerchantIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,16 +166,16 @@ func (s *webhooksMerchantLevel) GetMerchantsMerchantIDWebhooks(ctx context.Conte
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) GetMerchantsMerchantIDWebhooksWebhookID(ctx context.Context, request operations.GetMerchantsMerchantIDWebhooksWebhookIDRequest) (*operations.GetMerchantsMerchantIDWebhooksWebhookIDResponse, error) {
+func (s *webhooksMerchantLevel) GetMerchantsMerchantIDWebhooksWebhookID(ctx context.Context, request operations.GetMerchantsMerchantIDWebhooksWebhookIDRequest, security operations.GetMerchantsMerchantIDWebhooksWebhookIDSecurity) (*operations.GetMerchantsMerchantIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -233,11 +233,11 @@ func (s *webhooksMerchantLevel) GetMerchantsMerchantIDWebhooksWebhookID(ctx cont
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) PatchMerchantsMerchantIDWebhooksWebhookID(ctx context.Context, request operations.PatchMerchantsMerchantIDWebhooksWebhookIDRequest) (*operations.PatchMerchantsMerchantIDWebhooksWebhookIDResponse, error) {
+func (s *webhooksMerchantLevel) PatchMerchantsMerchantIDWebhooksWebhookID(ctx context.Context, request operations.PatchMerchantsMerchantIDWebhooksWebhookIDRequest, security operations.PatchMerchantsMerchantIDWebhooksWebhookIDSecurity) (*operations.PatchMerchantsMerchantIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMerchantWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -249,7 +249,7 @@ func (s *webhooksMerchantLevel) PatchMerchantsMerchantIDWebhooksWebhookID(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,11 +307,11 @@ func (s *webhooksMerchantLevel) PatchMerchantsMerchantIDWebhooksWebhookID(ctx co
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooks(ctx context.Context, request operations.PostMerchantsMerchantIDWebhooksRequest) (*operations.PostMerchantsMerchantIDWebhooksResponse, error) {
+func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooks(ctx context.Context, request operations.PostMerchantsMerchantIDWebhooksRequest, security operations.PostMerchantsMerchantIDWebhooksSecurity) (*operations.PostMerchantsMerchantIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateMerchantWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooks(ctx context.Cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -381,16 +381,16 @@ func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooks(ctx context.Cont
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmac(ctx context.Context, request operations.PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmacRequest) (*operations.PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmacResponse, error) {
+func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmac(ctx context.Context, request operations.PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmacRequest, security operations.PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmacSecurity) (*operations.PostMerchantsMerchantIDWebhooksWebhookIDGenerateHmacResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}/generateHmac", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}/generateHmac", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -452,11 +452,11 @@ func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooksWebhookIDGenerate
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooksWebhookIDTest(ctx context.Context, request operations.PostMerchantsMerchantIDWebhooksWebhookIDTestRequest) (*operations.PostMerchantsMerchantIDWebhooksWebhookIDTestResponse, error) {
+func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooksWebhookIDTest(ctx context.Context, request operations.PostMerchantsMerchantIDWebhooksWebhookIDTestRequest, security operations.PostMerchantsMerchantIDWebhooksWebhookIDTestSecurity) (*operations.PostMerchantsMerchantIDWebhooksWebhookIDTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}/test", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/webhooks/{webhookId}/test", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -468,7 +468,7 @@ func (s *webhooksMerchantLevel) PostMerchantsMerchantIDWebhooksWebhookIDTest(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -75,9 +75,9 @@ func newVersions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * A server error occurred (HTTP error `500`)
 func (s *versions) CreateArtifactVersion(ctx context.Context, request operations.CreateArtifactVersionRequest) (*operations.CreateArtifactVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -92,7 +92,7 @@ func (s *versions) CreateArtifactVersion(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -155,7 +155,7 @@ func (s *versions) CreateArtifactVersion(ctx context.Context, request operations
 // * A server error occurred (HTTP error `500`)
 func (s *versions) GetArtifactVersion(ctx context.Context, request operations.GetArtifactVersionRequest) (*operations.GetArtifactVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +208,7 @@ func (s *versions) GetArtifactVersion(ctx context.Context, request operations.Ge
 // * A server error occurred (HTTP error `500`)
 func (s *versions) ListArtifactVersions(ctx context.Context, request operations.ListArtifactVersionsRequest) (*operations.ListArtifactVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -266,14 +266,14 @@ func (s *versions) ListArtifactVersions(ctx context.Context, request operations.
 // of all versions of an artifact (for example, in a user interface).
 func (s *versions) SearchVersions(ctx context.Context, request operations.SearchVersionsRequest) (*operations.SearchVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/artifacts/{artifactId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -345,9 +345,9 @@ func (s *versions) SearchVersions(ctx context.Context, request operations.Search
 // * A server error occurred (HTTP error `500`)
 func (s *versions) UpdateArtifactVersionState(ctx context.Context, request operations.UpdateArtifactVersionStateRequest) (*operations.UpdateArtifactVersionStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/versions/{version}/state", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateState", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

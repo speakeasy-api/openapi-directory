@@ -37,7 +37,7 @@ func newOrgSettings(defaultClient, securityClient HTTPClient, serverURL, languag
 // Returns organization settings by name.
 func (s *orgSettings) GetV2OrgsNameSettings(ctx context.Context, request operations.GetV2OrgsNameSettingsRequest) (*operations.GetV2OrgsNameSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orgs/{name}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/orgs/{name}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -102,9 +102,9 @@ func (s *orgSettings) GetV2OrgsNameSettings(ctx context.Context, request operati
 // - `restricted_images`
 func (s *orgSettings) PutV2OrgsNameSettings(ctx context.Context, request operations.PutV2OrgsNameSettingsRequest) (*operations.PutV2OrgsNameSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orgs/{name}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/orgs/{name}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

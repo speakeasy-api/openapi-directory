@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMonitoringAlertHistoryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListMonitoringAlertHistoryXAmzTargetEnum
 type ListMonitoringAlertHistoryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListMonitoringAlertHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListMonitoringAlertHistoryHeaders struct {
+type ListMonitoringAlertHistoryRequest struct {
+	ListMonitoringAlertHistoryRequest shared.ListMonitoringAlertHistoryRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListMonitoringAlertHistoryHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListMonitoringAlertHistoryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListMonitoringAlertHistoryRequest struct {
-	QueryParams ListMonitoringAlertHistoryQueryParams
-	Headers     ListMonitoringAlertHistoryHeaders
-	Request     shared.ListMonitoringAlertHistoryRequest `request:"mediaType=application/json"`
 }
 
 type ListMonitoringAlertHistoryResponse struct {

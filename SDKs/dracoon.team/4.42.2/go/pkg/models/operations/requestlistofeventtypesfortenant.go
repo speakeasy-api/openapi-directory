@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestListOfEventTypesForTenantHeaders struct {
+type RequestListOfEventTypesForTenantRequest struct {
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RequestListOfEventTypesForTenantRequest struct {
-	Headers RequestListOfEventTypesForTenantHeaders
 }
 
 type RequestListOfEventTypesForTenantResponse struct {

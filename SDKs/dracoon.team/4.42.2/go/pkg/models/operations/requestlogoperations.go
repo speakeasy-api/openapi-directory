@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestLogOperationsQueryParams struct {
-	// Show only deprecated operations
-	IsDeprecated *bool `queryParam:"style=form,explode=true,name=is_deprecated"`
-}
-
-type RequestLogOperationsHeaders struct {
+type RequestLogOperationsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestLogOperationsRequest struct {
-	QueryParams RequestLogOperationsQueryParams
-	Headers     RequestLogOperationsHeaders
+	// Show only deprecated operations
+	IsDeprecated *bool `queryParam:"style=form,explode=true,name=is_deprecated"`
 }
 
 type RequestLogOperationsResponse struct {

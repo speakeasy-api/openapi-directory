@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssistantAssociationPathParams struct {
-	// The identifier of the assistant association. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	AssistantAssociationID string `pathParam:"style=simple,explode=false,name=assistantAssociationId"`
-	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
-}
-
-type GetAssistantAssociationHeaders struct {
+type GetAssistantAssociationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetAssistantAssociationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAssistantAssociationRequest struct {
-	PathParams GetAssistantAssociationPathParams
-	Headers    GetAssistantAssociationHeaders
+	// The identifier of the assistant association. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	AssistantAssociationID string `pathParam:"style=simple,explode=false,name=assistantAssociationId"`
+	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
 }
 
 type GetAssistantAssociationResponse struct {

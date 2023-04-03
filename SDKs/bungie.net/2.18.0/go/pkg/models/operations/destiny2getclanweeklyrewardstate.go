@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetClanWeeklyRewardStatePathParams struct {
+type Destiny2GetClanWeeklyRewardStateRequest struct {
 	// A valid group id of clan.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type Destiny2GetClanWeeklyRewardStateRequest struct {
-	PathParams Destiny2GetClanWeeklyRewardStatePathParams
 }
 
 // Destiny2GetClanWeeklyRewardState200Wildcard - Represents a runtime instance of a user's milestone status. Live Milestone data should be combined with DestinyMilestoneDefinition data to show the user a picture of what is available for them to do in the game, and their status in regards to said "things to do." Consider it a big, wonky to-do list, or Advisors 3.0 for those who remember the Destiny 1 API.

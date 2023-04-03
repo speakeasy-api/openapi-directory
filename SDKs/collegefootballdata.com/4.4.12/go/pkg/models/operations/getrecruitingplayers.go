@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecruitingPlayersQueryParams struct {
+type GetRecruitingPlayersRequest struct {
 	// Type of recruit (HighSchool, JUCO, PrepSchool)
 	Classification *string `queryParam:"style=form,explode=true,name=classification"`
 	// Position abbreviation filter
@@ -18,10 +18,6 @@ type GetRecruitingPlayersQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Recruiting class year (required if team no specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetRecruitingPlayersRequest struct {
-	QueryParams GetRecruitingPlayersQueryParams
 }
 
 type GetRecruitingPlayersResponse struct {

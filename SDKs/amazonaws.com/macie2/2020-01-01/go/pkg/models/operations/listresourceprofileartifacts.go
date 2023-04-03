@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResourceProfileArtifactsQueryParams struct {
-	// The nextToken string that specifies which page of results to return in a paginated response.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type ListResourceProfileArtifactsHeaders struct {
+type ListResourceProfileArtifactsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListResourceProfileArtifactsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListResourceProfileArtifactsRequest struct {
-	QueryParams ListResourceProfileArtifactsQueryParams
-	Headers     ListResourceProfileArtifactsHeaders
+	// The nextToken string that specifies which page of results to return in a paginated response.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type ListResourceProfileArtifactsResponse struct {

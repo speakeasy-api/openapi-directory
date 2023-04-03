@@ -13,40 +13,34 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.SearchRequest{
-        QueryParams: operations.SearchQueryParams{
-            Cursor: "corrupti",
-            Expr: "provident",
-            Facet: "distinctio",
-            Format: "sdk",
-            Fq: "quibusdam",
-            Highlight: "unde",
-            Partial: false,
-            Pretty: "true",
-            Q: "nulla",
-            QOptions: "corrupti",
-            QParser: "dismax",
-            Return: "vel",
-            Size: 623564,
-            Sort: "deserunt",
-            Start: 384382,
-            Stats: "iure",
-        },
-        Headers: operations.SearchHeaders{
-            XAmzAlgorithm: "magnam",
-            XAmzContentSha256: "debitis",
-            XAmzCredential: "ipsa",
-            XAmzDate: "delectus",
-            XAmzSecurityToken: "tempora",
-            XAmzSignature: "suscipit",
-            XAmzSignedHeaders: "molestiae",
-        },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "provident",
+        XAmzCredential: "distinctio",
+        XAmzDate: "quibusdam",
+        XAmzSecurityToken: "unde",
+        XAmzSignature: "nulla",
+        XAmzSignedHeaders: "corrupti",
+        Cursor: "illum",
+        Expr: "vel",
+        Facet: "error",
+        Format: "sdk",
+        Fq: "deserunt",
+        Highlight: "suscipit",
+        Partial: false,
+        Pretty: "true",
+        Q: "iure",
+        QOptions: "magnam",
+        QParser: "dismax",
+        Return: "ipsa",
+        Size: 963663,
+        Sort: "tempora",
+        Start: 383441,
+        Stats: "molestiae",
     }
 
     ctx := context.Background()

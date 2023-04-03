@@ -33,18 +33,18 @@ func newAPIResources(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // APIResourceCoverageOne - Get API Resource Coverage
 // Get API Resource Coverage
-func (s *apiResources) APIResourceCoverageOne(ctx context.Context, request operations.APIResourceCoverageOneRequest) (*operations.APIResourceCoverageOneResponse, error) {
+func (s *apiResources) APIResourceCoverageOne(ctx context.Context, request operations.APIResourceCoverageOneRequest, security operations.APIResourceCoverageOneSecurity) (*operations.APIResourceCoverageOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connector/apis/{id}/resources/{resource_id}/coverage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connector/apis/{id}/resources/{resource_id}/coverage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -120,18 +120,18 @@ func (s *apiResources) APIResourceCoverageOne(ctx context.Context, request opera
 
 // APIResourcesOne - Get API Resource
 // Get API Resource
-func (s *apiResources) APIResourcesOne(ctx context.Context, request operations.APIResourcesOneRequest) (*operations.APIResourcesOneResponse, error) {
+func (s *apiResources) APIResourcesOne(ctx context.Context, request operations.APIResourcesOneRequest, security operations.APIResourcesOneSecurity) (*operations.APIResourcesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connector/apis/{id}/resources/{resource_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connector/apis/{id}/resources/{resource_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopWorkflowPathParams struct {
-	// The ID of the migration workflow.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StopWorkflowHeaders struct {
+type StopWorkflowRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type StopWorkflowHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopWorkflowRequest struct {
-	PathParams StopWorkflowPathParams
-	Headers    StopWorkflowHeaders
+	// The ID of the migration workflow.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StopWorkflowResponse struct {

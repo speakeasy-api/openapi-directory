@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteDoNotContactsBySourceSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDoNotContactsBySourcePathParams struct {
-	// Source associated with Do Not Contact (DNC) entry.
-	Source string `pathParam:"style=simple,explode=false,name=source"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteDoNotContactsBySourceRequest struct {
-	PathParams DeleteDoNotContactsBySourcePathParams
-	Security   DeleteDoNotContactsBySourceSecurity
+	// Source associated with Do Not Contact (DNC) entry.
+	Source string `pathParam:"style=simple,explode=false,name=source"`
 }
 
 type DeleteDoNotContactsBySourceResponse struct {

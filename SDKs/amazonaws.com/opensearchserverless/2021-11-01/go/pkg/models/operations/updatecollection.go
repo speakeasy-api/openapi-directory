@@ -30,20 +30,16 @@ func (e *UpdateCollectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateCollectionHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateCollectionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateCollectionRequest struct {
-	Headers UpdateCollectionHeaders
-	Request shared.UpdateCollectionRequest `request:"mediaType=application/json"`
+	UpdateCollectionRequest shared.UpdateCollectionRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              UpdateCollectionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateCollectionResponse struct {

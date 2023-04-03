@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportBackendAuthPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment.
-	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
-}
-
-type ImportBackendAuthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ImportBackendAuthRequestBody struct {
 	// The ID of the Amazon Cognito identity pool.
 	IdentityPoolID *string `json:"identityPoolId,omitempty"`
@@ -36,9 +19,18 @@ type ImportBackendAuthRequestBody struct {
 }
 
 type ImportBackendAuthRequest struct {
-	PathParams ImportBackendAuthPathParams
-	Headers    ImportBackendAuthHeaders
-	Request    ImportBackendAuthRequestBody `request:"mediaType=application/json"`
+	RequestBody       ImportBackendAuthRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment.
+	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
 }
 
 type ImportBackendAuthResponse struct {

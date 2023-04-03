@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammeHighlightsQueryParams struct {
+type GetProgrammeHighlightsRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The language for any applicable localised strings.
@@ -16,10 +16,6 @@ type GetProgrammeHighlightsQueryParams struct {
 	Mixin *shared.MixinEnum `queryParam:"style=form,explode=true,name=mixin"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetProgrammeHighlightsRequest struct {
-	QueryParams GetProgrammeHighlightsQueryParams
 }
 
 type GetProgrammeHighlightsResponse struct {

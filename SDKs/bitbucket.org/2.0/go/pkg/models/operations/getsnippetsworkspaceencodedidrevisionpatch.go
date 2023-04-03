@@ -8,12 +8,12 @@ import (
 )
 
 type GetSnippetsWorkspaceEncodedIDRevisionPatchSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSnippetsWorkspaceEncodedIDRevisionPatchPathParams struct {
+type GetSnippetsWorkspaceEncodedIDRevisionPatchRequest struct {
 	// The snippet id.
 	EncodedID string `pathParam:"style=simple,explode=false,name=encoded_id"`
 	// A revspec expression. This can simply be a commit SHA1, a ref name, or a compare expression like `staging..production`.
@@ -22,11 +22,6 @@ type GetSnippetsWorkspaceEncodedIDRevisionPatchPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetSnippetsWorkspaceEncodedIDRevisionPatchRequest struct {
-	PathParams GetSnippetsWorkspaceEncodedIDRevisionPatchPathParams
-	Security   GetSnippetsWorkspaceEncodedIDRevisionPatchSecurity
 }
 
 type GetSnippetsWorkspaceEncodedIDRevisionPatchResponse struct {

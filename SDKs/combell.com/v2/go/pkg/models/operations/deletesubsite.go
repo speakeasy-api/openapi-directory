@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteSubsitePathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	SiteName string `pathParam:"style=simple,explode=false,name=siteName"`
-}
-
-type DeleteSubsiteQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// Name of the site on the linux hosting.
-	SiteName string `queryParam:"style=form,explode=true,name=site_name"`
-}
-
 type DeleteSubsiteRequest struct {
-	PathParams  DeleteSubsitePathParams
-	QueryParams DeleteSubsiteQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	SiteNamePathParameter string `pathParam:"style=simple,explode=false,name=siteName"`
+	// Name of the site on the linux hosting.
+	SiteNameQueryParameter string `queryParam:"style=form,explode=true,name=site_name"`
 }
 
 type DeleteSubsiteResponse struct {

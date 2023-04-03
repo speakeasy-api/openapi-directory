@@ -32,14 +32,7 @@ func (e *DeleteConfiguredTableAnalysisRuleAnalysisRuleTypeEnum) UnmarshalJSON(da
 	}
 }
 
-type DeleteConfiguredTableAnalysisRulePathParams struct {
-	// The analysis rule type to be deleted. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
-	AnalysisRuleType DeleteConfiguredTableAnalysisRuleAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=analysisRuleType"`
-	// The unique identifier for the configured table that the analysis rule applies to. Currently accepts the configured table ID.
-	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
-}
-
-type DeleteConfiguredTableAnalysisRuleHeaders struct {
+type DeleteConfiguredTableAnalysisRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -47,11 +40,10 @@ type DeleteConfiguredTableAnalysisRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteConfiguredTableAnalysisRuleRequest struct {
-	PathParams DeleteConfiguredTableAnalysisRulePathParams
-	Headers    DeleteConfiguredTableAnalysisRuleHeaders
+	// The analysis rule type to be deleted. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
+	AnalysisRuleType DeleteConfiguredTableAnalysisRuleAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=analysisRuleType"`
+	// The unique identifier for the configured table that the analysis rule applies to. Currently accepts the configured table ID.
+	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
 }
 
 type DeleteConfiguredTableAnalysisRuleResponse struct {

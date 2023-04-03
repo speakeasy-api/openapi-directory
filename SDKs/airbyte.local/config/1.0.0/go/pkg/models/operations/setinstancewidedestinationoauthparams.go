@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetInstancewideDestinationOauthParamsRequest struct {
-	Request shared.SetInstancewideDestinationOauthParamsRequestBody `request:"mediaType=application/json"`
-}
-
 type SetInstancewideDestinationOauthParamsResponse struct {
 	ContentType string
 	// Exception occurred; see message for details.

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWebhookPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type CreateWebhookHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateWebhookRequestBody struct {
 	//  The name for a branch that is part of an Amplify app.
 	BranchName string `json:"branchName"`
@@ -30,9 +15,16 @@ type CreateWebhookRequestBody struct {
 }
 
 type CreateWebhookRequest struct {
-	PathParams CreateWebhookPathParams
-	Headers    CreateWebhookHeaders
-	Request    CreateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateWebhookRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type CreateWebhookResponse struct {

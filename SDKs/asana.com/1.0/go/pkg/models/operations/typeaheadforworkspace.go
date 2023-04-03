@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TypeaheadForWorkspacePathParams struct {
-	// Globally unique identifier for the workspace or organization.
-	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
-}
-
 // TypeaheadForWorkspaceResourceTypeEnum - The type of values the typeahead should return. You can choose from one of the following: `custom_field`, `project`, `project_template`, `portfolio`, `tag`, `task`, and `user`. Note that unlike in the names of endpoints, the types listed here are in singular form (e.g. `task`). Using multiple types is not yet supported.
 type TypeaheadForWorkspaceResourceTypeEnum string
 
@@ -89,7 +84,7 @@ func (e *TypeaheadForWorkspaceTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TypeaheadForWorkspaceQueryParams struct {
+type TypeaheadForWorkspaceRequest struct {
 	// The number of results to return. The default is 20 if this parameter is omitted, with a minimum of 1 and a maximum of 100. If there are fewer results found than requested, all will be returned.
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
 	// Defines fields to return.
@@ -105,11 +100,8 @@ type TypeaheadForWorkspaceQueryParams struct {
 	ResourceType TypeaheadForWorkspaceResourceTypeEnum `queryParam:"style=form,explode=true,name=resource_type"`
 	// *Deprecated: new integrations should prefer the resource_type field.*
 	Type *TypeaheadForWorkspaceTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type TypeaheadForWorkspaceRequest struct {
-	PathParams  TypeaheadForWorkspacePathParams
-	QueryParams TypeaheadForWorkspaceQueryParams
+	// Globally unique identifier for the workspace or organization.
+	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
 }
 
 // TypeaheadForWorkspace200ApplicationJSON - A generic list of objects, such as those returned by the typeahead search endpoint.

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostListRecurringDetailsRequest struct {
-	Request *shared.RecurringDetailsRequest `request:"mediaType=application/json"`
-}
-
 type PostListRecurringDetailsResponse struct {
 	ContentType string
 	// OK - the request has succeeded.

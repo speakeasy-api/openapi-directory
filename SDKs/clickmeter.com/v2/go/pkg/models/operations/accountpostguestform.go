@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPostGuestFormPathParams struct {
+type AccountPostGuestFormRequest struct {
+	// Guest object with field updated
+	APICoreDtoAccountingGuest shared.APICoreDtoAccountingGuest `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
-}
-
-type AccountPostGuestFormRequest struct {
-	PathParams AccountPostGuestFormPathParams
-	// Guest object with field updated
-	Request shared.APICoreDtoAccountingGuest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type AccountPostGuestFormResponse struct {

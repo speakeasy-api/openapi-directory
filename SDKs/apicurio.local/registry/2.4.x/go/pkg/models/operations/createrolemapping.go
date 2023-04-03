@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRoleMappingRequest struct {
-	Request shared.RoleMapping `request:"mediaType=application/json"`
-}
-
 type CreateRoleMappingResponse struct {
 	ContentType string
 	// Common response for all operations that can fail with an unexpected server error.

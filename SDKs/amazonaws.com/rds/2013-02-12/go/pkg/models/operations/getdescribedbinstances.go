@@ -50,27 +50,19 @@ func (e *GETDescribeDBInstancesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeDBInstancesQueryParams struct {
+type GETDescribeDBInstancesRequest struct {
 	Action               GETDescribeDBInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBInstanceIdentifier *string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Marker               *string                           `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords           *int64                            `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version              GETDescribeDBInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDBInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDBInstancesRequest struct {
-	QueryParams GETDescribeDBInstancesQueryParams
-	Headers     GETDescribeDBInstancesHeaders
+	XAmzAlgorithm        *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDBInstancesResponse struct {

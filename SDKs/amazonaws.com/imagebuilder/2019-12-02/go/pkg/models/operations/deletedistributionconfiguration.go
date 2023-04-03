@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDistributionConfigurationQueryParams struct {
-	// The Amazon Resource Name (ARN) of the distribution configuration to delete.
-	DistributionConfigurationArn string `queryParam:"style=form,explode=true,name=distributionConfigurationArn"`
-}
-
-type DeleteDistributionConfigurationHeaders struct {
+type DeleteDistributionConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteDistributionConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDistributionConfigurationRequest struct {
-	QueryParams DeleteDistributionConfigurationQueryParams
-	Headers     DeleteDistributionConfigurationHeaders
+	// The Amazon Resource Name (ARN) of the distribution configuration to delete.
+	DistributionConfigurationArn string `queryParam:"style=form,explode=true,name=distributionConfigurationArn"`
 }
 
 type DeleteDistributionConfigurationResponse struct {

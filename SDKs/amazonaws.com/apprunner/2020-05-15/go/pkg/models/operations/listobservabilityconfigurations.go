@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListObservabilityConfigurationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListObservabilityConfigurationsXAmzTargetEnum
 type ListObservabilityConfigurationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListObservabilityConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListObservabilityConfigurationsHeaders struct {
+type ListObservabilityConfigurationsRequest struct {
+	ListObservabilityConfigurationsRequest shared.ListObservabilityConfigurationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListObservabilityConfigurationsHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListObservabilityConfigurationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListObservabilityConfigurationsRequest struct {
-	QueryParams ListObservabilityConfigurationsQueryParams
-	Headers     ListObservabilityConfigurationsHeaders
-	Request     shared.ListObservabilityConfigurationsRequest `request:"mediaType=application/json"`
 }
 
 type ListObservabilityConfigurationsResponse struct {

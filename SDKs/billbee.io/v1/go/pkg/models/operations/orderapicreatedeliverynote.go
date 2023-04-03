@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type OrderAPICreateDeliveryNotePathParams struct {
+type OrderAPICreateDeliveryNoteRequest struct {
 	// The internal billbee id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPICreateDeliveryNoteQueryParams struct {
 	// If true, the PDF is included in the response as base64 encoded string
 	IncludePdf *bool `queryParam:"style=form,explode=true,name=includePdf"`
 	// Optionally specify the id of a billbee connected cloud device to send the pdf to
 	SendToCloudID *int64 `queryParam:"style=form,explode=true,name=sendToCloudId"`
-}
-
-type OrderAPICreateDeliveryNoteRequest struct {
-	PathParams  OrderAPICreateDeliveryNotePathParams
-	QueryParams OrderAPICreateDeliveryNoteQueryParams
 }
 
 type OrderAPICreateDeliveryNoteResponse struct {

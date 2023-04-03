@@ -8,10 +8,12 @@ import (
 )
 
 type GetItvProfileTokenSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetItvProfileTokenQueryParams struct {
+type GetItvProfileTokenRequest struct {
+	// Details of token request.
+	ItvProfileTokenRequest shared.ItvProfileTokenRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -24,13 +26,6 @@ type GetItvProfileTokenQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetItvProfileTokenRequest struct {
-	QueryParams GetItvProfileTokenQueryParams
-	// Details of token request.
-	Request  shared.ItvProfileTokenRequest `request:"mediaType=application/json"`
-	Security GetItvProfileTokenSecurity
 }
 
 type GetItvProfileTokenResponse struct {

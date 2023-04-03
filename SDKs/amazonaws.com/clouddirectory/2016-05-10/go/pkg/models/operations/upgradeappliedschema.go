@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpgradeAppliedSchemaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpgradeAppliedSchemaRequestBody struct {
 	// The ARN for the directory to which the upgraded schema will be applied.
 	DirectoryArn string `json:"DirectoryArn"`
@@ -27,8 +17,14 @@ type UpgradeAppliedSchemaRequestBody struct {
 }
 
 type UpgradeAppliedSchemaRequest struct {
-	Headers UpgradeAppliedSchemaHeaders
-	Request UpgradeAppliedSchemaRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpgradeAppliedSchemaRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpgradeAppliedSchemaResponse struct {

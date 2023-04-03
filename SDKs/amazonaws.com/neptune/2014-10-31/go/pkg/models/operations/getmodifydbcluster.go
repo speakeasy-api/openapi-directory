@@ -62,7 +62,7 @@ func (e *GETModifyDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyDBClusterQueryParams struct {
+type GETModifyDBClusterRequest struct {
 	Action GETModifyDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>A value that indicates whether upgrades between different major versions are allowed.</p> <p>Constraints: You must set the allow-major-version-upgrade flag when providing an <code>EngineVersion</code> parameter that uses a different major version than the DB cluster's current version.</p>
 	AllowMajorVersionUpgrade *bool `queryParam:"style=form,explode=true,name=AllowMajorVersionUpgrade"`
@@ -103,21 +103,13 @@ type GETModifyDBClusterQueryParams struct {
 	Version                          GETModifyDBClusterVersionEnum                       `queryParam:"style=form,explode=true,name=Version"`
 	// A list of VPC security groups that the DB cluster will belong to.
 	VpcSecurityGroupIds []string `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
-}
-
-type GETModifyDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyDBClusterRequest struct {
-	QueryParams GETModifyDBClusterQueryParams
-	Headers     GETModifyDBClusterHeaders
+	XAmzAlgorithm       *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyDBClusterResponse struct {

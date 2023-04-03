@@ -33,7 +33,7 @@ func (e *AccountGetGuestsSortDirectionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountGetGuestsQueryParams struct {
+type AccountGetGuestsRequest struct {
 	// Limit results to this number
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Offset where to start from
@@ -44,10 +44,6 @@ type AccountGetGuestsQueryParams struct {
 	SortDirection *AccountGetGuestsSortDirectionEnum `queryParam:"style=form,explode=true,name=sortDirection"`
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
-}
-
-type AccountGetGuestsRequest struct {
-	QueryParams AccountGetGuestsQueryParams
 }
 
 type AccountGetGuestsResponse struct {

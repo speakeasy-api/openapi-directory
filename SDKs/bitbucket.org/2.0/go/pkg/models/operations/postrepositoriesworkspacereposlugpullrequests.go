@@ -8,12 +8,18 @@ import (
 )
 
 type PostRepositoriesWorkspaceRepoSlugPullrequestsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostRepositoriesWorkspaceRepoSlugPullrequestsPathParams struct {
+type PostRepositoriesWorkspaceRepoSlugPullrequestsRequest struct {
+	// The new pull request.
+	//
+	// The request URL you POST to becomes the destination repository URL. For this reason, you must specify an explicit source repository in the request object if you want to pull from a different repository (fork).
+	//
+	// Since not all elements are required or even mutable, you only need to include the elements you want to initialize, such as the source branch and the title.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
@@ -22,17 +28,6 @@ type PostRepositoriesWorkspaceRepoSlugPullrequestsPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PostRepositoriesWorkspaceRepoSlugPullrequestsRequest struct {
-	PathParams PostRepositoriesWorkspaceRepoSlugPullrequestsPathParams
-	// The new pull request.
-	//
-	// The request URL you POST to becomes the destination repository URL. For this reason, you must specify an explicit source repository in the request object if you want to pull from a different repository (fork).
-	//
-	// Since not all elements are required or even mutable, you only need to include the elements you want to initialize, such as the source branch and the title.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostRepositoriesWorkspaceRepoSlugPullrequestsSecurity
 }
 
 type PostRepositoriesWorkspaceRepoSlugPullrequestsResponse struct {

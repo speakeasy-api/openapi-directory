@@ -36,7 +36,7 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // FilesAll - List Files
 // List Files
-func (s *files) FilesAll(ctx context.Context, request operations.FilesAllRequest) (*operations.FilesAllResponse, error) {
+func (s *files) FilesAll(ctx context.Context, request operations.FilesAllRequest, security operations.FilesAllSecurity) (*operations.FilesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/files"
 
@@ -45,13 +45,13 @@ func (s *files) FilesAll(ctx context.Context, request operations.FilesAllRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,22 +147,22 @@ func (s *files) FilesAll(ctx context.Context, request operations.FilesAllRequest
 
 // FilesDelete - Delete File
 // Delete File
-func (s *files) FilesDelete(ctx context.Context, request operations.FilesDeleteRequest) (*operations.FilesDeleteResponse, error) {
+func (s *files) FilesDelete(ctx context.Context, request operations.FilesDeleteRequest, security operations.FilesDeleteSecurity) (*operations.FilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -258,22 +258,22 @@ func (s *files) FilesDelete(ctx context.Context, request operations.FilesDeleteR
 
 // FilesDownload - Download File
 // Download File
-func (s *files) FilesDownload(ctx context.Context, request operations.FilesDownloadRequest) (*operations.FilesDownloadResponse, error) {
+func (s *files) FilesDownload(ctx context.Context, request operations.FilesDownloadRequest, security operations.FilesDownloadSecurity) (*operations.FilesDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,22 +369,22 @@ func (s *files) FilesDownload(ctx context.Context, request operations.FilesDownl
 
 // FilesOne - Get File
 // Get File
-func (s *files) FilesOne(ctx context.Context, request operations.FilesOneRequest) (*operations.FilesOneResponse, error) {
+func (s *files) FilesOne(ctx context.Context, request operations.FilesOneRequest, security operations.FilesOneSecurity) (*operations.FilesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -480,11 +480,11 @@ func (s *files) FilesOne(ctx context.Context, request operations.FilesOneRequest
 
 // FilesSearch - Search Files
 // Search Files
-func (s *files) FilesSearch(ctx context.Context, request operations.FilesSearchRequest) (*operations.FilesSearchResponse, error) {
+func (s *files) FilesSearch(ctx context.Context, request operations.FilesSearchRequest, security operations.FilesSearchSecurity) (*operations.FilesSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/files/search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilesSearch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -499,13 +499,13 @@ func (s *files) FilesSearch(ctx context.Context, request operations.FilesSearchR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -601,11 +601,11 @@ func (s *files) FilesSearch(ctx context.Context, request operations.FilesSearchR
 
 // FilesUpdate - Rename or move File
 // Rename or move File
-func (s *files) FilesUpdate(ctx context.Context, request operations.FilesUpdateRequest) (*operations.FilesUpdateResponse, error) {
+func (s *files) FilesUpdate(ctx context.Context, request operations.FilesUpdateRequest, security operations.FilesUpdateSecurity) (*operations.FilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/files/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateFileRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -620,13 +620,13 @@ func (s *files) FilesUpdate(ctx context.Context, request operations.FilesUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

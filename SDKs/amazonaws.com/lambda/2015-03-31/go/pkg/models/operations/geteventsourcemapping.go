@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEventSourceMappingPathParams struct {
+type GetEventSourceMappingRequest struct {
 	// The identifier of the event source mapping.
-	UUID string `pathParam:"style=simple,explode=false,name=UUID"`
-}
-
-type GetEventSourceMappingHeaders struct {
+	UUID              string  `pathParam:"style=simple,explode=false,name=UUID"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetEventSourceMappingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEventSourceMappingRequest struct {
-	PathParams GetEventSourceMappingPathParams
-	Headers    GetEventSourceMappingHeaders
 }
 
 type GetEventSourceMappingResponse struct {

@@ -30,20 +30,16 @@ func (e *DescribeTaskSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeTaskSetsHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeTaskSetsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeTaskSetsRequest struct {
-	Headers DescribeTaskSetsHeaders
-	Request shared.DescribeTaskSetsRequest `request:"mediaType=application/json"`
+	DescribeTaskSetsRequest shared.DescribeTaskSetsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              DescribeTaskSetsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeTaskSetsResponse struct {

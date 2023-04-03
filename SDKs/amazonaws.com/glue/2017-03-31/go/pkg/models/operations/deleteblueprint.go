@@ -30,20 +30,16 @@ func (e *DeleteBlueprintXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteBlueprintHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteBlueprintXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteBlueprintRequest struct {
-	Headers DeleteBlueprintHeaders
-	Request shared.DeleteBlueprintRequest `request:"mediaType=application/json"`
+	DeleteBlueprintRequest shared.DeleteBlueprintRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             DeleteBlueprintXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteBlueprintResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountGetDomainWhitelistQueryParams struct {
+type AccountGetDomainWhitelistRequest struct {
 	// Limit results to this number
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Offset where to start from
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type AccountGetDomainWhitelistRequest struct {
-	QueryParams AccountGetDomainWhitelistQueryParams
 }
 
 type AccountGetDomainWhitelistResponse struct {

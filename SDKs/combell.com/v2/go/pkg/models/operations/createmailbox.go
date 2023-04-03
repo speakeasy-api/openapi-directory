@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CreateMailboxRequest struct {
-	// The add mailbox request.
-	Request *shared.CreateMailboxRequest `request:"mediaType=application/json"`
-}
 
 type CreateMailboxResponse struct {
 	ContentType string

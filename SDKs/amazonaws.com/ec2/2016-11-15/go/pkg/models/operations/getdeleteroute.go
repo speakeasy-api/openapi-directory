@@ -50,7 +50,7 @@ func (e *GETDeleteRouteVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteRouteQueryParams struct {
+type GETDeleteRouteRequest struct {
 	Action GETDeleteRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IPv4 CIDR range for the route. The value you specify must match the CIDR for the route exactly.
 	DestinationCidrBlock *string `queryParam:"style=form,explode=true,name=DestinationCidrBlock"`
@@ -61,23 +61,15 @@ type GETDeleteRouteQueryParams struct {
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the route table.
-	RouteTableID string                    `queryParam:"style=form,explode=true,name=RouteTableId"`
-	Version      GETDeleteRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteRouteRequest struct {
-	QueryParams GETDeleteRouteQueryParams
-	Headers     GETDeleteRouteHeaders
+	RouteTableID      string                    `queryParam:"style=form,explode=true,name=RouteTableId"`
+	Version           GETDeleteRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteRouteResponse struct {

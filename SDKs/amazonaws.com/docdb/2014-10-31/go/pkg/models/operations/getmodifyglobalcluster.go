@@ -50,7 +50,7 @@ func (e *GETModifyGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyGlobalClusterQueryParams struct {
+type GETModifyGlobalClusterRequest struct {
 	Action GETModifyGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates if the global cluster has deletion protection enabled. The global cluster can't be deleted when deletion protection is enabled.
 	DeletionProtection *bool `queryParam:"style=form,explode=true,name=DeletionProtection"`
@@ -59,21 +59,13 @@ type GETModifyGlobalClusterQueryParams struct {
 	// <p>The new identifier for a global cluster when you modify a global cluster. This value is stored as a lowercase string.</p> <ul> <li> <p>Must contain from 1 to 63 letters, numbers, or hyphens</p> <p>The first character must be a letter</p> <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul> <p>Example: <code>my-cluster2</code> </p>
 	NewGlobalClusterIdentifier *string                           `queryParam:"style=form,explode=true,name=NewGlobalClusterIdentifier"`
 	Version                    GETModifyGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyGlobalClusterRequest struct {
-	QueryParams GETModifyGlobalClusterQueryParams
-	Headers     GETModifyGlobalClusterHeaders
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyGlobalClusterResponse struct {

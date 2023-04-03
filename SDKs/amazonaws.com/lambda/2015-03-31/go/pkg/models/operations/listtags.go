@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTagsPathParams struct {
+type ListTagsRequest struct {
 	// The function's Amazon Resource Name (ARN). Note: Lambda does not support adding tags to aliases or versions.
-	Arn string `pathParam:"style=simple,explode=false,name=ARN"`
-}
-
-type ListTagsHeaders struct {
+	Arn               string  `pathParam:"style=simple,explode=false,name=ARN"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type ListTagsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTagsRequest struct {
-	PathParams ListTagsPathParams
-	Headers    ListTagsHeaders
 }
 
 type ListTagsResponse struct {

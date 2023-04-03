@@ -8,12 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetUsersIDUserLogsPathParams struct {
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserLogsQueryParams struct {
+type GetUsersIDUserLogsRequest struct {
 	// UUID of a connector
 	ConnectorUUID *string `queryParam:"style=form,explode=true,name=connector_uuid"`
 	// connections log error filter
@@ -27,8 +22,10 @@ type GetUsersIDUserLogsQueryParams struct {
 	IDMax *int64 `queryParam:"style=form,explode=true,name=id_max"`
 	// ID of a source
 	IDSource *int64 `queryParam:"style=form,explode=true,name=id_source"`
+	// Hint: you can use 'me' or 'all'
+	IDUserPathParameter string `pathParam:"style=simple,explode=false,name=id_user"`
 	// ID of a user
-	IDUser *int64 `queryParam:"style=form,explode=true,name=id_user"`
+	IDUserQueryParameter *int64 `queryParam:"style=form,explode=true,name=id_user"`
 	// limit number of results
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// maximum date
@@ -39,11 +36,6 @@ type GetUsersIDUserLogsQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// period to group logs
 	Period *string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetUsersIDUserLogsRequest struct {
-	PathParams  GetUsersIDUserLogsPathParams
-	QueryParams GetUsersIDUserLogsQueryParams
 }
 
 // GetUsersIDUserLogs200ApplicationJSON - connectionlogs

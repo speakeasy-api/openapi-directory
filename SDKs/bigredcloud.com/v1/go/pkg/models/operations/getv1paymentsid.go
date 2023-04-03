@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV1PaymentsIDPathParams struct {
+type GetV1PaymentsIDRequest struct {
 	// Id of Payment to return.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV1PaymentsIDRequest struct {
-	PathParams GetV1PaymentsIDPathParams
 }
 
 type GetV1PaymentsIDResponse struct {

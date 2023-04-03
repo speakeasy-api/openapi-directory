@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrderAPITagsCreateRawPathParams struct {
+type OrderAPITagsCreateRawRequest struct {
+	// Tags to attach
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The internal id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPITagsCreateRawRequest struct {
-	PathParams OrderAPITagsCreateRawPathParams
-	// Tags to attach
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPITagsCreateRawResponse struct {

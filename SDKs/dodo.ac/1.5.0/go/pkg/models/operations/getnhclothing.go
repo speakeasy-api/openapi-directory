@@ -199,7 +199,11 @@ func (e *GetNhClothingStyleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNhClothingQueryParams struct {
+type GetNhClothingRequest struct {
+	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
+	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
 	// Specify the category of clothing to return.
 	Category *GetNhClothingCategoryEnum `queryParam:"style=form,explode=true,name=category"`
 	// Return clothing that matches the provided colors (may specify one or two colors). Colors are used for gifting villagers.
@@ -210,18 +214,6 @@ type GetNhClothingQueryParams struct {
 	Labeltheme *GetNhClothingLabelthemeEnum `queryParam:"style=form,explode=true,name=labeltheme"`
 	// Return clothing that matches the provided styles (may specify one or two styles). Styles are used for gifting villagers.
 	Style []GetNhClothingStyleEnum `queryParam:"style=form,explode=true,name=style"`
-}
-
-type GetNhClothingHeaders struct {
-	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
-	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
-	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
-	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhClothingRequest struct {
-	QueryParams GetNhClothingQueryParams
-	Headers     GetNhClothingHeaders
 }
 
 type GetNhClothingResponse struct {

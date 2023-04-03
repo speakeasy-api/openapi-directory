@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSettingPathParams struct {
+type DeleteSettingRequest struct {
 	// The identifier of the Setting.
 	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type DeleteSettingRequest struct {
-	PathParams DeleteSettingPathParams
 }
 
 type DeleteSettingResponse struct {

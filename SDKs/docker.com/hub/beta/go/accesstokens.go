@@ -52,7 +52,7 @@ func newAccessTokens(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes a personal access token permanently. This cannot be undone.
 func (s *accessTokens) DeleteV2AccessTokensUUID(ctx context.Context, request operations.DeleteV2AccessTokensUUIDRequest) (*operations.DeleteV2AccessTokensUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -107,7 +107,7 @@ func (s *accessTokens) GetV2AccessTokens(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -169,7 +169,7 @@ func (s *accessTokens) GetV2AccessTokens(ctx context.Context, request operations
 // Returns a personal access token by UUID.
 func (s *accessTokens) GetV2AccessTokensUUID(ctx context.Context, request operations.GetV2AccessTokensUUIDRequest) (*operations.GetV2AccessTokensUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,9 +227,9 @@ func (s *accessTokens) GetV2AccessTokensUUID(ctx context.Context, request operat
 // token's label or enable/disable it.
 func (s *accessTokens) PatchV2AccessTokensUUID(ctx context.Context, request operations.PatchV2AccessTokensUUIDRequest) (*operations.PatchV2AccessTokensUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchAccessTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -300,7 +300,7 @@ func (s *accessTokens) PatchV2AccessTokensUUID(ctx context.Context, request oper
 
 // PostV2AccessTokens - Create a personal access token
 // Creates and returns a personal access token.
-func (s *accessTokens) PostV2AccessTokens(ctx context.Context, request operations.PostV2AccessTokensRequest) (*operations.PostV2AccessTokensResponse, error) {
+func (s *accessTokens) PostV2AccessTokens(ctx context.Context, request shared.CreateAccessTokenRequest) (*operations.PostV2AccessTokensResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/access-tokens"
 

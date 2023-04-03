@@ -30,7 +30,8 @@ func (e *IndexFacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IndexFacesHeaders struct {
+type IndexFacesRequest struct {
+	IndexFacesRequest shared.IndexFacesRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type IndexFacesHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        IndexFacesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type IndexFacesRequest struct {
-	Headers IndexFacesHeaders
-	Request shared.IndexFacesRequest `request:"mediaType=application/json"`
 }
 
 type IndexFacesResponse struct {

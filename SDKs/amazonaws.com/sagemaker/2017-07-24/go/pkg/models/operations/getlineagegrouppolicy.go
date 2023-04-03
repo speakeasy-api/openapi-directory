@@ -30,20 +30,16 @@ func (e *GetLineageGroupPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLineageGroupPolicyHeaders struct {
-	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetLineageGroupPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetLineageGroupPolicyRequest struct {
-	Headers GetLineageGroupPolicyHeaders
-	Request shared.GetLineageGroupPolicyRequest `request:"mediaType=application/json"`
+	GetLineageGroupPolicyRequest shared.GetLineageGroupPolicyRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   GetLineageGroupPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetLineageGroupPolicyResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListExperienceEntitiesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListExperienceEntitiesXAmzTargetEnum
 type ListExperienceEntitiesXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListExperienceEntitiesXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ListExperienceEntitiesHeaders struct {
+type ListExperienceEntitiesRequest struct {
+	ListExperienceEntitiesRequest shared.ListExperienceEntitiesRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListExperienceEntitiesHeaders struct {
 	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListExperienceEntitiesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListExperienceEntitiesRequest struct {
-	QueryParams ListExperienceEntitiesQueryParams
-	Headers     ListExperienceEntitiesHeaders
-	Request     shared.ListExperienceEntitiesRequest `request:"mediaType=application/json"`
 }
 
 type ListExperienceEntitiesResponse struct {

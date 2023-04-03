@@ -24,240 +24,216 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreatePipeRequest{
-        PathParams: operations.CreatePipePathParams{
-            Name: "corrupti",
-        },
-        Headers: operations.CreatePipeHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.CreatePipeRequestBody{
-            Description: "vel",
+        Name: "corrupti",
+        RequestBody: operations.CreatePipeRequestBody{
+            Description: "provident",
             DesiredState: "STOPPED",
-            Enrichment: "deserunt",
+            Enrichment: "quibusdam",
             EnrichmentParameters: &operations.CreatePipeRequestBodyEnrichmentParameters{
                 HTTPParameters: &shared.PipeEnrichmentHTTPParameters{
                     HeaderParameters: map[string]string{
-                        "iure": "magnam",
-                        "debitis": "ipsa",
+                        "nulla": "corrupti",
+                        "illum": "vel",
+                        "error": "deserunt",
                     },
                     PathParameterValues: []string{
-                        "tempora",
-                        "suscipit",
-                        "molestiae",
-                        "minus",
+                        "iure",
+                        "magnam",
                     },
                     QueryStringParameters: map[string]string{
-                        "voluptatum": "iusto",
-                        "excepturi": "nisi",
-                        "recusandae": "temporibus",
-                        "ab": "quis",
+                        "ipsa": "delectus",
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
                     },
                 },
-                InputTemplate: "veritatis",
+                InputTemplate: "iusto",
             },
-            RoleArn: "deserunt",
-            Source: "perferendis",
+            RoleArn: "excepturi",
+            Source: "nisi",
             SourceParameters: &operations.CreatePipeRequestBodySourceParameters{
                 ActiveMQBrokerParameters: &shared.PipeSourceActiveMQBrokerParameters{
-                    BatchSize: 368241,
+                    BatchSize: 925597,
                     Credentials: shared.MQBrokerAccessCredentials{
-                        BasicAuth: "repellendus",
+                        BasicAuth: "temporibus",
                     },
-                    MaximumBatchingWindowInSeconds: 957156,
-                    QueueName: "quo",
+                    MaximumBatchingWindowInSeconds: 71036,
+                    QueueName: "quis",
                 },
                 DynamoDBStreamParameters: &shared.PipeSourceDynamoDBStreamParameters{
-                    BatchSize: 140350,
+                    BatchSize: 87129,
                     DeadLetterConfig: &shared.DeadLetterConfig{
-                        Arn: "at",
+                        Arn: "deserunt",
                     },
-                    MaximumBatchingWindowInSeconds: 870088,
-                    MaximumRecordAgeInSeconds: 978619,
-                    MaximumRetryAttempts: 473608,
+                    MaximumBatchingWindowInSeconds: 20218,
+                    MaximumRecordAgeInSeconds: 368241,
+                    MaximumRetryAttempts: 832620,
                     OnPartialBatchItemFailure: "AUTOMATIC_BISECT",
-                    ParallelizationFactor: 799159,
+                    ParallelizationFactor: 957156,
                     StartingPosition: "LATEST",
                 },
                 FilterCriteria: &shared.FilterCriteria{
                     Filters: []shared.Filter{
                         shared.Filter{
-                            Pattern: "totam",
-                        },
-                        shared.Filter{
-                            Pattern: "porro",
+                            Pattern: "at",
                         },
                     },
                 },
                 KinesisStreamParameters: &shared.PipeSourceKinesisStreamParameters{
-                    BatchSize: 678880,
+                    BatchSize: 870088,
                     DeadLetterConfig: &shared.DeadLetterConfig{
-                        Arn: "dicta",
+                        Arn: "maiores",
                     },
-                    MaximumBatchingWindowInSeconds: 720633,
-                    MaximumRecordAgeInSeconds: 639921,
-                    MaximumRetryAttempts: 582020,
+                    MaximumBatchingWindowInSeconds: 473608,
+                    MaximumRecordAgeInSeconds: 799159,
+                    MaximumRetryAttempts: 800911,
                     OnPartialBatchItemFailure: "AUTOMATIC_BISECT",
-                    ParallelizationFactor: 143353,
+                    ParallelizationFactor: 461479,
                     StartingPosition: "LATEST",
-                    StartingPositionTimestamp: "2020-09-22T07:34:53.140Z",
+                    StartingPositionTimestamp: "2020-12-18T15:02:44.758Z",
                 },
                 ManagedStreamingKafkaParameters: &shared.PipeSourceManagedStreamingKafkaParameters{
-                    BatchSize: 521848,
-                    ConsumerGroupID: "beatae",
+                    BatchSize: 118274,
+                    ConsumerGroupID: "nam",
                     Credentials: &shared.MSKAccessCredentials{
-                        ClientCertificateTLSAuth: "commodi",
-                        SaslScram512Auth: "molestiae",
+                        ClientCertificateTLSAuth: "officia",
+                        SaslScram512Auth: "occaecati",
                     },
-                    MaximumBatchingWindowInSeconds: 264555,
-                    StartingPosition: "TRIM_HORIZON",
-                    TopicName: "impedit",
+                    MaximumBatchingWindowInSeconds: 143353,
+                    StartingPosition: "LATEST",
+                    TopicName: "hic",
                 },
                 RabbitMQBrokerParameters: &shared.PipeSourceRabbitMQBrokerParameters{
-                    BatchSize: 736918,
+                    BatchSize: 758616,
                     Credentials: shared.MQBrokerAccessCredentials{
-                        BasicAuth: "esse",
+                        BasicAuth: "totam",
                     },
-                    MaximumBatchingWindowInSeconds: 216550,
-                    QueueName: "excepturi",
-                    VirtualHost: "aspernatur",
+                    MaximumBatchingWindowInSeconds: 105907,
+                    QueueName: "commodi",
+                    VirtualHost: "molestiae",
                 },
                 SelfManagedKafkaParameters: &shared.PipeSourceSelfManagedKafkaParameters{
                     AdditionalBootstrapServers: []string{
-                        "ad",
+                        "qui",
+                        "impedit",
                     },
-                    BatchSize: 617636,
-                    ConsumerGroupID: "sed",
+                    BatchSize: 736918,
+                    ConsumerGroupID: "esse",
                     Credentials: &shared.SelfManagedKafkaAccessConfigurationCredentials{
-                        BasicAuth: "iste",
-                        ClientCertificateTLSAuth: "dolor",
-                        SaslScram256Auth: "natus",
-                        SaslScram512Auth: "laboriosam",
+                        BasicAuth: "ipsum",
+                        ClientCertificateTLSAuth: "excepturi",
+                        SaslScram256Auth: "aspernatur",
+                        SaslScram512Auth: "perferendis",
                     },
-                    MaximumBatchingWindowInSeconds: 943749,
-                    ServerRootCaCertificate: "saepe",
-                    StartingPosition: "LATEST",
-                    TopicName: "in",
+                    MaximumBatchingWindowInSeconds: 324141,
+                    ServerRootCaCertificate: "natus",
+                    StartingPosition: "TRIM_HORIZON",
+                    TopicName: "iste",
                     Vpc: &shared.SelfManagedKafkaAccessConfigurationVpc{
                         SecurityGroup: []string{
-                            "iste",
-                            "iure",
+                            "natus",
                         },
                         Subnets: []string{
-                            "quidem",
-                            "architecto",
-                            "ipsa",
-                            "reiciendis",
+                            "hic",
+                            "saepe",
                         },
                     },
                 },
                 SqsQueueParameters: &shared.PipeSourceSqsQueueParameters{
-                    BatchSize: 666767,
-                    MaximumBatchingWindowInSeconds: 653140,
+                    BatchSize: 681820,
+                    MaximumBatchingWindowInSeconds: 449950,
                 },
             },
             Tags: map[string]string{
-                "dolores": "dolorem",
-                "corporis": "explicabo",
-                "nobis": "enim",
+                "iste": "iure",
+                "saepe": "quidem",
             },
-            Target: "omnis",
+            Target: "architecto",
             TargetParameters: &operations.CreatePipeRequestBodyTargetParameters{
                 BatchJobParameters: &shared.PipeTargetBatchJobParameters{
                     ArrayProperties: &shared.BatchArrayProperties{
-                        Size: 363711,
+                        Size: 60225,
                     },
                     ContainerOverrides: &shared.BatchContainerOverrides{
                         Command: []string{
-                            "excepturi",
-                            "accusantium",
+                            "est",
+                            "mollitia",
+                            "laborum",
+                            "dolores",
                         },
                         Environment: []shared.BatchEnvironmentVariable{
                             shared.BatchEnvironmentVariable{
-                                Name: "culpa",
-                                Value: "doloribus",
-                            },
-                            shared.BatchEnvironmentVariable{
-                                Name: "sapiente",
-                                Value: "architecto",
+                                Name: "corporis",
+                                Value: "explicabo",
                             },
                         },
-                        InstanceType: "mollitia",
+                        InstanceType: "nobis",
                         ResourceRequirements: []shared.BatchResourceRequirement{
                             shared.BatchResourceRequirement{
                                 Type: "MEMORY",
-                                Value: "consequuntur",
+                                Value: "nemo",
+                            },
+                            shared.BatchResourceRequirement{
+                                Type: "GPU",
+                                Value: "excepturi",
                             },
                         },
                     },
                     DependsOn: []shared.BatchJobDependency{
                         shared.BatchJobDependency{
-                            JobID: "mollitia",
-                            Type: "SEQUENTIAL",
-                        },
-                        shared.BatchJobDependency{
-                            JobID: "numquam",
-                            Type: "N_TO_N",
-                        },
-                        shared.BatchJobDependency{
-                            JobID: "quam",
-                            Type: "N_TO_N",
-                        },
-                        shared.BatchJobDependency{
-                            JobID: "velit",
+                            JobID: "iure",
                             Type: "SEQUENTIAL",
                         },
                     },
-                    JobDefinition: "quia",
-                    JobName: "quis",
+                    JobDefinition: "doloribus",
+                    JobName: "sapiente",
                     Parameters: map[string]string{
-                        "laborum": "animi",
+                        "mollitia": "dolorem",
                     },
                     RetryStrategy: &shared.BatchRetryStrategy{
-                        Attempts: 317202,
+                        Attempts: 635059,
                     },
                 },
                 CloudWatchLogsParameters: &shared.PipeTargetCloudWatchLogsParameters{
-                    LogStreamName: "odit",
-                    Timestamp: "quo",
+                    LogStreamName: "consequuntur",
+                    Timestamp: "repellat",
                 },
                 EcsTaskParameters: &shared.PipeTargetEcsTaskParameters{
                     CapacityProviderStrategy: []shared.CapacityProviderStrategyItem{
                         shared.CapacityProviderStrategyItem{
-                            Base: 949572,
-                            CapacityProvider: "ipsam",
-                            Weight: 662527,
+                            Base: 581850,
+                            CapacityProvider: "numquam",
+                            Weight: 414369,
+                        },
+                        shared.CapacityProviderStrategyItem{
+                            Base: 466311,
+                            CapacityProvider: "molestiae",
+                            Weight: 244425,
+                        },
+                        shared.CapacityProviderStrategyItem{
+                            Base: 623510,
+                            CapacityProvider: "quia",
+                            Weight: 338007,
                         },
                     },
                     EnableECSManagedTags: false,
                     EnableExecuteCommand: false,
-                    Group: "possimus",
-                    LaunchType: "EC2",
+                    Group: "vitae",
+                    LaunchType: "EXTERNAL",
                     NetworkConfiguration: &shared.NetworkConfiguration{
                         AwsvpcConfiguration: &shared.AwsVpcConfiguration{
-                            AssignPublicIP: "ENABLED",
+                            AssignPublicIP: "DISABLED",
                             SecurityGroups: []string{
-                                "temporibus",
-                                "laborum",
-                                "quasi",
+                                "odit",
+                                "quo",
                             },
                             Subnets: []string{
-                                "voluptatibus",
-                                "vero",
-                                "nihil",
-                                "praesentium",
+                                "tenetur",
                             },
                         },
                     },
@@ -265,325 +241,230 @@ func main() {
                         ContainerOverrides: []shared.EcsContainerOverride{
                             shared.EcsContainerOverride{
                                 Command: []string{
-                                    "omnis",
+                                    "possimus",
+                                    "aut",
+                                    "quasi",
                                 },
-                                CPU: 451159,
+                                CPU: 622846,
                                 Environment: []shared.EcsEnvironmentVariable{
                                     shared.EcsEnvironmentVariable{
-                                        Name: "perferendis",
-                                        Value: "doloremque",
+                                        Name: "laborum",
+                                        Value: "quasi",
                                     },
                                     shared.EcsEnvironmentVariable{
-                                        Name: "reprehenderit",
+                                        Name: "reiciendis",
+                                        Value: "voluptatibus",
+                                    },
+                                    shared.EcsEnvironmentVariable{
+                                        Name: "vero",
+                                        Value: "nihil",
+                                    },
+                                    shared.EcsEnvironmentVariable{
+                                        Name: "praesentium",
+                                        Value: "voluptatibus",
+                                    },
+                                },
+                                EnvironmentFiles: []shared.EcsEnvironmentFile{
+                                    shared.EcsEnvironmentFile{
+                                        Type: "s3",
+                                        Value: "omnis",
+                                    },
+                                },
+                                Memory: 451159,
+                                MemoryReservation: 739264,
+                                Name: "perferendis",
+                                ResourceRequirements: []shared.EcsResourceRequirement{
+                                    shared.EcsResourceRequirement{
+                                        Type: "GPU",
                                         Value: "ut",
                                     },
+                                },
+                            },
+                            shared.EcsContainerOverride{
+                                Command: []string{
+                                    "dicta",
+                                    "corporis",
+                                    "dolore",
+                                    "iusto",
+                                },
+                                CPU: 118727,
+                                Environment: []shared.EcsEnvironmentVariable{
                                     shared.EcsEnvironmentVariable{
-                                        Name: "maiores",
-                                        Value: "dicta",
+                                        Name: "enim",
+                                        Value: "accusamus",
                                     },
-                                },
-                                EnvironmentFiles: []shared.EcsEnvironmentFile{
-                                    shared.EcsEnvironmentFile{
-                                        Type: "s3",
-                                        Value: "dolore",
-                                    },
-                                    shared.EcsEnvironmentFile{
-                                        Type: "s3",
-                                        Value: "iusto",
-                                    },
-                                },
-                                Memory: 118727,
-                                MemoryReservation: 688661,
-                                Name: "enim",
-                                ResourceRequirements: []shared.EcsResourceRequirement{
-                                    shared.EcsResourceRequirement{
-                                        Type: "GPU",
+                                    shared.EcsEnvironmentVariable{
+                                        Name: "commodi",
                                         Value: "repudiandae",
                                     },
-                                    shared.EcsResourceRequirement{
-                                        Type: "GPU",
-                                        Value: "ipsum",
-                                    },
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "molestias",
-                                    },
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "pariatur",
-                                    },
-                                },
-                            },
-                            shared.EcsContainerOverride{
-                                Command: []string{
-                                    "praesentium",
-                                    "rem",
-                                },
-                                CPU: 916723,
-                                Environment: []shared.EcsEnvironmentVariable{
                                     shared.EcsEnvironmentVariable{
-                                        Name: "repudiandae",
-                                        Value: "sint",
+                                        Name: "quae",
+                                        Value: "ipsum",
                                     },
                                 },
                                 EnvironmentFiles: []shared.EcsEnvironmentFile{
                                     shared.EcsEnvironmentFile{
                                         Type: "s3",
-                                        Value: "itaque",
+                                        Value: "molestias",
                                     },
-                                },
-                                Memory: 277718,
-                                MemoryReservation: 318569,
-                                Name: "consequatur",
-                                ResourceRequirements: []shared.EcsResourceRequirement{
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "explicabo",
-                                    },
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "distinctio",
-                                    },
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "labore",
-                                    },
-                                },
-                            },
-                            shared.EcsContainerOverride{
-                                Command: []string{
-                                    "qui",
-                                    "aliquid",
-                                },
-                                CPU: 586513,
-                                Environment: []shared.EcsEnvironmentVariable{
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "perferendis",
-                                        Value: "magni",
-                                    },
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "assumenda",
-                                        Value: "ipsam",
-                                    },
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "alias",
-                                        Value: "fugit",
-                                    },
-                                },
-                                EnvironmentFiles: []shared.EcsEnvironmentFile{
                                     shared.EcsEnvironmentFile{
                                         Type: "s3",
                                         Value: "excepturi",
                                     },
                                     shared.EcsEnvironmentFile{
                                         Type: "s3",
-                                        Value: "tempora",
-                                    },
-                                    shared.EcsEnvironmentFile{
-                                        Type: "s3",
-                                        Value: "facilis",
+                                        Value: "pariatur",
                                     },
                                 },
-                                Memory: 735194,
-                                MemoryReservation: 288476,
-                                Name: "delectus",
+                                Memory: 265389,
+                                MemoryReservation: 508969,
+                                Name: "rem",
                                 ResourceRequirements: []shared.EcsResourceRequirement{
                                     shared.EcsResourceRequirement{
                                         Type: "GPU",
-                                        Value: "eligendi",
+                                        Value: "repudiandae",
                                     },
                                     shared.EcsResourceRequirement{
                                         Type: "InferenceAccelerator",
-                                        Value: "aliquid",
+                                        Value: "veritatis",
                                     },
-                                },
-                            },
-                            shared.EcsContainerOverride{
-                                Command: []string{
-                                    "necessitatibus",
-                                    "sint",
-                                    "officia",
-                                },
-                                CPU: 223081,
-                                Environment: []shared.EcsEnvironmentVariable{
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "a",
-                                        Value: "dolorum",
-                                    },
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "in",
-                                        Value: "in",
-                                    },
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "illum",
-                                        Value: "maiores",
-                                    },
-                                    shared.EcsEnvironmentVariable{
-                                        Name: "rerum",
-                                        Value: "dicta",
-                                    },
-                                },
-                                EnvironmentFiles: []shared.EcsEnvironmentFile{
-                                    shared.EcsEnvironmentFile{
-                                        Type: "s3",
-                                        Value: "cumque",
-                                    },
-                                    shared.EcsEnvironmentFile{
-                                        Type: "s3",
-                                        Value: "facere",
-                                    },
-                                },
-                                Memory: 411820,
-                                MemoryReservation: 396506,
-                                Name: "laborum",
-                                ResourceRequirements: []shared.EcsResourceRequirement{
                                     shared.EcsResourceRequirement{
-                                        Type: "GPU",
-                                        Value: "occaecati",
+                                        Type: "InferenceAccelerator",
+                                        Value: "incidunt",
                                     },
                                     shared.EcsResourceRequirement{
                                         Type: "GPU",
-                                        Value: "accusamus",
-                                    },
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "quidem",
-                                    },
-                                    shared.EcsResourceRequirement{
-                                        Type: "InferenceAccelerator",
-                                        Value: "nam",
+                                        Value: "consequatur",
                                     },
                                 },
                             },
                         },
-                        CPU: "id",
+                        CPU: "est",
                         EphemeralStorage: &shared.EcsEphemeralStorage{
-                            SizeInGiB: 501324,
+                            SizeInGiB: 842342,
                         },
-                        ExecutionRoleArn: "deleniti",
+                        ExecutionRoleArn: "explicabo",
                         InferenceAcceleratorOverrides: []shared.EcsInferenceAcceleratorOverride{
                             shared.EcsInferenceAcceleratorOverride{
-                                DeviceName: "amet",
-                                DeviceType: "deserunt",
+                                DeviceName: "distinctio",
+                                DeviceType: "quibusdam",
                             },
                             shared.EcsInferenceAcceleratorOverride{
-                                DeviceName: "nisi",
-                                DeviceType: "vel",
+                                DeviceName: "labore",
+                                DeviceType: "modi",
                             },
                             shared.EcsInferenceAcceleratorOverride{
-                                DeviceName: "natus",
-                                DeviceType: "omnis",
-                            },
-                            shared.EcsInferenceAcceleratorOverride{
-                                DeviceName: "molestiae",
-                                DeviceType: "perferendis",
+                                DeviceName: "qui",
+                                DeviceType: "aliquid",
                             },
                         },
-                        Memory: "nihil",
-                        TaskRoleArn: "magnam",
+                        Memory: "cupiditate",
+                        TaskRoleArn: "quos",
                     },
                     PlacementConstraints: []shared.PlacementConstraint{
                         shared.PlacementConstraint{
-                            Expression: "id",
-                            Type: "distinctInstance",
-                        },
-                        shared.PlacementConstraint{
-                            Expression: "labore",
-                            Type: "distinctInstance",
-                        },
-                        shared.PlacementConstraint{
-                            Expression: "natus",
+                            Expression: "magni",
                             Type: "memberOf",
                         },
                     },
                     PlacementStrategy: []shared.PlacementStrategy{
                         shared.PlacementStrategy{
-                            Field: "vero",
+                            Field: "alias",
                             Type: "random",
                         },
                         shared.PlacementStrategy{
-                            Field: "architecto",
-                            Type: "random",
+                            Field: "dolorum",
+                            Type: "spread",
                         },
                     },
-                    PlatformVersion: "et",
+                    PlatformVersion: "tempora",
                     PropagateTags: "TASK_DEFINITION",
-                    ReferenceID: "excepturi",
+                    ReferenceID: "facilis",
                     Tags: []shared.Tag{
                         shared.Tag{
-                            Key: "provident",
-                            Value: "quos",
+                            Key: "labore",
+                            Value: "delectus",
                         },
                         shared.Tag{
-                            Key: "sint",
-                            Value: "accusantium",
+                            Key: "eum",
+                            Value: "non",
+                        },
+                        shared.Tag{
+                            Key: "eligendi",
+                            Value: "sint",
                         },
                     },
-                    TaskCount: 653201,
-                    TaskDefinitionArn: "reiciendis",
+                    TaskCount: 396098,
+                    TaskDefinitionArn: "provident",
                 },
                 EventBridgeEventBusParameters: &shared.PipeTargetEventBridgeEventBusParameters{
-                    DetailType: "mollitia",
-                    EndpointID: "ad",
+                    DetailType: "necessitatibus",
+                    EndpointID: "sint",
                     Resources: []string{
                         "dolor",
-                        "necessitatibus",
+                        "debitis",
+                        "a",
                     },
-                    Source: "odit",
-                    Time: "nemo",
+                    Source: "dolorum",
+                    Time: "in",
                 },
                 HTTPParameters: &shared.PipeTargetHTTPParameters{
                     HeaderParameters: map[string]string{
-                        "iure": "doloribus",
+                        "illum": "maiores",
+                        "rerum": "dicta",
                     },
                     PathParameterValues: []string{
-                        "eius",
-                        "maxime",
-                        "deleniti",
-                        "facilis",
+                        "cumque",
+                        "facere",
                     },
                     QueryStringParameters: map[string]string{
-                        "architecto": "architecto",
-                        "repudiandae": "ullam",
+                        "aliquid": "laborum",
+                        "accusamus": "non",
                     },
                 },
-                InputTemplate: "expedita",
+                InputTemplate: "occaecati",
                 KinesisStreamParameters: &shared.PipeTargetKinesisStreamParameters{
-                    PartitionKey: "nihil",
+                    PartitionKey: "enim",
                 },
                 LambdaFunctionParameters: &shared.PipeTargetLambdaFunctionParameters{
                     InvocationType: "FIRE_AND_FORGET",
                 },
                 RedshiftDataParameters: &shared.PipeTargetRedshiftDataParameters{
-                    Database: "quibusdam",
-                    DbUser: "sed",
-                    SecretManagerArn: "saepe",
+                    Database: "delectus",
+                    DbUser: "quidem",
+                    SecretManagerArn: "provident",
                     Sqls: []string{
-                        "accusantium",
-                        "consequuntur",
-                        "praesentium",
-                        "natus",
+                        "id",
+                        "blanditiis",
+                        "deleniti",
                     },
-                    StatementName: "magni",
+                    StatementName: "sapiente",
                     WithEvent: false,
                 },
                 SageMakerPipelineParameters: &shared.PipeTargetSageMakerPipelineParameters{
                     PipelineParameterList: []shared.SageMakerPipelineParameter{
                         shared.SageMakerPipelineParameter{
-                            Name: "quo",
-                            Value: "illum",
+                            Name: "deserunt",
+                            Value: "nisi",
                         },
                     },
                 },
                 SqsQueueParameters: &shared.PipeTargetSqsQueueParameters{
-                    MessageDeduplicationID: "pariatur",
-                    MessageGroupID: "maxime",
+                    MessageDeduplicationID: "vel",
+                    MessageGroupID: "natus",
                 },
                 StepFunctionStateMachineParameters: &shared.PipeTargetStateMachineParameters{
-                    InvocationType: "REQUEST_RESPONSE",
+                    InvocationType: "FIRE_AND_FORGET",
                 },
             },
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "perferendis",
+        XAmzCredential: "nihil",
+        XAmzDate: "magnam",
+        XAmzSecurityToken: "distinctio",
+        XAmzSignature: "id",
+        XAmzSignedHeaders: "labore",
     }
 
     ctx := context.Background()
@@ -600,7 +481,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -616,4 +497,15 @@ func main() {
 * `UpdatePipe` - <p>Update an existing pipe. When you call <code>UpdatePipe</code>, only the fields that are included in the request are changed, the rest are unchanged. The exception to this is if you modify any Amazon Web Services-service specific fields in the <code>SourceParameters</code>, <code>EnrichmentParameters</code>, or <code>TargetParameters</code> objects. The fields in these objects are updated atomically as one and override existing values. This is by design and means that if you don't specify an optional field in one of these Parameters objects, that field will be set to its system-default value after the update.</p> <p>For more information about pipes, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes.html"> Amazon EventBridge Pipes</a> in the Amazon EventBridge User Guide.</p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

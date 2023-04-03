@@ -13,23 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETCreateDomainRequest{
-        QueryParams: operations.GETCreateDomainQueryParams{
-            AWSAccessKeyID: "corrupti",
-            Action: "CreateDomain",
-            DomainName: "provident",
-            Signature: "distinctio",
-            SignatureMethod: "quibusdam",
-            SignatureVersion: "unde",
-            Timestamp: "nulla",
-            Version: "2009-04-15",
-        },
+        AWSAccessKeyID: "corrupti",
+        Action: "CreateDomain",
+        DomainName: "provident",
+        Signature: "distinctio",
+        SignatureMethod: "quibusdam",
+        SignatureVersion: "unde",
+        Timestamp: "nulla",
+        Version: "2009-04-15",
     }
 
     ctx := context.Background()

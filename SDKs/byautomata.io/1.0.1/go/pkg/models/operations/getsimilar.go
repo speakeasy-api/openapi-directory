@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSimilarQueryParams struct {
+type GetSimilarRequest struct {
 	// We'll provide information about related companies based on the site you provide. If a LinkedIn page is sent, we will try to identify the company related to the page. Ex. https://api.byautomata.io/similar?link=ibm.com
 	Link string `queryParam:"style=form,explode=true,name=link"`
 	// Page number of search results. Ex. https://api.byautomata.io/similar?link=ibm.com&page=1
 	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetSimilarRequest struct {
-	QueryParams GetSimilarQueryParams
 }
 
 // GetSimilar200ApplicationJSON - A successful operation

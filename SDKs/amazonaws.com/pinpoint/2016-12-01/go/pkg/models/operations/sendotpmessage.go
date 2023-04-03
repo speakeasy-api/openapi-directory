@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendOTPMessagePathParams struct {
-	// The unique ID of your Amazon Pinpoint application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-}
-
-type SendOTPMessageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SendOTPMessageRequestBodySendOTPMessageRequestParameters - Send OTP message request parameters.
 type SendOTPMessageRequestBodySendOTPMessageRequestParameters struct {
 	AllowedAttempts     *int64  `json:"AllowedAttempts,omitempty"`
@@ -43,9 +28,16 @@ type SendOTPMessageRequestBody struct {
 }
 
 type SendOTPMessageRequest struct {
-	PathParams SendOTPMessagePathParams
-	Headers    SendOTPMessageHeaders
-	Request    SendOTPMessageRequestBody `request:"mediaType=application/json"`
+	RequestBody       SendOTPMessageRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID of your Amazon Pinpoint application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
 }
 
 type SendOTPMessageResponse struct {

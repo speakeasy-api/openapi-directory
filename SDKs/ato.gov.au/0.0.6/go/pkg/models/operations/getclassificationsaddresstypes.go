@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClassificationsAddressTypesHeaders struct {
+type GetClassificationsAddressTypesRequest struct {
 	// The API key.
 	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetClassificationsAddressTypesRequest struct {
-	Headers GetClassificationsAddressTypesHeaders
 }
 
 type GetClassificationsAddressTypesResponse struct {

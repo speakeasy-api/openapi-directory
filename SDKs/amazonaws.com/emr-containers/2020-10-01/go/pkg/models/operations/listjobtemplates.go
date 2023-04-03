@@ -8,7 +8,14 @@ import (
 	"time"
 )
 
-type ListJobTemplatesQueryParams struct {
+type ListJobTemplatesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The date and time after which the job templates were created.
 	CreatedAfter *time.Time `queryParam:"style=form,explode=true,name=createdAfter"`
 	//  The date and time before which the job templates were created.
@@ -17,21 +24,6 @@ type ListJobTemplatesQueryParams struct {
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	//  The token for the next set of job templates to return.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListJobTemplatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobTemplatesRequest struct {
-	QueryParams ListJobTemplatesQueryParams
-	Headers     ListJobTemplatesHeaders
 }
 
 type ListJobTemplatesResponse struct {

@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCategoriesKeywordsIDKeywordPathParams struct {
-	IDKeyword int64 `pathParam:"style=simple,explode=false,name=id_keyword"`
-}
-
-type DeleteCategoriesKeywordsIDKeywordQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type DeleteCategoriesKeywordsIDKeywordRequest struct {
-	PathParams  DeleteCategoriesKeywordsIDKeywordPathParams
-	QueryParams DeleteCategoriesKeywordsIDKeywordQueryParams
+	Expand    *string `queryParam:"style=form,explode=true,name=expand"`
+	IDKeyword int64   `pathParam:"style=simple,explode=false,name=id_keyword"`
 }
 
 type DeleteCategoriesKeywordsIDKeywordResponse struct {

@@ -8,31 +8,18 @@ import (
 )
 
 type ConnectorResourcesOneSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectorResourcesOnePathParams struct {
+type ConnectorResourcesOneRequest struct {
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// ID of the resource you are acting upon.
 	ResourceID string `pathParam:"style=simple,explode=false,name=resource_id"`
-}
-
-type ConnectorResourcesOneQueryParams struct {
 	// Specify unified API for the connector resource. This is useful when a resource appears in multiple APIs
 	UnifiedAPI *shared.UnifiedAPIIDEnum `queryParam:"style=form,explode=true,name=unified_api"`
-}
-
-type ConnectorResourcesOneHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
-}
-
-type ConnectorResourcesOneRequest struct {
-	PathParams  ConnectorResourcesOnePathParams
-	QueryParams ConnectorResourcesOneQueryParams
-	Headers     ConnectorResourcesOneHeaders
-	Security    ConnectorResourcesOneSecurity
 }
 
 type ConnectorResourcesOneResponse struct {

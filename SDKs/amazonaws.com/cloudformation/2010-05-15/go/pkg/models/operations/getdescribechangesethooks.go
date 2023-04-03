@@ -50,7 +50,7 @@ func (e *GETDescribeChangeSetHooksVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeChangeSetHooksQueryParams struct {
+type GETDescribeChangeSetHooksRequest struct {
 	Action GETDescribeChangeSetHooksActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name or Amazon Resource Name (ARN) of the change set that you want to describe.
 	ChangeSetName string `queryParam:"style=form,explode=true,name=ChangeSetName"`
@@ -59,23 +59,15 @@ type GETDescribeChangeSetHooksQueryParams struct {
 	// A string, provided by the <code>DescribeChangeSetHooks</code> response output, that identifies the next page of information that you want to retrieve.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// If you specified the name of a change set, specify the stack name or stack ID (ARN) of the change set you want to describe.
-	StackName *string                              `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETDescribeChangeSetHooksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeChangeSetHooksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeChangeSetHooksRequest struct {
-	QueryParams GETDescribeChangeSetHooksQueryParams
-	Headers     GETDescribeChangeSetHooksHeaders
+	StackName         *string                              `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETDescribeChangeSetHooksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeChangeSetHooksResponse struct {

@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GroupV2AbdicateFoundershipPathParams struct {
+type GroupV2AbdicateFoundershipRequest struct {
 	// The new founder for this group. Must already be a group admin.
 	FounderIDNew int64 `pathParam:"style=simple,explode=false,name=founderIdNew"`
 	// The target group id.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// Membership type of the provided founderIdNew.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2AbdicateFoundershipRequest struct {
-	PathParams GroupV2AbdicateFoundershipPathParams
 }
 
 // GroupV2AbdicateFoundership200Wildcard - Look at the Response property for more information about the nature of this response

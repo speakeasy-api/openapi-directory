@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DisableOrganizationAdminAccountQueryParams struct {
-	// The Amazon Web Services account ID of the delegated Amazon Macie administrator account.
-	AdminAccountID string `queryParam:"style=form,explode=true,name=adminAccountId"`
-}
-
-type DisableOrganizationAdminAccountHeaders struct {
+type DisableOrganizationAdminAccountRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DisableOrganizationAdminAccountHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisableOrganizationAdminAccountRequest struct {
-	QueryParams DisableOrganizationAdminAccountQueryParams
-	Headers     DisableOrganizationAdminAccountHeaders
+	// The Amazon Web Services account ID of the delegated Amazon Macie administrator account.
+	AdminAccountID string `queryParam:"style=form,explode=true,name=adminAccountId"`
 }
 
 type DisableOrganizationAdminAccountResponse struct {

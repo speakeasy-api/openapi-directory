@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DecodeViaEPIPathParams struct {
-	// The VIN to identify the car. Must be a valid 17 char VIN
-	Vin string `pathParam:"style=simple,explode=false,name=vin"`
-}
-
-type DecodeViaEPIQueryParams struct {
+type DecodeViaEPIRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type DecodeViaEPIRequest struct {
-	PathParams  DecodeViaEPIPathParams
-	QueryParams DecodeViaEPIQueryParams
+	// The VIN to identify the car. Must be a valid 17 char VIN
+	Vin string `pathParam:"style=simple,explode=false,name=vin"`
 }
 
 type DecodeViaEPIResponse struct {

@@ -122,7 +122,7 @@ func (s *SDK) GETCancelJob(ctx context.Context, request operations.GETCancelJobR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,7 +182,7 @@ func (s *SDK) GETCreateJob(ctx context.Context, request operations.GETCreateJobR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -262,7 +262,7 @@ func (s *SDK) GETGETShippingLabel(ctx context.Context, request operations.GETGET
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -324,7 +324,7 @@ func (s *SDK) GETGETStatus(ctx context.Context, request operations.GETGETStatusR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -382,7 +382,7 @@ func (s *SDK) GETListJobs(ctx context.Context, request operations.GETListJobsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -436,7 +436,7 @@ func (s *SDK) GETUpdateJob(ctx context.Context, request operations.GETUpdateJobR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -515,7 +515,7 @@ func (s *SDK) POSTCancelJob(ctx context.Context, request operations.POSTCancelJo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Operation=CancelJob&Action=CancelJob"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -527,7 +527,7 @@ func (s *SDK) POSTCancelJob(ctx context.Context, request operations.POSTCancelJo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -582,7 +582,7 @@ func (s *SDK) POSTCreateJob(ctx context.Context, request operations.POSTCreateJo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Operation=CreateJob&Action=CreateJob"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -594,7 +594,7 @@ func (s *SDK) POSTCreateJob(ctx context.Context, request operations.POSTCreateJo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -669,7 +669,7 @@ func (s *SDK) POSTGetShippingLabel(ctx context.Context, request operations.POSTG
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Operation=GetShippingLabel&Action=GetShippingLabel"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -681,7 +681,7 @@ func (s *SDK) POSTGetShippingLabel(ctx context.Context, request operations.POSTG
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -738,7 +738,7 @@ func (s *SDK) POSTGetStatus(ctx context.Context, request operations.POSTGetStatu
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Operation=GetStatus&Action=GetStatus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -750,7 +750,7 @@ func (s *SDK) POSTGetStatus(ctx context.Context, request operations.POSTGetStatu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -803,7 +803,7 @@ func (s *SDK) POSTListJobs(ctx context.Context, request operations.POSTListJobsR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Operation=ListJobs&Action=ListJobs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -815,7 +815,7 @@ func (s *SDK) POSTListJobs(ctx context.Context, request operations.POSTListJobsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -864,7 +864,7 @@ func (s *SDK) POSTUpdateJob(ctx context.Context, request operations.POSTUpdateJo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Operation=UpdateJob&Action=UpdateJob"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -876,7 +876,7 @@ func (s *SDK) POSTUpdateJob(ctx context.Context, request operations.POSTUpdateJo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

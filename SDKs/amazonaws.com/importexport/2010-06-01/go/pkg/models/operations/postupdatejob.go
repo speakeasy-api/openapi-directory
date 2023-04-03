@@ -71,20 +71,16 @@ func (e *POSTUpdateJobVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTUpdateJobQueryParams struct {
+type POSTUpdateJobRequest struct {
 	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTUpdateJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        POSTUpdateJobOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody      []byte                     `request:"mediaType=text/xml"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                     `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                     `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                     `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTUpdateJobVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdateJobRequest struct {
-	QueryParams POSTUpdateJobQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTUpdateJobResponse struct {

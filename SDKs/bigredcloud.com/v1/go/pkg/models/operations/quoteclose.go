@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type QuoteClosePathParams struct {
+type QuoteCloseRequest struct {
 	// Id of Quote to close
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type QuoteCloseRequest struct {
-	PathParams QuoteClosePathParams
 }
 
 type QuoteCloseResponse struct {

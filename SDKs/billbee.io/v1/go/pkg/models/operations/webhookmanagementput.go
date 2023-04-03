@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WebHookManagementPutPathParams struct {
+type WebHookManagementPutRequest struct {
+	// The new webhook to use.
+	RechnungsdruckWebAppControllersAPIWebHookAPIModel shared.RechnungsdruckWebAppControllersAPIWebHookAPIModel `request:"mediaType=application/json"`
 	// The WebHook ID.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type WebHookManagementPutRequest struct {
-	PathParams WebHookManagementPutPathParams
-	// The new webhook to use.
-	Request shared.RechnungsdruckWebAppControllersAPIWebHookAPIModel `request:"mediaType=application/json"`
 }
 
 type WebHookManagementPutResponse struct {

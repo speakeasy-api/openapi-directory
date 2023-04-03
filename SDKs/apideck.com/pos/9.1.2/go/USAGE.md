@@ -14,26 +14,12 @@ func main() {
     s := sdk.New()
 
     req := operations.ItemsAddRequest{
-        Security: operations.ItemsAddSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.ItemsAddQueryParams{
-            Raw: false,
-        },
-        Headers: operations.ItemsAddHeaders{
-            XApideckAppID: "corrupti",
-            XApideckConsumerID: "provident",
-            XApideckServiceID: "distinctio",
-        },
-        Request: shared.ItemInput{
+        ItemInput: shared.ItemInput{
             Abbreviation: "Ch",
             AbsentAtLocationIds: []string{
-                "unde",
-                "nulla",
-                "corrupti",
-                "illum",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             Available: true,
             AvailableForPickup: false,
@@ -44,15 +30,26 @@ func main() {
                         "12345",
                         "12345",
                         "12345",
+                        "12345",
                     },
-                    Name: "deserunt",
+                    Name: "corrupti",
                 },
                 shared.ItemCategoriesInput{
                     ImageIds: []string{
                         "12345",
                         "12345",
+                        "12345",
+                        "12345",
                     },
-                    Name: "iure",
+                    Name: "vel",
+                },
+                shared.ItemCategoriesInput{
+                    ImageIds: []string{
+                        "12345",
+                        "12345",
+                        "12345",
+                    },
+                    Name: "deserunt",
                 },
             },
             Code: "11910345",
@@ -82,10 +79,8 @@ func main() {
             ProductType: "regular",
             Sku: "11910345",
             TaxIds: []string{
-                "ipsa",
-                "delectus",
-                "tempora",
-                "suscipit",
+                "magnam",
+                "debitis",
             },
             Variations: []shared.ItemVariationsInput{
                 shared.ItemVariationsInput{
@@ -98,22 +93,18 @@ func main() {
                     Sku: "11910345",
                     Stockable: false,
                 },
-                shared.ItemVariationsInput{
-                    Name: "Variation",
-                    PresentAtAllLocations: false,
-                    PriceAmount: 10,
-                    PriceCurrency: "USD",
-                    PricingType: "fixed",
-                    Sequence: 1,
-                    Sku: "11910345",
-                    Stockable: false,
-                },
             },
         },
+        Raw: false,
+        XApideckAppID: "delectus",
+        XApideckConsumerID: "tempora",
+        XApideckServiceID: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Items.ItemsAdd(ctx, req)
+    res, err := s.Items.ItemsAdd(ctx, req, operations.ItemsAddSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

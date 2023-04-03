@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLifecyclePolicyPathParams struct {
-	// The identifier of the lifecycle policy.
-	PolicyID string `pathParam:"style=simple,explode=false,name=policyId"`
-}
-
-type UpdateLifecyclePolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateLifecyclePolicyRequestBodyPolicyDetails -  <b>[All policy types]</b> Specifies the configuration of a lifecycle policy.
 type UpdateLifecyclePolicyRequestBodyPolicyDetails struct {
 	Actions           []shared.Action                     `json:"Actions,omitempty"`
@@ -72,9 +57,16 @@ type UpdateLifecyclePolicyRequestBody struct {
 }
 
 type UpdateLifecyclePolicyRequest struct {
-	PathParams UpdateLifecyclePolicyPathParams
-	Headers    UpdateLifecyclePolicyHeaders
-	Request    UpdateLifecyclePolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateLifecyclePolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the lifecycle policy.
+	PolicyID string `pathParam:"style=simple,explode=false,name=policyId"`
 }
 
 type UpdateLifecyclePolicyResponse struct {

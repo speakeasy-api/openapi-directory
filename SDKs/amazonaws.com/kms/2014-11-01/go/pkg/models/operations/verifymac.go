@@ -30,7 +30,8 @@ func (e *VerifyMacXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VerifyMacHeaders struct {
+type VerifyMacRequest struct {
+	VerifyMacRequest  shared.VerifyMacRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type VerifyMacHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        VerifyMacXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type VerifyMacRequest struct {
-	Headers VerifyMacHeaders
-	Request shared.VerifyMacRequest `request:"mediaType=application/json"`
 }
 
 type VerifyMacResponse struct {

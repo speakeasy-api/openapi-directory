@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLifecyclePolicyPathParams struct {
-	// The identifier of the lifecycle policy.
-	PolicyID string `pathParam:"style=simple,explode=false,name=policyId"`
-}
-
-type GetLifecyclePolicyHeaders struct {
+type GetLifecyclePolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetLifecyclePolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLifecyclePolicyRequest struct {
-	PathParams GetLifecyclePolicyPathParams
-	Headers    GetLifecyclePolicyHeaders
+	// The identifier of the lifecycle policy.
+	PolicyID string `pathParam:"style=simple,explode=false,name=policyId"`
 }
 
 type GetLifecyclePolicyResponse struct {

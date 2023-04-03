@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadDocumentPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DownloadDocumentRequest struct {
-	PathParams DownloadDocumentPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DownloadDocumentResponse struct {

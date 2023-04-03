@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsUpdateRawPathParams struct {
+type DomainsUpdateRawRequest struct {
+	// The domain to update
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of domain
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DomainsUpdateRawRequest struct {
-	PathParams DomainsUpdateRawPathParams
-	// The domain to update
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type DomainsUpdateRawResponse struct {

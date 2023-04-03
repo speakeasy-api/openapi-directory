@@ -35,11 +35,11 @@ func newV1Company(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // CompanyAlternativeSearch - Retrieves a list of companies from the KYC API company index
 // KYC API company index lookup by country and mixed parameters. This function requires a country code then a mixture of name
-func (s *v1Company) CompanyAlternativeSearch(ctx context.Context, request operations.CompanyAlternativeSearchRequest) (*operations.CompanyAlternativeSearchResponse, error) {
+func (s *v1Company) CompanyAlternativeSearch(ctx context.Context, request operations.CompanyAlternativeSearchRequest, security operations.CompanyAlternativeSearchSecurity) (*operations.CompanyAlternativeSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/{country}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,7 +51,7 @@ func (s *v1Company) CompanyAlternativeSearch(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *v1Company) CompanyAlternativeSearch(ctx context.Context, request operat
 
 // CompanyAnnouncement - Retrieves announcement data
 // Request full announcement data identified by announcement id
-func (s *v1Company) CompanyAnnouncement(ctx context.Context, request operations.CompanyAnnouncementRequest) (*operations.CompanyAnnouncementResponse, error) {
+func (s *v1Company) CompanyAnnouncement(ctx context.Context, request operations.CompanyAnnouncementRequest, security operations.CompanyAnnouncementSecurity) (*operations.CompanyAnnouncementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/announcement/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/announcement/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *v1Company) CompanyAnnouncement(ctx context.Context, request operations.
 
 // CompanyDeepsearchISIN - Retrieves a list of stock exchange listings
 // Lookup stock exchange listings identified by an ISIN (International Securities Identification Number) number. Search is forwarded to a provider.
-func (s *v1Company) CompanyDeepsearchISIN(ctx context.Context, request operations.CompanyDeepsearchISINRequest) (*operations.CompanyDeepsearchISINResponse, error) {
+func (s *v1Company) CompanyDeepsearchISIN(ctx context.Context, request operations.CompanyDeepsearchISINRequestBody, security operations.CompanyDeepsearchISINSecurity) (*operations.CompanyDeepsearchISINResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/company/deepsearch/isin"
 
@@ -168,7 +168,7 @@ func (s *v1Company) CompanyDeepsearchISIN(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,20 +214,20 @@ func (s *v1Company) CompanyDeepsearchISIN(ctx context.Context, request operation
 
 // CompanyDeepsearchLEI - Retrieves a list of companies
 // Lookup companies identified by a LEI (Legal Entity Identifier) number. Search is forwarded to a provider.
-func (s *v1Company) CompanyDeepsearchLEI(ctx context.Context, request operations.CompanyDeepsearchLEIRequest) (*operations.CompanyDeepsearchLEIResponse, error) {
+func (s *v1Company) CompanyDeepsearchLEI(ctx context.Context, request operations.CompanyDeepsearchLEIRequest, security operations.CompanyDeepsearchLEISecurity) (*operations.CompanyDeepsearchLEIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/deepsearch/lei/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/deepsearch/lei/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,16 +273,16 @@ func (s *v1Company) CompanyDeepsearchLEI(ctx context.Context, request operations
 
 // CompanyDeepsearchName - Retrieves a list of companies from the official business register
 // Search for companies with a certain name. Search is forwarded to the respective business register of the country.
-func (s *v1Company) CompanyDeepsearchName(ctx context.Context, request operations.CompanyDeepsearchNameRequest) (*operations.CompanyDeepsearchNameResponse, error) {
+func (s *v1Company) CompanyDeepsearchName(ctx context.Context, request operations.CompanyDeepsearchNameRequest, security operations.CompanyDeepsearchNameSecurity) (*operations.CompanyDeepsearchNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/deepsearch/name/{country}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/deepsearch/name/{country}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -328,16 +328,16 @@ func (s *v1Company) CompanyDeepsearchName(ctx context.Context, request operation
 
 // CompanyDeepsearchNumber - Retrieves a list of companies from the official business register
 // Search for companies with a certain register number. Search is forwarded to the respective business register of the country.
-func (s *v1Company) CompanyDeepsearchNumber(ctx context.Context, request operations.CompanyDeepsearchNumberRequest) (*operations.CompanyDeepsearchNumberResponse, error) {
+func (s *v1Company) CompanyDeepsearchNumber(ctx context.Context, request operations.CompanyDeepsearchNumberRequest, security operations.CompanyDeepsearchNumberSecurity) (*operations.CompanyDeepsearchNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/deepsearch/number/{country}/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/deepsearch/number/{country}/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -383,20 +383,20 @@ func (s *v1Company) CompanyDeepsearchNumber(ctx context.Context, request operati
 
 // CompanyIDAnnouncements - Retrieves company announcements
 // Search announcements filed to the business register from a company identified by an id
-func (s *v1Company) CompanyIDAnnouncements(ctx context.Context, request operations.CompanyIDAnnouncementsRequest) (*operations.CompanyIDAnnouncementsResponse, error) {
+func (s *v1Company) CompanyIDAnnouncements(ctx context.Context, request operations.CompanyIDAnnouncementsRequest, security operations.CompanyIDAnnouncementsSecurity) (*operations.CompanyIDAnnouncementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/{id}/announcements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/{id}/announcements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -442,20 +442,20 @@ func (s *v1Company) CompanyIDAnnouncements(ctx context.Context, request operatio
 
 // CompanyIDDataset - Retrieves company details
 // Get company details by id. The level of details is defined by the dataset parameter
-func (s *v1Company) CompanyIDDataset(ctx context.Context, request operations.CompanyIDDatasetRequest) (*operations.CompanyIDDatasetResponse, error) {
+func (s *v1Company) CompanyIDDataset(ctx context.Context, request operations.CompanyIDDatasetRequest, security operations.CompanyIDDatasetSecurity) (*operations.CompanyIDDatasetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/{id}/{dataset}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/{id}/{dataset}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -501,20 +501,20 @@ func (s *v1Company) CompanyIDDataset(ctx context.Context, request operations.Com
 
 // CompanyIDSuper - Retrieves structured data extracted from a company document
 // Request company superdata identified by company id
-func (s *v1Company) CompanyIDSuper(ctx context.Context, request operations.CompanyIDSuperRequest) (*operations.CompanyIDSuperResponse, error) {
+func (s *v1Company) CompanyIDSuper(ctx context.Context, request operations.CompanyIDSuperRequest, security operations.CompanyIDSuperSecurity) (*operations.CompanyIDSuperResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/{id}/super/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/{id}/super/{country}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -560,7 +560,7 @@ func (s *v1Company) CompanyIDSuper(ctx context.Context, request operations.Compa
 
 // CompanyMonitorChangeTypesList - Get available ChangeTypes
 // Get current list of available ChangeTypes to subscribe to
-func (s *v1Company) CompanyMonitorChangeTypesList(ctx context.Context, request operations.CompanyMonitorChangeTypesListRequest) (*operations.CompanyMonitorChangeTypesListResponse, error) {
+func (s *v1Company) CompanyMonitorChangeTypesList(ctx context.Context) (*operations.CompanyMonitorChangeTypesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/company/monitoring/changeTypes"
 
@@ -569,7 +569,7 @@ func (s *v1Company) CompanyMonitorChangeTypesList(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -615,16 +615,16 @@ func (s *v1Company) CompanyMonitorChangeTypesList(ctx context.Context, request o
 
 // CompanyMonitorID - Get monitor status for specific company id
 // Query status of registered monitors for a specific company identified by a company id
-func (s *v1Company) CompanyMonitorID(ctx context.Context, request operations.CompanyMonitorIDRequest) (*operations.CompanyMonitorIDResponse, error) {
+func (s *v1Company) CompanyMonitorID(ctx context.Context, request operations.CompanyMonitorIDRequest, security operations.CompanyMonitorIDSecurity) (*operations.CompanyMonitorIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/monitoring/list/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/monitoring/list/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -670,7 +670,7 @@ func (s *v1Company) CompanyMonitorID(ctx context.Context, request operations.Com
 
 // CompanyMonitorList - Retrieves a list of registered monitors
 // Query list of all registered monitors for logged in user
-func (s *v1Company) CompanyMonitorList(ctx context.Context, request operations.CompanyMonitorListRequest) (*operations.CompanyMonitorListResponse, error) {
+func (s *v1Company) CompanyMonitorList(ctx context.Context) (*operations.CompanyMonitorListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/company/monitoring/list"
 
@@ -679,7 +679,7 @@ func (s *v1Company) CompanyMonitorList(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -725,11 +725,11 @@ func (s *v1Company) CompanyMonitorList(ctx context.Context, request operations.C
 
 // CompanyMonitorRegister - Register a Company for monitoring
 // Add a company to your perpetual monitoring list and register a callback URL to get monitoring alerts.
-func (s *v1Company) CompanyMonitorRegister(ctx context.Context, request operations.CompanyMonitorRegisterRequest) (*operations.CompanyMonitorRegisterResponse, error) {
+func (s *v1Company) CompanyMonitorRegister(ctx context.Context, request operations.CompanyMonitorRegisterRequest, security operations.CompanyMonitorRegisterSecurity) (*operations.CompanyMonitorRegisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/monitoring/register/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/monitoring/register/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -741,7 +741,7 @@ func (s *v1Company) CompanyMonitorRegister(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -787,16 +787,16 @@ func (s *v1Company) CompanyMonitorRegister(ctx context.Context, request operatio
 
 // CompanyMonitorUnregister - Deactivates an active notification
 // Deactivate a previously registered company monitor identified by the notifier id
-func (s *v1Company) CompanyMonitorUnregister(ctx context.Context, request operations.CompanyMonitorUnregisterRequest) (*operations.CompanyMonitorUnregisterResponse, error) {
+func (s *v1Company) CompanyMonitorUnregister(ctx context.Context, request operations.CompanyMonitorUnregisterRequest, security operations.CompanyMonitorUnregisterSecurity) (*operations.CompanyMonitorUnregisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/monitoring/unregister/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/monitoring/unregister/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -833,16 +833,16 @@ func (s *v1Company) CompanyMonitorUnregister(ctx context.Context, request operat
 
 // CompanyNotificationID - Retrieves a list of registered notifications
 // Query list of registered notifications for a specific company identified by a company id
-func (s *v1Company) CompanyNotificationID(ctx context.Context, request operations.CompanyNotificationIDRequest) (*operations.CompanyNotificationIDResponse, error) {
+func (s *v1Company) CompanyNotificationID(ctx context.Context, request operations.CompanyNotificationIDRequest, security operations.CompanyNotificationIDSecurity) (*operations.CompanyNotificationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/notification/list/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/notification/list/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -888,7 +888,7 @@ func (s *v1Company) CompanyNotificationID(ctx context.Context, request operation
 
 // CompanyNotificationList - Retrieves a list of registered notifications
 // Query list of registered callback URLs for logged in user
-func (s *v1Company) CompanyNotificationList(ctx context.Context, request operations.CompanyNotificationListRequest) (*operations.CompanyNotificationListResponse, error) {
+func (s *v1Company) CompanyNotificationList(ctx context.Context) (*operations.CompanyNotificationListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/company/notification/list"
 
@@ -897,7 +897,7 @@ func (s *v1Company) CompanyNotificationList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -943,11 +943,11 @@ func (s *v1Company) CompanyNotificationList(ctx context.Context, request operati
 
 // CompanyNotificationRegister - Creates a new notification
 // Register a new callback URL to get notifications about companies.
-func (s *v1Company) CompanyNotificationRegister(ctx context.Context, request operations.CompanyNotificationRegisterRequest) (*operations.CompanyNotificationRegisterResponse, error) {
+func (s *v1Company) CompanyNotificationRegister(ctx context.Context, request operations.CompanyNotificationRegisterRequest, security operations.CompanyNotificationRegisterSecurity) (*operations.CompanyNotificationRegisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/notification/register/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/notification/register/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -959,7 +959,7 @@ func (s *v1Company) CompanyNotificationRegister(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1005,16 +1005,16 @@ func (s *v1Company) CompanyNotificationRegister(ctx context.Context, request ope
 
 // CompanyNotificationUnregister - Unregister a company from Monitoring
 // Deactivate a previously registered company monitor identified by the notifier id
-func (s *v1Company) CompanyNotificationUnregister(ctx context.Context, request operations.CompanyNotificationUnregisterRequest) (*operations.CompanyNotificationUnregisterResponse, error) {
+func (s *v1Company) CompanyNotificationUnregister(ctx context.Context, request operations.CompanyNotificationUnregisterRequest, security operations.CompanyNotificationUnregisterSecurity) (*operations.CompanyNotificationUnregisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/notification/unregister/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/notification/unregister/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1051,20 +1051,20 @@ func (s *v1Company) CompanyNotificationUnregister(ctx context.Context, request o
 
 // CompanySearchName - Retrieves a list of companies from the KYC API company index
 // KYC API company index lookup for companies with a certain name in a country.
-func (s *v1Company) CompanySearchName(ctx context.Context, request operations.CompanySearchNameRequest) (*operations.CompanySearchNameResponse, error) {
+func (s *v1Company) CompanySearchName(ctx context.Context, request operations.CompanySearchNameRequest, security operations.CompanySearchNameSecurity) (*operations.CompanySearchNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/name/{country}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/name/{country}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1110,20 +1110,20 @@ func (s *v1Company) CompanySearchName(ctx context.Context, request operations.Co
 
 // CompanySearchNumber - Retrieves a list of companies from the KYC API company index
 // KYC API company index lookup for companies with a certain register number in a country.
-func (s *v1Company) CompanySearchNumber(ctx context.Context, request operations.CompanySearchNumberRequest) (*operations.CompanySearchNumberResponse, error) {
+func (s *v1Company) CompanySearchNumber(ctx context.Context, request operations.CompanySearchNumberRequest, security operations.CompanySearchNumberSecurity) (*operations.CompanySearchNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/number/{country}/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/number/{country}/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

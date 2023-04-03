@@ -8,18 +8,13 @@ import (
 )
 
 type FetchOperationsSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type FetchOperationsQueryParams struct {
-	// Optional comma-separated list of resource owner unique identifiers by which to filter results.
-	ResourceOwnerID *string `queryParam:"style=form,explode=true,name=resourceOwnerId"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchOperationsRequest struct {
-	QueryParams FetchOperationsQueryParams
-	Security    FetchOperationsSecurity
+	// Optional comma-separated list of resource owner unique identifiers by which to filter results.
+	ResourceOwnerID *string `queryParam:"style=form,explode=true,name=resourceOwnerId"`
 }
 
 type FetchOperationsResponse struct {

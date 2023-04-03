@@ -50,7 +50,7 @@ func (e *GETListDomainsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListDomainsQueryParams struct {
+type GETListDomainsRequest struct {
 	AWSAccessKeyID string                   `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETListDomainsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.
@@ -62,10 +62,6 @@ type GETListDomainsQueryParams struct {
 	SignatureVersion string                    `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                    `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETListDomainsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListDomainsRequest struct {
-	QueryParams GETListDomainsQueryParams
 }
 
 type GETListDomainsResponse struct {

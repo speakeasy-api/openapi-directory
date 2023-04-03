@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetStatisticsListPathParams struct {
-	// Id of the group
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GroupsGetStatisticsListGroupByEnum - The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
 type GroupsGetStatisticsListGroupByEnum string
 
@@ -101,20 +96,17 @@ func (e *GroupsGetStatisticsListTimeFrameEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GroupsGetStatisticsListQueryParams struct {
+type GroupsGetStatisticsListRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
 	GroupBy *GroupsGetStatisticsListGroupByEnum `queryParam:"style=form,explode=true,name=groupBy"`
+	// Id of the group
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Timeframe of the request. See list at $timeframeList
 	TimeFrame GroupsGetStatisticsListTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type GroupsGetStatisticsListRequest struct {
-	PathParams  GroupsGetStatisticsListPathParams
-	QueryParams GroupsGetStatisticsListQueryParams
 }
 
 type GroupsGetStatisticsListResponse struct {

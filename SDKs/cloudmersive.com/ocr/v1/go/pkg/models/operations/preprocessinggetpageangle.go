@@ -8,7 +8,7 @@ import (
 )
 
 type PreprocessingGetPageAngleSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=Apikey"`
 }
 
 type PreprocessingGetPageAngleRequestBodyImageFile struct {
@@ -19,11 +19,6 @@ type PreprocessingGetPageAngleRequestBodyImageFile struct {
 type PreprocessingGetPageAngleRequestBody struct {
 	// Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
 	ImageFile PreprocessingGetPageAngleRequestBodyImageFile `multipartForm:"file"`
-}
-
-type PreprocessingGetPageAngleRequest struct {
-	Request  PreprocessingGetPageAngleRequestBody `request:"mediaType=multipart/form-data"`
-	Security PreprocessingGetPageAngleSecurity
 }
 
 type PreprocessingGetPageAngleResponse struct {

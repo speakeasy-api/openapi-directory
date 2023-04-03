@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateUserPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
 // UpdateUserXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type UpdateUserXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *UpdateUserXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateUserHeaders struct {
+type UpdateUserRequest struct {
+	UpdateUserRequest shared.UpdateUserRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *UpdateUserXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type UpdateUserRequest struct {
-	PathParams UpdateUserPathParams
-	Headers    UpdateUserHeaders
-	Request    shared.UpdateUserRequest `request:"mediaType=application/json"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type UpdateUserResponse struct {

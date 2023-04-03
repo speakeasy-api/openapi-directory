@@ -36,19 +36,11 @@ func (e *RequestPasswordPoliciesForPasswordTypePasswordTypeEnum) UnmarshalJSON(d
 	}
 }
 
-type RequestPasswordPoliciesForPasswordTypePathParams struct {
-	// Password type
-	PasswordType RequestPasswordPoliciesForPasswordTypePasswordTypeEnum `pathParam:"style=simple,explode=false,name=password_type"`
-}
-
-type RequestPasswordPoliciesForPasswordTypeHeaders struct {
+type RequestPasswordPoliciesForPasswordTypeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestPasswordPoliciesForPasswordTypeRequest struct {
-	PathParams RequestPasswordPoliciesForPasswordTypePathParams
-	Headers    RequestPasswordPoliciesForPasswordTypeHeaders
+	// Password type
+	PasswordType RequestPasswordPoliciesForPasswordTypePasswordTypeEnum `pathParam:"style=simple,explode=false,name=password_type"`
 }
 
 type RequestPasswordPoliciesForPasswordTypeResponse struct {

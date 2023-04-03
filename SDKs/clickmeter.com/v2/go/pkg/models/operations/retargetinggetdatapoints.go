@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingGetDatapointsPathParams struct {
-	// Id of the retargeting script
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // RetargetingGetDatapointsSortDirectionEnum - Direction of sort "asc" or "desc"
 type RetargetingGetDatapointsSortDirectionEnum string
 
@@ -68,11 +63,13 @@ func (e *RetargetingGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RetargetingGetDatapointsQueryParams struct {
+type RetargetingGetDatapointsRequest struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
 	CreatedBefore *string `queryParam:"style=form,explode=true,name=createdBefore"`
+	// Id of the retargeting script
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Maximum elements to retrieve. Default to 20 if not specified.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start when retrieving elements. Default is 0 if not specified.
@@ -89,11 +86,6 @@ type RetargetingGetDatapointsQueryParams struct {
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
-}
-
-type RetargetingGetDatapointsRequest struct {
-	PathParams  RetargetingGetDatapointsPathParams
-	QueryParams RetargetingGetDatapointsQueryParams
 }
 
 type RetargetingGetDatapointsResponse struct {

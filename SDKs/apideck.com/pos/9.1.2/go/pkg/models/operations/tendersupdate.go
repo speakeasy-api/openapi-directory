@@ -8,34 +8,21 @@ import (
 )
 
 type TendersUpdateSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type TendersUpdatePathParams struct {
+type TendersUpdateRequest struct {
+	TenderInput shared.TenderInput `request:"mediaType=application/json"`
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TendersUpdateQueryParams struct {
 	// Include raw response. Mostly used for debugging purposes
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type TendersUpdateHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type TendersUpdateRequest struct {
-	PathParams  TendersUpdatePathParams
-	QueryParams TendersUpdateQueryParams
-	Headers     TendersUpdateHeaders
-	Request     shared.TenderInput `request:"mediaType=application/json"`
-	Security    TendersUpdateSecurity
 }
 
 type TendersUpdateResponse struct {

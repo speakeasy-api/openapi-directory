@@ -7,26 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTypedLinkFacetInformationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The Amazon Resource Name (ARN) that is associated with the schema. For more information, see <a>arns</a>.
-	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
 type GetTypedLinkFacetInformationRequestBody struct {
 	// The unique name of the typed link facet.
 	Name string `json:"Name"`
 }
 
 type GetTypedLinkFacetInformationRequest struct {
-	Headers GetTypedLinkFacetInformationHeaders
-	Request GetTypedLinkFacetInformationRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetTypedLinkFacetInformationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) that is associated with the schema. For more information, see <a>arns</a>.
+	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
 }
 
 type GetTypedLinkFacetInformationResponse struct {

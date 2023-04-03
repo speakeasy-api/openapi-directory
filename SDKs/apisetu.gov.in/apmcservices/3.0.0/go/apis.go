@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Apmcl - Agriculture Produce Market Committee License
 // API to verify Agriculture Produce Market Committee License.
-func (s *apIs) Apmcl(ctx context.Context, request operations.ApmclRequest) (*operations.ApmclResponse, error) {
+func (s *apIs) Apmcl(ctx context.Context, request operations.ApmclRequestBody, security operations.ApmclSecurity) (*operations.ApmclResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apmcl/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Apmcl(ctx context.Context, request operations.ApmclRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

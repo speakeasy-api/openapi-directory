@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteContinuousDeploymentPolicy20200531PathParams struct {
+type DeleteContinuousDeploymentPolicy20200531Request struct {
 	// The identifier of the continuous deployment policy that you are deleting.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteContinuousDeploymentPolicy20200531Headers struct {
 	// The current version (<code>ETag</code> value) of the continuous deployment policy that you are deleting.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteContinuousDeploymentPolicy20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteContinuousDeploymentPolicy20200531Request struct {
-	PathParams DeleteContinuousDeploymentPolicy20200531PathParams
-	Headers    DeleteContinuousDeploymentPolicy20200531Headers
 }
 
 type DeleteContinuousDeploymentPolicy20200531Response struct {

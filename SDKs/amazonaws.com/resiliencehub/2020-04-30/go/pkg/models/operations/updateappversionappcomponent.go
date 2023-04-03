@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAppVersionAppComponentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateAppVersionAppComponentRequestBody struct {
 	// Currently, there is no supported additional information for Application Components.
 	AdditionalInfo map[string][]string `json:"additionalInfo,omitempty"`
@@ -31,8 +21,14 @@ type UpdateAppVersionAppComponentRequestBody struct {
 }
 
 type UpdateAppVersionAppComponentRequest struct {
-	Headers UpdateAppVersionAppComponentHeaders
-	Request UpdateAppVersionAppComponentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAppVersionAppComponentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateAppVersionAppComponentResponse struct {

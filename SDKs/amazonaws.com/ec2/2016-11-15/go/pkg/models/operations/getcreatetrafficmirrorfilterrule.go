@@ -110,7 +110,7 @@ func (e *GETCreateTrafficMirrorFilterRuleVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETCreateTrafficMirrorFilterRuleQueryParams struct {
+type GETCreateTrafficMirrorFilterRuleRequest struct {
 	Action GETCreateTrafficMirrorFilterRuleActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -137,21 +137,13 @@ type GETCreateTrafficMirrorFilterRuleQueryParams struct {
 	// The ID of the filter that this rule is associated with.
 	TrafficMirrorFilterID string                                      `queryParam:"style=form,explode=true,name=TrafficMirrorFilterId"`
 	Version               GETCreateTrafficMirrorFilterRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateTrafficMirrorFilterRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateTrafficMirrorFilterRuleRequest struct {
-	QueryParams GETCreateTrafficMirrorFilterRuleQueryParams
-	Headers     GETCreateTrafficMirrorFilterRuleHeaders
+	XAmzAlgorithm         *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateTrafficMirrorFilterRuleResponse struct {

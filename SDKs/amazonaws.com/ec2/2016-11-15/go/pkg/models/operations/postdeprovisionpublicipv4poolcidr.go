@@ -50,25 +50,17 @@ func (e *POSTDeprovisionPublicIpv4PoolCidrVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTDeprovisionPublicIpv4PoolCidrQueryParams struct {
-	Action  POSTDeprovisionPublicIpv4PoolCidrActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeprovisionPublicIpv4PoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeprovisionPublicIpv4PoolCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeprovisionPublicIpv4PoolCidrRequest struct {
-	QueryParams POSTDeprovisionPublicIpv4PoolCidrQueryParams
-	Headers     POSTDeprovisionPublicIpv4PoolCidrHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeprovisionPublicIpv4PoolCidrActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTDeprovisionPublicIpv4PoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeprovisionPublicIpv4PoolCidrResponse struct {

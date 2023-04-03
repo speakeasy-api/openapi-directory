@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBillingPlanUsageSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetBillingPlanUsageRequest struct {
-	Security GetBillingPlanUsageSecurity
-}
-
 type GetBillingPlanUsageResponse struct {
 	// successful operation
 	BillingPlanUsage *shared.BillingPlanUsage

@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetCheckForUpdateRequest{
-        QueryParams: operations.GetCheckForUpdateQueryParams{
-            IsTestflight: 548814,
-        },
+        IsTestflight: 548814,
     }
 
     ctx := context.Background()

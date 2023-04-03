@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisassociateAttributeGroupPathParams struct {
-	//  The name, ID, or ARN of the application.
-	Application string `pathParam:"style=simple,explode=false,name=application"`
-	//  The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
-	AttributeGroup string `pathParam:"style=simple,explode=false,name=attributeGroup"`
-}
-
-type DisassociateAttributeGroupHeaders struct {
+type DisassociateAttributeGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DisassociateAttributeGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateAttributeGroupRequest struct {
-	PathParams DisassociateAttributeGroupPathParams
-	Headers    DisassociateAttributeGroupHeaders
+	//  The name, ID, or ARN of the application.
+	Application string `pathParam:"style=simple,explode=false,name=application"`
+	//  The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
+	AttributeGroup string `pathParam:"style=simple,explode=false,name=attributeGroup"`
 }
 
 type DisassociateAttributeGroupResponse struct {

@@ -50,30 +50,22 @@ func (e *GETListManagedInsightRulesVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETListManagedInsightRulesQueryParams struct {
+type GETListManagedInsightRulesRequest struct {
 	Action GETListManagedInsightRulesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	//  The maximum number of results to return in one operation. If you omit this parameter, the default number is used. The default number is <code>100</code>.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	//  Include this value to get the next set of rules if the value was returned by the previous operation.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	//  The ARN of an Amazon Web Services resource that has managed Contributor Insights rules.
-	ResourceARN string                                `queryParam:"style=form,explode=true,name=ResourceARN"`
-	Version     GETListManagedInsightRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListManagedInsightRulesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListManagedInsightRulesRequest struct {
-	QueryParams GETListManagedInsightRulesQueryParams
-	Headers     GETListManagedInsightRulesHeaders
+	ResourceARN       string                                `queryParam:"style=form,explode=true,name=ResourceARN"`
+	Version           GETListManagedInsightRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListManagedInsightRulesResponse struct {

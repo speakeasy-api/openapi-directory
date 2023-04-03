@@ -104,7 +104,7 @@ func (e *GETListTypeRegistrationsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListTypeRegistrationsQueryParams struct {
+type GETListTypeRegistrationsRequest struct {
 	Action GETListTypeRegistrationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The maximum number of results to be returned with a single call. If the number of available results exceeds this maximum, the response includes a <code>NextToken</code> value that you can assign to the <code>NextToken</code> request parameter to get the next set of results.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
@@ -117,23 +117,15 @@ type GETListTypeRegistrationsQueryParams struct {
 	// <p>The Amazon Resource Name (ARN) of the extension.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
 	TypeArn *string `queryParam:"style=form,explode=true,name=TypeArn"`
 	// <p>The name of the extension.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
-	TypeName *string                             `queryParam:"style=form,explode=true,name=TypeName"`
-	Version  GETListTypeRegistrationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListTypeRegistrationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListTypeRegistrationsRequest struct {
-	QueryParams GETListTypeRegistrationsQueryParams
-	Headers     GETListTypeRegistrationsHeaders
+	TypeName          *string                             `queryParam:"style=form,explode=true,name=TypeName"`
+	Version           GETListTypeRegistrationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListTypeRegistrationsResponse struct {

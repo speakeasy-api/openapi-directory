@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCatalogItemsQueryParams struct {
+type ListCatalogItemsRequest struct {
 	// Filters the results by EC2 family (for example, M5).
 	Ec2FamilyFilter []string `queryParam:"style=form,explode=true,name=EC2FamilyFilter"`
 	// Filters the results by item class.
@@ -16,21 +16,13 @@ type ListCatalogItemsQueryParams struct {
 	NextToken       *string                       `queryParam:"style=form,explode=true,name=NextToken"`
 	// Filters the results by storage option.
 	SupportedStorageFilter []shared.SupportedStorageEnumEnum `queryParam:"style=form,explode=true,name=SupportedStorageFilter"`
-}
-
-type ListCatalogItemsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCatalogItemsRequest struct {
-	QueryParams ListCatalogItemsQueryParams
-	Headers     ListCatalogItemsHeaders
+	XAmzAlgorithm          *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListCatalogItemsResponse struct {

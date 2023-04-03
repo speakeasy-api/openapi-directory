@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteOpenIDLoginQueryParams struct {
+type CompleteOpenIDLoginRequest struct {
 	// Authorization code
 	Code string `queryParam:"style=form,explode=true,name=code"`
 	// Identity token
 	IDToken *string `queryParam:"style=form,explode=true,name=id_token"`
 	// Authentication state
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type CompleteOpenIDLoginRequest struct {
-	QueryParams CompleteOpenIDLoginQueryParams
 }
 
 type CompleteOpenIDLoginResponse struct {

@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDatalakeAutoEnableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateDatalakeAutoEnableRequestBody struct {
 	// Enable Security Lake with the specified configuration settings to begin collecting security data for new accounts in your organization.
 	ConfigurationForNewAccounts []shared.AutoEnableNewRegionConfiguration `json:"configurationForNewAccounts"`
 }
 
 type CreateDatalakeAutoEnableRequest struct {
-	Headers CreateDatalakeAutoEnableHeaders
-	Request CreateDatalakeAutoEnableRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDatalakeAutoEnableRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateDatalakeAutoEnableResponse struct {

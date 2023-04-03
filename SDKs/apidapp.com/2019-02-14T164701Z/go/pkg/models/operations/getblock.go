@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetBlockSecurity struct {
-	Key2 shared.SchemeKey2 `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBlockRequest struct {
-	Security GetBlockSecurity
-}
 
 type GetBlockResponse struct {
 	ContentType string

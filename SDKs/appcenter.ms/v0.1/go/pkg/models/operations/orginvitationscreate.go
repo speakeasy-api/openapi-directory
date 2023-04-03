@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrgInvitationsCreateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrgInvitationsCreatePathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // OrgInvitationsCreateRequestBodyRoleEnum - The user's role
@@ -54,10 +48,10 @@ type OrgInvitationsCreateRequestBody struct {
 }
 
 type OrgInvitationsCreateRequest struct {
-	PathParams OrgInvitationsCreatePathParams
 	// The email of the user to invite
-	Request  OrgInvitationsCreateRequestBody `request:"mediaType=application/json"`
-	Security OrgInvitationsCreateSecurity
+	RequestBody OrgInvitationsCreateRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum string

@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AnalyticsDistributionReleaseCountsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AnalyticsDistributionReleaseCountsPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AnalyticsDistributionReleaseCountsRequestBodyReleases struct {
@@ -35,10 +27,12 @@ type AnalyticsDistributionReleaseCountsRequestBody struct {
 }
 
 type AnalyticsDistributionReleaseCountsRequest struct {
-	PathParams AnalyticsDistributionReleaseCountsPathParams
 	// The releases to retrieve.
-	Request  AnalyticsDistributionReleaseCountsRequestBody `request:"mediaType=application/json"`
-	Security AnalyticsDistributionReleaseCountsSecurity
+	RequestBody AnalyticsDistributionReleaseCountsRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type AnalyticsDistributionReleaseCountsDefaultApplicationJSONErrorCodeEnum string

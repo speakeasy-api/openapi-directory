@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListIndicesQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token used to get the next set of results, or <code>null</code> if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListIndicesHeaders struct {
+type ListIndicesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListIndicesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListIndicesRequest struct {
-	QueryParams ListIndicesQueryParams
-	Headers     ListIndicesHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token used to get the next set of results, or <code>null</code> if there are no additional results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListIndicesResponse struct {

@@ -4,23 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetMediaDataByKeySecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetMediaDataByKeyPathParams struct {
+type GetMediaDataByKeyRequest struct {
 	// Media file type, available types: bmp, gif, jpg, m4a, mp3, mp4, png, wav
 	Extension string `pathParam:"style=simple,explode=false,name=extension"`
 	// A hash-key of a media resource
 	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type GetMediaDataByKeyRequest struct {
-	PathParams GetMediaDataByKeyPathParams
-	Security   GetMediaDataByKeySecurity
 }
 
 type GetMediaDataByKeyResponse struct {

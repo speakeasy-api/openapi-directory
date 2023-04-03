@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAppPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type UpdateAppHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAppRequestBodyAutoBranchCreationConfig -  Describes the automated branch creation configuration.
 type UpdateAppRequestBodyAutoBranchCreationConfig struct {
 	BasicAuthCredentials       *string           `json:"basicAuthCredentials,omitempty"`
@@ -105,9 +90,16 @@ type UpdateAppRequestBody struct {
 }
 
 type UpdateAppRequest struct {
-	PathParams UpdateAppPathParams
-	Headers    UpdateAppHeaders
-	Request    UpdateAppRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAppRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type UpdateAppResponse struct {

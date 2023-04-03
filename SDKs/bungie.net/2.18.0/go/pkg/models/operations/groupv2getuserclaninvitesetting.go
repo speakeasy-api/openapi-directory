@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2GetUserClanInviteSettingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2GetUserClanInviteSettingPathParams struct {
-	// The Destiny membership type of the account we wish to access settings.
-	MType int `pathParam:"style=simple,explode=false,name=mType"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2GetUserClanInviteSettingRequest struct {
-	PathParams GroupV2GetUserClanInviteSettingPathParams
-	Security   GroupV2GetUserClanInviteSettingSecurity
+	// The Destiny membership type of the account we wish to access settings.
+	MType int `pathParam:"style=simple,explode=false,name=mType"`
 }
 
 // GroupV2GetUserClanInviteSetting200Wildcard - Look at the Response property for more information about the nature of this response

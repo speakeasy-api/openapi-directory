@@ -30,7 +30,8 @@ func (e *ListHsmsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListHsmsHeaders struct {
+type ListHsmsRequest struct {
+	ListHsmsRequest   shared.ListHsmsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ListHsmsHeaders struct {
 	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListHsmsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListHsmsRequest struct {
-	Headers ListHsmsHeaders
-	Request shared.ListHsmsRequest `request:"mediaType=application/json"`
 }
 
 type ListHsmsResponse struct {

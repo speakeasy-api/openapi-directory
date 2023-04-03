@@ -35,7 +35,7 @@ func newWebBackend(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetStateType - Fetch the current state type for a connection.
-func (s *webBackend) GetStateType(ctx context.Context, request operations.GetStateTypeRequest) (*operations.GetStateTypeResponse, error) {
+func (s *webBackend) GetStateType(ctx context.Context, request shared.ConnectionIDRequestBody) (*operations.GetStateTypeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/state/get_type"
 
@@ -153,7 +153,7 @@ func (s *webBackend) WebBackendCheckUpdates(ctx context.Context) (*operations.We
 }
 
 // WebBackendCreateConnection - Create a connection
-func (s *webBackend) WebBackendCreateConnection(ctx context.Context, request operations.WebBackendCreateConnectionRequest) (*operations.WebBackendCreateConnectionResponse, error) {
+func (s *webBackend) WebBackendCreateConnection(ctx context.Context, request shared.WebBackendConnectionCreate) (*operations.WebBackendCreateConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/connections/create"
 
@@ -217,7 +217,7 @@ func (s *webBackend) WebBackendCreateConnection(ctx context.Context, request ope
 }
 
 // WebBackendGetConnection - Get a connection
-func (s *webBackend) WebBackendGetConnection(ctx context.Context, request operations.WebBackendGetConnectionRequest) (*operations.WebBackendGetConnectionResponse, error) {
+func (s *webBackend) WebBackendGetConnection(ctx context.Context, request shared.WebBackendConnectionRequestBody) (*operations.WebBackendGetConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/connections/get"
 
@@ -291,7 +291,7 @@ func (s *webBackend) WebBackendGetConnection(ctx context.Context, request operat
 }
 
 // WebBackendGetWorkspaceState - Returns the current state of a workspace
-func (s *webBackend) WebBackendGetWorkspaceState(ctx context.Context, request operations.WebBackendGetWorkspaceStateRequest) (*operations.WebBackendGetWorkspaceStateResponse, error) {
+func (s *webBackend) WebBackendGetWorkspaceState(ctx context.Context, request shared.WebBackendWorkspaceState) (*operations.WebBackendGetWorkspaceStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/workspace/state"
 
@@ -362,7 +362,7 @@ func (s *webBackend) WebBackendGetWorkspaceState(ctx context.Context, request op
 }
 
 // WebBackendListConnectionsForWorkspace - Returns all non-deleted connections for a workspace.
-func (s *webBackend) WebBackendListConnectionsForWorkspace(ctx context.Context, request operations.WebBackendListConnectionsForWorkspaceRequest) (*operations.WebBackendListConnectionsForWorkspaceResponse, error) {
+func (s *webBackend) WebBackendListConnectionsForWorkspace(ctx context.Context, request shared.WebBackendConnectionListRequestBody) (*operations.WebBackendListConnectionsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/connections/list"
 
@@ -492,7 +492,7 @@ func (s *webBackend) WebBackendListGeographies(ctx context.Context) (*operations
 // Note that if a catalog is present in the request body, the connection's entire catalog will be replaced
 // with the catalog from the request. This means that to modify a single stream, the entire new catalog
 // containing the updated stream needs to be sent.
-func (s *webBackend) WebBackendUpdateConnection(ctx context.Context, request operations.WebBackendUpdateConnectionRequest) (*operations.WebBackendUpdateConnectionResponse, error) {
+func (s *webBackend) WebBackendUpdateConnection(ctx context.Context, request shared.WebBackendConnectionUpdate) (*operations.WebBackendUpdateConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/connections/update"
 

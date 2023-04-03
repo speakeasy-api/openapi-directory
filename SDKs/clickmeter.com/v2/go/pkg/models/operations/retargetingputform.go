@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingPutFormRequest struct {
-	// The body of the retargeting script
-	Request shared.APICoreDtoRetargetingRetargetingScript `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type RetargetingPutFormResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

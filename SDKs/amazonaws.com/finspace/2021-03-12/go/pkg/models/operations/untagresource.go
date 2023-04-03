@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type UntagResourcePathParams struct {
-	// A FinSpace resource from which you want to remove a tag or tags. The value for this parameter is an Amazon Resource Name (ARN).
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type UntagResourceQueryParams struct {
-	// The tag keys (names) of one or more tags to be removed.
-	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
-}
-
-type UntagResourceHeaders struct {
+type UntagResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type UntagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UntagResourceRequest struct {
-	PathParams  UntagResourcePathParams
-	QueryParams UntagResourceQueryParams
-	Headers     UntagResourceHeaders
+	// A FinSpace resource from which you want to remove a tag or tags. The value for this parameter is an Amazon Resource Name (ARN).
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
+	// The tag keys (names) of one or more tags to be removed.
+	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
 }
 
 type UntagResourceResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveSyncConfigRequest struct {
-	Request shared.SaveAttemptSyncConfigRequestBody `request:"mediaType=application/json"`
-}
-
 type SaveSyncConfigResponse struct {
 	ContentType string
 	// Successful Operation

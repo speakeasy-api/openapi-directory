@@ -116,7 +116,7 @@ func (s *SDK) AddFacetToObject(ctx context.Context, request operations.AddFacetT
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/facets#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AddFacetToObject(ctx context.Context, request operations.AddFacetT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -262,7 +262,7 @@ func (s *SDK) ApplySchema(ctx context.Context, request operations.ApplySchemaReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/apply#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -277,7 +277,7 @@ func (s *SDK) ApplySchema(ctx context.Context, request operations.ApplySchemaReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -398,7 +398,7 @@ func (s *SDK) AttachObject(ctx context.Context, request operations.AttachObjectR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/attach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,7 +413,7 @@ func (s *SDK) AttachObject(ctx context.Context, request operations.AttachObjectR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -566,7 +566,7 @@ func (s *SDK) AttachPolicy(ctx context.Context, request operations.AttachPolicyR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/policy/attach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -581,7 +581,7 @@ func (s *SDK) AttachPolicy(ctx context.Context, request operations.AttachPolicyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -712,7 +712,7 @@ func (s *SDK) AttachToIndex(ctx context.Context, request operations.AttachToInde
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/index/attach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -727,7 +727,7 @@ func (s *SDK) AttachToIndex(ctx context.Context, request operations.AttachToInde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -888,7 +888,7 @@ func (s *SDK) AttachTypedLink(ctx context.Context, request operations.AttachType
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/attach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -903,7 +903,7 @@ func (s *SDK) AttachTypedLink(ctx context.Context, request operations.AttachType
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1046,7 +1046,7 @@ func (s *SDK) BatchRead(ctx context.Context, request operations.BatchReadRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/batchread#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1061,7 +1061,7 @@ func (s *SDK) BatchRead(ctx context.Context, request operations.BatchReadRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1172,7 +1172,7 @@ func (s *SDK) BatchWrite(ctx context.Context, request operations.BatchWriteReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/batchwrite#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1187,7 +1187,7 @@ func (s *SDK) BatchWrite(ctx context.Context, request operations.BatchWriteReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1308,7 +1308,7 @@ func (s *SDK) CreateDirectory(ctx context.Context, request operations.CreateDire
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/directory/create#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1323,7 +1323,7 @@ func (s *SDK) CreateDirectory(ctx context.Context, request operations.CreateDire
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1444,7 +1444,7 @@ func (s *SDK) CreateFacet(ctx context.Context, request operations.CreateFacetReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/facet/create#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1459,7 +1459,7 @@ func (s *SDK) CreateFacet(ctx context.Context, request operations.CreateFacetReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1600,7 +1600,7 @@ func (s *SDK) CreateIndex(ctx context.Context, request operations.CreateIndexReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/index#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1615,7 +1615,7 @@ func (s *SDK) CreateIndex(ctx context.Context, request operations.CreateIndexReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1766,7 +1766,7 @@ func (s *SDK) CreateObject(ctx context.Context, request operations.CreateObjectR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1781,7 +1781,7 @@ func (s *SDK) CreateObject(ctx context.Context, request operations.CreateObjectR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1932,7 +1932,7 @@ func (s *SDK) CreateSchema(ctx context.Context, request operations.CreateSchemaR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/create"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1947,7 +1947,7 @@ func (s *SDK) CreateSchema(ctx context.Context, request operations.CreateSchemaR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2060,7 +2060,7 @@ func (s *SDK) CreateTypedLinkFacet(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/facet/create#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2075,7 +2075,7 @@ func (s *SDK) CreateTypedLinkFacet(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2221,7 +2221,7 @@ func (s *SDK) DeleteDirectory(ctx context.Context, request operations.DeleteDire
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2352,7 +2352,7 @@ func (s *SDK) DeleteFacet(ctx context.Context, request operations.DeleteFacetReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/facet/delete#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2367,7 +2367,7 @@ func (s *SDK) DeleteFacet(ctx context.Context, request operations.DeleteFacetReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2498,7 +2498,7 @@ func (s *SDK) DeleteObject(ctx context.Context, request operations.DeleteObjectR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/delete#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2513,7 +2513,7 @@ func (s *SDK) DeleteObject(ctx context.Context, request operations.DeleteObjectR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2649,7 +2649,7 @@ func (s *SDK) DeleteSchema(ctx context.Context, request operations.DeleteSchemaR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2770,7 +2770,7 @@ func (s *SDK) DeleteTypedLinkFacet(ctx context.Context, request operations.Delet
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/facet/delete#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2785,7 +2785,7 @@ func (s *SDK) DeleteTypedLinkFacet(ctx context.Context, request operations.Delet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2906,7 +2906,7 @@ func (s *SDK) DetachFromIndex(ctx context.Context, request operations.DetachFrom
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/index/detach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2921,7 +2921,7 @@ func (s *SDK) DetachFromIndex(ctx context.Context, request operations.DetachFrom
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3062,7 +3062,7 @@ func (s *SDK) DetachObject(ctx context.Context, request operations.DetachObjectR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/detach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3077,7 +3077,7 @@ func (s *SDK) DetachObject(ctx context.Context, request operations.DetachObjectR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3208,7 +3208,7 @@ func (s *SDK) DetachPolicy(ctx context.Context, request operations.DetachPolicyR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/policy/detach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3223,7 +3223,7 @@ func (s *SDK) DetachPolicy(ctx context.Context, request operations.DetachPolicyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3354,7 +3354,7 @@ func (s *SDK) DetachTypedLink(ctx context.Context, request operations.DetachType
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/detach#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3369,7 +3369,7 @@ func (s *SDK) DetachTypedLink(ctx context.Context, request operations.DetachType
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3496,7 +3496,7 @@ func (s *SDK) DisableDirectory(ctx context.Context, request operations.DisableDi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3622,7 +3622,7 @@ func (s *SDK) EnableDirectory(ctx context.Context, request operations.EnableDire
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3743,7 +3743,7 @@ func (s *SDK) GetAppliedSchemaVersion(ctx context.Context, request operations.Ge
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/getappliedschema"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3758,7 +3758,7 @@ func (s *SDK) GetAppliedSchemaVersion(ctx context.Context, request operations.Ge
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3874,7 +3874,7 @@ func (s *SDK) GetDirectory(ctx context.Context, request operations.GetDirectoryR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3975,7 +3975,7 @@ func (s *SDK) GetFacet(ctx context.Context, request operations.GetFacetRequest) 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/facet#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3990,7 +3990,7 @@ func (s *SDK) GetFacet(ctx context.Context, request operations.GetFacetRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4111,7 +4111,7 @@ func (s *SDK) GetLinkAttributes(ctx context.Context, request operations.GetLinkA
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/attributes/get#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4126,7 +4126,7 @@ func (s *SDK) GetLinkAttributes(ctx context.Context, request operations.GetLinkA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4257,7 +4257,7 @@ func (s *SDK) GetObjectAttributes(ctx context.Context, request operations.GetObj
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/attributes/get#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4272,7 +4272,7 @@ func (s *SDK) GetObjectAttributes(ctx context.Context, request operations.GetObj
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4403,7 +4403,7 @@ func (s *SDK) GetObjectInformation(ctx context.Context, request operations.GetOb
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/information#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4418,7 +4418,7 @@ func (s *SDK) GetObjectInformation(ctx context.Context, request operations.GetOb
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4544,7 +4544,7 @@ func (s *SDK) GetSchemaAsJSON(ctx context.Context, request operations.GetSchemaA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4657,7 +4657,7 @@ func (s *SDK) GetTypedLinkFacetInformation(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/facet/get#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4672,7 +4672,7 @@ func (s *SDK) GetTypedLinkFacetInformation(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4803,7 +4803,7 @@ func (s *SDK) ListAppliedSchemaArns(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/applied"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4818,9 +4818,9 @@ func (s *SDK) ListAppliedSchemaArns(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4943,7 +4943,7 @@ func (s *SDK) ListAttachedIndices(ctx context.Context, request operations.ListAt
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/indices#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4958,9 +4958,9 @@ func (s *SDK) ListAttachedIndices(ctx context.Context, request operations.ListAt
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5083,7 +5083,7 @@ func (s *SDK) ListDevelopmentSchemaArns(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/development"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5098,9 +5098,9 @@ func (s *SDK) ListDevelopmentSchemaArns(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5223,7 +5223,7 @@ func (s *SDK) ListDirectories(ctx context.Context, request operations.ListDirect
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/directory/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5238,9 +5238,9 @@ func (s *SDK) ListDirectories(ctx context.Context, request operations.ListDirect
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5353,7 +5353,7 @@ func (s *SDK) ListFacetAttributes(ctx context.Context, request operations.ListFa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/facet/attributes#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5368,9 +5368,9 @@ func (s *SDK) ListFacetAttributes(ctx context.Context, request operations.ListFa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5503,7 +5503,7 @@ func (s *SDK) ListFacetNames(ctx context.Context, request operations.ListFacetNa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/facet/list#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5518,9 +5518,9 @@ func (s *SDK) ListFacetNames(ctx context.Context, request operations.ListFacetNa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5643,7 +5643,7 @@ func (s *SDK) ListIncomingTypedLinks(ctx context.Context, request operations.Lis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/incoming#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5658,7 +5658,7 @@ func (s *SDK) ListIncomingTypedLinks(ctx context.Context, request operations.Lis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5799,7 +5799,7 @@ func (s *SDK) ListIndex(ctx context.Context, request operations.ListIndexRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/index/targets#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5814,9 +5814,9 @@ func (s *SDK) ListIndex(ctx context.Context, request operations.ListIndexRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5969,7 +5969,7 @@ func (s *SDK) ListObjectAttributes(ctx context.Context, request operations.ListO
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/attributes#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5984,9 +5984,9 @@ func (s *SDK) ListObjectAttributes(ctx context.Context, request operations.ListO
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6129,7 +6129,7 @@ func (s *SDK) ListObjectChildren(ctx context.Context, request operations.ListObj
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/children#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6144,9 +6144,9 @@ func (s *SDK) ListObjectChildren(ctx context.Context, request operations.ListObj
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6289,7 +6289,7 @@ func (s *SDK) ListObjectParentPaths(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/parentpaths#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6304,9 +6304,9 @@ func (s *SDK) ListObjectParentPaths(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6439,7 +6439,7 @@ func (s *SDK) ListObjectParents(ctx context.Context, request operations.ListObje
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/parent#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6454,9 +6454,9 @@ func (s *SDK) ListObjectParents(ctx context.Context, request operations.ListObje
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6599,7 +6599,7 @@ func (s *SDK) ListObjectPolicies(ctx context.Context, request operations.ListObj
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/policy#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6614,9 +6614,9 @@ func (s *SDK) ListObjectPolicies(ctx context.Context, request operations.ListObj
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6749,7 +6749,7 @@ func (s *SDK) ListOutgoingTypedLinks(ctx context.Context, request operations.Lis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/outgoing#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6764,7 +6764,7 @@ func (s *SDK) ListOutgoingTypedLinks(ctx context.Context, request operations.Lis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6905,7 +6905,7 @@ func (s *SDK) ListPolicyAttachments(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/policy/attachment#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6920,9 +6920,9 @@ func (s *SDK) ListPolicyAttachments(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7065,7 +7065,7 @@ func (s *SDK) ListPublishedSchemaArns(ctx context.Context, request operations.Li
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/published"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7080,9 +7080,9 @@ func (s *SDK) ListPublishedSchemaArns(ctx context.Context, request operations.Li
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7205,7 +7205,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/tags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7220,9 +7220,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7345,7 +7345,7 @@ func (s *SDK) ListTypedLinkFacetAttributes(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/facet/attributes#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7360,9 +7360,9 @@ func (s *SDK) ListTypedLinkFacetAttributes(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7495,7 +7495,7 @@ func (s *SDK) ListTypedLinkFacetNames(ctx context.Context, request operations.Li
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/facet/list#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7510,9 +7510,9 @@ func (s *SDK) ListTypedLinkFacetNames(ctx context.Context, request operations.Li
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7635,7 +7635,7 @@ func (s *SDK) LookupPolicy(ctx context.Context, request operations.LookupPolicyR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/policy/lookup#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7650,9 +7650,9 @@ func (s *SDK) LookupPolicy(ctx context.Context, request operations.LookupPolicyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7785,7 +7785,7 @@ func (s *SDK) PublishSchema(ctx context.Context, request operations.PublishSchem
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/publish#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7800,7 +7800,7 @@ func (s *SDK) PublishSchema(ctx context.Context, request operations.PublishSchem
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7921,7 +7921,7 @@ func (s *SDK) PutSchemaFromJSON(ctx context.Context, request operations.PutSchem
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/json#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7936,7 +7936,7 @@ func (s *SDK) PutSchemaFromJSON(ctx context.Context, request operations.PutSchem
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8057,7 +8057,7 @@ func (s *SDK) RemoveFacetFromObject(ctx context.Context, request operations.Remo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/facets/delete#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8072,7 +8072,7 @@ func (s *SDK) RemoveFacetFromObject(ctx context.Context, request operations.Remo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8203,7 +8203,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/tags/add"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8218,7 +8218,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8339,7 +8339,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/tags/remove"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8354,7 +8354,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8475,7 +8475,7 @@ func (s *SDK) UpdateFacet(ctx context.Context, request operations.UpdateFacetReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/facet#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8490,7 +8490,7 @@ func (s *SDK) UpdateFacet(ctx context.Context, request operations.UpdateFacetReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8631,7 +8631,7 @@ func (s *SDK) UpdateLinkAttributes(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/attributes/update#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8646,7 +8646,7 @@ func (s *SDK) UpdateLinkAttributes(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8777,7 +8777,7 @@ func (s *SDK) UpdateObjectAttributes(ctx context.Context, request operations.Upd
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/object/update#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8792,7 +8792,7 @@ func (s *SDK) UpdateObjectAttributes(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8933,7 +8933,7 @@ func (s *SDK) UpdateSchema(ctx context.Context, request operations.UpdateSchemaR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/update#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8948,7 +8948,7 @@ func (s *SDK) UpdateSchema(ctx context.Context, request operations.UpdateSchemaR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9059,7 +9059,7 @@ func (s *SDK) UpdateTypedLinkFacet(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/typedlink/facet#x-amz-data-partition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9074,7 +9074,7 @@ func (s *SDK) UpdateTypedLinkFacet(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9225,7 +9225,7 @@ func (s *SDK) UpgradeAppliedSchema(ctx context.Context, request operations.Upgra
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/upgradeapplied"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9240,7 +9240,7 @@ func (s *SDK) UpgradeAppliedSchema(ctx context.Context, request operations.Upgra
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9361,7 +9361,7 @@ func (s *SDK) UpgradePublishedSchema(ctx context.Context, request operations.Upg
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/amazonclouddirectory/2017-01-11/schema/upgradepublished"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -9376,7 +9376,7 @@ func (s *SDK) UpgradePublishedSchema(ctx context.Context, request operations.Upg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

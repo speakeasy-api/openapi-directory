@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.AckMessageRequest{
-        PathParams: operations.AckMessagePathParams{
-            QueueMessageID: "corrupti",
-            QueueName: "provident",
-        },
+        QueueMessageID: "corrupti",
+        QueueName: "provident",
     }
 
     ctx := context.Background()

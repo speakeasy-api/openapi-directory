@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteAssignmentsIDRequest{
-        PathParams: operations.DeleteAssignmentsIDPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()

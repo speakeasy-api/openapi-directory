@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBankAccountPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetBankAccountRequest struct {
-	PathParams GetBankAccountPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBankAccountResponse struct {

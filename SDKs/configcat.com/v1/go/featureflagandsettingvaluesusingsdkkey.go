@@ -52,14 +52,14 @@ func newFeatureFlagAndSettingValuesUsingSDKKey(defaultClient, securityClient HTT
 // evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
 func (s *featureFlagAndSettingValuesUsingSDKKey) GetSettingValueBySdkkey(ctx context.Context, request operations.GetSettingValueBySdkkeyRequest) (*operations.GetSettingValueBySdkkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -158,9 +158,9 @@ func (s *featureFlagAndSettingValuesUsingSDKKey) GetSettingValueBySdkkey(ctx con
 // ```
 func (s *featureFlagAndSettingValuesUsingSDKKey) ReplaceSettingValueBySdkkey(ctx context.Context, request operations.ReplaceSettingValueBySdkkeyRequest) (*operations.ReplaceSettingValueBySdkkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSettingValueModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,9 +175,9 @@ func (s *featureFlagAndSettingValuesUsingSDKKey) ReplaceSettingValueBySdkkey(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -293,9 +293,9 @@ func (s *featureFlagAndSettingValuesUsingSDKKey) ReplaceSettingValueBySdkkey(ctx
 // ```
 func (s *featureFlagAndSettingValuesUsingSDKKey) UpdateSettingValueBySdkkey(ctx context.Context, request operations.UpdateSettingValueBySdkkeyRequest) (*operations.UpdateSettingValueBySdkkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JSONPatchInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,9 +310,9 @@ func (s *featureFlagAndSettingValuesUsingSDKKey) UpdateSettingValueBySdkkey(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

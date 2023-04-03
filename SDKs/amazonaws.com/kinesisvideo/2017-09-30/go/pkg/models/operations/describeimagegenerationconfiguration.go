@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeImageGenerationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DescribeImageGenerationConfigurationRequestBody struct {
 	// The Amazon Resource Name (ARN) of the Kinesis video stream from which to retrieve the image generation configuration. You must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
 	StreamARN *string `json:"StreamARN,omitempty"`
@@ -25,8 +15,14 @@ type DescribeImageGenerationConfigurationRequestBody struct {
 }
 
 type DescribeImageGenerationConfigurationRequest struct {
-	Headers DescribeImageGenerationConfigurationHeaders
-	Request DescribeImageGenerationConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       DescribeImageGenerationConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DescribeImageGenerationConfigurationResponse struct {

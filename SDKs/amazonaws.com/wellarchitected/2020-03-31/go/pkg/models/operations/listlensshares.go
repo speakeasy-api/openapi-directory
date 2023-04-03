@@ -9,10 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLensSharesPathParams struct {
-	LensAlias string `pathParam:"style=simple,explode=false,name=LensAlias"`
-}
-
 // ListLensSharesStatusEnum - The status of a workload share.
 type ListLensSharesStatusEnum string
 
@@ -55,30 +51,22 @@ func (e *ListLensSharesStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLensSharesQueryParams struct {
+type ListLensSharesRequest struct {
+	LensAlias string `pathParam:"style=simple,explode=false,name=LensAlias"`
 	// The maximum number of results to return for this request.
 	MaxResults *int64  `queryParam:"style=form,explode=true,name=MaxResults"`
 	NextToken  *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the lens is shared.
 	SharedWithPrefix *string `queryParam:"style=form,explode=true,name=SharedWithPrefix"`
 	// The status of a workload share.
-	Status *ListLensSharesStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-}
-
-type ListLensSharesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLensSharesRequest struct {
-	PathParams  ListLensSharesPathParams
-	QueryParams ListLensSharesQueryParams
-	Headers     ListLensSharesHeaders
+	Status            *ListLensSharesStatusEnum `queryParam:"style=form,explode=true,name=Status"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListLensSharesResponse struct {

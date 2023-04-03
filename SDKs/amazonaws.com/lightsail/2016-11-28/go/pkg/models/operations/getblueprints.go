@@ -30,20 +30,16 @@ func (e *GetBlueprintsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBlueprintsHeaders struct {
-	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetBlueprintsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetBlueprintsRequest struct {
-	Headers GetBlueprintsHeaders
-	Request shared.GetBlueprintsRequest `request:"mediaType=application/json"`
+	GetBlueprintsRequest shared.GetBlueprintsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget           GetBlueprintsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetBlueprintsResponse struct {

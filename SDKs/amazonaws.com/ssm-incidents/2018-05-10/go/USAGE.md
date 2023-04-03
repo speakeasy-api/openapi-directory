@@ -13,37 +13,36 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateReplicationSetRequest{
-        Headers: operations.CreateReplicationSetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateReplicationSetRequestBody{
-            ClientToken: "illum",
+        RequestBody: operations.CreateReplicationSetRequestBody{
+            ClientToken: "corrupti",
             Regions: map[string]shared.RegionMapInputValue{
-                "error": shared.RegionMapInputValue{
-                    SseKmsKeyID: "deserunt",
+                "distinctio": shared.RegionMapInputValue{
+                    SseKmsKeyID: "quibusdam",
                 },
-                "suscipit": shared.RegionMapInputValue{
-                    SseKmsKeyID: "iure",
+                "unde": shared.RegionMapInputValue{
+                    SseKmsKeyID: "nulla",
+                },
+                "corrupti": shared.RegionMapInputValue{
+                    SseKmsKeyID: "illum",
                 },
             },
             Tags: map[string]string{
-                "debitis": "ipsa",
-                "delectus": "tempora",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
         },
+        XAmzAlgorithm: "magnam",
+        XAmzContentSha256: "debitis",
+        XAmzCredential: "ipsa",
+        XAmzDate: "delectus",
+        XAmzSecurityToken: "tempora",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "molestiae",
     }
 
     ctx := context.Background()

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AuditLogsGetAuditActionsPathParams struct {
+type AuditLogsGetAuditActionsRequest struct {
 	// Namespace to query audit log actions for.
 	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type AuditLogsGetAuditActionsRequest struct {
-	PathParams AuditLogsGetAuditActionsPathParams
 }
 
 type AuditLogsGetAuditActionsResponse struct {

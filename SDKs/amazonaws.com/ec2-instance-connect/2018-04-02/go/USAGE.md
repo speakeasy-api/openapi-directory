@@ -13,29 +13,25 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.SendSSHPublicKeyRequest{
-        Headers: operations.SendSSHPublicKeyHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSEC2InstanceConnectService.SendSSHPublicKey",
+        SendSSHPublicKeyRequest: shared.SendSSHPublicKeyRequest{
+            AvailabilityZone: "corrupti",
+            InstanceID: "provident",
+            InstanceOSUser: "distinctio",
+            SSHPublicKey: "quibusdam",
         },
-        Request: shared.SendSSHPublicKeyRequest{
-            AvailabilityZone: "illum",
-            InstanceID: "vel",
-            InstanceOSUser: "error",
-            SSHPublicKey: "deserunt",
-        },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "AWSEC2InstanceConnectService.SendSSHPublicKey",
     }
 
     ctx := context.Background()

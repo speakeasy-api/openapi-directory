@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDistribution20171030PathParams struct {
-	// The distribution's id.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateDistribution20171030Headers struct {
-	// The value of the <code>ETag</code> header that you received when retrieving the distribution's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateDistribution20171030RequestBodyDistributionConfig - A distribution configuration.
 type UpdateDistribution20171030RequestBodyDistributionConfig struct {
 	Aliases              *shared.Aliases
@@ -52,9 +35,18 @@ type UpdateDistribution20171030RequestBody struct {
 }
 
 type UpdateDistribution20171030Request struct {
-	PathParams UpdateDistribution20171030PathParams
-	Headers    UpdateDistribution20171030Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The distribution's id.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The value of the <code>ETag</code> header that you received when retrieving the distribution's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateDistribution20171030Response struct {

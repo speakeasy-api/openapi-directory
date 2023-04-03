@@ -50,28 +50,20 @@ func (e *GETAddClientIDToOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETAddClientIDToOpenIDConnectProviderQueryParams struct {
+type GETAddClientIDToOpenIDConnectProviderRequest struct {
 	Action GETAddClientIDToOpenIDConnectProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The client ID (also known as audience) to add to the IAM OpenID Connect provider resource.
 	ClientID string `queryParam:"style=form,explode=true,name=ClientID"`
 	// The Amazon Resource Name (ARN) of the IAM OpenID Connect (OIDC) provider resource to add the client ID to. You can get a list of OIDC provider ARNs by using the <a>ListOpenIDConnectProviders</a> operation.
 	OpenIDConnectProviderArn string                                           `queryParam:"style=form,explode=true,name=OpenIDConnectProviderArn"`
 	Version                  GETAddClientIDToOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddClientIDToOpenIDConnectProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddClientIDToOpenIDConnectProviderRequest struct {
-	QueryParams GETAddClientIDToOpenIDConnectProviderQueryParams
-	Headers     GETAddClientIDToOpenIDConnectProviderHeaders
+	XAmzAlgorithm            *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddClientIDToOpenIDConnectProviderResponse struct {

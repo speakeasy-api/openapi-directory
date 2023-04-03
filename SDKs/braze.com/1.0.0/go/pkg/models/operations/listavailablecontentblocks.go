@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListAvailableContentBlocksQueryParams struct {
+type ListAvailableContentBlocksRequest struct {
 	// (Optional) Positive Number
 	//
 	// Maximum number of content blocks to retrieve, default to 100 if not provided, maximum acceptable value is 1000.
@@ -23,10 +23,6 @@ type ListAvailableContentBlocksQueryParams struct {
 	//
 	// Number of content blocks to skip before returning rest of the templates that fit the search criteria.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListAvailableContentBlocksRequest struct {
-	QueryParams ListAvailableContentBlocksQueryParams
 }
 
 type ListAvailableContentBlocksResponse struct {

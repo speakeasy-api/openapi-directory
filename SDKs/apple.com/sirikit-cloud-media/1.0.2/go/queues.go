@@ -37,7 +37,7 @@ func (s *queues) PlayMediaOnQueue(ctx context.Context, request operations.PlayMe
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/queues/playMedia"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlayMediaRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *queues) PlayMediaOnQueue(ctx context.Context, request operations.PlayMe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -95,7 +95,7 @@ func (s *queues) UpdateActivityOnQueue(ctx context.Context, request operations.U
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/queues/updateActivity"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateActivityRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,7 +107,7 @@ func (s *queues) UpdateActivityOnQueue(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteKeyPathParams struct {
+type DeleteKeyRequest struct {
 	// The name of the API key to delete.
-	KeyName string `pathParam:"style=simple,explode=false,name=KeyName"`
-}
-
-type DeleteKeyHeaders struct {
+	KeyName           string  `pathParam:"style=simple,explode=false,name=KeyName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteKeyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteKeyRequest struct {
-	PathParams DeleteKeyPathParams
-	Headers    DeleteKeyHeaders
 }
 
 type DeleteKeyResponse struct {

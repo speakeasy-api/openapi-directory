@@ -50,25 +50,17 @@ func (e *POSTDescribeServiceAccessPoliciesVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTDescribeServiceAccessPoliciesQueryParams struct {
-	Action  POSTDescribeServiceAccessPoliciesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeServiceAccessPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeServiceAccessPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeServiceAccessPoliciesRequest struct {
-	QueryParams POSTDescribeServiceAccessPoliciesQueryParams
-	Headers     POSTDescribeServiceAccessPoliciesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeServiceAccessPoliciesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTDescribeServiceAccessPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeServiceAccessPoliciesResponse struct {

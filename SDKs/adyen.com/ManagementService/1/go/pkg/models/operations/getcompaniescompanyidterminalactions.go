@@ -8,16 +8,13 @@ import (
 )
 
 type GetCompaniesCompanyIDTerminalActionsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDTerminalActionsPathParams struct {
+type GetCompaniesCompanyIDTerminalActionsRequest struct {
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDTerminalActionsQueryParams struct {
 	// The number of the page to fetch.
 	PageNumber *int `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The number of items to have on a page, maximum 100. The default is 20 items on a page.
@@ -28,12 +25,6 @@ type GetCompaniesCompanyIDTerminalActionsQueryParams struct {
 	// Returns terminal actions of the specified type.
 	// Allowed values: **InstallAndroidApp**, **UninstallAndroidApp**, **InstallAndroidCertificate**, **UninstallAndroidCertificate**.
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetCompaniesCompanyIDTerminalActionsRequest struct {
-	PathParams  GetCompaniesCompanyIDTerminalActionsPathParams
-	QueryParams GetCompaniesCompanyIDTerminalActionsQueryParams
-	Security    GetCompaniesCompanyIDTerminalActionsSecurity
 }
 
 type GetCompaniesCompanyIDTerminalActionsResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStreamProcessorsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListStreamProcessorsXAmzTargetEnum
 type ListStreamProcessorsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListStreamProcessorsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListStreamProcessorsHeaders struct {
+type ListStreamProcessorsRequest struct {
+	ListStreamProcessorsRequest shared.ListStreamProcessorsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListStreamProcessorsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListStreamProcessorsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListStreamProcessorsRequest struct {
-	QueryParams ListStreamProcessorsQueryParams
-	Headers     ListStreamProcessorsHeaders
-	Request     shared.ListStreamProcessorsRequest `request:"mediaType=application/json"`
 }
 
 type ListStreamProcessorsResponse struct {

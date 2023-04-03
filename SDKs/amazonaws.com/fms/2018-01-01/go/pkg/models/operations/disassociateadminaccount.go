@@ -29,7 +29,8 @@ func (e *DisassociateAdminAccountXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DisassociateAdminAccountHeaders struct {
+type DisassociateAdminAccountRequest struct {
+	RequestBody       map[string]interface{}                 `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DisassociateAdminAccountHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisassociateAdminAccountXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisassociateAdminAccountRequest struct {
-	Headers DisassociateAdminAccountHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DisassociateAdminAccountResponse struct {

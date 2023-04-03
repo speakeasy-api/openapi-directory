@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartSuiteRunPathParams struct {
-	// Suite definition ID of the test suite.
-	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
-}
-
-type StartSuiteRunHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartSuiteRunRequestBodySuiteRunConfiguration - Gets suite run configuration.
 type StartSuiteRunRequestBodySuiteRunConfiguration struct {
 	ParallelRun      *bool                   `json:"parallelRun,omitempty"`
@@ -39,9 +24,16 @@ type StartSuiteRunRequestBody struct {
 }
 
 type StartSuiteRunRequest struct {
-	PathParams StartSuiteRunPathParams
-	Headers    StartSuiteRunHeaders
-	Request    StartSuiteRunRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartSuiteRunRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Suite definition ID of the test suite.
+	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
 }
 
 type StartSuiteRunResponse struct {

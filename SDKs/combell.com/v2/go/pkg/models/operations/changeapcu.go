@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeApcuPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ChangeApcuQueryParams struct {
-	// Linux hosting domain name
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ChangeApcuRequest struct {
-	PathParams  ChangeApcuPathParams
-	QueryParams ChangeApcuQueryParams
 	// Php APcu config
-	Request *shared.UpdatePhpAPcuRequest `request:"mediaType=application/json"`
+	UpdatePhpAPcuRequest *shared.UpdatePhpAPcuRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ChangeApcuResponse struct {

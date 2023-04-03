@@ -35,11 +35,11 @@ func newSharedLinks(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // SharedLinksAdd - Create Shared Link
 // Create Shared Link
-func (s *sharedLinks) SharedLinksAdd(ctx context.Context, request operations.SharedLinksAddRequest) (*operations.SharedLinksAddResponse, error) {
+func (s *sharedLinks) SharedLinksAdd(ctx context.Context, request operations.SharedLinksAddRequest, security operations.SharedLinksAddSecurity) (*operations.SharedLinksAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/shared-links"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SharedLinkInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,13 +54,13 @@ func (s *sharedLinks) SharedLinksAdd(ctx context.Context, request operations.Sha
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *sharedLinks) SharedLinksAdd(ctx context.Context, request operations.Sha
 
 // SharedLinksAll - List SharedLinks
 // List SharedLinks
-func (s *sharedLinks) SharedLinksAll(ctx context.Context, request operations.SharedLinksAllRequest) (*operations.SharedLinksAllResponse, error) {
+func (s *sharedLinks) SharedLinksAll(ctx context.Context, request operations.SharedLinksAllRequest, security operations.SharedLinksAllSecurity) (*operations.SharedLinksAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/shared-links"
 
@@ -165,13 +165,13 @@ func (s *sharedLinks) SharedLinksAll(ctx context.Context, request operations.Sha
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,22 +267,22 @@ func (s *sharedLinks) SharedLinksAll(ctx context.Context, request operations.Sha
 
 // SharedLinksDelete - Delete Shared Link
 // Delete Shared Link
-func (s *sharedLinks) SharedLinksDelete(ctx context.Context, request operations.SharedLinksDeleteRequest) (*operations.SharedLinksDeleteResponse, error) {
+func (s *sharedLinks) SharedLinksDelete(ctx context.Context, request operations.SharedLinksDeleteRequest, security operations.SharedLinksDeleteSecurity) (*operations.SharedLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/shared-links/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/shared-links/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -378,22 +378,22 @@ func (s *sharedLinks) SharedLinksDelete(ctx context.Context, request operations.
 
 // SharedLinksOne - Get Shared Link
 // Get Shared Link
-func (s *sharedLinks) SharedLinksOne(ctx context.Context, request operations.SharedLinksOneRequest) (*operations.SharedLinksOneResponse, error) {
+func (s *sharedLinks) SharedLinksOne(ctx context.Context, request operations.SharedLinksOneRequest, security operations.SharedLinksOneSecurity) (*operations.SharedLinksOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/shared-links/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/shared-links/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -489,11 +489,11 @@ func (s *sharedLinks) SharedLinksOne(ctx context.Context, request operations.Sha
 
 // SharedLinksUpdate - Update Shared Link
 // Update Shared Link
-func (s *sharedLinks) SharedLinksUpdate(ctx context.Context, request operations.SharedLinksUpdateRequest) (*operations.SharedLinksUpdateResponse, error) {
+func (s *sharedLinks) SharedLinksUpdate(ctx context.Context, request operations.SharedLinksUpdateRequest, security operations.SharedLinksUpdateSecurity) (*operations.SharedLinksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/shared-links/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/shared-links/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SharedLinkInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,13 +508,13 @@ func (s *sharedLinks) SharedLinksUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

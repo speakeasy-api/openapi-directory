@@ -50,27 +50,19 @@ func (e *GETPromoteReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETPromoteReadReplicaQueryParams struct {
+type GETPromoteReadReplicaRequest struct {
 	Action                GETPromoteReadReplicaActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	BackupRetentionPeriod *int64                           `queryParam:"style=form,explode=true,name=BackupRetentionPeriod"`
 	DBInstanceIdentifier  string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	PreferredBackupWindow *string                          `queryParam:"style=form,explode=true,name=PreferredBackupWindow"`
 	Version               GETPromoteReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPromoteReadReplicaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPromoteReadReplicaRequest struct {
-	QueryParams GETPromoteReadReplicaQueryParams
-	Headers     GETPromoteReadReplicaHeaders
+	XAmzAlgorithm         *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPromoteReadReplicaResponse struct {

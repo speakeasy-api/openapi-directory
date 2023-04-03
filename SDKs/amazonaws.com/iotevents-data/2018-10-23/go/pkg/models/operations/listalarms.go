@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAlarmsPathParams struct {
-	// The name of the alarm model.
-	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
-}
-
-type ListAlarmsQueryParams struct {
-	// The maximum number of results to be returned per request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token that you can use to return the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAlarmsHeaders struct {
+type ListAlarmsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListAlarmsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAlarmsRequest struct {
-	PathParams  ListAlarmsPathParams
-	QueryParams ListAlarmsQueryParams
-	Headers     ListAlarmsHeaders
+	// The name of the alarm model.
+	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
+	// The maximum number of results to be returned per request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token that you can use to return the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAlarmsResponse struct {

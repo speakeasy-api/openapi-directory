@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteJobTemplatePathParams struct {
-	// The ID of the job template that will be deleted.
-	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type DeleteJobTemplateHeaders struct {
+type DeleteJobTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteJobTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteJobTemplateRequest struct {
-	PathParams DeleteJobTemplatePathParams
-	Headers    DeleteJobTemplateHeaders
+	// The ID of the job template that will be deleted.
+	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
 }
 
 type DeleteJobTemplateResponse struct {

@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OptimiseByCategoryPathParams struct {
-	ActionName shared.OptimisationActionNameGeneralParametersEnum `pathParam:"style=simple,explode=false,name=actionName"`
+type OptimiseByCategoryRequest struct {
+	// The channel identifier list concerned by this optimisation
+	RequestBody []string                                           `request:"mediaType=application/json"`
+	ActionName  shared.OptimisationActionNameGeneralParametersEnum `pathParam:"style=simple,explode=false,name=actionName"`
 	// The category identifier concerned by this optimisation
 	CatalogCategoryID string `pathParam:"style=simple,explode=false,name=catalogCategoryId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type OptimiseByCategoryRequest struct {
-	PathParams OptimiseByCategoryPathParams
-	// The channel identifier list concerned by this optimisation
-	Request []string `request:"mediaType=application/json"`
 }
 
 type OptimiseByCategoryResponse struct {

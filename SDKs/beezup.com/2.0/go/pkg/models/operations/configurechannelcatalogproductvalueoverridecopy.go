@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureChannelCatalogProductValueOverrideCopyPathParams struct {
+type ConfigureChannelCatalogProductValueOverrideCopyRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
 	// The product identifier
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ConfigureChannelCatalogProductValueOverrideCopyRequest struct {
-	PathParams ConfigureChannelCatalogProductValueOverrideCopyPathParams
 }
 
 type ConfigureChannelCatalogProductValueOverrideCopyResponse struct {

@@ -51,30 +51,22 @@ func (e *GETEnableImageDeprecationVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETEnableImageDeprecationQueryParams struct {
+type GETEnableImageDeprecationRequest struct {
 	Action GETEnableImageDeprecationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The date and time to deprecate the AMI, in UTC, in the following format: <i>YYYY</i>-<i>MM</i>-<i>DD</i>T<i>HH</i>:<i>MM</i>:<i>SS</i>Z. If you specify a value for seconds, Amazon EC2 rounds the seconds to the nearest minute.</p> <p>You can’t specify a date in the past. The upper limit for <code>DeprecateAt</code> is 10 years from now, except for public AMIs, where the upper limit is 2 years from the creation date.</p>
 	DeprecateAt time.Time `queryParam:"style=form,explode=true,name=DeprecateAt"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the AMI.
-	ImageID string                               `queryParam:"style=form,explode=true,name=ImageId"`
-	Version GETEnableImageDeprecationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableImageDeprecationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableImageDeprecationRequest struct {
-	QueryParams GETEnableImageDeprecationQueryParams
-	Headers     GETEnableImageDeprecationHeaders
+	ImageID           string                               `queryParam:"style=form,explode=true,name=ImageId"`
+	Version           GETEnableImageDeprecationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableImageDeprecationResponse struct {

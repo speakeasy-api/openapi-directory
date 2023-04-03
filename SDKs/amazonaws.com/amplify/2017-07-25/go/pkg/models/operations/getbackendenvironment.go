@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBackendEnvironmentPathParams struct {
-	//  The unique id for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The name for the backend environment.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type GetBackendEnvironmentHeaders struct {
+type GetBackendEnvironmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetBackendEnvironmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetBackendEnvironmentRequest struct {
-	PathParams GetBackendEnvironmentPathParams
-	Headers    GetBackendEnvironmentHeaders
+	//  The unique id for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name for the backend environment.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
 }
 
 type GetBackendEnvironmentResponse struct {

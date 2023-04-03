@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTrustStoreCertificatePathParams struct {
-	// The ARN of the trust store certificate.
-	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
-}
-
-type GetTrustStoreCertificateQueryParams struct {
-	// The thumbprint of the trust store certificate.
-	Thumbprint string `queryParam:"style=form,explode=true,name=thumbprint"`
-}
-
-type GetTrustStoreCertificateHeaders struct {
+type GetTrustStoreCertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type GetTrustStoreCertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTrustStoreCertificateRequest struct {
-	PathParams  GetTrustStoreCertificatePathParams
-	QueryParams GetTrustStoreCertificateQueryParams
-	Headers     GetTrustStoreCertificateHeaders
+	// The thumbprint of the trust store certificate.
+	Thumbprint string `queryParam:"style=form,explode=true,name=thumbprint"`
+	// The ARN of the trust store certificate.
+	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
 }
 
 type GetTrustStoreCertificateResponse struct {

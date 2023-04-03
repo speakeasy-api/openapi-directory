@@ -30,20 +30,16 @@ func (e *UpdateLabelGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateLabelGroupHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateLabelGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateLabelGroupRequest struct {
-	Headers UpdateLabelGroupHeaders
-	Request shared.UpdateLabelGroupRequest `request:"mediaType=application/json"`
+	UpdateLabelGroupRequest shared.UpdateLabelGroupRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              UpdateLabelGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateLabelGroupResponse struct {

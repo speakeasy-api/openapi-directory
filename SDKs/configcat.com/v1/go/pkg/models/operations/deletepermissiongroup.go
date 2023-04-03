@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePermissionGroupPathParams struct {
+type DeletePermissionGroupRequest struct {
 	// The identifier of the Permission Group.
 	PermissionGroupID int64 `pathParam:"style=simple,explode=false,name=permissionGroupId"`
-}
-
-type DeletePermissionGroupRequest struct {
-	PathParams DeletePermissionGroupPathParams
 }
 
 type DeletePermissionGroupResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeConformancePackComplianceQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeConformancePackComplianceXAmzTargetEnum
 type DescribeConformancePackComplianceXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeConformancePackComplianceXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DescribeConformancePackComplianceHeaders struct {
+type DescribeConformancePackComplianceRequest struct {
+	DescribeConformancePackComplianceRequest shared.DescribeConformancePackComplianceRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeConformancePackComplianceHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeConformancePackComplianceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeConformancePackComplianceRequest struct {
-	QueryParams DescribeConformancePackComplianceQueryParams
-	Headers     DescribeConformancePackComplianceHeaders
-	Request     shared.DescribeConformancePackComplianceRequest `request:"mediaType=application/json"`
 }
 
 type DescribeConformancePackComplianceResponse struct {

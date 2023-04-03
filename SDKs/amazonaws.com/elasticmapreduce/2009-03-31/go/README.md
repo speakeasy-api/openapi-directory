@@ -24,32 +24,33 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddInstanceFleetRequest{
-        Headers: operations.AddInstanceFleetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "ElasticMapReduce.AddInstanceFleet",
-        },
-        Request: shared.AddInstanceFleetInput{
-            ClusterID: "illum",
+        AddInstanceFleetInput: shared.AddInstanceFleetInput{
+            ClusterID: "corrupti",
             InstanceFleet: shared.InstanceFleetConfig{
                 InstanceFleetType: "CORE",
                 InstanceTypeConfigs: []shared.InstanceTypeConfig{
                     shared.InstanceTypeConfig{
-                        BidPrice: "deserunt",
-                        BidPriceAsPercentageOfOnDemandPrice: 3843.82,
+                        BidPrice: "quibusdam",
+                        BidPriceAsPercentageOfOnDemandPrice: 6027.63,
                         Configurations: []shared.Configuration{
+                            shared.Configuration{
+                                Classification: "corrupti",
+                                Configurations: []shared.Configuration{
+                                    shared.Configuration{},
+                                    shared.Configuration{},
+                                    shared.Configuration{},
+                                    shared.Configuration{},
+                                },
+                                Properties: map[string]string{
+                                    "error": "deserunt",
+                                    "suscipit": "iure",
+                                },
+                            },
                             shared.Configuration{
                                 Classification: "magnam",
                                 Configurations: []shared.Configuration{
@@ -75,134 +76,135 @@ func main() {
                                     "temporibus": "ab",
                                 },
                             },
+                            shared.Configuration{
+                                Classification: "quis",
+                                Configurations: []shared.Configuration{
+                                    shared.Configuration{},
+                                },
+                                Properties: map[string]string{
+                                    "perferendis": "ipsam",
+                                    "repellendus": "sapiente",
+                                    "quo": "odit",
+                                },
+                            },
                         },
-                        CustomAmiID: "quis",
+                        CustomAmiID: "at",
                         EbsConfiguration: &shared.EbsConfiguration{
                             EbsBlockDeviceConfigs: []shared.EbsBlockDeviceConfig{
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 648172,
-                                        SizeInGB: 20218,
-                                        Throughput: 368241,
-                                        VolumeType: "repellendus",
+                                        Iops: 978619,
+                                        SizeInGB: 473608,
+                                        Throughput: 799159,
+                                        VolumeType: "quod",
                                     },
-                                    VolumesPerInstance: 957156,
+                                    VolumesPerInstance: 461479,
+                                },
+                                shared.EbsBlockDeviceConfig{
+                                    VolumeSpecification: shared.VolumeSpecification{
+                                        Iops: 520478,
+                                        SizeInGB: 780529,
+                                        Throughput: 678880,
+                                        VolumeType: "dicta",
+                                    },
+                                    VolumesPerInstance: 720633,
+                                },
+                                shared.EbsBlockDeviceConfig{
+                                    VolumeSpecification: shared.VolumeSpecification{
+                                        Iops: 639921,
+                                        SizeInGB: 582020,
+                                        Throughput: 143353,
+                                        VolumeType: "deleniti",
+                                    },
+                                    VolumesPerInstance: 944669,
+                                },
+                                shared.EbsBlockDeviceConfig{
+                                    VolumeSpecification: shared.VolumeSpecification{
+                                        Iops: 758616,
+                                        SizeInGB: 521848,
+                                        Throughput: 105907,
+                                        VolumeType: "commodi",
+                                    },
+                                    VolumesPerInstance: 473600,
                                 },
                             },
                             EbsOptimized: false,
                         },
-                        InstanceType: "quo",
-                        WeightedCapacity: 140350,
+                        InstanceType: "modi",
+                        WeightedCapacity: 186332,
                     },
                     shared.InstanceTypeConfig{
-                        BidPrice: "at",
-                        BidPriceAsPercentageOfOnDemandPrice: 8700.88,
+                        BidPrice: "impedit",
+                        BidPriceAsPercentageOfOnDemandPrice: 7369.18,
                         Configurations: []shared.Configuration{
                             shared.Configuration{
-                                Classification: "molestiae",
+                                Classification: "ipsum",
                                 Configurations: []shared.Configuration{
-                                    shared.Configuration{},
                                     shared.Configuration{},
                                     shared.Configuration{},
                                     shared.Configuration{},
                                 },
                                 Properties: map[string]string{
-                                    "esse": "totam",
-                                    "porro": "dolorum",
-                                    "dicta": "nam",
-                                    "officia": "occaecati",
+                                    "perferendis": "ad",
                                 },
                             },
                             shared.Configuration{
-                                Classification: "fugit",
+                                Classification: "natus",
                                 Configurations: []shared.Configuration{
-                                    shared.Configuration{},
-                                    shared.Configuration{},
                                     shared.Configuration{},
                                 },
                                 Properties: map[string]string{
-                                    "optio": "totam",
-                                    "beatae": "commodi",
-                                    "molestiae": "modi",
-                                    "qui": "impedit",
-                                },
-                            },
-                            shared.Configuration{
-                                Classification: "cum",
-                                Configurations: []shared.Configuration{
-                                    shared.Configuration{},
-                                    shared.Configuration{},
-                                },
-                                Properties: map[string]string{
-                                    "excepturi": "aspernatur",
-                                },
-                            },
-                            shared.Configuration{
-                                Classification: "perferendis",
-                                Configurations: []shared.Configuration{
-                                    shared.Configuration{},
-                                    shared.Configuration{},
-                                },
-                                Properties: map[string]string{
-                                    "sed": "iste",
                                     "dolor": "natus",
                                     "laboriosam": "hic",
+                                    "saepe": "fuga",
                                 },
                             },
                         },
-                        CustomAmiID: "saepe",
+                        CustomAmiID: "in",
                         EbsConfiguration: &shared.EbsConfiguration{
                             EbsBlockDeviceConfigs: []shared.EbsBlockDeviceConfig{
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 449950,
-                                        SizeInGB: 359508,
-                                        Throughput: 613064,
-                                        VolumeType: "iure",
+                                        Iops: 613064,
+                                        SizeInGB: 437032,
+                                        Throughput: 902349,
+                                        VolumeType: "quidem",
                                     },
-                                    VolumesPerInstance: 902349,
+                                    VolumesPerInstance: 99280,
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 697631,
-                                        SizeInGB: 99280,
-                                        Throughput: 60225,
-                                        VolumeType: "reiciendis",
+                                        Iops: 60225,
+                                        SizeInGB: 969810,
+                                        Throughput: 666767,
+                                        VolumeType: "mollitia",
                                     },
-                                    VolumesPerInstance: 666767,
-                                },
-                                shared.EbsBlockDeviceConfig{
-                                    VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 653140,
-                                        SizeInGB: 670638,
-                                        Throughput: 170909,
-                                        VolumeType: "dolorem",
-                                    },
-                                    VolumesPerInstance: 358152,
+                                    VolumesPerInstance: 670638,
                                 },
                             },
                             EbsOptimized: false,
                         },
-                        InstanceType: "explicabo",
-                        WeightedCapacity: 750686,
+                        InstanceType: "dolores",
+                        WeightedCapacity: 210382,
                     },
                     shared.InstanceTypeConfig{
-                        BidPrice: "enim",
-                        BidPriceAsPercentageOfOnDemandPrice: 6078.31,
+                        BidPrice: "corporis",
+                        BidPriceAsPercentageOfOnDemandPrice: 1289.26,
                         Configurations: []shared.Configuration{
                             shared.Configuration{
-                                Classification: "minima",
+                                Classification: "enim",
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
                                     shared.Configuration{},
                                 },
                                 Properties: map[string]string{
-                                    "iure": "culpa",
+                                    "minima": "excepturi",
+                                    "accusantium": "iure",
                                 },
                             },
                             shared.Configuration{
-                                Classification: "doloribus",
+                                Classification: "culpa",
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -210,27 +212,70 @@ func main() {
                                     shared.Configuration{},
                                 },
                                 Properties: map[string]string{
-                                    "mollitia": "dolorem",
+                                    "architecto": "mollitia",
+                                    "dolorem": "culpa",
+                                    "consequuntur": "repellat",
+                                    "mollitia": "occaecati",
+                                },
+                            },
+                            shared.Configuration{
+                                Classification: "numquam",
+                                Configurations: []shared.Configuration{
+                                    shared.Configuration{},
+                                    shared.Configuration{},
+                                },
+                                Properties: map[string]string{
+                                    "molestiae": "velit",
+                                    "error": "quia",
+                                },
+                            },
+                            shared.Configuration{
+                                Classification: "quis",
+                                Configurations: []shared.Configuration{
+                                    shared.Configuration{},
+                                },
+                                Properties: map[string]string{
+                                    "animi": "enim",
+                                    "odit": "quo",
+                                    "sequi": "tenetur",
                                 },
                             },
                         },
-                        CustomAmiID: "culpa",
+                        CustomAmiID: "ipsam",
                         EbsConfiguration: &shared.EbsConfiguration{
                             EbsBlockDeviceConfigs: []shared.EbsBlockDeviceConfig{
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 995300,
-                                        SizeInGB: 653108,
-                                        Throughput: 581850,
-                                        VolumeType: "numquam",
+                                        Iops: 820994,
+                                        SizeInGB: 13571,
+                                        Throughput: 97101,
+                                        VolumeType: "error",
                                     },
-                                    VolumesPerInstance: 414369,
+                                    VolumesPerInstance: 837945,
+                                },
+                                shared.EbsBlockDeviceConfig{
+                                    VolumeSpecification: shared.VolumeSpecification{
+                                        Iops: 673660,
+                                        SizeInGB: 96098,
+                                        Throughput: 971945,
+                                        VolumeType: "voluptatibus",
+                                    },
+                                    VolumesPerInstance: 878194,
+                                },
+                                shared.EbsBlockDeviceConfig{
+                                    VolumeSpecification: shared.VolumeSpecification{
+                                        Iops: 468651,
+                                        SizeInGB: 509624,
+                                        Throughput: 976762,
+                                        VolumeType: "ipsa",
+                                    },
+                                    VolumesPerInstance: 604846,
                                 },
                             },
                             EbsOptimized: false,
                         },
-                        InstanceType: "quam",
-                        WeightedCapacity: 474697,
+                        InstanceType: "voluptate",
+                        WeightedCapacity: 739264,
                     },
                 },
                 LaunchSpecifications: &shared.InstanceFleetProvisioningSpecifications{
@@ -238,30 +283,38 @@ func main() {
                         AllocationStrategy: "lowest-price",
                         CapacityReservationOptions: &shared.OnDemandCapacityReservationOptions{
                             CapacityReservationPreference: "open",
-                            CapacityReservationResourceGroupArn: "error",
+                            CapacityReservationResourceGroupArn: "doloremque",
                             UsageStrategy: "use-capacity-reservations-first",
                         },
                     },
                     SpotSpecification: &shared.SpotProvisioningSpecification{
                         AllocationStrategy: "capacity-optimized",
-                        BlockDurationMinutes: 158969,
+                        BlockDurationMinutes: 441711,
                         TimeoutAction: "SWITCH_TO_ON_DEMAND",
-                        TimeoutDurationMinutes: 110375,
+                        TimeoutDurationMinutes: 979587,
                     },
                 },
-                Name: "laborum",
+                Name: "dicta",
                 ResizeSpecifications: &shared.InstanceFleetResizingSpecifications{
                     OnDemandResizeSpecification: &shared.OnDemandResizingSpecification{
-                        TimeoutDurationMinutes: 656330,
+                        TimeoutDurationMinutes: 359444,
                     },
                     SpotResizeSpecification: &shared.SpotResizingSpecification{
-                        TimeoutDurationMinutes: 317202,
+                        TimeoutDurationMinutes: 296140,
                     },
                 },
-                TargetOnDemandCapacity: 138183,
-                TargetSpotCapacity: 778346,
+                TargetOnDemandCapacity: 480894,
+                TargetSpotCapacity: 118727,
             },
         },
+        XAmzAlgorithm: "harum",
+        XAmzContentSha256: "enim",
+        XAmzCredential: "accusamus",
+        XAmzDate: "commodi",
+        XAmzSecurityToken: "repudiandae",
+        XAmzSignature: "quae",
+        XAmzSignedHeaders: "ipsum",
+        XAmzTarget: "ElasticMapReduce.AddInstanceFleet",
     }
 
     ctx := context.Background()
@@ -278,7 +331,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -337,4 +390,15 @@ func main() {
 * `UpdateStudioSessionMapping` - Updates the session policy attached to the user or group for the specified Amazon EMR Studio.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

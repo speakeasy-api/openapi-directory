@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBranchPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type CreateBranchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateBranchRequestBodyStageEnum -  Describes the current stage for the branch.
 type CreateBranchRequestBodyStageEnum string
 
@@ -95,9 +80,16 @@ type CreateBranchRequestBody struct {
 }
 
 type CreateBranchRequest struct {
-	PathParams CreateBranchPathParams
-	Headers    CreateBranchHeaders
-	Request    CreateBranchRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBranchRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type CreateBranchResponse struct {

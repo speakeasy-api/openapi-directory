@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteIntegrationLinkPathParams struct {
+type DeleteIntegrationLinkRequest struct {
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
 	// The integration's type.
@@ -16,10 +16,6 @@ type DeleteIntegrationLinkPathParams struct {
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// The id of the Setting.
 	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type DeleteIntegrationLinkRequest struct {
-	PathParams DeleteIntegrationLinkPathParams
 }
 
 type DeleteIntegrationLinkResponse struct {

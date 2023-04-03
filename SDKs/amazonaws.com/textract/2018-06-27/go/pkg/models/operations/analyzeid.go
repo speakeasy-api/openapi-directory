@@ -30,7 +30,8 @@ func (e *AnalyzeIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AnalyzeIDHeaders struct {
+type AnalyzeIDRequest struct {
+	AnalyzeIDRequest  shared.AnalyzeIDRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type AnalyzeIDHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        AnalyzeIDXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type AnalyzeIDRequest struct {
-	Headers AnalyzeIDHeaders
-	Request shared.AnalyzeIDRequest `request:"mediaType=application/json"`
 }
 
 type AnalyzeIDResponse struct {

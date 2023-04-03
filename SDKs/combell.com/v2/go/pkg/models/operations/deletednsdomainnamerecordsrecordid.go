@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteDNSDomainNameRecordsRecordIDPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	RecordID string `pathParam:"style=simple,explode=false,name=recordId"`
-}
-
-type DeleteDNSDomainNameRecordsRecordIDQueryParams struct {
-	// The domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// The id of the record.
-	RecordID string `queryParam:"style=form,explode=true,name=record_id"`
-}
-
 type DeleteDNSDomainNameRecordsRecordIDRequest struct {
-	PathParams  DeleteDNSDomainNameRecordsRecordIDPathParams
-	QueryParams DeleteDNSDomainNameRecordsRecordIDQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	RecordIDPathParameter string `pathParam:"style=simple,explode=false,name=recordId"`
+	// The id of the record.
+	RecordIDQueryParameter string `queryParam:"style=form,explode=true,name=record_id"`
 }
 
 type DeleteDNSDomainNameRecordsRecordIDResponse struct {

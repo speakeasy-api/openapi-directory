@@ -31,7 +31,6 @@ pkg/models/shared/restserviceerror.go
 pkg/models/shared/jsonobject.go
 pkg/models/shared/jsonpath.go
 pkg/models/shared/invalidfield.go
-pkg/models/shared/security.go
 pkg/models/shared/transferold.go
 pkg/models/shared/internalpartyidentification.go
 pkg/models/shared/partyidentification.go

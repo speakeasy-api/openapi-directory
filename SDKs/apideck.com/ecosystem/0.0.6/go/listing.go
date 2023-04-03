@@ -35,14 +35,14 @@ func newListing(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List listings
 func (s *listing) ListingsAll(ctx context.Context, request operations.ListingsAllRequest) (*operations.ListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,7 +84,7 @@ func (s *listing) ListingsAll(ctx context.Context, request operations.ListingsAl
 // Get listing
 func (s *listing) ListingsOne(ctx context.Context, request operations.ListingsOneRequest) (*operations.ListingsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

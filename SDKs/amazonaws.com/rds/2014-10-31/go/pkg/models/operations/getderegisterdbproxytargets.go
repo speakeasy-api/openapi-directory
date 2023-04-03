@@ -50,7 +50,7 @@ func (e *GETDeregisterDBProxyTargetsVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDeregisterDBProxyTargetsQueryParams struct {
+type GETDeregisterDBProxyTargetsRequest struct {
 	Action GETDeregisterDBProxyTargetsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// One or more DB cluster identifiers.
 	DBClusterIdentifiers []string `queryParam:"style=form,explode=true,name=DBClusterIdentifiers"`
@@ -59,23 +59,15 @@ type GETDeregisterDBProxyTargetsQueryParams struct {
 	// The identifier of the <code>DBProxy</code> that is associated with the <code>DBProxyTargetGroup</code>.
 	DBProxyName string `queryParam:"style=form,explode=true,name=DBProxyName"`
 	// The identifier of the <code>DBProxyTargetGroup</code>.
-	TargetGroupName *string                                `queryParam:"style=form,explode=true,name=TargetGroupName"`
-	Version         GETDeregisterDBProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeregisterDBProxyTargetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeregisterDBProxyTargetsRequest struct {
-	QueryParams GETDeregisterDBProxyTargetsQueryParams
-	Headers     GETDeregisterDBProxyTargetsHeaders
+	TargetGroupName   *string                                `queryParam:"style=form,explode=true,name=TargetGroupName"`
+	Version           GETDeregisterDBProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeregisterDBProxyTargetsResponse struct {

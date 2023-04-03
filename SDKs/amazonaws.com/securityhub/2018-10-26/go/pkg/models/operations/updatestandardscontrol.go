@@ -8,21 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateStandardsControlPathParams struct {
-	// The ARN of the security standard control to enable or disable.
-	StandardsControlArn string `pathParam:"style=simple,explode=false,name=StandardsControlArn"`
-}
-
-type UpdateStandardsControlHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateStandardsControlRequestBodyControlStatusEnum - The updated status of the security standard control.
 type UpdateStandardsControlRequestBodyControlStatusEnum string
 
@@ -55,9 +40,16 @@ type UpdateStandardsControlRequestBody struct {
 }
 
 type UpdateStandardsControlRequest struct {
-	PathParams UpdateStandardsControlPathParams
-	Headers    UpdateStandardsControlHeaders
-	Request    UpdateStandardsControlRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateStandardsControlRequestBody `request:"mediaType=application/json"`
+	// The ARN of the security standard control to enable or disable.
+	StandardsControlArn string  `pathParam:"style=simple,explode=false,name=StandardsControlArn"`
+	XAmzAlgorithm       *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateStandardsControlResponse struct {

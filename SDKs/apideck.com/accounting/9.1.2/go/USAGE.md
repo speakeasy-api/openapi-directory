@@ -14,32 +14,25 @@ func main() {
     s := sdk.New()
 
     req := operations.BalanceSheetOneRequest{
-        Security: operations.BalanceSheetOneSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+        Filter: &shared.BalanceSheetFilter{
+            EndDate: "2021-12-31",
+            StartDate: "2021-01-01",
         },
-        QueryParams: operations.BalanceSheetOneQueryParams{
-            Filter: &shared.BalanceSheetFilter{
-                EndDate: "2021-12-31",
-                StartDate: "2021-01-01",
-            },
-            PassThrough: map[string]interface{}{
-                "provident": "distinctio",
-                "quibusdam": "unde",
-                "nulla": "corrupti",
-            },
-            Raw: false,
+        PassThrough: map[string]interface{}{
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
         },
-        Headers: operations.BalanceSheetOneHeaders{
-            XApideckAppID: "illum",
-            XApideckConsumerID: "vel",
-            XApideckServiceID: "error",
-        },
+        Raw: false,
+        XApideckAppID: "illum",
+        XApideckConsumerID: "vel",
+        XApideckServiceID: "error",
     }
 
     ctx := context.Background()
-    res, err := s.BalanceSheet.BalanceSheetOne(ctx, req)
+    res, err := s.BalanceSheet.BalanceSheetOne(ctx, req, operations.BalanceSheetOneSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

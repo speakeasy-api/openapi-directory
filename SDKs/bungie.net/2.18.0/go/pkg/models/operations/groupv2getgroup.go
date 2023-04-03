@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupV2GetGroupPathParams struct {
+type GroupV2GetGroupRequest struct {
 	// Requested group's id.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetGroupRequest struct {
-	PathParams GroupV2GetGroupPathParams
 }
 
 // GroupV2GetGroup200Wildcard - Look at the Response property for more information about the nature of this response

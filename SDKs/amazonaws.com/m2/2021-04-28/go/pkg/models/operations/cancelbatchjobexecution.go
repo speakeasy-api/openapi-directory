@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelBatchJobExecutionPathParams struct {
-	// The unique identifier of the application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-	// The unique identifier of the batch job execution.
-	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
-}
-
-type CancelBatchJobExecutionHeaders struct {
+type CancelBatchJobExecutionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type CancelBatchJobExecutionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelBatchJobExecutionRequest struct {
-	PathParams CancelBatchJobExecutionPathParams
-	Headers    CancelBatchJobExecutionHeaders
+	// The unique identifier of the application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The unique identifier of the batch job execution.
+	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 }
 
 type CancelBatchJobExecutionResponse struct {

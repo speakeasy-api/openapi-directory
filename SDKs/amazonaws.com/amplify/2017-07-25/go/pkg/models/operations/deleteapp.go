@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAppPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type DeleteAppHeaders struct {
+type DeleteAppRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteAppHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAppRequest struct {
-	PathParams DeleteAppPathParams
-	Headers    DeleteAppHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type DeleteAppResponse struct {

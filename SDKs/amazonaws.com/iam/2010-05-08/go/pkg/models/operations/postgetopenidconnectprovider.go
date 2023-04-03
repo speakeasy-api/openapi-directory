@@ -50,25 +50,17 @@ func (e *POSTGetOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTGetOpenIDConnectProviderQueryParams struct {
-	Action  POSTGetOpenIDConnectProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetOpenIDConnectProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetOpenIDConnectProviderRequest struct {
-	QueryParams POSTGetOpenIDConnectProviderQueryParams
-	Headers     POSTGetOpenIDConnectProviderHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetOpenIDConnectProviderActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTGetOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetOpenIDConnectProviderResponse struct {

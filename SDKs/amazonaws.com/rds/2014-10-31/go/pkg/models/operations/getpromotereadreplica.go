@@ -50,7 +50,7 @@ func (e *GETPromoteReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETPromoteReadReplicaQueryParams struct {
+type GETPromoteReadReplicaRequest struct {
 	Action GETPromoteReadReplicaActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The number of days for which automated backups are retained. Setting this parameter to a positive number enables backups. Setting this parameter to 0 disables automated backups.</p> <p>Default: 1</p> <p>Constraints:</p> <ul> <li> <p>Must be a value from 0 to 35.</p> </li> <li> <p>Can't be set to 0 if the DB instance is a source to read replicas.</p> </li> </ul>
 	BackupRetentionPeriod *int64 `queryParam:"style=form,explode=true,name=BackupRetentionPeriod"`
@@ -59,21 +59,13 @@ type GETPromoteReadReplicaQueryParams struct {
 	// <p>The daily time range during which automated backups are created if automated backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.</p> <p>The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services Region. To see the time blocks available, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AdjustingTheMaintenanceWindow.html"> Adjusting the Preferred Maintenance Window</a> in the <i>Amazon RDS User Guide.</i> </p> <p>Constraints:</p> <ul> <li> <p>Must be in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li> </ul>
 	PreferredBackupWindow *string                          `queryParam:"style=form,explode=true,name=PreferredBackupWindow"`
 	Version               GETPromoteReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPromoteReadReplicaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPromoteReadReplicaRequest struct {
-	QueryParams GETPromoteReadReplicaQueryParams
-	Headers     GETPromoteReadReplicaHeaders
+	XAmzAlgorithm         *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPromoteReadReplicaResponse struct {

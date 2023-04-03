@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureAutomaticTransitionsRequest struct {
-	Request shared.ConfigureAutomaticTransitionRequest `request:"mediaType=application/json"`
-}
-
 type ConfigureAutomaticTransitionsResponse struct {
 	// Requested automatic Order status transition could not be configured
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

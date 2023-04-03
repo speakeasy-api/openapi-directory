@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSegmentsQueryParams struct {
-	// The maximum number of results to include in the response. If you omit this, the default of 50 is used.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use when requesting the next set of results. You received this token from a previous <code>ListSegments</code> operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListSegmentsHeaders struct {
+type ListSegmentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListSegmentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSegmentsRequest struct {
-	QueryParams ListSegmentsQueryParams
-	Headers     ListSegmentsHeaders
+	// The maximum number of results to include in the response. If you omit this, the default of 50 is used.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use when requesting the next set of results. You received this token from a previous <code>ListSegments</code> operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSegmentsResponse struct {

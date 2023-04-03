@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchPutAssetPropertyValueHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchPutAssetPropertyValueRequestBody struct {
 	// The list of asset property value entries for the batch put request. You can specify up to 10 entries per request.
 	Entries []shared.PutAssetPropertyValueEntry `json:"entries"`
 }
 
 type BatchPutAssetPropertyValueRequest struct {
-	Headers BatchPutAssetPropertyValueHeaders
-	Request BatchPutAssetPropertyValueRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchPutAssetPropertyValueRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type BatchPutAssetPropertyValueResponse struct {

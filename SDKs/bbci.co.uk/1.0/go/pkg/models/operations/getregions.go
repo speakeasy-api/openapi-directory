@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRegionsQueryParams struct {
+type GetRegionsRequest struct {
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetRegionsRequest struct {
-	QueryParams GetRegionsQueryParams
 }
 
 type GetRegionsResponse struct {

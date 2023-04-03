@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkflowStepsPathParams struct {
-	// The ID of the step group.
-	StepGroupID string `pathParam:"style=simple,explode=false,name=stepGroupId"`
-	// The ID of the migration workflow.
-	WorkflowID string `pathParam:"style=simple,explode=false,name=workflowId"`
-}
-
-type ListWorkflowStepsQueryParams struct {
-	// The maximum number of results that can be returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The pagination token.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListWorkflowStepsHeaders struct {
+type ListWorkflowStepsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListWorkflowStepsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWorkflowStepsRequest struct {
-	PathParams  ListWorkflowStepsPathParams
-	QueryParams ListWorkflowStepsQueryParams
-	Headers     ListWorkflowStepsHeaders
+	// The maximum number of results that can be returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The pagination token.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ID of the step group.
+	StepGroupID string `pathParam:"style=simple,explode=false,name=stepGroupId"`
+	// The ID of the migration workflow.
+	WorkflowID string `pathParam:"style=simple,explode=false,name=workflowId"`
 }
 
 type ListWorkflowStepsResponse struct {

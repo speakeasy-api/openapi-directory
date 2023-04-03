@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishMessagesToChannelRawPathParams struct {
-	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
-	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
-type PublishMessagesToChannelRawQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type PublishMessagesToChannelRawHeaders struct {
+type PublishMessagesToChannelRawRequest struct {
+	RequestBody []byte `request:"mediaType=application/x-msgpack"`
 	// The version of the API you wish to use.
 	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type PublishMessagesToChannelRawRequest struct {
-	PathParams  PublishMessagesToChannelRawPathParams
-	QueryParams PublishMessagesToChannelRawQueryParams
-	Headers     PublishMessagesToChannelRawHeaders
-	Request     []byte `request:"mediaType=application/x-msgpack"`
+	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 // PublishMessagesToChannelRaw2XXApplicationXMsgpack - OK

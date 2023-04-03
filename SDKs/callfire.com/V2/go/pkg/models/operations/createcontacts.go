@@ -8,13 +8,8 @@ import (
 )
 
 type CreateContactsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateContactsRequest struct {
-	// A list of a contact objects
-	Request  []shared.Contact `request:"mediaType=application/json"`
-	Security CreateContactsSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateContactsResponse struct {

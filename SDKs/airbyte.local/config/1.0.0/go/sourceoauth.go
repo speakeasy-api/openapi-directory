@@ -34,7 +34,7 @@ func newSourceOauth(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // CompleteSourceOAuth - Given a source def ID generate an access/refresh token etc.
-func (s *sourceOauth) CompleteSourceOAuth(ctx context.Context, request operations.CompleteSourceOAuthRequest) (*operations.CompleteSourceOAuthResponse, error) {
+func (s *sourceOauth) CompleteSourceOAuth(ctx context.Context, request shared.CompleteSourceOauthRequest) (*operations.CompleteSourceOAuthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/source_oauths/complete_oauth"
 
@@ -108,7 +108,7 @@ func (s *sourceOauth) CompleteSourceOAuth(ctx context.Context, request operation
 }
 
 // GetSourceOAuthConsent - Given a source connector definition ID, return the URL to the consent screen where to redirect the user to.
-func (s *sourceOauth) GetSourceOAuthConsent(ctx context.Context, request operations.GetSourceOAuthConsentRequest) (*operations.GetSourceOAuthConsentResponse, error) {
+func (s *sourceOauth) GetSourceOAuthConsent(ctx context.Context, request shared.SourceOauthConsentRequest) (*operations.GetSourceOAuthConsentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/source_oauths/get_consent_url"
 
@@ -182,7 +182,7 @@ func (s *sourceOauth) GetSourceOAuthConsent(ctx context.Context, request operati
 }
 
 // SetInstancewideSourceOauthParams - Sets instancewide variables to be used for the oauth flow when creating this source. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
-func (s *sourceOauth) SetInstancewideSourceOauthParams(ctx context.Context, request operations.SetInstancewideSourceOauthParamsRequest) (*operations.SetInstancewideSourceOauthParamsResponse, error) {
+func (s *sourceOauth) SetInstancewideSourceOauthParams(ctx context.Context, request shared.SetInstancewideSourceOauthParamsRequestBody) (*operations.SetInstancewideSourceOauthParamsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/source_oauths/oauth_params/create"
 

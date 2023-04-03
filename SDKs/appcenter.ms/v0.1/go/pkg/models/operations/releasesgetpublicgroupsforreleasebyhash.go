@@ -8,15 +8,11 @@ import (
 	"net/http"
 )
 
-type ReleasesGetPublicGroupsForReleaseByHashPathParams struct {
+type ReleasesGetPublicGroupsForReleaseByHashRequest struct {
 	// The secret of the target application
 	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
 	// The hash of the release
 	ReleaseHash string `pathParam:"style=simple,explode=false,name=release_hash"`
-}
-
-type ReleasesGetPublicGroupsForReleaseByHashRequest struct {
-	PathParams ReleasesGetPublicGroupsForReleaseByHashPathParams
 }
 
 type ReleasesGetPublicGroupsForReleaseByHash404ApplicationJSONCodeEnum string

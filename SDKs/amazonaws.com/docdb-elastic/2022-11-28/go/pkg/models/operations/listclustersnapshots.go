@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListClusterSnapshotsQueryParams struct {
-	// The arn of the Elastic DocumentDB cluster.
-	ClusterArn *string `queryParam:"style=form,explode=true,name=clusterArn"`
-	// The maximum number of entries to recieve in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The nextToken which is used the get the next page of data.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListClusterSnapshotsHeaders struct {
+type ListClusterSnapshotsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListClusterSnapshotsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListClusterSnapshotsRequest struct {
-	QueryParams ListClusterSnapshotsQueryParams
-	Headers     ListClusterSnapshotsHeaders
+	// The arn of the Elastic DocumentDB cluster.
+	ClusterArn *string `queryParam:"style=form,explode=true,name=clusterArn"`
+	// The maximum number of entries to recieve in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The nextToken which is used the get the next page of data.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListClusterSnapshotsResponse struct {

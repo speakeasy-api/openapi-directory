@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ProductCatalogSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ProductCatalogPathParams struct {
-	// two letter country code in upper case
-	Country string `pathParam:"style=simple,explode=false,name=country"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type ProductCatalogRequest struct {
-	PathParams ProductCatalogPathParams
-	Security   ProductCatalogSecurity
+	// two letter country code in upper case
+	Country string `pathParam:"style=simple,explode=false,name=country"`
 }
 
 // ProductCatalogDefaultApplicationJSON - Detailed information about the error

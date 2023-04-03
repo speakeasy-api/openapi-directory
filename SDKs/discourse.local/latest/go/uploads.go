@@ -43,7 +43,7 @@ func newUploads(defaultClient, securityClient HTTPClient, serverURL, language, s
 //
 // An external file store must be set up and `enable_direct_s3_uploads` must
 // be set to true for this endpoint to function.
-func (s *uploads) AbortMultipart(ctx context.Context, request operations.AbortMultipartRequest) (*operations.AbortMultipartResponse, error) {
+func (s *uploads) AbortMultipart(ctx context.Context, request operations.AbortMultipartRequestBody) (*operations.AbortMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/abort-multipart.json"
 
@@ -114,7 +114,7 @@ func (s *uploads) AbortMultipart(ctx context.Context, request operations.AbortMu
 //
 // An external file store must be set up and `enable_direct_s3_uploads` must
 // be set to true for this endpoint to function.
-func (s *uploads) BatchPresignMultipartParts(ctx context.Context, request operations.BatchPresignMultipartPartsRequest) (*operations.BatchPresignMultipartPartsResponse, error) {
+func (s *uploads) BatchPresignMultipartParts(ctx context.Context, request operations.BatchPresignMultipartPartsRequestBody) (*operations.BatchPresignMultipartPartsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/batch-presign-multipart-parts.json"
 
@@ -181,7 +181,7 @@ func (s *uploads) BatchPresignMultipartParts(ctx context.Context, request operat
 //
 // An external file store must be set up and `enable_direct_s3_uploads` must
 // be set to true for this endpoint to function.
-func (s *uploads) CompleteExternalUpload(ctx context.Context, request operations.CompleteExternalUploadRequest) (*operations.CompleteExternalUploadResponse, error) {
+func (s *uploads) CompleteExternalUpload(ctx context.Context, request operations.CompleteExternalUploadRequestBody) (*operations.CompleteExternalUploadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/complete-external-upload.json"
 
@@ -245,7 +245,7 @@ func (s *uploads) CompleteExternalUpload(ctx context.Context, request operations
 //
 // An external file store must be set up and `enable_direct_s3_uploads` must
 // be set to true for this endpoint to function.
-func (s *uploads) CompleteMultipart(ctx context.Context, request operations.CompleteMultipartRequest) (*operations.CompleteMultipartResponse, error) {
+func (s *uploads) CompleteMultipart(ctx context.Context, request operations.CompleteMultipartRequestBody) (*operations.CompleteMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/complete-multipart.json"
 
@@ -306,7 +306,7 @@ func (s *uploads) CompleteMultipart(ctx context.Context, request operations.Comp
 //
 // An external file store must be set up and `enable_direct_s3_uploads` must
 // be set to true for this endpoint to function.
-func (s *uploads) CreateMultipartUpload(ctx context.Context, request operations.CreateMultipartUploadRequest) (*operations.CreateMultipartUploadResponse, error) {
+func (s *uploads) CreateMultipartUpload(ctx context.Context, request operations.CreateMultipartUploadRequestBody) (*operations.CreateMultipartUploadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/create-multipart.json"
 
@@ -357,7 +357,7 @@ func (s *uploads) CreateMultipartUpload(ctx context.Context, request operations.
 }
 
 // CreateUpload - Creates an upload
-func (s *uploads) CreateUpload(ctx context.Context, request operations.CreateUploadRequest) (*operations.CreateUploadResponse, error) {
+func (s *uploads) CreateUpload(ctx context.Context, request operations.CreateUploadRequestBody) (*operations.CreateUploadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads.json"
 
@@ -427,7 +427,7 @@ func (s *uploads) CreateUpload(ctx context.Context, request operations.CreateUpl
 //
 // An external file store must be set up and `enable_direct_s3_uploads` must
 // be set to true for this endpoint to function.
-func (s *uploads) GeneratePresignedPut(ctx context.Context, request operations.GeneratePresignedPutRequest) (*operations.GeneratePresignedPutResponse, error) {
+func (s *uploads) GeneratePresignedPut(ctx context.Context, request operations.GeneratePresignedPutRequestBody) (*operations.GeneratePresignedPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads/generate-presigned-put.json"
 

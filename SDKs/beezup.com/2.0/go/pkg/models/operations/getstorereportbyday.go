@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStoreReportByDayPathParams struct {
+type GetStoreReportByDayRequest struct {
+	ReportByDayRequest shared.ReportByDayRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetStoreReportByDayRequest struct {
-	PathParams GetStoreReportByDayPathParams
-	Request    shared.ReportByDayRequest `request:"mediaType=application/json"`
 }
 
 type GetStoreReportByDayResponse struct {

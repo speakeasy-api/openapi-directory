@@ -50,26 +50,18 @@ func (e *GETDeleteReceiptFilterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteReceiptFilterQueryParams struct {
+type GETDeleteReceiptFilterRequest struct {
 	Action GETDeleteReceiptFilterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the IP address filter to delete.
-	FilterName string                            `queryParam:"style=form,explode=true,name=FilterName"`
-	Version    GETDeleteReceiptFilterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteReceiptFilterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteReceiptFilterRequest struct {
-	QueryParams GETDeleteReceiptFilterQueryParams
-	Headers     GETDeleteReceiptFilterHeaders
+	FilterName        string                            `queryParam:"style=form,explode=true,name=FilterName"`
+	Version           GETDeleteReceiptFilterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteReceiptFilterResponse struct {

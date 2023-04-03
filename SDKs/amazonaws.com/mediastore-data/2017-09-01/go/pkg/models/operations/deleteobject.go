@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteObjectPathParams struct {
+type DeleteObjectRequest struct {
 	// The path (including the file name) where the object is stored in the container. Format: &lt;folder name&gt;/&lt;folder name&gt;/&lt;file name&gt;
-	Path string `pathParam:"style=simple,explode=false,name=Path"`
-}
-
-type DeleteObjectHeaders struct {
+	Path              string  `pathParam:"style=simple,explode=false,name=Path"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteObjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteObjectRequest struct {
-	PathParams DeleteObjectPathParams
-	Headers    DeleteObjectHeaders
 }
 
 type DeleteObjectResponse struct {

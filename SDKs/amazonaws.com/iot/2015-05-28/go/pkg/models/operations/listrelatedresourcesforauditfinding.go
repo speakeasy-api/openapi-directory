@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRelatedResourcesForAuditFindingQueryParams struct {
-	// The finding Id.
-	FindingID string `queryParam:"style=form,explode=true,name=findingId"`
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token that can be used to retrieve the next set of results, or <code>null</code> if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListRelatedResourcesForAuditFindingHeaders struct {
+type ListRelatedResourcesForAuditFindingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListRelatedResourcesForAuditFindingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRelatedResourcesForAuditFindingRequest struct {
-	QueryParams ListRelatedResourcesForAuditFindingQueryParams
-	Headers     ListRelatedResourcesForAuditFindingHeaders
+	// The finding Id.
+	FindingID string `queryParam:"style=form,explode=true,name=findingId"`
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token that can be used to retrieve the next set of results, or <code>null</code> if there are no additional results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListRelatedResourcesForAuditFindingResponse struct {

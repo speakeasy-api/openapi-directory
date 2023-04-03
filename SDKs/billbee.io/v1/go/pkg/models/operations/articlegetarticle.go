@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetArticlePathParams struct {
+type ArticleGetArticleRequest struct {
 	// The id or the sku of the article to query
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ArticleGetArticleQueryParams struct {
 	// Either the value id, ean or the value sku to specify the meaning of the id parameter.
 	LookupBy *string `queryParam:"style=form,explode=true,name=lookupBy"`
-}
-
-type ArticleGetArticleRequest struct {
-	PathParams  ArticleGetArticlePathParams
-	QueryParams ArticleGetArticleQueryParams
 }
 
 type ArticleGetArticleResponse struct {

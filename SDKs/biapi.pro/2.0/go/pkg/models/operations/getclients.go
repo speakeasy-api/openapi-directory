@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClientsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetClientsRequest struct {
-	QueryParams GetClientsQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 // GetClients200ApplicationJSON - clients

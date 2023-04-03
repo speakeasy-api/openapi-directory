@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClipsPathParams struct {
-	// The programme identifier.
-	Pid string `pathParam:"style=simple,explode=false,name=pid"`
-}
-
-type GetClipsQueryParams struct {
+type GetClipsRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The programme identifier.
+	Pid string `pathParam:"style=simple,explode=false,name=pid"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetClipsRequest struct {
-	PathParams  GetClipsPathParams
-	QueryParams GetClipsQueryParams
 }
 
 type GetClipsResponse struct {

@@ -92,7 +92,7 @@ func New(opts ...SDKOption) *SDK {
 
 func (s *SDK) DeleteKeyKey(ctx context.Context, request operations.DeleteKeyKeyRequest) (*operations.DeleteKeyKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -134,16 +134,16 @@ func (s *SDK) DeleteKeyKey(ctx context.Context, request operations.DeleteKeyKeyR
 }
 
 // GetAccountID - Get account balance
-func (s *SDK) GetAccountID(ctx context.Context, request operations.GetAccountIDRequest) (*operations.GetAccountIDResponse, error) {
+func (s *SDK) GetAccountID(ctx context.Context, request operations.GetAccountIDRequest, security operations.GetAccountIDSecurity) (*operations.GetAccountIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *SDK) GetAccountID(ctx context.Context, request operations.GetAccountIDR
 }
 
 // GetBlock - Access detailed block information
-func (s *SDK) GetBlock(ctx context.Context, request operations.GetBlockRequest) (*operations.GetBlockResponse, error) {
+func (s *SDK) GetBlock(ctx context.Context) (*operations.GetBlockResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/block"
 
@@ -189,7 +189,7 @@ func (s *SDK) GetBlock(ctx context.Context, request operations.GetBlockRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -226,16 +226,16 @@ func (s *SDK) GetBlock(ctx context.Context, request operations.GetBlockRequest) 
 }
 
 // GetBlockID - Get information about particular block
-func (s *SDK) GetBlockID(ctx context.Context, request operations.GetBlockIDRequest) (*operations.GetBlockIDResponse, error) {
+func (s *SDK) GetBlockID(ctx context.Context, request operations.GetBlockIDRequest, security operations.GetBlockIDSecurity) (*operations.GetBlockIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/block/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/block/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -272,16 +272,16 @@ func (s *SDK) GetBlockID(ctx context.Context, request operations.GetBlockIDReque
 }
 
 // GetBlockIDTransaction - Get transaction count within block
-func (s *SDK) GetBlockIDTransaction(ctx context.Context, request operations.GetBlockIDTransactionRequest) (*operations.GetBlockIDTransactionResponse, error) {
+func (s *SDK) GetBlockIDTransaction(ctx context.Context, request operations.GetBlockIDTransactionRequest, security operations.GetBlockIDTransactionSecurity) (*operations.GetBlockIDTransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -318,16 +318,16 @@ func (s *SDK) GetBlockIDTransaction(ctx context.Context, request operations.GetB
 }
 
 // GetBlockIDTransactionIndex - Get information about particular transaction within block
-func (s *SDK) GetBlockIDTransactionIndex(ctx context.Context, request operations.GetBlockIDTransactionIndexRequest) (*operations.GetBlockIDTransactionIndexResponse, error) {
+func (s *SDK) GetBlockIDTransactionIndex(ctx context.Context, request operations.GetBlockIDTransactionIndexRequest, security operations.GetBlockIDTransactionIndexSecurity) (*operations.GetBlockIDTransactionIndexResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction/{index}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction/{index}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -364,7 +364,7 @@ func (s *SDK) GetBlockIDTransactionIndex(ctx context.Context, request operations
 }
 
 // GetBlockchain - Get a list of supported blockchains
-func (s *SDK) GetBlockchain(ctx context.Context, request operations.GetBlockchainRequest) (*operations.GetBlockchainResponse, error) {
+func (s *SDK) GetBlockchain(ctx context.Context) (*operations.GetBlockchainResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/blockchain"
 
@@ -373,7 +373,7 @@ func (s *SDK) GetBlockchain(ctx context.Context, request operations.GetBlockchai
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -410,16 +410,16 @@ func (s *SDK) GetBlockchain(ctx context.Context, request operations.GetBlockchai
 }
 
 // GetBlockchainID - Get information about blockchain woth given id
-func (s *SDK) GetBlockchainID(ctx context.Context, request operations.GetBlockchainIDRequest) (*operations.GetBlockchainIDResponse, error) {
+func (s *SDK) GetBlockchainID(ctx context.Context, request operations.GetBlockchainIDRequest, security operations.GetBlockchainIDSecurity) (*operations.GetBlockchainIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/blockchain/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/blockchain/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -456,16 +456,16 @@ func (s *SDK) GetBlockchainID(ctx context.Context, request operations.GetBlockch
 }
 
 // GetContractID - Get contract balance
-func (s *SDK) GetContractID(ctx context.Context, request operations.GetContractIDRequest) (*operations.GetContractIDResponse, error) {
+func (s *SDK) GetContractID(ctx context.Context, request operations.GetContractIDRequest, security operations.GetContractIDSecurity) (*operations.GetContractIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contract/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contract/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -548,7 +548,7 @@ func (s *SDK) GetErc20(ctx context.Context) (*operations.GetErc20Response, error
 // GetErc20Address - Get information amout token balance in the account
 func (s *SDK) GetErc20Address(ctx context.Context, request operations.GetErc20AddressRequest) (*operations.GetErc20AddressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/erc20/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/erc20/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -597,7 +597,7 @@ func (s *SDK) GetKey(ctx context.Context, request operations.GetKeyRequest) (*op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -636,16 +636,16 @@ func (s *SDK) GetKey(ctx context.Context, request operations.GetKeyRequest) (*op
 }
 
 // GetTransactionHash - Get information about transaction by the transaction hash value
-func (s *SDK) GetTransactionHash(ctx context.Context, request operations.GetTransactionHashRequest) (*operations.GetTransactionHashResponse, error) {
+func (s *SDK) GetTransactionHash(ctx context.Context, request operations.GetTransactionHashRequest, security operations.GetTransactionHashSecurity) (*operations.GetTransactionHashResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -682,16 +682,16 @@ func (s *SDK) GetTransactionHash(ctx context.Context, request operations.GetTran
 }
 
 // GetTransactionHashReceipt - Get receipt detail information
-func (s *SDK) GetTransactionHashReceipt(ctx context.Context, request operations.GetTransactionHashReceiptRequest) (*operations.GetTransactionHashReceiptResponse, error) {
+func (s *SDK) GetTransactionHashReceipt(ctx context.Context, request operations.GetTransactionHashReceiptRequest, security operations.GetTransactionHashReceiptSecurity) (*operations.GetTransactionHashReceiptResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}/receipt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}/receipt", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -862,7 +862,7 @@ func (s *SDK) GetWalletAccount(ctx context.Context) (*operations.GetWalletAccoun
 // GetWalletAccountID - Get account balance
 func (s *SDK) GetWalletAccountID(ctx context.Context, request operations.GetWalletAccountIDRequest) (*operations.GetWalletAccountIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -992,7 +992,7 @@ func (s *SDK) OptionsAccount(ctx context.Context) (*operations.OptionsAccountRes
 }
 func (s *SDK) OptionsAccountID(ctx context.Context, request operations.OptionsAccountIDRequest) (*operations.OptionsAccountIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1080,7 +1080,7 @@ func (s *SDK) OptionsBlock(ctx context.Context) (*operations.OptionsBlockRespons
 }
 func (s *SDK) OptionsBlockID(ctx context.Context, request operations.OptionsBlockIDRequest) (*operations.OptionsBlockIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/block/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/block/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1124,7 +1124,7 @@ func (s *SDK) OptionsBlockID(ctx context.Context, request operations.OptionsBloc
 }
 func (s *SDK) OptionsBlockIDTransaction(ctx context.Context, request operations.OptionsBlockIDTransactionRequest) (*operations.OptionsBlockIDTransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1168,7 +1168,7 @@ func (s *SDK) OptionsBlockIDTransaction(ctx context.Context, request operations.
 }
 func (s *SDK) OptionsBlockIDTransactionIndex(ctx context.Context, request operations.OptionsBlockIDTransactionIndexRequest) (*operations.OptionsBlockIDTransactionIndexResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction/{index}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/block/{id}/transaction/{index}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1256,7 +1256,7 @@ func (s *SDK) OptionsBlockchain(ctx context.Context) (*operations.OptionsBlockch
 }
 func (s *SDK) OptionsBlockchainID(ctx context.Context, request operations.OptionsBlockchainIDRequest) (*operations.OptionsBlockchainIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/blockchain/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/blockchain/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1344,7 +1344,7 @@ func (s *SDK) OptionsContract(ctx context.Context) (*operations.OptionsContractR
 }
 func (s *SDK) OptionsContractID(ctx context.Context, request operations.OptionsContractIDRequest) (*operations.OptionsContractIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contract/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contract/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1476,7 +1476,7 @@ func (s *SDK) OptionsErc20(ctx context.Context) (*operations.OptionsErc20Respons
 }
 func (s *SDK) OptionsErc20Address(ctx context.Context, request operations.OptionsErc20AddressRequest) (*operations.OptionsErc20AddressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/erc20/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/erc20/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1564,7 +1564,7 @@ func (s *SDK) OptionsKey(ctx context.Context) (*operations.OptionsKeyResponse, e
 }
 func (s *SDK) OptionsKeyKey(ctx context.Context, request operations.OptionsKeyKeyRequest) (*operations.OptionsKeyKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1652,7 +1652,7 @@ func (s *SDK) OptionsTransaction(ctx context.Context) (*operations.OptionsTransa
 }
 func (s *SDK) OptionsTransactionHash(ctx context.Context, request operations.OptionsTransactionHashRequest) (*operations.OptionsTransactionHashResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1696,7 +1696,7 @@ func (s *SDK) OptionsTransactionHash(ctx context.Context, request operations.Opt
 }
 func (s *SDK) OptionsTransactionHashReceipt(ctx context.Context, request operations.OptionsTransactionHashReceiptRequest) (*operations.OptionsTransactionHashReceiptResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}/receipt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transaction/{hash}/receipt", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1872,7 +1872,7 @@ func (s *SDK) OptionsWalletAccount(ctx context.Context) (*operations.OptionsWall
 }
 func (s *SDK) OptionsWalletAccountID(ctx context.Context, request operations.OptionsWalletAccountIDRequest) (*operations.OptionsWalletAccountIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1916,7 +1916,7 @@ func (s *SDK) OptionsWalletAccountID(ctx context.Context, request operations.Opt
 }
 func (s *SDK) OptionsWalletAccountIDPay(ctx context.Context, request operations.OptionsWalletAccountIDPayRequest) (*operations.OptionsWalletAccountIDPayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/pay", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/pay", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "OPTIONS", url, nil)
 	if err != nil {
@@ -1960,7 +1960,7 @@ func (s *SDK) OptionsWalletAccountIDPay(ctx context.Context, request operations.
 }
 
 // PostAccount - Create new account
-func (s *SDK) PostAccount(ctx context.Context, request operations.PostAccountRequest) (*operations.PostAccountResponse, error) {
+func (s *SDK) PostAccount(ctx context.Context) (*operations.PostAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -1969,7 +1969,7 @@ func (s *SDK) PostAccount(ctx context.Context, request operations.PostAccountReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2050,16 +2050,16 @@ func (s *SDK) PostContract(ctx context.Context) (*operations.PostContractRespons
 }
 
 // PostContractID - Call the contract
-func (s *SDK) PostContractID(ctx context.Context, request operations.PostContractIDRequest) (*operations.PostContractIDResponse, error) {
+func (s *SDK) PostContractID(ctx context.Context, request operations.PostContractIDRequest, security operations.PostContractIDSecurity) (*operations.PostContractIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contract/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contract/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2140,7 +2140,7 @@ func (s *SDK) PostErc20(ctx context.Context) (*operations.PostErc20Response, err
 // PostErc20Address - Transfer tokens to another account
 func (s *SDK) PostErc20Address(ctx context.Context, request operations.PostErc20AddressRequest) (*operations.PostErc20AddressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/erc20/{address}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/erc20/{address}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2224,7 +2224,7 @@ func (s *SDK) PostKey(ctx context.Context) (*operations.PostKeyResponse, error) 
 }
 
 // PostTransaction - Create a new transaction. Transfer Ether between accounts
-func (s *SDK) PostTransaction(ctx context.Context, request operations.PostTransactionRequest) (*operations.PostTransactionResponse, error) {
+func (s *SDK) PostTransaction(ctx context.Context) (*operations.PostTransactionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transaction"
 
@@ -2233,7 +2233,7 @@ func (s *SDK) PostTransaction(ctx context.Context, request operations.PostTransa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := s._defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2356,7 +2356,7 @@ func (s *SDK) PostWalletAccount(ctx context.Context) (*operations.PostWalletAcco
 }
 func (s *SDK) PostWalletAccountIDContract(ctx context.Context, request operations.PostWalletAccountIDContractRequest) (*operations.PostWalletAccountIDContractResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/contract", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/contract", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2398,7 +2398,7 @@ func (s *SDK) PostWalletAccountIDContract(ctx context.Context, request operation
 }
 func (s *SDK) PostWalletAccountIDErc20(ctx context.Context, request operations.PostWalletAccountIDErc20Request) (*operations.PostWalletAccountIDErc20Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/erc20", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/erc20", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2442,7 +2442,7 @@ func (s *SDK) PostWalletAccountIDErc20(ctx context.Context, request operations.P
 // PostWalletAccountIDPay - Send payment from the account held within the wallet
 func (s *SDK) PostWalletAccountIDPay(ctx context.Context, request operations.PostWalletAccountIDPayRequest) (*operations.PostWalletAccountIDPayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/pay", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/wallet/account/{id}/pay", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

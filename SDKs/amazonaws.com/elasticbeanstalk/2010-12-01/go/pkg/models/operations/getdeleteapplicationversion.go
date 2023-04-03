@@ -50,7 +50,7 @@ func (e *GETDeleteApplicationVersionVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDeleteApplicationVersionQueryParams struct {
+type GETDeleteApplicationVersionRequest struct {
 	Action GETDeleteApplicationVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the application to which the version belongs.
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
@@ -58,10 +58,7 @@ type GETDeleteApplicationVersionQueryParams struct {
 	DeleteSourceBundle *bool                                  `queryParam:"style=form,explode=true,name=DeleteSourceBundle"`
 	Version            GETDeleteApplicationVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The label of the version to delete.
-	VersionLabel string `queryParam:"style=form,explode=true,name=VersionLabel"`
-}
-
-type GETDeleteApplicationVersionHeaders struct {
+	VersionLabel      string  `queryParam:"style=form,explode=true,name=VersionLabel"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -69,11 +66,6 @@ type GETDeleteApplicationVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteApplicationVersionRequest struct {
-	QueryParams GETDeleteApplicationVersionQueryParams
-	Headers     GETDeleteApplicationVersionHeaders
 }
 
 type GETDeleteApplicationVersionResponse struct {

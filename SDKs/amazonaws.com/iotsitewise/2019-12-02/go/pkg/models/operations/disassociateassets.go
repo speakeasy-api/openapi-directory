@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type DisassociateAssetsPathParams struct {
-	// The ID of the parent asset from which to disassociate the child asset.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-}
-
-type DisassociateAssetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DisassociateAssetsRequestBody struct {
 	// The ID of the child asset to disassociate.
 	ChildAssetID string `json:"childAssetId"`
@@ -31,9 +16,16 @@ type DisassociateAssetsRequestBody struct {
 }
 
 type DisassociateAssetsRequest struct {
-	PathParams DisassociateAssetsPathParams
-	Headers    DisassociateAssetsHeaders
-	Request    DisassociateAssetsRequestBody `request:"mediaType=application/json"`
+	RequestBody       DisassociateAssetsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the parent asset from which to disassociate the child asset.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
 }
 
 type DisassociateAssetsResponse struct {

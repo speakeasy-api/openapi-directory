@@ -35,11 +35,11 @@ func newPdfOcr(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // PdfOcrPdfToLinesWithLocation - Convert a PDF into text lines with location
 // Converts a PDF into lines/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.
-func (s *pdfOcr) PdfOcrPdfToLinesWithLocation(ctx context.Context, request operations.PdfOcrPdfToLinesWithLocationRequest) (*operations.PdfOcrPdfToLinesWithLocationResponse, error) {
+func (s *pdfOcr) PdfOcrPdfToLinesWithLocation(ctx context.Context, request operations.PdfOcrPdfToLinesWithLocationRequest, security operations.PdfOcrPdfToLinesWithLocationSecurity) (*operations.PdfOcrPdfToLinesWithLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/pdf/to/lines-with-location"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,9 +54,9 @@ func (s *pdfOcr) PdfOcrPdfToLinesWithLocation(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -113,11 +113,11 @@ func (s *pdfOcr) PdfOcrPdfToLinesWithLocation(ctx context.Context, request opera
 
 // PdfOcrPdfToWordsWithLocation - Convert a PDF into words with location
 // Converts a PDF into words/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.
-func (s *pdfOcr) PdfOcrPdfToWordsWithLocation(ctx context.Context, request operations.PdfOcrPdfToWordsWithLocationRequest) (*operations.PdfOcrPdfToWordsWithLocationResponse, error) {
+func (s *pdfOcr) PdfOcrPdfToWordsWithLocation(ctx context.Context, request operations.PdfOcrPdfToWordsWithLocationRequest, security operations.PdfOcrPdfToWordsWithLocationSecurity) (*operations.PdfOcrPdfToWordsWithLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/pdf/to/words-with-location"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -132,9 +132,9 @@ func (s *pdfOcr) PdfOcrPdfToWordsWithLocation(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,11 +190,11 @@ func (s *pdfOcr) PdfOcrPdfToWordsWithLocation(ctx context.Context, request opera
 }
 
 // PdfOcrPost - Converts an uploaded PDF file into text via Optical Character Recognition.
-func (s *pdfOcr) PdfOcrPost(ctx context.Context, request operations.PdfOcrPostRequest) (*operations.PdfOcrPostResponse, error) {
+func (s *pdfOcr) PdfOcrPost(ctx context.Context, request operations.PdfOcrPostRequest, security operations.PdfOcrPostSecurity) (*operations.PdfOcrPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/pdf/toText"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -209,9 +209,9 @@ func (s *pdfOcr) PdfOcrPost(ctx context.Context, request operations.PdfOcrPostRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

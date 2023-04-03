@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnsubscribeDownloadSharePathParams struct {
-	// Share ID
-	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
-}
-
-type UnsubscribeDownloadShareHeaders struct {
+type UnsubscribeDownloadShareRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UnsubscribeDownloadShareRequest struct {
-	PathParams UnsubscribeDownloadSharePathParams
-	Headers    UnsubscribeDownloadShareHeaders
+	// Share ID
+	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
 }
 
 type UnsubscribeDownloadShareResponse struct {

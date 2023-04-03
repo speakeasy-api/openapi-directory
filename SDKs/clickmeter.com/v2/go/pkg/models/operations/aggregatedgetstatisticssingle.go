@@ -72,7 +72,7 @@ func (e *AggregatedGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type AggregatedGetStatisticsSingleQueryParams struct {
+type AggregatedGetStatisticsSingleRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// If using "yesterday" or "today" timeframe you can ask for the hourly detail
@@ -82,10 +82,6 @@ type AggregatedGetStatisticsSingleQueryParams struct {
 	TimeFrame AggregatedGetStatisticsSingleTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type AggregatedGetStatisticsSingleRequest struct {
-	QueryParams AggregatedGetStatisticsSingleQueryParams
 }
 
 type AggregatedGetStatisticsSingleResponse struct {

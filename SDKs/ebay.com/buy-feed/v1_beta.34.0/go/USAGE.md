@@ -14,25 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.GetItemFeedRequest{
-        Security: operations.GetItemFeedSecurity{
-            ClientCredentials: shared.SchemeClientCredentials{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetItemFeedQueryParams{
-            CategoryID: "corrupti",
-            Date: "provident",
-            FeedScope: "distinctio",
-        },
-        Headers: operations.GetItemFeedHeaders{
-            Accept: "quibusdam",
-            Range: "unde",
-            XEbayCMarketplaceID: "nulla",
-        },
+        Accept: "corrupti",
+        Range: "provident",
+        XEbayCMarketplaceID: "distinctio",
+        CategoryID: "quibusdam",
+        Date: "unde",
+        FeedScope: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.Item.GetItemFeed(ctx, req)
+    res, err := s.Item.GetItemFeed(ctx, req, operations.GetItemFeedSecurity{
+        ClientCredentials: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

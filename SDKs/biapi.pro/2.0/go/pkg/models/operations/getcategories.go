@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoriesQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetCategoriesRequest struct {
-	QueryParams GetCategoriesQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 // GetCategories200ApplicationJSON - categories

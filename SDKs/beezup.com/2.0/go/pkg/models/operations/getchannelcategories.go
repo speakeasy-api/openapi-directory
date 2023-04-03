@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelCategoriesPathParams struct {
-	// The channel identifier
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-}
-
-type GetChannelCategoriesHeaders struct {
+type GetChannelCategoriesRequest struct {
 	// Indicates that the client accepts that the response will be compressed to reduce traffic size.
 	AcceptEncoding []string `header:"style=simple,explode=false,name=Accept-Encoding"`
-}
-
-type GetChannelCategoriesRequest struct {
-	PathParams GetChannelCategoriesPathParams
-	Headers    GetChannelCategoriesHeaders
+	// The channel identifier
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 }
 
 type GetChannelCategoriesResponse struct {

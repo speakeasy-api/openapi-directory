@@ -10,8 +10,8 @@ import (
 )
 
 type PrfndSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type PrfndRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type PrfndRequestBody struct {
 	Format PrfndRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type PrfndRequest struct {
-	// Request format
-	Request  *PrfndRequestBody `request:"mediaType=application/json"`
-	Security PrfndSecurity
 }
 
 type Prfnd504ApplicationJSONErrorEnum string

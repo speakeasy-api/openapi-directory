@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeJobExecutionPathParams struct {
-	// The unique identifier assigned to this job when it was created.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The thing name associated with the device the job execution is running on.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type DescribeJobExecutionQueryParams struct {
-	// Optional. A number that identifies a particular job execution on a particular device. If not specified, the latest job execution is returned.
-	ExecutionNumber *int64 `queryParam:"style=form,explode=true,name=executionNumber"`
-	// Optional. When set to true, the response contains the job document. The default is false.
-	IncludeJobDocument *bool `queryParam:"style=form,explode=true,name=includeJobDocument"`
-}
-
-type DescribeJobExecutionHeaders struct {
+type DescribeJobExecutionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type DescribeJobExecutionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeJobExecutionRequest struct {
-	PathParams  DescribeJobExecutionPathParams
-	QueryParams DescribeJobExecutionQueryParams
-	Headers     DescribeJobExecutionHeaders
+	// Optional. A number that identifies a particular job execution on a particular device. If not specified, the latest job execution is returned.
+	ExecutionNumber *int64 `queryParam:"style=form,explode=true,name=executionNumber"`
+	// Optional. When set to true, the response contains the job document. The default is false.
+	IncludeJobDocument *bool `queryParam:"style=form,explode=true,name=includeJobDocument"`
+	// The unique identifier assigned to this job when it was created.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// The thing name associated with the device the job execution is running on.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type DescribeJobExecutionResponse struct {

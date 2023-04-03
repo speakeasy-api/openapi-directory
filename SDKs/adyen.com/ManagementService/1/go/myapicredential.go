@@ -37,16 +37,16 @@ func newMyAPICredential(defaultClient, securityClient HTTPClient, serverURL, lan
 // The API key from the request is used to identify the [API credential](https://docs.adyen.com/development-resources/api-credentials).
 //
 // You can make this request with any of the Management API roles.
-func (s *myAPICredential) DeleteMeAllowedOriginsOriginID(ctx context.Context, request operations.DeleteMeAllowedOriginsOriginIDRequest) (*operations.DeleteMeAllowedOriginsOriginIDResponse, error) {
+func (s *myAPICredential) DeleteMeAllowedOriginsOriginID(ctx context.Context, request operations.DeleteMeAllowedOriginsOriginIDRequest, security operations.DeleteMeAllowedOriginsOriginIDSecurity) (*operations.DeleteMeAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/allowedOrigins/{originId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/allowedOrigins/{originId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *myAPICredential) DeleteMeAllowedOriginsOriginID(ctx context.Context, re
 // Returns your [API credential](https://docs.adyen.com/development-resources/api-credentials) details based on the API Key you used in the request.
 //
 // You can make this request with any of the Management API roles.
-func (s *myAPICredential) GetMe(ctx context.Context, request operations.GetMeRequest) (*operations.GetMeResponse, error) {
+func (s *myAPICredential) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -102,7 +102,7 @@ func (s *myAPICredential) GetMe(ctx context.Context, request operations.GetMeReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *myAPICredential) GetMe(ctx context.Context, request operations.GetMeReq
 // Returns the list of [allowed origins](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) of your [API credential](https://docs.adyen.com/development-resources/api-credentials) based on the API key you used in the request.
 //
 // You can make this request with any of the Management API roles.
-func (s *myAPICredential) GetMeAllowedOrigins(ctx context.Context, request operations.GetMeAllowedOriginsRequest) (*operations.GetMeAllowedOriginsResponse, error) {
+func (s *myAPICredential) GetMeAllowedOrigins(ctx context.Context) (*operations.GetMeAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/allowedOrigins"
 
@@ -167,7 +167,7 @@ func (s *myAPICredential) GetMeAllowedOrigins(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,16 +224,16 @@ func (s *myAPICredential) GetMeAllowedOrigins(ctx context.Context, request opera
 // The API key from the request is used to identify the [API credential](https://docs.adyen.com/development-resources/api-credentials).
 //
 // You can make this request with any of the Management API roles.
-func (s *myAPICredential) GetMeAllowedOriginsOriginID(ctx context.Context, request operations.GetMeAllowedOriginsOriginIDRequest) (*operations.GetMeAllowedOriginsOriginIDResponse, error) {
+func (s *myAPICredential) GetMeAllowedOriginsOriginID(ctx context.Context, request operations.GetMeAllowedOriginsOriginIDRequest, security operations.GetMeAllowedOriginsOriginIDSecurity) (*operations.GetMeAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/allowedOrigins/{originId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/me/allowedOrigins/{originId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -290,7 +290,7 @@ func (s *myAPICredential) GetMeAllowedOriginsOriginID(ctx context.Context, reque
 // The API key from the request is used to identify the [API credential](https://docs.adyen.com/development-resources/api-credentials).
 //
 // You can make this request with any of the Management API roles.
-func (s *myAPICredential) PostMeAllowedOrigins(ctx context.Context, request operations.PostMeAllowedOriginsRequest) (*operations.PostMeAllowedOriginsResponse, error) {
+func (s *myAPICredential) PostMeAllowedOrigins(ctx context.Context, request shared.CreateAllowedOriginRequest, security operations.PostMeAllowedOriginsSecurity) (*operations.PostMeAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/allowedOrigins"
 
@@ -306,7 +306,7 @@ func (s *myAPICredential) PostMeAllowedOrigins(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

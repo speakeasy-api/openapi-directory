@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsListToolsetsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BuildsListToolsetsPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BuildsListToolsetsToolsEnum - Toolset name
@@ -47,15 +39,13 @@ func (e *BuildsListToolsetsToolsEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BuildsListToolsetsQueryParams struct {
+type BuildsListToolsetsRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Toolset name
 	Tools *BuildsListToolsetsToolsEnum `queryParam:"style=form,explode=true,name=tools"`
-}
-
-type BuildsListToolsetsRequest struct {
-	PathParams  BuildsListToolsetsPathParams
-	QueryParams BuildsListToolsetsQueryParams
-	Security    BuildsListToolsetsSecurity
 }
 
 // BuildsListToolsetsDefaultApplicationJSON - Bad Request

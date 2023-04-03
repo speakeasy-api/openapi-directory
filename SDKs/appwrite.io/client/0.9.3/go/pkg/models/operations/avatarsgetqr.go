@@ -4,15 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetQRSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AvatarsGetQRQueryParams struct {
+type AvatarsGetQRRequest struct {
 	// Return resulting image with 'Content-Disposition: attachment ' headers for the browser to start downloading it. Pass 0 for no header, or 1 for otherwise. Default value is set to 0.
 	Download *bool `queryParam:"style=form,explode=true,name=download"`
 	// Margin from edge. Pass an integer between 0 to 10. Defaults to 1.
@@ -21,11 +20,6 @@ type AvatarsGetQRQueryParams struct {
 	Size *int `queryParam:"style=form,explode=true,name=size"`
 	// Plain text to be converted to QR code image.
 	Text string `queryParam:"style=form,explode=true,name=text"`
-}
-
-type AvatarsGetQRRequest struct {
-	QueryParams AvatarsGetQRQueryParams
-	Security    AvatarsGetQRSecurity
 }
 
 type AvatarsGetQRResponse struct {

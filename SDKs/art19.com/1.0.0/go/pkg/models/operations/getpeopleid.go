@@ -8,17 +8,12 @@ import (
 )
 
 type GetPeopleIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetPeopleIDPathParams struct {
-	// The ID of the person resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetPeopleIDRequest struct {
-	PathParams GetPeopleIDPathParams
-	Security   GetPeopleIDSecurity
+	// The ID of the person resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetPeopleID200ApplicationVndAPIPlusJSON - Success

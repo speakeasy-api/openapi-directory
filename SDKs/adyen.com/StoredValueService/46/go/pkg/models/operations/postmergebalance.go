@@ -8,13 +8,8 @@ import (
 )
 
 type PostMergeBalanceSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostMergeBalanceRequest struct {
-	Request  *shared.StoredValueBalanceMergeRequest `request:"mediaType=application/json"`
-	Security PostMergeBalanceSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostMergeBalanceResponse struct {

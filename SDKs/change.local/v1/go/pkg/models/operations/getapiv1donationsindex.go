@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1DonationsIndexSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAPIV1DonationsIndexQueryParams struct {
-	// Which page to return. This endpoint is paginated, and returns maximum 30 donations per page.
-	Page *float64 `queryParam:"style=form,explode=true,name=page"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetAPIV1DonationsIndexRequest struct {
-	QueryParams GetAPIV1DonationsIndexQueryParams
-	Security    GetAPIV1DonationsIndexSecurity
+	// Which page to return. This endpoint is paginated, and returns maximum 30 donations per page.
+	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 }
 
 type GetAPIV1DonationsIndexResponse struct {

@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type DeletePostPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeletePostRequestBody struct {
 	// The `SiteSetting.can_permanently_delete` needs to be
 	// enabled first before this param can be used. Also this endpoint
@@ -20,8 +16,8 @@ type DeletePostRequestBody struct {
 }
 
 type DeletePostRequest struct {
-	PathParams DeletePostPathParams
-	Request    *DeletePostRequestBody `request:"mediaType=application/json"`
+	RequestBody *DeletePostRequestBody `request:"mediaType=application/json"`
+	ID          int64                  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeletePostResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisableChannelCatalogCategoryMappingPathParams struct {
+type DisableChannelCatalogCategoryMappingRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type DisableChannelCatalogCategoryMappingRequest struct {
-	PathParams DisableChannelCatalogCategoryMappingPathParams
 }
 
 type DisableChannelCatalogCategoryMappingResponse struct {

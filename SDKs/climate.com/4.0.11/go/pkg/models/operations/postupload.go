@@ -8,19 +8,14 @@ import (
 )
 
 type PostUploadSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type PostUploadHeaders struct {
-	// Email address associated with a Climate account, used when to sending to another user.
-	XRecipientEmail *string `header:"style=simple,explode=false,name=X-Recipient-Email"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostUploadRequest struct {
-	Headers  PostUploadHeaders
-	Request  *shared.Upload `request:"mediaType=application/json"`
-	Security PostUploadSecurity
+	Upload *shared.Upload `request:"mediaType=application/json"`
+	// Email address associated with a Climate account, used when to sending to another user.
+	XRecipientEmail *string `header:"style=simple,explode=false,name=X-Recipient-Email"`
 }
 
 type PostUploadResponse struct {

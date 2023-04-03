@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProfilePathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type CreateProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateProfileRequestBodyAddress - A generic address associated with the customer that is not mailing, shipping, or billing.
 type CreateProfileRequestBodyAddress struct {
 	Address1   *string `json:"Address1,omitempty"`
@@ -184,9 +169,16 @@ type CreateProfileRequestBody struct {
 }
 
 type CreateProfileRequest struct {
-	PathParams CreateProfilePathParams
-	Headers    CreateProfileHeaders
-	Request    CreateProfileRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName        string                   `pathParam:"style=simple,explode=false,name=DomainName"`
+	RequestBody       CreateProfileRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateProfileResponse struct {

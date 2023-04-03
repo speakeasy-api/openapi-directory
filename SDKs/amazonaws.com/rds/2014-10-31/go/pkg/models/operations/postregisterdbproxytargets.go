@@ -50,25 +50,17 @@ func (e *POSTRegisterDBProxyTargetsVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTRegisterDBProxyTargetsQueryParams struct {
-	Action  POSTRegisterDBProxyTargetsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRegisterDBProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRegisterDBProxyTargetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRegisterDBProxyTargetsRequest struct {
-	QueryParams POSTRegisterDBProxyTargetsQueryParams
-	Headers     POSTRegisterDBProxyTargetsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRegisterDBProxyTargetsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTRegisterDBProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRegisterDBProxyTargetsResponse struct {

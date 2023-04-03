@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAttributeGroupsForApplicationPathParams struct {
-	// The name or ID of the application.
-	Application string `pathParam:"style=simple,explode=false,name=application"`
-}
-
-type ListAttributeGroupsForApplicationQueryParams struct {
-	// The upper bound of the number of results to return. The value cannot exceed 25. If you omit this parameter, it defaults to 25. This value is optional.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// This token retrieves the next page of results after a previous API call.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAttributeGroupsForApplicationHeaders struct {
+type ListAttributeGroupsForApplicationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListAttributeGroupsForApplicationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAttributeGroupsForApplicationRequest struct {
-	PathParams  ListAttributeGroupsForApplicationPathParams
-	QueryParams ListAttributeGroupsForApplicationQueryParams
-	Headers     ListAttributeGroupsForApplicationHeaders
+	// The name or ID of the application.
+	Application string `pathParam:"style=simple,explode=false,name=application"`
+	// The upper bound of the number of results to return. The value cannot exceed 25. If you omit this parameter, it defaults to 25. This value is optional.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// This token retrieves the next page of results after a previous API call.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAttributeGroupsForApplicationResponse struct {

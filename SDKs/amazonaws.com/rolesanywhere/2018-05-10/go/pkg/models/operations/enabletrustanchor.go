@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnableTrustAnchorPathParams struct {
-	// The unique identifier of the trust anchor.
-	TrustAnchorID string `pathParam:"style=simple,explode=false,name=trustAnchorId"`
-}
-
-type EnableTrustAnchorHeaders struct {
+type EnableTrustAnchorRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type EnableTrustAnchorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type EnableTrustAnchorRequest struct {
-	PathParams EnableTrustAnchorPathParams
-	Headers    EnableTrustAnchorHeaders
+	// The unique identifier of the trust anchor.
+	TrustAnchorID string `pathParam:"style=simple,explode=false,name=trustAnchorId"`
 }
 
 type EnableTrustAnchorResponse struct {

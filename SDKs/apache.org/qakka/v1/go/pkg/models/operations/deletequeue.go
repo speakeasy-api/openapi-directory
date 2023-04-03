@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteQueuePathParams struct {
-	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
-}
-
-type DeleteQueueQueryParams struct {
-	Confirm *bool `queryParam:"style=form,explode=true,name=confirm"`
-}
-
 type DeleteQueueRequest struct {
-	PathParams  DeleteQueuePathParams
-	QueryParams DeleteQueueQueryParams
+	Confirm   *bool  `queryParam:"style=form,explode=true,name=confirm"`
+	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
 }
 
 type DeleteQueueResponse struct {

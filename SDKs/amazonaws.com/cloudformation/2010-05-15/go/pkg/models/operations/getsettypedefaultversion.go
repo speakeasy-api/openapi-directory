@@ -77,7 +77,7 @@ func (e *GETSetTypeDefaultVersionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetTypeDefaultVersionQueryParams struct {
+type GETSetTypeDefaultVersionRequest struct {
 	Action GETSetTypeDefaultVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the extension for which you want version summary information.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
 	Arn *string `queryParam:"style=form,explode=true,name=Arn"`
@@ -87,10 +87,7 @@ type GETSetTypeDefaultVersionQueryParams struct {
 	TypeName *string                             `queryParam:"style=form,explode=true,name=TypeName"`
 	Version  GETSetTypeDefaultVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name (ARN) assigned to the extension version when it is registered.
-	VersionID *string `queryParam:"style=form,explode=true,name=VersionId"`
-}
-
-type GETSetTypeDefaultVersionHeaders struct {
+	VersionID         *string `queryParam:"style=form,explode=true,name=VersionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -98,11 +95,6 @@ type GETSetTypeDefaultVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetTypeDefaultVersionRequest struct {
-	QueryParams GETSetTypeDefaultVersionQueryParams
-	Headers     GETSetTypeDefaultVersionHeaders
 }
 
 type GETSetTypeDefaultVersionResponse struct {

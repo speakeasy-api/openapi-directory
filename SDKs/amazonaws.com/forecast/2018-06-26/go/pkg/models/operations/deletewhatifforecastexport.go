@@ -30,20 +30,16 @@ func (e *DeleteWhatIfForecastExportXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DeleteWhatIfForecastExportHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteWhatIfForecastExportXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteWhatIfForecastExportRequest struct {
-	Headers DeleteWhatIfForecastExportHeaders
-	Request shared.DeleteWhatIfForecastExportRequest `request:"mediaType=application/json"`
+	DeleteWhatIfForecastExportRequest shared.DeleteWhatIfForecastExportRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                 *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                        DeleteWhatIfForecastExportXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteWhatIfForecastExportResponse struct {

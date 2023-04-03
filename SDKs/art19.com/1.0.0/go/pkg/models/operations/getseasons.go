@@ -10,7 +10,7 @@ import (
 )
 
 type GetSeasonsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetSeasonsSortEnum string
@@ -42,7 +42,7 @@ func (e *GetSeasonsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSeasonsQueryParams struct {
+type GetSeasonsRequest struct {
 	// The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
 	// The brackets *MUST* be percent-encoded, per the requirements in
 	// [RFC 3986 § 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
@@ -64,11 +64,6 @@ type GetSeasonsQueryParams struct {
 	// [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
 	//
 	Sort []GetSeasonsSortEnum `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetSeasonsRequest struct {
-	QueryParams GetSeasonsQueryParams
-	Security    GetSeasonsSecurity
 }
 
 // GetSeasons400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

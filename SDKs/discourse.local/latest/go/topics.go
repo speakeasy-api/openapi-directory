@@ -34,14 +34,14 @@ func newTopics(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // BookmarkTopic - Bookmark topic
 func (s *topics) BookmarkTopic(ctx context.Context, request operations.BookmarkTopicRequest) (*operations.BookmarkTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/bookmark.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/bookmark.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -69,7 +69,7 @@ func (s *topics) BookmarkTopic(ctx context.Context, request operations.BookmarkT
 }
 
 // CreateTopicPostPM - Creates a new topic, a new post, or a private message
-func (s *topics) CreateTopicPostPM(ctx context.Context, request operations.CreateTopicPostPMRequest) (*operations.CreateTopicPostPMResponse, error) {
+func (s *topics) CreateTopicPostPM(ctx context.Context, request operations.CreateTopicPostPMRequestBody) (*operations.CreateTopicPostPMResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts.json"
 
@@ -122,9 +122,9 @@ func (s *topics) CreateTopicPostPM(ctx context.Context, request operations.Creat
 // CreateTopicTimer - Create topic timer
 func (s *topics) CreateTopicTimer(ctx context.Context, request operations.CreateTopicTimerRequest) (*operations.CreateTopicTimerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/timer.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/timer.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,7 +136,7 @@ func (s *topics) CreateTopicTimer(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -175,9 +175,9 @@ func (s *topics) CreateTopicTimer(ctx context.Context, request operations.Create
 // GetSpecificPostsFromTopic - Get specific posts from a topic
 func (s *topics) GetSpecificPostsFromTopic(ctx context.Context, request operations.GetSpecificPostsFromTopicRequest) (*operations.GetSpecificPostsFromTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/posts.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/posts.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -189,7 +189,7 @@ func (s *topics) GetSpecificPostsFromTopic(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -228,14 +228,14 @@ func (s *topics) GetSpecificPostsFromTopic(ctx context.Context, request operatio
 // GetTopic - Get a single topic
 func (s *topics) GetTopic(ctx context.Context, request operations.GetTopicRequest) (*operations.GetTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -274,7 +274,7 @@ func (s *topics) GetTopic(ctx context.Context, request operations.GetTopicReques
 // GetTopicByExternalID - Get topic by external_id
 func (s *topics) GetTopicByExternalID(ctx context.Context, request operations.GetTopicByExternalIDRequest) (*operations.GetTopicByExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/external_id/{external_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/external_id/{external_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -309,9 +309,9 @@ func (s *topics) GetTopicByExternalID(ctx context.Context, request operations.Ge
 // InviteToTopic - Invite to topic
 func (s *topics) InviteToTopic(ctx context.Context, request operations.InviteToTopicRequest) (*operations.InviteToTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/invite.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/invite.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *topics) InviteToTopic(ctx context.Context, request operations.InviteToT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -369,9 +369,9 @@ func (s *topics) ListLatestTopics(ctx context.Context, request operations.ListLa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -419,9 +419,9 @@ func (s *topics) ListTopTopics(ctx context.Context, request operations.ListTopTo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -462,14 +462,14 @@ func (s *topics) ListTopTopics(ctx context.Context, request operations.ListTopTo
 // RemoveTopic - Remove a topic
 func (s *topics) RemoveTopic(ctx context.Context, request operations.RemoveTopicRequest) (*operations.RemoveTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -499,9 +499,9 @@ func (s *topics) RemoveTopic(ctx context.Context, request operations.RemoveTopic
 // SetNotificationLevel - Set notification level
 func (s *topics) SetNotificationLevel(ctx context.Context, request operations.SetNotificationLevelRequest) (*operations.SetNotificationLevelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/notifications.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/notifications.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -513,7 +513,7 @@ func (s *topics) SetNotificationLevel(ctx context.Context, request operations.Se
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -552,9 +552,9 @@ func (s *topics) SetNotificationLevel(ctx context.Context, request operations.Se
 // UpdateTopic - Update a topic
 func (s *topics) UpdateTopic(ctx context.Context, request operations.UpdateTopicRequest) (*operations.UpdateTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/-/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/-/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -566,7 +566,7 @@ func (s *topics) UpdateTopic(ctx context.Context, request operations.UpdateTopic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -605,9 +605,9 @@ func (s *topics) UpdateTopic(ctx context.Context, request operations.UpdateTopic
 // UpdateTopicStatus - Update the status of a topic
 func (s *topics) UpdateTopicStatus(ctx context.Context, request operations.UpdateTopicStatusRequest) (*operations.UpdateTopicStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/status.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/status.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -619,7 +619,7 @@ func (s *topics) UpdateTopicStatus(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -658,9 +658,9 @@ func (s *topics) UpdateTopicStatus(ctx context.Context, request operations.Updat
 // UpdateTopicTimestamp - Update topic timestamp
 func (s *topics) UpdateTopicTimestamp(ctx context.Context, request operations.UpdateTopicTimestampRequest) (*operations.UpdateTopicTimestampResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/change-timestamp.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/change-timestamp.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -672,7 +672,7 @@ func (s *topics) UpdateTopicTimestamp(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

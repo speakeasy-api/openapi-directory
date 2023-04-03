@@ -50,7 +50,7 @@ func (e *GETDescribeClusterParametersVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeClusterParametersQueryParams struct {
+type GETDescribeClusterParametersRequest struct {
 	Action GETDescribeClusterParametersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional parameter that specifies the starting point to return a set of response records. When the results of a <a>DescribeClusterParameters</a> request exceed the value specified in <code>MaxRecords</code>, Amazon Web Services returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -59,23 +59,15 @@ type GETDescribeClusterParametersQueryParams struct {
 	// The name of a cluster parameter group for which to return details.
 	ParameterGroupName string `queryParam:"style=form,explode=true,name=ParameterGroupName"`
 	// <p>The parameter types to return. Specify <code>user</code> to show parameters that are different form the default. Similarly, specify <code>engine-default</code> to show parameters that are the same as the default parameter group. </p> <p>Default: All parameter types returned.</p> <p>Valid Values: <code>user</code> | <code>engine-default</code> </p>
-	Source  *string                                 `queryParam:"style=form,explode=true,name=Source"`
-	Version GETDescribeClusterParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeClusterParametersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeClusterParametersRequest struct {
-	QueryParams GETDescribeClusterParametersQueryParams
-	Headers     GETDescribeClusterParametersHeaders
+	Source            *string                                 `queryParam:"style=form,explode=true,name=Source"`
+	Version           GETDescribeClusterParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeClusterParametersResponse struct {

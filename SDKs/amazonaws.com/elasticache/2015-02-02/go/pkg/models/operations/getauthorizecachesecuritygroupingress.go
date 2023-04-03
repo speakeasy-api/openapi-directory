@@ -50,7 +50,7 @@ func (e *GETAuthorizeCacheSecurityGroupIngressVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETAuthorizeCacheSecurityGroupIngressQueryParams struct {
+type GETAuthorizeCacheSecurityGroupIngressRequest struct {
 	Action GETAuthorizeCacheSecurityGroupIngressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cache security group that allows network ingress.
 	CacheSecurityGroupName string `queryParam:"style=form,explode=true,name=CacheSecurityGroupName"`
@@ -59,21 +59,13 @@ type GETAuthorizeCacheSecurityGroupIngressQueryParams struct {
 	// The Amazon account number of the Amazon EC2 security group owner. Note that this is not the same thing as an Amazon access key ID - you must provide a valid Amazon account number for this parameter.
 	Ec2SecurityGroupOwnerID string                                           `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`
 	Version                 GETAuthorizeCacheSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAuthorizeCacheSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAuthorizeCacheSecurityGroupIngressRequest struct {
-	QueryParams GETAuthorizeCacheSecurityGroupIngressQueryParams
-	Headers     GETAuthorizeCacheSecurityGroupIngressHeaders
+	XAmzAlgorithm           *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAuthorizeCacheSecurityGroupIngressResponse struct {

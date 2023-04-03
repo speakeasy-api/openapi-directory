@@ -8,18 +8,13 @@ import (
 )
 
 type FunctionsGetSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type FunctionsGetPathParams struct {
-	// Function unique ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type FunctionsGetRequest struct {
-	PathParams FunctionsGetPathParams
-	Security   FunctionsGetSecurity
+	// Function unique ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type FunctionsGetResponse struct {

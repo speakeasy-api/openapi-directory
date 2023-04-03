@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterPushDeviceJSONQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type RegisterPushDeviceJSONHeaders struct {
+type RegisterPushDeviceJSONRequest struct {
+	DeviceDetailsInput *shared.DeviceDetailsInput `request:"mediaType=application/json"`
 	// The version of the API you wish to use.
 	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type RegisterPushDeviceJSONRequest struct {
-	QueryParams RegisterPushDeviceJSONQueryParams
-	Headers     RegisterPushDeviceJSONHeaders
-	Request     *shared.DeviceDetailsInput `request:"mediaType=application/json"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type RegisterPushDeviceJSONResponse struct {

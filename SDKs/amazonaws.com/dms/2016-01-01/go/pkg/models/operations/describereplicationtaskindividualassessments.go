@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeReplicationTaskIndividualAssessmentsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum
 type DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum) UnmarshalJS
 	}
 }
 
-type DescribeReplicationTaskIndividualAssessmentsHeaders struct {
+type DescribeReplicationTaskIndividualAssessmentsRequest struct {
+	DescribeReplicationTaskIndividualAssessmentsMessage shared.DescribeReplicationTaskIndividualAssessmentsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                                    `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeReplicationTaskIndividualAssessmentsHeaders struct {
 	XAmzSignature     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeReplicationTaskIndividualAssessmentsRequest struct {
-	QueryParams DescribeReplicationTaskIndividualAssessmentsQueryParams
-	Headers     DescribeReplicationTaskIndividualAssessmentsHeaders
-	Request     shared.DescribeReplicationTaskIndividualAssessmentsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeReplicationTaskIndividualAssessmentsResponse struct {

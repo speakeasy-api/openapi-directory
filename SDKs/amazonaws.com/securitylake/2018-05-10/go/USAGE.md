@@ -13,44 +13,40 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAwsLogSourceRequest{
-        Headers: operations.CreateAwsLogSourceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateAwsLogSourceRequestBody{
+        RequestBody: operations.CreateAwsLogSourceRequestBody{
             EnableAllDimensions: map[string]map[string][]string{
-                "vel": map[string][]string{
-                    "deserunt": []string{
+                "provident": map[string][]string{
+                    "quibusdam": []string{
+                        "nulla",
+                        "corrupti",
+                        "illum",
+                    },
+                    "vel": []string{
+                        "deserunt",
+                        "suscipit",
                         "iure",
-                        "magnam",
                     },
-                    "debitis": []string{
+                    "magnam": []string{
+                        "ipsa",
                         "delectus",
-                    },
-                    "tempora": []string{
-                        "molestiae",
-                        "minus",
+                        "tempora",
+                        "suscipit",
                     },
                 },
-                "placeat": map[string][]string{
-                    "iusto": []string{
+                "molestiae": map[string][]string{
+                    "placeat": []string{
+                        "iusto",
+                        "excepturi",
                         "nisi",
-                        "recusandae",
-                        "temporibus",
                     },
-                    "ab": []string{
+                    "recusandae": []string{
+                        "ab",
+                        "quis",
                         "veritatis",
                         "deserunt",
                     },
@@ -58,26 +54,26 @@ func main() {
                         "repellendus",
                         "sapiente",
                     },
-                },
-                "quo": map[string][]string{
-                    "at": []string{
-                        "maiores",
-                        "molestiae",
-                        "quod",
-                        "quod",
+                    "quo": []string{
+                        "at",
                     },
                 },
-                "esse": map[string][]string{
-                    "porro": []string{
-                        "dicta",
-                        "nam",
-                        "officia",
-                    },
-                    "occaecati": []string{
-                        "deleniti",
-                    },
-                    "hic": []string{
+                "at": map[string][]string{
+                    "molestiae": []string{
+                        "quod",
+                        "esse",
                         "totam",
+                        "porro",
+                    },
+                    "dolorum": []string{
+                        "nam",
+                    },
+                    "officia": []string{
+                        "fugit",
+                        "deleniti",
+                        "hic",
+                    },
+                    "optio": []string{
                         "beatae",
                         "commodi",
                         "molestiae",
@@ -103,6 +99,13 @@ func main() {
                 "SOURCE_TYPE",
             },
         },
+        XAmzAlgorithm: "laboriosam",
+        XAmzContentSha256: "hic",
+        XAmzCredential: "saepe",
+        XAmzDate: "fuga",
+        XAmzSecurityToken: "in",
+        XAmzSignature: "corporis",
+        XAmzSignedHeaders: "iste",
     }
 
     ctx := context.Background()

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPredictedPointsQueryParams struct {
+type GetPredictedPointsRequest struct {
 	// Distance filter
 	Distance int64 `queryParam:"style=form,explode=true,name=distance"`
 	// Down filter
 	Down int64 `queryParam:"style=form,explode=true,name=down"`
-}
-
-type GetPredictedPointsRequest struct {
-	QueryParams GetPredictedPointsQueryParams
 }
 
 type GetPredictedPointsResponse struct {

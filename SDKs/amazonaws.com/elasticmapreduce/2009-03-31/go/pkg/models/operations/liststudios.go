@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStudiosQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListStudiosXAmzTargetEnum
 type ListStudiosXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListStudiosXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListStudiosHeaders struct {
+type ListStudiosRequest struct {
+	ListStudiosInput shared.ListStudiosInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                   `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListStudiosHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListStudiosXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListStudiosRequest struct {
-	QueryParams ListStudiosQueryParams
-	Headers     ListStudiosHeaders
-	Request     shared.ListStudiosInput `request:"mediaType=application/json"`
 }
 
 type ListStudiosResponse struct {

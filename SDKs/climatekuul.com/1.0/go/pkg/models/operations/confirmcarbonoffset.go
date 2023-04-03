@@ -23,11 +23,6 @@ type ConfirmCarbonOffsetRequestBody struct {
 	TransactionID string `form:"name=transaction_id"`
 }
 
-type ConfirmCarbonOffsetRequest struct {
-	Request   *ConfirmCarbonOffsetRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type ConfirmCarbonOffsetResponse struct {
 	ContentType string
 	StatusCode  int

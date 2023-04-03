@@ -13,25 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.CreateArticleRequest{
-        Request: &shared.Article{
-            Article: &shared.ArticleArticle{
-                BodyMarkdown: "corrupti",
-                CanonicalURL: "provident",
-                Description: "distinctio",
-                MainImage: "quibusdam",
-                OrganizationID: 602763,
-                Published: false,
-                Series: "nulla",
-                Tags: "corrupti",
-                Title: "Dr.",
-            },
+    req := shared.Article{
+        Article: &shared.ArticleArticle{
+            BodyMarkdown: "corrupti",
+            CanonicalURL: "provident",
+            Description: "distinctio",
+            MainImage: "quibusdam",
+            OrganizationID: 602763,
+            Published: false,
+            Series: "nulla",
+            Tags: "corrupti",
+            Title: "Dr.",
         },
     }
 

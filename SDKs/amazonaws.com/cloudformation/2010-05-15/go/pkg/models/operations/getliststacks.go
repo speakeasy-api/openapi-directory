@@ -51,28 +51,20 @@ func (e *GETListStacksVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListStacksQueryParams struct {
+type GETListStacksRequest struct {
 	Action GETListStacksActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A string that identifies the next page of stacks that you want to retrieve.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// Stack status to use as a filter. Specify one or more stack status codes to list only stacks with the specified status codes. For a complete list of stack status codes, see the <code>StackStatus</code> parameter of the <a>Stack</a> data type.
 	StackStatusFilter []shared.StackStatusEnum `queryParam:"style=form,explode=true,name=StackStatusFilter"`
 	Version           GETListStacksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListStacksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListStacksRequest struct {
-	QueryParams GETListStacksQueryParams
-	Headers     GETListStacksHeaders
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListStacksResponse struct {

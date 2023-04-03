@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetLinkedProfilesPathParams struct {
+type Destiny2GetLinkedProfilesRequest struct {
+	// (optional) if set to 'true', all memberships regardless of whether they're obscured by overrides will be returned. Normal privacy restrictions on account linking will still apply no matter what.
+	GetAllMemberships *bool `queryParam:"style=form,explode=true,name=getAllMemberships"`
 	// The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// The type for the membership whose linked Destiny accounts you want returned.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetLinkedProfilesQueryParams struct {
-	// (optional) if set to 'true', all memberships regardless of whether they're obscured by overrides will be returned. Normal privacy restrictions on account linking will still apply no matter what.
-	GetAllMemberships *bool `queryParam:"style=form,explode=true,name=getAllMemberships"`
-}
-
-type Destiny2GetLinkedProfilesRequest struct {
-	PathParams  Destiny2GetLinkedProfilesPathParams
-	QueryParams Destiny2GetLinkedProfilesQueryParams
 }
 
 // Destiny2GetLinkedProfiles200Wildcard - I know what you seek. You seek linked accounts. Found them, you have.

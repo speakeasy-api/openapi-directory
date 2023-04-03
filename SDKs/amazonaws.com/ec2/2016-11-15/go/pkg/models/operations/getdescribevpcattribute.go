@@ -77,7 +77,7 @@ func (e *GETDescribeVpcAttributeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeVpcAttributeQueryParams struct {
+type GETDescribeVpcAttributeRequest struct {
 	Action GETDescribeVpcAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The VPC attribute.
 	Attribute GETDescribeVpcAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
@@ -85,10 +85,7 @@ type GETDescribeVpcAttributeQueryParams struct {
 	DryRun  *bool                              `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETDescribeVpcAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDescribeVpcAttributeHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -96,11 +93,6 @@ type GETDescribeVpcAttributeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeVpcAttributeRequest struct {
-	QueryParams GETDescribeVpcAttributeQueryParams
-	Headers     GETDescribeVpcAttributeHeaders
 }
 
 type GETDescribeVpcAttributeResponse struct {

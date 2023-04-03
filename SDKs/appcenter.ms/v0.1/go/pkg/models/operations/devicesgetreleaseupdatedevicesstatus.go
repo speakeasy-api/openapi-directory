@@ -6,33 +6,23 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DevicesGetReleaseUpdateDevicesStatusSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type DevicesGetReleaseUpdateDevicesStatusPathParams struct {
+type DevicesGetReleaseUpdateDevicesStatusRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// A boolean value that indicates if the provisioning profile should be return in addition to the status. When set to true, the provisioning profile will be returned only when status is 'complete' or 'preparing_for_testers'.
+	IncludeProvisioningProfile *bool `queryParam:"style=form,explode=true,name=include_provisioning_profile"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The ID of the release.
 	ReleaseID string `pathParam:"style=simple,explode=false,name=release_id"`
 	// The ID of the resign operation.
 	ResignID string `pathParam:"style=simple,explode=false,name=resign_id"`
-}
-
-type DevicesGetReleaseUpdateDevicesStatusQueryParams struct {
-	// A boolean value that indicates if the provisioning profile should be return in addition to the status. When set to true, the provisioning profile will be returned only when status is 'complete' or 'preparing_for_testers'.
-	IncludeProvisioningProfile *bool `queryParam:"style=form,explode=true,name=include_provisioning_profile"`
-}
-
-type DevicesGetReleaseUpdateDevicesStatusRequest struct {
-	PathParams  DevicesGetReleaseUpdateDevicesStatusPathParams
-	QueryParams DevicesGetReleaseUpdateDevicesStatusQueryParams
-	Security    DevicesGetReleaseUpdateDevicesStatusSecurity
 }
 
 type DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum string

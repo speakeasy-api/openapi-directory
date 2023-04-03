@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadAvatarAsMultipartHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
 type UploadAvatarAsMultipartRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -23,8 +18,9 @@ type UploadAvatarAsMultipartRequestBody struct {
 }
 
 type UploadAvatarAsMultipartRequest struct {
-	Headers UploadAvatarAsMultipartHeaders
-	Request *UploadAvatarAsMultipartRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *UploadAvatarAsMultipartRequestBody `request:"mediaType=multipart/form-data"`
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 }
 
 type UploadAvatarAsMultipartResponse struct {

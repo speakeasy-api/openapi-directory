@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPITagsUpdateJSONPathParams struct {
+type OrderAPITagsUpdateJSONRequest struct {
+	// Tags to attach
+	RechnungsdruckWebAppControllersAPIOrderTagCreate shared.RechnungsdruckWebAppControllersAPIOrderTagCreate `request:"mediaType=application/json"`
 	// The internal id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPITagsUpdateJSONRequest struct {
-	PathParams OrderAPITagsUpdateJSONPathParams
-	// Tags to attach
-	Request shared.RechnungsdruckWebAppControllersAPIOrderTagCreate `request:"mediaType=application/json"`
 }
 
 type OrderAPITagsUpdateJSONResponse struct {

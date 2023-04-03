@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListComponentVersionsPathParams struct {
-	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component.
-	Arn string `pathParam:"style=simple,explode=false,name=arn"`
-}
-
-type ListComponentVersionsQueryParams struct {
-	// The maximum number of results to be returned per paginated request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListComponentVersionsHeaders struct {
+type ListComponentVersionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListComponentVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListComponentVersionsRequest struct {
-	PathParams  ListComponentVersionsPathParams
-	QueryParams ListComponentVersionsQueryParams
-	Headers     ListComponentVersionsHeaders
+	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component.
+	Arn string `pathParam:"style=simple,explode=false,name=arn"`
+	// The maximum number of results to be returned per paginated request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListComponentVersionsResponse struct {

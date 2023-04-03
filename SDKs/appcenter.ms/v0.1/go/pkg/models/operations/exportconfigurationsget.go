@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportConfigurationsGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ExportConfigurationsGetPathParams struct {
+type ExportConfigurationsGetRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The id of the export configuration.
 	ExportConfigurationID string `pathParam:"style=simple,explode=false,name=export_configuration_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ExportConfigurationsGetRequest struct {
-	PathParams ExportConfigurationsGetPathParams
-	Security   ExportConfigurationsGetSecurity
 }
 
 type ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum string

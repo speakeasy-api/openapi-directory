@@ -50,7 +50,7 @@ func (e *GETUpdateApplicationVersionVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETUpdateApplicationVersionQueryParams struct {
+type GETUpdateApplicationVersionRequest struct {
 	Action GETUpdateApplicationVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the application associated with this version.</p> <p> If no application is found with this name, <code>UpdateApplication</code> returns an <code>InvalidParameterValue</code> error.</p>
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
@@ -58,10 +58,7 @@ type GETUpdateApplicationVersionQueryParams struct {
 	Description *string                                `queryParam:"style=form,explode=true,name=Description"`
 	Version     GETUpdateApplicationVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>The name of the version to update.</p> <p>If no application version is found with this label, <code>UpdateApplication</code> returns an <code>InvalidParameterValue</code> error. </p>
-	VersionLabel string `queryParam:"style=form,explode=true,name=VersionLabel"`
-}
-
-type GETUpdateApplicationVersionHeaders struct {
+	VersionLabel      string  `queryParam:"style=form,explode=true,name=VersionLabel"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -69,11 +66,6 @@ type GETUpdateApplicationVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateApplicationVersionRequest struct {
-	QueryParams GETUpdateApplicationVersionQueryParams
-	Headers     GETUpdateApplicationVersionHeaders
 }
 
 type GETUpdateApplicationVersionResponse struct {

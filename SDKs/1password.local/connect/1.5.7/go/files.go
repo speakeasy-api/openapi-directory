@@ -33,16 +33,16 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // DownloadFileByID - Get the content of a File
-func (s *files) DownloadFileByID(ctx context.Context, request operations.DownloadFileByIDRequest) (*operations.DownloadFileByIDResponse, error) {
+func (s *files) DownloadFileByID(ctx context.Context, request operations.DownloadFileByIDRequest, security operations.DownloadFileByIDSecurity) (*operations.DownloadFileByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,20 +91,20 @@ func (s *files) DownloadFileByID(ctx context.Context, request operations.Downloa
 }
 
 // GetDetailsOfFileByID - Get the details of a File
-func (s *files) GetDetailsOfFileByID(ctx context.Context, request operations.GetDetailsOfFileByIDRequest) (*operations.GetDetailsOfFileByIDResponse, error) {
+func (s *files) GetDetailsOfFileByID(ctx context.Context, request operations.GetDetailsOfFileByIDRequest, security operations.GetDetailsOfFileByIDSecurity) (*operations.GetDetailsOfFileByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,20 +155,20 @@ func (s *files) GetDetailsOfFileByID(ctx context.Context, request operations.Get
 }
 
 // GetItemFiles - Get all the files inside an Item
-func (s *files) GetItemFiles(ctx context.Context, request operations.GetItemFilesRequest) (*operations.GetItemFilesResponse, error) {
+func (s *files) GetItemFiles(ctx context.Context, request operations.GetItemFilesRequest, security operations.GetItemFilesSecurity) (*operations.GetItemFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

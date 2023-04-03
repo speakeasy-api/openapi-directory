@@ -50,7 +50,7 @@ func (e *GETDescribeHsmClientCertificatesVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDescribeHsmClientCertificatesQueryParams struct {
+type GETDescribeHsmClientCertificatesRequest struct {
 	Action GETDescribeHsmClientCertificatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of a specific HSM client certificate for which you want information. If no identifier is specified, information is returned for all HSM client certificates owned by your Amazon Web Services account.
 	HsmClientCertificateIdentifier *string `queryParam:"style=form,explode=true,name=HsmClientCertificateIdentifier"`
@@ -61,23 +61,15 @@ type GETDescribeHsmClientCertificatesQueryParams struct {
 	// A tag key or keys for which you want to return all matching HSM client certificates that are associated with the specified key or keys. For example, suppose that you have HSM client certificates that are tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with the HSM client certificates that have either or both of these tag keys associated with them.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// A tag value or values for which you want to return all matching HSM client certificates that are associated with the specified tag value or values. For example, suppose that you have HSM client certificates that are tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with the HSM client certificates that have either or both of these tag values associated with them.
-	TagValues []string                                    `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeHsmClientCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeHsmClientCertificatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeHsmClientCertificatesRequest struct {
-	QueryParams GETDescribeHsmClientCertificatesQueryParams
-	Headers     GETDescribeHsmClientCertificatesHeaders
+	TagValues         []string                                    `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeHsmClientCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeHsmClientCertificatesResponse struct {

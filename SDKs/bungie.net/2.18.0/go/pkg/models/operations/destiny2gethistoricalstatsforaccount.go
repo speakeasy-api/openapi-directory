@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetHistoricalStatsForAccountPathParams struct {
+type Destiny2GetHistoricalStatsForAccountRequest struct {
 	// The Destiny membershipId of the user to retrieve.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
-	// A valid non-BungieNet membership type.
-	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetHistoricalStatsForAccountQueryParams struct {
 	// Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
 	Groups []int `queryParam:"style=form,explode=false,name=groups"`
-}
-
-type Destiny2GetHistoricalStatsForAccountRequest struct {
-	PathParams  Destiny2GetHistoricalStatsForAccountPathParams
-	QueryParams Destiny2GetHistoricalStatsForAccountQueryParams
+	// A valid non-BungieNet membership type.
+	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
 }
 
 // Destiny2GetHistoricalStatsForAccount200Wildcard - Look at the Response property for more information about the nature of this response

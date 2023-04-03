@@ -50,16 +50,13 @@ func (e *GETGETPolicyVersionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETPolicyVersionQueryParams struct {
+type GETGETPolicyVersionRequest struct {
 	Action GETGETPolicyVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the managed policy that you want information about.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
 	PolicyArn string                         `queryParam:"style=form,explode=true,name=PolicyArn"`
 	Version   GETGETPolicyVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>Identifies the policy version to retrieve.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that consists of the lowercase letter 'v' followed by one or two digits, and optionally followed by a period '.' and a string of letters and digits.</p>
-	VersionID string `queryParam:"style=form,explode=true,name=VersionId"`
-}
-
-type GETGETPolicyVersionHeaders struct {
+	VersionID         string  `queryParam:"style=form,explode=true,name=VersionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -67,11 +64,6 @@ type GETGETPolicyVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETPolicyVersionRequest struct {
-	QueryParams GETGETPolicyVersionQueryParams
-	Headers     GETGETPolicyVersionHeaders
 }
 
 type GETGETPolicyVersionResponse struct {

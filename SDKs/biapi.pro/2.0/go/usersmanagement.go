@@ -36,14 +36,14 @@ func newUsersManagement(defaultClient, securityClient HTTPClient, serverURL, lan
 // This endpoint deletes the user.<br><br>
 func (s *usersManagement) DeleteUsersIDUser(ctx context.Context, request operations.DeleteUsersIDUserRequest) (*operations.DeleteUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func (s *usersManagement) DeleteUsersIDUser(ctx context.Context, request operati
 // - keys (string): list of coma separated keys to be deleted.<br><br>
 func (s *usersManagement) DeleteUsersIDUserConfig(ctx context.Context, request operations.DeleteUsersIDUserConfigRequest) (*operations.DeleteUsersIDUserConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *usersManagement) GetUsers(ctx context.Context, request operations.GetUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -168,14 +168,14 @@ func (s *usersManagement) GetUsers(ctx context.Context, request operations.GetUs
 // GetUsersIDUser - Get a user
 func (s *usersManagement) GetUsersIDUser(ctx context.Context, request operations.GetUsersIDUserRequest) (*operations.GetUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -217,7 +217,7 @@ func (s *usersManagement) GetUsersIDUser(ctx context.Context, request operations
 // <br><br>
 func (s *usersManagement) GetUsersIDUserConfig(ctx context.Context, request operations.GetUsersIDUserConfigRequest) (*operations.GetUsersIDUserConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,14 +261,14 @@ func (s *usersManagement) GetUsersIDUserConfig(ctx context.Context, request oper
 // GetUsersIDUserProfiles - Get profiles
 func (s *usersManagement) GetUsersIDUserProfiles(ctx context.Context, request operations.GetUsersIDUserProfilesRequest) (*operations.GetUsersIDUserProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,14 +309,14 @@ func (s *usersManagement) GetUsersIDUserProfiles(ctx context.Context, request op
 // GetUsersIDUserProfilesMain - Get the main profile
 func (s *usersManagement) GetUsersIDUserProfilesMain(ctx context.Context, request operations.GetUsersIDUserProfilesMainRequest) (*operations.GetUsersIDUserProfilesMainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/main", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/main", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -357,14 +357,14 @@ func (s *usersManagement) GetUsersIDUserProfilesMain(ctx context.Context, reques
 // GetUsersIDUserProfilesIDProfile - Get a profile
 func (s *usersManagement) GetUsersIDUserProfilesIDProfile(ctx context.Context, request operations.GetUsersIDUserProfilesIDProfileRequest) (*operations.GetUsersIDUserProfilesIDProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/{id_profile}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/{id_profile}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -405,7 +405,7 @@ func (s *usersManagement) GetUsersIDUserProfilesIDProfile(ctx context.Context, r
 // PostUsersIDUserConfig - Change configuration of a user. modifications on keys prefixed by 'biapi.' (except callback_url) are ignored
 func (s *usersManagement) PostUsersIDUserConfig(ctx context.Context, request operations.PostUsersIDUserConfigRequest) (*operations.PostUsersIDUserConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -441,9 +441,9 @@ func (s *usersManagement) PostUsersIDUserConfig(ctx context.Context, request ope
 // Create an access_token for this user and get it.<br><br>
 func (s *usersManagement) PostUsersIDUserToken(ctx context.Context, request operations.PostUsersIDUserTokenRequest) (*operations.PostUsersIDUserTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

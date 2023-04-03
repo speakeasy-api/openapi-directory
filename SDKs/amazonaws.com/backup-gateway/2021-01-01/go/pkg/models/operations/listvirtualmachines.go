@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListVirtualMachinesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListVirtualMachinesXAmzTargetEnum
 type ListVirtualMachinesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListVirtualMachinesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListVirtualMachinesHeaders struct {
+type ListVirtualMachinesRequest struct {
+	ListVirtualMachinesInput shared.ListVirtualMachinesInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListVirtualMachinesHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListVirtualMachinesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListVirtualMachinesRequest struct {
-	QueryParams ListVirtualMachinesQueryParams
-	Headers     ListVirtualMachinesHeaders
-	Request     shared.ListVirtualMachinesInput `request:"mediaType=application/json"`
 }
 
 type ListVirtualMachinesResponse struct {

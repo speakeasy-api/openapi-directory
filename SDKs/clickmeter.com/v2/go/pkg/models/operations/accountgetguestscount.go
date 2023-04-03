@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountGetGuestsCountQueryParams struct {
+type AccountGetGuestsCountRequest struct {
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
-}
-
-type AccountGetGuestsCountRequest struct {
-	QueryParams AccountGetGuestsCountQueryParams
 }
 
 type AccountGetGuestsCountResponse struct {

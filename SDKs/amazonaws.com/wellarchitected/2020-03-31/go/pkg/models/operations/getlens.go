@@ -7,16 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLensPathParams struct {
+type GetLensRequest struct {
 	LensAlias string `pathParam:"style=simple,explode=false,name=LensAlias"`
-}
-
-type GetLensQueryParams struct {
 	// The lens version to be retrieved.
-	LensVersion *string `queryParam:"style=form,explode=true,name=LensVersion"`
-}
-
-type GetLensHeaders struct {
+	LensVersion       *string `queryParam:"style=form,explode=true,name=LensVersion"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +18,6 @@ type GetLensHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLensRequest struct {
-	PathParams  GetLensPathParams
-	QueryParams GetLensQueryParams
-	Headers     GetLensHeaders
 }
 
 type GetLensResponse struct {

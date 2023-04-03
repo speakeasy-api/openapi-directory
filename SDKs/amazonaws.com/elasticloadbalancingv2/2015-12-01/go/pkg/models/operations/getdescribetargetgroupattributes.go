@@ -50,26 +50,18 @@ func (e *GETDescribeTargetGroupAttributesVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDescribeTargetGroupAttributesQueryParams struct {
+type GETDescribeTargetGroupAttributesRequest struct {
 	Action GETDescribeTargetGroupAttributesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the target group.
-	TargetGroupArn string                                      `queryParam:"style=form,explode=true,name=TargetGroupArn"`
-	Version        GETDescribeTargetGroupAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeTargetGroupAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeTargetGroupAttributesRequest struct {
-	QueryParams GETDescribeTargetGroupAttributesQueryParams
-	Headers     GETDescribeTargetGroupAttributesHeaders
+	TargetGroupArn    string                                      `queryParam:"style=form,explode=true,name=TargetGroupArn"`
+	Version           GETDescribeTargetGroupAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeTargetGroupAttributesResponse struct {

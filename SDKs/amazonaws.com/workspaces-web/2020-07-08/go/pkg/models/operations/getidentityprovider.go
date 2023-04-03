@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIdentityProviderPathParams struct {
-	// The ARN of the identity provider.
-	IdentityProviderArn string `pathParam:"style=simple,explode=false,name=identityProviderArn"`
-}
-
-type GetIdentityProviderHeaders struct {
+type GetIdentityProviderRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetIdentityProviderHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetIdentityProviderRequest struct {
-	PathParams GetIdentityProviderPathParams
-	Headers    GetIdentityProviderHeaders
+	// The ARN of the identity provider.
+	IdentityProviderArn string `pathParam:"style=simple,explode=false,name=identityProviderArn"`
 }
 
 type GetIdentityProviderResponse struct {

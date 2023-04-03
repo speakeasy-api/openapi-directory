@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.ImporterExporterCodeVerificationAPIRequest{
-        Security: operations.ImporterExporterCodeVerificationAPISecurity{
-            APIKey: &shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.ImporterExporterCodeVerificationAPIPathParams{
-            Iec: "corrupti",
-        },
+        Iec: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.APIs.ImporterExporterCodeVerificationAPI(ctx, req)
+    res, err := s.APIs.ImporterExporterCodeVerificationAPI(ctx, req, operations.ImporterExporterCodeVerificationAPISecurity{
+        APIKey: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

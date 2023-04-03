@@ -6,31 +6,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DevicesListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type DevicesListPathParams struct {
+type DevicesListRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the distribution group.
 	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type DevicesListQueryParams struct {
 	// when provided, gets the provisioning state of the devices owned by users of this distribution group when compared to the provided release.
 	ReleaseID *float64 `queryParam:"style=form,explode=true,name=release_id"`
-}
-
-type DevicesListRequest struct {
-	PathParams  DevicesListPathParams
-	QueryParams DevicesListQueryParams
-	Security    DevicesListSecurity
 }
 
 type DevicesList404ApplicationJSONCodeEnum string

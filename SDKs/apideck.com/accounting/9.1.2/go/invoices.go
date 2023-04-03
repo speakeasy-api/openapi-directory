@@ -34,11 +34,11 @@ func newInvoices(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // InvoicesAdd - Create Invoice
 // Create Invoice
-func (s *invoices) InvoicesAdd(ctx context.Context, request operations.InvoicesAddRequest) (*operations.InvoicesAddResponse, error) {
+func (s *invoices) InvoicesAdd(ctx context.Context, request operations.InvoicesAddRequest, security operations.InvoicesAddSecurity) (*operations.InvoicesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/invoices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvoiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *invoices) InvoicesAdd(ctx context.Context, request operations.InvoicesA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *invoices) InvoicesAdd(ctx context.Context, request operations.InvoicesA
 
 // InvoicesAll - List Invoices
 // List Invoices
-func (s *invoices) InvoicesAll(ctx context.Context, request operations.InvoicesAllRequest) (*operations.InvoicesAllResponse, error) {
+func (s *invoices) InvoicesAll(ctx context.Context, request operations.InvoicesAllRequest, security operations.InvoicesAllSecurity) (*operations.InvoicesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/invoices"
 
@@ -164,13 +164,13 @@ func (s *invoices) InvoicesAll(ctx context.Context, request operations.InvoicesA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *invoices) InvoicesAll(ctx context.Context, request operations.InvoicesA
 
 // InvoicesDelete - Delete Invoice
 // Delete Invoice
-func (s *invoices) InvoicesDelete(ctx context.Context, request operations.InvoicesDeleteRequest) (*operations.InvoicesDeleteResponse, error) {
+func (s *invoices) InvoicesDelete(ctx context.Context, request operations.InvoicesDeleteRequest, security operations.InvoicesDeleteSecurity) (*operations.InvoicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/invoices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/invoices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *invoices) InvoicesDelete(ctx context.Context, request operations.Invoic
 
 // InvoicesOne - Get Invoice
 // Get Invoice
-func (s *invoices) InvoicesOne(ctx context.Context, request operations.InvoicesOneRequest) (*operations.InvoicesOneResponse, error) {
+func (s *invoices) InvoicesOne(ctx context.Context, request operations.InvoicesOneRequest, security operations.InvoicesOneSecurity) (*operations.InvoicesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/invoices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/invoices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *invoices) InvoicesOne(ctx context.Context, request operations.InvoicesO
 
 // InvoicesUpdate - Update Invoice
 // Update Invoice
-func (s *invoices) InvoicesUpdate(ctx context.Context, request operations.InvoicesUpdateRequest) (*operations.InvoicesUpdateResponse, error) {
+func (s *invoices) InvoicesUpdate(ctx context.Context, request operations.InvoicesUpdateRequest, security operations.InvoicesUpdateSecurity) (*operations.InvoicesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/invoices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/invoices/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvoiceInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *invoices) InvoicesUpdate(ctx context.Context, request operations.Invoic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

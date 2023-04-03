@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAppsQueryParams struct {
-	//  The maximum number of records to list in a single response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  A pagination token. If non-null, the pagination token is returned in a result. Pass its value in another request to retrieve more entries.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAppsHeaders struct {
+type ListAppsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListAppsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAppsRequest struct {
-	QueryParams ListAppsQueryParams
-	Headers     ListAppsHeaders
+	//  The maximum number of records to list in a single response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  A pagination token. If non-null, the pagination token is returned in a result. Pass its value in another request to retrieve more entries.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAppsResponse struct {

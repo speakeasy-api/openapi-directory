@@ -50,28 +50,20 @@ func (e *GETStopDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStopDBInstanceQueryParams struct {
+type GETStopDBInstanceRequest struct {
 	Action GETStopDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The user-supplied instance identifier.
 	DBInstanceIdentifier string `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	// The user-supplied instance identifier of the DB Snapshot created immediately before the DB instance is stopped.
 	DBSnapshotIdentifier *string                      `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Version              GETStopDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStopDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStopDBInstanceRequest struct {
-	QueryParams GETStopDBInstanceQueryParams
-	Headers     GETStopDBInstanceHeaders
+	XAmzAlgorithm        *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStopDBInstanceResponse struct {

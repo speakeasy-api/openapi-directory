@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCoachesQueryParams struct {
+type GetCoachesRequest struct {
 	// First name filter
 	FirstName *string `queryParam:"style=form,explode=true,name=firstName"`
 	// Last name filter
@@ -20,10 +20,6 @@ type GetCoachesQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCoachesRequest struct {
-	QueryParams GetCoachesQueryParams
 }
 
 type GetCoachesResponse struct {

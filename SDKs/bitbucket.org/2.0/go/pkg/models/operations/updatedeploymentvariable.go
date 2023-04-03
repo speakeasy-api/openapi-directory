@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type UpdateDeploymentVariablePathParams struct {
+type UpdateDeploymentVariableRequest struct {
+	// The updated deployment variable.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The environment.
 	EnvironmentUUID string `pathParam:"style=simple,explode=false,name=environment_uuid"`
 	// The repository.
@@ -15,12 +17,6 @@ type UpdateDeploymentVariablePathParams struct {
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type UpdateDeploymentVariableRequest struct {
-	PathParams UpdateDeploymentVariablePathParams
-	// The updated deployment variable.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateDeploymentVariableResponse struct {

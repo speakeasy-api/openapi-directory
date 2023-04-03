@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccessPreviewFindingsPathParams struct {
-	// The unique ID for the access preview.
-	AccessPreviewID string `pathParam:"style=simple,explode=false,name=accessPreviewId"`
-}
-
-type ListAccessPreviewFindingsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAccessPreviewFindingsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListAccessPreviewFindingsRequestBody struct {
 	// The <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ARN of the analyzer</a> used to generate the access.
 	AnalyzerArn string `json:"analyzerArn"`
@@ -41,10 +19,20 @@ type ListAccessPreviewFindingsRequestBody struct {
 }
 
 type ListAccessPreviewFindingsRequest struct {
-	PathParams  ListAccessPreviewFindingsPathParams
-	QueryParams ListAccessPreviewFindingsQueryParams
-	Headers     ListAccessPreviewFindingsHeaders
-	Request     ListAccessPreviewFindingsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListAccessPreviewFindingsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID for the access preview.
+	AccessPreviewID string `pathParam:"style=simple,explode=false,name=accessPreviewId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAccessPreviewFindingsResponse struct {

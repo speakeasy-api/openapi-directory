@@ -6,12 +6,15 @@ import (
 	"net/http"
 )
 
-type TagResourcePathParams struct {
-	// The Amazon Resource Name (ARN) for a tag that you add to a resource. Tags are supported only for monitors in Amazon CloudWatch Internet Monitor.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=ResourceArn"`
+type TagResourceRequestBody struct {
+	// Tags that you add to a resource. You can add a maximum of 50 tags in Internet Monitor.
+	Tags map[string]string `json:"Tags"`
 }
 
-type TagResourceHeaders struct {
+type TagResourceRequest struct {
+	RequestBody TagResourceRequestBody `request:"mediaType=application/json"`
+	// The Amazon Resource Name (ARN) for a tag that you add to a resource. Tags are supported only for monitors in Amazon CloudWatch Internet Monitor.
+	ResourceArn       string  `pathParam:"style=simple,explode=false,name=ResourceArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,17 +22,6 @@ type TagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type TagResourceRequestBody struct {
-	// Tags that you add to a resource. You can add a maximum of 50 tags in Internet Monitor.
-	Tags map[string]string `json:"Tags"`
-}
-
-type TagResourceRequest struct {
-	PathParams TagResourcePathParams
-	Headers    TagResourceHeaders
-	Request    TagResourceRequestBody `request:"mediaType=application/json"`
 }
 
 type TagResourceResponse struct {

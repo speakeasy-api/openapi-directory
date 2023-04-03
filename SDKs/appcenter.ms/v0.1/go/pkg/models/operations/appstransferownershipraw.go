@@ -6,27 +6,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppsTransferOwnershipRawSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AppsTransferOwnershipRawPathParams struct {
+type AppsTransferOwnershipRawRequest struct {
+	// allow empty body for custom http-client lib
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner (user or organization) to which the app is being transferred
 	DestinationOwnerName string `pathParam:"style=simple,explode=false,name=destination_owner_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AppsTransferOwnershipRawRequest struct {
-	PathParams AppsTransferOwnershipRawPathParams
-	// allow empty body for custom http-client lib
-	Request  []byte `request:"mediaType=application/octet-stream"`
-	Security AppsTransferOwnershipRawSecurity
 }
 
 type AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum string

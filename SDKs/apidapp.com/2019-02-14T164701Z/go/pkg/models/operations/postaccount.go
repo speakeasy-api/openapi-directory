@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostAccountSecurity struct {
-	Key2 shared.SchemeKey2 `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostAccountRequest struct {
-	Security PostAccountSecurity
-}
 
 type PostAccountResponse struct {
 	ContentType string

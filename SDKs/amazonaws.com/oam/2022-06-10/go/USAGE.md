@@ -13,34 +13,32 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateLinkRequest{
-        Headers: operations.CreateLinkHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateLinkRequestBody{
-            LabelTemplate: "illum",
+        RequestBody: operations.CreateLinkRequestBody{
+            LabelTemplate: "corrupti",
             ResourceTypes: []shared.ResourceTypeEnum{
-                "AWS::Logs::LogGroup",
+                "AWS::XRay::Trace",
+                "AWS::XRay::Trace",
                 "AWS::Logs::LogGroup",
             },
-            SinkIdentifier: "suscipit",
+            SinkIdentifier: "nulla",
             Tags: map[string]string{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "illum": "vel",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
         },
+        XAmzAlgorithm: "magnam",
+        XAmzContentSha256: "debitis",
+        XAmzCredential: "ipsa",
+        XAmzDate: "delectus",
+        XAmzSecurityToken: "tempora",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "molestiae",
     }
 
     ctx := context.Background()

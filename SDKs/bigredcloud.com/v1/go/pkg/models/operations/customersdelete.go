@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type CustomersDeletePathParams struct {
+type CustomersDeleteRequest struct {
 	// Id of Customer to remove.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomersDeleteQueryParams struct {
 	// Timestamp of Customer to remove. Should be encoded in Base64.
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type CustomersDeleteRequest struct {
-	PathParams  CustomersDeletePathParams
-	QueryParams CustomersDeleteQueryParams
 }
 
 type CustomersDeleteResponse struct {

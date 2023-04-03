@@ -50,7 +50,7 @@ func (e *GETDeleteLocalGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDeleteLocalGatewayRouteQueryParams struct {
+type GETDeleteLocalGatewayRouteRequest struct {
 	Action GETDeleteLocalGatewayRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR range for the route. This must match the CIDR for the route exactly.
 	DestinationCidrBlock *string `queryParam:"style=form,explode=true,name=DestinationCidrBlock"`
@@ -61,21 +61,13 @@ type GETDeleteLocalGatewayRouteQueryParams struct {
 	// The ID of the local gateway route table.
 	LocalGatewayRouteTableID string                                `queryParam:"style=form,explode=true,name=LocalGatewayRouteTableId"`
 	Version                  GETDeleteLocalGatewayRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteLocalGatewayRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteLocalGatewayRouteRequest struct {
-	QueryParams GETDeleteLocalGatewayRouteQueryParams
-	Headers     GETDeleteLocalGatewayRouteHeaders
+	XAmzAlgorithm            *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteLocalGatewayRouteResponse struct {

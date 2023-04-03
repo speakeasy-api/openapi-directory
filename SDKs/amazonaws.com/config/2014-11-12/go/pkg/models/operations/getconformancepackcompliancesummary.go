@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConformancePackComplianceSummaryQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetConformancePackComplianceSummaryXAmzTargetEnum
 type GetConformancePackComplianceSummaryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetConformancePackComplianceSummaryXAmzTargetEnum) UnmarshalJSON(data [
 	}
 }
 
-type GetConformancePackComplianceSummaryHeaders struct {
+type GetConformancePackComplianceSummaryRequest struct {
+	GetConformancePackComplianceSummaryRequest shared.GetConformancePackComplianceSummaryRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetConformancePackComplianceSummaryHeaders struct {
 	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetConformancePackComplianceSummaryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetConformancePackComplianceSummaryRequest struct {
-	QueryParams GetConformancePackComplianceSummaryQueryParams
-	Headers     GetConformancePackComplianceSummaryHeaders
-	Request     shared.GetConformancePackComplianceSummaryRequest `request:"mediaType=application/json"`
 }
 
 type GetConformancePackComplianceSummaryResponse struct {

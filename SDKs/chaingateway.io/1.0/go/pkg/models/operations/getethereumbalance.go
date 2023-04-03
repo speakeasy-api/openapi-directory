@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEthereumBalanceHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type GetEthereumBalanceRequest struct {
-	Headers GetEthereumBalanceHeaders
-	Request shared.GetEthereumBalanceRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization             string                           `header:"style=simple,explode=false,name=Authorization"`
+	GetEthereumBalanceRequest shared.GetEthereumBalanceRequest `request:"mediaType=application/json"`
 }
 
 type GetEthereumBalanceResponse struct {

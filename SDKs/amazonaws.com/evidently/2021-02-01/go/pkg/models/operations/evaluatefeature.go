@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EvaluateFeaturePathParams struct {
-	// The name of the feature being evaluated.
-	Feature string `pathParam:"style=simple,explode=false,name=feature"`
-	// The name or ARN of the project that contains this feature.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type EvaluateFeatureHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type EvaluateFeatureRequestBody struct {
 	// An internal ID that represents a unique user of the application. This <code>entityID</code> is checked against any override rules assigned for this feature.
 	EntityID string `json:"entityId"`
@@ -32,9 +15,18 @@ type EvaluateFeatureRequestBody struct {
 }
 
 type EvaluateFeatureRequest struct {
-	PathParams EvaluateFeaturePathParams
-	Headers    EvaluateFeatureHeaders
-	Request    EvaluateFeatureRequestBody `request:"mediaType=application/json"`
+	RequestBody       EvaluateFeatureRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the feature being evaluated.
+	Feature string `pathParam:"style=simple,explode=false,name=feature"`
+	// The name or ARN of the project that contains this feature.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type EvaluateFeatureResponse struct {

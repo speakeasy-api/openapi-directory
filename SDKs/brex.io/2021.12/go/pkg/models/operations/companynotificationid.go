@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type CompanyNotificationIDSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyNotificationIDPathParams struct {
-	// Company Hex ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type CompanyNotificationIDRequest struct {
-	PathParams CompanyNotificationIDPathParams
-	Security   CompanyNotificationIDSecurity
+	// Company Hex ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // CompanyNotificationIDDefaultApplicationJSON - Detailed information about the error

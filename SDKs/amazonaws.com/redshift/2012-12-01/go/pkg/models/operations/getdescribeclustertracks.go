@@ -50,30 +50,22 @@ func (e *GETDescribeClusterTracksVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeClusterTracksQueryParams struct {
+type GETDescribeClusterTracksRequest struct {
 	Action GETDescribeClusterTracksActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the maintenance track.
 	MaintenanceTrackName *string `queryParam:"style=form,explode=true,name=MaintenanceTrackName"`
 	// An optional parameter that specifies the starting point to return a set of response records. When the results of a <code>DescribeClusterTracks</code> request exceed the value specified in <code>MaxRecords</code>, Amazon Redshift returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// An integer value for the maximum number of maintenance tracks to return.
-	MaxRecords *int64                              `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeClusterTracksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeClusterTracksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeClusterTracksRequest struct {
-	QueryParams GETDescribeClusterTracksQueryParams
-	Headers     GETDescribeClusterTracksHeaders
+	MaxRecords        *int64                              `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeClusterTracksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeClusterTracksResponse struct {

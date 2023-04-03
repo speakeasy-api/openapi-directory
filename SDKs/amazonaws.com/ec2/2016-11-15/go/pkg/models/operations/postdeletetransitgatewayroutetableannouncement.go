@@ -50,25 +50,17 @@ func (e *POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum) UnmarshalJSO
 	}
 }
 
-type POSTDeleteTransitGatewayRouteTableAnnouncementQueryParams struct {
-	Action  POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteTransitGatewayRouteTableAnnouncementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteTransitGatewayRouteTableAnnouncementRequest struct {
-	QueryParams POSTDeleteTransitGatewayRouteTableAnnouncementQueryParams
-	Headers     POSTDeleteTransitGatewayRouteTableAnnouncementHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                                    `request:"mediaType=text/xml"`
+	Version           POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteTransitGatewayRouteTableAnnouncementResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDatabaseUsersPathParams struct {
-	// Automatically added
-	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-}
-
-type GetDatabaseUsersQueryParams struct {
-	// Name of the database.
-	DatabaseName string `queryParam:"style=form,explode=true,name=database_name"`
-}
-
 type GetDatabaseUsersRequest struct {
-	PathParams  GetDatabaseUsersPathParams
-	QueryParams GetDatabaseUsersQueryParams
+	// Automatically added
+	DatabaseNamePathParameter string `pathParam:"style=simple,explode=false,name=databaseName"`
+	// Name of the database.
+	DatabaseNameQueryParameter string `queryParam:"style=form,explode=true,name=database_name"`
 }
 
 type GetDatabaseUsersResponse struct {

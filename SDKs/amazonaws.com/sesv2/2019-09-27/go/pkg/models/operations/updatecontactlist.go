@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContactListPathParams struct {
-	// The name of the contact list.
-	ContactListName string `pathParam:"style=simple,explode=false,name=ContactListName"`
-}
-
-type UpdateContactListHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateContactListRequestBody struct {
 	// A description of what the contact list is about.
 	Description *string `json:"Description,omitempty"`
@@ -30,9 +15,16 @@ type UpdateContactListRequestBody struct {
 }
 
 type UpdateContactListRequest struct {
-	PathParams UpdateContactListPathParams
-	Headers    UpdateContactListHeaders
-	Request    UpdateContactListRequestBody `request:"mediaType=application/json"`
+	// The name of the contact list.
+	ContactListName   string                       `pathParam:"style=simple,explode=false,name=ContactListName"`
+	RequestBody       UpdateContactListRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateContactListResponse struct {

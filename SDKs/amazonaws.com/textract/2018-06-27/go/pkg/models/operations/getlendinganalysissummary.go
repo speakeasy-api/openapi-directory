@@ -30,20 +30,16 @@ func (e *GetLendingAnalysisSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetLendingAnalysisSummaryHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetLendingAnalysisSummaryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetLendingAnalysisSummaryRequest struct {
-	Headers GetLendingAnalysisSummaryHeaders
-	Request shared.GetLendingAnalysisSummaryRequest `request:"mediaType=application/json"`
+	GetLendingAnalysisSummaryRequest shared.GetLendingAnalysisSummaryRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                         *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                       GetLendingAnalysisSummaryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetLendingAnalysisSummaryResponse struct {

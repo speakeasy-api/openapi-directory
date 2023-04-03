@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectPathParams struct {
-	// The name or ARN of the project that you want to see the details of.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type GetProjectHeaders struct {
+type GetProjectRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetProjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetProjectRequest struct {
-	PathParams GetProjectPathParams
-	Headers    GetProjectHeaders
+	// The name or ARN of the project that you want to see the details of.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type GetProjectResponse struct {

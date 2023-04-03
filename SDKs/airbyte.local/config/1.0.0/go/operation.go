@@ -33,7 +33,7 @@ func newOperation(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // CheckOperation - Check if an operation to be created is valid
-func (s *operation) CheckOperation(ctx context.Context, request operations.CheckOperationRequest) (*operations.CheckOperationResponse, error) {
+func (s *operation) CheckOperation(ctx context.Context, request shared.OperatorConfiguration) (*operations.CheckOperationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations/check"
 
@@ -97,7 +97,7 @@ func (s *operation) CheckOperation(ctx context.Context, request operations.Check
 }
 
 // CreateOperation - Create an operation to be applied as part of a connection pipeline
-func (s *operation) CreateOperation(ctx context.Context, request operations.CreateOperationRequest) (*operations.CreateOperationResponse, error) {
+func (s *operation) CreateOperation(ctx context.Context, request shared.OperationCreate) (*operations.CreateOperationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations/create"
 
@@ -161,7 +161,7 @@ func (s *operation) CreateOperation(ctx context.Context, request operations.Crea
 }
 
 // DeleteOperation - Delete an operation
-func (s *operation) DeleteOperation(ctx context.Context, request operations.DeleteOperationRequest) (*operations.DeleteOperationResponse, error) {
+func (s *operation) DeleteOperation(ctx context.Context, request shared.OperationIDRequestBody) (*operations.DeleteOperationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations/delete"
 
@@ -226,7 +226,7 @@ func (s *operation) DeleteOperation(ctx context.Context, request operations.Dele
 }
 
 // GetOperation - Returns an operation
-func (s *operation) GetOperation(ctx context.Context, request operations.GetOperationRequest) (*operations.GetOperationResponse, error) {
+func (s *operation) GetOperation(ctx context.Context, request shared.OperationIDRequestBody) (*operations.GetOperationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations/get"
 
@@ -301,7 +301,7 @@ func (s *operation) GetOperation(ctx context.Context, request operations.GetOper
 
 // ListOperationsForConnection - Returns all operations for a connection.
 // List operations for connection.
-func (s *operation) ListOperationsForConnection(ctx context.Context, request operations.ListOperationsForConnectionRequest) (*operations.ListOperationsForConnectionResponse, error) {
+func (s *operation) ListOperationsForConnection(ctx context.Context, request shared.ConnectionIDRequestBody) (*operations.ListOperationsForConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations/list"
 
@@ -375,7 +375,7 @@ func (s *operation) ListOperationsForConnection(ctx context.Context, request ope
 }
 
 // UpdateOperation - Update an operation
-func (s *operation) UpdateOperation(ctx context.Context, request operations.UpdateOperationRequest) (*operations.UpdateOperationResponse, error) {
+func (s *operation) UpdateOperation(ctx context.Context, request shared.OperationUpdate) (*operations.UpdateOperationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/operations/update"
 

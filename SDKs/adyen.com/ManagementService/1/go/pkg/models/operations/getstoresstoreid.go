@@ -8,18 +8,13 @@ import (
 )
 
 type GetStoresStoreIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetStoresStoreIDPathParams struct {
-	// The unique identifier of the store.
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetStoresStoreIDRequest struct {
-	PathParams GetStoresStoreIDPathParams
-	Security   GetStoresStoreIDSecurity
+	// The unique identifier of the store.
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type GetStoresStoreIDResponse struct {

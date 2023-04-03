@@ -8,18 +8,13 @@ import (
 )
 
 type PostLegalEntitiesIDCheckVerificationErrorsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostLegalEntitiesIDCheckVerificationErrorsPathParams struct {
-	// The unique identifier of the legal entity.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostLegalEntitiesIDCheckVerificationErrorsRequest struct {
-	PathParams PostLegalEntitiesIDCheckVerificationErrorsPathParams
-	Security   PostLegalEntitiesIDCheckVerificationErrorsSecurity
+	// The unique identifier of the legal entity.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostLegalEntitiesIDCheckVerificationErrorsResponse struct {

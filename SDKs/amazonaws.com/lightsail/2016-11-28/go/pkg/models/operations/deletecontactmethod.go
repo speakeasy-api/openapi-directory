@@ -30,20 +30,16 @@ func (e *DeleteContactMethodXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteContactMethodHeaders struct {
-	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteContactMethodXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteContactMethodRequest struct {
-	Headers DeleteContactMethodHeaders
-	Request shared.DeleteContactMethodRequest `request:"mediaType=application/json"`
+	DeleteContactMethodRequest shared.DeleteContactMethodRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 DeleteContactMethodXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteContactMethodResponse struct {

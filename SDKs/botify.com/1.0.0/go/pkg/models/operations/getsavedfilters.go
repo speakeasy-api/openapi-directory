@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSavedFiltersPathParams struct {
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetSavedFiltersQueryParams struct {
+type GetSavedFiltersRequest struct {
 	// Page Number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// Page Size
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetSavedFiltersRequest struct {
-	PathParams  GetSavedFiltersPathParams
-	QueryParams GetSavedFiltersQueryParams
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetSavedFilters200ApplicationJSON - Successful operation

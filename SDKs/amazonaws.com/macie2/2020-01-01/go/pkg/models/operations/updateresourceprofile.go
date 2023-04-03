@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type UpdateResourceProfileQueryParams struct {
-	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type UpdateResourceProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateResourceProfileRequestBody struct {
 	// The new sensitivity score for the bucket. Valid values are: 100, assign the maximum score and apply the <i>Sensitive</i> label to the bucket; and, null (empty), assign a score that Amazon Macie calculates automatically after you submit the request.
 	SensitivityScoreOverride *int64 `json:"sensitivityScoreOverride,omitempty"`
 }
 
 type UpdateResourceProfileRequest struct {
-	QueryParams UpdateResourceProfileQueryParams
-	Headers     UpdateResourceProfileHeaders
-	Request     UpdateResourceProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateResourceProfileRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type UpdateResourceProfileResponse struct {

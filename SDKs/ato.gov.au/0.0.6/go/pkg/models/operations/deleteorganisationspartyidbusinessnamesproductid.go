@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteOrganisationsPartyIDBusinessNamesProductIDPathParams struct {
+type DeleteOrganisationsPartyIDBusinessNamesProductIDRequest struct {
+	// The API key.
+	APIKey string `header:"style=simple,explode=false,name=apiKey"`
 	// The party identifier.
 	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
 	// The product identifier.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type DeleteOrganisationsPartyIDBusinessNamesProductIDHeaders struct {
-	// The API key.
-	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type DeleteOrganisationsPartyIDBusinessNamesProductIDRequest struct {
-	PathParams DeleteOrganisationsPartyIDBusinessNamesProductIDPathParams
-	Headers    DeleteOrganisationsPartyIDBusinessNamesProductIDHeaders
 }
 
 type DeleteOrganisationsPartyIDBusinessNamesProductIDResponse struct {

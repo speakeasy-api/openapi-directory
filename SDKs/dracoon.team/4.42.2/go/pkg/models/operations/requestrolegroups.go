@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestRoleGroupsPathParams struct {
-	// Role ID
-	RoleID int `pathParam:"style=simple,explode=false,name=role_id"`
-}
-
-type RequestRoleGroupsQueryParams struct {
+type RequestRoleGroupsRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Range limit.
@@ -23,17 +20,8 @@ type RequestRoleGroupsQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Range offset
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type RequestRoleGroupsHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestRoleGroupsRequest struct {
-	PathParams  RequestRoleGroupsPathParams
-	QueryParams RequestRoleGroupsQueryParams
-	Headers     RequestRoleGroupsHeaders
+	// Role ID
+	RoleID int `pathParam:"style=simple,explode=false,name=role_id"`
 }
 
 type RequestRoleGroupsResponse struct {

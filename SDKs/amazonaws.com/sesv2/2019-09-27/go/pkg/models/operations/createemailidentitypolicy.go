@@ -6,32 +6,24 @@ import (
 	"net/http"
 )
 
-type CreateEmailIdentityPolicyPathParams struct {
-	// The email identity.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-	// <p>The name of the policy.</p> <p>The policy name cannot exceed 64 characters and can only include alphanumeric characters, dashes, and underscores.</p>
-	PolicyName string `pathParam:"style=simple,explode=false,name=PolicyName"`
-}
-
-type CreateEmailIdentityPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateEmailIdentityPolicyRequestBody struct {
 	// <p>The text of the policy in JSON format. The policy cannot exceed 4 KB.</p> <p>For information about the syntax of sending authorization policies, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Amazon SES Developer Guide</a>.</p>
 	Policy string `json:"Policy"`
 }
 
 type CreateEmailIdentityPolicyRequest struct {
-	PathParams CreateEmailIdentityPolicyPathParams
-	Headers    CreateEmailIdentityPolicyHeaders
-	Request    CreateEmailIdentityPolicyRequestBody `request:"mediaType=application/json"`
+	// The email identity.
+	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
+	// <p>The name of the policy.</p> <p>The policy name cannot exceed 64 characters and can only include alphanumeric characters, dashes, and underscores.</p>
+	PolicyName        string                               `pathParam:"style=simple,explode=false,name=PolicyName"`
+	RequestBody       CreateEmailIdentityPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateEmailIdentityPolicyResponse struct {

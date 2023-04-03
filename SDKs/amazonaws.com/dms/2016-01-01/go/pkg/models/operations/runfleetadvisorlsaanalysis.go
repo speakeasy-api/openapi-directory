@@ -30,7 +30,7 @@ func (e *RunFleetAdvisorLsaAnalysisXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type RunFleetAdvisorLsaAnalysisHeaders struct {
+type RunFleetAdvisorLsaAnalysisRequest struct {
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type RunFleetAdvisorLsaAnalysisHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        RunFleetAdvisorLsaAnalysisXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type RunFleetAdvisorLsaAnalysisRequest struct {
-	Headers RunFleetAdvisorLsaAnalysisHeaders
 }
 
 type RunFleetAdvisorLsaAnalysisResponse struct {

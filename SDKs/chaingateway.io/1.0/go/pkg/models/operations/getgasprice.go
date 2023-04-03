@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGasPriceHeaders struct {
+type GetGasPriceRequest struct {
 	// API Key
 	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	ContentType   string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type GetGasPriceRequest struct {
-	Headers GetGasPriceHeaders
 }
 
 type GetGasPriceResponse struct {

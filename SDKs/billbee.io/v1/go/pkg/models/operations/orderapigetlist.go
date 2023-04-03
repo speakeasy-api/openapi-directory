@@ -40,7 +40,7 @@ func (e *OrderAPIGetListArticleTitleSourceEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type OrderAPIGetListQueryParams struct {
+type OrderAPIGetListRequest struct {
 	// The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
 	ArticleTitleSource *OrderAPIGetListArticleTitleSourceEnum `queryParam:"style=form,explode=true,name=articleTitleSource"`
 	// If true the list of tags passed to the call are used to filter orders to not include these tags
@@ -65,10 +65,6 @@ type OrderAPIGetListQueryParams struct {
 	ShopID []int64 `queryParam:"style=form,explode=true,name=shopId"`
 	// Specifies a list of tags the order must have attached to be included in the response
 	Tag []string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type OrderAPIGetListRequest struct {
-	QueryParams OrderAPIGetListQueryParams
 }
 
 type OrderAPIGetListResponse struct {

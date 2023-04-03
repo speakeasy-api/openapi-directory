@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountDeleteIPBlacklistPathParams struct {
+type AccountDeleteIPBlacklistRequest struct {
 	// The id of the ip to delete
 	BlacklistID string `pathParam:"style=simple,explode=false,name=blacklistId"`
-}
-
-type AccountDeleteIPBlacklistRequest struct {
-	PathParams AccountDeleteIPBlacklistPathParams
 }
 
 type AccountDeleteIPBlacklistResponse struct {

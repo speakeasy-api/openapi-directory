@@ -35,7 +35,7 @@ func newPreprocessing(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // PreprocessingBinarize - Convert an image of text into a binarized (light and dark) view
 // Perform an adaptive binarization algorithm on the input image to prepare it for further OCR operations.
-func (s *preprocessing) PreprocessingBinarize(ctx context.Context, request operations.PreprocessingBinarizeRequest) (*operations.PreprocessingBinarizeResponse, error) {
+func (s *preprocessing) PreprocessingBinarize(ctx context.Context, request operations.PreprocessingBinarizeRequestBody, security operations.PreprocessingBinarizeSecurity) (*operations.PreprocessingBinarizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/preprocessing/image/binarize"
 
@@ -54,7 +54,7 @@ func (s *preprocessing) PreprocessingBinarize(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,7 @@ func (s *preprocessing) PreprocessingBinarize(ctx context.Context, request opera
 
 // PreprocessingBinarizeAdvanced - Convert an image of text into a binary (light and dark) view with ML
 // Perform an advanced adaptive, Deep Learning-based binarization algorithm on the input image to prepare it for further OCR operations.  Provides enhanced accuracy than adaptive binarization.  Image will be upsampled to 300 DPI if it has a DPI below 300.
-func (s *preprocessing) PreprocessingBinarizeAdvanced(ctx context.Context, request operations.PreprocessingBinarizeAdvancedRequest) (*operations.PreprocessingBinarizeAdvancedResponse, error) {
+func (s *preprocessing) PreprocessingBinarizeAdvanced(ctx context.Context, request operations.PreprocessingBinarizeAdvancedRequestBody, security operations.PreprocessingBinarizeAdvancedSecurity) (*operations.PreprocessingBinarizeAdvancedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/preprocessing/image/binarize/advanced"
 
@@ -134,7 +134,7 @@ func (s *preprocessing) PreprocessingBinarizeAdvanced(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -195,7 +195,7 @@ func (s *preprocessing) PreprocessingBinarizeAdvanced(ctx context.Context, reque
 
 // PreprocessingGetPageAngle - Get the angle of the page / document / receipt
 // Analyzes a photo or image of a document and identifies the rotation angle of the page.
-func (s *preprocessing) PreprocessingGetPageAngle(ctx context.Context, request operations.PreprocessingGetPageAngleRequest) (*operations.PreprocessingGetPageAngleResponse, error) {
+func (s *preprocessing) PreprocessingGetPageAngle(ctx context.Context, request operations.PreprocessingGetPageAngleRequestBody, security operations.PreprocessingGetPageAngleSecurity) (*operations.PreprocessingGetPageAngleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/preprocessing/image/get-page-angle"
 
@@ -214,7 +214,7 @@ func (s *preprocessing) PreprocessingGetPageAngle(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -271,7 +271,7 @@ func (s *preprocessing) PreprocessingGetPageAngle(ctx context.Context, request o
 
 // PreprocessingUnrotate - Detect and unrotate a document image
 // Detect and unrotate an image of a document (e.g. that was scanned at an angle).  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
-func (s *preprocessing) PreprocessingUnrotate(ctx context.Context, request operations.PreprocessingUnrotateRequest) (*operations.PreprocessingUnrotateResponse, error) {
+func (s *preprocessing) PreprocessingUnrotate(ctx context.Context, request operations.PreprocessingUnrotateRequestBody, security operations.PreprocessingUnrotateSecurity) (*operations.PreprocessingUnrotateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/preprocessing/image/unrotate"
 
@@ -290,7 +290,7 @@ func (s *preprocessing) PreprocessingUnrotate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -351,7 +351,7 @@ func (s *preprocessing) PreprocessingUnrotate(ctx context.Context, request opera
 
 // PreprocessingUnrotateAdvanced - Detect and unrotate a document image (advanced)
 // Detect and unrotate an image of a document (e.g. that was scanned at an angle) using deep learning.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
-func (s *preprocessing) PreprocessingUnrotateAdvanced(ctx context.Context, request operations.PreprocessingUnrotateAdvancedRequest) (*operations.PreprocessingUnrotateAdvancedResponse, error) {
+func (s *preprocessing) PreprocessingUnrotateAdvanced(ctx context.Context, request operations.PreprocessingUnrotateAdvancedRequestBody, security operations.PreprocessingUnrotateAdvancedSecurity) (*operations.PreprocessingUnrotateAdvancedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/preprocessing/image/unrotate/advanced"
 
@@ -370,7 +370,7 @@ func (s *preprocessing) PreprocessingUnrotateAdvanced(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -431,7 +431,7 @@ func (s *preprocessing) PreprocessingUnrotateAdvanced(ctx context.Context, reque
 
 // PreprocessingUnskew - Detect and unskew a photo of a document
 // Detect and unskew a photo of a document (e.g. taken on a cell phone) into a perfectly square image.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
-func (s *preprocessing) PreprocessingUnskew(ctx context.Context, request operations.PreprocessingUnskewRequest) (*operations.PreprocessingUnskewResponse, error) {
+func (s *preprocessing) PreprocessingUnskew(ctx context.Context, request operations.PreprocessingUnskewRequestBody, security operations.PreprocessingUnskewSecurity) (*operations.PreprocessingUnskewResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/preprocessing/image/unskew"
 
@@ -450,7 +450,7 @@ func (s *preprocessing) PreprocessingUnskew(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

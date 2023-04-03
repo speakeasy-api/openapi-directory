@@ -8,28 +8,6 @@ import (
 	"time"
 )
 
-type ListReferencesPathParams struct {
-	// The references' reference store ID.
-	ReferenceStoreID string `pathParam:"style=simple,explode=false,name=referenceStoreId"`
-}
-
-type ListReferencesQueryParams struct {
-	// The maximum number of references to return in one page of results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Specify the pagination token from a previous request to retrieve the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListReferencesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListReferencesRequestBodyFilter - A filter for references.
 type ListReferencesRequestBodyFilter struct {
 	CreatedAfter  *time.Time `json:"createdAfter,omitempty"`
@@ -44,10 +22,20 @@ type ListReferencesRequestBody struct {
 }
 
 type ListReferencesRequest struct {
-	PathParams  ListReferencesPathParams
-	QueryParams ListReferencesQueryParams
-	Headers     ListReferencesHeaders
-	Request     ListReferencesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListReferencesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The maximum number of references to return in one page of results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Specify the pagination token from a previous request to retrieve the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The references' reference store ID.
+	ReferenceStoreID string `pathParam:"style=simple,explode=false,name=referenceStoreId"`
 }
 
 type ListReferencesResponse struct {

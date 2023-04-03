@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIParsePlaceholdersJSONPathParams struct {
+type OrderAPIParsePlaceholdersJSONRequest struct {
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerParseTextContainer shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerParseTextContainer `request:"mediaType=application/json"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIParsePlaceholdersJSONRequest struct {
-	PathParams OrderAPIParsePlaceholdersJSONPathParams
-	Request    shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerParseTextContainer `request:"mediaType=application/json"`
 }
 
 type OrderAPIParsePlaceholdersJSONResponse struct {

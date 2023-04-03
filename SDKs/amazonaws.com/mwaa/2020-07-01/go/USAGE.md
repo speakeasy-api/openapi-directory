@@ -13,25 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateCliTokenRequest{
-        PathParams: operations.CreateCliTokenPathParams{
-            Name: "corrupti",
-        },
-        Headers: operations.CreateCliTokenHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
+        Name: "corrupti",
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
     }
 
     ctx := context.Background()

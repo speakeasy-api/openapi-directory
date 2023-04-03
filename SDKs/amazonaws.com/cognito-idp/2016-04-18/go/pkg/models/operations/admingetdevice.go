@@ -30,20 +30,16 @@ func (e *AdminGetDeviceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AdminGetDeviceHeaders struct {
-	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        AdminGetDeviceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type AdminGetDeviceRequest struct {
-	Headers AdminGetDeviceHeaders
-	Request shared.AdminGetDeviceRequest `request:"mediaType=application/json"`
+	AdminGetDeviceRequest shared.AdminGetDeviceRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            AdminGetDeviceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type AdminGetDeviceResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSuiteDefinitionsQueryParams struct {
-	// The maximum number of results to return at once.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used to get the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListSuiteDefinitionsHeaders struct {
+type ListSuiteDefinitionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListSuiteDefinitionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSuiteDefinitionsRequest struct {
-	QueryParams ListSuiteDefinitionsQueryParams
-	Headers     ListSuiteDefinitionsHeaders
+	// The maximum number of results to return at once.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used to get the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSuiteDefinitionsResponse struct {

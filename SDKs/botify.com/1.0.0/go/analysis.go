@@ -35,9 +35,9 @@ func newAnalysis(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Creates a new UrlExport object and starts a task that will export the results into a csv. Returns the model id that manages the task
 func (s *analysis) CreateUrlsExport(ctx context.Context, request operations.CreateUrlsExportRequest) (*operations.CreateUrlsExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UrlsQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *analysis) CreateUrlsExport(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -101,7 +101,7 @@ func (s *analysis) CreateUrlsExport(ctx context.Context, request operations.Crea
 // Get an Analysis detail
 func (s *analysis) GetAnalysisSummary(ctx context.Context, request operations.GetAnalysisSummaryRequest) (*operations.GetAnalysisSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *analysis) GetAnalysisSummary(ctx context.Context, request operations.Ge
 // Return global statistics for an analysis
 func (s *analysis) GetCrawlStatistics(ctx context.Context, request operations.GetCrawlStatisticsRequest) (*operations.GetCrawlStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,14 +211,14 @@ func (s *analysis) GetCrawlStatistics(ctx context.Context, request operations.Ge
 // Return crawl statistics grouped by time frequency (1 min, 5 mins or 60 min) for an analysis
 func (s *analysis) GetCrawlStatisticsByFrequency(ctx context.Context, request operations.GetCrawlStatisticsByFrequencyRequest) (*operations.GetCrawlStatisticsByFrequencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/time", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/time", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -270,7 +270,7 @@ func (s *analysis) GetCrawlStatisticsByFrequency(ctx context.Context, request op
 // Return a list of 1000 latest URLs crawled (all crawled URLs or only URLS with HTTP errors)
 func (s *analysis) GetCrawlStatisticsUrls(ctx context.Context, request operations.GetCrawlStatisticsUrlsRequest) (*operations.GetCrawlStatisticsUrlsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/urls/{list_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/urls/{list_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,14 +325,14 @@ func (s *analysis) GetCrawlStatisticsUrls(ctx context.Context, request operation
 // List of Orphan URLs. URLs which generated visits from the selected source according to Google Analytics data, but were not crawled with by the Botify crawler (either because no links to them were found on the website, or because the crawler was not allowed to follow these links according to the project settings).   For a search engine (medium: origanic; sources: all, aol, ask, baidu, bing, google, naver, yahoo, yandex) or a social network (medium: social; sources: all, facebook, google+, linkedin, pinterest, reddit, tumblr, twitter)
 func (s *analysis) GetGanalyticsOrphanURLs(ctx context.Context, request operations.GetGanalyticsOrphanURLsRequest) (*operations.GetGanalyticsOrphanURLsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -384,7 +384,7 @@ func (s *analysis) GetGanalyticsOrphanURLs(ctx context.Context, request operatio
 // Get inlinks percentiles
 func (s *analysis) GetLinksPercentiles(ctx context.Context, request operations.GetLinksPercentilesRequest) (*operations.GetLinksPercentilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/links/percentiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/links/percentiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,14 +439,14 @@ func (s *analysis) GetLinksPercentiles(ctx context.Context, request operations.G
 // Top domains
 func (s *analysis) GetLinksTopDomains(ctx context.Context, request operations.GetLinksTopDomainsRequest) (*operations.GetLinksTopDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/domains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/domains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -498,14 +498,14 @@ func (s *analysis) GetLinksTopDomains(ctx context.Context, request operations.Ge
 // Top subddomains
 func (s *analysis) GetLinksTopSubdomains(ctx context.Context, request operations.GetLinksTopSubdomainsRequest) (*operations.GetLinksTopSubdomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/subdomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/subdomains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -557,7 +557,7 @@ func (s *analysis) GetLinksTopSubdomains(ctx context.Context, request operations
 // Lost pagerank
 func (s *analysis) GetPageRankLost(ctx context.Context, request operations.GetPageRankLostRequest) (*operations.GetPageRankLostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/pagerank/lost", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/pagerank/lost", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -612,7 +612,7 @@ func (s *analysis) GetPageRankLost(ctx context.Context, request operations.GetPa
 // Get global information of the sitemaps found (sitemaps indexes, invalid sitemaps urls, etc.)
 func (s *analysis) GetSitemapsReport(ctx context.Context, request operations.GetSitemapsReportRequest) (*operations.GetSitemapsReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/report", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -667,14 +667,14 @@ func (s *analysis) GetSitemapsReport(ctx context.Context, request operations.Get
 // Sample list of URLs which were found in your sitemaps but outside of the crawl perimeter defined for the project, for instance domain/subdomain or protocol (HTTP/HTTPS) not allowed in the crawl settings.
 func (s *analysis) GetSitemapsSamplesOutOfConfig(ctx context.Context, request operations.GetSitemapsSamplesOutOfConfigRequest) (*operations.GetSitemapsSamplesOutOfConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/out_of_config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/out_of_config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -726,14 +726,14 @@ func (s *analysis) GetSitemapsSamplesOutOfConfig(ctx context.Context, request op
 // Sample list of URLs which were found in your sitemaps, within the project allowed scope (allowed domains/subdomains/protocols), but not found by the Botify crawler.
 func (s *analysis) GetSitemapsSamplesSitemapsOnly(ctx context.Context, request operations.GetSitemapsSamplesSitemapsOnlyRequest) (*operations.GetSitemapsSamplesSitemapsOnlyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/sitemap_only", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/sitemap_only", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -785,14 +785,14 @@ func (s *analysis) GetSitemapsSamplesSitemapsOnly(ctx context.Context, request o
 // Gets the detail of an URL for an analysis
 func (s *analysis) GetURLDetail(ctx context.Context, request operations.GetURLDetailRequest) (*operations.GetURLDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/{url}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/{url}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -844,9 +844,9 @@ func (s *analysis) GetURLDetail(ctx context.Context, request operations.GetURLDe
 // Executes a query and returns a paginated response
 func (s *analysis) GetUrls(ctx context.Context, request operations.GetUrlsRequest) (*operations.GetUrlsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UrlsQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -858,7 +858,7 @@ func (s *analysis) GetUrls(ctx context.Context, request operations.GetUrlsReques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -910,9 +910,9 @@ func (s *analysis) GetUrls(ctx context.Context, request operations.GetUrlsReques
 // Query aggregator. It accepts multiple queries
 func (s *analysis) GetUrlsAggs(ctx context.Context, request operations.GetUrlsAggsRequest) (*operations.GetUrlsAggsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -924,7 +924,7 @@ func (s *analysis) GetUrlsAggs(ctx context.Context, request operations.GetUrlsAg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -976,14 +976,14 @@ func (s *analysis) GetUrlsAggs(ctx context.Context, request operations.GetUrlsAg
 // Gets an Analysis datamodel
 func (s *analysis) GetUrlsDatamodel(ctx context.Context, request operations.GetUrlsDatamodelRequest) (*operations.GetUrlsDatamodelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/datamodel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/datamodel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1035,7 +1035,7 @@ func (s *analysis) GetUrlsDatamodel(ctx context.Context, request operations.GetU
 // Checks the status of an CSVUrlExportJob object. Returns json object with the status.
 func (s *analysis) GetUrlsExportStatus(ctx context.Context, request operations.GetUrlsExportStatusRequest) (*operations.GetUrlsExportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export/{url_export_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export/{url_export_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1090,14 +1090,14 @@ func (s *analysis) GetUrlsExportStatus(ctx context.Context, request operations.G
 // A list of the CSV Exports requests and their current status
 func (s *analysis) GetUrlsExports(ctx context.Context, request operations.GetUrlsExportsRequest) (*operations.GetUrlsExportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1149,9 +1149,9 @@ func (s *analysis) GetUrlsExports(ctx context.Context, request operations.GetUrl
 // Return most frequent segments (= suggested patterns in the previous version) for a Botify Query.
 func (s *analysis) GetUrlsSuggestedFilters(ctx context.Context, request operations.GetUrlsSuggestedFiltersRequest) (*operations.GetUrlsSuggestedFiltersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/suggested_filters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/suggested_filters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UrlsAggsQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1163,7 +1163,7 @@ func (s *analysis) GetUrlsSuggestedFilters(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -30,7 +30,8 @@ func (e *DeleteHapgXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteHapgHeaders struct {
+type DeleteHapgRequest struct {
+	DeleteHapgRequest shared.DeleteHapgRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteHapgHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteHapgXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteHapgRequest struct {
-	Headers DeleteHapgHeaders
-	Request shared.DeleteHapgRequest `request:"mediaType=application/json"`
 }
 
 type DeleteHapgResponse struct {

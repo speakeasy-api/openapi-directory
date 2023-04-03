@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDeploymentVariablePathParams struct {
+type DeleteDeploymentVariableRequest struct {
 	// The environment.
 	EnvironmentUUID string `pathParam:"style=simple,explode=false,name=environment_uuid"`
 	// The repository.
@@ -15,10 +15,6 @@ type DeleteDeploymentVariablePathParams struct {
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteDeploymentVariableRequest struct {
-	PathParams DeleteDeploymentVariablePathParams
 }
 
 type DeleteDeploymentVariableResponse struct {

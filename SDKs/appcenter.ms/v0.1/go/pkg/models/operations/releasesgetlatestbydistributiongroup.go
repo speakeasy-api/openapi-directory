@@ -6,33 +6,23 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesGetLatestByDistributionGroupSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesGetLatestByDistributionGroupPathParams struct {
+type ReleasesGetLatestByDistributionGroupRequest struct {
 	// The name of the app
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the distribution group.
 	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The check if the request is from Install page
+	IsInstallPage *bool `queryParam:"style=form,explode=true,name=is_install_page"`
 	// The name of the app owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Also supports the constant `latest`, which will return the latest release in the distribution group.
 	ReleaseID string `pathParam:"style=simple,explode=false,name=release_id"`
-}
-
-type ReleasesGetLatestByDistributionGroupQueryParams struct {
-	// The check if the request is from Install page
-	IsInstallPage *bool `queryParam:"style=form,explode=true,name=is_install_page"`
-}
-
-type ReleasesGetLatestByDistributionGroupRequest struct {
-	PathParams  ReleasesGetLatestByDistributionGroupPathParams
-	QueryParams ReleasesGetLatestByDistributionGroupQueryParams
-	Security    ReleasesGetLatestByDistributionGroupSecurity
 }
 
 type ReleasesGetLatestByDistributionGroup501ApplicationJSONCodeEnum string

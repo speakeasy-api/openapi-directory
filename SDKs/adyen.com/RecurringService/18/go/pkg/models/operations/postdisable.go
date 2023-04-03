@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostDisableRequest struct {
-	Request *shared.DisableRequest `request:"mediaType=application/json"`
-}
-
 type PostDisableResponse struct {
 	ContentType string
 	// OK - the request has succeeded.

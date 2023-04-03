@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateConfiguredTableAnalysisRulePathParams struct {
-	// The identifier for the configured table to create the analysis rule for. Currently accepts the configured table ID.
-	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
-}
-
-type CreateConfiguredTableAnalysisRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy - Controls on the query specifications that can be run on a configured table.
 type CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy struct {
 	V1 *shared.ConfiguredTableAnalysisRulePolicyV1 `json:"v1,omitempty"`
@@ -61,9 +46,16 @@ type CreateConfiguredTableAnalysisRuleRequestBody struct {
 }
 
 type CreateConfiguredTableAnalysisRuleRequest struct {
-	PathParams CreateConfiguredTableAnalysisRulePathParams
-	Headers    CreateConfiguredTableAnalysisRuleHeaders
-	Request    CreateConfiguredTableAnalysisRuleRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateConfiguredTableAnalysisRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier for the configured table to create the analysis rule for. Currently accepts the configured table ID.
+	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
 }
 
 type CreateConfiguredTableAnalysisRuleResponse struct {

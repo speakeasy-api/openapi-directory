@@ -6,11 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UserAPITokensNewSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UserAPITokensNewRequestBodyScopeEnum string
@@ -42,12 +42,6 @@ type UserAPITokensNewRequestBody struct {
 	Description *string `json:"description,omitempty"`
 	// The scope for this token.
 	Scope []UserAPITokensNewRequestBodyScopeEnum `json:"scope,omitempty"`
-}
-
-type UserAPITokensNewRequest struct {
-	// Description of the token
-	Request  *UserAPITokensNewRequestBody `request:"mediaType=application/json"`
-	Security UserAPITokensNewSecurity
 }
 
 type UserAPITokensNew401ApplicationJSONErrorCodeEnum string

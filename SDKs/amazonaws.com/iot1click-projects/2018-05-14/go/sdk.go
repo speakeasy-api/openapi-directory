@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AssociateDeviceWithPlacement - Associates a physical device with a placement.
 func (s *SDK) AssociateDeviceWithPlacement(ctx context.Context, request operations.AssociateDeviceWithPlacementRequest) (*operations.AssociateDeviceWithPlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}/devices/{deviceTemplateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}/devices/{deviceTemplateName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateDeviceWithPlacement(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -210,9 +210,9 @@ func (s *SDK) AssociateDeviceWithPlacement(ctx context.Context, request operatio
 // CreatePlacement - Creates an empty placement.
 func (s *SDK) CreatePlacement(ctx context.Context, request operations.CreatePlacementRequest) (*operations.CreatePlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) CreatePlacement(ctx context.Context, request operations.CreatePlac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -308,7 +308,7 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -392,14 +392,14 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 // DeletePlacement - <p>Deletes a placement. To delete a placement, it must not have any devices associated with it.</p> <note> <p>When you delete a placement, all associated data becomes irretrievable.</p> </note>
 func (s *SDK) DeletePlacement(ctx context.Context, request operations.DeletePlacementRequest) (*operations.DeletePlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -478,14 +478,14 @@ func (s *SDK) DeletePlacement(ctx context.Context, request operations.DeletePlac
 // DeleteProject - <p>Deletes a project. To delete a project, it must not have any placements associated with it.</p> <note> <p>When you delete a project, all associated data becomes irretrievable.</p> </note>
 func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -564,14 +564,14 @@ func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjec
 // DescribePlacement - Describes a placement in a project.
 func (s *SDK) DescribePlacement(ctx context.Context, request operations.DescribePlacementRequest) (*operations.DescribePlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -640,14 +640,14 @@ func (s *SDK) DescribePlacement(ctx context.Context, request operations.Describe
 // DescribeProject - Returns an object describing a project.
 func (s *SDK) DescribeProject(ctx context.Context, request operations.DescribeProjectRequest) (*operations.DescribeProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -716,14 +716,14 @@ func (s *SDK) DescribeProject(ctx context.Context, request operations.DescribePr
 // DisassociateDeviceFromPlacement - Removes a physical device from a placement.
 func (s *SDK) DisassociateDeviceFromPlacement(ctx context.Context, request operations.DisassociateDeviceFromPlacementRequest) (*operations.DisassociateDeviceFromPlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}/devices/{deviceTemplateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}/devices/{deviceTemplateName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -802,14 +802,14 @@ func (s *SDK) DisassociateDeviceFromPlacement(ctx context.Context, request opera
 // GetDevicesInPlacement - Returns an object enumerating the devices in a placement.
 func (s *SDK) GetDevicesInPlacement(ctx context.Context, request operations.GetDevicesInPlacementRequest) (*operations.GetDevicesInPlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}/devices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}/devices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -878,16 +878,16 @@ func (s *SDK) GetDevicesInPlacement(ctx context.Context, request operations.GetD
 // ListPlacements - Lists the placement(s) of a project.
 func (s *SDK) ListPlacements(ctx context.Context, request operations.ListPlacementsRequest) (*operations.ListPlacementsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -965,9 +965,9 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1028,14 +1028,14 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 // ListTagsForResource - Lists the tags (metadata key/value pairs) which you have assigned to the resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1104,9 +1104,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // TagResource - Creates or modifies tags for a resource. Tags are key/value pairs (metadata) that can be used to manage a resource. For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS Tagging Strategies</a>.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1121,7 +1121,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1190,16 +1190,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes one or more tags (metadata key/value pairs) from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1270,9 +1270,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdatePlacement - Updates a placement with the given attributes. To clear an attribute, pass an empty value (i.e., "").
 func (s *SDK) UpdatePlacement(ctx context.Context, request operations.UpdatePlacementRequest) (*operations.UpdatePlacementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}/placements/{placementName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1287,7 +1287,7 @@ func (s *SDK) UpdatePlacement(ctx context.Context, request operations.UpdatePlac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1366,9 +1366,9 @@ func (s *SDK) UpdatePlacement(ctx context.Context, request operations.UpdatePlac
 // UpdateProject - Updates a project associated with your AWS account and region. With the exception of device template names, you can pass just the values that need to be updated because the update request will change only the values that are provided. To clear a value, pass the empty string (i.e., <code>""</code>).
 func (s *SDK) UpdateProject(ctx context.Context, request operations.UpdateProjectRequest) (*operations.UpdateProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1383,7 +1383,7 @@ func (s *SDK) UpdateProject(ctx context.Context, request operations.UpdateProjec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

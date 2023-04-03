@@ -116,7 +116,7 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/migrationworkflow/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -212,7 +212,7 @@ func (s *SDK) CreateWorkflowStep(ctx context.Context, request operations.CreateW
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workflowstep"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) CreateWorkflowStep(ctx context.Context, request operations.CreateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -308,7 +308,7 @@ func (s *SDK) CreateWorkflowStepGroup(ctx context.Context, request operations.Cr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workflowstepgroups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *SDK) CreateWorkflowStepGroup(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -402,14 +402,14 @@ func (s *SDK) CreateWorkflowStepGroup(ctx context.Context, request operations.Cr
 // DeleteWorkflow - Delete a migration workflow. You must pause a running workflow in Migration Hub Orchestrator console to delete it.
 func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkflowRequest) (*operations.DeleteWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -498,16 +498,16 @@ func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkf
 // DeleteWorkflowStep - Delete a step in a migration workflow. Pause the workflow to delete a running step.
 func (s *SDK) DeleteWorkflowStep(ctx context.Context, request operations.DeleteWorkflowStepRequest) (*operations.DeleteWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#stepGroupId&workflowId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#stepGroupId&workflowId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -598,16 +598,16 @@ func (s *SDK) DeleteWorkflowStep(ctx context.Context, request operations.DeleteW
 // DeleteWorkflowStepGroup - Delete a step group in a migration workflow.
 func (s *SDK) DeleteWorkflowStepGroup(ctx context.Context, request operations.DeleteWorkflowStepGroupRequest) (*operations.DeleteWorkflowStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -698,14 +698,14 @@ func (s *SDK) DeleteWorkflowStepGroup(ctx context.Context, request operations.De
 // GetTemplate - Get the template you want to use for creating a migration workflow.
 func (s *SDK) GetTemplate(ctx context.Context, request operations.GetTemplateRequest) (*operations.GetTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflowtemplate/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflowtemplate/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -784,16 +784,16 @@ func (s *SDK) GetTemplate(ctx context.Context, request operations.GetTemplateReq
 // GetTemplateStep - Get a specific step in a template.
 func (s *SDK) GetTemplateStep(ctx context.Context, request operations.GetTemplateStepRequest) (*operations.GetTemplateStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templatestep/{id}#templateId&stepGroupId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templatestep/{id}#templateId&stepGroupId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -884,14 +884,14 @@ func (s *SDK) GetTemplateStep(ctx context.Context, request operations.GetTemplat
 // GetTemplateStepGroup - Get a step group in a template.
 func (s *SDK) GetTemplateStepGroup(ctx context.Context, request operations.GetTemplateStepGroupRequest) (*operations.GetTemplateStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{templateId}/stepgroups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/{templateId}/stepgroups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -980,14 +980,14 @@ func (s *SDK) GetTemplateStepGroup(ctx context.Context, request operations.GetTe
 // GetWorkflow - Get migration workflow.
 func (s *SDK) GetWorkflow(ctx context.Context, request operations.GetWorkflowRequest) (*operations.GetWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1076,16 +1076,16 @@ func (s *SDK) GetWorkflow(ctx context.Context, request operations.GetWorkflowReq
 // GetWorkflowStep - Get a step in the migration workflow.
 func (s *SDK) GetWorkflowStep(ctx context.Context, request operations.GetWorkflowStepRequest) (*operations.GetWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#workflowId&stepGroupId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#workflowId&stepGroupId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1166,16 +1166,16 @@ func (s *SDK) GetWorkflowStep(ctx context.Context, request operations.GetWorkflo
 // GetWorkflowStepGroup - Get the step group of a migration workflow.
 func (s *SDK) GetWorkflowStepGroup(ctx context.Context, request operations.GetWorkflowStepGroupRequest) (*operations.GetWorkflowStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1273,9 +1273,9 @@ func (s *SDK) ListPlugins(ctx context.Context, request operations.ListPluginsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1346,14 +1346,14 @@ func (s *SDK) ListPlugins(ctx context.Context, request operations.ListPluginsReq
 // ListTagsForResource - List the tags added to a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1412,16 +1412,16 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTemplateStepGroups - List the step groups in a template.
 func (s *SDK) ListTemplateStepGroups(ctx context.Context, request operations.ListTemplateStepGroupsRequest) (*operations.ListTemplateStepGroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templatestepgroups/{templateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templatestepgroups/{templateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1509,9 +1509,9 @@ func (s *SDK) ListTemplateSteps(ctx context.Context, request operations.ListTemp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1609,9 +1609,9 @@ func (s *SDK) ListTemplates(ctx context.Context, request operations.ListTemplate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1689,9 +1689,9 @@ func (s *SDK) ListWorkflowStepGroups(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1782,16 +1782,16 @@ func (s *SDK) ListWorkflowStepGroups(ctx context.Context, request operations.Lis
 // ListWorkflowSteps - List the steps in a workflow.
 func (s *SDK) ListWorkflowSteps(ctx context.Context, request operations.ListWorkflowStepsRequest) (*operations.ListWorkflowStepsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflow/{workflowId}/workflowstepgroups/{stepGroupId}/workflowsteps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflow/{workflowId}/workflowstepgroups/{stepGroupId}/workflowsteps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1879,9 +1879,9 @@ func (s *SDK) ListWorkflows(ctx context.Context, request operations.ListWorkflow
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1972,16 +1972,16 @@ func (s *SDK) ListWorkflows(ctx context.Context, request operations.ListWorkflow
 // RetryWorkflowStep - Retry a failed step in a migration workflow.
 func (s *SDK) RetryWorkflowStep(ctx context.Context, request operations.RetryWorkflowStepRequest) (*operations.RetryWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retryworkflowstep/{id}#workflowId&stepGroupId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/retryworkflowstep/{id}#workflowId&stepGroupId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2062,14 +2062,14 @@ func (s *SDK) RetryWorkflowStep(ctx context.Context, request operations.RetryWor
 // StartWorkflow - Start a migration workflow.
 func (s *SDK) StartWorkflow(ctx context.Context, request operations.StartWorkflowRequest) (*operations.StartWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2158,14 +2158,14 @@ func (s *SDK) StartWorkflow(ctx context.Context, request operations.StartWorkflo
 // StopWorkflow - Stop an ongoing migration workflow.
 func (s *SDK) StopWorkflow(ctx context.Context, request operations.StopWorkflowRequest) (*operations.StopWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2254,9 +2254,9 @@ func (s *SDK) StopWorkflow(ctx context.Context, request operations.StopWorkflowR
 // TagResource - Tag a resource by specifying its Amazon Resource Name (ARN).
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2271,7 +2271,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2330,16 +2330,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deletes the tags for a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2400,9 +2400,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateWorkflow - Update a migration workflow.
 func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkflowRequest) (*operations.UpdateWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2417,7 +2417,7 @@ func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2506,9 +2506,9 @@ func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkf
 // UpdateWorkflowStep - Update a step in a migration workflow.
 func (s *SDK) UpdateWorkflowStep(ctx context.Context, request operations.UpdateWorkflowStepRequest) (*operations.UpdateWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2523,7 +2523,7 @@ func (s *SDK) UpdateWorkflowStep(ctx context.Context, request operations.UpdateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2602,9 +2602,9 @@ func (s *SDK) UpdateWorkflowStep(ctx context.Context, request operations.UpdateW
 // UpdateWorkflowStepGroup - Update the step group in a migration workflow.
 func (s *SDK) UpdateWorkflowStepGroup(ctx context.Context, request operations.UpdateWorkflowStepGroupRequest) (*operations.UpdateWorkflowStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2619,9 +2619,9 @@ func (s *SDK) UpdateWorkflowStepGroup(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETChangeMessageVisibilityPathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETChangeMessageVisibilityActionEnum
 type GETChangeMessageVisibilityActionEnum string
 
@@ -57,16 +50,17 @@ func (e *GETChangeMessageVisibilityVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETChangeMessageVisibilityQueryParams struct {
-	Action GETChangeMessageVisibilityActionEnum `queryParam:"style=form,explode=true,name=Action"`
+type GETChangeMessageVisibilityRequest struct {
+	// The AWS account number
+	AccountNumber int64                                `pathParam:"style=simple,explode=false,name=AccountNumber"`
+	Action        GETChangeMessageVisibilityActionEnum `queryParam:"style=form,explode=true,name=Action"`
+	// The name of the queue
+	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
 	// The receipt handle associated with the message whose visibility timeout is changed. This parameter is returned by the <code> <a>ReceiveMessage</a> </code> action.
 	ReceiptHandle string                                `queryParam:"style=form,explode=true,name=ReceiptHandle"`
 	Version       GETChangeMessageVisibilityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The new value for the message's visibility timeout (in seconds). Values range: <code>0</code> to <code>43200</code>. Maximum: 12 hours.
-	VisibilityTimeout int64 `queryParam:"style=form,explode=true,name=VisibilityTimeout"`
-}
-
-type GETChangeMessageVisibilityHeaders struct {
+	VisibilityTimeout int64   `queryParam:"style=form,explode=true,name=VisibilityTimeout"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -74,12 +68,6 @@ type GETChangeMessageVisibilityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETChangeMessageVisibilityRequest struct {
-	PathParams  GETChangeMessageVisibilityPathParams
-	QueryParams GETChangeMessageVisibilityQueryParams
-	Headers     GETChangeMessageVisibilityHeaders
 }
 
 type GETChangeMessageVisibilityResponse struct {

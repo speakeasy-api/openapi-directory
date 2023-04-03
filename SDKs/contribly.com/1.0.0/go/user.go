@@ -43,7 +43,7 @@ func (s *user) GetUsers(ctx context.Context, request operations.GetUsersRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -86,7 +86,7 @@ func (s *user) GetUsers(ctx context.Context, request operations.GetUsersRequest)
 // GetUsersID - Retrieve a single user by id
 func (s *user) GetUsersID(ctx context.Context, request operations.GetUsersIDRequest) (*operations.GetUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *user) GetUsersID(ctx context.Context, request operations.GetUsersIDRequ
 // GetUsersIDLinkedType - Retrieve a users linked profile by type
 func (s *user) GetUsersIDLinkedType(ctx context.Context, request operations.GetUsersIDLinkedTypeRequest) (*operations.GetUsersIDLinkedTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/linked/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/linked/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

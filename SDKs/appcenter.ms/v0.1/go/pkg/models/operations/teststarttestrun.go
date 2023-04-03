@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestStartTestRunSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestStartTestRunPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the test run
-	TestRunID string `pathParam:"style=simple,explode=false,name=test_run_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TestStartTestRunTestCloudStartTestRunOptions - Options required to start the test run
@@ -37,10 +27,14 @@ type TestStartTestRunTestCloudStartTestRunOptions struct {
 }
 
 type TestStartTestRunRequest struct {
-	PathParams TestStartTestRunPathParams
 	// Option required to start the test run
-	Request  TestStartTestRunTestCloudStartTestRunOptions `request:"mediaType=application/json"`
-	Security TestStartTestRunSecurity
+	RequestBody TestStartTestRunTestCloudStartTestRunOptions `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the test run
+	TestRunID string `pathParam:"style=simple,explode=false,name=test_run_id"`
 }
 
 // TestStartTestRunTestCloudTestRunStartResult - Result of starting a test run

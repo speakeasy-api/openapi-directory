@@ -50,28 +50,20 @@ func (e *GETDisableIpamOrganizationAdminAccountVersionEnum) UnmarshalJSON(data [
 	}
 }
 
-type GETDisableIpamOrganizationAdminAccountQueryParams struct {
+type GETDisableIpamOrganizationAdminAccountRequest struct {
 	Action GETDisableIpamOrganizationAdminAccountActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Organizations member account ID that you want to disable as IPAM account.
 	DelegatedAdminAccountID string `queryParam:"style=form,explode=true,name=DelegatedAdminAccountId"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                             `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETDisableIpamOrganizationAdminAccountVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisableIpamOrganizationAdminAccountHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableIpamOrganizationAdminAccountRequest struct {
-	QueryParams GETDisableIpamOrganizationAdminAccountQueryParams
-	Headers     GETDisableIpamOrganizationAdminAccountHeaders
+	DryRun            *bool                                             `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETDisableIpamOrganizationAdminAccountVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisableIpamOrganizationAdminAccountResponse struct {

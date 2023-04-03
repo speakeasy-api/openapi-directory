@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CancelZonalShift - Cancel a zonal shift in Amazon Route 53 Application Recovery Controller that you've started for a resource in your AWS account in an AWS Region.
 func (s *SDK) CancelZonalShift(ctx context.Context, request operations.CancelZonalShiftRequest) (*operations.CancelZonalShiftResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/zonalshifts/{zonalShiftId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/zonalshifts/{zonalShiftId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -220,14 +220,14 @@ func (s *SDK) CancelZonalShift(ctx context.Context, request operations.CancelZon
 // GetManagedResource - <p>Get information about a resource that's been registered for zonal shifts with Amazon Route 53 Application Recovery Controller in this AWS Region. Resources that are registered for zonal shifts are managed resources in Route 53 ARC.</p> <p>At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with cross-zone load balancing turned off.</p>
 func (s *SDK) GetManagedResource(ctx context.Context, request operations.GetManagedResourceRequest) (*operations.GetManagedResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/managedresources/{resourceIdentifier}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/managedresources/{resourceIdentifier}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -323,9 +323,9 @@ func (s *SDK) ListManagedResources(ctx context.Context, request operations.ListM
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -413,9 +413,9 @@ func (s *SDK) ListZonalShifts(ctx context.Context, request operations.ListZonalS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -498,7 +498,7 @@ func (s *SDK) StartZonalShift(ctx context.Context, request operations.StartZonal
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/zonalshifts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -513,7 +513,7 @@ func (s *SDK) StartZonalShift(ctx context.Context, request operations.StartZonal
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -612,9 +612,9 @@ func (s *SDK) StartZonalShift(ctx context.Context, request operations.StartZonal
 // UpdateZonalShift - Update an active zonal shift in Amazon Route 53 Application Recovery Controller in your AWS account. You can update a zonal shift to set a new expiration, or edit or replace the comment for the zonal shift.
 func (s *SDK) UpdateZonalShift(ctx context.Context, request operations.UpdateZonalShiftRequest) (*operations.UpdateZonalShiftResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/zonalshifts/{zonalShiftId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/zonalshifts/{zonalShiftId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -629,7 +629,7 @@ func (s *SDK) UpdateZonalShift(ctx context.Context, request operations.UpdateZon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

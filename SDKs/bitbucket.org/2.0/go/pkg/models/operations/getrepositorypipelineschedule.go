@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetRepositoryPipelineSchedulePathParams struct {
+type GetRepositoryPipelineScheduleRequest struct {
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The uuid of the schedule.
 	ScheduleUUID string `pathParam:"style=simple,explode=false,name=schedule_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoryPipelineScheduleRequest struct {
-	PathParams GetRepositoryPipelineSchedulePathParams
 }
 
 type GetRepositoryPipelineScheduleResponse struct {

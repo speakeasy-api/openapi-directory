@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTemplateDesignerTemplatesPostRequest struct {
-	Request shared.CreateOrUpdateTemplateRequest `request:"mediaType=application/json"`
-}
-
 type CreateTemplateDesignerTemplatesPostResponse struct {
 	ContentType string
 	// Client Error

@@ -7,17 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDUserConnectionsPathParams struct {
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserConnectionsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-	// optional comma-separated list of sources to use for the connection synchronization
-	Source *string `queryParam:"style=form,explode=true,name=source"`
-}
-
 type PostUsersIDUserConnectionsRequestBody struct {
 	// optional uuid of the connector (replaces id_connector)
 	ConnectorUUID *string `multipartForm:"name=connector_uuid"`
@@ -26,9 +15,12 @@ type PostUsersIDUserConnectionsRequestBody struct {
 }
 
 type PostUsersIDUserConnectionsRequest struct {
-	PathParams  PostUsersIDUserConnectionsPathParams
-	QueryParams PostUsersIDUserConnectionsQueryParams
-	Request     *PostUsersIDUserConnectionsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostUsersIDUserConnectionsRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                                `queryParam:"style=form,explode=true,name=expand"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
+	// optional comma-separated list of sources to use for the connection synchronization
+	Source *string `queryParam:"style=form,explode=true,name=source"`
 }
 
 type PostUsersIDUserConnectionsResponse struct {

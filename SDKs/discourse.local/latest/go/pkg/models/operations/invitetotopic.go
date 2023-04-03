@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type InviteToTopicPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type InviteToTopicHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type InviteToTopicRequestBody struct {
 	Email *string `json:"email,omitempty"`
 	User  *string `json:"user,omitempty"`
 }
 
 type InviteToTopicRequest struct {
-	PathParams InviteToTopicPathParams
-	Headers    InviteToTopicHeaders
-	Request    *InviteToTopicRequestBody `request:"mediaType=application/json"`
+	APIKey      string                    `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                    `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *InviteToTopicRequestBody `request:"mediaType=application/json"`
+	ID          string                    `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type InviteToTopic200ApplicationJSONUser struct {

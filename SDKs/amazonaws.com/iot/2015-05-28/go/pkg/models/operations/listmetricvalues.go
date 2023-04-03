@@ -34,7 +34,14 @@ func (e *ListMetricValuesDimensionValueOperatorEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListMetricValuesQueryParams struct {
+type ListMetricValuesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The dimension name.
 	DimensionName *string `queryParam:"style=form,explode=true,name=dimensionName"`
 	// The dimension value operator.
@@ -51,21 +58,6 @@ type ListMetricValuesQueryParams struct {
 	StartTime time.Time `queryParam:"style=form,explode=true,name=startTime"`
 	// The name of the thing for which security profile metric values are returned.
 	ThingName string `queryParam:"style=form,explode=true,name=thingName"`
-}
-
-type ListMetricValuesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListMetricValuesRequest struct {
-	QueryParams ListMetricValuesQueryParams
-	Headers     ListMetricValuesHeaders
 }
 
 type ListMetricValuesResponse struct {

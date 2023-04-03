@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMobileDeviceAccessOverridesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListMobileDeviceAccessOverridesXAmzTargetEnum
 type ListMobileDeviceAccessOverridesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListMobileDeviceAccessOverridesXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListMobileDeviceAccessOverridesHeaders struct {
+type ListMobileDeviceAccessOverridesRequest struct {
+	ListMobileDeviceAccessOverridesRequest shared.ListMobileDeviceAccessOverridesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListMobileDeviceAccessOverridesHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListMobileDeviceAccessOverridesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListMobileDeviceAccessOverridesRequest struct {
-	QueryParams ListMobileDeviceAccessOverridesQueryParams
-	Headers     ListMobileDeviceAccessOverridesHeaders
-	Request     shared.ListMobileDeviceAccessOverridesRequest `request:"mediaType=application/json"`
 }
 
 type ListMobileDeviceAccessOverridesResponse struct {

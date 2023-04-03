@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WebBackendGetWorkspaceStateRequest struct {
-	Request *shared.WebBackendWorkspaceState `request:"mediaType=application/json"`
-}
-
 type WebBackendGetWorkspaceStateResponse struct {
 	ContentType string
 	// Input failed validation

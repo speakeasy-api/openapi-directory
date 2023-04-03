@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CompanyMonitorChangeTypesListSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyMonitorChangeTypesListRequest struct {
-	Security CompanyMonitorChangeTypesListSecurity
-}
 
 // CompanyMonitorChangeTypesListDefaultApplicationJSON - Detailed information about the error
 type CompanyMonitorChangeTypesListDefaultApplicationJSON struct {

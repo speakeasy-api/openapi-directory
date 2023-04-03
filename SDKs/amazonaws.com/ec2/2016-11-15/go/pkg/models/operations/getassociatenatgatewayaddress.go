@@ -50,7 +50,7 @@ func (e *GETAssociateNatGatewayAddressVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETAssociateNatGatewayAddressQueryParams struct {
+type GETAssociateNatGatewayAddressRequest struct {
 	Action GETAssociateNatGatewayAddressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The allocation IDs of EIPs that you want to associate with your NAT gateway.
 	AllocationID []string `queryParam:"style=form,explode=true,name=AllocationId"`
@@ -59,23 +59,15 @@ type GETAssociateNatGatewayAddressQueryParams struct {
 	// The NAT gateway ID.
 	NatGatewayID string `queryParam:"style=form,explode=true,name=NatGatewayId"`
 	// The private IPv4 addresses that you want to assign to the NAT gateway.
-	PrivateIPAddress []string                                 `queryParam:"style=form,explode=true,name=PrivateIpAddress"`
-	Version          GETAssociateNatGatewayAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssociateNatGatewayAddressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateNatGatewayAddressRequest struct {
-	QueryParams GETAssociateNatGatewayAddressQueryParams
-	Headers     GETAssociateNatGatewayAddressHeaders
+	PrivateIPAddress  []string                                 `queryParam:"style=form,explode=true,name=PrivateIpAddress"`
+	Version           GETAssociateNatGatewayAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssociateNatGatewayAddressResponse struct {

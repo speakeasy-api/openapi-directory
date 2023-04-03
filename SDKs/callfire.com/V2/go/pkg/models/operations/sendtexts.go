@@ -8,10 +8,13 @@ import (
 )
 
 type SendTextsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type SendTextsQueryParams struct {
+type SendTextsRequest struct {
+	// List of TextRecipient objects. By recipient we mean either phone number or contact with user-defined attributes added to action. Text messaging supports media files, provide a list of ids of media files for recipient to attach media to the message.
+	RequestBody []shared.TextRecipient `request:"mediaType=application/json"`
 	// Specifies a campaignId to send texts through a previously created campaign
 	CampaignID *int64 `queryParam:"style=form,explode=true,name=campaignId"`
 	// Text message can be overridden by TextRecipient.message field. If multiple recipients have the same text message to a different recipients it is better to specify a single default message and do not duplicate it in each recipient.
@@ -20,13 +23,6 @@ type SendTextsQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Turns on strict validation for recipients
 	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
-}
-
-type SendTextsRequest struct {
-	QueryParams SendTextsQueryParams
-	// List of TextRecipient objects. By recipient we mean either phone number or contact with user-defined attributes added to action. Text messaging supports media files, provide a list of ids of media files for recipient to attach media to the message.
-	Request  []shared.TextRecipient `request:"mediaType=application/json"`
-	Security SendTextsSecurity
 }
 
 type SendTextsResponse struct {

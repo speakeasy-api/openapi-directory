@@ -13,26 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CancelImageCreationRequest{
-        Headers: operations.CancelImageCreationHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
+        RequestBody: operations.CancelImageCreationRequestBody{
+            ClientToken: "corrupti",
+            ImageBuildVersionArn: "provident",
         },
-        Request: operations.CancelImageCreationRequestBody{
-            ClientToken: "illum",
-            ImageBuildVersionArn: "vel",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
     }
 
     ctx := context.Background()

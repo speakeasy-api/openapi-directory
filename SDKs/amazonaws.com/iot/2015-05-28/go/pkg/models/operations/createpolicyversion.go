@@ -7,36 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePolicyVersionPathParams struct {
-	// The policy name.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type CreatePolicyVersionQueryParams struct {
-	// Specifies whether the policy version is set as the default. When this parameter is true, the new policy version becomes the operative version (that is, the version that is in effect for the certificates to which the policy is attached).
-	SetAsDefault *bool `queryParam:"style=form,explode=true,name=setAsDefault"`
-}
-
-type CreatePolicyVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreatePolicyVersionRequestBody struct {
 	// The JSON document that describes the policy. Minimum length of 1. Maximum length of 2048, excluding whitespace.
 	PolicyDocument string `json:"policyDocument"`
 }
 
 type CreatePolicyVersionRequest struct {
-	PathParams  CreatePolicyVersionPathParams
-	QueryParams CreatePolicyVersionQueryParams
-	Headers     CreatePolicyVersionHeaders
-	Request     CreatePolicyVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreatePolicyVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The policy name.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
+	// Specifies whether the policy version is set as the default. When this parameter is true, the new policy version becomes the operative version (that is, the version that is in effect for the certificates to which the policy is attached).
+	SetAsDefault *bool `queryParam:"style=form,explode=true,name=setAsDefault"`
 }
 
 type CreatePolicyVersionResponse struct {

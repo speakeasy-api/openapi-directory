@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeIdentityPoolUsagePathParams struct {
+type DescribeIdentityPoolUsageRequest struct {
 	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type DescribeIdentityPoolUsageHeaders struct {
+	IdentityPoolID    string  `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeIdentityPoolUsageHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeIdentityPoolUsageRequest struct {
-	PathParams DescribeIdentityPoolUsagePathParams
-	Headers    DescribeIdentityPoolUsageHeaders
 }
 
 type DescribeIdentityPoolUsageResponse struct {

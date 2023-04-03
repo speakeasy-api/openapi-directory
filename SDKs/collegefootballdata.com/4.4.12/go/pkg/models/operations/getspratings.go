@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSPRatingsQueryParams struct {
+type GetSPRatingsRequest struct {
 	// Team filter (required if year not specified)
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Season filter (required if team not specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetSPRatingsRequest struct {
-	QueryParams GetSPRatingsQueryParams
 }
 
 type GetSPRatingsResponse struct {

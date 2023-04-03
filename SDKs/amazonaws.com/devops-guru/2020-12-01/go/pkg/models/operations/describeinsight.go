@@ -7,17 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeInsightPathParams struct {
-	//  The ID of the insight.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DescribeInsightQueryParams struct {
+type DescribeInsightRequest struct {
 	// The ID of the member account in the organization.
 	AccountID *string `queryParam:"style=form,explode=true,name=AccountId"`
-}
-
-type DescribeInsightHeaders struct {
+	//  The ID of the insight.
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +19,6 @@ type DescribeInsightHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeInsightRequest struct {
-	PathParams  DescribeInsightPathParams
-	QueryParams DescribeInsightQueryParams
-	Headers     DescribeInsightHeaders
 }
 
 type DescribeInsightResponse struct {

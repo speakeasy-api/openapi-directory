@@ -21,7 +21,6 @@ pkg/models/operations/getitempriorityfeed.go
 pkg/models/operations/getitemsnapshotfeed.go
 pkg/models/shared/itemresponse.go
 pkg/models/shared/item.go
-pkg/models/shared/security.go
 pkg/models/shared/itemgroupresponse.go
 pkg/models/shared/itemgroup.go
 pkg/models/shared/itempriorityresponse.go

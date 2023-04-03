@@ -63,29 +63,21 @@ func (e *ListLensesLensTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLensesQueryParams struct {
+type ListLensesRequest struct {
 	LensName *string `queryParam:"style=form,explode=true,name=LensName"`
 	// The status of lenses to be returned.
 	LensStatus *ListLensesLensStatusEnum `queryParam:"style=form,explode=true,name=LensStatus"`
 	// The type of lenses to be returned.
-	LensType   *ListLensesLensTypeEnum `queryParam:"style=form,explode=true,name=LensType"`
-	MaxResults *int64                  `queryParam:"style=form,explode=true,name=MaxResults"`
-	NextToken  *string                 `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListLensesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLensesRequest struct {
-	QueryParams ListLensesQueryParams
-	Headers     ListLensesHeaders
+	LensType          *ListLensesLensTypeEnum `queryParam:"style=form,explode=true,name=LensType"`
+	MaxResults        *int64                  `queryParam:"style=form,explode=true,name=MaxResults"`
+	NextToken         *string                 `queryParam:"style=form,explode=true,name=NextToken"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListLensesResponse struct {

@@ -34,7 +34,7 @@ func newInformationRetrieval(defaultClient, securityClient HTTPClient, serverURL
 
 // KeywordExtraction - Extracts the Keywords of the Document
 // The Keyword Extraction function enables you to extract from an arbitrary document all the keywords and word-combinations along with their occurrences in the text.
-func (s *informationRetrieval) KeywordExtraction(ctx context.Context, request operations.KeywordExtractionRequest) (*operations.KeywordExtractionResponse, error) {
+func (s *informationRetrieval) KeywordExtraction(ctx context.Context, request operations.KeywordExtractionRequestBody) (*operations.KeywordExtractionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/1.0/KeywordExtraction.json"
 
@@ -77,7 +77,7 @@ func (s *informationRetrieval) KeywordExtraction(ctx context.Context, request op
 
 // TextExtraction - Extracts the clear text from Webpage
 // The Text Extraction function enables you to extract the important information from a given webpage. Extracting the clear text of the documents is an important step before any other analysis.
-func (s *informationRetrieval) TextExtraction(ctx context.Context, request operations.TextExtractionRequest) (*operations.TextExtractionResponse, error) {
+func (s *informationRetrieval) TextExtraction(ctx context.Context, request operations.TextExtractionRequestBody) (*operations.TextExtractionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/1.0/TextExtraction.json"
 

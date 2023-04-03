@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Pmjay - Pradhan Mantri Jan Arogya Yojana
 // API to verify Pradhan Mantri Jan Arogya Yojana.
-func (s *apIs) Pmjay(ctx context.Context, request operations.PmjayRequest) (*operations.PmjayResponse, error) {
+func (s *apIs) Pmjay(ctx context.Context, request operations.PmjayRequestBody, security operations.PmjaySecurity) (*operations.PmjayResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pmjay/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Pmjay(ctx context.Context, request operations.PmjayRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

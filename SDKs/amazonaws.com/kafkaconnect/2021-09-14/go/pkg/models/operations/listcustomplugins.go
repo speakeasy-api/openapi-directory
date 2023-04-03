@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCustomPluginsQueryParams struct {
-	// The maximum number of custom plugins to list in one response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// If the response of a ListCustomPlugins operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListCustomPluginsHeaders struct {
+type ListCustomPluginsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListCustomPluginsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCustomPluginsRequest struct {
-	QueryParams ListCustomPluginsQueryParams
-	Headers     ListCustomPluginsHeaders
+	// The maximum number of custom plugins to list in one response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// If the response of a ListCustomPlugins operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListCustomPluginsResponse struct {

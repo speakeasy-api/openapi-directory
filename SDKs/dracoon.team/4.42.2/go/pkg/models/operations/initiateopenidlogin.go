@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InitiateOpenIDLoginQueryParams struct {
+type InitiateOpenIDLoginRequest struct {
 	// Issuer identifier of the OpenID Connect identity provider
 	Issuer string `queryParam:"style=form,explode=true,name=issuer"`
 	// Language ID or ISO 639-1 code
@@ -18,10 +18,6 @@ type InitiateOpenIDLoginQueryParams struct {
 	//
 	// If the request is valid, the API will respond with `204 No Content`.
 	Test bool `queryParam:"style=form,explode=true,name=test"`
-}
-
-type InitiateOpenIDLoginRequest struct {
-	QueryParams InitiateOpenIDLoginQueryParams
 }
 
 type InitiateOpenIDLoginResponse struct {

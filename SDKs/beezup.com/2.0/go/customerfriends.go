@@ -34,14 +34,14 @@ func newCustomerFriends(defaultClient, securityClient HTTPClient, serverURL, lan
 // GetFriendInfo - Get friend information
 func (s *customerFriends) GetFriendInfo(ctx context.Context, request operations.GetFriendInfoRequest) (*operations.GetFriendInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/friends/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/friends/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

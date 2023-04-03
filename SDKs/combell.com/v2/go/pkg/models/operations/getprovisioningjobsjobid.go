@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProvisioningjobsJobIDPathParams struct {
-	// Automatically added
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetProvisioningjobsJobIDQueryParams struct {
-	JobID string `queryParam:"style=form,explode=true,name=job_id"`
-}
-
 type GetProvisioningjobsJobIDRequest struct {
-	PathParams  GetProvisioningjobsJobIDPathParams
-	QueryParams GetProvisioningjobsJobIDQueryParams
+	// Automatically added
+	JobIDPathParameter  string `pathParam:"style=simple,explode=false,name=jobId"`
+	JobIDQueryParameter string `queryParam:"style=form,explode=true,name=job_id"`
 }
 
 type GetProvisioningjobsJobIDResponse struct {

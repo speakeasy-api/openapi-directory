@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCachePolicyConfig20200531PathParams struct {
+type GetCachePolicyConfig20200531Request struct {
 	// The unique identifier for the cache policy. If the cache policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the cache policy is not attached to a cache behavior, you can get the identifier using <code>ListCachePolicies</code>.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetCachePolicyConfig20200531Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetCachePolicyConfig20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCachePolicyConfig20200531Request struct {
-	PathParams GetCachePolicyConfig20200531PathParams
-	Headers    GetCachePolicyConfig20200531Headers
 }
 
 type GetCachePolicyConfig20200531Response struct {

@@ -7,29 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryListAPISpecsPathParams struct {
+type RegistryListAPISpecsRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
-	// The location id.
-	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// The project id.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// The version id.
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryListAPISpecsQueryParams struct {
 	// An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields except contents.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// The location id.
+	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The maximum number of specs to return. The service may return fewer than this value. If unspecified, at most 50 values will be returned. The maximum is 1000; values above 1000 will be coerced to 1000.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// A page token, received from a previous `ListApiSpecs` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListApiSpecs` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
-}
-
-type RegistryListAPISpecsRequest struct {
-	PathParams  RegistryListAPISpecsPathParams
-	QueryParams RegistryListAPISpecsQueryParams
+	// The project id.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// The version id.
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type RegistryListAPISpecsResponse struct {

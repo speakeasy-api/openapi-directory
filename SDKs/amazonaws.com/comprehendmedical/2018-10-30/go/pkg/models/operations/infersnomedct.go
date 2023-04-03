@@ -30,20 +30,16 @@ func (e *InferSNOMEDCTXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type InferSNOMEDCTHeaders struct {
-	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        InferSNOMEDCTXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type InferSNOMEDCTRequest struct {
-	Headers InferSNOMEDCTHeaders
-	Request shared.InferSNOMEDCTRequest `request:"mediaType=application/json"`
+	InferSNOMEDCTRequest shared.InferSNOMEDCTRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget           InferSNOMEDCTXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type InferSNOMEDCTResponse struct {

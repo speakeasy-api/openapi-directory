@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteDatabaseUserPathParams struct {
-	// Automatically added
-	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-	// Automatically added
-	UserName string `pathParam:"style=simple,explode=false,name=userName"`
-}
-
-type DeleteDatabaseUserQueryParams struct {
-	// Name of the database.
-	DatabaseName string `queryParam:"style=form,explode=true,name=database_name"`
-	// Name of the user.
-	UserName string `queryParam:"style=form,explode=true,name=user_name"`
-}
-
 type DeleteDatabaseUserRequest struct {
-	PathParams  DeleteDatabaseUserPathParams
-	QueryParams DeleteDatabaseUserQueryParams
+	// Automatically added
+	DatabaseNamePathParameter string `pathParam:"style=simple,explode=false,name=databaseName"`
+	// Name of the database.
+	DatabaseNameQueryParameter string `queryParam:"style=form,explode=true,name=database_name"`
+	// Automatically added
+	UserNamePathParameter string `pathParam:"style=simple,explode=false,name=userName"`
+	// Name of the user.
+	UserNameQueryParameter string `queryParam:"style=form,explode=true,name=user_name"`
 }
 
 type DeleteDatabaseUserResponse struct {

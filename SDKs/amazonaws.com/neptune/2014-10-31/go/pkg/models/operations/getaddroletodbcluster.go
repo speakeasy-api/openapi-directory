@@ -50,30 +50,22 @@ func (e *GETAddRoleToDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAddRoleToDBClusterQueryParams struct {
+type GETAddRoleToDBClusterRequest struct {
 	Action GETAddRoleToDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the DB cluster to associate the IAM role with.
 	DBClusterIdentifier string `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	// The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the list of supported feature names, see <a href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
 	FeatureName *string `queryParam:"style=form,explode=true,name=FeatureName"`
 	// The Amazon Resource Name (ARN) of the IAM role to associate with the Neptune DB cluster, for example <code>arn:aws:iam::123456789012:role/NeptuneAccessRole</code>.
-	RoleArn string                           `queryParam:"style=form,explode=true,name=RoleArn"`
-	Version GETAddRoleToDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddRoleToDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddRoleToDBClusterRequest struct {
-	QueryParams GETAddRoleToDBClusterQueryParams
-	Headers     GETAddRoleToDBClusterHeaders
+	RoleArn           string                           `queryParam:"style=form,explode=true,name=RoleArn"`
+	Version           GETAddRoleToDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddRoleToDBClusterResponse struct {

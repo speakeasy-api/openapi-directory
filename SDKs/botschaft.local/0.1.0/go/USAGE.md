@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.ConfigConfigGetRequest{
-        Headers: operations.ConfigConfigGetHeaders{
-            Authorization: "corrupti",
-        },
+        Authorization: "corrupti",
     }
 
     ctx := context.Background()

@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEnvironmentPathParams struct {
-	// The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type UpdateEnvironmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateEnvironmentRequestBodyLoggingConfiguration - Defines the Apache Airflow log types to send to CloudWatch Logs.
 type UpdateEnvironmentRequestBodyLoggingConfiguration struct {
 	DagProcessingLogs *shared.ModuleLoggingConfigurationInput `json:"DagProcessingLogs,omitempty"`
@@ -100,9 +85,16 @@ type UpdateEnvironmentRequestBody struct {
 }
 
 type UpdateEnvironmentRequest struct {
-	PathParams UpdateEnvironmentPathParams
-	Headers    UpdateEnvironmentHeaders
-	Request    UpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	// The name of your Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
+	Name              string                       `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       UpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateEnvironmentResponse struct {

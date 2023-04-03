@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDestinationDefinitionRequest struct {
-	Request shared.DestinationDefinitionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type DeleteDestinationDefinitionResponse struct {
 	ContentType string
 	// Input failed validation

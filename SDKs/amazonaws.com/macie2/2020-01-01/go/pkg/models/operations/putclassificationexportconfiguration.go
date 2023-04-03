@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutClassificationExportConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutClassificationExportConfigurationRequestBodyConfiguration - Specifies where to store data classification results, and the encryption settings to use when storing results in that location. The location must be an S3 bucket.
 type PutClassificationExportConfigurationRequestBodyConfiguration struct {
 	S3Destination *shared.S3Destination `json:"s3Destination,omitempty"`
@@ -28,8 +18,14 @@ type PutClassificationExportConfigurationRequestBody struct {
 }
 
 type PutClassificationExportConfigurationRequest struct {
-	Headers PutClassificationExportConfigurationHeaders
-	Request PutClassificationExportConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutClassificationExportConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutClassificationExportConfigurationResponse struct {

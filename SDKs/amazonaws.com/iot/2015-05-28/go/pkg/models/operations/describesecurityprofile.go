@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeSecurityProfilePathParams struct {
-	// The name of the security profile whose information you want to get.
-	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
-}
-
-type DescribeSecurityProfileHeaders struct {
+type DescribeSecurityProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeSecurityProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeSecurityProfileRequest struct {
-	PathParams DescribeSecurityProfilePathParams
-	Headers    DescribeSecurityProfileHeaders
+	// The name of the security profile whose information you want to get.
+	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
 }
 
 type DescribeSecurityProfileResponse struct {

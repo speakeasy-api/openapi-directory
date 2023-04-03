@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryDeleteAPIDeploymentRevisionPathParams struct {
+type RegistryDeleteAPIDeploymentRevisionRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The deployment id.
@@ -16,10 +16,6 @@ type RegistryDeleteAPIDeploymentRevisionPathParams struct {
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryDeleteAPIDeploymentRevisionRequest struct {
-	PathParams RegistryDeleteAPIDeploymentRevisionPathParams
 }
 
 type RegistryDeleteAPIDeploymentRevisionResponse struct {

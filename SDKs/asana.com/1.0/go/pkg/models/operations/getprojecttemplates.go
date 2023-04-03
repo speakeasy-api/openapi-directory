@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectTemplatesQueryParams struct {
+type GetProjectTemplatesRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -26,10 +26,6 @@ type GetProjectTemplatesQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// The workspace to filter results on.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetProjectTemplatesRequest struct {
-	QueryParams GetProjectTemplatesQueryParams
 }
 
 // GetProjectTemplates200ApplicationJSON - Successfully retrieved the requested team's or workspace's project templates.

@@ -42,11 +42,6 @@ type PostLoginSample struct {
 	Source   *PostLoginSampleSourceEnum `json:"source,omitempty"`
 }
 
-type PostLoginRequest struct {
-	// The login payload
-	Request PostLoginSample `request:"mediaType=application/json"`
-}
-
 type PostLoginResponse struct {
 	ContentType string
 	StatusCode  int

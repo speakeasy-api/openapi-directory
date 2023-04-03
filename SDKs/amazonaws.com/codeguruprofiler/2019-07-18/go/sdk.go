@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AddNotificationChannels - Add up to 2 anomaly notifications channels for a profiling group.
 func (s *SDK) AddNotificationChannels(ctx context.Context, request operations.AddNotificationChannelsRequest) (*operations.AddNotificationChannelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/notificationConfiguration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/notificationConfiguration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AddNotificationChannels(ctx context.Context, request operations.Ad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -230,9 +230,9 @@ func (s *SDK) AddNotificationChannels(ctx context.Context, request operations.Ad
 // BatchGetFrameMetricData -  Returns the time series of values for a requested list of frame metrics from a time period.
 func (s *SDK) BatchGetFrameMetricData(ctx context.Context, request operations.BatchGetFrameMetricDataRequest) (*operations.BatchGetFrameMetricDataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/frames/-/metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/frames/-/metrics", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,9 +247,9 @@ func (s *SDK) BatchGetFrameMetricData(ctx context.Context, request operations.Ba
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -330,9 +330,9 @@ func (s *SDK) BatchGetFrameMetricData(ctx context.Context, request operations.Ba
 // ConfigureAgent -  Used by profiler agents to report their current state and to receive remote configuration updates. For example, <code>ConfigureAgent</code> can be used to tell an agent whether to profile or not and for how long to return profiling data.
 func (s *SDK) ConfigureAgent(ctx context.Context, request operations.ConfigureAgentRequest) (*operations.ConfigureAgentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/configureAgent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/configureAgent", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -347,7 +347,7 @@ func (s *SDK) ConfigureAgent(ctx context.Context, request operations.ConfigureAg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -428,7 +428,7 @@ func (s *SDK) CreateProfilingGroup(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/profilingGroups#clientToken"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -443,9 +443,9 @@ func (s *SDK) CreateProfilingGroup(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -536,14 +536,14 @@ func (s *SDK) CreateProfilingGroup(ctx context.Context, request operations.Creat
 // DeleteProfilingGroup - Deletes a profiling group.
 func (s *SDK) DeleteProfilingGroup(ctx context.Context, request operations.DeleteProfilingGroupRequest) (*operations.DeleteProfilingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -632,14 +632,14 @@ func (s *SDK) DeleteProfilingGroup(ctx context.Context, request operations.Delet
 // DescribeProfilingGroup -  Returns a <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> object that contains information about the requested profiling group.
 func (s *SDK) DescribeProfilingGroup(ctx context.Context, request operations.DescribeProfilingGroupRequest) (*operations.DescribeProfilingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -725,9 +725,9 @@ func (s *SDK) GetFindingsReportAccountSummary(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -798,14 +798,14 @@ func (s *SDK) GetFindingsReportAccountSummary(ctx context.Context, request opera
 // GetNotificationConfiguration - Get the current configuration for anomaly notifications for a profiling group.
 func (s *SDK) GetNotificationConfiguration(ctx context.Context, request operations.GetNotificationConfigurationRequest) (*operations.GetNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/notificationConfiguration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/notificationConfiguration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -884,14 +884,14 @@ func (s *SDK) GetNotificationConfiguration(ctx context.Context, request operatio
 // GetPolicy -  Returns the JSON-formatted resource-based policy on a profiling group.
 func (s *SDK) GetPolicy(ctx context.Context, request operations.GetPolicyRequest) (*operations.GetPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/policy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -960,16 +960,16 @@ func (s *SDK) GetPolicy(ctx context.Context, request operations.GetPolicyRequest
 // GetProfile - <p> Gets the aggregated profile of a profiling group for a specified time range. Amazon CodeGuru Profiler collects posted agent profiles for a profiling group into aggregated profiles. </p> <pre><code> &lt;note&gt; &lt;p&gt; Because aggregated profiles expire over time &lt;code&gt;GetProfile&lt;/code&gt; is not idempotent. &lt;/p&gt; &lt;/note&gt; &lt;p&gt; Specify the time range for the requested aggregated profile using 1 or 2 of the following parameters: &lt;code&gt;startTime&lt;/code&gt;, &lt;code&gt;endTime&lt;/code&gt;, &lt;code&gt;period&lt;/code&gt;. The maximum time range allowed is 7 days. If you specify all 3 parameters, an exception is thrown. If you specify only &lt;code&gt;period&lt;/code&gt;, the latest aggregated profile is returned. &lt;/p&gt; &lt;p&gt; Aggregated profiles are available with aggregation periods of 5 minutes, 1 hour, and 1 day, aligned to UTC. The aggregation period of an aggregated profile determines how long it is retained. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AggregatedProfileTime.html&quot;&gt; &lt;code&gt;AggregatedProfileTime&lt;/code&gt; &lt;/a&gt;. The aggregated profile's aggregation period determines how long it is retained by CodeGuru Profiler. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; If the aggregation period is 5 minutes, the aggregated profile is retained for 15 days. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; If the aggregation period is 1 hour, the aggregated profile is retained for 60 days. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; If the aggregation period is 1 day, the aggregated profile is retained for 3 years. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;There are two use cases for calling &lt;code&gt;GetProfile&lt;/code&gt;.&lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt; If you want to return an aggregated profile that already exists, use &lt;a href=&quot;https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ListProfileTimes.html&quot;&gt; &lt;code&gt;ListProfileTimes&lt;/code&gt; &lt;/a&gt; to view the time ranges of existing aggregated profiles. Use them in a &lt;code&gt;GetProfile&lt;/code&gt; request to return a specific, existing aggregated profile. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; If you want to return an aggregated profile for a time range that doesn't align with an existing aggregated profile, then CodeGuru Profiler makes a best effort to combine existing aggregated profiles from the requested time range and return them as one aggregated profile. &lt;/p&gt; &lt;p&gt; If aggregated profiles do not exist for the full time range requested, then aggregated profiles for a smaller time range are returned. For example, if the requested time range is from 00:00 to 00:20, and the existing aggregated profiles are from 00:15 and 00:25, then the aggregated profiles from 00:15 to 00:20 are returned. &lt;/p&gt; &lt;/li&gt; &lt;/ol&gt; </code></pre>
 func (s *SDK) GetProfile(ctx context.Context, request operations.GetProfileRequest) (*operations.GetProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/profile", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/profile", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1050,16 +1050,16 @@ func (s *SDK) GetProfile(ctx context.Context, request operations.GetProfileReque
 // GetRecommendations -  Returns a list of <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_Recommendation.html"> <code>Recommendation</code> </a> objects that contain recommendations for a profiling group for a given time period. A list of <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_Anomaly.html"> <code>Anomaly</code> </a> objects that contains details about anomalies detected in the profiling group for the same time period is also returned.
 func (s *SDK) GetRecommendations(ctx context.Context, request operations.GetRecommendationsRequest) (*operations.GetRecommendationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/internal/profilingGroups/{profilingGroupName}/recommendations#endTime&startTime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/internal/profilingGroups/{profilingGroupName}/recommendations#endTime&startTime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1140,16 +1140,16 @@ func (s *SDK) GetRecommendations(ctx context.Context, request operations.GetReco
 // ListFindingsReports - List the available reports for a given profiling group and time range.
 func (s *SDK) ListFindingsReports(ctx context.Context, request operations.ListFindingsReportsRequest) (*operations.ListFindingsReportsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/internal/profilingGroups/{profilingGroupName}/findingsReports#endTime&startTime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/internal/profilingGroups/{profilingGroupName}/findingsReports#endTime&startTime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1230,16 +1230,16 @@ func (s *SDK) ListFindingsReports(ctx context.Context, request operations.ListFi
 // ListProfileTimes - Lists the start times of the available aggregated profiles of a profiling group for an aggregation period within the specified time range.
 func (s *SDK) ListProfileTimes(ctx context.Context, request operations.ListProfileTimesRequest) (*operations.ListProfileTimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/profileTimes#endTime&period&startTime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/profileTimes#endTime&period&startTime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1327,9 +1327,9 @@ func (s *SDK) ListProfilingGroups(ctx context.Context, request operations.ListPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1390,14 +1390,14 @@ func (s *SDK) ListProfilingGroups(ctx context.Context, request operations.ListPr
 // ListTagsForResource -  Returns a list of the tags that are assigned to a specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1466,9 +1466,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // PostAgentProfile -  Submits profiling data to an aggregated profile of a profiling group. To get an aggregated profile that is created with this profiling data, use <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetProfile.html"> <code>GetProfile</code> </a>.
 func (s *SDK) PostAgentProfile(ctx context.Context, request operations.PostAgentProfileRequest) (*operations.PostAgentProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/agentProfile#Content-Type", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/agentProfile#Content-Type", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1483,9 +1483,9 @@ func (s *SDK) PostAgentProfile(ctx context.Context, request operations.PostAgent
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1566,9 +1566,9 @@ func (s *SDK) PostAgentProfile(ctx context.Context, request operations.PostAgent
 // PutPermission - <p> Adds permissions to a profiling group's resource-based policy that are provided using an action group. If a profiling group doesn't have a resource-based policy, one is created for it using the permissions in the action group and the roles and users in the <code>principals</code> parameter. </p> <pre><code> &lt;p&gt; The one supported action group that can be added is &lt;code&gt;agentPermission&lt;/code&gt; which grants &lt;code&gt;ConfigureAgent&lt;/code&gt; and &lt;code&gt;PostAgent&lt;/code&gt; permissions. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html&quot;&gt;Resource-based policies in CodeGuru Profiler&lt;/a&gt; in the &lt;i&gt;Amazon CodeGuru Profiler User Guide&lt;/i&gt;, &lt;a href=&quot;https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html&quot;&gt; &lt;code&gt;ConfigureAgent&lt;/code&gt; &lt;/a&gt;, and &lt;a href=&quot;https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html&quot;&gt; &lt;code&gt;PostAgentProfile&lt;/code&gt; &lt;/a&gt;. &lt;/p&gt; &lt;p&gt; The first time you call &lt;code&gt;PutPermission&lt;/code&gt; on a profiling group, do not specify a &lt;code&gt;revisionId&lt;/code&gt; because it doesn't have a resource-based policy. Subsequent calls must provide a &lt;code&gt;revisionId&lt;/code&gt; to specify which revision of the resource-based policy to add the permissions to. &lt;/p&gt; &lt;p&gt; The response contains the profiling group's JSON-formatted resource policy. &lt;/p&gt; </code></pre>
 func (s *SDK) PutPermission(ctx context.Context, request operations.PutPermissionRequest) (*operations.PutPermissionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/policy/{actionGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/policy/{actionGroup}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1583,7 +1583,7 @@ func (s *SDK) PutPermission(ctx context.Context, request operations.PutPermissio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1672,14 +1672,14 @@ func (s *SDK) PutPermission(ctx context.Context, request operations.PutPermissio
 // RemoveNotificationChannel - Remove one anomaly notifications channel for a profiling group.
 func (s *SDK) RemoveNotificationChannel(ctx context.Context, request operations.RemoveNotificationChannelRequest) (*operations.RemoveNotificationChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/notificationConfiguration/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/notificationConfiguration/{channelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1758,16 +1758,16 @@ func (s *SDK) RemoveNotificationChannel(ctx context.Context, request operations.
 // RemovePermission -  Removes permissions from a profiling group's resource-based policy that are provided using an action group. The one supported action group that can be removed is <code>agentPermission</code> which grants <code>ConfigureAgent</code> and <code>PostAgent</code> permissions. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html">Resource-based policies in CodeGuru Profiler</a> in the <i>Amazon CodeGuru Profiler User Guide</i>, <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html"> <code>ConfigureAgent</code> </a>, and <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html"> <code>PostAgentProfile</code> </a>.
 func (s *SDK) RemovePermission(ctx context.Context, request operations.RemovePermissionRequest) (*operations.RemovePermissionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/policy/{actionGroup}#revisionId", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}/policy/{actionGroup}#revisionId", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1858,9 +1858,9 @@ func (s *SDK) RemovePermission(ctx context.Context, request operations.RemovePer
 // SubmitFeedback - Sends feedback to CodeGuru Profiler about whether the anomaly detected by the analysis is useful or not.
 func (s *SDK) SubmitFeedback(ctx context.Context, request operations.SubmitFeedbackRequest) (*operations.SubmitFeedbackResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/internal/profilingGroups/{profilingGroupName}/anomalies/{anomalyInstanceId}/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/internal/profilingGroups/{profilingGroupName}/anomalies/{anomalyInstanceId}/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1875,7 +1875,7 @@ func (s *SDK) SubmitFeedback(ctx context.Context, request operations.SubmitFeedb
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1954,9 +1954,9 @@ func (s *SDK) SubmitFeedback(ctx context.Context, request operations.SubmitFeedb
 // TagResource -  Use to assign one or more tags to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1971,7 +1971,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2040,16 +2040,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource -  Use to remove one or more tags from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2120,9 +2120,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateProfilingGroup - Updates a profiling group.
 func (s *SDK) UpdateProfilingGroup(ctx context.Context, request operations.UpdateProfilingGroupRequest) (*operations.UpdateProfilingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profilingGroups/{profilingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2137,7 +2137,7 @@ func (s *SDK) UpdateProfilingGroup(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

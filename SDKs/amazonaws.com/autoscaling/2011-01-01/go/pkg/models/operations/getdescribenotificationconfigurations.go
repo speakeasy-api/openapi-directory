@@ -50,30 +50,22 @@ func (e *GETDescribeNotificationConfigurationsVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETDescribeNotificationConfigurationsQueryParams struct {
+type GETDescribeNotificationConfigurationsRequest struct {
 	Action GETDescribeNotificationConfigurationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupNames []string `queryParam:"style=form,explode=true,name=AutoScalingGroupNames"`
 	// The maximum number of items to return with this call. The default value is <code>50</code> and the maximum value is <code>100</code>.
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// The token for the next set of items to return. (You received this token from a previous call.)
-	NextToken *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETDescribeNotificationConfigurationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeNotificationConfigurationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeNotificationConfigurationsRequest struct {
-	QueryParams GETDescribeNotificationConfigurationsQueryParams
-	Headers     GETDescribeNotificationConfigurationsHeaders
+	NextToken         *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETDescribeNotificationConfigurationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeNotificationConfigurationsResponse struct {

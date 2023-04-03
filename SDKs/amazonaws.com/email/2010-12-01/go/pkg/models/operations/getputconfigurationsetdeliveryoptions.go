@@ -56,28 +56,20 @@ func (e *GETPutConfigurationSetDeliveryOptionsVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETPutConfigurationSetDeliveryOptionsQueryParams struct {
+type GETPutConfigurationSetDeliveryOptionsRequest struct {
 	Action GETPutConfigurationSetDeliveryOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the configuration set that you want to specify the delivery options for.
 	ConfigurationSetName string `queryParam:"style=form,explode=true,name=ConfigurationSetName"`
 	// Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS).
-	DeliveryOptions *GETPutConfigurationSetDeliveryOptionsDeliveryOptions `queryParam:"style=form,explode=true,name=DeliveryOptions"`
-	Version         GETPutConfigurationSetDeliveryOptionsVersionEnum      `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPutConfigurationSetDeliveryOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPutConfigurationSetDeliveryOptionsRequest struct {
-	QueryParams GETPutConfigurationSetDeliveryOptionsQueryParams
-	Headers     GETPutConfigurationSetDeliveryOptionsHeaders
+	DeliveryOptions   *GETPutConfigurationSetDeliveryOptionsDeliveryOptions `queryParam:"style=form,explode=true,name=DeliveryOptions"`
+	Version           GETPutConfigurationSetDeliveryOptionsVersionEnum      `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPutConfigurationSetDeliveryOptionsResponse struct {

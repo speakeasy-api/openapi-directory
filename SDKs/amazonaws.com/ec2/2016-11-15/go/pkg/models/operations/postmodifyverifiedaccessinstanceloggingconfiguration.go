@@ -50,25 +50,17 @@ func (e *POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum) Unmars
 	}
 }
 
-type POSTModifyVerifiedAccessInstanceLoggingConfigurationQueryParams struct {
-	Action  POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyVerifiedAccessInstanceLoggingConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyVerifiedAccessInstanceLoggingConfigurationRequest struct {
-	QueryParams POSTModifyVerifiedAccessInstanceLoggingConfigurationQueryParams
-	Headers     POSTModifyVerifiedAccessInstanceLoggingConfigurationHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                                          `request:"mediaType=text/xml"`
+	Version           POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyVerifiedAccessInstanceLoggingConfigurationResponse struct {

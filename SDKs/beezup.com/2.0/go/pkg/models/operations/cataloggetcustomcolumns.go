@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetCustomColumnsPathParams struct {
+type CatalogGetCustomColumnsRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetCustomColumnsRequest struct {
-	PathParams CatalogGetCustomColumnsPathParams
 }
 
 type CatalogGetCustomColumnsResponse struct {

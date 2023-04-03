@@ -42,9 +42,9 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 // The user can be referenced by their globally unique user ID or their email address. Returns the full user record for the invited user.
 func (s *workspaces) AddUserForWorkspace(ctx context.Context, request operations.AddUserForWorkspaceRequest) (*operations.AddUserForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/addUser", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/addUser", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -59,7 +59,7 @@ func (s *workspaces) AddUserForWorkspace(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -119,14 +119,14 @@ func (s *workspaces) AddUserForWorkspace(ctx context.Context, request operations
 // Returns the full workspace record for a single workspace.
 func (s *workspaces) GetWorkspace(ctx context.Context, request operations.GetWorkspaceRequest) (*operations.GetWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -193,7 +193,7 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -255,9 +255,9 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 // Returns an empty data record.
 func (s *workspaces) RemoveUserForWorkspace(ctx context.Context, request operations.RemoveUserForWorkspaceRequest) (*operations.RemoveUserForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/removeUser", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/removeUser", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -272,7 +272,7 @@ func (s *workspaces) RemoveUserForWorkspace(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -334,9 +334,9 @@ func (s *workspaces) RemoveUserForWorkspace(ctx context.Context, request operati
 // Returns the complete, updated workspace record.
 func (s *workspaces) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest) (*operations.UpdateWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -351,7 +351,7 @@ func (s *workspaces) UpdateWorkspace(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

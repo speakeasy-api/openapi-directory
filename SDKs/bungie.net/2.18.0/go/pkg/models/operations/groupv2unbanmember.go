@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2UnbanMemberSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2UnbanMemberPathParams struct {
+type GroupV2UnbanMemberRequest struct {
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// Membership ID of the member to unban from the group
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Membership type of the provided membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2UnbanMemberRequest struct {
-	PathParams GroupV2UnbanMemberPathParams
-	Security   GroupV2UnbanMemberSecurity
 }
 
 // GroupV2UnbanMember200Wildcard - Look at the Response property for more information about the nature of this response

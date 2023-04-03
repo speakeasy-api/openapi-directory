@@ -50,25 +50,17 @@ func (e *POSTGetFederationTokenVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetFederationTokenQueryParams struct {
-	Action  POSTGetFederationTokenActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetFederationTokenVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetFederationTokenHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetFederationTokenRequest struct {
-	QueryParams POSTGetFederationTokenQueryParams
-	Headers     POSTGetFederationTokenHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetFederationTokenActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTGetFederationTokenVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetFederationTokenResponse struct {

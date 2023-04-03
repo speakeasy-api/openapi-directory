@@ -50,25 +50,17 @@ func (e *POSTDeleteEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteEndpointAccessQueryParams struct {
-	Action  POSTDeleteEndpointAccessActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteEndpointAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteEndpointAccessRequest struct {
-	QueryParams POSTDeleteEndpointAccessQueryParams
-	Headers     POSTDeleteEndpointAccessHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteEndpointAccessActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTDeleteEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteEndpointAccessResponse struct {

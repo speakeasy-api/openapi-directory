@@ -8,24 +8,15 @@ import (
 )
 
 type PatientVaccineRecordsReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PatientVaccineRecordsReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatientVaccineRecordsReadQueryParams struct {
-	CvxCode *string `queryParam:"style=form,explode=true,name=cvx_code"`
-	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	Patient *int64  `queryParam:"style=form,explode=true,name=patient"`
-	Since   *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatientVaccineRecordsReadRequest struct {
-	PathParams  PatientVaccineRecordsReadPathParams
-	QueryParams PatientVaccineRecordsReadQueryParams
-	Security    PatientVaccineRecordsReadSecurity
+	CvxCode *string `queryParam:"style=form,explode=true,name=cvx_code"`
+	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	Patient *int64  `queryParam:"style=form,explode=true,name=patient"`
+	Since   *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 type PatientVaccineRecordsReadResponse struct {

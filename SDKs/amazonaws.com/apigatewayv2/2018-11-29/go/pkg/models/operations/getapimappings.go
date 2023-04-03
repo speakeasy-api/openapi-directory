@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIMappingsPathParams struct {
-	// The domain name.
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type GetAPIMappingsQueryParams struct {
-	// The maximum number of elements to be returned for this resource.
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// The next page of elements from this collection. Not valid for the last element of the collection.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetAPIMappingsHeaders struct {
+type GetAPIMappingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type GetAPIMappingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAPIMappingsRequest struct {
-	PathParams  GetAPIMappingsPathParams
-	QueryParams GetAPIMappingsQueryParams
-	Headers     GetAPIMappingsHeaders
+	// The domain name.
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The maximum number of elements to be returned for this resource.
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// The next page of elements from this collection. Not valid for the last element of the collection.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetAPIMappingsResponse struct {

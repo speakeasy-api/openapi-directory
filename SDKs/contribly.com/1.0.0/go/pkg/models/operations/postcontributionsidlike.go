@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostContributionsIDLikePathParams struct {
+type PostContributionsIDLikeRequest struct {
 	// Id of the contribution
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostContributionsIDLikeRequest struct {
-	PathParams PostContributionsIDLikePathParams
 }
 
 type PostContributionsIDLikeResponse struct {

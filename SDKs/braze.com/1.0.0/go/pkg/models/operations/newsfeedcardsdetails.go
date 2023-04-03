@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type NewsFeedCardsDetailsQueryParams struct {
+type NewsFeedCardsDetailsRequest struct {
 	// (Required) String
 	//
 	// Card API identifier
 	CardID *string `queryParam:"style=form,explode=true,name=card_id"`
-}
-
-type NewsFeedCardsDetailsRequest struct {
-	QueryParams NewsFeedCardsDetailsQueryParams
 }
 
 type NewsFeedCardsDetailsResponse struct {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAttachedPoliciesPathParams struct {
-	// The group or principal for which the policies will be listed. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).
-	Target string `pathParam:"style=simple,explode=false,name=target"`
-}
-
-type ListAttachedPoliciesQueryParams struct {
-	// The token to retrieve the next set of results.
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-	// The maximum number of results to be returned per request.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-	// When true, recursively list attached policies.
-	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
-}
-
-type ListAttachedPoliciesHeaders struct {
+type ListAttachedPoliciesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListAttachedPoliciesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAttachedPoliciesRequest struct {
-	PathParams  ListAttachedPoliciesPathParams
-	QueryParams ListAttachedPoliciesQueryParams
-	Headers     ListAttachedPoliciesHeaders
+	// The token to retrieve the next set of results.
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
+	// The maximum number of results to be returned per request.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
+	// When true, recursively list attached policies.
+	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
+	// The group or principal for which the policies will be listed. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).
+	Target string `pathParam:"style=simple,explode=false,name=target"`
 }
 
 type ListAttachedPoliciesResponse struct {

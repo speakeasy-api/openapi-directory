@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTemplatePathParams struct {
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-	// A unique identifier for the template.
-	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type UpdateTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateTemplateRequestBodyLayoutConfiguration - Object to store configuration of layouts associated to the template.
 type UpdateTemplateRequestBodyLayoutConfiguration struct {
 	DefaultLayout *string `json:"defaultLayout,omitempty"`
@@ -69,9 +52,18 @@ type UpdateTemplateRequestBody struct {
 }
 
 type UpdateTemplateRequest struct {
-	PathParams UpdateTemplatePathParams
-	Headers    UpdateTemplateHeaders
-	Request    UpdateTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// A unique identifier for the template.
+	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
 }
 
 type UpdateTemplateResponse struct {

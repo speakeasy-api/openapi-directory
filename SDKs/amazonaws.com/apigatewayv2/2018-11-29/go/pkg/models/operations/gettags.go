@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsPathParams struct {
-	// The resource ARN for the tag.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resource-arn"`
-}
-
-type GetTagsHeaders struct {
+type GetTagsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetTagsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTagsRequest struct {
-	PathParams GetTagsPathParams
-	Headers    GetTagsHeaders
+	// The resource ARN for the tag.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resource-arn"`
 }
 
 type GetTagsResponse struct {

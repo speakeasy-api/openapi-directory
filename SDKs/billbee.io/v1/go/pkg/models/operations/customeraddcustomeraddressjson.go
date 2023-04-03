@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddCustomerAddressJSONPathParams struct {
+type CustomerAddCustomerAddressJSONRequest struct {
+	// Model containing the address, that should be attached.
+	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/json"`
 	// CustomerId to attach the new address to.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerAddCustomerAddressJSONRequest struct {
-	PathParams CustomerAddCustomerAddressJSONPathParams
-	// Model containing the address, that should be attached.
-	Request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/json"`
 }
 
 type CustomerAddCustomerAddressJSONResponse struct {

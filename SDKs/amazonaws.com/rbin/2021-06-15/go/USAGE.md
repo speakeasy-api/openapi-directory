@@ -13,60 +13,56 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateRuleRequest{
-        Headers: operations.CreateRuleHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateRuleRequestBody{
-            Description: "illum",
+        RequestBody: operations.CreateRuleRequestBody{
+            Description: "corrupti",
             LockConfiguration: &operations.CreateRuleRequestBodyLockConfiguration{
                 UnlockDelay: &shared.UnlockDelay{
                     UnlockDelayUnit: "DAYS",
-                    UnlockDelayValue: 423655,
+                    UnlockDelayValue: 592845,
                 },
             },
             ResourceTags: []shared.ResourceTag{
                 shared.ResourceTag{
-                    ResourceTagKey: "deserunt",
-                    ResourceTagValue: "suscipit",
+                    ResourceTagKey: "quibusdam",
+                    ResourceTagValue: "unde",
                 },
                 shared.ResourceTag{
-                    ResourceTagKey: "iure",
-                    ResourceTagValue: "magnam",
+                    ResourceTagKey: "nulla",
+                    ResourceTagValue: "corrupti",
                 },
                 shared.ResourceTag{
-                    ResourceTagKey: "debitis",
-                    ResourceTagValue: "ipsa",
+                    ResourceTagKey: "illum",
+                    ResourceTagValue: "vel",
                 },
             },
             ResourceType: "EC2_IMAGE",
             RetentionPeriod: operations.CreateRuleRequestBodyRetentionPeriod{
                 RetentionPeriodUnit: "DAYS",
-                RetentionPeriodValue: 272656,
+                RetentionPeriodValue: 645894,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "molestiae",
-                    Value: "minus",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "placeat",
-                    Value: "voluptatum",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },
+        XAmzAlgorithm: "delectus",
+        XAmzContentSha256: "tempora",
+        XAmzCredential: "suscipit",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "minus",
+        XAmzSignature: "placeat",
+        XAmzSignedHeaders: "voluptatum",
     }
 
     ctx := context.Background()

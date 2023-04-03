@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetComplianceDetailsByResourceQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetComplianceDetailsByResourceXAmzTargetEnum
 type GetComplianceDetailsByResourceXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *GetComplianceDetailsByResourceXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetComplianceDetailsByResourceHeaders struct {
+type GetComplianceDetailsByResourceRequest struct {
+	GetComplianceDetailsByResourceRequest shared.GetComplianceDetailsByResourceRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type GetComplianceDetailsByResourceHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetComplianceDetailsByResourceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetComplianceDetailsByResourceRequest struct {
-	QueryParams GetComplianceDetailsByResourceQueryParams
-	Headers     GetComplianceDetailsByResourceHeaders
-	Request     shared.GetComplianceDetailsByResourceRequest `request:"mediaType=application/json"`
 }
 
 type GetComplianceDetailsByResourceResponse struct {

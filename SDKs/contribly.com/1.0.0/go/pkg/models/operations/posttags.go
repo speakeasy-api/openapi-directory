@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTagsRequest struct {
-	// Tag object to be created
-	Request shared.TagSubmission `request:"mediaType=application/json"`
-}
-
 type PostTagsResponse struct {
 	ContentType string
 	// The new tag submission failed to validate. Check the response body for details.

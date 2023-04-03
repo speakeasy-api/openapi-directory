@@ -7,11 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkloadPathParams struct {
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
-type GetWorkloadHeaders struct {
+type GetWorkloadRequest struct {
+	WorkloadID        string  `pathParam:"style=simple,explode=false,name=WorkloadId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetWorkloadHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetWorkloadRequest struct {
-	PathParams GetWorkloadPathParams
-	Headers    GetWorkloadHeaders
 }
 
 type GetWorkloadResponse struct {

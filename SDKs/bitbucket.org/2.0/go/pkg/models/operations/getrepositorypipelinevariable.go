@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type GetRepositoryPipelineVariablePathParams struct {
+type GetRepositoryPipelineVariableRequest struct {
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The UUID of the variable to retrieve.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoryPipelineVariableRequest struct {
-	PathParams GetRepositoryPipelineVariablePathParams
 }
 
 type GetRepositoryPipelineVariableResponse struct {

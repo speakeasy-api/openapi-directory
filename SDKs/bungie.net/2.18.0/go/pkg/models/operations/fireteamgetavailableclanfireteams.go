@@ -8,16 +8,20 @@ import (
 )
 
 type FireteamGetAvailableClanFireteamsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FireteamGetAvailableClanFireteamsPathParams struct {
+type FireteamGetAvailableClanFireteamsRequest struct {
 	// The activity type to filter by.
 	ActivityType int `pathParam:"style=simple,explode=false,name=activityType"`
 	// The date range to grab available fireteams.
 	DateRange int64 `pathParam:"style=simple,explode=false,name=dateRange"`
+	// If you wish the result to exclude immediate fireteams, set this to true. Immediate-only can be forced using the dateRange enum.
+	ExcludeImmediate *bool `queryParam:"style=form,explode=true,name=excludeImmediate"`
 	// The group id of the clan.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
+	// An optional language filter.
+	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
 	// Zero based page
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// The platform filter.
@@ -26,19 +30,6 @@ type FireteamGetAvailableClanFireteamsPathParams struct {
 	PublicOnly int64 `pathParam:"style=simple,explode=false,name=publicOnly"`
 	// Filters based on available slots
 	SlotFilter int64 `pathParam:"style=simple,explode=false,name=slotFilter"`
-}
-
-type FireteamGetAvailableClanFireteamsQueryParams struct {
-	// If you wish the result to exclude immediate fireteams, set this to true. Immediate-only can be forced using the dateRange enum.
-	ExcludeImmediate *bool `queryParam:"style=form,explode=true,name=excludeImmediate"`
-	// An optional language filter.
-	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
-}
-
-type FireteamGetAvailableClanFireteamsRequest struct {
-	PathParams  FireteamGetAvailableClanFireteamsPathParams
-	QueryParams FireteamGetAvailableClanFireteamsQueryParams
-	Security    FireteamGetAvailableClanFireteamsSecurity
 }
 
 // FireteamGetAvailableClanFireteams200Wildcard - Look at the Response property for more information about the nature of this response

@@ -48,7 +48,7 @@ func newDownloads(defaultClient, securityClient HTTPClient, serverURL, language,
 // None.
 func (s *downloads) DownloadAvatar(ctx context.Context, request operations.DownloadAvatarRequest) (*operations.DownloadAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/avatar/{user_id}/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/avatar/{user_id}/{uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -119,16 +119,16 @@ func (s *downloads) DownloadAvatar(ctx context.Context, request operations.Downl
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *downloads) DownloadFileViaToken(ctx context.Context, request operations.DownloadFileViaTokenRequest) (*operations.DownloadFileViaTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,16 +194,16 @@ func (s *downloads) DownloadFileViaToken(ctx context.Context, request operations
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *downloads) DownloadFileViaToken1(ctx context.Context, request operations.DownloadFileViaToken1Request) (*operations.DownloadFileViaToken1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,7 +268,7 @@ func (s *downloads) DownloadFileViaToken1(ctx context.Context, request operation
 // Create a download token with `POST /nodes/zip` API.
 func (s *downloads) DownloadZipArchiveViaToken(ctx context.Context, request operations.DownloadZipArchiveViaTokenRequest) (*operations.DownloadZipArchiveViaTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/zip/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/downloads/zip/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

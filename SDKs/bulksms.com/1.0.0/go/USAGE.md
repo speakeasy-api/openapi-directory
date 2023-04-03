@@ -13,21 +13,16 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostRmmPreSignAttachmentRequest{
-        Security: operations.PostRmmPreSignAttachmentSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        Request: shared.PreSignRequest{
-            FileExtension: "pdf",
-            MediaType: "application/pdf",
-        },
+    req := shared.PreSignRequest{
+        FileExtension: "pdf",
+        MediaType: "application/pdf",
     }
 
     ctx := context.Background()
-    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, req)
+    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, req, operations.PostRmmPreSignAttachmentSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

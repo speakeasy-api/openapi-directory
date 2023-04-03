@@ -30,7 +30,8 @@ func (e *GetCommitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCommitHeaders struct {
+type GetCommitRequest struct {
+	GetCommitInput    shared.GetCommitInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetCommitHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetCommitXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetCommitRequest struct {
-	Headers GetCommitHeaders
-	Request shared.GetCommitInput `request:"mediaType=application/json"`
 }
 
 type GetCommitResponse struct {

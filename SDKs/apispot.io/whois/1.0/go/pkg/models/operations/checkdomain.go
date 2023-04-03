@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type CheckDomainPathParams struct {
+type CheckDomainRequest struct {
 	// Domain
 	Domain string `pathParam:"style=simple,explode=false,name=domain"`
-}
-
-type CheckDomainRequest struct {
-	PathParams CheckDomainPathParams
 }
 
 // CheckDomain200ApplicationJSON - OK

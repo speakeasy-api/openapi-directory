@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConstraintsForPortfolioQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // ListConstraintsForPortfolioXAmzTargetEnum
 type ListConstraintsForPortfolioXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListConstraintsForPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListConstraintsForPortfolioHeaders struct {
+type ListConstraintsForPortfolioRequest struct {
+	ListConstraintsForPortfolioInput shared.ListConstraintsForPortfolioInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken         *string                                   `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListConstraintsForPortfolioHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListConstraintsForPortfolioXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListConstraintsForPortfolioRequest struct {
-	QueryParams ListConstraintsForPortfolioQueryParams
-	Headers     ListConstraintsForPortfolioHeaders
-	Request     shared.ListConstraintsForPortfolioInput `request:"mediaType=application/json"`
 }
 
 type ListConstraintsForPortfolioResponse struct {

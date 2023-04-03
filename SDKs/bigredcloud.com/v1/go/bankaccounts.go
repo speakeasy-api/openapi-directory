@@ -35,14 +35,14 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 // BankAccountsDelete - Removes an existing Bank Account.
 func (s *bankAccounts) BankAccountsDelete(ctx context.Context, request operations.BankAccountsDeleteRequest) (*operations.BankAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *bankAccounts) BankAccountsGet(ctx context.Context) (*operations.BankAcc
 }
 
 // BankAccountsPost - Creates a new Bank Account.
-func (s *bankAccounts) BankAccountsPost(ctx context.Context, request operations.BankAccountsPostRequest) (*operations.BankAccountsPostResponse, error) {
+func (s *bankAccounts) BankAccountsPost(ctx context.Context, request shared.BankAccountDto) (*operations.BankAccountsPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/bankAccounts"
 
@@ -181,7 +181,7 @@ func (s *bankAccounts) BankAccountsPost(ctx context.Context, request operations.
 }
 
 // BankAccountsProcessBatch - Processes a batch of Bank Accounts.
-func (s *bankAccounts) BankAccountsProcessBatch(ctx context.Context, request operations.BankAccountsProcessBatchRequest) (*operations.BankAccountsProcessBatchResponse, error) {
+func (s *bankAccounts) BankAccountsProcessBatch(ctx context.Context, request []shared.BatchItemBankAccountDto) (*operations.BankAccountsProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/bankAccounts/batch"
 
@@ -237,9 +237,9 @@ func (s *bankAccounts) BankAccountsProcessBatch(ctx context.Context, request ope
 // BankAccountsPut - Updates an existing Bank Account.
 func (s *bankAccounts) BankAccountsPut(ctx context.Context, request operations.BankAccountsPutRequest) (*operations.BankAccountsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BankAccountDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *bankAccounts) BankAccountsPut(ctx context.Context, request operations.B
 // GetV1BankAccountsID - Returns information about a single Bank Account.
 func (s *bankAccounts) GetV1BankAccountsID(ctx context.Context, request operations.GetV1BankAccountsIDRequest) (*operations.GetV1BankAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

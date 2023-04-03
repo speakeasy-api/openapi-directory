@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAnalyzedResourceQueryParams struct {
-	// The <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ARN of the analyzer</a> to retrieve information from.
-	AnalyzerArn string `queryParam:"style=form,explode=true,name=analyzerArn"`
-	// The ARN of the resource to retrieve information about.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type GetAnalyzedResourceHeaders struct {
+type GetAnalyzedResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetAnalyzedResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAnalyzedResourceRequest struct {
-	QueryParams GetAnalyzedResourceQueryParams
-	Headers     GetAnalyzedResourceHeaders
+	// The <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ARN of the analyzer</a> to retrieve information from.
+	AnalyzerArn string `queryParam:"style=form,explode=true,name=analyzerArn"`
+	// The ARN of the resource to retrieve information about.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type GetAnalyzedResourceResponse struct {

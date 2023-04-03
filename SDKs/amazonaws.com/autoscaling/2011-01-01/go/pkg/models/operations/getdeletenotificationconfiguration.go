@@ -50,28 +50,20 @@ func (e *GETDeleteNotificationConfigurationVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETDeleteNotificationConfigurationQueryParams struct {
+type GETDeleteNotificationConfigurationRequest struct {
 	Action GETDeleteNotificationConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The Amazon Resource Name (ARN) of the Amazon SNS topic.
-	TopicARN string                                        `queryParam:"style=form,explode=true,name=TopicARN"`
-	Version  GETDeleteNotificationConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteNotificationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteNotificationConfigurationRequest struct {
-	QueryParams GETDeleteNotificationConfigurationQueryParams
-	Headers     GETDeleteNotificationConfigurationHeaders
+	TopicARN          string                                        `queryParam:"style=form,explode=true,name=TopicARN"`
+	Version           GETDeleteNotificationConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteNotificationConfigurationResponse struct {

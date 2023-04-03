@@ -36,7 +36,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Verifies whether 3D Secure is available for the specified BIN or card brand. For 3D Secure 2, this endpoint also returns device fingerprinting keys.
 //
 // For more information, refer to [3D Secure 2](https://docs.adyen.com/online-payments/3d-secure/native-3ds2).
-func (s *general) PostGet3dsAvailability(ctx context.Context, request operations.PostGet3dsAvailabilityRequest) (*operations.PostGet3dsAvailabilityResponse, error) {
+func (s *general) PostGet3dsAvailability(ctx context.Context, request shared.ThreeDSAvailabilityRequest, security operations.PostGet3dsAvailabilitySecurity) (*operations.PostGet3dsAvailabilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get3dsAvailability"
 
@@ -52,7 +52,7 @@ func (s *general) PostGet3dsAvailability(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -112,7 +112,7 @@ func (s *general) PostGet3dsAvailability(ctx context.Context, request operations
 // To retrieve this information, make the call to the `/getCostEstimate` endpoint. The response to this call contains the amount of the interchange and scheme fees charged by the network for this transaction, and also which surcharging policy is possible (based on current regulations).
 //
 // > Since not all information is known in advance (for example, if the cardholder will successfully authenticate via 3D Secure or if you also plan to provide additional Level 2/3 data), the returned amounts are based on a set of assumption criteria you define in the `assumptions` parameter.
-func (s *general) PostGetCostEstimate(ctx context.Context, request operations.PostGetCostEstimateRequest) (*operations.PostGetCostEstimateResponse, error) {
+func (s *general) PostGetCostEstimate(ctx context.Context, request shared.CostEstimateRequest, security operations.PostGetCostEstimateSecurity) (*operations.PostGetCostEstimateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getCostEstimate"
 
@@ -128,7 +128,7 @@ func (s *general) PostGetCostEstimate(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

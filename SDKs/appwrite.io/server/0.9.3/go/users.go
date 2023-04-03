@@ -35,7 +35,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // UsersCreate - Create User
 // Create a new user.
-func (s *users) UsersCreate(ctx context.Context, request operations.UsersCreateRequest) (*operations.UsersCreateResponse, error) {
+func (s *users) UsersCreate(ctx context.Context, request operations.UsersCreateRequestBody, security operations.UsersCreateSecurity) (*operations.UsersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -51,7 +51,7 @@ func (s *users) UsersCreate(ctx context.Context, request operations.UsersCreateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,16 +87,16 @@ func (s *users) UsersCreate(ctx context.Context, request operations.UsersCreateR
 
 // UsersDelete - Delete User
 // Delete a user by its unique ID.
-func (s *users) UsersDelete(ctx context.Context, request operations.UsersDeleteRequest) (*operations.UsersDeleteResponse, error) {
+func (s *users) UsersDelete(ctx context.Context, request operations.UsersDeleteRequest, security operations.UsersDeleteSecurity) (*operations.UsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -123,16 +123,16 @@ func (s *users) UsersDelete(ctx context.Context, request operations.UsersDeleteR
 
 // UsersDeleteSession - Delete User Session
 // Delete a user sessions by its unique ID.
-func (s *users) UsersDeleteSession(ctx context.Context, request operations.UsersDeleteSessionRequest) (*operations.UsersDeleteSessionResponse, error) {
+func (s *users) UsersDeleteSession(ctx context.Context, request operations.UsersDeleteSessionRequest, security operations.UsersDeleteSessionSecurity) (*operations.UsersDeleteSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/sessions/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/sessions/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,16 +159,16 @@ func (s *users) UsersDeleteSession(ctx context.Context, request operations.Users
 
 // UsersDeleteSessions - Delete User Sessions
 // Delete all user's sessions by using the user's unique ID.
-func (s *users) UsersDeleteSessions(ctx context.Context, request operations.UsersDeleteSessionsRequest) (*operations.UsersDeleteSessionsResponse, error) {
+func (s *users) UsersDeleteSessions(ctx context.Context, request operations.UsersDeleteSessionsRequest, security operations.UsersDeleteSessionsSecurity) (*operations.UsersDeleteSessionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -195,16 +195,16 @@ func (s *users) UsersDeleteSessions(ctx context.Context, request operations.User
 
 // UsersGet - Get User
 // Get a user by its unique ID.
-func (s *users) UsersGet(ctx context.Context, request operations.UsersGetRequest) (*operations.UsersGetResponse, error) {
+func (s *users) UsersGet(ctx context.Context, request operations.UsersGetRequest, security operations.UsersGetSecurity) (*operations.UsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -240,16 +240,16 @@ func (s *users) UsersGet(ctx context.Context, request operations.UsersGetRequest
 
 // UsersGetLogs - Get User Logs
 // Get a user activity logs list by its unique ID.
-func (s *users) UsersGetLogs(ctx context.Context, request operations.UsersGetLogsRequest) (*operations.UsersGetLogsResponse, error) {
+func (s *users) UsersGetLogs(ctx context.Context, request operations.UsersGetLogsRequest, security operations.UsersGetLogsSecurity) (*operations.UsersGetLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,16 +285,16 @@ func (s *users) UsersGetLogs(ctx context.Context, request operations.UsersGetLog
 
 // UsersGetPrefs - Get User Preferences
 // Get the user preferences by its unique ID.
-func (s *users) UsersGetPrefs(ctx context.Context, request operations.UsersGetPrefsRequest) (*operations.UsersGetPrefsResponse, error) {
+func (s *users) UsersGetPrefs(ctx context.Context, request operations.UsersGetPrefsRequest, security operations.UsersGetPrefsSecurity) (*operations.UsersGetPrefsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/prefs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/prefs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -330,16 +330,16 @@ func (s *users) UsersGetPrefs(ctx context.Context, request operations.UsersGetPr
 
 // UsersGetSessions - Get User Sessions
 // Get the user sessions list by its unique ID.
-func (s *users) UsersGetSessions(ctx context.Context, request operations.UsersGetSessionsRequest) (*operations.UsersGetSessionsResponse, error) {
+func (s *users) UsersGetSessions(ctx context.Context, request operations.UsersGetSessionsRequest, security operations.UsersGetSessionsSecurity) (*operations.UsersGetSessionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -375,7 +375,7 @@ func (s *users) UsersGetSessions(ctx context.Context, request operations.UsersGe
 
 // UsersList - List Users
 // Get a list of all the project's users. You can use the query params to filter your results.
-func (s *users) UsersList(ctx context.Context, request operations.UsersListRequest) (*operations.UsersListResponse, error) {
+func (s *users) UsersList(ctx context.Context, request operations.UsersListRequest, security operations.UsersListSecurity) (*operations.UsersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
 
@@ -384,11 +384,11 @@ func (s *users) UsersList(ctx context.Context, request operations.UsersListReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -424,11 +424,11 @@ func (s *users) UsersList(ctx context.Context, request operations.UsersListReque
 
 // UsersUpdatePrefs - Update User Preferences
 // Update the user preferences by its unique ID. You can pass only the specific settings you wish to update.
-func (s *users) UsersUpdatePrefs(ctx context.Context, request operations.UsersUpdatePrefsRequest) (*operations.UsersUpdatePrefsResponse, error) {
+func (s *users) UsersUpdatePrefs(ctx context.Context, request operations.UsersUpdatePrefsRequest, security operations.UsersUpdatePrefsSecurity) (*operations.UsersUpdatePrefsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/prefs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/prefs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -440,7 +440,7 @@ func (s *users) UsersUpdatePrefs(ctx context.Context, request operations.UsersUp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -476,11 +476,11 @@ func (s *users) UsersUpdatePrefs(ctx context.Context, request operations.UsersUp
 
 // UsersUpdateStatus - Update User Status
 // Update the user status by its unique ID.
-func (s *users) UsersUpdateStatus(ctx context.Context, request operations.UsersUpdateStatusRequest) (*operations.UsersUpdateStatusResponse, error) {
+func (s *users) UsersUpdateStatus(ctx context.Context, request operations.UsersUpdateStatusRequest, security operations.UsersUpdateStatusSecurity) (*operations.UsersUpdateStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -492,7 +492,7 @@ func (s *users) UsersUpdateStatus(ctx context.Context, request operations.UsersU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -528,11 +528,11 @@ func (s *users) UsersUpdateStatus(ctx context.Context, request operations.UsersU
 
 // UsersUpdateVerification - Update Email Verification
 // Update the user email verification status by its unique ID.
-func (s *users) UsersUpdateVerification(ctx context.Context, request operations.UsersUpdateVerificationRequest) (*operations.UsersUpdateVerificationResponse, error) {
+func (s *users) UsersUpdateVerification(ctx context.Context, request operations.UsersUpdateVerificationRequest, security operations.UsersUpdateVerificationSecurity) (*operations.UsersUpdateVerificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/verification", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/verification", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -544,7 +544,7 @@ func (s *users) UsersUpdateVerification(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

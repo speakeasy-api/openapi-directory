@@ -33,22 +33,22 @@ func newConnectorResources(defaultClient, securityClient HTTPClient, serverURL, 
 
 // ConnectorResourcesOne - Get Connector Resource
 // Get Connector Resource
-func (s *connectorResources) ConnectorResourcesOne(ctx context.Context, request operations.ConnectorResourcesOneRequest) (*operations.ConnectorResourcesOneResponse, error) {
+func (s *connectorResources) ConnectorResourcesOne(ctx context.Context, request operations.ConnectorResourcesOneRequest, security operations.ConnectorResourcesOneSecurity) (*operations.ConnectorResourcesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connector/connectors/{id}/resources/{resource_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connector/connectors/{id}/resources/{resource_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

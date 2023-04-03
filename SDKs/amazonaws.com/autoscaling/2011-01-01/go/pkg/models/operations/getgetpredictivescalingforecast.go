@@ -51,7 +51,7 @@ func (e *GETGETPredictiveScalingForecastVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETGETPredictiveScalingForecastQueryParams struct {
+type GETGETPredictiveScalingForecastRequest struct {
 	Action GETGETPredictiveScalingForecastActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -60,23 +60,15 @@ type GETGETPredictiveScalingForecastQueryParams struct {
 	// The name of the policy.
 	PolicyName string `queryParam:"style=form,explode=true,name=PolicyName"`
 	// The inclusive start time of the time range for the forecast data to get. At most, the date and time can be one year before the current date and time.
-	StartTime time.Time                                  `queryParam:"style=form,explode=true,name=StartTime"`
-	Version   GETGETPredictiveScalingForecastVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETPredictiveScalingForecastHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETPredictiveScalingForecastRequest struct {
-	QueryParams GETGETPredictiveScalingForecastQueryParams
-	Headers     GETGETPredictiveScalingForecastHeaders
+	StartTime         time.Time                                  `queryParam:"style=form,explode=true,name=StartTime"`
+	Version           GETGETPredictiveScalingForecastVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETPredictiveScalingForecastResponse struct {

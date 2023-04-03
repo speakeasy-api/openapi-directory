@@ -50,25 +50,17 @@ func (e *POSTEnableIpamOrganizationAdminAccountVersionEnum) UnmarshalJSON(data [
 	}
 }
 
-type POSTEnableIpamOrganizationAdminAccountQueryParams struct {
-	Action  POSTEnableIpamOrganizationAdminAccountActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTEnableIpamOrganizationAdminAccountVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTEnableIpamOrganizationAdminAccountHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTEnableIpamOrganizationAdminAccountRequest struct {
-	QueryParams POSTEnableIpamOrganizationAdminAccountQueryParams
-	Headers     POSTEnableIpamOrganizationAdminAccountHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTEnableIpamOrganizationAdminAccountActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                            `request:"mediaType=text/xml"`
+	Version           POSTEnableIpamOrganizationAdminAccountVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTEnableIpamOrganizationAdminAccountResponse struct {

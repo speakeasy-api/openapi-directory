@@ -30,7 +30,8 @@ func (e *AcceptMatchXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AcceptMatchHeaders struct {
+type AcceptMatchRequest struct {
+	AcceptMatchInput  shared.AcceptMatchInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type AcceptMatchHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        AcceptMatchXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type AcceptMatchRequest struct {
-	Headers AcceptMatchHeaders
-	Request shared.AcceptMatchInput `request:"mediaType=application/json"`
 }
 
 type AcceptMatchResponse struct {

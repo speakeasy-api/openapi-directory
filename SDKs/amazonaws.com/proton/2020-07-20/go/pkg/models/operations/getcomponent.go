@@ -30,7 +30,8 @@ func (e *GetComponentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetComponentHeaders struct {
+type GetComponentRequest struct {
+	GetComponentInput shared.GetComponentInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetComponentHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetComponentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetComponentRequest struct {
-	Headers GetComponentHeaders
-	Request shared.GetComponentInput `request:"mediaType=application/json"`
 }
 
 type GetComponentResponse struct {

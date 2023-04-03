@@ -34,7 +34,7 @@ func newProfitAndLoss(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // ProfitAndLossOne - Get Profit and Loss
 // Get Profit and Loss
-func (s *profitAndLoss) ProfitAndLossOne(ctx context.Context, request operations.ProfitAndLossOneRequest) (*operations.ProfitAndLossOneResponse, error) {
+func (s *profitAndLoss) ProfitAndLossOne(ctx context.Context, request operations.ProfitAndLossOneRequest, security operations.ProfitAndLossOneSecurity) (*operations.ProfitAndLossOneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/profit-and-loss"
 
@@ -43,13 +43,13 @@ func (s *profitAndLoss) ProfitAndLossOne(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

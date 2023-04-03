@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelJobPathParams struct {
-	// The unique identifier you assigned to this job when it was created.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type CancelJobQueryParams struct {
-	// <p>(Optional) If <code>true</code> job executions with status "IN_PROGRESS" and "QUEUED" are canceled, otherwise only job executions with status "QUEUED" are canceled. The default is <code>false</code>.</p> <p>Canceling a job which is "IN_PROGRESS", will cause a device which is executing the job to be unable to update the job execution status. Use caution and ensure that each device executing a job which is canceled is able to recover to a valid state.</p>
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-}
-
-type CancelJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CancelJobRequestBody struct {
 	// An optional comment string describing why the job was canceled.
 	Comment *string `json:"comment,omitempty"`
@@ -35,10 +15,18 @@ type CancelJobRequestBody struct {
 }
 
 type CancelJobRequest struct {
-	PathParams  CancelJobPathParams
-	QueryParams CancelJobQueryParams
-	Headers     CancelJobHeaders
-	Request     CancelJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       CancelJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>(Optional) If <code>true</code> job executions with status "IN_PROGRESS" and "QUEUED" are canceled, otherwise only job executions with status "QUEUED" are canceled. The default is <code>false</code>.</p> <p>Canceling a job which is "IN_PROGRESS", will cause a device which is executing the job to be unable to update the job execution status. Use caution and ensure that each device executing a job which is canceled is able to recover to a valid state.</p>
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
+	// The unique identifier you assigned to this job when it was created.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type CancelJobResponse struct {

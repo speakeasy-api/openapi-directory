@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestGetDeviceSetOfOwnerSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TestGetDeviceSetOfOwnerPathParams struct {
+type TestGetDeviceSetOfOwnerRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The UUID of the device set
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type TestGetDeviceSetOfOwnerRequest struct {
-	PathParams TestGetDeviceSetOfOwnerPathParams
-	Security   TestGetDeviceSetOfOwnerSecurity
 }
 
 type TestGetDeviceSetOfOwnerDeviceSetDeviceConfigurationsImage struct {

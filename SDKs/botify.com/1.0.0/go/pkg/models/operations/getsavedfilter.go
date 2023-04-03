@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSavedFilterPathParams struct {
+type GetSavedFilterRequest struct {
 	// Saved Filter's identifier
 	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 	// Project's identifier
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetSavedFilterRequest struct {
-	PathParams GetSavedFilterPathParams
 }
 
 type GetSavedFilterResponse struct {

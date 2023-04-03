@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSegmentPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-	// The unique identifier for the segment.
-	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
-}
-
-type UpdateSegmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateSegmentRequestBodyWriteSegmentRequest - Specifies the configuration, dimension, and other settings for a segment. A WriteSegmentRequest object can include a Dimensions object or a SegmentGroups object, but not both.
 type UpdateSegmentRequestBodyWriteSegmentRequest struct {
 	Dimensions    *shared.SegmentDimensions `json:"Dimensions,omitempty"`
@@ -38,9 +21,18 @@ type UpdateSegmentRequestBody struct {
 }
 
 type UpdateSegmentRequest struct {
-	PathParams UpdateSegmentPathParams
-	Headers    UpdateSegmentHeaders
-	Request    UpdateSegmentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSegmentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
+	// The unique identifier for the segment.
+	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
 }
 
 type UpdateSegmentResponse struct {

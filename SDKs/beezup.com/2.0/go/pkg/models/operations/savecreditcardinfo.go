@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveCreditCardInfoRequest struct {
-	// Credit card info
-	Request shared.CreditCardInfo `request:"mediaType=application/json"`
-}
-
 type SaveCreditCardInfoResponse struct {
 	// BadRequest
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

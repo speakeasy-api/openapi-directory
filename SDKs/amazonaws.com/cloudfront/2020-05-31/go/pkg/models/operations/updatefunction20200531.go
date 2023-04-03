@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFunction20200531PathParams struct {
-	// The name of the function that you are updating.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type UpdateFunction20200531Headers struct {
-	// The current version (<code>ETag</code> value) of the function that you are updating, which you can get using <code>DescribeFunction</code>.
-	IfMatch           string  `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFunction20200531RequestBodyFunctionConfig - Contains configuration information about a CloudFront function.
 type UpdateFunction20200531RequestBodyFunctionConfig struct {
 	Comment *string
@@ -38,9 +21,18 @@ type UpdateFunction20200531RequestBody struct {
 }
 
 type UpdateFunction20200531Request struct {
-	PathParams UpdateFunction20200531PathParams
-	Headers    UpdateFunction20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The current version (<code>ETag</code> value) of the function that you are updating, which you can get using <code>DescribeFunction</code>.
+	IfMatch string `header:"style=simple,explode=false,name=If-Match"`
+	// The name of the function that you are updating.
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateFunction20200531Response struct {

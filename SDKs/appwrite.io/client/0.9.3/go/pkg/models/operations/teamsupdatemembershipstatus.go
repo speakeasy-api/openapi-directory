@@ -8,15 +8,8 @@ import (
 )
 
 type TeamsUpdateMembershipStatusSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsUpdateMembershipStatusPathParams struct {
-	// Membership ID.
-	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
-	// Team unique ID.
-	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type TeamsUpdateMembershipStatusRequestBody struct {
@@ -27,9 +20,11 @@ type TeamsUpdateMembershipStatusRequestBody struct {
 }
 
 type TeamsUpdateMembershipStatusRequest struct {
-	PathParams TeamsUpdateMembershipStatusPathParams
-	Request    *TeamsUpdateMembershipStatusRequestBody `request:"mediaType=application/json"`
-	Security   TeamsUpdateMembershipStatusSecurity
+	RequestBody *TeamsUpdateMembershipStatusRequestBody `request:"mediaType=application/json"`
+	// Membership ID.
+	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
+	// Team unique ID.
+	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
 type TeamsUpdateMembershipStatusResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogComputeExpressionPathParams struct {
+type CatalogComputeExpressionRequest struct {
+	ComputeExpressionRequest shared.ComputeExpressionRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogComputeExpressionRequest struct {
-	PathParams CatalogComputeExpressionPathParams
-	Request    shared.ComputeExpressionRequest `request:"mediaType=application/json"`
 }
 
 type CatalogComputeExpressionResponse struct {

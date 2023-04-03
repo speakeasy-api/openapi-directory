@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDUserProfilesIDProfilePathParams struct {
-	IDProfile int64 `pathParam:"style=simple,explode=false,name=id_profile"`
+type GetUsersIDUserProfilesIDProfileRequest struct {
+	Expand    *string `queryParam:"style=form,explode=true,name=expand"`
+	IDProfile int64   `pathParam:"style=simple,explode=false,name=id_profile"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserProfilesIDProfileQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type GetUsersIDUserProfilesIDProfileRequest struct {
-	PathParams  GetUsersIDUserProfilesIDProfilePathParams
-	QueryParams GetUsersIDUserProfilesIDProfileQueryParams
 }
 
 type GetUsersIDUserProfilesIDProfileResponse struct {

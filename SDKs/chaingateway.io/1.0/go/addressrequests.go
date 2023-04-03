@@ -39,7 +39,7 @@ func (s *addressRequests) DeleteAddress(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteAddress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteAddressRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *addressRequests) DeleteAddress(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -96,7 +96,7 @@ func (s *addressRequests) ExportAddress(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/exportAddress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportAddressRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +111,7 @@ func (s *addressRequests) ExportAddress(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -153,7 +153,7 @@ func (s *addressRequests) ImportAddress(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/importAddress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportAddressRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +168,7 @@ func (s *addressRequests) ImportAddress(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,7 +215,7 @@ func (s *addressRequests) ListAddresses(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -257,7 +257,7 @@ func (s *addressRequests) NewAddress(ctx context.Context, request operations.New
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/newAddress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NewAddressRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -272,7 +272,7 @@ func (s *addressRequests) NewAddress(ctx context.Context, request operations.New
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

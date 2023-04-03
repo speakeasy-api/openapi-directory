@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddTagForTaskPathParams struct {
-	// The task to operate on.
-	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
+// AddTagForTaskRequestBody - The tag to add to the task.
+type AddTagForTaskRequestBody struct {
+	Data *shared.TaskAddTagRequest `json:"data,omitempty"`
 }
 
-type AddTagForTaskQueryParams struct {
+type AddTagForTaskRequest struct {
+	// The tag to add to the task.
+	RequestBody AddTagForTaskRequestBody `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type AddTagForTaskQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// AddTagForTaskRequestBody - The tag to add to the task.
-type AddTagForTaskRequestBody struct {
-	Data *shared.TaskAddTagRequest `json:"data,omitempty"`
-}
-
-type AddTagForTaskRequest struct {
-	PathParams  AddTagForTaskPathParams
-	QueryParams AddTagForTaskQueryParams
-	// The tag to add to the task.
-	Request AddTagForTaskRequestBody `request:"mediaType=application/json"`
+	// The task to operate on.
+	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
 }
 
 // AddTagForTask200ApplicationJSON - Successfully added the specified tag to the task.

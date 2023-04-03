@@ -50,25 +50,17 @@ func (e *POSTModifyDBParameterGroupVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTModifyDBParameterGroupQueryParams struct {
-	Action  POSTModifyDBParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyDBParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyDBParameterGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyDBParameterGroupRequest struct {
-	QueryParams POSTModifyDBParameterGroupQueryParams
-	Headers     POSTModifyDBParameterGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyDBParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTModifyDBParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyDBParameterGroupResponse struct {

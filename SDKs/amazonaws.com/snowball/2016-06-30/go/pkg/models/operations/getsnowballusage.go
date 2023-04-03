@@ -30,7 +30,8 @@ func (e *GetSnowballUsageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSnowballUsageHeaders struct {
+type GetSnowballUsageRequest struct {
+	RequestBody       map[string]interface{}         `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetSnowballUsageHeaders struct {
 	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetSnowballUsageXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetSnowballUsageRequest struct {
-	Headers GetSnowballUsageHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetSnowballUsageResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum) UnmarshalJSON
 	}
 }
 
-type GETDecreaseNodeGroupsInGlobalReplicationGroupQueryParams struct {
+type GETDecreaseNodeGroupsInGlobalReplicationGroupRequest struct {
 	Action GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates that the shard reconfiguration process begins immediately. At present, the only permitted value for this parameter is true.
 	ApplyImmediately bool `queryParam:"style=form,explode=true,name=ApplyImmediately"`
@@ -61,23 +61,15 @@ type GETDecreaseNodeGroupsInGlobalReplicationGroupQueryParams struct {
 	// The name of the Global datastore
 	GlobalReplicationGroupID string `queryParam:"style=form,explode=true,name=GlobalReplicationGroupId"`
 	// The number of node groups (shards) that results from the modification of the shard configuration
-	NodeGroupCount int64                                                    `queryParam:"style=form,explode=true,name=NodeGroupCount"`
-	Version        GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDecreaseNodeGroupsInGlobalReplicationGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDecreaseNodeGroupsInGlobalReplicationGroupRequest struct {
-	QueryParams GETDecreaseNodeGroupsInGlobalReplicationGroupQueryParams
-	Headers     GETDecreaseNodeGroupsInGlobalReplicationGroupHeaders
+	NodeGroupCount    int64                                                    `queryParam:"style=form,explode=true,name=NodeGroupCount"`
+	Version           GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDecreaseNodeGroupsInGlobalReplicationGroupResponse struct {

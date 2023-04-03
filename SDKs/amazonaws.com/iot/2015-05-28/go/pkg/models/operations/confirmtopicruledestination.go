@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type ConfirmTopicRuleDestinationPathParams struct {
-	// The token used to confirm ownership or access to the topic rule confirmation URL.
-	ConfirmationToken string `pathParam:"style=simple,explode=false,name=confirmationToken"`
-}
-
-type ConfirmTopicRuleDestinationHeaders struct {
+type ConfirmTopicRuleDestinationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type ConfirmTopicRuleDestinationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ConfirmTopicRuleDestinationRequest struct {
-	PathParams ConfirmTopicRuleDestinationPathParams
-	Headers    ConfirmTopicRuleDestinationHeaders
+	// The token used to confirm ownership or access to the topic rule confirmation URL.
+	ConfirmationToken string `pathParam:"style=simple,explode=false,name=confirmationToken"`
 }
 
 type ConfirmTopicRuleDestinationResponse struct {

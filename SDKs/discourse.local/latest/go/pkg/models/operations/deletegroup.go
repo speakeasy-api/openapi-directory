@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteGroupPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteGroupRequest struct {
-	PathParams DeleteGroupPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // DeleteGroup200ApplicationJSON - response

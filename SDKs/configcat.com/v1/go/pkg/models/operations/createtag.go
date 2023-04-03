@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTagPathParams struct {
+type CreateTagRequest struct {
+	CreateTagModel shared.CreateTagModel `request:"mediaType=application/json"`
 	// The identifier of the Organization.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type CreateTagRequest struct {
-	PathParams CreateTagPathParams
-	Request    shared.CreateTagModel `request:"mediaType=application/json"`
 }
 
 type CreateTagResponse struct {

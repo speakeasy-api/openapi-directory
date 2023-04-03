@@ -8,12 +8,7 @@ import (
 	"time"
 )
 
-type ListDomainDeliverabilityCampaignsPathParams struct {
-	// The domain to obtain deliverability data for.
-	SubscribedDomain string `pathParam:"style=simple,explode=false,name=SubscribedDomain"`
-}
-
-type ListDomainDeliverabilityCampaignsQueryParams struct {
+type ListDomainDeliverabilityCampaignsRequest struct {
 	// The last day that you want to obtain deliverability data for. This value has to be less than or equal to 30 days after the value of the <code>StartDate</code> parameter.
 	EndDate time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// A token that’s returned from a previous call to the <code>ListDomainDeliverabilityCampaigns</code> operation. This token indicates the position of a campaign in the list of campaigns.
@@ -22,9 +17,8 @@ type ListDomainDeliverabilityCampaignsQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The first day that you want to obtain deliverability data for.
 	StartDate time.Time `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type ListDomainDeliverabilityCampaignsHeaders struct {
+	// The domain to obtain deliverability data for.
+	SubscribedDomain  string  `pathParam:"style=simple,explode=false,name=SubscribedDomain"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -32,12 +26,6 @@ type ListDomainDeliverabilityCampaignsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDomainDeliverabilityCampaignsRequest struct {
-	PathParams  ListDomainDeliverabilityCampaignsPathParams
-	QueryParams ListDomainDeliverabilityCampaignsQueryParams
-	Headers     ListDomainDeliverabilityCampaignsHeaders
 }
 
 type ListDomainDeliverabilityCampaignsResponse struct {

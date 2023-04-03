@@ -6,17 +6,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
-
-type DataSubjectRightDeleteRequestSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DataSubjectRightDeleteRequestRequest struct {
-	Security DataSubjectRightDeleteRequestSecurity
-}
 
 type DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum string
 

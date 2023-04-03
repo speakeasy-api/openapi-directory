@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrganisationsPartyIDAddressesPathParams struct {
-	// The party identifier.
-	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
-}
-
-type GetOrganisationsPartyIDAddressesHeaders struct {
+type GetOrganisationsPartyIDAddressesRequest struct {
 	// The API key.
 	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetOrganisationsPartyIDAddressesRequest struct {
-	PathParams GetOrganisationsPartyIDAddressesPathParams
-	Headers    GetOrganisationsPartyIDAddressesHeaders
+	// The party identifier.
+	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
 }
 
 type GetOrganisationsPartyIDAddressesResponse struct {

@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStandardsControlAssociationsQueryParams struct {
+type ListStandardsControlAssociationsRequest struct {
 	//  An optional parameter that limits the total results of the API response to the specified number. If this parameter isn't provided in the request, the results include the first 25 standard and control associations. The results also include a <code>NextToken</code> parameter that you can use in a subsequent API call to get the next 25 associations. This repeats until all associations for the specified control are returned. The number of results is limited by the number of supported Security Hub standards that you've enabled in the calling account.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	//  Optional pagination parameter.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	//  The identifier of the control (identified with <code>SecurityControlId</code>, <code>SecurityControlArn</code>, or a mix of both parameters) that you want to determine the enablement status of in each enabled standard.
-	SecurityControlID string `queryParam:"style=form,explode=true,name=SecurityControlId"`
-}
-
-type ListStandardsControlAssociationsHeaders struct {
+	SecurityControlID string  `queryParam:"style=form,explode=true,name=SecurityControlId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type ListStandardsControlAssociationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStandardsControlAssociationsRequest struct {
-	QueryParams ListStandardsControlAssociationsQueryParams
-	Headers     ListStandardsControlAssociationsHeaders
 }
 
 type ListStandardsControlAssociationsResponse struct {

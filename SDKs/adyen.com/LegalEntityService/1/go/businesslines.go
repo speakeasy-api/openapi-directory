@@ -36,16 +36,16 @@ func newBusinessLines(defaultClient, securityClient HTTPClient, serverURL, langu
 // Deletes a business line.
 //
 //	>"If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
-func (s *businessLines) DeleteBusinessLinesID(ctx context.Context, request operations.DeleteBusinessLinesIDRequest) (*operations.DeleteBusinessLinesIDResponse, error) {
+func (s *businessLines) DeleteBusinessLinesID(ctx context.Context, request operations.DeleteBusinessLinesIDRequest, security operations.DeleteBusinessLinesIDSecurity) (*operations.DeleteBusinessLinesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,16 +90,16 @@ func (s *businessLines) DeleteBusinessLinesID(ctx context.Context, request opera
 
 // GetBusinessLinesID - Get a business line
 // Returns the detail of a business line.
-func (s *businessLines) GetBusinessLinesID(ctx context.Context, request operations.GetBusinessLinesIDRequest) (*operations.GetBusinessLinesIDResponse, error) {
+func (s *businessLines) GetBusinessLinesID(ctx context.Context, request operations.GetBusinessLinesIDRequest, security operations.GetBusinessLinesIDSecurity) (*operations.GetBusinessLinesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *businessLines) GetBusinessLinesID(ctx context.Context, request operatio
 // Creates a business line.
 //
 // This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
-func (s *businessLines) PostBusinessLines(ctx context.Context, request operations.PostBusinessLinesRequest) (*operations.PostBusinessLinesResponse, error) {
+func (s *businessLines) PostBusinessLines(ctx context.Context, request shared.BusinessLineInfoInput, security operations.PostBusinessLinesSecurity) (*operations.PostBusinessLinesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/businessLines"
 
@@ -171,7 +171,7 @@ func (s *businessLines) PostBusinessLines(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

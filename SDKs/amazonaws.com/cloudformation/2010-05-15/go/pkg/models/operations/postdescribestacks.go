@@ -50,27 +50,19 @@ func (e *POSTDescribeStacksVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeStacksQueryParams struct {
+type POSTDescribeStacksRequest struct {
 	Action POSTDescribeStacksActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
-	NextToken *string                       `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTDescribeStacksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeStacksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeStacksRequest struct {
-	QueryParams POSTDescribeStacksQueryParams
-	Headers     POSTDescribeStacksHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                        `request:"mediaType=text/xml"`
+	Version           POSTDescribeStacksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeStacksResponse struct {

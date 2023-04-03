@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsUpdatePathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-	// The team's name
-	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TeamsUpdateRequestBody - The information used to update the team
@@ -27,10 +19,12 @@ type TeamsUpdateRequestBody struct {
 }
 
 type TeamsUpdateRequest struct {
-	PathParams TeamsUpdatePathParams
 	// The information used to update the team
-	Request  TeamsUpdateRequestBody `request:"mediaType=application/json"`
-	Security TeamsUpdateSecurity
+	RequestBody TeamsUpdateRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	// The team's name
+	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
 }
 
 type TeamsUpdateDefaultApplicationJSONErrorCodeEnum string

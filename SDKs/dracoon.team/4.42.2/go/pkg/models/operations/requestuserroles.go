@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUserRolesPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RequestUserRolesHeaders struct {
+type RequestUserRolesRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestUserRolesRequest struct {
-	PathParams RequestUserRolesPathParams
-	Headers    RequestUserRolesHeaders
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type RequestUserRolesResponse struct {

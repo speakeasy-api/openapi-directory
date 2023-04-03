@@ -24,164 +24,44 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateDeliveryStreamRequest{
-        Headers: operations.CreateDeliveryStreamHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Firehose_20150804.CreateDeliveryStream",
-        },
-        Request: shared.CreateDeliveryStreamInput{
+        CreateDeliveryStreamInput: shared.CreateDeliveryStreamInput{
             AmazonOpenSearchServerlessDestinationConfiguration: &shared.AmazonOpenSearchServerlessDestinationConfiguration{
                 BufferingHints: &shared.AmazonOpenSearchServerlessBufferingHints{
-                    IntervalInSeconds: 847252,
-                    SizeInMBs: 423655,
+                    IntervalInSeconds: 548814,
+                    SizeInMBs: 592845,
                 },
                 CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                     Enabled: false,
-                    LogGroupName: "error",
-                    LogStreamName: "deserunt",
+                    LogGroupName: "distinctio",
+                    LogStreamName: "quibusdam",
                 },
-                CollectionEndpoint: "suscipit",
-                IndexName: "iure",
+                CollectionEndpoint: "unde",
+                IndexName: "nulla",
                 ProcessingConfiguration: &shared.ProcessingConfiguration{
                     Enabled: false,
                     Processors: []shared.Processor{
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
-                                    ParameterName: "LambdaArn",
-                                    ParameterValue: "delectus",
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "error",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "MetadataExtractionQuery",
+                                    ParameterName: "BufferSizeInMBs",
                                     ParameterValue: "suscipit",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "RoleArn",
-                                    ParameterValue: "minus",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "SubRecordType",
-                                    ParameterValue: "voluptatum",
-                                },
-                            },
-                            Type: "Lambda",
-                        },
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
                                     ParameterName: "JsonParsingEngine",
-                                    ParameterValue: "recusandae",
+                                    ParameterValue: "magnam",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "SubRecordType",
-                                    ParameterValue: "ab",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "JsonParsingEngine",
-                                    ParameterValue: "veritatis",
-                                },
-                            },
-                            Type: "MetadataExtraction",
-                        },
-                    },
-                },
-                RetryOptions: &shared.AmazonOpenSearchServerlessRetryOptions{
-                    DurationInSeconds: 20218,
-                },
-                RoleARN: "ipsam",
-                S3BackupMode: "AllDocuments",
-                S3Configuration: shared.S3DestinationConfiguration{
-                    BucketARN: "sapiente",
-                    BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 778157,
-                        SizeInMBs: 140350,
-                    },
-                    CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
-                        Enabled: false,
-                        LogGroupName: "at",
-                        LogStreamName: "at",
-                    },
-                    CompressionFormat: "HADOOP_SNAPPY",
-                    EncryptionConfiguration: &shared.EncryptionConfiguration{
-                        KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "molestiae",
-                        },
-                        NoEncryptionConfig: "NoEncryption",
-                    },
-                    ErrorOutputPrefix: "quod",
-                    Prefix: "quod",
-                    RoleARN: "esse",
-                },
-                VpcConfiguration: &shared.VpcConfiguration{
-                    RoleARN: "totam",
-                    SecurityGroupIds: []string{
-                        "dolorum",
-                        "dicta",
-                        "nam",
-                        "officia",
-                    },
-                    SubnetIds: []string{
-                        "fugit",
-                        "deleniti",
-                        "hic",
-                    },
-                },
-            },
-            AmazonopensearchserviceDestinationConfiguration: &shared.AmazonopensearchserviceDestinationConfiguration{
-                BufferingHints: &shared.AmazonopensearchserviceBufferingHints{
-                    IntervalInSeconds: 758616,
-                    SizeInMBs: 521848,
-                },
-                CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
-                    Enabled: false,
-                    LogGroupName: "beatae",
-                    LogStreamName: "commodi",
-                },
-                ClusterEndpoint: "molestiae",
-                DomainARN: "modi",
-                IndexName: "qui",
-                IndexRotationPeriod: "OneWeek",
-                ProcessingConfiguration: &shared.ProcessingConfiguration{
-                    Enabled: false,
-                    Processors: []shared.Processor{
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "NumberOfRetries",
-                                    ParameterValue: "excepturi",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "NumberOfRetries",
-                                    ParameterValue: "perferendis",
-                                },
-                            },
-                            Type: "Lambda",
-                        },
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "NumberOfRetries",
-                                    ParameterValue: "iste",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "MetadataExtractionQuery",
-                                    ParameterValue: "natus",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "JsonParsingEngine",
-                                    ParameterValue: "hic",
+                                    ParameterName: "Delimiter",
+                                    ParameterValue: "ipsa",
                                 },
                             },
                             Type: "AppendDelimiterToRecord",
@@ -189,16 +69,106 @@ func main() {
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
-                                    ParameterName: "RoleArn",
-                                    ParameterValue: "corporis",
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "molestiae",
                                 },
                                 shared.ProcessorParameter{
+                                    ParameterName: "SubRecordType",
+                                    ParameterValue: "placeat",
+                                },
+                            },
+                            Type: "MetadataExtraction",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
                                     ParameterName: "BufferSizeInMBs",
-                                    ParameterValue: "iure",
+                                    ParameterValue: "nisi",
                                 },
                                 shared.ProcessorParameter{
                                     ParameterName: "Delimiter",
-                                    ParameterValue: "quidem",
+                                    ParameterValue: "temporibus",
+                                },
+                            },
+                            Type: "RecordDeAggregation",
+                        },
+                    },
+                },
+                RetryOptions: &shared.AmazonOpenSearchServerlessRetryOptions{
+                    DurationInSeconds: 337396,
+                },
+                RoleARN: "veritatis",
+                S3BackupMode: "AllDocuments",
+                S3Configuration: shared.S3DestinationConfiguration{
+                    BucketARN: "perferendis",
+                    BufferingHints: &shared.BufferingHints{
+                        IntervalInSeconds: 368241,
+                        SizeInMBs: 832620,
+                    },
+                    CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
+                        Enabled: false,
+                        LogGroupName: "sapiente",
+                        LogStreamName: "quo",
+                    },
+                    CompressionFormat: "UNCOMPRESSED",
+                    EncryptionConfiguration: &shared.EncryptionConfiguration{
+                        KMSEncryptionConfig: &shared.KMSEncryptionConfig{
+                            AWSKMSKeyARN: "at",
+                        },
+                        NoEncryptionConfig: "NoEncryption",
+                    },
+                    ErrorOutputPrefix: "at",
+                    Prefix: "maiores",
+                    RoleARN: "molestiae",
+                },
+                VpcConfiguration: &shared.VpcConfiguration{
+                    RoleARN: "quod",
+                    SecurityGroupIds: []string{
+                        "esse",
+                        "totam",
+                        "porro",
+                        "dolorum",
+                    },
+                    SubnetIds: []string{
+                        "nam",
+                    },
+                },
+            },
+            AmazonopensearchserviceDestinationConfiguration: &shared.AmazonopensearchserviceDestinationConfiguration{
+                BufferingHints: &shared.AmazonopensearchserviceBufferingHints{
+                    IntervalInSeconds: 639921,
+                    SizeInMBs: 582020,
+                },
+                CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
+                    Enabled: false,
+                    LogGroupName: "fugit",
+                    LogStreamName: "deleniti",
+                },
+                ClusterEndpoint: "hic",
+                DomainARN: "optio",
+                IndexName: "totam",
+                IndexRotationPeriod: "NoRotation",
+                ProcessingConfiguration: &shared.ProcessingConfiguration{
+                    Enabled: false,
+                    Processors: []shared.Processor{
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "MetadataExtractionQuery",
+                                    ParameterValue: "qui",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferIntervalInSeconds",
+                                    ParameterValue: "cum",
+                                },
+                            },
+                            Type: "Lambda",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferSizeInMBs",
+                                    ParameterValue: "aspernatur",
                                 },
                             },
                             Type: "RecordDeAggregation",
@@ -206,111 +176,134 @@ func main() {
                     },
                 },
                 RetryOptions: &shared.AmazonopensearchserviceRetryOptions{
-                    DurationInSeconds: 60225,
+                    DurationInSeconds: 324141,
                 },
-                RoleARN: "reiciendis",
-                S3BackupMode: "AllDocuments",
+                RoleARN: "natus",
+                S3BackupMode: "FailedDocumentsOnly",
                 S3Configuration: shared.S3DestinationConfiguration{
-                    BucketARN: "mollitia",
+                    BucketARN: "iste",
                     BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 670638,
-                        SizeInMBs: 170909,
+                        IntervalInSeconds: 222321,
+                        SizeInMBs: 616934,
                     },
                     CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                         Enabled: false,
-                        LogGroupName: "dolorem",
-                        LogStreamName: "corporis",
+                        LogGroupName: "laboriosam",
+                        LogStreamName: "hic",
                     },
-                    CompressionFormat: "UNCOMPRESSED",
+                    CompressionFormat: "HADOOP_SNAPPY",
                     EncryptionConfiguration: &shared.EncryptionConfiguration{
                         KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "nobis",
+                            AWSKMSKeyARN: "fuga",
                         },
                         NoEncryptionConfig: "NoEncryption",
                     },
-                    ErrorOutputPrefix: "enim",
-                    Prefix: "omnis",
-                    RoleARN: "nemo",
+                    ErrorOutputPrefix: "in",
+                    Prefix: "corporis",
+                    RoleARN: "iste",
                 },
-                TypeName: "minima",
+                TypeName: "iure",
                 VpcConfiguration: &shared.VpcConfiguration{
-                    RoleARN: "excepturi",
+                    RoleARN: "saepe",
                     SecurityGroupIds: []string{
-                        "iure",
+                        "architecto",
+                        "ipsa",
+                        "reiciendis",
                     },
                     SubnetIds: []string{
-                        "doloribus",
-                        "sapiente",
-                        "architecto",
+                        "mollitia",
+                        "laborum",
+                        "dolores",
                     },
                 },
             },
             DeliveryStreamEncryptionConfigurationInput: &shared.DeliveryStreamEncryptionConfigurationInput{
-                KeyARN: "mollitia",
+                KeyARN: "dolorem",
                 KeyType: "AWS_OWNED_CMK",
             },
-            DeliveryStreamName: "culpa",
-            DeliveryStreamType: "DirectPut",
+            DeliveryStreamName: "explicabo",
+            DeliveryStreamType: "KinesisStreamAsSource",
             ElasticsearchDestinationConfiguration: &shared.ElasticsearchDestinationConfiguration{
                 BufferingHints: &shared.ElasticsearchBufferingHints{
-                    IntervalInSeconds: 995300,
-                    SizeInMBs: 653108,
+                    IntervalInSeconds: 315428,
+                    SizeInMBs: 607831,
                 },
                 CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                     Enabled: false,
-                    LogGroupName: "occaecati",
-                    LogStreamName: "numquam",
+                    LogGroupName: "nemo",
+                    LogStreamName: "minima",
                 },
-                ClusterEndpoint: "commodi",
-                DomainARN: "quam",
-                IndexName: "molestiae",
-                IndexRotationPeriod: "OneHour",
+                ClusterEndpoint: "excepturi",
+                DomainARN: "accusantium",
+                IndexName: "iure",
+                IndexRotationPeriod: "OneWeek",
                 ProcessingConfiguration: &shared.ProcessingConfiguration{
                     Enabled: false,
                     Processors: []shared.Processor{
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
-                                    ParameterName: "JsonParsingEngine",
-                                    ParameterValue: "vitae",
+                                    ParameterName: "LambdaArn",
+                                    ParameterValue: "mollitia",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "NumberOfRetries",
+                                    ParameterValue: "culpa",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "NumberOfRetries",
+                                    ParameterValue: "repellat",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferSizeInMBs",
+                                    ParameterValue: "occaecati",
                                 },
                             },
-                            Type: "MetadataExtraction",
+                            Type: "Lambda",
                         },
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
+                                    ParameterName: "RoleArn",
+                                    ParameterValue: "molestiae",
+                                },
+                                shared.ProcessorParameter{
                                     ParameterName: "MetadataExtractionQuery",
-                                    ParameterValue: "odit",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "SubRecordType",
-                                    ParameterValue: "sequi",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "Delimiter",
-                                    ParameterValue: "ipsam",
+                                    ParameterValue: "error",
                                 },
                             },
-                            Type: "MetadataExtraction",
+                            Type: "RecordDeAggregation",
                         },
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
                                     ParameterName: "LambdaArn",
-                                    ParameterValue: "quasi",
+                                    ParameterValue: "laborum",
                                 },
                                 shared.ProcessorParameter{
                                     ParameterName: "BufferSizeInMBs",
-                                    ParameterValue: "temporibus",
+                                    ParameterValue: "enim",
+                                },
+                            },
+                            Type: "RecordDeAggregation",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "NumberOfRetries",
+                                    ParameterValue: "tenetur",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "BufferIntervalInSeconds",
-                                    ParameterValue: "quasi",
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "id",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "Delimiter",
-                                    ParameterValue: "voluptatibus",
+                                    ParameterName: "SubRecordType",
+                                    ParameterValue: "aut",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "LambdaArn",
+                                    ParameterValue: "error",
                                 },
                             },
                             Type: "AppendDelimiterToRecord",
@@ -318,73 +311,72 @@ func main() {
                     },
                 },
                 RetryOptions: &shared.ElasticsearchRetryOptions{
-                    DurationInSeconds: 468651,
+                    DurationInSeconds: 673660,
                 },
-                RoleARN: "praesentium",
+                RoleARN: "quasi",
                 S3BackupMode: "AllDocuments",
                 S3Configuration: shared.S3DestinationConfiguration{
-                    BucketARN: "ipsa",
+                    BucketARN: "voluptatibus",
                     BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 604846,
-                        SizeInMBs: 451159,
+                        IntervalInSeconds: 878194,
+                        SizeInMBs: 468651,
                     },
                     CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                         Enabled: false,
-                        LogGroupName: "cum",
-                        LogStreamName: "perferendis",
+                        LogGroupName: "praesentium",
+                        LogStreamName: "voluptatibus",
                     },
                     CompressionFormat: "UNCOMPRESSED",
                     EncryptionConfiguration: &shared.EncryptionConfiguration{
                         KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "reprehenderit",
+                            AWSKMSKeyARN: "omnis",
                         },
                         NoEncryptionConfig: "NoEncryption",
                     },
-                    ErrorOutputPrefix: "ut",
-                    Prefix: "maiores",
-                    RoleARN: "dicta",
+                    ErrorOutputPrefix: "voluptate",
+                    Prefix: "cum",
+                    RoleARN: "perferendis",
                 },
-                TypeName: "corporis",
+                TypeName: "doloremque",
                 VpcConfiguration: &shared.VpcConfiguration{
-                    RoleARN: "dolore",
+                    RoleARN: "reprehenderit",
                     SecurityGroupIds: []string{
+                        "maiores",
                         "dicta",
-                        "harum",
                     },
                     SubnetIds: []string{
-                        "accusamus",
-                        "commodi",
+                        "dolore",
+                        "iusto",
                     },
                 },
             },
             ExtendedS3DestinationConfiguration: &shared.ExtendedS3DestinationConfiguration{
-                BucketARN: "repudiandae",
+                BucketARN: "dicta",
                 BufferingHints: &shared.BufferingHints{
-                    IntervalInSeconds: 64147,
-                    SizeInMBs: 216822,
+                    IntervalInSeconds: 688661,
+                    SizeInMBs: 317983,
                 },
                 CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                     Enabled: false,
-                    LogGroupName: "quidem",
-                    LogStreamName: "molestias",
+                    LogGroupName: "accusamus",
+                    LogStreamName: "commodi",
                 },
-                CompressionFormat: "ZIP",
+                CompressionFormat: "HADOOP_SNAPPY",
                 DataFormatConversionConfiguration: &shared.DataFormatConversionConfiguration{
                     Enabled: false,
                     InputFormatConfiguration: &shared.InputFormatConfiguration{
                         Deserializer: &shared.Deserializer{
                             HiveJSONSerDe: &shared.HiveJSONSerDe{
                                 TimestampFormats: []string{
-                                    "modi",
-                                    "praesentium",
-                                    "rem",
-                                    "voluptates",
+                                    "ipsum",
                                 },
                             },
                             OpenXJSONSerDe: &shared.OpenXJSONSerDe{
                                 CaseInsensitive: false,
                                 ColumnToJSONKeyMappings: map[string]string{
-                                    "repudiandae": "sint",
+                                    "molestias": "excepturi",
+                                    "pariatur": "modi",
+                                    "praesentium": "rem",
                                 },
                                 ConvertDotsInJSONKeysToUnderscores: false,
                             },
@@ -393,265 +385,126 @@ func main() {
                     OutputFormatConfiguration: &shared.OutputFormatConfiguration{
                         Serializer: &shared.Serializer{
                             OrcSerDe: &shared.OrcSerDe{
-                                BlockSizeBytes: 83112,
+                                BlockSizeBytes: 916723,
                                 BloomFilterColumns: []string{
-                                    "incidunt",
-                                    "enim",
-                                    "consequatur",
-                                    "est",
+                                    "repudiandae",
                                 },
-                                BloomFilterFalsePositiveProbability: 8423.42,
+                                BloomFilterFalsePositiveProbability: 5759.47,
                                 Compression: "NONE",
-                                DictionaryKeyThreshold: 6471.74,
+                                DictionaryKeyThreshold: 9292.97,
                                 EnablePadding: false,
-                                FormatVersion: "V0_12",
-                                PaddingTolerance: 8413.86,
-                                RowIndexStride: 289406,
-                                StripeSizeBytes: 264730,
+                                FormatVersion: "V0_11",
+                                PaddingTolerance: 3185.69,
+                                RowIndexStride: 9356,
+                                StripeSizeBytes: 667411,
                             },
                             ParquetSerDe: &shared.ParquetSerDe{
-                                BlockSizeBytes: 183191,
-                                Compression: "GZIP",
+                                BlockSizeBytes: 842342,
+                                Compression: "UNCOMPRESSED",
                                 EnableDictionaryCompression: false,
-                                MaxPaddingBytes: 586513,
-                                PageSizeBytes: 552822,
-                                WriterVersion: "V1",
+                                MaxPaddingBytes: 647174,
+                                PageSizeBytes: 716327,
+                                WriterVersion: "V2",
                             },
                         },
                     },
                     SchemaConfiguration: &shared.SchemaConfiguration{
-                        CatalogID: "magni",
-                        DatabaseName: "assumenda",
-                        Region: "ipsam",
-                        RoleARN: "alias",
-                        TableName: "fugit",
-                        VersionID: "dolorum",
+                        CatalogID: "labore",
+                        DatabaseName: "modi",
+                        Region: "qui",
+                        RoleARN: "aliquid",
+                        TableName: "cupiditate",
+                        VersionID: "quos",
                     },
                 },
                 DynamicPartitioningConfiguration: &shared.DynamicPartitioningConfiguration{
                     Enabled: false,
                     RetryOptions: &shared.RetryOptions{
-                        DurationInSeconds: 569618,
+                        DurationInSeconds: 20107,
                     },
                 },
                 EncryptionConfiguration: &shared.EncryptionConfiguration{
                     KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                        AWSKMSKeyARN: "tempora",
+                        AWSKMSKeyARN: "magni",
                     },
                     NoEncryptionConfig: "NoEncryption",
                 },
-                ErrorOutputPrefix: "facilis",
-                Prefix: "tempore",
+                ErrorOutputPrefix: "assumenda",
+                Prefix: "ipsam",
                 ProcessingConfiguration: &shared.ProcessingConfiguration{
                     Enabled: false,
                     Processors: []shared.Processor{
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
-                                    ParameterName: "JsonParsingEngine",
-                                    ParameterValue: "non",
-                                },
-                                shared.ProcessorParameter{
                                     ParameterName: "BufferIntervalInSeconds",
-                                    ParameterValue: "sint",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "JsonParsingEngine",
-                                    ParameterValue: "provident",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "Delimiter",
-                                    ParameterValue: "sint",
+                                    ParameterValue: "excepturi",
                                 },
                             },
-                            Type: "MetadataExtraction",
-                        },
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "Delimiter",
-                                    ParameterValue: "a",
-                                },
-                            },
-                            Type: "MetadataExtraction",
+                            Type: "Lambda",
                         },
                     },
                 },
-                RoleARN: "in",
+                RoleARN: "facilis",
                 S3BackupConfiguration: &shared.S3DestinationConfiguration{
-                    BucketARN: "in",
+                    BucketARN: "tempore",
                     BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 846409,
-                        SizeInMBs: 978571,
+                        IntervalInSeconds: 288476,
+                        SizeInMBs: 962189,
                     },
                     CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                         Enabled: false,
-                        LogGroupName: "rerum",
-                        LogStreamName: "dicta",
+                        LogGroupName: "eum",
+                        LogStreamName: "non",
                     },
-                    CompressionFormat: "GZIP",
+                    CompressionFormat: "Snappy",
                     EncryptionConfiguration: &shared.EncryptionConfiguration{
                         KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "cumque",
+                            AWSKMSKeyARN: "sint",
                         },
                         NoEncryptionConfig: "NoEncryption",
                     },
-                    ErrorOutputPrefix: "facere",
-                    Prefix: "ea",
-                    RoleARN: "aliquid",
+                    ErrorOutputPrefix: "aliquid",
+                    Prefix: "provident",
+                    RoleARN: "necessitatibus",
                 },
                 S3BackupMode: "Enabled",
             },
             HTTPEndpointDestinationConfiguration: &shared.HTTPEndpointDestinationConfiguration{
                 BufferingHints: &shared.HTTPEndpointBufferingHints{
-                    IntervalInSeconds: 881104,
-                    SizeInMBs: 249796,
+                    IntervalInSeconds: 638921,
+                    SizeInMBs: 223081,
                 },
                 CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                     Enabled: false,
-                    LogGroupName: "occaecati",
-                    LogStreamName: "enim",
+                    LogGroupName: "debitis",
+                    LogStreamName: "a",
                 },
                 EndpointConfiguration: shared.HTTPEndpointConfiguration{
-                    AccessKey: "accusamus",
-                    Name: "delectus",
-                    URL: "quidem",
+                    AccessKey: "dolorum",
+                    Name: "in",
+                    URL: "in",
                 },
                 ProcessingConfiguration: &shared.ProcessingConfiguration{
                     Enabled: false,
                     Processors: []shared.Processor{
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "BufferSizeInMBs",
-                                    ParameterValue: "blanditiis",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "RoleArn",
-                                    ParameterValue: "sapiente",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "MetadataExtractionQuery",
-                                    ParameterValue: "deserunt",
-                                },
-                            },
-                            Type: "Lambda",
-                        },
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "BufferSizeInMBs",
-                                    ParameterValue: "omnis",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "RoleArn",
-                                    ParameterValue: "perferendis",
-                                },
-                            },
-                            Type: "Lambda",
-                        },
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
                                     ParameterName: "BufferIntervalInSeconds",
-                                    ParameterValue: "id",
+                                    ParameterValue: "dicta",
                                 },
                                 shared.ProcessorParameter{
                                     ParameterName: "MetadataExtractionQuery",
-                                    ParameterValue: "labore",
-                                },
-                            },
-                            Type: "Lambda",
-                        },
-                    },
-                },
-                RequestConfiguration: &shared.HTTPEndpointRequestConfiguration{
-                    CommonAttributes: []shared.HTTPEndpointCommonAttribute{
-                        shared.HTTPEndpointCommonAttribute{
-                            AttributeName: "nobis",
-                            AttributeValue: "eum",
-                        },
-                        shared.HTTPEndpointCommonAttribute{
-                            AttributeName: "vero",
-                            AttributeValue: "aspernatur",
-                        },
-                        shared.HTTPEndpointCommonAttribute{
-                            AttributeName: "architecto",
-                            AttributeValue: "magnam",
-                        },
-                    },
-                    ContentEncoding: "NONE",
-                },
-                RetryOptions: &shared.HTTPEndpointRetryOptions{
-                    DurationInSeconds: 569965,
-                },
-                RoleARN: "ullam",
-                S3BackupMode: "AllData",
-                S3Configuration: shared.S3DestinationConfiguration{
-                    BucketARN: "quos",
-                    BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 574325,
-                        SizeInMBs: 33625,
-                    },
-                    CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
-                        Enabled: false,
-                        LogGroupName: "mollitia",
-                        LogStreamName: "reiciendis",
-                    },
-                    CompressionFormat: "Snappy",
-                    EncryptionConfiguration: &shared.EncryptionConfiguration{
-                        KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "ad",
-                        },
-                        NoEncryptionConfig: "NoEncryption",
-                    },
-                    ErrorOutputPrefix: "eum",
-                    Prefix: "dolor",
-                    RoleARN: "necessitatibus",
-                },
-            },
-            KinesisStreamSourceConfiguration: &shared.KinesisStreamSourceConfiguration{
-                KinesisStreamARN: "odit",
-                RoleARN: "nemo",
-            },
-            RedshiftDestinationConfiguration: &shared.RedshiftDestinationConfiguration{
-                CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
-                    Enabled: false,
-                    LogGroupName: "quasi",
-                    LogStreamName: "iure",
-                },
-                ClusterJDBCURL: "doloribus",
-                CopyCommand: shared.CopyCommand{
-                    CopyOptions: "debitis",
-                    DataTableColumns: "eius",
-                    DataTableName: "maxime",
-                },
-                Password: "deleniti",
-                ProcessingConfiguration: &shared.ProcessingConfiguration{
-                    Enabled: false,
-                    Processors: []shared.Processor{
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "LambdaArn",
-                                    ParameterValue: "architecto",
+                                    ParameterValue: "cumque",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "Delimiter",
-                                    ParameterValue: "ullam",
-                                },
-                            },
-                            Type: "MetadataExtraction",
-                        },
-                        shared.Processor{
-                            Parameters: []shared.ProcessorParameter{
-                                shared.ProcessorParameter{
-                                    ParameterName: "Delimiter",
-                                    ParameterValue: "quibusdam",
+                                    ParameterName: "SubRecordType",
+                                    ParameterValue: "ea",
                                 },
                                 shared.ProcessorParameter{
-                                    ParameterName: "NumberOfRetries",
-                                    ParameterValue: "saepe",
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "laborum",
                                 },
                             },
                             Type: "AppendDelimiterToRecord",
@@ -659,165 +512,322 @@ func main() {
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
-                                    ParameterName: "NumberOfRetries",
-                                    ParameterValue: "praesentium",
+                                    ParameterName: "BufferSizeInMBs",
+                                    ParameterValue: "enim",
+                                },
+                            },
+                            Type: "AppendDelimiterToRecord",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferIntervalInSeconds",
+                                    ParameterValue: "provident",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferIntervalInSeconds",
+                                    ParameterValue: "id",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "RoleArn",
+                                    ParameterValue: "deleniti",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "Delimiter",
+                                    ParameterValue: "amet",
                                 },
                             },
                             Type: "MetadataExtraction",
                         },
-                    },
-                },
-                RetryOptions: &shared.RedshiftRetryOptions{
-                    DurationInSeconds: 166847,
-                },
-                RoleARN: "sunt",
-                S3BackupConfiguration: &shared.S3DestinationConfiguration{
-                    BucketARN: "quo",
-                    BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 848009,
-                        SizeInMBs: 864934,
-                    },
-                    CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
-                        Enabled: false,
-                        LogGroupName: "maxime",
-                        LogStreamName: "ea",
-                    },
-                    CompressionFormat: "ZIP",
-                    EncryptionConfiguration: &shared.EncryptionConfiguration{
-                        KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "odit",
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "natus",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferSizeInMBs",
+                                    ParameterValue: "molestiae",
+                                },
+                            },
+                            Type: "RecordDeAggregation",
                         },
-                        NoEncryptionConfig: "NoEncryption",
                     },
-                    ErrorOutputPrefix: "ea",
-                    Prefix: "accusantium",
-                    RoleARN: "ab",
                 },
-                S3BackupMode: "Enabled",
+                RequestConfiguration: &shared.HTTPEndpointRequestConfiguration{
+                    CommonAttributes: []shared.HTTPEndpointCommonAttribute{
+                        shared.HTTPEndpointCommonAttribute{
+                            AttributeName: "magnam",
+                            AttributeValue: "distinctio",
+                        },
+                        shared.HTTPEndpointCommonAttribute{
+                            AttributeName: "id",
+                            AttributeValue: "labore",
+                        },
+                    },
+                    ContentEncoding: "NONE",
+                },
+                RetryOptions: &shared.HTTPEndpointRetryOptions{
+                    DurationInSeconds: 383462,
+                },
+                RoleARN: "natus",
+                S3BackupMode: "AllData",
                 S3Configuration: shared.S3DestinationConfiguration{
-                    BucketARN: "quidem",
+                    BucketARN: "eum",
                     BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 373291,
-                        SizeInMBs: 453543,
+                        IntervalInSeconds: 878453,
+                        SizeInMBs: 135474,
                     },
                     CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                         Enabled: false,
-                        LogGroupName: "autem",
-                        LogStreamName: "nam",
+                        LogGroupName: "architecto",
+                        LogStreamName: "magnam",
                     },
                     CompressionFormat: "UNCOMPRESSED",
                     EncryptionConfiguration: &shared.EncryptionConfiguration{
                         KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "pariatur",
+                            AWSKMSKeyARN: "excepturi",
                         },
                         NoEncryptionConfig: "NoEncryption",
                     },
-                    ErrorOutputPrefix: "nemo",
-                    Prefix: "voluptatibus",
-                    RoleARN: "perferendis",
+                    ErrorOutputPrefix: "ullam",
+                    Prefix: "provident",
+                    RoleARN: "quos",
                 },
-                Username: "fugiat",
             },
-            S3DestinationConfiguration: &shared.CreateDeliveryStreamInputS3DestinationConfiguration{
-                BucketARN: "amet",
-                BufferingHints: &shared.BufferingHints{
-                    IntervalInSeconds: 11714,
-                    SizeInMBs: 764912,
-                },
+            KinesisStreamSourceConfiguration: &shared.KinesisStreamSourceConfiguration{
+                KinesisStreamARN: "sint",
+                RoleARN: "accusantium",
+            },
+            RedshiftDestinationConfiguration: &shared.RedshiftDestinationConfiguration{
                 CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                     Enabled: false,
-                    LogGroupName: "corporis",
-                    LogStreamName: "hic",
+                    LogGroupName: "mollitia",
+                    LogStreamName: "reiciendis",
                 },
-                CompressionFormat: "Snappy",
-                EncryptionConfiguration: &shared.EncryptionConfiguration{
-                    KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                        AWSKMSKeyARN: "nobis",
-                    },
-                    NoEncryptionConfig: "NoEncryption",
+                ClusterJDBCURL: "mollitia",
+                CopyCommand: shared.CopyCommand{
+                    CopyOptions: "ad",
+                    DataTableColumns: "eum",
+                    DataTableName: "dolor",
                 },
-                ErrorOutputPrefix: "dolores",
-                Prefix: "quis",
-                RoleARN: "totam",
-            },
-            SplunkDestinationConfiguration: &shared.SplunkDestinationConfiguration{
-                CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
-                    Enabled: false,
-                    LogGroupName: "dignissimos",
-                    LogStreamName: "eaque",
-                },
-                HECAcknowledgmentTimeoutInSeconds: 338985,
-                HECEndpoint: "nesciunt",
-                HECEndpointType: "Raw",
-                HECToken: "perferendis",
+                Password: "necessitatibus",
                 ProcessingConfiguration: &shared.ProcessingConfiguration{
                     Enabled: false,
                     Processors: []shared.Processor{
                         shared.Processor{
                             Parameters: []shared.ProcessorParameter{
                                 shared.ProcessorParameter{
-                                    ParameterName: "RoleArn",
-                                    ParameterValue: "dolor",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "SubRecordType",
-                                    ParameterValue: "nostrum",
+                                    ParameterName: "LambdaArn",
+                                    ParameterValue: "iure",
                                 },
                                 shared.ProcessorParameter{
                                     ParameterName: "Delimiter",
-                                    ParameterValue: "recusandae",
-                                },
-                                shared.ProcessorParameter{
-                                    ParameterName: "BufferSizeInMBs",
-                                    ParameterValue: "facilis",
+                                    ParameterValue: "debitis",
                                 },
                             },
-                            Type: "MetadataExtraction",
+                            Type: "Lambda",
                         },
                     },
                 },
-                RetryOptions: &shared.SplunkRetryOptions{
-                    DurationInSeconds: 31838,
+                RetryOptions: &shared.RedshiftRetryOptions{
+                    DurationInSeconds: 806194,
                 },
-                S3BackupMode: "AllEvents",
-                S3Configuration: shared.S3DestinationConfiguration{
-                    BucketARN: "consequuntur",
+                RoleARN: "deleniti",
+                S3BackupConfiguration: &shared.S3DestinationConfiguration{
+                    BucketARN: "facilis",
                     BufferingHints: &shared.BufferingHints{
-                        IntervalInSeconds: 500026,
-                        SizeInMBs: 621479,
+                        IntervalInSeconds: 447926,
+                        SizeInMBs: 100226,
                     },
                     CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
                         Enabled: false,
-                        LogGroupName: "eaque",
-                        LogStreamName: "occaecati",
+                        LogGroupName: "architecto",
+                        LogStreamName: "repudiandae",
+                    },
+                    CompressionFormat: "GZIP",
+                    EncryptionConfiguration: &shared.EncryptionConfiguration{
+                        KMSEncryptionConfig: &shared.KMSEncryptionConfig{
+                            AWSKMSKeyARN: "expedita",
+                        },
+                        NoEncryptionConfig: "NoEncryption",
+                    },
+                    ErrorOutputPrefix: "nihil",
+                    Prefix: "repellat",
+                    RoleARN: "quibusdam",
+                },
+                S3BackupMode: "Disabled",
+                S3Configuration: shared.S3DestinationConfiguration{
+                    BucketARN: "saepe",
+                    BufferingHints: &shared.BufferingHints{
+                        IntervalInSeconds: 868126,
+                        SizeInMBs: 37559,
+                    },
+                    CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
+                        Enabled: false,
+                        LogGroupName: "consequuntur",
+                        LogStreamName: "praesentium",
                     },
                     CompressionFormat: "Snappy",
                     EncryptionConfiguration: &shared.EncryptionConfiguration{
                         KMSEncryptionConfig: &shared.KMSEncryptionConfig{
-                            AWSKMSKeyARN: "adipisci",
+                            AWSKMSKeyARN: "magni",
                         },
                         NoEncryptionConfig: "NoEncryption",
                     },
-                    ErrorOutputPrefix: "asperiores",
-                    Prefix: "earum",
-                    RoleARN: "modi",
+                    ErrorOutputPrefix: "sunt",
+                    Prefix: "quo",
+                    RoleARN: "illum",
+                },
+                Username: "pariatur",
+            },
+            S3DestinationConfiguration: &shared.CreateDeliveryStreamInputS3DestinationConfiguration{
+                BucketARN: "maxime",
+                BufferingHints: &shared.BufferingHints{
+                    IntervalInSeconds: 411397,
+                    SizeInMBs: 569101,
+                },
+                CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
+                    Enabled: false,
+                    LogGroupName: "odit",
+                    LogStreamName: "ea",
+                },
+                CompressionFormat: "UNCOMPRESSED",
+                EncryptionConfiguration: &shared.EncryptionConfiguration{
+                    KMSEncryptionConfig: &shared.KMSEncryptionConfig{
+                        AWSKMSKeyARN: "ab",
+                    },
+                    NoEncryptionConfig: "NoEncryption",
+                },
+                ErrorOutputPrefix: "maiores",
+                Prefix: "quidem",
+                RoleARN: "ipsam",
+            },
+            SplunkDestinationConfiguration: &shared.SplunkDestinationConfiguration{
+                CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
+                    Enabled: false,
+                    LogGroupName: "voluptate",
+                    LogStreamName: "autem",
+                },
+                HECAcknowledgmentTimeoutInSeconds: 722056,
+                HECEndpoint: "eaque",
+                HECEndpointType: "Event",
+                HECToken: "nemo",
+                ProcessingConfiguration: &shared.ProcessingConfiguration{
+                    Enabled: false,
+                    Processors: []shared.Processor{
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "SubRecordType",
+                                    ParameterValue: "amet",
+                                },
+                            },
+                            Type: "RecordDeAggregation",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "hic",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "BufferIntervalInSeconds",
+                                    ParameterValue: "nobis",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "NumberOfRetries",
+                                    ParameterValue: "quis",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "RoleArn",
+                                    ParameterValue: "dignissimos",
+                                },
+                            },
+                            Type: "RecordDeAggregation",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "NumberOfRetries",
+                                    ParameterValue: "eos",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "LambdaArn",
+                                    ParameterValue: "dolores",
+                                },
+                            },
+                            Type: "AppendDelimiterToRecord",
+                        },
+                        shared.Processor{
+                            Parameters: []shared.ProcessorParameter{
+                                shared.ProcessorParameter{
+                                    ParameterName: "MetadataExtractionQuery",
+                                    ParameterValue: "vero",
+                                },
+                                shared.ProcessorParameter{
+                                    ParameterName: "JsonParsingEngine",
+                                    ParameterValue: "hic",
+                                },
+                            },
+                            Type: "AppendDelimiterToRecord",
+                        },
+                    },
+                },
+                RetryOptions: &shared.SplunkRetryOptions{
+                    DurationInSeconds: 608253,
+                },
+                S3BackupMode: "AllEvents",
+                S3Configuration: shared.S3DestinationConfiguration{
+                    BucketARN: "perspiciatis",
+                    BufferingHints: &shared.BufferingHints{
+                        IntervalInSeconds: 31838,
+                        SizeInMBs: 783645,
+                    },
+                    CloudWatchLoggingOptions: &shared.CloudWatchLoggingOptions{
+                        Enabled: false,
+                        LogGroupName: "consequuntur",
+                        LogStreamName: "blanditiis",
+                    },
+                    CompressionFormat: "Snappy",
+                    EncryptionConfiguration: &shared.EncryptionConfiguration{
+                        KMSEncryptionConfig: &shared.KMSEncryptionConfig{
+                            AWSKMSKeyARN: "eaque",
+                        },
+                        NoEncryptionConfig: "NoEncryption",
+                    },
+                    ErrorOutputPrefix: "occaecati",
+                    Prefix: "rerum",
+                    RoleARN: "adipisci",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "dolorum",
-                    Value: "deleniti",
+                    Key: "earum",
+                    Value: "modi",
                 },
                 shared.Tag{
-                    Key: "pariatur",
-                    Value: "provident",
+                    Key: "iste",
+                    Value: "dolorum",
                 },
                 shared.Tag{
-                    Key: "nobis",
-                    Value: "libero",
+                    Key: "deleniti",
+                    Value: "pariatur",
+                },
+                shared.Tag{
+                    Key: "provident",
+                    Value: "nobis",
                 },
             },
         },
+        XAmzAlgorithm: "libero",
+        XAmzContentSha256: "delectus",
+        XAmzCredential: "quaerat",
+        XAmzDate: "quos",
+        XAmzSecurityToken: "aliquid",
+        XAmzSignature: "dolorem",
+        XAmzSignedHeaders: "dolorem",
+        XAmzTarget: "Firehose_20150804.CreateDeliveryStream",
     }
 
     ctx := context.Background()
@@ -834,7 +844,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -852,4 +862,15 @@ func main() {
 * `UpdateDestination` - <p>Updates the specified destination of the specified delivery stream.</p> <p>Use this operation to change the destination type (for example, to replace the Amazon S3 destination with Amazon Redshift) or change the parameters associated with a destination (for example, to change the bucket name of the Amazon S3 destination). The update might not occur immediately. The target delivery stream remains active while the configurations are updated, so data writes to the delivery stream can continue during this process. The updated configurations are usually effective within a few minutes.</p> <p>Switching between Amazon ES and other services is not supported. For an Amazon ES destination, you can only update to another Amazon ES destination.</p> <p>If the destination type is the same, Kinesis Data Firehose merges the configuration parameters specified with the destination configuration that already exists on the delivery stream. If any of the parameters are not specified in the call, the existing values are retained. For example, in the Amazon S3 destination, if <a>EncryptionConfiguration</a> is not specified, then the existing <code>EncryptionConfiguration</code> is maintained on the destination.</p> <p>If the destination type is not the same, for example, changing the destination from Amazon S3 to Amazon Redshift, Kinesis Data Firehose does not merge any parameters. In this case, all parameters must be specified.</p> <p>Kinesis Data Firehose uses <code>CurrentDeliveryStreamVersionId</code> to avoid race conditions and conflicting merges. This is a required field, and the service updates the configuration only if the existing configuration has a version ID that matches. After the update is applied successfully, the version ID is updated, and can be retrieved using <a>DescribeDeliveryStream</a>. Use the new version ID to set <code>CurrentDeliveryStreamVersionId</code> in the next call.</p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountCreateJWTSecurity struct {
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AccountCreateJWTRequest struct {
-	Security AccountCreateJWTSecurity
-}
-
 type AccountCreateJWTResponse struct {
 	ContentType string
 	StatusCode  int

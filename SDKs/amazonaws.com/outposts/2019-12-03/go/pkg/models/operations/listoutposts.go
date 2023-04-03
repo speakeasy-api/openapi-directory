@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOutpostsQueryParams struct {
+type ListOutpostsRequest struct {
 	// Filters the results by Availability Zone (for example, <code>us-east-1a</code>).
 	AvailabilityZoneFilter []string `queryParam:"style=form,explode=true,name=AvailabilityZoneFilter"`
 	// Filters the results by AZ ID (for example, <code>use1-az1</code>).
@@ -16,21 +16,13 @@ type ListOutpostsQueryParams struct {
 	LifeCycleStatusFilter []string `queryParam:"style=form,explode=true,name=LifeCycleStatusFilter"`
 	MaxResults            *int64   `queryParam:"style=form,explode=true,name=MaxResults"`
 	NextToken             *string  `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListOutpostsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListOutpostsRequest struct {
-	QueryParams ListOutpostsQueryParams
-	Headers     ListOutpostsHeaders
+	XAmzAlgorithm         *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListOutpostsResponse struct {

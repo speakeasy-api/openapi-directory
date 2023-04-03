@@ -50,30 +50,22 @@ func (e *GETDescribeClusterDbRevisionsVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDescribeClusterDbRevisionsQueryParams struct {
+type GETDescribeClusterDbRevisionsRequest struct {
 	Action GETDescribeClusterDbRevisionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier for a cluster whose <code>ClusterDbRevisions</code> you are requesting. This parameter is case sensitive. All clusters defined for an account are returned by default.
 	ClusterIdentifier *string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	// <p>An optional parameter that specifies the starting point for returning a set of response records. When the results of a <code>DescribeClusterDbRevisions</code> request exceed the value specified in <code>MaxRecords</code>, Amazon Redshift returns a value in the <code>marker</code> field of the response. You can retrieve the next set of response records by providing the returned <code>marker</code> value in the <code>marker</code> parameter and retrying the request. </p> <p>Constraints: You can specify either the <code>ClusterIdentifier</code> parameter, or the <code>marker</code> parameter, but not both.</p>
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified MaxRecords value, a value is returned in the <code>marker</code> field of the response. You can retrieve the next set of response records by providing the returned <code>marker</code> value in the <code>marker</code> parameter and retrying the request. </p> <p>Default: 100</p> <p>Constraints: minimum 20, maximum 100.</p>
-	MaxRecords *int64                                   `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeClusterDbRevisionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeClusterDbRevisionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeClusterDbRevisionsRequest struct {
-	QueryParams GETDescribeClusterDbRevisionsQueryParams
-	Headers     GETDescribeClusterDbRevisionsHeaders
+	MaxRecords        *int64                                   `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeClusterDbRevisionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeClusterDbRevisionsResponse struct {

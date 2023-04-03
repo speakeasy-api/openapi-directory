@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResourcesInProtectionGroupQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListResourcesInProtectionGroupXAmzTargetEnum
 type ListResourcesInProtectionGroupXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListResourcesInProtectionGroupXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ListResourcesInProtectionGroupHeaders struct {
+type ListResourcesInProtectionGroupRequest struct {
+	ListResourcesInProtectionGroupRequest shared.ListResourcesInProtectionGroupRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListResourcesInProtectionGroupHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListResourcesInProtectionGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListResourcesInProtectionGroupRequest struct {
-	QueryParams ListResourcesInProtectionGroupQueryParams
-	Headers     ListResourcesInProtectionGroupHeaders
-	Request     shared.ListResourcesInProtectionGroupRequest `request:"mediaType=application/json"`
 }
 
 type ListResourcesInProtectionGroupResponse struct {

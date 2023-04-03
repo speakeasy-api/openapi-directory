@@ -8,19 +8,14 @@ import (
 )
 
 type PatchAccountHoldersIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchAccountHoldersIDPathParams struct {
-	// The unique identifier of the account holder.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchAccountHoldersIDRequest struct {
-	PathParams PatchAccountHoldersIDPathParams
-	Request    *shared.AccountHolderInput `request:"mediaType=application/json"`
-	Security   PatchAccountHoldersIDSecurity
+	AccountHolderInput *shared.AccountHolderInput `request:"mediaType=application/json"`
+	// The unique identifier of the account holder.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchAccountHoldersIDResponse struct {

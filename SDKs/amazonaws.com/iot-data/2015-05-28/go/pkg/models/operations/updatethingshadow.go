@@ -7,36 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateThingShadowPathParams struct {
-	// The name of the thing.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type UpdateThingShadowQueryParams struct {
-	// The name of the shadow.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type UpdateThingShadowHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateThingShadowRequestBody struct {
 	// The state information, in JSON format.
 	Payload string `json:"payload"`
 }
 
 type UpdateThingShadowRequest struct {
-	PathParams  UpdateThingShadowPathParams
-	QueryParams UpdateThingShadowQueryParams
-	Headers     UpdateThingShadowHeaders
-	Request     UpdateThingShadowRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateThingShadowRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the shadow.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// The name of the thing.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type UpdateThingShadowResponse struct {

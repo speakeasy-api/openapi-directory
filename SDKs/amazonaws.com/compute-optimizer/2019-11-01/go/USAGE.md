@@ -13,36 +13,31 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DeleteRecommendationPreferencesRequest{
-        Headers: operations.DeleteRecommendationPreferencesHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "ComputeOptimizerService.DeleteRecommendationPreferences",
-        },
-        Request: shared.DeleteRecommendationPreferencesRequest{
+        DeleteRecommendationPreferencesRequest: shared.DeleteRecommendationPreferencesRequest{
             RecommendationPreferenceNames: []shared.RecommendationPreferenceNameEnum{
                 "InferredWorkloadTypes",
-                "InferredWorkloadTypes",
-                "InferredWorkloadTypes",
-                "InferredWorkloadTypes",
+                "ExternalMetricsPreference",
+                "ExternalMetricsPreference",
             },
-            ResourceType: "EbsVolume",
+            ResourceType: "LambdaFunction",
             Scope: &shared.Scope{
-                Name: "Organization",
-                Value: "debitis",
+                Name: "ResourceArn",
+                Value: "corrupti",
             },
         },
+        XAmzAlgorithm: "illum",
+        XAmzContentSha256: "vel",
+        XAmzCredential: "error",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "magnam",
+        XAmzTarget: "ComputeOptimizerService.DeleteRecommendationPreferences",
     }
 
     ctx := context.Background()

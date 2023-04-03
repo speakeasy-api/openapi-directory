@@ -44,9 +44,9 @@ func (s *push) DeletePushDeviceDetails(ctx context.Context, request operations.D
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -110,9 +110,9 @@ func (s *push) GetChannelsWithPushSubscribers(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -192,16 +192,16 @@ func (s *push) GetChannelsWithPushSubscribers(ctx context.Context, request opera
 // Get the full details of a device.
 func (s *push) GetPushDeviceDetails(ctx context.Context, request operations.GetPushDeviceDetailsRequest) (*operations.GetPushDeviceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -288,9 +288,9 @@ func (s *push) GetPushSubscriptionsOnChannels(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -363,9 +363,9 @@ func (s *push) GetRegisteredPushDevices(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -445,9 +445,9 @@ func (s *push) GetRegisteredPushDevices(ctx context.Context, request operations.
 // Specific attributes of an existing registration can be updated. Only clientId, metadata and push.recipient are mutable.
 func (s *push) PatchPushDeviceDetailsForm(ctx context.Context, request operations.PatchPushDeviceDetailsFormRequest) (*operations.PatchPushDeviceDetailsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceDetailsInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -459,9 +459,9 @@ func (s *push) PatchPushDeviceDetailsForm(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -541,9 +541,9 @@ func (s *push) PatchPushDeviceDetailsForm(ctx context.Context, request operation
 // Specific attributes of an existing registration can be updated. Only clientId, metadata and push.recipient are mutable.
 func (s *push) PatchPushDeviceDetailsJSON(ctx context.Context, request operations.PatchPushDeviceDetailsJSONRequest) (*operations.PatchPushDeviceDetailsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceDetailsInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -555,9 +555,9 @@ func (s *push) PatchPushDeviceDetailsJSON(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -637,9 +637,9 @@ func (s *push) PatchPushDeviceDetailsJSON(ctx context.Context, request operation
 // Specific attributes of an existing registration can be updated. Only clientId, metadata and push.recipient are mutable.
 func (s *push) PatchPushDeviceDetailsRaw(ctx context.Context, request operations.PatchPushDeviceDetailsRawRequest) (*operations.PatchPushDeviceDetailsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -651,9 +651,9 @@ func (s *push) PatchPushDeviceDetailsRaw(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -735,7 +735,7 @@ func (s *push) PublishPushNotificationToDevicesForm(ctx context.Context, request
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push/publish"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -747,9 +747,9 @@ func (s *push) PublishPushNotificationToDevicesForm(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -808,7 +808,7 @@ func (s *push) PublishPushNotificationToDevicesJSON(ctx context.Context, request
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push/publish"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -820,9 +820,9 @@ func (s *push) PublishPushNotificationToDevicesJSON(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -881,7 +881,7 @@ func (s *push) PublishPushNotificationToDevicesRaw(ctx context.Context, request 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push/publish"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -893,9 +893,9 @@ func (s *push) PublishPushNotificationToDevicesRaw(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -952,9 +952,9 @@ func (s *push) PublishPushNotificationToDevicesRaw(ctx context.Context, request 
 // Device registrations can be upserted (the existing registration is replaced entirely) with a PUT operation. Only clientId, metadata and push.recipient are mutable.
 func (s *push) PutPushDeviceDetailsForm(ctx context.Context, request operations.PutPushDeviceDetailsFormRequest) (*operations.PutPushDeviceDetailsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceDetailsInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -966,9 +966,9 @@ func (s *push) PutPushDeviceDetailsForm(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1048,9 +1048,9 @@ func (s *push) PutPushDeviceDetailsForm(ctx context.Context, request operations.
 // Device registrations can be upserted (the existing registration is replaced entirely) with a PUT operation. Only clientId, metadata and push.recipient are mutable.
 func (s *push) PutPushDeviceDetailsJSON(ctx context.Context, request operations.PutPushDeviceDetailsJSONRequest) (*operations.PutPushDeviceDetailsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceDetailsInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1062,9 +1062,9 @@ func (s *push) PutPushDeviceDetailsJSON(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1144,9 +1144,9 @@ func (s *push) PutPushDeviceDetailsJSON(ctx context.Context, request operations.
 // Device registrations can be upserted (the existing registration is replaced entirely) with a PUT operation. Only clientId, metadata and push.recipient are mutable.
 func (s *push) PutPushDeviceDetailsRaw(ctx context.Context, request operations.PutPushDeviceDetailsRawRequest) (*operations.PutPushDeviceDetailsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1158,9 +1158,9 @@ func (s *push) PutPushDeviceDetailsRaw(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1242,7 +1242,7 @@ func (s *push) RegisterPushDeviceJSON(ctx context.Context, request operations.Re
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push/deviceRegistrations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceDetailsInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1254,9 +1254,9 @@ func (s *push) RegisterPushDeviceJSON(ctx context.Context, request operations.Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1338,7 +1338,7 @@ func (s *push) RegisterPushDeviceRaw(ctx context.Context, request operations.Reg
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/push/deviceRegistrations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1350,9 +1350,9 @@ func (s *push) RegisterPushDeviceRaw(ctx context.Context, request operations.Reg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1439,9 +1439,9 @@ func (s *push) UnregisterAllPushDevices(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1498,16 +1498,16 @@ func (s *push) UnregisterAllPushDevices(ctx context.Context, request operations.
 // Unregisters a single device by its device ID. All its subscriptions for receiving push notifications through channels will also be deleted.
 func (s *push) UnregisterPushDevice(ctx context.Context, request operations.UnregisterPushDeviceRequest) (*operations.UnregisterPushDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1564,16 +1564,16 @@ func (s *push) UnregisterPushDevice(ctx context.Context, request operations.Unre
 // Gets an updated device details object.
 func (s *push) UpdatePushDeviceDetails(ctx context.Context, request operations.UpdatePushDeviceDetailsRequest) (*operations.UpdatePushDeviceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}/resetUpdateToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/push/deviceRegistrations/{device_id}/resetUpdateToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

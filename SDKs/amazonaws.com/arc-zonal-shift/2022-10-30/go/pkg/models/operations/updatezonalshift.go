@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateZonalShiftPathParams struct {
-	// The identifier of a zonal shift.
-	ZonalShiftID string `pathParam:"style=simple,explode=false,name=zonalShiftId"`
-}
-
-type UpdateZonalShiftHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateZonalShiftRequestBody struct {
 	// A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is maintained. A new comment overwrites any existing comment string.
 	Comment *string `json:"comment,omitempty"`
@@ -30,9 +15,16 @@ type UpdateZonalShiftRequestBody struct {
 }
 
 type UpdateZonalShiftRequest struct {
-	PathParams UpdateZonalShiftPathParams
-	Headers    UpdateZonalShiftHeaders
-	Request    UpdateZonalShiftRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateZonalShiftRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of a zonal shift.
+	ZonalShiftID string `pathParam:"style=simple,explode=false,name=zonalShiftId"`
 }
 
 type UpdateZonalShiftResponse struct {

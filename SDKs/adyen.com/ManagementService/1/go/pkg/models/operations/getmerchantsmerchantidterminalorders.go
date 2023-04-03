@@ -8,29 +8,20 @@ import (
 )
 
 type GetMerchantsMerchantIDTerminalOrdersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetMerchantsMerchantIDTerminalOrdersPathParams struct {
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type GetMerchantsMerchantIDTerminalOrdersQueryParams struct {
+type GetMerchantsMerchantIDTerminalOrdersRequest struct {
 	// Your purchase order number.
 	CustomerOrderReference *string `queryParam:"style=form,explode=true,name=customerOrderReference"`
 	// The number of orders to return.
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	Limit      *int   `queryParam:"style=form,explode=true,name=limit"`
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// The number of orders to skip.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetMerchantsMerchantIDTerminalOrdersRequest struct {
-	PathParams  GetMerchantsMerchantIDTerminalOrdersPathParams
-	QueryParams GetMerchantsMerchantIDTerminalOrdersQueryParams
-	Security    GetMerchantsMerchantIDTerminalOrdersSecurity
 }
 
 type GetMerchantsMerchantIDTerminalOrdersResponse struct {

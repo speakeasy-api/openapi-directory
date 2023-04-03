@@ -7,20 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartInstanceOnboardingJobPathParams struct {
-	ConnectInstanceID string `pathParam:"style=simple,explode=false,name=connectInstanceId"`
-}
-
-type StartInstanceOnboardingJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartInstanceOnboardingJobRequestBodyEncryptionConfig - Encryption config for Connect Instance. Note that sensitive data will always be encrypted. If disabled, service will perform encryption with its own key. If enabled, a KMS key id needs to be provided and KMS charges will apply. KMS is only type supported
 type StartInstanceOnboardingJobRequestBodyEncryptionConfig struct {
 	// Boolean to indicate if custom encryption has been enabled.
@@ -37,9 +23,15 @@ type StartInstanceOnboardingJobRequestBody struct {
 }
 
 type StartInstanceOnboardingJobRequest struct {
-	PathParams StartInstanceOnboardingJobPathParams
-	Headers    StartInstanceOnboardingJobHeaders
-	Request    StartInstanceOnboardingJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartInstanceOnboardingJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	ConnectInstanceID string                                `pathParam:"style=simple,explode=false,name=connectInstanceId"`
 }
 
 type StartInstanceOnboardingJobResponse struct {

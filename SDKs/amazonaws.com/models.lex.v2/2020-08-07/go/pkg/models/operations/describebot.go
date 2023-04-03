@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBotPathParams struct {
-	// The unique identifier of the bot to describe.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type DescribeBotHeaders struct {
+type DescribeBotRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeBotHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBotRequest struct {
-	PathParams DescribeBotPathParams
-	Headers    DescribeBotHeaders
+	// The unique identifier of the bot to describe.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 }
 
 type DescribeBotResponse struct {

@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutStudioMembersPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type PutStudioMembersHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
-	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutStudioMembersRequestBody struct {
 	// The ID of the identity store.
 	IdentityStoreID string `json:"identityStoreId"`
@@ -32,9 +15,18 @@ type PutStudioMembersRequestBody struct {
 }
 
 type PutStudioMembersRequest struct {
-	PathParams PutStudioMembersPathParams
-	Headers    PutStudioMembersHeaders
-	Request    PutStudioMembersRequestBody `request:"mediaType=application/json"`
+	RequestBody   PutStudioMembersRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
+	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type PutStudioMembersResponse struct {

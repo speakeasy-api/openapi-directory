@@ -36,30 +36,18 @@ func (e *GetResourceCollectionResourceCollectionTypeEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GetResourceCollectionPathParams struct {
-	//  The type of Amazon Web Services resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
-	ResourceCollectionType GetResourceCollectionResourceCollectionTypeEnum `pathParam:"style=simple,explode=false,name=ResourceCollectionType"`
-}
-
-type GetResourceCollectionQueryParams struct {
+type GetResourceCollectionRequest struct {
 	// The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetResourceCollectionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetResourceCollectionRequest struct {
-	PathParams  GetResourceCollectionPathParams
-	QueryParams GetResourceCollectionQueryParams
-	Headers     GetResourceCollectionHeaders
+	//  The type of Amazon Web Services resource collections to return. The one valid value is <code>CLOUD_FORMATION</code> for Amazon Web Services CloudFormation stacks.
+	ResourceCollectionType GetResourceCollectionResourceCollectionTypeEnum `pathParam:"style=simple,explode=false,name=ResourceCollectionType"`
+	XAmzAlgorithm          *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetResourceCollectionResponse struct {

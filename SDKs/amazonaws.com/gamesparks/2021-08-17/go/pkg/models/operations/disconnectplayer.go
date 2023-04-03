@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisconnectPlayerPathParams struct {
+type DisconnectPlayerRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
 	// The unique identifier representing a player.
 	PlayerID string `pathParam:"style=simple,explode=false,name=PlayerId"`
 	// The name of the stage.
-	StageName string `pathParam:"style=simple,explode=false,name=StageName"`
-}
-
-type DisconnectPlayerHeaders struct {
+	StageName         string  `pathParam:"style=simple,explode=false,name=StageName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type DisconnectPlayerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisconnectPlayerRequest struct {
-	PathParams DisconnectPlayerPathParams
-	Headers    DisconnectPlayerHeaders
 }
 
 type DisconnectPlayerResponse struct {

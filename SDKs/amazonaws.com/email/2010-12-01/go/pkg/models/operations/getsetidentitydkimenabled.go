@@ -50,28 +50,20 @@ func (e *GETSetIdentityDkimEnabledVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETSetIdentityDkimEnabledQueryParams struct {
+type GETSetIdentityDkimEnabledRequest struct {
 	Action GETSetIdentityDkimEnabledActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Sets whether DKIM signing is enabled for an identity. Set to <code>true</code> to enable DKIM signing for this identity; <code>false</code> to disable it.
 	DkimEnabled bool `queryParam:"style=form,explode=true,name=DkimEnabled"`
 	// The identity for which DKIM signing should be enabled or disabled.
-	Identity string                               `queryParam:"style=form,explode=true,name=Identity"`
-	Version  GETSetIdentityDkimEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetIdentityDkimEnabledHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetIdentityDkimEnabledRequest struct {
-	QueryParams GETSetIdentityDkimEnabledQueryParams
-	Headers     GETSetIdentityDkimEnabledHeaders
+	Identity          string                               `queryParam:"style=form,explode=true,name=Identity"`
+	Version           GETSetIdentityDkimEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetIdentityDkimEnabledResponse struct {

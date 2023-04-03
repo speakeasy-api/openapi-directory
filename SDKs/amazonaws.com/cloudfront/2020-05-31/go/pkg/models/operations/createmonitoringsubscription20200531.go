@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateMonitoringSubscription20200531PathParams struct {
-	// The ID of the distribution that you are enabling metrics for.
-	DistributionID string `pathParam:"style=simple,explode=false,name=DistributionId"`
-}
-
-type CreateMonitoringSubscription20200531Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateMonitoringSubscription20200531RequestBodyMonitoringSubscription - A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
 type CreateMonitoringSubscription20200531RequestBodyMonitoringSubscription struct {
 	RealtimeMetricsSubscriptionConfig *shared.RealtimeMetricsSubscriptionConfig
@@ -33,9 +18,16 @@ type CreateMonitoringSubscription20200531RequestBody struct {
 }
 
 type CreateMonitoringSubscription20200531Request struct {
-	PathParams CreateMonitoringSubscription20200531PathParams
-	Headers    CreateMonitoringSubscription20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The ID of the distribution that you are enabling metrics for.
+	DistributionID    string  `pathParam:"style=simple,explode=false,name=DistributionId"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateMonitoringSubscription20200531Response struct {

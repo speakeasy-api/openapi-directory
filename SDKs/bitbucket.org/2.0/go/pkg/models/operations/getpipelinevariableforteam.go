@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetPipelineVariableForTeamPathParams struct {
+type GetPipelineVariableForTeamRequest struct {
 	// The account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
 	// The UUID of the variable to retrieve.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
-}
-
-type GetPipelineVariableForTeamRequest struct {
-	PathParams GetPipelineVariableForTeamPathParams
 }
 
 type GetPipelineVariableForTeamResponse struct {

@@ -6,23 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateKeyGroup20200531PathParams struct {
-	// The identifier of the key group that you are updating.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateKeyGroup20200531Headers struct {
-	// The version of the key group that you are updating. The version is the key group's <code>ETag</code> value.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateKeyGroup20200531RequestBodyKeyGroupConfig - <p>A key group configuration.</p> <p>A key group contains a list of public keys that you can use with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">CloudFront signed URLs and signed cookies</a>.</p>
 type UpdateKeyGroup20200531RequestBodyKeyGroupConfig struct {
 	Comment *string
@@ -36,9 +19,18 @@ type UpdateKeyGroup20200531RequestBody struct {
 }
 
 type UpdateKeyGroup20200531Request struct {
-	PathParams UpdateKeyGroup20200531PathParams
-	Headers    UpdateKeyGroup20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The identifier of the key group that you are updating.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The version of the key group that you are updating. The version is the key group's <code>ETag</code> value.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateKeyGroup20200531Response struct {

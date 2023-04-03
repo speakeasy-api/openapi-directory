@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDevicesQueryParams struct {
-	// The type of the device, such as "button".
-	DeviceType *string `queryParam:"style=form,explode=true,name=deviceType"`
-	// The maximum number of results to return per request. If not set, a default value of
-	//  100 is used.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListDevicesHeaders struct {
+type ListDevicesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,11 +15,13 @@ type ListDevicesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDevicesRequest struct {
-	QueryParams ListDevicesQueryParams
-	Headers     ListDevicesHeaders
+	// The type of the device, such as "button".
+	DeviceType *string `queryParam:"style=form,explode=true,name=deviceType"`
+	// The maximum number of results to return per request. If not set, a default value of
+	//  100 is used.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListDevicesResponse struct {

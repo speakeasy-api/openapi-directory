@@ -43,7 +43,6 @@ pkg/models/shared/collection.go
 pkg/models/shared/badrequestresponse.go
 pkg/models/shared/collectionssort.go
 pkg/models/shared/sortdirectionenum.go
-pkg/models/shared/security.go
 pkg/models/shared/getcollectionresponse.go
 pkg/models/shared/createcommentresponse.go
 pkg/models/shared/unifiedid.go
@@ -67,4 +66,5 @@ pkg/models/shared/updateticketresponse.go
 pkg/models/shared/getcollectionusersresponse.go
 pkg/models/shared/collectionuser.go
 pkg/models/shared/getcollectionuserresponse.go
+pkg/models/shared/security.go
 USAGE.md

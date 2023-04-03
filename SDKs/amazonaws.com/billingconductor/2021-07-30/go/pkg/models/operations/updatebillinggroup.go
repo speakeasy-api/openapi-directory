@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateBillingGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateBillingGroupRequestBodyComputationPreference -  The preferences and settings that will be used to compute the Amazon Web Services charges for a billing group.
 type UpdateBillingGroupRequestBodyComputationPreference struct {
 	PricingPlanArn *string `json:"PricingPlanArn,omitempty"`
@@ -62,8 +52,14 @@ type UpdateBillingGroupRequestBody struct {
 }
 
 type UpdateBillingGroupRequest struct {
-	Headers UpdateBillingGroupHeaders
-	Request UpdateBillingGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateBillingGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateBillingGroupResponse struct {

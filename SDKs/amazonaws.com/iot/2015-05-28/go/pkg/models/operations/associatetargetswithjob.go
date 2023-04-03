@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateTargetsWithJobPathParams struct {
-	// The unique identifier you assigned to this job when it was created.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type AssociateTargetsWithJobQueryParams struct {
-	// <p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>
-	NamespaceID *string `queryParam:"style=form,explode=true,name=namespaceId"`
-}
-
-type AssociateTargetsWithJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AssociateTargetsWithJobRequestBody struct {
 	// An optional comment string describing why the job was associated with the targets.
 	Comment *string `json:"comment,omitempty"`
@@ -35,10 +15,18 @@ type AssociateTargetsWithJobRequestBody struct {
 }
 
 type AssociateTargetsWithJobRequest struct {
-	PathParams  AssociateTargetsWithJobPathParams
-	QueryParams AssociateTargetsWithJobQueryParams
-	Headers     AssociateTargetsWithJobHeaders
-	Request     AssociateTargetsWithJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       AssociateTargetsWithJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier you assigned to this job when it was created.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// <p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>
+	NamespaceID *string `queryParam:"style=form,explode=true,name=namespaceId"`
 }
 
 type AssociateTargetsWithJobResponse struct {

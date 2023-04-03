@@ -50,30 +50,22 @@ func (e *GETUnassignPrivateIPAddressesVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETUnassignPrivateIPAddressesQueryParams struct {
+type GETUnassignPrivateIPAddressesRequest struct {
 	Action GETUnassignPrivateIPAddressesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IPv4 prefixes to unassign from the network interface.
 	Ipv4Prefix []string `queryParam:"style=form,explode=true,name=Ipv4Prefix"`
 	// The ID of the network interface.
 	NetworkInterfaceID string `queryParam:"style=form,explode=true,name=NetworkInterfaceId"`
 	// The secondary private IP addresses to unassign from the network interface. You can specify this option multiple times to unassign more than one IP address.
-	PrivateIPAddress []string                                 `queryParam:"style=form,explode=true,name=PrivateIpAddress"`
-	Version          GETUnassignPrivateIPAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUnassignPrivateIPAddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUnassignPrivateIPAddressesRequest struct {
-	QueryParams GETUnassignPrivateIPAddressesQueryParams
-	Headers     GETUnassignPrivateIPAddressesHeaders
+	PrivateIPAddress  []string                                 `queryParam:"style=form,explode=true,name=PrivateIpAddress"`
+	Version           GETUnassignPrivateIPAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUnassignPrivateIPAddressesResponse struct {

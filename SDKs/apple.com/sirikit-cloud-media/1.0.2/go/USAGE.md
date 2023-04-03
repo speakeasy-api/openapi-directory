@@ -14,15 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.ExtensionConfigurationRequest{
-        Headers: operations.ExtensionConfigurationHeaders{
-            AcceptLanguage: "corrupti",
-            CacheControl: "provident",
-            IfNoneMatch: "distinctio",
-            RequestTimeout: 8442.66,
-            UserAgent: "unde",
-            XApplecloudextensionRetryCount: 8579.46,
-            XApplecloudextensionSessionID: "corrupti",
-        },
+        AcceptLanguage: "corrupti",
+        CacheControl: "provident",
+        IfNoneMatch: "distinctio",
+        RequestTimeout: 8442.66,
+        UserAgent: "unde",
+        XApplecloudextensionRetryCount: 8579.46,
+        XApplecloudextensionSessionID: "corrupti",
     }
 
     ctx := context.Background()

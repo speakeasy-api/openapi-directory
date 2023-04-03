@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteKeyGroup20200531PathParams struct {
+type DeleteKeyGroup20200531Request struct {
 	// The identifier of the key group that you are deleting. To get the identifier, use <code>ListKeyGroups</code>.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteKeyGroup20200531Headers struct {
 	// The version of the key group that you are deleting. The version is the key group's <code>ETag</code> value. To get the <code>ETag</code>, use <code>GetKeyGroup</code> or <code>GetKeyGroupConfig</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteKeyGroup20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteKeyGroup20200531Request struct {
-	PathParams DeleteKeyGroup20200531PathParams
-	Headers    DeleteKeyGroup20200531Headers
 }
 
 type DeleteKeyGroup20200531Response struct {

@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBackendStoragePathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type CreateBackendStorageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateBackendStorageRequestBodyResourceConfigPermissions - The authorization configuration for the storage S3 bucket.
 type CreateBackendStorageRequestBodyResourceConfigPermissions struct {
 	Authenticated   []shared.AuthenticatedElementEnum   `json:"Authenticated"`
@@ -68,9 +53,16 @@ type CreateBackendStorageRequestBody struct {
 }
 
 type CreateBackendStorageRequest struct {
-	PathParams CreateBackendStoragePathParams
-	Headers    CreateBackendStorageHeaders
-	Request    CreateBackendStorageRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBackendStorageRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type CreateBackendStorageResponse struct {

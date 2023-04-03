@@ -34,7 +34,14 @@ func (e *GetAssetPropertyAggregatesTimeOrderingEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetAssetPropertyAggregatesQueryParams struct {
+type GetAssetPropertyAggregatesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The data aggregating function.
 	AggregateTypes []shared.AggregateTypeEnum `queryParam:"style=form,explode=true,name=aggregateTypes"`
 	// The ID of the asset.
@@ -57,21 +64,6 @@ type GetAssetPropertyAggregatesQueryParams struct {
 	StartDate time.Time `queryParam:"style=form,explode=true,name=startDate"`
 	// <p>The chronological sorting order of the requested information.</p> <p>Default: <code>ASCENDING</code> </p>
 	TimeOrdering *GetAssetPropertyAggregatesTimeOrderingEnum `queryParam:"style=form,explode=true,name=timeOrdering"`
-}
-
-type GetAssetPropertyAggregatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAssetPropertyAggregatesRequest struct {
-	QueryParams GetAssetPropertyAggregatesQueryParams
-	Headers     GetAssetPropertyAggregatesHeaders
 }
 
 type GetAssetPropertyAggregatesResponse struct {

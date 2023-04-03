@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type UntagResourcePathParams struct {
-	// The resource ARN for the tag.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resource-arn"`
-}
-
-type UntagResourceQueryParams struct {
-	// The Tag keys to delete
-	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
-}
-
-type UntagResourceHeaders struct {
+type UntagResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type UntagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UntagResourceRequest struct {
-	PathParams  UntagResourcePathParams
-	QueryParams UntagResourceQueryParams
-	Headers     UntagResourceHeaders
+	// The resource ARN for the tag.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resource-arn"`
+	// The Tag keys to delete
+	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
 }
 
 type UntagResourceResponse struct {

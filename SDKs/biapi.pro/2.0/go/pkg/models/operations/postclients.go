@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostClientsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostClientsRequestBody struct {
 	// custom config about the client
 	Config *string `multipartForm:"name=config"`
@@ -23,8 +19,8 @@ type PostClientsRequestBody struct {
 }
 
 type PostClientsRequest struct {
-	QueryParams PostClientsQueryParams
-	Request     *PostClientsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostClientsRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                 `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PostClientsResponse struct {

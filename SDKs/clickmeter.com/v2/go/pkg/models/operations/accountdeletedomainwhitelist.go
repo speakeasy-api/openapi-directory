@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountDeleteDomainWhitelistPathParams struct {
+type AccountDeleteDomainWhitelistRequest struct {
 	// The id of the domain to delete
 	WhitelistID string `pathParam:"style=simple,explode=false,name=whitelistId"`
-}
-
-type AccountDeleteDomainWhitelistRequest struct {
-	PathParams AccountDeleteDomainWhitelistPathParams
 }
 
 type AccountDeleteDomainWhitelistResponse struct {

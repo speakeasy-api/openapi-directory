@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeEffectivePatchesForPatchBaselineQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum
 type DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum) UnmarshalJSON(d
 	}
 }
 
-type DescribeEffectivePatchesForPatchBaselineHeaders struct {
+type DescribeEffectivePatchesForPatchBaselineRequest struct {
+	DescribeEffectivePatchesForPatchBaselineRequest shared.DescribeEffectivePatchesForPatchBaselineRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                                `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeEffectivePatchesForPatchBaselineHeaders struct {
 	XAmzSignature     *string                                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeEffectivePatchesForPatchBaselineRequest struct {
-	QueryParams DescribeEffectivePatchesForPatchBaselineQueryParams
-	Headers     DescribeEffectivePatchesForPatchBaselineHeaders
-	Request     shared.DescribeEffectivePatchesForPatchBaselineRequest `request:"mediaType=application/json"`
 }
 
 type DescribeEffectivePatchesForPatchBaselineResponse struct {

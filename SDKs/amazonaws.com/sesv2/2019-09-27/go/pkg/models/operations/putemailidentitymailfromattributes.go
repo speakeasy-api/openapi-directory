@@ -8,21 +8,6 @@ import (
 	"net/http"
 )
 
-type PutEmailIdentityMailFromAttributesPathParams struct {
-	// The verified email identity.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-}
-
-type PutEmailIdentityMailFromAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum - <p>The action to take if the required MX record can't be found when you send an email. When you set this value to <code>UseDefaultValue</code>, the mail is sent using <i>amazonses.com</i> as the MAIL FROM domain. When you set this value to <code>RejectMessage</code>, the Amazon SES API v2 returns a <code>MailFromDomainNotVerified</code> error, and doesn't attempt to deliver the email.</p> <p>These behaviors are taken when the custom MAIL FROM domain configuration is in the <code>Pending</code>, <code>Failed</code>, and <code>TemporaryFailure</code> states.</p>
 type PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum string
 
@@ -55,9 +40,16 @@ type PutEmailIdentityMailFromAttributesRequestBody struct {
 }
 
 type PutEmailIdentityMailFromAttributesRequest struct {
-	PathParams PutEmailIdentityMailFromAttributesPathParams
-	Headers    PutEmailIdentityMailFromAttributesHeaders
-	Request    PutEmailIdentityMailFromAttributesRequestBody `request:"mediaType=application/json"`
+	// The verified email identity.
+	EmailIdentity     string                                        `pathParam:"style=simple,explode=false,name=EmailIdentity"`
+	RequestBody       PutEmailIdentityMailFromAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutEmailIdentityMailFromAttributesResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type PodocSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type PodocRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type PodocRequestBody struct {
 	Format PodocRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type PodocRequest struct {
-	// Request format
-	Request  *PodocRequestBody `request:"mediaType=application/json"`
-	Security PodocSecurity
 }
 
 type Podoc504ApplicationJSONErrorEnum string

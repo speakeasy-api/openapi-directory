@@ -74,7 +74,7 @@ func (e *GETEnableLoggingVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableLoggingQueryParams struct {
+type GETEnableLoggingRequest struct {
 	Action GETEnableLoggingActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of an existing S3 bucket where the log files are to be stored.</p> <p>Constraints:</p> <ul> <li> <p>Must be in the same region as the cluster</p> </li> <li> <p>The cluster must have read bucket and put object permissions</p> </li> </ul>
 	BucketName *string `queryParam:"style=form,explode=true,name=BucketName"`
@@ -85,23 +85,15 @@ type GETEnableLoggingQueryParams struct {
 	// The collection of exported log types. Possible values are <code>connectionlog</code>, <code>useractivitylog</code>, and <code>userlog</code>.
 	LogExports []string `queryParam:"style=form,explode=true,name=LogExports"`
 	// <p>The prefix applied to the log file names.</p> <p>Constraints:</p> <ul> <li> <p>Cannot exceed 512 characters</p> </li> <li> <p>Cannot contain spaces( ), double quotes ("), single quotes ('), a backslash (\), or control characters. The hexadecimal codes for invalid characters are: </p> <ul> <li> <p>x00 to x20</p> </li> <li> <p>x22</p> </li> <li> <p>x27</p> </li> <li> <p>x5c</p> </li> <li> <p>x7f or larger</p> </li> </ul> </li> </ul>
-	S3KeyPrefix *string                     `queryParam:"style=form,explode=true,name=S3KeyPrefix"`
-	Version     GETEnableLoggingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableLoggingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableLoggingRequest struct {
-	QueryParams GETEnableLoggingQueryParams
-	Headers     GETEnableLoggingHeaders
+	S3KeyPrefix       *string                     `queryParam:"style=form,explode=true,name=S3KeyPrefix"`
+	Version           GETEnableLoggingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableLoggingResponse struct {

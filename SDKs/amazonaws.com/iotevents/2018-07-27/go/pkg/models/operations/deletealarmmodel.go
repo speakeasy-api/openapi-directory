@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAlarmModelPathParams struct {
-	// The name of the alarm model.
-	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
-}
-
-type DeleteAlarmModelHeaders struct {
+type DeleteAlarmModelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteAlarmModelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAlarmModelRequest struct {
-	PathParams DeleteAlarmModelPathParams
-	Headers    DeleteAlarmModelHeaders
+	// The name of the alarm model.
+	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
 }
 
 type DeleteAlarmModelResponse struct {

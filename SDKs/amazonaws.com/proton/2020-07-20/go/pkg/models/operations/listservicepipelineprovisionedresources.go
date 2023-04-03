@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServicePipelineProvisionedResourcesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListServicePipelineProvisionedResourcesXAmzTargetEnum
 type ListServicePipelineProvisionedResourcesXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *ListServicePipelineProvisionedResourcesXAmzTargetEnum) UnmarshalJSON(da
 	}
 }
 
-type ListServicePipelineProvisionedResourcesHeaders struct {
-	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListServicePipelineProvisionedResourcesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListServicePipelineProvisionedResourcesRequest struct {
-	QueryParams ListServicePipelineProvisionedResourcesQueryParams
-	Headers     ListServicePipelineProvisionedResourcesHeaders
-	Request     shared.ListServicePipelineProvisionedResourcesInput `request:"mediaType=application/json"`
+	ListServicePipelineProvisionedResourcesInput shared.ListServicePipelineProvisionedResourcesInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                                *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                            *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                               *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                     *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                            *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                                *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                            *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                                   ListServicePipelineProvisionedResourcesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListServicePipelineProvisionedResourcesResponse struct {

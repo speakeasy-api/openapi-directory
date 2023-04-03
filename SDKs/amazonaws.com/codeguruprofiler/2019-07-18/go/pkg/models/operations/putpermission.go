@@ -9,6 +9,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type PutPermissionRequestBody struct {
+	//  A list ARNs for the roles and users you want to grant access to the profiling group. Wildcards are not are supported in the ARNs.
+	Principals []string `json:"principals"`
+	//  A universally unique identifier (UUID) for the revision of the policy you are adding to the profiling group. Do not specify this when you add permissions to a profiling group for the first time. If a policy already exists on the profiling group, you must specify the <code>revisionId</code>.
+	RevisionID *string `json:"revisionId,omitempty"`
+}
+
 // PutPermissionActionGroupEnum -  Specifies an action group that contains permissions to add to a profiling group resource. One action group is supported, <code>agentPermissions</code>, which grants permission to perform actions required by the profiling agent, <code>ConfigureAgent</code> and <code>PostAgentProfile</code> permissions.
 type PutPermissionActionGroupEnum string
 
@@ -30,34 +37,19 @@ func (e *PutPermissionActionGroupEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutPermissionPathParams struct {
+type PutPermissionRequest struct {
+	RequestBody       PutPermissionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  Specifies an action group that contains permissions to add to a profiling group resource. One action group is supported, <code>agentPermissions</code>, which grants permission to perform actions required by the profiling agent, <code>ConfigureAgent</code> and <code>PostAgentProfile</code> permissions.
 	ActionGroup PutPermissionActionGroupEnum `pathParam:"style=simple,explode=false,name=actionGroup"`
 	// The name of the profiling group to grant access to.
 	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type PutPermissionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type PutPermissionRequestBody struct {
-	//  A list ARNs for the roles and users you want to grant access to the profiling group. Wildcards are not are supported in the ARNs.
-	Principals []string `json:"principals"`
-	//  A universally unique identifier (UUID) for the revision of the policy you are adding to the profiling group. Do not specify this when you add permissions to a profiling group for the first time. If a policy already exists on the profiling group, you must specify the <code>revisionId</code>.
-	RevisionID *string `json:"revisionId,omitempty"`
-}
-
-type PutPermissionRequest struct {
-	PathParams PutPermissionPathParams
-	Headers    PutPermissionHeaders
-	Request    PutPermissionRequestBody `request:"mediaType=application/json"`
 }
 
 type PutPermissionResponse struct {

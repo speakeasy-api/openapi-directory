@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCostCategoryDefinitionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListCostCategoryDefinitionsXAmzTargetEnum
 type ListCostCategoryDefinitionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListCostCategoryDefinitionsXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListCostCategoryDefinitionsHeaders struct {
+type ListCostCategoryDefinitionsRequest struct {
+	ListCostCategoryDefinitionsRequest shared.ListCostCategoryDefinitionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListCostCategoryDefinitionsHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListCostCategoryDefinitionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListCostCategoryDefinitionsRequest struct {
-	QueryParams ListCostCategoryDefinitionsQueryParams
-	Headers     ListCostCategoryDefinitionsHeaders
-	Request     shared.ListCostCategoryDefinitionsRequest `request:"mediaType=application/json"`
 }
 
 type ListCostCategoryDefinitionsResponse struct {

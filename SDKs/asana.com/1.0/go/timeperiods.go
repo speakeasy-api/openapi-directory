@@ -37,14 +37,14 @@ func newTimePeriods(defaultClient, securityClient HTTPClient, serverURL, languag
 // Returns the full record for a single time period.
 func (s *timePeriods) GetTimePeriod(ctx context.Context, request operations.GetTimePeriodRequest) (*operations.GetTimePeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/time_periods/{time_period_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/time_periods/{time_period_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -111,7 +111,7 @@ func (s *timePeriods) GetTimePeriods(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

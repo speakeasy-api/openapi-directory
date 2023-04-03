@@ -96,7 +96,7 @@ func (e *AggregatedGetStatisticsListTimeFrameEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type AggregatedGetStatisticsListQueryParams struct {
+type AggregatedGetStatisticsListRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
@@ -105,10 +105,6 @@ type AggregatedGetStatisticsListQueryParams struct {
 	TimeFrame AggregatedGetStatisticsListTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type AggregatedGetStatisticsListRequest struct {
-	QueryParams AggregatedGetStatisticsListQueryParams
 }
 
 type AggregatedGetStatisticsListResponse struct {

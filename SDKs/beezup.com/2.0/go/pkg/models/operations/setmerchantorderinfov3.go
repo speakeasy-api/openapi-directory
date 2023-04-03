@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetMerchantOrderInfoV3PathParams struct {
+type SetMerchantOrderInfoV3Request struct {
 	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
 	// The marketplace technical code
-	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type SetMerchantOrderInfoV3QueryParams struct {
+	MarketplaceTechnicalCode    string                             `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
+	SetMerchantOrderInfoRequest shared.SetMerchantOrderInfoRequest `request:"mediaType=application/json"`
 	// If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
 	TestMode *bool `queryParam:"style=form,explode=true,name=testMode"`
-}
-
-type SetMerchantOrderInfoV3Request struct {
-	PathParams  SetMerchantOrderInfoV3PathParams
-	QueryParams SetMerchantOrderInfoV3QueryParams
-	Request     shared.SetMerchantOrderInfoRequest `request:"mediaType=application/json"`
 }
 
 type SetMerchantOrderInfoV3Response struct {

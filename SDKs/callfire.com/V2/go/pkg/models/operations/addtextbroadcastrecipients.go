@@ -8,27 +8,19 @@ import (
 )
 
 type AddTextBroadcastRecipientsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type AddTextBroadcastRecipientsPathParams struct {
-	// An id of a text broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AddTextBroadcastRecipientsQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
-	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type AddTextBroadcastRecipientsRequest struct {
-	PathParams  AddTextBroadcastRecipientsPathParams
-	QueryParams AddTextBroadcastRecipientsQueryParams
 	// A list of the TextRecipient objects
-	Request  []shared.TextRecipient `request:"mediaType=application/json"`
-	Security AddTextBroadcastRecipientsSecurity
+	RequestBody []shared.TextRecipient `request:"mediaType=application/json"`
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// An id of a text broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
 }
 
 type AddTextBroadcastRecipientsResponse struct {

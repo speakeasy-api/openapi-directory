@@ -50,7 +50,7 @@ func (e *GETDeleteDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDBInstanceQueryParams struct {
+type GETDeleteDBInstanceRequest struct {
 	Action GETDeleteDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB instance identifier for the DB instance to be deleted. This parameter isn't case-sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match the name of an existing DB instance.</p> </li> </ul>
 	DBInstanceIdentifier string `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
@@ -59,21 +59,13 @@ type GETDeleteDBInstanceQueryParams struct {
 	// <p> Determines whether a final DB snapshot is created before the DB instance is deleted. If <code>true</code> is specified, no DBSnapshot is created. If <code>false</code> is specified, a DB snapshot is created before the DB instance is deleted.</p> <p>Note that when a DB instance is in a failure state and has a status of 'failed', 'incompatible-restore', or 'incompatible-network', it can only be deleted when the SkipFinalSnapshot parameter is set to "true".</p> <p>Specify <code>true</code> when deleting a Read Replica.</p> <note> <p>The FinalDBSnapshotIdentifier parameter must be specified if SkipFinalSnapshot is <code>false</code>.</p> </note> <p>Default: <code>false</code> </p>
 	SkipFinalSnapshot *bool                          `queryParam:"style=form,explode=true,name=SkipFinalSnapshot"`
 	Version           GETDeleteDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBInstanceRequest struct {
-	QueryParams GETDeleteDBInstanceQueryParams
-	Headers     GETDeleteDBInstanceHeaders
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBInstanceResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlansIDPathParams struct {
-	// The identifier of the Plan to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPlansIDQueryParams struct {
+type GetPlansIDRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -37,6 +32,8 @@ type GetPlansIDQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the Plan to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -53,11 +50,6 @@ type GetPlansIDQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetPlansIDRequest struct {
-	PathParams  GetPlansIDPathParams
-	QueryParams GetPlansIDQueryParams
 }
 
 type GetPlansIDResponse struct {

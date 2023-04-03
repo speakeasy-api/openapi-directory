@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsGetDownloadURISecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BuildsGetDownloadURIDownloadTypeEnum - The download type
@@ -46,7 +45,7 @@ func (e *BuildsGetDownloadURIDownloadTypeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type BuildsGetDownloadURIPathParams struct {
+type BuildsGetDownloadURIRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The build ID
@@ -55,11 +54,6 @@ type BuildsGetDownloadURIPathParams struct {
 	DownloadType BuildsGetDownloadURIDownloadTypeEnum `pathParam:"style=simple,explode=false,name=download_type"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type BuildsGetDownloadURIRequest struct {
-	PathParams BuildsGetDownloadURIPathParams
-	Security   BuildsGetDownloadURISecurity
 }
 
 // BuildsGetDownloadURI200ApplicationJSON - A download reference

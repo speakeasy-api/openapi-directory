@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamespaceDataByTimespanPathParams struct {
+type GetNamespaceDataByTimespanRequest struct {
 	// Type of data to fetch
 	Dataview shared.DataviewTypeEnum `pathParam:"style=simple,explode=false,name=dataview"`
 	// Namespace to fetch data for
@@ -18,10 +18,6 @@ type GetNamespaceDataByTimespanPathParams struct {
 	Timespantype shared.TimespanTypeEnum `pathParam:"style=simple,explode=false,name=timespantype"`
 	// Year to fetch data for
 	Year int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetNamespaceDataByTimespanRequest struct {
-	PathParams GetNamespaceDataByTimespanPathParams
 }
 
 type GetNamespaceDataByTimespanResponse struct {

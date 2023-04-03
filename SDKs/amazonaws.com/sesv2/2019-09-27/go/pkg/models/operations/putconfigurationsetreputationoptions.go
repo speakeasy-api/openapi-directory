@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type PutConfigurationSetReputationOptionsPathParams struct {
-	// The name of the configuration set.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type PutConfigurationSetReputationOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutConfigurationSetReputationOptionsRequestBody struct {
 	// If <code>true</code>, tracking of reputation metrics is enabled for the configuration set. If <code>false</code>, tracking of reputation metrics is disabled for the configuration set.
 	ReputationMetricsEnabled *bool `json:"ReputationMetricsEnabled,omitempty"`
 }
 
 type PutConfigurationSetReputationOptionsRequest struct {
-	PathParams PutConfigurationSetReputationOptionsPathParams
-	Headers    PutConfigurationSetReputationOptionsHeaders
-	Request    PutConfigurationSetReputationOptionsRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set.
+	ConfigurationSetName string                                          `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	RequestBody          PutConfigurationSetReputationOptionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutConfigurationSetReputationOptionsResponse struct {

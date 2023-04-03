@@ -50,26 +50,18 @@ func (e *GETDeleteUserGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteUserGroupQueryParams struct {
+type GETDeleteUserGroupRequest struct {
 	Action GETDeleteUserGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the user group.
-	UserGroupID string                        `queryParam:"style=form,explode=true,name=UserGroupId"`
-	Version     GETDeleteUserGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteUserGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteUserGroupRequest struct {
-	QueryParams GETDeleteUserGroupQueryParams
-	Headers     GETDeleteUserGroupHeaders
+	UserGroupID       string                        `queryParam:"style=form,explode=true,name=UserGroupId"`
+	Version           GETDeleteUserGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteUserGroupResponse struct {

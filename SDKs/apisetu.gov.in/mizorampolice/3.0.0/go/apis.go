@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Govid - ID Card
 // API to verify ID Card.
-func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*operations.GovidResponse, error) {
+func (s *apIs) Govid(ctx context.Context, request operations.GovidRequestBody, security operations.GovidSecurity) (*operations.GovidResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/govid/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

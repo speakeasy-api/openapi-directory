@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDatasetPathParams struct {
-	// The name of the dataset to delete.
-	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
-}
-
-type DeleteDatasetHeaders struct {
+type DeleteDatasetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDatasetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDatasetRequest struct {
-	PathParams DeleteDatasetPathParams
-	Headers    DeleteDatasetHeaders
+	// The name of the dataset to delete.
+	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
 }
 
 type DeleteDatasetResponse struct {

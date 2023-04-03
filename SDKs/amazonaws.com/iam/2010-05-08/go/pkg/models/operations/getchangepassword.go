@@ -50,28 +50,20 @@ func (e *GETChangePasswordVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETChangePasswordQueryParams struct {
+type GETChangePasswordRequest struct {
 	Action GETChangePasswordActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The new password. The new password must conform to the Amazon Web Services account's password policy, if one exists.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of characters. That string can include almost any printable ASCII character from the space (<code>\u0020</code>) through the end of the ASCII character range (<code>\u00FF</code>). You can also include the tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>) characters. Any of these characters are valid in a password. However, many tools, such as the Amazon Web Services Management Console, might restrict the ability to type certain characters because they have special meaning within that tool.</p>
 	NewPassword string `queryParam:"style=form,explode=true,name=NewPassword"`
 	// The IAM user's current password.
-	OldPassword string                       `queryParam:"style=form,explode=true,name=OldPassword"`
-	Version     GETChangePasswordVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETChangePasswordHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETChangePasswordRequest struct {
-	QueryParams GETChangePasswordQueryParams
-	Headers     GETChangePasswordHeaders
+	OldPassword       string                       `queryParam:"style=form,explode=true,name=OldPassword"`
+	Version           GETChangePasswordVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETChangePasswordResponse struct {

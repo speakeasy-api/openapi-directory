@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartDevEnvironmentSessionPathParams struct {
-	// The system-generated unique ID of the Dev Environment.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The name of the project in the space.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
 // StartDevEnvironmentSessionRequestBodySessionConfiguration - Information about the configuration of a Dev Environment session.
 type StartDevEnvironmentSessionRequestBodySessionConfiguration struct {
 	ExecuteCommandSessionConfiguration *shared.ExecuteCommandSessionConfiguration `json:"executeCommandSessionConfiguration,omitempty"`
@@ -28,8 +19,13 @@ type StartDevEnvironmentSessionRequestBody struct {
 }
 
 type StartDevEnvironmentSessionRequest struct {
-	PathParams StartDevEnvironmentSessionPathParams
-	Request    StartDevEnvironmentSessionRequestBody `request:"mediaType=application/json"`
+	RequestBody StartDevEnvironmentSessionRequestBody `request:"mediaType=application/json"`
+	// The system-generated unique ID of the Dev Environment.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The name of the project in the space.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type StartDevEnvironmentSessionResponse struct {

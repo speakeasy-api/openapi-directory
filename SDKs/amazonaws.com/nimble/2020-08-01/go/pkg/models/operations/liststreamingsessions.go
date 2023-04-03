@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStreamingSessionsPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListStreamingSessionsQueryParams struct {
+type ListStreamingSessionsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// Filters the request to streaming sessions created by the given user.
 	CreatedBy *string `queryParam:"style=form,explode=true,name=createdBy"`
 	// The token for the next set of results, or null if there are no more results.
@@ -21,22 +23,8 @@ type ListStreamingSessionsQueryParams struct {
 	OwnedBy *string `queryParam:"style=form,explode=true,name=ownedBy"`
 	// Filters the request to only the provided session IDs.
 	SessionIds *string `queryParam:"style=form,explode=true,name=sessionIds"`
-}
-
-type ListStreamingSessionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStreamingSessionsRequest struct {
-	PathParams  ListStreamingSessionsPathParams
-	QueryParams ListStreamingSessionsQueryParams
-	Headers     ListStreamingSessionsHeaders
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type ListStreamingSessionsResponse struct {

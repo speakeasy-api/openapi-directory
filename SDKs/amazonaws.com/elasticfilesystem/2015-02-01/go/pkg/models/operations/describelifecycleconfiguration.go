@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeLifecycleConfigurationPathParams struct {
+type DescribeLifecycleConfigurationRequest struct {
 	// The ID of the file system whose <code>LifecycleConfiguration</code> object you want to retrieve (String).
-	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type DescribeLifecycleConfigurationHeaders struct {
+	FileSystemID      string  `pathParam:"style=simple,explode=false,name=FileSystemId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeLifecycleConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeLifecycleConfigurationRequest struct {
-	PathParams DescribeLifecycleConfigurationPathParams
-	Headers    DescribeLifecycleConfigurationHeaders
 }
 
 type DescribeLifecycleConfigurationResponse struct {

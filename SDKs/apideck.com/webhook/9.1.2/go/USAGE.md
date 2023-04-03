@@ -14,15 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.WebhooksAddRequest{
-        Security: operations.WebhooksAddSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Headers: operations.WebhooksAddHeaders{
-            XApideckAppID: "corrupti",
-        },
-        Request: shared.CreateWebhookRequest{
+        CreateWebhookRequest: shared.CreateWebhookRequest{
             DeliveryURL: "https://example.com/my/webhook/endpoint",
             Description: "A description",
             Events: []shared.WebhookEventTypeEnum{
@@ -33,10 +25,13 @@ func main() {
             Status: "enabled",
             UnifiedAPI: "crm",
         },
+        XApideckAppID: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Webhooks.WebhooksAdd(ctx, req)
+    res, err := s.Webhooks.WebhooksAdd(ctx, req, operations.WebhooksAddSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

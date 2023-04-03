@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetErc20AddressPathParams struct {
-	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
 type GetErc20AddressRequest struct {
-	PathParams GetErc20AddressPathParams
+	Address string `pathParam:"style=simple,explode=false,name=address"`
 }
 
 type GetErc20AddressResponse struct {

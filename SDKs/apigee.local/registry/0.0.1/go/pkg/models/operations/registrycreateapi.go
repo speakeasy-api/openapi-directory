@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryCreateAPIPathParams struct {
+type RegistryCreateAPIRequest struct {
+	APIInput shared.APIInput `request:"mediaType=application/json"`
+	// Required. The ID to use for the api, which will become the final component of the api's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+	APIID *string `queryParam:"style=form,explode=true,name=apiId"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryCreateAPIQueryParams struct {
-	// Required. The ID to use for the api, which will become the final component of the api's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
-	APIID *string `queryParam:"style=form,explode=true,name=apiId"`
-}
-
-type RegistryCreateAPIRequest struct {
-	PathParams  RegistryCreateAPIPathParams
-	QueryParams RegistryCreateAPIQueryParams
-	Request     shared.APIInput `request:"mediaType=application/json"`
 }
 
 type RegistryCreateAPIResponse struct {

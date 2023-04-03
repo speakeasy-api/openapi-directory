@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2SearchDestinyEntitiesPathParams struct {
+type Destiny2SearchDestinyEntitiesRequest struct {
+	// Page number to return, starting with 0.
+	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The string to use when searching for Destiny entities.
 	SearchTerm string `pathParam:"style=simple,explode=false,name=searchTerm"`
 	// The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'.
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type Destiny2SearchDestinyEntitiesQueryParams struct {
-	// Page number to return, starting with 0.
-	Page *int `queryParam:"style=form,explode=true,name=page"`
-}
-
-type Destiny2SearchDestinyEntitiesRequest struct {
-	PathParams  Destiny2SearchDestinyEntitiesPathParams
-	QueryParams Destiny2SearchDestinyEntitiesQueryParams
 }
 
 // Destiny2SearchDestinyEntities200Wildcard - The results of a search for Destiny content. This will be improved on over time, I've been doing some experimenting to see what might be useful.

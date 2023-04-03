@@ -6,21 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsUpdateStateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsUpdateStatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The id of the error group
-	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type ErrorsUpdateStateRequestBodyStateEnum string
@@ -56,10 +46,14 @@ type ErrorsUpdateStateRequestBody struct {
 }
 
 type ErrorsUpdateStateRequest struct {
-	PathParams ErrorsUpdateStatePathParams
 	// The state of the error group
-	Request  ErrorsUpdateStateRequestBody `request:"mediaType=application/json"`
-	Security ErrorsUpdateStateSecurity
+	RequestBody ErrorsUpdateStateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The id of the error group
+	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum string

@@ -8,16 +8,13 @@ import (
 )
 
 type GetCompaniesCompanyIDTerminalOrdersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDTerminalOrdersPathParams struct {
+type GetCompaniesCompanyIDTerminalOrdersRequest struct {
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDTerminalOrdersQueryParams struct {
 	// Your purchase order number.
 	CustomerOrderReference *string `queryParam:"style=form,explode=true,name=customerOrderReference"`
 	// The number of orders to return.
@@ -26,12 +23,6 @@ type GetCompaniesCompanyIDTerminalOrdersQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered.
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetCompaniesCompanyIDTerminalOrdersRequest struct {
-	PathParams  GetCompaniesCompanyIDTerminalOrdersPathParams
-	QueryParams GetCompaniesCompanyIDTerminalOrdersQueryParams
-	Security    GetCompaniesCompanyIDTerminalOrdersSecurity
 }
 
 type GetCompaniesCompanyIDTerminalOrdersResponse struct {

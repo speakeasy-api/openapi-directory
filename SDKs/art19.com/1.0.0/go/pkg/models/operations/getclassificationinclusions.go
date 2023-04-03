@@ -10,7 +10,7 @@ import (
 )
 
 type GetClassificationInclusionsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 // GetClassificationInclusionsClassificationTypeEnum - The type of classification that the classification inclusions are linked to.
@@ -100,7 +100,7 @@ func (e *GetClassificationInclusionsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetClassificationInclusionsQueryParams struct {
+type GetClassificationInclusionsRequest struct {
 	// Limit the result to classification inclusions linked to a classification with this ID.
 	ClassificationID *string `queryParam:"style=form,explode=true,name=classification_id"`
 	// The type of classification that the classification inclusions are linked to.
@@ -134,11 +134,6 @@ type GetClassificationInclusionsQueryParams struct {
 	// [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
 	//
 	Sort []GetClassificationInclusionsSortEnum `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetClassificationInclusionsRequest struct {
-	QueryParams GetClassificationInclusionsQueryParams
-	Security    GetClassificationInclusionsSecurity
 }
 
 // GetClassificationInclusions400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

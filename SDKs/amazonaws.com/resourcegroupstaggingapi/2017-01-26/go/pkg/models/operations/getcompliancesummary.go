@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetComplianceSummaryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	PaginationToken *string `queryParam:"style=form,explode=true,name=PaginationToken"`
-}
-
 // GetComplianceSummaryXAmzTargetEnum
 type GetComplianceSummaryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetComplianceSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetComplianceSummaryHeaders struct {
+type GetComplianceSummaryRequest struct {
+	GetComplianceSummaryInput shared.GetComplianceSummaryInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	PaginationToken   *string                            `queryParam:"style=form,explode=true,name=PaginationToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetComplianceSummaryHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetComplianceSummaryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetComplianceSummaryRequest struct {
-	QueryParams GetComplianceSummaryQueryParams
-	Headers     GetComplianceSummaryHeaders
-	Request     shared.GetComplianceSummaryInput `request:"mediaType=application/json"`
 }
 
 type GetComplianceSummaryResponse struct {

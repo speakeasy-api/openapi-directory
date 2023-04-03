@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDomainAssociationPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type UpdateDomainAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDomainAssociationRequestBody struct {
 	//  Sets the branch patterns for automatic subdomain creation.
 	AutoSubDomainCreationPatterns []string `json:"autoSubDomainCreationPatterns,omitempty"`
@@ -36,9 +19,18 @@ type UpdateDomainAssociationRequestBody struct {
 }
 
 type UpdateDomainAssociationRequest struct {
-	PathParams UpdateDomainAssociationPathParams
-	Headers    UpdateDomainAssociationHeaders
-	Request    UpdateDomainAssociationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDomainAssociationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name of the domain.
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
 }
 
 type UpdateDomainAssociationResponse struct {

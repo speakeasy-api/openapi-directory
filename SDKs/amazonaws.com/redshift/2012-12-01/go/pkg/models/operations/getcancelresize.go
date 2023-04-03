@@ -50,26 +50,18 @@ func (e *GETCancelResizeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCancelResizeQueryParams struct {
+type GETCancelResizeRequest struct {
 	Action GETCancelResizeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The unique identifier for the cluster that you want to cancel a resize operation for.
 	ClusterIdentifier string                     `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETCancelResizeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelResizeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCancelResizeRequest struct {
-	QueryParams GETCancelResizeQueryParams
-	Headers     GETCancelResizeHeaders
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCancelResizeResponse struct {

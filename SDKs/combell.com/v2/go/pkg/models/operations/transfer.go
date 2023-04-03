@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TransferRequest struct {
-	Request *shared.TransferDomain `request:"mediaType=application/json"`
-}
 
 type TransferResponse struct {
 	ContentType string

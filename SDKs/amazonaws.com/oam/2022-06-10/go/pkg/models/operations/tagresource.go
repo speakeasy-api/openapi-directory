@@ -6,12 +6,15 @@ import (
 	"net/http"
 )
 
-type TagResourcePathParams struct {
-	// <p>The ARN of the resource that you're adding tags to.</p> <p>The ARN format of a sink is <code>arn:aws:oam:<i>Region</i>:<i>account-id</i>:sink/<i>sink-id</i> </code> </p> <p>The ARN format of a link is <code>arn:aws:oam:<i>Region</i>:<i>account-id</i>:link/<i>link-id</i> </code> </p> <p>For more information about ARN format, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html">CloudWatch Logs resources and operations</a>.</p>
-	ResourceArn string `pathParam:"style=simple,explode=false,name=ResourceArn"`
+type TagResourceRequestBody struct {
+	// The list of key-value pairs to associate with the resource.
+	Tags map[string]string `json:"Tags"`
 }
 
-type TagResourceHeaders struct {
+type TagResourceRequest struct {
+	RequestBody TagResourceRequestBody `request:"mediaType=application/json"`
+	// <p>The ARN of the resource that you're adding tags to.</p> <p>The ARN format of a sink is <code>arn:aws:oam:<i>Region</i>:<i>account-id</i>:sink/<i>sink-id</i> </code> </p> <p>The ARN format of a link is <code>arn:aws:oam:<i>Region</i>:<i>account-id</i>:link/<i>link-id</i> </code> </p> <p>For more information about ARN format, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html">CloudWatch Logs resources and operations</a>.</p>
+	ResourceArn       string  `pathParam:"style=simple,explode=false,name=ResourceArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,17 +22,6 @@ type TagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type TagResourceRequestBody struct {
-	// The list of key-value pairs to associate with the resource.
-	Tags map[string]string `json:"Tags"`
-}
-
-type TagResourceRequest struct {
-	PathParams TagResourcePathParams
-	Headers    TagResourceHeaders
-	Request    TagResourceRequestBody `request:"mediaType=application/json"`
 }
 
 type TagResourceResponse struct {

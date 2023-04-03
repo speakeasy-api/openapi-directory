@@ -8,18 +8,6 @@ import (
 	"openapi/pkg/types"
 )
 
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionPathParams struct {
-	IDAccount     int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection  int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDTransaction int64 `pathParam:"style=simple,explode=false,name=id_transaction"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionRequestBody struct {
 	// if false, transaction isn't considered in analyzisis endpoints (like /balances)
 	Active *bool `multipartForm:"name=active"`
@@ -34,9 +22,13 @@ type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransac
 }
 
 type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionRequest struct {
-	PathParams  PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionPathParams
-	QueryParams PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionQueryParams
-	Request     *PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody   *PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionRequestBody `request:"mediaType=multipart/form-data"`
+	Expand        *string                                                                                     `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount     int64                                                                                       `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection  int64                                                                                       `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDTransaction int64                                                                                       `pathParam:"style=simple,explode=false,name=id_transaction"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionResponse struct {

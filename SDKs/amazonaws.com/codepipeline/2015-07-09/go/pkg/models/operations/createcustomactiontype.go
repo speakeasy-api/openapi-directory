@@ -30,20 +30,16 @@ func (e *CreateCustomActionTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type CreateCustomActionTypeHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateCustomActionTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateCustomActionTypeRequest struct {
-	Headers CreateCustomActionTypeHeaders
-	Request shared.CreateCustomActionTypeInput `request:"mediaType=application/json"`
+	CreateCustomActionTypeInput shared.CreateCustomActionTypeInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  CreateCustomActionTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateCustomActionTypeResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPartnerPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetPartnerRequest struct {
-	PathParams GetPartnerPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPartnerResponse struct {

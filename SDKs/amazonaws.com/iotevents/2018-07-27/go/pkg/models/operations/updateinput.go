@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateInputPathParams struct {
-	// The name of the input you want to update.
-	InputName string `pathParam:"style=simple,explode=false,name=inputName"`
-}
-
-type UpdateInputHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateInputRequestBodyInputDefinition - The definition of the input.
 type UpdateInputRequestBodyInputDefinition struct {
 	Attributes []shared.Attribute `json:"attributes,omitempty"`
@@ -35,9 +20,16 @@ type UpdateInputRequestBody struct {
 }
 
 type UpdateInputRequest struct {
-	PathParams UpdateInputPathParams
-	Headers    UpdateInputHeaders
-	Request    UpdateInputRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateInputRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the input you want to update.
+	InputName string `pathParam:"style=simple,explode=false,name=inputName"`
 }
 
 type UpdateInputResponse struct {

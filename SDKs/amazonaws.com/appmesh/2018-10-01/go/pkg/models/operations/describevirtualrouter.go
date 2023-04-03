@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeVirtualRouterPathParams struct {
-	// The name of the service mesh in which the virtual router resides.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual router to describe.
-	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
-}
-
-type DescribeVirtualRouterHeaders struct {
+type DescribeVirtualRouterRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeVirtualRouterHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeVirtualRouterRequest struct {
-	PathParams DescribeVirtualRouterPathParams
-	Headers    DescribeVirtualRouterHeaders
+	// The name of the service mesh in which the virtual router resides.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the virtual router to describe.
+	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
 }
 
 type DescribeVirtualRouterResponse struct {

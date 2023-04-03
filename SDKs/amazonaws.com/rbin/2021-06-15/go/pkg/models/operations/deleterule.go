@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteRulePathParams struct {
-	// The unique ID of the retention rule.
-	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
-}
-
-type DeleteRuleHeaders struct {
+type DeleteRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRuleRequest struct {
-	PathParams DeleteRulePathParams
-	Headers    DeleteRuleHeaders
+	// The unique ID of the retention rule.
+	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 }
 
 type DeleteRuleResponse struct {

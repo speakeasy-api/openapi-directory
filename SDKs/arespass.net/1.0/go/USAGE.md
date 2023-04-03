@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAboutRequest{
-        QueryParams: operations.GetAboutQueryParams{
-            OutputFormat: "corrupti",
-        },
+        OutputFormat: "corrupti",
     }
 
     ctx := context.Background()

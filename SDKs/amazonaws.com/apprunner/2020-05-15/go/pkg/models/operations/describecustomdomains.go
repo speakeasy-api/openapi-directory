@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeCustomDomainsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeCustomDomainsXAmzTargetEnum
 type DescribeCustomDomainsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeCustomDomainsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeCustomDomainsHeaders struct {
+type DescribeCustomDomainsRequest struct {
+	DescribeCustomDomainsRequest shared.DescribeCustomDomainsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeCustomDomainsHeaders struct {
 	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeCustomDomainsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeCustomDomainsRequest struct {
-	QueryParams DescribeCustomDomainsQueryParams
-	Headers     DescribeCustomDomainsHeaders
-	Request     shared.DescribeCustomDomainsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeCustomDomainsResponse struct {

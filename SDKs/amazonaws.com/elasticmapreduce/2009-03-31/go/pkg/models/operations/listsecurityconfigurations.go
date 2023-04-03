@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSecurityConfigurationsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListSecurityConfigurationsXAmzTargetEnum
 type ListSecurityConfigurationsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListSecurityConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListSecurityConfigurationsHeaders struct {
+type ListSecurityConfigurationsRequest struct {
+	ListSecurityConfigurationsInput shared.ListSecurityConfigurationsInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                                  `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListSecurityConfigurationsHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListSecurityConfigurationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListSecurityConfigurationsRequest struct {
-	QueryParams ListSecurityConfigurationsQueryParams
-	Headers     ListSecurityConfigurationsHeaders
-	Request     shared.ListSecurityConfigurationsInput `request:"mediaType=application/json"`
 }
 
 type ListSecurityConfigurationsResponse struct {

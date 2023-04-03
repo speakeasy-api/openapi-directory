@@ -8,18 +8,13 @@ import (
 )
 
 type FetchFieldByIDSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type FetchFieldByIDPathParams struct {
-	// Unique identifier of the Field.
-	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchFieldByIDRequest struct {
-	PathParams FetchFieldByIDPathParams
-	Security   FetchFieldByIDSecurity
+	// Unique identifier of the Field.
+	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
 }
 
 type FetchFieldByIDResponse struct {

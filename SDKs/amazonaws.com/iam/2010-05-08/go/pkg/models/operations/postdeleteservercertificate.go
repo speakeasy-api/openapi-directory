@@ -50,25 +50,17 @@ func (e *POSTDeleteServerCertificateVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTDeleteServerCertificateQueryParams struct {
-	Action  POSTDeleteServerCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteServerCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteServerCertificateRequest struct {
-	QueryParams POSTDeleteServerCertificateQueryParams
-	Headers     POSTDeleteServerCertificateHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteServerCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTDeleteServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteServerCertificateResponse struct {

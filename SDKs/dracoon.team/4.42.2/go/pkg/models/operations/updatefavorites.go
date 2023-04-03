@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFavoritesHeaders struct {
+type UpdateFavoritesRequest struct {
+	UpdateFavoritesBulkRequest shared.UpdateFavoritesBulkRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateFavoritesRequest struct {
-	Headers UpdateFavoritesHeaders
-	Request shared.UpdateFavoritesBulkRequest `request:"mediaType=application/json"`
 }
 
 type UpdateFavoritesResponse struct {

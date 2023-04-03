@@ -10,10 +10,6 @@ type CreateTagGroupRequestBody struct {
 	Name string `json:"name"`
 }
 
-type CreateTagGroupRequest struct {
-	Request *CreateTagGroupRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateTagGroup200ApplicationJSONTagGroup struct {
 	ID            int64                  `json:"id"`
 	Name          string                 `json:"name"`

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEnvironmentsForRepositoryPathParams struct {
+type GetEnvironmentsForRepositoryRequest struct {
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetEnvironmentsForRepositoryRequest struct {
-	PathParams GetEnvironmentsForRepositoryPathParams
 }
 
 type GetEnvironmentsForRepositoryResponse struct {

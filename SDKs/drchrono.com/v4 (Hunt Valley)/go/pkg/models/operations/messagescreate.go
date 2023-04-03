@@ -8,10 +8,10 @@ import (
 )
 
 type MessagesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MessagesCreateQueryParams struct {
+type MessagesCreateRequest struct {
 	Doctor          *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Owner           *int64  `queryParam:"style=form,explode=true,name=owner"`
 	Patient         *int64  `queryParam:"style=form,explode=true,name=patient"`
@@ -19,11 +19,6 @@ type MessagesCreateQueryParams struct {
 	ResponsibleUser *int64  `queryParam:"style=form,explode=true,name=responsible_user"`
 	Type            *string `queryParam:"style=form,explode=true,name=type"`
 	UpdatedSince    *string `queryParam:"style=form,explode=true,name=updated_since"`
-}
-
-type MessagesCreateRequest struct {
-	QueryParams MessagesCreateQueryParams
-	Security    MessagesCreateSecurity
 }
 
 type MessagesCreateResponse struct {

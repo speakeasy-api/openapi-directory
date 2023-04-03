@@ -8,19 +8,14 @@ import (
 )
 
 type DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams struct {
+type DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest struct {
 	// the organization name
 	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
 	// The name of the receiver
 	ReceiverName string `pathParam:"style=simple,explode=false,name=receiverName"`
-}
-
-type DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest struct {
-	PathParams DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams
-	Security   DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity
 }
 
 type DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse struct {

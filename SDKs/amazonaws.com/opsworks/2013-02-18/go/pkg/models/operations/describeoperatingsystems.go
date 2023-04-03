@@ -30,7 +30,7 @@ func (e *DescribeOperatingSystemsXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DescribeOperatingSystemsHeaders struct {
+type DescribeOperatingSystemsRequest struct {
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type DescribeOperatingSystemsHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeOperatingSystemsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeOperatingSystemsRequest struct {
-	Headers DescribeOperatingSystemsHeaders
 }
 
 type DescribeOperatingSystemsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type WimstatusQueryParams struct {
+type WimstatusRequest struct {
 	// VID key of the process.
 	Vid *string `queryParam:"style=form,explode=true,name=vid"`
-}
-
-type WimstatusRequest struct {
-	QueryParams WimstatusQueryParams
 }
 
 // Wimstatus200ApplicationJSON - Success

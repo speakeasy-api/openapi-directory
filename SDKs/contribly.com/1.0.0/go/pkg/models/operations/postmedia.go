@@ -8,13 +8,7 @@ import (
 )
 
 type PostMediaSecurity struct {
-	Oauth shared.SchemeOauth `security:"scheme,type=oauth2"`
-}
-
-type PostMediaRequest struct {
-	// Binary media file
-	Request  string `request:"mediaType=application/json"`
-	Security PostMediaSecurity
+	Oauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostMediaResponse struct {

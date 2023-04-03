@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeProjectQueryParams struct {
-	//  Unique project identifier.
-	ProjectID string `queryParam:"style=form,explode=true,name=projectId"`
-	//  If set to true, causes AWS Mobile Hub to synchronize information from other services, e.g., update state of AWS CloudFormation stacks in the AWS Mobile Hub project.
-	SyncFromResources *bool `queryParam:"style=form,explode=true,name=syncFromResources"`
-}
-
-type DescribeProjectHeaders struct {
+type DescribeProjectRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeProjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeProjectRequest struct {
-	QueryParams DescribeProjectQueryParams
-	Headers     DescribeProjectHeaders
+	//  Unique project identifier.
+	ProjectID string `queryParam:"style=form,explode=true,name=projectId"`
+	//  If set to true, causes AWS Mobile Hub to synchronize information from other services, e.g., update state of AWS CloudFormation stacks in the AWS Mobile Hub project.
+	SyncFromResources *bool `queryParam:"style=form,explode=true,name=syncFromResources"`
 }
 
 type DescribeProjectResponse struct {

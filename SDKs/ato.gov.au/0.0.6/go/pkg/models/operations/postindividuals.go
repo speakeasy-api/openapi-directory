@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostIndividualsHeaders struct {
+type PostIndividualsRequest struct {
 	// The API key.
 	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type PostIndividualsRequest struct {
-	Headers PostIndividualsHeaders
 	// Individual resource
-	Request shared.IndividualInput `request:"mediaType=application/json"`
+	IndividualInput shared.IndividualInput `request:"mediaType=application/json"`
 }
 
 type PostIndividualsResponse struct {

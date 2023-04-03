@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type FireteamGetActivePrivateClanFireteamCountSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type FireteamGetActivePrivateClanFireteamCountPathParams struct {
-	// The group id of the clan.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FireteamGetActivePrivateClanFireteamCountRequest struct {
-	PathParams FireteamGetActivePrivateClanFireteamCountPathParams
-	Security   FireteamGetActivePrivateClanFireteamCountSecurity
+	// The group id of the clan.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // FireteamGetActivePrivateClanFireteamCount200Wildcard - Look at the Response property for more information about the nature of this response

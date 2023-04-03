@@ -41,10 +41,20 @@ func newAuthentication(defaultClient, securityClient HTTPClient, serverURL, lang
 // The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
 //
 // Most Docker Hub APIs require this token either to consume or to get detailed information. For example, to list images in a private repository.
-func (s *authentication) PostUsers2FALogin(ctx context.Context, request operations.PostUsers2FALoginRequest) (*operations.PostUsers2FALoginResponse, error) {
+func (s *authentication) PostUsers2FALogin(ctx context.Context, request shared.Users2FALoginRequest, opts ...operations.Option) (*operations.PostUsers2FALoginResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostUsers2FALoginServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/2fa-login"
@@ -115,10 +125,20 @@ func (s *authentication) PostUsers2FALogin(ctx context.Context, request operatio
 // The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
 //
 // Most Docker Hub APIs require this token either to consume or to get detailed information. For example, to list images in a private repository.
-func (s *authentication) PostUsersLogin(ctx context.Context, request operations.PostUsersLoginRequest) (*operations.PostUsersLoginResponse, error) {
+func (s *authentication) PostUsersLogin(ctx context.Context, request shared.UsersLoginRequest, opts ...operations.Option) (*operations.PostUsersLoginResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.PostUsersLoginServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/login"

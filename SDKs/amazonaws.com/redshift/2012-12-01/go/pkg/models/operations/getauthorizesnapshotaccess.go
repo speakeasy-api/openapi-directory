@@ -50,7 +50,7 @@ func (e *GETAuthorizeSnapshotAccessVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETAuthorizeSnapshotAccessQueryParams struct {
+type GETAuthorizeSnapshotAccessRequest struct {
 	// <p>The identifier of the Amazon Web Services account authorized to restore the specified snapshot.</p> <p>To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.</p>
 	AccountWithRestoreAccess string                               `queryParam:"style=form,explode=true,name=AccountWithRestoreAccess"`
 	Action                   GETAuthorizeSnapshotAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -61,21 +61,13 @@ type GETAuthorizeSnapshotAccessQueryParams struct {
 	// The identifier of the snapshot the account is authorized to restore.
 	SnapshotIdentifier *string                               `queryParam:"style=form,explode=true,name=SnapshotIdentifier"`
 	Version            GETAuthorizeSnapshotAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAuthorizeSnapshotAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAuthorizeSnapshotAccessRequest struct {
-	QueryParams GETAuthorizeSnapshotAccessQueryParams
-	Headers     GETAuthorizeSnapshotAccessHeaders
+	XAmzAlgorithm      *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAuthorizeSnapshotAccessResponse struct {

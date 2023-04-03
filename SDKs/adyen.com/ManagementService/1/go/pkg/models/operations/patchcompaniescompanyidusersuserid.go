@@ -8,21 +8,16 @@ import (
 )
 
 type PatchCompaniesCompanyIDUsersUserIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PatchCompaniesCompanyIDUsersUserIDPathParams struct {
+type PatchCompaniesCompanyIDUsersUserIDRequest struct {
+	UpdateCompanyUserRequest *shared.UpdateCompanyUserRequest `request:"mediaType=application/json"`
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// The unique identifier of the user.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PatchCompaniesCompanyIDUsersUserIDRequest struct {
-	PathParams PatchCompaniesCompanyIDUsersUserIDPathParams
-	Request    *shared.UpdateCompanyUserRequest `request:"mediaType=application/json"`
-	Security   PatchCompaniesCompanyIDUsersUserIDSecurity
 }
 
 type PatchCompaniesCompanyIDUsersUserIDResponse struct {

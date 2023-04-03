@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type WebHookManagementDeletePathParams struct {
+type WebHookManagementDeleteRequest struct {
 	// The WebHook ID.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type WebHookManagementDeleteRequest struct {
-	PathParams WebHookManagementDeletePathParams
 }
 
 type WebHookManagementDeleteResponse struct {

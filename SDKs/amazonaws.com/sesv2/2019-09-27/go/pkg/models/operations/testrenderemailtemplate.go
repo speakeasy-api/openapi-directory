@@ -7,12 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestRenderEmailTemplatePathParams struct {
-	// The name of the template.
-	TemplateName string `pathParam:"style=simple,explode=false,name=TemplateName"`
+type TestRenderEmailTemplateRequestBody struct {
+	// An object that defines the values to use for message variables in the template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the value to use for that variable.
+	TemplateData string `json:"TemplateData"`
 }
 
-type TestRenderEmailTemplateHeaders struct {
+type TestRenderEmailTemplateRequest struct {
+	RequestBody TestRenderEmailTemplateRequestBody `request:"mediaType=application/json"`
+	// The name of the template.
+	TemplateName      string  `pathParam:"style=simple,explode=false,name=TemplateName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,17 +23,6 @@ type TestRenderEmailTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type TestRenderEmailTemplateRequestBody struct {
-	// An object that defines the values to use for message variables in the template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the value to use for that variable.
-	TemplateData string `json:"TemplateData"`
-}
-
-type TestRenderEmailTemplateRequest struct {
-	PathParams TestRenderEmailTemplatePathParams
-	Headers    TestRenderEmailTemplateHeaders
-	Request    TestRenderEmailTemplateRequestBody `request:"mediaType=application/json"`
 }
 
 type TestRenderEmailTemplateResponse struct {

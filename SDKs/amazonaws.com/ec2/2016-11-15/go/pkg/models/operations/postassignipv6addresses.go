@@ -50,25 +50,17 @@ func (e *POSTAssignIpv6AddressesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTAssignIpv6AddressesQueryParams struct {
-	Action  POSTAssignIpv6AddressesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAssignIpv6AddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAssignIpv6AddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAssignIpv6AddressesRequest struct {
-	QueryParams POSTAssignIpv6AddressesQueryParams
-	Headers     POSTAssignIpv6AddressesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAssignIpv6AddressesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTAssignIpv6AddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAssignIpv6AddressesResponse struct {

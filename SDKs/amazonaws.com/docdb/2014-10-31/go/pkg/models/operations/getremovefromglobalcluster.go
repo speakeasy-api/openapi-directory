@@ -50,28 +50,20 @@ func (e *GETRemoveFromGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETRemoveFromGlobalClusterQueryParams struct {
+type GETRemoveFromGlobalClusterRequest struct {
 	Action GETRemoveFromGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) identifying the cluster that was detached from the Amazon DocumentDB global cluster.
 	DbClusterIdentifier string `queryParam:"style=form,explode=true,name=DbClusterIdentifier"`
 	// The cluster identifier to detach from the Amazon DocumentDB global cluster.
 	GlobalClusterIdentifier string                                `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`
 	Version                 GETRemoveFromGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemoveFromGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRemoveFromGlobalClusterRequest struct {
-	QueryParams GETRemoveFromGlobalClusterQueryParams
-	Headers     GETRemoveFromGlobalClusterHeaders
+	XAmzAlgorithm           *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemoveFromGlobalClusterResponse struct {

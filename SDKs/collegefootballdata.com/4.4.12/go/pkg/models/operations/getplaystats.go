@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlayStatsQueryParams struct {
+type GetPlayStatsRequest struct {
 	// athleteId filter (from /roster endpoint)
 	AthleteID *int64 `queryParam:"style=form,explode=true,name=athleteId"`
 	// conference abbreviation filter
@@ -24,10 +24,6 @@ type GetPlayStatsQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPlayStatsRequest struct {
-	QueryParams GetPlayStatsQueryParams
 }
 
 type GetPlayStatsResponse struct {

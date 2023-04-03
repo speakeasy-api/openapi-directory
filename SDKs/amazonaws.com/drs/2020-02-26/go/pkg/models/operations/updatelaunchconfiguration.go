@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLaunchConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateLaunchConfigurationRequestBodyLaunchDispositionEnum - The state of the Recovery Instance in EC2 after the recovery operation.
 type UpdateLaunchConfigurationRequestBodyLaunchDispositionEnum string
 
@@ -90,8 +80,14 @@ type UpdateLaunchConfigurationRequestBody struct {
 }
 
 type UpdateLaunchConfigurationRequest struct {
-	Headers UpdateLaunchConfigurationHeaders
-	Request UpdateLaunchConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateLaunchConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateLaunchConfigurationResponse struct {

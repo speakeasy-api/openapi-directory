@@ -36,20 +36,20 @@ func newAPICredentialsCompanyLevel(defaultClient, securityClient HTTPClient, ser
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentials(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsRequest) (*operations.GetCompaniesCompanyIDAPICredentialsResponse, error) {
+func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentials(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsRequest, security operations.GetCompaniesCompanyIDAPICredentialsSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,16 +106,16 @@ func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentials(ctx con
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialID(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDRequest) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDResponse, error) {
+func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialID(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDRequest, security operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -172,11 +172,11 @@ func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICrede
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsCompanyLevel) PatchCompaniesCompanyIDAPICredentialsAPICredentialID(ctx context.Context, request operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDRequest) (*operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDResponse, error) {
+func (s *apiCredentialsCompanyLevel) PatchCompaniesCompanyIDAPICredentialsAPICredentialID(ctx context.Context, request operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDRequest, security operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDSecurity) (*operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCompanyAPICredentialRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -188,7 +188,7 @@ func (s *apiCredentialsCompanyLevel) PatchCompaniesCompanyIDAPICredentialsAPICre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,11 +254,11 @@ func (s *apiCredentialsCompanyLevel) PatchCompaniesCompanyIDAPICredentialsAPICre
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsCompanyLevel) PostCompaniesCompanyIDAPICredentials(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsRequest) (*operations.PostCompaniesCompanyIDAPICredentialsResponse, error) {
+func (s *apiCredentialsCompanyLevel) PostCompaniesCompanyIDAPICredentials(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsRequest, security operations.PostCompaniesCompanyIDAPICredentialsSecurity) (*operations.PostCompaniesCompanyIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCompanyAPICredentialRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -270,7 +270,7 @@ func (s *apiCredentialsCompanyLevel) PostCompaniesCompanyIDAPICredentials(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -73,7 +73,7 @@ func (s *systemSettingsConfig) RequestAuthConfig(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -161,7 +161,7 @@ func (s *systemSettingsConfig) RequestEventlogConfig(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -274,7 +274,7 @@ func (s *systemSettingsConfig) RequestGeneralSettings(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -365,7 +365,7 @@ func (s *systemSettingsConfig) RequestInfrastructureProperties(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -455,7 +455,7 @@ func (s *systemSettingsConfig) RequestSyslogConfig(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -546,7 +546,7 @@ func (s *systemSettingsConfig) RequestSystemDefaults(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -634,7 +634,7 @@ func (s *systemSettingsConfig) UpdateAuthConfig(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/settings/auth"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -649,7 +649,7 @@ func (s *systemSettingsConfig) UpdateAuthConfig(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -735,7 +735,7 @@ func (s *systemSettingsConfig) UpdateEventlogConfig(ctx context.Context, request
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/settings/eventlog"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateEventlogConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -750,7 +750,7 @@ func (s *systemSettingsConfig) UpdateEventlogConfig(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -854,7 +854,7 @@ func (s *systemSettingsConfig) UpdateGeneralSettings(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/settings/general"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateGeneralSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -869,7 +869,7 @@ func (s *systemSettingsConfig) UpdateGeneralSettings(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -959,7 +959,7 @@ func (s *systemSettingsConfig) UpdateSyslogConfig(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/settings/syslog"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSyslogConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -974,7 +974,7 @@ func (s *systemSettingsConfig) UpdateSyslogConfig(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1063,7 +1063,7 @@ func (s *systemSettingsConfig) UpdateSystemDefaults(ctx context.Context, request
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/settings/defaults"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSystemDefaults", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1078,7 +1078,7 @@ func (s *systemSettingsConfig) UpdateSystemDefaults(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccountsForProvisionedPermissionSetQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListAccountsForProvisionedPermissionSetXAmzTargetEnum
 type ListAccountsForProvisionedPermissionSetXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAccountsForProvisionedPermissionSetXAmzTargetEnum) UnmarshalJSON(da
 	}
 }
 
-type ListAccountsForProvisionedPermissionSetHeaders struct {
+type ListAccountsForProvisionedPermissionSetRequest struct {
+	ListAccountsForProvisionedPermissionSetRequest shared.ListAccountsForProvisionedPermissionSetRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                               `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAccountsForProvisionedPermissionSetHeaders struct {
 	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAccountsForProvisionedPermissionSetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAccountsForProvisionedPermissionSetRequest struct {
-	QueryParams ListAccountsForProvisionedPermissionSetQueryParams
-	Headers     ListAccountsForProvisionedPermissionSetHeaders
-	Request     shared.ListAccountsForProvisionedPermissionSetRequest `request:"mediaType=application/json"`
 }
 
 type ListAccountsForProvisionedPermissionSetResponse struct {

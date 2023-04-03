@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddressesCreateFormRequest struct {
-	Request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type CustomerAddressesCreateFormResponse struct {
 	Body        []byte
 	ContentType string

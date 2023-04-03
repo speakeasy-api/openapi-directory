@@ -14,25 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.ImageOcrImageLinesWithLocationRequest{
-        Security: operations.ImageOcrImageLinesWithLocationSecurity{
-            Apikey: shared.SchemeApikey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Headers: operations.ImageOcrImageLinesWithLocationHeaders{
-            Language: "corrupti",
-            Preprocessing: "provident",
-        },
-        Request: operations.ImageOcrImageLinesWithLocationRequestBody{
+        RequestBody: operations.ImageOcrImageLinesWithLocationRequestBody{
             ImageFile: operations.ImageOcrImageLinesWithLocationRequestBodyImageFile{
-                Content: []byte("distinctio"),
-                ImageFile: "quibusdam",
+                Content: []byte("corrupti"),
+                ImageFile: "provident",
             },
         },
+        Language: "distinctio",
+        Preprocessing: "quibusdam",
     }
 
     ctx := context.Background()
-    res, err := s.ImageOcr.ImageOcrImageLinesWithLocation(ctx, req)
+    res, err := s.ImageOcr.ImageOcrImageLinesWithLocation(ctx, req, operations.ImageOcrImageLinesWithLocationSecurity{
+        Apikey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

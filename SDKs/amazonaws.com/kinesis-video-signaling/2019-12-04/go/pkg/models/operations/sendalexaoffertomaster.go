@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendAlexaOfferToMasterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type SendAlexaOfferToMasterRequestBody struct {
 	// The ARN of the signaling channel by which Alexa and the master peer communicate.
 	ChannelARN string `json:"ChannelARN"`
@@ -27,8 +17,14 @@ type SendAlexaOfferToMasterRequestBody struct {
 }
 
 type SendAlexaOfferToMasterRequest struct {
-	Headers SendAlexaOfferToMasterHeaders
-	Request SendAlexaOfferToMasterRequestBody `request:"mediaType=application/json"`
+	RequestBody       SendAlexaOfferToMasterRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SendAlexaOfferToMasterResponse struct {

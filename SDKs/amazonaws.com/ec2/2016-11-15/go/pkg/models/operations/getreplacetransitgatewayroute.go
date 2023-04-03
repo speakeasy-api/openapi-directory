@@ -50,7 +50,7 @@ func (e *GETReplaceTransitGatewayRouteVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETReplaceTransitGatewayRouteQueryParams struct {
+type GETReplaceTransitGatewayRouteRequest struct {
 	Action GETReplaceTransitGatewayRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates whether traffic matching this route is to be dropped.
 	Blackhole *bool `queryParam:"style=form,explode=true,name=Blackhole"`
@@ -63,21 +63,13 @@ type GETReplaceTransitGatewayRouteQueryParams struct {
 	// The ID of the route table.
 	TransitGatewayRouteTableID string                                   `queryParam:"style=form,explode=true,name=TransitGatewayRouteTableId"`
 	Version                    GETReplaceTransitGatewayRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReplaceTransitGatewayRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReplaceTransitGatewayRouteRequest struct {
-	QueryParams GETReplaceTransitGatewayRouteQueryParams
-	Headers     GETReplaceTransitGatewayRouteHeaders
+	XAmzAlgorithm              *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReplaceTransitGatewayRouteResponse struct {

@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesDeleteTesterFromDestinationsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesDeleteTesterFromDestinationsPathParams struct {
+type ReleasesDeleteTesterFromDestinationsRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The id of the tester
 	TesterID string `pathParam:"style=simple,explode=false,name=tester_id"`
-}
-
-type ReleasesDeleteTesterFromDestinationsRequest struct {
-	PathParams ReleasesDeleteTesterFromDestinationsPathParams
-	Security   ReleasesDeleteTesterFromDestinationsSecurity
 }
 
 type ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum string

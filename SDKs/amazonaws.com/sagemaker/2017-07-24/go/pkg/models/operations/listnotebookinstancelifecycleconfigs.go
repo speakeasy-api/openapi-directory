@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListNotebookInstanceLifecycleConfigsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListNotebookInstanceLifecycleConfigsXAmzTargetEnum
 type ListNotebookInstanceLifecycleConfigsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListNotebookInstanceLifecycleConfigsXAmzTargetEnum) UnmarshalJSON(data 
 	}
 }
 
-type ListNotebookInstanceLifecycleConfigsHeaders struct {
+type ListNotebookInstanceLifecycleConfigsRequest struct {
+	ListNotebookInstanceLifecycleConfigsInput shared.ListNotebookInstanceLifecycleConfigsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListNotebookInstanceLifecycleConfigsHeaders struct {
 	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListNotebookInstanceLifecycleConfigsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListNotebookInstanceLifecycleConfigsRequest struct {
-	QueryParams ListNotebookInstanceLifecycleConfigsQueryParams
-	Headers     ListNotebookInstanceLifecycleConfigsHeaders
-	Request     shared.ListNotebookInstanceLifecycleConfigsInput `request:"mediaType=application/json"`
 }
 
 type ListNotebookInstanceLifecycleConfigsResponse struct {

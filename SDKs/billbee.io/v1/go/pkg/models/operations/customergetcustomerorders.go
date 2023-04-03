@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerGetCustomerOrdersPathParams struct {
+type CustomerGetCustomerOrdersRequest struct {
 	// The id of the customer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerGetCustomerOrdersQueryParams struct {
 	// The current page to request starting with 1
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The pagesize for the result list. Values between 1 and 250 are allowed
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type CustomerGetCustomerOrdersRequest struct {
-	PathParams  CustomerGetCustomerOrdersPathParams
-	QueryParams CustomerGetCustomerOrdersQueryParams
 }
 
 type CustomerGetCustomerOrdersResponse struct {

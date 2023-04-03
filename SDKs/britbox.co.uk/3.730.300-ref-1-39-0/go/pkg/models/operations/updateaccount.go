@@ -8,10 +8,12 @@ import (
 )
 
 type UpdateAccountSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateAccountQueryParams struct {
+type UpdateAccountRequest struct {
+	// Updated account details.
+	AccountUpdateRequest shared.AccountUpdateRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -46,13 +48,6 @@ type UpdateAccountQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type UpdateAccountRequest struct {
-	QueryParams UpdateAccountQueryParams
-	// Updated account details.
-	Request  shared.AccountUpdateRequest `request:"mediaType=application/json"`
-	Security UpdateAccountSecurity
 }
 
 type UpdateAccountResponse struct {

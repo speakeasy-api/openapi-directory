@@ -50,25 +50,17 @@ func (e *POSTDeleteWarmPoolVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteWarmPoolQueryParams struct {
-	Action  POSTDeleteWarmPoolActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteWarmPoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteWarmPoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteWarmPoolRequest struct {
-	QueryParams POSTDeleteWarmPoolQueryParams
-	Headers     POSTDeleteWarmPoolHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteWarmPoolActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                        `request:"mediaType=text/xml"`
+	Version           POSTDeleteWarmPoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteWarmPoolResponse struct {

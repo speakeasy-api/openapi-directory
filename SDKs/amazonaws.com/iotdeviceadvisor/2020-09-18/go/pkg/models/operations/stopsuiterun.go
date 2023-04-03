@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type StopSuiteRunPathParams struct {
-	// Suite definition ID of the test suite run to be stopped.
-	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
-	// Suite run ID of the test suite run to be stopped.
-	SuiteRunID string `pathParam:"style=simple,explode=false,name=suiteRunId"`
-}
-
-type StopSuiteRunHeaders struct {
+type StopSuiteRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type StopSuiteRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopSuiteRunRequest struct {
-	PathParams StopSuiteRunPathParams
-	Headers    StopSuiteRunHeaders
+	// Suite definition ID of the test suite run to be stopped.
+	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
+	// Suite run ID of the test suite run to be stopped.
+	SuiteRunID string `pathParam:"style=simple,explode=false,name=suiteRunId"`
 }
 
 type StopSuiteRunResponse struct {

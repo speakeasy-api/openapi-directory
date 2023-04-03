@@ -8,17 +8,12 @@ import (
 )
 
 type GetEpisodesIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetEpisodesIDPathParams struct {
-	// The ID of the episode resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetEpisodesIDRequest struct {
-	PathParams GetEpisodesIDPathParams
-	Security   GetEpisodesIDSecurity
+	// The ID of the episode resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetEpisodesID200ApplicationVndAPIPlusJSON - Success

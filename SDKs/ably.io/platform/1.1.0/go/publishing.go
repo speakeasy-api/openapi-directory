@@ -36,9 +36,9 @@ func newPublishing(defaultClient, securityClient HTTPClient, serverURL, language
 // Publish a message to the specified channel
 func (s *publishing) PublishMessagesToChannelForm(ctx context.Context, request operations.PublishMessagesToChannelFormRequest) (*operations.PublishMessagesToChannelFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,9 +50,9 @@ func (s *publishing) PublishMessagesToChannelForm(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,9 +132,9 @@ func (s *publishing) PublishMessagesToChannelForm(ctx context.Context, request o
 // Publish a message to the specified channel
 func (s *publishing) PublishMessagesToChannelJSON(ctx context.Context, request operations.PublishMessagesToChannelJSONRequest) (*operations.PublishMessagesToChannelJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -146,9 +146,9 @@ func (s *publishing) PublishMessagesToChannelJSON(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -228,9 +228,9 @@ func (s *publishing) PublishMessagesToChannelJSON(ctx context.Context, request o
 // Publish a message to the specified channel
 func (s *publishing) PublishMessagesToChannelRaw(ctx context.Context, request operations.PublishMessagesToChannelRawRequest) (*operations.PublishMessagesToChannelRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -242,9 +242,9 @@ func (s *publishing) PublishMessagesToChannelRaw(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

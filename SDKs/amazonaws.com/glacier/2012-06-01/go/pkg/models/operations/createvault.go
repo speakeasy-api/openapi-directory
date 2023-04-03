@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type CreateVaultPathParams struct {
-	// The <code>AccountId</code> value is the AWS account ID. This value must match the AWS account ID associated with the credentials used to sign the request. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you specify your account ID, do not include any hyphens ('-') in the ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The name of the vault.
-	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
-}
-
-type CreateVaultHeaders struct {
+type CreateVaultRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type CreateVaultHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CreateVaultRequest struct {
-	PathParams CreateVaultPathParams
-	Headers    CreateVaultHeaders
+	// The <code>AccountId</code> value is the AWS account ID. This value must match the AWS account ID associated with the credentials used to sign the request. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you specify your account ID, do not include any hyphens ('-') in the ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	// The name of the vault.
+	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
 }
 
 type CreateVaultResponse struct {

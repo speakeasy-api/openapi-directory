@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAnnotationImportJobsQueryParams struct {
-	// The maximum number of jobs to return in one page of results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Specify the pagination token from a previous request to retrieve the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAnnotationImportJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListAnnotationImportJobsRequestBodyFilter - A filter for annotation import jobs.
 type ListAnnotationImportJobsRequestBodyFilter struct {
 	Status    *shared.JobStatusEnum `json:"status,omitempty"`
@@ -38,9 +21,18 @@ type ListAnnotationImportJobsRequestBody struct {
 }
 
 type ListAnnotationImportJobsRequest struct {
-	QueryParams ListAnnotationImportJobsQueryParams
-	Headers     ListAnnotationImportJobsHeaders
-	Request     ListAnnotationImportJobsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListAnnotationImportJobsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The maximum number of jobs to return in one page of results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Specify the pagination token from a previous request to retrieve the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAnnotationImportJobsResponse struct {

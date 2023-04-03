@@ -13,33 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcceptEulasRequest{
-        PathParams: operations.AcceptEulasPathParams{
-            StudioID: "corrupti",
-        },
-        Headers: operations.AcceptEulasHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzClientToken: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
-        Request: operations.AcceptEulasRequestBody{
+        RequestBody: operations.AcceptEulasRequestBody{
             EulaIds: []string{
-                "deserunt",
-                "suscipit",
-                "iure",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
+        XAmzAlgorithm: "unde",
+        XAmzClientToken: "nulla",
+        XAmzContentSha256: "corrupti",
+        XAmzCredential: "illum",
+        XAmzDate: "vel",
+        XAmzSecurityToken: "error",
+        XAmzSignature: "deserunt",
+        XAmzSignedHeaders: "suscipit",
+        StudioID: "iure",
     }
 
     ctx := context.Background()

@@ -50,25 +50,17 @@ func (e *POSTGetCapacityReservationUsageVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type POSTGetCapacityReservationUsageQueryParams struct {
-	Action  POSTGetCapacityReservationUsageActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetCapacityReservationUsageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetCapacityReservationUsageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetCapacityReservationUsageRequest struct {
-	QueryParams POSTGetCapacityReservationUsageQueryParams
-	Headers     POSTGetCapacityReservationUsageHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetCapacityReservationUsageActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                     `request:"mediaType=text/xml"`
+	Version           POSTGetCapacityReservationUsageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetCapacityReservationUsageResponse struct {

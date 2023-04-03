@@ -87,7 +87,7 @@ func (e *HitsGetHitsTimeframeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HitsGetHitsQueryParams struct {
+type HitsGetHitsRequest struct {
 	// Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 	Filter *HitsGetHitsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
@@ -100,10 +100,6 @@ type HitsGetHitsQueryParams struct {
 	Timeframe HitsGetHitsTimeframeEnum `queryParam:"style=form,explode=true,name=timeframe"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type HitsGetHitsRequest struct {
-	QueryParams HitsGetHitsQueryParams
 }
 
 type HitsGetHitsResponse struct {

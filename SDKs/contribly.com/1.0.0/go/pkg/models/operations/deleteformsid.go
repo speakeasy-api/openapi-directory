@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFormsIDPathParams struct {
+type DeleteFormsIDRequest struct {
 	// Id of the form to delete
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteFormsIDRequest struct {
-	PathParams DeleteFormsIDPathParams
 }
 
 type DeleteFormsIDResponse struct {

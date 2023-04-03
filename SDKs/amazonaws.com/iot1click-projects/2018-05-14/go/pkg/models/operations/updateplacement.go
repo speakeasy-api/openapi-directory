@@ -6,32 +6,24 @@ import (
 	"net/http"
 )
 
-type UpdatePlacementPathParams struct {
-	// The name of the placement to update.
-	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
-	// The name of the project containing the placement to be updated.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type UpdatePlacementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdatePlacementRequestBody struct {
 	// The user-defined object of attributes used to update the placement. The maximum number of key/value pairs is 50.
 	Attributes map[string]string `json:"attributes,omitempty"`
 }
 
 type UpdatePlacementRequest struct {
-	PathParams UpdatePlacementPathParams
-	Headers    UpdatePlacementHeaders
-	Request    UpdatePlacementRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdatePlacementRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the placement to update.
+	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
+	// The name of the project containing the placement to be updated.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type UpdatePlacementResponse struct {

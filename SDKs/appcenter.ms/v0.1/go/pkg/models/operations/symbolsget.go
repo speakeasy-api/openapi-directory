@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SymbolsGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type SymbolsGetPathParams struct {
+type SymbolsGetRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The ID of the symbol (uuid of the symbol)
 	SymbolID string `pathParam:"style=simple,explode=false,name=symbol_id"`
-}
-
-type SymbolsGetRequest struct {
-	PathParams SymbolsGetPathParams
-	Security   SymbolsGetSecurity
 }
 
 // SymbolsGet500ApplicationJSON - Internal error

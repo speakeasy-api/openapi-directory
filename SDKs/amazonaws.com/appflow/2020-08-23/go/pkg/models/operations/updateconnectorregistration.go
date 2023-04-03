@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConnectorRegistrationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateConnectorRegistrationRequestBodyConnectorProvisioningConfig - Contains information about the configuration of the connector being registered.
 type UpdateConnectorRegistrationRequestBodyConnectorProvisioningConfig struct {
 	Lambda *shared.LambdaConnectorProvisioningConfig `json:"lambda,omitempty"`
@@ -32,8 +22,14 @@ type UpdateConnectorRegistrationRequestBody struct {
 }
 
 type UpdateConnectorRegistrationRequest struct {
-	Headers UpdateConnectorRegistrationHeaders
-	Request UpdateConnectorRegistrationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateConnectorRegistrationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateConnectorRegistrationResponse struct {

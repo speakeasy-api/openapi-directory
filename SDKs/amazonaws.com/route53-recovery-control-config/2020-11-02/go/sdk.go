@@ -116,7 +116,7 @@ func (s *SDK) CreateCluster(ctx context.Context, request operations.CreateCluste
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cluster"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateCluster(ctx context.Context, request operations.CreateCluste
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -242,7 +242,7 @@ func (s *SDK) CreateControlPanel(ctx context.Context, request operations.CreateC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/controlpanel"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) CreateControlPanel(ctx context.Context, request operations.CreateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -368,7 +368,7 @@ func (s *SDK) CreateRoutingControl(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/routingcontrol"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *SDK) CreateRoutingControl(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -494,7 +494,7 @@ func (s *SDK) CreateSafetyRule(ctx context.Context, request operations.CreateSaf
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/safetyrule"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,7 +509,7 @@ func (s *SDK) CreateSafetyRule(ctx context.Context, request operations.CreateSaf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -568,14 +568,14 @@ func (s *SDK) CreateSafetyRule(ctx context.Context, request operations.CreateSaf
 // DeleteCluster - Delete a cluster.
 func (s *SDK) DeleteCluster(ctx context.Context, request operations.DeleteClusterRequest) (*operations.DeleteClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/{ClusterArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cluster/{ClusterArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -674,14 +674,14 @@ func (s *SDK) DeleteCluster(ctx context.Context, request operations.DeleteCluste
 // DeleteControlPanel - Deletes a control panel.
 func (s *SDK) DeleteControlPanel(ctx context.Context, request operations.DeleteControlPanelRequest) (*operations.DeleteControlPanelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -780,14 +780,14 @@ func (s *SDK) DeleteControlPanel(ctx context.Context, request operations.DeleteC
 // DeleteRoutingControl - Deletes a routing control.
 func (s *SDK) DeleteRoutingControl(ctx context.Context, request operations.DeleteRoutingControlRequest) (*operations.DeleteRoutingControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routingcontrol/{RoutingControlArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/routingcontrol/{RoutingControlArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -886,14 +886,14 @@ func (s *SDK) DeleteRoutingControl(ctx context.Context, request operations.Delet
 // DeleteSafetyRule - <p>Deletes a safety rule.</p>/&gt;
 func (s *SDK) DeleteSafetyRule(ctx context.Context, request operations.DeleteSafetyRuleRequest) (*operations.DeleteSafetyRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/safetyrule/{SafetyRuleArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/safetyrule/{SafetyRuleArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -962,14 +962,14 @@ func (s *SDK) DeleteSafetyRule(ctx context.Context, request operations.DeleteSaf
 // DescribeCluster - Display the details about a cluster. The response includes the cluster name, endpoints, status, and Amazon Resource Name (ARN).
 func (s *SDK) DescribeCluster(ctx context.Context, request operations.DescribeClusterRequest) (*operations.DescribeClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/{ClusterArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cluster/{ClusterArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1068,14 +1068,14 @@ func (s *SDK) DescribeCluster(ctx context.Context, request operations.DescribeCl
 // DescribeControlPanel - Displays details about a control panel.
 func (s *SDK) DescribeControlPanel(ctx context.Context, request operations.DescribeControlPanelRequest) (*operations.DescribeControlPanelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1174,14 +1174,14 @@ func (s *SDK) DescribeControlPanel(ctx context.Context, request operations.Descr
 // DescribeRoutingControl - <p>Displays details about a routing control. A routing control has one of two states: ON and OFF. You can map the routing control state to the state of an Amazon Route 53 health check, which can be used to control routing.</p> <p>To get or update the routing control state, see the Recovery Cluster (data plane) API actions for Amazon Route 53 Application Recovery Controller.</p>
 func (s *SDK) DescribeRoutingControl(ctx context.Context, request operations.DescribeRoutingControlRequest) (*operations.DescribeRoutingControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routingcontrol/{RoutingControlArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/routingcontrol/{RoutingControlArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1280,14 +1280,14 @@ func (s *SDK) DescribeRoutingControl(ctx context.Context, request operations.Des
 // DescribeSafetyRule - Returns information about a safety rule.
 func (s *SDK) DescribeSafetyRule(ctx context.Context, request operations.DescribeSafetyRuleRequest) (*operations.DescribeSafetyRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/safetyrule/{SafetyRuleArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/safetyrule/{SafetyRuleArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1346,16 +1346,16 @@ func (s *SDK) DescribeSafetyRule(ctx context.Context, request operations.Describ
 // ListAssociatedRoute53HealthChecks - Returns an array of all Amazon Route 53 health checks associated with a specific routing control.
 func (s *SDK) ListAssociatedRoute53HealthChecks(ctx context.Context, request operations.ListAssociatedRoute53HealthChecksRequest) (*operations.ListAssociatedRoute53HealthChecksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routingcontrol/{RoutingControlArn}/associatedRoute53HealthChecks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/routingcontrol/{RoutingControlArn}/associatedRoute53HealthChecks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1433,9 +1433,9 @@ func (s *SDK) ListClusters(ctx context.Context, request operations.ListClustersR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1533,9 +1533,9 @@ func (s *SDK) ListControlPanels(ctx context.Context, request operations.ListCont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1626,16 +1626,16 @@ func (s *SDK) ListControlPanels(ctx context.Context, request operations.ListCont
 // ListRoutingControls - Returns an array of routing controls for a control panel. A routing control is an Amazon Route 53 Application Recovery Controller construct that has one of two states: ON and OFF. You can map the routing control state to the state of an Amazon Route 53 health check, which can be used to control routing.
 func (s *SDK) ListRoutingControls(ctx context.Context, request operations.ListRoutingControlsRequest) (*operations.ListRoutingControlsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}/routingcontrols", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}/routingcontrols", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1726,16 +1726,16 @@ func (s *SDK) ListRoutingControls(ctx context.Context, request operations.ListRo
 // ListSafetyRules - List the safety rules (the assertion rules and gating rules) that you've defined for the routing controls in a control panel.
 func (s *SDK) ListSafetyRules(ctx context.Context, request operations.ListSafetyRulesRequest) (*operations.ListSafetyRulesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}/safetyrules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controlpanel/{ControlPanelArn}/safetyrules", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1826,14 +1826,14 @@ func (s *SDK) ListSafetyRules(ctx context.Context, request operations.ListSafety
 // ListTagsForResource - Lists the tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1902,9 +1902,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // TagResource - Adds a tag to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1919,7 +1919,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1988,16 +1988,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes a tag from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#TagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#TagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2070,7 +2070,7 @@ func (s *SDK) UpdateControlPanel(ctx context.Context, request operations.UpdateC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/controlpanel"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2085,7 +2085,7 @@ func (s *SDK) UpdateControlPanel(ctx context.Context, request operations.UpdateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2186,7 +2186,7 @@ func (s *SDK) UpdateRoutingControl(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/routingcontrol"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2201,7 +2201,7 @@ func (s *SDK) UpdateRoutingControl(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2302,7 +2302,7 @@ func (s *SDK) UpdateSafetyRule(ctx context.Context, request operations.UpdateSaf
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/safetyrule"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2317,7 +2317,7 @@ func (s *SDK) UpdateSafetyRule(ctx context.Context, request operations.UpdateSaf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

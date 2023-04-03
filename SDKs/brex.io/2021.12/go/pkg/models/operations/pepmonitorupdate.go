@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type PepMonitorUpdateSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PepMonitorUpdatePathParams struct {
-	// The identifier of the Monitor
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // PepMonitorUpdateRequestBody - Pass new Webhook as post parameter
@@ -24,10 +18,10 @@ type PepMonitorUpdateRequestBody struct {
 }
 
 type PepMonitorUpdateRequest struct {
-	PathParams PepMonitorUpdatePathParams
 	// Pass new Webhook as post parameter
-	Request  *PepMonitorUpdateRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PepMonitorUpdateSecurity
+	RequestBody *PepMonitorUpdateRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// The identifier of the Monitor
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PepMonitorUpdateDefaultApplicationJSON - Detailed information about the error

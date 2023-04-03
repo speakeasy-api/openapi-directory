@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSitePathParams struct {
-	//  The ID or the Amazon Resource Name (ARN) of the site.
-	SiteID string `pathParam:"style=simple,explode=false,name=SiteId"`
-}
-
-type UpdateSiteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateSiteRequestBody struct {
 	// The description of the site.
 	Description *string `json:"Description,omitempty"`
@@ -32,9 +17,16 @@ type UpdateSiteRequestBody struct {
 }
 
 type UpdateSiteRequest struct {
-	PathParams UpdateSitePathParams
-	Headers    UpdateSiteHeaders
-	Request    UpdateSiteRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateSiteRequestBody `request:"mediaType=application/json"`
+	//  The ID or the Amazon Resource Name (ARN) of the site.
+	SiteID            string  `pathParam:"style=simple,explode=false,name=SiteId"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateSiteResponse struct {

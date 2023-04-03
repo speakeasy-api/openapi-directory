@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBackendEnvironmentsPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type ListBackendEnvironmentsQueryParams struct {
-	//  The name of the backend environment
-	EnvironmentName *string `queryParam:"style=form,explode=true,name=environmentName"`
-	//  The maximum number of records to list in a single response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  A pagination token. Set to null to start listing backend environments from the start. If a non-null pagination token is returned in a result, pass its value in here to list more backend environments.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListBackendEnvironmentsHeaders struct {
+type ListBackendEnvironmentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListBackendEnvironmentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListBackendEnvironmentsRequest struct {
-	PathParams  ListBackendEnvironmentsPathParams
-	QueryParams ListBackendEnvironmentsQueryParams
-	Headers     ListBackendEnvironmentsHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name of the backend environment
+	EnvironmentName *string `queryParam:"style=form,explode=true,name=environmentName"`
+	//  The maximum number of records to list in a single response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  A pagination token. Set to null to start listing backend environments from the start. If a non-null pagination token is returned in a result, pass its value in here to list more backend environments.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBackendEnvironmentsResponse struct {

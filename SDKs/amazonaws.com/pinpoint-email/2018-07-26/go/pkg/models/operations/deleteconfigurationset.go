@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type DeleteConfigurationSetPathParams struct {
-	// The name of the configuration set that you want to delete.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type DeleteConfigurationSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteConfigurationSetRequest struct {
-	PathParams DeleteConfigurationSetPathParams
-	Headers    DeleteConfigurationSetHeaders
+	// The name of the configuration set that you want to delete.
+	ConfigurationSetName string  `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	XAmzAlgorithm        *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteConfigurationSetResponse struct {

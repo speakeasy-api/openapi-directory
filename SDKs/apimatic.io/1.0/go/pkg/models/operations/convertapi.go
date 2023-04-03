@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type ConvertAPIRequestBody struct {
+	URL *string `multipartForm:"name=url"`
+}
+
 // ConvertAPIFormatEnum
 type ConvertAPIFormatEnum string
 
@@ -47,17 +51,9 @@ func (e *ConvertAPIFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ConvertAPIQueryParams struct {
-	Format ConvertAPIFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type ConvertAPIRequestBody struct {
-	URL *string `multipartForm:"name=url"`
-}
-
 type ConvertAPIRequest struct {
-	QueryParams ConvertAPIQueryParams
-	Request     *ConvertAPIRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *ConvertAPIRequestBody `request:"mediaType=multipart/form-data"`
+	Format      ConvertAPIFormatEnum   `queryParam:"style=form,explode=true,name=format"`
 }
 
 type ConvertAPIResponse struct {

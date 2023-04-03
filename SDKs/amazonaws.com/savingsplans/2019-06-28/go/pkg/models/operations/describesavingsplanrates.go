@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeSavingsPlanRatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DescribeSavingsPlanRatesRequestBody struct {
 	// The filters.
 	Filters []shared.SavingsPlanRateFilter `json:"filters,omitempty"`
@@ -29,8 +19,14 @@ type DescribeSavingsPlanRatesRequestBody struct {
 }
 
 type DescribeSavingsPlanRatesRequest struct {
-	Headers DescribeSavingsPlanRatesHeaders
-	Request DescribeSavingsPlanRatesRequestBody `request:"mediaType=application/json"`
+	RequestBody       DescribeSavingsPlanRatesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DescribeSavingsPlanRatesResponse struct {

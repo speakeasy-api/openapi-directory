@@ -30,7 +30,8 @@ func (e *GetFolderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFolderHeaders struct {
+type GetFolderRequest struct {
+	GetFolderInput    shared.GetFolderInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetFolderHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetFolderXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetFolderRequest struct {
-	Headers GetFolderHeaders
-	Request shared.GetFolderInput `request:"mediaType=application/json"`
 }
 
 type GetFolderResponse struct {

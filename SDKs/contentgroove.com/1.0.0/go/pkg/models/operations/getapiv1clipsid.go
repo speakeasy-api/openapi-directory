@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1ClipsIDSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAPIV1ClipsIDPathParams struct {
-	// The id of the clip to be retrieved
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetAPIV1ClipsIDRequest struct {
-	PathParams GetAPIV1ClipsIDPathParams
-	Security   GetAPIV1ClipsIDSecurity
+	// The id of the clip to be retrieved
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1ClipsIDResponse struct {

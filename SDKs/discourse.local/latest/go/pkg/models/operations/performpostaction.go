@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type PerformPostActionHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type PerformPostActionRequestBody struct {
 	FlagTopic        *bool `json:"flag_topic,omitempty"`
 	ID               int64 `json:"id"`
@@ -18,8 +13,9 @@ type PerformPostActionRequestBody struct {
 }
 
 type PerformPostActionRequest struct {
-	Headers PerformPostActionHeaders
-	Request *PerformPostActionRequestBody `request:"mediaType=application/json"`
+	APIKey      string                        `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                        `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *PerformPostActionRequestBody `request:"mediaType=application/json"`
 }
 
 type PerformPostAction200ApplicationJSONActionsSummary struct {

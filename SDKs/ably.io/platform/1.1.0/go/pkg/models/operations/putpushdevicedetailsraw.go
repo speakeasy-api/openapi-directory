@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutPushDeviceDetailsRawPathParams struct {
-	// Device's ID.
-	DeviceID string `pathParam:"style=simple,explode=false,name=device_id"`
-}
-
-type PutPushDeviceDetailsRawQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type PutPushDeviceDetailsRawHeaders struct {
+type PutPushDeviceDetailsRawRequest struct {
+	RequestBody []byte `request:"mediaType=application/x-msgpack"`
 	// The version of the API you wish to use.
 	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type PutPushDeviceDetailsRawRequest struct {
-	PathParams  PutPushDeviceDetailsRawPathParams
-	QueryParams PutPushDeviceDetailsRawQueryParams
-	Headers     PutPushDeviceDetailsRawHeaders
-	Request     []byte `request:"mediaType=application/x-msgpack"`
+	// Device's ID.
+	DeviceID string `pathParam:"style=simple,explode=false,name=device_id"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type PutPushDeviceDetailsRawResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteComponentTypePathParams struct {
-	// The ID of the component type to delete.
-	ComponentTypeID string `pathParam:"style=simple,explode=false,name=componentTypeId"`
-	// The ID of the workspace that contains the component type.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteComponentTypeHeaders struct {
+type DeleteComponentTypeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteComponentTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteComponentTypeRequest struct {
-	PathParams DeleteComponentTypePathParams
-	Headers    DeleteComponentTypeHeaders
+	// The ID of the component type to delete.
+	ComponentTypeID string `pathParam:"style=simple,explode=false,name=componentTypeId"`
+	// The ID of the workspace that contains the component type.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteComponentTypeResponse struct {

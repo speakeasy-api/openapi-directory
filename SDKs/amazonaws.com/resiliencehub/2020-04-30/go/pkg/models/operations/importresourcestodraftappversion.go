@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportResourcesToDraftAppVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum - The import strategy you would like to set to import resources into Resilience Hub application.
 type ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum string
 
@@ -57,8 +47,14 @@ type ImportResourcesToDraftAppVersionRequestBody struct {
 }
 
 type ImportResourcesToDraftAppVersionRequest struct {
-	Headers ImportResourcesToDraftAppVersionHeaders
-	Request ImportResourcesToDraftAppVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody       ImportResourcesToDraftAppVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ImportResourcesToDraftAppVersionResponse struct {

@@ -38,7 +38,7 @@ func newDocument(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Cancel a document. Returns a cancellation document object if the cancellation is succeded.
 func (s *document) CancelDocument(ctx context.Context, request operations.CancelDocumentRequest) (*operations.CancelDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *document) CancelDocument(ctx context.Context, request operations.Cancel
 
 // CreateDocument - Create a document
 // Create a new document. Returns a document object if the create is succeded.
-func (s *document) CreateDocument(ctx context.Context, request operations.CreateDocumentRequest) (*operations.CreateDocumentResponse, error) {
+func (s *document) CreateDocument(ctx context.Context, request shared.DocumentInsert) (*operations.CreateDocumentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/documents"
 
@@ -224,7 +224,7 @@ func (s *document) CreateDocument(ctx context.Context, request operations.Create
 // Create a new document from proforma. Returns a document object if the create is succeded.
 func (s *document) CreateDocumentFromProforma(ctx context.Context, request operations.CreateDocumentFromProformaRequest) (*operations.CreateDocumentFromProformaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/create-from-proforma", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/create-from-proforma", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -313,7 +313,7 @@ func (s *document) CreateDocumentFromProforma(ctx context.Context, request opera
 // Delete all exist payment history on document.
 func (s *document) DeletePayment(ctx context.Context, request operations.DeletePaymentRequest) (*operations.DeletePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -390,7 +390,7 @@ func (s *document) DeletePayment(ctx context.Context, request operations.DeleteP
 // Download a document. Returns a document in PDF format.
 func (s *document) DownloadDocument(ctx context.Context, request operations.DownloadDocumentRequest) (*operations.DownloadDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -489,7 +489,7 @@ func (s *document) DownloadDocument(ctx context.Context, request operations.Down
 // Retrieves the details of an existing document.
 func (s *document) GetDocument(ctx context.Context, request operations.GetDocumentRequest) (*operations.GetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -576,7 +576,7 @@ func (s *document) GetDocument(ctx context.Context, request operations.GetDocume
 // Retrieves the details of an existing document status.
 func (s *document) GetOnlineSzamlaStatus(ctx context.Context, request operations.GetOnlineSzamlaStatusRequest) (*operations.GetOnlineSzamlaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/online-szamla", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/online-szamla", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -663,7 +663,7 @@ func (s *document) GetOnlineSzamlaStatus(ctx context.Context, request operations
 // Retrieves the details of payment history an existing document.
 func (s *document) GetPayment(ctx context.Context, request operations.GetPaymentRequest) (*operations.GetPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/payments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -750,7 +750,7 @@ func (s *document) GetPayment(ctx context.Context, request operations.GetPayment
 // Retrieves public url to download an existing document.
 func (s *document) GetPublicURL(ctx context.Context, request operations.GetPublicURLRequest) (*operations.GetPublicURLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/public-url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/public-url", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -844,7 +844,7 @@ func (s *document) ListDocument(ctx context.Context, request operations.ListDocu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -926,9 +926,9 @@ func (s *document) ListDocument(ctx context.Context, request operations.ListDocu
 // Returns a list of emails, where the invoice is sent.
 func (s *document) SendDocument(ctx context.Context, request operations.SendDocumentRequest) (*operations.SendDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/send", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/send", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendDocument", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1022,9 +1022,9 @@ func (s *document) SendDocument(ctx context.Context, request operations.SendDocu
 // Update payment history an existing document. Returns a payment history object if the update is succeded.
 func (s *document) UpdatePayment(ctx context.Context, request operations.UpdatePaymentRequest) (*operations.UpdatePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/payments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}/payments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -13,21 +13,17 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.CreateBankAccountRequest{
-        Request: shared.BankAccountInput{
-            AccountNumber: "corrupti",
-            AccountNumberIban: "provident",
-            Currency: "PLN",
-            Name: "quibusdam",
-            NeedQr: false,
-            Swift: "unde",
-        },
+    req := shared.BankAccountInput{
+        AccountNumber: "corrupti",
+        AccountNumberIban: "provident",
+        Currency: "PLN",
+        Name: "quibusdam",
+        NeedQr: false,
+        Swift: "unde",
     }
 
     ctx := context.Background()

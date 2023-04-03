@@ -4,19 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ResubscribeSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ResubscribePathParams struct {
-	// The identifier of the payment platform (stripe/itunes). Only stripe is currently supported.
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type ResubscribeQueryParams struct {
+type ResubscribeRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -31,12 +25,8 @@ type ResubscribeQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The id of the plan to renew.
 	PlanID string `queryParam:"style=form,explode=true,name=planId"`
-}
-
-type ResubscribeRequest struct {
-	PathParams  ResubscribePathParams
-	QueryParams ResubscribeQueryParams
-	Security    ResubscribeSecurity
+	// The identifier of the payment platform (stripe/itunes). Only stripe is currently supported.
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type ResubscribeResponse struct {

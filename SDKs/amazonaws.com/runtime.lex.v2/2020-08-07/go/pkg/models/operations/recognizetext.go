@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RecognizeTextPathParams struct {
-	// The alias identifier in use for the bot that processes the request.
-	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
-	// The identifier of the bot that processes the request.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The locale where the session is in use.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-	// The identifier of the user session that is having the conversation.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type RecognizeTextHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RecognizeTextRequestBodySessionState - The state of the user's session with Amazon Lex V2.
 type RecognizeTextRequestBodySessionState struct {
 	ActiveContexts       []shared.ActiveContext `json:"activeContexts,omitempty"`
@@ -48,9 +27,22 @@ type RecognizeTextRequestBody struct {
 }
 
 type RecognizeTextRequest struct {
-	PathParams RecognizeTextPathParams
-	Headers    RecognizeTextHeaders
-	Request    RecognizeTextRequestBody `request:"mediaType=application/json"`
+	RequestBody       RecognizeTextRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The alias identifier in use for the bot that processes the request.
+	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
+	// The identifier of the bot that processes the request.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The locale where the session is in use.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// The identifier of the user session that is having the conversation.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type RecognizeTextResponse struct {

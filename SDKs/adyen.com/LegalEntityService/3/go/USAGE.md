@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteBusinessLinesIDRequest{
-        Security: operations.DeleteBusinessLinesIDSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.DeleteBusinessLinesIDPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.BusinessLines.DeleteBusinessLinesID(ctx, req)
+    res, err := s.BusinessLines.DeleteBusinessLinesID(ctx, req, operations.DeleteBusinessLinesIDSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

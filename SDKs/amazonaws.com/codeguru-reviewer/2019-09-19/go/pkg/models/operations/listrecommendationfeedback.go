@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRecommendationFeedbackPathParams struct {
+type ListRecommendationFeedbackRequest struct {
 	// The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html">CodeReview</a> object.
 	CodeReviewArn string `pathParam:"style=simple,explode=false,name=CodeReviewArn"`
-}
-
-type ListRecommendationFeedbackQueryParams struct {
 	// The maximum number of results that are returned per call. The default is 100.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged.
@@ -20,23 +17,14 @@ type ListRecommendationFeedbackQueryParams struct {
 	// Used to query the recommendation feedback for a given recommendation.
 	RecommendationIds []string `queryParam:"style=form,explode=true,name=RecommendationIds"`
 	// <p>An Amazon Web Services user's account ID or Amazon Resource Name (ARN). Use this ID to query the recommendation feedback for a code review from that user.</p> <p> The <code>UserId</code> is an IAM principal that can be specified as an Amazon Web Services account ID or an Amazon Resource Name (ARN). For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#Principal_specifying"> Specifying a Principal</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
-	UserIds []string `queryParam:"style=form,explode=true,name=UserIds"`
-}
-
-type ListRecommendationFeedbackHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRecommendationFeedbackRequest struct {
-	PathParams  ListRecommendationFeedbackPathParams
-	QueryParams ListRecommendationFeedbackQueryParams
-	Headers     ListRecommendationFeedbackHeaders
+	UserIds           []string `queryParam:"style=form,explode=true,name=UserIds"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListRecommendationFeedbackResponse struct {

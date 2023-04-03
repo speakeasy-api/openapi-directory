@@ -50,30 +50,22 @@ func (e *GETDisableVgwRoutePropagationVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDisableVgwRoutePropagationQueryParams struct {
+type GETDisableVgwRoutePropagationRequest struct {
 	Action GETDisableVgwRoutePropagationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the virtual private gateway.
 	GatewayID string `queryParam:"style=form,explode=true,name=GatewayId"`
 	// The ID of the route table.
-	RouteTableID string                                   `queryParam:"style=form,explode=true,name=RouteTableId"`
-	Version      GETDisableVgwRoutePropagationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisableVgwRoutePropagationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableVgwRoutePropagationRequest struct {
-	QueryParams GETDisableVgwRoutePropagationQueryParams
-	Headers     GETDisableVgwRoutePropagationHeaders
+	RouteTableID      string                                   `queryParam:"style=form,explode=true,name=RouteTableId"`
+	Version           GETDisableVgwRoutePropagationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisableVgwRoutePropagationResponse struct {

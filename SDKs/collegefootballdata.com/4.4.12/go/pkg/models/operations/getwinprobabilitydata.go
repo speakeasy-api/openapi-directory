@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWinProbabilityDataQueryParams struct {
+type GetWinProbabilityDataRequest struct {
 	// Game id filter
 	GameID int64 `queryParam:"style=form,explode=true,name=gameId"`
-}
-
-type GetWinProbabilityDataRequest struct {
-	QueryParams GetWinProbabilityDataQueryParams
 }
 
 type GetWinProbabilityDataResponse struct {

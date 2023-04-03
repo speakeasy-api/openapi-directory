@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClaimDevicesByClaimCodePathParams struct {
-	// The claim code, starting with "C-", as provided by the device manufacturer.
-	ClaimCode string `pathParam:"style=simple,explode=false,name=claimCode"`
-}
-
-type ClaimDevicesByClaimCodeHeaders struct {
+type ClaimDevicesByClaimCodeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type ClaimDevicesByClaimCodeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ClaimDevicesByClaimCodeRequest struct {
-	PathParams ClaimDevicesByClaimCodePathParams
-	Headers    ClaimDevicesByClaimCodeHeaders
+	// The claim code, starting with "C-", as provided by the device manufacturer.
+	ClaimCode string `pathParam:"style=simple,explode=false,name=claimCode"`
 }
 
 type ClaimDevicesByClaimCodeResponse struct {

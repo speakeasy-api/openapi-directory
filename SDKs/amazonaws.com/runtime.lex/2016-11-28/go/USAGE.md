@@ -13,27 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DeleteSessionRequest{
-        PathParams: operations.DeleteSessionPathParams{
-            BotAlias: "corrupti",
-            BotName: "provident",
-            UserID: "distinctio",
-        },
-        Headers: operations.DeleteSessionHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "provident",
+        XAmzCredential: "distinctio",
+        XAmzDate: "quibusdam",
+        XAmzSecurityToken: "unde",
+        XAmzSignature: "nulla",
+        XAmzSignedHeaders: "corrupti",
+        BotAlias: "illum",
+        BotName: "vel",
+        UserID: "error",
     }
 
     ctx := context.Background()

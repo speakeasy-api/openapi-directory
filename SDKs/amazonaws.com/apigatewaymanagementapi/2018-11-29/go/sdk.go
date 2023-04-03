@@ -113,14 +113,14 @@ func New(opts ...SDKOption) *SDK {
 // DeleteConnection - Delete the connection with the provided id.
 func (s *SDK) DeleteConnection(ctx context.Context, request operations.DeleteConnectionRequest) (*operations.DeleteConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -180,14 +180,14 @@ func (s *SDK) DeleteConnection(ctx context.Context, request operations.DeleteCon
 // GetConnection - Get information about the connection with the provided id.
 func (s *SDK) GetConnection(ctx context.Context, request operations.GetConnectionRequest) (*operations.GetConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -256,9 +256,9 @@ func (s *SDK) GetConnection(ctx context.Context, request operations.GetConnectio
 // PostToConnection - Sends the provided data to the specified connection.
 func (s *SDK) PostToConnection(ctx context.Context, request operations.PostToConnectionRequest) (*operations.PostToConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -273,7 +273,7 @@ func (s *SDK) PostToConnection(ctx context.Context, request operations.PostToCon
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

@@ -50,25 +50,17 @@ func (e *GETDeleteEventSubscriptionVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDeleteEventSubscriptionQueryParams struct {
-	Action           GETDeleteEventSubscriptionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SubscriptionName string                                `queryParam:"style=form,explode=true,name=SubscriptionName"`
-	Version          GETDeleteEventSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteEventSubscriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETDeleteEventSubscriptionRequest struct {
-	QueryParams GETDeleteEventSubscriptionQueryParams
-	Headers     GETDeleteEventSubscriptionHeaders
+	Action            GETDeleteEventSubscriptionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	SubscriptionName  string                                `queryParam:"style=form,explode=true,name=SubscriptionName"`
+	Version           GETDeleteEventSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteEventSubscriptionResponse struct {

@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammesByCategoryPathParams struct {
-	// The category identifier to return results from.
-	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
-type GetProgrammesByCategoryQueryParams struct {
+type GetProgrammesByCategoryRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The category identifier to return results from.
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// The page index.
@@ -23,11 +20,6 @@ type GetProgrammesByCategoryQueryParams struct {
 	PerPage int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetProgrammesByCategoryRequest struct {
-	PathParams  GetProgrammesByCategoryPathParams
-	QueryParams GetProgrammesByCategoryQueryParams
 }
 
 type GetProgrammesByCategoryResponse struct {

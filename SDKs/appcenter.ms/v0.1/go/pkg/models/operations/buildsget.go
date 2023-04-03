@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type BuildsGetPathParams struct {
+type BuildsGetRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The build ID
 	BuildID int64 `pathParam:"style=simple,explode=false,name=build_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type BuildsGetRequest struct {
-	PathParams BuildsGetPathParams
-	Security   BuildsGetSecurity
 }
 
 // BuildsGet200ApplicationJSON - Success

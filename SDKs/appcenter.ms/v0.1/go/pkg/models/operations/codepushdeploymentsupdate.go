@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CodePushDeploymentsUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CodePushDeploymentsUpdatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// deployment name
-	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // CodePushDeploymentsUpdateRequestBody - Deployment modification. All fields are optional and only provided fields will get updated.
@@ -26,10 +16,14 @@ type CodePushDeploymentsUpdateRequestBody struct {
 }
 
 type CodePushDeploymentsUpdateRequest struct {
-	PathParams CodePushDeploymentsUpdatePathParams
 	// Deployment modification. All fields are optional and only provided fields will get updated.
-	Request  CodePushDeploymentsUpdateRequestBody `request:"mediaType=application/json"`
-	Security CodePushDeploymentsUpdateSecurity
+	RequestBody CodePushDeploymentsUpdateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// deployment name
+	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CodePushDeploymentsUpdateDefaultApplicationJSON - Error

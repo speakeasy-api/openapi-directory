@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPodcastEpisodesQueryParams struct {
+type GetPodcastEpisodesRequest struct {
 	// Pagination page
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// Using this parameter will retrieve episodes belonging to a specific podcast.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetPodcastEpisodesRequest struct {
-	QueryParams GetPodcastEpisodesQueryParams
 }
 
 type GetPodcastEpisodesResponse struct {

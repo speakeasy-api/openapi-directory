@@ -36,14 +36,14 @@ func newMotorcycleSearch(defaultClient, securityClient HTTPClient, serverURL, la
 // Get a particular Motorcycle listing by its id
 func (s *motorcycleSearch) GetListingMotorcycleID(ctx context.Context, request operations.GetListingMotorcycleIDRequest) (*operations.GetListingMotorcycleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/motorcycle/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/motorcycle/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *motorcycleSearch) GetListingMotorcycleID(ctx context.Context, request o
 // Get Motorcycle listing options, features, seller comments
 func (s *motorcycleSearch) GetListingMotorcycleIDExtra(ctx context.Context, request operations.GetListingMotorcycleIDExtraRequest) (*operations.GetListingMotorcycleIDExtraResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/motorcycle/{id}/extra", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/motorcycle/{id}/extra", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *motorcycleSearch) GetListingMotorcycleIDExtra(ctx context.Context, requ
 // Get Motorcycle listing media (photo, photos) by id
 func (s *motorcycleSearch) GetListingMotorcycleIDMedia(ctx context.Context, request operations.GetListingMotorcycleIDMediaRequest) (*operations.GetListingMotorcycleIDMediaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/motorcycle/{id}/media", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/motorcycle/{id}/media", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -233,7 +233,7 @@ func (s *motorcycleSearch) GetSearchMotorcycleActive(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -292,7 +292,7 @@ func (s *motorcycleSearch) GetSearchMotorcycleAutoComplete(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

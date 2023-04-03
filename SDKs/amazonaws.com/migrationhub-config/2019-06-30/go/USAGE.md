@@ -13,31 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateHomeRegionControlRequest{
-        Headers: operations.CreateHomeRegionControlHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
-        },
-        Request: shared.CreateHomeRegionControlRequest{
+        CreateHomeRegionControlRequest: shared.CreateHomeRegionControlRequest{
             DryRun: false,
-            HomeRegion: "illum",
+            HomeRegion: "corrupti",
             Target: shared.Target{
-                ID: "vel",
+                ID: "provident",
                 Type: "ACCOUNT",
             },
         },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
     }
 
     ctx := context.Background()

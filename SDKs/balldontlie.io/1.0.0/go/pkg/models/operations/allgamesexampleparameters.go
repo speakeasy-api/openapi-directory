@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AllGamesExampleParametersQueryParams struct {
+type AllGamesExampleParametersRequest struct {
 	Seasons *string `queryParam:"style=form,explode=true,name=seasons[]"`
 	TeamIds *string `queryParam:"style=form,explode=true,name=team_ids[]"`
-}
-
-type AllGamesExampleParametersRequest struct {
-	QueryParams AllGamesExampleParametersQueryParams
 }
 
 type AllGamesExampleParametersResponse struct {

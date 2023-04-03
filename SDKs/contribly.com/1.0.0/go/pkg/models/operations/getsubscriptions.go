@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionsRequest struct {
-	// Subscription to be created
-	Request shared.SubscriptionSubmission `request:"mediaType=application/json"`
-}
-
 type GetSubscriptionsResponse struct {
 	ContentType string
 	Headers     map[string][]string

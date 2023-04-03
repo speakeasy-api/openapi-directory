@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSessionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListSessionsXAmzTargetEnum
 type ListSessionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListSessionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSessionsHeaders struct {
+type ListSessionsRequest struct {
+	ListSessionsRequest shared.ListSessionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListSessionsHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListSessionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListSessionsRequest struct {
-	QueryParams ListSessionsQueryParams
-	Headers     ListSessionsHeaders
-	Request     shared.ListSessionsRequest `request:"mediaType=application/json"`
 }
 
 type ListSessionsResponse struct {

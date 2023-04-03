@@ -13,30 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateDeviceWithPlacementRequest{
-        PathParams: operations.AssociateDeviceWithPlacementPathParams{
-            DeviceTemplateName: "corrupti",
-            PlacementName: "provident",
-            ProjectName: "distinctio",
+        RequestBody: operations.AssociateDeviceWithPlacementRequestBody{
+            DeviceID: "corrupti",
         },
-        Headers: operations.AssociateDeviceWithPlacementHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
-        Request: operations.AssociateDeviceWithPlacementRequestBody{
-            DeviceID: "deserunt",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        DeviceTemplateName: "vel",
+        PlacementName: "error",
+        ProjectName: "deserunt",
     }
 
     ctx := context.Background()

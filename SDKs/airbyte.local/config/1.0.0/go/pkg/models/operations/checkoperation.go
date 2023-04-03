@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CheckOperationRequest struct {
-	Request shared.OperatorConfiguration `request:"mediaType=application/json"`
-}
-
 type CheckOperationResponse struct {
 	// Successful operation
 	CheckOperationRead *shared.CheckOperationRead

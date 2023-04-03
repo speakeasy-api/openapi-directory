@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Ndcer - No Dues/ Objection Certificate
 // API to verify No Dues/ Objection Certificate.
-func (s *apIs) Ndcer(ctx context.Context, request operations.NdcerRequest) (*operations.NdcerResponse, error) {
+func (s *apIs) Ndcer(ctx context.Context, request operations.NdcerRequestBody, security operations.NdcerSecurity) (*operations.NdcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ndcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Ndcer(ctx context.Context, request operations.NdcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

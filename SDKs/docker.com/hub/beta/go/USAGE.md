@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteV2AccessTokensUUIDRequest{
-        PathParams: operations.DeleteV2AccessTokensUUIDPathParams{
-            UUID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
+        UUID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
     }
 
     ctx := context.Background()

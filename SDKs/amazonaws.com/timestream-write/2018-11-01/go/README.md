@@ -24,166 +24,158 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateBatchLoadTaskRequest{
-        Headers: operations.CreateBatchLoadTaskHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Timestream_20181101.CreateBatchLoadTask",
-        },
-        Request: shared.CreateBatchLoadTaskRequest{
-            ClientToken: "illum",
+        CreateBatchLoadTaskRequest: shared.CreateBatchLoadTaskRequest{
+            ClientToken: "corrupti",
             DataModelConfiguration: &shared.DataModelConfiguration{
                 DataModel: &shared.DataModel{
                     DimensionMappings: []shared.DimensionMapping{
                         shared.DimensionMapping{
-                            DestinationColumn: "error",
-                            SourceColumn: "deserunt",
+                            DestinationColumn: "distinctio",
+                            SourceColumn: "quibusdam",
                         },
                         shared.DimensionMapping{
-                            DestinationColumn: "suscipit",
-                            SourceColumn: "iure",
+                            DestinationColumn: "unde",
+                            SourceColumn: "nulla",
+                        },
+                        shared.DimensionMapping{
+                            DestinationColumn: "corrupti",
+                            SourceColumn: "illum",
                         },
                     },
-                    MeasureNameColumn: "magnam",
+                    MeasureNameColumn: "vel",
                     MixedMeasureMappings: []shared.MixedMeasureMapping{
                         shared.MixedMeasureMapping{
-                            MeasureName: "ipsa",
-                            MeasureValueType: "MULTI",
+                            MeasureName: "deserunt",
+                            MeasureValueType: "VARCHAR",
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
                                     MeasureValueType: "BIGINT",
-                                    SourceColumn: "molestiae",
-                                    TargetMultiMeasureAttributeName: "minus",
+                                    SourceColumn: "debitis",
+                                    TargetMultiMeasureAttributeName: "ipsa",
                                 },
                                 shared.MultiMeasureAttributeMapping{
                                     MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "voluptatum",
-                                    TargetMultiMeasureAttributeName: "iusto",
+                                    SourceColumn: "tempora",
+                                    TargetMultiMeasureAttributeName: "suscipit",
                                 },
                             },
-                            SourceColumn: "excepturi",
-                            TargetMeasureName: "nisi",
+                            SourceColumn: "molestiae",
+                            TargetMeasureName: "minus",
                         },
                         shared.MixedMeasureMapping{
-                            MeasureName: "recusandae",
-                            MeasureValueType: "MULTI",
+                            MeasureName: "placeat",
+                            MeasureValueType: "BOOLEAN",
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BIGINT",
-                                    SourceColumn: "veritatis",
-                                    TargetMultiMeasureAttributeName: "deserunt",
+                                    MeasureValueType: "BOOLEAN",
+                                    SourceColumn: "nisi",
+                                    TargetMultiMeasureAttributeName: "recusandae",
+                                },
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "TIMESTAMP",
+                                    SourceColumn: "ab",
+                                    TargetMultiMeasureAttributeName: "quis",
                                 },
                             },
-                            SourceColumn: "perferendis",
-                            TargetMeasureName: "ipsam",
+                            SourceColumn: "veritatis",
+                            TargetMeasureName: "deserunt",
                         },
                         shared.MixedMeasureMapping{
-                            MeasureName: "repellendus",
-                            MeasureValueType: "MULTI",
+                            MeasureName: "perferendis",
+                            MeasureValueType: "VARCHAR",
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "DOUBLE",
+                                    MeasureValueType: "TIMESTAMP",
+                                    SourceColumn: "quo",
+                                    TargetMultiMeasureAttributeName: "odit",
+                                },
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "TIMESTAMP",
                                     SourceColumn: "at",
-                                    TargetMultiMeasureAttributeName: "at",
+                                    TargetMultiMeasureAttributeName: "maiores",
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "molestiae",
+                                    MeasureValueType: "BOOLEAN",
+                                    SourceColumn: "quod",
                                     TargetMultiMeasureAttributeName: "quod",
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "esse",
-                                    TargetMultiMeasureAttributeName: "totam",
-                                },
-                                shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "VARCHAR",
-                                    SourceColumn: "dolorum",
-                                    TargetMultiMeasureAttributeName: "dicta",
+                                    MeasureValueType: "BOOLEAN",
+                                    SourceColumn: "totam",
+                                    TargetMultiMeasureAttributeName: "porro",
                                 },
                             },
-                            SourceColumn: "nam",
-                            TargetMeasureName: "officia",
-                        },
-                        shared.MixedMeasureMapping{
-                            MeasureName: "occaecati",
-                            MeasureValueType: "DOUBLE",
-                            MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
-                                shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "optio",
-                                    TargetMultiMeasureAttributeName: "totam",
-                                },
-                                shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "DOUBLE",
-                                    SourceColumn: "commodi",
-                                    TargetMultiMeasureAttributeName: "molestiae",
-                                },
-                                shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BIGINT",
-                                    SourceColumn: "qui",
-                                    TargetMultiMeasureAttributeName: "impedit",
-                                },
-                            },
-                            SourceColumn: "cum",
-                            TargetMeasureName: "esse",
+                            SourceColumn: "dolorum",
+                            TargetMeasureName: "dicta",
                         },
                     },
                     MultiMeasureMappings: &shared.MultiMeasureMappings{
                         MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                             shared.MultiMeasureAttributeMapping{
+                                MeasureValueType: "VARCHAR",
+                                SourceColumn: "occaecati",
+                                TargetMultiMeasureAttributeName: "fugit",
+                            },
+                            shared.MultiMeasureAttributeMapping{
                                 MeasureValueType: "BOOLEAN",
-                                SourceColumn: "aspernatur",
-                                TargetMultiMeasureAttributeName: "perferendis",
+                                SourceColumn: "hic",
+                                TargetMultiMeasureAttributeName: "optio",
+                            },
+                            shared.MultiMeasureAttributeMapping{
+                                MeasureValueType: "BOOLEAN",
+                                SourceColumn: "beatae",
+                                TargetMultiMeasureAttributeName: "commodi",
                             },
                         },
-                        TargetMultiMeasureName: "ad",
+                        TargetMultiMeasureName: "molestiae",
                     },
-                    TimeColumn: "natus",
+                    TimeColumn: "modi",
                     TimeUnit: "MILLISECONDS",
                 },
                 DataModelS3Configuration: &shared.DataModelS3Configuration{
-                    BucketName: "iste",
-                    ObjectKey: "dolor",
+                    BucketName: "impedit",
+                    ObjectKey: "cum",
                 },
             },
             DataSourceConfiguration: shared.DataSourceConfiguration{
                 CsvConfiguration: &shared.CsvConfiguration{
-                    ColumnSeparator: "natus",
-                    EscapeChar: "laboriosam",
-                    NullValue: "hic",
-                    QuoteChar: "saepe",
+                    ColumnSeparator: "esse",
+                    EscapeChar: "ipsum",
+                    NullValue: "excepturi",
+                    QuoteChar: "aspernatur",
                     TrimWhiteSpace: false,
                 },
                 DataFormat: "CSV",
                 DataSourceS3Configuration: shared.DataSourceS3Configuration{
-                    BucketName: "fuga",
-                    ObjectKeyPrefix: "in",
+                    BucketName: "perferendis",
+                    ObjectKeyPrefix: "ad",
                 },
             },
-            RecordVersion: 359508,
+            RecordVersion: 617636,
             ReportConfiguration: shared.ReportConfiguration{
                 ReportS3Configuration: &shared.ReportS3Configuration{
-                    BucketName: "iste",
-                    EncryptionOption: "SSE_S3",
-                    KmsKeyID: "saepe",
-                    ObjectKeyPrefix: "quidem",
+                    BucketName: "sed",
+                    EncryptionOption: "SSE_KMS",
+                    KmsKeyID: "dolor",
+                    ObjectKeyPrefix: "natus",
                 },
             },
-            TargetDatabaseName: "architecto",
-            TargetTableName: "ipsa",
+            TargetDatabaseName: "laboriosam",
+            TargetTableName: "hic",
         },
+        XAmzAlgorithm: "saepe",
+        XAmzContentSha256: "fuga",
+        XAmzCredential: "in",
+        XAmzDate: "corporis",
+        XAmzSecurityToken: "iste",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "saepe",
+        XAmzTarget: "Timestream_20181101.CreateBatchLoadTask",
     }
 
     ctx := context.Background()
@@ -200,7 +192,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -225,4 +217,15 @@ func main() {
 * `WriteRecords` - <p>Enables you to write your time-series data into Timestream. You can specify a single data point or a batch of data points to be inserted into the system. Timestream offers you a flexible schema that auto detects the column names and data types for your Timestream tables based on the dimension names and data types of the data points you specify when invoking writes into the database. </p> <p>Timestream supports eventual consistency read semantics. This means that when you query data immediately after writing a batch of data into Timestream, the query results might not reflect the results of a recently completed write operation. The results may also include some stale data. If you repeat the query request after a short time, the results should return the latest data. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. </p> <p>See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.write.html">code sample</a> for details.</p> <p> <b>Upserts</b> </p> <p>You can use the <code>Version</code> parameter in a <code>WriteRecords</code> request to update data points. Timestream tracks a version number with each record. <code>Version</code> defaults to <code>1</code> when it's not specified for the record in the request. Timestream updates an existing record’s measure value along with its <code>Version</code> when it receives a write request with a higher <code>Version</code> number for that record. When it receives an update request where the measure value is the same as that of the existing record, Timestream still updates <code>Version</code>, if it is greater than the existing value of <code>Version</code>. You can update a data point as many times as desired, as long as the value of <code>Version</code> continuously increases. </p> <p> For example, suppose you write a new record without indicating <code>Version</code> in the request. Timestream stores this record, and set <code>Version</code> to <code>1</code>. Now, suppose you try to update this record with a <code>WriteRecords</code> request of the same record with a different measure value but, like before, do not provide <code>Version</code>. In this case, Timestream will reject this update with a <code>RejectedRecordsException</code> since the updated record’s version is not greater than the existing value of Version. </p> <p>However, if you were to resend the update request with <code>Version</code> set to <code>2</code>, Timestream would then succeed in updating the record’s value, and the <code>Version</code> would be set to <code>2</code>. Next, suppose you sent a <code>WriteRecords</code> request with this same record and an identical measure value, but with <code>Version</code> set to <code>3</code>. In this case, Timestream would only update <code>Version</code> to <code>3</code>. Any further updates would need to send a version number greater than <code>3</code>, or the update requests would receive a <code>RejectedRecordsException</code>. </p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

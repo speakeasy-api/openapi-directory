@@ -7,19 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDUserConnectionsIDConnectionSourcesIDSourcePathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDSource     int64 `pathParam:"style=simple,explode=false,name=id_source"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionSourcesIDSourceQueryParams struct {
-	// do the synchronization in background (to use with the synchronize parameter)
-	Background *bool   `queryParam:"style=form,explode=true,name=background"`
-	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 	// to enable or disable connector source
 	Disabled *bool `multipartForm:"name=disabled"`
@@ -30,9 +17,14 @@ type PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 }
 
 type PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest struct {
-	PathParams  PutUsersIDUserConnectionsIDConnectionSourcesIDSourcePathParams
-	QueryParams PutUsersIDUserConnectionsIDConnectionSourcesIDSourceQueryParams
-	Request     *PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	// do the synchronization in background (to use with the synchronize parameter)
+	Background   *bool   `queryParam:"style=form,explode=true,name=background"`
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDSource     int64   `pathParam:"style=simple,explode=false,name=id_source"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PutUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse struct {

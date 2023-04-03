@@ -7,34 +7,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProjectQueryParams struct {
-	//  Name of the project.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-	//  Default region where project resources should be created.
-	Region *string `queryParam:"style=form,explode=true,name=region"`
-	//  Unique identifier for an exported snapshot of project configuration. This snapshot identifier is included in the share URL when a project is exported.
-	SnapshotID *string `queryParam:"style=form,explode=true,name=snapshotId"`
-}
-
-type CreateProjectHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateProjectRequestBody struct {
 	//  Binary file data.
 	Contents *string `json:"contents,omitempty"`
 }
 
 type CreateProjectRequest struct {
-	QueryParams CreateProjectQueryParams
-	Headers     CreateProjectHeaders
-	Request     CreateProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateProjectRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  Name of the project.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	//  Default region where project resources should be created.
+	Region *string `queryParam:"style=form,explode=true,name=region"`
+	//  Unique identifier for an exported snapshot of project configuration. This snapshot identifier is included in the share URL when a project is exported.
+	SnapshotID *string `queryParam:"style=form,explode=true,name=snapshotId"`
 }
 
 type CreateProjectResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type LogOutUserPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type LogOutUserRequest struct {
-	PathParams LogOutUserPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // LogOutUser200ApplicationJSON - response

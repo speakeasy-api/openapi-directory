@@ -50,25 +50,17 @@ func (e *POSTTagResourceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTTagResourceQueryParams struct {
-	Action  POSTTagResourceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTTagResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTTagResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTTagResourceRequest struct {
-	QueryParams POSTTagResourceQueryParams
-	Headers     POSTTagResourceHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTTagResourceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                     `request:"mediaType=text/xml"`
+	Version           POSTTagResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTTagResourceResponse struct {

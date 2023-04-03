@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCommentsByArticleIDQueryParams struct {
+type GetCommentsByArticleIDRequest struct {
 	// Article identifier.
 	AID *string `queryParam:"style=form,explode=true,name=a_id"`
 	// Podcast Episode identifier.
 	PID *string `queryParam:"style=form,explode=true,name=p_id"`
-}
-
-type GetCommentsByArticleIDRequest struct {
-	QueryParams GetCommentsByArticleIDQueryParams
 }
 
 type GetCommentsByArticleIDResponse struct {

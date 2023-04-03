@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersForTeamPathParams struct {
-	// Globally unique identifier for the team.
-	TeamGid string `pathParam:"style=simple,explode=false,name=team_gid"`
-}
-
-type GetUsersForTeamQueryParams struct {
+type GetUsersForTeamRequest struct {
 	// Offset token.
 	// An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.
 	// 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
@@ -24,11 +19,8 @@ type GetUsersForTeamQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetUsersForTeamRequest struct {
-	PathParams  GetUsersForTeamPathParams
-	QueryParams GetUsersForTeamQueryParams
+	// Globally unique identifier for the team.
+	TeamGid string `pathParam:"style=simple,explode=false,name=team_gid"`
 }
 
 // GetUsersForTeam200ApplicationJSON - Returns the user records for all the members of the team, including guests and limited access users

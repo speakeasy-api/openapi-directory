@@ -9,24 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUserPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RequestUserQueryParams struct {
-	// Filter users with DIRECT or DIRECT **AND** EFFECTIVE roles.
-	//
-	// * `false`: DIRECT roles
-	//
-	// * `true`: DIRECT **AND** EFFECTIVE roles
-	//
-	// DIRECT means: e.g. user gets role **directly** granted from someone with _grant permission_ right.
-	//
-	// EFFECTIVE means: e.g. user gets role through **group membership**.
-	EffectiveRoles *bool `queryParam:"style=form,explode=true,name=effective_roles"`
-}
-
 // RequestUserXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestUserXSdsDateFormatEnum string
 
@@ -60,17 +42,23 @@ func (e *RequestUserXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestUserHeaders struct {
+type RequestUserRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestUserXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestUserRequest struct {
-	PathParams  RequestUserPathParams
-	QueryParams RequestUserQueryParams
-	Headers     RequestUserHeaders
+	// Filter users with DIRECT or DIRECT **AND** EFFECTIVE roles.
+	//
+	// * `false`: DIRECT roles
+	//
+	// * `true`: DIRECT **AND** EFFECTIVE roles
+	//
+	// DIRECT means: e.g. user gets role **directly** granted from someone with _grant permission_ right.
+	//
+	// EFFECTIVE means: e.g. user gets role through **group membership**.
+	EffectiveRoles *bool `queryParam:"style=form,explode=true,name=effective_roles"`
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type RequestUserResponse struct {

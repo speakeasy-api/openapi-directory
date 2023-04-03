@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCanaryRunsPathParams struct {
-	// The name of the canary that you want to see runs for.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetCanaryRunsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetCanaryRunsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetCanaryRunsRequestBody struct {
 	// Specify this parameter to limit how many runs are returned each time you use the <code>GetCanaryRuns</code> operation. If you omit this parameter, the default of 100 is used.
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -37,10 +15,20 @@ type GetCanaryRunsRequestBody struct {
 }
 
 type GetCanaryRunsRequest struct {
-	PathParams  GetCanaryRunsPathParams
-	QueryParams GetCanaryRunsQueryParams
-	Headers     GetCanaryRunsHeaders
-	Request     GetCanaryRunsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                  `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       GetCanaryRunsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the canary that you want to see runs for.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetCanaryRunsResponse struct {

@@ -30,20 +30,16 @@ func (e *BatchGetProjectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BatchGetProjectsHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        BatchGetProjectsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type BatchGetProjectsRequest struct {
-	Headers BatchGetProjectsHeaders
-	Request shared.BatchGetProjectsInput `request:"mediaType=application/json"`
+	BatchGetProjectsInput shared.BatchGetProjectsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            BatchGetProjectsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type BatchGetProjectsResponse struct {

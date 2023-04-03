@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GeneratePdfDesignerTemplatesIDGeneratePostPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GeneratePdfDesignerTemplatesIDGeneratePostRequest struct {
-	PathParams GeneratePdfDesignerTemplatesIDGeneratePostPathParams
-	Request    shared.GeneratePDFPayload `request:"mediaType=application/json"`
+	GeneratePDFPayload shared.GeneratePDFPayload `request:"mediaType=application/json"`
+	ID                 string                    `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GeneratePdfDesignerTemplatesIDGeneratePostResponse struct {

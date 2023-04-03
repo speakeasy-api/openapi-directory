@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeProvisioningTemplateVersionPathParams struct {
-	// The template name.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-	// The provisioning template version ID.
-	VersionID int64 `pathParam:"style=simple,explode=false,name=versionId"`
-}
-
-type DescribeProvisioningTemplateVersionHeaders struct {
+type DescribeProvisioningTemplateVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeProvisioningTemplateVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeProvisioningTemplateVersionRequest struct {
-	PathParams DescribeProvisioningTemplateVersionPathParams
-	Headers    DescribeProvisioningTemplateVersionHeaders
+	// The template name.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
+	// The provisioning template version ID.
+	VersionID int64 `pathParam:"style=simple,explode=false,name=versionId"`
 }
 
 type DescribeProvisioningTemplateVersionResponse struct {

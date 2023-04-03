@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeObjectsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-}
-
 // DescribeObjectsXAmzTargetEnum
 type DescribeObjectsXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *DescribeObjectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeObjectsHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeObjectsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeObjectsRequest struct {
-	QueryParams DescribeObjectsQueryParams
-	Headers     DescribeObjectsHeaders
-	Request     shared.DescribeObjectsInput `request:"mediaType=application/json"`
+	DescribeObjectsInput shared.DescribeObjectsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget           DescribeObjectsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
 }
 
 type DescribeObjectsResponse struct {

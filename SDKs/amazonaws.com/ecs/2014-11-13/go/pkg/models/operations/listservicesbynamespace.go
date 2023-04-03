@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServicesByNamespaceQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListServicesByNamespaceXAmzTargetEnum
 type ListServicesByNamespaceXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListServicesByNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type ListServicesByNamespaceHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListServicesByNamespaceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListServicesByNamespaceRequest struct {
-	QueryParams ListServicesByNamespaceQueryParams
-	Headers     ListServicesByNamespaceHeaders
-	Request     shared.ListServicesByNamespaceRequest `request:"mediaType=application/json"`
+	ListServicesByNamespaceRequest shared.ListServicesByNamespaceRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     ListServicesByNamespaceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListServicesByNamespaceResponse struct {

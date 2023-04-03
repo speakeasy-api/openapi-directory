@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Lpgsv - LPG Subscription Voucher
 // API to verify LPG Subscription Voucher.
-func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequest) (*operations.LpgsvResponse, error) {
+func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequestBody, security operations.LpgsvSecurity) (*operations.LpgsvResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/lpgsv/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequest) (*ope
 
 // Lpgtv - Termination Voucher
 // API to verify Termination Voucher.
-func (s *apIs) Lpgtv(ctx context.Context, request operations.LpgtvRequest) (*operations.LpgtvResponse, error) {
+func (s *apIs) Lpgtv(ctx context.Context, request operations.LpgtvRequestBody, security operations.LpgtvSecurity) (*operations.LpgtvResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/lpgtv/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Lpgtv(ctx context.Context, request operations.LpgtvRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

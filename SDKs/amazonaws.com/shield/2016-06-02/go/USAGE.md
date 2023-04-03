@@ -13,26 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateDRTLogBucketRequest{
-        Headers: operations.AssociateDRTLogBucketHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSShield_20160616.AssociateDRTLogBucket",
+        AssociateDRTLogBucketRequest: shared.AssociateDRTLogBucketRequest{
+            LogBucket: "corrupti",
         },
-        Request: shared.AssociateDRTLogBucketRequest{
-            LogBucket: "illum",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        XAmzTarget: "AWSShield_20160616.AssociateDRTLogBucket",
     }
 
     ctx := context.Background()

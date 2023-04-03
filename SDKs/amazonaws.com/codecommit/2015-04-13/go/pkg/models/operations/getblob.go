@@ -30,7 +30,8 @@ func (e *GetBlobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBlobHeaders struct {
+type GetBlobRequest struct {
+	GetBlobInput      shared.GetBlobInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetBlobHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetBlobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetBlobRequest struct {
-	Headers GetBlobHeaders
-	Request shared.GetBlobInput `request:"mediaType=application/json"`
 }
 
 type GetBlobResponse struct {

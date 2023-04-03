@@ -34,11 +34,11 @@ func newTimeOffRequests(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // TimeOffRequestsAdd - Create Time Off Request
 // Create Time Off Request
-func (s *timeOffRequests) TimeOffRequestsAdd(ctx context.Context, request operations.TimeOffRequestsAddRequest) (*operations.TimeOffRequestsAddResponse, error) {
+func (s *timeOffRequests) TimeOffRequestsAdd(ctx context.Context, request operations.TimeOffRequestsAddRequest, security operations.TimeOffRequestsAddSecurity) (*operations.TimeOffRequestsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hris/time-off-requests"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeOffRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *timeOffRequests) TimeOffRequestsAdd(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *timeOffRequests) TimeOffRequestsAdd(ctx context.Context, request operat
 
 // TimeOffRequestsAll - List Time Off Requests
 // List Time Off Requests
-func (s *timeOffRequests) TimeOffRequestsAll(ctx context.Context, request operations.TimeOffRequestsAllRequest) (*operations.TimeOffRequestsAllResponse, error) {
+func (s *timeOffRequests) TimeOffRequestsAll(ctx context.Context, request operations.TimeOffRequestsAllRequest, security operations.TimeOffRequestsAllSecurity) (*operations.TimeOffRequestsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hris/time-off-requests"
 
@@ -164,13 +164,13 @@ func (s *timeOffRequests) TimeOffRequestsAll(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *timeOffRequests) TimeOffRequestsAll(ctx context.Context, request operat
 
 // TimeOffRequestsDelete - Delete Time Off Request
 // Delete Time Off Request
-func (s *timeOffRequests) TimeOffRequestsDelete(ctx context.Context, request operations.TimeOffRequestsDeleteRequest) (*operations.TimeOffRequestsDeleteResponse, error) {
+func (s *timeOffRequests) TimeOffRequestsDelete(ctx context.Context, request operations.TimeOffRequestsDeleteRequest, security operations.TimeOffRequestsDeleteSecurity) (*operations.TimeOffRequestsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/time-off-requests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/time-off-requests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *timeOffRequests) TimeOffRequestsDelete(ctx context.Context, request ope
 
 // TimeOffRequestsOne - Get Time Off Request
 // Get Time Off Request
-func (s *timeOffRequests) TimeOffRequestsOne(ctx context.Context, request operations.TimeOffRequestsOneRequest) (*operations.TimeOffRequestsOneResponse, error) {
+func (s *timeOffRequests) TimeOffRequestsOne(ctx context.Context, request operations.TimeOffRequestsOneRequest, security operations.TimeOffRequestsOneSecurity) (*operations.TimeOffRequestsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/time-off-requests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/time-off-requests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *timeOffRequests) TimeOffRequestsOne(ctx context.Context, request operat
 
 // TimeOffRequestsUpdate - Update Time Off Request
 // Update Time Off Request
-func (s *timeOffRequests) TimeOffRequestsUpdate(ctx context.Context, request operations.TimeOffRequestsUpdateRequest) (*operations.TimeOffRequestsUpdateResponse, error) {
+func (s *timeOffRequests) TimeOffRequestsUpdate(ctx context.Context, request operations.TimeOffRequestsUpdateRequest, security operations.TimeOffRequestsUpdateSecurity) (*operations.TimeOffRequestsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/time-off-requests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/time-off-requests/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeOffRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *timeOffRequests) TimeOffRequestsUpdate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

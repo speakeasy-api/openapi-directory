@@ -34,7 +34,7 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // JobsAll - List Jobs
 // List Jobs
-func (s *jobs) JobsAll(ctx context.Context, request operations.JobsAllRequest) (*operations.JobsAllResponse, error) {
+func (s *jobs) JobsAll(ctx context.Context, request operations.JobsAllRequest, security operations.JobsAllSecurity) (*operations.JobsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ats/jobs"
 
@@ -43,13 +43,13 @@ func (s *jobs) JobsAll(ctx context.Context, request operations.JobsAllRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,22 +145,22 @@ func (s *jobs) JobsAll(ctx context.Context, request operations.JobsAllRequest) (
 
 // JobsOne - Get Job
 // Get Job
-func (s *jobs) JobsOne(ctx context.Context, request operations.JobsOneRequest) (*operations.JobsOneResponse, error) {
+func (s *jobs) JobsOne(ctx context.Context, request operations.JobsOneRequest, security operations.JobsOneSecurity) (*operations.JobsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ats/jobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ats/jobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

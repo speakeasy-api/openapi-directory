@@ -25,46 +25,8 @@ func main() {
     s := sdk.New()
 
     req := operations.LeadsAddRequest{
-        Security: operations.LeadsAddSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.LeadsAddQueryParams{
-            Raw: false,
-        },
-        Headers: operations.LeadsAddHeaders{
-            XApideckAppID: "corrupti",
-            XApideckConsumerID: "provident",
-            XApideckServiceID: "distinctio",
-        },
-        Request: shared.LeadInput{
+        LeadInput: shared.LeadInput{
             Addresses: []shared.Address{
-                shared.Address{
-                    City: "San Francisco",
-                    ContactName: "Elon Musk",
-                    Country: "US",
-                    County: "Santa Clara",
-                    Email: "elon@musk.com",
-                    Fax: "122-111-1111",
-                    ID: "123",
-                    Latitude: "40.759211",
-                    Line1: "Main street",
-                    Line2: "apt #",
-                    Line3: "Suite #",
-                    Line4: "delivery instructions",
-                    Longitude: "-73.984638",
-                    Name: "HQ US",
-                    PhoneNumber: "111-111-1111",
-                    PostalCode: "94104",
-                    RowVersion: "1-12345",
-                    Salutation: "Mr",
-                    State: "CA",
-                    StreetNumber: "25",
-                    String: "25 Spring Street, Blackburn, VIC 3130",
-                    Type: "primary",
-                    Website: "https://elonmusk.com",
-                },
                 shared.Address{
                     City: "San Francisco",
                     ContactName: "Elon Musk",
@@ -150,17 +112,17 @@ func main() {
                     Description: "Employee Level",
                     ID: "2389328923893298",
                     Name: "employee_level",
-                    Value: []string{
-                        "illum",
-                        "vel",
-                        "error",
-                    },
+                    Value: true,
                 },
                 shared.CustomField{
                     Description: "Employee Level",
                     ID: "2389328923893298",
                     Name: "employee_level",
-                    Value: true,
+                    Value: []string{
+                        "nulla",
+                        "corrupti",
+                        "illum",
+                    },
                 },
                 shared.CustomField{
                     Description: "Employee Level",
@@ -171,6 +133,11 @@ func main() {
             },
             Description: "A thinker",
             Emails: []shared.Email{
+                shared.Email{
+                    Email: "elon@musk.com",
+                    ID: "123",
+                    Type: "primary",
+                },
                 shared.Email{
                     Email: "elon@musk.com",
                     ID: "123",
@@ -207,6 +174,14 @@ func main() {
                     Number: "111-111-1111",
                     Type: "primary",
                 },
+                shared.PhoneNumber{
+                    AreaCode: "323",
+                    CountryCode: "1",
+                    Extension: "105",
+                    ID: "12345",
+                    Number: "111-111-1111",
+                    Type: "primary",
+                },
             },
             Prefix: "Sir",
             SocialLinks: []shared.SocialLink{
@@ -220,20 +195,11 @@ func main() {
                     Type: "twitter",
                     URL: "https://www.twitter.com/apideck-io",
                 },
-                shared.SocialLink{
-                    ID: "12345",
-                    Type: "twitter",
-                    URL: "https://www.twitter.com/apideck-io",
-                },
-                shared.SocialLink{
-                    ID: "12345",
-                    Type: "twitter",
-                    URL: "https://www.twitter.com/apideck-io",
-                },
             },
             Status: "New",
             Tags: []string{
-                "delectus",
+                "magnam",
+                "debitis",
             },
             Title: "CEO",
             Websites: []shared.Website{
@@ -242,17 +208,18 @@ func main() {
                     Type: "primary",
                     URL: "http://example.com",
                 },
-                shared.Website{
-                    ID: "12345",
-                    Type: "primary",
-                    URL: "http://example.com",
-                },
             },
         },
+        Raw: false,
+        XApideckAppID: "delectus",
+        XApideckConsumerID: "tempora",
+        XApideckServiceID: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Leads.LeadsAdd(ctx, req)
+    res, err := s.Leads.LeadsAdd(ctx, req, operations.LeadsAddSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -265,7 +232,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Leads
@@ -277,4 +244,15 @@ func main() {
 * `LeadsUpdate` - Update lead
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

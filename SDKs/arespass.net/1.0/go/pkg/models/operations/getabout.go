@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAboutQueryParams struct {
+type GetAboutRequest struct {
 	// **The format of the returned metadata.**
 	//
 	// Allowed values are *json*, *xml* and *yaml*.
@@ -15,10 +15,6 @@ type GetAboutQueryParams struct {
 	// The default value is *xml*.
 	//
 	OutputFormat *string `queryParam:"style=form,explode=true,name=outputFormat"`
-}
-
-type GetAboutRequest struct {
-	QueryParams GetAboutQueryParams
 }
 
 type GetAboutResponse struct {

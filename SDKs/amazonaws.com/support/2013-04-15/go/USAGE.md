@@ -13,36 +13,36 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddAttachmentsToSetRequest{
-        Headers: operations.AddAttachmentsToSetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSSupport_20130415.AddAttachmentsToSet",
-        },
-        Request: shared.AddAttachmentsToSetRequest{
-            AttachmentSetID: "illum",
+        AddAttachmentsToSetRequest: shared.AddAttachmentsToSetRequest{
+            AttachmentSetID: "corrupti",
             Attachments: []shared.Attachment{
                 shared.Attachment{
-                    Data: "error",
-                    FileName: "deserunt",
+                    Data: "distinctio",
+                    FileName: "quibusdam",
                 },
                 shared.Attachment{
-                    Data: "suscipit",
-                    FileName: "iure",
+                    Data: "unde",
+                    FileName: "nulla",
+                },
+                shared.Attachment{
+                    Data: "corrupti",
+                    FileName: "illum",
                 },
             },
         },
+        XAmzAlgorithm: "vel",
+        XAmzContentSha256: "error",
+        XAmzCredential: "deserunt",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "iure",
+        XAmzSignature: "magnam",
+        XAmzSignedHeaders: "debitis",
+        XAmzTarget: "AWSSupport_20130415.AddAttachmentsToSet",
     }
 
     ctx := context.Background()

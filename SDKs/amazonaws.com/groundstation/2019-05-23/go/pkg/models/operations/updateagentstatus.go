@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAgentStatusPathParams struct {
-	// UUID of agent to update.
-	AgentID string `pathParam:"style=simple,explode=false,name=agentId"`
-}
-
-type UpdateAgentStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAgentStatusRequestBodyAggregateStatus - Aggregate status of Agent components.
 type UpdateAgentStatusRequestBodyAggregateStatus struct {
 	SignatureMap map[string]bool         `json:"signatureMap,omitempty"`
@@ -38,9 +23,16 @@ type UpdateAgentStatusRequestBody struct {
 }
 
 type UpdateAgentStatusRequest struct {
-	PathParams UpdateAgentStatusPathParams
-	Headers    UpdateAgentStatusHeaders
-	Request    UpdateAgentStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAgentStatusRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// UUID of agent to update.
+	AgentID string `pathParam:"style=simple,explode=false,name=agentId"`
 }
 
 type UpdateAgentStatusResponse struct {

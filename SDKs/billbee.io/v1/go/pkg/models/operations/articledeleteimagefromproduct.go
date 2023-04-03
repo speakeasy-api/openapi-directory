@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type ArticleDeleteImageFromProductPathParams struct {
+type ArticleDeleteImageFromProductRequest struct {
 	// The image id
 	ImageID int64 `pathParam:"style=simple,explode=false,name=imageId"`
 	// The product id
 	ProductID int64 `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ArticleDeleteImageFromProductRequest struct {
-	PathParams ArticleDeleteImageFromProductPathParams
 }
 
 type ArticleDeleteImageFromProductResponse struct {

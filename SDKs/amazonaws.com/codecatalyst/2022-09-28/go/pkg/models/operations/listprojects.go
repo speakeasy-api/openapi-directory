@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProjectsPathParams struct {
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type ListProjectsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListProjectsRequestBody struct {
 	// Information about filters to apply to narrow the results returned in the list.
 	Filters []shared.ProjectListFilter `json:"filters,omitempty"`
@@ -29,9 +17,13 @@ type ListProjectsRequestBody struct {
 }
 
 type ListProjectsRequest struct {
-	PathParams  ListProjectsPathParams
-	QueryParams ListProjectsQueryParams
-	Request     ListProjectsRequestBody `request:"mediaType=application/json"`
+	RequestBody ListProjectsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type ListProjectsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetGroupPathParams struct {
+type GetGroupRequest struct {
 	// Use group name instead of id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetGroupRequest struct {
-	PathParams GetGroupPathParams
 }
 
 type GetGroup200ApplicationJSONExtras struct {

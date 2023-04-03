@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdateRepositoryBuildNumberPathParams struct {
+type UpdateRepositoryBuildNumberRequest struct {
+	// The build number to update.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type UpdateRepositoryBuildNumberRequest struct {
-	PathParams UpdateRepositoryBuildNumberPathParams
-	// The build number to update.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateRepositoryBuildNumberResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type GetVaultItemByIDSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetVaultItemByIDPathParams struct {
+type GetVaultItemByIDRequest struct {
 	// The UUID of the Item to fetch
 	ItemUUID string `pathParam:"style=simple,explode=false,name=itemUuid"`
 	// The UUID of the Vault to fetch Item from
 	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type GetVaultItemByIDRequest struct {
-	PathParams GetVaultItemByIDPathParams
-	Security   GetVaultItemByIDSecurity
 }
 
 type GetVaultItemByIDResponse struct {

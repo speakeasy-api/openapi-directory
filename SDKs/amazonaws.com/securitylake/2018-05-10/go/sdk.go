@@ -116,7 +116,7 @@ func (s *SDK) CreateAwsLogSource(ctx context.Context, request operations.CreateA
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/logsources/aws"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateAwsLogSource(ctx context.Context, request operations.CreateA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -232,7 +232,7 @@ func (s *SDK) CreateCustomLogSource(ctx context.Context, request operations.Crea
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/logsources/custom"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *SDK) CreateCustomLogSource(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -358,7 +358,7 @@ func (s *SDK) CreateDatalake(ctx context.Context, request operations.CreateDatal
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -373,7 +373,7 @@ func (s *SDK) CreateDatalake(ctx context.Context, request operations.CreateDatal
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -484,7 +484,7 @@ func (s *SDK) CreateDatalakeAutoEnable(ctx context.Context, request operations.C
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/autoenable"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -499,7 +499,7 @@ func (s *SDK) CreateDatalakeAutoEnable(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -580,7 +580,7 @@ func (s *SDK) CreateDatalakeDelegatedAdmin(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/delegate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -595,7 +595,7 @@ func (s *SDK) CreateDatalakeDelegatedAdmin(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -676,7 +676,7 @@ func (s *SDK) CreateDatalakeExceptionsSubscription(ctx context.Context, request 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/exceptions/subscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -691,7 +691,7 @@ func (s *SDK) CreateDatalakeExceptionsSubscription(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -772,7 +772,7 @@ func (s *SDK) CreateSubscriber(ctx context.Context, request operations.CreateSub
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/subscribers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -787,7 +787,7 @@ func (s *SDK) CreateSubscriber(ctx context.Context, request operations.CreateSub
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -906,9 +906,9 @@ func (s *SDK) CreateSubscriber(ctx context.Context, request operations.CreateSub
 // CreateSubscriptionNotificationConfiguration - Notifies the subscriber when new data is written to the data lake for the sources that the subscriber consumes in Security Lake. You can create only one subscriber notification per subscriber.
 func (s *SDK) CreateSubscriptionNotificationConfiguration(ctx context.Context, request operations.CreateSubscriptionNotificationConfigurationRequest) (*operations.CreateSubscriptionNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -923,7 +923,7 @@ func (s *SDK) CreateSubscriptionNotificationConfiguration(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1034,7 +1034,7 @@ func (s *SDK) DeleteAwsLogSource(ctx context.Context, request operations.DeleteA
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/logsources/aws/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1049,7 +1049,7 @@ func (s *SDK) DeleteAwsLogSource(ctx context.Context, request operations.DeleteA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1135,9 +1135,9 @@ func (s *SDK) DeleteCustomLogSource(ctx context.Context, request operations.Dele
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1255,7 +1255,7 @@ func (s *SDK) DeleteDatalake(ctx context.Context, request operations.DeleteDatal
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1366,7 +1366,7 @@ func (s *SDK) DeleteDatalakeAutoEnable(ctx context.Context, request operations.D
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/autoenable/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1381,7 +1381,7 @@ func (s *SDK) DeleteDatalakeAutoEnable(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1460,14 +1460,14 @@ func (s *SDK) DeleteDatalakeAutoEnable(ctx context.Context, request operations.D
 // DeleteDatalakeDelegatedAdmin - Deletes the Amazon Security Lake delegated administrator account for the organization. This API can only be called by the organization management account. The organization management account cannot be the delegated administrator account.
 func (s *SDK) DeleteDatalakeDelegatedAdmin(ctx context.Context, request operations.DeleteDatalakeDelegatedAdminRequest) (*operations.DeleteDatalakeDelegatedAdminResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/datalake/delegate/{account}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/datalake/delegate/{account}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1553,7 +1553,7 @@ func (s *SDK) DeleteDatalakeExceptionsSubscription(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1639,9 +1639,9 @@ func (s *SDK) DeleteSubscriber(ctx context.Context, request operations.DeleteSub
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1762,14 +1762,14 @@ func (s *SDK) DeleteSubscriber(ctx context.Context, request operations.DeleteSub
 // DeleteSubscriptionNotificationConfiguration - Deletes the specified notification subscription in Amazon Security Lake for the organization you specify.
 func (s *SDK) DeleteSubscriptionNotificationConfiguration(ctx context.Context, request operations.DeleteSubscriptionNotificationConfigurationRequest) (*operations.DeleteSubscriptionNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1885,7 +1885,7 @@ func (s *SDK) GetDatalake(ctx context.Context, request operations.GetDatalakeReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1981,7 +1981,7 @@ func (s *SDK) GetDatalakeAutoEnable(ctx context.Context, request operations.GetD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2067,7 +2067,7 @@ func (s *SDK) GetDatalakeExceptionsExpiry(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2153,7 +2153,7 @@ func (s *SDK) GetDatalakeExceptionsSubscription(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2234,7 +2234,7 @@ func (s *SDK) GetDatalakeStatus(ctx context.Context, request operations.GetDatal
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/status"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2249,9 +2249,9 @@ func (s *SDK) GetDatalakeStatus(ctx context.Context, request operations.GetDatal
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2332,14 +2332,14 @@ func (s *SDK) GetDatalakeStatus(ctx context.Context, request operations.GetDatal
 // GetSubscriber - Retrieves the subscription information for the specified subscription ID. You can get information about a specific subscriber.
 func (s *SDK) GetSubscriber(ctx context.Context, request operations.GetSubscriberRequest) (*operations.GetSubscriberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2430,7 +2430,7 @@ func (s *SDK) ListDatalakeExceptions(ctx context.Context, request operations.Lis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/exceptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2445,9 +2445,9 @@ func (s *SDK) ListDatalakeExceptions(ctx context.Context, request operations.Lis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2530,7 +2530,7 @@ func (s *SDK) ListLogSources(ctx context.Context, request operations.ListLogSour
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/logsources/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2545,9 +2545,9 @@ func (s *SDK) ListLogSources(ctx context.Context, request operations.ListLogSour
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2645,9 +2645,9 @@ func (s *SDK) ListSubscribers(ctx context.Context, request operations.ListSubscr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2750,7 +2750,7 @@ func (s *SDK) UpdateDatalake(ctx context.Context, request operations.UpdateDatal
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2765,7 +2765,7 @@ func (s *SDK) UpdateDatalake(ctx context.Context, request operations.UpdateDatal
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2856,7 +2856,7 @@ func (s *SDK) UpdateDatalakeExceptionsExpiry(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/exceptions/expiry"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2871,7 +2871,7 @@ func (s *SDK) UpdateDatalakeExceptionsExpiry(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2952,7 +2952,7 @@ func (s *SDK) UpdateDatalakeExceptionsSubscription(ctx context.Context, request 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/datalake/exceptions/subscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2967,7 +2967,7 @@ func (s *SDK) UpdateDatalakeExceptionsSubscription(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3046,9 +3046,9 @@ func (s *SDK) UpdateDatalakeExceptionsSubscription(ctx context.Context, request 
 // UpdateSubscriber - Updates an existing subscription for the given Amazon Security Lake account ID. You can update a subscriber by changing the sources that the subscriber consumes data from.
 func (s *SDK) UpdateSubscriber(ctx context.Context, request operations.UpdateSubscriberRequest) (*operations.UpdateSubscriberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3063,7 +3063,7 @@ func (s *SDK) UpdateSubscriber(ctx context.Context, request operations.UpdateSub
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3172,9 +3172,9 @@ func (s *SDK) UpdateSubscriber(ctx context.Context, request operations.UpdateSub
 // UpdateSubscriptionNotificationConfiguration - Updates an existing notification method for the subscription (SQS or HTTPs endpoint) or switches the notification subscription endpoint for a subscriber.
 func (s *SDK) UpdateSubscriptionNotificationConfiguration(ctx context.Context, request operations.UpdateSubscriptionNotificationConfigurationRequest) (*operations.UpdateSubscriptionNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3189,7 +3189,7 @@ func (s *SDK) UpdateSubscriptionNotificationConfiguration(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

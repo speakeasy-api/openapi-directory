@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidatePinRequestQueryParams struct {
+type ValidatePinRequestRequest struct {
+	// Data for validating PIN.
+	EeValidatePinRequest shared.EeValidatePinRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type ValidatePinRequestQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ValidatePinRequestRequest struct {
-	QueryParams ValidatePinRequestQueryParams
-	// Data for validating PIN.
-	Request shared.EeValidatePinRequest `request:"mediaType=application/json"`
 }
 
 type ValidatePinRequestResponse struct {

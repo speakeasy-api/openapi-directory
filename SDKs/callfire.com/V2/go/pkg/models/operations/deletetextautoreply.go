@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteTextAutoReplySecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteTextAutoReplyPathParams struct {
-	// An id of a text auto reply
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteTextAutoReplyRequest struct {
-	PathParams DeleteTextAutoReplyPathParams
-	Security   DeleteTextAutoReplySecurity
+	// An id of a text auto reply
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteTextAutoReplyResponse struct {

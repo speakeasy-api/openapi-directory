@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SendAnalyticsQueryParams struct {
+type SendAnalyticsRequest struct {
 	// (Required) String
 	//
 	// Campaign API identifier.
@@ -23,10 +23,6 @@ type SendAnalyticsQueryParams struct {
 	//
 	// Send API identifier.
 	SendID *string `queryParam:"style=form,explode=true,name=send_id"`
-}
-
-type SendAnalyticsRequest struct {
-	QueryParams SendAnalyticsQueryParams
 }
 
 type SendAnalyticsResponse struct {

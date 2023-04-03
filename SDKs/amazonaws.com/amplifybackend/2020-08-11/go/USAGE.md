@@ -13,29 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CloneBackendRequest{
-        PathParams: operations.CloneBackendPathParams{
-            AppID: "corrupti",
-            BackendEnvironmentName: "provident",
+        RequestBody: operations.CloneBackendRequestBody{
+            TargetEnvironmentName: "corrupti",
         },
-        Headers: operations.CloneBackendHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
-        Request: operations.CloneBackendRequestBody{
-            TargetEnvironmentName: "error",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        AppID: "vel",
+        BackendEnvironmentName: "error",
     }
 
     ctx := context.Background()

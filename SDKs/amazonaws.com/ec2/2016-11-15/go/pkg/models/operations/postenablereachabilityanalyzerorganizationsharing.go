@@ -50,25 +50,17 @@ func (e *POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum) Unmarshal
 	}
 }
 
-type POSTEnableReachabilityAnalyzerOrganizationSharingQueryParams struct {
-	Action  POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTEnableReachabilityAnalyzerOrganizationSharingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTEnableReachabilityAnalyzerOrganizationSharingRequest struct {
-	QueryParams POSTEnableReachabilityAnalyzerOrganizationSharingQueryParams
-	Headers     POSTEnableReachabilityAnalyzerOrganizationSharingHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                                       `request:"mediaType=text/xml"`
+	Version           POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTEnableReachabilityAnalyzerOrganizationSharingResponse struct {

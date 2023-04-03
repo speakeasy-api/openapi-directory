@@ -33,17 +33,13 @@ func (e *AccountPatchPermissionsRawTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountPatchPermissionsRawPathParams struct {
+type AccountPatchPermissionsRawRequest struct {
+	// The patch permission request
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
 	// Can be "datapoint" or "group"
 	Type AccountPatchPermissionsRawTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type AccountPatchPermissionsRawRequest struct {
-	PathParams AccountPatchPermissionsRawPathParams
-	// The patch permission request
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type AccountPatchPermissionsRawResponse struct {

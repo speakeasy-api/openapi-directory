@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchDeleteReadSetPathParams struct {
-	// The read sets' sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
-type BatchDeleteReadSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchDeleteReadSetRequestBody struct {
 	// The read sets' IDs.
 	Ids []string `json:"ids"`
 }
 
 type BatchDeleteReadSetRequest struct {
-	PathParams BatchDeleteReadSetPathParams
-	Headers    BatchDeleteReadSetHeaders
-	Request    BatchDeleteReadSetRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchDeleteReadSetRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The read sets' sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type BatchDeleteReadSetResponse struct {

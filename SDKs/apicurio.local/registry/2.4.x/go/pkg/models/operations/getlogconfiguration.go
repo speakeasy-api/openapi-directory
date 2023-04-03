@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLogConfigurationPathParams struct {
+type GetLogConfigurationRequest struct {
 	// The name of a single logger.
 	Logger string `pathParam:"style=simple,explode=false,name=logger"`
-}
-
-type GetLogConfigurationRequest struct {
-	PathParams GetLogConfigurationPathParams
 }
 
 type GetLogConfigurationResponse struct {

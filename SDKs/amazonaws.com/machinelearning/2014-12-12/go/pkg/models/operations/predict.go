@@ -30,7 +30,8 @@ func (e *PredictXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PredictHeaders struct {
+type PredictRequest struct {
+	PredictInput      shared.PredictInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type PredictHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        PredictXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type PredictRequest struct {
-	Headers PredictHeaders
-	Request shared.PredictInput `request:"mediaType=application/json"`
 }
 
 type PredictResponse struct {

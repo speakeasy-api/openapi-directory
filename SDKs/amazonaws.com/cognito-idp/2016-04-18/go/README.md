@@ -24,88 +24,69 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddCustomAttributesRequest{
-        Headers: operations.AddCustomAttributesHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
-        },
-        Request: shared.AddCustomAttributesRequest{
+        AddCustomAttributesRequest: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Number",
+                    AttributeDataType: "DateTime",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "error",
+                    Name: "distinctio",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "deserunt",
-                        MinValue: "suscipit",
+                        MaxValue: "quibusdam",
+                        MinValue: "unde",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "iure",
-                        MinLength: "magnam",
+                        MaxLength: "nulla",
+                        MinLength: "corrupti",
                     },
                 },
                 shared.SchemaAttributeType{
                     AttributeDataType: "Boolean",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "ipsa",
+                    Name: "vel",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "delectus",
-                        MinValue: "tempora",
+                        MaxValue: "error",
+                        MinValue: "deserunt",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
                         MaxLength: "suscipit",
-                        MinLength: "molestiae",
+                        MinLength: "iure",
                     },
                 },
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Boolean",
+                    AttributeDataType: "Number",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "placeat",
+                    Name: "debitis",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "voluptatum",
-                        MinValue: "iusto",
+                        MaxValue: "ipsa",
+                        MinValue: "delectus",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "excepturi",
-                        MinLength: "nisi",
-                    },
-                },
-                shared.SchemaAttributeType{
-                    AttributeDataType: "Boolean",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: false,
-                    Name: "temporibus",
-                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "ab",
-                        MinValue: "quis",
-                    },
-                    Required: false,
-                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "veritatis",
-                        MinLength: "deserunt",
+                        MaxLength: "tempora",
+                        MinLength: "suscipit",
                     },
                 },
             },
-            UserPoolID: "perferendis",
+            UserPoolID: "molestiae",
         },
+        XAmzAlgorithm: "minus",
+        XAmzContentSha256: "placeat",
+        XAmzCredential: "voluptatum",
+        XAmzDate: "iusto",
+        XAmzSecurityToken: "excepturi",
+        XAmzSignature: "nisi",
+        XAmzSignedHeaders: "recusandae",
+        XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
     }
 
     ctx := context.Background()
@@ -122,7 +103,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -229,4 +210,15 @@ func main() {
 * `VerifyUserAttribute` - <p>Verifies the specified user attributes in the user pool.</p> <p> If your user pool requires verification before Amazon Cognito updates the attribute value, VerifyUserAttribute updates the affected attribute to its pending value. For more information, see <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserAttributeUpdateSettingsType.html"> UserAttributeUpdateSettingsType</a>. </p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

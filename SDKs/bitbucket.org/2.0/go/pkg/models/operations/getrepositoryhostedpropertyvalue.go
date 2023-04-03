@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetRepositoryHostedPropertyValuePathParams struct {
+type GetRepositoryHostedPropertyValueRequest struct {
 	// The key of the Connect app.
 	AppKey string `pathParam:"style=simple,explode=false,name=app_key"`
 	// The name of the property.
@@ -15,10 +15,6 @@ type GetRepositoryHostedPropertyValuePathParams struct {
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The repository container; either the workspace slug or the UUID in curly braces.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoryHostedPropertyValueRequest struct {
-	PathParams GetRepositoryHostedPropertyValuePathParams
 }
 
 type GetRepositoryHostedPropertyValueResponse struct {

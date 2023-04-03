@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type NifComprehensiveSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type NifComprehensivePathParams struct {
-	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
-	Country string `pathParam:"style=simple,explode=false,name=country"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // NifComprehensiveRequestBody - Company details
@@ -27,10 +21,10 @@ type NifComprehensiveRequestBody struct {
 }
 
 type NifComprehensiveRequest struct {
-	PathParams NifComprehensivePathParams
 	// Company details
-	Request  NifComprehensiveRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security NifComprehensiveSecurity
+	RequestBody NifComprehensiveRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
+	Country string `pathParam:"style=simple,explode=false,name=country"`
 }
 
 // NifComprehensiveDefaultApplicationJSON - Detailed information about the error

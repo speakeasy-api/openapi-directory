@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConfigPropertyPathParams struct {
+type GetConfigPropertyRequest struct {
 	// The name of a configuration property.
 	PropertyName string `pathParam:"style=simple,explode=false,name=propertyName"`
-}
-
-type GetConfigPropertyRequest struct {
-	PathParams GetConfigPropertyPathParams
 }
 
 type GetConfigPropertyResponse struct {

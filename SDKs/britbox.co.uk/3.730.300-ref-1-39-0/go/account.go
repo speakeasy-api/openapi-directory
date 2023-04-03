@@ -33,11 +33,11 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // AddPaymentMethod - Add a new payment method to an account.
-func (s *account) AddPaymentMethod(ctx context.Context, request operations.AddPaymentMethodRequest) (*operations.AddPaymentMethodResponse, error) {
+func (s *account) AddPaymentMethod(ctx context.Context, request operations.AddPaymentMethodRequest, security operations.AddPaymentMethodSecurity) (*operations.AddPaymentMethodResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/billing/methods"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddPaymentMethodRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,11 +52,11 @@ func (s *account) AddPaymentMethod(ctx context.Context, request operations.AddPa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,11 +126,11 @@ func (s *account) AddPaymentMethod(ctx context.Context, request operations.AddPa
 // Once authorized, the device will then be able to sign in to that account
 // via the `/authorization/device` endpoint, without needing to provide the
 // credentials of the user.
-func (s *account) AuthorizeDevice(ctx context.Context, request operations.AuthorizeDeviceRequest) (*operations.AuthorizeDeviceResponse, error) {
+func (s *account) AuthorizeDevice(ctx context.Context, request operations.AuthorizeDeviceRequest, security operations.AuthorizeDeviceSecurity) (*operations.AuthorizeDeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/devices/authorization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceAuthorizationCode", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,11 +145,11 @@ func (s *account) AuthorizeDevice(ctx context.Context, request operations.Author
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -196,20 +196,20 @@ func (s *account) AuthorizeDevice(ctx context.Context, request operations.Author
 //
 // A cancelled subscription will continue to be valid until the subscription
 // expiry date or next renewal date.
-func (s *account) CancelSubscription(ctx context.Context, request operations.CancelSubscriptionRequest) (*operations.CancelSubscriptionResponse, error) {
+func (s *account) CancelSubscription(ctx context.Context, request operations.CancelSubscriptionRequest, security operations.CancelSubscriptionSecurity) (*operations.CancelSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,11 +259,11 @@ func (s *account) CancelSubscription(ctx context.Context, request operations.Can
 // ChangePassword - Change the password of an account.
 //
 // The expected token scope is Settings.
-func (s *account) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
+func (s *account) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest, security operations.ChangePasswordSecurity) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/password"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangePasswordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -278,11 +278,11 @@ func (s *account) ChangePassword(ctx context.Context, request operations.ChangeP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -330,11 +330,11 @@ func (s *account) ChangePassword(ctx context.Context, request operations.ChangeP
 }
 
 // ChangePin - Change the pin of an account.
-func (s *account) ChangePin(ctx context.Context, request operations.ChangePinRequest) (*operations.ChangePinResponse, error) {
+func (s *account) ChangePin(ctx context.Context, request operations.ChangePinRequest, security operations.ChangePinSecurity) (*operations.ChangePinResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/pin"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangePinRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,11 +349,11 @@ func (s *account) ChangePin(ctx context.Context, request operations.ChangePinReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -401,11 +401,11 @@ func (s *account) ChangePin(ctx context.Context, request operations.ChangePinReq
 }
 
 // CreateProfile - Create a new profile under the active account.
-func (s *account) CreateProfile(ctx context.Context, request operations.CreateProfileRequest) (*operations.CreateProfileResponse, error) {
+func (s *account) CreateProfile(ctx context.Context, request operations.CreateProfileRequest, security operations.CreateProfileSecurity) (*operations.CreateProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profiles"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileCreationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -420,11 +420,11 @@ func (s *account) CreateProfile(ctx context.Context, request operations.CreatePr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -483,20 +483,20 @@ func (s *account) CreateProfile(ctx context.Context, request operations.CreatePr
 // DeleteProfileWithID - Delete a profile with a specific id under the active account.
 //
 // Note that you cannot delete the primary profile.
-func (s *account) DeleteProfileWithID(ctx context.Context, request operations.DeleteProfileWithIDRequest) (*operations.DeleteProfileWithIDResponse, error) {
+func (s *account) DeleteProfileWithID(ctx context.Context, request operations.DeleteProfileWithIDRequest, security operations.DeleteProfileWithIDSecurity) (*operations.DeleteProfileWithIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -544,20 +544,20 @@ func (s *account) DeleteProfileWithID(ctx context.Context, request operations.De
 }
 
 // DeregisterDevice - Deregister a playback device from an account.
-func (s *account) DeregisterDevice(ctx context.Context, request operations.DeregisterDeviceRequest) (*operations.DeregisterDeviceResponse, error) {
+func (s *account) DeregisterDevice(ctx context.Context, request operations.DeregisterDeviceRequest, security operations.DeregisterDeviceSecurity) (*operations.DeregisterDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -613,7 +613,7 @@ func (s *account) DeregisterDevice(ctx context.Context, request operations.Dereg
 // application may first get a nonce from here to include in the request.
 // Facebook will then include the nonce in the auth token it issues. This
 // token can be passed back to our services and the nonce checked for validity.
-func (s *account) GenerateNonce(ctx context.Context, request operations.GenerateNonceRequest) (*operations.GenerateNonceResponse, error) {
+func (s *account) GenerateNonce(ctx context.Context, request operations.GenerateNonceRequest, security operations.GenerateNonceSecurity) (*operations.GenerateNonceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/nonce"
 
@@ -622,11 +622,11 @@ func (s *account) GenerateNonce(ctx context.Context, request operations.Generate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -683,7 +683,7 @@ func (s *account) GenerateNonce(ctx context.Context, request operations.Generate
 }
 
 // GetAccount - Get the details of an account along with the profiles and entitlements under it.
-func (s *account) GetAccount(ctx context.Context, request operations.GetAccountRequest) (*operations.GetAccountResponse, error) {
+func (s *account) GetAccount(ctx context.Context, request operations.GetAccountRequest, security operations.GetAccountSecurity) (*operations.GetAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -692,11 +692,11 @@ func (s *account) GetAccount(ctx context.Context, request operations.GetAccountR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -753,20 +753,20 @@ func (s *account) GetAccount(ctx context.Context, request operations.GetAccountR
 }
 
 // GetDevice - Get a registered device.
-func (s *account) GetDevice(ctx context.Context, request operations.GetDeviceRequest) (*operations.GetDeviceResponse, error) {
+func (s *account) GetDevice(ctx context.Context, request operations.GetDeviceRequest, security operations.GetDeviceSecurity) (*operations.GetDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -825,7 +825,7 @@ func (s *account) GetDevice(ctx context.Context, request operations.GetDeviceReq
 // GetDevices - Get all devices registered under this account.
 //
 // Also includes information around device registration and deregistration limits.
-func (s *account) GetDevices(ctx context.Context, request operations.GetDevicesRequest) (*operations.GetDevicesResponse, error) {
+func (s *account) GetDevices(ctx context.Context, request operations.GetDevicesRequest, security operations.GetDevicesSecurity) (*operations.GetDevicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/devices"
 
@@ -834,11 +834,11 @@ func (s *account) GetDevices(ctx context.Context, request operations.GetDevicesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -898,7 +898,7 @@ func (s *account) GetDevices(ctx context.Context, request operations.GetDevicesR
 //
 // This list is returned under the call to get account information so a call here is
 // only required when wishing to refresh a local copy of entitlements.
-func (s *account) GetEntitlements(ctx context.Context, request operations.GetEntitlementsRequest) (*operations.GetEntitlementsResponse, error) {
+func (s *account) GetEntitlements(ctx context.Context, request operations.GetEntitlementsRequest, security operations.GetEntitlementsSecurity) (*operations.GetEntitlementsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/entitlements"
 
@@ -907,11 +907,11 @@ func (s *account) GetEntitlements(ctx context.Context, request operations.GetEnt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -992,20 +992,20 @@ func (s *account) GetEntitlements(ctx context.Context, request operations.GetEnt
 // would return an array with 0 or more stream files followed by 0 or more progressive files.
 //
 // If no files are found a 404 is returned.
-func (s *account) GetItemMediaFiles(ctx context.Context, request operations.GetItemMediaFilesRequest) (*operations.GetItemMediaFilesResponse, error) {
+func (s *account) GetItemMediaFiles(ctx context.Context, request operations.GetItemMediaFilesRequest, security operations.GetItemMediaFilesSecurity) (*operations.GetItemMediaFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1081,20 +1081,20 @@ func (s *account) GetItemMediaFiles(ctx context.Context, request operations.GetI
 // would return an array with 0 or more stream files followed by 0 or more progressive files.
 //
 // If no files are found a 404 is returned.
-func (s *account) GetItemMediaFilesGuarded(ctx context.Context, request operations.GetItemMediaFilesGuardedRequest) (*operations.GetItemMediaFilesGuardedResponse, error) {
+func (s *account) GetItemMediaFilesGuarded(ctx context.Context, request operations.GetItemMediaFilesGuardedRequest, security operations.GetItemMediaFilesGuardedSecurity) (*operations.GetItemMediaFilesGuardedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos-guarded", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos-guarded", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1151,20 +1151,20 @@ func (s *account) GetItemMediaFilesGuarded(ctx context.Context, request operatio
 }
 
 // GetPaymentMethod - Get a payment method under an account.
-func (s *account) GetPaymentMethod(ctx context.Context, request operations.GetPaymentMethodRequest) (*operations.GetPaymentMethodResponse, error) {
+func (s *account) GetPaymentMethod(ctx context.Context, request operations.GetPaymentMethodRequest, security operations.GetPaymentMethodSecurity) (*operations.GetPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1221,7 +1221,7 @@ func (s *account) GetPaymentMethod(ctx context.Context, request operations.GetPa
 }
 
 // GetPaymentMethods - Get the available payment methods under an account.
-func (s *account) GetPaymentMethods(ctx context.Context, request operations.GetPaymentMethodsRequest) (*operations.GetPaymentMethodsResponse, error) {
+func (s *account) GetPaymentMethods(ctx context.Context, request operations.GetPaymentMethodsRequest, security operations.GetPaymentMethodsSecurity) (*operations.GetPaymentMethodsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/billing/methods"
 
@@ -1230,11 +1230,11 @@ func (s *account) GetPaymentMethods(ctx context.Context, request operations.GetP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1291,20 +1291,20 @@ func (s *account) GetPaymentMethods(ctx context.Context, request operations.GetP
 }
 
 // GetProfileWithID - Get the summary of a profile with a specific id under the active account.
-func (s *account) GetProfileWithID(ctx context.Context, request operations.GetProfileWithIDRequest) (*operations.GetProfileWithIDResponse, error) {
+func (s *account) GetProfileWithID(ctx context.Context, request operations.GetProfileWithIDRequest, security operations.GetProfileWithIDSecurity) (*operations.GetProfileWithIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1361,7 +1361,7 @@ func (s *account) GetProfileWithID(ctx context.Context, request operations.GetPr
 }
 
 // GetPurchases - Get a list of all purchases made under an account.
-func (s *account) GetPurchases(ctx context.Context, request operations.GetPurchasesRequest) (*operations.GetPurchasesResponse, error) {
+func (s *account) GetPurchases(ctx context.Context, request operations.GetPurchasesRequest, security operations.GetPurchasesSecurity) (*operations.GetPurchasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/billing/purchases"
 
@@ -1370,11 +1370,11 @@ func (s *account) GetPurchases(ctx context.Context, request operations.GetPurcha
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1432,11 +1432,11 @@ func (s *account) GetPurchases(ctx context.Context, request operations.GetPurcha
 
 // MakePurchase - Purchase a plan or item offer.
 // The result of a successful transaction is a new entitlement.
-func (s *account) MakePurchase(ctx context.Context, request operations.MakePurchaseRequest) (*operations.MakePurchaseResponse, error) {
+func (s *account) MakePurchase(ctx context.Context, request operations.MakePurchaseRequest, security operations.MakePurchaseSecurity) (*operations.MakePurchaseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/billing/purchases"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PurchaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1451,11 +1451,11 @@ func (s *account) MakePurchase(ctx context.Context, request operations.MakePurch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1514,11 +1514,11 @@ func (s *account) MakePurchase(ctx context.Context, request operations.MakePurch
 // RegisterDevice - Register a playback device under an account.
 //
 // If a device with the same id already exists a `409` conflict will be returned.
-func (s *account) RegisterDevice(ctx context.Context, request operations.RegisterDeviceRequest) (*operations.RegisterDeviceResponse, error) {
+func (s *account) RegisterDevice(ctx context.Context, request operations.RegisterDeviceRequest, security operations.RegisterDeviceSecurity) (*operations.RegisterDeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/devices"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceRegistrationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1533,11 +1533,11 @@ func (s *account) RegisterDevice(ctx context.Context, request operations.Registe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1596,20 +1596,20 @@ func (s *account) RegisterDevice(ctx context.Context, request operations.Registe
 }
 
 // RemovePaymentMethod - Remove a payment method from an account.
-func (s *account) RemovePaymentMethod(ctx context.Context, request operations.RemovePaymentMethodRequest) (*operations.RemovePaymentMethodResponse, error) {
+func (s *account) RemovePaymentMethod(ctx context.Context, request operations.RemovePaymentMethodRequest, security operations.RemovePaymentMethodSecurity) (*operations.RemovePaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1657,20 +1657,20 @@ func (s *account) RemovePaymentMethod(ctx context.Context, request operations.Re
 }
 
 // RenameDevice - Rename a device
-func (s *account) RenameDevice(ctx context.Context, request operations.RenameDeviceRequest) (*operations.RenameDeviceResponse, error) {
+func (s *account) RenameDevice(ctx context.Context, request operations.RenameDeviceRequest, security operations.RenameDeviceSecurity) (*operations.RenameDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}/name", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1728,7 +1728,7 @@ func (s *account) RenameDevice(ctx context.Context, request operations.RenameDev
 // If the user doesn't click the link before it expires then this endpoint can be called
 // to request a new verification email. In the future it may also be used if we add support
 // for changing an account email address.
-func (s *account) RequestEmailVerification(ctx context.Context, request operations.RequestEmailVerificationRequest) (*operations.RequestEmailVerificationResponse, error) {
+func (s *account) RequestEmailVerification(ctx context.Context, request operations.RequestEmailVerificationRequest, security operations.RequestEmailVerificationSecurity) (*operations.RequestEmailVerificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/request-email-verification"
 
@@ -1737,11 +1737,11 @@ func (s *account) RequestEmailVerification(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1794,11 +1794,11 @@ func (s *account) RequestEmailVerification(ctx context.Context, request operatio
 // properties you wish to update.
 //
 // When the address is provided any properties which are omitted from the address will be cleared.
-func (s *account) UpdateAccount(ctx context.Context, request operations.UpdateAccountRequest) (*operations.UpdateAccountResponse, error) {
+func (s *account) UpdateAccount(ctx context.Context, request operations.UpdateAccountRequest, security operations.UpdateAccountSecurity) (*operations.UpdateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1813,11 +1813,11 @@ func (s *account) UpdateAccount(ctx context.Context, request operations.UpdateAc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1867,11 +1867,11 @@ func (s *account) UpdateAccount(ctx context.Context, request operations.UpdateAc
 // UpdateProfileWithID - Update the summary of a profile with a specific id under the active account.
 //
 // This supports partial updates so you can send just the properties you wish to update.
-func (s *account) UpdateProfileWithID(ctx context.Context, request operations.UpdateProfileWithIDRequest) (*operations.UpdateProfileWithIDResponse, error) {
+func (s *account) UpdateProfileWithID(ctx context.Context, request operations.UpdateProfileWithIDRequest, security operations.UpdateProfileWithIDSecurity) (*operations.UpdateProfileWithIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1886,11 +1886,11 @@ func (s *account) UpdateProfileWithID(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1944,20 +1944,20 @@ func (s *account) UpdateProfileWithID(ctx context.Context, request operations.Up
 //
 // To switch plans provide the id of the current active subscription membership
 // of the account, and in the query specify the id of the plan to switch to.
-func (s *account) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest) (*operations.UpdateSubscriptionResponse, error) {
+func (s *account) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest, security operations.UpdateSubscriptionSecurity) (*operations.UpdateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

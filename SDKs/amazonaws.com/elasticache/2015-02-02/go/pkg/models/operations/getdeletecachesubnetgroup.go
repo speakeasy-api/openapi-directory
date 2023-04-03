@@ -50,26 +50,18 @@ func (e *GETDeleteCacheSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDeleteCacheSubnetGroupQueryParams struct {
+type GETDeleteCacheSubnetGroupRequest struct {
 	Action GETDeleteCacheSubnetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the cache subnet group to delete.</p> <p>Constraints: Must contain no more than 255 alphanumeric characters or hyphens.</p>
 	CacheSubnetGroupName string                               `queryParam:"style=form,explode=true,name=CacheSubnetGroupName"`
 	Version              GETDeleteCacheSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteCacheSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteCacheSubnetGroupRequest struct {
-	QueryParams GETDeleteCacheSubnetGroupQueryParams
-	Headers     GETDeleteCacheSubnetGroupHeaders
+	XAmzAlgorithm        *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteCacheSubnetGroupResponse struct {

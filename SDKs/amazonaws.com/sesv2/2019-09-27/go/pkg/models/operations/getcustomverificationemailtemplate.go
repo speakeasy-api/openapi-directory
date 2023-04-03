@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomVerificationEmailTemplatePathParams struct {
+type GetCustomVerificationEmailTemplateRequest struct {
 	// The name of the custom verification email template that you want to retrieve.
-	TemplateName string `pathParam:"style=simple,explode=false,name=TemplateName"`
-}
-
-type GetCustomVerificationEmailTemplateHeaders struct {
+	TemplateName      string  `pathParam:"style=simple,explode=false,name=TemplateName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetCustomVerificationEmailTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCustomVerificationEmailTemplateRequest struct {
-	PathParams GetCustomVerificationEmailTemplatePathParams
-	Headers    GetCustomVerificationEmailTemplateHeaders
 }
 
 type GetCustomVerificationEmailTemplateResponse struct {

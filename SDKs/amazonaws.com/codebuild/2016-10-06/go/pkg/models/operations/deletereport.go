@@ -30,7 +30,8 @@ func (e *DeleteReportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteReportHeaders struct {
+type DeleteReportRequest struct {
+	DeleteReportInput shared.DeleteReportInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteReportHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteReportXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteReportRequest struct {
-	Headers DeleteReportHeaders
-	Request shared.DeleteReportInput `request:"mediaType=application/json"`
 }
 
 type DeleteReportResponse struct {

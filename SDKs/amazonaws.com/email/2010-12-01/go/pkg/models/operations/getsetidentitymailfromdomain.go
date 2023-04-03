@@ -74,30 +74,22 @@ func (e *GETSetIdentityMailFromDomainVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETSetIdentityMailFromDomainQueryParams struct {
+type GETSetIdentityMailFromDomainRequest struct {
 	Action GETSetIdentityMailFromDomainActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. If you choose <code>UseDefaultValue</code>, Amazon SES will use amazonses.com (or a subdomain of that) as the MAIL FROM domain. If you choose <code>RejectMessage</code>, Amazon SES will return a <code>MailFromDomainNotVerified</code> error and not send the email.</p> <p>The action specified in <code>BehaviorOnMXFailure</code> is taken when the custom MAIL FROM domain setup is in the <code>Pending</code>, <code>Failed</code>, and <code>TemporaryFailure</code> states.</p>
 	BehaviorOnMXFailure *GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum `queryParam:"style=form,explode=true,name=BehaviorOnMXFailure"`
 	// The verified identity for which you want to enable or disable the specified custom MAIL FROM domain.
 	Identity string `queryParam:"style=form,explode=true,name=Identity"`
 	// The custom MAIL FROM domain that you want the verified identity to use. The MAIL FROM domain must 1) be a subdomain of the verified identity, 2) not be used in a "From" address if the MAIL FROM domain is the destination of email feedback forwarding (for more information, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from.html">Amazon SES Developer Guide</a>), and 3) not be used to receive emails. A value of <code>null</code> disables the custom MAIL FROM setting for the identity.
-	MailFromDomain *string                                 `queryParam:"style=form,explode=true,name=MailFromDomain"`
-	Version        GETSetIdentityMailFromDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetIdentityMailFromDomainHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetIdentityMailFromDomainRequest struct {
-	QueryParams GETSetIdentityMailFromDomainQueryParams
-	Headers     GETSetIdentityMailFromDomainHeaders
+	MailFromDomain    *string                                 `queryParam:"style=form,explode=true,name=MailFromDomain"`
+	Version           GETSetIdentityMailFromDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetIdentityMailFromDomainResponse struct {

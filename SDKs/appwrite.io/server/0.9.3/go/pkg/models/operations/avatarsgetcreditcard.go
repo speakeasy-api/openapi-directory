@@ -4,33 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetCreditCardSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AvatarsGetCreditCardPathParams struct {
+type AvatarsGetCreditCardRequest struct {
 	// Credit Card Code. Possible values: amex, argencard, cabal, censosud, diners, discover, elo, hipercard, jcb, mastercard, naranja, targeta-shopping, union-china-pay, visa, mir, maestro.
 	Code string `pathParam:"style=simple,explode=false,name=code"`
-}
-
-type AvatarsGetCreditCardQueryParams struct {
 	// Image height. Pass an integer between 0 to 2000. Defaults to 100.
 	Height *int `queryParam:"style=form,explode=true,name=height"`
 	// Image quality. Pass an integer between 0 to 100. Defaults to 100.
 	Quality *int `queryParam:"style=form,explode=true,name=quality"`
 	// Image width. Pass an integer between 0 to 2000. Defaults to 100.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type AvatarsGetCreditCardRequest struct {
-	PathParams  AvatarsGetCreditCardPathParams
-	QueryParams AvatarsGetCreditCardQueryParams
-	Security    AvatarsGetCreditCardSecurity
 }
 
 type AvatarsGetCreditCardResponse struct {

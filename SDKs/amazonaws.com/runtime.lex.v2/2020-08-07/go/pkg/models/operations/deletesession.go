@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSessionPathParams struct {
+type DeleteSessionRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The alias identifier in use for the bot that contains the session data.
 	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
 	// The identifier of the bot that contains the session data.
@@ -16,21 +23,6 @@ type DeleteSessionPathParams struct {
 	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 	// The identifier of the session to delete.
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type DeleteSessionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSessionRequest struct {
-	PathParams DeleteSessionPathParams
-	Headers    DeleteSessionHeaders
 }
 
 type DeleteSessionResponse struct {

@@ -17,11 +17,6 @@ type CodePushAcquisitionUpdateDownloadStatusRequestBody struct {
 	Status                    *string `json:"status,omitempty"`
 }
 
-type CodePushAcquisitionUpdateDownloadStatusRequest struct {
-	// Deployment status metric properties
-	Request CodePushAcquisitionUpdateDownloadStatusRequestBody `request:"mediaType=application/json"`
-}
-
 // CodePushAcquisitionUpdateDownloadStatusDefaultApplicationJSON - Error
 type CodePushAcquisitionUpdateDownloadStatusDefaultApplicationJSON struct {
 	Message string `json:"message"`

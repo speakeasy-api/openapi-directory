@@ -50,25 +50,17 @@ func (e *POSTDisassociateEnvironmentOperationsRoleVersionEnum) UnmarshalJSON(dat
 	}
 }
 
-type POSTDisassociateEnvironmentOperationsRoleQueryParams struct {
-	Action  POSTDisassociateEnvironmentOperationsRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisassociateEnvironmentOperationsRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisassociateEnvironmentOperationsRoleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisassociateEnvironmentOperationsRoleRequest struct {
-	QueryParams POSTDisassociateEnvironmentOperationsRoleQueryParams
-	Headers     POSTDisassociateEnvironmentOperationsRoleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisassociateEnvironmentOperationsRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                               `request:"mediaType=text/xml"`
+	Version           POSTDisassociateEnvironmentOperationsRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisassociateEnvironmentOperationsRoleResponse struct {

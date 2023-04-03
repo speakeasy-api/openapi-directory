@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPipelineVariablesForUserPathParams struct {
+type GetPipelineVariablesForUserRequest struct {
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type GetPipelineVariablesForUserRequest struct {
-	PathParams GetPipelineVariablesForUserPathParams
 }
 
 type GetPipelineVariablesForUserResponse struct {

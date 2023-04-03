@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeProductsQueryParams struct {
+type DescribeProductsRequest struct {
 	// The maximum number of results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that is required for pagination. On your first call to the <code>DescribeProducts</code> operation, set the value of this parameter to <code>NULL</code>.</p> <p>For subsequent calls to the operation, to continue listing data, set the value of this parameter to the value returned from the previous response.</p>
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The ARN of the integration to return.
-	ProductArn *string `queryParam:"style=form,explode=true,name=ProductArn"`
-}
-
-type DescribeProductsHeaders struct {
+	ProductArn        *string `queryParam:"style=form,explode=true,name=ProductArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type DescribeProductsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeProductsRequest struct {
-	QueryParams DescribeProductsQueryParams
-	Headers     DescribeProductsHeaders
 }
 
 type DescribeProductsResponse struct {

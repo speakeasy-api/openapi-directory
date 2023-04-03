@@ -51,7 +51,7 @@ func (e *GETRestoreDBInstanceToPointInTimeVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETRestoreDBInstanceToPointInTimeQueryParams struct {
+type GETRestoreDBInstanceToPointInTimeRequest struct {
 	Action                     GETRestoreDBInstanceToPointInTimeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoMinorVersionUpgrade    *bool                                        `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
 	AvailabilityZone           *string                                      `queryParam:"style=form,explode=true,name=AvailabilityZone"`
@@ -70,21 +70,13 @@ type GETRestoreDBInstanceToPointInTimeQueryParams struct {
 	TargetDBInstanceIdentifier string                                       `queryParam:"style=form,explode=true,name=TargetDBInstanceIdentifier"`
 	UseLatestRestorableTime    *bool                                        `queryParam:"style=form,explode=true,name=UseLatestRestorableTime"`
 	Version                    GETRestoreDBInstanceToPointInTimeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRestoreDBInstanceToPointInTimeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRestoreDBInstanceToPointInTimeRequest struct {
-	QueryParams GETRestoreDBInstanceToPointInTimeQueryParams
-	Headers     GETRestoreDBInstanceToPointInTimeHeaders
+	XAmzAlgorithm              *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRestoreDBInstanceToPointInTimeResponse struct {

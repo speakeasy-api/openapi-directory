@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBaiduChannelPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-}
-
-type DeleteBaiduChannelHeaders struct {
+type DeleteBaiduChannelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteBaiduChannelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBaiduChannelRequest struct {
-	PathParams DeleteBaiduChannelPathParams
-	Headers    DeleteBaiduChannelHeaders
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
 }
 
 type DeleteBaiduChannelResponse struct {

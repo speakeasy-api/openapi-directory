@@ -34,7 +34,7 @@ func newCustomerContracts(defaultClient, securityClient HTTPClient, serverURL, l
 
 // CreateContract - Create a new contract
 // Now you are ready to create your contract. Before that, please ensure that you check the offer with the same request parameterts. /offers
-func (s *customerContracts) CreateContract(ctx context.Context, request operations.CreateContractRequest) (*operations.CreateContractResponse, error) {
+func (s *customerContracts) CreateContract(ctx context.Context, request shared.OfferRequest) (*operations.CreateContractResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/contracts"
 
@@ -156,7 +156,7 @@ func (s *customerContracts) GetBillingPeriods(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,7 +215,7 @@ func (s *customerContracts) GetContracts(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -266,7 +266,7 @@ func (s *customerContracts) GetContracts(ctx context.Context, request operations
 
 // GetOffer - Get offer pricing
 // Get the offer pricing then you can create your contract with the same request parameters. /v2/user/customer/contracts
-func (s *customerContracts) GetOffer(ctx context.Context, request operations.GetOfferRequest) (*operations.GetOfferResponse, error) {
+func (s *customerContracts) GetOffer(ctx context.Context, request shared.OfferRequest) (*operations.GetOfferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/offers"
 
@@ -343,7 +343,7 @@ func (s *customerContracts) GetStandardOffers(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -442,7 +442,7 @@ func (s *customerContracts) ReactivateCurrentContract(ctx context.Context) (*ope
 
 // TerminateCurrentContract - Schedule termination of your current contract at the end of the commitment.
 // By default your contract are automatically renew. By calling this operation you can disable the auto renewal.
-func (s *customerContracts) TerminateCurrentContract(ctx context.Context, request operations.TerminateCurrentContractRequest) (*operations.TerminateCurrentContractResponse, error) {
+func (s *customerContracts) TerminateCurrentContract(ctx context.Context, request shared.TerminateContract) (*operations.TerminateCurrentContractResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/contracts/current/disableAutoRenewal"
 

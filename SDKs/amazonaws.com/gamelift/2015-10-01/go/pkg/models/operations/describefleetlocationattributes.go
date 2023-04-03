@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFleetLocationAttributesQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeFleetLocationAttributesXAmzTargetEnum
 type DescribeFleetLocationAttributesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeFleetLocationAttributesXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DescribeFleetLocationAttributesHeaders struct {
+type DescribeFleetLocationAttributesRequest struct {
+	DescribeFleetLocationAttributesInput shared.DescribeFleetLocationAttributesInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeFleetLocationAttributesHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeFleetLocationAttributesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeFleetLocationAttributesRequest struct {
-	QueryParams DescribeFleetLocationAttributesQueryParams
-	Headers     DescribeFleetLocationAttributesHeaders
-	Request     shared.DescribeFleetLocationAttributesInput `request:"mediaType=application/json"`
 }
 
 type DescribeFleetLocationAttributesResponse struct {

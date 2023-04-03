@@ -15,6 +15,5 @@ pkg/utils/utils.go
 pkg/models/operations/dpicr.go
 pkg/models/operations/govid.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 pkg/models/shared/academiccertificateschema.go
 USAGE.md

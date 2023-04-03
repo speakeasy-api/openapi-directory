@@ -30,7 +30,8 @@ func (e *StartQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StartQueryHeaders struct {
+type StartQueryRequest struct {
+	StartQueryRequest shared.StartQueryRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type StartQueryHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        StartQueryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type StartQueryRequest struct {
-	Headers StartQueryHeaders
-	Request shared.StartQueryRequest `request:"mediaType=application/json"`
 }
 
 type StartQueryResponse struct {

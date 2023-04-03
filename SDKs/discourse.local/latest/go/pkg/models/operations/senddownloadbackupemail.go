@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type SendDownloadBackupEmailPathParams struct {
-	Filename string `pathParam:"style=simple,explode=false,name=filename"`
-}
-
 type SendDownloadBackupEmailRequest struct {
-	PathParams SendDownloadBackupEmailPathParams
+	Filename string `pathParam:"style=simple,explode=false,name=filename"`
 }
 
 type SendDownloadBackupEmailResponse struct {

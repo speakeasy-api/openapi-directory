@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProfileObjectTypePathParams struct {
+type GetProfileObjectTypeRequest struct {
 	// The unique name of the domain.
 	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
 	// The name of the profile object type.
-	ObjectTypeName string `pathParam:"style=simple,explode=false,name=ObjectTypeName"`
-}
-
-type GetProfileObjectTypeHeaders struct {
+	ObjectTypeName    string  `pathParam:"style=simple,explode=false,name=ObjectTypeName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetProfileObjectTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetProfileObjectTypeRequest struct {
-	PathParams GetProfileObjectTypePathParams
-	Headers    GetProfileObjectTypeHeaders
 }
 
 type GetProfileObjectTypeResponse struct {

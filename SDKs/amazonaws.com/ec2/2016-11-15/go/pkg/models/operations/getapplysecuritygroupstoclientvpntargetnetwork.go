@@ -50,7 +50,7 @@ func (e *GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum) UnmarshalJSO
 	}
 }
 
-type GETApplySecurityGroupsToClientVpnTargetNetworkQueryParams struct {
+type GETApplySecurityGroupsToClientVpnTargetNetworkRequest struct {
 	Action GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Client VPN endpoint.
 	ClientVpnEndpointID string `queryParam:"style=form,explode=true,name=ClientVpnEndpointId"`
@@ -60,10 +60,7 @@ type GETApplySecurityGroupsToClientVpnTargetNetworkQueryParams struct {
 	SecurityGroupID []string                                                  `queryParam:"style=form,explode=true,name=SecurityGroupId"`
 	Version         GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC in which the associated target network is located.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETApplySecurityGroupsToClientVpnTargetNetworkHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -71,11 +68,6 @@ type GETApplySecurityGroupsToClientVpnTargetNetworkHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETApplySecurityGroupsToClientVpnTargetNetworkRequest struct {
-	QueryParams GETApplySecurityGroupsToClientVpnTargetNetworkQueryParams
-	Headers     GETApplySecurityGroupsToClientVpnTargetNetworkHeaders
 }
 
 type GETApplySecurityGroupsToClientVpnTargetNetworkResponse struct {

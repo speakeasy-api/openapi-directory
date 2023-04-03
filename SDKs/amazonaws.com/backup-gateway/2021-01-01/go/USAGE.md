@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateGatewayToServerRequest{
-        Headers: operations.AssociateGatewayToServerHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "BackupOnPremises_v20210101.AssociateGatewayToServer",
+        AssociateGatewayToServerInput: shared.AssociateGatewayToServerInput{
+            GatewayArn: "corrupti",
+            ServerArn: "provident",
         },
-        Request: shared.AssociateGatewayToServerInput{
-            GatewayArn: "illum",
-            ServerArn: "vel",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "BackupOnPremises_v20210101.AssociateGatewayToServer",
     }
 
     ctx := context.Background()

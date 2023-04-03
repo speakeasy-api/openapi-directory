@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePublicKey20190326PathParams struct {
+type DeletePublicKey20190326Request struct {
 	// The ID of the public key you want to remove from CloudFront.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeletePublicKey20190326Headers struct {
 	// The value of the <code>ETag</code> header that you received when retrieving the public key identity to delete. For example: <code>E2QWRUHAPOMQZL</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeletePublicKey20190326Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeletePublicKey20190326Request struct {
-	PathParams DeletePublicKey20190326PathParams
-	Headers    DeletePublicKey20190326Headers
 }
 
 type DeletePublicKey20190326Response struct {

@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type GetContributionsQueryParams struct {
+type GetContributionsRequest struct {
 	// Restrict results to contributions submitted to this assignment.
 	Assignment *string `queryParam:"style=form,explode=true,name=assignment"`
 	// Limit results to contributions which have a publicly visible location within the given country (specified by two letter country code).
@@ -44,10 +44,6 @@ type GetContributionsQueryParams struct {
 	URLWords *string `queryParam:"style=form,explode=true,name=urlWords"`
 	// Restrict results to contributions by this user identified by id.
 	User *string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type GetContributionsRequest struct {
-	QueryParams GetContributionsQueryParams
 }
 
 type GetContributionsResponse struct {

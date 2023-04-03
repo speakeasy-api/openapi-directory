@@ -50,28 +50,20 @@ func (e *GETDeleteAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteAccessKeyQueryParams struct {
+type GETDeleteAccessKeyRequest struct {
 	// <p>The access key ID for the access key ID and secret access key you want to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	AccessKeyID string                       `queryParam:"style=form,explode=true,name=AccessKeyId"`
 	Action      GETDeleteAccessKeyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the user whose access key pair you want to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                       `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETDeleteAccessKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteAccessKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteAccessKeyRequest struct {
-	QueryParams GETDeleteAccessKeyQueryParams
-	Headers     GETDeleteAccessKeyHeaders
+	UserName          *string                       `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETDeleteAccessKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteAccessKeyResponse struct {

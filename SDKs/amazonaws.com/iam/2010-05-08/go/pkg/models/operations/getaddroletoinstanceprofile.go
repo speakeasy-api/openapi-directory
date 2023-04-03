@@ -50,28 +50,20 @@ func (e *GETAddRoleToInstanceProfileVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETAddRoleToInstanceProfileQueryParams struct {
+type GETAddRoleToInstanceProfileRequest struct {
 	Action GETAddRoleToInstanceProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the instance profile to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	InstanceProfileName string `queryParam:"style=form,explode=true,name=InstanceProfileName"`
 	// <p>The name of the role to add.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	RoleName string                                 `queryParam:"style=form,explode=true,name=RoleName"`
-	Version  GETAddRoleToInstanceProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddRoleToInstanceProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddRoleToInstanceProfileRequest struct {
-	QueryParams GETAddRoleToInstanceProfileQueryParams
-	Headers     GETAddRoleToInstanceProfileHeaders
+	RoleName          string                                 `queryParam:"style=form,explode=true,name=RoleName"`
+	Version           GETAddRoleToInstanceProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddRoleToInstanceProfileResponse struct {

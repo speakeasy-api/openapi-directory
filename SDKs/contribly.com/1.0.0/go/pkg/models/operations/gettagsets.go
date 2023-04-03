@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsetsQueryParams struct {
+type GetTagsetsRequest struct {
 	// Restrict results to those owned by this user.
 	OwnedBy *string `queryParam:"style=form,explode=true,name=ownedBy"`
 	// Restrict results by urlWords. Should be used with ownedBy when searching for one of your own tag sets.
 	URLWords *string `queryParam:"style=form,explode=true,name=urlWords"`
-}
-
-type GetTagsetsRequest struct {
-	QueryParams GetTagsetsQueryParams
 }
 
 type GetTagsetsResponse struct {

@@ -50,28 +50,20 @@ func (e *GETUntagOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETUntagOpenIDConnectProviderQueryParams struct {
+type GETUntagOpenIDConnectProviderRequest struct {
 	Action GETUntagOpenIDConnectProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ARN of the OIDC provider in IAM from which you want to remove tags.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	OpenIDConnectProviderArn string `queryParam:"style=form,explode=true,name=OpenIDConnectProviderArn"`
 	// A list of key names as a simple array of strings. The tags with matching keys are removed from the specified OIDC provider.
-	TagKeys []string                                 `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETUntagOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUntagOpenIDConnectProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUntagOpenIDConnectProviderRequest struct {
-	QueryParams GETUntagOpenIDConnectProviderQueryParams
-	Headers     GETUntagOpenIDConnectProviderHeaders
+	TagKeys           []string                                 `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETUntagOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUntagOpenIDConnectProviderResponse struct {

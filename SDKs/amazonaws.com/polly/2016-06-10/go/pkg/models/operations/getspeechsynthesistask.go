@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpeechSynthesisTaskPathParams struct {
+type GetSpeechSynthesisTaskRequest struct {
 	// The Amazon Polly generated identifier for a speech synthesis task.
-	TaskID string `pathParam:"style=simple,explode=false,name=TaskId"`
-}
-
-type GetSpeechSynthesisTaskHeaders struct {
+	TaskID            string  `pathParam:"style=simple,explode=false,name=TaskId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetSpeechSynthesisTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSpeechSynthesisTaskRequest struct {
-	PathParams GetSpeechSynthesisTaskPathParams
-	Headers    GetSpeechSynthesisTaskHeaders
 }
 
 type GetSpeechSynthesisTaskResponse struct {

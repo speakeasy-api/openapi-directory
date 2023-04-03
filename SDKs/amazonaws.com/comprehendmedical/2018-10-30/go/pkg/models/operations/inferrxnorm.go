@@ -30,20 +30,16 @@ func (e *InferRxNormXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type InferRxNormHeaders struct {
-	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        InferRxNormXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type InferRxNormRequest struct {
-	Headers InferRxNormHeaders
-	Request shared.InferRxNormRequest `request:"mediaType=application/json"`
+	InferRxNormRequest shared.InferRxNormRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         InferRxNormXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type InferRxNormResponse struct {

@@ -52,7 +52,7 @@ func (s *user) ChangeUserPassword(ctx context.Context, request operations.Change
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account/password"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeUserPasswordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -67,7 +67,7 @@ func (s *user) ChangeUserPassword(ctx context.Context, request operations.Change
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -134,7 +134,7 @@ func (s *user) ConfirmTotpSetup(ctx context.Context, request operations.ConfirmT
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account/mfa/totp"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MfaTotpConfirmationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -149,7 +149,7 @@ func (s *user) ConfirmTotpSetup(ctx context.Context, request operations.ConfirmT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -214,7 +214,7 @@ func (s *user) CreateAndPreserveUserKeyPair(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account/keypairs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateKeyPairRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -229,7 +229,7 @@ func (s *user) CreateAndPreserveUserKeyPair(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -291,16 +291,16 @@ func (s *user) CreateAndPreserveUserKeyPair(ctx context.Context, request operati
 // None.
 func (s *user) DeleteMfaTotpSetup(ctx context.Context, request operations.DeleteMfaTotpSetupRequest) (*operations.DeleteMfaTotpSetupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/account/mfa/totp/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/account/mfa/totp/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -367,7 +367,7 @@ func (s *user) EnableCustomerEncryption(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account/customer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableCustomerEncryptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -382,7 +382,7 @@ func (s *user) EnableCustomerEncryption(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -459,7 +459,7 @@ func (s *user) GetMfaStatusForUser(ctx context.Context, request operations.GetMf
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -532,7 +532,7 @@ func (s *user) GetTotpSetupInformation(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -659,9 +659,9 @@ func (s *user) ListDownloadShareSubscriptions(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -788,9 +788,9 @@ func (s *user) ListNodeSubscriptions(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -917,9 +917,9 @@ func (s *user) ListUploadShareSubscriptions(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -997,9 +997,9 @@ func (s *user) Logout(ctx context.Context, request operations.LogoutRequest) (*o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1063,7 +1063,7 @@ func (s *user) PingUser(ctx context.Context, request operations.PingUserRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1129,14 +1129,14 @@ func (s *user) PingUser(ctx context.Context, request operations.PingUserRequest)
 // None.
 func (s *user) RemoveOAuthApproval(ctx context.Context, request operations.RemoveOAuthApprovalRequest) (*operations.RemoveOAuthApprovalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/oauth/approvals/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/oauth/approvals/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1195,14 +1195,14 @@ func (s *user) RemoveOAuthApproval(ctx context.Context, request operations.Remov
 // None.
 func (s *user) RemoveOAuthAuthorization(ctx context.Context, request operations.RemoveOAuthAuthorizationRequest) (*operations.RemoveOAuthAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/oauth/authorizations/{client_id}/{authorization_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/oauth/authorizations/{client_id}/{authorization_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1259,14 +1259,14 @@ func (s *user) RemoveOAuthAuthorization(ctx context.Context, request operations.
 // None.
 func (s *user) RemoveOAuthAuthorizations(ctx context.Context, request operations.RemoveOAuthAuthorizationsRequest) (*operations.RemoveOAuthAuthorizationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/oauth/authorizations/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/oauth/authorizations/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1325,14 +1325,14 @@ func (s *user) RemoveOAuthAuthorizations(ctx context.Context, request operations
 // Allowed characters for keys are: `[a-zA-Z0-9_-]`
 func (s *user) RemoveProfileAttribute(ctx context.Context, request operations.RemoveProfileAttributeRequest) (*operations.RemoveProfileAttributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/profileAttributes/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/profileAttributes/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1402,9 +1402,9 @@ func (s *user) RemoveUserKeyPair(ctx context.Context, request operations.RemoveU
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1474,7 +1474,7 @@ func (s *user) RequestAvatar(ctx context.Context, request operations.RequestAvat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1551,7 +1551,7 @@ func (s *user) RequestCustomerInfo(ctx context.Context, request operations.Reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1626,7 +1626,7 @@ func (s *user) RequestCustomerKeyPair(ctx context.Context, request operations.Re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1701,7 +1701,7 @@ func (s *user) RequestListOfNotificationConfigs(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1798,9 +1798,9 @@ func (s *user) RequestOAuthApprovals(ctx context.Context, request operations.Req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1919,9 +1919,9 @@ func (s *user) RequestOAuthAuthorizations(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2044,9 +2044,9 @@ func (s *user) RequestProfileAttributes(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2121,9 +2121,9 @@ func (s *user) RequestUserInfo(ctx context.Context, request operations.RequestUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2194,9 +2194,9 @@ func (s *user) RequestUserKeyPair(ctx context.Context, request operations.Reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2275,7 +2275,7 @@ func (s *user) RequestUserKeyPairs(ctx context.Context, request operations.Reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2351,7 +2351,7 @@ func (s *user) ResetAvatar(ctx context.Context, request operations.ResetAvatarRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2425,7 +2425,7 @@ func (s *user) SetProfileAttributes(ctx context.Context, request operations.SetP
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/profileAttributes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileAttributesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2440,7 +2440,7 @@ func (s *user) SetProfileAttributes(ctx context.Context, request operations.SetP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2510,7 +2510,7 @@ func (s *user) SetUserKeyPair(ctx context.Context, request operations.SetUserKey
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account/keypair"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserKeyPairContainer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2525,7 +2525,7 @@ func (s *user) SetUserKeyPair(ctx context.Context, request operations.SetUserKey
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2587,14 +2587,14 @@ func (s *user) SetUserKeyPair(ctx context.Context, request operations.SetUserKey
 // None.
 func (s *user) SubscribeDownloadShare(ctx context.Context, request operations.SubscribeDownloadShareRequest) (*operations.SubscribeDownloadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/download_shares/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/download_shares/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2669,7 +2669,7 @@ func (s *user) SubscribeDownloadShares(ctx context.Context, request operations.S
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/subscriptions/download_shares"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionsBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2684,7 +2684,7 @@ func (s *user) SubscribeDownloadShares(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2750,14 +2750,14 @@ func (s *user) SubscribeDownloadShares(ctx context.Context, request operations.S
 // None.
 func (s *user) SubscribeNode(ctx context.Context, request operations.SubscribeNodeRequest) (*operations.SubscribeNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/nodes/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/nodes/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2830,14 +2830,14 @@ func (s *user) SubscribeNode(ctx context.Context, request operations.SubscribeNo
 // None.
 func (s *user) SubscribeUploadShare(ctx context.Context, request operations.SubscribeUploadShareRequest) (*operations.SubscribeUploadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/upload_shares/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/upload_shares/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2912,7 +2912,7 @@ func (s *user) SubscribeUploadShares(ctx context.Context, request operations.Sub
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/subscriptions/upload_shares"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionsBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2927,7 +2927,7 @@ func (s *user) SubscribeUploadShares(ctx context.Context, request operations.Sub
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -2993,14 +2993,14 @@ func (s *user) SubscribeUploadShares(ctx context.Context, request operations.Sub
 // None.
 func (s *user) UnsubscribeDownloadShare(ctx context.Context, request operations.UnsubscribeDownloadShareRequest) (*operations.UnsubscribeDownloadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/download_shares/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/download_shares/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3064,14 +3064,14 @@ func (s *user) UnsubscribeDownloadShare(ctx context.Context, request operations.
 // None.
 func (s *user) UnsubscribeNode(ctx context.Context, request operations.UnsubscribeNodeRequest) (*operations.UnsubscribeNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/nodes/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/nodes/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3135,14 +3135,14 @@ func (s *user) UnsubscribeNode(ctx context.Context, request operations.Unsubscri
 // None.
 func (s *user) UnsubscribeUploadShare(ctx context.Context, request operations.UnsubscribeUploadShareRequest) (*operations.UnsubscribeUploadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/upload_shares/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/subscriptions/upload_shares/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3208,7 +3208,7 @@ func (s *user) UpdateNodeSubscriptions(ctx context.Context, request operations.U
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/subscriptions/nodes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionsBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3223,7 +3223,7 @@ func (s *user) UpdateNodeSubscriptions(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3288,9 +3288,9 @@ func (s *user) UpdateNodeSubscriptions(ctx context.Context, request operations.U
 // Leave `channelIds` empty to disable notifications.
 func (s *user) UpdateNotificationConfig(ctx context.Context, request operations.UpdateNotificationConfigRequest) (*operations.UpdateNotificationConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/user/notifications/config/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/user/notifications/config/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationConfigChangeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3305,7 +3305,7 @@ func (s *user) UpdateNotificationConfig(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3383,7 +3383,7 @@ func (s *user) UpdateProfileAttributes(ctx context.Context, request operations.U
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/profileAttributes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileAttributesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3398,7 +3398,7 @@ func (s *user) UpdateProfileAttributes(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3469,7 +3469,7 @@ func (s *user) UpdateUserAccount(ctx context.Context, request operations.UpdateU
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateUserAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3484,7 +3484,7 @@ func (s *user) UpdateUserAccount(ctx context.Context, request operations.UpdateU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3560,7 +3560,7 @@ func (s *user) UploadAvatarAsMultipart(ctx context.Context, request operations.U
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/user/account/avatar"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3572,7 +3572,7 @@ func (s *user) UploadAvatarAsMultipart(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -3646,9 +3646,9 @@ func (s *user) UseEmergencyCode(ctx context.Context, request operations.UseEmerg
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

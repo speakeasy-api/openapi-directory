@@ -55,10 +55,6 @@ type PostAPIPagesRequestBody struct {
 	Title *string `json:"title,omitempty"`
 }
 
-type PostAPIPagesRequest struct {
-	Request *PostAPIPagesRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAPIPagesResponse struct {
 	ContentType string
 	StatusCode  int

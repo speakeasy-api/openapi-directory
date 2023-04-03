@@ -13,29 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETAddRoleToDBClusterRequest{
-        QueryParams: operations.GETAddRoleToDBClusterQueryParams{
-            Action: "AddRoleToDBCluster",
-            DBClusterIdentifier: "corrupti",
-            FeatureName: "provident",
-            RoleArn: "distinctio",
-            Version: "2014-10-31",
-        },
-        Headers: operations.GETAddRoleToDBClusterHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
+        Action: "AddRoleToDBCluster",
+        DBClusterIdentifier: "corrupti",
+        FeatureName: "provident",
+        RoleArn: "distinctio",
+        Version: "2014-10-31",
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
     }
 
     ctx := context.Background()

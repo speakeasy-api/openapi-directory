@@ -8,12 +8,16 @@ import (
 	"time"
 )
 
-type ListDatasetContentsPathParams struct {
+type ListDatasetContentsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The name of the dataset whose contents information you want to list.
 	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
-}
-
-type ListDatasetContentsQueryParams struct {
 	// The maximum number of results to return in this request.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// The token for the next set of results.
@@ -22,22 +26,6 @@ type ListDatasetContentsQueryParams struct {
 	ScheduledBefore *time.Time `queryParam:"style=form,explode=true,name=scheduledBefore"`
 	// A filter to limit results to those dataset contents whose creation is scheduled on or after the given time. See the field <code>triggers.schedule</code> in the <code>CreateDataset</code> request. (timestamp)
 	ScheduledOnOrAfter *time.Time `queryParam:"style=form,explode=true,name=scheduledOnOrAfter"`
-}
-
-type ListDatasetContentsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDatasetContentsRequest struct {
-	PathParams  ListDatasetContentsPathParams
-	QueryParams ListDatasetContentsQueryParams
-	Headers     ListDatasetContentsHeaders
 }
 
 type ListDatasetContentsResponse struct {

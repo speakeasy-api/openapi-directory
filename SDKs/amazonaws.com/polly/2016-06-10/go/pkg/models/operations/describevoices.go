@@ -159,7 +159,7 @@ func (e *DescribeVoicesLanguageCodeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeVoicesQueryParams struct {
+type DescribeVoicesRequest struct {
 	// Specifies the engine (<code>standard</code> or <code>neural</code>) used by Amazon Polly when processing input text for speech synthesis.
 	Engine *DescribeVoicesEngineEnum `queryParam:"style=form,explode=true,name=Engine"`
 	// Boolean value indicating whether to return any bilingual voices that use the specified language as an additional language. For instance, if you request all languages that use US English (es-US), and there is an Italian voice that speaks both Italian (it-IT) and US English, that voice will be included if you specify <code>yes</code> but not if you specify <code>no</code>.
@@ -167,10 +167,7 @@ type DescribeVoicesQueryParams struct {
 	//  The language identification tag (ISO 639 code for the language name-ISO 3166 country code) for filtering the list of voices returned. If you don't specify this optional parameter, all available voices are returned.
 	LanguageCode *DescribeVoicesLanguageCodeEnum `queryParam:"style=form,explode=true,name=LanguageCode"`
 	// An opaque pagination token returned from the previous <code>DescribeVoices</code> operation. If present, this indicates where to continue the listing.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type DescribeVoicesHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -178,11 +175,6 @@ type DescribeVoicesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeVoicesRequest struct {
-	QueryParams DescribeVoicesQueryParams
-	Headers     DescribeVoicesHeaders
 }
 
 type DescribeVoicesResponse struct {

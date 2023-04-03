@@ -32,7 +32,7 @@ func newBackups(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // CreateBackup - Create backup
-func (s *backups) CreateBackup(ctx context.Context, request operations.CreateBackupRequest) (*operations.CreateBackupResponse, error) {
+func (s *backups) CreateBackup(ctx context.Context, request operations.CreateBackupRequestBody) (*operations.CreateBackupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/backups.json"
 
@@ -85,14 +85,14 @@ func (s *backups) CreateBackup(ctx context.Context, request operations.CreateBac
 // DownloadBackup - Download backup
 func (s *backups) DownloadBackup(ctx context.Context, request operations.DownloadBackupRequest) (*operations.DownloadBackupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -168,7 +168,7 @@ func (s *backups) GetBackups(ctx context.Context) (*operations.GetBackupsRespons
 // SendDownloadBackupEmail - Send download backup email
 func (s *backups) SendDownloadBackupEmail(ctx context.Context, request operations.SendDownloadBackupEmailRequest) (*operations.SendDownloadBackupEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

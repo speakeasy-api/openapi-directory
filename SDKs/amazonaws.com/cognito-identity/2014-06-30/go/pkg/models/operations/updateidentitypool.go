@@ -30,7 +30,8 @@ func (e *UpdateIdentityPoolXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateIdentityPoolHeaders struct {
+type UpdateIdentityPoolRequest struct {
+	IdentityPool      shared.IdentityPool              `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type UpdateIdentityPoolHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        UpdateIdentityPoolXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type UpdateIdentityPoolRequest struct {
-	Headers UpdateIdentityPoolHeaders
-	Request shared.IdentityPool `request:"mediaType=application/json"`
 }
 
 type UpdateIdentityPoolResponse struct {

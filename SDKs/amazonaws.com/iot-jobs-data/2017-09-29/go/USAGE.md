@@ -13,30 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DescribeJobExecutionRequest{
-        PathParams: operations.DescribeJobExecutionPathParams{
-            JobID: "corrupti",
-            ThingName: "provident",
-        },
-        QueryParams: operations.DescribeJobExecutionQueryParams{
-            ExecutionNumber: 715190,
-            IncludeJobDocument: false,
-        },
-        Headers: operations.DescribeJobExecutionHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "provident",
+        XAmzCredential: "distinctio",
+        XAmzDate: "quibusdam",
+        XAmzSecurityToken: "unde",
+        XAmzSignature: "nulla",
+        XAmzSignedHeaders: "corrupti",
+        ExecutionNumber: 847252,
+        IncludeJobDocument: false,
+        JobID: "vel",
+        ThingName: "error",
     }
 
     ctx := context.Background()

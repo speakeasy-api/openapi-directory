@@ -8,23 +8,14 @@ import (
 )
 
 type WebhooksOneSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type WebhooksOnePathParams struct {
-	// JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type WebhooksOneHeaders struct {
-	// The ID of your Unify application
-	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type WebhooksOneRequest struct {
-	PathParams WebhooksOnePathParams
-	Headers    WebhooksOneHeaders
-	Security   WebhooksOneSecurity
+	// JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The ID of your Unify application
+	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 }
 
 type WebhooksOneResponse struct {

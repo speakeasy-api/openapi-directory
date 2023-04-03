@@ -74,28 +74,20 @@ func (e *GETGenerateServiceLastAccessedDetailsVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETGenerateServiceLastAccessedDetailsQueryParams struct {
+type GETGenerateServiceLastAccessedDetailsRequest struct {
 	Action GETGenerateServiceLastAccessedDetailsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ARN of the IAM resource (user, group, role, or managed policy) used to generate information about when the resource was last used in an attempt to access an Amazon Web Services service.
 	Arn string `queryParam:"style=form,explode=true,name=Arn"`
 	// The level of detail that you want to generate. You can specify whether you want to generate information about the last attempt to access services or actions. If you specify service-level granularity, this operation generates only service data. If you specify action-level granularity, it generates service and action data. If you don't include this optional parameter, the operation generates service data.
-	Granularity *GETGenerateServiceLastAccessedDetailsGranularityEnum `queryParam:"style=form,explode=true,name=Granularity"`
-	Version     GETGenerateServiceLastAccessedDetailsVersionEnum      `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGenerateServiceLastAccessedDetailsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGenerateServiceLastAccessedDetailsRequest struct {
-	QueryParams GETGenerateServiceLastAccessedDetailsQueryParams
-	Headers     GETGenerateServiceLastAccessedDetailsHeaders
+	Granularity       *GETGenerateServiceLastAccessedDetailsGranularityEnum `queryParam:"style=form,explode=true,name=Granularity"`
+	Version           GETGenerateServiceLastAccessedDetailsVersionEnum      `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGenerateServiceLastAccessedDetailsResponse struct {

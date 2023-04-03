@@ -8,17 +8,13 @@ import (
 )
 
 type ArchiveVoiceBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ArchiveVoiceBroadcastPathParams struct {
-	// An id of a voice broadcast to archive
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ArchiveVoiceBroadcastRequest struct {
-	PathParams ArchiveVoiceBroadcastPathParams
-	Security   ArchiveVoiceBroadcastSecurity
+	// An id of a voice broadcast to archive
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ArchiveVoiceBroadcastResponse struct {

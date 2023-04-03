@@ -13,40 +13,48 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateComponentRequest{
-        PathParams: operations.CreateComponentPathParams{
-            AppID: "corrupti",
-            EnvironmentName: "provident",
-        },
-        QueryParams: operations.CreateComponentQueryParams{
-            ClientToken: "distinctio",
-        },
-        Headers: operations.CreateComponentHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
-        Request: operations.CreateComponentRequestBody{
+        RequestBody: operations.CreateComponentRequestBody{
             ComponentToCreate: operations.CreateComponentRequestBodyComponentToCreate{
                 BindingProperties: map[string]shared.ComponentBindingPropertiesValue{
-                    "suscipit": shared.ComponentBindingPropertiesValue{
+                    "provident": shared.ComponentBindingPropertiesValue{
                         BindingProperties: &shared.ComponentBindingPropertiesValueProperties{
-                            Bucket: "iure",
-                            DefaultValue: "magnam",
-                            Field: "debitis",
-                            Key: "ipsa",
-                            Model: "delectus",
+                            Bucket: "distinctio",
+                            DefaultValue: "quibusdam",
+                            Field: "unde",
+                            Key: "nulla",
+                            Model: "corrupti",
                             Predicates: []shared.Predicate{
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "error",
+                                    Operand: "deserunt",
+                                    Operator: "suscipit",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "debitis",
+                                    Operand: "ipsa",
+                                    Operator: "delectus",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
                                 shared.Predicate{
                                     And: []shared.Predicate{
                                         shared.Predicate{},
@@ -4341,6 +4349,16 @@ func main() {
                 },
             },
         },
+        XAmzAlgorithm: "dolore",
+        XAmzContentSha256: "voluptatibus",
+        XAmzCredential: "iure",
+        XAmzDate: "explicabo",
+        XAmzSecurityToken: "minus",
+        XAmzSignature: "soluta",
+        XAmzSignedHeaders: "dolorum",
+        AppID: "velit",
+        ClientToken: "earum",
+        EnvironmentName: "praesentium",
     }
 
     ctx := context.Background()

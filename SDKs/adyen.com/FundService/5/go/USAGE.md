@@ -13,19 +13,14 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostAccountHolderBalanceRequest{
-        Security: operations.PostAccountHolderBalanceSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &shared.AccountHolderBalanceRequest{
-            AccountHolderCode: "corrupti",
-        },
+    req := shared.AccountHolderBalanceRequest{
+        AccountHolderCode: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.General.PostAccountHolderBalance(ctx, req)
+    res, err := s.General.PostAccountHolderBalance(ctx, req, operations.PostAccountHolderBalanceSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

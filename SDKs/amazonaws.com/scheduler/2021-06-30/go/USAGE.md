@@ -13,77 +13,77 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateScheduleRequest{
-        PathParams: operations.CreateSchedulePathParams{
-            Name: "corrupti",
-        },
-        Headers: operations.CreateScheduleHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.CreateScheduleRequestBody{
-            ClientToken: "vel",
-            Description: "error",
-            EndDate: "2022-03-26T09:37:56.283Z",
+        Name: "corrupti",
+        RequestBody: operations.CreateScheduleRequestBody{
+            ClientToken: "provident",
+            Description: "distinctio",
+            EndDate: "2021-03-11T23:22:42.658Z",
             FlexibleTimeWindow: operations.CreateScheduleRequestBodyFlexibleTimeWindow{
-                MaximumWindowInMinutes: 437587,
-                Mode: "OFF",
+                MaximumWindowInMinutes: 857946,
+                Mode: "FLEXIBLE",
             },
-            GroupName: "debitis",
-            KmsKeyArn: "ipsa",
-            ScheduleExpression: "delectus",
-            ScheduleExpressionTimezone: "tempora",
-            StartDate: "2022-07-10T15:39:12.517Z",
-            State: "DISABLED",
+            GroupName: "illum",
+            KmsKeyArn: "vel",
+            ScheduleExpression: "error",
+            ScheduleExpressionTimezone: "deserunt",
+            StartDate: "2022-07-25T06:44:09.184Z",
+            State: "ENABLED",
             Target: operations.CreateScheduleRequestBodyTarget{
-                Arn: "placeat",
+                Arn: "debitis",
                 DeadLetterConfig: &shared.DeadLetterConfig{
-                    Arn: "voluptatum",
+                    Arn: "ipsa",
                 },
                 EcsParameters: &shared.EcsParameters{
                     CapacityProviderStrategy: []shared.CapacityProviderStrategyItem{
                         shared.CapacityProviderStrategyItem{
-                            Base: 568045,
-                            CapacityProvider: "nisi",
-                            Weight: 925597,
+                            Base: 272656,
+                            CapacityProvider: "suscipit",
+                            Weight: 477665,
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 836079,
-                            CapacityProvider: "ab",
-                            Weight: 337396,
+                            Base: 791725,
+                            CapacityProvider: "placeat",
+                            Weight: 528895,
+                        },
+                        shared.CapacityProviderStrategyItem{
+                            Base: 479977,
+                            CapacityProvider: "excepturi",
+                            Weight: 392785,
+                        },
+                        shared.CapacityProviderStrategyItem{
+                            Base: 925597,
+                            CapacityProvider: "temporibus",
+                            Weight: 71036,
                         },
                     },
                     EnableECSManagedTags: false,
                     EnableExecuteCommand: false,
-                    Group: "veritatis",
-                    LaunchType: "FARGATE",
+                    Group: "quis",
+                    LaunchType: "EC2",
                     NetworkConfiguration: &shared.NetworkConfiguration{
                         AwsvpcConfiguration: &shared.AwsVpcConfiguration{
-                            AssignPublicIP: "ENABLED",
+                            AssignPublicIP: "DISABLED",
                             SecurityGroups: []string{
-                                "repellendus",
-                                "sapiente",
+                                "ipsam",
                             },
                             Subnets: []string{
+                                "sapiente",
+                                "quo",
                                 "odit",
                                 "at",
-                                "at",
-                                "maiores",
                             },
                         },
                     },
                     PlacementConstraints: []shared.PlacementConstraint{
+                        shared.PlacementConstraint{
+                            Expression: "maiores",
+                            Type: "distinctInstance",
+                        },
                         shared.PlacementConstraint{
                             Expression: "quod",
                             Type: "memberOf",
@@ -92,71 +92,74 @@ func main() {
                             Expression: "esse",
                             Type: "memberOf",
                         },
+                        shared.PlacementConstraint{
+                            Expression: "porro",
+                            Type: "memberOf",
+                        },
                     },
                     PlacementStrategy: []shared.PlacementStrategy{
-                        shared.PlacementStrategy{
-                            Field: "dolorum",
-                            Type: "random",
-                        },
                         shared.PlacementStrategy{
                             Field: "nam",
                             Type: "spread",
                         },
-                        shared.PlacementStrategy{
-                            Field: "occaecati",
-                            Type: "random",
-                        },
-                        shared.PlacementStrategy{
-                            Field: "deleniti",
-                            Type: "binpack",
-                        },
                     },
-                    PlatformVersion: "optio",
+                    PlatformVersion: "occaecati",
                     PropagateTags: "TASK_DEFINITION",
-                    ReferenceID: "totam",
+                    ReferenceID: "fugit",
                     Tags: []map[string]string{
                         map[string]string{
+                            "optio": "totam",
+                            "beatae": "commodi",
                             "molestiae": "modi",
                             "qui": "impedit",
                         },
+                        map[string]string{
+                            "esse": "ipsum",
+                            "excepturi": "aspernatur",
+                            "perferendis": "ad",
+                        },
+                        map[string]string{
+                            "sed": "iste",
+                            "dolor": "natus",
+                            "laboriosam": "hic",
+                        },
                     },
-                    TaskCount: 736918,
-                    TaskDefinitionArn: "esse",
+                    TaskCount: 902599,
+                    TaskDefinitionArn: "fuga",
                 },
                 EventBridgeParameters: &shared.EventBridgeParameters{
-                    DetailType: "ipsum",
-                    Source: "excepturi",
+                    DetailType: "in",
+                    Source: "corporis",
                 },
-                Input: "aspernatur",
+                Input: "iste",
                 KinesisParameters: &shared.KinesisParameters{
-                    PartitionKey: "perferendis",
+                    PartitionKey: "iure",
                 },
                 RetryPolicy: &shared.RetryPolicy{
-                    MaximumEventAgeInSeconds: 324141,
-                    MaximumRetryAttempts: 617636,
+                    MaximumEventAgeInSeconds: 902349,
+                    MaximumRetryAttempts: 697631,
                 },
-                RoleArn: "sed",
+                RoleArn: "architecto",
                 SageMakerPipelineParameters: &shared.SageMakerPipelineParameters{
                     PipelineParameterList: []shared.SageMakerPipelineParameter{
                         shared.SageMakerPipelineParameter{
-                            Name: "dolor",
-                            Value: "natus",
-                        },
-                        shared.SageMakerPipelineParameter{
-                            Name: "laboriosam",
-                            Value: "hic",
-                        },
-                        shared.SageMakerPipelineParameter{
-                            Name: "saepe",
-                            Value: "fuga",
+                            Name: "reiciendis",
+                            Value: "est",
                         },
                     },
                 },
                 SqsParameters: &shared.SqsParameters{
-                    MessageGroupID: "in",
+                    MessageGroupID: "mollitia",
                 },
             },
         },
+        XAmzAlgorithm: "laborum",
+        XAmzContentSha256: "dolores",
+        XAmzCredential: "dolorem",
+        XAmzDate: "corporis",
+        XAmzSecurityToken: "explicabo",
+        XAmzSignature: "nobis",
+        XAmzSignedHeaders: "enim",
     }
 
     ctx := context.Background()

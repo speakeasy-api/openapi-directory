@@ -50,7 +50,7 @@ func (e *GETAttachVolumeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAttachVolumeQueryParams struct {
+type GETAttachVolumeRequest struct {
 	Action GETAttachVolumeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The device name (for example, <code>/dev/sdh</code> or <code>xvdh</code>).
 	Device string `queryParam:"style=form,explode=true,name=Device"`
@@ -60,10 +60,7 @@ type GETAttachVolumeQueryParams struct {
 	InstanceID string                     `queryParam:"style=form,explode=true,name=InstanceId"`
 	Version    GETAttachVolumeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the EBS volume. The volume and instance must be within the same Availability Zone.
-	VolumeID string `queryParam:"style=form,explode=true,name=VolumeId"`
-}
-
-type GETAttachVolumeHeaders struct {
+	VolumeID          string  `queryParam:"style=form,explode=true,name=VolumeId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -71,11 +68,6 @@ type GETAttachVolumeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAttachVolumeRequest struct {
-	QueryParams GETAttachVolumeQueryParams
-	Headers     GETAttachVolumeHeaders
 }
 
 type GETAttachVolumeResponse struct {

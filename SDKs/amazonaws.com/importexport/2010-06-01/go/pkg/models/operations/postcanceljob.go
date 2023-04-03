@@ -71,20 +71,16 @@ func (e *POSTCancelJobVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCancelJobQueryParams struct {
+type POSTCancelJobRequest struct {
 	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTCancelJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        POSTCancelJobOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody      []byte                     `request:"mediaType=text/xml"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                     `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                     `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                     `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTCancelJobVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCancelJobRequest struct {
-	QueryParams POSTCancelJobQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTCancelJobResponse struct {

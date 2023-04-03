@@ -10,7 +10,7 @@ import (
 )
 
 type CompanyIDDatasetSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // CompanyIDDatasetDatasetEnum - company master data by id
@@ -46,13 +46,6 @@ func (e *CompanyIDDatasetDatasetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CompanyIDDatasetPathParams struct {
-	// company master data by id
-	Dataset CompanyIDDatasetDatasetEnum `pathParam:"style=simple,explode=false,name=dataset"`
-	// company master data by id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // CompanyIDDatasetLangEnum - Optional data translation (only available in limited jurisdictions)
 type CompanyIDDatasetLangEnum string
 
@@ -83,17 +76,15 @@ func (e *CompanyIDDatasetLangEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CompanyIDDatasetQueryParams struct {
+type CompanyIDDatasetRequest struct {
 	// Try to retrieve additional stock information for this company. (Only available on refresh)
 	CheckStockListing *bool `queryParam:"style=form,explode=true,name=check_stock_listing"`
+	// company master data by id
+	Dataset CompanyIDDatasetDatasetEnum `pathParam:"style=simple,explode=false,name=dataset"`
+	// company master data by id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Optional data translation (only available in limited jurisdictions)
 	Lang *CompanyIDDatasetLangEnum `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type CompanyIDDatasetRequest struct {
-	PathParams  CompanyIDDatasetPathParams
-	QueryParams CompanyIDDatasetQueryParams
-	Security    CompanyIDDatasetSecurity
 }
 
 // CompanyIDDatasetDefaultApplicationJSON - Detailed information about the error

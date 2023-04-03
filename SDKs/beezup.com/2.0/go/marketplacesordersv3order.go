@@ -34,9 +34,9 @@ func newMarketplacesOrdersV3Order(defaultClient, securityClient HTTPClient, serv
 // ChangeOrderV3 - Change your marketplace Order Information (accept, ship, etc.)
 func (s *marketplacesOrdersV3Order) ChangeOrderV3(ctx context.Context, request operations.ChangeOrderV3Request) (*operations.ChangeOrderV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *marketplacesOrdersV3Order) ChangeOrderV3(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -118,14 +118,14 @@ func (s *marketplacesOrdersV3Order) ChangeOrderV3(ctx context.Context, request o
 // ClearMerchantOrderInfoV3 - Clear an Order's merchant information
 func (s *marketplacesOrdersV3Order) ClearMerchantOrderInfoV3(ctx context.Context, request operations.ClearMerchantOrderInfoV3Request) (*operations.ClearMerchantOrderInfoV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,7 +180,7 @@ func (s *marketplacesOrdersV3Order) ClearMerchantOrderInfoV3(ctx context.Context
 // This operation will help you to know the status of your order change operation
 func (s *marketplacesOrdersV3Order) GetOrderChangeReportingV3(ctx context.Context, request operations.GetOrderChangeReportingV3Request) (*operations.GetOrderChangeReportingV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history/{orderChangeExecutionUUID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history/{orderChangeExecutionUUID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +247,7 @@ func (s *marketplacesOrdersV3Order) GetOrderChangeReportingV3(ctx context.Contex
 // GetOrderHistoryV3 - Get an Order's harvest and change history
 func (s *marketplacesOrdersV3Order) GetOrderHistoryV3(ctx context.Context, request operations.GetOrderHistoryV3Request) (*operations.GetOrderHistoryV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -314,14 +314,14 @@ func (s *marketplacesOrdersV3Order) GetOrderHistoryV3(ctx context.Context, reque
 // GetOrderV3 - Get full Order and Order Item(s) properties
 func (s *marketplacesOrdersV3Order) GetOrderV3(ctx context.Context, request operations.GetOrderV3Request) (*operations.GetOrderV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -385,14 +385,14 @@ func (s *marketplacesOrdersV3Order) GetOrderV3(ctx context.Context, request oper
 // HarvestAccount - Send harvest request for an Account
 func (s *marketplacesOrdersV3Order) HarvestAccount(ctx context.Context, request operations.HarvestAccountRequest) (*operations.HarvestAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/harvest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/harvest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -458,7 +458,7 @@ func (s *marketplacesOrdersV3Order) HarvestAccount(ctx context.Context, request 
 // HarvestOrderV3 - Send harvest request for a single Order
 func (s *marketplacesOrdersV3Order) HarvestOrderV3(ctx context.Context, request operations.HarvestOrderV3Request) (*operations.HarvestOrderV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -529,14 +529,14 @@ func (s *marketplacesOrdersV3Order) HarvestOrderV3(ctx context.Context, request 
 // This could be useful
 func (s *marketplacesOrdersV3Order) HeadOrderV3(ctx context.Context, request operations.HeadOrderV3Request) (*operations.HeadOrderV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -590,9 +590,9 @@ func (s *marketplacesOrdersV3Order) HeadOrderV3(ctx context.Context, request ope
 // SetMerchantOrderInfoV3 - Set an Order's merchant information
 func (s *marketplacesOrdersV3Order) SetMerchantOrderInfoV3(ctx context.Context, request operations.SetMerchantOrderInfoV3Request) (*operations.SetMerchantOrderInfoV3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMerchantOrderInfoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -607,7 +607,7 @@ func (s *marketplacesOrdersV3Order) SetMerchantOrderInfoV3(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

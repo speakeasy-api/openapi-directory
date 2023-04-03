@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExtensionVersionPathParams struct {
+type GetExtensionVersionRequest struct {
 	// The version of the extension.
 	ExtensionVersion string `pathParam:"style=simple,explode=false,name=ExtensionVersion"`
 	// The name of the extension.
 	Name string `pathParam:"style=simple,explode=false,name=Name"`
 	// The namespace (qualifier) of the extension.
-	Namespace string `pathParam:"style=simple,explode=false,name=Namespace"`
-}
-
-type GetExtensionVersionHeaders struct {
+	Namespace         string  `pathParam:"style=simple,explode=false,name=Namespace"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type GetExtensionVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetExtensionVersionRequest struct {
-	PathParams GetExtensionVersionPathParams
-	Headers    GetExtensionVersionHeaders
 }
 
 type GetExtensionVersionResponse struct {

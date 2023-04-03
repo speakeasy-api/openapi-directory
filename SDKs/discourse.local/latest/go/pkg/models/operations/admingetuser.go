@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type AdminGetUserPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type AdminGetUserRequest struct {
-	PathParams AdminGetUserPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type AdminGetUser200ApplicationJSONApprovedBy struct {

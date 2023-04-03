@@ -50,16 +50,13 @@ func (e *GETDeletePolicyVersionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeletePolicyVersionQueryParams struct {
+type GETDeletePolicyVersionRequest struct {
 	Action GETDeletePolicyVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the IAM policy from which you want to delete a version.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
 	PolicyArn string                            `queryParam:"style=form,explode=true,name=PolicyArn"`
 	Version   GETDeletePolicyVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>The policy version to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that consists of the lowercase letter 'v' followed by one or two digits, and optionally followed by a period '.' and a string of letters and digits.</p> <p>For more information about managed policy versions, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for managed policies</a> in the <i>IAM User Guide</i>.</p>
-	VersionID string `queryParam:"style=form,explode=true,name=VersionId"`
-}
-
-type GETDeletePolicyVersionHeaders struct {
+	VersionID         string  `queryParam:"style=form,explode=true,name=VersionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -67,11 +64,6 @@ type GETDeletePolicyVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeletePolicyVersionRequest struct {
-	QueryParams GETDeletePolicyVersionQueryParams
-	Headers     GETDeletePolicyVersionHeaders
 }
 
 type GETDeletePolicyVersionResponse struct {

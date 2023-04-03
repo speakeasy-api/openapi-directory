@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssociatedGroupsPathParams struct {
-	// The ARN of the canary that you want to view groups for.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type ListAssociatedGroupsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListAssociatedGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListAssociatedGroupsRequestBody struct {
 	// Specify this parameter to limit how many groups are returned each time you use the <code>ListAssociatedGroups</code> operation. If you omit this parameter, the default of 20 is used.
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -37,10 +15,20 @@ type ListAssociatedGroupsRequestBody struct {
 }
 
 type ListAssociatedGroupsRequest struct {
-	PathParams  ListAssociatedGroupsPathParams
-	QueryParams ListAssociatedGroupsQueryParams
-	Headers     ListAssociatedGroupsHeaders
-	Request     ListAssociatedGroupsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                         `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListAssociatedGroupsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ARN of the canary that you want to view groups for.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
 }
 
 type ListAssociatedGroupsResponse struct {

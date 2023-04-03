@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBulkImportJobPathParams struct {
-	// The ID of the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type DescribeBulkImportJobHeaders struct {
+type DescribeBulkImportJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeBulkImportJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBulkImportJobRequest struct {
-	PathParams DescribeBulkImportJobPathParams
-	Headers    DescribeBulkImportJobHeaders
+	// The ID of the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type DescribeBulkImportJobResponse struct {

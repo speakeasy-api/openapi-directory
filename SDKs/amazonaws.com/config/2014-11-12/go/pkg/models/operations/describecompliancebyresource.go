@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeComplianceByResourceQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeComplianceByResourceXAmzTargetEnum
 type DescribeComplianceByResourceXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeComplianceByResourceXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DescribeComplianceByResourceHeaders struct {
+type DescribeComplianceByResourceRequest struct {
+	DescribeComplianceByResourceRequest shared.DescribeComplianceByResourceRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeComplianceByResourceHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeComplianceByResourceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeComplianceByResourceRequest struct {
-	QueryParams DescribeComplianceByResourceQueryParams
-	Headers     DescribeComplianceByResourceHeaders
-	Request     shared.DescribeComplianceByResourceRequest `request:"mediaType=application/json"`
 }
 
 type DescribeComplianceByResourceResponse struct {

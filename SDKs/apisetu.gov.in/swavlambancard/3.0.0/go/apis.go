@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Dpicr - Disabled Person Identity Card/ Certificate
 // API to verify Disabled Person Identity Card/ Certificate.
-func (s *apIs) Dpicr(ctx context.Context, request operations.DpicrRequest) (*operations.DpicrResponse, error) {
+func (s *apIs) Dpicr(ctx context.Context, request operations.DpicrRequestBody, security operations.DpicrSecurity) (*operations.DpicrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dpicr/certificate"
 
@@ -50,7 +50,7 @@ func (s *apIs) Dpicr(ctx context.Context, request operations.DpicrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,7 +147,7 @@ func (s *apIs) Dpicr(ctx context.Context, request operations.DpicrRequest) (*ope
 
 // Govid - ID Card
 // API to verify ID Card.
-func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*operations.GovidResponse, error) {
+func (s *apIs) Govid(ctx context.Context, request operations.GovidRequestBody, security operations.GovidSecurity) (*operations.GovidResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/govid/certificate"
 
@@ -163,7 +163,7 @@ func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

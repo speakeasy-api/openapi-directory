@@ -33,16 +33,16 @@ func newFireteam(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // FireteamGetActivePrivateClanFireteamCount - Gets a count of all active non-public fireteams for the specified clan. Maximum value returned is 25.
-func (s *fireteam) FireteamGetActivePrivateClanFireteamCount(ctx context.Context, request operations.FireteamGetActivePrivateClanFireteamCountRequest) (*operations.FireteamGetActivePrivateClanFireteamCountResponse, error) {
+func (s *fireteam) FireteamGetActivePrivateClanFireteamCount(ctx context.Context, request operations.FireteamGetActivePrivateClanFireteamCountRequest, security operations.FireteamGetActivePrivateClanFireteamCountSecurity) (*operations.FireteamGetActivePrivateClanFireteamCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/ActiveCount/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/ActiveCount/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,20 +77,20 @@ func (s *fireteam) FireteamGetActivePrivateClanFireteamCount(ctx context.Context
 }
 
 // FireteamGetAvailableClanFireteams - Gets a listing of all of this clan's fireteams that are have available slots. Caller is not checked for join criteria so caching is maximized.
-func (s *fireteam) FireteamGetAvailableClanFireteams(ctx context.Context, request operations.FireteamGetAvailableClanFireteamsRequest) (*operations.FireteamGetAvailableClanFireteamsResponse, error) {
+func (s *fireteam) FireteamGetAvailableClanFireteams(ctx context.Context, request operations.FireteamGetAvailableClanFireteamsRequest, security operations.FireteamGetAvailableClanFireteamsSecurity) (*operations.FireteamGetAvailableClanFireteamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{publicOnly}/{page}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{publicOnly}/{page}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,16 +125,16 @@ func (s *fireteam) FireteamGetAvailableClanFireteams(ctx context.Context, reques
 }
 
 // FireteamGetClanFireteam - Gets a specific fireteam.
-func (s *fireteam) FireteamGetClanFireteam(ctx context.Context, request operations.FireteamGetClanFireteamRequest) (*operations.FireteamGetClanFireteamResponse, error) {
+func (s *fireteam) FireteamGetClanFireteam(ctx context.Context, request operations.FireteamGetClanFireteamRequest, security operations.FireteamGetClanFireteamSecurity) (*operations.FireteamGetClanFireteamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/Summary/{fireteamId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/Summary/{fireteamId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -169,20 +169,20 @@ func (s *fireteam) FireteamGetClanFireteam(ctx context.Context, request operatio
 }
 
 // FireteamGetMyClanFireteams - Gets a listing of all fireteams that caller is an applicant, a member, or an alternate of.
-func (s *fireteam) FireteamGetMyClanFireteams(ctx context.Context, request operations.FireteamGetMyClanFireteamsRequest) (*operations.FireteamGetMyClanFireteamsResponse, error) {
+func (s *fireteam) FireteamGetMyClanFireteams(ctx context.Context, request operations.FireteamGetMyClanFireteamsRequest, security operations.FireteamGetMyClanFireteamsSecurity) (*operations.FireteamGetMyClanFireteamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/My/{platform}/{includeClosed}/{page}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Clan/{groupId}/My/{platform}/{includeClosed}/{page}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -217,20 +217,20 @@ func (s *fireteam) FireteamGetMyClanFireteams(ctx context.Context, request opera
 }
 
 // FireteamSearchPublicAvailableClanFireteams - Gets a listing of all public fireteams starting now with open slots. Caller is not checked for join criteria so caching is maximized.
-func (s *fireteam) FireteamSearchPublicAvailableClanFireteams(ctx context.Context, request operations.FireteamSearchPublicAvailableClanFireteamsRequest) (*operations.FireteamSearchPublicAvailableClanFireteamsResponse, error) {
+func (s *fireteam) FireteamSearchPublicAvailableClanFireteams(ctx context.Context, request operations.FireteamSearchPublicAvailableClanFireteamsRequest, security operations.FireteamSearchPublicAvailableClanFireteamsSecurity) (*operations.FireteamSearchPublicAvailableClanFireteamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Search/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{page}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Fireteam/Search/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{page}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRightsPathParams struct {
+type GetRightsRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetRightsRequest struct {
-	PathParams GetRightsPathParams
 }
 
 type GetRightsResponse struct {

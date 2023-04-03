@@ -50,26 +50,18 @@ func (e *GETRotateEncryptionKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRotateEncryptionKeyQueryParams struct {
+type GETRotateEncryptionKeyRequest struct {
 	Action GETRotateEncryptionKeyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of the cluster that you want to rotate the encryption keys for.</p> <p>Constraints: Must be the name of valid cluster that has encryption enabled.</p>
 	ClusterIdentifier string                            `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETRotateEncryptionKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRotateEncryptionKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRotateEncryptionKeyRequest struct {
-	QueryParams GETRotateEncryptionKeyQueryParams
-	Headers     GETRotateEncryptionKeyHeaders
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRotateEncryptionKeyResponse struct {

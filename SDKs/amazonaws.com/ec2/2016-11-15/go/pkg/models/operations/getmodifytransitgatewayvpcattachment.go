@@ -58,7 +58,7 @@ func (e *GETModifyTransitGatewayVpcAttachmentVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETModifyTransitGatewayVpcAttachmentQueryParams struct {
+type GETModifyTransitGatewayVpcAttachmentRequest struct {
 	Action GETModifyTransitGatewayVpcAttachmentActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IDs of one or more subnets to add. You can specify at most one subnet per Availability Zone.
 	AddSubnetIds []string `queryParam:"style=form,explode=true,name=AddSubnetIds"`
@@ -71,21 +71,13 @@ type GETModifyTransitGatewayVpcAttachmentQueryParams struct {
 	// The ID of the attachment.
 	TransitGatewayAttachmentID string                                          `queryParam:"style=form,explode=true,name=TransitGatewayAttachmentId"`
 	Version                    GETModifyTransitGatewayVpcAttachmentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyTransitGatewayVpcAttachmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyTransitGatewayVpcAttachmentRequest struct {
-	QueryParams GETModifyTransitGatewayVpcAttachmentQueryParams
-	Headers     GETModifyTransitGatewayVpcAttachmentHeaders
+	XAmzAlgorithm              *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyTransitGatewayVpcAttachmentResponse struct {

@@ -35,14 +35,14 @@ func newBanks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteBanksCategoriesIDCategory - Delete the supplied category
 func (s *banks) DeleteBanksCategoriesIDCategory(ctx context.Context, request operations.DeleteBanksCategoriesIDCategoryRequest) (*operations.DeleteBanksCategoriesIDCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/categories/{id_category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/categories/{id_category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *banks) DeleteBanksCategoriesIDCategory(ctx context.Context, request ope
 // DeleteCategoriesKeywordsIDKeyword - Delete a particular key-value pair on a transaction.
 func (s *banks) DeleteCategoriesKeywordsIDKeyword(ctx context.Context, request operations.DeleteCategoriesKeywordsIDKeywordRequest) (*operations.DeleteCategoriesKeywordsIDKeywordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/keywords/{id_keyword}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/keywords/{id_keyword}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -132,14 +132,14 @@ func (s *banks) DeleteCategoriesKeywordsIDKeyword(ctx context.Context, request o
 // This will make it so the specified source will not be synchronized anymore.<br><br>
 func (s *banks) DeleteConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.DeleteConnectionsIDConnectionSourcesIDSourceRequest) (*operations.DeleteConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,14 +180,14 @@ func (s *banks) DeleteConnectionsIDConnectionSourcesIDSource(ctx context.Context
 // DeleteConnectorsIDConnectorLogosIDLogo - Delete a single Logo object.
 func (s *banks) DeleteConnectorsIDConnectorLogosIDLogo(ctx context.Context, request operations.DeleteConnectorsIDConnectorLogosIDLogoRequest) (*operations.DeleteConnectorsIDConnectorLogosIDLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/{id_logo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/{id_logo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -228,14 +228,14 @@ func (s *banks) DeleteConnectorsIDConnectorLogosIDLogo(ctx context.Context, requ
 // DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionscluster - Delete a clustered transaction
 func (s *banks) DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest) (*operations.DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -276,14 +276,14 @@ func (s *banks) DeleteUsersIDUserAccountsIDAccountTransactionsclustersIDTransact
 // DeleteUsersIDUserCategoriesFullIDFull - Delete a user-created transaction category
 func (s *banks) DeleteUsersIDUserCategoriesFullIDFull(ctx context.Context, request operations.DeleteUsersIDUserCategoriesFullIDFullRequest) (*operations.DeleteUsersIDUserCategoriesFullIDFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full/{id_full}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full/{id_full}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -324,14 +324,14 @@ func (s *banks) DeleteUsersIDUserCategoriesFullIDFull(ctx context.Context, reque
 // DeleteUsersIDUserConnections - Delete all connections
 func (s *banks) DeleteUsersIDUserConnections(ctx context.Context, request operations.DeleteUsersIDUserConnectionsRequest) (*operations.DeleteUsersIDUserConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -373,14 +373,14 @@ func (s *banks) DeleteUsersIDUserConnections(ctx context.Context, request operat
 // This endpoint deletes a connection and all related accounts and transactions.<br><br>
 func (s *banks) DeleteUsersIDUserConnectionsIDConnection(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -421,14 +421,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnection(ctx context.Context, re
 // DeleteUsersIDUserConnectionsIDConnectionAccounts - Delete all accounts
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccounts(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionAccountsRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -470,14 +470,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccounts(ctx context.Con
 // It deletes a specific account.<br><br>
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccount(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -518,14 +518,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccount(ctx co
 // DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactions - Delete transactions
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactions(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -566,14 +566,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransac
 // DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformations - Delete all arbitrary key-value pairs of a transaction
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformations(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -614,14 +614,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransac
 // DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformation - Delete a particular key-value pair on a transaction.
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformation(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformationRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations/{id_information}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations/{id_information}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -662,14 +662,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransac
 // DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionscluster - Delete a clustered transaction
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -711,14 +711,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransac
 // This will make it so the specified source will not be synchronized anymore.<br><br>
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -759,14 +759,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx cont
 // DeleteUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionscluster - Delete a clustered transaction
 func (s *banks) DeleteUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionsclusterRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -807,14 +807,14 @@ func (s *banks) DeleteUsersIDUserConnectionsIDConnectionTransactionsclustersIDTr
 // DeleteUsersIDUserTransactionsclustersIDTransactionscluster - Delete a clustered transaction
 func (s *banks) DeleteUsersIDUserTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.DeleteUsersIDUserTransactionsclustersIDTransactionsclusterRequest) (*operations.DeleteUsersIDUserTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -862,7 +862,7 @@ func (s *banks) GetAccountTypes(ctx context.Context, request operations.GetAccou
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -903,14 +903,14 @@ func (s *banks) GetAccountTypes(ctx context.Context, request operations.GetAccou
 // GetAccountTypesIDAccountType - Get an account type
 func (s *banks) GetAccountTypesIDAccountType(ctx context.Context, request operations.GetAccountTypesIDAccountTypeRequest) (*operations.GetAccountTypesIDAccountTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_types/{id_account_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account_types/{id_account_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -958,7 +958,7 @@ func (s *banks) GetBanks(ctx context.Context, request operations.GetBanksRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -999,14 +999,14 @@ func (s *banks) GetBanks(ctx context.Context, request operations.GetBanksRequest
 // GetBanksIDBank - Get a connector
 func (s *banks) GetBanksIDBank(ctx context.Context, request operations.GetBanksIDBankRequest) (*operations.GetBanksIDBankResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_bank}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_bank}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1048,14 +1048,14 @@ func (s *banks) GetBanksIDBank(ctx context.Context, request operations.GetBanksI
 // By default, it selects a set of 3 connections with the 'diversity' method<br><br>
 func (s *banks) GetBanksIDConnectorConnections(ctx context.Context, request operations.GetBanksIDConnectorConnectionsRequest) (*operations.GetBanksIDConnectorConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1097,14 +1097,14 @@ func (s *banks) GetBanksIDConnectorConnections(ctx context.Context, request oper
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetBanksIDConnectorLogos(ctx context.Context, request operations.GetBanksIDConnectorLogosRequest) (*operations.GetBanksIDConnectorLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1146,14 +1146,14 @@ func (s *banks) GetBanksIDConnectorLogos(ctx context.Context, request operations
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetBanksIDConnectorLogosMain(ctx context.Context, request operations.GetBanksIDConnectorLogosMainRequest) (*operations.GetBanksIDConnectorLogosMainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/logos/main", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/logos/main", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1195,14 +1195,14 @@ func (s *banks) GetBanksIDConnectorLogosMain(ctx context.Context, request operat
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetBanksIDConnectorLogosThumbnail(ctx context.Context, request operations.GetBanksIDConnectorLogosThumbnailRequest) (*operations.GetBanksIDConnectorLogosThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/logos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/logos/thumbnail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1243,14 +1243,14 @@ func (s *banks) GetBanksIDConnectorLogosThumbnail(ctx context.Context, request o
 // GetBanksIDConnectorSources - Get list of connector sources
 func (s *banks) GetBanksIDConnectorSources(ctx context.Context, request operations.GetBanksIDConnectorSourcesRequest) (*operations.GetBanksIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1291,14 +1291,14 @@ func (s *banks) GetBanksIDConnectorSources(ctx context.Context, request operatio
 // GetBanksIDConnectorSourcesIDConnectorSourceFields - Get fields specific to a domain and a source
 func (s *banks) GetBanksIDConnectorSourcesIDConnectorSourceFields(ctx context.Context, request operations.GetBanksIDConnectorSourcesIDConnectorSourceFieldsRequest) (*operations.GetBanksIDConnectorSourcesIDConnectorSourceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_connector_source}/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_connector_source}/fields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1339,14 +1339,14 @@ func (s *banks) GetBanksIDConnectorSourcesIDConnectorSourceFields(ctx context.Co
 // GetBanksIDConnectorSourcesIDSource - Get the connector source
 func (s *banks) GetBanksIDConnectorSourcesIDSource(ctx context.Context, request operations.GetBanksIDConnectorSourcesIDSourceRequest) (*operations.GetBanksIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1395,7 +1395,7 @@ func (s *banks) GetCategories(ctx context.Context, request operations.GetCategor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1443,7 +1443,7 @@ func (s *banks) GetConnections(ctx context.Context, request operations.GetConnec
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1485,14 +1485,14 @@ func (s *banks) GetConnections(ctx context.Context, request operations.GetConnec
 // Get logs about connections.<br><br>
 func (s *banks) GetConnectionsIDConnectionLogs(ctx context.Context, request operations.GetConnectionsIDConnectionLogsRequest) (*operations.GetConnectionsIDConnectionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1533,14 +1533,14 @@ func (s *banks) GetConnectionsIDConnectionLogs(ctx context.Context, request oper
 // GetConnectionsIDConnectionSources - Get connection sources
 func (s *banks) GetConnectionsIDConnectionSources(ctx context.Context, request operations.GetConnectionsIDConnectionSourcesRequest) (*operations.GetConnectionsIDConnectionSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1588,7 +1588,7 @@ func (s *banks) GetConnectors(ctx context.Context, request operations.GetConnect
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1629,14 +1629,14 @@ func (s *banks) GetConnectors(ctx context.Context, request operations.GetConnect
 // GetConnectorsIDConnector - Get a connector
 func (s *banks) GetConnectorsIDConnector(ctx context.Context, request operations.GetConnectorsIDConnectorRequest) (*operations.GetConnectorsIDConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1678,14 +1678,14 @@ func (s *banks) GetConnectorsIDConnector(ctx context.Context, request operations
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetConnectorsIDConnectorLogos(ctx context.Context, request operations.GetConnectorsIDConnectorLogosRequest) (*operations.GetConnectorsIDConnectorLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1727,14 +1727,14 @@ func (s *banks) GetConnectorsIDConnectorLogos(ctx context.Context, request opera
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetConnectorsIDConnectorLogosMain(ctx context.Context, request operations.GetConnectorsIDConnectorLogosMainRequest) (*operations.GetConnectorsIDConnectorLogosMainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/main", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/main", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1776,14 +1776,14 @@ func (s *banks) GetConnectorsIDConnectorLogosMain(ctx context.Context, request o
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetConnectorsIDConnectorLogosThumbnail(ctx context.Context, request operations.GetConnectorsIDConnectorLogosThumbnailRequest) (*operations.GetConnectorsIDConnectorLogosThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/thumbnail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1824,14 +1824,14 @@ func (s *banks) GetConnectorsIDConnectorLogosThumbnail(ctx context.Context, requ
 // GetConnectorsIDConnectorSources - Get list of connector sources
 func (s *banks) GetConnectorsIDConnectorSources(ctx context.Context, request operations.GetConnectorsIDConnectorSourcesRequest) (*operations.GetConnectorsIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1872,14 +1872,14 @@ func (s *banks) GetConnectorsIDConnectorSources(ctx context.Context, request ope
 // GetConnectorsIDConnectorSourcesIDConnectorSourceFields - Get fields specific to a domain and a source
 func (s *banks) GetConnectorsIDConnectorSourcesIDConnectorSourceFields(ctx context.Context, request operations.GetConnectorsIDConnectorSourcesIDConnectorSourceFieldsRequest) (*operations.GetConnectorsIDConnectorSourcesIDConnectorSourceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_connector_source}/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_connector_source}/fields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1920,14 +1920,14 @@ func (s *banks) GetConnectorsIDConnectorSourcesIDConnectorSourceFields(ctx conte
 // GetConnectorsIDConnectorSourcesIDSource - Get the connector source
 func (s *banks) GetConnectorsIDConnectorSourcesIDSource(ctx context.Context, request operations.GetConnectorsIDConnectorSourcesIDSourceRequest) (*operations.GetConnectorsIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1976,7 +1976,7 @@ func (s *banks) GetInvoicing(ctx context.Context, request operations.GetInvoicin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2016,7 +2016,7 @@ func (s *banks) GetLogs(ctx context.Context, request operations.GetLogsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2064,7 +2064,7 @@ func (s *banks) GetProviders(ctx context.Context, request operations.GetProvider
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2106,14 +2106,14 @@ func (s *banks) GetProviders(ctx context.Context, request operations.GetProvider
 // By default, it selects a set of 3 connections.<br><br>
 func (s *banks) GetProvidersIDConnectorConnections(ctx context.Context, request operations.GetProvidersIDConnectorConnectionsRequest) (*operations.GetProvidersIDConnectorConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2155,14 +2155,14 @@ func (s *banks) GetProvidersIDConnectorConnections(ctx context.Context, request 
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetProvidersIDConnectorLogos(ctx context.Context, request operations.GetProvidersIDConnectorLogosRequest) (*operations.GetProvidersIDConnectorLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2204,14 +2204,14 @@ func (s *banks) GetProvidersIDConnectorLogos(ctx context.Context, request operat
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetProvidersIDConnectorLogosMain(ctx context.Context, request operations.GetProvidersIDConnectorLogosMainRequest) (*operations.GetProvidersIDConnectorLogosMainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/logos/main", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/logos/main", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2253,14 +2253,14 @@ func (s *banks) GetProvidersIDConnectorLogosMain(ctx context.Context, request op
 // This endpoint returns all links to files associated with this connector.<br><br>
 func (s *banks) GetProvidersIDConnectorLogosThumbnail(ctx context.Context, request operations.GetProvidersIDConnectorLogosThumbnailRequest) (*operations.GetProvidersIDConnectorLogosThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/logos/thumbnail", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/logos/thumbnail", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2301,14 +2301,14 @@ func (s *banks) GetProvidersIDConnectorLogosThumbnail(ctx context.Context, reque
 // GetProvidersIDConnectorSources - Get list of connector sources
 func (s *banks) GetProvidersIDConnectorSources(ctx context.Context, request operations.GetProvidersIDConnectorSourcesRequest) (*operations.GetProvidersIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2349,14 +2349,14 @@ func (s *banks) GetProvidersIDConnectorSources(ctx context.Context, request oper
 // GetProvidersIDConnectorSourcesIDConnectorSourceFields - Get fields specific to a domain and a source
 func (s *banks) GetProvidersIDConnectorSourcesIDConnectorSourceFields(ctx context.Context, request operations.GetProvidersIDConnectorSourcesIDConnectorSourceFieldsRequest) (*operations.GetProvidersIDConnectorSourcesIDConnectorSourceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_connector_source}/fields", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_connector_source}/fields", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2397,14 +2397,14 @@ func (s *banks) GetProvidersIDConnectorSourcesIDConnectorSourceFields(ctx contex
 // GetProvidersIDConnectorSourcesIDSource - Get the connector source
 func (s *banks) GetProvidersIDConnectorSourcesIDSource(ctx context.Context, request operations.GetProvidersIDConnectorSourcesIDSourceRequest) (*operations.GetProvidersIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_source}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2445,14 +2445,14 @@ func (s *banks) GetProvidersIDConnectorSourcesIDSource(ctx context.Context, requ
 // GetProvidersIDProvider - Get a connector
 func (s *banks) GetProvidersIDProvider(ctx context.Context, request operations.GetProvidersIDProviderRequest) (*operations.GetProvidersIDProviderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_provider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_provider}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2500,7 +2500,7 @@ func (s *banks) GetPsd2Registrations(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2541,14 +2541,14 @@ func (s *banks) GetPsd2Registrations(ctx context.Context, request operations.Get
 // GetPsd2RegistrationsIDPsd2Registration - Get details for a given psd2 registration
 func (s *banks) GetPsd2RegistrationsIDPsd2Registration(ctx context.Context, request operations.GetPsd2RegistrationsIDPsd2RegistrationRequest) (*operations.GetPsd2RegistrationsIDPsd2RegistrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/psd2-registrations/{id_psd2-registration}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/psd2-registrations/{id_psd2-registration}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2590,14 +2590,14 @@ func (s *banks) GetPsd2RegistrationsIDPsd2Registration(ctx context.Context, requ
 // Get logs of psd2 registration. By default, it selects logs for the last month. You can use "min_date" and "max_date" to change boundary dates.<br><br>
 func (s *banks) GetPsd2RegistrationsIDPsd2registrationLogs(ctx context.Context, request operations.GetPsd2RegistrationsIDPsd2registrationLogsRequest) (*operations.GetPsd2RegistrationsIDPsd2registrationLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/psd2-registrations/{id_psd2registration}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/psd2-registrations/{id_psd2registration}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2638,14 +2638,14 @@ func (s *banks) GetPsd2RegistrationsIDPsd2registrationLogs(ctx context.Context, 
 // GetUsersIDUserAccountTypes - Get account types
 func (s *banks) GetUsersIDUserAccountTypes(ctx context.Context, request operations.GetUsersIDUserAccountTypesRequest) (*operations.GetUsersIDUserAccountTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/account_types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/account_types", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2686,14 +2686,14 @@ func (s *banks) GetUsersIDUserAccountTypes(ctx context.Context, request operatio
 // GetUsersIDUserAccountTypesIDAccountType - Get an account type
 func (s *banks) GetUsersIDUserAccountTypesIDAccountType(ctx context.Context, request operations.GetUsersIDUserAccountTypesIDAccountTypeRequest) (*operations.GetUsersIDUserAccountTypesIDAccountTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/account_types/{id_account_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/account_types/{id_account_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2735,7 +2735,7 @@ func (s *banks) GetUsersIDUserAccountTypesIDAccountType(ctx context.Context, req
 // Ressource to get categories for the user's transactions<br><br>
 func (s *banks) GetUsersIDUserAccountsIDAccountCategories(ctx context.Context, request operations.GetUsersIDUserAccountsIDAccountCategoriesRequest) (*operations.GetUsersIDUserAccountsIDAccountCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2770,14 +2770,14 @@ func (s *banks) GetUsersIDUserAccountsIDAccountCategories(ctx context.Context, r
 // GetUsersIDUserAccountsIDAccountTransactionsclusters - Get clustered transactions
 func (s *banks) GetUsersIDUserAccountsIDAccountTransactionsclusters(ctx context.Context, request operations.GetUsersIDUserAccountsIDAccountTransactionsclustersRequest) (*operations.GetUsersIDUserAccountsIDAccountTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2818,14 +2818,14 @@ func (s *banks) GetUsersIDUserAccountsIDAccountTransactionsclusters(ctx context.
 // GetUsersIDUserAlerts - Get alerts
 func (s *banks) GetUsersIDUserAlerts(ctx context.Context, request operations.GetUsersIDUserAlertsRequest) (*operations.GetUsersIDUserAlertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/alerts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/alerts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2867,7 +2867,7 @@ func (s *banks) GetUsersIDUserAlerts(ctx context.Context, request operations.Get
 // Ressource to get categories for the user's transactions<br><br>
 func (s *banks) GetUsersIDUserCategories(ctx context.Context, request operations.GetUsersIDUserCategoriesRequest) (*operations.GetUsersIDUserCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2903,14 +2903,14 @@ func (s *banks) GetUsersIDUserCategories(ctx context.Context, request operations
 // Ressource to get categories<br><br>
 func (s *banks) GetUsersIDUserCategoriesFull(ctx context.Context, request operations.GetUsersIDUserCategoriesFullRequest) (*operations.GetUsersIDUserCategoriesFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2951,14 +2951,14 @@ func (s *banks) GetUsersIDUserCategoriesFull(ctx context.Context, request operat
 // GetUsersIDUserConnections - Get connections
 func (s *banks) GetUsersIDUserConnections(ctx context.Context, request operations.GetUsersIDUserConnectionsRequest) (*operations.GetUsersIDUserConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2999,14 +2999,14 @@ func (s *banks) GetUsersIDUserConnections(ctx context.Context, request operation
 // GetUsersIDUserConnectionsIDConnectionAccounts - Get accounts list.
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccounts(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3048,7 +3048,7 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccounts(ctx context.Contex
 // Ressource to get categories for the user's transactions<br><br>
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountCategories(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountCategoriesRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3084,14 +3084,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountCategories
 // Get account delta between sums of transactions and difference of account balance for the given period.<br><br>
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDelta(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDeltaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/delta", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/delta", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3124,14 +3124,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountDelta(ctx 
 // Get logs of account. By default, it selects logs for the last month. You can use "min_date" and "max_date" to change boundary dates.<br><br>
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogs(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3172,14 +3172,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogs(ctx c
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSources - Get account sources
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSources(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3221,14 +3221,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSources(ct
 // Get list of transactions.<br><br>By default, it selects transactions for the last month. You can use "min_date" and "max_date" to change boundary dates.<br><br>
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactions(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3269,14 +3269,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformations - List all arbitrary key-value pairs on a transaction
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformations(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3317,14 +3317,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformation - Get a particular arbitrary key-value pair on a transaction
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformation(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformationRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsIDInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations/{id_information}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations/{id_information}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3365,14 +3365,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclusters - Get clustered transactions
 func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclusters(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersRequest) (*operations.GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3414,14 +3414,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // <br><br>
 func (s *banks) GetUsersIDUserConnectionsIDConnectionInformations(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionInformationsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionInformationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/informations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/informations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3463,14 +3463,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionInformations(ctx context.Co
 // Get logs about connections.<br><br>
 func (s *banks) GetUsersIDUserConnectionsIDConnectionLogs(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionLogsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3511,14 +3511,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionLogs(ctx context.Context, r
 // GetUsersIDUserConnectionsIDConnectionSources - Get connection sources
 func (s *banks) GetUsersIDUserConnectionsIDConnectionSources(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionSourcesRequest) (*operations.GetUsersIDUserConnectionsIDConnectionSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3559,14 +3559,14 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionSources(ctx context.Context
 // GetUsersIDUserConnectionsIDConnectionTransactionsclusters - Get clustered transactions
 func (s *banks) GetUsersIDUserConnectionsIDConnectionTransactionsclusters(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionTransactionsclustersRequest) (*operations.GetUsersIDUserConnectionsIDConnectionTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3607,7 +3607,7 @@ func (s *banks) GetUsersIDUserConnectionsIDConnectionTransactionsclusters(ctx co
 // GetUsersIDUserForecast - Get forecast
 func (s *banks) GetUsersIDUserForecast(ctx context.Context, request operations.GetUsersIDUserForecastRequest) (*operations.GetUsersIDUserForecastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/forecast", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/forecast", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3643,14 +3643,14 @@ func (s *banks) GetUsersIDUserForecast(ctx context.Context, request operations.G
 // Get logs about connections.<br><br>
 func (s *banks) GetUsersIDUserLogs(ctx context.Context, request operations.GetUsersIDUserLogsRequest) (*operations.GetUsersIDUserLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3691,14 +3691,14 @@ func (s *banks) GetUsersIDUserLogs(ctx context.Context, request operations.GetUs
 // GetUsersIDUserTransactionsclusters - Get clustered transactions
 func (s *banks) GetUsersIDUserTransactionsclusters(ctx context.Context, request operations.GetUsersIDUserTransactionsclustersRequest) (*operations.GetUsersIDUserTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3742,7 +3742,7 @@ func (s *banks) PostBanksCategories(ctx context.Context, request operations.Post
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/banks/categories"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3757,7 +3757,7 @@ func (s *banks) PostBanksCategories(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3799,9 +3799,9 @@ func (s *banks) PostBanksCategories(ctx context.Context, request operations.Post
 // Edit the name for the supplied category.<br><br>
 func (s *banks) PostBanksCategoriesIDCategory(ctx context.Context, request operations.PostBanksCategoriesIDCategoryRequest) (*operations.PostBanksCategoriesIDCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/categories/{id_category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/banks/categories/{id_category}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3816,7 +3816,7 @@ func (s *banks) PostBanksCategoriesIDCategory(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3865,7 +3865,7 @@ func (s *banks) PostCategoriesKeywords(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3905,7 +3905,7 @@ func (s *banks) PostCategoriesKeywords(ctx context.Context, request operations.P
 
 // PostCategorize - categorize transactions without storing them
 // It requires an array of transaction dictionaries. Any fields of transactions that are not required will be kept in the response. The response contains the list of transactions with two more fields: id_category and state (it indicates how the transaction has been categorized)<br><br>
-func (s *banks) PostCategorize(ctx context.Context, request operations.PostCategorizeRequest) (*operations.PostCategorizeResponse, error) {
+func (s *banks) PostCategorize(ctx context.Context, request operations.PostCategorizeRequestBody) (*operations.PostCategorizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/categorize"
 
@@ -3962,9 +3962,9 @@ func (s *banks) PostCategorize(ctx context.Context, request operations.PostCateg
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *banks) PostConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PostConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PostConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3976,7 +3976,7 @@ func (s *banks) PostConnectionsIDConnectionSourcesIDSource(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4020,7 +4020,7 @@ func (s *banks) PostConnectors(ctx context.Context, request operations.PostConne
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connectors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4035,7 +4035,7 @@ func (s *banks) PostConnectors(ctx context.Context, request operations.PostConne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4077,14 +4077,14 @@ func (s *banks) PostConnectors(ctx context.Context, request operations.PostConne
 // This endpoint creates a connector logo. You can either pass a file to as a parameter to insert and link it with the connector or pass an id_file to link a connector with an existing file. Will fail if the file is already linked with that connector.<br><br>Form params: - id_file (integer): The id of the file to link with that connector. - img (string): Path to the image to link with that connector.<br><br>
 func (s *banks) PostConnectorsIDConnectorLogos(ctx context.Context, request operations.PostConnectorsIDConnectorLogosRequest) (*operations.PostConnectorsIDConnectorLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4126,14 +4126,14 @@ func (s *banks) PostConnectorsIDConnectorLogos(ctx context.Context, request oper
 // Form params : - next_date (date) required: Date of transaction - mean_amount (decimal) required: Mean Amount - wording (string) required: name of transaction - id_account (id) required: related account<br><br>
 func (s *banks) PostUsersIDUserAccountsIDAccountTransactionsclusters(ctx context.Context, request operations.PostUsersIDUserAccountsIDAccountTransactionsclustersRequest) (*operations.PostUsersIDUserAccountsIDAccountTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4174,9 +4174,9 @@ func (s *banks) PostUsersIDUserAccountsIDAccountTransactionsclusters(ctx context
 // PostUsersIDUserCategoriesFull - Create a new transaction category
 func (s *banks) PostUsersIDUserCategoriesFull(ctx context.Context, request operations.PostUsersIDUserCategoriesFullRequest) (*operations.PostUsersIDUserCategoriesFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4188,7 +4188,7 @@ func (s *banks) PostUsersIDUserCategoriesFull(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4230,9 +4230,9 @@ func (s *banks) PostUsersIDUserCategoriesFull(ctx context.Context, request opera
 // Create a new connection to a given bank or provider. You have to give all needed parameters (use /banks/ID/fields or /providers/ID/fields to get them).<br><br>
 func (s *banks) PostUsersIDUserConnections(ctx context.Context, request operations.PostUsersIDUserConnectionsRequest) (*operations.PostUsersIDUserConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4244,7 +4244,7 @@ func (s *banks) PostUsersIDUserConnections(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4286,9 +4286,9 @@ func (s *banks) PostUsersIDUserConnections(ctx context.Context, request operatio
 // Give new parameters to change on the configuration of this connection (for example "password").<br><br>It tests connection to website, and if it fails, a 400 response is given with the error code "wrongpass" or "websiteUnavailable".<br><br>You can also supply meta-parameters on connection, like 'active' or 'expire'.<br><br>It's possible to execute the update/synchronization in the background with a query parameter. If done in background this endpoint will respond with data that is not yet updated. To obtain updated data, polling is required as the the data will be filled in the background.<br><br>
 func (s *banks) PostUsersIDUserConnectionsIDConnection(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionRequest) (*operations.PostUsersIDUserConnectionsIDConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4300,7 +4300,7 @@ func (s *banks) PostUsersIDUserConnectionsIDConnection(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4342,9 +4342,9 @@ func (s *banks) PostUsersIDUserConnectionsIDConnection(ctx context.Context, requ
 // This endpoint creates an account related to a connection or not.<br><br>
 func (s *banks) PostUsersIDUserConnectionsIDConnectionAccounts(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionAccountsRequest) (*operations.PostUsersIDUserConnectionsIDConnectionAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4359,7 +4359,7 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionAccounts(ctx context.Conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4401,9 +4401,9 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionAccounts(ctx context.Conte
 // Create transactions for the supplied account or the account whose id is given with form parameters. It requires an array of transaction dictionaries.<br><br><br><br>
 func (s *banks) PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactions(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequest) (*operations.PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4418,7 +4418,7 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransacti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4460,14 +4460,14 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransacti
 // Form params : - next_date (date) required: Date of transaction - mean_amount (decimal) required: Mean Amount - wording (string) required: name of transaction - id_account (id) required: related account<br><br>
 func (s *banks) PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclusters(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersRequest) (*operations.PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4509,9 +4509,9 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransacti
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *banks) PostUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PostUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4523,7 +4523,7 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4565,14 +4565,14 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx contex
 // Form params : - next_date (date) required: Date of transaction - mean_amount (decimal) required: Mean Amount - wording (string) required: name of transaction - id_account (id) required: related account<br><br>
 func (s *banks) PostUsersIDUserConnectionsIDConnectionTransactionsclusters(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionTransactionsclustersRequest) (*operations.PostUsersIDUserConnectionsIDConnectionTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4614,14 +4614,14 @@ func (s *banks) PostUsersIDUserConnectionsIDConnectionTransactionsclusters(ctx c
 // Form params : - next_date (date) required: Date of transaction - mean_amount (decimal) required: Mean Amount - wording (string) required: name of transaction - id_account (id) required: related account<br><br>
 func (s *banks) PostUsersIDUserTransactionsclusters(ctx context.Context, request operations.PostUsersIDUserTransactionsclustersRequest) (*operations.PostUsersIDUserTransactionsclustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4663,9 +4663,9 @@ func (s *banks) PostUsersIDUserTransactionsclusters(ctx context.Context, request
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *banks) PutConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PutConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PutConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4677,7 +4677,7 @@ func (s *banks) PutConnectionsIDConnectionSourcesIDSource(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4720,7 +4720,7 @@ func (s *banks) PutConnectors(ctx context.Context, request operations.PutConnect
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connectors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4732,7 +4732,7 @@ func (s *banks) PutConnectors(ctx context.Context, request operations.PutConnect
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4774,9 +4774,9 @@ func (s *banks) PutConnectors(ctx context.Context, request operations.PutConnect
 // <br><br>
 func (s *banks) PutConnectorsIDConnector(ctx context.Context, request operations.PutConnectorsIDConnectorRequest) (*operations.PutConnectorsIDConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4788,7 +4788,7 @@ func (s *banks) PutConnectorsIDConnector(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4830,14 +4830,14 @@ func (s *banks) PutConnectorsIDConnector(ctx context.Context, request operations
 // This endpoint creates or update a connector logo. This logo is a mapping between a file (/file route) and a connector (/connectors route) or a provider (/providers route).<br><br>Form params: - id_file (integer): The id of the file to link with that connector.<br><br>
 func (s *banks) PutConnectorsIDConnectorLogos(ctx context.Context, request operations.PutConnectorsIDConnectorLogosRequest) (*operations.PutConnectorsIDConnectorLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4879,14 +4879,14 @@ func (s *banks) PutConnectorsIDConnectorLogos(ctx context.Context, request opera
 // This endpoint creates or update a connector logo. This logo is a mapping between a file (/file route) and a connector (/connectors route) or a provider (/providers route).<br><br>Form params: - id_file (integer): The id of the file to link with that connector.<br><br>
 func (s *banks) PutConnectorsIDConnectorLogosIDLogo(ctx context.Context, request operations.PutConnectorsIDConnectorLogosIDLogoRequest) (*operations.PutConnectorsIDConnectorLogosIDLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/{id_logo}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/logos/{id_logo}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4927,9 +4927,9 @@ func (s *banks) PutConnectorsIDConnectorLogosIDLogo(ctx context.Context, request
 // PutConnectorsIDConnectorSources - Edit several connector sources
 func (s *banks) PutConnectorsIDConnectorSources(ctx context.Context, request operations.PutConnectorsIDConnectorSourcesRequest) (*operations.PutConnectorsIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4941,7 +4941,7 @@ func (s *banks) PutConnectorsIDConnectorSources(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4982,9 +4982,9 @@ func (s *banks) PutConnectorsIDConnectorSources(ctx context.Context, request ope
 // PutConnectorsIDConnectorSourcesIDSource - Edit the provided connector source
 func (s *banks) PutConnectorsIDConnectorSourcesIDSource(ctx context.Context, request operations.PutConnectorsIDConnectorSourcesIDSourceRequest) (*operations.PutConnectorsIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4996,7 +4996,7 @@ func (s *banks) PutConnectorsIDConnectorSourcesIDSource(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5038,14 +5038,14 @@ func (s *banks) PutConnectorsIDConnectorSourcesIDSource(ctx context.Context, req
 // Form params : - next_date (date): Date of transaction - mean_amount (decimal): Mean Amount - wording (string): name of transaction - id_account (id): related account - id_category (id): related category - enabled (bool): is enabled<br><br>
 func (s *banks) PutUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.PutUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest) (*operations.PutUsersIDUserAccountsIDAccountTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5086,9 +5086,9 @@ func (s *banks) PutUsersIDUserAccountsIDAccountTransactionsclustersIDTransaction
 // PutUsersIDUserCategoriesFullIDFull - Modify a user-created category
 func (s *banks) PutUsersIDUserCategoriesFullIDFull(ctx context.Context, request operations.PutUsersIDUserCategoriesFullIDFullRequest) (*operations.PutUsersIDUserCategoriesFullIDFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full/{id_full}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/categories/full/{id_full}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5100,7 +5100,7 @@ func (s *banks) PutUsersIDUserCategoriesFullIDFull(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5142,14 +5142,14 @@ func (s *banks) PutUsersIDUserCategoriesFullIDFull(ctx context.Context, request 
 // We suggest to pass parameter expand=accounts[transactions] to get all *new* and *updated* transactions.<br><br>
 func (s *banks) PutUsersIDUserConnectionsIDConnection(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionRequest) (*operations.PutUsersIDUserConnectionsIDConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5190,14 +5190,14 @@ func (s *banks) PutUsersIDUserConnectionsIDConnection(ctx context.Context, reque
 // PutUsersIDUserConnectionsIDConnectionAccounts - Update many accounts at once
 func (s *banks) PutUsersIDUserConnectionsIDConnectionAccounts(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionAccountsRequest) (*operations.PutUsersIDUserConnectionsIDConnectionAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5239,9 +5239,9 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccounts(ctx context.Contex
 // It updates a specific account<br><br>
 func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccount(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountRequest) (*operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5253,7 +5253,7 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccount(ctx conte
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5294,9 +5294,9 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccount(ctx conte
 // PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransaction - Edit a transaction meta-data
 func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransaction(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionRequest) (*operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5308,7 +5308,7 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5349,14 +5349,14 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformations - Add or edit transaction arbitrary key-value pairs
 func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformations(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest) (*operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactions/{id_transaction}/informations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5398,14 +5398,14 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // Form params : - next_date (date): Date of transaction - mean_amount (decimal): Mean Amount - wording (string): name of transaction - id_account (id): related account - id_category (id): related category - enabled (bool): is enabled<br><br>
 func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest) (*operations.PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/accounts/{id_account}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5447,9 +5447,9 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactio
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *banks) PutUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PutUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5461,7 +5461,7 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5503,14 +5503,14 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context
 // Form params : - next_date (date): Date of transaction - mean_amount (decimal): Mean Amount - wording (string): name of transaction - id_account (id): related account - id_category (id): related category - enabled (bool): is enabled<br><br>
 func (s *banks) PutUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionsclusterRequest) (*operations.PutUsersIDUserConnectionsIDConnectionTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5552,14 +5552,14 @@ func (s *banks) PutUsersIDUserConnectionsIDConnectionTransactionsclustersIDTrans
 // Form params : - next_date (date): Date of transaction - mean_amount (decimal): Mean Amount - wording (string): name of transaction - id_account (id): related account - id_category (id): related category - enabled (bool): is enabled<br><br>
 func (s *banks) PutUsersIDUserTransactionsclustersIDTransactionscluster(ctx context.Context, request operations.PutUsersIDUserTransactionsclustersIDTransactionsclusterRequest) (*operations.PutUsersIDUserTransactionsclustersIDTransactionsclusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters/{id_transactionscluster}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/transactionsclusters/{id_transactionscluster}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

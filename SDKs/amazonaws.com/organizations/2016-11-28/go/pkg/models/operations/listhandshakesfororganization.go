@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListHandshakesForOrganizationQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListHandshakesForOrganizationXAmzTargetEnum
 type ListHandshakesForOrganizationXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListHandshakesForOrganizationXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListHandshakesForOrganizationHeaders struct {
+type ListHandshakesForOrganizationRequest struct {
+	ListHandshakesForOrganizationRequest shared.ListHandshakesForOrganizationRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListHandshakesForOrganizationHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListHandshakesForOrganizationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListHandshakesForOrganizationRequest struct {
-	QueryParams ListHandshakesForOrganizationQueryParams
-	Headers     ListHandshakesForOrganizationHeaders
-	Request     shared.ListHandshakesForOrganizationRequest `request:"mediaType=application/json"`
 }
 
 type ListHandshakesForOrganizationResponse struct {

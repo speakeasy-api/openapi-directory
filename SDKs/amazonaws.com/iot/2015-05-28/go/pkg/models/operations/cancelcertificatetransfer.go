@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelCertificateTransferPathParams struct {
-	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type CancelCertificateTransferHeaders struct {
+type CancelCertificateTransferRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type CancelCertificateTransferHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelCertificateTransferRequest struct {
-	PathParams CancelCertificateTransferPathParams
-	Headers    CancelCertificateTransferHeaders
+	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 }
 
 type CancelCertificateTransferResponse struct {

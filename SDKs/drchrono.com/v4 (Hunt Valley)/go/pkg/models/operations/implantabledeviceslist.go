@@ -8,21 +8,16 @@ import (
 )
 
 type ImplantableDevicesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ImplantableDevicesListQueryParams struct {
+type ImplantableDevicesListRequest struct {
 	Cursor      *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor      *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	MuDate      *string `queryParam:"style=form,explode=true,name=mu_date"`
 	MuDateRange *string `queryParam:"style=form,explode=true,name=mu_date_range"`
 	PageSize    *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Patient     *int64  `queryParam:"style=form,explode=true,name=patient"`
-}
-
-type ImplantableDevicesListRequest struct {
-	QueryParams ImplantableDevicesListQueryParams
-	Security    ImplantableDevicesListSecurity
 }
 
 // ImplantableDevicesList200ApplicationJSON - Paginated Result

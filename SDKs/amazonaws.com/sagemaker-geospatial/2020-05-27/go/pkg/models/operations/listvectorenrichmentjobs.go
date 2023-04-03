@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListVectorEnrichmentJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListVectorEnrichmentJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListVectorEnrichmentJobsRequestBodySortOrderEnum - An optional value that specifies whether you want the results sorted in <code>Ascending</code> or <code>Descending</code> order.
 type ListVectorEnrichmentJobsRequestBodySortOrderEnum string
 
@@ -64,9 +47,18 @@ type ListVectorEnrichmentJobsRequestBody struct {
 }
 
 type ListVectorEnrichmentJobsRequest struct {
-	QueryParams ListVectorEnrichmentJobsQueryParams
-	Headers     ListVectorEnrichmentJobsHeaders
-	Request     ListVectorEnrichmentJobsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListVectorEnrichmentJobsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListVectorEnrichmentJobsResponse struct {

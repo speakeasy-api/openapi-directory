@@ -50,25 +50,17 @@ func (e *POSTModifyManagedPrefixListVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTModifyManagedPrefixListQueryParams struct {
-	Action  POSTModifyManagedPrefixListActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyManagedPrefixListVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyManagedPrefixListHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyManagedPrefixListRequest struct {
-	QueryParams POSTModifyManagedPrefixListQueryParams
-	Headers     POSTModifyManagedPrefixListHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyManagedPrefixListActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTModifyManagedPrefixListVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyManagedPrefixListResponse struct {

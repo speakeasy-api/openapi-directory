@@ -6,27 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesGetLatestPrivateReleaseSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReleasesGetLatestPrivateReleasePathParams struct {
-	// The secret of the target application
-	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
-}
-
-type ReleasesGetLatestPrivateReleaseQueryParams struct {
-	// When passing `udid` in the query string, a provisioning check for the given device ID will be done. Will be ignored for non-iOS platforms.
-	Udid *string `queryParam:"style=form,explode=true,name=udid"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type ReleasesGetLatestPrivateReleaseRequest struct {
-	PathParams  ReleasesGetLatestPrivateReleasePathParams
-	QueryParams ReleasesGetLatestPrivateReleaseQueryParams
-	Security    ReleasesGetLatestPrivateReleaseSecurity
+	// The secret of the target application
+	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
+	// When passing `udid` in the query string, a provisioning check for the given device ID will be done. Will be ignored for non-iOS platforms.
+	Udid *string `queryParam:"style=form,explode=true,name=udid"`
 }
 
 type ReleasesGetLatestPrivateRelease404ApplicationJSONCodeEnum string

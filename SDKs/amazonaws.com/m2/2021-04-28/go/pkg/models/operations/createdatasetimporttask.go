@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDataSetImportTaskPathParams struct {
-	// The unique identifier of the application for which you want to import data sets.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type CreateDataSetImportTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateDataSetImportTaskRequestBodyImportConfig - Identifies one or more data sets you want to import with the <a>CreateDataSetImportTask</a> operation.
 type CreateDataSetImportTaskRequestBodyImportConfig struct {
 	DataSets   []shared.DataSetImportItem `json:"dataSets,omitempty"`
@@ -36,9 +21,16 @@ type CreateDataSetImportTaskRequestBody struct {
 }
 
 type CreateDataSetImportTaskRequest struct {
-	PathParams CreateDataSetImportTaskPathParams
-	Headers    CreateDataSetImportTaskHeaders
-	Request    CreateDataSetImportTaskRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDataSetImportTaskRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the application for which you want to import data sets.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 }
 
 type CreateDataSetImportTaskResponse struct {

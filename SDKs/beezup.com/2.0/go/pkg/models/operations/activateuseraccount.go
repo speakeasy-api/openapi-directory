@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivateUserAccountRequest struct {
-	// The email activation id received by email.
-	Request string `request:"mediaType=application/json"`
-}
-
 type ActivateUserAccountResponse struct {
 	// Invalid email activation id
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

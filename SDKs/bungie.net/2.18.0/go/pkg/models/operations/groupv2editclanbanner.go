@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2EditClanBannerSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2EditClanBannerPathParams struct {
-	// Group ID of the group to edit.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2EditClanBannerRequest struct {
-	PathParams GroupV2EditClanBannerPathParams
-	Security   GroupV2EditClanBannerSecurity
+	// Group ID of the group to edit.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2EditClanBanner200Wildcard - Look at the Response property for more information about the nature of this response

@@ -30,20 +30,16 @@ func (e *UpdateExpirationForHITXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type UpdateExpirationForHITHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateExpirationForHITXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateExpirationForHITRequest struct {
-	Headers UpdateExpirationForHITHeaders
-	Request shared.UpdateExpirationForHITRequest `request:"mediaType=application/json"`
+	UpdateExpirationForHITRequest shared.UpdateExpirationForHITRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    UpdateExpirationForHITXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateExpirationForHITResponse struct {

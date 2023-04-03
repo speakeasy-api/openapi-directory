@@ -8,10 +8,10 @@ import (
 )
 
 type MessagesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type MessagesListQueryParams struct {
+type MessagesListRequest struct {
 	Cursor          *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor          *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Owner           *int64  `queryParam:"style=form,explode=true,name=owner"`
@@ -21,11 +21,6 @@ type MessagesListQueryParams struct {
 	ResponsibleUser *int64  `queryParam:"style=form,explode=true,name=responsible_user"`
 	Type            *string `queryParam:"style=form,explode=true,name=type"`
 	UpdatedSince    *string `queryParam:"style=form,explode=true,name=updated_since"`
-}
-
-type MessagesListRequest struct {
-	QueryParams MessagesListQueryParams
-	Security    MessagesListSecurity
 }
 
 // MessagesList200ApplicationJSON - Paginated Result

@@ -34,7 +34,7 @@ func newExecute(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteProxy - DELETE
 // Proxies a downstream DELETE request to a service and injects the necessary credentials into a request stored in Vault. This allows you to have an additional security layer and logging without needing to rely on Unify for normalization.
 // **Note**: Vault will proxy all data to the downstream URL and method/verb in the headers.
-func (s *execute) DeleteProxy(ctx context.Context, request operations.DeleteProxyRequest) (*operations.DeleteProxyResponse, error) {
+func (s *execute) DeleteProxy(ctx context.Context, request operations.DeleteProxyRequest, security operations.DeleteProxySecurity) (*operations.DeleteProxyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proxy"
 
@@ -43,9 +43,9 @@ func (s *execute) DeleteProxy(ctx context.Context, request operations.DeleteProx
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *execute) DeleteProxy(ctx context.Context, request operations.DeleteProx
 // GetProxy - GET
 // Proxies a downstream GET request to a service and injects the necessary credentials into a request stored in Vault. This allows you to have an additional security layer and logging without needing to rely on Unify for normalization.
 // **Note**: Vault will proxy all data to the downstream URL and method/verb in the headers.
-func (s *execute) GetProxy(ctx context.Context, request operations.GetProxyRequest) (*operations.GetProxyResponse, error) {
+func (s *execute) GetProxy(ctx context.Context, request operations.GetProxyRequest, security operations.GetProxySecurity) (*operations.GetProxyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proxy"
 
@@ -111,9 +111,9 @@ func (s *execute) GetProxy(ctx context.Context, request operations.GetProxyReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *execute) GetProxy(ctx context.Context, request operations.GetProxyReque
 // OptionsProxy - OPTIONS
 // Proxies a downstream OPTION request to a service and injects the necessary credentials into a request stored in Vault. This allows you to have an additional security layer and logging without needing to rely on Unify for normalization.
 // **Note**: Vault will proxy all data to the downstream URL and method/verb in the headers.
-func (s *execute) OptionsProxy(ctx context.Context, request operations.OptionsProxyRequest) (*operations.OptionsProxyResponse, error) {
+func (s *execute) OptionsProxy(ctx context.Context, request operations.OptionsProxyRequest, security operations.OptionsProxySecurity) (*operations.OptionsProxyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proxy"
 
@@ -179,9 +179,9 @@ func (s *execute) OptionsProxy(ctx context.Context, request operations.OptionsPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -238,11 +238,11 @@ func (s *execute) OptionsProxy(ctx context.Context, request operations.OptionsPr
 // PatchProxy - PATCH
 // Proxies a downstream PATCH request to a service and injects the necessary credentials into a request stored in Vault. This allows you to have an additional security layer and logging without needing to rely on Unify for normalization.
 // **Note**: Vault will proxy all data to the downstream URL and method/verb in the headers.
-func (s *execute) PatchProxy(ctx context.Context, request operations.PatchProxyRequest) (*operations.PatchProxyResponse, error) {
+func (s *execute) PatchProxy(ctx context.Context, request operations.PatchProxyRequest, security operations.PatchProxySecurity) (*operations.PatchProxyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proxy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -254,9 +254,9 @@ func (s *execute) PatchProxy(ctx context.Context, request operations.PatchProxyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,11 +313,11 @@ func (s *execute) PatchProxy(ctx context.Context, request operations.PatchProxyR
 // PostProxy - POST
 // Proxies a downstream POST request to a service and injects the necessary credentials into a request stored in Vault. This allows you to have an additional security layer and logging without needing to rely on Unify for normalization.
 // **Note**: Vault will proxy all data to the downstream URL and method/verb in the headers.
-func (s *execute) PostProxy(ctx context.Context, request operations.PostProxyRequest) (*operations.PostProxyResponse, error) {
+func (s *execute) PostProxy(ctx context.Context, request operations.PostProxyRequest, security operations.PostProxySecurity) (*operations.PostProxyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proxy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -329,9 +329,9 @@ func (s *execute) PostProxy(ctx context.Context, request operations.PostProxyReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,11 +388,11 @@ func (s *execute) PostProxy(ctx context.Context, request operations.PostProxyReq
 // PutProxy - PUT
 // Proxies a downstream PUT request to a service and injects the necessary credentials into a request stored in Vault. This allows you to have an additional security layer and logging without needing to rely on Unify for normalization.
 // **Note**: Vault will proxy all data to the downstream URL and method/verb in the headers.
-func (s *execute) PutProxy(ctx context.Context, request operations.PutProxyRequest) (*operations.PutProxyResponse, error) {
+func (s *execute) PutProxy(ctx context.Context, request operations.PutProxyRequest, security operations.PutProxySecurity) (*operations.PutProxyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/proxy"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -404,9 +404,9 @@ func (s *execute) PutProxy(ctx context.Context, request operations.PutProxyReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

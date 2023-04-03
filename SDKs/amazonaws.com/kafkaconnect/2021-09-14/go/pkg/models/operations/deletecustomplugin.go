@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomPluginPathParams struct {
-	// The Amazon Resource Name (ARN) of the custom plugin that you want to delete.
-	CustomPluginArn string `pathParam:"style=simple,explode=false,name=customPluginArn"`
-}
-
-type DeleteCustomPluginHeaders struct {
+type DeleteCustomPluginRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteCustomPluginHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCustomPluginRequest struct {
-	PathParams DeleteCustomPluginPathParams
-	Headers    DeleteCustomPluginHeaders
+	// The Amazon Resource Name (ARN) of the custom plugin that you want to delete.
+	CustomPluginArn string `pathParam:"style=simple,explode=false,name=customPluginArn"`
 }
 
 type DeleteCustomPluginResponse struct {

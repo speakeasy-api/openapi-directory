@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContentPathParams struct {
-	// The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
-	// The identifier of the knowledge base. Can be either the ID or the ARN
-	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
-}
-
-type UpdateContentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateContentRequestBody struct {
 	// A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing data between an external system and Wisdom, you can store an external version identifier as metadata to utilize for determining drift.
 	Metadata map[string]string `json:"metadata,omitempty"`
@@ -40,9 +23,18 @@ type UpdateContentRequestBody struct {
 }
 
 type UpdateContentRequest struct {
-	PathParams UpdateContentPathParams
-	Headers    UpdateContentHeaders
-	Request    UpdateContentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateContentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
+	// The identifier of the knowledge base. Can be either the ID or the ARN
+	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
 }
 
 type UpdateContentResponse struct {

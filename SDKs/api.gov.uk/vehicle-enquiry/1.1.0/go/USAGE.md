@@ -14,13 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.GetVehicleDetailsByRegistrationNumberRequest{
-        Headers: operations.GetVehicleDetailsByRegistrationNumberHeaders{
-            XCorrelationID: "corrupti",
-            XAPIKey: "provident",
+        VehicleRequest: shared.VehicleRequest{
+            RegistrationNumber: "corrupti",
         },
-        Request: shared.VehicleRequest{
-            RegistrationNumber: "distinctio",
-        },
+        XCorrelationID: "provident",
+        XAPIKey: "distinctio",
     }
 
     ctx := context.Background()

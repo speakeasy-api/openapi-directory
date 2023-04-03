@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostV2AccessTokensRequest struct {
-	Request shared.CreateAccessTokenRequest `request:"mediaType=application/json"`
-}
-
 type PostV2AccessTokensResponse struct {
 	ContentType string
 	// Unauthorized

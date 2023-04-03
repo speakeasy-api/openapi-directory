@@ -13,41 +13,45 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateFirewallRuleGroupRequest{
-        Headers: operations.AssociateFirewallRuleGroupHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
-        },
-        Request: shared.AssociateFirewallRuleGroupRequest{
-            CreatorRequestID: "illum",
-            FirewallRuleGroupID: "vel",
+        AssociateFirewallRuleGroupRequest: shared.AssociateFirewallRuleGroupRequest{
+            CreatorRequestID: "corrupti",
+            FirewallRuleGroupID: "provident",
             MutationProtection: "DISABLED",
-            Name: "deserunt",
-            Priority: 384382,
+            Name: "quibusdam",
+            Priority: 602763,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "magnam",
-                    Value: "debitis",
+                    Key: "corrupti",
+                    Value: "illum",
                 },
                 shared.Tag{
-                    Key: "ipsa",
-                    Value: "delectus",
+                    Key: "vel",
+                    Value: "error",
+                },
+                shared.Tag{
+                    Key: "deserunt",
+                    Value: "suscipit",
+                },
+                shared.Tag{
+                    Key: "iure",
+                    Value: "magnam",
                 },
             },
-            VpcID: "tempora",
+            VpcID: "debitis",
         },
+        XAmzAlgorithm: "ipsa",
+        XAmzContentSha256: "delectus",
+        XAmzCredential: "tempora",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "molestiae",
+        XAmzSignature: "minus",
+        XAmzSignedHeaders: "placeat",
+        XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
     }
 
     ctx := context.Background()

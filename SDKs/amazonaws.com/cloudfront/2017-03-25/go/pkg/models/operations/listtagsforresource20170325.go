@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type ListTagsForResource20170325QueryParams struct {
+type ListTagsForResource20170325Request struct {
 	//  An ARN of a CloudFront resource.
-	Resource string `queryParam:"style=form,explode=true,name=Resource"`
-}
-
-type ListTagsForResource20170325Headers struct {
+	Resource          string  `queryParam:"style=form,explode=true,name=Resource"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type ListTagsForResource20170325Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTagsForResource20170325Request struct {
-	QueryParams ListTagsForResource20170325QueryParams
-	Headers     ListTagsForResource20170325Headers
 }
 
 type ListTagsForResource20170325Response struct {

@@ -33,16 +33,7 @@ func (e *ListControlsControlTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListControlsQueryParams struct {
-	//  The type of control, such as a standard control or a custom control.
-	ControlType ListControlsControlTypeEnum `queryParam:"style=form,explode=true,name=controlType"`
-	//  Represents the maximum number of results on a page or for an API request call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  The pagination token that's used to fetch the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListControlsHeaders struct {
+type ListControlsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type ListControlsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListControlsRequest struct {
-	QueryParams ListControlsQueryParams
-	Headers     ListControlsHeaders
+	//  The type of control, such as a standard control or a custom control.
+	ControlType ListControlsControlTypeEnum `queryParam:"style=form,explode=true,name=controlType"`
+	//  Represents the maximum number of results on a page or for an API request call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  The pagination token that's used to fetch the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListControlsResponse struct {

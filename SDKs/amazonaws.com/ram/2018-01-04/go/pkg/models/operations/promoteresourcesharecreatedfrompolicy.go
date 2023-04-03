@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PromoteResourceShareCreatedFromPolicyQueryParams struct {
-	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share to promote.
-	ResourceShareArn string `queryParam:"style=form,explode=true,name=resourceShareArn"`
-}
-
-type PromoteResourceShareCreatedFromPolicyHeaders struct {
+type PromoteResourceShareCreatedFromPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type PromoteResourceShareCreatedFromPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type PromoteResourceShareCreatedFromPolicyRequest struct {
-	QueryParams PromoteResourceShareCreatedFromPolicyQueryParams
-	Headers     PromoteResourceShareCreatedFromPolicyHeaders
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share to promote.
+	ResourceShareArn string `queryParam:"style=form,explode=true,name=resourceShareArn"`
 }
 
 type PromoteResourceShareCreatedFromPolicyResponse struct {

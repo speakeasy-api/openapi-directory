@@ -36,7 +36,7 @@ func newScope(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // SignConfirm - this is a scope confirmation
 func (s *scope) SignConfirm(ctx context.Context, request operations.SignConfirmRequest) (*operations.SignConfirmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -104,7 +104,7 @@ func (s *scope) SignConfirm(ctx context.Context, request operations.SignConfirmR
 // SignDelete - delete a verification job
 func (s *scope) SignDelete(ctx context.Context, request operations.SignDeleteRequest) (*operations.SignDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *scope) SignRequest(ctx context.Context, request operations.SignRequestR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/scope"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -186,7 +186,7 @@ func (s *scope) SignRequest(ctx context.Context, request operations.SignRequestR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -247,7 +247,7 @@ func (s *scope) SignRequest(ctx context.Context, request operations.SignRequestR
 // SignRetrieve - get the status / current content of a verification job
 func (s *scope) SignRetrieve(ctx context.Context, request operations.SignRetrieveRequest) (*operations.SignRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,7 +326,7 @@ func (s *scope) SignRetrieve(ctx context.Context, request operations.SignRetriev
 // SignRetrieveHead - HEAD to get the status of a verification job
 func (s *scope) SignRetrieveHead(ctx context.Context, request operations.SignRetrieveHeadRequest) (*operations.SignRetrieveHeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -384,7 +384,7 @@ func (s *scope) SignRetrieveHead(ctx context.Context, request operations.SignRet
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *scope) SignUpdate(ctx context.Context, request operations.SignUpdateRequest) (*operations.SignUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

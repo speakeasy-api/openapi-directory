@@ -38,7 +38,7 @@ func (s *omInvoiceAPIGeneration) GenerateBatchOrderInvoice(ctx context.Context, 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/invoices/generate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *omInvoiceAPIGeneration) GenerateBatchOrderInvoice(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,9 +130,9 @@ func (s *omInvoiceAPIGeneration) GenerateBatchOrderInvoice(ctx context.Context, 
 // GenerateOrderInvoice - Generate an Order Invoice
 func (s *omInvoiceAPIGeneration) GenerateOrderInvoice(ctx context.Context, request operations.GenerateOrderInvoiceRequest) (*operations.GenerateOrderInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/generate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateOrderInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -147,7 +147,7 @@ func (s *omInvoiceAPIGeneration) GenerateOrderInvoice(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -205,7 +205,7 @@ func (s *omInvoiceAPIGeneration) GenerateOrderInvoice(ctx context.Context, reque
 }
 
 // GetOrderInvoicePdf - Returns the PDF version of the invoice
-func (s *omInvoiceAPIGeneration) GetOrderInvoicePdf(ctx context.Context, request operations.GetOrderInvoicePdfRequest) (*operations.GetOrderInvoicePdfResponse, error) {
+func (s *omInvoiceAPIGeneration) GetOrderInvoicePdf(ctx context.Context, request shared.GetOrderInvoicePdfFromHTMLInvoiceURLRequest) (*operations.GetOrderInvoicePdfResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/invoices/getPdfInvoice"
 
@@ -283,9 +283,9 @@ func (s *omInvoiceAPIGeneration) GetOrderInvoicePdf(ctx context.Context, request
 // GetOrderInvoicePreview - View a preview an Order Invoice
 func (s *omInvoiceAPIGeneration) GetOrderInvoicePreview(ctx context.Context, request operations.GetOrderInvoicePreviewRequest) (*operations.GetOrderInvoicePreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/preview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/preview", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PreviewOrderInvoiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -300,7 +300,7 @@ func (s *omInvoiceAPIGeneration) GetOrderInvoicePreview(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

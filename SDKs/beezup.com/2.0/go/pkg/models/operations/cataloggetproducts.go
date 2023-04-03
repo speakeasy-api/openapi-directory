@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetProductsPathParams struct {
+type CatalogGetProductsRequest struct {
+	GetProductsRequest shared.GetProductsRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetProductsRequest struct {
-	PathParams CatalogGetProductsPathParams
-	Request    shared.GetProductsRequest `request:"mediaType=application/json"`
 }
 
 type CatalogGetProductsResponse struct {

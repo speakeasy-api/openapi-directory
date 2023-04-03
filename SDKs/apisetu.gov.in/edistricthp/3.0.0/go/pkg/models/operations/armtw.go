@@ -10,8 +10,8 @@ import (
 )
 
 type ArmtwSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type ArmtwRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type ArmtwRequestBody struct {
 	Format ArmtwRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type ArmtwRequest struct {
-	// Request format
-	Request  *ArmtwRequestBody `request:"mediaType=application/json"`
-	Security ArmtwSecurity
 }
 
 type Armtw504ApplicationJSONErrorEnum string

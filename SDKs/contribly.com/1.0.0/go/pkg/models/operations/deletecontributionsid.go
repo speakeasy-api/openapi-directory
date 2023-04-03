@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteContributionsIDPathParams struct {
+type DeleteContributionsIDRequest struct {
 	// Id of the contribution to delete
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteContributionsIDRequest struct {
-	PathParams DeleteContributionsIDPathParams
 }
 
 type DeleteContributionsIDResponse struct {

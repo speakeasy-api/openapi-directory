@@ -30,7 +30,8 @@ func (e *GetGroupIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGroupIDHeaders struct {
+type GetGroupIDRequest struct {
+	GetGroupIDRequest shared.GetGroupIDRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetGroupIDHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetGroupIDXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetGroupIDRequest struct {
-	Headers GetGroupIDHeaders
-	Request shared.GetGroupIDRequest `request:"mediaType=application/json"`
 }
 
 type GetGroupIDResponse struct {

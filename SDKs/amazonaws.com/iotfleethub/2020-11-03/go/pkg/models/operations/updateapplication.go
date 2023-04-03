@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateApplicationPathParams struct {
-	// The unique Id of the web application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type UpdateApplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateApplicationRequestBody struct {
 	// An optional description of the web application.
 	ApplicationDescription *string `json:"applicationDescription,omitempty"`
@@ -31,9 +16,16 @@ type UpdateApplicationRequestBody struct {
 }
 
 type UpdateApplicationRequest struct {
-	PathParams UpdateApplicationPathParams
-	Headers    UpdateApplicationHeaders
-	Request    UpdateApplicationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateApplicationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique Id of the web application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 }
 
 type UpdateApplicationResponse struct {

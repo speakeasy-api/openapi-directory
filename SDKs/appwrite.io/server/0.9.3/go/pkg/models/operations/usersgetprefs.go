@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UsersGetPrefsSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersGetPrefsPathParams struct {
-	// User unique ID.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type UsersGetPrefsRequest struct {
-	PathParams UsersGetPrefsPathParams
-	Security   UsersGetPrefsSecurity
+	// User unique ID.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UsersGetPrefsResponse struct {

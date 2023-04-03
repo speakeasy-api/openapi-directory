@@ -8,17 +8,12 @@ import (
 )
 
 type Destiny2AwaGetActionTokenSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type Destiny2AwaGetActionTokenPathParams struct {
-	// The identifier for the advanced write action request.
-	CorrelationID string `pathParam:"style=simple,explode=false,name=correlationId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Destiny2AwaGetActionTokenRequest struct {
-	PathParams Destiny2AwaGetActionTokenPathParams
-	Security   Destiny2AwaGetActionTokenSecurity
+	// The identifier for the advanced write action request.
+	CorrelationID string `pathParam:"style=simple,explode=false,name=correlationId"`
 }
 
 // Destiny2AwaGetActionToken200Wildcard - Look at the Response property for more information about the nature of this response

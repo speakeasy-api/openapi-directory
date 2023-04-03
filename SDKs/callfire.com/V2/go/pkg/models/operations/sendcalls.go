@@ -10,7 +10,8 @@ import (
 )
 
 type SendCallsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // SendCallsDefaultVoiceEnum - The voice set by default for all text-to-speech messages defined in CallRecipient objects or as default *Message properties
@@ -46,7 +47,12 @@ func (e *SendCallsDefaultVoiceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SendCallsQueryParams struct {
+type SendCallsRequest struct {
+	// An array of CallRecipient objects.
+	// Limitations:
+	// 1. Max number of CallRecipient objects is 10
+	//
+	RequestBody []shared.CallRecipient `request:"mediaType=application/json"`
 	// Specifies a campaignId to send calls quickly on a previously created campaign
 	CampaignID *int64 `queryParam:"style=form,explode=true,name=campaignId"`
 	// Text to be turned into a sound, this text will be played when the phone is answered. Parameter can be overridden for any particular CallRecipient
@@ -63,16 +69,6 @@ type SendCallsQueryParams struct {
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
 	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
-}
-
-type SendCallsRequest struct {
-	QueryParams SendCallsQueryParams
-	// An array of CallRecipient objects.
-	// Limitations:
-	// 1. Max number of CallRecipient objects is 10
-	//
-	Request  []shared.CallRecipient `request:"mediaType=application/json"`
-	Security SendCallsSecurity
 }
 
 type SendCallsResponse struct {

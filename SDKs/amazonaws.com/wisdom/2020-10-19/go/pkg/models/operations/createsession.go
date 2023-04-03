@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSessionPathParams struct {
-	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
-}
-
-type CreateSessionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateSessionRequestBody struct {
 	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -34,9 +19,16 @@ type CreateSessionRequestBody struct {
 }
 
 type CreateSessionRequest struct {
-	PathParams CreateSessionPathParams
-	Headers    CreateSessionHeaders
-	Request    CreateSessionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSessionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
 }
 
 type CreateSessionResponse struct {

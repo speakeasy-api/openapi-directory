@@ -77,7 +77,7 @@ func (s *console) GetAemProductInfo(ctx context.Context) (*operations.GetAemProd
 }
 func (s *console) GetBundleInfo(ctx context.Context, request operations.GetBundleInfoRequest) (*operations.GetBundleInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,14 +174,14 @@ func (s *console) GetConfigMgr(ctx context.Context) (*operations.GetConfigMgrRes
 }
 func (s *console) PostBundle(ctx context.Context, request operations.PostBundleRequest) (*operations.PostBundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -211,7 +211,7 @@ func (s *console) PostBundle(ctx context.Context, request operations.PostBundleR
 }
 func (s *console) PostJmxRepository(ctx context.Context, request operations.PostJmxRepositoryRequest) (*operations.PostJmxRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -251,7 +251,7 @@ func (s *console) PostSamlConfiguration(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SeeEmailTemplateInformationQueryParams struct {
+type SeeEmailTemplateInformationRequest struct {
 	// (Required) String
 	//
 	// Your email template's API Identifier.
 	EmailTemplateID *string `queryParam:"style=form,explode=true,name=email_template_id"`
-}
-
-type SeeEmailTemplateInformationRequest struct {
-	QueryParams SeeEmailTemplateInformationQueryParams
 }
 
 type SeeEmailTemplateInformationResponse struct {

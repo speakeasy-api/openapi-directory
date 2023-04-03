@@ -33,14 +33,14 @@ func newServiceInformation(defaultClient, securityClient HTTPClient, serverURL, 
 // GetServiceDetailsByID - getServiceDetailsByID is used to get information on a service, by the Service ID. This will typically return a train service, but will also return a bus and ferry services. The Service ID must be provided in the serviceIDUrlSafe format that is provided in the response for Arrival and Departure Boards. A service ID is specific to a station, and can only be looked up for a short time after a train/bus/ferry arrives at, or departs from a station. This is a National Rail limitation.
 func (s *serviceInformation) GetServiceDetailsByID(ctx context.Context, request operations.GetServiceDetailsByIDRequest) (*operations.GetServiceDetailsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getServiceDetailsByID/{serviceID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getServiceDetailsByID/{serviceID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

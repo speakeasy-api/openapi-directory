@@ -8,21 +8,13 @@ import (
 	"net/http"
 )
 
-type ReleasesGetLatestByPublicDistributionGroupPathParams struct {
+type ReleasesGetLatestByPublicDistributionGroupRequest struct {
 	// The secret of the target application
 	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
 	// the id for destination
 	DistributionGroupID string `pathParam:"style=simple,explode=false,name=distribution_group_id"`
-}
-
-type ReleasesGetLatestByPublicDistributionGroupQueryParams struct {
 	// The check if the request is from Install page
 	IsInstallPage *bool `queryParam:"style=form,explode=true,name=is_install_page"`
-}
-
-type ReleasesGetLatestByPublicDistributionGroupRequest struct {
-	PathParams  ReleasesGetLatestByPublicDistributionGroupPathParams
-	QueryParams ReleasesGetLatestByPublicDistributionGroupQueryParams
 }
 
 type ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum string

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDatasetPathParams struct {
-	// The name of the dataset to update.
-	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
-}
-
-type UpdateDatasetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateDatasetRequestBodyRetentionPeriod - How long, in days, message data is kept.
 type UpdateDatasetRequestBodyRetentionPeriod struct {
 	NumberOfDays *int64 `json:"numberOfDays,omitempty"`
@@ -50,9 +35,16 @@ type UpdateDatasetRequestBody struct {
 }
 
 type UpdateDatasetRequest struct {
-	PathParams UpdateDatasetPathParams
-	Headers    UpdateDatasetHeaders
-	Request    UpdateDatasetRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDatasetRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the dataset to update.
+	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
 }
 
 type UpdateDatasetResponse struct {

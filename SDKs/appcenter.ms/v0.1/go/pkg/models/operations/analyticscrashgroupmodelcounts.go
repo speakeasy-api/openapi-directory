@@ -6,32 +6,22 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AnalyticsCrashGroupModelCountsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AnalyticsCrashGroupModelCountsPathParams struct {
+type AnalyticsCrashGroupModelCountsRequest struct {
+	// The maximum number of results to return. (0 will fetch all results)
+	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The id of the crash group.
 	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AnalyticsCrashGroupModelCountsQueryParams struct {
-	// The maximum number of results to return. (0 will fetch all results)
-	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
 	Version   string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type AnalyticsCrashGroupModelCountsRequest struct {
-	PathParams  AnalyticsCrashGroupModelCountsPathParams
-	QueryParams AnalyticsCrashGroupModelCountsQueryParams
-	Security    AnalyticsCrashGroupModelCountsSecurity
 }
 
 // AnalyticsCrashGroupModelCountsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

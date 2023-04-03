@@ -33,11 +33,11 @@ func newV1NifVerification(defaultClient, securityClient HTTPClient, serverURL, l
 
 // NifBasic - Verifies a NIF number
 // Performs a basic verification check of a given NIF tax number against NIF.com. Optional parameters may be added to improve calculation of confidence score.
-func (s *v1NifVerification) NifBasic(ctx context.Context, request operations.NifBasicRequest) (*operations.NifBasicResponse, error) {
+func (s *v1NifVerification) NifBasic(ctx context.Context, request operations.NifBasicRequest, security operations.NifBasicSecurity) (*operations.NifBasicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/basic-check/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/basic-check/{country}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *v1NifVerification) NifBasic(ctx context.Context, request operations.Nif
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,11 +98,11 @@ func (s *v1NifVerification) NifBasic(ctx context.Context, request operations.Nif
 
 // NifComprehensive - Verifies a NIF number and retrieves company data
 // Comprehensive verification of given portuguese NIF number against NIF.com. Optional parameters may help to build a better confidence score. Additional company data will be provided.
-func (s *v1NifVerification) NifComprehensive(ctx context.Context, request operations.NifComprehensiveRequest) (*operations.NifComprehensiveResponse, error) {
+func (s *v1NifVerification) NifComprehensive(ctx context.Context, request operations.NifComprehensiveRequest, security operations.NifComprehensiveSecurity) (*operations.NifComprehensiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/comprehensive-check/{country}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/comprehensive-check/{country}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -117,7 +117,7 @@ func (s *v1NifVerification) NifComprehensive(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

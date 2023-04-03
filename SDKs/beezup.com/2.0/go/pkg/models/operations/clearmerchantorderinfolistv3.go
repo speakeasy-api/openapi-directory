@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClearMerchantOrderInfoListV3QueryParams struct {
+type ClearMerchantOrderInfoListV3Request struct {
+	ClearMerchantOrderInfoListRequest shared.ClearMerchantOrderInfoListRequest `request:"mediaType=application/json"`
 	// If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
 	TestMode *bool `queryParam:"style=form,explode=true,name=testMode"`
-}
-
-type ClearMerchantOrderInfoListV3Request struct {
-	QueryParams ClearMerchantOrderInfoListV3QueryParams
-	Request     shared.ClearMerchantOrderInfoListRequest `request:"mediaType=application/json"`
 }
 
 type ClearMerchantOrderInfoListV3Response struct {

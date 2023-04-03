@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPsd2RegistrationsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetPsd2RegistrationsRequest struct {
-	QueryParams GetPsd2RegistrationsQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 // GetPsd2Registrations200ApplicationJSON - psd2registrations

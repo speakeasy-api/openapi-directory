@@ -116,7 +116,7 @@ func (s *SDK) DeleteAlternateContact(ctx context.Context, request operations.Del
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteAlternateContact"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) DeleteAlternateContact(ctx context.Context, request operations.Del
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -213,7 +213,7 @@ func (s *SDK) DisableRegion(ctx context.Context, request operations.DisableRegio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disableRegion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -228,7 +228,7 @@ func (s *SDK) DisableRegion(ctx context.Context, request operations.DisableRegio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -310,7 +310,7 @@ func (s *SDK) EnableRegion(ctx context.Context, request operations.EnableRegionR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/enableRegion"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -325,7 +325,7 @@ func (s *SDK) EnableRegion(ctx context.Context, request operations.EnableRegionR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -407,7 +407,7 @@ func (s *SDK) GetAlternateContact(ctx context.Context, request operations.GetAlt
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getAlternateContact"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -422,7 +422,7 @@ func (s *SDK) GetAlternateContact(ctx context.Context, request operations.GetAlt
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -513,7 +513,7 @@ func (s *SDK) GetContactInformation(ctx context.Context, request operations.GetC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getContactInformation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -528,7 +528,7 @@ func (s *SDK) GetContactInformation(ctx context.Context, request operations.GetC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -619,7 +619,7 @@ func (s *SDK) GetRegionOptStatus(ctx context.Context, request operations.GetRegi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getRegionOptStatus"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -634,7 +634,7 @@ func (s *SDK) GetRegionOptStatus(ctx context.Context, request operations.GetRegi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -715,7 +715,7 @@ func (s *SDK) ListRegions(ctx context.Context, request operations.ListRegionsReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listRegions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -730,9 +730,9 @@ func (s *SDK) ListRegions(ctx context.Context, request operations.ListRegionsReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -815,7 +815,7 @@ func (s *SDK) PutAlternateContact(ctx context.Context, request operations.PutAlt
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/putAlternateContact"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -830,7 +830,7 @@ func (s *SDK) PutAlternateContact(ctx context.Context, request operations.PutAlt
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -902,7 +902,7 @@ func (s *SDK) PutContactInformation(ctx context.Context, request operations.PutC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/putContactInformation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -917,7 +917,7 @@ func (s *SDK) PutContactInformation(ctx context.Context, request operations.PutC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

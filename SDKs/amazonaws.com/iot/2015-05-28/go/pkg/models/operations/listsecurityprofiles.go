@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSecurityProfilesQueryParams struct {
+type ListSecurityProfilesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// A filter to limit results to the security profiles that use the defined dimension. Cannot be used with <code>metricName</code>
 	DimensionName *string `queryParam:"style=form,explode=true,name=dimensionName"`
 	// The maximum number of results to return at one time.
@@ -16,21 +23,6 @@ type ListSecurityProfilesQueryParams struct {
 	MetricName *string `queryParam:"style=form,explode=true,name=metricName"`
 	// The token for the next set of results.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListSecurityProfilesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSecurityProfilesRequest struct {
-	QueryParams ListSecurityProfilesQueryParams
-	Headers     ListSecurityProfilesHeaders
 }
 
 type ListSecurityProfilesResponse struct {

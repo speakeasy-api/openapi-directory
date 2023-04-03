@@ -70,7 +70,7 @@ func (s *provisioning) CreateCustomer(ctx context.Context, request operations.Cr
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/provisioning/customers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NewCustomerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -85,7 +85,7 @@ func (s *provisioning) CreateCustomer(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -180,7 +180,7 @@ func (s *provisioning) CreateTenantWebhook(ctx context.Context, request operatio
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/provisioning/webhooks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -195,7 +195,7 @@ func (s *provisioning) CreateTenantWebhook(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -261,14 +261,14 @@ func (s *provisioning) CreateTenantWebhook(ctx context.Context, request operatio
 // None.
 func (s *provisioning) RemoveCustomer(ctx context.Context, request operations.RemoveCustomerRequest) (*operations.RemoveCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -328,14 +328,14 @@ func (s *provisioning) RemoveCustomer(ctx context.Context, request operations.Re
 // * Characters are **case-insensitive**.
 func (s *provisioning) RemoveCustomerAttribute(ctx context.Context, request operations.RemoveCustomerAttributeRequest) (*operations.RemoveCustomerAttributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -394,14 +394,14 @@ func (s *provisioning) RemoveCustomerAttribute(ctx context.Context, request oper
 // None.
 func (s *provisioning) RemoveTenantWebhook(ctx context.Context, request operations.RemoveTenantWebhookRequest) (*operations.RemoveTenantWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -460,16 +460,16 @@ func (s *provisioning) RemoveTenantWebhook(ctx context.Context, request operatio
 // None.
 func (s *provisioning) RequestCustomer(ctx context.Context, request operations.RequestCustomerRequest) (*operations.RequestCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -589,16 +589,16 @@ func (s *provisioning) RequestCustomer(ctx context.Context, request operations.R
 // </details>
 func (s *provisioning) RequestCustomerAttributes(ctx context.Context, request operations.RequestCustomerAttributesRequest) (*operations.RequestCustomerAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -752,16 +752,16 @@ func (s *provisioning) RequestCustomerAttributes(ctx context.Context, request op
 // </details>
 func (s *provisioning) RequestCustomerUsers(ctx context.Context, request operations.RequestCustomerUsersRequest) (*operations.RequestCustomerUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -931,9 +931,9 @@ func (s *provisioning) RequestCustomers(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1010,7 +1010,7 @@ func (s *provisioning) RequestListOfEventTypesForTenant(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1147,9 +1147,9 @@ func (s *provisioning) RequestListOfTenantWebhooks(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1219,14 +1219,14 @@ func (s *provisioning) RequestListOfTenantWebhooks(ctx context.Context, request 
 // None.
 func (s *provisioning) RequestTenantWebhook(ctx context.Context, request operations.RequestTenantWebhookRequest) (*operations.RequestTenantWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1296,14 +1296,14 @@ func (s *provisioning) RequestTenantWebhook(ctx context.Context, request operati
 // None.
 func (s *provisioning) ResetTenantWebhookLifetime(ctx context.Context, request operations.ResetTenantWebhookLifetimeRequest) (*operations.ResetTenantWebhookLifetimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}/reset_lifetime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}/reset_lifetime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1377,9 +1377,9 @@ func (s *provisioning) ResetTenantWebhookLifetime(ctx context.Context, request o
 // * Characters are **case-insensitive**.
 func (s *provisioning) SetCustomerAttributes(ctx context.Context, request operations.SetCustomerAttributesRequest) (*operations.SetCustomerAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerAttributes", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1394,7 +1394,7 @@ func (s *provisioning) SetCustomerAttributes(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1460,9 +1460,9 @@ func (s *provisioning) SetCustomerAttributes(ctx context.Context, request operat
 // None.
 func (s *provisioning) UpdateCustomer(ctx context.Context, request operations.UpdateCustomerRequest) (*operations.UpdateCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCustomerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1477,7 +1477,7 @@ func (s *provisioning) UpdateCustomer(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1552,9 +1552,9 @@ func (s *provisioning) UpdateCustomer(ctx context.Context, request operations.Up
 // * Characters are **case-insensitive**.
 func (s *provisioning) UpdateCustomerAttributes(ctx context.Context, request operations.UpdateCustomerAttributesRequest) (*operations.UpdateCustomerAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/customers/{customer_id}/customerAttributes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerAttributes", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1569,7 +1569,7 @@ func (s *provisioning) UpdateCustomerAttributes(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1651,9 +1651,9 @@ func (s *provisioning) UpdateCustomerAttributes(ctx context.Context, request ope
 // </details>
 func (s *provisioning) UpdateTenantWebhook(ctx context.Context, request operations.UpdateTenantWebhookRequest) (*operations.UpdateTenantWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/provisioning/webhooks/{webhook_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1668,7 +1668,7 @@ func (s *provisioning) UpdateTenantWebhook(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

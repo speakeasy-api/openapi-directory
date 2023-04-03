@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetPostAndParentAwaitingApprovalPathParams struct {
+type ForumGetPostAndParentAwaitingApprovalRequest struct {
 	ChildPostID int64 `pathParam:"style=simple,explode=false,name=childPostId"`
-}
-
-type ForumGetPostAndParentAwaitingApprovalQueryParams struct {
 	// If this value is not null or empty, banned posts are requested to be returned
 	Showbanned *string `queryParam:"style=form,explode=true,name=showbanned"`
-}
-
-type ForumGetPostAndParentAwaitingApprovalRequest struct {
-	PathParams  ForumGetPostAndParentAwaitingApprovalPathParams
-	QueryParams ForumGetPostAndParentAwaitingApprovalQueryParams
 }
 
 // ForumGetPostAndParentAwaitingApproval200Wildcard - Look at the Response property for more information about the nature of this response

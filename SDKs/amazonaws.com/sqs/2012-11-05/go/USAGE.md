@@ -13,41 +13,34 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETAddPermissionRequest{
-        PathParams: operations.GETAddPermissionPathParams{
-            AccountNumber: 548814,
-            QueueName: "provident",
+        AWSAccountIds: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
-        QueryParams: operations.GETAddPermissionQueryParams{
-            AWSAccountIds: []string{
-                "quibusdam",
-                "unde",
-                "nulla",
-            },
-            Action: "AddPermission",
-            Actions: []string{
-                "illum",
-                "vel",
-                "error",
-            },
-            Label: "deserunt",
-            Version: "2012-11-05",
+        AccountNumber: 602763,
+        Action: "AddPermission",
+        Actions: []string{
+            "corrupti",
+            "illum",
+            "vel",
+            "error",
         },
-        Headers: operations.GETAddPermissionHeaders{
-            XAmzAlgorithm: "suscipit",
-            XAmzContentSha256: "iure",
-            XAmzCredential: "magnam",
-            XAmzDate: "debitis",
-            XAmzSecurityToken: "ipsa",
-            XAmzSignature: "delectus",
-            XAmzSignedHeaders: "tempora",
-        },
+        Label: "deserunt",
+        QueueName: "suscipit",
+        Version: "2012-11-05",
+        XAmzAlgorithm: "iure",
+        XAmzContentSha256: "magnam",
+        XAmzCredential: "debitis",
+        XAmzDate: "ipsa",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "tempora",
+        XAmzSignedHeaders: "suscipit",
     }
 
     ctx := context.Background()

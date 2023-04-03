@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDetectorModelPathParams struct {
-	// The name of the detector model.
-	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
-}
-
-type DescribeDetectorModelQueryParams struct {
-	// The version of the detector model.
-	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type DescribeDetectorModelHeaders struct {
+type DescribeDetectorModelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeDetectorModelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDetectorModelRequest struct {
-	PathParams  DescribeDetectorModelPathParams
-	QueryParams DescribeDetectorModelQueryParams
-	Headers     DescribeDetectorModelHeaders
+	// The name of the detector model.
+	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
+	// The version of the detector model.
+	Version *string `queryParam:"style=form,explode=true,name=version"`
 }
 
 type DescribeDetectorModelResponse struct {

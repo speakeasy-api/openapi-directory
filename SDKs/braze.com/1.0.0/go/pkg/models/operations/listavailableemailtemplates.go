@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListAvailableEmailTemplatesQueryParams struct {
+type ListAvailableEmailTemplatesRequest struct {
 	// (Optional) Positive Number
 	//
 	// Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000.
@@ -23,10 +23,6 @@ type ListAvailableEmailTemplatesQueryParams struct {
 	//
 	// Number of templates to skip before returning rest of the templates that fit the search criteria.
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListAvailableEmailTemplatesRequest struct {
-	QueryParams ListAvailableEmailTemplatesQueryParams
 }
 
 type ListAvailableEmailTemplatesResponse struct {

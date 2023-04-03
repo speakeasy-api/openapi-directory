@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCustomSourceDefinitionRequest struct {
-	Request *shared.CustomSourceDefinitionCreate `request:"mediaType=application/json"`
-}
-
 type CreateCustomSourceDefinitionResponse struct {
 	ContentType string
 	// Input failed validation

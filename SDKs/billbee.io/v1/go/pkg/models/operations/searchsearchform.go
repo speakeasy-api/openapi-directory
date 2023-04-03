@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchSearchFormRequest struct {
-	Request shared.RechnungsdruckWebAppControllersAPISearchControllerSearchModel `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type SearchSearchFormResponse struct {
 	Body        []byte
 	ContentType string

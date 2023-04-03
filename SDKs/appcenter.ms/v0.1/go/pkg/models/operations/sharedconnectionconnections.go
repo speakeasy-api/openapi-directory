@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SharedconnectionConnectionsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SharedconnectionConnectionsRequest struct {
-	Security SharedconnectionConnectionsSecurity
-}
 
 type SharedconnectionConnectionsDefaultApplicationJSONCodeEnum string
 

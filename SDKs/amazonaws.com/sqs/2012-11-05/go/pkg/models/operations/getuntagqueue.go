@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETUntagQueuePathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETUntagQueueActionEnum
 type GETUntagQueueActionEnum string
 
@@ -57,27 +50,22 @@ func (e *GETUntagQueueVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUntagQueueQueryParams struct {
-	Action GETUntagQueueActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// The list of tags to be removed from the specified queue.
-	TagKeys []string                 `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETUntagQueueVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUntagQueueHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETUntagQueueRequest struct {
-	PathParams  GETUntagQueuePathParams
-	QueryParams GETUntagQueueQueryParams
-	Headers     GETUntagQueueHeaders
+	// The AWS account number
+	AccountNumber int64                   `pathParam:"style=simple,explode=false,name=AccountNumber"`
+	Action        GETUntagQueueActionEnum `queryParam:"style=form,explode=true,name=Action"`
+	// The name of the queue
+	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
+	// The list of tags to be removed from the specified queue.
+	TagKeys           []string                 `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETUntagQueueVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUntagQueueResponse struct {

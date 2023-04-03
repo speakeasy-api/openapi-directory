@@ -9,12 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAnonNextPlaybackItemPathParams struct {
-	// The identifier of the source item to base the next to watch item off.
-	//
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
 // GetAnonNextPlaybackItemExpandEnum - If no value is specified no dependencies are expanded.
 //
 // If 'parent' is specified then only the direct parent will be expanded.
@@ -45,7 +39,7 @@ func (e *GetAnonNextPlaybackItemExpandEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAnonNextPlaybackItemQueryParams struct {
+type GetAnonNextPlaybackItemRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// If no value is specified no dependencies are expanded.
@@ -79,6 +73,9 @@ type GetAnonNextPlaybackItemQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the source item to base the next to watch item off.
+	//
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -95,11 +92,6 @@ type GetAnonNextPlaybackItemQueryParams struct {
 	MaxRating *string `queryParam:"style=form,explode=true,name=max_rating"`
 	// The list of segments to filter the response by.
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
-}
-
-type GetAnonNextPlaybackItemRequest struct {
-	PathParams  GetAnonNextPlaybackItemPathParams
-	QueryParams GetAnonNextPlaybackItemQueryParams
 }
 
 type GetAnonNextPlaybackItemResponse struct {

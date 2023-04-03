@@ -8,16 +8,13 @@ import (
 )
 
 type GetCompaniesCompanyIDTerminalProductsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDTerminalProductsPathParams struct {
+type GetCompaniesCompanyIDTerminalProductsRequest struct {
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDTerminalProductsQueryParams struct {
 	// The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US**
 	Country string `queryParam:"style=form,explode=true,name=country"`
 	// The number of products to return.
@@ -26,12 +23,6 @@ type GetCompaniesCompanyIDTerminalProductsQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// The terminal model to return products for. Use the ID returned in the [GET `/terminalModels`](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/companies/{companyId}/terminalModels) response. For example, **Verifone.M400**
 	TerminalModelID *string `queryParam:"style=form,explode=true,name=terminalModelId"`
-}
-
-type GetCompaniesCompanyIDTerminalProductsRequest struct {
-	PathParams  GetCompaniesCompanyIDTerminalProductsPathParams
-	QueryParams GetCompaniesCompanyIDTerminalProductsQueryParams
-	Security    GetCompaniesCompanyIDTerminalProductsSecurity
 }
 
 type GetCompaniesCompanyIDTerminalProductsResponse struct {

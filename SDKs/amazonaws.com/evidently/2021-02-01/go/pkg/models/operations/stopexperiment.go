@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopExperimentPathParams struct {
-	// The name of the experiment to stop.
-	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
-	// The name or ARN of the project that contains the experiment to stop.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type StopExperimentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StopExperimentRequestBodyDesiredStateEnum - Specify whether the experiment is to be considered <code>COMPLETED</code> or <code>CANCELLED</code> after it stops.
 type StopExperimentRequestBodyDesiredStateEnum string
 
@@ -58,9 +41,18 @@ type StopExperimentRequestBody struct {
 }
 
 type StopExperimentRequest struct {
-	PathParams StopExperimentPathParams
-	Headers    StopExperimentHeaders
-	Request    StopExperimentRequestBody `request:"mediaType=application/json"`
+	RequestBody       StopExperimentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the experiment to stop.
+	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
+	// The name or ARN of the project that contains the experiment to stop.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type StopExperimentResponse struct {

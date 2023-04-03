@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AnalyticsStoreIndexPathParams struct {
+type AnalyticsStoreIndexRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type AnalyticsStoreIndexRequest struct {
-	PathParams AnalyticsStoreIndexPathParams
 }
 
 type AnalyticsStoreIndexResponse struct {

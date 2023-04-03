@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMonitorsQueryParams struct {
+type ListMonitorsRequest struct {
 	// The number of monitor objects that you want to return with this call.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The status of a monitor. This includes the status of the data processing for the monitor and the status of the monitor itself.</p> <p>For information about the statuses for a monitor, see <a href="https://docs.aws.amazon.com/internet-monitor/latest/api/API_Monitor.html"> Monitor</a>.</p>
 	MonitorStatus *string `queryParam:"style=form,explode=true,name=MonitorStatus"`
 	// The token for the next set of results. You receive this token from a previous call.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListMonitorsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type ListMonitorsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListMonitorsRequest struct {
-	QueryParams ListMonitorsQueryParams
-	Headers     ListMonitorsHeaders
 }
 
 type ListMonitorsResponse struct {

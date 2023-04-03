@@ -35,14 +35,14 @@ func newCategory(defaultClient, securityClient HTTPClient, serverURL, language, 
 // List categories
 func (s *category) CategoriesAll(ctx context.Context, request operations.CategoriesAllRequest) (*operations.CategoriesAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,7 +84,7 @@ func (s *category) CategoriesAll(ctx context.Context, request operations.Categor
 // Get category
 func (s *category) CategoriesOne(ctx context.Context, request operations.CategoriesOneRequest) (*operations.CategoriesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,14 +129,14 @@ func (s *category) CategoriesOne(ctx context.Context, request operations.Categor
 // List category listings
 func (s *category) CategoryListingsAll(ctx context.Context, request operations.CategoryListingsAllRequest) (*operations.CategoryListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}/listings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}/listings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

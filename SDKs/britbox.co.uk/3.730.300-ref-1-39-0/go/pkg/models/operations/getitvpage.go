@@ -117,7 +117,7 @@ func (e *GetItvPageTextEntryFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetItvPageQueryParams struct {
+type GetItvPageRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -214,10 +214,6 @@ type GetItvPageQueryParams struct {
 	// Converts the value of a text page entry to the specified format.
 	//
 	TextEntryFormat *GetItvPageTextEntryFormatEnum `queryParam:"style=form,explode=true,name=text_entry_format"`
-}
-
-type GetItvPageRequest struct {
-	QueryParams GetItvPageQueryParams
 }
 
 type GetItvPageResponse struct {

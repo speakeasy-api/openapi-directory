@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlayerConnectionStatusPathParams struct {
+type GetPlayerConnectionStatusRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
 	// The unique identifier representing a player.
 	PlayerID string `pathParam:"style=simple,explode=false,name=PlayerId"`
 	// The name of the stage.
-	StageName string `pathParam:"style=simple,explode=false,name=StageName"`
-}
-
-type GetPlayerConnectionStatusHeaders struct {
+	StageName         string  `pathParam:"style=simple,explode=false,name=StageName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type GetPlayerConnectionStatusHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetPlayerConnectionStatusRequest struct {
-	PathParams GetPlayerConnectionStatusPathParams
-	Headers    GetPlayerConnectionStatusHeaders
 }
 
 type GetPlayerConnectionStatusResponse struct {

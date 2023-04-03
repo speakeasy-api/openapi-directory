@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccountAssignmentDeletionStatusQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListAccountAssignmentDeletionStatusXAmzTargetEnum
 type ListAccountAssignmentDeletionStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAccountAssignmentDeletionStatusXAmzTargetEnum) UnmarshalJSON(data [
 	}
 }
 
-type ListAccountAssignmentDeletionStatusHeaders struct {
+type ListAccountAssignmentDeletionStatusRequest struct {
+	ListAccountAssignmentDeletionStatusRequest shared.ListAccountAssignmentDeletionStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAccountAssignmentDeletionStatusHeaders struct {
 	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAccountAssignmentDeletionStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAccountAssignmentDeletionStatusRequest struct {
-	QueryParams ListAccountAssignmentDeletionStatusQueryParams
-	Headers     ListAccountAssignmentDeletionStatusHeaders
-	Request     shared.ListAccountAssignmentDeletionStatusRequest `request:"mediaType=application/json"`
 }
 
 type ListAccountAssignmentDeletionStatusResponse struct {

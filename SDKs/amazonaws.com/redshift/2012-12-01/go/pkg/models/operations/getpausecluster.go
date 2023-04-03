@@ -50,26 +50,18 @@ func (e *GETPauseClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETPauseClusterQueryParams struct {
+type GETPauseClusterRequest struct {
 	Action GETPauseClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the cluster to be paused.
 	ClusterIdentifier string                     `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETPauseClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPauseClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPauseClusterRequest struct {
-	QueryParams GETPauseClusterQueryParams
-	Headers     GETPauseClusterHeaders
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPauseClusterResponse struct {

@@ -50,29 +50,21 @@ func (e *POSTListPlatformBranchesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListPlatformBranchesQueryParams struct {
+type POSTListPlatformBranchesRequest struct {
 	Action POSTListPlatformBranchesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination limit
 	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// Pagination token
-	NextToken *string                             `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTListPlatformBranchesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListPlatformBranchesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTListPlatformBranchesRequest struct {
-	QueryParams POSTListPlatformBranchesQueryParams
-	Headers     POSTListPlatformBranchesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTListPlatformBranchesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListPlatformBranchesResponse struct {

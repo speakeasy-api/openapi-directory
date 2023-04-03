@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsGetDatapointsPathParams struct {
-	// Id of the conversion
-	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
 // ConversionsGetDatapointsStatusEnum - Status of datapoint ("deleted"/"active"/"paused"/"spam")
 type ConversionsGetDatapointsStatusEnum string
 
@@ -68,7 +63,9 @@ func (e *ConversionsGetDatapointsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ConversionsGetDatapointsQueryParams struct {
+type ConversionsGetDatapointsRequest struct {
+	// Id of the conversion
+	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
@@ -85,11 +82,6 @@ type ConversionsGetDatapointsQueryParams struct {
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Type of datapoint ("tl"/"tp")
 	Type *ConversionsGetDatapointsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ConversionsGetDatapointsRequest struct {
-	PathParams  ConversionsGetDatapointsPathParams
-	QueryParams ConversionsGetDatapointsQueryParams
 }
 
 type ConversionsGetDatapointsResponse struct {

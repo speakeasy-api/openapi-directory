@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestEventlogConfigHeaders struct {
+type RequestEventlogConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestEventlogConfigRequest struct {
-	Headers RequestEventlogConfigHeaders
 }
 
 type RequestEventlogConfigResponse struct {

@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveProjectForTaskPathParams struct {
-	// The task to operate on.
-	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
+// RemoveProjectForTaskRequestBody - The project to remove the task from.
+type RemoveProjectForTaskRequestBody struct {
+	Data *shared.TaskRemoveProjectRequest `json:"data,omitempty"`
 }
 
-type RemoveProjectForTaskQueryParams struct {
+type RemoveProjectForTaskRequest struct {
+	// The project to remove the task from.
+	RequestBody RemoveProjectForTaskRequestBody `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type RemoveProjectForTaskQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// RemoveProjectForTaskRequestBody - The project to remove the task from.
-type RemoveProjectForTaskRequestBody struct {
-	Data *shared.TaskRemoveProjectRequest `json:"data,omitempty"`
-}
-
-type RemoveProjectForTaskRequest struct {
-	PathParams  RemoveProjectForTaskPathParams
-	QueryParams RemoveProjectForTaskQueryParams
-	// The project to remove the task from.
-	Request RemoveProjectForTaskRequestBody `request:"mediaType=application/json"`
+	// The task to operate on.
+	TaskGid string `pathParam:"style=simple,explode=false,name=task_gid"`
 }
 
 // RemoveProjectForTask200ApplicationJSON - Successfully removed the specified project from the task.

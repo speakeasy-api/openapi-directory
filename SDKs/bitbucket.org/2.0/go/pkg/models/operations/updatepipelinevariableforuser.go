@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdatePipelineVariableForUserPathParams struct {
+type UpdatePipelineVariableForUserRequest struct {
+	// The updated variable.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
 	// The UUID of the variable.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
-}
-
-type UpdatePipelineVariableForUserRequest struct {
-	PathParams UpdatePipelineVariableForUserPathParams
-	// The updated variable.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdatePipelineVariableForUserResponse struct {

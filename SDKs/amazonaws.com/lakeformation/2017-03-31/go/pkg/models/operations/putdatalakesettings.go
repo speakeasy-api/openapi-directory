@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutDataLakeSettingsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutDataLakeSettingsRequestBodyDataLakeSettings - A structure representing a list of Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions.
 type PutDataLakeSettingsRequestBodyDataLakeSettings struct {
 	AllowExternalDataFiltering       *bool                         `json:"AllowExternalDataFiltering,omitempty"`
@@ -37,8 +27,14 @@ type PutDataLakeSettingsRequestBody struct {
 }
 
 type PutDataLakeSettingsRequest struct {
-	Headers PutDataLakeSettingsHeaders
-	Request PutDataLakeSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutDataLakeSettingsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutDataLakeSettingsResponse struct {

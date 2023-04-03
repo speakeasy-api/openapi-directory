@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostAssignmentsRequest struct {
-	// Assignment object to be created
-	Request shared.AssignmentSubmission `request:"mediaType=application/json"`
-}
-
 type PostAssignmentsResponse struct {
 	// Assignment created
 	Assignment  *shared.Assignment

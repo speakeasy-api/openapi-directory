@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEnvironmentPathParams struct {
+type CreateEnvironmentRequest struct {
+	CreateEnvironmentModel shared.CreateEnvironmentModel `request:"mediaType=application/json"`
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type CreateEnvironmentRequest struct {
-	PathParams CreateEnvironmentPathParams
-	Request    shared.CreateEnvironmentModel `request:"mediaType=application/json"`
 }
 
 type CreateEnvironmentResponse struct {

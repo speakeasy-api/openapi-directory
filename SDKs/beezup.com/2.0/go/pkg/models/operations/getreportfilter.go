@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportFilterPathParams struct {
+type GetReportFilterRequest struct {
 	// Your report filter identifier
 	ReportFilterID string `pathParam:"style=simple,explode=false,name=reportFilterId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetReportFilterRequest struct {
-	PathParams GetReportFilterPathParams
 }
 
 type GetReportFilterResponse struct {

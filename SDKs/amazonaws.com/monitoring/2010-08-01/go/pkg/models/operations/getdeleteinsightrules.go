@@ -50,26 +50,18 @@ func (e *GETDeleteInsightRulesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteInsightRulesQueryParams struct {
+type GETDeleteInsightRulesRequest struct {
 	Action GETDeleteInsightRulesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An array of the rule names to delete. If you need to find out the names of your rules, use <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeInsightRules.html">DescribeInsightRules</a>.
-	RuleNames []string                         `queryParam:"style=form,explode=true,name=RuleNames"`
-	Version   GETDeleteInsightRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteInsightRulesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteInsightRulesRequest struct {
-	QueryParams GETDeleteInsightRulesQueryParams
-	Headers     GETDeleteInsightRulesHeaders
+	RuleNames         []string                         `queryParam:"style=form,explode=true,name=RuleNames"`
+	Version           GETDeleteInsightRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteInsightRulesResponse struct {

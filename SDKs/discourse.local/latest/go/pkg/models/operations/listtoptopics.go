@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type ListTopTopicsQueryParams struct {
-	// Enum: `all`, `yearly`, `quarterly`, `monthly`, `weekly`, `daily`
-	Period *string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type ListTopTopicsHeaders struct {
+type ListTopTopicsRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type ListTopTopicsRequest struct {
-	QueryParams ListTopTopicsQueryParams
-	Headers     ListTopTopicsHeaders
+	// Enum: `all`, `yearly`, `quarterly`, `monthly`, `weekly`, `daily`
+	Period *string `queryParam:"style=form,explode=true,name=period"`
 }
 
 type ListTopTopics200ApplicationJSONTopicListTopicsPosters struct {

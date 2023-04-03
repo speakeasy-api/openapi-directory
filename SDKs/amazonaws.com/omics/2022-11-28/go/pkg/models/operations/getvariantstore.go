@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVariantStorePathParams struct {
-	// The store's name.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetVariantStoreHeaders struct {
+type GetVariantStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetVariantStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetVariantStoreRequest struct {
-	PathParams GetVariantStorePathParams
-	Headers    GetVariantStoreHeaders
+	// The store's name.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetVariantStoreResponse struct {

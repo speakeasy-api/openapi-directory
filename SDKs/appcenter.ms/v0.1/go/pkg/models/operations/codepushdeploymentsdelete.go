@@ -4,26 +4,20 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CodePushDeploymentsDeleteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CodePushDeploymentsDeletePathParams struct {
+type CodePushDeploymentsDeleteRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// deployment name
 	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CodePushDeploymentsDeleteRequest struct {
-	PathParams CodePushDeploymentsDeletePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
-	Security   CodePushDeploymentsDeleteSecurity
 }
 
 // CodePushDeploymentsDeleteDefaultApplicationJSON - Error

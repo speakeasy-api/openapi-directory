@@ -41,16 +41,16 @@ func newBranchRestrictions(defaultClient, securityClient HTTPClient, serverURL, 
 
 // DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Delete a branch restriction rule
 // Deletes an existing branch restriction rule.
-func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
+func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,20 +92,20 @@ func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictio
 // GetRepositoriesWorkspaceRepoSlugBranchRestrictions - List branch restrictions
 // Returns a paginated list of all branch restrictions on the
 // repository.
-func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
+func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, security operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,16 +155,16 @@ func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(
 
 // GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Get a branch restriction rule
 // Returns a specific branch restriction rule.
-func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
+func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,11 +253,11 @@ func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsI
 //
 // Note that branch restrictions with overlapping matchers is allowed,
 // but the resulting behavior may be surprising.
-func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
+func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, security operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -272,7 +272,7 @@ func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -326,11 +326,11 @@ func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions
 // Fields not present in the request body are ignored.
 //
 // See [`POST`](/cloud/bitbucket/rest/api-group-branch-restrictions/#api-repositories-workspace-repo-slug-branch-restrictions-post) for details.
-func (s *branchRestrictions) PutRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
+func (s *branchRestrictions) PutRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -345,7 +345,7 @@ func (s *branchRestrictions) PutRepositoriesWorkspaceRepoSlugBranchRestrictionsI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

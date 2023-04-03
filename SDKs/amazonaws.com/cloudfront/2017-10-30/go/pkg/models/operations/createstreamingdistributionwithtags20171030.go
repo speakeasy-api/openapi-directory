@@ -9,6 +9,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// CreateStreamingDistributionWithTags20171030RequestBodyStreamingDistributionConfigWithTags - A streaming distribution Configuration and a list of tags to be associated with the streaming distribution.
+type CreateStreamingDistributionWithTags20171030RequestBodyStreamingDistributionConfigWithTags struct {
+	StreamingDistributionConfig *shared.StreamingDistributionConfig
+	Tags                        *shared.Tags
+}
+
+type CreateStreamingDistributionWithTags20171030RequestBody struct {
+	// A streaming distribution Configuration and a list of tags to be associated with the streaming distribution.
+	StreamingDistributionConfigWithTags CreateStreamingDistributionWithTags20171030RequestBodyStreamingDistributionConfigWithTags
+}
+
 // CreateStreamingDistributionWithTags20171030WithTagsEnum
 type CreateStreamingDistributionWithTags20171030WithTagsEnum string
 
@@ -30,35 +41,16 @@ func (e *CreateStreamingDistributionWithTags20171030WithTagsEnum) UnmarshalJSON(
 	}
 }
 
-type CreateStreamingDistributionWithTags20171030QueryParams struct {
-	WithTags CreateStreamingDistributionWithTags20171030WithTagsEnum `queryParam:"style=form,explode=true,name=WithTags"`
-}
-
-type CreateStreamingDistributionWithTags20171030Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// CreateStreamingDistributionWithTags20171030RequestBodyStreamingDistributionConfigWithTags - A streaming distribution Configuration and a list of tags to be associated with the streaming distribution.
-type CreateStreamingDistributionWithTags20171030RequestBodyStreamingDistributionConfigWithTags struct {
-	StreamingDistributionConfig *shared.StreamingDistributionConfig
-	Tags                        *shared.Tags
-}
-
-type CreateStreamingDistributionWithTags20171030RequestBody struct {
-	// A streaming distribution Configuration and a list of tags to be associated with the streaming distribution.
-	StreamingDistributionConfigWithTags CreateStreamingDistributionWithTags20171030RequestBodyStreamingDistributionConfigWithTags
-}
-
 type CreateStreamingDistributionWithTags20171030Request struct {
-	QueryParams CreateStreamingDistributionWithTags20171030QueryParams
-	Headers     CreateStreamingDistributionWithTags20171030Headers
-	Request     []byte `request:"mediaType=text/xml"`
+	RequestBody       []byte                                                  `request:"mediaType=text/xml"`
+	WithTags          CreateStreamingDistributionWithTags20171030WithTagsEnum `queryParam:"style=form,explode=true,name=WithTags"`
+	XAmzAlgorithm     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateStreamingDistributionWithTags20171030Response struct {

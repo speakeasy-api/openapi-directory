@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StromkontoChoicesQueryParams struct {
+type StromkontoChoicesRequest struct {
 	// Ethereum style address referencing a valid account alias (never use Stromkonto directly!).
 	Account *string `queryParam:"style=form,explode=true,name=account"`
-}
-
-type StromkontoChoicesRequest struct {
-	QueryParams StromkontoChoicesQueryParams
 }
 
 type StromkontoChoicesResponse struct {

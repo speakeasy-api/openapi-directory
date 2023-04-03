@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProjectsQueryParams struct {
-	//  Maximum number of records to list in a single response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  Pagination token. Set to null to start listing projects from start. If non-null pagination token is returned in a result, then pass its value in here in another request to list more projects.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListProjectsHeaders struct {
+type ListProjectsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListProjectsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProjectsRequest struct {
-	QueryParams ListProjectsQueryParams
-	Headers     ListProjectsHeaders
+	//  Maximum number of records to list in a single response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  Pagination token. Set to null to start listing projects from start. If non-null pagination token is returned in a result, then pass its value in here in another request to list more projects.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListProjectsResponse struct {

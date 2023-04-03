@@ -8,24 +8,15 @@ import (
 )
 
 type GetCompaniesCompanyIDTerminalLogosSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCompaniesCompanyIDTerminalLogosPathParams struct {
-	// The unique identifier of the company account.
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDTerminalLogosQueryParams struct {
-	// The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
-	Model string `queryParam:"style=form,explode=true,name=model"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetCompaniesCompanyIDTerminalLogosRequest struct {
-	PathParams  GetCompaniesCompanyIDTerminalLogosPathParams
-	QueryParams GetCompaniesCompanyIDTerminalLogosQueryParams
-	Security    GetCompaniesCompanyIDTerminalLogosSecurity
+	// The unique identifier of the company account.
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	// The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
+	Model string `queryParam:"style=form,explode=true,name=model"`
 }
 
 type GetCompaniesCompanyIDTerminalLogosResponse struct {

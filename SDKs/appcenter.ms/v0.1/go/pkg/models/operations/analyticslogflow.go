@@ -6,30 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type AnalyticsLogFlowSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AnalyticsLogFlowPathParams struct {
+type AnalyticsLogFlowRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AnalyticsLogFlowQueryParams struct {
 	// Start date time in data in ISO 8601 date time format. It must be within the current day in the UTC timezone. The default value is the start time of the current day in UTC timezone.
 	Start *time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type AnalyticsLogFlowRequest struct {
-	PathParams  AnalyticsLogFlowPathParams
-	QueryParams AnalyticsLogFlowQueryParams
-	Security    AnalyticsLogFlowSecurity
 }
 
 type AnalyticsLogFlowDefaultApplicationJSONErrorCodeEnum string

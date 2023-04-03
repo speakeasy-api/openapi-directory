@@ -78,7 +78,7 @@ func (e *GETDescribeAlarmsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeAlarmsQueryParams struct {
+type GETDescribeAlarmsRequest struct {
 	Action GETDescribeAlarmsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Use this parameter to filter the results of the operation to only those alarms that use a certain alarm action. For example, you could specify the ARN of an SNS topic to find all alarms that send notifications to that topic.
 	ActionPrefix *string `queryParam:"style=form,explode=true,name=ActionPrefix"`
@@ -97,23 +97,15 @@ type GETDescribeAlarmsQueryParams struct {
 	// <p>If you use this parameter and specify the name of a metric or composite alarm, the operation returns information about the "parent" alarms of the alarm you specify. These are the composite alarms that have <code>AlarmRule</code> parameters that reference the alarm named in <code>ParentsOfAlarmName</code>. Information about the alarm that you specify in <code>ParentsOfAlarmName</code> is not returned.</p> <p>If you specify <code>ParentsOfAlarmName</code>, you cannot specify any other parameters in the request except for <code>MaxRecords</code> and <code>NextToken</code>. If you do so, you receive a validation error.</p> <note> <p>Only the Alarm Name and ARN are returned by this operation when you use this parameter. To get complete information about these alarms, perform another <code>DescribeAlarms</code> operation and specify the parent alarm names in the <code>AlarmNames</code> parameter.</p> </note>
 	ParentsOfAlarmName *string `queryParam:"style=form,explode=true,name=ParentsOfAlarmName"`
 	// Specify this parameter to receive information only about alarms that are currently in the state that you specify.
-	StateValue *GETDescribeAlarmsStateValueEnum `queryParam:"style=form,explode=true,name=StateValue"`
-	Version    GETDescribeAlarmsVersionEnum     `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAlarmsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAlarmsRequest struct {
-	QueryParams GETDescribeAlarmsQueryParams
-	Headers     GETDescribeAlarmsHeaders
+	StateValue        *GETDescribeAlarmsStateValueEnum `queryParam:"style=form,explode=true,name=StateValue"`
+	Version           GETDescribeAlarmsVersionEnum     `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAlarmsResponse struct {

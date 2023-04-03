@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddRoomGuestUsersPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type AddRoomGuestUsersHeaders struct {
+type AddRoomGuestUsersRequest struct {
+	RoomGuestUserAddRequest shared.RoomGuestUserAddRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type AddRoomGuestUsersRequest struct {
-	PathParams AddRoomGuestUsersPathParams
-	Headers    AddRoomGuestUsersHeaders
-	Request    shared.RoomGuestUserAddRequest `request:"mediaType=application/json"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type AddRoomGuestUsersResponse struct {

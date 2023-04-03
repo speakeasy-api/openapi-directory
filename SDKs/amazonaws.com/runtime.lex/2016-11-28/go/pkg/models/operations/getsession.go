@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSessionPathParams struct {
-	// The alias in use for the bot that contains the session data.
-	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
-	// The name of the bot that contains the session data.
-	BotName string `pathParam:"style=simple,explode=false,name=botName"`
-	// The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type GetSessionQueryParams struct {
-	// <p>A string used to filter the intents returned in the <code>recentIntentSummaryView</code> structure. </p> <p>When you specify a filter, only intents with their <code>checkpointLabel</code> field set to that string are returned.</p>
-	CheckpointLabelFilter *string `queryParam:"style=form,explode=true,name=checkpointLabelFilter"`
-}
-
-type GetSessionHeaders struct {
+type GetSessionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type GetSessionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSessionRequest struct {
-	PathParams  GetSessionPathParams
-	QueryParams GetSessionQueryParams
-	Headers     GetSessionHeaders
+	// The alias in use for the bot that contains the session data.
+	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
+	// The name of the bot that contains the session data.
+	BotName string `pathParam:"style=simple,explode=false,name=botName"`
+	// <p>A string used to filter the intents returned in the <code>recentIntentSummaryView</code> structure. </p> <p>When you specify a filter, only intents with their <code>checkpointLabel</code> field set to that string are returned.</p>
+	CheckpointLabelFilter *string `queryParam:"style=form,explode=true,name=checkpointLabelFilter"`
+	// The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type GetSessionResponse struct {

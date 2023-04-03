@@ -13,46 +13,42 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateApplicationRequest{
-        Headers: operations.CreateApplicationHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "EC2WindowsBarleyService.CreateApplication",
-        },
-        Request: shared.CreateApplicationRequest{
+        CreateApplicationRequest: shared.CreateApplicationRequest{
             AutoConfigEnabled: false,
             AutoCreate: false,
             CWEMonitorEnabled: false,
             GroupingType: "ACCOUNT_BASED",
             OpsCenterEnabled: false,
-            OpsItemSNSTopicArn: "illum",
-            ResourceGroupName: "vel",
+            OpsItemSNSTopicArn: "corrupti",
+            ResourceGroupName: "provident",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "deserunt",
-                    Value: "suscipit",
+                    Key: "quibusdam",
+                    Value: "unde",
                 },
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "illum",
+                    Value: "vel",
                 },
             },
         },
+        XAmzAlgorithm: "error",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "suscipit",
+        XAmzDate: "iure",
+        XAmzSecurityToken: "magnam",
+        XAmzSignature: "debitis",
+        XAmzSignedHeaders: "ipsa",
+        XAmzTarget: "EC2WindowsBarleyService.CreateApplication",
     }
 
     ctx := context.Background()

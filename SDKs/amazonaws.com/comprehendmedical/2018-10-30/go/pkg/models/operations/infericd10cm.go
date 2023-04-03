@@ -30,20 +30,16 @@ func (e *InferIcd10CMXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type InferIcd10CMHeaders struct {
-	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        InferIcd10CMXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type InferIcd10CMRequest struct {
-	Headers InferIcd10CMHeaders
-	Request shared.InferIcd10CMRequest `request:"mediaType=application/json"`
+	InferIcd10CMRequest shared.InferIcd10CMRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm       *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget          InferIcd10CMXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type InferIcd10CMResponse struct {

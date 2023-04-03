@@ -50,26 +50,18 @@ func (e *GETDeleteDBClusterParameterGroupVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDeleteDBClusterParameterGroupQueryParams struct {
+type GETDeleteDBClusterParameterGroupRequest struct {
 	Action GETDeleteDBClusterParameterGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the DB cluster parameter group.</p> <p>Constraints:</p> <ul> <li> <p>Must be the name of an existing DB cluster parameter group.</p> </li> <li> <p>You can't delete a default DB cluster parameter group.</p> </li> <li> <p>Cannot be associated with any DB clusters.</p> </li> </ul>
 	DBClusterParameterGroupName string                                      `queryParam:"style=form,explode=true,name=DBClusterParameterGroupName"`
 	Version                     GETDeleteDBClusterParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBClusterParameterGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBClusterParameterGroupRequest struct {
-	QueryParams GETDeleteDBClusterParameterGroupQueryParams
-	Headers     GETDeleteDBClusterParameterGroupHeaders
+	XAmzAlgorithm               *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBClusterParameterGroupResponse struct {

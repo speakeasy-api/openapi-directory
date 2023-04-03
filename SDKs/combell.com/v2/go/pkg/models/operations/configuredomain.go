@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureDomainPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ConfigureDomainQueryParams struct {
-	// The domain name
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ConfigureDomainRequest struct {
-	PathParams  ConfigureDomainPathParams
-	QueryParams ConfigureDomainQueryParams
 	// Contains the domain renew information
-	Request *shared.EditDomainWillRenewRequest `request:"mediaType=application/json"`
+	EditDomainWillRenewRequest *shared.EditDomainWillRenewRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The domain name
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ConfigureDomainResponse struct {

@@ -81,7 +81,6 @@ pkg/models/shared/credential.go
 pkg/models/shared/authority.go
 pkg/models/shared/user.go
 pkg/models/shared/client.go
-pkg/models/shared/security.go
 pkg/models/shared/contribution.go
 pkg/models/shared/via.go
 pkg/models/shared/moderationhistoryitem.go

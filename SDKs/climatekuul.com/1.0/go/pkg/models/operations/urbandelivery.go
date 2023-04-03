@@ -29,11 +29,6 @@ type UrbanDeliveryRequestBody struct {
 	VehicleType string `form:"name=vehicle_type"`
 }
 
-type UrbanDeliveryRequest struct {
-	Request   *UrbanDeliveryRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type UrbanDeliveryResponse struct {
 	ContentType string
 	StatusCode  int

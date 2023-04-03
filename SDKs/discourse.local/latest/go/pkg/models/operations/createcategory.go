@@ -19,10 +19,6 @@ type CreateCategoryRequestBody struct {
 	TopicFeaturedLinksAllowed *bool                  `json:"topic_featured_links_allowed,omitempty"`
 }
 
-type CreateCategoryRequest struct {
-	Request *CreateCategoryRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateCategory200ApplicationJSONCategoryGroupPermissions struct {
 	GroupName      string `json:"group_name"`
 	PermissionType int64  `json:"permission_type"`

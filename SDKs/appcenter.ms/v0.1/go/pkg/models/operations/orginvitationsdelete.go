@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrgInvitationsDeleteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrgInvitationsDeletePathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // OrgInvitationsDeleteRequestBody - The email of the user whose invitation should be removed
@@ -25,10 +19,10 @@ type OrgInvitationsDeleteRequestBody struct {
 }
 
 type OrgInvitationsDeleteRequest struct {
-	PathParams OrgInvitationsDeletePathParams
 	// The email of the user whose invitation should be removed
-	Request  OrgInvitationsDeleteRequestBody `request:"mediaType=application/json"`
-	Security OrgInvitationsDeleteSecurity
+	RequestBody OrgInvitationsDeleteRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrgInvitationsDeleteDefaultApplicationJSONErrorCodeEnum string

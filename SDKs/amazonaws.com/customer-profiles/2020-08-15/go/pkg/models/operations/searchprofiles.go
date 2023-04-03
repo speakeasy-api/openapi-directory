@@ -9,28 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchProfilesPathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type SearchProfilesQueryParams struct {
-	// <p>The maximum number of objects returned per page.</p> <p>The default is 20 if this parameter is not included in the request.</p>
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
-	// The pagination token from the previous SearchProfiles API call.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-}
-
-type SearchProfilesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SearchProfilesRequestBodyLogicalOperatorEnum - <p>Relationship between all specified search keys that will be used to search for profiles. This includes the required <code>KeyName</code> and <code>Values</code> parameters as well as any key-value(s) pairs specified in the <code>AdditionalSearchKeys</code> list.</p> <p>This parameter influences which profiles will be returned in the response in the following manner:</p> <ul> <li> <p> <code>AND</code> - The response only includes profiles that match all of the search keys.</p> </li> <li> <p> <code>OR</code> - The response includes profiles that match at least one of the search keys.</p> </li> </ul> <p>The <code>OR</code> relationship is the default behavior if this parameter is not included in the request.</p>
 type SearchProfilesRequestBodyLogicalOperatorEnum string
 
@@ -67,10 +45,20 @@ type SearchProfilesRequestBody struct {
 }
 
 type SearchProfilesRequest struct {
-	PathParams  SearchProfilesPathParams
-	QueryParams SearchProfilesQueryParams
-	Headers     SearchProfilesHeaders
-	Request     SearchProfilesRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName        string                    `pathParam:"style=simple,explode=false,name=DomainName"`
+	RequestBody       SearchProfilesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>The maximum number of objects returned per page.</p> <p>The default is 20 if this parameter is not included in the request.</p>
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
+	// The pagination token from the previous SearchProfiles API call.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
 }
 
 type SearchProfilesResponse struct {

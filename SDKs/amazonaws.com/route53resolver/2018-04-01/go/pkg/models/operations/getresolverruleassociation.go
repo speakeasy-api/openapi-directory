@@ -30,20 +30,16 @@ func (e *GetResolverRuleAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetResolverRuleAssociationHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetResolverRuleAssociationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetResolverRuleAssociationRequest struct {
-	Headers GetResolverRuleAssociationHeaders
-	Request shared.GetResolverRuleAssociationRequest `request:"mediaType=application/json"`
+	GetResolverRuleAssociationRequest shared.GetResolverRuleAssociationRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                 *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                        GetResolverRuleAssociationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetResolverRuleAssociationResponse struct {

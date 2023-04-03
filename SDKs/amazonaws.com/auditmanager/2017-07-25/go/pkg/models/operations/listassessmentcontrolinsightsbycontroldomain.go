@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssessmentControlInsightsByControlDomainQueryParams struct {
+type ListAssessmentControlInsightsByControlDomainRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The unique identifier for the active assessment.
 	AssessmentID string `queryParam:"style=form,explode=true,name=assessmentId"`
 	// The unique identifier for the control domain.
@@ -16,21 +23,6 @@ type ListAssessmentControlInsightsByControlDomainQueryParams struct {
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// The pagination token that's used to fetch the next set of results.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAssessmentControlInsightsByControlDomainHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssessmentControlInsightsByControlDomainRequest struct {
-	QueryParams ListAssessmentControlInsightsByControlDomainQueryParams
-	Headers     ListAssessmentControlInsightsByControlDomainHeaders
 }
 
 type ListAssessmentControlInsightsByControlDomainResponse struct {

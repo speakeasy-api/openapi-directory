@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteMailboxPathParams struct {
-	// Automatically added
-	MailboxName string `pathParam:"style=simple,explode=false,name=mailboxName"`
-}
-
-type DeleteMailboxQueryParams struct {
-	// Mailbox name.
-	MailboxName string `queryParam:"style=form,explode=true,name=mailbox_name"`
-}
-
 type DeleteMailboxRequest struct {
-	PathParams  DeleteMailboxPathParams
-	QueryParams DeleteMailboxQueryParams
+	// Automatically added
+	MailboxNamePathParameter string `pathParam:"style=simple,explode=false,name=mailboxName"`
+	// Mailbox name.
+	MailboxNameQueryParameter string `queryParam:"style=form,explode=true,name=mailbox_name"`
 }
 
 type DeleteMailboxResponse struct {

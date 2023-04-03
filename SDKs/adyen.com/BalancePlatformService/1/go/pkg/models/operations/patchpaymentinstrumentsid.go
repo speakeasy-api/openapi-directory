@@ -8,19 +8,14 @@ import (
 )
 
 type PatchPaymentInstrumentsIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchPaymentInstrumentsIDPathParams struct {
-	// The unique identifier of the payment instrument.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchPaymentInstrumentsIDRequest struct {
-	PathParams PatchPaymentInstrumentsIDPathParams
-	Request    *shared.PaymentInstrumentUpdateRequest `request:"mediaType=application/json"`
-	Security   PatchPaymentInstrumentsIDSecurity
+	PaymentInstrumentUpdateRequest *shared.PaymentInstrumentUpdateRequest `request:"mediaType=application/json"`
+	// The unique identifier of the payment instrument.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchPaymentInstrumentsIDResponse struct {

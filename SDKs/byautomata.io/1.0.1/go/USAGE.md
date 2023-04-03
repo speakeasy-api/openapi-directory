@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetContentproSearchRequest{
-        QueryParams: operations.GetContentproSearchQueryParams{
-            Terms: "corrupti",
-        },
+        Terms: "corrupti",
     }
 
     ctx := context.Background()

@@ -279,7 +279,6 @@ pkg/models/operations/taskspartialupdate.go
 pkg/models/operations/tasksread.go
 pkg/models/operations/tasksupdate.go
 pkg/models/shared/doctor.go
-pkg/models/shared/security.go
 pkg/models/shared/userprofilesgroup.go
 pkg/models/shared/userprofile.go
 pkg/models/shared/billingprofile.go

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteOutpostPathParams struct {
+type DeleteOutpostRequest struct {
 	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
-	OutpostID string `pathParam:"style=simple,explode=false,name=OutpostId"`
-}
-
-type DeleteOutpostHeaders struct {
+	OutpostID         string  `pathParam:"style=simple,explode=false,name=OutpostId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteOutpostHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteOutpostRequest struct {
-	PathParams DeleteOutpostPathParams
-	Headers    DeleteOutpostHeaders
 }
 
 type DeleteOutpostResponse struct {

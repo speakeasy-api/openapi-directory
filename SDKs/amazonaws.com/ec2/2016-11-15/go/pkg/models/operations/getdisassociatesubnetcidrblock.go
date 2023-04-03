@@ -50,26 +50,18 @@ func (e *GETDisassociateSubnetCidrBlockVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDisassociateSubnetCidrBlockQueryParams struct {
+type GETDisassociateSubnetCidrBlockRequest struct {
 	Action GETDisassociateSubnetCidrBlockActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The association ID for the CIDR block.
-	AssociationID string                                    `queryParam:"style=form,explode=true,name=AssociationId"`
-	Version       GETDisassociateSubnetCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateSubnetCidrBlockHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateSubnetCidrBlockRequest struct {
-	QueryParams GETDisassociateSubnetCidrBlockQueryParams
-	Headers     GETDisassociateSubnetCidrBlockHeaders
+	AssociationID     string                                    `queryParam:"style=form,explode=true,name=AssociationId"`
+	Version           GETDisassociateSubnetCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateSubnetCidrBlockResponse struct {

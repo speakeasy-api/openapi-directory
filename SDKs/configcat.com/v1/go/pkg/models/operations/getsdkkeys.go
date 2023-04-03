@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSDKKeysPathParams struct {
+type GetSDKKeysRequest struct {
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
-}
-
-type GetSDKKeysRequest struct {
-	PathParams GetSDKKeysPathParams
 }
 
 type GetSDKKeysResponse struct {

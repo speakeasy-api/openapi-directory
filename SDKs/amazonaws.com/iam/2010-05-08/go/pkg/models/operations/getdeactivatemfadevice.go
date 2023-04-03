@@ -50,28 +50,20 @@ func (e *GETDeactivateMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeactivateMFADeviceQueryParams struct {
+type GETDeactivateMFADeviceRequest struct {
 	Action GETDeactivateMFADeviceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@:/-</p>
 	SerialNumber string `queryParam:"style=form,explode=true,name=SerialNumber"`
 	// <p>The name of the user whose MFA device you want to deactivate.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                            `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETDeactivateMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeactivateMFADeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeactivateMFADeviceRequest struct {
-	QueryParams GETDeactivateMFADeviceQueryParams
-	Headers     GETDeactivateMFADeviceHeaders
+	UserName          string                            `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETDeactivateMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeactivateMFADeviceResponse struct {

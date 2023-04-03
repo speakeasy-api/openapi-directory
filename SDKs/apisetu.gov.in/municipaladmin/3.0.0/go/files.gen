@@ -17,5 +17,4 @@ pkg/models/operations/tapcn.go
 pkg/models/operations/tdlcs.go
 pkg/models/operations/ugdcn.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

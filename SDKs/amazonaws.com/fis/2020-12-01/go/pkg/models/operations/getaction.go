@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetActionPathParams struct {
-	// The ID of the action.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetActionHeaders struct {
+type GetActionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetActionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetActionRequest struct {
-	PathParams GetActionPathParams
-	Headers    GetActionHeaders
+	// The ID of the action.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetActionResponse struct {

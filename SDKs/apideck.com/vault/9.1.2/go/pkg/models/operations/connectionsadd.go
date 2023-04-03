@@ -8,29 +8,20 @@ import (
 )
 
 type ConnectionsAddSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectionsAddPathParams struct {
+type ConnectionsAddRequest struct {
+	// Fields that need to be persisted on the resource
+	ConnectionInput shared.ConnectionInput `request:"mediaType=application/json"`
 	// Service ID of the resource to return
 	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
 	// Unified API
 	UnifiedAPI string `pathParam:"style=simple,explode=false,name=unified_api"`
-}
-
-type ConnectionsAddHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
-}
-
-type ConnectionsAddRequest struct {
-	PathParams ConnectionsAddPathParams
-	Headers    ConnectionsAddHeaders
-	// Fields that need to be persisted on the resource
-	Request  shared.ConnectionInput `request:"mediaType=application/json"`
-	Security ConnectionsAddSecurity
 }
 
 type ConnectionsAddResponse struct {

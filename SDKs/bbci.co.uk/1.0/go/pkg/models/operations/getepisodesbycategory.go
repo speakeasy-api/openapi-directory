@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEpisodesByCategoryPathParams struct {
-	// The category identifier to return results from.
-	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
 // GetEpisodesByCategorySortEnum - The sort order of the results.
 type GetEpisodesByCategorySortEnum string
 
@@ -38,9 +33,11 @@ func (e *GetEpisodesByCategorySortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEpisodesByCategoryQueryParams struct {
+type GetEpisodesByCategoryRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The category identifier to return results from.
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// The page index.
@@ -51,11 +48,6 @@ type GetEpisodesByCategoryQueryParams struct {
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
 	// The sort order of the results.
 	Sort *GetEpisodesByCategorySortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetEpisodesByCategoryRequest struct {
-	PathParams  GetEpisodesByCategoryPathParams
-	QueryParams GetEpisodesByCategoryQueryParams
 }
 
 type GetEpisodesByCategoryResponse struct {

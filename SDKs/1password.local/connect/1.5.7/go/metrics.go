@@ -34,10 +34,20 @@ func newMetrics(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetPrometheusMetrics - Query server for exposed Prometheus metrics
 // See Prometheus documentation for a complete data model.
-func (s *metrics) GetPrometheusMetrics(ctx context.Context, request operations.GetPrometheusMetricsRequest) (*operations.GetPrometheusMetricsResponse, error) {
+func (s *metrics) GetPrometheusMetrics(ctx context.Context, opts ...operations.Option) (*operations.GetPrometheusMetricsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetPrometheusMetricsServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/metrics"

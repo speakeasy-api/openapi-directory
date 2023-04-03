@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type QuittungTSEDataQueryParams struct {
+type QuittungTSEDataRequest struct {
 	// Quittung Identifier  (serialnumber generated during receipt generation process)
 	Account *string `queryParam:"style=form,explode=true,name=account"`
-}
-
-type QuittungTSEDataRequest struct {
-	QueryParams QuittungTSEDataQueryParams
 }
 
 type QuittungTSEDataResponse struct {

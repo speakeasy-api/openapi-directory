@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeviceIdentifierPathParams struct {
-	// The Amazon Resource Name (ARN) of the device identifier.
-	DeviceIdentifierArn string `pathParam:"style=simple,explode=false,name=deviceIdentifierArn"`
-}
-
-type GetDeviceIdentifierHeaders struct {
+type GetDeviceIdentifierRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetDeviceIdentifierHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDeviceIdentifierRequest struct {
-	PathParams GetDeviceIdentifierPathParams
-	Headers    GetDeviceIdentifierHeaders
+	// The Amazon Resource Name (ARN) of the device identifier.
+	DeviceIdentifierArn string `pathParam:"style=simple,explode=false,name=deviceIdentifierArn"`
 }
 
 type GetDeviceIdentifierResponse struct {

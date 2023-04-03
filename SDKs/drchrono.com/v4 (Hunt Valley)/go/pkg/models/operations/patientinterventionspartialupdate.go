@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PatientInterventionsPartialUpdateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PatientInterventionsPartialUpdatePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatientInterventionsPartialUpdateQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatientInterventionsPartialUpdateRequest struct {
-	PathParams  PatientInterventionsPartialUpdatePathParams
-	QueryParams PatientInterventionsPartialUpdateQueryParams
-	Security    PatientInterventionsPartialUpdateSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID      string `pathParam:"style=simple,explode=false,name=id"`
+	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
 }
 
 type PatientInterventionsPartialUpdateResponse struct {

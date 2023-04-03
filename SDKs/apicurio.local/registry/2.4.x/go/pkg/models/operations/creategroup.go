@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGroupRequest struct {
-	Request shared.CreateGroupMetaData `request:"mediaType=application/json"`
-}
-
 type CreateGroupResponse struct {
 	ContentType string
 	// Common response used when an input conflicts with existing data.

@@ -30,20 +30,16 @@ func (e *DeleteVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type DeleteVirtualInterfaceHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteVirtualInterfaceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteVirtualInterfaceRequest struct {
-	Headers DeleteVirtualInterfaceHeaders
-	Request shared.DeleteVirtualInterfaceRequest `request:"mediaType=application/json"`
+	DeleteVirtualInterfaceRequest shared.DeleteVirtualInterfaceRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    DeleteVirtualInterfaceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteVirtualInterfaceResponse struct {

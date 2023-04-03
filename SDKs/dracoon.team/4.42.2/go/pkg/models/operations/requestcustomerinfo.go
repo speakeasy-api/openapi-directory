@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestCustomerInfoHeaders struct {
+type RequestCustomerInfoRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestCustomerInfoRequest struct {
-	Headers RequestCustomerInfoHeaders
 }
 
 type RequestCustomerInfoResponse struct {

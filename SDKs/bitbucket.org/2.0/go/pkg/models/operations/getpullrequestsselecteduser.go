@@ -10,16 +10,9 @@ import (
 )
 
 type GetPullrequestsSelectedUserSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetPullrequestsSelectedUserPathParams struct {
-	// This can either be the username of the pull request author, the author's UUID
-	// surrounded by curly-braces, for example: `{account UUID}`, or the author's Atlassian ID.
-	//
-	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetPullrequestsSelectedUserStateEnum - Only return pull requests that are in this state. This parameter can be repeated.
@@ -52,15 +45,13 @@ func (e *GetPullrequestsSelectedUserStateEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetPullrequestsSelectedUserQueryParams struct {
+type GetPullrequestsSelectedUserRequest struct {
+	// This can either be the username of the pull request author, the author's UUID
+	// surrounded by curly-braces, for example: `{account UUID}`, or the author's Atlassian ID.
+	//
+	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
 	// Only return pull requests that are in this state. This parameter can be repeated.
 	State *GetPullrequestsSelectedUserStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetPullrequestsSelectedUserRequest struct {
-	PathParams  GetPullrequestsSelectedUserPathParams
-	QueryParams GetPullrequestsSelectedUserQueryParams
-	Security    GetPullrequestsSelectedUserSecurity
 }
 
 type GetPullrequestsSelectedUserResponse struct {

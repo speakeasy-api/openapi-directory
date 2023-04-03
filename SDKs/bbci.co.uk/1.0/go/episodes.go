@@ -35,14 +35,14 @@ func newEpisodes(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get Clips
 func (s *episodes) GetClips(ctx context.Context, request operations.GetClipsRequest) (*operations.GetClipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clips/{pid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clips/{pid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,14 +84,14 @@ func (s *episodes) GetClips(ctx context.Context, request operations.GetClipsRequ
 // Get the list of all the episodes for a given category in TV & iPlayer.
 func (s *episodes) GetEpisodesByCategory(ctx context.Context, request operations.GetEpisodesByCategoryRequest) (*operations.GetEpisodesByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/episodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/episodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -133,14 +133,14 @@ func (s *episodes) GetEpisodesByCategory(ctx context.Context, request operations
 // Get episodes by group, brand or series
 func (s *episodes) GetEpisodesByGroup(ctx context.Context, request operations.GetEpisodesByGroupRequest) (*operations.GetEpisodesByGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{pid}/episodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/groups/{pid}/episodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,14 +182,14 @@ func (s *episodes) GetEpisodesByGroup(ctx context.Context, request operations.Ge
 // Get the child episodes belonging to a given programme identifier.
 func (s *episodes) GetEpisodesByParentPID(ctx context.Context, request operations.GetEpisodesByParentPIDRequest) (*operations.GetEpisodesByParentPIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/programmes/{pid}/episodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/programmes/{pid}/episodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,14 +231,14 @@ func (s *episodes) GetEpisodesByParentPID(ctx context.Context, request operation
 // Get Onward Journey (next programme)
 func (s *episodes) GetOnwardJourney(ctx context.Context, request operations.GetOnwardJourneyRequest) (*operations.GetOnwardJourneyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/next", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/next", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -280,14 +280,14 @@ func (s *episodes) GetOnwardJourney(ctx context.Context, request operations.GetO
 // Get the episode for a given episode identifier.
 func (s *episodes) GetProgrammeByPID(ctx context.Context, request operations.GetProgrammeByPIDRequest) (*operations.GetProgrammeByPIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -329,14 +329,14 @@ func (s *episodes) GetProgrammeByPID(ctx context.Context, request operations.Get
 // Get programme recommendations
 func (s *episodes) GetProgrammeRecommendations(ctx context.Context, request operations.GetProgrammeRecommendationsRequest) (*operations.GetProgrammeRecommendationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/recommendations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/recommendations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -385,7 +385,7 @@ func (s *episodes) GetProgrammesPopular(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -427,14 +427,14 @@ func (s *episodes) GetProgrammesPopular(ctx context.Context, request operations.
 // Get Trailers (pre-rolls)
 func (s *episodes) GetTrailersPreRolls(ctx context.Context, request operations.GetTrailersPreRollsRequest) (*operations.GetTrailersPreRollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/prerolls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/prerolls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -476,14 +476,14 @@ func (s *episodes) GetTrailersPreRolls(ctx context.Context, request operations.G
 // Get Follow-ups (post-rolls)
 func (s *episodes) GetPostRolls(ctx context.Context, request operations.GetPostRollsRequest) (*operations.GetPostRollsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/postrolls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/episodes/{pid}/postrolls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

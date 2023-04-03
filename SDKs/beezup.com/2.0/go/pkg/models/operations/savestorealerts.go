@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveStoreAlertsPathParams struct {
+type SaveStoreAlertsRequest struct {
+	RequestBody map[string]shared.SaveStoreAlertRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type SaveStoreAlertsRequest struct {
-	PathParams SaveStoreAlertsPathParams
-	Request    map[string]shared.SaveStoreAlertRequest `request:"mediaType=application/json"`
 }
 
 type SaveStoreAlertsResponse struct {

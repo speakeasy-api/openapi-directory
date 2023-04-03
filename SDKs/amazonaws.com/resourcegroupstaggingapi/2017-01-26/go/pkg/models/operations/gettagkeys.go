@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagKeysQueryParams struct {
-	// Pagination token
-	PaginationToken *string `queryParam:"style=form,explode=true,name=PaginationToken"`
-}
-
 // GetTagKeysXAmzTargetEnum
 type GetTagKeysXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *GetTagKeysXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTagKeysHeaders struct {
+type GetTagKeysRequest struct {
+	GetTagKeysInput shared.GetTagKeysInput `request:"mediaType=application/json"`
+	// Pagination token
+	PaginationToken   *string                  `queryParam:"style=form,explode=true,name=PaginationToken"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type GetTagKeysHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetTagKeysXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetTagKeysRequest struct {
-	QueryParams GetTagKeysQueryParams
-	Headers     GetTagKeysHeaders
-	Request     shared.GetTagKeysInput `request:"mediaType=application/json"`
 }
 
 type GetTagKeysResponse struct {

@@ -37,7 +37,7 @@ func newAccountMerchantLevel(defaultClient, securityClient HTTPClient, serverURL
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Account read
-func (s *accountMerchantLevel) GetMerchants(ctx context.Context, request operations.GetMerchantsRequest) (*operations.GetMerchantsResponse, error) {
+func (s *accountMerchantLevel) GetMerchants(ctx context.Context, request operations.GetMerchantsRequest, security operations.GetMerchantsSecurity) (*operations.GetMerchantsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/merchants"
 
@@ -46,11 +46,11 @@ func (s *accountMerchantLevel) GetMerchants(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,16 +108,16 @@ func (s *accountMerchantLevel) GetMerchants(ctx context.Context, request operati
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Account read
-func (s *accountMerchantLevel) GetMerchantsMerchantID(ctx context.Context, request operations.GetMerchantsMerchantIDRequest) (*operations.GetMerchantsMerchantIDResponse, error) {
+func (s *accountMerchantLevel) GetMerchantsMerchantID(ctx context.Context, request operations.GetMerchantsMerchantIDRequest, security operations.GetMerchantsMerchantIDSecurity) (*operations.GetMerchantsMerchantIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *accountMerchantLevel) GetMerchantsMerchantID(ctx context.Context, reque
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Accounts read and write
-func (s *accountMerchantLevel) PostMerchants(ctx context.Context, request operations.PostMerchantsRequest) (*operations.PostMerchantsResponse, error) {
+func (s *accountMerchantLevel) PostMerchants(ctx context.Context, request shared.CreateMerchantRequest, security operations.PostMerchantsSecurity) (*operations.PostMerchantsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/merchants"
 
@@ -193,7 +193,7 @@ func (s *accountMerchantLevel) PostMerchants(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -255,16 +255,16 @@ func (s *accountMerchantLevel) PostMerchants(ctx context.Context, request operat
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Accounts read and write
-func (s *accountMerchantLevel) PostMerchantsMerchantIDActivate(ctx context.Context, request operations.PostMerchantsMerchantIDActivateRequest) (*operations.PostMerchantsMerchantIDActivateResponse, error) {
+func (s *accountMerchantLevel) PostMerchantsMerchantIDActivate(ctx context.Context, request operations.PostMerchantsMerchantIDActivateRequest, security operations.PostMerchantsMerchantIDActivateSecurity) (*operations.PostMerchantsMerchantIDActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/activate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

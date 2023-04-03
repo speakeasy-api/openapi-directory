@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSyncJobPathParams struct {
-	// <p>The sync source.</p> <note> <p>Currently the only supported syncSource is <code>SITEWISE </code>.</p> </note>
-	SyncSource string `pathParam:"style=simple,explode=false,name=syncSource"`
-}
-
-type GetSyncJobQueryParams struct {
-	// The workspace ID.
-	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetSyncJobHeaders struct {
+type GetSyncJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type GetSyncJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSyncJobRequest struct {
-	PathParams  GetSyncJobPathParams
-	QueryParams GetSyncJobQueryParams
-	Headers     GetSyncJobHeaders
+	// <p>The sync source.</p> <note> <p>Currently the only supported syncSource is <code>SITEWISE </code>.</p> </note>
+	SyncSource string `pathParam:"style=simple,explode=false,name=syncSource"`
+	// The workspace ID.
+	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
 }
 
 type GetSyncJobResponse struct {

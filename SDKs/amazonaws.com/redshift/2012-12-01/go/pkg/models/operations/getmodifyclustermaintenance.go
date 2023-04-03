@@ -51,7 +51,7 @@ func (e *GETModifyClusterMaintenanceVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETModifyClusterMaintenanceQueryParams struct {
+type GETModifyClusterMaintenanceRequest struct {
 	Action GETModifyClusterMaintenanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier for the cluster.
 	ClusterIdentifier string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -66,21 +66,13 @@ type GETModifyClusterMaintenanceQueryParams struct {
 	// A timestamp indicating the start time for the deferred maintenance window.
 	DeferMaintenanceStartTime *time.Time                             `queryParam:"style=form,explode=true,name=DeferMaintenanceStartTime"`
 	Version                   GETModifyClusterMaintenanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyClusterMaintenanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyClusterMaintenanceRequest struct {
-	QueryParams GETModifyClusterMaintenanceQueryParams
-	Headers     GETModifyClusterMaintenanceHeaders
+	XAmzAlgorithm             *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyClusterMaintenanceResponse struct {

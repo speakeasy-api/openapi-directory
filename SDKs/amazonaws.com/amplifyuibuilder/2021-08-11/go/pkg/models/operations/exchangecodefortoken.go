@@ -9,6 +9,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// ExchangeCodeForTokenRequestBodyRequest - Describes the configuration of a request to exchange an access code for a token.
+type ExchangeCodeForTokenRequestBodyRequest struct {
+	Code        *string `json:"code,omitempty"`
+	RedirectURI *string `json:"redirectUri,omitempty"`
+}
+
+type ExchangeCodeForTokenRequestBody struct {
+	// Describes the configuration of a request to exchange an access code for a token.
+	Request ExchangeCodeForTokenRequestBodyRequest `json:"request"`
+}
+
 // ExchangeCodeForTokenProviderEnum - The third-party provider for the token. The only valid value is <code>figma</code>.
 type ExchangeCodeForTokenProviderEnum string
 
@@ -30,36 +41,17 @@ func (e *ExchangeCodeForTokenProviderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ExchangeCodeForTokenPathParams struct {
+type ExchangeCodeForTokenRequest struct {
+	RequestBody       ExchangeCodeForTokenRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The third-party provider for the token. The only valid value is <code>figma</code>.
 	Provider ExchangeCodeForTokenProviderEnum `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type ExchangeCodeForTokenHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// ExchangeCodeForTokenRequestBodyRequest - Describes the configuration of a request to exchange an access code for a token.
-type ExchangeCodeForTokenRequestBodyRequest struct {
-	Code        *string `json:"code,omitempty"`
-	RedirectURI *string `json:"redirectUri,omitempty"`
-}
-
-type ExchangeCodeForTokenRequestBody struct {
-	// Describes the configuration of a request to exchange an access code for a token.
-	Request ExchangeCodeForTokenRequestBodyRequest `json:"request"`
-}
-
-type ExchangeCodeForTokenRequest struct {
-	PathParams ExchangeCodeForTokenPathParams
-	Headers    ExchangeCodeForTokenHeaders
-	Request    ExchangeCodeForTokenRequestBody `request:"mediaType=application/json"`
 }
 
 type ExchangeCodeForTokenResponse struct {

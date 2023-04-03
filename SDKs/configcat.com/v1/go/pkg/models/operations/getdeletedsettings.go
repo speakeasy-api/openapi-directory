@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeletedSettingsPathParams struct {
+type GetDeletedSettingsRequest struct {
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-}
-
-type GetDeletedSettingsRequest struct {
-	PathParams GetDeletedSettingsPathParams
 }
 
 type GetDeletedSettingsResponse struct {

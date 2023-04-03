@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeTrackerPathParams struct {
+type DescribeTrackerRequest struct {
 	// The name of the tracker resource.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
-}
-
-type DescribeTrackerHeaders struct {
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeTrackerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeTrackerRequest struct {
-	PathParams DescribeTrackerPathParams
-	Headers    DescribeTrackerHeaders
 }
 
 type DescribeTrackerResponse struct {

@@ -101,7 +101,7 @@ func (e *GETListTypeVersionsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListTypeVersionsQueryParams struct {
+type GETListTypeVersionsRequest struct {
 	Action GETListTypeVersionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the extension for which you want version summary information.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
 	Arn *string `queryParam:"style=form,explode=true,name=Arn"`
@@ -116,23 +116,15 @@ type GETListTypeVersionsQueryParams struct {
 	// <p>The kind of the extension.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
 	Type *GETListTypeVersionsTypeEnum `queryParam:"style=form,explode=true,name=Type"`
 	// <p>The name of the extension for which you want version summary information.</p> <p>Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.</p>
-	TypeName *string                        `queryParam:"style=form,explode=true,name=TypeName"`
-	Version  GETListTypeVersionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListTypeVersionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListTypeVersionsRequest struct {
-	QueryParams GETListTypeVersionsQueryParams
-	Headers     GETListTypeVersionsHeaders
+	TypeName          *string                        `queryParam:"style=form,explode=true,name=TypeName"`
+	Version           GETListTypeVersionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListTypeVersionsResponse struct {

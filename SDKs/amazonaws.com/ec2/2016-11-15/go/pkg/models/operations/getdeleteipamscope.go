@@ -50,28 +50,20 @@ func (e *GETDeleteIpamScopeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteIpamScopeQueryParams struct {
+type GETDeleteIpamScopeRequest struct {
 	Action GETDeleteIpamScopeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the scope to delete.
-	IpamScopeID string                        `queryParam:"style=form,explode=true,name=IpamScopeId"`
-	Version     GETDeleteIpamScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteIpamScopeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteIpamScopeRequest struct {
-	QueryParams GETDeleteIpamScopeQueryParams
-	Headers     GETDeleteIpamScopeHeaders
+	IpamScopeID       string                        `queryParam:"style=form,explode=true,name=IpamScopeId"`
+	Version           GETDeleteIpamScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteIpamScopeResponse struct {

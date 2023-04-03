@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerUpdateFormPathParams struct {
+type CustomerUpdateFormRequest struct {
+	BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput `request:"mediaType=application/x-www-form-urlencoded"`
 	// The id of the customer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerUpdateFormRequest struct {
-	PathParams CustomerUpdateFormPathParams
-	Request    shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CustomerUpdateFormResponse struct {

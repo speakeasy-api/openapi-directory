@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangePhpMemoryLimitPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ChangePhpMemoryLimitQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ChangePhpMemoryLimitRequest struct {
-	PathParams  ChangePhpMemoryLimitPathParams
-	QueryParams ChangePhpMemoryLimitQueryParams
 	// Memory limit config
-	Request *shared.UpdatePhpMemoryLimitRequest `request:"mediaType=application/json"`
+	UpdatePhpMemoryLimitRequest *shared.UpdatePhpMemoryLimitRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ChangePhpMemoryLimitResponse struct {

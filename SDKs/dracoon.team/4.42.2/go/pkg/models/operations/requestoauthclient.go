@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestOAuthClientPathParams struct {
-	// OAuth client ID
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type RequestOAuthClientHeaders struct {
+type RequestOAuthClientRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestOAuthClientRequest struct {
-	PathParams RequestOAuthClientPathParams
-	Headers    RequestOAuthClientHeaders
+	// OAuth client ID
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type RequestOAuthClientResponse struct {

@@ -8,27 +8,18 @@ import (
 )
 
 type ConnectionsAllSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectionsAllQueryParams struct {
+type ConnectionsAllRequest struct {
 	// Scope results to Unified API
 	API *string `queryParam:"style=form,explode=true,name=api"`
 	// Scopes results to connections that have been configured or not
 	Configured *bool `queryParam:"style=form,explode=true,name=configured"`
-}
-
-type ConnectionsAllHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
-}
-
-type ConnectionsAllRequest struct {
-	QueryParams ConnectionsAllQueryParams
-	Headers     ConnectionsAllHeaders
-	Security    ConnectionsAllSecurity
 }
 
 type ConnectionsAllResponse struct {

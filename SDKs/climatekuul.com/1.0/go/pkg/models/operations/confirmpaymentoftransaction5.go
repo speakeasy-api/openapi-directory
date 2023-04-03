@@ -17,11 +17,6 @@ type ConfirmPaymentOfTransaction5RequestBody struct {
 	TransactionID string `form:"name=transaction_id"`
 }
 
-type ConfirmPaymentOfTransaction5Request struct {
-	Request   *ConfirmPaymentOfTransaction5RequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type ConfirmPaymentOfTransaction5Response struct {
 	ContentType string
 	StatusCode  int

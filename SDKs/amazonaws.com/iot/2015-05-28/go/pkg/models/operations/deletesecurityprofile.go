@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteSecurityProfilePathParams struct {
-	// The name of the security profile to be deleted.
-	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
-}
-
-type DeleteSecurityProfileQueryParams struct {
-	// The expected version of the security profile. A new version is generated whenever the security profile is updated. If you specify a value that is different from the actual version, a <code>VersionConflictException</code> is thrown.
-	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
-}
-
-type DeleteSecurityProfileHeaders struct {
+type DeleteSecurityProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteSecurityProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSecurityProfileRequest struct {
-	PathParams  DeleteSecurityProfilePathParams
-	QueryParams DeleteSecurityProfileQueryParams
-	Headers     DeleteSecurityProfileHeaders
+	// The expected version of the security profile. A new version is generated whenever the security profile is updated. If you specify a value that is different from the actual version, a <code>VersionConflictException</code> is thrown.
+	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
+	// The name of the security profile to be deleted.
+	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
 }
 
 type DeleteSecurityProfileResponse struct {

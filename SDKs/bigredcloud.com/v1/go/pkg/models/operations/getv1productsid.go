@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV1ProductsIDPathParams struct {
+type GetV1ProductsIDRequest struct {
 	// Id of Product to return.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV1ProductsIDRequest struct {
-	PathParams GetV1ProductsIDPathParams
 }
 
 type GetV1ProductsIDResponse struct {

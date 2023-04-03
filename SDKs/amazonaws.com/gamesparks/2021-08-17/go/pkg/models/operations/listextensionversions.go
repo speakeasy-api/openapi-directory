@@ -7,21 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListExtensionVersionsPathParams struct {
+type ListExtensionVersionsRequest struct {
+	// <p>The maximum number of results to return.</p> <p> Use this parameter with NextToken to get results as a set of sequential pages. </p>
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The name of the extension.
 	Name string `pathParam:"style=simple,explode=false,name=Name"`
 	// The namespace (qualifier) of the extension.
 	Namespace string `pathParam:"style=simple,explode=false,name=Namespace"`
-}
-
-type ListExtensionVersionsQueryParams struct {
-	// <p>The maximum number of results to return.</p> <p> Use this parameter with NextToken to get results as a set of sequential pages. </p>
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that indicates the start of the next sequential page of results.</p> <p> Use the token that is returned with a previous call to this operation. To start at the beginning of the result set, do not specify a value. </p>
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListExtensionVersionsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +23,6 @@ type ListExtensionVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListExtensionVersionsRequest struct {
-	PathParams  ListExtensionVersionsPathParams
-	QueryParams ListExtensionVersionsQueryParams
-	Headers     ListExtensionVersionsHeaders
 }
 
 type ListExtensionVersionsResponse struct {

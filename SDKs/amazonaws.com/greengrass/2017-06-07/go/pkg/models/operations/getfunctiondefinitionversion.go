@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFunctionDefinitionVersionPathParams struct {
+type GetFunctionDefinitionVersionRequest struct {
 	// The ID of the Lambda function definition.
 	FunctionDefinitionID string `pathParam:"style=simple,explode=false,name=FunctionDefinitionId"`
 	// The ID of the function definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListFunctionDefinitionVersions'' requests. If the version is the last one that was associated with a function definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
 	FunctionDefinitionVersionID string `pathParam:"style=simple,explode=false,name=FunctionDefinitionVersionId"`
-}
-
-type GetFunctionDefinitionVersionQueryParams struct {
 	// The token for the next set of results, or ''null'' if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetFunctionDefinitionVersionHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type GetFunctionDefinitionVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetFunctionDefinitionVersionRequest struct {
-	PathParams  GetFunctionDefinitionVersionPathParams
-	QueryParams GetFunctionDefinitionVersionQueryParams
-	Headers     GetFunctionDefinitionVersionHeaders
 }
 
 type GetFunctionDefinitionVersionResponse struct {

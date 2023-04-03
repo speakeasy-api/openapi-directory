@@ -8,15 +8,8 @@ import (
 )
 
 type TeamsUpdateMembershipRolesSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsUpdateMembershipRolesPathParams struct {
-	// Membership ID.
-	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
-	// Team unique ID.
-	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type TeamsUpdateMembershipRolesRequestBody struct {
@@ -25,9 +18,11 @@ type TeamsUpdateMembershipRolesRequestBody struct {
 }
 
 type TeamsUpdateMembershipRolesRequest struct {
-	PathParams TeamsUpdateMembershipRolesPathParams
-	Request    *TeamsUpdateMembershipRolesRequestBody `request:"mediaType=application/json"`
-	Security   TeamsUpdateMembershipRolesSecurity
+	RequestBody *TeamsUpdateMembershipRolesRequestBody `request:"mediaType=application/json"`
+	// Membership ID.
+	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
+	// Team unique ID.
+	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
 type TeamsUpdateMembershipRolesResponse struct {

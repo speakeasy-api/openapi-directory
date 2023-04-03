@@ -30,7 +30,8 @@ func (e *GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum) UnmarshalJSON(
 	}
 }
 
-type GetSagemakerServicecatalogPortfolioStatusHeaders struct {
+type GetSagemakerServicecatalogPortfolioStatusRequest struct {
+	RequestBody       map[string]interface{}                                  `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetSagemakerServicecatalogPortfolioStatusHeaders struct {
 	XAmzSignature     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetSagemakerServicecatalogPortfolioStatusRequest struct {
-	Headers GetSagemakerServicecatalogPortfolioStatusHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetSagemakerServicecatalogPortfolioStatusResponse struct {

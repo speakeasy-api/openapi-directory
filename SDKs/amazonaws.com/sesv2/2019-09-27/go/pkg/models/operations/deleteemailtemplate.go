@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteEmailTemplatePathParams struct {
+type DeleteEmailTemplateRequest struct {
 	// The name of the template to be deleted.
-	TemplateName string `pathParam:"style=simple,explode=false,name=TemplateName"`
-}
-
-type DeleteEmailTemplateHeaders struct {
+	TemplateName      string  `pathParam:"style=simple,explode=false,name=TemplateName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteEmailTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEmailTemplateRequest struct {
-	PathParams DeleteEmailTemplatePathParams
-	Headers    DeleteEmailTemplateHeaders
 }
 
 type DeleteEmailTemplateResponse struct {

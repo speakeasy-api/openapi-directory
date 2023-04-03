@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -35,7 +36,7 @@ func newCredits(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Before you can use the transfer credits endpoint, the _credit-transfer facility_ must be activated for your account.  You can request activation from `support@bulksms.com`.
 //
 // The recipient must be an enabled account that uses the same currency as your account.
-func (s *credits) PostCreditTransfer(ctx context.Context, request operations.PostCreditTransferRequest) (*operations.PostCreditTransferResponse, error) {
+func (s *credits) PostCreditTransfer(ctx context.Context, request shared.TransferEntry, security operations.PostCreditTransferSecurity) (*operations.PostCreditTransferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/credit/transfer"
 
@@ -54,7 +55,7 @@ func (s *credits) PostCreditTransfer(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

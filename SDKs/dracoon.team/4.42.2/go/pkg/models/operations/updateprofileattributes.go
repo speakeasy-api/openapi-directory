@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProfileAttributesHeaders struct {
+type UpdateProfileAttributesRequest struct {
+	ProfileAttributesRequest shared.ProfileAttributesRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateProfileAttributesRequest struct {
-	Headers UpdateProfileAttributesHeaders
-	Request shared.ProfileAttributesRequest `request:"mediaType=application/json"`
 }
 
 type UpdateProfileAttributesResponse struct {

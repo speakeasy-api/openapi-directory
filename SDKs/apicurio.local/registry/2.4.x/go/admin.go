@@ -42,7 +42,7 @@ func newAdmin(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // * The rule type is unknown (HTTP error `400`)
 // * The rule already exists (HTTP error `409`)
 // * A server error occurred (HTTP error `500`)
-func (s *admin) CreateGlobalRule(ctx context.Context, request operations.CreateGlobalRuleRequest) (*operations.CreateGlobalRuleResponse, error) {
+func (s *admin) CreateGlobalRule(ctx context.Context, request shared.Rule) (*operations.CreateGlobalRuleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/rules"
 
@@ -106,7 +106,7 @@ func (s *admin) CreateGlobalRule(ctx context.Context, request operations.CreateG
 // This operation can fail for the following reasons:
 //
 // * A server error occurred (HTTP error `500`)
-func (s *admin) CreateRoleMapping(ctx context.Context, request operations.CreateRoleMappingRequest) (*operations.CreateRoleMappingResponse, error) {
+func (s *admin) CreateRoleMapping(ctx context.Context, request shared.RoleMapping) (*operations.CreateRoleMappingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/roleMappings"
 
@@ -222,7 +222,7 @@ func (s *admin) DeleteAllGlobalRules(ctx context.Context) (*operations.DeleteAll
 // * A server error occurred (HTTP error `500`)
 func (s *admin) DeleteGlobalRule(ctx context.Context, request operations.DeleteGlobalRuleRequest) (*operations.DeleteGlobalRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/rules/{rule}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/rules/{rule}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -275,7 +275,7 @@ func (s *admin) DeleteGlobalRule(ctx context.Context, request operations.DeleteG
 // * A server error occurred (HTTP error `500`)
 func (s *admin) DeleteRoleMapping(ctx context.Context, request operations.DeleteRoleMappingRequest) (*operations.DeleteRoleMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/roleMappings/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/roleMappings/{principalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -330,7 +330,7 @@ func (s *admin) ExportData(ctx context.Context, request operations.ExportDataReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -394,7 +394,7 @@ func (s *admin) ExportData(ctx context.Context, request operations.ExportDataReq
 // * A server error occurred (HTTP error `500`)
 func (s *admin) GetConfigProperty(ctx context.Context, request operations.GetConfigPropertyRequest) (*operations.GetConfigPropertyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/config/properties/{propertyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/config/properties/{propertyName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -457,7 +457,7 @@ func (s *admin) GetConfigProperty(ctx context.Context, request operations.GetCon
 // * A server error occurred (HTTP error `500`)
 func (s *admin) GetGlobalRuleConfig(ctx context.Context, request operations.GetGlobalRuleConfigRequest) (*operations.GetGlobalRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/rules/{rule}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/rules/{rule}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -514,7 +514,7 @@ func (s *admin) GetGlobalRuleConfig(ctx context.Context, request operations.GetG
 // Returns the configured logger configuration for the provided logger name, if no logger configuration is persisted it will return the current default log configuration in the system.
 func (s *admin) GetLogConfiguration(ctx context.Context, request operations.GetLogConfigurationRequest) (*operations.GetLogConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/loggers/{logger}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/loggers/{logger}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -574,7 +574,7 @@ func (s *admin) GetLogConfiguration(ctx context.Context, request operations.GetL
 // * A server error occurred (HTTP error `500`)
 func (s *admin) GetRoleMapping(ctx context.Context, request operations.GetRoleMappingRequest) (*operations.GetRoleMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/roleMappings/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/roleMappings/{principalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -633,7 +633,7 @@ func (s *admin) ImportData(ctx context.Context, request operations.ImportDataReq
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/import"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -648,7 +648,7 @@ func (s *admin) ImportData(ctx context.Context, request operations.ImportDataReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -981,7 +981,7 @@ func (s *admin) ListRoleMappings(ctx context.Context) (*operations.ListRoleMappi
 // Removes the configured logger configuration (if any) for the given logger.
 func (s *admin) RemoveLogConfiguration(ctx context.Context, request operations.RemoveLogConfigurationRequest) (*operations.RemoveLogConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/loggers/{logger}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/loggers/{logger}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1043,7 +1043,7 @@ func (s *admin) RemoveLogConfiguration(ctx context.Context, request operations.R
 // * A server error occurred (HTTP error `500`)
 func (s *admin) ResetConfigProperty(ctx context.Context, request operations.ResetConfigPropertyRequest) (*operations.ResetConfigPropertyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/config/properties/{propertyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/config/properties/{propertyName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1091,9 +1091,9 @@ func (s *admin) ResetConfigProperty(ctx context.Context, request operations.Rese
 // Configures the logger referenced by the provided logger name with the given configuration.
 func (s *admin) SetLogConfiguration(ctx context.Context, request operations.SetLogConfigurationRequest) (*operations.SetLogConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/loggers/{logger}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/loggers/{logger}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LogConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1161,9 +1161,9 @@ func (s *admin) SetLogConfiguration(ctx context.Context, request operations.SetL
 // * A server error occurred (HTTP error `500`)
 func (s *admin) UpdateConfigProperty(ctx context.Context, request operations.UpdateConfigPropertyRequest) (*operations.UpdateConfigPropertyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/config/properties/{propertyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/config/properties/{propertyName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateConfigurationProperty", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1225,9 +1225,9 @@ func (s *admin) UpdateConfigProperty(ctx context.Context, request operations.Upd
 // * A server error occurred (HTTP error `500`)
 func (s *admin) UpdateGlobalRuleConfig(ctx context.Context, request operations.UpdateGlobalRuleConfigRequest) (*operations.UpdateGlobalRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/rules/{rule}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/rules/{rule}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Rule1", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1297,9 +1297,9 @@ func (s *admin) UpdateGlobalRuleConfig(ctx context.Context, request operations.U
 // * A server error occurred (HTTP error `500`)
 func (s *admin) UpdateRoleMapping(ctx context.Context, request operations.UpdateRoleMappingRequest) (*operations.UpdateRoleMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/roleMappings/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/roleMappings/{principalId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateRole", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

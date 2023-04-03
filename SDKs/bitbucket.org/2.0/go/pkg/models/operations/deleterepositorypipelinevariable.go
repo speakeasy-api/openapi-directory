@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteRepositoryPipelineVariablePathParams struct {
+type DeleteRepositoryPipelineVariableRequest struct {
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The UUID of the variable to delete.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteRepositoryPipelineVariableRequest struct {
-	PathParams DeleteRepositoryPipelineVariablePathParams
 }
 
 type DeleteRepositoryPipelineVariableResponse struct {

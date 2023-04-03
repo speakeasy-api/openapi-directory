@@ -50,25 +50,17 @@ func (e *POSTDeleteAutoScalingGroupVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTDeleteAutoScalingGroupQueryParams struct {
-	Action  POSTDeleteAutoScalingGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteAutoScalingGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteAutoScalingGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteAutoScalingGroupRequest struct {
-	QueryParams POSTDeleteAutoScalingGroupQueryParams
-	Headers     POSTDeleteAutoScalingGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteAutoScalingGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTDeleteAutoScalingGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteAutoScalingGroupResponse struct {

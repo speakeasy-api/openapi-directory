@@ -8,25 +8,17 @@ import (
 )
 
 type ToggleCallBroadcastRecipientsStatusSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ToggleCallBroadcastRecipientsStatusPathParams struct {
-	// An id of a voice broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ToggleCallBroadcastRecipientsStatusQueryParams struct {
-	// Flag which indicate what to do with calls (true will enable call in DISABLED status and vice versa)
-	Enable *bool `queryParam:"style=form,explode=true,name=enable"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ToggleCallBroadcastRecipientsStatusRequest struct {
-	PathParams  ToggleCallBroadcastRecipientsStatusPathParams
-	QueryParams ToggleCallBroadcastRecipientsStatusQueryParams
 	// List of Recipient objects. By recipient we mean either phone number or contact id.
-	Request  []shared.Recipient `request:"mediaType=application/json"`
-	Security ToggleCallBroadcastRecipientsStatusSecurity
+	RequestBody []shared.Recipient `request:"mediaType=application/json"`
+	// Flag which indicate what to do with calls (true will enable call in DISABLED status and vice versa)
+	Enable *bool `queryParam:"style=form,explode=true,name=enable"`
+	// An id of a voice broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ToggleCallBroadcastRecipientsStatusResponse struct {

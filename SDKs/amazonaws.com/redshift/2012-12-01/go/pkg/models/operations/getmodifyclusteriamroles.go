@@ -50,7 +50,7 @@ func (e *GETModifyClusterIamRolesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyClusterIamRolesQueryParams struct {
+type GETModifyClusterIamRolesRequest struct {
 	Action GETModifyClusterIamRolesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Zero or more IAM roles to associate with the cluster. The roles must be in their Amazon Resource Name (ARN) format.
 	AddIamRoles []string `queryParam:"style=form,explode=true,name=AddIamRoles"`
@@ -59,23 +59,15 @@ type GETModifyClusterIamRolesQueryParams struct {
 	// The Amazon Resource Name (ARN) for the IAM role that was set as default for the cluster when the cluster was last modified.
 	DefaultIamRoleArn *string `queryParam:"style=form,explode=true,name=DefaultIamRoleArn"`
 	// Zero or more IAM roles in ARN format to disassociate from the cluster.
-	RemoveIamRoles []string                            `queryParam:"style=form,explode=true,name=RemoveIamRoles"`
-	Version        GETModifyClusterIamRolesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyClusterIamRolesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyClusterIamRolesRequest struct {
-	QueryParams GETModifyClusterIamRolesQueryParams
-	Headers     GETModifyClusterIamRolesHeaders
+	RemoveIamRoles    []string                            `queryParam:"style=form,explode=true,name=RemoveIamRoles"`
+	Version           GETModifyClusterIamRolesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyClusterIamRolesResponse struct {

@@ -13,28 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DescribeStreamRequest{
-        Headers: operations.DescribeStreamHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "DynamoDBStreams_20120810.DescribeStream",
+        DescribeStreamInput: shared.DescribeStreamInput{
+            ExclusiveStartShardID: "corrupti",
+            Limit: 592845,
+            StreamArn: "distinctio",
         },
-        Request: shared.DescribeStreamInput{
-            ExclusiveStartShardID: "illum",
-            Limit: 423655,
-            StreamArn: "error",
-        },
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
+        XAmzTarget: "DynamoDBStreams_20120810.DescribeStream",
     }
 
     ctx := context.Background()

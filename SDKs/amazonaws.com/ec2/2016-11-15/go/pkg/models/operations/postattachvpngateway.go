@@ -50,25 +50,17 @@ func (e *POSTAttachVpnGatewayVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTAttachVpnGatewayQueryParams struct {
-	Action  POSTAttachVpnGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAttachVpnGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAttachVpnGatewayHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAttachVpnGatewayRequest struct {
-	QueryParams POSTAttachVpnGatewayQueryParams
-	Headers     POSTAttachVpnGatewayHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAttachVpnGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTAttachVpnGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAttachVpnGatewayResponse struct {

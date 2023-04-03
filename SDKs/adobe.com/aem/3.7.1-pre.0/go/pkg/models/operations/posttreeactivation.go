@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type PostTreeActivationQueryParams struct {
+type PostTreeActivationRequest struct {
 	Cmd               string `queryParam:"style=form,explode=true,name=cmd"`
 	Ignoredeactivated bool   `queryParam:"style=form,explode=true,name=ignoredeactivated"`
 	Onlymodified      bool   `queryParam:"style=form,explode=true,name=onlymodified"`
 	Path              string `queryParam:"style=form,explode=true,name=path"`
-}
-
-type PostTreeActivationRequest struct {
-	QueryParams PostTreeActivationQueryParams
 }
 
 type PostTreeActivationResponse struct {

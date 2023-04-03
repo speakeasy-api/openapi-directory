@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRotationOverridesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListRotationOverridesXAmzTargetEnum
 type ListRotationOverridesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListRotationOverridesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListRotationOverridesHeaders struct {
+type ListRotationOverridesRequest struct {
+	ListRotationOverridesRequest shared.ListRotationOverridesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListRotationOverridesHeaders struct {
 	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListRotationOverridesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListRotationOverridesRequest struct {
-	QueryParams ListRotationOverridesQueryParams
-	Headers     ListRotationOverridesHeaders
-	Request     shared.ListRotationOverridesRequest `request:"mediaType=application/json"`
 }
 
 type ListRotationOverridesResponse struct {

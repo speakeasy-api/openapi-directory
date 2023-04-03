@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsPatchTagNameFormPathParams struct {
+type TagsPatchTagNameFormRequest struct {
+	// The body patch
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of the tag
 	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type TagsPatchTagNameFormRequest struct {
-	PathParams TagsPatchTagNameFormPathParams
-	// The body patch
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type TagsPatchTagNameFormResponse struct {

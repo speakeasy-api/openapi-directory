@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // SearchXAmzTargetEnum
 type SearchXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *SearchXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchHeaders struct {
+type SearchRequest struct {
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string              `queryParam:"style=form,explode=true,name=NextToken"`
+	SearchRequest     shared.SearchRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type SearchHeaders struct {
 	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        SearchXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type SearchRequest struct {
-	QueryParams SearchQueryParams
-	Headers     SearchHeaders
-	Request     shared.SearchRequest `request:"mediaType=application/json"`
 }
 
 type SearchResponse struct {

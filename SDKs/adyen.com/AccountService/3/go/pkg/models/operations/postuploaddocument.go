@@ -8,13 +8,8 @@ import (
 )
 
 type PostUploadDocumentSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostUploadDocumentRequest struct {
-	Request  *shared.UploadDocumentRequest `request:"mediaType=application/json"`
-	Security PostUploadDocumentSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostUploadDocumentResponse struct {

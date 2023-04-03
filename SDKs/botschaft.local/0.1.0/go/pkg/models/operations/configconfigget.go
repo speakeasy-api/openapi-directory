@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigConfigGetHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
 type ConfigConfigGetRequest struct {
-	Headers ConfigConfigGetHeaders
+	Authorization *string `header:"style=simple,explode=false,name=authorization"`
 }
 
 type ConfigConfigGetResponse struct {

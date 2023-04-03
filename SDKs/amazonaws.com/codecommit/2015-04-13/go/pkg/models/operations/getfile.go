@@ -30,7 +30,8 @@ func (e *GetFileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFileHeaders struct {
+type GetFileRequest struct {
+	GetFileInput      shared.GetFileInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetFileHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetFileXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetFileRequest struct {
-	Headers GetFileHeaders
-	Request shared.GetFileInput `request:"mediaType=application/json"`
 }
 
 type GetFileResponse struct {

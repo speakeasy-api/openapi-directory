@@ -34,16 +34,16 @@ func newDocuments(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // DeleteDocumentsID - Delete a document
 // Deletes a document.
-func (s *documents) DeleteDocumentsID(ctx context.Context, request operations.DeleteDocumentsIDRequest) (*operations.DeleteDocumentsIDResponse, error) {
+func (s *documents) DeleteDocumentsID(ctx context.Context, request operations.DeleteDocumentsIDRequest, security operations.DeleteDocumentsIDSecurity) (*operations.DeleteDocumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *documents) DeleteDocumentsID(ctx context.Context, request operations.De
 
 // GetDocumentsID - Get a document
 // Returns a document.
-func (s *documents) GetDocumentsID(ctx context.Context, request operations.GetDocumentsIDRequest) (*operations.GetDocumentsIDResponse, error) {
+func (s *documents) GetDocumentsID(ctx context.Context, request operations.GetDocumentsIDRequest, security operations.GetDocumentsIDSecurity) (*operations.GetDocumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,11 +160,11 @@ func (s *documents) GetDocumentsID(ctx context.Context, request operations.GetDo
 
 // PatchDocumentsID - Update a document
 // Updates a document.
-func (s *documents) PatchDocumentsID(ctx context.Context, request operations.PatchDocumentsIDRequest) (*operations.PatchDocumentsIDResponse, error) {
+func (s *documents) PatchDocumentsID(ctx context.Context, request operations.PatchDocumentsIDRequest, security operations.PatchDocumentsIDSecurity) (*operations.PatchDocumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DocumentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,7 +176,7 @@ func (s *documents) PatchDocumentsID(ctx context.Context, request operations.Pat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -234,7 +234,7 @@ func (s *documents) PatchDocumentsID(ctx context.Context, request operations.Pat
 //	Adyen uses the information from the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities) to run automated verification checks. If these checks fail, you will be notified to provide additional documents.
 //
 //	You should only upload documents when Adyen requests additional information for the legal entity.
-func (s *documents) PostDocuments(ctx context.Context, request operations.PostDocumentsRequest) (*operations.PostDocumentsResponse, error) {
+func (s *documents) PostDocuments(ctx context.Context, request shared.DocumentInput, security operations.PostDocumentsSecurity) (*operations.PostDocumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/documents"
 
@@ -250,7 +250,7 @@ func (s *documents) PostDocuments(ctx context.Context, request operations.PostDo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Ratcr - Ration Card
 // API to verify Ration Card.
-func (s *apIs) Ratcr(ctx context.Context, request operations.RatcrRequest) (*operations.RatcrResponse, error) {
+func (s *apIs) Ratcr(ctx context.Context, request operations.RatcrRequestBody, security operations.RatcrSecurity) (*operations.RatcrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ratcr/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Ratcr(ctx context.Context, request operations.RatcrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

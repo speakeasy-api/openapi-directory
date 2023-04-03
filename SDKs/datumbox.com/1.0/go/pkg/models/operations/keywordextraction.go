@@ -15,10 +15,6 @@ type KeywordExtractionRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type KeywordExtractionRequest struct {
-	Request *KeywordExtractionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type KeywordExtractionResponse struct {
 	ContentType string
 	StatusCode  int

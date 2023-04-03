@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TestGdprExportAccountSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestGdprExportAccountRequest struct {
-	Security TestGdprExportAccountSecurity
-}
 
 // TestGdprExportAccount200ApplicationJSON - OK
 type TestGdprExportAccount200ApplicationJSON struct {

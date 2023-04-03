@@ -13,29 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETAuthorizeCacheSecurityGroupIngressRequest{
-        QueryParams: operations.GETAuthorizeCacheSecurityGroupIngressQueryParams{
-            Action: "AuthorizeCacheSecurityGroupIngress",
-            CacheSecurityGroupName: "corrupti",
-            Ec2SecurityGroupName: "provident",
-            Ec2SecurityGroupOwnerID: "distinctio",
-            Version: "2015-02-02",
-        },
-        Headers: operations.GETAuthorizeCacheSecurityGroupIngressHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
+        Action: "AuthorizeCacheSecurityGroupIngress",
+        CacheSecurityGroupName: "corrupti",
+        Ec2SecurityGroupName: "provident",
+        Ec2SecurityGroupOwnerID: "distinctio",
+        Version: "2015-02-02",
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
     }
 
     ctx := context.Background()

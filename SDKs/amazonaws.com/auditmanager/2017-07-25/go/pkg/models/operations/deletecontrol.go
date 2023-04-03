@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteControlPathParams struct {
-	//  The unique identifier for the control.
-	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
-}
-
-type DeleteControlHeaders struct {
+type DeleteControlRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteControlHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteControlRequest struct {
-	PathParams DeleteControlPathParams
-	Headers    DeleteControlHeaders
+	//  The unique identifier for the control.
+	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
 }
 
 type DeleteControlResponse struct {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDeviceResourcesPathParams struct {
-	// The ID of the managed device that you are listing the resources of.
-	ManagedDeviceID string `pathParam:"style=simple,explode=false,name=managedDeviceId"`
-}
-
-type ListDeviceResourcesQueryParams struct {
-	// The maximum number of resources per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A pagination token to continue to the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// A structure used to filter the results by type of resource.
-	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListDeviceResourcesHeaders struct {
+type ListDeviceResourcesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListDeviceResourcesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDeviceResourcesRequest struct {
-	PathParams  ListDeviceResourcesPathParams
-	QueryParams ListDeviceResourcesQueryParams
-	Headers     ListDeviceResourcesHeaders
+	// The ID of the managed device that you are listing the resources of.
+	ManagedDeviceID string `pathParam:"style=simple,explode=false,name=managedDeviceId"`
+	// The maximum number of resources per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A pagination token to continue to the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// A structure used to filter the results by type of resource.
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 }
 
 type ListDeviceResourcesResponse struct {

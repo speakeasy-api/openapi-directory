@@ -50,28 +50,20 @@ func (e *GETUpdateApplicationVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateApplicationQueryParams struct {
+type GETUpdateApplicationRequest struct {
 	Action GETUpdateApplicationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the application to update. If no such application is found, <code>UpdateApplication</code> returns an <code>InvalidParameterValue</code> error.
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
 	// <p>A new description for the application.</p> <p>Default: If not specified, AWS Elastic Beanstalk does not update the description.</p>
-	Description *string                         `queryParam:"style=form,explode=true,name=Description"`
-	Version     GETUpdateApplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateApplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateApplicationRequest struct {
-	QueryParams GETUpdateApplicationQueryParams
-	Headers     GETUpdateApplicationHeaders
+	Description       *string                         `queryParam:"style=form,explode=true,name=Description"`
+	Version           GETUpdateApplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateApplicationResponse struct {

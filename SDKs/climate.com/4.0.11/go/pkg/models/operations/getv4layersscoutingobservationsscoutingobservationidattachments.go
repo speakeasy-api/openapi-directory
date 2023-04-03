@@ -8,26 +8,17 @@ import (
 )
 
 type GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsPathParams struct {
-	// Unique identifier of the Scouting Observation.
-	ScoutingObservationID string `pathParam:"style=simple,explode=false,name=scoutingObservationId"`
-}
-
-type GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsHeaders struct {
+type GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsRequest struct {
 	// Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
 	XLimit *int `header:"style=simple,explode=false,name=X-Limit"`
 	// Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
 	XNextToken *string `header:"style=simple,explode=false,name=X-Next-Token"`
-}
-
-type GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsRequest struct {
-	PathParams GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsPathParams
-	Headers    GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsHeaders
-	Security   GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsSecurity
+	// Unique identifier of the Scouting Observation.
+	ScoutingObservationID string `pathParam:"style=simple,explode=false,name=scoutingObservationId"`
 }
 
 type GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsResponse struct {

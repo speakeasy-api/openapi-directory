@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsPutJSONRequest struct {
-	// The domain to create
-	Request shared.APICoreDtoDomainsDomain `request:"mediaType=application/json"`
-}
-
 type DomainsPutJSONResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

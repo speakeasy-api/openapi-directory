@@ -50,19 +50,15 @@ func (e *POSTDeleteDomainVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteDomainQueryParams struct {
+type POSTDeleteDomainRequest struct {
 	AWSAccessKeyID   string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTDeleteDomainActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody      []byte                      `request:"mediaType=text/xml"`
 	Signature        string                      `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                      `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                      `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                      `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTDeleteDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteDomainRequest struct {
-	QueryParams POSTDeleteDomainQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTDeleteDomainResponse struct {

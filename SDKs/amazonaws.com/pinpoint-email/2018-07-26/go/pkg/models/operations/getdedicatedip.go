@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDedicatedIPPathParams struct {
+type GetDedicatedIPRequest struct {
 	// The IP address that you want to obtain more information about. The value you specify has to be a dedicated IP address that's assocaited with your Amazon Pinpoint account.
-	IP string `pathParam:"style=simple,explode=false,name=IP"`
-}
-
-type GetDedicatedIPHeaders struct {
+	IP                string  `pathParam:"style=simple,explode=false,name=IP"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetDedicatedIPHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDedicatedIPRequest struct {
-	PathParams GetDedicatedIPPathParams
-	Headers    GetDedicatedIPHeaders
 }
 
 type GetDedicatedIPResponse struct {

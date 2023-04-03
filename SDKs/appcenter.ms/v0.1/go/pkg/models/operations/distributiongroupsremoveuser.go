@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsRemoveUserSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsRemoveUserPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DistributionGroupsRemoveUserRequestBody - The list of members to add
@@ -29,10 +19,14 @@ type DistributionGroupsRemoveUserRequestBody struct {
 }
 
 type DistributionGroupsRemoveUserRequest struct {
-	PathParams DistributionGroupsRemoveUserPathParams
 	// The list of members to add
-	Request  DistributionGroupsRemoveUserRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsRemoveUserSecurity
+	RequestBody DistributionGroupsRemoveUserRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type DistributionGroupsRemoveUserDefaultApplicationJSONErrorCodeEnum string

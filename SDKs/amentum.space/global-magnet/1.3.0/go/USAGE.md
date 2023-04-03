@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
-        QueryParams: operations.AppAPIWMMEndpointsWMMMagneticFieldQueryParams{
-            Altitude: 10,
-            Latitude: 80,
-            Longitude: 100,
-            Year: 2020.5,
-        },
+        Altitude: 10,
+        Latitude: 80,
+        Longitude: 100,
+        Year: 2020.5,
     }
 
     ctx := context.Background()

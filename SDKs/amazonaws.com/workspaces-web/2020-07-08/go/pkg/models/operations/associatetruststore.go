@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateTrustStorePathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type AssociateTrustStoreQueryParams struct {
-	// The ARN of the trust store.
-	TrustStoreArn string `queryParam:"style=form,explode=true,name=trustStoreArn"`
-}
-
-type AssociateTrustStoreHeaders struct {
+type AssociateTrustStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type AssociateTrustStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateTrustStoreRequest struct {
-	PathParams  AssociateTrustStorePathParams
-	QueryParams AssociateTrustStoreQueryParams
-	Headers     AssociateTrustStoreHeaders
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
+	// The ARN of the trust store.
+	TrustStoreArn string `queryParam:"style=form,explode=true,name=trustStoreArn"`
 }
 
 type AssociateTrustStoreResponse struct {

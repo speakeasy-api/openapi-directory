@@ -13,29 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddLFTagsToResourceRequest{
-        Headers: operations.AddLFTagsToResourceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.AddLFTagsToResourceRequestBody{
-            CatalogID: "illum",
+        RequestBody: operations.AddLFTagsToResourceRequestBody{
+            CatalogID: "corrupti",
             LFTags: []shared.LFTagPair{
                 shared.LFTagPair{
-                    CatalogID: "error",
-                    TagKey: "deserunt",
+                    CatalogID: "distinctio",
+                    TagKey: "quibusdam",
                     TagValues: []string{
+                        "nulla",
+                        "corrupti",
+                        "illum",
+                    },
+                },
+                shared.LFTagPair{
+                    CatalogID: "vel",
+                    TagKey: "error",
+                    TagValues: []string{
+                        "suscipit",
                         "iure",
                         "magnam",
                     },
@@ -139,6 +138,13 @@ func main() {
                 },
             },
         },
+        XAmzAlgorithm: "saepe",
+        XAmzContentSha256: "fuga",
+        XAmzCredential: "in",
+        XAmzDate: "corporis",
+        XAmzSecurityToken: "iste",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "saepe",
     }
 
     ctx := context.Background()

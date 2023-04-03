@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetPollPathParams struct {
+type ForumGetPollRequest struct {
 	// The post id of the topic that has the poll.
 	TopicID int64 `pathParam:"style=simple,explode=false,name=topicId"`
-}
-
-type ForumGetPollRequest struct {
-	PathParams ForumGetPollPathParams
 }
 
 // ForumGetPoll200Wildcard - Look at the Response property for more information about the nature of this response

@@ -34,7 +34,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CreateWebhook - Create a webhook
 // Create a Webhook for notification in the CallFire system. Use the webhooks API to receive notifications of important CallFire events. Select the resource to listen to, and then choose the resource events to receive notifications on. When an event triggers, a POST will be made to the callback URL with a payload of notification information. Available resources and their events include 'CccCampaign': ['started', 'stopped', 'finished'], 'CallBroadcast': ['started', 'stopped', 'finished'], 'TextBroadcast': ['started', 'stopped', 'finished'], 'OutboundCall': ['finished'], 'InboundCall': ['finished'], 'OutboundText': ['finished'], 'InboundText': ['finished'], 'ContactList': ['validationFinished', 'validationFailed'], 'MonthlyRenewal': ['failed', 'finished'], 'LowBalance': ['failed', 'finished']. Webhooks support secret token which is used as signing key to HmacSHA1 hash of json payload which is returned in 'X-CallFire-Signature' header. This header can be used to verify callback POST is coming from CallFire. See [security guide](https://developers.callfire.com/security-guide.html)
-func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateWebhookRequest) (*operations.CreateWebhookResponse, error) {
+func (s *webhooks) CreateWebhook(ctx context.Context, request shared.WebhookInput, security operations.CreateWebhookSecurity) (*operations.CreateWebhookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks"
 
@@ -50,7 +50,7 @@ func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -104,16 +104,16 @@ func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateW
 
 // DeleteWebhook - Delete a webhook
 // Deletes a webhook instance. Will be removed permanently
-func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteWebhookRequest) (*operations.DeleteWebhookResponse, error) {
+func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteWebhookRequest, security operations.DeleteWebhookSecurity) (*operations.DeleteWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,7 +157,7 @@ func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteW
 
 // FindWebhookResources - Find webhook resources
 // Searches for webhook resources. Available resources include 'CccCampaign': ['started', 'stopped', 'finished'], 'CallBroadcast': ['started', 'stopped', 'finished'], 'TextBroadcast': ['started', 'stopped', 'finished'], 'OutboundCall': ['finished'], 'InboundCall': ['finished'], 'OutboundText': ['finished'], 'InboundText': ['finished'], 'ContactList': ['validationFinished', 'validationFailed'], 'MonthlyRenewal': ['failed', 'finished'], 'LowBalance': ['failed', 'finished']
-func (s *webhooks) FindWebhookResources(ctx context.Context, request operations.FindWebhookResourcesRequest) (*operations.FindWebhookResourcesResponse, error) {
+func (s *webhooks) FindWebhookResources(ctx context.Context, request operations.FindWebhookResourcesRequest, security operations.FindWebhookResourcesSecurity) (*operations.FindWebhookResourcesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks/resources"
 
@@ -166,11 +166,11 @@ func (s *webhooks) FindWebhookResources(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,7 +224,7 @@ func (s *webhooks) FindWebhookResources(ctx context.Context, request operations.
 
 // FindWebhooks - Find webhooks
 // Searches all webhooks available for a current user. Searches by name, resource, event, callback URL, or whether they are enabled. Returns a paged list of Webhooks
-func (s *webhooks) FindWebhooks(ctx context.Context, request operations.FindWebhooksRequest) (*operations.FindWebhooksResponse, error) {
+func (s *webhooks) FindWebhooks(ctx context.Context, request operations.FindWebhooksRequest, security operations.FindWebhooksSecurity) (*operations.FindWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks"
 
@@ -233,11 +233,11 @@ func (s *webhooks) FindWebhooks(ctx context.Context, request operations.FindWebh
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -291,20 +291,20 @@ func (s *webhooks) FindWebhooks(ctx context.Context, request operations.FindWebh
 
 // GetWebhook - Find a specific webhook
 // Returns a single Webhook instance for a given webhook id
-func (s *webhooks) GetWebhook(ctx context.Context, request operations.GetWebhookRequest) (*operations.GetWebhookResponse, error) {
+func (s *webhooks) GetWebhook(ctx context.Context, request operations.GetWebhookRequest, security operations.GetWebhookSecurity) (*operations.GetWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -358,20 +358,20 @@ func (s *webhooks) GetWebhook(ctx context.Context, request operations.GetWebhook
 
 // GetWebhookResource - Find specific webhook resource
 // Returns information about supported events for a given webhook resource
-func (s *webhooks) GetWebhookResource(ctx context.Context, request operations.GetWebhookResourceRequest) (*operations.GetWebhookResourceResponse, error) {
+func (s *webhooks) GetWebhookResource(ctx context.Context, request operations.GetWebhookResourceRequest, security operations.GetWebhookResourceSecurity) (*operations.GetWebhookResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/resources/{resource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/resources/{resource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -425,11 +425,11 @@ func (s *webhooks) GetWebhookResource(ctx context.Context, request operations.Ge
 
 // UpdateWebhook - Update a webhook
 // Updates the information in existing webhook
-func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
+func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest, security operations.UpdateWebhookSecurity) (*operations.UpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -441,7 +441,7 @@ func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

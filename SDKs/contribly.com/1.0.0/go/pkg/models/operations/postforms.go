@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostFormsRequest struct {
-	// Form object to be created
-	Request shared.FormSubmission `request:"mediaType=application/json"`
-}
-
 type PostFormsResponse struct {
 	ContentType string
 	// Form created

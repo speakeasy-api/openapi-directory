@@ -6,34 +6,26 @@ import (
 	"net/http"
 )
 
-type AssociateDeviceWithPlacementPathParams struct {
-	// The device template name to associate with the device ID.
-	DeviceTemplateName string `pathParam:"style=simple,explode=false,name=deviceTemplateName"`
-	// The name of the placement in which to associate the device.
-	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
-	// The name of the project containing the placement in which to associate the device.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type AssociateDeviceWithPlacementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AssociateDeviceWithPlacementRequestBody struct {
 	// The ID of the physical device to be associated with the given placement in the project. Note that a mandatory 4 character prefix is required for all <code>deviceId</code> values.
 	DeviceID string `json:"deviceId"`
 }
 
 type AssociateDeviceWithPlacementRequest struct {
-	PathParams AssociateDeviceWithPlacementPathParams
-	Headers    AssociateDeviceWithPlacementHeaders
-	Request    AssociateDeviceWithPlacementRequestBody `request:"mediaType=application/json"`
+	RequestBody       AssociateDeviceWithPlacementRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The device template name to associate with the device ID.
+	DeviceTemplateName string `pathParam:"style=simple,explode=false,name=deviceTemplateName"`
+	// The name of the placement in which to associate the device.
+	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
+	// The name of the project containing the placement in which to associate the device.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type AssociateDeviceWithPlacementResponse struct {

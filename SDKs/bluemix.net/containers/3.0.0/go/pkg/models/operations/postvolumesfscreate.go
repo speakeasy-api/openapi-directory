@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostVolumesFsCreateHeaders struct {
+type PostVolumesFsCreateRequest struct {
+	// The input parameter to create a new file share in a space.
+	FileshareParam shared.FileshareParam `request:"mediaType=application/json"`
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostVolumesFsCreateRequest struct {
-	Headers PostVolumesFsCreateHeaders
-	// The input parameter to create a new file share in a space.
-	Request shared.FileshareParam `request:"mediaType=application/json"`
 }
 
 type PostVolumesFsCreateResponse struct {

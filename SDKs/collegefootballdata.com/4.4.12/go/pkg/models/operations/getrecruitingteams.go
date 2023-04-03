@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecruitingTeamsQueryParams struct {
+type GetRecruitingTeamsRequest struct {
 	// Team filter
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Recruiting class year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetRecruitingTeamsRequest struct {
-	QueryParams GetRecruitingTeamsQueryParams
 }
 
 type GetRecruitingTeamsResponse struct {

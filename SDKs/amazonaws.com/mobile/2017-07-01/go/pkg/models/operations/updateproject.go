@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProjectQueryParams struct {
-	//  Unique project identifier.
-	ProjectID string `queryParam:"style=form,explode=true,name=projectId"`
-}
-
-type UpdateProjectHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateProjectRequestBody struct {
 	//  Binary file data.
 	Contents *string `json:"contents,omitempty"`
 }
 
 type UpdateProjectRequest struct {
-	QueryParams UpdateProjectQueryParams
-	Headers     UpdateProjectHeaders
-	Request     UpdateProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateProjectRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  Unique project identifier.
+	ProjectID string `queryParam:"style=form,explode=true,name=projectId"`
 }
 
 type UpdateProjectResponse struct {

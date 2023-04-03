@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFileSystemsQueryParams struct {
+type DescribeFileSystemsRequest struct {
 	// (Optional) Restricts the list to the file system with this creation token (String). You specify a creation token when you create an Amazon EFS file system.
 	CreationToken *string `queryParam:"style=form,explode=true,name=CreationToken"`
 	// (Optional) ID of the file system whose description you want to retrieve (String).
@@ -15,10 +15,7 @@ type DescribeFileSystemsQueryParams struct {
 	// (Optional) Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If present, specifies to continue the list from where the returning call had left off.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// (Optional) Specifies the maximum number of file systems to return in the response (integer). This number is automatically set to 100. The response is paginated at 100 per page if you have more than 100 file systems.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type DescribeFileSystemsHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,11 +23,6 @@ type DescribeFileSystemsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeFileSystemsRequest struct {
-	QueryParams DescribeFileSystemsQueryParams
-	Headers     DescribeFileSystemsHeaders
 }
 
 type DescribeFileSystemsResponse struct {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteInsightPathParams struct {
+type DeleteInsightRequest struct {
 	// The ARN of the insight to delete.
-	InsightArn string `pathParam:"style=simple,explode=false,name=InsightArn"`
-}
-
-type DeleteInsightHeaders struct {
+	InsightArn        string  `pathParam:"style=simple,explode=false,name=InsightArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DeleteInsightHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteInsightRequest struct {
-	PathParams DeleteInsightPathParams
-	Headers    DeleteInsightHeaders
 }
 
 type DeleteInsightResponse struct {

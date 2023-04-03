@@ -57,7 +57,7 @@ func (s *systemStorageConfig) CreateS3Config(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/storage/s3"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "S3ConfigCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -72,7 +72,7 @@ func (s *systemStorageConfig) CreateS3Config(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -148,7 +148,7 @@ func (s *systemStorageConfig) CreateS3Tag(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/storage/s3/tags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "S3TagCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -163,7 +163,7 @@ func (s *systemStorageConfig) CreateS3Tag(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -236,14 +236,14 @@ func (s *systemStorageConfig) CreateS3Tag(ctx context.Context, request operation
 // None.
 func (s *systemStorageConfig) RemoveS3Tag(ctx context.Context, request operations.RemoveS3TagRequest) (*operations.RemoveS3TagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/storage/s3/tags/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/storage/s3/tags/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -318,7 +318,7 @@ func (s *systemStorageConfig) Request3Config(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -389,14 +389,14 @@ func (s *systemStorageConfig) Request3Config(ctx context.Context, request operat
 // None.
 func (s *systemStorageConfig) RequestS3Tag(ctx context.Context, request operations.RequestS3TagRequest) (*operations.RequestS3TagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/storage/s3/tags/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/storage/s3/tags/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -476,7 +476,7 @@ func (s *systemStorageConfig) RequestS3TagList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -552,7 +552,7 @@ func (s *systemStorageConfig) UpdateS3Config(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/storage/s3"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "S3ConfigUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -567,7 +567,7 @@ func (s *systemStorageConfig) UpdateS3Config(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

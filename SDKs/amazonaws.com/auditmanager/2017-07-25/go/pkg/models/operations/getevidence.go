@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEvidencePathParams struct {
+type GetEvidenceRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  The unique identifier for the assessment.
 	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
 	//  The unique identifier for the control set.
@@ -16,21 +23,6 @@ type GetEvidencePathParams struct {
 	EvidenceFolderID string `pathParam:"style=simple,explode=false,name=evidenceFolderId"`
 	//  The unique identifier for the evidence.
 	EvidenceID string `pathParam:"style=simple,explode=false,name=evidenceId"`
-}
-
-type GetEvidenceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEvidenceRequest struct {
-	PathParams GetEvidencePathParams
-	Headers    GetEvidenceHeaders
 }
 
 type GetEvidenceResponse struct {

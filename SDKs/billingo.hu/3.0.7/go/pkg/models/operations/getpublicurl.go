@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPublicURLPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetPublicURLRequest struct {
-	PathParams GetPublicURLPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPublicURLResponse struct {

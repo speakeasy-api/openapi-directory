@@ -34,11 +34,11 @@ func newItems(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // ItemsAdd - Create Item
 // Create Item
-func (s *items) ItemsAdd(ctx context.Context, request operations.ItemsAddRequest) (*operations.ItemsAddResponse, error) {
+func (s *items) ItemsAdd(ctx context.Context, request operations.ItemsAddRequest, security operations.ItemsAddSecurity) (*operations.ItemsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/items"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *items) ItemsAdd(ctx context.Context, request operations.ItemsAddRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *items) ItemsAdd(ctx context.Context, request operations.ItemsAddRequest
 
 // ItemsAll - List Items
 // List Items
-func (s *items) ItemsAll(ctx context.Context, request operations.ItemsAllRequest) (*operations.ItemsAllResponse, error) {
+func (s *items) ItemsAll(ctx context.Context, request operations.ItemsAllRequest, security operations.ItemsAllSecurity) (*operations.ItemsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/items"
 
@@ -164,13 +164,13 @@ func (s *items) ItemsAll(ctx context.Context, request operations.ItemsAllRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *items) ItemsAll(ctx context.Context, request operations.ItemsAllRequest
 
 // ItemsDelete - Delete Item
 // Delete Item
-func (s *items) ItemsDelete(ctx context.Context, request operations.ItemsDeleteRequest) (*operations.ItemsDeleteResponse, error) {
+func (s *items) ItemsDelete(ctx context.Context, request operations.ItemsDeleteRequest, security operations.ItemsDeleteSecurity) (*operations.ItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *items) ItemsDelete(ctx context.Context, request operations.ItemsDeleteR
 
 // ItemsOne - Get Item
 // Get Item
-func (s *items) ItemsOne(ctx context.Context, request operations.ItemsOneRequest) (*operations.ItemsOneResponse, error) {
+func (s *items) ItemsOne(ctx context.Context, request operations.ItemsOneRequest, security operations.ItemsOneSecurity) (*operations.ItemsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *items) ItemsOne(ctx context.Context, request operations.ItemsOneRequest
 
 // ItemsUpdate - Update Item
 // Update Item
-func (s *items) ItemsUpdate(ctx context.Context, request operations.ItemsUpdateRequest) (*operations.ItemsUpdateResponse, error) {
+func (s *items) ItemsUpdate(ctx context.Context, request operations.ItemsUpdateRequest, security operations.ItemsUpdateSecurity) (*operations.ItemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/items/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *items) ItemsUpdate(ctx context.Context, request operations.ItemsUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

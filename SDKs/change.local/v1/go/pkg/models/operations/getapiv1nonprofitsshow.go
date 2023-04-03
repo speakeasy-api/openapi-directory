@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1NonprofitsShowSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAPIV1NonprofitsShowQueryParams struct {
-	// The id of a nonprofit from the CHANGE network.
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetAPIV1NonprofitsShowRequest struct {
-	QueryParams GetAPIV1NonprofitsShowQueryParams
-	Security    GetAPIV1NonprofitsShowSecurity
+	// The id of a nonprofit from the CHANGE network.
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetAPIV1NonprofitsShowResponse struct {

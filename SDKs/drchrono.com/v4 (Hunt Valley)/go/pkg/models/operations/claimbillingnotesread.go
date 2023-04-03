@@ -8,22 +8,13 @@ import (
 )
 
 type ClaimBillingNotesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ClaimBillingNotesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClaimBillingNotesReadQueryParams struct {
-	Appointment *int64 `queryParam:"style=form,explode=true,name=appointment"`
-	Doctor      *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClaimBillingNotesReadRequest struct {
-	PathParams  ClaimBillingNotesReadPathParams
-	QueryParams ClaimBillingNotesReadQueryParams
-	Security    ClaimBillingNotesReadSecurity
+	Appointment *int64 `queryParam:"style=form,explode=true,name=appointment"`
+	Doctor      *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID          string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ClaimBillingNotesReadResponse struct {

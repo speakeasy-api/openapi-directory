@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteLoggingConfigurationPathParams struct {
-	// The ID of the workspace to vend logs to.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteLoggingConfigurationQueryParams struct {
-	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteLoggingConfigurationHeaders struct {
+type DeleteLoggingConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteLoggingConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteLoggingConfigurationRequest struct {
-	PathParams  DeleteLoggingConfigurationPathParams
-	QueryParams DeleteLoggingConfigurationQueryParams
-	Headers     DeleteLoggingConfigurationHeaders
+	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The ID of the workspace to vend logs to.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteLoggingConfigurationResponse struct {

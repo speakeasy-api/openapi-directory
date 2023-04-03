@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDocumentRequest struct {
-	// DocumentInsert object that you would like to store.
-	Request shared.DocumentInsert `request:"mediaType=application/json"`
-}
-
 type CreateDocumentResponse struct {
 	// The request is malformed.
 	ClientErrorResponse *shared.ClientErrorResponse

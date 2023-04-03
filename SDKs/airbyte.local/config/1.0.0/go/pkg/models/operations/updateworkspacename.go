@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWorkspaceNameRequest struct {
-	Request shared.WorkspaceUpdateName `request:"mediaType=application/json"`
-}
-
 type UpdateWorkspaceNameResponse struct {
 	ContentType string
 	// Input failed validation

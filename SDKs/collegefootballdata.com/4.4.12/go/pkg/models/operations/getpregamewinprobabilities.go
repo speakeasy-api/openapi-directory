@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPregameWinProbabilitiesQueryParams struct {
+type GetPregameWinProbabilitiesRequest struct {
 	// regular or postseason
 	SeasonType *string `queryParam:"style=form,explode=true,name=seasonType"`
 	// Team filter
@@ -16,10 +16,6 @@ type GetPregameWinProbabilitiesQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPregameWinProbabilitiesRequest struct {
-	QueryParams GetPregameWinProbabilitiesQueryParams
 }
 
 type GetPregameWinProbabilitiesResponse struct {

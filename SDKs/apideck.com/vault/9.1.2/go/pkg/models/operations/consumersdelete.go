@@ -8,23 +8,14 @@ import (
 )
 
 type ConsumersDeleteSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ConsumersDeletePathParams struct {
-	// ID of the consumer to return
-	ConsumerID string `pathParam:"style=simple,explode=false,name=consumer_id"`
-}
-
-type ConsumersDeleteHeaders struct {
-	// The ID of your Unify application
-	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ConsumersDeleteRequest struct {
-	PathParams ConsumersDeletePathParams
-	Headers    ConsumersDeleteHeaders
-	Security   ConsumersDeleteSecurity
+	// ID of the consumer to return
+	ConsumerID string `pathParam:"style=simple,explode=false,name=consumer_id"`
+	// The ID of your Unify application
+	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 }
 
 type ConsumersDeleteResponse struct {

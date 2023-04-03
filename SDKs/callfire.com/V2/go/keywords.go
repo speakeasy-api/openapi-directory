@@ -34,7 +34,7 @@ func newKeywords(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // FindKeywordLeaseConfigs - Find keyword lease configs
 // Searches for all keyword lease configs for the user. Returns a paged list of KeywordConfig
-func (s *keywords) FindKeywordLeaseConfigs(ctx context.Context, request operations.FindKeywordLeaseConfigsRequest) (*operations.FindKeywordLeaseConfigsResponse, error) {
+func (s *keywords) FindKeywordLeaseConfigs(ctx context.Context, request operations.FindKeywordLeaseConfigsRequest, security operations.FindKeywordLeaseConfigsSecurity) (*operations.FindKeywordLeaseConfigsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keywords/leases/configs"
 
@@ -43,11 +43,11 @@ func (s *keywords) FindKeywordLeaseConfigs(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *keywords) FindKeywordLeaseConfigs(ctx context.Context, request operatio
 
 // FindKeywordLeases - Find keyword leases
 // Searches for all keywords owned by user. A keyword lease is the ownership information involving a keyword
-func (s *keywords) FindKeywordLeases(ctx context.Context, request operations.FindKeywordLeasesRequest) (*operations.FindKeywordLeasesResponse, error) {
+func (s *keywords) FindKeywordLeases(ctx context.Context, request operations.FindKeywordLeasesRequest, security operations.FindKeywordLeasesSecurity) (*operations.FindKeywordLeasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keywords/leases"
 
@@ -110,11 +110,11 @@ func (s *keywords) FindKeywordLeases(ctx context.Context, request operations.Fin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *keywords) FindKeywordLeases(ctx context.Context, request operations.Fin
 
 // FindKeywords - Find keywords
 // Searches for all keywords available for purchase on the CallFire platform. If a keyword appears in the response, it is available for purchase. List the 'keywords' in a query parameter to search for multiple keywords (at least one keyword should be sent in request). Keyword should only consist of uppercase and lowercase letters and numbers. Number of characters must be greater than 2, but less than 65.
-func (s *keywords) FindKeywords(ctx context.Context, request operations.FindKeywordsRequest) (*operations.FindKeywordsResponse, error) {
+func (s *keywords) FindKeywords(ctx context.Context, request operations.FindKeywordsRequest, security operations.FindKeywordsSecurity) (*operations.FindKeywordsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/keywords"
 
@@ -177,11 +177,11 @@ func (s *keywords) FindKeywords(ctx context.Context, request operations.FindKeyw
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,20 +235,20 @@ func (s *keywords) FindKeywords(ctx context.Context, request operations.FindKeyw
 
 // GetKeywordLease - Find a specific lease
 // Searches for all keywords owned by user
-func (s *keywords) GetKeywordLease(ctx context.Context, request operations.GetKeywordLeaseRequest) (*operations.GetKeywordLeaseResponse, error) {
+func (s *keywords) GetKeywordLease(ctx context.Context, request operations.GetKeywordLeaseRequest, security operations.GetKeywordLeaseSecurity) (*operations.GetKeywordLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -302,20 +302,20 @@ func (s *keywords) GetKeywordLease(ctx context.Context, request operations.GetKe
 
 // GetKeywordLeaseByID - Find a keyword by id
 // Get keyword by id
-func (s *keywords) GetKeywordLeaseByID(ctx context.Context, request operations.GetKeywordLeaseByIDRequest) (*operations.GetKeywordLeaseByIDResponse, error) {
+func (s *keywords) GetKeywordLeaseByID(ctx context.Context, request operations.GetKeywordLeaseByIDRequest, security operations.GetKeywordLeaseByIDSecurity) (*operations.GetKeywordLeaseByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/id/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/id/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,20 +369,20 @@ func (s *keywords) GetKeywordLeaseByID(ctx context.Context, request operations.G
 
 // GetKeywordLeaseConfig - Find a specific keyword lease config
 // Returns a single KeywordConfig instance for a given keyword lease
-func (s *keywords) GetKeywordLeaseConfig(ctx context.Context, request operations.GetKeywordLeaseConfigRequest) (*operations.GetKeywordLeaseConfigResponse, error) {
+func (s *keywords) GetKeywordLeaseConfig(ctx context.Context, request operations.GetKeywordLeaseConfigRequest, security operations.GetKeywordLeaseConfigSecurity) (*operations.GetKeywordLeaseConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -436,16 +436,16 @@ func (s *keywords) GetKeywordLeaseConfig(ctx context.Context, request operations
 
 // IsKeywordAvailable - Check for a specific keyword
 // Searches for the specific keyword to purchase on the CallFire platform. Returns 'true' if keyword is available. Keyword should only consist of uppercase and lowercase letters and numbers. Number of characters must be greater than 2, but less than 65.
-func (s *keywords) IsKeywordAvailable(ctx context.Context, request operations.IsKeywordAvailableRequest) (*operations.IsKeywordAvailableResponse, error) {
+func (s *keywords) IsKeywordAvailable(ctx context.Context, request operations.IsKeywordAvailableRequest, security operations.IsKeywordAvailableSecurity) (*operations.IsKeywordAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/{keyword}/available", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keywords/{keyword}/available", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *keywords) IsKeywordAvailable(ctx context.Context, request operations.Is
 
 // UpdateKeywordLease - Update a lease
 // Updates a keyword lease. Turns the autoRenew on/off. Configure double opt in feature. Add/remove contact list from keyword.
-func (s *keywords) UpdateKeywordLease(ctx context.Context, request operations.UpdateKeywordLeaseRequest) (*operations.UpdateKeywordLeaseResponse, error) {
+func (s *keywords) UpdateKeywordLease(ctx context.Context, request operations.UpdateKeywordLeaseRequest, security operations.UpdateKeywordLeaseSecurity) (*operations.UpdateKeywordLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeywordLease", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,7 +515,7 @@ func (s *keywords) UpdateKeywordLease(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -559,11 +559,11 @@ func (s *keywords) UpdateKeywordLease(ctx context.Context, request operations.Up
 
 // UpdateKeywordLeaseConfig - Update a keyword lease config
 // Updates a keyword lease configuration. Use this API endpoint to enable/disable inbound SMS forwarding, set forward number. Forward number must be in E.164 format)
-func (s *keywords) UpdateKeywordLeaseConfig(ctx context.Context, request operations.UpdateKeywordLeaseConfigRequest) (*operations.UpdateKeywordLeaseConfigResponse, error) {
+func (s *keywords) UpdateKeywordLeaseConfig(ctx context.Context, request operations.UpdateKeywordLeaseConfigRequest, security operations.UpdateKeywordLeaseConfigSecurity) (*operations.UpdateKeywordLeaseConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeywordConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -575,7 +575,7 @@ func (s *keywords) UpdateKeywordLeaseConfig(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

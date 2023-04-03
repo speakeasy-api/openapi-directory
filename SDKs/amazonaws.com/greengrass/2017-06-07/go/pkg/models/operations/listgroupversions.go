@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGroupVersionsPathParams struct {
+type ListGroupVersionsRequest struct {
 	// The ID of the Greengrass group.
 	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type ListGroupVersionsQueryParams struct {
 	// The maximum number of results to be returned per request.
 	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token for the next set of results, or ''null'' if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListGroupVersionsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListGroupVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListGroupVersionsRequest struct {
-	PathParams  ListGroupVersionsPathParams
-	QueryParams ListGroupVersionsQueryParams
-	Headers     ListGroupVersionsHeaders
 }
 
 type ListGroupVersionsResponse struct {

@@ -8,19 +8,14 @@ import (
 )
 
 type PatchLegalEntitiesIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchLegalEntitiesIDPathParams struct {
-	// The unique identifier of the legal entity.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchLegalEntitiesIDRequest struct {
-	PathParams PatchLegalEntitiesIDPathParams
-	Request    *shared.LegalEntityInfoInput `request:"mediaType=application/json"`
-	Security   PatchLegalEntitiesIDSecurity
+	LegalEntityInfoInput *shared.LegalEntityInfoInput `request:"mediaType=application/json"`
+	// The unique identifier of the legal entity.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchLegalEntitiesIDResponse struct {

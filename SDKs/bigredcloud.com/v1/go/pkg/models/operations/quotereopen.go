@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type QuoteReopenPathParams struct {
+type QuoteReopenRequest struct {
 	// Id of Quote to reopen
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type QuoteReopenRequest struct {
-	PathParams QuoteReopenPathParams
 }
 
 type QuoteReopenResponse struct {

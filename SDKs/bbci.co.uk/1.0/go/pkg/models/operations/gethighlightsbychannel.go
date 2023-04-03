@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHighlightsByChannelPathParams struct {
-	// The channel identifier to limit results to.
-	Channel string `pathParam:"style=simple,explode=false,name=channel"`
-}
-
-type GetHighlightsByChannelQueryParams struct {
+type GetHighlightsByChannelRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The channel identifier to limit results to.
+	Channel string `pathParam:"style=simple,explode=false,name=channel"`
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// Whether to include live programmes
@@ -23,11 +20,6 @@ type GetHighlightsByChannelQueryParams struct {
 	Mixin *shared.MixinEnum `queryParam:"style=form,explode=true,name=mixin"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetHighlightsByChannelRequest struct {
-	PathParams  GetHighlightsByChannelPathParams
-	QueryParams GetHighlightsByChannelQueryParams
 }
 
 type GetHighlightsByChannelResponse struct {

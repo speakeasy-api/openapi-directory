@@ -7,34 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRecordPathParams struct {
-	// The name of the feature group to delete the record from.
-	FeatureGroupName string `pathParam:"style=simple,explode=false,name=FeatureGroupName"`
-}
-
-type DeleteRecordQueryParams struct {
+type DeleteRecordRequest struct {
 	// Timestamp indicating when the deletion event occurred. <code>EventTime</code> can be used to query data at a certain point in time.
 	EventTime string `queryParam:"style=form,explode=true,name=EventTime"`
+	// The name of the feature group to delete the record from.
+	FeatureGroupName string `pathParam:"style=simple,explode=false,name=FeatureGroupName"`
 	// The value for the <code>RecordIdentifier</code> that uniquely identifies the record, in string format.
 	RecordIdentifierValueAsString string `queryParam:"style=form,explode=true,name=RecordIdentifierValueAsString"`
 	// A list of stores from which you're deleting the record. By default, Feature Store deletes the record from all of the stores that you're using for the <code>FeatureGroup</code>.
-	TargetStores []shared.TargetStoreEnum `queryParam:"style=form,explode=true,name=TargetStores"`
-}
-
-type DeleteRecordHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRecordRequest struct {
-	PathParams  DeleteRecordPathParams
-	QueryParams DeleteRecordQueryParams
-	Headers     DeleteRecordHeaders
+	TargetStores      []shared.TargetStoreEnum `queryParam:"style=form,explode=true,name=TargetStores"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteRecordResponse struct {

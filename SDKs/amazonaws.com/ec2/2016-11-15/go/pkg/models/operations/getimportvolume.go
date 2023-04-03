@@ -89,7 +89,7 @@ type GETImportVolumeVolume struct {
 	Size int64 `queryParam:"name=Size"`
 }
 
-type GETImportVolumeQueryParams struct {
+type GETImportVolumeRequest struct {
 	Action GETImportVolumeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Availability Zone for the resulting EBS volume.
 	AvailabilityZone string `queryParam:"style=form,explode=true,name=AvailabilityZone"`
@@ -101,22 +101,14 @@ type GETImportVolumeQueryParams struct {
 	Image   GETImportVolumeImage       `queryParam:"style=form,explode=true,name=Image"`
 	Version GETImportVolumeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The volume size.
-	Volume GETImportVolumeVolume `queryParam:"style=form,explode=true,name=Volume"`
-}
-
-type GETImportVolumeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETImportVolumeRequest struct {
-	QueryParams GETImportVolumeQueryParams
-	Headers     GETImportVolumeHeaders
+	Volume            GETImportVolumeVolume `queryParam:"style=form,explode=true,name=Volume"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETImportVolumeResponse struct {

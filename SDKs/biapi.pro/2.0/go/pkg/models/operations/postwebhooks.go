@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostWebhooksQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostWebhooksRequestBody struct {
 	// The webhook event
 	Event *string `multipartForm:"name=event"`
@@ -27,8 +23,8 @@ type PostWebhooksRequestBody struct {
 }
 
 type PostWebhooksRequest struct {
-	QueryParams PostWebhooksQueryParams
-	Request     *PostWebhooksRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostWebhooksRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                  `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PostWebhooksResponse struct {

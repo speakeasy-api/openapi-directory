@@ -8,17 +8,13 @@ import (
 )
 
 type FindKeywordsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type FindKeywordsQueryParams struct {
-	// A keyword to search for
-	Keywords []string `queryParam:"style=form,explode=true,name=keywords"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type FindKeywordsRequest struct {
-	QueryParams FindKeywordsQueryParams
-	Security    FindKeywordsSecurity
+	// A keyword to search for
+	Keywords []string `queryParam:"style=form,explode=true,name=keywords"`
 }
 
 type FindKeywordsResponse struct {

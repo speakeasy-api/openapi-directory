@@ -39,16 +39,16 @@ func newSSH(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // ```
 // $ curl -X DELETE https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/{b15b6026-9c02-4626-b4ad-b905f99f763a}
 // ```
-func (s *ssh) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.DeleteUsersSelectedUserSSHKeysKeyIDRequest) (*operations.DeleteUsersSelectedUserSSHKeysKeyIDResponse, error) {
+func (s *ssh) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.DeleteUsersSelectedUserSSHKeysKeyIDRequest, security operations.DeleteUsersSelectedUserSSHKeysKeyIDSecurity) (*operations.DeleteUsersSelectedUserSSHKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,16 +136,16 @@ func (s *ssh) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request o
 //	}
 //
 // ```
-func (s *ssh) GetUsersSelectedUserSSHKeys(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysRequest) (*operations.GetUsersSelectedUserSSHKeysResponse, error) {
+func (s *ssh) GetUsersSelectedUserSSHKeys(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysRequest, security operations.GetUsersSelectedUserSSHKeysSecurity) (*operations.GetUsersSelectedUserSSHKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,16 +231,16 @@ func (s *ssh) GetUsersSelectedUserSSHKeys(ctx context.Context, request operation
 //	}
 //
 // ```
-func (s *ssh) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysKeyIDRequest) (*operations.GetUsersSelectedUserSSHKeysKeyIDResponse, error) {
+func (s *ssh) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysKeyIDRequest, security operations.GetUsersSelectedUserSSHKeysKeyIDSecurity) (*operations.GetUsersSelectedUserSSHKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -326,11 +326,11 @@ func (s *ssh) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request oper
 //	}
 //
 // ```
-func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operations.PostUsersSelectedUserSSHKeysRequest) (*operations.PostUsersSelectedUserSSHKeysResponse, error) {
+func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operations.PostUsersSelectedUserSSHKeysRequest, security operations.PostUsersSelectedUserSSHKeysSecurity) (*operations.PostUsersSelectedUserSSHKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -342,7 +342,7 @@ func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -432,11 +432,11 @@ func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operatio
 //	}
 //
 // ```
-func (s *ssh) PutUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.PutUsersSelectedUserSSHKeysKeyIDRequest) (*operations.PutUsersSelectedUserSSHKeysKeyIDResponse, error) {
+func (s *ssh) PutUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.PutUsersSelectedUserSSHKeysKeyIDRequest, security operations.PutUsersSelectedUserSSHKeysKeyIDSecurity) (*operations.PutUsersSelectedUserSSHKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -448,7 +448,7 @@ func (s *ssh) PutUsersSelectedUserSSHKeysKeyID(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

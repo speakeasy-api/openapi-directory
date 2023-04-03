@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDocumentClassificationJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDocumentClassificationJobsXAmzTargetEnum
 type ListDocumentClassificationJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDocumentClassificationJobsXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ListDocumentClassificationJobsHeaders struct {
+type ListDocumentClassificationJobsRequest struct {
+	ListDocumentClassificationJobsRequest shared.ListDocumentClassificationJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDocumentClassificationJobsHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDocumentClassificationJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDocumentClassificationJobsRequest struct {
-	QueryParams ListDocumentClassificationJobsQueryParams
-	Headers     ListDocumentClassificationJobsHeaders
-	Request     shared.ListDocumentClassificationJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListDocumentClassificationJobsResponse struct {

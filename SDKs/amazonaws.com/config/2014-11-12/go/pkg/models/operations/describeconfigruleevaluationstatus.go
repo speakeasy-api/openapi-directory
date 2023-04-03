@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeConfigRuleEvaluationStatusQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeConfigRuleEvaluationStatusXAmzTargetEnum
 type DescribeConfigRuleEvaluationStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeConfigRuleEvaluationStatusXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type DescribeConfigRuleEvaluationStatusHeaders struct {
+type DescribeConfigRuleEvaluationStatusRequest struct {
+	DescribeConfigRuleEvaluationStatusRequest shared.DescribeConfigRuleEvaluationStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeConfigRuleEvaluationStatusHeaders struct {
 	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeConfigRuleEvaluationStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeConfigRuleEvaluationStatusRequest struct {
-	QueryParams DescribeConfigRuleEvaluationStatusQueryParams
-	Headers     DescribeConfigRuleEvaluationStatusHeaders
-	Request     shared.DescribeConfigRuleEvaluationStatusRequest `request:"mediaType=application/json"`
 }
 
 type DescribeConfigRuleEvaluationStatusResponse struct {

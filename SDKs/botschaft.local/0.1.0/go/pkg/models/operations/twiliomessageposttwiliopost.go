@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TwilioMessagePostTwilioPostHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
 type TwilioMessagePostTwilioPostRequest struct {
-	Headers TwilioMessagePostTwilioPostHeaders
-	Request shared.TwilioMessageRequest `request:"mediaType=application/json"`
+	TwilioMessageRequest shared.TwilioMessageRequest `request:"mediaType=application/json"`
+	Authorization        *string                     `header:"style=simple,explode=false,name=authorization"`
 }
 
 type TwilioMessagePostTwilioPostResponse struct {

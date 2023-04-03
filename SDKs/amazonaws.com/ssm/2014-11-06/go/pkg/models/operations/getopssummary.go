@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOpsSummaryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetOpsSummaryXAmzTargetEnum
 type GetOpsSummaryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetOpsSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOpsSummaryHeaders struct {
+type GetOpsSummaryRequest struct {
+	GetOpsSummaryRequest shared.GetOpsSummaryRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetOpsSummaryHeaders struct {
 	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetOpsSummaryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetOpsSummaryRequest struct {
-	QueryParams GetOpsSummaryQueryParams
-	Headers     GetOpsSummaryHeaders
-	Request     shared.GetOpsSummaryRequest `request:"mediaType=application/json"`
 }
 
 type GetOpsSummaryResponse struct {

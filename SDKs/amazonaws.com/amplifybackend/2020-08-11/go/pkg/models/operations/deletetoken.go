@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteTokenPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The session ID.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type DeleteTokenHeaders struct {
+type DeleteTokenRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteTokenHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTokenRequest struct {
-	PathParams DeleteTokenPathParams
-	Headers    DeleteTokenHeaders
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The session ID.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type DeleteTokenResponse struct {

@@ -10,8 +10,8 @@ import (
 )
 
 type SsmgrSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type SsmgrRequestBodyCertificateParameters struct {
@@ -52,12 +52,6 @@ type SsmgrRequestBody struct {
 	Format SsmgrRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type SsmgrRequest struct {
-	// Request format
-	Request  *SsmgrRequestBody `request:"mediaType=application/json"`
-	Security SsmgrSecurity
 }
 
 type Ssmgr504ApplicationJSONErrorEnum string

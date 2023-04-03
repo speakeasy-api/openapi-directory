@@ -50,28 +50,20 @@ func (e *GETRebootDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRebootDBInstanceQueryParams struct {
+type GETRebootDBInstanceRequest struct {
 	Action GETRebootDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB instance identifier. This parameter is stored as a lowercase string.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identifier of an existing DBInstance.</p> </li> </ul>
 	DBInstanceIdentifier string `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	// <p> When <code>true</code>, the reboot is conducted through a MultiAZ failover.</p> <p>Constraint: You can't specify <code>true</code> if the instance is not configured for MultiAZ.</p>
-	ForceFailover *bool                          `queryParam:"style=form,explode=true,name=ForceFailover"`
-	Version       GETRebootDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRebootDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRebootDBInstanceRequest struct {
-	QueryParams GETRebootDBInstanceQueryParams
-	Headers     GETRebootDBInstanceHeaders
+	ForceFailover     *bool                          `queryParam:"style=form,explode=true,name=ForceFailover"`
+	Version           GETRebootDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRebootDBInstanceResponse struct {

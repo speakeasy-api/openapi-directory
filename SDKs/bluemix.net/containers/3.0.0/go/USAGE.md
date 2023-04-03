@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetContainersMessagesRequest{
-        Headers: operations.GetContainersMessagesHeaders{
-            XAuthProjectID: "corrupti",
-            XAuthToken: "provident",
-        },
+        XAuthProjectID: "corrupti",
+        XAuthToken: "provident",
     }
 
     ctx := context.Background()

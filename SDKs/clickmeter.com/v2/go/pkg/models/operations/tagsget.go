@@ -39,7 +39,7 @@ func (e *TagsGetTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TagsGetQueryParams struct {
+type TagsGetRequest struct {
 	// Comma separated list of datapoints id to filter by
 	Datapoints *string `queryParam:"style=form,explode=true,name=datapoints"`
 	// Comma separated list of groups id to filter by
@@ -52,10 +52,6 @@ type TagsGetQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Type of entity related to the tag
 	Type *TagsGetTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type TagsGetRequest struct {
-	QueryParams TagsGetQueryParams
 }
 
 type TagsGetResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteKeyKeyPathParams struct {
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
 type DeleteKeyKeyRequest struct {
-	PathParams DeleteKeyKeyPathParams
+	Key string `pathParam:"style=simple,explode=false,name=key"`
 }
 
 type DeleteKeyKeyResponse struct {

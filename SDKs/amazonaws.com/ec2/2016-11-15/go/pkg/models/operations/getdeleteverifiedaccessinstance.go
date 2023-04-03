@@ -50,7 +50,7 @@ func (e *GETDeleteVerifiedAccessInstanceVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETDeleteVerifiedAccessInstanceQueryParams struct {
+type GETDeleteVerifiedAccessInstanceRequest struct {
 	Action GETDeleteVerifiedAccessInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -59,21 +59,13 @@ type GETDeleteVerifiedAccessInstanceQueryParams struct {
 	// The ID of the Amazon Web Services Verified Access instance.
 	VerifiedAccessInstanceID string                                     `queryParam:"style=form,explode=true,name=VerifiedAccessInstanceId"`
 	Version                  GETDeleteVerifiedAccessInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteVerifiedAccessInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteVerifiedAccessInstanceRequest struct {
-	QueryParams GETDeleteVerifiedAccessInstanceQueryParams
-	Headers     GETDeleteVerifiedAccessInstanceHeaders
+	XAmzAlgorithm            *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteVerifiedAccessInstanceResponse struct {

@@ -50,26 +50,18 @@ func (e *GETDeleteHsmConfigurationVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDeleteHsmConfigurationQueryParams struct {
+type GETDeleteHsmConfigurationRequest struct {
 	Action GETDeleteHsmConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the Amazon Redshift HSM configuration to be deleted.
 	HsmConfigurationIdentifier string                               `queryParam:"style=form,explode=true,name=HsmConfigurationIdentifier"`
 	Version                    GETDeleteHsmConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteHsmConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteHsmConfigurationRequest struct {
-	QueryParams GETDeleteHsmConfigurationQueryParams
-	Headers     GETDeleteHsmConfigurationHeaders
+	XAmzAlgorithm              *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteHsmConfigurationResponse struct {

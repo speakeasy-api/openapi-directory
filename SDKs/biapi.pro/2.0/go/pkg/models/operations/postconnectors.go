@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostConnectorsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostConnectorsRequestBody struct {
 	// Optionnal comment
 	Comment *string `multipartForm:"name=comment"`
@@ -31,8 +27,8 @@ type PostConnectorsRequestBody struct {
 }
 
 type PostConnectorsRequest struct {
-	QueryParams PostConnectorsQueryParams
-	Request     PostConnectorsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostConnectorsRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                   `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PostConnectorsResponse struct {

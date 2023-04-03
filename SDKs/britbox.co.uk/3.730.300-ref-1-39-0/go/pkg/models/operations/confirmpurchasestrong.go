@@ -8,15 +8,12 @@ import (
 )
 
 type ConfirmPurchaseStrongSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ConfirmPurchaseStrongPathParams struct {
-	// The identifier of the payment platform (stripe/itunes).
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type ConfirmPurchaseStrongQueryParams struct {
+type ConfirmPurchaseStrongRequest struct {
+	// Details of a purchase request.
+	ItvPurchaseStrongRequest shared.ItvPurchaseStrongRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -29,14 +26,8 @@ type ConfirmPurchaseStrongQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ConfirmPurchaseStrongRequest struct {
-	PathParams  ConfirmPurchaseStrongPathParams
-	QueryParams ConfirmPurchaseStrongQueryParams
-	// Details of a purchase request.
-	Request  shared.ItvPurchaseStrongRequest `request:"mediaType=application/json"`
-	Security ConfirmPurchaseStrongSecurity
+	// The identifier of the payment platform (stripe/itunes).
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type ConfirmPurchaseStrongResponse struct {

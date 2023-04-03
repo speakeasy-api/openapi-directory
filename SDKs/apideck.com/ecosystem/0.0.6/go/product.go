@@ -35,14 +35,14 @@ func newProduct(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List product listings
 func (s *product) ProductListingsAll(ctx context.Context, request operations.ProductListingsAllRequest) (*operations.ProductListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}/listings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}/listings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,7 +84,7 @@ func (s *product) ProductListingsAll(ctx context.Context, request operations.Pro
 // List products
 func (s *product) ProductsAll(ctx context.Context, request operations.ProductsAllRequest) (*operations.ProductsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *product) ProductsAll(ctx context.Context, request operations.ProductsAl
 // Get product
 func (s *product) ProductsOne(ctx context.Context, request operations.ProductsOneRequest) (*operations.ProductsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

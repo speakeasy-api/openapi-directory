@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCommentByIDPathParams struct {
+type GetCommentByIDRequest struct {
 	// Comment identifier.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCommentByIDRequest struct {
-	PathParams GetCommentByIDPathParams
 }
 
 type GetCommentByIDResponse struct {

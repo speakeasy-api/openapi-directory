@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIPostNewOrderFormQueryParams struct {
+type OrderAPIPostNewOrderFormRequest struct {
+	BillbeeInterfacesBillbeeAPIModelOrderInput shared.BillbeeInterfacesBillbeeAPIModelOrderInput `request:"mediaType=application/x-www-form-urlencoded"`
 	// Deprecated, if orderData.ApiAccountId is set, it will be used instead of 'shopId'
 	ShopID *int64 `queryParam:"style=form,explode=true,name=shopId"`
-}
-
-type OrderAPIPostNewOrderFormRequest struct {
-	QueryParams OrderAPIPostNewOrderFormQueryParams
-	Request     shared.BillbeeInterfacesBillbeeAPIModelOrderInput `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type OrderAPIPostNewOrderFormResponse struct {

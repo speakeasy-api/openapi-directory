@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutWebhooksAuthIDAuthPathParams struct {
-	IDAuth int64 `pathParam:"style=simple,explode=false,name=id_auth"`
-}
-
-type PutWebhooksAuthIDAuthQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutWebhooksAuthIDAuthRequestBody struct {
 	// The authentication process configuration. A dict containt either the certificate
 	Config *string `multipartForm:"name=config"`
@@ -25,9 +17,9 @@ type PutWebhooksAuthIDAuthRequestBody struct {
 }
 
 type PutWebhooksAuthIDAuthRequest struct {
-	PathParams  PutWebhooksAuthIDAuthPathParams
-	QueryParams PutWebhooksAuthIDAuthQueryParams
-	Request     PutWebhooksAuthIDAuthRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PutWebhooksAuthIDAuthRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                          `queryParam:"style=form,explode=true,name=expand"`
+	IDAuth      int64                            `pathParam:"style=simple,explode=false,name=id_auth"`
 }
 
 type PutWebhooksAuthIDAuthResponse struct {

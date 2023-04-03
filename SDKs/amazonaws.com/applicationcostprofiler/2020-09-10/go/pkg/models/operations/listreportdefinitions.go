@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListReportDefinitionsQueryParams struct {
-	// The maximum number of results to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token value from a previous call to access the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListReportDefinitionsHeaders struct {
+type ListReportDefinitionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListReportDefinitionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListReportDefinitionsRequest struct {
-	QueryParams ListReportDefinitionsQueryParams
-	Headers     ListReportDefinitionsHeaders
+	// The maximum number of results to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token value from a previous call to access the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListReportDefinitionsResponse struct {

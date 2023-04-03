@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchTeamPathParams struct {
-	// The account to search in; either the username or the UUID in curly braces
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type SearchTeamQueryParams struct {
+type SearchTeamRequest struct {
 	// Which page of the search results to retrieve
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// How many search results to retrieve per page
 	Pagelen *int `queryParam:"style=form,explode=true,name=pagelen"`
 	// The search query
 	SearchQuery string `queryParam:"style=form,explode=true,name=search_query"`
-}
-
-type SearchTeamRequest struct {
-	PathParams  SearchTeamPathParams
-	QueryParams SearchTeamQueryParams
+	// The account to search in; either the username or the UUID in curly braces
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type SearchTeamResponse struct {

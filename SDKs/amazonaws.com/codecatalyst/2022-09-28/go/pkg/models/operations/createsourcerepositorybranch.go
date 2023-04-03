@@ -7,7 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSourceRepositoryBranchPathParams struct {
+type CreateSourceRepositoryBranchRequestBody struct {
+	// The commit ID in an existing branch from which you want to create the new branch.
+	HeadCommitID *string `json:"headCommitId,omitempty"`
+}
+
+type CreateSourceRepositoryBranchRequest struct {
+	RequestBody CreateSourceRepositoryBranchRequestBody `request:"mediaType=application/json"`
 	// The name for the branch you're creating.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The name of the project in the space.
@@ -16,16 +22,6 @@ type CreateSourceRepositoryBranchPathParams struct {
 	SourceRepositoryName string `pathParam:"style=simple,explode=false,name=sourceRepositoryName"`
 	// The name of the space.
 	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type CreateSourceRepositoryBranchRequestBody struct {
-	// The commit ID in an existing branch from which you want to create the new branch.
-	HeadCommitID *string `json:"headCommitId,omitempty"`
-}
-
-type CreateSourceRepositoryBranchRequest struct {
-	PathParams CreateSourceRepositoryBranchPathParams
-	Request    CreateSourceRepositoryBranchRequestBody `request:"mediaType=application/json"`
 }
 
 type CreateSourceRepositoryBranchResponse struct {

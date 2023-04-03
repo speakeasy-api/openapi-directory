@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSamplesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListSamplesXAmzTargetEnum
 type ListSamplesXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *ListSamplesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSamplesHeaders struct {
-	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListSamplesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListSamplesRequest struct {
-	QueryParams ListSamplesQueryParams
-	Headers     ListSamplesHeaders
-	Request     shared.ListSamplesRequest `request:"mediaType=application/json"`
+	ListSamplesRequest shared.ListSamplesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         ListSamplesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSamplesResponse struct {

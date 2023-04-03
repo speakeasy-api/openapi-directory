@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecordsFormatPathParams struct {
-	// Note - There is a small difference with some field names in the response between JSON and XML.
-	// When a field name has more than one word, JSON format will separate the words with an underscore, eg. "content_partner", whereas XML uses a hyphenated naming convention, eg. "content-partner".
-	//
-	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
-}
-
 // GetRecordsFormatAndCategoryEnum - These are the same categories that are used across the tabs in [digitalnz.org](https://digitalnz.org/records?text=&tab=Videos)
 type GetRecordsFormatAndCategoryEnum string
 
@@ -288,7 +281,25 @@ func (e *GetRecordsFormatSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRecordsFormatQueryParams struct {
+type GetRecordsFormatRequest struct {
+	// The DigitalNZ API no longer requires a key to access public content. However, if you plan on using the API regularly, expect to be a high volume consumer or are planning on creating an application, we encourage you to use an API key so that we can:
+	// - provide targeted help and support
+	// - increase your query throughput (by negotiation)
+	// - notify you directly of changes to the API
+	// - gather usage metrics to help improve the service
+	//
+	// API requests that do not pass a valid API key/token are treated as unauthenticated. A maximum rate limit applies across all unauthenticated requests. This rate limit is in place to protect the service from overuse, resulting in unsustainable costs, or potential attack.
+	//
+	// **Getting an API key**
+	// [Create a DigitalNZ account](https://digitalnz.org/sign_up), log in and select "[my API key](https://digitalnz.org/api_keys/edit)" from your username drop-down menu (on the right hand side)'. The key is a long string of jumbled letters and numbers (hash) that is unique to you. You are required to keep the key secret. (Refer to the [Developer API Terms of Use](https://digitalnz.org/about/terms-of-use/developer-api-terms-of-use) for more information).
+	//
+	// **Using an API key**
+	// When you make a call to the API you'll need to pass the key in a custom HTTP header: ‘Authentication-Token’.
+	// For example, a query using the ‘curl’ command might look like the following (where ‘{YOUR_API_KEY}’ is replaced with a valid API key):
+	//
+	// `curl -H "Authentication-Token:{YOUR_API_KEY}" http://api.digitalnz.org/v3/records.json?text=kiwi`
+	//
+	AuthenticationToken *string `header:"style=simple,explode=false,name=Authentication-Token"`
 	// These are the same categories that are used across the tabs in [digitalnz.org](https://digitalnz.org/records?text=&tab=Videos)
 	AndCategory *GetRecordsFormatAndCategoryEnum `queryParam:"style=form,explode=true,name=and[category][]"`
 	// This field allows searching specifically by century. The metadata is derived from the same date information that is searchable and returned in the date field.
@@ -390,6 +401,10 @@ type GetRecordsFormatQueryParams struct {
 	// Comma-separated whitelist of fields to be returned. The syntax *"&fields=verbose"* can be used to return the bulk of the fields, or you can customise which fields you are interested in, eg. *"&fields=id,title,subject,collection,landing_url,locations"*.
 	//
 	Fields *string `queryParam:"style=form,explode=false,name=fields"`
+	// Note - There is a small difference with some field names in the response between JSON and XML.
+	// When a field name has more than one word, JSON format will separate the words with an underscore, eg. "content_partner", whereas XML uses a hyphenated naming convention, eg. "content-partner".
+	//
+	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// A geographic bounding box scoping a search to a geographic region. Order of latitude-longitude coordinates is north, west, south, east.   For example, filtering the Wellington region would be *"&geo_bbox=-41,174,-42,175"*
 	//
 	GeoBbox *string `queryParam:"style=form,explode=true,name=geo_bbox"`
@@ -414,33 +429,6 @@ type GetRecordsFormatQueryParams struct {
 	// All of the above `and[___][]` filters in this document are also able to be used with this syntax to exclude specific matches. For example to exclude Papers Past content `&without[primary_collection]=Papers+Past`
 	//
 	WithoutFilterField *string `queryParam:"style=form,explode=true,name=without[{filter_field}]"`
-}
-
-type GetRecordsFormatHeaders struct {
-	// The DigitalNZ API no longer requires a key to access public content. However, if you plan on using the API regularly, expect to be a high volume consumer or are planning on creating an application, we encourage you to use an API key so that we can:
-	// - provide targeted help and support
-	// - increase your query throughput (by negotiation)
-	// - notify you directly of changes to the API
-	// - gather usage metrics to help improve the service
-	//
-	// API requests that do not pass a valid API key/token are treated as unauthenticated. A maximum rate limit applies across all unauthenticated requests. This rate limit is in place to protect the service from overuse, resulting in unsustainable costs, or potential attack.
-	//
-	// **Getting an API key**
-	// [Create a DigitalNZ account](https://digitalnz.org/sign_up), log in and select "[my API key](https://digitalnz.org/api_keys/edit)" from your username drop-down menu (on the right hand side)'. The key is a long string of jumbled letters and numbers (hash) that is unique to you. You are required to keep the key secret. (Refer to the [Developer API Terms of Use](https://digitalnz.org/about/terms-of-use/developer-api-terms-of-use) for more information).
-	//
-	// **Using an API key**
-	// When you make a call to the API you'll need to pass the key in a custom HTTP header: ‘Authentication-Token’.
-	// For example, a query using the ‘curl’ command might look like the following (where ‘{YOUR_API_KEY}’ is replaced with a valid API key):
-	//
-	// `curl -H "Authentication-Token:{YOUR_API_KEY}" http://api.digitalnz.org/v3/records.json?text=kiwi`
-	//
-	AuthenticationToken *string `header:"style=simple,explode=false,name=Authentication-Token"`
-}
-
-type GetRecordsFormatRequest struct {
-	PathParams  GetRecordsFormatPathParams
-	QueryParams GetRecordsFormatQueryParams
-	Headers     GetRecordsFormatHeaders
 }
 
 // GetRecordsFormat200ApplicationJSON - search results matching criteria

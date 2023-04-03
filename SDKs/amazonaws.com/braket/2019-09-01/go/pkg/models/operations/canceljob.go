@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelJobPathParams struct {
-	// The ARN of the Amazon Braket job to cancel.
-	JobArn string `pathParam:"style=simple,explode=false,name=jobArn"`
-}
-
-type CancelJobHeaders struct {
+type CancelJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CancelJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelJobRequest struct {
-	PathParams CancelJobPathParams
-	Headers    CancelJobHeaders
+	// The ARN of the Amazon Braket job to cancel.
+	JobArn string `pathParam:"style=simple,explode=false,name=jobArn"`
 }
 
 type CancelJobResponse struct {

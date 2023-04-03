@@ -4,23 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCallRecordingMp3ByNameSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetCallRecordingMp3ByNamePathParams struct {
+type GetCallRecordingMp3ByNameRequest struct {
 	// An id of a call
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// A name of a recording
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetCallRecordingMp3ByNameRequest struct {
-	PathParams GetCallRecordingMp3ByNamePathParams
-	Security   GetCallRecordingMp3ByNameSecurity
 }
 
 type GetCallRecordingMp3ByNameResponse struct {

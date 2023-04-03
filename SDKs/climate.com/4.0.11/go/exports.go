@@ -36,18 +36,18 @@ func newExports(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // FetchExportContentsByID - Retrieve the binary contents of a processed export request.
 // Downloads larger than `5MiB` (`5242880 bytes`) in size must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB` (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).
-func (s *exports) FetchExportContentsByID(ctx context.Context, request operations.FetchExportContentsByIDRequest) (*operations.FetchExportContentsByIDResponse, error) {
+func (s *exports) FetchExportContentsByID(ctx context.Context, request operations.FetchExportContentsByIDRequest, security operations.FetchExportContentsByIDSecurity) (*operations.FetchExportContentsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/exports/{exportId}/contents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/exports/{exportId}/contents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -130,16 +130,16 @@ func (s *exports) FetchExportContentsByID(ctx context.Context, request operation
 
 // FetchExportStatusByID - Retrieve the status of an Export.
 // Check the status of an **Export** by ID.
-func (s *exports) FetchExportStatusByID(ctx context.Context, request operations.FetchExportStatusByIDRequest) (*operations.FetchExportStatusByIDResponse, error) {
+func (s *exports) FetchExportStatusByID(ctx context.Context, request operations.FetchExportStatusByIDRequest, security operations.FetchExportStatusByIDSecurity) (*operations.FetchExportStatusByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/exports/{exportId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/exports/{exportId}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -230,7 +230,7 @@ func (s *exports) FetchExportStatusByID(ctx context.Context, request operations.
 //   - resourceOwnerId
 //
 //     Requires `exports:read` and `plantingActivitySummary:read` scope.
-func (s *exports) PostExport(ctx context.Context, request operations.PostExportRequest) (*operations.PostExportResponse, error) {
+func (s *exports) PostExport(ctx context.Context, request shared.Export, security operations.PostExportSecurity) (*operations.PostExportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/exports"
 
@@ -246,7 +246,7 @@ func (s *exports) PostExport(ctx context.Context, request operations.PostExportR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

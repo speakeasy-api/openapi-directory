@@ -50,26 +50,18 @@ func (e *GETCancelInstanceRefreshVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCancelInstanceRefreshQueryParams struct {
+type GETCancelInstanceRefreshRequest struct {
 	Action GETCancelInstanceRefreshActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string                              `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	Version              GETCancelInstanceRefreshVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelInstanceRefreshHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCancelInstanceRefreshRequest struct {
-	QueryParams GETCancelInstanceRefreshQueryParams
-	Headers     GETCancelInstanceRefreshHeaders
+	XAmzAlgorithm        *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCancelInstanceRefreshResponse struct {

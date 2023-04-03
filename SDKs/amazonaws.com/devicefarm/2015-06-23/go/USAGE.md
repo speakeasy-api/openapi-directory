@@ -13,41 +13,42 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateDevicePoolRequest{
-        Headers: operations.CreateDevicePoolHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
-        },
-        Request: shared.CreateDevicePoolRequest{
-            Description: "illum",
-            MaxDevices: 423655,
-            Name: "error",
-            ProjectArn: "deserunt",
+        CreateDevicePoolRequest: shared.CreateDevicePoolRequest{
+            Description: "corrupti",
+            MaxDevices: 592845,
+            Name: "distinctio",
+            ProjectArn: "quibusdam",
             Rules: []shared.Rule{
                 shared.Rule{
-                    Attribute: "REMOTE_DEBUG_ENABLED",
-                    Operator: "LESS_THAN_OR_EQUALS",
-                    Value: "debitis",
+                    Attribute: "MODEL",
+                    Operator: "GREATER_THAN_OR_EQUALS",
+                    Value: "illum",
                 },
                 shared.Rule{
-                    Attribute: "ARN",
-                    Operator: "CONTAINS",
-                    Value: "tempora",
+                    Attribute: "REMOTE_DEBUG_ENABLED",
+                    Operator: "GREATER_THAN_OR_EQUALS",
+                    Value: "deserunt",
+                },
+                shared.Rule{
+                    Attribute: "REMOTE_ACCESS_ENABLED",
+                    Operator: "GREATER_THAN",
+                    Value: "magnam",
                 },
             },
         },
+        XAmzAlgorithm: "debitis",
+        XAmzContentSha256: "ipsa",
+        XAmzCredential: "delectus",
+        XAmzDate: "tempora",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "molestiae",
+        XAmzSignedHeaders: "minus",
+        XAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
     }
 
     ctx := context.Background()

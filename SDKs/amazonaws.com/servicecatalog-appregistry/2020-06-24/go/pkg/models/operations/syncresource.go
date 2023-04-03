@@ -33,14 +33,7 @@ func (e *SyncResourceResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SyncResourcePathParams struct {
-	// An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an Amazon Web Services CloudFormation stack, or an Amazon S3 bucket.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-	// The type of resource of which the application will be associated.
-	ResourceType SyncResourceResourceTypeEnum `pathParam:"style=simple,explode=false,name=resourceType"`
-}
-
-type SyncResourceHeaders struct {
+type SyncResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -48,11 +41,10 @@ type SyncResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type SyncResourceRequest struct {
-	PathParams SyncResourcePathParams
-	Headers    SyncResourceHeaders
+	// An entity you can work with and specify with a name or ID. Examples include an Amazon EC2 instance, an Amazon Web Services CloudFormation stack, or an Amazon S3 bucket.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
+	// The type of resource of which the application will be associated.
+	ResourceType SyncResourceResourceTypeEnum `pathParam:"style=simple,explode=false,name=resourceType"`
 }
 
 type SyncResourceResponse struct {

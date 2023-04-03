@@ -50,28 +50,20 @@ func (e *GETAuthorizeDataShareVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAuthorizeDataShareQueryParams struct {
+type GETAuthorizeDataShareRequest struct {
 	Action GETAuthorizeDataShareActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the data consumer that is authorized to access the datashare. This identifier is an Amazon Web Services account ID or a keyword, such as ADX.
 	ConsumerIdentifier string `queryParam:"style=form,explode=true,name=ConsumerIdentifier"`
 	// The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
-	DataShareArn string                           `queryParam:"style=form,explode=true,name=DataShareArn"`
-	Version      GETAuthorizeDataShareVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAuthorizeDataShareHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAuthorizeDataShareRequest struct {
-	QueryParams GETAuthorizeDataShareQueryParams
-	Headers     GETAuthorizeDataShareHeaders
+	DataShareArn      string                           `queryParam:"style=form,explode=true,name=DataShareArn"`
+	Version           GETAuthorizeDataShareVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAuthorizeDataShareResponse struct {

@@ -35,14 +35,14 @@ func newSuppliers(defaultClient, securityClient HTTPClient, serverURL, language,
 // SuppliersDelete - Removes an existing Supplier.
 func (s *suppliers) SuppliersDelete(ctx context.Context, request operations.SuppliersDeleteRequest) (*operations.SuppliersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -129,7 +129,7 @@ func (s *suppliers) SuppliersGet(ctx context.Context) (*operations.SuppliersGetR
 // SuppliersGetAccountTrans - Returns a list of Supplier's account transactions.
 func (s *suppliers) SuppliersGetAccountTrans(ctx context.Context, request operations.SuppliersGetAccountTransRequest) (*operations.SuppliersGetAccountTransResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{itemId}/accountTrans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{itemId}/accountTrans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *suppliers) SuppliersGetAccountTrans(ctx context.Context, request operat
 // SuppliersGetOpeningBalance - Returns a Supplier's opening balances, calculated for the next periods: current month, one month old, two months old, three and more months old.
 func (s *suppliers) SuppliersGetOpeningBalance(ctx context.Context, request operations.SuppliersGetOpeningBalanceRequest) (*operations.SuppliersGetOpeningBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{itemId}/openingBalance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{itemId}/openingBalance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +217,7 @@ func (s *suppliers) SuppliersGetOpeningBalance(ctx context.Context, request oper
 // SuppliersGetOpeningBalanceList - Returns a list of Supplier's opening balance transactions.
 func (s *suppliers) SuppliersGetOpeningBalanceList(ctx context.Context, request operations.SuppliersGetOpeningBalanceListRequest) (*operations.SuppliersGetOpeningBalanceListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{itemId}/openingBalanceList", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{itemId}/openingBalanceList", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *suppliers) SuppliersGetOpeningBalanceList(ctx context.Context, request 
 }
 
 // SuppliersPost - Creates a new Supplier.
-func (s *suppliers) SuppliersPost(ctx context.Context, request operations.SuppliersPostRequest) (*operations.SuppliersPostResponse, error) {
+func (s *suppliers) SuppliersPost(ctx context.Context, request shared.SupplierDto) (*operations.SuppliersPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/suppliers"
 
@@ -313,7 +313,7 @@ func (s *suppliers) SuppliersPost(ctx context.Context, request operations.Suppli
 }
 
 // SuppliersProcessBatch - Processes a batch of Suppliers.
-func (s *suppliers) SuppliersProcessBatch(ctx context.Context, request operations.SuppliersProcessBatchRequest) (*operations.SuppliersProcessBatchResponse, error) {
+func (s *suppliers) SuppliersProcessBatch(ctx context.Context, request []shared.BatchItemSupplierDto) (*operations.SuppliersProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/suppliers/batch"
 
@@ -369,9 +369,9 @@ func (s *suppliers) SuppliersProcessBatch(ctx context.Context, request operation
 // SuppliersPut - Updates an existing Supplier.
 func (s *suppliers) SuppliersPut(ctx context.Context, request operations.SuppliersPutRequest) (*operations.SuppliersPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SupplierDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -423,14 +423,14 @@ func (s *suppliers) SuppliersPut(ctx context.Context, request operations.Supplie
 // GetV1SuppliersID - Returns information about a single Supplier. You may specify that Supplier's ledger balance should be calculated.
 func (s *suppliers) GetV1SuppliersID(ctx context.Context, request operations.GetV1SuppliersIDRequest) (*operations.GetV1SuppliersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/suppliers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

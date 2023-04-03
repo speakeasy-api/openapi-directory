@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutDomainWhitelistFormRequest struct {
-	// The entry to add
-	Request shared.APICoreDtoAccountingDomainWhitelistEntry `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type AccountPutDomainWhitelistFormResponse struct {
 	APICoreDtoAccountingDomainWhitelistEntry *shared.APICoreDtoAccountingDomainWhitelistEntry
 	Body                                     []byte

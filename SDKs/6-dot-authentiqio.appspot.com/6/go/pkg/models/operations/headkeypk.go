@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type HeadKeyPKPathParams struct {
+type HeadKeyPKRequest struct {
 	// Public Signing Key - Authentiq ID (43 chars)
 	Pk string `pathParam:"style=simple,explode=false,name=PK"`
-}
-
-type HeadKeyPKRequest struct {
-	PathParams HeadKeyPKPathParams
 }
 
 type HeadKeyPKResponse struct {

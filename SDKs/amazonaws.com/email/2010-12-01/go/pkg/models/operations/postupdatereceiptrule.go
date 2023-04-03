@@ -50,25 +50,17 @@ func (e *POSTUpdateReceiptRuleVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTUpdateReceiptRuleQueryParams struct {
-	Action  POSTUpdateReceiptRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUpdateReceiptRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdateReceiptRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUpdateReceiptRuleRequest struct {
-	QueryParams POSTUpdateReceiptRuleQueryParams
-	Headers     POSTUpdateReceiptRuleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUpdateReceiptRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                           `request:"mediaType=text/xml"`
+	Version           POSTUpdateReceiptRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUpdateReceiptRuleResponse struct {

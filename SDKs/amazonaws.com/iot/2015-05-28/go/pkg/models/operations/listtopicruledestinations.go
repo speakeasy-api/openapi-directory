@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTopicRuleDestinationsQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListTopicRuleDestinationsHeaders struct {
+type ListTopicRuleDestinationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListTopicRuleDestinationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTopicRuleDestinationsRequest struct {
-	QueryParams ListTopicRuleDestinationsQueryParams
-	Headers     ListTopicRuleDestinationsHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListTopicRuleDestinationsResponse struct {

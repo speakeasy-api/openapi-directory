@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CanvasDataAnalyticsSummaryQueryParams struct {
+type CanvasDataAnalyticsSummaryRequest struct {
 	// (Required) String
 	//
 	// Canvas API identifier
@@ -35,10 +35,6 @@ type CanvasDataAnalyticsSummaryQueryParams struct {
 	//
 	// Date on which the data export should begin (either length or starting_at required)
 	StartingAt *string `queryParam:"style=form,explode=true,name=starting_at"`
-}
-
-type CanvasDataAnalyticsSummaryRequest struct {
-	QueryParams CanvasDataAnalyticsSummaryQueryParams
 }
 
 type CanvasDataAnalyticsSummaryResponse struct {

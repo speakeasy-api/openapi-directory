@@ -8,25 +8,17 @@ import (
 )
 
 type GetUniversalDoNotContactsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetUniversalDoNotContactsPathParams struct {
-	// A required destination phone number in E.164 format (11-digit). Example: 12132000384
-	ToNumber string `pathParam:"style=simple,explode=false,name=toNumber"`
-}
-
-type GetUniversalDoNotContactsQueryParams struct {
+type GetUniversalDoNotContactsRequest struct {
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// An optional destination/source number for DNC, specified in E.164 format (11-digit). Example: 12132000384
 	FromNumber *string `queryParam:"style=form,explode=true,name=fromNumber"`
-}
-
-type GetUniversalDoNotContactsRequest struct {
-	PathParams  GetUniversalDoNotContactsPathParams
-	QueryParams GetUniversalDoNotContactsQueryParams
-	Security    GetUniversalDoNotContactsSecurity
+	// A required destination phone number in E.164 format (11-digit). Example: 12132000384
+	ToNumber string `pathParam:"style=simple,explode=false,name=toNumber"`
 }
 
 type GetUniversalDoNotContactsResponse struct {

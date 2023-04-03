@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateEnvironmentPathParams struct {
-	// The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type CreateEnvironmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateEnvironmentRequestBodyLoggingConfiguration - Defines the Apache Airflow log types to send to CloudWatch Logs.
 type CreateEnvironmentRequestBodyLoggingConfiguration struct {
 	DagProcessingLogs *shared.ModuleLoggingConfigurationInput `json:"DagProcessingLogs,omitempty"`
@@ -105,9 +90,16 @@ type CreateEnvironmentRequestBody struct {
 }
 
 type CreateEnvironmentRequest struct {
-	PathParams CreateEnvironmentPathParams
-	Headers    CreateEnvironmentHeaders
-	Request    CreateEnvironmentRequestBody `request:"mediaType=application/json"`
+	// The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
+	Name              string                       `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       CreateEnvironmentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateEnvironmentResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSettingPathParams struct {
+type GetSettingRequest struct {
 	// The identifier of the Setting.
 	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type GetSettingRequest struct {
-	PathParams GetSettingPathParams
 }
 
 type GetSettingResponse struct {

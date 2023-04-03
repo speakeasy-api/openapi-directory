@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDrivesQueryParams struct {
+type GetDrivesRequest struct {
 	// Division classification filter (fbs/fcs/ii/iii)
 	Classification *string `queryParam:"style=form,explode=true,name=classification"`
 	// Conference filter
@@ -28,10 +28,6 @@ type GetDrivesQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetDrivesRequest struct {
-	QueryParams GetDrivesQueryParams
 }
 
 type GetDrivesResponse struct {

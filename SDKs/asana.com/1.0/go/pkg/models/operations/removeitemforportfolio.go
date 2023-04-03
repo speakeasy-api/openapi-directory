@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveItemForPortfolioPathParams struct {
-	// Globally unique identifier for the portfolio.
-	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
+// RemoveItemForPortfolioRequestBody - Information about the item being removed.
+type RemoveItemForPortfolioRequestBody struct {
+	Data *shared.PortfolioRemoveItemRequest `json:"data,omitempty"`
 }
 
-type RemoveItemForPortfolioQueryParams struct {
+type RemoveItemForPortfolioRequest struct {
+	// Information about the item being removed.
+	RequestBody RemoveItemForPortfolioRequestBody `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type RemoveItemForPortfolioQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// RemoveItemForPortfolioRequestBody - Information about the item being removed.
-type RemoveItemForPortfolioRequestBody struct {
-	Data *shared.PortfolioRemoveItemRequest `json:"data,omitempty"`
-}
-
-type RemoveItemForPortfolioRequest struct {
-	PathParams  RemoveItemForPortfolioPathParams
-	QueryParams RemoveItemForPortfolioQueryParams
-	// Information about the item being removed.
-	Request RemoveItemForPortfolioRequestBody `request:"mediaType=application/json"`
+	// Globally unique identifier for the portfolio.
+	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
 }
 
 // RemoveItemForPortfolio200ApplicationJSON - Successfully removed the item from the portfolio.

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RevokeRoomGroupsPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
 // RevokeRoomGroupsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RevokeRoomGroupsXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *RevokeRoomGroupsXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RevokeRoomGroupsHeaders struct {
+type RevokeRoomGroupsRequest struct {
+	RoomGroupsDeleteBatchRequest shared.RoomGroupsDeleteBatchRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RevokeRoomGroupsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RevokeRoomGroupsRequest struct {
-	PathParams RevokeRoomGroupsPathParams
-	Headers    RevokeRoomGroupsHeaders
-	Request    shared.RoomGroupsDeleteBatchRequest `request:"mediaType=application/json"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type RevokeRoomGroupsResponse struct {

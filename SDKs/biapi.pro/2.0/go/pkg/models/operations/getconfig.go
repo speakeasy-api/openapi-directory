@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetConfigQueryParams struct {
+type GetConfigRequest struct {
 	// limit the results to keys matching the given value
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetConfigRequest struct {
-	QueryParams GetConfigQueryParams
 }
 
 type GetConfigResponse struct {

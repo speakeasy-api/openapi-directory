@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLinksPercentilesPathParams struct {
+type GetLinksPercentilesRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Project's identifier
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetLinksPercentilesRequest struct {
-	PathParams GetLinksPercentilesPathParams
 }
 
 type GetLinksPercentilesResponse struct {

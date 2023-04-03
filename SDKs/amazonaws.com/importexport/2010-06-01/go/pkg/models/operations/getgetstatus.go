@@ -71,7 +71,7 @@ func (e *GETGETStatusVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETStatusQueryParams struct {
+type GETGETStatusRequest struct {
 	APIVersion       *string                   `queryParam:"style=form,explode=true,name=APIVersion"`
 	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GETGETStatusActionEnum    `queryParam:"style=form,explode=true,name=Action"`
@@ -82,10 +82,6 @@ type GETGETStatusQueryParams struct {
 	SignatureVersion string                    `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                    `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETGETStatusVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETStatusRequest struct {
-	QueryParams GETGETStatusQueryParams
 }
 
 type GETGETStatusResponse struct {

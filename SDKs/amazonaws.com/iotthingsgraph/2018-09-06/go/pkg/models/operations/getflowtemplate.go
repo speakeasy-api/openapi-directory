@@ -30,20 +30,16 @@ func (e *GetFlowTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFlowTemplateHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetFlowTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetFlowTemplateRequest struct {
-	Headers GetFlowTemplateHeaders
-	Request shared.GetFlowTemplateRequest `request:"mediaType=application/json"`
+	GetFlowTemplateRequest shared.GetFlowTemplateRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             GetFlowTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetFlowTemplateResponse struct {

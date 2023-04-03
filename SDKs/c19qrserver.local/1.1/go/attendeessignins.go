@@ -37,7 +37,7 @@ func newAttendeesSignins(defaultClient, securityClient HTTPClient, serverURL, la
 // Delete a signin record
 func (s *attendeesSignins) DeleteSigninSigninID(ctx context.Context, request operations.DeleteSigninSigninIDRequest) (*operations.DeleteSigninSigninIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *attendeesSignins) DeleteSigninSigninID(ctx context.Context, request ope
 // Retrieve the information associated with a signin record
 func (s *attendeesSignins) GetSigninSigninID(ctx context.Context, request operations.GetSigninSigninIDRequest) (*operations.GetSigninSigninIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,7 +145,7 @@ func (s *attendeesSignins) GetSignins(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -204,7 +204,7 @@ func (s *attendeesSignins) GetSignins(ctx context.Context, request operations.Ge
 }
 
 // PostSignin - Create a new signin record
-func (s *attendeesSignins) PostSignin(ctx context.Context, request operations.PostSigninRequest) (*operations.PostSigninResponse, error) {
+func (s *attendeesSignins) PostSignin(ctx context.Context, request shared.Signin) (*operations.PostSigninResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signin"
 
@@ -278,9 +278,9 @@ func (s *attendeesSignins) PostSignin(ctx context.Context, request operations.Po
 // Update a signin record
 func (s *attendeesSignins) PutSigninSigninID(ctx context.Context, request operations.PutSigninSigninIDRequest) (*operations.PutSigninSigninIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Signin", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

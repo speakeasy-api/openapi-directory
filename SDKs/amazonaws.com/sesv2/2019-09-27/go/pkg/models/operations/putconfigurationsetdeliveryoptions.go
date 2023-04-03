@@ -8,21 +8,6 @@ import (
 	"net/http"
 )
 
-type PutConfigurationSetDeliveryOptionsPathParams struct {
-	// The name of the configuration set to associate with a dedicated IP pool.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type PutConfigurationSetDeliveryOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum - Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS). If the value is <code>Require</code>, messages are only delivered if a TLS connection can be established. If the value is <code>Optional</code>, messages can be delivered in plain text if a TLS connection can't be established.
 type PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum string
 
@@ -55,9 +40,16 @@ type PutConfigurationSetDeliveryOptionsRequestBody struct {
 }
 
 type PutConfigurationSetDeliveryOptionsRequest struct {
-	PathParams PutConfigurationSetDeliveryOptionsPathParams
-	Headers    PutConfigurationSetDeliveryOptionsHeaders
-	Request    PutConfigurationSetDeliveryOptionsRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set to associate with a dedicated IP pool.
+	ConfigurationSetName string                                        `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	RequestBody          PutConfigurationSetDeliveryOptionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutConfigurationSetDeliveryOptionsResponse struct {

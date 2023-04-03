@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCertificatesByCAPathParams struct {
-	// The ID of the CA certificate. This operation will list all registered device certificate that were signed by this CA certificate.
-	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
-}
-
-type ListCertificatesByCAQueryParams struct {
-	// Specifies the order for results. If True, the results are returned in ascending order, based on the creation date.
-	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
-	// The marker for the next set of results.
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-	// The result page size.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListCertificatesByCAHeaders struct {
+type ListCertificatesByCARequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListCertificatesByCAHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCertificatesByCARequest struct {
-	PathParams  ListCertificatesByCAPathParams
-	QueryParams ListCertificatesByCAQueryParams
-	Headers     ListCertificatesByCAHeaders
+	// The ID of the CA certificate. This operation will list all registered device certificate that were signed by this CA certificate.
+	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
+	// Specifies the order for results. If True, the results are returned in ascending order, based on the creation date.
+	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
+	// The marker for the next set of results.
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
+	// The result page size.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type ListCertificatesByCAResponse struct {

@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchDeleteGeofencePathParams struct {
-	// The geofence collection storing the geofences to be deleted.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-}
-
-type BatchDeleteGeofenceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchDeleteGeofenceRequestBody struct {
 	// The batch of geofences to be deleted.
 	GeofenceIds []string `json:"GeofenceIds"`
 }
 
 type BatchDeleteGeofenceRequest struct {
-	PathParams BatchDeleteGeofencePathParams
-	Headers    BatchDeleteGeofenceHeaders
-	Request    BatchDeleteGeofenceRequestBody `request:"mediaType=application/json"`
+	// The geofence collection storing the geofences to be deleted.
+	CollectionName    string                         `pathParam:"style=simple,explode=false,name=CollectionName"`
+	RequestBody       BatchDeleteGeofenceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type BatchDeleteGeofenceResponse struct {

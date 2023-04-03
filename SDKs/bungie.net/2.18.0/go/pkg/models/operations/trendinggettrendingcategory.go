@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrendingGetTrendingCategoryPathParams struct {
+type TrendingGetTrendingCategoryRequest struct {
 	// The ID of the category for whom you want additional results.
 	CategoryID string `pathParam:"style=simple,explode=false,name=categoryId"`
 	// The page # of results to return.
 	PageNumber int `pathParam:"style=simple,explode=false,name=pageNumber"`
-}
-
-type TrendingGetTrendingCategoryRequest struct {
-	PathParams TrendingGetTrendingCategoryPathParams
 }
 
 // TrendingGetTrendingCategory200Wildcard - Look at the Response property for more information about the nature of this response

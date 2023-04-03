@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteNetworkPathParams struct {
-	// The Amazon Resource Name (ARN) of the network.
-	NetworkArn string `pathParam:"style=simple,explode=false,name=networkArn"`
-}
-
-type DeleteNetworkQueryParams struct {
-	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to ensure idempotency</a>.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteNetworkHeaders struct {
+type DeleteNetworkRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteNetworkHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteNetworkRequest struct {
-	PathParams  DeleteNetworkPathParams
-	QueryParams DeleteNetworkQueryParams
-	Headers     DeleteNetworkHeaders
+	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to ensure idempotency</a>.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The Amazon Resource Name (ARN) of the network.
+	NetworkArn string `pathParam:"style=simple,explode=false,name=networkArn"`
 }
 
 type DeleteNetworkResponse struct {

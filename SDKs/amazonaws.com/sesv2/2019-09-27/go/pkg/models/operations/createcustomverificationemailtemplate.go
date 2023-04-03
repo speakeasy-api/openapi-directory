@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateCustomVerificationEmailTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateCustomVerificationEmailTemplateRequestBody struct {
 	// The URL that the recipient of the verification email is sent to if his or her address is not successfully verified.
 	FailureRedirectionURL string `json:"FailureRedirectionURL"`
@@ -32,8 +22,14 @@ type CreateCustomVerificationEmailTemplateRequestBody struct {
 }
 
 type CreateCustomVerificationEmailTemplateRequest struct {
-	Headers CreateCustomVerificationEmailTemplateHeaders
-	Request CreateCustomVerificationEmailTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateCustomVerificationEmailTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateCustomVerificationEmailTemplateResponse struct {

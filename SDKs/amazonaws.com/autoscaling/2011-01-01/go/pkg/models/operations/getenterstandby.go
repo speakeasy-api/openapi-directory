@@ -50,7 +50,7 @@ func (e *GETEnterStandbyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnterStandbyQueryParams struct {
+type GETEnterStandbyRequest struct {
 	Action GETEnterStandbyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -59,21 +59,13 @@ type GETEnterStandbyQueryParams struct {
 	// Indicates whether to decrement the desired capacity of the Auto Scaling group by the number of instances moved to <code>Standby</code> mode.
 	ShouldDecrementDesiredCapacity bool                       `queryParam:"style=form,explode=true,name=ShouldDecrementDesiredCapacity"`
 	Version                        GETEnterStandbyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnterStandbyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnterStandbyRequest struct {
-	QueryParams GETEnterStandbyQueryParams
-	Headers     GETEnterStandbyHeaders
+	XAmzAlgorithm                  *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnterStandbyResponse struct {

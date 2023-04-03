@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFunctionEventInvokeConfigPathParams struct {
-	// <p>The name of the Lambda function, version, or alias.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>my-function</code> (name-only), <code>my-function:v1</code> (with alias).</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>You can append a version number or alias to any of the formats. The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type UpdateFunctionEventInvokeConfigQueryParams struct {
-	// A version number or alias name.
-	Qualifier *string `queryParam:"style=form,explode=true,name=Qualifier"`
-}
-
-type UpdateFunctionEventInvokeConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFunctionEventInvokeConfigRequestBodyDestinationConfig - A configuration object that specifies the destination of an event after Lambda processes it.
 type UpdateFunctionEventInvokeConfigRequestBodyDestinationConfig struct {
 	OnFailure *shared.OnFailure `json:"OnFailure,omitempty"`
@@ -43,10 +23,18 @@ type UpdateFunctionEventInvokeConfigRequestBody struct {
 }
 
 type UpdateFunctionEventInvokeConfigRequest struct {
-	PathParams  UpdateFunctionEventInvokeConfigPathParams
-	QueryParams UpdateFunctionEventInvokeConfigQueryParams
-	Headers     UpdateFunctionEventInvokeConfigHeaders
-	Request     UpdateFunctionEventInvokeConfigRequestBody `request:"mediaType=application/json"`
+	// <p>The name of the Lambda function, version, or alias.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> - <code>my-function</code> (name-only), <code>my-function:v1</code> (with alias).</p> </li> <li> <p> <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> - <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>You can append a version number or alias to any of the formats. The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
+	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
+	// A version number or alias name.
+	Qualifier         *string                                    `queryParam:"style=form,explode=true,name=Qualifier"`
+	RequestBody       UpdateFunctionEventInvokeConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateFunctionEventInvokeConfigResponse struct {

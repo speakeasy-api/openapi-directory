@@ -50,7 +50,7 @@ func (e *GETModifyVpcEndpointServiceConfigurationVersionEnum) UnmarshalJSON(data
 	}
 }
 
-type GETModifyVpcEndpointServiceConfigurationQueryParams struct {
+type GETModifyVpcEndpointServiceConfigurationRequest struct {
 	// Indicates whether requests to create an endpoint to your service must be accepted.
 	AcceptanceRequired *bool                                              `queryParam:"style=form,explode=true,name=AcceptanceRequired"`
 	Action             GETModifyVpcEndpointServiceConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -73,23 +73,15 @@ type GETModifyVpcEndpointServiceConfigurationQueryParams struct {
 	// The IP address types to remove from your service configuration.
 	RemoveSupportedIPAddressType []string `queryParam:"style=form,explode=true,name=RemoveSupportedIpAddressType"`
 	// The ID of the service.
-	ServiceID string                                              `queryParam:"style=form,explode=true,name=ServiceId"`
-	Version   GETModifyVpcEndpointServiceConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyVpcEndpointServiceConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpcEndpointServiceConfigurationRequest struct {
-	QueryParams GETModifyVpcEndpointServiceConfigurationQueryParams
-	Headers     GETModifyVpcEndpointServiceConfigurationHeaders
+	ServiceID         string                                              `queryParam:"style=form,explode=true,name=ServiceId"`
+	Version           GETModifyVpcEndpointServiceConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyVpcEndpointServiceConfigurationResponse struct {

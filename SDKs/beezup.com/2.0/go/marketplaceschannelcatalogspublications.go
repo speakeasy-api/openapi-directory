@@ -34,14 +34,14 @@ func newMarketplacesChannelCatalogsPublications(defaultClient, securityClient HT
 // GetPublications - Fetch the publication history for an account, sorted by descending start date
 func (s *marketplacesChannelCatalogsPublications) GetPublications(ctx context.Context, request operations.GetPublicationsRequest) (*operations.GetPublicationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,9 +98,9 @@ func (s *marketplacesChannelCatalogsPublications) GetPublications(ctx context.Co
 // PublishCatalogToMarketplace - [PREVIEW] Launch a publication of the catalog to the marketplace
 func (s *marketplacesChannelCatalogsPublications) PublishCatalogToMarketplace(ctx context.Context, request operations.PublishCatalogToMarketplaceRequest) (*operations.PublishCatalogToMarketplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/publish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/publish", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublishCatalogToMarketplaceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,6 +137,9 @@ func (s *marketplacesChannelCatalogsPublications) PublishCatalogToMarketplace(ct
 	case httpRes.StatusCode == 202:
 		fallthrough
 	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 503:
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 400:
 		fallthrough
 	default:
@@ -149,8 +152,6 @@ func (s *marketplacesChannelCatalogsPublications) PublishCatalogToMarketplace(ct
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 503:
-		res.Headers = httpRes.Header
 	}
 
 	return res, nil

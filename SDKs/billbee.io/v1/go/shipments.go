@@ -43,7 +43,7 @@ func (s *shipments) ShipmentGetList(ctx context.Context, request operations.Ship
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -254,7 +254,7 @@ func (s *shipments) ShipmentGetShippingproviders(ctx context.Context) (*operatio
 }
 
 // ShipmentPostShipmentForm - Creates a new shipment with the selected Shippingprovider
-func (s *shipments) ShipmentPostShipmentForm(ctx context.Context, request operations.ShipmentPostShipmentFormRequest) (*operations.ShipmentPostShipmentFormResponse, error) {
+func (s *shipments) ShipmentPostShipmentForm(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput) (*operations.ShipmentPostShipmentFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/shipment"
 
@@ -315,7 +315,7 @@ func (s *shipments) ShipmentPostShipmentForm(ctx context.Context, request operat
 }
 
 // ShipmentPostShipmentJSON - Creates a new shipment with the selected Shippingprovider
-func (s *shipments) ShipmentPostShipmentJSON(ctx context.Context, request operations.ShipmentPostShipmentJSONRequest) (*operations.ShipmentPostShipmentJSONResponse, error) {
+func (s *shipments) ShipmentPostShipmentJSON(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput) (*operations.ShipmentPostShipmentJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/shipment"
 
@@ -376,7 +376,7 @@ func (s *shipments) ShipmentPostShipmentJSON(ctx context.Context, request operat
 }
 
 // ShipmentPostShipmentRaw - Creates a new shipment with the selected Shippingprovider
-func (s *shipments) ShipmentPostShipmentRaw(ctx context.Context, request operations.ShipmentPostShipmentRawRequest) (*operations.ShipmentPostShipmentRawResponse, error) {
+func (s *shipments) ShipmentPostShipmentRaw(ctx context.Context, request []byte) (*operations.ShipmentPostShipmentRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/shipment"
 
@@ -437,7 +437,7 @@ func (s *shipments) ShipmentPostShipmentRaw(ctx context.Context, request operati
 }
 
 // ShipmentShipWithLabelForm - Creates a shipment for an order in billbee
-func (s *shipments) ShipmentShipWithLabelForm(ctx context.Context, request operations.ShipmentShipWithLabelFormRequest) (*operations.ShipmentShipWithLabelFormResponse, error) {
+func (s *shipments) ShipmentShipWithLabelForm(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPIShipmentWithLabel) (*operations.ShipmentShipWithLabelFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/shipwithlabel"
 
@@ -512,7 +512,7 @@ func (s *shipments) ShipmentShipWithLabelForm(ctx context.Context, request opera
 }
 
 // ShipmentShipWithLabelJSON - Creates a shipment for an order in billbee
-func (s *shipments) ShipmentShipWithLabelJSON(ctx context.Context, request operations.ShipmentShipWithLabelJSONRequest) (*operations.ShipmentShipWithLabelJSONResponse, error) {
+func (s *shipments) ShipmentShipWithLabelJSON(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPIShipmentWithLabel) (*operations.ShipmentShipWithLabelJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/shipwithlabel"
 
@@ -587,7 +587,7 @@ func (s *shipments) ShipmentShipWithLabelJSON(ctx context.Context, request opera
 }
 
 // ShipmentShipWithLabelRaw - Creates a shipment for an order in billbee
-func (s *shipments) ShipmentShipWithLabelRaw(ctx context.Context, request operations.ShipmentShipWithLabelRawRequest) (*operations.ShipmentShipWithLabelRawResponse, error) {
+func (s *shipments) ShipmentShipWithLabelRaw(ctx context.Context, request []byte) (*operations.ShipmentShipWithLabelRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/shipwithlabel"
 

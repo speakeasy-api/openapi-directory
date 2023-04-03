@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestStartUploadingFileSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TestStartUploadingFilePathParams struct {
+type TestStartUploadingFileRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The ID of the test run
 	TestRunID string `pathParam:"style=simple,explode=false,name=test_run_id"`
-}
-
-type TestStartUploadingFileRequest struct {
-	PathParams TestStartUploadingFilePathParams
-	Security   TestStartUploadingFileSecurity
 }
 
 type TestStartUploadingFileResponse struct {

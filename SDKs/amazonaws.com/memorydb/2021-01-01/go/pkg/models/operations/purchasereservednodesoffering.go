@@ -30,20 +30,16 @@ func (e *PurchaseReservedNodesOfferingXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type PurchaseReservedNodesOfferingHeaders struct {
-	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        PurchaseReservedNodesOfferingXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type PurchaseReservedNodesOfferingRequest struct {
-	Headers PurchaseReservedNodesOfferingHeaders
-	Request shared.PurchaseReservedNodesOfferingRequest `request:"mediaType=application/json"`
+	PurchaseReservedNodesOfferingRequest shared.PurchaseReservedNodesOfferingRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                       *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                             *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                    *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                           PurchaseReservedNodesOfferingXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type PurchaseReservedNodesOfferingResponse struct {

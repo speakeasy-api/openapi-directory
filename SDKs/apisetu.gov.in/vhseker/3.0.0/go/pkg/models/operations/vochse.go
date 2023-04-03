@@ -10,8 +10,8 @@ import (
 )
 
 type VochseSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type VochseRequestBodyCertificateParameters struct {
@@ -56,12 +56,6 @@ type VochseRequestBody struct {
 	Format VochseRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type VochseRequest struct {
-	// Request format
-	Request  *VochseRequestBody `request:"mediaType=application/json"`
-	Security VochseSecurity
 }
 
 type Vochse504ApplicationJSONErrorEnum string

@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidatePolicyQueryParams struct {
-	// The maximum number of results to return in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used for pagination of results returned.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ValidatePolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ValidatePolicyRequestBodyLocaleEnum - The locale to use for localizing the findings.
 type ValidatePolicyRequestBodyLocaleEnum string
 
@@ -146,9 +129,18 @@ type ValidatePolicyRequestBody struct {
 }
 
 type ValidatePolicyRequest struct {
-	QueryParams ValidatePolicyQueryParams
-	Headers     ValidatePolicyHeaders
-	Request     ValidatePolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       ValidatePolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The maximum number of results to return in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used for pagination of results returned.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ValidatePolicyResponse struct {

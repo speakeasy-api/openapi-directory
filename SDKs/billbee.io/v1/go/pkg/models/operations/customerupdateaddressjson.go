@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerUpdateAddressJSONPathParams struct {
+type CustomerUpdateAddressJSONRequest struct {
+	// The updated address. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
+	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/json"`
 	// The id of the address
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerUpdateAddressJSONRequest struct {
-	PathParams CustomerUpdateAddressJSONPathParams
-	// The updated address. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
-	Request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/json"`
 }
 
 type CustomerUpdateAddressJSONResponse struct {

@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteAPICredentialSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteAPICredentialPathParams struct {
-	// An id of an API credential
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteAPICredentialRequest struct {
-	PathParams DeleteAPICredentialPathParams
-	Security   DeleteAPICredentialSecurity
+	// An id of an API credential
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPICredentialResponse struct {

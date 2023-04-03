@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type Destiny2SnapshotLoadoutSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type Destiny2SnapshotLoadoutRequest struct {
-	Security Destiny2SnapshotLoadoutSecurity
-}
 
 // Destiny2SnapshotLoadout200Wildcard - Look at the Response property for more information about the nature of this response
 type Destiny2SnapshotLoadout200Wildcard struct {

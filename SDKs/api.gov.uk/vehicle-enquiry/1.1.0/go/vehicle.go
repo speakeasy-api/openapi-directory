@@ -38,7 +38,7 @@ func (s *vehicle) GetVehicleDetailsByRegistrationNumber(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/vehicles"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VehicleRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,7 +53,7 @@ func (s *vehicle) GetVehicleDetailsByRegistrationNumber(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -30,20 +30,16 @@ func (e *DescribeTimeToLiveXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeTimeToLiveHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeTimeToLiveXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeTimeToLiveRequest struct {
-	Headers DescribeTimeToLiveHeaders
-	Request shared.DescribeTimeToLiveInput `request:"mediaType=application/json"`
+	DescribeTimeToLiveInput shared.DescribeTimeToLiveInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              DescribeTimeToLiveXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeTimeToLiveResponse struct {

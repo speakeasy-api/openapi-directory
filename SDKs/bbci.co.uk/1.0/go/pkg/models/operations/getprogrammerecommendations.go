@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammeRecommendationsPathParams struct {
-	// The programme identifier.
-	Pid string `pathParam:"style=simple,explode=false,name=pid"`
-}
-
-type GetProgrammeRecommendationsQueryParams struct {
+type GetProgrammeRecommendationsRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The page index.
 	Page int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return.
 	PerPage int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The programme identifier.
+	Pid string `pathParam:"style=simple,explode=false,name=pid"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetProgrammeRecommendationsRequest struct {
-	PathParams  GetProgrammeRecommendationsPathParams
-	QueryParams GetProgrammeRecommendationsQueryParams
 }
 
 type GetProgrammeRecommendationsResponse struct {

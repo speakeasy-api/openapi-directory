@@ -50,25 +50,17 @@ func (e *POSTRestoreAddressToClassicVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTRestoreAddressToClassicQueryParams struct {
-	Action  POSTRestoreAddressToClassicActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRestoreAddressToClassicVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRestoreAddressToClassicHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRestoreAddressToClassicRequest struct {
-	QueryParams POSTRestoreAddressToClassicQueryParams
-	Headers     POSTRestoreAddressToClassicHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRestoreAddressToClassicActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTRestoreAddressToClassicVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRestoreAddressToClassicResponse struct {

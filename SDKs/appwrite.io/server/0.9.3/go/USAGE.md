@@ -13,23 +13,16 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AccountCreateRecoveryRequest{
-        Security: operations.AccountCreateRecoverySecurity{
-            Jwt: shared.SchemeJwt{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-            Project: shared.SchemeProject{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &operations.AccountCreateRecoveryRequestBody{
-            Email: "Larue_Rau85@yahoo.com",
-            URL: "corrupti",
-        },
+    req := operations.AccountCreateRecoveryRequestBody{
+        Email: "Larue_Rau85@yahoo.com",
+        URL: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Account.AccountCreateRecovery(ctx, req)
+    res, err := s.Account.AccountCreateRecovery(ctx, req, operations.AccountCreateRecoverySecurity{
+        Jwt: "YOUR_API_KEY_HERE",
+        Project: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

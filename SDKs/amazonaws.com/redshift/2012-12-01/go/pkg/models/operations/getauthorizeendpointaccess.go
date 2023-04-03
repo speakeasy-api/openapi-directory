@@ -50,7 +50,7 @@ func (e *GETAuthorizeEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETAuthorizeEndpointAccessQueryParams struct {
+type GETAuthorizeEndpointAccessRequest struct {
 	// The Amazon Web Services account ID to grant access to.
 	Account string                               `queryParam:"style=form,explode=true,name=Account"`
 	Action  GETAuthorizeEndpointAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -58,22 +58,14 @@ type GETAuthorizeEndpointAccessQueryParams struct {
 	ClusterIdentifier *string                               `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETAuthorizeEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The virtual private cloud (VPC) identifiers to grant access to.
-	VpcIds []string `queryParam:"style=form,explode=true,name=VpcIds"`
-}
-
-type GETAuthorizeEndpointAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAuthorizeEndpointAccessRequest struct {
-	QueryParams GETAuthorizeEndpointAccessQueryParams
-	Headers     GETAuthorizeEndpointAccessHeaders
+	VpcIds            []string `queryParam:"style=form,explode=true,name=VpcIds"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAuthorizeEndpointAccessResponse struct {

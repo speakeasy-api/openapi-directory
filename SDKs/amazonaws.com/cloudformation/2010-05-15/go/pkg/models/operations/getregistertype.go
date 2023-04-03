@@ -83,7 +83,7 @@ func (e *GETRegisterTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRegisterTypeQueryParams struct {
+type GETRegisterTypeRequest struct {
 	Action GETRegisterTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier that acts as an idempotency key for this registration request. Specifying a client request token prevents CloudFormation from generating more than one version of an extension from the same registration request, even if the request is submitted multiple times.
 	ClientRequestToken *string `queryParam:"style=form,explode=true,name=ClientRequestToken"`
@@ -96,23 +96,15 @@ type GETRegisterTypeQueryParams struct {
 	// The kind of extension.
 	Type *GETRegisterTypeTypeEnum `queryParam:"style=form,explode=true,name=Type"`
 	// <p>The name of the extension being registered.</p> <p>We suggest that extension names adhere to the following patterns:</p> <ul> <li> <p>For resource types, <i>company_or_organization</i>::<i>service</i>::<i>type</i>.</p> </li> <li> <p>For modules, <i>company_or_organization</i>::<i>service</i>::<i>type</i>::MODULE.</p> </li> <li> <p>For hooks, <i>MyCompany</i>::<i>Testing</i>::<i>MyTestHook</i>.</p> </li> </ul> <note> <p>The following organization namespaces are reserved and can't be used in your extension names:</p> <ul> <li> <p> <code>Alexa</code> </p> </li> <li> <p> <code>AMZN</code> </p> </li> <li> <p> <code>Amazon</code> </p> </li> <li> <p> <code>AWS</code> </p> </li> <li> <p> <code>Custom</code> </p> </li> <li> <p> <code>Dev</code> </p> </li> </ul> </note>
-	TypeName string                     `queryParam:"style=form,explode=true,name=TypeName"`
-	Version  GETRegisterTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRegisterTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRegisterTypeRequest struct {
-	QueryParams GETRegisterTypeQueryParams
-	Headers     GETRegisterTypeHeaders
+	TypeName          string                     `queryParam:"style=form,explode=true,name=TypeName"`
+	Version           GETRegisterTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRegisterTypeResponse struct {

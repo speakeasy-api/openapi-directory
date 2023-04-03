@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestCustomerPathParams struct {
-	// Customer ID
-	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
-}
-
-type RequestCustomerQueryParams struct {
-	// Include custom customer attributes.
-	IncludeAttributes *bool `queryParam:"style=form,explode=true,name=include_attributes"`
-}
-
 // RequestCustomerXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestCustomerXSdsDateFormatEnum string
 
@@ -52,17 +42,15 @@ func (e *RequestCustomerXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestCustomerHeaders struct {
+type RequestCustomerRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestCustomerXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RequestCustomerRequest struct {
-	PathParams  RequestCustomerPathParams
-	QueryParams RequestCustomerQueryParams
-	Headers     RequestCustomerHeaders
+	// Customer ID
+	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
+	// Include custom customer attributes.
+	IncludeAttributes *bool `queryParam:"style=form,explode=true,name=include_attributes"`
 }
 
 type RequestCustomerResponse struct {

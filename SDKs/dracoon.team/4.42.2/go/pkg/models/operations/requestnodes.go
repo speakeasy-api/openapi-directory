@@ -9,37 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestNodesQueryParams struct {
-	// * `0` - top level nodes only
-	//
-	// * `n` (any positive number) - include `n` levels starting from the current node
-	DepthLevel *int `queryParam:"style=form,explode=true,name=depth_level"`
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Parent node ID.
-	//
-	// Only rooms and folders can be parents.
-	//
-	// Parent ID `0` or empty is the root node.
-	ParentID *int64 `queryParam:"style=form,explode=true,name=parent_id"`
-	// Show all rooms for management perspective.
-	//
-	// Only possible for _Rooms Managers_ / _Room Admins_.
-	//
-	// For all other users, it will be ignored.
-	RoomManager *bool `queryParam:"style=form,explode=true,name=room_manager"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestNodesXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestNodesXSdsDateFormatEnum string
 
@@ -73,16 +42,39 @@ func (e *RequestNodesXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestNodesHeaders struct {
+type RequestNodesRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestNodesXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestNodesRequest struct {
-	QueryParams RequestNodesQueryParams
-	Headers     RequestNodesHeaders
+	// * `0` - top level nodes only
+	//
+	// * `n` (any positive number) - include `n` levels starting from the current node
+	DepthLevel *int `queryParam:"style=form,explode=true,name=depth_level"`
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Parent node ID.
+	//
+	// Only rooms and folders can be parents.
+	//
+	// Parent ID `0` or empty is the root node.
+	ParentID *int64 `queryParam:"style=form,explode=true,name=parent_id"`
+	// Show all rooms for management perspective.
+	//
+	// Only possible for _Rooms Managers_ / _Room Admins_.
+	//
+	// For all other users, it will be ignored.
+	RoomManager *bool `queryParam:"style=form,explode=true,name=room_manager"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestNodesResponse struct {

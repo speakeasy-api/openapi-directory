@@ -7,30 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRoutePathParams struct {
-	// The name of the service mesh that the route resides in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the route to update.
-	RouteName string `pathParam:"style=simple,explode=false,name=routeName"`
-	// The name of the virtual router that the route is associated with.
-	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
-}
-
-type UpdateRouteQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type UpdateRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateRouteRequestBodySpec - An object that represents a route specification. Specify one route type.
 type UpdateRouteRequestBodySpec struct {
 	GrpcRoute  *shared.GrpcRoute `json:"grpcRoute,omitempty"`
@@ -48,10 +24,22 @@ type UpdateRouteRequestBody struct {
 }
 
 type UpdateRouteRequest struct {
-	PathParams  UpdateRoutePathParams
-	QueryParams UpdateRouteQueryParams
-	Headers     UpdateRouteHeaders
-	Request     UpdateRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateRouteRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh that the route resides in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the route to update.
+	RouteName string `pathParam:"style=simple,explode=false,name=routeName"`
+	// The name of the virtual router that the route is associated with.
+	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
 }
 
 type UpdateRouteResponse struct {

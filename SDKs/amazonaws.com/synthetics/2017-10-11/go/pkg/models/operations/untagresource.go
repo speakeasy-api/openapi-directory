@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type UntagResourcePathParams struct {
-	// <p>The ARN of the canary or group that you're removing tags from.</p> <p>The ARN format of a canary is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:canary:<i>canary-name</i> </code>.</p> <p>The ARN format of a group is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:group:<i>group-name</i> </code> </p>
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type UntagResourceQueryParams struct {
-	// The list of tag keys to remove from the resource.
-	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
-}
-
-type UntagResourceHeaders struct {
+type UntagResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type UntagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UntagResourceRequest struct {
-	PathParams  UntagResourcePathParams
-	QueryParams UntagResourceQueryParams
-	Headers     UntagResourceHeaders
+	// <p>The ARN of the canary or group that you're removing tags from.</p> <p>The ARN format of a canary is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:canary:<i>canary-name</i> </code>.</p> <p>The ARN format of a group is <code>arn:aws:synthetics:<i>Region</i>:<i>account-id</i>:group:<i>group-name</i> </code> </p>
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
+	// The list of tag keys to remove from the resource.
+	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
 }
 
 type UntagResourceResponse struct {

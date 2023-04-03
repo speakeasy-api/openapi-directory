@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BranchConfigurationsUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BranchConfigurationsUpdatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The branch name
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type BranchConfigurationsUpdateRequestBodyArtifactVersioningBuildNumberFormatEnum string
@@ -205,10 +195,14 @@ type BranchConfigurationsUpdateRequestBody struct {
 }
 
 type BranchConfigurationsUpdateRequest struct {
-	PathParams BranchConfigurationsUpdatePathParams
 	// Parameters of the configuration
-	Request  BranchConfigurationsUpdateRequestBody `request:"mediaType=application/json"`
-	Security BranchConfigurationsUpdateSecurity
+	RequestBody BranchConfigurationsUpdateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The branch name
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type BranchConfigurationsUpdate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum string

@@ -50,25 +50,17 @@ func (e *POSTImportInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTImportInstanceQueryParams struct {
-	Action  POSTImportInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTImportInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTImportInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTImportInstanceRequest struct {
-	QueryParams POSTImportInstanceQueryParams
-	Headers     POSTImportInstanceHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTImportInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                        `request:"mediaType=text/xml"`
+	Version           POSTImportInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTImportInstanceResponse struct {

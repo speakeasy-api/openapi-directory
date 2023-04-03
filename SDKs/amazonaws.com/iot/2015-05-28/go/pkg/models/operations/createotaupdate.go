@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateOTAUpdatePathParams struct {
-	// The ID of the OTA update to be created.
-	OtaUpdateID string `pathParam:"style=simple,explode=false,name=otaUpdateId"`
-}
-
-type CreateOTAUpdateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateOTAUpdateRequestBodyAwsJobAbortConfig - The criteria that determine when and how a job abort takes place.
 type CreateOTAUpdateRequestBodyAwsJobAbortConfig struct {
 	AbortCriteriaList []shared.AwsJobAbortCriteria `json:"abortCriteriaList,omitempty"`
@@ -97,9 +82,16 @@ type CreateOTAUpdateRequestBody struct {
 }
 
 type CreateOTAUpdateRequest struct {
-	PathParams CreateOTAUpdatePathParams
-	Headers    CreateOTAUpdateHeaders
-	Request    CreateOTAUpdateRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateOTAUpdateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the OTA update to be created.
+	OtaUpdateID string `pathParam:"style=simple,explode=false,name=otaUpdateId"`
 }
 
 type CreateOTAUpdateResponse struct {

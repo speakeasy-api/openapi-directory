@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAlertManagerDefinitionPathParams struct {
-	// The ID of the workspace in which to delete the alert manager definition.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteAlertManagerDefinitionQueryParams struct {
-	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteAlertManagerDefinitionHeaders struct {
+type DeleteAlertManagerDefinitionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteAlertManagerDefinitionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAlertManagerDefinitionRequest struct {
-	PathParams  DeleteAlertManagerDefinitionPathParams
-	QueryParams DeleteAlertManagerDefinitionQueryParams
-	Headers     DeleteAlertManagerDefinitionHeaders
+	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The ID of the workspace in which to delete the alert manager definition.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteAlertManagerDefinitionResponse struct {

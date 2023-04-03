@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeMfaPoliciesConfigHeaders struct {
+type ChangeMfaPoliciesConfigRequest struct {
+	UpdateMfaPoliciesConfig shared.UpdateMfaPoliciesConfig `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ChangeMfaPoliciesConfigRequest struct {
-	Headers ChangeMfaPoliciesConfigHeaders
-	Request shared.UpdateMfaPoliciesConfig `request:"mediaType=application/json"`
 }
 
 type ChangeMfaPoliciesConfigResponse struct {

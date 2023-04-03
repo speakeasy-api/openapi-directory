@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CreatePipelineVariableForWorkspacePathParams struct {
+type CreatePipelineVariableForWorkspaceRequest struct {
+	// The variable to create.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type CreatePipelineVariableForWorkspaceRequest struct {
-	PathParams CreatePipelineVariableForWorkspacePathParams
-	// The variable to create.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreatePipelineVariableForWorkspaceResponse struct {

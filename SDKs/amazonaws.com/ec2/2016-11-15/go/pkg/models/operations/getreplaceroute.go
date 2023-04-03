@@ -50,7 +50,7 @@ func (e *GETReplaceRouteVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETReplaceRouteQueryParams struct {
+type GETReplaceRouteRequest struct {
 	Action GETReplaceRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// [IPv4 traffic only] The ID of a carrier gateway.
 	CarrierGatewayID *string `queryParam:"style=form,explode=true,name=CarrierGatewayId"`
@@ -87,21 +87,13 @@ type GETReplaceRouteQueryParams struct {
 	VpcEndpointID *string `queryParam:"style=form,explode=true,name=VpcEndpointId"`
 	// The ID of a VPC peering connection.
 	VpcPeeringConnectionID *string `queryParam:"style=form,explode=true,name=VpcPeeringConnectionId"`
-}
-
-type GETReplaceRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReplaceRouteRequest struct {
-	QueryParams GETReplaceRouteQueryParams
-	Headers     GETReplaceRouteHeaders
+	XAmzAlgorithm          *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReplaceRouteResponse struct {

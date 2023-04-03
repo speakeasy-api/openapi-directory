@@ -8,23 +8,14 @@ import (
 )
 
 type GetEventSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetEventPathParams struct {
-	// The unique identifier for the eBay event.
-	EventID string `pathParam:"style=simple,explode=false,name=event_id"`
-}
-
-type GetEventHeaders struct {
-	// A header used to specify the eBay marketplace ID.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetEventRequest struct {
-	PathParams GetEventPathParams
-	Headers    GetEventHeaders
-	Security   GetEventSecurity
+	// A header used to specify the eBay marketplace ID.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	// The unique identifier for the eBay event.
+	EventID string `pathParam:"style=simple,explode=false,name=event_id"`
 }
 
 type GetEventResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GsiBesthourQueryParams struct {
+type GsiBesthourRequest struct {
 	// How many hours in row do you need the device turned on?
 	Hours *int64 `queryParam:"style=form,explode=true,name=hours"`
 	// Any valid Stromkonto account (address).
@@ -15,10 +15,6 @@ type GsiBesthourQueryParams struct {
 	Timeframe *int64 `queryParam:"style=form,explode=true,name=timeframe"`
 	// Zipcode (Postleitzahl) of a city in Germany.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GsiBesthourRequest struct {
-	QueryParams GsiBesthourQueryParams
 }
 
 type GsiBesthourResponse struct {

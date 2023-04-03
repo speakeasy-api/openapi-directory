@@ -50,28 +50,20 @@ func (e *GETGETHostReservationPurchasePreviewVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETGETHostReservationPurchasePreviewQueryParams struct {
+type GETGETHostReservationPurchasePreviewRequest struct {
 	Action GETGETHostReservationPurchasePreviewActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IDs of the Dedicated Hosts with which the reservation is associated.
 	HostIDSet []string `queryParam:"style=form,explode=true,name=HostIdSet"`
 	// The offering ID of the reservation.
-	OfferingID string                                          `queryParam:"style=form,explode=true,name=OfferingId"`
-	Version    GETGETHostReservationPurchasePreviewVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETHostReservationPurchasePreviewHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETHostReservationPurchasePreviewRequest struct {
-	QueryParams GETGETHostReservationPurchasePreviewQueryParams
-	Headers     GETGETHostReservationPurchasePreviewHeaders
+	OfferingID        string                                          `queryParam:"style=form,explode=true,name=OfferingId"`
+	Version           GETGETHostReservationPurchasePreviewVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETHostReservationPurchasePreviewResponse struct {

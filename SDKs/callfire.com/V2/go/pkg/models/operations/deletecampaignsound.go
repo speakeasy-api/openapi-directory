@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteCampaignSoundSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteCampaignSoundPathParams struct {
-	// An id of a campaign sound
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteCampaignSoundRequest struct {
-	PathParams DeleteCampaignSoundPathParams
-	Security   DeleteCampaignSoundSecurity
+	// An id of a campaign sound
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteCampaignSoundResponse struct {

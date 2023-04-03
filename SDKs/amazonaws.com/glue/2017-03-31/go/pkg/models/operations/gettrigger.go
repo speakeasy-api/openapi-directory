@@ -30,7 +30,8 @@ func (e *GetTriggerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTriggerHeaders struct {
+type GetTriggerRequest struct {
+	GetTriggerRequest shared.GetTriggerRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetTriggerHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetTriggerXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetTriggerRequest struct {
-	Headers GetTriggerHeaders
-	Request shared.GetTriggerRequest `request:"mediaType=application/json"`
 }
 
 type GetTriggerResponse struct {

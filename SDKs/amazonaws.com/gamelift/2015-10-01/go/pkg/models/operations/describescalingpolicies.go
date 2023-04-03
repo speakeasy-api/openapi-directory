@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeScalingPoliciesQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeScalingPoliciesXAmzTargetEnum
 type DescribeScalingPoliciesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeScalingPoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type DescribeScalingPoliciesHeaders struct {
+type DescribeScalingPoliciesRequest struct {
+	DescribeScalingPoliciesInput shared.DescribeScalingPoliciesInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                               `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeScalingPoliciesHeaders struct {
 	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeScalingPoliciesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeScalingPoliciesRequest struct {
-	QueryParams DescribeScalingPoliciesQueryParams
-	Headers     DescribeScalingPoliciesHeaders
-	Request     shared.DescribeScalingPoliciesInput `request:"mediaType=application/json"`
 }
 
 type DescribeScalingPoliciesResponse struct {

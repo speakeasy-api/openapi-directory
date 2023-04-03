@@ -37,7 +37,7 @@ func newChannelCatalogsProductsOptimisation(defaultClient, securityClient HTTPCl
 // /!\ In case of massive optimisation we recommand you to use the analytics api
 func (s *channelCatalogsProductsOptimisation) DisableChannelCatalogProduct(ctx context.Context, request operations.DisableChannelCatalogProductRequest) (*operations.DisableChannelCatalogProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *channelCatalogsProductsOptimisation) DisableChannelCatalogProduct(ctx c
 // /!\ In case of massive optimisation we recommand you to use the analytics api
 func (s *channelCatalogsProductsOptimisation) ReenableChannelCatalogProduct(ctx context.Context, request operations.ReenableChannelCatalogProductRequest) (*operations.ReenableChannelCatalogProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/reenable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/reenable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

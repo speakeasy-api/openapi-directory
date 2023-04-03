@@ -30,7 +30,8 @@ func (e *GetDiskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDiskHeaders struct {
+type GetDiskRequest struct {
+	GetDiskRequest    shared.GetDiskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetDiskHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetDiskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetDiskRequest struct {
-	Headers GetDiskHeaders
-	Request shared.GetDiskRequest `request:"mediaType=application/json"`
 }
 
 type GetDiskResponse struct {

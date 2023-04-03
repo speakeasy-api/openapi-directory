@@ -11,19 +11,7 @@ import (
 )
 
 type WebhooksResolveSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type WebhooksResolvePathParams struct {
-	// JWT Webhook token that represents the connection lookupId. Signed so we know source came from us
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Service provider ID.
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type WebhooksResolveQueryParams struct {
-	// The name of downstream event when connector does not supply in body or header
-	E *string `queryParam:"style=form,explode=true,name=e"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type WebhooksResolveRequestBodyType string
@@ -95,10 +83,13 @@ func (u WebhooksResolveRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type WebhooksResolveRequest struct {
-	PathParams  WebhooksResolvePathParams
-	QueryParams WebhooksResolveQueryParams
-	Request     WebhooksResolveRequestBody `request:"mediaType=application/json"`
-	Security    WebhooksResolveSecurity
+	RequestBody WebhooksResolveRequestBody `request:"mediaType=application/json"`
+	// The name of downstream event when connector does not supply in body or header
+	E *string `queryParam:"style=form,explode=true,name=e"`
+	// JWT Webhook token that represents the connection lookupId. Signed so we know source came from us
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Service provider ID.
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type WebhooksResolveResponse struct {

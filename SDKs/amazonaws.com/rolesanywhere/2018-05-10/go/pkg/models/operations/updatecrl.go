@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCrlPathParams struct {
-	// The unique identifier of the certificate revocation list (CRL).
-	CrlID string `pathParam:"style=simple,explode=false,name=crlId"`
-}
-
-type UpdateCrlHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateCrlRequestBody struct {
 	// The x509 v3 specified certificate revocation list
 	CrlData *string `json:"crlData,omitempty"`
@@ -30,9 +15,16 @@ type UpdateCrlRequestBody struct {
 }
 
 type UpdateCrlRequest struct {
-	PathParams UpdateCrlPathParams
-	Headers    UpdateCrlHeaders
-	Request    UpdateCrlRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateCrlRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the certificate revocation list (CRL).
+	CrlID string `pathParam:"style=simple,explode=false,name=crlId"`
 }
 
 type UpdateCrlResponse struct {

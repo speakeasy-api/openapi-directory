@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListUserSSubscriptionGroupStatusSmsQueryParams struct {
+type ListUserSSubscriptionGroupStatusSmsRequest struct {
 	// (Required*) String
 	//
 	// The `external_id` of the user (must include at least one and at most 50 `external_ids`).
@@ -25,10 +25,6 @@ type ListUserSSubscriptionGroupStatusSmsQueryParams struct {
 	//
 	// The `id` of your subscription group.
 	SubscriptionGroupID *string `queryParam:"style=form,explode=true,name=subscription_group_id"`
-}
-
-type ListUserSSubscriptionGroupStatusSmsRequest struct {
-	QueryParams ListUserSSubscriptionGroupStatusSmsQueryParams
 }
 
 type ListUserSSubscriptionGroupStatusSmsResponse struct {

@@ -32,7 +32,6 @@ pkg/models/shared/statusenum.go
 pkg/models/shared/webhookeventtypeenum.go
 pkg/models/shared/badrequestresponse.go
 pkg/models/shared/createwebhookrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/getwebhooksresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
@@ -42,4 +41,5 @@ pkg/models/shared/getwebhookresponse.go
 pkg/models/shared/resolvewebhookresponse.go
 pkg/models/shared/updatewebhookresponse.go
 pkg/models/shared/updatewebhookrequest.go
+pkg/models/shared/security.go
 USAGE.md

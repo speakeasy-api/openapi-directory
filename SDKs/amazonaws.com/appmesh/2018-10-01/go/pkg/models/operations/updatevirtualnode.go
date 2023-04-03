@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateVirtualNodePathParams struct {
-	// The name of the service mesh in which the virtual node resides.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual node to update.
-	VirtualNodeName string `pathParam:"style=simple,explode=false,name=virtualNodeName"`
-}
-
-type UpdateVirtualNodeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateVirtualNodeRequestBodySpec - An object representing the specification of a virtual node.
 type UpdateVirtualNodeRequestBodySpec struct {
 	Backends         []string                 `json:"backends,omitempty"`
@@ -40,9 +23,18 @@ type UpdateVirtualNodeRequestBody struct {
 }
 
 type UpdateVirtualNodeRequest struct {
-	PathParams UpdateVirtualNodePathParams
-	Headers    UpdateVirtualNodeHeaders
-	Request    UpdateVirtualNodeRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateVirtualNodeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh in which the virtual node resides.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the virtual node to update.
+	VirtualNodeName string `pathParam:"style=simple,explode=false,name=virtualNodeName"`
 }
 
 type UpdateVirtualNodeResponse struct {

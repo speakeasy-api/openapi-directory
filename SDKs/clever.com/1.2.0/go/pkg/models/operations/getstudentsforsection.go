@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStudentsForSectionPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetStudentsForSectionQueryParams struct {
+type GetStudentsForSectionRequest struct {
 	EndingBefore  *string `queryParam:"style=form,explode=true,name=ending_before"`
+	ID            string  `pathParam:"style=simple,explode=false,name=id"`
 	Limit         *int64  `queryParam:"style=form,explode=true,name=limit"`
 	StartingAfter *string `queryParam:"style=form,explode=true,name=starting_after"`
-}
-
-type GetStudentsForSectionRequest struct {
-	PathParams  GetStudentsForSectionPathParams
-	QueryParams GetStudentsForSectionQueryParams
 }
 
 type GetStudentsForSectionResponse struct {

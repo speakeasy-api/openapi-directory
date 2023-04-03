@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortalPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type GetPortalHeaders struct {
+type GetPortalRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetPortalHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetPortalRequest struct {
-	PathParams GetPortalPathParams
-	Headers    GetPortalHeaders
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
 }
 
 type GetPortalResponse struct {

@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelQuantumTaskPathParams struct {
-	// The ARN of the task to cancel.
-	QuantumTaskArn string `pathParam:"style=simple,explode=false,name=quantumTaskArn"`
-}
-
-type CancelQuantumTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CancelQuantumTaskRequestBody struct {
 	// The client token associated with the request.
 	ClientToken string `json:"clientToken"`
 }
 
 type CancelQuantumTaskRequest struct {
-	PathParams CancelQuantumTaskPathParams
-	Headers    CancelQuantumTaskHeaders
-	Request    CancelQuantumTaskRequestBody `request:"mediaType=application/json"`
+	RequestBody       CancelQuantumTaskRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ARN of the task to cancel.
+	QuantumTaskArn string `pathParam:"style=simple,explode=false,name=quantumTaskArn"`
 }
 
 type CancelQuantumTaskResponse struct {

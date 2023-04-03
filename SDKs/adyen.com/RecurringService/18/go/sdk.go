@@ -96,7 +96,7 @@ func New(opts ...SDKOption) *SDK {
 // Disables stored payment details to stop charging a shopper with this particular recurring detail ID.
 //
 // For more information, refer to [Disable stored details](https://docs.adyen.com/developers/features/recurring-payments/disable-stored-details).
-func (s *SDK) PostDisable(ctx context.Context, request operations.PostDisableRequest) (*operations.PostDisableResponse, error) {
+func (s *SDK) PostDisable(ctx context.Context, request shared.DisableRequest) (*operations.PostDisableResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disable"
 
@@ -159,7 +159,7 @@ func (s *SDK) PostDisable(ctx context.Context, request operations.PostDisableReq
 // Lists the stored payment details for a shopper, if there are any available. The recurring detail ID can be used with a regular authorisation request to charge the shopper. A summary of the payment detail is returned for presentation to the shopper.
 //
 // For more information, refer to [Retrieve stored details](https://docs.adyen.com/developers/features/recurring-payments/retrieve-stored-details).
-func (s *SDK) PostListRecurringDetails(ctx context.Context, request operations.PostListRecurringDetailsRequest) (*operations.PostListRecurringDetailsResponse, error) {
+func (s *SDK) PostListRecurringDetails(ctx context.Context, request shared.RecurringDetailsRequest) (*operations.PostListRecurringDetailsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listRecurringDetails"
 

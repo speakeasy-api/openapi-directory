@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeClassificationPoliciesConfigHeaders struct {
+type ChangeClassificationPoliciesConfigRequest struct {
+	UpdateClassificationPoliciesConfig shared.UpdateClassificationPoliciesConfig `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ChangeClassificationPoliciesConfigRequest struct {
-	Headers ChangeClassificationPoliciesConfigHeaders
-	Request shared.UpdateClassificationPoliciesConfig `request:"mediaType=application/json"`
 }
 
 type ChangeClassificationPoliciesConfigResponse struct {

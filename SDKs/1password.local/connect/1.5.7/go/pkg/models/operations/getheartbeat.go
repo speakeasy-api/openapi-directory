@@ -10,10 +10,6 @@ var GetHeartbeatServerList = []string{
 	"http://localhost:8080",
 }
 
-type GetHeartbeatRequest struct {
-	ServerURL *string
-}
-
 type GetHeartbeatResponse struct {
 	ContentType string
 	// OK

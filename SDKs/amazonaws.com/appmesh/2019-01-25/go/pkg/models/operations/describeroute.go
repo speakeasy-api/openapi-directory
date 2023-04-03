@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeRoutePathParams struct {
-	// The name of the service mesh that the route resides in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the route to describe.
-	RouteName string `pathParam:"style=simple,explode=false,name=routeName"`
-	// The name of the virtual router that the route is associated with.
-	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
-}
-
-type DescribeRouteQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type DescribeRouteHeaders struct {
+type DescribeRouteRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type DescribeRouteHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeRouteRequest struct {
-	PathParams  DescribeRoutePathParams
-	QueryParams DescribeRouteQueryParams
-	Headers     DescribeRouteHeaders
+	// The name of the service mesh that the route resides in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the route to describe.
+	RouteName string `pathParam:"style=simple,explode=false,name=routeName"`
+	// The name of the virtual router that the route is associated with.
+	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
 }
 
 type DescribeRouteResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClassifiersQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetClassifiersXAmzTargetEnum
 type GetClassifiersXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetClassifiersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetClassifiersHeaders struct {
+type GetClassifiersRequest struct {
+	GetClassifiersRequest shared.GetClassifiersRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetClassifiersHeaders struct {
 	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetClassifiersXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetClassifiersRequest struct {
-	QueryParams GetClassifiersQueryParams
-	Headers     GetClassifiersHeaders
-	Request     shared.GetClassifiersRequest `request:"mediaType=application/json"`
 }
 
 type GetClassifiersResponse struct {

@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureSSHPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ConfigureSSHQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ConfigureSSHRequest struct {
-	PathParams  ConfigureSSHPathParams
-	QueryParams ConfigureSSHQueryParams
-	Request     *shared.SSHConfiguration `request:"mediaType=application/json"`
+	SSHConfiguration *shared.SSHConfiguration `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ConfigureSSHResponse struct {

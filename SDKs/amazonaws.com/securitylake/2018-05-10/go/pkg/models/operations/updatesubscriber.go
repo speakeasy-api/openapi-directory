@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSubscriberPathParams struct {
-	// A value created by Security Lake that uniquely identifies your subscription.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateSubscriberHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateSubscriberRequestBody struct {
 	// The external ID of the Security Lake account.
 	ExternalID *string `json:"externalId,omitempty"`
@@ -34,9 +19,16 @@ type UpdateSubscriberRequestBody struct {
 }
 
 type UpdateSubscriberRequest struct {
-	PathParams UpdateSubscriberPathParams
-	Headers    UpdateSubscriberHeaders
-	Request    UpdateSubscriberRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSubscriberRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A value created by Security Lake that uniquely identifies your subscription.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateSubscriberResponse struct {

@@ -50,30 +50,22 @@ func (e *GETGETClusterCredentialsWithIAMVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETGETClusterCredentialsWithIAMQueryParams struct {
+type GETGETClusterCredentialsWithIAMRequest struct {
 	Action GETGETClusterCredentialsWithIAMActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The unique identifier of the cluster that contains the database for which you are requesting credentials.
 	ClusterIdentifier string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	// The name of the database for which you are requesting credentials. If the database name is specified, the IAM policy must allow access to the resource <code>dbname</code> for the specified database name. If the database name is not specified, access to all databases is allowed.
 	DbName *string `queryParam:"style=form,explode=true,name=DbName"`
 	// <p>The number of seconds until the returned temporary password expires.</p> <p>Range: 900-3600. Default: 900.</p>
-	DurationSeconds *int64                                     `queryParam:"style=form,explode=true,name=DurationSeconds"`
-	Version         GETGETClusterCredentialsWithIAMVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETClusterCredentialsWithIAMHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETClusterCredentialsWithIAMRequest struct {
-	QueryParams GETGETClusterCredentialsWithIAMQueryParams
-	Headers     GETGETClusterCredentialsWithIAMHeaders
+	DurationSeconds   *int64                                     `queryParam:"style=form,explode=true,name=DurationSeconds"`
+	Version           GETGETClusterCredentialsWithIAMVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETClusterCredentialsWithIAMResponse struct {

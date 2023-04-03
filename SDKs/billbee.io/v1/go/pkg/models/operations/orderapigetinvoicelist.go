@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type OrderAPIGetInvoiceListQueryParams struct {
+type OrderAPIGetInvoiceListRequest struct {
 	// If true the list of tags passed to the call are used to filter orders to not include these tags
 	ExcludeTags      *bool `queryParam:"style=form,explode=true,name=excludeTags"`
 	IncludePositions *bool `queryParam:"style=form,explode=true,name=includePositions"`
@@ -26,10 +26,6 @@ type OrderAPIGetInvoiceListQueryParams struct {
 	// Specifies a list of shop ids for which invoices should be included
 	ShopID []int64  `queryParam:"style=form,explode=true,name=shopId"`
 	Tag    []string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type OrderAPIGetInvoiceListRequest struct {
-	QueryParams OrderAPIGetInvoiceListQueryParams
 }
 
 type OrderAPIGetInvoiceListResponse struct {

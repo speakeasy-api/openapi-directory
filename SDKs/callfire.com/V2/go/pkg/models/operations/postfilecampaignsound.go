@@ -8,12 +8,8 @@ import (
 )
 
 type PostFileCampaignSoundSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostFileCampaignSoundQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostFileCampaignSoundRequestBodyFile struct {
@@ -29,9 +25,9 @@ type PostFileCampaignSoundRequestBody struct {
 }
 
 type PostFileCampaignSoundRequest struct {
-	QueryParams PostFileCampaignSoundQueryParams
-	Request     PostFileCampaignSoundRequestBody `request:"mediaType=multipart/form-data"`
-	Security    PostFileCampaignSoundSecurity
+	RequestBody PostFileCampaignSoundRequestBody `request:"mediaType=multipart/form-data"`
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 type PostFileCampaignSoundResponse struct {

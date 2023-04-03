@@ -58,27 +58,19 @@ func (e *GETDefineExpressionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDefineExpressionQueryParams struct {
+type GETDefineExpressionRequest struct {
 	Action     GETDefineExpressionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                        `queryParam:"style=form,explode=true,name=DomainName"`
 	// A named expression that can be evaluated at search time. Can be used to sort the search results, define other expressions, or return computed information in the search results.
-	Expression GETDefineExpressionExpression  `queryParam:"style=form,explode=true,name=Expression"`
-	Version    GETDefineExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDefineExpressionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDefineExpressionRequest struct {
-	QueryParams GETDefineExpressionQueryParams
-	Headers     GETDefineExpressionHeaders
+	Expression        GETDefineExpressionExpression  `queryParam:"style=form,explode=true,name=Expression"`
+	Version           GETDefineExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDefineExpressionResponse struct {

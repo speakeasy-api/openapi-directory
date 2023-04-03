@@ -34,7 +34,7 @@ func newCompanyInfo(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // CompanyInfoOne - Get company info
 // Get company info
-func (s *companyInfo) CompanyInfoOne(ctx context.Context, request operations.CompanyInfoOneRequest) (*operations.CompanyInfoOneResponse, error) {
+func (s *companyInfo) CompanyInfoOne(ctx context.Context, request operations.CompanyInfoOneRequest, security operations.CompanyInfoOneSecurity) (*operations.CompanyInfoOneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/company-info"
 
@@ -43,13 +43,13 @@ func (s *companyInfo) CompanyInfoOne(ctx context.Context, request operations.Com
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

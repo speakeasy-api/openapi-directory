@@ -50,26 +50,18 @@ func (e *GETListTagsForResourceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListTagsForResourceQueryParams struct {
+type GETListTagsForResourceRequest struct {
 	Action GETListTagsForResourceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the resouce for which a tag list is requested.</p> <p>Must be the ARN of an Elastic Beanstalk resource.</p>
-	ResourceArn string                            `queryParam:"style=form,explode=true,name=ResourceArn"`
-	Version     GETListTagsForResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListTagsForResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListTagsForResourceRequest struct {
-	QueryParams GETListTagsForResourceQueryParams
-	Headers     GETListTagsForResourceHeaders
+	ResourceArn       string                            `queryParam:"style=form,explode=true,name=ResourceArn"`
+	Version           GETListTagsForResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListTagsForResourceResponse struct {

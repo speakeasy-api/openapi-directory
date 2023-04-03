@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobExecutionsForJobPathParams struct {
-	// The unique identifier you assigned to this job when it was created.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
 // ListJobExecutionsForJobStatusEnum - The status of the job.
 type ListJobExecutionsForJobStatusEnum string
 
@@ -56,16 +51,7 @@ func (e *ListJobExecutionsForJobStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListJobExecutionsForJobQueryParams struct {
-	// The maximum number of results to be returned per request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The status of the job.
-	Status *ListJobExecutionsForJobStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListJobExecutionsForJobHeaders struct {
+type ListJobExecutionsForJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -73,12 +59,14 @@ type ListJobExecutionsForJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobExecutionsForJobRequest struct {
-	PathParams  ListJobExecutionsForJobPathParams
-	QueryParams ListJobExecutionsForJobQueryParams
-	Headers     ListJobExecutionsForJobHeaders
+	// The unique identifier you assigned to this job when it was created.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// The maximum number of results to be returned per request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The status of the job.
+	Status *ListJobExecutionsForJobStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListJobExecutionsForJobResponse struct {

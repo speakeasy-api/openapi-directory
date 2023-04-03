@@ -13,11 +13,9 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateGlobalRuleRequest{
-        Request: shared.Rule{
-            Config: "corrupti",
-            Type: "VALIDITY",
-        },
+    req := shared.Rule{
+        Config: "corrupti",
+        Type: "VALIDITY",
     }
 
     ctx := context.Background()

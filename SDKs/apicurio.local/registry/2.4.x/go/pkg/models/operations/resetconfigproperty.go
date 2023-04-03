@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetConfigPropertyPathParams struct {
+type ResetConfigPropertyRequest struct {
 	// The name of a configuration property.
 	PropertyName string `pathParam:"style=simple,explode=false,name=propertyName"`
-}
-
-type ResetConfigPropertyRequest struct {
-	PathParams ResetConfigPropertyPathParams
 }
 
 type ResetConfigPropertyResponse struct {

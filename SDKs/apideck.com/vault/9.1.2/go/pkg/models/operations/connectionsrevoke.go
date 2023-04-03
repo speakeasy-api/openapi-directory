@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConnectionsRevokePathParams struct {
+type ConnectionsRevokeRequest struct {
 	// Application ID of the resource to return
 	ApplicationID string `pathParam:"style=simple,explode=false,name=application_id"`
-	// Service ID of the resource to return
-	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
-}
-
-type ConnectionsRevokeQueryParams struct {
 	// URL to redirect back to after authorization. When left empty the default configured redirect uri will be used.
 	RedirectURI string `queryParam:"style=form,explode=true,name=redirect_uri"`
+	// Service ID of the resource to return
+	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
 	// An opaque value the applications adds to the initial request that the authorization server includes when redirecting the back to the application. This value must be used by the application to prevent CSRF attacks.
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ConnectionsRevokeRequest struct {
-	PathParams  ConnectionsRevokePathParams
-	QueryParams ConnectionsRevokeQueryParams
 }
 
 type ConnectionsRevokeResponse struct {

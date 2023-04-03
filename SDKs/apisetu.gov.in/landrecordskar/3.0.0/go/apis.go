@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Cncer - Conversion Certificate
 // API to verify Conversion Certificate.
-func (s *apIs) Cncer(ctx context.Context, request operations.CncerRequest) (*operations.CncerResponse, error) {
+func (s *apIs) Cncer(ctx context.Context, request operations.CncerRequestBody, security operations.CncerSecurity) (*operations.CncerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cncer/certificate"
 
@@ -50,7 +50,7 @@ func (s *apIs) Cncer(ctx context.Context, request operations.CncerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *apIs) Cncer(ctx context.Context, request operations.CncerRequest) (*ope
 
 // Mutan - Mutation Report/ePattadar Passbook
 // API to verify Mutation Report/ePattadar Passbook.
-func (s *apIs) Mutan(ctx context.Context, request operations.MutanRequest) (*operations.MutanResponse, error) {
+func (s *apIs) Mutan(ctx context.Context, request operations.MutanRequestBody, security operations.MutanSecurity) (*operations.MutanResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mutan/certificate"
 
@@ -172,7 +172,7 @@ func (s *apIs) Mutan(ctx context.Context, request operations.MutanRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMergeConflictsQueryParams struct {
-	// Pagination limit
-	MaxConflictFiles *string `queryParam:"style=form,explode=true,name=maxConflictFiles"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // GetMergeConflictsXAmzTargetEnum
 type GetMergeConflictsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *GetMergeConflictsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMergeConflictsHeaders struct {
-	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetMergeConflictsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetMergeConflictsRequest struct {
-	QueryParams GetMergeConflictsQueryParams
-	Headers     GetMergeConflictsHeaders
-	Request     shared.GetMergeConflictsInput `request:"mediaType=application/json"`
+	GetMergeConflictsInput shared.GetMergeConflictsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             GetMergeConflictsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxConflictFiles *string `queryParam:"style=form,explode=true,name=maxConflictFiles"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetMergeConflictsResponse struct {

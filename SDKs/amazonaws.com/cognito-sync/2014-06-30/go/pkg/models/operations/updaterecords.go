@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRecordsPathParams struct {
-	// A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (dash), and '.' (dot).
-	DatasetName string `pathParam:"style=simple,explode=false,name=DatasetName"`
-	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
-	IdentityID string `pathParam:"style=simple,explode=false,name=IdentityId"`
-	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type UpdateRecordsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// Intended to supply a device ID that will populate the lastModifiedBy field referenced in other methods. The ClientContext field is not yet implemented.
-	XAmzClientContext *string `header:"style=simple,explode=false,name=x-amz-Client-Context"`
-}
-
 type UpdateRecordsRequestBody struct {
 	// The unique ID generated for this device by Cognito.
 	DeviceID *string `json:"DeviceId,omitempty"`
@@ -38,9 +17,22 @@ type UpdateRecordsRequestBody struct {
 }
 
 type UpdateRecordsRequest struct {
-	PathParams UpdateRecordsPathParams
-	Headers    UpdateRecordsHeaders
-	Request    UpdateRecordsRequestBody `request:"mediaType=application/json"`
+	// A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (dash), and '.' (dot).
+	DatasetName string `pathParam:"style=simple,explode=false,name=DatasetName"`
+	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+	IdentityID string `pathParam:"style=simple,explode=false,name=IdentityId"`
+	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+	IdentityPoolID    string                   `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
+	RequestBody       UpdateRecordsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Intended to supply a device ID that will populate the lastModifiedBy field referenced in other methods. The ClientContext field is not yet implemented.
+	XAmzClientContext *string `header:"style=simple,explode=false,name=x-amz-Client-Context"`
 }
 
 type UpdateRecordsResponse struct {

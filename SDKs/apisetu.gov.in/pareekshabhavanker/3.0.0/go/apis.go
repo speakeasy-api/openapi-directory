@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Sslcr - Class X School Leaving Certificate
 // API to verify Class X School Leaving Certificate.
-func (s *apIs) Sslcr(ctx context.Context, request operations.SslcrRequest) (*operations.SslcrResponse, error) {
+func (s *apIs) Sslcr(ctx context.Context, request operations.SslcrRequestBody, security operations.SslcrSecurity) (*operations.SslcrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sslcr/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Sslcr(ctx context.Context, request operations.SslcrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

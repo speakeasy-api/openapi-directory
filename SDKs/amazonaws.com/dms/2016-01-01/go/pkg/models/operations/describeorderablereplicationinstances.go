@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeOrderableReplicationInstancesQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeOrderableReplicationInstancesXAmzTargetEnum
 type DescribeOrderableReplicationInstancesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeOrderableReplicationInstancesXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type DescribeOrderableReplicationInstancesHeaders struct {
+type DescribeOrderableReplicationInstancesRequest struct {
+	DescribeOrderableReplicationInstancesMessage shared.DescribeOrderableReplicationInstancesMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                             `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeOrderableReplicationInstancesHeaders struct {
 	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeOrderableReplicationInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeOrderableReplicationInstancesRequest struct {
-	QueryParams DescribeOrderableReplicationInstancesQueryParams
-	Headers     DescribeOrderableReplicationInstancesHeaders
-	Request     shared.DescribeOrderableReplicationInstancesMessage `request:"mediaType=application/json"`
 }
 
 type DescribeOrderableReplicationInstancesResponse struct {

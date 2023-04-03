@@ -8,23 +8,14 @@ import (
 )
 
 type GroupV2GetPendingMembershipsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2GetPendingMembershipsPathParams struct {
-	// ID of the group.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetPendingMembershipsQueryParams struct {
-	// Page number (starting with 1). Each page has a fixed size of 50 items per page.
-	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2GetPendingMembershipsRequest struct {
-	PathParams  GroupV2GetPendingMembershipsPathParams
-	QueryParams GroupV2GetPendingMembershipsQueryParams
-	Security    GroupV2GetPendingMembershipsSecurity
+	// Page number (starting with 1). Each page has a fixed size of 50 items per page.
+	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	// ID of the group.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2GetPendingMemberships200Wildcard - Look at the Response property for more information about the nature of this response

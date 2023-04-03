@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddFavoritePathParams struct {
-	// Node ID
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 // AddFavoriteXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type AddFavoriteXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *AddFavoriteXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AddFavoriteHeaders struct {
+type AddFavoriteRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *AddFavoriteXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type AddFavoriteRequest struct {
-	PathParams AddFavoritePathParams
-	Headers    AddFavoriteHeaders
+	// Node ID
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type AddFavoriteResponse struct {

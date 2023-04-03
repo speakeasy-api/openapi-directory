@@ -50,29 +50,21 @@ func (e *POSTDescribeDBClustersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeDBClustersQueryParams struct {
+type POSTDescribeDBClustersRequest struct {
 	Action POSTDescribeDBClustersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Pagination limit
-	MaxRecords *string                           `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    POSTDescribeDBClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeDBClustersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeDBClustersRequest struct {
-	QueryParams POSTDescribeDBClustersQueryParams
-	Headers     POSTDescribeDBClustersHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	MaxRecords        *string                           `queryParam:"style=form,explode=true,name=MaxRecords"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTDescribeDBClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeDBClustersResponse struct {

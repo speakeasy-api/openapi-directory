@@ -42,7 +42,7 @@ func (e *ClickStreamGetFilterEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ClickStreamGetQueryParams struct {
+type ClickStreamGetRequest struct {
 	// Filter by this conversion id (mutually exclusive with "datapoint" and "group")
 	Conversion *int64 `queryParam:"style=form,explode=true,name=conversion"`
 	// Filter by this datapoint id (mutually exclusive with "group" and "conversion")
@@ -53,10 +53,6 @@ type ClickStreamGetQueryParams struct {
 	Group *int64 `queryParam:"style=form,explode=true,name=group"`
 	// Limit results to this number
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ClickStreamGetRequest struct {
-	QueryParams ClickStreamGetQueryParams
 }
 
 type ClickStreamGetResponse struct {

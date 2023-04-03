@@ -11,15 +11,10 @@ var GetV1ServerList = []string{
 	"https://ipgeolocation.abstractapi.com",
 }
 
-type GetV1QueryParams struct {
+type GetV1Request struct {
 	APIKey    string  `queryParam:"style=form,explode=true,name=api_key"`
 	Fields    *string `queryParam:"style=form,explode=true,name=fields"`
 	IPAddress *string `queryParam:"style=form,explode=true,name=ip_address"`
-}
-
-type GetV1Request struct {
-	QueryParams GetV1QueryParams
-	ServerURL   *string
 }
 
 type GetV1Response struct {

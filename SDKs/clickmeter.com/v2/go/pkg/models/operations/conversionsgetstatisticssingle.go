@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsGetStatisticsSinglePathParams struct {
-	// Id of the conversion
-	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
 // ConversionsGetStatisticsSingleTimeFrameEnum - Timeframe of the request. See list at $timeframeList
 type ConversionsGetStatisticsSingleTimeFrameEnum string
 
@@ -77,7 +72,9 @@ func (e *ConversionsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ConversionsGetStatisticsSingleQueryParams struct {
+type ConversionsGetStatisticsSingleRequest struct {
+	// Id of the conversion
+	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
 	// Is the datapoint marked as favourite
 	Favourite *bool `queryParam:"style=form,explode=true,name=favourite"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
@@ -90,11 +87,6 @@ type ConversionsGetStatisticsSingleQueryParams struct {
 	TimeFrame ConversionsGetStatisticsSingleTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type ConversionsGetStatisticsSingleRequest struct {
-	PathParams  ConversionsGetStatisticsSinglePathParams
-	QueryParams ConversionsGetStatisticsSingleQueryParams
 }
 
 type ConversionsGetStatisticsSingleResponse struct {

@@ -50,26 +50,18 @@ func (e *GETGETIdentityNotificationAttributesVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETGETIdentityNotificationAttributesQueryParams struct {
+type GETGETIdentityNotificationAttributesRequest struct {
 	Action GETGETIdentityNotificationAttributesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A list of one or more identities. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.
-	Identities []string                                        `queryParam:"style=form,explode=true,name=Identities"`
-	Version    GETGETIdentityNotificationAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETIdentityNotificationAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETIdentityNotificationAttributesRequest struct {
-	QueryParams GETGETIdentityNotificationAttributesQueryParams
-	Headers     GETGETIdentityNotificationAttributesHeaders
+	Identities        []string                                        `queryParam:"style=form,explode=true,name=Identities"`
+	Version           GETGETIdentityNotificationAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETIdentityNotificationAttributesResponse struct {

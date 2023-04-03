@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListNodeSubscriptionsQueryParams struct {
+type ListNodeSubscriptionsRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Range limit.
@@ -20,16 +22,6 @@ type ListNodeSubscriptionsQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Sort string
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type ListNodeSubscriptionsHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ListNodeSubscriptionsRequest struct {
-	QueryParams ListNodeSubscriptionsQueryParams
-	Headers     ListNodeSubscriptionsHeaders
 }
 
 type ListNodeSubscriptionsResponse struct {

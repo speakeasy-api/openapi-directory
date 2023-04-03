@@ -13,32 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetMediaRequest{
-        Headers: operations.GetMediaHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.GetMediaRequestBody{
+        RequestBody: operations.GetMediaRequestBody{
             StartSelector: operations.GetMediaRequestBodyStartSelector{
-                AfterFragmentNumber: "illum",
-                ContinuationToken: "vel",
-                StartSelectorType: "NOW",
-                StartTimestamp: "2022-03-26T09:37:56.283Z",
+                AfterFragmentNumber: "corrupti",
+                ContinuationToken: "provident",
+                StartSelectorType: "EARLIEST",
+                StartTimestamp: "2021-03-11T23:22:42.658Z",
             },
-            StreamARN: "iure",
-            StreamName: "magnam",
+            StreamARN: "nulla",
+            StreamName: "corrupti",
         },
+        XAmzAlgorithm: "illum",
+        XAmzContentSha256: "vel",
+        XAmzCredential: "error",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "magnam",
     }
 
     ctx := context.Background()

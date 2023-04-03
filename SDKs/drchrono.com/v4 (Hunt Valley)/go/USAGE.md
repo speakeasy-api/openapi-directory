@@ -14,20 +14,15 @@ func main() {
     s := sdk.New()
 
     req := operations.DoctorsListRequest{
-        Security: operations.DoctorsListSecurity{
-            DrchronoOauth2: shared.SchemeDrchronoOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.DoctorsListQueryParams{
-            Cursor: "corrupti",
-            Doctor: 592845,
-            PageSize: 715190,
-        },
+        Cursor: "corrupti",
+        Doctor: 592845,
+        PageSize: 715190,
     }
 
     ctx := context.Background()
-    res, err := s.Administrative.DoctorsList(ctx, req)
+    res, err := s.Administrative.DoctorsList(ctx, req, operations.DoctorsListSecurity{
+        DrchronoOauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

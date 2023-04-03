@@ -11,12 +11,6 @@ var PostUsersLoginServerList = []string{
 	"https://hub.docker.com",
 }
 
-type PostUsersLoginRequest struct {
-	// Login details.
-	Request   shared.UsersLoginRequest `request:"mediaType=application/json"`
-	ServerURL *string
-}
-
 type PostUsersLoginResponse struct {
 	ContentType string
 	// Authentication failed or second factor required

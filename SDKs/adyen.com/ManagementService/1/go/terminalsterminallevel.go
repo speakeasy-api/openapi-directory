@@ -38,7 +38,7 @@ func newTerminalsTerminalLevel(defaultClient, securityClient HTTPClient, serverU
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API — Terminal actions read
-func (s *terminalsTerminalLevel) GetTerminals(ctx context.Context, request operations.GetTerminalsRequest) (*operations.GetTerminalsResponse, error) {
+func (s *terminalsTerminalLevel) GetTerminals(ctx context.Context, request operations.GetTerminalsRequest, security operations.GetTerminalsSecurity) (*operations.GetTerminalsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/terminals"
 
@@ -47,11 +47,11 @@ func (s *terminalsTerminalLevel) GetTerminals(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

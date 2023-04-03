@@ -8,23 +8,14 @@ import (
 )
 
 type GetTransferSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetTransferPathParams struct {
-	// The unique identifier of the <code>TRANSFER</code> transaction type you wish to retrieve.
-	TransferID string `pathParam:"style=simple,explode=false,name=transfer_Id"`
-}
-
-type GetTransferHeaders struct {
-	// This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See <a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank ">HTTP request headers</a> for the marketplace ID values.
-	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetTransferRequest struct {
-	PathParams GetTransferPathParams
-	Headers    GetTransferHeaders
-	Security   GetTransferSecurity
+	// This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See <a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank ">HTTP request headers</a> for the marketplace ID values.
+	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	// The unique identifier of the <code>TRANSFER</code> transaction type you wish to retrieve.
+	TransferID string `pathParam:"style=simple,explode=false,name=transfer_Id"`
 }
 
 type GetTransferResponse struct {

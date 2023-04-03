@@ -21,10 +21,6 @@ type CompleteExternalUploadRequestBody struct {
 	UniqueIdentifier string `json:"unique_identifier"`
 }
 
-type CompleteExternalUploadRequest struct {
-	Request *CompleteExternalUploadRequestBody `request:"mediaType=application/json"`
-}
-
 // CompleteExternalUpload200ApplicationJSON - external upload initialized
 type CompleteExternalUpload200ApplicationJSON struct {
 	DominantColor    *string `json:"dominant_color,omitempty"`

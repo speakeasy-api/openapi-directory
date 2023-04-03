@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeAutoRedirectPathParams struct {
+type ChangeAutoRedirectRequest struct {
+	// Auto redirect config.
+	AutoRedirectConfig *shared.AutoRedirectConfig `request:"mediaType=application/json"`
 	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 	// Specific hostname.
 	Hostname string `pathParam:"style=simple,explode=false,name=hostname"`
-}
-
-type ChangeAutoRedirectQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
-type ChangeAutoRedirectRequest struct {
-	PathParams  ChangeAutoRedirectPathParams
-	QueryParams ChangeAutoRedirectQueryParams
-	// Auto redirect config.
-	Request *shared.AutoRedirectConfig `request:"mediaType=application/json"`
 }
 
 type ChangeAutoRedirectResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportBundlePathParams struct {
-	//  Unique bundle identifier.
-	BundleID string `pathParam:"style=simple,explode=false,name=bundleId"`
-}
-
 // ExportBundlePlatformEnum -  Developer desktop or target mobile app or website platform.
 type ExportBundlePlatformEnum string
 
@@ -53,14 +48,7 @@ func (e *ExportBundlePlatformEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ExportBundleQueryParams struct {
-	//  Developer desktop or target application platform.
-	Platform *ExportBundlePlatformEnum `queryParam:"style=form,explode=true,name=platform"`
-	//  Unique project identifier.
-	ProjectID *string `queryParam:"style=form,explode=true,name=projectId"`
-}
-
-type ExportBundleHeaders struct {
+type ExportBundleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -68,12 +56,12 @@ type ExportBundleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ExportBundleRequest struct {
-	PathParams  ExportBundlePathParams
-	QueryParams ExportBundleQueryParams
-	Headers     ExportBundleHeaders
+	//  Unique bundle identifier.
+	BundleID string `pathParam:"style=simple,explode=false,name=bundleId"`
+	//  Developer desktop or target application platform.
+	Platform *ExportBundlePlatformEnum `queryParam:"style=form,explode=true,name=platform"`
+	//  Unique project identifier.
+	ProjectID *string `queryParam:"style=form,explode=true,name=projectId"`
 }
 
 type ExportBundleResponse struct {

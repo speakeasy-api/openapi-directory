@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ProductStatusSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ProductStatusPathParams struct {
-	// ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type ProductStatusRequest struct {
-	PathParams ProductStatusPathParams
-	Security   ProductStatusSecurity
+	// ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // ProductStatusDefaultApplicationJSON - Detailed information about the error

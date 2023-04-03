@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEmailTemplatesQueryParams struct {
+type ListEmailTemplatesRequest struct {
 	// A token returned from a previous call to <code>ListEmailTemplates</code> to indicate the position in the list of email templates.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// <p>The number of results to show in a single call to <code>ListEmailTemplates</code>. If the number of results is larger than the number you specified in this parameter, then the response includes a <code>NextToken</code> element, which you can use to obtain additional results.</p> <p>The value you specify has to be at least 1, and can be no more than 10.</p>
-	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
-}
-
-type ListEmailTemplatesHeaders struct {
+	PageSize          *int64  `queryParam:"style=form,explode=true,name=PageSize"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListEmailTemplatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEmailTemplatesRequest struct {
-	QueryParams ListEmailTemplatesQueryParams
-	Headers     ListEmailTemplatesHeaders
 }
 
 type ListEmailTemplatesResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectsForTeamPathParams struct {
-	// Globally unique identifier for the team.
-	TeamGid string `pathParam:"style=simple,explode=false,name=team_gid"`
-}
-
-type GetProjectsForTeamQueryParams struct {
+type GetProjectsForTeamRequest struct {
 	// Only return projects whose `archived` field takes on the value of this parameter.
 	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
 	// Results per page.
@@ -29,11 +24,8 @@ type GetProjectsForTeamQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetProjectsForTeamRequest struct {
-	PathParams  GetProjectsForTeamPathParams
-	QueryParams GetProjectsForTeamQueryParams
+	// Globally unique identifier for the team.
+	TeamGid string `pathParam:"style=simple,explode=false,name=team_gid"`
 }
 
 // GetProjectsForTeam200ApplicationJSON - Successfully retrieved the requested team's projects.

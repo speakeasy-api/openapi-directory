@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortfolioMembershipsForPortfolioPathParams struct {
-	// Globally unique identifier for the portfolio.
-	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
-}
-
-type GetPortfolioMembershipsForPortfolioQueryParams struct {
+type GetPortfolioMembershipsForPortfolioRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,13 +22,10 @@ type GetPortfolioMembershipsForPortfolioQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
+	// Globally unique identifier for the portfolio.
+	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
 	// A string identifying a user. This can either be the string "me", an email, or the gid of a user.
 	User *string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type GetPortfolioMembershipsForPortfolioRequest struct {
-	PathParams  GetPortfolioMembershipsForPortfolioPathParams
-	QueryParams GetPortfolioMembershipsForPortfolioQueryParams
 }
 
 // GetPortfolioMembershipsForPortfolio200ApplicationJSON - Successfully retrieved the requested portfolio's memberships.

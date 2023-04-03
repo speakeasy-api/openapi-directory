@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsGetGroupsPathParams struct {
-	// Id of the tag.
-	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
 // TagsGetGroupsStatusEnum - Status of the datapoint
 type TagsGetGroupsStatusEnum string
 
@@ -38,7 +33,7 @@ func (e *TagsGetGroupsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TagsGetGroupsQueryParams struct {
+type TagsGetGroupsRequest struct {
 	// Exclude groups created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude groups created after this date (YYYYMMDD)
@@ -49,13 +44,10 @@ type TagsGetGroupsQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Status of the datapoint
 	Status *TagsGetGroupsStatusEnum `queryParam:"style=form,explode=true,name=status"`
+	// Id of the tag.
+	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
-}
-
-type TagsGetGroupsRequest struct {
-	PathParams  TagsGetGroupsPathParams
-	QueryParams TagsGetGroupsQueryParams
 }
 
 type TagsGetGroupsResponse struct {

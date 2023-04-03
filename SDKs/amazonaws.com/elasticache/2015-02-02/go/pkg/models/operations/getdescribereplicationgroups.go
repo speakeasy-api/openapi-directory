@@ -50,7 +50,7 @@ func (e *GETDescribeReplicationGroupsVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeReplicationGroupsQueryParams struct {
+type GETDescribeReplicationGroupsRequest struct {
 	Action GETDescribeReplicationGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -59,21 +59,13 @@ type GETDescribeReplicationGroupsQueryParams struct {
 	// <p>The identifier for the replication group to be described. This parameter is not case sensitive.</p> <p>If you do not specify this parameter, information about all replication groups is returned.</p>
 	ReplicationGroupID *string                                 `queryParam:"style=form,explode=true,name=ReplicationGroupId"`
 	Version            GETDescribeReplicationGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeReplicationGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeReplicationGroupsRequest struct {
-	QueryParams GETDescribeReplicationGroupsQueryParams
-	Headers     GETDescribeReplicationGroupsHeaders
+	XAmzAlgorithm      *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeReplicationGroupsResponse struct {

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteCloudFrontOriginAccessIdentity20181105PathParams struct {
+type DeleteCloudFrontOriginAccessIdentity20181105Request struct {
 	// The origin access identity's ID.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteCloudFrontOriginAccessIdentity20181105Headers struct {
 	// The value of the <code>ETag</code> header you received from a previous <code>GET</code> or <code>PUT</code> request. For example: <code>E2QWRUHAPOMQZL</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteCloudFrontOriginAccessIdentity20181105Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCloudFrontOriginAccessIdentity20181105Request struct {
-	PathParams DeleteCloudFrontOriginAccessIdentity20181105PathParams
-	Headers    DeleteCloudFrontOriginAccessIdentity20181105Headers
 }
 
 type DeleteCloudFrontOriginAccessIdentity20181105Response struct {

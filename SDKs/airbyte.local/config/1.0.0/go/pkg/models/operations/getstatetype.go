@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStateTypeRequest struct {
-	Request shared.ConnectionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetStateTypeResponse struct {
 	// Successful operation
 	ConnectionStateType *shared.ConnectionStateTypeEnum

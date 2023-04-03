@@ -30,7 +30,7 @@ func (e *ListFunctionsFunctionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListFunctionsQueryParams struct {
+type ListFunctionsRequest struct {
 	// Set to <code>ALL</code> to include entries for all published versions of each function.
 	FunctionVersion *ListFunctionsFunctionVersionEnum `queryParam:"style=form,explode=true,name=FunctionVersion"`
 	// Specify the pagination token that's returned by a previous request to retrieve the next page of results.
@@ -38,10 +38,7 @@ type ListFunctionsQueryParams struct {
 	// For Lambda@Edge functions, the Amazon Web Services Region of the master function. For example, <code>us-east-1</code> filters the list of functions to include only Lambda@Edge functions replicated from a master function in US East (N. Virginia). If specified, you must set <code>FunctionVersion</code> to <code>ALL</code>.
 	MasterRegion *string `queryParam:"style=form,explode=true,name=MasterRegion"`
 	// The maximum number of functions to return in the response. Note that <code>ListFunctions</code> returns a maximum of 50 items in each response, even if you set the number higher.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListFunctionsHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -49,11 +46,6 @@ type ListFunctionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListFunctionsRequest struct {
-	QueryParams ListFunctionsQueryParams
-	Headers     ListFunctionsHeaders
 }
 
 type ListFunctionsResponse struct {

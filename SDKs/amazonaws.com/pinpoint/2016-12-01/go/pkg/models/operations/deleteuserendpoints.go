@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUserEndpointsPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-	// The unique identifier for the user.
-	UserID string `pathParam:"style=simple,explode=false,name=user-id"`
-}
-
-type DeleteUserEndpointsHeaders struct {
+type DeleteUserEndpointsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteUserEndpointsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteUserEndpointsRequest struct {
-	PathParams DeleteUserEndpointsPathParams
-	Headers    DeleteUserEndpointsHeaders
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
+	// The unique identifier for the user.
+	UserID string `pathParam:"style=simple,explode=false,name=user-id"`
 }
 
 type DeleteUserEndpointsResponse struct {

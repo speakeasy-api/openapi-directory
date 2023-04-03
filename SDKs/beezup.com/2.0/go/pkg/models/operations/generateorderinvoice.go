@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateOrderInvoicePathParams struct {
+type GenerateOrderInvoiceRequest struct {
 	// The Account Identifier
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order UUID
-	BeezUPOrderUUID string `pathParam:"style=simple,explode=false,name=beezUPOrderUUID"`
+	BeezUPOrderUUID             string                             `pathParam:"style=simple,explode=false,name=beezUPOrderUUID"`
+	GenerateOrderInvoiceRequest shared.GenerateOrderInvoiceRequest `request:"mediaType=application/json"`
 	// The Marketplace Technical Code
 	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type GenerateOrderInvoiceQueryParams struct {
 	// Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
 	UserName string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type GenerateOrderInvoiceRequest struct {
-	PathParams  GenerateOrderInvoicePathParams
-	QueryParams GenerateOrderInvoiceQueryParams
-	Request     shared.GenerateOrderInvoiceRequest `request:"mediaType=application/json"`
 }
 
 type GenerateOrderInvoiceResponse struct {

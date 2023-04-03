@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFleetAdvisorLsaAnalysisQueryParams struct {
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeFleetAdvisorLsaAnalysisXAmzTargetEnum
 type DescribeFleetAdvisorLsaAnalysisXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeFleetAdvisorLsaAnalysisXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DescribeFleetAdvisorLsaAnalysisHeaders struct {
+type DescribeFleetAdvisorLsaAnalysisRequest struct {
+	DescribeFleetAdvisorLsaAnalysisRequest shared.DescribeFleetAdvisorLsaAnalysisRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeFleetAdvisorLsaAnalysisHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeFleetAdvisorLsaAnalysisXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeFleetAdvisorLsaAnalysisRequest struct {
-	QueryParams DescribeFleetAdvisorLsaAnalysisQueryParams
-	Headers     DescribeFleetAdvisorLsaAnalysisHeaders
-	Request     shared.DescribeFleetAdvisorLsaAnalysisRequest `request:"mediaType=application/json"`
 }
 
 type DescribeFleetAdvisorLsaAnalysisResponse struct {

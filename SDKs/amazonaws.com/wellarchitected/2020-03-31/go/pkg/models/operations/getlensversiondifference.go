@@ -7,18 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLensVersionDifferencePathParams struct {
-	LensAlias string `pathParam:"style=simple,explode=false,name=LensAlias"`
-}
-
-type GetLensVersionDifferenceQueryParams struct {
+type GetLensVersionDifferenceRequest struct {
 	// The base version of the lens.
 	BaseLensVersion *string `queryParam:"style=form,explode=true,name=BaseLensVersion"`
+	LensAlias       string  `pathParam:"style=simple,explode=false,name=LensAlias"`
 	// The lens version to target a difference for.
 	TargetLensVersion *string `queryParam:"style=form,explode=true,name=TargetLensVersion"`
-}
-
-type GetLensVersionDifferenceHeaders struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +20,6 @@ type GetLensVersionDifferenceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLensVersionDifferenceRequest struct {
-	PathParams  GetLensVersionDifferencePathParams
-	QueryParams GetLensVersionDifferenceQueryParams
-	Headers     GetLensVersionDifferenceHeaders
 }
 
 type GetLensVersionDifferenceResponse struct {

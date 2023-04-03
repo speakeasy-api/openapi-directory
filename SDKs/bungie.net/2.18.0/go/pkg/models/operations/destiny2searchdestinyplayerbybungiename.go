@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2SearchDestinyPlayerByBungieNamePathParams struct {
+type Destiny2SearchDestinyPlayerByBungieNameRequest struct {
 	// A valid non-BungieNet membership type, or All. Indicates which memberships to return. You probably want this set to All.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2SearchDestinyPlayerByBungieNameRequest struct {
-	PathParams Destiny2SearchDestinyPlayerByBungieNamePathParams
 }
 
 // Destiny2SearchDestinyPlayerByBungieName200Wildcard - Look at the Response property for more information about the nature of this response

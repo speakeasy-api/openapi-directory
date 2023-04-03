@@ -8,20 +8,15 @@ import (
 )
 
 type FunctionsGetTagSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type FunctionsGetTagPathParams struct {
+type FunctionsGetTagRequest struct {
 	// Function unique ID.
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 	// Tag unique ID.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type FunctionsGetTagRequest struct {
-	PathParams FunctionsGetTagPathParams
-	Security   FunctionsGetTagSecurity
 }
 
 type FunctionsGetTagResponse struct {

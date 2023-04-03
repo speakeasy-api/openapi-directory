@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddressesCreateJSONRequest struct {
-	Request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/json"`
-}
-
 type CustomerAddressesCreateJSONResponse struct {
 	Body        []byte
 	ContentType string

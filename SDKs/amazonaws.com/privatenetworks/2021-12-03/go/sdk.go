@@ -116,7 +116,7 @@ func (s *SDK) AcknowledgeOrderReceipt(ctx context.Context, request operations.Ac
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/orders/acknowledge"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AcknowledgeOrderReceipt(ctx context.Context, request operations.Ac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -202,7 +202,7 @@ func (s *SDK) ActivateDeviceIdentifier(ctx context.Context, request operations.A
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/device-identifiers/activate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -217,7 +217,7 @@ func (s *SDK) ActivateDeviceIdentifier(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -288,7 +288,7 @@ func (s *SDK) ActivateNetworkSite(ctx context.Context, request operations.Activa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-sites/activate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *SDK) ActivateNetworkSite(ctx context.Context, request operations.Activa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -374,7 +374,7 @@ func (s *SDK) ConfigureAccessPoint(ctx context.Context, request operations.Confi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-resources/configure"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,7 +389,7 @@ func (s *SDK) ConfigureAccessPoint(ctx context.Context, request operations.Confi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -460,7 +460,7 @@ func (s *SDK) CreateNetwork(ctx context.Context, request operations.CreateNetwor
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/networks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -475,7 +475,7 @@ func (s *SDK) CreateNetwork(ctx context.Context, request operations.CreateNetwor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -546,7 +546,7 @@ func (s *SDK) CreateNetworkSite(ctx context.Context, request operations.CreateNe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-sites"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -561,7 +561,7 @@ func (s *SDK) CreateNetworkSite(ctx context.Context, request operations.CreateNe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -632,7 +632,7 @@ func (s *SDK) DeactivateDeviceIdentifier(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/device-identifiers/deactivate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -647,7 +647,7 @@ func (s *SDK) DeactivateDeviceIdentifier(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -716,16 +716,16 @@ func (s *SDK) DeactivateDeviceIdentifier(ctx context.Context, request operations
 // DeleteNetwork - Deletes the specified network. You must delete network sites before you delete the network. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/APIReference/API_DeleteNetworkSite.html">DeleteNetworkSite</a> in the <i>API Reference for Amazon Web Services Private 5G</i>.
 func (s *SDK) DeleteNetwork(ctx context.Context, request operations.DeleteNetworkRequest) (*operations.DeleteNetworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -806,16 +806,16 @@ func (s *SDK) DeleteNetwork(ctx context.Context, request operations.DeleteNetwor
 // DeleteNetworkSite - Deletes the specified network site. Return the hardware after you delete the network site. You are responsible for minimum charges. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/userguide/hardware-maintenance.html">Hardware returns</a> in the <i>Amazon Web Services Private 5G User Guide</i>.
 func (s *SDK) DeleteNetworkSite(ctx context.Context, request operations.DeleteNetworkSiteRequest) (*operations.DeleteNetworkSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -896,14 +896,14 @@ func (s *SDK) DeleteNetworkSite(ctx context.Context, request operations.DeleteNe
 // GetDeviceIdentifier - Gets the specified device identifier.
 func (s *SDK) GetDeviceIdentifier(ctx context.Context, request operations.GetDeviceIdentifierRequest) (*operations.GetDeviceIdentifierResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/device-identifiers/{deviceIdentifierArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/device-identifiers/{deviceIdentifierArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -972,14 +972,14 @@ func (s *SDK) GetDeviceIdentifier(ctx context.Context, request operations.GetDev
 // GetNetwork - Gets the specified network.
 func (s *SDK) GetNetwork(ctx context.Context, request operations.GetNetworkRequest) (*operations.GetNetworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1048,14 +1048,14 @@ func (s *SDK) GetNetwork(ctx context.Context, request operations.GetNetworkReque
 // GetNetworkResource - Gets the specified network resource.
 func (s *SDK) GetNetworkResource(ctx context.Context, request operations.GetNetworkResourceRequest) (*operations.GetNetworkResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/network-resources/{networkResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/network-resources/{networkResourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1124,14 +1124,14 @@ func (s *SDK) GetNetworkResource(ctx context.Context, request operations.GetNetw
 // GetNetworkSite - Gets the specified network site.
 func (s *SDK) GetNetworkSite(ctx context.Context, request operations.GetNetworkSiteRequest) (*operations.GetNetworkSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1200,14 +1200,14 @@ func (s *SDK) GetNetworkSite(ctx context.Context, request operations.GetNetworkS
 // GetOrder - Gets the specified order.
 func (s *SDK) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1278,7 +1278,7 @@ func (s *SDK) ListDeviceIdentifiers(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/device-identifiers/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1293,9 +1293,9 @@ func (s *SDK) ListDeviceIdentifiers(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1368,7 +1368,7 @@ func (s *SDK) ListNetworkResources(ctx context.Context, request operations.ListN
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-resources"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1383,9 +1383,9 @@ func (s *SDK) ListNetworkResources(ctx context.Context, request operations.ListN
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1458,7 +1458,7 @@ func (s *SDK) ListNetworkSites(ctx context.Context, request operations.ListNetwo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-sites/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1473,9 +1473,9 @@ func (s *SDK) ListNetworkSites(ctx context.Context, request operations.ListNetwo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1548,7 +1548,7 @@ func (s *SDK) ListNetworks(ctx context.Context, request operations.ListNetworksR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/networks/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1563,9 +1563,9 @@ func (s *SDK) ListNetworks(ctx context.Context, request operations.ListNetworksR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1638,7 +1638,7 @@ func (s *SDK) ListOrders(ctx context.Context, request operations.ListOrdersReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/orders/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1653,9 +1653,9 @@ func (s *SDK) ListOrders(ctx context.Context, request operations.ListOrdersReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1726,14 +1726,14 @@ func (s *SDK) ListOrders(ctx context.Context, request operations.ListOrdersReque
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1829,7 +1829,7 @@ func (s *SDK) Ping(ctx context.Context, request operations.PingRequest) (*operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1880,7 +1880,7 @@ func (s *SDK) StartNetworkResourceUpdate(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-resources/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1895,7 +1895,7 @@ func (s *SDK) StartNetworkResourceUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1964,9 +1964,9 @@ func (s *SDK) StartNetworkResourceUpdate(ctx context.Context, request operations
 // TagResource -  Adds tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1981,7 +1981,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2070,16 +2070,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2172,7 +2172,7 @@ func (s *SDK) UpdateNetworkSite(ctx context.Context, request operations.UpdateNe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-sites/site"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2187,7 +2187,7 @@ func (s *SDK) UpdateNetworkSite(ctx context.Context, request operations.UpdateNe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2258,7 +2258,7 @@ func (s *SDK) UpdateNetworkSitePlan(ctx context.Context, request operations.Upda
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/network-sites/plan"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2273,7 +2273,7 @@ func (s *SDK) UpdateNetworkSitePlan(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

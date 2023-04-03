@@ -13,28 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETAddClientIDToOpenIDConnectProviderRequest{
-        QueryParams: operations.GETAddClientIDToOpenIDConnectProviderQueryParams{
-            Action: "AddClientIDToOpenIDConnectProvider",
-            ClientID: "corrupti",
-            OpenIDConnectProviderArn: "provident",
-            Version: "2010-05-08",
-        },
-        Headers: operations.GETAddClientIDToOpenIDConnectProviderHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
+        Action: "AddClientIDToOpenIDConnectProvider",
+        ClientID: "corrupti",
+        OpenIDConnectProviderArn: "provident",
+        Version: "2010-05-08",
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
     }
 
     ctx := context.Background()

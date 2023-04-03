@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteInsightPathParams struct {
+type DeleteInsightRequest struct {
 	// The ID of the insight.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteInsightHeaders struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteInsightHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteInsightRequest struct {
-	PathParams DeleteInsightPathParams
-	Headers    DeleteInsightHeaders
 }
 
 type DeleteInsightResponse struct {

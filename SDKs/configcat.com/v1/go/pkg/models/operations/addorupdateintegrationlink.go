@@ -7,7 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddOrUpdateIntegrationLinkPathParams struct {
+type AddOrUpdateIntegrationLinkRequest struct {
+	AddOrUpdateIntegrationLinkModel *shared.AddOrUpdateIntegrationLinkModel `request:"mediaType=application/json"`
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
 	// The integration link's type.
@@ -16,11 +17,6 @@ type AddOrUpdateIntegrationLinkPathParams struct {
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// The id of the Setting.
 	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type AddOrUpdateIntegrationLinkRequest struct {
-	PathParams AddOrUpdateIntegrationLinkPathParams
-	Request    *shared.AddOrUpdateIntegrationLinkModel `request:"mediaType=application/json"`
 }
 
 type AddOrUpdateIntegrationLinkResponse struct {

@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetPasswordQueryParams struct {
+type ResetPasswordRequest struct {
+	// ITV reset token from email link and a new password.
+	PasswordResetRequest shared.PasswordResetRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type ResetPasswordQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ResetPasswordRequest struct {
-	QueryParams ResetPasswordQueryParams
-	// ITV reset token from email link and a new password.
-	Request shared.PasswordResetRequest `request:"mediaType=application/json"`
 }
 
 type ResetPasswordResponse struct {

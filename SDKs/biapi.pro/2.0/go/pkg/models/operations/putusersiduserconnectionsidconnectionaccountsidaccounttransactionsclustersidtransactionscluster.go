@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterPathParams struct {
-	IDAccount             int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection          int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDTransactionscluster int64 `pathParam:"style=simple,explode=false,name=id_transactionscluster"`
+type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest struct {
+	Expand                *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount             int64   `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection          int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDTransactionscluster int64   `pathParam:"style=simple,explode=false,name=id_transactionscluster"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterRequest struct {
-	PathParams  PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterPathParams
-	QueryParams PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterQueryParams
 }
 
 type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsclustersIDTransactionsclusterResponse struct {

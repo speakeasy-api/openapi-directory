@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAvailableResourceDimensionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListAvailableResourceDimensionsXAmzTargetEnum
 type ListAvailableResourceDimensionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAvailableResourceDimensionsXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListAvailableResourceDimensionsHeaders struct {
+type ListAvailableResourceDimensionsRequest struct {
+	ListAvailableResourceDimensionsRequest shared.ListAvailableResourceDimensionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAvailableResourceDimensionsHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAvailableResourceDimensionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAvailableResourceDimensionsRequest struct {
-	QueryParams ListAvailableResourceDimensionsQueryParams
-	Headers     ListAvailableResourceDimensionsHeaders
-	Request     shared.ListAvailableResourceDimensionsRequest `request:"mediaType=application/json"`
 }
 
 type ListAvailableResourceDimensionsResponse struct {

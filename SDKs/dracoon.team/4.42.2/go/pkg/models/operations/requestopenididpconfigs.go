@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestOpenIDIdpConfigsHeaders struct {
+type RequestOpenIDIdpConfigsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestOpenIDIdpConfigsRequest struct {
-	Headers RequestOpenIDIdpConfigsHeaders
 }
 
 type RequestOpenIDIdpConfigsResponse struct {

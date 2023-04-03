@@ -39,7 +39,7 @@ func newAuditLogs(defaultClient, securityClient HTTPClient, serverURL, language,
 // Get audit log actions for a namespace to be used as a filter for querying audit events.
 func (s *auditLogs) AuditLogsGetAuditActions(ctx context.Context, request operations.AuditLogsGetAuditActionsRequest) (*operations.AuditLogsGetAuditActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}/actions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}/actions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,14 +114,14 @@ func (s *auditLogs) AuditLogsGetAuditActions(ctx context.Context, request operat
 // Get audit log events for a given namespace.
 func (s *auditLogs) AuditLogsGetAuditLogs(ctx context.Context, request operations.AuditLogsGetAuditLogsRequest) (*operations.AuditLogsGetAuditLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

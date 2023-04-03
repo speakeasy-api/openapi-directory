@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProvisioningClaimPathParams struct {
-	// The name of the provisioning template to use.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type CreateProvisioningClaimHeaders struct {
+type CreateProvisioningClaimRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CreateProvisioningClaimHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CreateProvisioningClaimRequest struct {
-	PathParams CreateProvisioningClaimPathParams
-	Headers    CreateProvisioningClaimHeaders
+	// The name of the provisioning template to use.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
 }
 
 type CreateProvisioningClaimResponse struct {

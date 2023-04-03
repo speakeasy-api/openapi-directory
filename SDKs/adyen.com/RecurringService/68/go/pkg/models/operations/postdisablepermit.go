@@ -8,13 +8,8 @@ import (
 )
 
 type PostDisablePermitSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostDisablePermitRequest struct {
-	Request  *shared.DisablePermitRequest `request:"mediaType=application/json"`
-	Security PostDisablePermitSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostDisablePermitResponse struct {

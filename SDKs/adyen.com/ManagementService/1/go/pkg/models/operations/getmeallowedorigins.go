@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMeAllowedOriginsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMeAllowedOriginsRequest struct {
-	Security GetMeAllowedOriginsSecurity
-}
-
 type GetMeAllowedOriginsResponse struct {
 	// OK - the request has succeeded.
 	AllowedOriginsResponse *shared.AllowedOriginsResponse

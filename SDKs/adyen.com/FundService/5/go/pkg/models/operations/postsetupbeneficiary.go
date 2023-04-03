@@ -8,13 +8,8 @@ import (
 )
 
 type PostSetupBeneficiarySecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostSetupBeneficiaryRequest struct {
-	Request  *shared.SetupBeneficiaryRequest `request:"mediaType=application/json"`
-	Security PostSetupBeneficiarySecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostSetupBeneficiaryResponse struct {

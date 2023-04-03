@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListClustersQueryParams struct {
-	// The maximum number of entries to recieve in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The nextToken which is used the get the next page of data.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListClustersHeaders struct {
+type ListClustersRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListClustersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListClustersRequest struct {
-	QueryParams ListClustersQueryParams
-	Headers     ListClustersHeaders
+	// The maximum number of entries to recieve in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The nextToken which is used the get the next page of data.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListClustersResponse struct {

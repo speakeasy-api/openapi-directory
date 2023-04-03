@@ -148,7 +148,6 @@ pkg/models/shared/resourceid.go
 pkg/models/shared/errorresponse.go
 pkg/models/shared/batchrequest.go
 pkg/models/shared/recipient.go
-pkg/models/shared/security.go
 pkg/models/shared/calllist.go
 pkg/models/shared/call.go
 pkg/models/shared/callrecord.go

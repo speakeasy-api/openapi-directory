@@ -35,14 +35,14 @@ func newRecallSearch(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get a particular recall information for a vin
 func (s *recallSearch) GetRecallHistory(ctx context.Context, request operations.GetRecallHistoryRequest) (*operations.GetRecallHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/car/recall/{vin}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/car/recall/{vin}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

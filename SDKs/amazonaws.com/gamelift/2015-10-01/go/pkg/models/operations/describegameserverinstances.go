@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeGameServerInstancesQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeGameServerInstancesXAmzTargetEnum
 type DescribeGameServerInstancesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeGameServerInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type DescribeGameServerInstancesHeaders struct {
+type DescribeGameServerInstancesRequest struct {
+	DescribeGameServerInstancesInput shared.DescribeGameServerInstancesInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeGameServerInstancesHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeGameServerInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeGameServerInstancesRequest struct {
-	QueryParams DescribeGameServerInstancesQueryParams
-	Headers     DescribeGameServerInstancesHeaders
-	Request     shared.DescribeGameServerInstancesInput `request:"mediaType=application/json"`
 }
 
 type DescribeGameServerInstancesResponse struct {

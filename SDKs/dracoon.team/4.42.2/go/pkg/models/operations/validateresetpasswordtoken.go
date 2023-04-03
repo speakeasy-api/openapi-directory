@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidateResetPasswordTokenPathParams struct {
+type ValidateResetPasswordTokenRequest struct {
 	// Password reset token
 	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type ValidateResetPasswordTokenRequest struct {
-	PathParams ValidateResetPasswordTokenPathParams
 }
 
 type ValidateResetPasswordTokenResponse struct {

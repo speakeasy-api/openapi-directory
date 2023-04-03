@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangePasswordRequest struct {
-	Request shared.ChangePasswordRequest `request:"mediaType=application/json"`
-}
-
 type ChangePasswordResponse struct {
 	// Old password is invalid or the new password does not respect the password's constraints
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

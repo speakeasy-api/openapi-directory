@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateOrUpdateStateRequest struct {
-	Request shared.ConnectionStateCreateOrUpdate `request:"mediaType=application/json"`
-}
-
 type CreateOrUpdateStateResponse struct {
 	// Successful operation
 	ConnectionState *shared.ConnectionState

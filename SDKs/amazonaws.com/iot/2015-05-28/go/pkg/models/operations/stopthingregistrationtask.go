@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type StopThingRegistrationTaskPathParams struct {
-	// The bulk thing provisioning task ID.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type StopThingRegistrationTaskHeaders struct {
+type StopThingRegistrationTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type StopThingRegistrationTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopThingRegistrationTaskRequest struct {
-	PathParams StopThingRegistrationTaskPathParams
-	Headers    StopThingRegistrationTaskHeaders
+	// The bulk thing provisioning task ID.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type StopThingRegistrationTaskResponse struct {

@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBotAliasesPathParams struct {
-	// The identifier of the bot to list aliases for.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type ListBotAliasesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListBotAliasesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListBotAliasesRequestBody struct {
 	// The maximum number of aliases to return in each page of results. If there are fewer results than the max page size, only the actual number of results are returned.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -37,10 +15,20 @@ type ListBotAliasesRequestBody struct {
 }
 
 type ListBotAliasesRequest struct {
-	PathParams  ListBotAliasesPathParams
-	QueryParams ListBotAliasesQueryParams
-	Headers     ListBotAliasesHeaders
-	Request     ListBotAliasesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListBotAliasesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot to list aliases for.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBotAliasesResponse struct {

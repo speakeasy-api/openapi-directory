@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeStreamPathParams struct {
-	// The stream ID.
-	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
-}
-
-type DescribeStreamHeaders struct {
+type DescribeStreamRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeStreamHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeStreamRequest struct {
-	PathParams DescribeStreamPathParams
-	Headers    DescribeStreamHeaders
+	// The stream ID.
+	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
 }
 
 type DescribeStreamResponse struct {

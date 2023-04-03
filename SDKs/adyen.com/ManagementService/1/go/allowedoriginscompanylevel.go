@@ -36,16 +36,16 @@ func newAllowedOriginsCompanyLevel(defaultClient, securityClient HTTPClient, ser
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsCompanyLevel) DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest) (*operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
+func (s *allowedOriginsCompanyLevel) DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,16 +93,16 @@ func (s *allowedOriginsCompanyLevel) DeleteCompaniesCompanyIDAPICredentialsAPICr
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
+func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,16 +159,16 @@ func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICrede
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
+func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,11 +225,11 @@ func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICrede
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest) (*operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
+func (s *allowedOriginsCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AllowedOrigin", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -241,7 +241,7 @@ func (s *allowedOriginsCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICred
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

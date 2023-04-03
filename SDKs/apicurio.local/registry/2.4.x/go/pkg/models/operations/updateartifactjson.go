@@ -7,32 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateArtifactJSONPathParams struct {
-	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
-	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type UpdateArtifactJSONHeaders struct {
-	// Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
-	XRegistryDescription *string `header:"style=simple,explode=false,name=X-Registry-Description"`
-	// Specifies the artifact description of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the description from the artifact content.
-	XRegistryDescriptionEncoded *string `header:"style=simple,explode=false,name=X-Registry-Description-Encoded"`
-	// Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not
-	// provided, the server will extract the name from the artifact content.
-	XRegistryName *string `header:"style=simple,explode=false,name=X-Registry-Name"`
-	// Specifies the artifact name of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the name from the artifact content.
-	XRegistryNameEncoded *string `header:"style=simple,explode=false,name=X-Registry-Name-Encoded"`
-	// Specifies the version number of this new version of the artifact content.  This would typically
-	// be a simple integer or a SemVer value.  If not provided, the server will assign a version number
-	// automatically.
-	XRegistryVersion *string `header:"style=simple,explode=false,name=X-Registry-Version"`
-}
-
 type UpdateArtifactJSONRequest struct {
-	PathParams UpdateArtifactJSONPathParams
-	Headers    UpdateArtifactJSONHeaders
 	// The new content of the artifact being updated. This is often, but not always, JSON data
 	// representing one of the supported artifact types:
 	//
@@ -46,7 +21,24 @@ type UpdateArtifactJSONRequest struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	//
-	Request shared.ContentCreateRequest `request:"mediaType=application/vnd.create.extended+json"`
+	ContentCreateRequest shared.ContentCreateRequest `request:"mediaType=application/vnd.create.extended+json"`
+	// Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
+	XRegistryDescription *string `header:"style=simple,explode=false,name=X-Registry-Description"`
+	// Specifies the artifact description of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the description from the artifact content.
+	XRegistryDescriptionEncoded *string `header:"style=simple,explode=false,name=X-Registry-Description-Encoded"`
+	// Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not
+	// provided, the server will extract the name from the artifact content.
+	XRegistryName *string `header:"style=simple,explode=false,name=X-Registry-Name"`
+	// Specifies the artifact name of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the name from the artifact content.
+	XRegistryNameEncoded *string `header:"style=simple,explode=false,name=X-Registry-Name-Encoded"`
+	// Specifies the version number of this new version of the artifact content.  This would typically
+	// be a simple integer or a SemVer value.  If not provided, the server will assign a version number
+	// automatically.
+	XRegistryVersion *string `header:"style=simple,explode=false,name=X-Registry-Version"`
+	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
+	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type UpdateArtifactJSONResponse struct {

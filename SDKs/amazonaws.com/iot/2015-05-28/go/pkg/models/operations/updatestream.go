@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateStreamPathParams struct {
-	// The stream ID.
-	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
-}
-
-type UpdateStreamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateStreamRequestBody struct {
 	// The description of the stream.
 	Description *string `json:"description,omitempty"`
@@ -32,9 +17,16 @@ type UpdateStreamRequestBody struct {
 }
 
 type UpdateStreamRequest struct {
-	PathParams UpdateStreamPathParams
-	Headers    UpdateStreamHeaders
-	Request    UpdateStreamRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateStreamRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The stream ID.
+	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
 }
 
 type UpdateStreamResponse struct {

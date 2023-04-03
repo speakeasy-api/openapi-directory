@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAgentConfigurationPathParams struct {
-	// UUID of agent to get configuration information for.
-	AgentID string `pathParam:"style=simple,explode=false,name=agentId"`
-}
-
-type GetAgentConfigurationHeaders struct {
+type GetAgentConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetAgentConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAgentConfigurationRequest struct {
-	PathParams GetAgentConfigurationPathParams
-	Headers    GetAgentConfigurationHeaders
+	// UUID of agent to get configuration information for.
+	AgentID string `pathParam:"style=simple,explode=false,name=agentId"`
 }
 
 type GetAgentConfigurationResponse struct {

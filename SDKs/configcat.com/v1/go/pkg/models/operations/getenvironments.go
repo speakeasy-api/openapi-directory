@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEnvironmentsPathParams struct {
+type GetEnvironmentsRequest struct {
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type GetEnvironmentsRequest struct {
-	PathParams GetEnvironmentsPathParams
 }
 
 type GetEnvironmentsResponse struct {

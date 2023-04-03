@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDeviceIdentifiersQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	StartToken *string `queryParam:"style=form,explode=true,name=startToken"`
-}
-
-type ListDeviceIdentifiersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListDeviceIdentifiersRequestBody struct {
 	// <p>The filters.</p> <ul> <li> <p> <code>ORDER</code> - The Amazon Resource Name (ARN) of the order.</p> </li> <li> <p> <code>STATUS</code> - The status (<code>ACTIVE</code> | <code>INACTIVE</code>).</p> </li> <li> <p> <code>TRAFFIC_GROUP</code> - The Amazon Resource Name (ARN) of the traffic group.</p> </li> </ul> <p>Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request returns all results that match any of the specified values.</p>
 	Filters map[string][]string `json:"filters,omitempty"`
@@ -36,9 +19,18 @@ type ListDeviceIdentifiersRequestBody struct {
 }
 
 type ListDeviceIdentifiersRequest struct {
-	QueryParams ListDeviceIdentifiersQueryParams
-	Headers     ListDeviceIdentifiersHeaders
-	Request     ListDeviceIdentifiersRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListDeviceIdentifiersRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	StartToken *string `queryParam:"style=form,explode=true,name=startToken"`
 }
 
 type ListDeviceIdentifiersResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnregisterAllPushDevicesQueryParams struct {
+type UnregisterAllPushDevicesRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
 	// Optional filter to restrict to devices associated with that clientId. Cannot be used with deviceId.
 	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 	// Optional filter to restrict to devices associated with that deviceId. Cannot be used with clientId.
 	DeviceID *string `queryParam:"style=form,explode=true,name=deviceId"`
 	// The response format you would like
 	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type UnregisterAllPushDevicesHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type UnregisterAllPushDevicesRequest struct {
-	QueryParams UnregisterAllPushDevicesQueryParams
-	Headers     UnregisterAllPushDevicesHeaders
 }
 
 type UnregisterAllPushDevicesResponse struct {

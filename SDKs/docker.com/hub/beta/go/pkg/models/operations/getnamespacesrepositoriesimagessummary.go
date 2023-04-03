@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamespacesRepositoriesImagesSummaryPathParams struct {
-	// Namespace of the repository.
-	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-	// Name of the repository.
-	Repository string `pathParam:"style=simple,explode=false,name=repository"`
-}
-
-type GetNamespacesRepositoriesImagesSummaryQueryParams struct {
+type GetNamespacesRepositoriesImagesSummaryRequest struct {
 	// Sets the time from which an image must have been pushed or pulled to
 	// be counted as active.
 	//
 	// Defaults to 1 month before the current time.
 	//
 	ActiveFrom *string `queryParam:"style=form,explode=true,name=active_from"`
-}
-
-type GetNamespacesRepositoriesImagesSummaryRequest struct {
-	PathParams  GetNamespacesRepositoriesImagesSummaryPathParams
-	QueryParams GetNamespacesRepositoriesImagesSummaryQueryParams
+	// Namespace of the repository.
+	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
+	// Name of the repository.
+	Repository string `pathParam:"style=simple,explode=false,name=repository"`
 }
 
 type GetNamespacesRepositoriesImagesSummaryResponse struct {

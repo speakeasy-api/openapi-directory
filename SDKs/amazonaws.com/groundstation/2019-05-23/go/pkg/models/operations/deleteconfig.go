@@ -48,14 +48,7 @@ func (e *DeleteConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteConfigPathParams struct {
-	// UUID of a <code>Config</code>.
-	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-	// Type of a <code>Config</code>.
-	ConfigType DeleteConfigConfigTypeEnum `pathParam:"style=simple,explode=false,name=configType"`
-}
-
-type DeleteConfigHeaders struct {
+type DeleteConfigRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -63,11 +56,10 @@ type DeleteConfigHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteConfigRequest struct {
-	PathParams DeleteConfigPathParams
-	Headers    DeleteConfigHeaders
+	// UUID of a <code>Config</code>.
+	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
+	// Type of a <code>Config</code>.
+	ConfigType DeleteConfigConfigTypeEnum `pathParam:"style=simple,explode=false,name=configType"`
 }
 
 type DeleteConfigResponse struct {

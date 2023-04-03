@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SuppliersPostRequest struct {
-	// Information of Supplier to create.
-	Request shared.SupplierDto `request:"mediaType=application/json"`
-}
 
 type SuppliersPostResponse struct {
 	ContentType string

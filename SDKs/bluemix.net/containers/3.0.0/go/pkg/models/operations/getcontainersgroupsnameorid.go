@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContainersGroupsNameOrIDPathParams struct {
-	// The name or unique ID of the container group that you want to inspect. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type GetContainersGroupsNameOrIDHeaders struct {
+type GetContainersGroupsNameOrIDRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetContainersGroupsNameOrIDRequest struct {
-	PathParams GetContainersGroupsNameOrIDPathParams
-	Headers    GetContainersGroupsNameOrIDHeaders
+	// The name or unique ID of the container group that you want to inspect. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type GetContainersGroupsNameOrIDResponse struct {

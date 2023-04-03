@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelJobRunPathParams struct {
-	// The ID of the job run to cancel.
-	JobRunID string `pathParam:"style=simple,explode=false,name=jobRunId"`
-	// The ID of the virtual cluster for which the job run will be canceled.
-	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
-}
-
-type CancelJobRunHeaders struct {
+type CancelJobRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type CancelJobRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelJobRunRequest struct {
-	PathParams CancelJobRunPathParams
-	Headers    CancelJobRunHeaders
+	// The ID of the job run to cancel.
+	JobRunID string `pathParam:"style=simple,explode=false,name=jobRunId"`
+	// The ID of the virtual cluster for which the job run will be canceled.
+	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
 }
 
 type CancelJobRunResponse struct {

@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportFormsPathParams struct {
-	// The unique ID of the Amplify app to export forms to.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type ExportFormsQueryParams struct {
-	// The token to request the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ExportFormsHeaders struct {
+type ExportFormsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ExportFormsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ExportFormsRequest struct {
-	PathParams  ExportFormsPathParams
-	QueryParams ExportFormsQueryParams
-	Headers     ExportFormsHeaders
+	// The unique ID of the Amplify app to export forms to.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The token to request the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ExportFormsResponse struct {

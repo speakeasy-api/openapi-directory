@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type AddGroupMembersPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type AddGroupMembersRequestBody struct {
 	// comma separated list
 	Usernames *string `json:"usernames,omitempty"`
 }
 
 type AddGroupMembersRequest struct {
-	PathParams AddGroupMembersPathParams
-	Request    *AddGroupMembersRequestBody `request:"mediaType=application/json"`
+	RequestBody *AddGroupMembersRequestBody `request:"mediaType=application/json"`
+	ID          int64                       `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // AddGroupMembers200ApplicationJSON - success response

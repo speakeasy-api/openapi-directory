@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // GetApplicationComponentDetails -  Retrieves details about an application component.
 func (s *SDK) GetApplicationComponentDetails(ctx context.Context, request operations.GetApplicationComponentDetailsRequest) (*operations.GetApplicationComponentDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-details/{applicationComponentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-details/{applicationComponentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -190,14 +190,14 @@ func (s *SDK) GetApplicationComponentDetails(ctx context.Context, request operat
 // GetApplicationComponentStrategies -  Retrieves a list of all the recommended strategies and tools for an application component running on a server.
 func (s *SDK) GetApplicationComponentStrategies(ctx context.Context, request operations.GetApplicationComponentStrategiesRequest) (*operations.GetApplicationComponentStrategiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-strategies/{applicationComponentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-strategies/{applicationComponentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -266,14 +266,14 @@ func (s *SDK) GetApplicationComponentStrategies(ctx context.Context, request ope
 // GetAssessment -  Retrieves the status of an on-going assessment.
 func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmentRequest) (*operations.GetAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-assessment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-assessment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -352,14 +352,14 @@ func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmen
 // GetImportFileTask -  Retrieves the details about a specific import task.
 func (s *SDK) GetImportFileTask(ctx context.Context, request operations.GetImportFileTaskRequest) (*operations.GetImportFileTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-import-file-task/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-import-file-task/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -455,7 +455,7 @@ func (s *SDK) GetLatestAssessmentID(ctx context.Context, request operations.GetL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -541,7 +541,7 @@ func (s *SDK) GetPortfolioPreferences(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -627,7 +627,7 @@ func (s *SDK) GetPortfolioSummary(ctx context.Context, request operations.GetPor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -696,14 +696,14 @@ func (s *SDK) GetPortfolioSummary(ctx context.Context, request operations.GetPor
 // GetRecommendationReportDetails -  Retrieves detailed information about the specified recommendation report.
 func (s *SDK) GetRecommendationReportDetails(ctx context.Context, request operations.GetRecommendationReportDetailsRequest) (*operations.GetRecommendationReportDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-recommendation-report-details/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-recommendation-report-details/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -792,16 +792,16 @@ func (s *SDK) GetRecommendationReportDetails(ctx context.Context, request operat
 // GetServerDetails -  Retrieves detailed information about a specified server.
 func (s *SDK) GetServerDetails(ctx context.Context, request operations.GetServerDetailsRequest) (*operations.GetServerDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-server-details/{serverId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-server-details/{serverId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -892,14 +892,14 @@ func (s *SDK) GetServerDetails(ctx context.Context, request operations.GetServer
 // GetServerStrategies -  Retrieves recommended strategies and tools for the specified server.
 func (s *SDK) GetServerStrategies(ctx context.Context, request operations.GetServerStrategiesRequest) (*operations.GetServerStrategiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-server-strategies/{serverId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/get-server-strategies/{serverId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -990,7 +990,7 @@ func (s *SDK) ListApplicationComponents(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-applicationcomponents"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1005,9 +1005,9 @@ func (s *SDK) ListApplicationComponents(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1095,9 +1095,9 @@ func (s *SDK) ListCollectors(ctx context.Context, request operations.ListCollect
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1185,9 +1185,9 @@ func (s *SDK) ListImportFileTask(ctx context.Context, request operations.ListImp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1270,7 +1270,7 @@ func (s *SDK) ListServers(ctx context.Context, request operations.ListServersReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-servers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1285,9 +1285,9 @@ func (s *SDK) ListServers(ctx context.Context, request operations.ListServersReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1370,7 +1370,7 @@ func (s *SDK) PutPortfolioPreferences(ctx context.Context, request operations.Pu
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/put-portfolio-preferences"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1385,7 +1385,7 @@ func (s *SDK) PutPortfolioPreferences(ctx context.Context, request operations.Pu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1476,7 +1476,7 @@ func (s *SDK) StartAssessment(ctx context.Context, request operations.StartAsses
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/start-assessment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1491,7 +1491,7 @@ func (s *SDK) StartAssessment(ctx context.Context, request operations.StartAsses
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1572,7 +1572,7 @@ func (s *SDK) StartImportFileTask(ctx context.Context, request operations.StartI
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/start-import-file-task"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1587,7 +1587,7 @@ func (s *SDK) StartImportFileTask(ctx context.Context, request operations.StartI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1678,7 +1678,7 @@ func (s *SDK) StartRecommendationReportGeneration(ctx context.Context, request o
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/start-recommendation-report-generation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1693,7 +1693,7 @@ func (s *SDK) StartRecommendationReportGeneration(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1784,7 +1784,7 @@ func (s *SDK) StopAssessment(ctx context.Context, request operations.StopAssessm
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stop-assessment"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1799,7 +1799,7 @@ func (s *SDK) StopAssessment(ctx context.Context, request operations.StopAssessm
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1880,7 +1880,7 @@ func (s *SDK) UpdateApplicationComponentConfig(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update-applicationcomponent-config/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1895,7 +1895,7 @@ func (s *SDK) UpdateApplicationComponentConfig(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1976,7 +1976,7 @@ func (s *SDK) UpdateServerConfig(ctx context.Context, request operations.UpdateS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update-server-config/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1991,7 +1991,7 @@ func (s *SDK) UpdateServerConfig(ctx context.Context, request operations.UpdateS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

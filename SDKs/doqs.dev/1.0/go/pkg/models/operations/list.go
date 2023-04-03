@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListQueryParams struct {
+type ListRequest struct {
 	Limit  *int64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type ListRequest struct {
-	QueryParams ListQueryParams
 }
 
 type ListResponse struct {

@@ -8,25 +8,16 @@ import (
 )
 
 type WebhooksAllSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type WebhooksAllQueryParams struct {
+type WebhooksAllRequest struct {
 	// Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Number of records to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type WebhooksAllHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
-}
-
-type WebhooksAllRequest struct {
-	QueryParams WebhooksAllQueryParams
-	Headers     WebhooksAllHeaders
-	Security    WebhooksAllSecurity
 }
 
 type WebhooksAllResponse struct {

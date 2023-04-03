@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAccessPolicyPathParams struct {
-	// The ID of the access policy.
-	AccessPolicyID string `pathParam:"style=simple,explode=false,name=accessPolicyId"`
-}
-
-type UpdateAccessPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAccessPolicyRequestBodyAccessPolicyIdentity - <p>Contains an identity that can access an IoT SiteWise Monitor resource.</p> <note> <p>Currently, you can't use Amazon Web Services APIs to retrieve IAM Identity Center identity IDs. You can find the IAM Identity Center identity IDs in the URL of user and group pages in the <a href="https://console.aws.amazon.com/singlesignon">IAM Identity Center console</a>.</p> </note>
 type UpdateAccessPolicyRequestBodyAccessPolicyIdentity struct {
 	Group   *shared.GroupIdentity   `json:"group,omitempty"`
@@ -74,9 +59,16 @@ type UpdateAccessPolicyRequestBody struct {
 }
 
 type UpdateAccessPolicyRequest struct {
-	PathParams UpdateAccessPolicyPathParams
-	Headers    UpdateAccessPolicyHeaders
-	Request    UpdateAccessPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAccessPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the access policy.
+	AccessPolicyID string `pathParam:"style=simple,explode=false,name=accessPolicyId"`
 }
 
 type UpdateAccessPolicyResponse struct {

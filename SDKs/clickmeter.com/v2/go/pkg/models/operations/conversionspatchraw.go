@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPatchRawPathParams struct {
+type ConversionsPatchRawRequest struct {
+	// Patch request
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsPatchRawRequest struct {
-	PathParams ConversionsPatchRawPathParams
-	// Patch request
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type ConversionsPatchRawResponse struct {

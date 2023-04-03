@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type LegacyCodePushAcquisitionUpdateDownloadStatusSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // LegacyCodePushAcquisitionUpdateDownloadStatusRequestBody - Deployment status metric properties
@@ -20,12 +19,6 @@ type LegacyCodePushAcquisitionUpdateDownloadStatusRequestBody struct {
 	PreviousDeploymentKey     *string `json:"previousDeploymentKey,omitempty"`
 	PreviousLabelOrAppVersion *string `json:"previousLabelOrAppVersion,omitempty"`
 	Status                    *string `json:"status,omitempty"`
-}
-
-type LegacyCodePushAcquisitionUpdateDownloadStatusRequest struct {
-	// Deployment status metric properties
-	Request  LegacyCodePushAcquisitionUpdateDownloadStatusRequestBody `request:"mediaType=application/json"`
-	Security LegacyCodePushAcquisitionUpdateDownloadStatusSecurity
 }
 
 // LegacyCodePushAcquisitionUpdateDownloadStatusDefaultApplicationJSON - Error

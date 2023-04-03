@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type RemoveNotificationChannelPathParams struct {
+type RemoveNotificationChannelRequest struct {
 	//  The ID of the notification channel to be removed.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type RemoveNotificationChannelHeaders struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type RemoveNotificationChannelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type RemoveNotificationChannelRequest struct {
-	PathParams RemoveNotificationChannelPathParams
-	Headers    RemoveNotificationChannelHeaders
 }
 
 type RemoveNotificationChannelResponse struct {

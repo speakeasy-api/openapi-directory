@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProductsOnePathParams struct {
+type ProductsOneRequest struct {
 	EcosystemID string `pathParam:"style=simple,explode=false,name=ecosystem_id"`
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ProductsOneRequest struct {
-	PathParams ProductsOnePathParams
 }
 
 type ProductsOneResponse struct {

@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1WebhookSubscriptionsSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 // GetAPIV1WebhookSubscriptionsSortEnum - Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
@@ -49,7 +48,7 @@ func (e *GetAPIV1WebhookSubscriptionsSortEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetAPIV1WebhookSubscriptionsQueryParams struct {
+type GetAPIV1WebhookSubscriptionsRequest struct {
 	// Filters to be applied to the query.
 	//
 	// Query params in the url must look like this: "filter[attributeName_*matcher*]"
@@ -62,11 +61,6 @@ type GetAPIV1WebhookSubscriptionsQueryParams struct {
 	Filter map[string]interface{} `queryParam:"style=deepObject,explode=true,name=filter"`
 	// Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
 	Sort *GetAPIV1WebhookSubscriptionsSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAPIV1WebhookSubscriptionsRequest struct {
-	QueryParams GetAPIV1WebhookSubscriptionsQueryParams
-	Security    GetAPIV1WebhookSubscriptionsSecurity
 }
 
 type GetAPIV1WebhookSubscriptionsResponse struct {

@@ -8,13 +8,9 @@ import (
 	"time"
 )
 
-type KeyRetrievePathParams struct {
+type KeyRetrieveRequest struct {
 	// Public Signing Key - Authentiq ID (43 chars)
 	Pk string `pathParam:"style=simple,explode=false,name=PK"`
-}
-
-type KeyRetrieveRequest struct {
-	PathParams KeyRetrievePathParams
 }
 
 // KeyRetrieveJWT - Successfully retrieved

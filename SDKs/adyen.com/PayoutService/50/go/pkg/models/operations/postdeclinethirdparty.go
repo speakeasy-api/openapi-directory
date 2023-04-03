@@ -8,13 +8,8 @@ import (
 )
 
 type PostDeclineThirdPartySecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostDeclineThirdPartyRequest struct {
-	Request  *shared.ModifyRequest `request:"mediaType=application/json"`
-	Security PostDeclineThirdPartySecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostDeclineThirdPartyResponse struct {

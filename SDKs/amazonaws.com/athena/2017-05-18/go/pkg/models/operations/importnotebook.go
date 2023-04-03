@@ -30,20 +30,16 @@ func (e *ImportNotebookXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ImportNotebookHeaders struct {
-	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ImportNotebookXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ImportNotebookRequest struct {
-	Headers ImportNotebookHeaders
-	Request shared.ImportNotebookInput `request:"mediaType=application/json"`
+	ImportNotebookInput shared.ImportNotebookInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm       *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget          ImportNotebookXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ImportNotebookResponse struct {

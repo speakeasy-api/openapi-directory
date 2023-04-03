@@ -36,7 +36,7 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteSubscriptionsID - Delete a subscription.
 func (s *subscriptions) DeleteSubscriptionsID(ctx context.Context, request operations.DeleteSubscriptionsIDRequest) (*operations.DeleteSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -114,7 +114,7 @@ func (s *subscriptions) GetSubscriptionTypes(ctx context.Context) (*operations.G
 }
 
 // GetSubscriptions - List subscriptions for the authorised user.
-func (s *subscriptions) GetSubscriptions(ctx context.Context, request operations.GetSubscriptionsRequest) (*operations.GetSubscriptionsResponse, error) {
+func (s *subscriptions) GetSubscriptions(ctx context.Context, request shared.SubscriptionSubmission) (*operations.GetSubscriptionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscriptions"
 

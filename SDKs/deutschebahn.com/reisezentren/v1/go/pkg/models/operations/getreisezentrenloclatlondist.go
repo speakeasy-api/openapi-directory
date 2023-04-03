@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReisezentrenLocLatLonDistPathParams struct {
+type GetReisezentrenLocLatLonDistRequest struct {
 	// Radius
 	Dist float32 `pathParam:"style=simple,explode=false,name=dist"`
 	// Latitude
 	Lat float32 `pathParam:"style=simple,explode=false,name=lat"`
 	// Longitude
 	Lon float32 `pathParam:"style=simple,explode=false,name=lon"`
-}
-
-type GetReisezentrenLocLatLonDistRequest struct {
-	PathParams GetReisezentrenLocLatLonDistPathParams
 }
 
 type GetReisezentrenLocLatLonDistResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListModelQualityJobDefinitionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListModelQualityJobDefinitionsXAmzTargetEnum
 type ListModelQualityJobDefinitionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListModelQualityJobDefinitionsXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ListModelQualityJobDefinitionsHeaders struct {
+type ListModelQualityJobDefinitionsRequest struct {
+	ListModelQualityJobDefinitionsRequest shared.ListModelQualityJobDefinitionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListModelQualityJobDefinitionsHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListModelQualityJobDefinitionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListModelQualityJobDefinitionsRequest struct {
-	QueryParams ListModelQualityJobDefinitionsQueryParams
-	Headers     ListModelQualityJobDefinitionsHeaders
-	Request     shared.ListModelQualityJobDefinitionsRequest `request:"mediaType=application/json"`
 }
 
 type ListModelQualityJobDefinitionsResponse struct {

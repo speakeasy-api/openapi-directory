@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeCodeReviewPathParams struct {
+type DescribeCodeReviewRequest struct {
 	// The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html">CodeReview</a> object.
-	CodeReviewArn string `pathParam:"style=simple,explode=false,name=CodeReviewArn"`
-}
-
-type DescribeCodeReviewHeaders struct {
+	CodeReviewArn     string  `pathParam:"style=simple,explode=false,name=CodeReviewArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeCodeReviewHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeCodeReviewRequest struct {
-	PathParams DescribeCodeReviewPathParams
-	Headers    DescribeCodeReviewHeaders
 }
 
 type DescribeCodeReviewResponse struct {

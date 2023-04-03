@@ -50,28 +50,20 @@ func (e *GETSetSecurityGroupsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetSecurityGroupsQueryParams struct {
+type GETSetSecurityGroupsRequest struct {
 	Action GETSetSecurityGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the load balancer.
 	LoadBalancerArn string `queryParam:"style=form,explode=true,name=LoadBalancerArn"`
 	// The IDs of the security groups.
-	SecurityGroups []string                        `queryParam:"style=form,explode=true,name=SecurityGroups"`
-	Version        GETSetSecurityGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetSecurityGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetSecurityGroupsRequest struct {
-	QueryParams GETSetSecurityGroupsQueryParams
-	Headers     GETSetSecurityGroupsHeaders
+	SecurityGroups    []string                        `queryParam:"style=form,explode=true,name=SecurityGroups"`
+	Version           GETSetSecurityGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetSecurityGroupsResponse struct {

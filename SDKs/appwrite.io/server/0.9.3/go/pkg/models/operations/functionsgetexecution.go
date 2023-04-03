@@ -8,21 +8,16 @@ import (
 )
 
 type FunctionsGetExecutionSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type FunctionsGetExecutionPathParams struct {
+type FunctionsGetExecutionRequest struct {
 	// Execution unique ID.
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Function unique ID.
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
-}
-
-type FunctionsGetExecutionRequest struct {
-	PathParams FunctionsGetExecutionPathParams
-	Security   FunctionsGetExecutionSecurity
 }
 
 type FunctionsGetExecutionResponse struct {

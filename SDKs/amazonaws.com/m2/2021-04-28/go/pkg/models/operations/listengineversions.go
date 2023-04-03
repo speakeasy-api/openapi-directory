@@ -33,16 +33,7 @@ func (e *ListEngineVersionsEngineTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListEngineVersionsQueryParams struct {
-	// The type of target platform.
-	EngineType *ListEngineVersionsEngineTypeEnum `queryParam:"style=form,explode=true,name=engineType"`
-	// The maximum number of objects to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A pagination token returned from a previous call to this operation. This specifies the next item to return. To return to the beginning of the list, exclude this parameter.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListEngineVersionsHeaders struct {
+type ListEngineVersionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type ListEngineVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEngineVersionsRequest struct {
-	QueryParams ListEngineVersionsQueryParams
-	Headers     ListEngineVersionsHeaders
+	// The type of target platform.
+	EngineType *ListEngineVersionsEngineTypeEnum `queryParam:"style=form,explode=true,name=engineType"`
+	// The maximum number of objects to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A pagination token returned from a previous call to this operation. This specifies the next item to return. To return to the beginning of the list, exclude this parameter.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListEngineVersionsResponse struct {

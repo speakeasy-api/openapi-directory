@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteEphemerisPathParams struct {
-	// The AWS Ground Station ephemeris ID.
-	EphemerisID string `pathParam:"style=simple,explode=false,name=ephemerisId"`
-}
-
-type DeleteEphemerisHeaders struct {
+type DeleteEphemerisRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteEphemerisHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEphemerisRequest struct {
-	PathParams DeleteEphemerisPathParams
-	Headers    DeleteEphemerisHeaders
+	// The AWS Ground Station ephemeris ID.
+	EphemerisID string `pathParam:"style=simple,explode=false,name=ephemerisId"`
 }
 
 type DeleteEphemerisResponse struct {

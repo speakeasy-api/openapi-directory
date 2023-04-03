@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteBatchPathParams struct {
+type DeleteBatchRequest struct {
 	// Batch ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteBatchRequest struct {
-	PathParams DeleteBatchPathParams
 }
 
 type DeleteBatchResponse struct {

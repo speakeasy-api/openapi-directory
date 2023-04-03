@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteRepositoryPipelineCachesPathParams struct {
+type DeleteRepositoryPipelineCachesRequest struct {
+	// The cache name.
+	Name string `queryParam:"style=form,explode=true,name=name"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The account.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteRepositoryPipelineCachesQueryParams struct {
-	// The cache name.
-	Name string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type DeleteRepositoryPipelineCachesRequest struct {
-	PathParams  DeleteRepositoryPipelineCachesPathParams
-	QueryParams DeleteRepositoryPipelineCachesQueryParams
 }
 
 type DeleteRepositoryPipelineCachesResponse struct {

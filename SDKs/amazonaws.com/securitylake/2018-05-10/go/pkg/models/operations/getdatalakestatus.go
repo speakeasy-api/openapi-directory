@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDatalakeStatusQueryParams struct {
-	// Pagination limit
-	MaxAccountResults *string `queryParam:"style=form,explode=true,name=maxAccountResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetDatalakeStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetDatalakeStatusRequestBody struct {
 	// The Amazon Web Services account ID for which a static snapshot of the current Amazon Web Services Region, including enabled accounts and log sources, is retrieved.
 	AccountSet []string `json:"accountSet,omitempty"`
@@ -34,9 +17,18 @@ type GetDatalakeStatusRequestBody struct {
 }
 
 type GetDatalakeStatusRequest struct {
-	QueryParams GetDatalakeStatusQueryParams
-	Headers     GetDatalakeStatusHeaders
-	Request     GetDatalakeStatusRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetDatalakeStatusRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxAccountResults *string `queryParam:"style=form,explode=true,name=maxAccountResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetDatalakeStatusResponse struct {

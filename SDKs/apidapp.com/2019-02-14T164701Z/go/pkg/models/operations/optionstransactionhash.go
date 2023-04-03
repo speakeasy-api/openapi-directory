@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsTransactionHashPathParams struct {
+type OptionsTransactionHashRequest struct {
 	// Automatically added
 	Hash string `pathParam:"style=simple,explode=false,name=hash"`
-}
-
-type OptionsTransactionHashRequest struct {
-	PathParams OptionsTransactionHashPathParams
 }
 
 type OptionsTransactionHashResponse struct {

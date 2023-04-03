@@ -13,45 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateEntitiesToExperienceRequest{
-        Headers: operations.AssociateEntitiesToExperienceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSKendraFrontendService.AssociateEntitiesToExperience",
-        },
-        Request: shared.AssociateEntitiesToExperienceRequest{
+        AssociateEntitiesToExperienceRequest: shared.AssociateEntitiesToExperienceRequest{
             EntityList: []shared.EntityConfiguration{
                 shared.EntityConfiguration{
-                    EntityID: "vel",
+                    EntityID: "provident",
                     EntityType: "GROUP",
                 },
                 shared.EntityConfiguration{
-                    EntityID: "deserunt",
-                    EntityType: "USER",
+                    EntityID: "quibusdam",
+                    EntityType: "GROUP",
                 },
                 shared.EntityConfiguration{
-                    EntityID: "iure",
-                    EntityType: "USER",
-                },
-                shared.EntityConfiguration{
-                    EntityID: "debitis",
-                    EntityType: "USER",
+                    EntityID: "nulla",
+                    EntityType: "GROUP",
                 },
             },
-            ID: "delectus",
-            IndexID: "tempora",
+            ID: "illum",
+            IndexID: "vel",
         },
+        XAmzAlgorithm: "error",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "suscipit",
+        XAmzDate: "iure",
+        XAmzSecurityToken: "magnam",
+        XAmzSignature: "debitis",
+        XAmzSignedHeaders: "ipsa",
+        XAmzTarget: "AWSKendraFrontendService.AssociateEntitiesToExperience",
     }
 
     ctx := context.Background()

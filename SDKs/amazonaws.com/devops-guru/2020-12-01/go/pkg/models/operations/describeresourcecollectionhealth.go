@@ -36,30 +36,18 @@ func (e *DescribeResourceCollectionHealthResourceCollectionTypeEnum) UnmarshalJS
 	}
 }
 
-type DescribeResourceCollectionHealthPathParams struct {
-	//  An Amazon Web Services resource collection type. This type specifies how analyzed Amazon Web Services resources are defined. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
-	ResourceCollectionType DescribeResourceCollectionHealthResourceCollectionTypeEnum `pathParam:"style=simple,explode=false,name=ResourceCollectionType"`
-}
-
-type DescribeResourceCollectionHealthQueryParams struct {
+type DescribeResourceCollectionHealthRequest struct {
 	// The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type DescribeResourceCollectionHealthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeResourceCollectionHealthRequest struct {
-	PathParams  DescribeResourceCollectionHealthPathParams
-	QueryParams DescribeResourceCollectionHealthQueryParams
-	Headers     DescribeResourceCollectionHealthHeaders
+	//  An Amazon Web Services resource collection type. This type specifies how analyzed Amazon Web Services resources are defined. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
+	ResourceCollectionType DescribeResourceCollectionHealthResourceCollectionTypeEnum `pathParam:"style=simple,explode=false,name=ResourceCollectionType"`
+	XAmzAlgorithm          *string                                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DescribeResourceCollectionHealthResponse struct {

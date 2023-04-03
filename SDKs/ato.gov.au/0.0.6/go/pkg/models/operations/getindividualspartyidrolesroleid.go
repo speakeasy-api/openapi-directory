@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIndividualsPartyIDRolesRoleIDPathParams struct {
+type GetIndividualsPartyIDRolesRoleIDRequest struct {
+	// The API key.
+	APIKey string `header:"style=simple,explode=false,name=apiKey"`
 	// The party identifier.
 	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
 	// The role identifier.
 	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
-}
-
-type GetIndividualsPartyIDRolesRoleIDHeaders struct {
-	// The API key.
-	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetIndividualsPartyIDRolesRoleIDRequest struct {
-	PathParams GetIndividualsPartyIDRolesRoleIDPathParams
-	Headers    GetIndividualsPartyIDRolesRoleIDHeaders
 }
 
 type GetIndividualsPartyIDRolesRoleIDResponse struct {

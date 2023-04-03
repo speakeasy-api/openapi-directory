@@ -50,7 +50,7 @@ func (e *GETModifyLaunchTemplateVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyLaunchTemplateQueryParams struct {
+type GETModifyLaunchTemplateRequest struct {
 	Action GETModifyLaunchTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>.</p> <p>Constraint: Maximum 128 ASCII characters.</p>
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -63,21 +63,13 @@ type GETModifyLaunchTemplateQueryParams struct {
 	// The version number of the launch template to set as the default version.
 	SetDefaultVersion *string                            `queryParam:"style=form,explode=true,name=SetDefaultVersion"`
 	Version           GETModifyLaunchTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyLaunchTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyLaunchTemplateRequest struct {
-	QueryParams GETModifyLaunchTemplateQueryParams
-	Headers     GETModifyLaunchTemplateHeaders
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyLaunchTemplateResponse struct {

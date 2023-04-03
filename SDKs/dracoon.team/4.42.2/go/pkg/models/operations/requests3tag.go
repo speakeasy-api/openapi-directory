@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestS3TagPathParams struct {
-	// S3 tag ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RequestS3TagHeaders struct {
+type RequestS3TagRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestS3TagRequest struct {
-	PathParams RequestS3TagPathParams
-	Headers    RequestS3TagHeaders
+	// S3 tag ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RequestS3TagResponse struct {

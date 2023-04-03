@@ -50,28 +50,20 @@ func (e *GETDeleteSSHPublicKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteSSHPublicKeyQueryParams struct {
+type GETDeleteSSHPublicKeyRequest struct {
 	Action GETDeleteSSHPublicKeyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier for the SSH public key.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	SSHPublicKeyID string `queryParam:"style=form,explode=true,name=SSHPublicKeyId"`
 	// <p>The name of the IAM user associated with the SSH public key.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                           `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETDeleteSSHPublicKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteSSHPublicKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteSSHPublicKeyRequest struct {
-	QueryParams GETDeleteSSHPublicKeyQueryParams
-	Headers     GETDeleteSSHPublicKeyHeaders
+	UserName          string                           `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETDeleteSSHPublicKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteSSHPublicKeyResponse struct {

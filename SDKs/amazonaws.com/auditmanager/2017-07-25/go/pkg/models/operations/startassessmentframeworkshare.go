@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartAssessmentFrameworkSharePathParams struct {
-	//  The unique identifier for the custom framework to be shared.
-	FrameworkID string `pathParam:"style=simple,explode=false,name=frameworkId"`
-}
-
-type StartAssessmentFrameworkShareHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type StartAssessmentFrameworkShareRequestBody struct {
 	//  An optional comment from the sender about the share request.
 	Comment *string `json:"comment,omitempty"`
@@ -32,9 +17,16 @@ type StartAssessmentFrameworkShareRequestBody struct {
 }
 
 type StartAssessmentFrameworkShareRequest struct {
-	PathParams StartAssessmentFrameworkSharePathParams
-	Headers    StartAssessmentFrameworkShareHeaders
-	Request    StartAssessmentFrameworkShareRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartAssessmentFrameworkShareRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique identifier for the custom framework to be shared.
+	FrameworkID string `pathParam:"style=simple,explode=false,name=frameworkId"`
 }
 
 type StartAssessmentFrameworkShareResponse struct {

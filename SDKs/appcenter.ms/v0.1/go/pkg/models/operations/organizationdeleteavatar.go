@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrganizationDeleteAvatarSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrganizationDeleteAvatarPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type OrganizationDeleteAvatarRequest struct {
-	PathParams OrganizationDeleteAvatarPathParams
-	Security   OrganizationDeleteAvatarSecurity
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum string

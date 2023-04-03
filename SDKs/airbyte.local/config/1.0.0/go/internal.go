@@ -33,7 +33,7 @@ func newInternal(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // CreateOrUpdateState - Create or update the state for a connection.
-func (s *internal) CreateOrUpdateState(ctx context.Context, request operations.CreateOrUpdateStateRequest) (*operations.CreateOrUpdateStateResponse, error) {
+func (s *internal) CreateOrUpdateState(ctx context.Context, request shared.ConnectionStateCreateOrUpdate) (*operations.CreateOrUpdateStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/state/create_or_update"
 
@@ -107,7 +107,7 @@ func (s *internal) CreateOrUpdateState(ctx context.Context, request operations.C
 }
 
 // GetAttemptNormalizationStatusesForJob - Get normalization status to determine if we can bypass normalization phase
-func (s *internal) GetAttemptNormalizationStatusesForJob(ctx context.Context, request operations.GetAttemptNormalizationStatusesForJobRequest) (*operations.GetAttemptNormalizationStatusesForJobResponse, error) {
+func (s *internal) GetAttemptNormalizationStatusesForJob(ctx context.Context, request shared.JobIDRequestBody) (*operations.GetAttemptNormalizationStatusesForJobResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/jobs/get_normalization_status"
 
@@ -158,7 +158,7 @@ func (s *internal) GetAttemptNormalizationStatusesForJob(ctx context.Context, re
 }
 
 // SaveStats - For worker to set sync stats of a running attempt.
-func (s *internal) SaveStats(ctx context.Context, request operations.SaveStatsRequest) (*operations.SaveStatsResponse, error) {
+func (s *internal) SaveStats(ctx context.Context, request shared.SaveStatsRequestBody) (*operations.SaveStatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attempt/save_stats"
 
@@ -212,7 +212,7 @@ func (s *internal) SaveStats(ctx context.Context, request operations.SaveStatsRe
 }
 
 // SaveSyncConfig - For worker to save the AttemptSyncConfig for an attempt.
-func (s *internal) SaveSyncConfig(ctx context.Context, request operations.SaveSyncConfigRequest) (*operations.SaveSyncConfigResponse, error) {
+func (s *internal) SaveSyncConfig(ctx context.Context, request shared.SaveAttemptSyncConfigRequestBody) (*operations.SaveSyncConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attempt/save_sync_config"
 
@@ -266,7 +266,7 @@ func (s *internal) SaveSyncConfig(ctx context.Context, request operations.SaveSy
 }
 
 // SetWorkflowInAttempt - For worker to register the workflow id in attempt.
-func (s *internal) SetWorkflowInAttempt(ctx context.Context, request operations.SetWorkflowInAttemptRequest) (*operations.SetWorkflowInAttemptResponse, error) {
+func (s *internal) SetWorkflowInAttempt(ctx context.Context, request shared.SetWorkflowInAttemptRequestBody) (*operations.SetWorkflowInAttemptResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attempt/set_workflow_in_attempt"
 
@@ -320,7 +320,7 @@ func (s *internal) SetWorkflowInAttempt(ctx context.Context, request operations.
 }
 
 // WriteDiscoverCatalogResult - Should only called from worker, to write result from discover activity back to DB.
-func (s *internal) WriteDiscoverCatalogResult(ctx context.Context, request operations.WriteDiscoverCatalogResultRequest) (*operations.WriteDiscoverCatalogResultResponse, error) {
+func (s *internal) WriteDiscoverCatalogResult(ctx context.Context, request shared.SourceDiscoverSchemaWriteRequestBody) (*operations.WriteDiscoverCatalogResultResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/write_discover_catalog_result"
 

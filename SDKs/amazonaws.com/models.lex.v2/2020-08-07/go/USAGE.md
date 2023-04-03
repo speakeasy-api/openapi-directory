@@ -13,46 +13,40 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchCreateCustomVocabularyItemRequest{
-        PathParams: operations.BatchCreateCustomVocabularyItemPathParams{
-            BotID: "corrupti",
-            BotVersion: "provident",
-            LocaleID: "distinctio",
-        },
-        Headers: operations.BatchCreateCustomVocabularyItemHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
-        Request: operations.BatchCreateCustomVocabularyItemRequestBody{
+        RequestBody: operations.BatchCreateCustomVocabularyItemRequestBody{
             CustomVocabularyItemList: []shared.NewCustomVocabularyItem{
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "suscipit",
-                    Phrase: "iure",
-                    Weight: 297534,
+                    DisplayAs: "provident",
+                    Phrase: "distinctio",
+                    Weight: 844266,
                 },
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "debitis",
-                    Phrase: "ipsa",
-                    Weight: 963663,
+                    DisplayAs: "unde",
+                    Phrase: "nulla",
+                    Weight: 544883,
                 },
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "tempora",
-                    Phrase: "suscipit",
-                    Weight: 477665,
+                    DisplayAs: "illum",
+                    Phrase: "vel",
+                    Weight: 623564,
                 },
             },
         },
+        XAmzAlgorithm: "deserunt",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "iure",
+        XAmzDate: "magnam",
+        XAmzSecurityToken: "debitis",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "delectus",
+        BotID: "tempora",
+        BotVersion: "suscipit",
+        LocaleID: "molestiae",
     }
 
     ctx := context.Background()

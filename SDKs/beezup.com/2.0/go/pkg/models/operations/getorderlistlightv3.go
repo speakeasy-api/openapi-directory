@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderListLightV3Request struct {
-	Request shared.OrderListRequest `request:"mediaType=application/json"`
-}
-
 type GetOrderListLightV3Response struct {
 	// Occurs when something goes wrong
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

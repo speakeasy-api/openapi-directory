@@ -98,7 +98,7 @@ func (e *GETModifyInstancePlacementVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETModifyInstancePlacementQueryParams struct {
+type GETModifyInstancePlacementRequest struct {
 	Action GETModifyInstancePlacementActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The affinity setting for the instance.
 	Affinity *GETModifyInstancePlacementAffinityEnum `queryParam:"style=form,explode=true,name=Affinity"`
@@ -115,23 +115,15 @@ type GETModifyInstancePlacementQueryParams struct {
 	// The number of the partition in which to place the instance. Valid only if the placement group strategy is set to <code>partition</code>.
 	PartitionNumber *int64 `queryParam:"style=form,explode=true,name=PartitionNumber"`
 	// <p>The tenancy for the instance.</p> <note> <p>For T3 instances, you can't change the tenancy from <code>dedicated</code> to <code>host</code>, or from <code>host</code> to <code>dedicated</code>. Attempting to make one of these unsupported tenancy changes results in the <code>InvalidTenancy</code> error code.</p> </note>
-	Tenancy *GETModifyInstancePlacementTenancyEnum `queryParam:"style=form,explode=true,name=Tenancy"`
-	Version GETModifyInstancePlacementVersionEnum  `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyInstancePlacementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyInstancePlacementRequest struct {
-	QueryParams GETModifyInstancePlacementQueryParams
-	Headers     GETModifyInstancePlacementHeaders
+	Tenancy           *GETModifyInstancePlacementTenancyEnum `queryParam:"style=form,explode=true,name=Tenancy"`
+	Version           GETModifyInstancePlacementVersionEnum  `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyInstancePlacementResponse struct {

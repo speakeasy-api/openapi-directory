@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteProjectPathParams struct {
-	//  Unique project identifier.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type DeleteProjectHeaders struct {
+type DeleteProjectRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteProjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteProjectRequest struct {
-	PathParams DeleteProjectPathParams
-	Headers    DeleteProjectHeaders
+	//  Unique project identifier.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type DeleteProjectResponse struct {

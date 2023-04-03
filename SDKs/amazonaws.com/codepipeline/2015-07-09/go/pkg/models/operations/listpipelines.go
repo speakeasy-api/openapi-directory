@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPipelinesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListPipelinesXAmzTargetEnum
 type ListPipelinesXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListPipelinesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPipelinesHeaders struct {
-	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListPipelinesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListPipelinesRequest struct {
-	QueryParams ListPipelinesQueryParams
-	Headers     ListPipelinesHeaders
-	Request     shared.ListPipelinesInput `request:"mediaType=application/json"`
+	ListPipelinesInput shared.ListPipelinesInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         ListPipelinesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListPipelinesResponse struct {

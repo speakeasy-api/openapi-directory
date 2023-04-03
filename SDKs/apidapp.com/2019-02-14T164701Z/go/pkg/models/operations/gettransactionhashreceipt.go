@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetTransactionHashReceiptSecurity struct {
-	Key2 shared.SchemeKey2 `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetTransactionHashReceiptPathParams struct {
-	Hash string `pathParam:"style=simple,explode=false,name=hash"`
+	Key2 string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
 }
 
 type GetTransactionHashReceiptRequest struct {
-	PathParams GetTransactionHashReceiptPathParams
-	Security   GetTransactionHashReceiptSecurity
+	Hash string `pathParam:"style=simple,explode=false,name=hash"`
 }
 
 type GetTransactionHashReceiptResponse struct {

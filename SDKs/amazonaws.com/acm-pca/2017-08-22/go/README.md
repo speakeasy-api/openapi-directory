@@ -24,24 +24,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateCertificateAuthorityRequest{
-        Headers: operations.CreateCertificateAuthorityHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "ACMPrivateCA.CreateCertificateAuthority",
-        },
-        Request: shared.CreateCertificateAuthorityRequest{
+        CreateCertificateAuthorityRequest: shared.CreateCertificateAuthorityRequest{
             CertificateAuthorityConfiguration: shared.CertificateAuthorityConfiguration{
                 CsrExtensions: &shared.CsrExtensions{
                     KeyUsage: &shared.KeyUsage{
@@ -59,282 +47,223 @@ func main() {
                         shared.AccessDescription{
                             AccessLocation: shared.GeneralName{
                                 DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "vel",
-                                    Country: "Netherlands Antilles",
+                                    CommonName: "provident",
+                                    Country: "Portugal",
                                     CustomAttributes: []shared.CustomAttribute{
                                         shared.CustomAttribute{
-                                            ObjectIdentifier: "suscipit",
-                                            Value: "iure",
+                                            ObjectIdentifier: "unde",
+                                            Value: "nulla",
                                         },
                                         shared.CustomAttribute{
-                                            ObjectIdentifier: "magnam",
-                                            Value: "debitis",
+                                            ObjectIdentifier: "corrupti",
+                                            Value: "illum",
                                         },
                                         shared.CustomAttribute{
-                                            ObjectIdentifier: "ipsa",
-                                            Value: "delectus",
+                                            ObjectIdentifier: "vel",
+                                            Value: "error",
+                                        },
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "deserunt",
+                                            Value: "suscipit",
                                         },
                                     },
-                                    DistinguishedNameQualifier: "tempora",
-                                    GenerationQualifier: "suscipit",
-                                    GivenName: "molestiae",
-                                    Initials: "minus",
-                                    Locality: "placeat",
-                                    Organization: "voluptatum",
-                                    OrganizationalUnit: "iusto",
-                                    Pseudonym: "excepturi",
-                                    SerialNumber: "nisi",
-                                    State: "recusandae",
-                                    Surname: "temporibus",
-                                    Title: "Mr.",
+                                    DistinguishedNameQualifier: "iure",
+                                    GenerationQualifier: "magnam",
+                                    GivenName: "debitis",
+                                    Initials: "ipsa",
+                                    Locality: "delectus",
+                                    Organization: "tempora",
+                                    OrganizationalUnit: "suscipit",
+                                    Pseudonym: "molestiae",
+                                    SerialNumber: "minus",
+                                    State: "placeat",
+                                    Surname: "voluptatum",
+                                    Title: "Ms.",
                                 },
-                                DNSName: "quis",
+                                DNSName: "excepturi",
                                 EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "veritatis",
-                                    PartyName: "deserunt",
+                                    NameAssigner: "nisi",
+                                    PartyName: "recusandae",
                                 },
-                                IPAddress: "perferendis",
+                                IPAddress: "temporibus",
                                 OtherName: &shared.OtherName{
-                                    TypeID: "ipsam",
-                                    Value: "repellendus",
+                                    TypeID: "ab",
+                                    Value: "quis",
                                 },
-                                RegisteredID: "sapiente",
-                                Rfc822Name: "quo",
-                                UniformResourceIdentifier: "odit",
-                            },
-                            AccessMethod: shared.AccessMethod{
-                                AccessMethodType: "RESOURCE_PKI_NOTIFY",
-                                CustomObjectIdentifier: "at",
-                            },
-                        },
-                        shared.AccessDescription{
-                            AccessLocation: shared.GeneralName{
-                                DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "maiores",
-                                    Country: "Kuwait",
-                                    CustomAttributes: []shared.CustomAttribute{
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "quod",
-                                            Value: "esse",
-                                        },
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "totam",
-                                            Value: "porro",
-                                        },
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "dolorum",
-                                            Value: "dicta",
-                                        },
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "nam",
-                                            Value: "officia",
-                                        },
-                                    },
-                                    DistinguishedNameQualifier: "occaecati",
-                                    GenerationQualifier: "fugit",
-                                    GivenName: "deleniti",
-                                    Initials: "hic",
-                                    Locality: "optio",
-                                    Organization: "totam",
-                                    OrganizationalUnit: "beatae",
-                                    Pseudonym: "commodi",
-                                    SerialNumber: "molestiae",
-                                    State: "modi",
-                                    Surname: "qui",
-                                    Title: "Miss",
-                                },
-                                DNSName: "cum",
-                                EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "esse",
-                                    PartyName: "ipsum",
-                                },
-                                IPAddress: "excepturi",
-                                OtherName: &shared.OtherName{
-                                    TypeID: "aspernatur",
-                                    Value: "perferendis",
-                                },
-                                RegisteredID: "ad",
-                                Rfc822Name: "natus",
-                                UniformResourceIdentifier: "sed",
+                                RegisteredID: "veritatis",
+                                Rfc822Name: "deserunt",
+                                UniformResourceIdentifier: "perferendis",
                             },
                             AccessMethod: shared.AccessMethod{
                                 AccessMethodType: "RESOURCE_PKI_MANIFEST",
-                                CustomObjectIdentifier: "dolor",
+                                CustomObjectIdentifier: "repellendus",
                             },
                         },
                         shared.AccessDescription{
                             AccessLocation: shared.GeneralName{
                                 DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "natus",
-                                    Country: "Honduras",
+                                    CommonName: "sapiente",
+                                    Country: "San Marino",
                                     CustomAttributes: []shared.CustomAttribute{
                                         shared.CustomAttribute{
-                                            ObjectIdentifier: "saepe",
-                                            Value: "fuga",
-                                        },
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "in",
-                                            Value: "corporis",
-                                        },
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "iste",
-                                            Value: "iure",
-                                        },
-                                        shared.CustomAttribute{
-                                            ObjectIdentifier: "saepe",
-                                            Value: "quidem",
+                                            ObjectIdentifier: "at",
+                                            Value: "at",
                                         },
                                     },
-                                    DistinguishedNameQualifier: "architecto",
-                                    GenerationQualifier: "ipsa",
-                                    GivenName: "reiciendis",
-                                    Initials: "est",
-                                    Locality: "mollitia",
-                                    Organization: "laborum",
-                                    OrganizationalUnit: "dolores",
-                                    Pseudonym: "dolorem",
-                                    SerialNumber: "corporis",
-                                    State: "explicabo",
-                                    Surname: "nobis",
-                                    Title: "Mrs.",
+                                    DistinguishedNameQualifier: "maiores",
+                                    GenerationQualifier: "molestiae",
+                                    GivenName: "quod",
+                                    Initials: "quod",
+                                    Locality: "esse",
+                                    Organization: "totam",
+                                    OrganizationalUnit: "porro",
+                                    Pseudonym: "dolorum",
+                                    SerialNumber: "dicta",
+                                    State: "nam",
+                                    Surname: "officia",
+                                    Title: "Ms.",
                                 },
-                                DNSName: "omnis",
+                                DNSName: "fugit",
                                 EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "nemo",
-                                    PartyName: "minima",
+                                    NameAssigner: "deleniti",
+                                    PartyName: "hic",
                                 },
-                                IPAddress: "excepturi",
+                                IPAddress: "optio",
                                 OtherName: &shared.OtherName{
-                                    TypeID: "accusantium",
-                                    Value: "iure",
+                                    TypeID: "totam",
+                                    Value: "beatae",
                                 },
-                                RegisteredID: "culpa",
-                                Rfc822Name: "doloribus",
-                                UniformResourceIdentifier: "sapiente",
+                                RegisteredID: "commodi",
+                                Rfc822Name: "molestiae",
+                                UniformResourceIdentifier: "modi",
                             },
                             AccessMethod: shared.AccessMethod{
                                 AccessMethodType: "CA_REPOSITORY",
-                                CustomObjectIdentifier: "mollitia",
+                                CustomObjectIdentifier: "impedit",
                             },
                         },
                         shared.AccessDescription{
                             AccessLocation: shared.GeneralName{
                                 DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "dolorem",
-                                    Country: "New Caledonia",
+                                    CommonName: "cum",
+                                    Country: "Kenya",
                                     CustomAttributes: []shared.CustomAttribute{
                                         shared.CustomAttribute{
-                                            ObjectIdentifier: "repellat",
-                                            Value: "mollitia",
+                                            ObjectIdentifier: "excepturi",
+                                            Value: "aspernatur",
                                         },
                                     },
-                                    DistinguishedNameQualifier: "occaecati",
-                                    GenerationQualifier: "numquam",
-                                    GivenName: "commodi",
-                                    Initials: "quam",
-                                    Locality: "molestiae",
-                                    Organization: "velit",
-                                    OrganizationalUnit: "error",
-                                    Pseudonym: "quia",
-                                    SerialNumber: "quis",
-                                    State: "vitae",
-                                    Surname: "laborum",
-                                    Title: "Miss",
+                                    DistinguishedNameQualifier: "perferendis",
+                                    GenerationQualifier: "ad",
+                                    GivenName: "natus",
+                                    Initials: "sed",
+                                    Locality: "iste",
+                                    Organization: "dolor",
+                                    OrganizationalUnit: "natus",
+                                    Pseudonym: "laboriosam",
+                                    SerialNumber: "hic",
+                                    State: "saepe",
+                                    Surname: "fuga",
+                                    Title: "Ms.",
                                 },
-                                DNSName: "enim",
+                                DNSName: "corporis",
                                 EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "odit",
-                                    PartyName: "quo",
+                                    NameAssigner: "iste",
+                                    PartyName: "iure",
                                 },
-                                IPAddress: "sequi",
+                                IPAddress: "saepe",
                                 OtherName: &shared.OtherName{
-                                    TypeID: "tenetur",
-                                    Value: "ipsam",
+                                    TypeID: "quidem",
+                                    Value: "architecto",
                                 },
-                                RegisteredID: "id",
-                                Rfc822Name: "possimus",
-                                UniformResourceIdentifier: "aut",
+                                RegisteredID: "ipsa",
+                                Rfc822Name: "reiciendis",
+                                UniformResourceIdentifier: "est",
                             },
                             AccessMethod: shared.AccessMethod{
-                                AccessMethodType: "CA_REPOSITORY",
-                                CustomObjectIdentifier: "error",
+                                AccessMethodType: "RESOURCE_PKI_MANIFEST",
+                                CustomObjectIdentifier: "laborum",
                             },
                         },
                     },
                 },
-                KeyAlgorithm: "EC_secp384r1",
-                SigningAlgorithm: "SHA384WITHRSA",
+                KeyAlgorithm: "RSA_2048",
+                SigningAlgorithm: "SHA384WITHECDSA",
                 Subject: shared.Asn1Subject{
-                    CommonName: "quasi",
-                    Country: "Virgin Islands, British",
+                    CommonName: "corporis",
+                    Country: "Brunei Darussalam",
                     CustomAttributes: []shared.CustomAttribute{
                         shared.CustomAttribute{
-                            ObjectIdentifier: "vero",
-                            Value: "nihil",
-                        },
-                        shared.CustomAttribute{
-                            ObjectIdentifier: "praesentium",
-                            Value: "voluptatibus",
-                        },
-                        shared.CustomAttribute{
-                            ObjectIdentifier: "ipsa",
+                            ObjectIdentifier: "enim",
                             Value: "omnis",
                         },
                         shared.CustomAttribute{
-                            ObjectIdentifier: "voluptate",
-                            Value: "cum",
+                            ObjectIdentifier: "nemo",
+                            Value: "minima",
+                        },
+                        shared.CustomAttribute{
+                            ObjectIdentifier: "excepturi",
+                            Value: "accusantium",
+                        },
+                        shared.CustomAttribute{
+                            ObjectIdentifier: "iure",
+                            Value: "culpa",
                         },
                     },
-                    DistinguishedNameQualifier: "perferendis",
-                    GenerationQualifier: "doloremque",
-                    GivenName: "reprehenderit",
-                    Initials: "ut",
-                    Locality: "maiores",
-                    Organization: "dicta",
-                    OrganizationalUnit: "corporis",
-                    Pseudonym: "dolore",
-                    SerialNumber: "iusto",
-                    State: "dicta",
-                    Surname: "harum",
-                    Title: "Mrs.",
+                    DistinguishedNameQualifier: "doloribus",
+                    GenerationQualifier: "sapiente",
+                    GivenName: "architecto",
+                    Initials: "mollitia",
+                    Locality: "dolorem",
+                    Organization: "culpa",
+                    OrganizationalUnit: "consequuntur",
+                    Pseudonym: "repellat",
+                    SerialNumber: "mollitia",
+                    State: "occaecati",
+                    Surname: "numquam",
+                    Title: "Ms.",
                 },
             },
-            CertificateAuthorityType: "SUBORDINATE",
-            IdempotencyToken: "commodi",
-            KeyStorageSecurityStandard: "FIPS_140_2_LEVEL_3_OR_HIGHER",
+            CertificateAuthorityType: "ROOT",
+            IdempotencyToken: "molestiae",
+            KeyStorageSecurityStandard: "FIPS_140_2_LEVEL_2_OR_HIGHER",
             RevocationConfiguration: &shared.RevocationConfiguration{
                 CrlConfiguration: &shared.CrlConfiguration{
-                    CustomCname: "quae",
+                    CustomCname: "error",
                     Enabled: false,
-                    ExpirationInDays: 216822,
-                    S3BucketName: "quidem",
-                    S3ObjectACL: "BUCKET_OWNER_FULL_CONTROL",
+                    ExpirationInDays: 158969,
+                    S3BucketName: "quis",
+                    S3ObjectACL: "PUBLIC_READ",
                 },
                 OcspConfiguration: &shared.OcspConfiguration{
                     Enabled: false,
-                    OcspCustomCname: "excepturi",
+                    OcspCustomCname: "laborum",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "modi",
-                    Value: "praesentium",
+                    Key: "enim",
+                    Value: "odit",
                 },
                 shared.Tag{
-                    Key: "rem",
-                    Value: "voluptates",
+                    Key: "quo",
+                    Value: "sequi",
                 },
                 shared.Tag{
-                    Key: "quasi",
-                    Value: "repudiandae",
-                },
-                shared.Tag{
-                    Key: "sint",
-                    Value: "veritatis",
+                    Key: "tenetur",
+                    Value: "ipsam",
                 },
             },
             UsageMode: "SHORT_LIVED_CERTIFICATE",
         },
+        XAmzAlgorithm: "possimus",
+        XAmzContentSha256: "aut",
+        XAmzCredential: "quasi",
+        XAmzDate: "error",
+        XAmzSecurityToken: "temporibus",
+        XAmzSignature: "laborum",
+        XAmzSignedHeaders: "quasi",
+        XAmzTarget: "ACMPrivateCA.CreateCertificateAuthority",
     }
 
     ctx := context.Background()
@@ -351,7 +280,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -380,4 +309,15 @@ func main() {
 * `UpdateCertificateAuthority` - <p>Updates the status or configuration of a private certificate authority (CA). Your private CA must be in the <code>ACTIVE</code> or <code>DISABLED</code> state before you can update it. You can disable a private CA that is in the <code>ACTIVE</code> state or make a CA that is in the <code>DISABLED</code> state active again.</p> <note> <p>Both Amazon Web Services Private CA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see <a href="https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html#s3-policies">Access policies for CRLs in Amazon S3</a>.</p> </note>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

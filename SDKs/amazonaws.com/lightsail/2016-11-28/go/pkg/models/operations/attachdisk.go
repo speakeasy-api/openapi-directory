@@ -30,7 +30,8 @@ func (e *AttachDiskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AttachDiskHeaders struct {
+type AttachDiskRequest struct {
+	AttachDiskRequest shared.AttachDiskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type AttachDiskHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        AttachDiskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type AttachDiskRequest struct {
-	Headers AttachDiskHeaders
-	Request shared.AttachDiskRequest `request:"mediaType=application/json"`
 }
 
 type AttachDiskResponse struct {

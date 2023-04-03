@@ -9,17 +9,6 @@ import (
 	"time"
 )
 
-type PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsPathParams struct {
-	IDAccount    int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequestBody struct {
 	// 1 if the transaction should be taken into account by pfm services (default: 1)
 	Active *bool `multipartForm:"name=active"`
@@ -44,9 +33,12 @@ type PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequestB
 }
 
 type PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequest struct {
-	PathParams  PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsPathParams
-	QueryParams PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsQueryParams
-	Request     PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody  PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequestBody `request:"mediaType=multipart/form-data"`
+	Expand       *string                                                                        `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount    int64                                                                          `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection int64                                                                          `pathParam:"style=simple,explode=false,name=id_connection"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PostUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsResponse struct {

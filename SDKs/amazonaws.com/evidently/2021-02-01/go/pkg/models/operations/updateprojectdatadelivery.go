@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProjectDataDeliveryPathParams struct {
-	// The name or ARN of the project that you want to modify the data storage options for.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type UpdateProjectDataDeliveryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateProjectDataDeliveryRequestBodyCloudWatchLogs - A structure containing the CloudWatch Logs log group where the project stores evaluation events.
 type UpdateProjectDataDeliveryRequestBodyCloudWatchLogs struct {
 	LogGroup *string `json:"logGroup,omitempty"`
@@ -41,9 +26,16 @@ type UpdateProjectDataDeliveryRequestBody struct {
 }
 
 type UpdateProjectDataDeliveryRequest struct {
-	PathParams UpdateProjectDataDeliveryPathParams
-	Headers    UpdateProjectDataDeliveryHeaders
-	Request    UpdateProjectDataDeliveryRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateProjectDataDeliveryRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name or ARN of the project that you want to modify the data storage options for.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type UpdateProjectDataDeliveryResponse struct {

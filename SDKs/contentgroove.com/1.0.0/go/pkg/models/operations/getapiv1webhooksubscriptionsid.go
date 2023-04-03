@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1WebhookSubscriptionsIDSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAPIV1WebhookSubscriptionsIDPathParams struct {
-	// The id of the webhook subscription to be retrieved
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetAPIV1WebhookSubscriptionsIDRequest struct {
-	PathParams GetAPIV1WebhookSubscriptionsIDPathParams
-	Security   GetAPIV1WebhookSubscriptionsIDSecurity
+	// The id of the webhook subscription to be retrieved
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPIV1WebhookSubscriptionsIDResponse struct {

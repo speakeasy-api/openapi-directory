@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIGetByExtRefPathParams struct {
+type OrderAPIGetByExtRefRequest struct {
 	// The extern order number of the order
 	ExtRef string `pathParam:"style=simple,explode=false,name=extRef"`
-}
-
-type OrderAPIGetByExtRefRequest struct {
-	PathParams OrderAPIGetByExtRefPathParams
 }
 
 type OrderAPIGetByExtRefResponse struct {

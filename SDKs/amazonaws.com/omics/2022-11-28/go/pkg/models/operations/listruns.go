@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRunsQueryParams struct {
+type ListRunsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of runs to return in one page of results.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// Filter the list by run name.
@@ -16,21 +23,6 @@ type ListRunsQueryParams struct {
 	RunGroupID *string `queryParam:"style=form,explode=true,name=runGroupId"`
 	// Specify the pagination token from a previous request to retrieve the next page of results.
 	StartingToken *string `queryParam:"style=form,explode=true,name=startingToken"`
-}
-
-type ListRunsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRunsRequest struct {
-	QueryParams ListRunsQueryParams
-	Headers     ListRunsHeaders
 }
 
 type ListRunsResponse struct {

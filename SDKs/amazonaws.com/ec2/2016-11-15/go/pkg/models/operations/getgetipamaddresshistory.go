@@ -51,7 +51,7 @@ func (e *GETGETIpamAddressHistoryVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETIpamAddressHistoryQueryParams struct {
+type GETGETIpamAddressHistoryRequest struct {
 	Action GETGETIpamAddressHistoryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR you want the history of. The CIDR can be an IPv4 or IPv6 IP address range. If you enter a /16 IPv4 CIDR, you will get records that match it exactly. You will not get records for any subnets within the /16 CIDR.
 	Cidr string `queryParam:"style=form,explode=true,name=Cidr"`
@@ -69,10 +69,7 @@ type GETGETIpamAddressHistoryQueryParams struct {
 	StartTime *time.Time                          `queryParam:"style=form,explode=true,name=StartTime"`
 	Version   GETGETIpamAddressHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC you want your history records filtered by.
-	VpcID *string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETGETIpamAddressHistoryHeaders struct {
+	VpcID             *string `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -80,11 +77,6 @@ type GETGETIpamAddressHistoryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETIpamAddressHistoryRequest struct {
-	QueryParams GETGETIpamAddressHistoryQueryParams
-	Headers     GETGETIpamAddressHistoryHeaders
 }
 
 type GETGETIpamAddressHistoryResponse struct {

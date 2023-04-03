@@ -50,30 +50,22 @@ func (e *GETSendCustomVerificationEmailVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETSendCustomVerificationEmailQueryParams struct {
+type GETSendCustomVerificationEmailRequest struct {
 	Action GETSendCustomVerificationEmailActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Name of a configuration set to use when sending the verification email.
 	ConfigurationSetName *string `queryParam:"style=form,explode=true,name=ConfigurationSetName"`
 	// The email address to verify.
 	EmailAddress string `queryParam:"style=form,explode=true,name=EmailAddress"`
 	// The name of the custom verification email template to use when sending the verification email.
-	TemplateName string                                    `queryParam:"style=form,explode=true,name=TemplateName"`
-	Version      GETSendCustomVerificationEmailVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSendCustomVerificationEmailHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSendCustomVerificationEmailRequest struct {
-	QueryParams GETSendCustomVerificationEmailQueryParams
-	Headers     GETSendCustomVerificationEmailHeaders
+	TemplateName      string                                    `queryParam:"style=form,explode=true,name=TemplateName"`
+	Version           GETSendCustomVerificationEmailVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSendCustomVerificationEmailResponse struct {

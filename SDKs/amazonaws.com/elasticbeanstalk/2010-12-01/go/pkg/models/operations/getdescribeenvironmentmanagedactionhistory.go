@@ -50,7 +50,7 @@ func (e *GETDescribeEnvironmentManagedActionHistoryVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETDescribeEnvironmentManagedActionHistoryQueryParams struct {
+type GETDescribeEnvironmentManagedActionHistoryRequest struct {
 	Action GETDescribeEnvironmentManagedActionHistoryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The environment ID of the target environment.
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=EnvironmentId"`
@@ -59,23 +59,15 @@ type GETDescribeEnvironmentManagedActionHistoryQueryParams struct {
 	// The maximum number of items to return for a single request.
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
 	// The pagination token returned by a previous request.
-	NextToken *string                                               `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETDescribeEnvironmentManagedActionHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEnvironmentManagedActionHistoryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEnvironmentManagedActionHistoryRequest struct {
-	QueryParams GETDescribeEnvironmentManagedActionHistoryQueryParams
-	Headers     GETDescribeEnvironmentManagedActionHistoryHeaders
+	NextToken         *string                                               `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETDescribeEnvironmentManagedActionHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEnvironmentManagedActionHistoryResponse struct {

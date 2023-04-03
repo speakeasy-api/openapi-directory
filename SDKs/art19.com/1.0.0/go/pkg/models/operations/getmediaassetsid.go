@@ -8,17 +8,12 @@ import (
 )
 
 type GetMediaAssetsIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetMediaAssetsIDPathParams struct {
-	// The ID of the media asset resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetMediaAssetsIDRequest struct {
-	PathParams GetMediaAssetsIDPathParams
-	Security   GetMediaAssetsIDSecurity
+	// The ID of the media asset resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetMediaAssetsID200ApplicationVndAPIPlusJSON - Success

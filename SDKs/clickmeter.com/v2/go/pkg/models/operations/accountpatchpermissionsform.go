@@ -33,17 +33,13 @@ func (e *AccountPatchPermissionsFormTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountPatchPermissionsFormPathParams struct {
+type AccountPatchPermissionsFormRequest struct {
+	// The patch permission request
+	APICoreRequestsPermissionPatchRequest shared.APICoreRequestsPermissionPatchRequest `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
 	// Can be "datapoint" or "group"
 	Type AccountPatchPermissionsFormTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type AccountPatchPermissionsFormRequest struct {
-	PathParams AccountPatchPermissionsFormPathParams
-	// The patch permission request
-	Request shared.APICoreRequestsPermissionPatchRequest `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type AccountPatchPermissionsFormResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAssignmentsIDPathParams struct {
+type DeleteAssignmentsIDRequest struct {
 	// Id of the assignment to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAssignmentsIDRequest struct {
-	PathParams DeleteAssignmentsIDPathParams
 }
 
 type DeleteAssignmentsIDResponse struct {

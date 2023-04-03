@@ -50,30 +50,22 @@ func (e *GETSetStackPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetStackPolicyQueryParams struct {
+type GETSetStackPolicyRequest struct {
 	Action GETSetStackPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name or unique stack ID that you want to associate a policy with.
 	StackName string `queryParam:"style=form,explode=true,name=StackName"`
 	// Structure containing the stack policy body. For more information, go to <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html"> Prevent updates to stack resources</a> in the CloudFormation User Guide. You can specify either the <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.
 	StackPolicyBody *string `queryParam:"style=form,explode=true,name=StackPolicyBody"`
 	// Location of a file containing the stack policy. The URL must point to a policy (maximum size: 16 KB) located in an Amazon S3 bucket in the same Amazon Web Services Region as the stack. You can specify either the <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.
-	StackPolicyURL *string                      `queryParam:"style=form,explode=true,name=StackPolicyURL"`
-	Version        GETSetStackPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetStackPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetStackPolicyRequest struct {
-	QueryParams GETSetStackPolicyQueryParams
-	Headers     GETSetStackPolicyHeaders
+	StackPolicyURL    *string                      `queryParam:"style=form,explode=true,name=StackPolicyURL"`
+	Version           GETSetStackPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetStackPolicyResponse struct {

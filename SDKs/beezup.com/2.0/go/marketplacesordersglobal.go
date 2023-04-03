@@ -43,9 +43,9 @@ func (s *marketplacesOrdersGlobal) GetMarketplaceAccountsSynchronization(ctx con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -108,7 +108,7 @@ func (s *marketplacesOrdersGlobal) GetOrderIndex(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -167,7 +167,7 @@ func (s *marketplacesOrdersGlobal) HarvestAll(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -193,9 +193,9 @@ func (s *marketplacesOrdersGlobal) HarvestAll(ctx context.Context, request opera
 	case httpRes.StatusCode == 202:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode == 404:
-		fallthrough
-	default:
+	case httpRes.StatusCode == 409:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.BeezUPCommonErrorResponseMessage
@@ -205,9 +205,9 @@ func (s *marketplacesOrdersGlobal) HarvestAll(ctx context.Context, request opera
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		res.Headers = httpRes.Header
-
+	case httpRes.StatusCode == 404:
+		fallthrough
+	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.BeezUPCommonErrorResponseMessage

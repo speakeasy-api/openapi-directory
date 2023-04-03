@@ -8,33 +8,24 @@ import (
 )
 
 type FireteamSearchPublicAvailableClanFireteamsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FireteamSearchPublicAvailableClanFireteamsPathParams struct {
+type FireteamSearchPublicAvailableClanFireteamsRequest struct {
 	// The activity type to filter by.
 	ActivityType int `pathParam:"style=simple,explode=false,name=activityType"`
 	// The date range to grab available fireteams.
 	DateRange int64 `pathParam:"style=simple,explode=false,name=dateRange"`
+	// If you wish the result to exclude immediate fireteams, set this to true. Immediate-only can be forced using the dateRange enum.
+	ExcludeImmediate *bool `queryParam:"style=form,explode=true,name=excludeImmediate"`
+	// An optional language filter.
+	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
 	// Zero based page
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// The platform filter.
 	Platform int64 `pathParam:"style=simple,explode=false,name=platform"`
 	// Filters based on available slots
 	SlotFilter int64 `pathParam:"style=simple,explode=false,name=slotFilter"`
-}
-
-type FireteamSearchPublicAvailableClanFireteamsQueryParams struct {
-	// If you wish the result to exclude immediate fireteams, set this to true. Immediate-only can be forced using the dateRange enum.
-	ExcludeImmediate *bool `queryParam:"style=form,explode=true,name=excludeImmediate"`
-	// An optional language filter.
-	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
-}
-
-type FireteamSearchPublicAvailableClanFireteamsRequest struct {
-	PathParams  FireteamSearchPublicAvailableClanFireteamsPathParams
-	QueryParams FireteamSearchPublicAvailableClanFireteamsQueryParams
-	Security    FireteamSearchPublicAvailableClanFireteamsSecurity
 }
 
 // FireteamSearchPublicAvailableClanFireteams200Wildcard - Look at the Response property for more information about the nature of this response

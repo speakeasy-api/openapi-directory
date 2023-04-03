@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStreamsQueryParams struct {
-	// Set to true to return the list of streams in ascending order.
-	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
-	// The maximum number of results to return at a time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used to get the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListStreamsHeaders struct {
+type ListStreamsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListStreamsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStreamsRequest struct {
-	QueryParams ListStreamsQueryParams
-	Headers     ListStreamsHeaders
+	// Set to true to return the list of streams in ascending order.
+	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
+	// The maximum number of results to return at a time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used to get the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListStreamsResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type AddClutterSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 type AddClutterRequestBody struct {
 	Features []shared.Feature `json:"features,omitempty"`
 	Name     *string          `json:"name,omitempty"`
 	Type     *string          `json:"type,omitempty"`
-}
-
-type AddClutterRequest struct {
-	Request  AddClutterRequestBody `request:"mediaType=application/json"`
-	Security AddClutterSecurity
 }
 
 type AddClutterResponse struct {

@@ -30,7 +30,8 @@ func (e *SetStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SetStatusHeaders struct {
+type SetStatusRequest struct {
+	SetStatusInput    shared.SetStatusInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type SetStatusHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        SetStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type SetStatusRequest struct {
-	Headers SetStatusHeaders
-	Request shared.SetStatusInput `request:"mediaType=application/json"`
 }
 
 type SetStatusResponse struct {

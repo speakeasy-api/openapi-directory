@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrderAPIAddShipmentRawPathParams struct {
+type OrderAPIAddShipmentRawRequest struct {
+	// The shipment data to create the shipment
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The internal billbee id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIAddShipmentRawRequest struct {
-	PathParams OrderAPIAddShipmentRawPathParams
-	// The shipment data to create the shipment
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPIAddShipmentRawResponse struct {

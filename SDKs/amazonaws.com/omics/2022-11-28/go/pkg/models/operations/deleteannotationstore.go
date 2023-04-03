@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAnnotationStorePathParams struct {
-	// The store's name.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteAnnotationStoreQueryParams struct {
-	// Whether to force deletion.
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-}
-
-type DeleteAnnotationStoreHeaders struct {
+type DeleteAnnotationStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteAnnotationStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAnnotationStoreRequest struct {
-	PathParams  DeleteAnnotationStorePathParams
-	QueryParams DeleteAnnotationStoreQueryParams
-	Headers     DeleteAnnotationStoreHeaders
+	// Whether to force deletion.
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
+	// The store's name.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DeleteAnnotationStoreResponse struct {

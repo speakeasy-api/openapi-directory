@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type AuthorizeQueryParams struct {
+type AuthorizeRequest struct {
 	// A client ID obtained from the [Dashboard](https://dashboard.authentiq.com/).
 	//
 	ClientID string `queryParam:"style=form,explode=true,name=client_id"`
@@ -40,10 +40,6 @@ type AuthorizeQueryParams struct {
 	// Specifies the preferred language to use on the authorization page, as a space-separated list of BCP47 language tags. Ignored at the moment.
 	//
 	UILocales *string `queryParam:"style=form,explode=true,name=ui_locales"`
-}
-
-type AuthorizeRequest struct {
-	QueryParams AuthorizeQueryParams
 }
 
 type AuthorizeResponse struct {

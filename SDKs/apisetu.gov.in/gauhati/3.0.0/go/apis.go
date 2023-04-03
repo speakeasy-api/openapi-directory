@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Socer - Educational/ Exam Registration Certificate
 // API to verify Educational/ Exam Registration Certificate.
-func (s *apIs) Socer(ctx context.Context, request operations.SocerRequest) (*operations.SocerResponse, error) {
+func (s *apIs) Socer(ctx context.Context, request operations.SocerRequestBody, security operations.SocerSecurity) (*operations.SocerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/socer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Socer(ctx context.Context, request operations.SocerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

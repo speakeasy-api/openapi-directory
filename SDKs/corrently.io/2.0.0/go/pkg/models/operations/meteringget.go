@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type MeteringGetQueryParams struct {
+type MeteringGetRequest struct {
 	// Account/Address (Stromkonto) to retrieve reading for.
 	Account *string `queryParam:"style=form,explode=true,name=account"`
-}
-
-type MeteringGetRequest struct {
-	QueryParams MeteringGetQueryParams
 }
 
 // MeteringGet200ApplicationJSON - Success

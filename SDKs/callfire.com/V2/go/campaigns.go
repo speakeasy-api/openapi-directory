@@ -35,16 +35,16 @@ func newCampaigns(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // DeleteCampaignSound - Delete a specific sound
 // Deletes a single campaign sound instance for a specific campaign sound id, this operation does not delete sound completely, it sets sound status to ARCHIVED which means that sound will no longer appear in 'find' operation results, but still accessible via 'get' operation
-func (s *campaigns) DeleteCampaignSound(ctx context.Context, request operations.DeleteCampaignSoundRequest) (*operations.DeleteCampaignSoundResponse, error) {
+func (s *campaigns) DeleteCampaignSound(ctx context.Context, request operations.DeleteCampaignSoundRequest, security operations.DeleteCampaignSoundSecurity) (*operations.DeleteCampaignSoundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *campaigns) DeleteCampaignSound(ctx context.Context, request operations.
 
 // FindCampaignSounds - Find sounds
 // To find all campaign sounds which were created by user. Returns all sounds available to be used in campaigns
-func (s *campaigns) FindCampaignSounds(ctx context.Context, request operations.FindCampaignSoundsRequest) (*operations.FindCampaignSoundsResponse, error) {
+func (s *campaigns) FindCampaignSounds(ctx context.Context, request operations.FindCampaignSoundsRequest, security operations.FindCampaignSoundsSecurity) (*operations.FindCampaignSoundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns/sounds"
 
@@ -97,11 +97,11 @@ func (s *campaigns) FindCampaignSounds(ctx context.Context, request operations.F
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,20 +155,20 @@ func (s *campaigns) FindCampaignSounds(ctx context.Context, request operations.F
 
 // GetCampaignBatch - Find a specific batch
 // Returns a single Batch instance for a given batch id. This API is useful for determining the state of a validating batch
-func (s *campaigns) GetCampaignBatch(ctx context.Context, request operations.GetCampaignBatchRequest) (*operations.GetCampaignBatchResponse, error) {
+func (s *campaigns) GetCampaignBatch(ctx context.Context, request operations.GetCampaignBatchRequest, security operations.GetCampaignBatchSecurity) (*operations.GetCampaignBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -222,20 +222,20 @@ func (s *campaigns) GetCampaignBatch(ctx context.Context, request operations.Get
 
 // GetCampaignSound - Find a specific sound
 // Returns a single CampaignSound instance for a given sound id in campaign. This is a meta data to the sounds. No audio data is returned from this API
-func (s *campaigns) GetCampaignSound(ctx context.Context, request operations.GetCampaignSoundRequest) (*operations.GetCampaignSoundResponse, error) {
+func (s *campaigns) GetCampaignSound(ctx context.Context, request operations.GetCampaignSoundRequest, security operations.GetCampaignSoundSecurity) (*operations.GetCampaignSoundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,16 +289,16 @@ func (s *campaigns) GetCampaignSound(ctx context.Context, request operations.Get
 
 // GetCampaignSoundDataMp3 - Download a MP3 sound
 // Download the MP3 version of a hosted file. This is an audio data endpoint. Returns binary response of the 'audio/mpeg' content type
-func (s *campaigns) GetCampaignSoundDataMp3(ctx context.Context, request operations.GetCampaignSoundDataMp3Request) (*operations.GetCampaignSoundDataMp3Response, error) {
+func (s *campaigns) GetCampaignSoundDataMp3(ctx context.Context, request operations.GetCampaignSoundDataMp3Request, security operations.GetCampaignSoundDataMp3Security) (*operations.GetCampaignSoundDataMp3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.mp3", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.mp3", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -344,16 +344,16 @@ func (s *campaigns) GetCampaignSoundDataMp3(ctx context.Context, request operati
 
 // GetCampaignSoundDataWav - Download a WAV sound
 // Download the WAV version of the hosted file. This is an audio data endpoint. Returns binary response of the 'audio/mpeg' content type
-func (s *campaigns) GetCampaignSoundDataWav(ctx context.Context, request operations.GetCampaignSoundDataWavRequest) (*operations.GetCampaignSoundDataWavResponse, error) {
+func (s *campaigns) GetCampaignSoundDataWav(ctx context.Context, request operations.GetCampaignSoundDataWavRequest, security operations.GetCampaignSoundDataWavSecurity) (*operations.GetCampaignSoundDataWavResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.wav", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.wav", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -399,11 +399,11 @@ func (s *campaigns) GetCampaignSoundDataWav(ctx context.Context, request operati
 
 // PostCallCampaignSound - Add sound via call
 // Use this API to create a sound via a phone call. Provide the required phone number in the CallCreateSound object inside the request, and user will receive a call shortly after with instructions on how to record a sound over the phone.
-func (s *campaigns) PostCallCampaignSound(ctx context.Context, request operations.PostCallCampaignSoundRequest) (*operations.PostCallCampaignSoundResponse, error) {
+func (s *campaigns) PostCallCampaignSound(ctx context.Context, request operations.PostCallCampaignSoundRequest, security operations.PostCallCampaignSoundSecurity) (*operations.PostCallCampaignSoundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns/sounds/calls"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallCreateSound", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -415,11 +415,11 @@ func (s *campaigns) PostCallCampaignSound(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -473,11 +473,11 @@ func (s *campaigns) PostCallCampaignSound(ctx context.Context, request operation
 
 // PostFileCampaignSound - Add sound via file
 // Create a campaign sound file via a supplied .mp3 or .wav file
-func (s *campaigns) PostFileCampaignSound(ctx context.Context, request operations.PostFileCampaignSoundRequest) (*operations.PostFileCampaignSoundResponse, error) {
+func (s *campaigns) PostFileCampaignSound(ctx context.Context, request operations.PostFileCampaignSoundRequest, security operations.PostFileCampaignSoundSecurity) (*operations.PostFileCampaignSoundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns/sounds/files"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -492,11 +492,11 @@ func (s *campaigns) PostFileCampaignSound(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -550,11 +550,11 @@ func (s *campaigns) PostFileCampaignSound(ctx context.Context, request operation
 
 // PostTTSCampaignSound - Add sound via text-to-speech
 // Use this API to create a sound file via a supplied string of text. Add a text in the TextToSpeech.message field, and pick a voice in the TextToSpeech.voice field. Available voices are: MALE1, FEMALE1, FEMALE2, SPANISH1, FRENCHCANADIAN1
-func (s *campaigns) PostTTSCampaignSound(ctx context.Context, request operations.PostTTSCampaignSoundRequest) (*operations.PostTTSCampaignSoundResponse, error) {
+func (s *campaigns) PostTTSCampaignSound(ctx context.Context, request operations.PostTTSCampaignSoundRequest, security operations.PostTTSCampaignSoundSecurity) (*operations.PostTTSCampaignSoundResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns/sounds/tts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TextToSpeech", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -566,11 +566,11 @@ func (s *campaigns) PostTTSCampaignSound(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -624,11 +624,11 @@ func (s *campaigns) PostTTSCampaignSound(ctx context.Context, request operations
 
 // UpdateCampaignBatch - Update a batch
 // Updates a single Batch instance, currently batch can only be turned "on/off"
-func (s *campaigns) UpdateCampaignBatch(ctx context.Context, request operations.UpdateCampaignBatchRequest) (*operations.UpdateCampaignBatchResponse, error) {
+func (s *campaigns) UpdateCampaignBatch(ctx context.Context, request operations.UpdateCampaignBatchRequest, security operations.UpdateCampaignBatchSecurity) (*operations.UpdateCampaignBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -640,7 +640,7 @@ func (s *campaigns) UpdateCampaignBatch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

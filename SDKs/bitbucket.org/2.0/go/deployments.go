@@ -40,9 +40,9 @@ func newDeployments(defaultClient, securityClient HTTPClient, serverURL, languag
 // Create an environment.
 func (s *deployments) CreateEnvironment(ctx context.Context, request operations.CreateEnvironmentRequest) (*operations.CreateEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -109,7 +109,7 @@ func (s *deployments) CreateEnvironment(ctx context.Context, request operations.
 // Delete an environment
 func (s *deployments) DeleteEnvironmentForRepository(ctx context.Context, request operations.DeleteEnvironmentForRepositoryRequest) (*operations.DeleteEnvironmentForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -160,16 +160,16 @@ func (s *deployments) DeleteEnvironmentForRepository(ctx context.Context, reques
 // -H "Authorization <auth header>" \
 // https://api.bitbucket.org/2.0/repositories/mleu/test/deploy-keys/1234
 // ```
-func (s *deployments) DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIDResponse, error) {
+func (s *deployments) DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,16 +215,16 @@ func (s *deployments) DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx con
 // -H "Authorization <auth header>" \
 // https://api.bitbucket.org/2.0/workspaces/jzeng/projects/JZ/deploy-keys/1234
 // ```
-func (s *deployments) DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDRequest) (*operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse, error) {
+func (s *deployments) DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDRequest, security operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDSecurity) (*operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -265,7 +265,7 @@ func (s *deployments) DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID
 // Retrieve a deployment
 func (s *deployments) GetDeploymentForRepository(ctx context.Context, request operations.GetDeploymentForRepositoryRequest) (*operations.GetDeploymentForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments/{deployment_uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments/{deployment_uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -320,7 +320,7 @@ func (s *deployments) GetDeploymentForRepository(ctx context.Context, request op
 // Find deployments
 func (s *deployments) GetDeploymentsForRepository(ctx context.Context, request operations.GetDeploymentsForRepositoryRequest) (*operations.GetDeploymentsForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -365,7 +365,7 @@ func (s *deployments) GetDeploymentsForRepository(ctx context.Context, request o
 // Retrieve an environment
 func (s *deployments) GetEnvironmentForRepository(ctx context.Context, request operations.GetEnvironmentForRepositoryRequest) (*operations.GetEnvironmentForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -420,7 +420,7 @@ func (s *deployments) GetEnvironmentForRepository(ctx context.Context, request o
 // Find environments
 func (s *deployments) GetEnvironmentsForRepository(ctx context.Context, request operations.GetEnvironmentsForRepositoryRequest) (*operations.GetEnvironmentsForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -500,16 +500,16 @@ func (s *deployments) GetEnvironmentsForRepository(ctx context.Context, request 
 //	}
 //
 // ```
-func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDeployKeysRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse, error) {
+func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDeployKeysRequest, security operations.GetRepositoriesWorkspaceRepoSlugDeployKeysSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -586,16 +586,16 @@ func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Con
 //	}
 //
 // ```
-func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIDResponse, error) {
+func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -684,16 +684,16 @@ func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx contex
 //	}
 //
 // ```
-func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse, error) {
+func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysSecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -781,16 +781,16 @@ func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx con
 //	}
 //
 // ```
-func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse, error) {
+func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDSecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -877,16 +877,16 @@ func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ct
 //	}
 //
 // ```
-func (s *deployments) PostRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugDeployKeysRequest) (*operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse, error) {
+func (s *deployments) PostRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugDeployKeysRequest, security operations.PostRepositoriesWorkspaceRepoSlugDeployKeysSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -969,16 +969,16 @@ func (s *deployments) PostRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Co
 //	}
 //
 // ```
-func (s *deployments) PostWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx context.Context, request operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest) (*operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse, error) {
+func (s *deployments) PostWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx context.Context, request operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest, security operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysSecurity) (*operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1067,16 +1067,16 @@ func (s *deployments) PostWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx co
 //	}
 //
 // ```
-func (s *deployments) PutRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIDResponse, error) {
+func (s *deployments) PutRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1127,7 +1127,7 @@ func (s *deployments) PutRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx contex
 // Update an environment
 func (s *deployments) UpdateEnvironmentForRepository(ctx context.Context, request operations.UpdateEnvironmentForRepositoryRequest) (*operations.UpdateEnvironmentForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

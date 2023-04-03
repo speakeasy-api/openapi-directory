@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkspacesQueryParams struct {
-	// Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be returned.
-	Alias *string `queryParam:"style=form,explode=true,name=alias"`
-	// Maximum results to return in response (default=100, maximum=1000).
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token to request the next page in a paginated list. This token is obtained from the output of the previous ListWorkspaces request.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListWorkspacesHeaders struct {
+type ListWorkspacesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListWorkspacesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWorkspacesRequest struct {
-	QueryParams ListWorkspacesQueryParams
-	Headers     ListWorkspacesHeaders
+	// Optional filter for workspace alias. Only the workspaces with aliases that begin with this value will be returned.
+	Alias *string `queryParam:"style=form,explode=true,name=alias"`
+	// Maximum results to return in response (default=100, maximum=1000).
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token to request the next page in a paginated list. This token is obtained from the output of the previous ListWorkspaces request.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListWorkspacesResponse struct {

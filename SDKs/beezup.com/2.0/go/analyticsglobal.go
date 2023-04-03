@@ -89,7 +89,7 @@ func (s *analyticsGlobal) AnalyticsIndex(ctx context.Context) (*operations.Analy
 // AnalyticsStoreIndex - Get the Analytics API operation index for one store
 func (s *analyticsGlobal) AnalyticsStoreIndex(ctx context.Context, request operations.AnalyticsStoreIndexRequest) (*operations.AnalyticsStoreIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -30,7 +30,8 @@ func (e *RunTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RunTaskHeaders struct {
+type RunTaskRequest struct {
+	RunTaskRequest    shared.RunTaskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type RunTaskHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        RunTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type RunTaskRequest struct {
-	Headers RunTaskHeaders
-	Request shared.RunTaskRequest `request:"mediaType=application/json"`
 }
 
 type RunTaskResponse struct {

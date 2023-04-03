@@ -8,24 +8,15 @@ import (
 )
 
 type GetStoresStoreIDTerminalLogosSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetStoresStoreIDTerminalLogosPathParams struct {
-	// The unique identifier of the store.
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetStoresStoreIDTerminalLogosQueryParams struct {
-	// The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
-	Model string `queryParam:"style=form,explode=true,name=model"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetStoresStoreIDTerminalLogosRequest struct {
-	PathParams  GetStoresStoreIDTerminalLogosPathParams
-	QueryParams GetStoresStoreIDTerminalLogosQueryParams
-	Security    GetStoresStoreIDTerminalLogosSecurity
+	// The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
+	Model string `queryParam:"style=form,explode=true,name=model"`
+	// The unique identifier of the store.
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type GetStoresStoreIDTerminalLogosResponse struct {

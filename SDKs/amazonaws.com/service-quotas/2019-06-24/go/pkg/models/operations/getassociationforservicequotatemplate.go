@@ -30,7 +30,8 @@ func (e *GetAssociationForServiceQuotaTemplateXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type GetAssociationForServiceQuotaTemplateHeaders struct {
+type GetAssociationForServiceQuotaTemplateRequest struct {
+	RequestBody       map[string]interface{}                              `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetAssociationForServiceQuotaTemplateHeaders struct {
 	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetAssociationForServiceQuotaTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetAssociationForServiceQuotaTemplateRequest struct {
-	Headers GetAssociationForServiceQuotaTemplateHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetAssociationForServiceQuotaTemplateResponse struct {

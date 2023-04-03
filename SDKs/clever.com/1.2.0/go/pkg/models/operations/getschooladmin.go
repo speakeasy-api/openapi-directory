@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSchoolAdminPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSchoolAdminQueryParams struct {
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
 type GetSchoolAdminRequest struct {
-	PathParams  GetSchoolAdminPathParams
-	QueryParams GetSchoolAdminQueryParams
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetSchoolAdminResponse struct {

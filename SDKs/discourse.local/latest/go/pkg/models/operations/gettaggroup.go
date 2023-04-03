@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetTagGroupPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetTagGroupRequest struct {
-	PathParams GetTagGroupPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetTagGroup200ApplicationJSONTagGroupPermissions struct {

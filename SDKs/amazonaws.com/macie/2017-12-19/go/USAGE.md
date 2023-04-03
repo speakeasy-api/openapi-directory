@@ -13,26 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateMemberAccountRequest{
-        Headers: operations.AssociateMemberAccountHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "MacieService.AssociateMemberAccount",
+        AssociateMemberAccountRequest: shared.AssociateMemberAccountRequest{
+            MemberAccountID: "corrupti",
         },
-        Request: shared.AssociateMemberAccountRequest{
-            MemberAccountID: "illum",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        XAmzTarget: "MacieService.AssociateMemberAccount",
     }
 
     ctx := context.Background()

@@ -8,21 +8,16 @@ import (
 )
 
 type TinVerificationComprehensiveCheckSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
-type TinVerificationComprehensiveCheckQueryParams struct {
+type TinVerificationComprehensiveCheckRequest struct {
 	// Company Name
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// The percentage of minimum similarity threshold for company matching (optional, default: 70%)
 	Threshold *int64 `queryParam:"style=form,explode=true,name=threshold"`
 	// Nine letter TIN number with or without hyphens
 	Tin string `queryParam:"style=form,explode=true,name=tin"`
-}
-
-type TinVerificationComprehensiveCheckRequest struct {
-	QueryParams TinVerificationComprehensiveCheckQueryParams
-	Security    TinVerificationComprehensiveCheckSecurity
 }
 
 // TinVerificationComprehensiveCheckDefaultApplicationJSON - Detailed information about the error

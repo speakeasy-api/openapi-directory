@@ -13,41 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddNotificationChannelRequest{
-        Headers: operations.AddNotificationChannelHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.AddNotificationChannelRequestBody{
+        RequestBody: operations.AddNotificationChannelRequestBody{
             Config: operations.AddNotificationChannelRequestBodyConfig{
                 Filters: &shared.NotificationFilterConfig{
                     MessageTypes: []shared.NotificationMessageTypeEnum{
                         "NEW_ASSOCIATION",
                         "SEVERITY_UPGRADED",
-                        "SEVERITY_UPGRADED",
-                        "CLOSED_INSIGHT",
+                        "NEW_RECOMMENDATION",
                     },
                     Severities: []shared.InsightSeverityEnum{
-                        "LOW",
+                        "HIGH",
+                        "MEDIUM",
                         "HIGH",
                     },
                 },
                 Sns: &shared.SnsChannelConfig{
-                    TopicArn: "ipsa",
+                    TopicArn: "vel",
                 },
             },
         },
+        XAmzAlgorithm: "error",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "suscipit",
+        XAmzDate: "iure",
+        XAmzSecurityToken: "magnam",
+        XAmzSignature: "debitis",
+        XAmzSignedHeaders: "ipsa",
     }
 
     ctx := context.Background()

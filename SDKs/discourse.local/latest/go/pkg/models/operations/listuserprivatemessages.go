@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type ListUserPrivateMessagesPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type ListUserPrivateMessagesRequest struct {
-	PathParams ListUserPrivateMessagesPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type ListUserPrivateMessages200ApplicationJSONTopicListTopicsParticipants struct {

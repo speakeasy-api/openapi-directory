@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGamePPAQueryParams struct {
+type GetGamePPARequest struct {
 	// Conference filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Filter to remove garbage time plays from calculations
@@ -20,10 +20,6 @@ type GetGamePPAQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetGamePPARequest struct {
-	QueryParams GetGamePPAQueryParams
 }
 
 type GetGamePPAResponse struct {

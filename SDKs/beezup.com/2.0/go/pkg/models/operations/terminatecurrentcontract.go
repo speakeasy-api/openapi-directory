@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TerminateCurrentContractRequest struct {
-	// Indicate the termination reason
-	Request shared.TerminateContract `request:"mediaType=application/json"`
-}
-
 type TerminateCurrentContractResponse struct {
 	// Invalid reason type
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

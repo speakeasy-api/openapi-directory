@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLinesQueryParams struct {
+type GetLinesRequest struct {
 	// Away team filter
 	Away *string `queryParam:"style=form,explode=true,name=away"`
 	// Conference abbreviation filter
@@ -24,10 +24,6 @@ type GetLinesQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year/season filter for games
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetLinesRequest struct {
-	QueryParams GetLinesQueryParams
 }
 
 type GetLinesResponse struct {

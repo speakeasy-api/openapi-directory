@@ -30,20 +30,16 @@ func (e *UpdateInstanceProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateInstanceProfileHeaders struct {
-	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateInstanceProfileXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateInstanceProfileRequest struct {
-	Headers UpdateInstanceProfileHeaders
-	Request shared.UpdateInstanceProfileRequest `request:"mediaType=application/json"`
+	UpdateInstanceProfileRequest shared.UpdateInstanceProfileRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   UpdateInstanceProfileXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateInstanceProfileResponse struct {

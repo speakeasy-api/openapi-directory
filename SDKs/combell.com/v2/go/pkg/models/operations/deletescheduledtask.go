@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteScheduledTaskPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	ScheduledTaskID string `pathParam:"style=simple,explode=false,name=scheduledTaskId"`
-}
-
-type DeleteScheduledTaskQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// Id of the scheduled task.
-	ScheduledTaskID string `queryParam:"style=form,explode=true,name=scheduled_task_id"`
-}
-
 type DeleteScheduledTaskRequest struct {
-	PathParams  DeleteScheduledTaskPathParams
-	QueryParams DeleteScheduledTaskQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	ScheduledTaskIDPathParameter string `pathParam:"style=simple,explode=false,name=scheduledTaskId"`
+	// Id of the scheduled task.
+	ScheduledTaskIDQueryParameter string `queryParam:"style=form,explode=true,name=scheduled_task_id"`
 }
 
 type DeleteScheduledTaskResponse struct {

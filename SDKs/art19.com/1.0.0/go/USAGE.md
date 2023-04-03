@@ -14,31 +14,26 @@ func main() {
     s := sdk.New()
 
     req := operations.GetClassificationsRequest{
-        Security: operations.GetClassificationsSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+        Ids: []string{
+            "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+            "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+            "b7392059-2939-46fe-a759-6eb10faaa235",
         },
-        QueryParams: operations.GetClassificationsQueryParams{
-            Ids: []string{
-                "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
-                "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
-                "b7392059-2939-46fe-a759-6eb10faaa235",
-            },
-            IsCountry: "explicabo",
-            PageNumber: 750686,
-            PageSize: 315428,
-            Q: "omnis",
-            Sort: []GetClassificationsSortEnum{
-                "created_at",
-                "updated_at",
-            },
-            Type: "AlternateFeedType",
+        IsCountry: "explicabo",
+        PageNumber: 750686,
+        PageSize: 315428,
+        Q: "omnis",
+        Sort: []GetClassificationsSortEnum{
+            "created_at",
+            "updated_at",
         },
+        Type: "AlternateFeedType",
     }
 
     ctx := context.Background()
-    res, err := s.Classification.GetClassifications(ctx, req)
+    res, err := s.Classification.GetClassifications(ctx, req, operations.GetClassificationsSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

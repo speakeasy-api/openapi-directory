@@ -34,7 +34,7 @@ func newAPIV1(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // GetItemUsages - Retrieves item usages
 // This endpoint requires your JSON Web Token to have the *itemusages* feature.
-func (s *apiV1) GetItemUsages(ctx context.Context, request operations.GetItemUsagesRequest) (*operations.GetItemUsagesResponse, error) {
+func (s *apiV1) GetItemUsages(ctx context.Context, request operations.GetItemUsagesRequestBody, security operations.GetItemUsagesSecurity) (*operations.GetItemUsagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/itemusages"
 
@@ -50,7 +50,7 @@ func (s *apiV1) GetItemUsages(ctx context.Context, request operations.GetItemUsa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,7 +98,7 @@ func (s *apiV1) GetItemUsages(ctx context.Context, request operations.GetItemUsa
 
 // GetSignInAttempts - Retrieves sign-in attempts
 // This endpoint requires your JSON Web Token to have the *signinattempts* feature.
-func (s *apiV1) GetSignInAttempts(ctx context.Context, request operations.GetSignInAttemptsRequest) (*operations.GetSignInAttemptsResponse, error) {
+func (s *apiV1) GetSignInAttempts(ctx context.Context, request operations.GetSignInAttemptsRequestBody, security operations.GetSignInAttemptsSecurity) (*operations.GetSignInAttemptsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/signinattempts"
 
@@ -114,7 +114,7 @@ func (s *apiV1) GetSignInAttempts(ctx context.Context, request operations.GetSig
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

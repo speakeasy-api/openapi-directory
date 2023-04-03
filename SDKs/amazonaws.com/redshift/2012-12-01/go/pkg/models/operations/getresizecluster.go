@@ -50,7 +50,7 @@ func (e *GETResizeClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETResizeClusterQueryParams struct {
+type GETResizeClusterRequest struct {
 	Action GETResizeClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to <code>false</code>, the resize type is elastic.
 	Classic *bool `queryParam:"style=form,explode=true,name=Classic"`
@@ -67,21 +67,13 @@ type GETResizeClusterQueryParams struct {
 	// The identifier of the target reserved node offering.
 	TargetReservedNodeOfferingID *string                     `queryParam:"style=form,explode=true,name=TargetReservedNodeOfferingId"`
 	Version                      GETResizeClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETResizeClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETResizeClusterRequest struct {
-	QueryParams GETResizeClusterQueryParams
-	Headers     GETResizeClusterHeaders
+	XAmzAlgorithm                *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETResizeClusterResponse struct {

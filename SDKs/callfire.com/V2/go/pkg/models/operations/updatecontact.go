@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateContactSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateContactPathParams struct {
-	// An id of a contact
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateContactRequest struct {
-	PathParams UpdateContactPathParams
 	// A contact object
-	Request  *shared.Contact `request:"mediaType=application/json"`
-	Security UpdateContactSecurity
+	Contact *shared.Contact `request:"mediaType=application/json"`
+	// An id of a contact
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateContactResponse struct {

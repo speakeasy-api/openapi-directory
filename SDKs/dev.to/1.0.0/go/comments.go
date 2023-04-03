@@ -40,7 +40,7 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 //	See the format specification for further details.
 func (s *comments) GetCommentByID(ctx context.Context, request operations.GetCommentByIDRequest) (*operations.GetCommentByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/comments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *comments) GetCommentsByArticleID(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -116,7 +116,7 @@ func (s *SDK) PutEvents(ctx context.Context, request operations.PutEventsRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2014-06-05/events#x-amz-Client-Context"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) PutEvents(ctx context.Context, request operations.PutEventsRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPortfolioMembershipsQueryParams struct {
+type GetPortfolioMembershipsRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -28,10 +28,6 @@ type GetPortfolioMembershipsQueryParams struct {
 	User *string `queryParam:"style=form,explode=true,name=user"`
 	// The workspace to filter results on.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetPortfolioMembershipsRequest struct {
-	QueryParams GetPortfolioMembershipsQueryParams
 }
 
 // GetPortfolioMemberships200ApplicationJSON - Successfully retrieved portfolio memberships.

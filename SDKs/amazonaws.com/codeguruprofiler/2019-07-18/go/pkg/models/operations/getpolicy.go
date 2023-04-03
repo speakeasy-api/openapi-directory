@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPolicyPathParams struct {
-	// The name of the profiling group.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type GetPolicyHeaders struct {
+type GetPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetPolicyRequest struct {
-	PathParams GetPolicyPathParams
-	Headers    GetPolicyHeaders
+	// The name of the profiling group.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 }
 
 type GetPolicyResponse struct {

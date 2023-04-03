@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBotVersionPathParams struct {
-	// The identifier of the bot containing the version to return metadata for.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot to return metadata for.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-}
-
-type DescribeBotVersionHeaders struct {
+type DescribeBotVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeBotVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBotVersionRequest struct {
-	PathParams DescribeBotVersionPathParams
-	Headers    DescribeBotVersionHeaders
+	// The identifier of the bot containing the version to return metadata for.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot to return metadata for.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
 }
 
 type DescribeBotVersionResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTCancelUpdateStackVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCancelUpdateStackQueryParams struct {
-	Action  POSTCancelUpdateStackActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCancelUpdateStackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCancelUpdateStackHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCancelUpdateStackRequest struct {
-	QueryParams POSTCancelUpdateStackQueryParams
-	Headers     POSTCancelUpdateStackHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCancelUpdateStackActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                           `request:"mediaType=text/xml"`
+	Version           POSTCancelUpdateStackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCancelUpdateStackResponse struct {

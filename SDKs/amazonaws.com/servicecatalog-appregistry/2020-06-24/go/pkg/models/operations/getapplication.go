@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationPathParams struct {
-	//  The name, ID, or ARN of the application.
-	Application string `pathParam:"style=simple,explode=false,name=application"`
-}
-
-type GetApplicationHeaders struct {
+type GetApplicationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetApplicationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetApplicationRequest struct {
-	PathParams GetApplicationPathParams
-	Headers    GetApplicationHeaders
+	//  The name, ID, or ARN of the application.
+	Application string `pathParam:"style=simple,explode=false,name=application"`
 }
 
 type GetApplicationResponse struct {

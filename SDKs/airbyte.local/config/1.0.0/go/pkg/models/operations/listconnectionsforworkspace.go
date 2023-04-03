@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConnectionsForWorkspaceRequest struct {
-	Request shared.WorkspaceIDRequestBody `request:"mediaType=application/json"`
-}
-
 type ListConnectionsForWorkspaceResponse struct {
 	// Successful operation
 	ConnectionReadList *shared.ConnectionReadList

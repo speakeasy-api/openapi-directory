@@ -50,26 +50,18 @@ func (e *GETRebootClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRebootClusterQueryParams struct {
+type GETRebootClusterRequest struct {
 	Action GETRebootClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cluster identifier.
 	ClusterIdentifier string                      `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETRebootClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRebootClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRebootClusterRequest struct {
-	QueryParams GETRebootClusterQueryParams
-	Headers     GETRebootClusterHeaders
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRebootClusterResponse struct {

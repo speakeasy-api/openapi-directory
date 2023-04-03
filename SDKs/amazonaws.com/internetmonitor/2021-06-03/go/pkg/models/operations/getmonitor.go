@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMonitorPathParams struct {
+type GetMonitorRequest struct {
 	// The name of the monitor.
-	MonitorName string `pathParam:"style=simple,explode=false,name=MonitorName"`
-}
-
-type GetMonitorHeaders struct {
+	MonitorName       string  `pathParam:"style=simple,explode=false,name=MonitorName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetMonitorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMonitorRequest struct {
-	PathParams GetMonitorPathParams
-	Headers    GetMonitorHeaders
 }
 
 type GetMonitorResponse struct {

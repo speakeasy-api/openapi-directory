@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCollectionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListCollectionsXAmzTargetEnum
 type ListCollectionsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListCollectionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCollectionsHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListCollectionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListCollectionsRequest struct {
-	QueryParams ListCollectionsQueryParams
-	Headers     ListCollectionsHeaders
-	Request     shared.ListCollectionsRequest `request:"mediaType=application/json"`
+	ListCollectionsRequest shared.ListCollectionsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             ListCollectionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListCollectionsResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePermissionGroupPathParams struct {
+type UpdatePermissionGroupRequest struct {
+	UpdatePermissionGroupRequest shared.UpdatePermissionGroupRequest `request:"mediaType=application/json"`
 	// The identifier of the Permission Group.
 	PermissionGroupID int64 `pathParam:"style=simple,explode=false,name=permissionGroupId"`
-}
-
-type UpdatePermissionGroupRequest struct {
-	PathParams UpdatePermissionGroupPathParams
-	Request    shared.UpdatePermissionGroupRequest `request:"mediaType=application/json"`
 }
 
 type UpdatePermissionGroupResponse struct {

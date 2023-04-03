@@ -50,25 +50,17 @@ func (e *POSTCreateVerifiedAccessGroupVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTCreateVerifiedAccessGroupQueryParams struct {
-	Action  POSTCreateVerifiedAccessGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateVerifiedAccessGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateVerifiedAccessGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateVerifiedAccessGroupRequest struct {
-	QueryParams POSTCreateVerifiedAccessGroupQueryParams
-	Headers     POSTCreateVerifiedAccessGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateVerifiedAccessGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTCreateVerifiedAccessGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateVerifiedAccessGroupResponse struct {

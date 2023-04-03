@@ -50,7 +50,7 @@ func (e *GETAllocateIpamPoolCidrVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAllocateIpamPoolCidrQueryParams struct {
+type GETAllocateIpamPoolCidrRequest struct {
 	Action GETAllocateIpamPoolCidrActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The CIDR you would like to allocate from the IPAM pool. Note the following:</p> <ul> <li> <p>If there is no DefaultNetmaskLength allocation rule set on the pool, you must specify either the NetmaskLength or the CIDR.</p> </li> <li> <p>If the DefaultNetmaskLength allocation rule is set on the pool, you can specify either the NetmaskLength or the CIDR and the DefaultNetmaskLength allocation rule will be ignored.</p> </li> </ul> <p>Possible values: Any available IPv4 or IPv6 CIDR.</p>
 	Cidr *string `queryParam:"style=form,explode=true,name=Cidr"`
@@ -67,23 +67,15 @@ type GETAllocateIpamPoolCidrQueryParams struct {
 	// <p>The netmask length of the CIDR you would like to allocate from the IPAM pool. Note the following:</p> <ul> <li> <p>If there is no DefaultNetmaskLength allocation rule set on the pool, you must specify either the NetmaskLength or the CIDR.</p> </li> <li> <p>If the DefaultNetmaskLength allocation rule is set on the pool, you can specify either the NetmaskLength or the CIDR and the DefaultNetmaskLength allocation rule will be ignored.</p> </li> </ul> <p>Possible netmask lengths for IPv4 addresses are 0 - 32. Possible netmask lengths for IPv6 addresses are 0 - 128.</p>
 	NetmaskLength *int64 `queryParam:"style=form,explode=true,name=NetmaskLength"`
 	// A preview of the next available CIDR in a pool.
-	PreviewNextCidr *bool                              `queryParam:"style=form,explode=true,name=PreviewNextCidr"`
-	Version         GETAllocateIpamPoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAllocateIpamPoolCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAllocateIpamPoolCidrRequest struct {
-	QueryParams GETAllocateIpamPoolCidrQueryParams
-	Headers     GETAllocateIpamPoolCidrHeaders
+	PreviewNextCidr   *bool                              `queryParam:"style=form,explode=true,name=PreviewNextCidr"`
+	Version           GETAllocateIpamPoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAllocateIpamPoolCidrResponse struct {

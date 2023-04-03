@@ -8,12 +8,16 @@ import (
 	"time"
 )
 
-type ListJobRunsPathParams struct {
+type ListJobRunsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The ID of the application for which to list the job run.
 	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type ListJobRunsQueryParams struct {
 	// The lower bound of the option to filter by creation date and time.
 	CreatedAtAfter *time.Time `queryParam:"style=form,explode=true,name=createdAtAfter"`
 	// The upper bound of the option to filter by creation date and time.
@@ -24,22 +28,6 @@ type ListJobRunsQueryParams struct {
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 	// An optional filter for job run states. Note that if this filter contains multiple states, the resulting list will be grouped by the state.
 	States []shared.JobRunStateEnum `queryParam:"style=form,explode=true,name=states"`
-}
-
-type ListJobRunsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobRunsRequest struct {
-	PathParams  ListJobRunsPathParams
-	QueryParams ListJobRunsQueryParams
-	Headers     ListJobRunsHeaders
 }
 
 type ListJobRunsResponse struct {

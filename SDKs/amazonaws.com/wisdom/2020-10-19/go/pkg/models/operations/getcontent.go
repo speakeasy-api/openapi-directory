@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContentPathParams struct {
-	// The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
-	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
-}
-
-type GetContentHeaders struct {
+type GetContentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetContentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetContentRequest struct {
-	PathParams GetContentPathParams
-	Headers    GetContentHeaders
+	// The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
+	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
 }
 
 type GetContentResponse struct {

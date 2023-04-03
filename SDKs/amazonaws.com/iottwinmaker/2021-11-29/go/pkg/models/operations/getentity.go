@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEntityPathParams struct {
-	// The ID of the entity.
-	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
-	// The ID of the workspace.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type GetEntityHeaders struct {
+type GetEntityRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetEntityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEntityRequest struct {
-	PathParams GetEntityPathParams
-	Headers    GetEntityHeaders
+	// The ID of the entity.
+	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
+	// The ID of the workspace.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type GetEntityResponse struct {

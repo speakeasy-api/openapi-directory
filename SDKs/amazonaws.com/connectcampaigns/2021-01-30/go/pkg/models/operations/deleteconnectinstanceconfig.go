@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteConnectInstanceConfigPathParams struct {
-	ConnectInstanceID string `pathParam:"style=simple,explode=false,name=connectInstanceId"`
-}
-
-type DeleteConnectInstanceConfigHeaders struct {
+type DeleteConnectInstanceConfigRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -18,11 +14,7 @@ type DeleteConnectInstanceConfigHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteConnectInstanceConfigRequest struct {
-	PathParams DeleteConnectInstanceConfigPathParams
-	Headers    DeleteConnectInstanceConfigHeaders
+	ConnectInstanceID string  `pathParam:"style=simple,explode=false,name=connectInstanceId"`
 }
 
 type DeleteConnectInstanceConfigResponse struct {

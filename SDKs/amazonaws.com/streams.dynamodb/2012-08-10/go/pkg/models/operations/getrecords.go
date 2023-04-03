@@ -30,7 +30,8 @@ func (e *GetRecordsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRecordsHeaders struct {
+type GetRecordsRequest struct {
+	GetRecordsInput   shared.GetRecordsInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetRecordsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetRecordsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetRecordsRequest struct {
-	Headers GetRecordsHeaders
-	Request shared.GetRecordsInput `request:"mediaType=application/json"`
 }
 
 type GetRecordsResponse struct {

@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TokensForceDropsRepairSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TokensForceDropsRepairRequest struct {
-	Security TokensForceDropsRepairSecurity
-}
 
 // TokensForceDropsRepair200Wildcard - Look at the Response property for more information about the nature of this response
 type TokensForceDropsRepair200Wildcard struct {

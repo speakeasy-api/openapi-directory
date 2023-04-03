@@ -8,30 +8,6 @@ import (
 	"time"
 )
 
-type GetDevicePositionHistoryPathParams struct {
-	// The device whose position history you want to retrieve.
-	DeviceID string `pathParam:"style=simple,explode=false,name=DeviceId"`
-	// The tracker resource receiving the request for the device position history.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
-}
-
-type GetDevicePositionHistoryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetDevicePositionHistoryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetDevicePositionHistoryRequestBody struct {
 	// <p>Specify the end time for the position history in <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. By default, the value will be the time that the request is made.</p> <p>Requirement:</p> <ul> <li> <p>The time specified for <code>EndTimeExclusive</code> must be after the time for <code>StartTimeInclusive</code>.</p> </li> </ul>
 	EndTimeExclusive *time.Time `json:"EndTimeExclusive,omitempty"`
@@ -44,10 +20,22 @@ type GetDevicePositionHistoryRequestBody struct {
 }
 
 type GetDevicePositionHistoryRequest struct {
-	PathParams  GetDevicePositionHistoryPathParams
-	QueryParams GetDevicePositionHistoryQueryParams
-	Headers     GetDevicePositionHistoryHeaders
-	Request     GetDevicePositionHistoryRequestBody `request:"mediaType=application/json"`
+	// The device whose position history you want to retrieve.
+	DeviceID string `pathParam:"style=simple,explode=false,name=DeviceId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken   *string                             `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody GetDevicePositionHistoryRequestBody `request:"mediaType=application/json"`
+	// The tracker resource receiving the request for the device position history.
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetDevicePositionHistoryResponse struct {

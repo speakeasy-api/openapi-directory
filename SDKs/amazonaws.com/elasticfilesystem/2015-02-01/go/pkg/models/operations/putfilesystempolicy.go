@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutFileSystemPolicyPathParams struct {
-	// The ID of the EFS file system that you want to create or update the <code>FileSystemPolicy</code> for.
-	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type PutFileSystemPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutFileSystemPolicyRequestBody struct {
 	// (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout safety check. The lockout safety check determines whether the policy in the request will lock out, or prevent, the IAM principal that is making the request from making future <code>PutFileSystemPolicy</code> requests on this file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the IAM principal that is making the request from making subsequent <code>PutFileSystemPolicy</code> requests on this file system. The default value is <code>False</code>.
 	BypassPolicyLockoutSafetyCheck *bool `json:"BypassPolicyLockoutSafetyCheck,omitempty"`
@@ -30,9 +15,16 @@ type PutFileSystemPolicyRequestBody struct {
 }
 
 type PutFileSystemPolicyRequest struct {
-	PathParams PutFileSystemPolicyPathParams
-	Headers    PutFileSystemPolicyHeaders
-	Request    PutFileSystemPolicyRequestBody `request:"mediaType=application/json"`
+	// The ID of the EFS file system that you want to create or update the <code>FileSystemPolicy</code> for.
+	FileSystemID      string                         `pathParam:"style=simple,explode=false,name=FileSystemId"`
+	RequestBody       PutFileSystemPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutFileSystemPolicyResponse struct {

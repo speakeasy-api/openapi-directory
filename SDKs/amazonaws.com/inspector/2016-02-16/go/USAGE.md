@@ -13,49 +13,41 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddAttributesToFindingsRequest{
-        Headers: operations.AddAttributesToFindingsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "InspectorService.AddAttributesToFindings",
-        },
-        Request: shared.AddAttributesToFindingsRequest{
+        AddAttributesToFindingsRequest: shared.AddAttributesToFindingsRequest{
             Attributes: []shared.Attribute{
                 shared.Attribute{
-                    Key: "vel",
-                    Value: "error",
+                    Key: "provident",
+                    Value: "distinctio",
                 },
                 shared.Attribute{
-                    Key: "deserunt",
-                    Value: "suscipit",
+                    Key: "quibusdam",
+                    Value: "unde",
                 },
                 shared.Attribute{
-                    Key: "iure",
-                    Value: "magnam",
-                },
-                shared.Attribute{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
             },
             FindingArns: []string{
-                "tempora",
+                "vel",
+                "error",
+                "deserunt",
                 "suscipit",
-                "molestiae",
-                "minus",
             },
         },
+        XAmzAlgorithm: "iure",
+        XAmzContentSha256: "magnam",
+        XAmzCredential: "debitis",
+        XAmzDate: "ipsa",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "tempora",
+        XAmzSignedHeaders: "suscipit",
+        XAmzTarget: "InspectorService.AddAttributesToFindings",
     }
 
     ctx := context.Background()

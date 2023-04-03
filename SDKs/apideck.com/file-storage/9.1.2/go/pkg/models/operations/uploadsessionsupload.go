@@ -12,39 +12,25 @@ var UploadSessionsUploadServerList = []string{
 }
 
 type UploadSessionsUploadSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type UploadSessionsUploadPathParams struct {
+type UploadSessionsUploadRequest struct {
+	RequestBody []byte `request:"mediaType=*/*"`
+	// The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest)
+	Digest *string `header:"style=simple,explode=false,name=digest"`
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UploadSessionsUploadQueryParams struct {
 	// Part number of the file part being uploaded.
 	PartNumber float64 `queryParam:"style=form,explode=true,name=part_number"`
 	// Include raw response. Mostly used for debugging purposes
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type UploadSessionsUploadHeaders struct {
-	// The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest)
-	Digest *string `header:"style=simple,explode=false,name=digest"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type UploadSessionsUploadRequest struct {
-	PathParams  UploadSessionsUploadPathParams
-	QueryParams UploadSessionsUploadQueryParams
-	Headers     UploadSessionsUploadHeaders
-	Request     []byte `request:"mediaType=*/*"`
-	Security    UploadSessionsUploadSecurity
-	ServerURL   *string
 }
 
 type UploadSessionsUploadResponse struct {

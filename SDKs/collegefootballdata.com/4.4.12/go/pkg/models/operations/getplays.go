@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlaysQueryParams struct {
+type GetPlaysRequest struct {
 	// Division classification filter (fbs/fcs/ii/iii)
 	Classification *string `queryParam:"style=form,explode=true,name=classification"`
 	// Conference filter
@@ -30,10 +30,6 @@ type GetPlaysQueryParams struct {
 	Week int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPlaysRequest struct {
-	QueryParams GetPlaysQueryParams
 }
 
 type GetPlaysResponse struct {

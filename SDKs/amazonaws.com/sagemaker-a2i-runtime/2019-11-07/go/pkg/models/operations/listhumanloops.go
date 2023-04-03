@@ -34,7 +34,7 @@ func (e *ListHumanLoopsSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListHumanLoopsQueryParams struct {
+type ListHumanLoopsRequest struct {
 	// (Optional) The timestamp of the date when you want the human loops to begin in ISO 8601 format. For example, <code>2020-02-24</code>.
 	CreationTimeAfter *time.Time `queryParam:"style=form,explode=true,name=CreationTimeAfter"`
 	// (Optional) The timestamp of the date before which you want the human loops to begin in ISO 8601 format. For example, <code>2020-02-24</code>.
@@ -46,22 +46,14 @@ type ListHumanLoopsQueryParams struct {
 	// A token to display the next page of results.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// Optional. The order for displaying results. Valid values: <code>Ascending</code> and <code>Descending</code>.
-	SortOrder *ListHumanLoopsSortOrderEnum `queryParam:"style=form,explode=true,name=SortOrder"`
-}
-
-type ListHumanLoopsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListHumanLoopsRequest struct {
-	QueryParams ListHumanLoopsQueryParams
-	Headers     ListHumanLoopsHeaders
+	SortOrder         *ListHumanLoopsSortOrderEnum `queryParam:"style=form,explode=true,name=SortOrder"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListHumanLoopsResponse struct {

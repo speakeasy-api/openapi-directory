@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeTimeSeriesQueryParams struct {
-	// The alias that identifies the time series.
-	Alias *string `queryParam:"style=form,explode=true,name=alias"`
-	// The ID of the asset in which the asset property was created.
-	AssetID *string `queryParam:"style=form,explode=true,name=assetId"`
-	// The ID of the asset property.
-	PropertyID *string `queryParam:"style=form,explode=true,name=propertyId"`
-}
-
-type DescribeTimeSeriesHeaders struct {
+type DescribeTimeSeriesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DescribeTimeSeriesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeTimeSeriesRequest struct {
-	QueryParams DescribeTimeSeriesQueryParams
-	Headers     DescribeTimeSeriesHeaders
+	// The alias that identifies the time series.
+	Alias *string `queryParam:"style=form,explode=true,name=alias"`
+	// The ID of the asset in which the asset property was created.
+	AssetID *string `queryParam:"style=form,explode=true,name=assetId"`
+	// The ID of the asset property.
+	PropertyID *string `queryParam:"style=form,explode=true,name=propertyId"`
 }
 
 type DescribeTimeSeriesResponse struct {

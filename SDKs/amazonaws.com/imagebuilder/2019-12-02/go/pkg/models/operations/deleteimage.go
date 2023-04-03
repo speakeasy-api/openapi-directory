@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteImageQueryParams struct {
-	// The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
-	ImageBuildVersionArn string `queryParam:"style=form,explode=true,name=imageBuildVersionArn"`
-}
-
-type DeleteImageHeaders struct {
+type DeleteImageRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteImageHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteImageRequest struct {
-	QueryParams DeleteImageQueryParams
-	Headers     DeleteImageHeaders
+	// The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
+	ImageBuildVersionArn string `queryParam:"style=form,explode=true,name=imageBuildVersionArn"`
 }
 
 type DeleteImageResponse struct {

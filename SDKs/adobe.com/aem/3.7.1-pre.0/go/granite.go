@@ -36,7 +36,7 @@ func (s *granite) SslSetup(ctx context.Context, request operations.SslSetupReque
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libs/granite/security/post/sslSetup.html"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *granite) SslSetup(ctx context.Context, request operations.SslSetupReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

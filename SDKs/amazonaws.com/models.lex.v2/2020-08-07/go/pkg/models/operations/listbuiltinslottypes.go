@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBuiltInSlotTypesPathParams struct {
-	// The identifier of the language and locale of the slot types to list. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type ListBuiltInSlotTypesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListBuiltInSlotTypesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListBuiltInSlotTypesRequestBodySortBy - Specifies attributes for sorting a list of built-in slot types.
 type ListBuiltInSlotTypesRequestBodySortBy struct {
 	Attribute *shared.BuiltInSlotTypeSortAttributeEnum `json:"attribute,omitempty"`
@@ -45,10 +23,20 @@ type ListBuiltInSlotTypesRequestBody struct {
 }
 
 type ListBuiltInSlotTypesRequest struct {
-	PathParams  ListBuiltInSlotTypesPathParams
-	QueryParams ListBuiltInSlotTypesQueryParams
-	Headers     ListBuiltInSlotTypesHeaders
-	Request     ListBuiltInSlotTypesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListBuiltInSlotTypesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the language and locale of the slot types to list. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBuiltInSlotTypesResponse struct {

@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConfigurationSetSuppressionOptionsPathParams struct {
-	// The name of the configuration set to change the suppression list preferences for.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type PutConfigurationSetSuppressionOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutConfigurationSetSuppressionOptionsRequestBody struct {
 	// <p>A list that contains the reasons that email addresses are automatically added to the suppression list for your account. This list can contain any or all of the following:</p> <ul> <li> <p> <code>COMPLAINT</code> – Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a complaint.</p> </li> <li> <p> <code>BOUNCE</code> – Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a hard bounce.</p> </li> </ul>
 	SuppressedReasons []shared.SuppressionListReasonEnum `json:"SuppressedReasons,omitempty"`
 }
 
 type PutConfigurationSetSuppressionOptionsRequest struct {
-	PathParams PutConfigurationSetSuppressionOptionsPathParams
-	Headers    PutConfigurationSetSuppressionOptionsHeaders
-	Request    PutConfigurationSetSuppressionOptionsRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set to change the suppression list preferences for.
+	ConfigurationSetName string                                           `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	RequestBody          PutConfigurationSetSuppressionOptionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutConfigurationSetSuppressionOptionsResponse struct {

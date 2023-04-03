@@ -13,28 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETAddSourceIdentifierToSubscriptionRequest{
-        QueryParams: operations.GETAddSourceIdentifierToSubscriptionQueryParams{
-            Action: "AddSourceIdentifierToSubscription",
-            SourceIdentifier: "corrupti",
-            SubscriptionName: "provident",
-            Version: "2013-01-10",
-        },
-        Headers: operations.GETAddSourceIdentifierToSubscriptionHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
+        Action: "AddSourceIdentifierToSubscription",
+        SourceIdentifier: "corrupti",
+        SubscriptionName: "provident",
+        Version: "2013-01-10",
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
     }
 
     ctx := context.Background()

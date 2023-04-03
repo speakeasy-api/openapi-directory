@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProtectedQueriesPathParams struct {
-	// The identifier for the membership in the collaboration.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
 // ListProtectedQueriesStatusEnum - A filter on the status of the protected query.
 type ListProtectedQueriesStatusEnum string
 
@@ -53,16 +48,7 @@ func (e *ListProtectedQueriesStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListProtectedQueriesQueryParams struct {
-	// The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service can return a nextToken even if the maximum results has not been met.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token value retrieved from a previous call to access the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// A filter on the status of the protected query.
-	Status *ListProtectedQueriesStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListProtectedQueriesHeaders struct {
+type ListProtectedQueriesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -70,12 +56,14 @@ type ListProtectedQueriesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProtectedQueriesRequest struct {
-	PathParams  ListProtectedQueriesPathParams
-	QueryParams ListProtectedQueriesQueryParams
-	Headers     ListProtectedQueriesHeaders
+	// The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service can return a nextToken even if the maximum results has not been met.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The identifier for the membership in the collaboration.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
+	// The token value retrieved from a previous call to access the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// A filter on the status of the protected query.
+	Status *ListProtectedQueriesStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListProtectedQueriesResponse struct {

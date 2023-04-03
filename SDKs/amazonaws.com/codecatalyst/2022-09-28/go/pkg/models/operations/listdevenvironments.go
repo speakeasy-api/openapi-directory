@@ -7,20 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDevEnvironmentsPathParams struct {
-	// The name of the project in the space.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type ListDevEnvironmentsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListDevEnvironmentsRequestBody struct {
 	// Information about filters to apply to narrow the results returned in the list.
 	Filters []shared.Filter `json:"filters,omitempty"`
@@ -31,9 +17,15 @@ type ListDevEnvironmentsRequestBody struct {
 }
 
 type ListDevEnvironmentsRequest struct {
-	PathParams  ListDevEnvironmentsPathParams
-	QueryParams ListDevEnvironmentsQueryParams
-	Request     ListDevEnvironmentsRequestBody `request:"mediaType=application/json"`
+	RequestBody ListDevEnvironmentsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name of the project in the space.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type ListDevEnvironmentsResponse struct {

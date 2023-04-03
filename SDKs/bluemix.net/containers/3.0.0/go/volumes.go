@@ -36,14 +36,14 @@ func newVolumes(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete a volume with a given name from a space (corresponding IBM Containers command: `cf ic volume rm VOLNAME`). To delete a volume, all mounted containers must be unmounted first. After the volume is deleted, the data that are stored in the volume are lost.
 func (s *volumes) DeleteVolumesName(ctx context.Context, request operations.DeleteVolumesNameRequest) (*operations.DeleteVolumesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -87,7 +87,7 @@ func (s *volumes) GetVolumesJSON(ctx context.Context, request operations.GetVolu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -130,14 +130,14 @@ func (s *volumes) GetVolumesJSON(ctx context.Context, request operations.GetVolu
 // Retrieve a detailed list of information about a volume that is identified by the volume name (corresponding IBM Containers command: `cf ic volume inspect VOLNAME`).
 func (s *volumes) GetVolumesNameJSON(ctx context.Context, request operations.GetVolumesNameJSONRequest) (*operations.GetVolumesNameJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{name}/json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/{name}/json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -193,9 +193,9 @@ func (s *volumes) PostVolumesCreate(ctx context.Context, request operations.Post
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,9 +244,9 @@ func (s *volumes) PostVolumesCreate(ctx context.Context, request operations.Post
 // This endpoint provisions an existing volume that was created in one space to another space within the same organization. Single containers and container groups in each space can read and write to the shared volume. The volume remains owned by the original space it was created in, including management and billing. For example, the volume can be deleted from the original space only.
 func (s *volumes) PostVolumesName(ctx context.Context, request operations.PostVolumesNameRequest) (*operations.PostVolumesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateVolume", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,7 +261,7 @@ func (s *volumes) PostVolumesName(ctx context.Context, request operations.PostVo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

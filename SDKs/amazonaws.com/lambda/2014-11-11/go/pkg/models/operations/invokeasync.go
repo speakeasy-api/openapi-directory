@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvokeAsyncPathParams struct {
-	// The Lambda function name.
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type InvokeAsyncHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type InvokeAsyncRequestBody struct {
 	// JSON that you want to provide to your Lambda function as input.
 	InvokeArgs string `json:"InvokeArgs"`
 }
 
 type InvokeAsyncRequest struct {
-	PathParams InvokeAsyncPathParams
-	Headers    InvokeAsyncHeaders
-	Request    InvokeAsyncRequestBody `request:"mediaType=application/json"`
+	// The Lambda function name.
+	FunctionName      string                 `pathParam:"style=simple,explode=false,name=FunctionName"`
+	RequestBody       InvokeAsyncRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type InvokeAsyncResponse struct {

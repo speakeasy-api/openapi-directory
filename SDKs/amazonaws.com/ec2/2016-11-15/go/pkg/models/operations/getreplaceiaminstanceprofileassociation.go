@@ -56,28 +56,20 @@ func (e *GETReplaceIamInstanceProfileAssociationVersionEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETReplaceIamInstanceProfileAssociationQueryParams struct {
+type GETReplaceIamInstanceProfileAssociationRequest struct {
 	Action GETReplaceIamInstanceProfileAssociationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the existing IAM instance profile association.
 	AssociationID string `queryParam:"style=form,explode=true,name=AssociationId"`
 	// The IAM instance profile.
 	IamInstanceProfile GETReplaceIamInstanceProfileAssociationIamInstanceProfile `queryParam:"style=form,explode=true,name=IamInstanceProfile"`
 	Version            GETReplaceIamInstanceProfileAssociationVersionEnum        `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReplaceIamInstanceProfileAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReplaceIamInstanceProfileAssociationRequest struct {
-	QueryParams GETReplaceIamInstanceProfileAssociationQueryParams
-	Headers     GETReplaceIamInstanceProfileAssociationHeaders
+	XAmzAlgorithm      *string                                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReplaceIamInstanceProfileAssociationResponse struct {

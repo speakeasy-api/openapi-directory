@@ -13,78 +13,61 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchGetRecordRequest{
-        Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.BatchGetRecordRequestBody{
+        RequestBody: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "vel",
+                    FeatureGroupName: "provident",
                     FeatureNames: []string{
-                        "deserunt",
-                        "suscipit",
-                        "iure",
+                        "quibusdam",
+                        "unde",
+                        "nulla",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "debitis",
-                        "ipsa",
+                        "illum",
+                        "vel",
+                        "error",
                     },
                 },
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "delectus",
+                    FeatureGroupName: "deserunt",
                     FeatureNames: []string{
-                        "suscipit",
-                        "molestiae",
+                        "iure",
+                        "magnam",
                     },
                     RecordIdentifiersValueAsString: []string{
+                        "ipsa",
+                        "delectus",
+                        "tempora",
+                        "suscipit",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "molestiae",
+                    FeatureNames: []string{
                         "placeat",
                         "voluptatum",
                         "iusto",
                         "excepturi",
                     },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "nisi",
-                    FeatureNames: []string{
+                    RecordIdentifiersValueAsString: []string{
+                        "recusandae",
                         "temporibus",
-                        "ab",
-                        "quis",
-                        "veritatis",
-                    },
-                    RecordIdentifiersValueAsString: []string{
-                        "perferendis",
-                        "ipsam",
-                        "repellendus",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "sapiente",
-                    FeatureNames: []string{
-                        "odit",
-                        "at",
-                        "at",
-                        "maiores",
-                    },
-                    RecordIdentifiersValueAsString: []string{
-                        "quod",
-                        "quod",
                     },
                 },
             },
         },
+        XAmzAlgorithm: "ab",
+        XAmzContentSha256: "quis",
+        XAmzCredential: "veritatis",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "perferendis",
+        XAmzSignature: "ipsam",
+        XAmzSignedHeaders: "repellendus",
     }
 
     ctx := context.Background()

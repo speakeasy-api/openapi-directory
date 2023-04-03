@@ -13,20 +13,15 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetCertificatePdfRequest{
-        Security: operations.GetCertificatePdfSecurity{
-            CertAuth: shared.SchemeCertAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        Request: shared.CertificateRequest{
-            BeneficiaryID: "corrupti",
-            Mobile: "(786) 858-4663 x4280",
-        },
+    req := shared.CertificateRequest{
+        BeneficiaryID: "corrupti",
+        Mobile: "(786) 858-4663 x4280",
     }
 
     ctx := context.Background()
-    res, err := s.Certificate.GetCertificatePdf(ctx, req)
+    res, err := s.Certificate.GetCertificatePdf(ctx, req, operations.GetCertificatePdfSecurity{
+        CertAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

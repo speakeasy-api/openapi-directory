@@ -50,28 +50,20 @@ func (e *GETBatchDeleteScheduledActionVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETBatchDeleteScheduledActionQueryParams struct {
+type GETBatchDeleteScheduledActionRequest struct {
 	Action GETBatchDeleteScheduledActionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The names of the scheduled actions to delete. The maximum number allowed is 50.
 	ScheduledActionNames []string                                 `queryParam:"style=form,explode=true,name=ScheduledActionNames"`
 	Version              GETBatchDeleteScheduledActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETBatchDeleteScheduledActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETBatchDeleteScheduledActionRequest struct {
-	QueryParams GETBatchDeleteScheduledActionQueryParams
-	Headers     GETBatchDeleteScheduledActionHeaders
+	XAmzAlgorithm        *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETBatchDeleteScheduledActionResponse struct {

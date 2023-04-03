@@ -51,7 +51,7 @@ func (e *GETDescribeStackResourceDriftsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDescribeStackResourceDriftsQueryParams struct {
+type GETDescribeStackResourceDriftsRequest struct {
 	Action GETDescribeStackResourceDriftsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The maximum number of results to be returned with a single call. If the number of available results exceeds this maximum, the response includes a <code>NextToken</code> value that you can assign to the <code>NextToken</code> request parameter to get the next set of results.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
@@ -62,21 +62,13 @@ type GETDescribeStackResourceDriftsQueryParams struct {
 	// <p>The resource drift status values to use as filters for the resource drift results returned.</p> <ul> <li> <p> <code>DELETED</code>: The resource differs from its expected template configuration in that the resource has been deleted.</p> </li> <li> <p> <code>MODIFIED</code>: One or more resource properties differ from their expected template values.</p> </li> <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.</p> </li> <li> <p> <code>NOT_CHECKED</code>: CloudFormation doesn't currently return this value.</p> </li> </ul>
 	StackResourceDriftStatusFilters []shared.StackResourceDriftStatusEnum     `queryParam:"style=form,explode=true,name=StackResourceDriftStatusFilters"`
 	Version                         GETDescribeStackResourceDriftsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeStackResourceDriftsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeStackResourceDriftsRequest struct {
-	QueryParams GETDescribeStackResourceDriftsQueryParams
-	Headers     GETDescribeStackResourceDriftsHeaders
+	XAmzAlgorithm                   *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeStackResourceDriftsResponse struct {

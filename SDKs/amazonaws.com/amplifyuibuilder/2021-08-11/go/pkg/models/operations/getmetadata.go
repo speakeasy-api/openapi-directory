@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMetadataPathParams struct {
-	// The unique ID of the Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type GetMetadataHeaders struct {
+type GetMetadataRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetMetadataHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMetadataRequest struct {
-	PathParams GetMetadataPathParams
-	Headers    GetMetadataHeaders
+	// The unique ID of the Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment that is part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
 }
 
 type GetMetadataResponse struct {

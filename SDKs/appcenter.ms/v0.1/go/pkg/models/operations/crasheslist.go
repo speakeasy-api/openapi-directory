@@ -11,16 +11,7 @@ import (
 )
 
 type CrashesListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CrashesListPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// id of a specific group
-	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // CrashesListErrorTypeEnum
@@ -47,22 +38,22 @@ func (e *CrashesListErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CrashesListQueryParams struct {
+type CrashesListRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// version
-	AppVersion *string                   `queryParam:"style=form,explode=true,name=app_version"`
-	DateFrom   *time.Time                `queryParam:"style=form,explode=true,name=date_from"`
-	DateTo     *time.Time                `queryParam:"style=form,explode=true,name=date_to"`
-	ErrorType  *CrashesListErrorTypeEnum `queryParam:"style=form,explode=true,name=error_type"`
+	AppVersion *string `queryParam:"style=form,explode=true,name=app_version"`
+	// id of a specific group
+	CrashGroupID string                    `pathParam:"style=simple,explode=false,name=crash_group_id"`
+	DateFrom     *time.Time                `queryParam:"style=form,explode=true,name=date_from"`
+	DateTo       *time.Time                `queryParam:"style=form,explode=true,name=date_to"`
+	ErrorType    *CrashesListErrorTypeEnum `queryParam:"style=form,explode=true,name=error_type"`
 	// true if the crash should include the custom log report. Default is false
 	IncludeLog *bool `queryParam:"style=form,explode=true,name=include_log"`
 	// true if the crash should include the raw crash report. Default is false
 	IncludeReport *bool `queryParam:"style=form,explode=true,name=include_report"`
-}
-
-type CrashesListRequest struct {
-	PathParams  CrashesListPathParams
-	QueryParams CrashesListQueryParams
-	Security    CrashesListSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CrashesListDefaultApplicationJSON - Error

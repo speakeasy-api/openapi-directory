@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFunctionsByCodeSigningConfigPathParams struct {
+type ListFunctionsByCodeSigningConfigRequest struct {
 	// The The Amazon Resource Name (ARN) of the code signing configuration.
 	CodeSigningConfigArn string `pathParam:"style=simple,explode=false,name=CodeSigningConfigArn"`
-}
-
-type ListFunctionsByCodeSigningConfigQueryParams struct {
 	// Specify the pagination token that's returned by a previous request to retrieve the next page of results.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Maximum number of items to return.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListFunctionsByCodeSigningConfigHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListFunctionsByCodeSigningConfigHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListFunctionsByCodeSigningConfigRequest struct {
-	PathParams  ListFunctionsByCodeSigningConfigPathParams
-	QueryParams ListFunctionsByCodeSigningConfigQueryParams
-	Headers     ListFunctionsByCodeSigningConfigHeaders
 }
 
 type ListFunctionsByCodeSigningConfigResponse struct {

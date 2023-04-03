@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArtifactOwnerPathParams struct {
+type GetArtifactOwnerRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GetArtifactOwnerRequest struct {
-	PathParams GetArtifactOwnerPathParams
 }
 
 type GetArtifactOwnerResponse struct {

@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AttachTypedLinkHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The Amazon Resource Name (ARN) of the directory where you want to attach the typed link.
-	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
 // AttachTypedLinkRequestBodySourceObjectReference - The reference that identifies an object.
 type AttachTypedLinkRequestBodySourceObjectReference struct {
 	Selector *string `json:"Selector,omitempty"`
@@ -47,8 +35,16 @@ type AttachTypedLinkRequestBody struct {
 }
 
 type AttachTypedLinkRequest struct {
-	Headers AttachTypedLinkHeaders
-	Request AttachTypedLinkRequestBody `request:"mediaType=application/json"`
+	RequestBody       AttachTypedLinkRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) of the directory where you want to attach the typed link.
+	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
 }
 
 type AttachTypedLinkResponse struct {

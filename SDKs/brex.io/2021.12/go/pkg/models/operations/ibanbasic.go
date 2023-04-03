@@ -4,23 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type IbanBasicSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // IbanBasicRequestBody - IBAN number
 type IbanBasicRequestBody struct {
 	// IBAN number to validate
 	IbanNumber string `form:"name=ibanNumber"`
-}
-
-type IbanBasicRequest struct {
-	// IBAN number
-	Request  IbanBasicRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security IbanBasicSecurity
 }
 
 // IbanBasicDefaultApplicationJSON - Detailed information about the error

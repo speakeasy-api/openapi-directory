@@ -50,7 +50,7 @@ func (e *GETModifyGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyGlobalClusterQueryParams struct {
+type GETModifyGlobalClusterRequest struct {
 	Action GETModifyGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>A value that indicates whether major version upgrades are allowed.</p> <p>Constraints: You must allow major version upgrades when specifying a value for the <code>EngineVersion</code> parameter that is a different major version than the DB cluster's current version.</p> <p>If you upgrade the major version of a global database, the cluster and DB instance parameter groups are set to the default parameter groups for the new version. Apply any custom parameter groups after completing the upgrade.</p>
 	AllowMajorVersionUpgrade *bool `queryParam:"style=form,explode=true,name=AllowMajorVersionUpgrade"`
@@ -63,21 +63,13 @@ type GETModifyGlobalClusterQueryParams struct {
 	// <p>The new cluster identifier for the global database cluster when modifying a global database cluster. This value is stored as a lowercase string.</p> <p>Constraints:</p> <ul> <li> <p>Must contain from 1 to 63 letters, numbers, or hyphens</p> </li> <li> <p>The first character must be a letter</p> </li> <li> <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul> <p>Example: <code>my-cluster2</code> </p>
 	NewGlobalClusterIdentifier *string                           `queryParam:"style=form,explode=true,name=NewGlobalClusterIdentifier"`
 	Version                    GETModifyGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyGlobalClusterRequest struct {
-	QueryParams GETModifyGlobalClusterQueryParams
-	Headers     GETModifyGlobalClusterHeaders
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyGlobalClusterResponse struct {

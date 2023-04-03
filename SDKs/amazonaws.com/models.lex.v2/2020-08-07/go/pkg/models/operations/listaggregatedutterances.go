@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAggregatedUtterancesPathParams struct {
-	// The unique identifier of the bot associated with this request.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type ListAggregatedUtterancesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAggregatedUtterancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListAggregatedUtterancesRequestBodyAggregationDuration - Provides parameters for setting the time window and duration for aggregating utterance data.
 type ListAggregatedUtterancesRequestBodyAggregationDuration struct {
 	RelativeAggregationDuration *shared.RelativeAggregationDuration `json:"relativeAggregationDuration,omitempty"`
@@ -60,10 +38,20 @@ type ListAggregatedUtterancesRequestBody struct {
 }
 
 type ListAggregatedUtterancesRequest struct {
-	PathParams  ListAggregatedUtterancesPathParams
-	QueryParams ListAggregatedUtterancesQueryParams
-	Headers     ListAggregatedUtterancesHeaders
-	Request     ListAggregatedUtterancesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListAggregatedUtterancesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the bot associated with this request.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAggregatedUtterancesResponse struct {

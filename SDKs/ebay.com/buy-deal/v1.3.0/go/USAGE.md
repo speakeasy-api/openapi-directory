@@ -14,25 +14,18 @@ func main() {
     s := sdk.New()
 
     req := operations.GetDealItemsRequest{
-        Security: operations.GetDealItemsSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetDealItemsQueryParams{
-            CategoryIds: "corrupti",
-            Commissionable: "provident",
-            DeliveryCountry: "distinctio",
-            Limit: "quibusdam",
-            Offset: "unde",
-        },
-        Headers: operations.GetDealItemsHeaders{
-            XEbayCMarketplaceID: "nulla",
-        },
+        XEbayCMarketplaceID: "corrupti",
+        CategoryIds: "provident",
+        Commissionable: "distinctio",
+        DeliveryCountry: "quibusdam",
+        Limit: "unde",
+        Offset: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.DealItem.GetDealItems(ctx, req)
+    res, err := s.DealItem.GetDealItems(ctx, req, operations.GetDealItemsSecurity{
+        APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

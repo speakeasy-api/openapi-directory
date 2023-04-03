@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Nncer - Non-Encumbrance Certificate
 // API to verify Non-Encumbrance Certificate.
-func (s *apIs) Nncer(ctx context.Context, request operations.NncerRequest) (*operations.NncerResponse, error) {
+func (s *apIs) Nncer(ctx context.Context, request operations.NncerRequestBody, security operations.NncerSecurity) (*operations.NncerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nncer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Nncer(ctx context.Context, request operations.NncerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

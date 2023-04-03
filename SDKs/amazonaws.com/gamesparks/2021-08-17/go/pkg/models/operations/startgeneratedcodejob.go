@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartGeneratedCodeJobPathParams struct {
-	// The name of the game.
-	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-	// The identifier of the snapshot for which to generate code.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=SnapshotId"`
-}
-
-type StartGeneratedCodeJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartGeneratedCodeJobRequestBodyGenerator - Properties that specify the code generator for a generated code job.
 type StartGeneratedCodeJobRequestBodyGenerator struct {
 	GameSDKVersion *string `json:"GameSdkVersion,omitempty"`
@@ -37,9 +20,18 @@ type StartGeneratedCodeJobRequestBody struct {
 }
 
 type StartGeneratedCodeJobRequest struct {
-	PathParams StartGeneratedCodeJobPathParams
-	Headers    StartGeneratedCodeJobHeaders
-	Request    StartGeneratedCodeJobRequestBody `request:"mediaType=application/json"`
+	// The name of the game.
+	GameName    string                           `pathParam:"style=simple,explode=false,name=GameName"`
+	RequestBody StartGeneratedCodeJobRequestBody `request:"mediaType=application/json"`
+	// The identifier of the snapshot for which to generate code.
+	SnapshotID        string  `pathParam:"style=simple,explode=false,name=SnapshotId"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type StartGeneratedCodeJobResponse struct {

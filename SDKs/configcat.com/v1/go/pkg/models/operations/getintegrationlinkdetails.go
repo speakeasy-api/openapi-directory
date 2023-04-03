@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIntegrationLinkDetailsPathParams struct {
+type GetIntegrationLinkDetailsRequest struct {
 	// The integration link's type.
 	IntegrationLinkType shared.IntegrationLinkTypeEnum `pathParam:"style=simple,explode=false,name=integrationLinkType"`
 	// The key of the integration link.
 	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type GetIntegrationLinkDetailsRequest struct {
-	PathParams GetIntegrationLinkDetailsPathParams
 }
 
 type GetIntegrationLinkDetailsResponse struct {

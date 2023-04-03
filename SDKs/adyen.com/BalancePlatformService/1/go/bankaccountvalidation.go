@@ -34,7 +34,7 @@ func newBankAccountValidation(defaultClient, securityClient HTTPClient, serverUR
 
 // PostValidateBankAccountIdentification - Validate a bank account
 // Validates bank account identification details. You can use this endpoint to validate bank account details before you [make a transfer](https://docs.adyen.com/api-explorer/transfers/latest/post/transfers) or [create a transfer instrument](https://docs.adyen.com/api-explorer/legalentity/latest/post/transferInstruments).
-func (s *bankAccountValidation) PostValidateBankAccountIdentification(ctx context.Context, request operations.PostValidateBankAccountIdentificationRequest) (*operations.PostValidateBankAccountIdentificationResponse, error) {
+func (s *bankAccountValidation) PostValidateBankAccountIdentification(ctx context.Context, request shared.BankAccountIdentificationValidationRequest, security operations.PostValidateBankAccountIdentificationSecurity) (*operations.PostValidateBankAccountIdentificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/validateBankAccountIdentification"
 
@@ -50,7 +50,7 @@ func (s *bankAccountValidation) PostValidateBankAccountIdentification(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

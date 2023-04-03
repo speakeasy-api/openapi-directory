@@ -8,18 +8,13 @@ import (
 )
 
 type DeleteDocumentsIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDocumentsIDPathParams struct {
-	// The unique identifier of the document to be deleted.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type DeleteDocumentsIDRequest struct {
-	PathParams DeleteDocumentsIDPathParams
-	Security   DeleteDocumentsIDSecurity
+	// The unique identifier of the document to be deleted.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteDocumentsIDResponse struct {

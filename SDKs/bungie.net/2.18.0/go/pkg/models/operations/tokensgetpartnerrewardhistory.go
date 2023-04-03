@@ -8,19 +8,14 @@ import (
 )
 
 type TokensGetPartnerRewardHistorySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TokensGetPartnerRewardHistoryPathParams struct {
+type TokensGetPartnerRewardHistoryRequest struct {
 	// The partner application identifier.
 	PartnerApplicationID int `pathParam:"style=simple,explode=false,name=partnerApplicationId"`
 	// The bungie.net user to return reward history for.
 	TargetBnetMembershipID int64 `pathParam:"style=simple,explode=false,name=targetBnetMembershipId"`
-}
-
-type TokensGetPartnerRewardHistoryRequest struct {
-	PathParams TokensGetPartnerRewardHistoryPathParams
-	Security   TokensGetPartnerRewardHistorySecurity
 }
 
 // TokensGetPartnerRewardHistory200Wildcard - Look at the Response property for more information about the nature of this response

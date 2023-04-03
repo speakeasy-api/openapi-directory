@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSubsitePathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type CreateSubsiteQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type CreateSubsiteRequest struct {
-	PathParams  CreateSubsitePathParams
-	QueryParams CreateSubsiteQueryParams
 	// Add subsite request
-	Request *shared.AddSubsiteRequest `request:"mediaType=application/json"`
+	AddSubsiteRequest *shared.AddSubsiteRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type CreateSubsiteResponse struct {

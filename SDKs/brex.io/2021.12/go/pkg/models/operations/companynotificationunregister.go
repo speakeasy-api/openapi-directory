@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyNotificationUnregisterSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyNotificationUnregisterPathParams struct {
-	// Registration id of monitoring request record
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type CompanyNotificationUnregisterRequest struct {
-	PathParams CompanyNotificationUnregisterPathParams
-	Security   CompanyNotificationUnregisterSecurity
+	// Registration id of monitoring request record
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // CompanyNotificationUnregisterDefaultApplicationJSON - Detailed information about the error

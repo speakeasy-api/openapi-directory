@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteVpcLinkPathParams struct {
-	// The ID of the VPC link.
-	VpcLinkID string `pathParam:"style=simple,explode=false,name=vpcLinkId"`
-}
-
-type DeleteVpcLinkHeaders struct {
+type DeleteVpcLinkRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteVpcLinkHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVpcLinkRequest struct {
-	PathParams DeleteVpcLinkPathParams
-	Headers    DeleteVpcLinkHeaders
+	// The ID of the VPC link.
+	VpcLinkID string `pathParam:"style=simple,explode=false,name=vpcLinkId"`
 }
 
 type DeleteVpcLinkResponse struct {

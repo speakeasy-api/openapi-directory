@@ -50,25 +50,17 @@ func (e *POSTDescribeFleetInstancesVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTDescribeFleetInstancesQueryParams struct {
-	Action  POSTDescribeFleetInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeFleetInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeFleetInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeFleetInstancesRequest struct {
-	QueryParams POSTDescribeFleetInstancesQueryParams
-	Headers     POSTDescribeFleetInstancesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeFleetInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTDescribeFleetInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeFleetInstancesResponse struct {

@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type VatCategoriesProcessVatRatesRequest struct {
-	// Array of Vat Rates.
-	Request []shared.VatRatesByVatCategoryDto `request:"mediaType=application/json"`
-}
 
 type VatCategoriesProcessVatRatesResponse struct {
 	ContentType string

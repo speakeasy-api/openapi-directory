@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlayerSeasonPPAQueryParams struct {
+type GetPlayerSeasonPPARequest struct {
 	// Conference abbreviation filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Filter to remove garbage time plays from calculations
@@ -22,10 +22,6 @@ type GetPlayerSeasonPPAQueryParams struct {
 	Threshold *string `queryParam:"style=form,explode=true,name=threshold"`
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPlayerSeasonPPARequest struct {
-	QueryParams GetPlayerSeasonPPAQueryParams
 }
 
 type GetPlayerSeasonPPAResponse struct {

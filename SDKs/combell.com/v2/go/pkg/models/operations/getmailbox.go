@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMailboxPathParams struct {
-	// Automatically added
-	MailboxName string `pathParam:"style=simple,explode=false,name=mailboxName"`
-}
-
-type GetMailboxQueryParams struct {
-	// Mailbox name.
-	MailboxName string `queryParam:"style=form,explode=true,name=mailbox_name"`
-}
-
 type GetMailboxRequest struct {
-	PathParams  GetMailboxPathParams
-	QueryParams GetMailboxQueryParams
+	// Automatically added
+	MailboxNamePathParameter string `pathParam:"style=simple,explode=false,name=mailboxName"`
+	// Mailbox name.
+	MailboxNameQueryParameter string `queryParam:"style=form,explode=true,name=mailbox_name"`
 }
 
 type GetMailboxResponse struct {

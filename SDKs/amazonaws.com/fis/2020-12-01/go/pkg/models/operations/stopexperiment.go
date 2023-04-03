@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopExperimentPathParams struct {
-	// The ID of the experiment.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StopExperimentHeaders struct {
+type StopExperimentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type StopExperimentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopExperimentRequest struct {
-	PathParams StopExperimentPathParams
-	Headers    StopExperimentHeaders
+	// The ID of the experiment.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StopExperimentResponse struct {

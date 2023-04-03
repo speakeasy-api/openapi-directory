@@ -50,30 +50,22 @@ func (e *GETListPolicyTagsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListPolicyTagsQueryParams struct {
+type GETListPolicyTagsRequest struct {
 	Action GETListPolicyTagsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the <code>Marker</code> element in the response that you received to indicate where the next call should start.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the <code>IsTruncated</code> response element is <code>true</code>.</p> <p>If you do not include this parameter, the number of items defaults to 100. Note that IAM might return fewer results, even when there are more results available. In that case, the <code>IsTruncated</code> response element returns <code>true</code>, and <code>Marker</code> contains a value to include in the subsequent call that tells the service where to continue from.</p>
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
 	// <p>The ARN of the IAM customer managed policy whose tags you want to see.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	PolicyArn string                       `queryParam:"style=form,explode=true,name=PolicyArn"`
-	Version   GETListPolicyTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListPolicyTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListPolicyTagsRequest struct {
-	QueryParams GETListPolicyTagsQueryParams
-	Headers     GETListPolicyTagsHeaders
+	PolicyArn         string                       `queryParam:"style=form,explode=true,name=PolicyArn"`
+	Version           GETListPolicyTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListPolicyTagsResponse struct {

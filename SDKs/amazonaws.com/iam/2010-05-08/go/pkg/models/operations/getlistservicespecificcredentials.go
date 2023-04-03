@@ -50,28 +50,20 @@ func (e *GETListServiceSpecificCredentialsVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETListServiceSpecificCredentialsQueryParams struct {
+type GETListServiceSpecificCredentialsRequest struct {
 	Action GETListServiceSpecificCredentialsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Filters the returned results to only those for the specified Amazon Web Services service. If not specified, then Amazon Web Services returns service-specific credentials for all services.
 	ServiceName *string `queryParam:"style=form,explode=true,name=ServiceName"`
 	// <p>The name of the user whose service-specific credentials you want information about. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                                      `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETListServiceSpecificCredentialsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListServiceSpecificCredentialsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListServiceSpecificCredentialsRequest struct {
-	QueryParams GETListServiceSpecificCredentialsQueryParams
-	Headers     GETListServiceSpecificCredentialsHeaders
+	UserName          *string                                      `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETListServiceSpecificCredentialsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListServiceSpecificCredentialsResponse struct {

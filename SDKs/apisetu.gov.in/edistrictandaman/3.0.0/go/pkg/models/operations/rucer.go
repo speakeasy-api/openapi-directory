@@ -10,8 +10,8 @@ import (
 )
 
 type RucerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type RucerRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type RucerRequestBody struct {
 	Format RucerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type RucerRequest struct {
-	// Request format
-	Request  *RucerRequestBody `request:"mediaType=application/json"`
-	Security RucerSecurity
 }
 
 type Rucer504ApplicationJSONErrorEnum string

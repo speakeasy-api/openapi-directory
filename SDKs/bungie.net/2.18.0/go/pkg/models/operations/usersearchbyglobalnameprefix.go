@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserSearchByGlobalNamePrefixPathParams struct {
+type UserSearchByGlobalNamePrefixRequest struct {
 	// The display name prefix you're looking for.
 	DisplayNamePrefix string `pathParam:"style=simple,explode=false,name=displayNamePrefix"`
 	// The zero-based page of results you desire.
 	Page int `pathParam:"style=simple,explode=false,name=page"`
-}
-
-type UserSearchByGlobalNamePrefixRequest struct {
-	PathParams UserSearchByGlobalNamePrefixPathParams
 }
 
 // UserSearchByGlobalNamePrefix200Wildcard - Look at the Response property for more information about the nature of this response

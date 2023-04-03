@@ -8,13 +8,8 @@ import (
 )
 
 type PostRequestSubjectErasureSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostRequestSubjectErasureRequest struct {
-	Request  *shared.SubjectErasureByPspReferenceRequest `request:"mediaType=application/json"`
-	Security PostRequestSubjectErasureSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostRequestSubjectErasureResponse struct {

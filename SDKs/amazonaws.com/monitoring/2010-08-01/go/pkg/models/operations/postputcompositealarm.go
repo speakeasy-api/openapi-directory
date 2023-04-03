@@ -50,25 +50,17 @@ func (e *POSTPutCompositeAlarmVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTPutCompositeAlarmQueryParams struct {
-	Action  POSTPutCompositeAlarmActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTPutCompositeAlarmVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTPutCompositeAlarmHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTPutCompositeAlarmRequest struct {
-	QueryParams POSTPutCompositeAlarmQueryParams
-	Headers     POSTPutCompositeAlarmHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTPutCompositeAlarmActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                           `request:"mediaType=text/xml"`
+	Version           POSTPutCompositeAlarmVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTPutCompositeAlarmResponse struct {

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateJobTemplatePathParams struct {
-	// A unique identifier for the job template. We recommend using a UUID. Alpha-numeric characters, "-", and "_" are valid for use here.
-	JobTemplateID string `pathParam:"style=simple,explode=false,name=jobTemplateId"`
-}
-
-type CreateJobTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateJobTemplateRequestBodyAbortConfig - The criteria that determine when and how a job abort takes place.
 type CreateJobTemplateRequestBodyAbortConfig struct {
 	CriteriaList []shared.AbortCriteria `json:"criteriaList,omitempty"`
@@ -75,9 +60,16 @@ type CreateJobTemplateRequestBody struct {
 }
 
 type CreateJobTemplateRequest struct {
-	PathParams CreateJobTemplatePathParams
-	Headers    CreateJobTemplateHeaders
-	Request    CreateJobTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateJobTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier for the job template. We recommend using a UUID. Alpha-numeric characters, "-", and "_" are valid for use here.
+	JobTemplateID string `pathParam:"style=simple,explode=false,name=jobTemplateId"`
 }
 
 type CreateJobTemplateResponse struct {

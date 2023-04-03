@@ -6,29 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AnalyticsListAudiencesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AnalyticsListAudiencesPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AnalyticsListAudiencesQueryParams struct {
-	// Include disabled audience definitions
-	IncludeDisabled *bool `queryParam:"style=form,explode=true,name=include_disabled"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AnalyticsListAudiencesRequest struct {
-	PathParams  AnalyticsListAudiencesPathParams
-	QueryParams AnalyticsListAudiencesQueryParams
-	Security    AnalyticsListAudiencesSecurity
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Include disabled audience definitions
+	IncludeDisabled *bool `queryParam:"style=form,explode=true,name=include_disabled"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum string

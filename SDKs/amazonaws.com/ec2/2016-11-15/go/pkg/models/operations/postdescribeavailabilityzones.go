@@ -50,25 +50,17 @@ func (e *POSTDescribeAvailabilityZonesVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTDescribeAvailabilityZonesQueryParams struct {
-	Action  POSTDescribeAvailabilityZonesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeAvailabilityZonesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeAvailabilityZonesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeAvailabilityZonesRequest struct {
-	QueryParams POSTDescribeAvailabilityZonesQueryParams
-	Headers     POSTDescribeAvailabilityZonesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeAvailabilityZonesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTDescribeAvailabilityZonesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeAvailabilityZonesResponse struct {

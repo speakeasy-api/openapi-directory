@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBankAccountRequest struct {
-	// BankAccount object that you would like to store.
-	Request shared.BankAccountInput `request:"mediaType=application/json"`
-}
-
 type CreateBankAccountResponse struct {
 	// BankAccount created successfully.
 	BankAccount *shared.BankAccount

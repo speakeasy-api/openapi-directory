@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkflowRunsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetWorkflowRunsXAmzTargetEnum
 type GetWorkflowRunsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetWorkflowRunsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWorkflowRunsHeaders struct {
+type GetWorkflowRunsRequest struct {
+	GetWorkflowRunsRequest shared.GetWorkflowRunsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetWorkflowRunsHeaders struct {
 	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetWorkflowRunsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetWorkflowRunsRequest struct {
-	QueryParams GetWorkflowRunsQueryParams
-	Headers     GetWorkflowRunsHeaders
-	Request     shared.GetWorkflowRunsRequest `request:"mediaType=application/json"`
 }
 
 type GetWorkflowRunsResponse struct {

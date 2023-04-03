@@ -95,7 +95,7 @@ func (e *GETUpdateJobVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateJobQueryParams struct {
+type GETUpdateJobRequest struct {
 	APIVersion     *string                `queryParam:"style=form,explode=true,name=APIVersion"`
 	AWSAccessKeyID string                 `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETUpdateJobActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -110,10 +110,6 @@ type GETUpdateJobQueryParams struct {
 	Timestamp        string                    `queryParam:"style=form,explode=true,name=Timestamp"`
 	ValidateOnly     bool                      `queryParam:"style=form,explode=true,name=ValidateOnly"`
 	Version          GETUpdateJobVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateJobRequest struct {
-	QueryParams GETUpdateJobQueryParams
 }
 
 type GETUpdateJobResponse struct {

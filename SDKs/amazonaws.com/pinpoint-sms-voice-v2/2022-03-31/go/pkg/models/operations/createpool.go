@@ -30,7 +30,8 @@ func (e *CreatePoolXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreatePoolHeaders struct {
+type CreatePoolRequest struct {
+	CreatePoolRequest shared.CreatePoolRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreatePoolHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreatePoolXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreatePoolRequest struct {
-	Headers CreatePoolHeaders
-	Request shared.CreatePoolRequest `request:"mediaType=application/json"`
 }
 
 type CreatePoolResponse struct {

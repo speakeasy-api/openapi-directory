@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBillingGroupPathParams struct {
-	// The name you wish to give to the billing group.
-	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
-}
-
-type CreateBillingGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateBillingGroupRequestBodyBillingGroupProperties - The properties of a billing group.
 type CreateBillingGroupRequestBodyBillingGroupProperties struct {
 	BillingGroupDescription *string `json:"billingGroupDescription,omitempty"`
@@ -35,9 +20,16 @@ type CreateBillingGroupRequestBody struct {
 }
 
 type CreateBillingGroupRequest struct {
-	PathParams CreateBillingGroupPathParams
-	Headers    CreateBillingGroupHeaders
-	Request    CreateBillingGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBillingGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name you wish to give to the billing group.
+	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
 }
 
 type CreateBillingGroupResponse struct {

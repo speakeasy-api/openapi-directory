@@ -50,25 +50,17 @@ func (e *POSTDescribeExportTasksVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeExportTasksQueryParams struct {
-	Action  POSTDescribeExportTasksActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeExportTasksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeExportTasksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeExportTasksRequest struct {
-	QueryParams POSTDescribeExportTasksQueryParams
-	Headers     POSTDescribeExportTasksHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeExportTasksActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTDescribeExportTasksVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeExportTasksResponse struct {

@@ -50,30 +50,22 @@ func (e *GETDeprovisionPublicIpv4PoolCidrVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDeprovisionPublicIpv4PoolCidrQueryParams struct {
+type GETDeprovisionPublicIpv4PoolCidrRequest struct {
 	Action GETDeprovisionPublicIpv4PoolCidrActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR you want to deprovision from the pool. Enter the CIDR you want to deprovision with a netmask of <code>/32</code>. You must rerun this command for each IP address in the CIDR range. If your CIDR is a <code>/24</code>, you will have to run this command to deprovision each of the 256 IP addresses in the <code>/24</code> CIDR.
 	Cidr string `queryParam:"style=form,explode=true,name=Cidr"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the pool that you want to deprovision the CIDR from.
-	PoolID  string                                      `queryParam:"style=form,explode=true,name=PoolId"`
-	Version GETDeprovisionPublicIpv4PoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeprovisionPublicIpv4PoolCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeprovisionPublicIpv4PoolCidrRequest struct {
-	QueryParams GETDeprovisionPublicIpv4PoolCidrQueryParams
-	Headers     GETDeprovisionPublicIpv4PoolCidrHeaders
+	PoolID            string                                      `queryParam:"style=form,explode=true,name=PoolId"`
+	Version           GETDeprovisionPublicIpv4PoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeprovisionPublicIpv4PoolCidrResponse struct {

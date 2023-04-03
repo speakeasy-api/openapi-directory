@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchRvUkActiveQueryParams struct {
+type GetSearchRvUkActiveRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter rv on their availability_status
@@ -118,10 +118,6 @@ type GetSearchRvUkActiveQueryParams struct {
 	YearRange *string `queryParam:"style=form,explode=true,name=year_range"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchRvUkActiveRequest struct {
-	QueryParams GetSearchRvUkActiveQueryParams
 }
 
 type GetSearchRvUkActiveResponse struct {

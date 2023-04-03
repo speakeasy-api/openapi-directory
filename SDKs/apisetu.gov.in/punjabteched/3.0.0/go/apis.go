@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Dgcer - Degree/ Diploma Certificate
 // API to verify Degree/ Diploma Certificate.
-func (s *apIs) Dgcer(ctx context.Context, request operations.DgcerRequest) (*operations.DgcerResponse, error) {
+func (s *apIs) Dgcer(ctx context.Context, request operations.DgcerRequestBody, security operations.DgcerSecurity) (*operations.DgcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dgcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Dgcer(ctx context.Context, request operations.DgcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

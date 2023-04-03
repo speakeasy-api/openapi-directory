@@ -13,85 +13,63 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AnalyzeDocumentRequest{
-        Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Textract.AnalyzeDocument",
-        },
-        Request: shared.AnalyzeDocumentRequest{
+        AnalyzeDocumentRequest: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "illum",
+                Bytes: "corrupti",
                 S3Object: &shared.S3Object{
-                    Bucket: "vel",
-                    Name: "error",
-                    Version: "deserunt",
+                    Bucket: "provident",
+                    Name: "distinctio",
+                    Version: "quibusdam",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
-                "FORMS",
-                "FORMS",
+                "SIGNATURES",
+                "QUERIES",
+                "SIGNATURES",
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
-                        "FreeOfPersonallyIdentifiableInformation",
                         "FreeOfAdultContent",
-                        "FreeOfPersonallyIdentifiableInformation",
-                        "FreeOfPersonallyIdentifiableInformation",
+                        "FreeOfAdultContent",
                     },
                 },
-                FlowDefinitionArn: "molestiae",
-                HumanLoopName: "minus",
+                FlowDefinitionArn: "suscipit",
+                HumanLoopName: "iure",
             },
             QueriesConfig: &shared.QueriesConfig{
                 Queries: []shared.Query{
                     shared.Query{
-                        Alias: "voluptatum",
+                        Alias: "debitis",
                         Pages: []string{
-                            "excepturi",
-                            "nisi",
+                            "delectus",
                         },
-                        Text: "recusandae",
+                        Text: "tempora",
                     },
                     shared.Query{
-                        Alias: "temporibus",
+                        Alias: "suscipit",
                         Pages: []string{
-                            "quis",
+                            "minus",
+                            "placeat",
                         },
-                        Text: "veritatis",
-                    },
-                    shared.Query{
-                        Alias: "deserunt",
-                        Pages: []string{
-                            "ipsam",
-                        },
-                        Text: "repellendus",
-                    },
-                    shared.Query{
-                        Alias: "sapiente",
-                        Pages: []string{
-                            "odit",
-                            "at",
-                            "at",
-                            "maiores",
-                        },
-                        Text: "molestiae",
+                        Text: "voluptatum",
                     },
                 },
             },
         },
+        XAmzAlgorithm: "iusto",
+        XAmzContentSha256: "excepturi",
+        XAmzCredential: "nisi",
+        XAmzDate: "recusandae",
+        XAmzSecurityToken: "temporibus",
+        XAmzSignature: "ab",
+        XAmzSignedHeaders: "quis",
+        XAmzTarget: "Textract.AnalyzeDocument",
     }
 
     ctx := context.Background()

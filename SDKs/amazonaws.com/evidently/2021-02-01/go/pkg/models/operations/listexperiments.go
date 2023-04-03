@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListExperimentsPathParams struct {
-	// The name or ARN of the project to return the experiment list from.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
 // ListExperimentsStatusEnum - Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.
 type ListExperimentsStatusEnum string
 
@@ -47,16 +42,7 @@ func (e *ListExperimentsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListExperimentsQueryParams struct {
-	// The maximum number of results to include in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use when requesting the next set of results. You received this token from a previous <code>ListExperiments</code> operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.
-	Status *ListExperimentsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListExperimentsHeaders struct {
+type ListExperimentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -64,12 +50,14 @@ type ListExperimentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListExperimentsRequest struct {
-	PathParams  ListExperimentsPathParams
-	QueryParams ListExperimentsQueryParams
-	Headers     ListExperimentsHeaders
+	// The maximum number of results to include in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use when requesting the next set of results. You received this token from a previous <code>ListExperiments</code> operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name or ARN of the project to return the experiment list from.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.
+	Status *ListExperimentsStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListExperimentsResponse struct {

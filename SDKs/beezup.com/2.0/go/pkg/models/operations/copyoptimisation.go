@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CopyOptimisationPathParams struct {
+type CopyOptimisationRequest struct {
+	CopyOptimisationRequest shared.CopyOptimisationRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CopyOptimisationRequest struct {
-	PathParams CopyOptimisationPathParams
-	Request    shared.CopyOptimisationRequest `request:"mediaType=application/json"`
 }
 
 type CopyOptimisationResponse struct {

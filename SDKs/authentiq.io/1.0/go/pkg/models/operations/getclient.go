@@ -8,19 +8,14 @@ import (
 )
 
 type GetClientSecurity struct {
-	ClientRegistrationToken *shared.SchemeClientRegistrationToken `security:"scheme,type=apiKey,subtype=header"`
-	OauthCode               *shared.SchemeOauthCode               `security:"scheme,type=oauth2"`
-	OauthImplicit           *shared.SchemeOauthImplicit           `security:"scheme,type=oauth2"`
-}
-
-type GetClientPathParams struct {
-	// Client identifier
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
+	ClientRegistrationToken *string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	OauthCode               *string `security:"scheme,type=oauth2,name=Authorization"`
+	OauthImplicit           *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetClientRequest struct {
-	PathParams GetClientPathParams
-	Security   GetClientSecurity
+	// Client identifier
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type GetClientResponse struct {

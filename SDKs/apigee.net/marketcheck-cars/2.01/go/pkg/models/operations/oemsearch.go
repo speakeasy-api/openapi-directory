@@ -36,7 +36,7 @@ func (e *OemSearchOfferTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type OemSearchQueryParams struct {
+type OemSearchRequest struct {
 	// To filter listing on acquisition fee of the car
 	AcquisitionFee *string `queryParam:"style=form,explode=true,name=acquisition_fee"`
 	// The API Authentication Key. Mandatory with all API calls.
@@ -123,10 +123,6 @@ type OemSearchQueryParams struct {
 	Year *string `queryParam:"style=form,explode=true,name=year"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type OemSearchRequest struct {
-	QueryParams OemSearchQueryParams
 }
 
 type OemSearchResponse struct {

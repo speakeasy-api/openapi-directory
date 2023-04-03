@@ -30,20 +30,16 @@ func (e *AttachCertificateToDistributionXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type AttachCertificateToDistributionHeaders struct {
-	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        AttachCertificateToDistributionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type AttachCertificateToDistributionRequest struct {
-	Headers AttachCertificateToDistributionHeaders
-	Request shared.AttachCertificateToDistributionRequest `request:"mediaType=application/json"`
+	AttachCertificateToDistributionRequest shared.AttachCertificateToDistributionRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                         *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                               *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                      *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                             AttachCertificateToDistributionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type AttachCertificateToDistributionResponse struct {

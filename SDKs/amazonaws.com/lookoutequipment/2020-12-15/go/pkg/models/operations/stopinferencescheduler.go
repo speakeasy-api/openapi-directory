@@ -30,20 +30,16 @@ func (e *StopInferenceSchedulerXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type StopInferenceSchedulerHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StopInferenceSchedulerXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StopInferenceSchedulerRequest struct {
-	Headers StopInferenceSchedulerHeaders
-	Request shared.StopInferenceSchedulerRequest `request:"mediaType=application/json"`
+	StopInferenceSchedulerRequest shared.StopInferenceSchedulerRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    StopInferenceSchedulerXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StopInferenceSchedulerResponse struct {

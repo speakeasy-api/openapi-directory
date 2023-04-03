@@ -35,9 +35,9 @@ func newChannelCatalogsProducts(defaultClient, securityClient HTTPClient, server
 // ExportChannelCatalogProductInfoList - Export channel catalog product information list
 func (s *channelCatalogsProducts) ExportChannelCatalogProductInfoList(ctx context.Context, request operations.ExportChannelCatalogProductInfoListRequest) (*operations.ExportChannelCatalogProductInfoListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/export", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetChannelCatalogProductInfoListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *channelCatalogsProducts) ExportChannelCatalogProductInfoList(ctx contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *channelCatalogsProducts) ExportChannelCatalogProductInfoList(ctx contex
 }
 
 // GetChannelCatalogProductByChannelCatalog - Get channel catalog products related to these channel catalogs
-func (s *channelCatalogsProducts) GetChannelCatalogProductByChannelCatalog(ctx context.Context, request operations.GetChannelCatalogProductByChannelCatalogRequest) (*operations.GetChannelCatalogProductByChannelCatalogResponse, error) {
+func (s *channelCatalogsProducts) GetChannelCatalogProductByChannelCatalog(ctx context.Context, request shared.ChannelCatalogProductByChannelCatalogRequest) (*operations.GetChannelCatalogProductByChannelCatalogResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/channelCatalogs/products"
 
@@ -173,7 +173,7 @@ func (s *channelCatalogsProducts) GetChannelCatalogProductByChannelCatalog(ctx c
 // GetChannelCatalogProductInfo - Get channel catalog product information
 func (s *channelCatalogsProducts) GetChannelCatalogProductInfo(ctx context.Context, request operations.GetChannelCatalogProductInfoRequest) (*operations.GetChannelCatalogProductInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,9 +229,9 @@ func (s *channelCatalogsProducts) GetChannelCatalogProductInfo(ctx context.Conte
 // GetChannelCatalogProductInfoList - Get channel catalog product information list
 func (s *channelCatalogsProducts) GetChannelCatalogProductInfoList(ctx context.Context, request operations.GetChannelCatalogProductInfoListRequest) (*operations.GetChannelCatalogProductInfoListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetChannelCatalogProductInfoListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -295,7 +295,7 @@ func (s *channelCatalogsProducts) GetChannelCatalogProductInfoList(ctx context.C
 // GetChannelCatalogProductsCounters - Get channel catalog products' counters
 func (s *channelCatalogsProducts) GetChannelCatalogProductsCounters(ctx context.Context, request operations.GetChannelCatalogProductsCountersRequest) (*operations.GetChannelCatalogProductsCountersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/counters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/counters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

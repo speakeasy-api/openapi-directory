@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLoggerDefinitionVersionPathParams struct {
+type GetLoggerDefinitionVersionRequest struct {
 	// The ID of the logger definition.
 	LoggerDefinitionID string `pathParam:"style=simple,explode=false,name=LoggerDefinitionId"`
 	// The ID of the logger definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListLoggerDefinitionVersions'' requests. If the version is the last one that was associated with a logger definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
 	LoggerDefinitionVersionID string `pathParam:"style=simple,explode=false,name=LoggerDefinitionVersionId"`
-}
-
-type GetLoggerDefinitionVersionQueryParams struct {
 	// The token for the next set of results, or ''null'' if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetLoggerDefinitionVersionHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type GetLoggerDefinitionVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLoggerDefinitionVersionRequest struct {
-	PathParams  GetLoggerDefinitionVersionPathParams
-	QueryParams GetLoggerDefinitionVersionQueryParams
-	Headers     GetLoggerDefinitionVersionHeaders
 }
 
 type GetLoggerDefinitionVersionResponse struct {

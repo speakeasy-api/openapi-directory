@@ -50,27 +50,19 @@ func (e *GETUpdateAvailabilityOptionsVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETUpdateAvailabilityOptionsQueryParams struct {
+type GETUpdateAvailabilityOptionsRequest struct {
 	Action     GETUpdateAvailabilityOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                                 `queryParam:"style=form,explode=true,name=DomainName"`
 	// You expand an existing search domain to a second Availability Zone by setting the Multi-AZ option to true. Similarly, you can turn off the Multi-AZ option to downgrade the domain to a single Availability Zone by setting the Multi-AZ option to <code>false</code>.
-	MultiAZ bool                                    `queryParam:"style=form,explode=true,name=MultiAZ"`
-	Version GETUpdateAvailabilityOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateAvailabilityOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateAvailabilityOptionsRequest struct {
-	QueryParams GETUpdateAvailabilityOptionsQueryParams
-	Headers     GETUpdateAvailabilityOptionsHeaders
+	MultiAZ           bool                                    `queryParam:"style=form,explode=true,name=MultiAZ"`
+	Version           GETUpdateAvailabilityOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateAvailabilityOptionsResponse struct {

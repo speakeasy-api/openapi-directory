@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryGetAPIVersionPathParams struct {
+type RegistryGetAPIVersionRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The location id.
@@ -16,10 +16,6 @@ type RegistryGetAPIVersionPathParams struct {
 	Project string `pathParam:"style=simple,explode=false,name=project"`
 	// The version id.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryGetAPIVersionRequest struct {
-	PathParams RegistryGetAPIVersionPathParams
 }
 
 type RegistryGetAPIVersionResponse struct {

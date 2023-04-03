@@ -50,28 +50,20 @@ func (e *GETApplySecurityGroupsToLoadBalancerVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETApplySecurityGroupsToLoadBalancerQueryParams struct {
+type GETApplySecurityGroupsToLoadBalancerRequest struct {
 	Action GETApplySecurityGroupsToLoadBalancerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the load balancer.
 	LoadBalancerName string `queryParam:"style=form,explode=true,name=LoadBalancerName"`
 	// The IDs of the security groups to associate with the load balancer. Note that you cannot specify the name of the security group.
-	SecurityGroups []string                                        `queryParam:"style=form,explode=true,name=SecurityGroups"`
-	Version        GETApplySecurityGroupsToLoadBalancerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETApplySecurityGroupsToLoadBalancerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETApplySecurityGroupsToLoadBalancerRequest struct {
-	QueryParams GETApplySecurityGroupsToLoadBalancerQueryParams
-	Headers     GETApplySecurityGroupsToLoadBalancerHeaders
+	SecurityGroups    []string                                        `queryParam:"style=form,explode=true,name=SecurityGroups"`
+	Version           GETApplySecurityGroupsToLoadBalancerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETApplySecurityGroupsToLoadBalancerResponse struct {

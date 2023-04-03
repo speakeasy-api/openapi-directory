@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchProductsAsAdminQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // SearchProductsAsAdminXAmzTargetEnum
 type SearchProductsAsAdminXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *SearchProductsAsAdminXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchProductsAsAdminHeaders struct {
-	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        SearchProductsAsAdminXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type SearchProductsAsAdminRequest struct {
-	QueryParams SearchProductsAsAdminQueryParams
-	Headers     SearchProductsAsAdminHeaders
-	Request     shared.SearchProductsAsAdminInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken                  *string                             `queryParam:"style=form,explode=true,name=PageToken"`
+	SearchProductsAsAdminInput shared.SearchProductsAsAdminInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 SearchProductsAsAdminXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type SearchProductsAsAdminResponse struct {

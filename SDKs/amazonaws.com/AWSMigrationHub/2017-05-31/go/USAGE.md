@@ -13,32 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateCreatedArtifactRequest{
-        Headers: operations.AssociateCreatedArtifactHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSMigrationHub.AssociateCreatedArtifact",
-        },
-        Request: shared.AssociateCreatedArtifactRequest{
+        AssociateCreatedArtifactRequest: shared.AssociateCreatedArtifactRequest{
             CreatedArtifact: shared.CreatedArtifact{
-                Description: "illum",
-                Name: "vel",
+                Description: "corrupti",
+                Name: "provident",
             },
             DryRun: false,
-            MigrationTaskName: "error",
-            ProgressUpdateStream: "deserunt",
+            MigrationTaskName: "distinctio",
+            ProgressUpdateStream: "quibusdam",
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "AWSMigrationHub.AssociateCreatedArtifact",
     }
 
     ctx := context.Background()

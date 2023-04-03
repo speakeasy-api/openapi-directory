@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBackendEnvironmentPathParams struct {
-	//  The unique ID of an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The name of a backend environment of an Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type DeleteBackendEnvironmentHeaders struct {
+type DeleteBackendEnvironmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteBackendEnvironmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBackendEnvironmentRequest struct {
-	PathParams DeleteBackendEnvironmentPathParams
-	Headers    DeleteBackendEnvironmentHeaders
+	//  The unique ID of an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name of a backend environment of an Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
 }
 
 type DeleteBackendEnvironmentResponse struct {

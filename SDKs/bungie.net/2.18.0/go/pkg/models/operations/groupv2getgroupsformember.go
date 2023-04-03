@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupV2GetGroupsForMemberPathParams struct {
+type GroupV2GetGroupsForMemberRequest struct {
 	// Filter apply to list of joined groups.
 	Filter int `pathParam:"style=simple,explode=false,name=filter"`
 	// Type of group the supplied member founded.
@@ -16,10 +16,6 @@ type GroupV2GetGroupsForMemberPathParams struct {
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Membership type of the supplied membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2GetGroupsForMemberRequest struct {
-	PathParams GroupV2GetGroupsForMemberPathParams
 }
 
 // GroupV2GetGroupsForMember200Wildcard - Look at the Response property for more information about the nature of this response

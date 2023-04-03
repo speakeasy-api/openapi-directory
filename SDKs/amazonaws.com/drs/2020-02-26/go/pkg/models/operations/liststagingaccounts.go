@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStagingAccountsQueryParams struct {
-	// The maximum number of staging Accounts to retrieve.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token of the next staging Account to retrieve.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListStagingAccountsHeaders struct {
+type ListStagingAccountsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListStagingAccountsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStagingAccountsRequest struct {
-	QueryParams ListStagingAccountsQueryParams
-	Headers     ListStagingAccountsHeaders
+	// The maximum number of staging Accounts to retrieve.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token of the next staging Account to retrieve.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListStagingAccountsResponse struct {

@@ -77,7 +77,7 @@ func (e *GETSetTypeConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetTypeConfigurationQueryParams struct {
+type GETSetTypeConfigurationRequest struct {
 	Action GETSetTypeConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The configuration data for the extension, in this account and region.</p> <p>The configuration data must be formatted as JSON, and validate against the schema returned in the <code>ConfigurationSchema</code> response element of <a href="AWSCloudFormation/latest/APIReference/API_DescribeType.html">API_DescribeType</a>. For more information, see <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html#resource-type-howto-configuration">Defining account-level configuration data for an extension</a> in the <i>CloudFormation CLI User Guide</i>.</p>
 	Configuration string `queryParam:"style=form,explode=true,name=Configuration"`
@@ -88,23 +88,15 @@ type GETSetTypeConfigurationQueryParams struct {
 	// <p>The Amazon Resource Name (ARN) for the extension, in this account and region.</p> <p>For public extensions, this will be the ARN assigned when you <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html">activate the type</a> in this account and region. For private extensions, this will be the ARN assigned when you <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">register the type</a> in this account and region.</p> <p>Do not include the extension versions suffix at the end of the ARN. You can set the configuration for an extension, but not for a specific extension version.</p>
 	TypeArn *string `queryParam:"style=form,explode=true,name=TypeArn"`
 	// <p>The name of the extension.</p> <p>Conditional: You must specify <code>ConfigurationArn</code>, or <code>Type</code> and <code>TypeName</code>.</p>
-	TypeName *string                            `queryParam:"style=form,explode=true,name=TypeName"`
-	Version  GETSetTypeConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetTypeConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetTypeConfigurationRequest struct {
-	QueryParams GETSetTypeConfigurationQueryParams
-	Headers     GETSetTypeConfigurationHeaders
+	TypeName          *string                            `queryParam:"style=form,explode=true,name=TypeName"`
+	Version           GETSetTypeConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetTypeConfigurationResponse struct {

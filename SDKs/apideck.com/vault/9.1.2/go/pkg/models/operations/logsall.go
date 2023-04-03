@@ -8,29 +8,20 @@ import (
 )
 
 type LogsAllSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type LogsAllQueryParams struct {
+type LogsAllRequest struct {
 	// Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Filter results
 	Filter *shared.LogsFilter `queryParam:"style=deepObject,explode=true,name=filter"`
 	// Number of records to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type LogsAllHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
-}
-
-type LogsAllRequest struct {
-	QueryParams LogsAllQueryParams
-	Headers     LogsAllHeaders
-	Security    LogsAllSecurity
 }
 
 type LogsAllResponse struct {

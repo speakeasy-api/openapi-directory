@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserGetBungieNetUserByIDPathParams struct {
+type UserGetBungieNetUserByIDRequest struct {
 	// The requested Bungie.net membership id.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UserGetBungieNetUserByIDRequest struct {
-	PathParams UserGetBungieNetUserByIDPathParams
 }
 
 // UserGetBungieNetUserByID200Wildcard - Look at the Response property for more information about the nature of this response

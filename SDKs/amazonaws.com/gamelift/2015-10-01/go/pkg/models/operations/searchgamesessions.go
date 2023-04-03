@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchGameSessionsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // SearchGameSessionsXAmzTargetEnum
 type SearchGameSessionsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *SearchGameSessionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchGameSessionsHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        SearchGameSessionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type SearchGameSessionsRequest struct {
-	QueryParams SearchGameSessionsQueryParams
-	Headers     SearchGameSessionsHeaders
-	Request     shared.SearchGameSessionsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken               *string                          `queryParam:"style=form,explode=true,name=NextToken"`
+	SearchGameSessionsInput shared.SearchGameSessionsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              SearchGameSessionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type SearchGameSessionsResponse struct {

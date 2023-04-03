@@ -30,20 +30,16 @@ func (e *ImportSourceCredentialsXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type ImportSourceCredentialsHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ImportSourceCredentialsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ImportSourceCredentialsRequest struct {
-	Headers ImportSourceCredentialsHeaders
-	Request shared.ImportSourceCredentialsInput `request:"mediaType=application/json"`
+	ImportSourceCredentialsInput shared.ImportSourceCredentialsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   ImportSourceCredentialsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ImportSourceCredentialsResponse struct {

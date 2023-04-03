@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEnvironmentPathParams struct {
-	// The unique identifier of the runtime environment.
-	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
-}
-
-type GetEnvironmentHeaders struct {
+type GetEnvironmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetEnvironmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEnvironmentRequest struct {
-	PathParams GetEnvironmentPathParams
-	Headers    GetEnvironmentHeaders
+	// The unique identifier of the runtime environment.
+	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
 }
 
 type GetEnvironmentResponse struct {

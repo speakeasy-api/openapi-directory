@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFeatureFlagPathParams struct {
+type GetFeatureFlagRequest struct {
 	// The identifier of the feature to check for feature flag.
 	Feature string `pathParam:"style=simple,explode=false,name=feature"`
-}
-
-type GetFeatureFlagQueryParams struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -25,11 +22,6 @@ type GetFeatureFlagQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetFeatureFlagRequest struct {
-	PathParams  GetFeatureFlagPathParams
-	QueryParams GetFeatureFlagQueryParams
 }
 
 type GetFeatureFlagResponse struct {

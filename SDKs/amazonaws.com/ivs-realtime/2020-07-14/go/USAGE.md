@@ -13,39 +13,34 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateParticipantTokenRequest{
-        Headers: operations.CreateParticipantTokenHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateParticipantTokenRequestBody{
+        RequestBody: operations.CreateParticipantTokenRequestBody{
             Attributes: map[string]string{
-                "vel": "error",
-                "deserunt": "suscipit",
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
             Capabilities: []shared.ParticipantTokenCapabilityEnum{
                 "PUBLISH",
-                "PUBLISH",
-                "PUBLISH",
                 "SUBSCRIBE",
+                "SUBSCRIBE",
+                "PUBLISH",
             },
-            Duration: 812169,
-            StageArn: "voluptatum",
-            UserID: "iusto",
+            Duration: 437587,
+            StageArn: "magnam",
+            UserID: "debitis",
         },
+        XAmzAlgorithm: "ipsa",
+        XAmzContentSha256: "delectus",
+        XAmzCredential: "tempora",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "molestiae",
+        XAmzSignature: "minus",
+        XAmzSignedHeaders: "placeat",
     }
 
     ctx := context.Background()

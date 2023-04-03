@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIdentityProviderPathParams struct {
-	// The ARN of the identity provider.
-	IdentityProviderArn string `pathParam:"style=simple,explode=false,name=identityProviderArn"`
-}
-
-type UpdateIdentityProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateIdentityProviderRequestBodyIdentityProviderTypeEnum - The type of the identity provider.
 type UpdateIdentityProviderRequestBodyIdentityProviderTypeEnum string
 
@@ -72,9 +57,16 @@ type UpdateIdentityProviderRequestBody struct {
 }
 
 type UpdateIdentityProviderRequest struct {
-	PathParams UpdateIdentityProviderPathParams
-	Headers    UpdateIdentityProviderHeaders
-	Request    UpdateIdentityProviderRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateIdentityProviderRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ARN of the identity provider.
+	IdentityProviderArn string `pathParam:"style=simple,explode=false,name=identityProviderArn"`
 }
 
 type UpdateIdentityProviderResponse struct {

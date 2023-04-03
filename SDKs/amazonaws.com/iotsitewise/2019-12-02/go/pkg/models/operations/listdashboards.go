@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDashboardsQueryParams struct {
-	// <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The ID of the project.
-	ProjectID string `queryParam:"style=form,explode=true,name=projectId"`
-}
-
-type ListDashboardsHeaders struct {
+type ListDashboardsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListDashboardsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDashboardsRequest struct {
-	QueryParams ListDashboardsQueryParams
-	Headers     ListDashboardsHeaders
+	// <p>The maximum number of results to return for each paginated request.</p> <p>Default: 50</p>
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ID of the project.
+	ProjectID string `queryParam:"style=form,explode=true,name=projectId"`
 }
 
 type ListDashboardsResponse struct {

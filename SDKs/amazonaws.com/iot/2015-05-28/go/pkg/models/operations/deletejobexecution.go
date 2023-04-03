@@ -6,23 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteJobExecutionPathParams struct {
-	// <p>The ID of the job execution to be deleted. The <code>executionNumber</code> refers to the execution of a particular job on a particular device.</p> <p>Note that once a job execution is deleted, the <code>executionNumber</code> may be reused by IoT, so be sure you get and use the correct value here.</p>
-	ExecutionNumber int64 `pathParam:"style=simple,explode=false,name=executionNumber"`
-	// The ID of the job whose execution on a particular device will be deleted.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The name of the thing whose job execution will be deleted.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type DeleteJobExecutionQueryParams struct {
-	// <p>(Optional) When true, you can delete a job execution which is "IN_PROGRESS". Otherwise, you can only delete a job execution which is in a terminal state ("SUCCEEDED", "FAILED", "REJECTED", "REMOVED" or "CANCELED") or an exception will occur. The default is false.</p> <note> <p>Deleting a job execution which is "IN_PROGRESS", will cause the device to be unable to access job information or update the job execution status. Use caution and ensure that the device is able to recover to a valid state.</p> </note>
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-	// <p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>
-	NamespaceID *string `queryParam:"style=form,explode=true,name=namespaceId"`
-}
-
-type DeleteJobExecutionHeaders struct {
+type DeleteJobExecutionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -30,12 +14,16 @@ type DeleteJobExecutionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteJobExecutionRequest struct {
-	PathParams  DeleteJobExecutionPathParams
-	QueryParams DeleteJobExecutionQueryParams
-	Headers     DeleteJobExecutionHeaders
+	// <p>The ID of the job execution to be deleted. The <code>executionNumber</code> refers to the execution of a particular job on a particular device.</p> <p>Note that once a job execution is deleted, the <code>executionNumber</code> may be reused by IoT, so be sure you get and use the correct value here.</p>
+	ExecutionNumber int64 `pathParam:"style=simple,explode=false,name=executionNumber"`
+	// <p>(Optional) When true, you can delete a job execution which is "IN_PROGRESS". Otherwise, you can only delete a job execution which is in a terminal state ("SUCCEEDED", "FAILED", "REJECTED", "REMOVED" or "CANCELED") or an exception will occur. The default is false.</p> <note> <p>Deleting a job execution which is "IN_PROGRESS", will cause the device to be unable to access job information or update the job execution status. Use caution and ensure that the device is able to recover to a valid state.</p> </note>
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
+	// The ID of the job whose execution on a particular device will be deleted.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// <p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>
+	NamespaceID *string `queryParam:"style=form,explode=true,name=namespaceId"`
+	// The name of the thing whose job execution will be deleted.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type DeleteJobExecutionResponse struct {

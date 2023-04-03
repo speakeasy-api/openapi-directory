@@ -50,25 +50,17 @@ func (e *POSTModifyClusterSubnetGroupVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTModifyClusterSubnetGroupQueryParams struct {
-	Action  POSTModifyClusterSubnetGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyClusterSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyClusterSubnetGroupRequest struct {
-	QueryParams POSTModifyClusterSubnetGroupQueryParams
-	Headers     POSTModifyClusterSubnetGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyClusterSubnetGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTModifyClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyClusterSubnetGroupResponse struct {

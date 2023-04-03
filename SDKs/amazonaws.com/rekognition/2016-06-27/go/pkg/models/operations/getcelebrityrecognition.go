@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCelebrityRecognitionQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetCelebrityRecognitionXAmzTargetEnum
 type GetCelebrityRecognitionXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetCelebrityRecognitionXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GetCelebrityRecognitionHeaders struct {
+type GetCelebrityRecognitionRequest struct {
+	GetCelebrityRecognitionRequest shared.GetCelebrityRecognitionRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                               `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetCelebrityRecognitionHeaders struct {
 	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetCelebrityRecognitionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetCelebrityRecognitionRequest struct {
-	QueryParams GetCelebrityRecognitionQueryParams
-	Headers     GetCelebrityRecognitionHeaders
-	Request     shared.GetCelebrityRecognitionRequest `request:"mediaType=application/json"`
 }
 
 type GetCelebrityRecognitionResponse struct {

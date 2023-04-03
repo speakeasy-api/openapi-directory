@@ -30,7 +30,8 @@ func (e *SignXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SignHeaders struct {
+type SignRequest struct {
+	SignRequest       shared.SignRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type SignHeaders struct {
 	XAmzSignature     *string            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        SignXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type SignRequest struct {
-	Headers SignHeaders
-	Request shared.SignRequest `request:"mediaType=application/json"`
 }
 
 type SignResponse struct {

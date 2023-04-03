@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.IPGeolocationWithConfidenceAreaAndHazardReportAPIRequest{
-        QueryParams: operations.IPGeolocationWithConfidenceAreaAndHazardReportAPIQueryParams{
-            IP: "193.114.112.122",
-            Key: "{{API KEY}}",
-            LocalityLanguage: "en",
-        },
+        IP: "193.114.112.122",
+        Key: "{{API KEY}}",
+        LocalityLanguage: "en",
     }
 
     ctx := context.Background()

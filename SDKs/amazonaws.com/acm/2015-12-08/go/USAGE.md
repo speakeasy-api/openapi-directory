@@ -13,36 +13,36 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddTagsToCertificateRequest{
-        Headers: operations.AddTagsToCertificateHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "CertificateManager.AddTagsToCertificate",
-        },
-        Request: shared.AddTagsToCertificateRequest{
-            CertificateArn: "illum",
+        AddTagsToCertificateRequest: shared.AddTagsToCertificateRequest{
+            CertificateArn: "corrupti",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "error",
-                    Value: "deserunt",
+                    Key: "distinctio",
+                    Value: "quibusdam",
                 },
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "iure",
+                    Key: "unde",
+                    Value: "nulla",
+                },
+                shared.Tag{
+                    Key: "corrupti",
+                    Value: "illum",
                 },
             },
         },
+        XAmzAlgorithm: "vel",
+        XAmzContentSha256: "error",
+        XAmzCredential: "deserunt",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "iure",
+        XAmzSignature: "magnam",
+        XAmzSignedHeaders: "debitis",
+        XAmzTarget: "CertificateManager.AddTagsToCertificate",
     }
 
     ctx := context.Background()

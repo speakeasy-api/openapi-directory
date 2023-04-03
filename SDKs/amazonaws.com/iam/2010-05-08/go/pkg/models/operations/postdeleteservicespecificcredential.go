@@ -50,25 +50,17 @@ func (e *POSTDeleteServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTDeleteServiceSpecificCredentialQueryParams struct {
-	Action  POSTDeleteServiceSpecificCredentialActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteServiceSpecificCredentialHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteServiceSpecificCredentialRequest struct {
-	QueryParams POSTDeleteServiceSpecificCredentialQueryParams
-	Headers     POSTDeleteServiceSpecificCredentialHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteServiceSpecificCredentialActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTDeleteServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteServiceSpecificCredentialResponse struct {

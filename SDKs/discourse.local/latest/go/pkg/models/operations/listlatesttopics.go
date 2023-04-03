@@ -6,22 +6,14 @@ import (
 	"net/http"
 )
 
-type ListLatestTopicsQueryParams struct {
+type ListLatestTopicsRequest struct {
+	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
 	// Defaults to `desc`, add `ascending=true` to sort asc
 	Ascending *string `queryParam:"style=form,explode=true,name=ascending"`
 	// Enum: `default`, `created`, `activity`, `views`, `posts`, `category`,
 	// `likes`, `op_likes`, `posters`
 	Order *string `queryParam:"style=form,explode=true,name=order"`
-}
-
-type ListLatestTopicsHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type ListLatestTopicsRequest struct {
-	QueryParams ListLatestTopicsQueryParams
-	Headers     ListLatestTopicsHeaders
 }
 
 type ListLatestTopics200ApplicationJSONTopicListTopicsPosters struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type CreateVaultItemSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type CreateVaultItemPathParams struct {
-	// The UUID of the Vault to create an Item in
-	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type CreateVaultItemRequest struct {
-	PathParams CreateVaultItemPathParams
-	Request    *shared.FullItemInput `request:"mediaType=application/json"`
-	Security   CreateVaultItemSecurity
+	FullItemInput *shared.FullItemInput `request:"mediaType=application/json"`
+	// The UUID of the Vault to create an Item in
+	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
 }
 
 type CreateVaultItemResponse struct {

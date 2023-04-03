@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrgInvitationsListPendingSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrgInvitationsListPendingPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type OrgInvitationsListPendingRequest struct {
-	PathParams OrgInvitationsListPendingPathParams
-	Security   OrgInvitationsListPendingSecurity
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum string

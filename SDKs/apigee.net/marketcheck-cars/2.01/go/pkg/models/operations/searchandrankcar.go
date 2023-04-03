@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchAndRankCarQueryParams struct {
+type SearchAndRankCarRequest struct {
+	// Inputs needed for ranking a group of car listings
+	CarRankRequest shared.CarRankRequest `request:"mediaType=application/json"`
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Flag on whether to include api_key in response API urls (if any)
@@ -180,12 +182,6 @@ type SearchAndRankCarQueryParams struct {
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type SearchAndRankCarRequest struct {
-	QueryParams SearchAndRankCarQueryParams
-	// Inputs needed for ranking a group of car listings
-	Request shared.CarRankRequest `request:"mediaType=application/json"`
 }
 
 type SearchAndRankCarResponse struct {

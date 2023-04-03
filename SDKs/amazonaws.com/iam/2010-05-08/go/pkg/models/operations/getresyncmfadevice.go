@@ -50,7 +50,7 @@ func (e *GETResyncMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETResyncMFADeviceQueryParams struct {
+type GETResyncMFADeviceRequest struct {
 	Action GETResyncMFADeviceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>An authentication code emitted by the device.</p> <p>The format for this parameter is a sequence of six digits.</p>
 	AuthenticationCode1 string `queryParam:"style=form,explode=true,name=AuthenticationCode1"`
@@ -59,23 +59,15 @@ type GETResyncMFADeviceQueryParams struct {
 	// <p>Serial number that uniquely identifies the MFA device.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	SerialNumber string `queryParam:"style=form,explode=true,name=SerialNumber"`
 	// <p>The name of the user whose MFA device you want to resynchronize.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                        `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETResyncMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETResyncMFADeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETResyncMFADeviceRequest struct {
-	QueryParams GETResyncMFADeviceQueryParams
-	Headers     GETResyncMFADeviceHeaders
+	UserName          string                        `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETResyncMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETResyncMFADeviceResponse struct {

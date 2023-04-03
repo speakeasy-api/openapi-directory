@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBackendAuthPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment.
-	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
-}
-
-type DeleteBackendAuthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteBackendAuthRequestBody struct {
 	// The name of this resource.
 	ResourceName string `json:"resourceName"`
 }
 
 type DeleteBackendAuthRequest struct {
-	PathParams DeleteBackendAuthPathParams
-	Headers    DeleteBackendAuthHeaders
-	Request    DeleteBackendAuthRequestBody `request:"mediaType=application/json"`
+	RequestBody       DeleteBackendAuthRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment.
+	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
 }
 
 type DeleteBackendAuthResponse struct {

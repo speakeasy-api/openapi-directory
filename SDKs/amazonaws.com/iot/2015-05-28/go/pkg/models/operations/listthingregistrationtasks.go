@@ -42,16 +42,7 @@ func (e *ListThingRegistrationTasksStatusEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ListThingRegistrationTasksQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The status of the bulk thing provisioning task.
-	Status *ListThingRegistrationTasksStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListThingRegistrationTasksHeaders struct {
+type ListThingRegistrationTasksRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -59,11 +50,12 @@ type ListThingRegistrationTasksHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListThingRegistrationTasksRequest struct {
-	QueryParams ListThingRegistrationTasksQueryParams
-	Headers     ListThingRegistrationTasksHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The status of the bulk thing provisioning task.
+	Status *ListThingRegistrationTasksStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListThingRegistrationTasksResponse struct {

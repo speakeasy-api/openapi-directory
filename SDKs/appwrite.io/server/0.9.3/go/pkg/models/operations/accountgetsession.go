@@ -8,18 +8,13 @@ import (
 )
 
 type AccountGetSessionSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AccountGetSessionPathParams struct {
-	// Session unique ID. Use the string 'current' to get the current device session.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountGetSessionRequest struct {
-	PathParams AccountGetSessionPathParams
-	Security   AccountGetSessionSecurity
+	// Session unique ID. Use the string 'current' to get the current device session.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type AccountGetSessionResponse struct {

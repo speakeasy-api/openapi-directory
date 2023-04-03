@@ -30,20 +30,16 @@ func (e *CreateContainerServiceDeploymentXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type CreateContainerServiceDeploymentHeaders struct {
-	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateContainerServiceDeploymentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateContainerServiceDeploymentRequest struct {
-	Headers CreateContainerServiceDeploymentHeaders
-	Request shared.CreateContainerServiceDeploymentRequest `request:"mediaType=application/json"`
+	CreateContainerServiceDeploymentRequest shared.CreateContainerServiceDeploymentRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                          *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                       *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                              CreateContainerServiceDeploymentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateContainerServiceDeploymentResponse struct {

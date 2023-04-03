@@ -67,7 +67,14 @@ func (e *ListViolationEventsVerificationStateEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListViolationEventsQueryParams struct {
+type ListViolationEventsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  The criteria for a behavior.
 	BehaviorCriteriaType *ListViolationEventsBehaviorCriteriaTypeEnum `queryParam:"style=form,explode=true,name=behaviorCriteriaType"`
 	// The end time for the alerts to be listed.
@@ -86,21 +93,6 @@ type ListViolationEventsQueryParams struct {
 	ThingName *string `queryParam:"style=form,explode=true,name=thingName"`
 	// The verification state of the violation (detect alarm).
 	VerificationState *ListViolationEventsVerificationStateEnum `queryParam:"style=form,explode=true,name=verificationState"`
-}
-
-type ListViolationEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListViolationEventsRequest struct {
-	QueryParams ListViolationEventsQueryParams
-	Headers     ListViolationEventsHeaders
 }
 
 type ListViolationEventsResponse struct {

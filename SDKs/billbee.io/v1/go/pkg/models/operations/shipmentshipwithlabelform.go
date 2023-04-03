@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShipmentShipWithLabelFormRequest struct {
-	// Details on the order and the shipping methods, that should be used.
-	Request shared.RechnungsdruckWebAppControllersAPIShipmentWithLabel `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type ShipmentShipWithLabelFormResponse struct {
 	Body        []byte
 	ContentType string

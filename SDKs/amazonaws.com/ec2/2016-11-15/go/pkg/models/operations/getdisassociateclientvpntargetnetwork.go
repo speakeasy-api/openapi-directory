@@ -50,30 +50,22 @@ func (e *GETDisassociateClientVpnTargetNetworkVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETDisassociateClientVpnTargetNetworkQueryParams struct {
+type GETDisassociateClientVpnTargetNetworkRequest struct {
 	Action GETDisassociateClientVpnTargetNetworkActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the target network association.
 	AssociationID string `queryParam:"style=form,explode=true,name=AssociationId"`
 	// The ID of the Client VPN endpoint from which to disassociate the target network.
 	ClientVpnEndpointID string `queryParam:"style=form,explode=true,name=ClientVpnEndpointId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                            `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETDisassociateClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateClientVpnTargetNetworkHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateClientVpnTargetNetworkRequest struct {
-	QueryParams GETDisassociateClientVpnTargetNetworkQueryParams
-	Headers     GETDisassociateClientVpnTargetNetworkHeaders
+	DryRun            *bool                                            `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETDisassociateClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateClientVpnTargetNetworkResponse struct {

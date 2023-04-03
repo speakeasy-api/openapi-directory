@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type AttachPrincipalPolicyPathParams struct {
-	// The policy name.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type AttachPrincipalPolicyHeaders struct {
+type AttachPrincipalPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,13 +14,10 @@ type AttachPrincipalPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The policy name.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 	// The principal, which can be a certificate ARN (as returned from the CreateCertificate operation) or an Amazon Cognito ID.
 	XAmznIotPrincipal string `header:"style=simple,explode=false,name=x-amzn-iot-principal"`
-}
-
-type AttachPrincipalPolicyRequest struct {
-	PathParams AttachPrincipalPolicyPathParams
-	Headers    AttachPrincipalPolicyHeaders
 }
 
 type AttachPrincipalPolicyResponse struct {

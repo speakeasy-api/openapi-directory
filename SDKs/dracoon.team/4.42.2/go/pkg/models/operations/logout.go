@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LogoutQueryParams struct {
-	// Invalidate all tokens
-	Everywhere *bool `queryParam:"style=form,explode=true,name=everywhere"`
-}
-
-type LogoutHeaders struct {
+type LogoutRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type LogoutRequest struct {
-	QueryParams LogoutQueryParams
-	Headers     LogoutHeaders
+	// Invalidate all tokens
+	Everywhere *bool `queryParam:"style=form,explode=true,name=everywhere"`
 }
 
 type LogoutResponse struct {

@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateContinuousDeploymentPolicy20200531PathParams struct {
-	// The identifier of the continuous deployment policy that you are updating.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateContinuousDeploymentPolicy20200531Headers struct {
-	// The current version (<code>ETag</code> value) of the continuous deployment policy that you are updating.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateContinuousDeploymentPolicy20200531RequestBodyContinuousDeploymentPolicyConfig - Contains the configuration for a continuous deployment policy.
 type UpdateContinuousDeploymentPolicy20200531RequestBodyContinuousDeploymentPolicyConfig struct {
 	Enabled                     *bool
@@ -37,9 +20,18 @@ type UpdateContinuousDeploymentPolicy20200531RequestBody struct {
 }
 
 type UpdateContinuousDeploymentPolicy20200531Request struct {
-	PathParams UpdateContinuousDeploymentPolicy20200531PathParams
-	Headers    UpdateContinuousDeploymentPolicy20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The identifier of the continuous deployment policy that you are updating.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The current version (<code>ETag</code> value) of the continuous deployment policy that you are updating.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateContinuousDeploymentPolicy20200531Response struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImportFileTaskPathParams struct {
-	//  The ID of the import file task. This ID is returned in the response of <a>StartImportFileTask</a>.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetImportFileTaskHeaders struct {
+type GetImportFileTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetImportFileTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetImportFileTaskRequest struct {
-	PathParams GetImportFileTaskPathParams
-	Headers    GetImportFileTaskHeaders
+	//  The ID of the import file task. This ID is returned in the response of <a>StartImportFileTask</a>.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetImportFileTaskResponse struct {

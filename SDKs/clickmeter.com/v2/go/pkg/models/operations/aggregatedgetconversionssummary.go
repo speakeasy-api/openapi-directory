@@ -120,7 +120,7 @@ func (e *AggregatedGetConversionsSummaryTimeFrameEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type AggregatedGetConversionsSummaryQueryParams struct {
+type AggregatedGetConversionsSummaryRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// Limit results to this number
@@ -139,10 +139,6 @@ type AggregatedGetConversionsSummaryQueryParams struct {
 	TimeFrame AggregatedGetConversionsSummaryTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type AggregatedGetConversionsSummaryRequest struct {
-	QueryParams AggregatedGetConversionsSummaryQueryParams
 }
 
 type AggregatedGetConversionsSummaryResponse struct {

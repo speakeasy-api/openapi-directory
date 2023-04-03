@@ -14,30 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.CustomersAllRequest{
-        Security: operations.CustomersAllSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+        Cursor: "corrupti",
+        Fields: "provident",
+        Filter: &shared.EcommerceCustomersFilter{
+            Email: "elon@musk.com",
+            PhoneNumber: "111-111-1111",
         },
-        QueryParams: operations.CustomersAllQueryParams{
-            Cursor: "corrupti",
-            Fields: "provident",
-            Filter: &shared.EcommerceCustomersFilter{
-                Email: "elon@musk.com",
-                PhoneNumber: "111-111-1111",
-            },
-            Limit: 715190,
-            Raw: false,
-        },
-        Headers: operations.CustomersAllHeaders{
-            XApideckAppID: "quibusdam",
-            XApideckConsumerID: "unde",
-            XApideckServiceID: "nulla",
-        },
+        Limit: 715190,
+        Raw: false,
+        XApideckAppID: "quibusdam",
+        XApideckConsumerID: "unde",
+        XApideckServiceID: "nulla",
     }
 
     ctx := context.Background()
-    res, err := s.Customers.CustomersAll(ctx, req)
+    res, err := s.Customers.CustomersAll(ctx, req, operations.CustomersAllSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

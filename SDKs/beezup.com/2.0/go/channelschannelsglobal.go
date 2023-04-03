@@ -42,7 +42,7 @@ func (s *channelsChannelsGlobal) GetAvailableChannels(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *channelsChannelsGlobal) GetAvailableChannels(ctx context.Context, reque
 // GetChannelCategories - Get channel categories
 func (s *channelsChannelsGlobal) GetChannelCategories(ctx context.Context, request operations.GetChannelCategoriesRequest) (*operations.GetChannelCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channels/{channelId}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channels/{channelId}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -131,9 +131,9 @@ func (s *channelsChannelsGlobal) GetChannelCategories(ctx context.Context, reque
 // GetChannelColumns - Get channel columns
 func (s *channelsChannelsGlobal) GetChannelColumns(ctx context.Context, request operations.GetChannelColumnsRequest) (*operations.GetChannelColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channels/{channelId}/columns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channels/{channelId}/columns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -145,7 +145,7 @@ func (s *channelsChannelsGlobal) GetChannelColumns(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -186,7 +186,7 @@ func (s *channelsChannelsGlobal) GetChannelColumns(ctx context.Context, request 
 // GetChannelInfo - Get channel information
 func (s *channelsChannelsGlobal) GetChannelInfo(ctx context.Context, request operations.GetChannelInfoRequest) (*operations.GetChannelInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channels/{channelId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channels/{channelId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

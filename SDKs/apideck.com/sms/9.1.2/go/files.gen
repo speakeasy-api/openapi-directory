@@ -26,7 +26,6 @@ pkg/models/shared/createmessageresponse.go
 pkg/models/shared/unifiedid.go
 pkg/models/shared/badrequestresponse.go
 pkg/models/shared/message.go
-pkg/models/shared/security.go
 pkg/models/shared/getmessagesresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
@@ -34,4 +33,5 @@ pkg/models/shared/currencyenum.go
 pkg/models/shared/deletemessageresponse.go
 pkg/models/shared/getmessageresponse.go
 pkg/models/shared/updatemessageresponse.go
+pkg/models/shared/security.go
 USAGE.md

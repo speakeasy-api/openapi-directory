@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateStreamingDistribution20161125PathParams struct {
-	// The streaming distribution's id.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateStreamingDistribution20161125Headers struct {
-	// The value of the <code>ETag</code> header that you received when retrieving the streaming distribution's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateStreamingDistribution20161125RequestBodyStreamingDistributionConfig - The RTMP distribution's configuration information.
 type UpdateStreamingDistribution20161125RequestBodyStreamingDistributionConfig struct {
 	Aliases         *shared.Aliases
@@ -42,9 +25,18 @@ type UpdateStreamingDistribution20161125RequestBody struct {
 }
 
 type UpdateStreamingDistribution20161125Request struct {
-	PathParams UpdateStreamingDistribution20161125PathParams
-	Headers    UpdateStreamingDistribution20161125Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The streaming distribution's id.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The value of the <code>ETag</code> header that you received when retrieving the streaming distribution's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateStreamingDistribution20161125Response struct {

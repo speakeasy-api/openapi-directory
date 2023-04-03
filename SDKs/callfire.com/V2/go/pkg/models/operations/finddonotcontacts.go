@@ -8,10 +8,11 @@ import (
 )
 
 type FindDoNotContactsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindDoNotContactsQueryParams struct {
+type FindDoNotContactsRequest struct {
 	// Show only Do-Not-Call numbers
 	Call *bool `queryParam:"style=form,explode=true,name=call"`
 	// A campaign id which was used to send a message to a DNC number
@@ -34,11 +35,6 @@ type FindDoNotContactsQueryParams struct {
 	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// Show only Do-Not-Text numbers
 	Text *bool `queryParam:"style=form,explode=true,name=text"`
-}
-
-type FindDoNotContactsRequest struct {
-	QueryParams FindDoNotContactsQueryParams
-	Security    FindDoNotContactsSecurity
 }
 
 type FindDoNotContactsResponse struct {

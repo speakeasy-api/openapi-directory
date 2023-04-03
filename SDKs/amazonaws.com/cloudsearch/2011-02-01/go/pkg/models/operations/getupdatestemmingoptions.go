@@ -50,26 +50,18 @@ func (e *GETUpdateStemmingOptionsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateStemmingOptionsQueryParams struct {
-	Action     GETUpdateStemmingOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DomainName string                              `queryParam:"style=form,explode=true,name=DomainName"`
-	Stems      string                              `queryParam:"style=form,explode=true,name=Stems"`
-	Version    GETUpdateStemmingOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateStemmingOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETUpdateStemmingOptionsRequest struct {
-	QueryParams GETUpdateStemmingOptionsQueryParams
-	Headers     GETUpdateStemmingOptionsHeaders
+	Action            GETUpdateStemmingOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	DomainName        string                              `queryParam:"style=form,explode=true,name=DomainName"`
+	Stems             string                              `queryParam:"style=form,explode=true,name=Stems"`
+	Version           GETUpdateStemmingOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateStemmingOptionsResponse struct {

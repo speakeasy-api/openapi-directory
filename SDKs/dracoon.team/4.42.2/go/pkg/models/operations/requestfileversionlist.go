@@ -9,22 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestFileVersionListPathParams struct {
-	// Reference ID
-	ReferenceID int64 `pathParam:"style=simple,explode=false,name=reference_id"`
-}
-
-type RequestFileVersionListQueryParams struct {
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
 // RequestFileVersionListXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestFileVersionListXSdsDateFormatEnum string
 
@@ -58,17 +42,21 @@ func (e *RequestFileVersionListXSdsDateFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type RequestFileVersionListHeaders struct {
+type RequestFileVersionListRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestFileVersionListXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestFileVersionListRequest struct {
-	PathParams  RequestFileVersionListPathParams
-	QueryParams RequestFileVersionListQueryParams
-	Headers     RequestFileVersionListHeaders
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Reference ID
+	ReferenceID int64 `pathParam:"style=simple,explode=false,name=reference_id"`
 }
 
 type RequestFileVersionListResponse struct {

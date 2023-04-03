@@ -36,7 +36,7 @@ func newLibreOffice(defaultClient, securityClient HTTPClient, serverURL, languag
 // Convert an office document (Word, Excel, Powerpoint) or an image (jpg, gif, png) to a PDF using LibreOffice on AWS Lambda.
 // ### Authorize via Header of Request
 // **Authorization: YOUR-API-KEY**
-func (s *libreOffice) LibreConvertPost(ctx context.Context, request operations.LibreConvertPostRequest) (*operations.LibreConvertPostResponse, error) {
+func (s *libreOffice) LibreConvertPost(ctx context.Context, request shared.LibreOfficeConvertRequest) (*operations.LibreConvertPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libreoffice/convert"
 

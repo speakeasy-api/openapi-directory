@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SavePersonalInfoRequest struct {
-	Request shared.PersonalInfo `request:"mediaType=application/json"`
-}
-
 type SavePersonalInfoResponse struct {
 	// Bad Request
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

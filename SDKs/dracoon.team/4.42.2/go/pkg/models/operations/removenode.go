@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveNodePathParams struct {
-	// Node ID
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type RemoveNodeHeaders struct {
+type RemoveNodeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveNodeRequest struct {
-	PathParams RemoveNodePathParams
-	Headers    RemoveNodeHeaders
+	// Node ID
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type RemoveNodeResponse struct {

@@ -34,7 +34,7 @@ func newAttempt(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // SaveStats - For worker to set sync stats of a running attempt.
-func (s *attempt) SaveStats(ctx context.Context, request operations.SaveStatsRequest) (*operations.SaveStatsResponse, error) {
+func (s *attempt) SaveStats(ctx context.Context, request shared.SaveStatsRequestBody) (*operations.SaveStatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attempt/save_stats"
 
@@ -88,7 +88,7 @@ func (s *attempt) SaveStats(ctx context.Context, request operations.SaveStatsReq
 }
 
 // SaveSyncConfig - For worker to save the AttemptSyncConfig for an attempt.
-func (s *attempt) SaveSyncConfig(ctx context.Context, request operations.SaveSyncConfigRequest) (*operations.SaveSyncConfigResponse, error) {
+func (s *attempt) SaveSyncConfig(ctx context.Context, request shared.SaveAttemptSyncConfigRequestBody) (*operations.SaveSyncConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attempt/save_sync_config"
 
@@ -142,7 +142,7 @@ func (s *attempt) SaveSyncConfig(ctx context.Context, request operations.SaveSyn
 }
 
 // SetWorkflowInAttempt - For worker to register the workflow id in attempt.
-func (s *attempt) SetWorkflowInAttempt(ctx context.Context, request operations.SetWorkflowInAttemptRequest) (*operations.SetWorkflowInAttemptResponse, error) {
+func (s *attempt) SetWorkflowInAttempt(ctx context.Context, request shared.SetWorkflowInAttemptRequestBody) (*operations.SetWorkflowInAttemptResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/attempt/set_workflow_in_attempt"
 

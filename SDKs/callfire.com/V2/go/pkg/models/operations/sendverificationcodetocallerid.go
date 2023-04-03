@@ -8,17 +8,13 @@ import (
 )
 
 type SendVerificationCodeToCallerIDSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type SendVerificationCodeToCallerIDPathParams struct {
-	// A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
-	Callerid string `pathParam:"style=simple,explode=false,name=callerid"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type SendVerificationCodeToCallerIDRequest struct {
-	PathParams SendVerificationCodeToCallerIDPathParams
-	Security   SendVerificationCodeToCallerIDSecurity
+	// A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
+	Callerid string `pathParam:"style=simple,explode=false,name=callerid"`
 }
 
 type SendVerificationCodeToCallerIDResponse struct {

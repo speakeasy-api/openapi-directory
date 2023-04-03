@@ -36,20 +36,20 @@ func newUsersMerchantLevel(defaultClient, securityClient HTTPClient, serverURL, 
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Users read and write
-func (s *usersMerchantLevel) GetMerchantsMerchantIDUsers(ctx context.Context, request operations.GetMerchantsMerchantIDUsersRequest) (*operations.GetMerchantsMerchantIDUsersResponse, error) {
+func (s *usersMerchantLevel) GetMerchantsMerchantIDUsers(ctx context.Context, request operations.GetMerchantsMerchantIDUsersRequest, security operations.GetMerchantsMerchantIDUsersSecurity) (*operations.GetMerchantsMerchantIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -107,16 +107,16 @@ func (s *usersMerchantLevel) GetMerchantsMerchantIDUsers(ctx context.Context, re
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Users read and write
-func (s *usersMerchantLevel) GetMerchantsMerchantIDUsersUserID(ctx context.Context, request operations.GetMerchantsMerchantIDUsersUserIDRequest) (*operations.GetMerchantsMerchantIDUsersUserIDResponse, error) {
+func (s *usersMerchantLevel) GetMerchantsMerchantIDUsersUserID(ctx context.Context, request operations.GetMerchantsMerchantIDUsersUserIDRequest, security operations.GetMerchantsMerchantIDUsersUserIDSecurity) (*operations.GetMerchantsMerchantIDUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *usersMerchantLevel) GetMerchantsMerchantIDUsersUserID(ctx context.Conte
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Users read and write
-func (s *usersMerchantLevel) PatchMerchantsMerchantIDUsersUserID(ctx context.Context, request operations.PatchMerchantsMerchantIDUsersUserIDRequest) (*operations.PatchMerchantsMerchantIDUsersUserIDResponse, error) {
+func (s *usersMerchantLevel) PatchMerchantsMerchantIDUsersUserID(ctx context.Context, request operations.PatchMerchantsMerchantIDUsersUserIDRequest, security operations.PatchMerchantsMerchantIDUsersUserIDSecurity) (*operations.PatchMerchantsMerchantIDUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMerchantUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *usersMerchantLevel) PatchMerchantsMerchantIDUsersUserID(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,11 +248,11 @@ func (s *usersMerchantLevel) PatchMerchantsMerchantIDUsersUserID(ctx context.Con
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Users read and write
-func (s *usersMerchantLevel) PostMerchantsMerchantIDUsers(ctx context.Context, request operations.PostMerchantsMerchantIDUsersRequest) (*operations.PostMerchantsMerchantIDUsersResponse, error) {
+func (s *usersMerchantLevel) PostMerchantsMerchantIDUsers(ctx context.Context, request operations.PostMerchantsMerchantIDUsersRequest, security operations.PostMerchantsMerchantIDUsersSecurity) (*operations.PostMerchantsMerchantIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateMerchantUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -264,7 +264,7 @@ func (s *usersMerchantLevel) PostMerchantsMerchantIDUsers(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

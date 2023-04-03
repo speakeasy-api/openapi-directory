@@ -146,7 +146,7 @@ func (e *GETModifyInstanceMetadataOptionsVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETModifyInstanceMetadataOptionsQueryParams struct {
+type GETModifyInstanceMetadataOptionsRequest struct {
 	Action GETModifyInstanceMetadataOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -163,21 +163,13 @@ type GETModifyInstanceMetadataOptionsQueryParams struct {
 	// <p>Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with instance tags using the instance metadata</a>.</p> <p>Default: <code>disabled</code> </p>
 	InstanceMetadataTags *GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum `queryParam:"style=form,explode=true,name=InstanceMetadataTags"`
 	Version              GETModifyInstanceMetadataOptionsVersionEnum               `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyInstanceMetadataOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyInstanceMetadataOptionsRequest struct {
-	QueryParams GETModifyInstanceMetadataOptionsQueryParams
-	Headers     GETModifyInstanceMetadataOptionsHeaders
+	XAmzAlgorithm        *string                                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyInstanceMetadataOptionsResponse struct {

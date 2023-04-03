@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListReviewPolicyResultsForHITQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListReviewPolicyResultsForHITXAmzTargetEnum
 type ListReviewPolicyResultsForHITXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListReviewPolicyResultsForHITXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListReviewPolicyResultsForHITHeaders struct {
+type ListReviewPolicyResultsForHITRequest struct {
+	ListReviewPolicyResultsForHITRequest shared.ListReviewPolicyResultsForHITRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListReviewPolicyResultsForHITHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListReviewPolicyResultsForHITXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListReviewPolicyResultsForHITRequest struct {
-	QueryParams ListReviewPolicyResultsForHITQueryParams
-	Headers     ListReviewPolicyResultsForHITHeaders
-	Request     shared.ListReviewPolicyResultsForHITRequest `request:"mediaType=application/json"`
 }
 
 type ListReviewPolicyResultsForHITResponse struct {

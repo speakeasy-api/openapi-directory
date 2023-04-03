@@ -34,7 +34,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostCreateTestCardRanges - Creates one or more test card ranges.
 // Creates one or more test card ranges.
-func (s *general) PostCreateTestCardRanges(ctx context.Context, request operations.PostCreateTestCardRangesRequest) (*operations.PostCreateTestCardRangesResponse, error) {
+func (s *general) PostCreateTestCardRanges(ctx context.Context, request shared.CreateTestCardRangesRequest, security operations.PostCreateTestCardRangesSecurity) (*operations.PostCreateTestCardRangesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createTestCardRanges"
 
@@ -50,7 +50,7 @@ func (s *general) PostCreateTestCardRanges(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

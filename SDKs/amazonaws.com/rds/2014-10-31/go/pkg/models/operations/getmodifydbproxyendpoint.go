@@ -50,7 +50,7 @@ func (e *GETModifyDBProxyEndpointVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyDBProxyEndpointQueryParams struct {
+type GETModifyDBProxyEndpointRequest struct {
 	Action GETModifyDBProxyEndpointActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the DB proxy sociated with the DB proxy endpoint that you want to modify.
 	DBProxyEndpointName string `queryParam:"style=form,explode=true,name=DBProxyEndpointName"`
@@ -59,21 +59,13 @@ type GETModifyDBProxyEndpointQueryParams struct {
 	Version                GETModifyDBProxyEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The VPC security group IDs for the DB proxy endpoint. When the DB proxy endpoint uses a different VPC than the original proxy, you also specify a different set of security group IDs than for the original proxy.
 	VpcSecurityGroupIds []string `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
-}
-
-type GETModifyDBProxyEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyDBProxyEndpointRequest struct {
-	QueryParams GETModifyDBProxyEndpointQueryParams
-	Headers     GETModifyDBProxyEndpointHeaders
+	XAmzAlgorithm       *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyDBProxyEndpointResponse struct {

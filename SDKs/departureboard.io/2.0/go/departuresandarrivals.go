@@ -33,14 +33,14 @@ func newDeparturesAndArrivals(defaultClient, securityClient HTTPClient, serverUR
 // GetArrivalsAndDeparturesByCRS - getArrivalsAndDeparturesByCRS is used to get a list of services arriving to and departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 func (s *departuresAndArrivals) GetArrivalsAndDeparturesByCRS(ctx context.Context, request operations.GetArrivalsAndDeparturesByCRSRequest) (*operations.GetArrivalsAndDeparturesByCRSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getArrivalsAndDeparturesByCRS/{CRS}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getArrivalsAndDeparturesByCRS/{CRS}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,14 +82,14 @@ func (s *departuresAndArrivals) GetArrivalsAndDeparturesByCRS(ctx context.Contex
 // GetArrivalsByCRS - getArrivalsByCRS is used to get a list of services arriving to a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 func (s *departuresAndArrivals) GetArrivalsByCRS(ctx context.Context, request operations.GetArrivalsByCRSRequest) (*operations.GetArrivalsByCRSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getArrivalsByCRS/{CRS}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getArrivalsByCRS/{CRS}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -131,14 +131,14 @@ func (s *departuresAndArrivals) GetArrivalsByCRS(ctx context.Context, request op
 // GetDeparturesByCRS - getDeparturesByCRS is used to get a list of services departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 func (s *departuresAndArrivals) GetDeparturesByCRS(ctx context.Context, request operations.GetDeparturesByCRSRequest) (*operations.GetDeparturesByCRSResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getDeparturesByCRS/{CRS}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/getDeparturesByCRS/{CRS}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

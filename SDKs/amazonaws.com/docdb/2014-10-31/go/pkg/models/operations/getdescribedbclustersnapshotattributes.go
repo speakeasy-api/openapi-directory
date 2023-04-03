@@ -50,26 +50,18 @@ func (e *GETDescribeDBClusterSnapshotAttributesVersionEnum) UnmarshalJSON(data [
 	}
 }
 
-type GETDescribeDBClusterSnapshotAttributesQueryParams struct {
+type GETDescribeDBClusterSnapshotAttributesRequest struct {
 	Action GETDescribeDBClusterSnapshotAttributesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier for the cluster snapshot to describe the attributes for.
 	DBClusterSnapshotIdentifier string                                            `queryParam:"style=form,explode=true,name=DBClusterSnapshotIdentifier"`
 	Version                     GETDescribeDBClusterSnapshotAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDBClusterSnapshotAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDBClusterSnapshotAttributesRequest struct {
-	QueryParams GETDescribeDBClusterSnapshotAttributesQueryParams
-	Headers     GETDescribeDBClusterSnapshotAttributesHeaders
+	XAmzAlgorithm               *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDBClusterSnapshotAttributesResponse struct {

@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ContentSearchContentByTagAndTypePathParams struct {
-	Locale string `pathParam:"style=simple,explode=false,name=locale"`
-	Tag    string `pathParam:"style=simple,explode=false,name=tag"`
-	Type   string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type ContentSearchContentByTagAndTypeQueryParams struct {
+type ContentSearchContentByTagAndTypeRequest struct {
 	// Page number for the search results starting with page 1.
 	Currentpage *int `queryParam:"style=form,explode=true,name=currentpage"`
 	// Not used.
 	Head *bool `queryParam:"style=form,explode=true,name=head"`
 	// Not used.
-	Itemsperpage *int `queryParam:"style=form,explode=true,name=itemsperpage"`
-}
-
-type ContentSearchContentByTagAndTypeRequest struct {
-	PathParams  ContentSearchContentByTagAndTypePathParams
-	QueryParams ContentSearchContentByTagAndTypeQueryParams
+	Itemsperpage *int   `queryParam:"style=form,explode=true,name=itemsperpage"`
+	Locale       string `pathParam:"style=simple,explode=false,name=locale"`
+	Tag          string `pathParam:"style=simple,explode=false,name=tag"`
+	Type         string `pathParam:"style=simple,explode=false,name=type"`
 }
 
 // ContentSearchContentByTagAndType200Wildcard - Look at the Response property for more information about the nature of this response

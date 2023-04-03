@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveNotificationChannelPathParams struct {
-	// The id of the channel that we want to stop receiving notifications.
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-	// The name of the profiling group we want to change notification configuration for.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type RemoveNotificationChannelHeaders struct {
+type RemoveNotificationChannelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type RemoveNotificationChannelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type RemoveNotificationChannelRequest struct {
-	PathParams RemoveNotificationChannelPathParams
-	Headers    RemoveNotificationChannelHeaders
+	// The id of the channel that we want to stop receiving notifications.
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
+	// The name of the profiling group we want to change notification configuration for.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 }
 
 type RemoveNotificationChannelResponse struct {

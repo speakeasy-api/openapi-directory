@@ -62,7 +62,7 @@ func (e *GETEnableFastLaunchVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableFastLaunchQueryParams struct {
+type GETEnableFastLaunchRequest struct {
 	Action GETEnableFastLaunchActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -77,21 +77,13 @@ type GETEnableFastLaunchQueryParams struct {
 	// Configuration settings for creating and managing the snapshots that are used for pre-provisioning the Windows AMI for faster launching. The associated <code>ResourceType</code> must be <code>snapshot</code>.
 	SnapshotConfiguration *GETEnableFastLaunchSnapshotConfiguration `queryParam:"style=form,explode=true,name=SnapshotConfiguration"`
 	Version               GETEnableFastLaunchVersionEnum            `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableFastLaunchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableFastLaunchRequest struct {
-	QueryParams GETEnableFastLaunchQueryParams
-	Headers     GETEnableFastLaunchHeaders
+	XAmzAlgorithm         *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableFastLaunchResponse struct {

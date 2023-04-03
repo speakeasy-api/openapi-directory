@@ -9,6 +9,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// CreateDistributionWithTags20190326RequestBodyDistributionConfigWithTags - A distribution Configuration and a list of tags to be associated with the distribution.
+type CreateDistributionWithTags20190326RequestBodyDistributionConfigWithTags struct {
+	DistributionConfig *shared.DistributionConfig
+	Tags               *shared.Tags
+}
+
+type CreateDistributionWithTags20190326RequestBody struct {
+	// A distribution Configuration and a list of tags to be associated with the distribution.
+	DistributionConfigWithTags CreateDistributionWithTags20190326RequestBodyDistributionConfigWithTags
+}
+
 // CreateDistributionWithTags20190326WithTagsEnum
 type CreateDistributionWithTags20190326WithTagsEnum string
 
@@ -30,35 +41,16 @@ func (e *CreateDistributionWithTags20190326WithTagsEnum) UnmarshalJSON(data []by
 	}
 }
 
-type CreateDistributionWithTags20190326QueryParams struct {
-	WithTags CreateDistributionWithTags20190326WithTagsEnum `queryParam:"style=form,explode=true,name=WithTags"`
-}
-
-type CreateDistributionWithTags20190326Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// CreateDistributionWithTags20190326RequestBodyDistributionConfigWithTags - A distribution Configuration and a list of tags to be associated with the distribution.
-type CreateDistributionWithTags20190326RequestBodyDistributionConfigWithTags struct {
-	DistributionConfig *shared.DistributionConfig
-	Tags               *shared.Tags
-}
-
-type CreateDistributionWithTags20190326RequestBody struct {
-	// A distribution Configuration and a list of tags to be associated with the distribution.
-	DistributionConfigWithTags CreateDistributionWithTags20190326RequestBodyDistributionConfigWithTags
-}
-
 type CreateDistributionWithTags20190326Request struct {
-	QueryParams CreateDistributionWithTags20190326QueryParams
-	Headers     CreateDistributionWithTags20190326Headers
-	Request     []byte `request:"mediaType=text/xml"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	WithTags          CreateDistributionWithTags20190326WithTagsEnum `queryParam:"style=form,explode=true,name=WithTags"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateDistributionWithTags20190326Response struct {

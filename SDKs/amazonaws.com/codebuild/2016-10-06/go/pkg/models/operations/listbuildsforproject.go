@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBuildsForProjectQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListBuildsForProjectXAmzTargetEnum
 type ListBuildsForProjectXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *ListBuildsForProjectXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListBuildsForProjectHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListBuildsForProjectXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListBuildsForProjectRequest struct {
-	QueryParams ListBuildsForProjectQueryParams
-	Headers     ListBuildsForProjectHeaders
-	Request     shared.ListBuildsForProjectInput `request:"mediaType=application/json"`
+	ListBuildsForProjectInput shared.ListBuildsForProjectInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                ListBuildsForProjectXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBuildsForProjectResponse struct {

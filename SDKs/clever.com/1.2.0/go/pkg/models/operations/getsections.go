@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSectionsQueryParams struct {
+type GetSectionsRequest struct {
 	EndingBefore  *string `queryParam:"style=form,explode=true,name=ending_before"`
 	Limit         *int64  `queryParam:"style=form,explode=true,name=limit"`
 	StartingAfter *string `queryParam:"style=form,explode=true,name=starting_after"`
 	Where         *string `queryParam:"style=form,explode=true,name=where"`
-}
-
-type GetSectionsRequest struct {
-	QueryParams GetSectionsQueryParams
 }
 
 type GetSectionsResponse struct {

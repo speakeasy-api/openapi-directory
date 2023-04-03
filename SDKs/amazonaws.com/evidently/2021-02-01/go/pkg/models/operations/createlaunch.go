@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLaunchPathParams struct {
-	// The name or ARN of the project that you want to create the launch in.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type CreateLaunchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateLaunchRequestBodyScheduledSplitsConfig - An array of structures that define the traffic allocation percentages among the feature variations during each step of a launch. This also defines the start time of each step.
 type CreateLaunchRequestBodyScheduledSplitsConfig struct {
 	Steps []shared.ScheduledSplitConfig `json:"steps,omitempty"`
@@ -45,9 +30,16 @@ type CreateLaunchRequestBody struct {
 }
 
 type CreateLaunchRequest struct {
-	PathParams CreateLaunchPathParams
-	Headers    CreateLaunchHeaders
-	Request    CreateLaunchRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateLaunchRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name or ARN of the project that you want to create the launch in.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type CreateLaunchResponse struct {

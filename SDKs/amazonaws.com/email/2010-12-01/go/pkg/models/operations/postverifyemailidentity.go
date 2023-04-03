@@ -50,25 +50,17 @@ func (e *POSTVerifyEmailIdentityVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTVerifyEmailIdentityQueryParams struct {
-	Action  POSTVerifyEmailIdentityActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTVerifyEmailIdentityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTVerifyEmailIdentityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTVerifyEmailIdentityRequest struct {
-	QueryParams POSTVerifyEmailIdentityQueryParams
-	Headers     POSTVerifyEmailIdentityHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTVerifyEmailIdentityActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTVerifyEmailIdentityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTVerifyEmailIdentityResponse struct {

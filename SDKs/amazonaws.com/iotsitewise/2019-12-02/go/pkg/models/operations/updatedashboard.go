@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDashboardPathParams struct {
-	// The ID of the dashboard to update.
-	DashboardID string `pathParam:"style=simple,explode=false,name=dashboardId"`
-}
-
-type UpdateDashboardHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDashboardRequestBody struct {
 	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -33,9 +18,16 @@ type UpdateDashboardRequestBody struct {
 }
 
 type UpdateDashboardRequest struct {
-	PathParams UpdateDashboardPathParams
-	Headers    UpdateDashboardHeaders
-	Request    UpdateDashboardRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDashboardRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the dashboard to update.
+	DashboardID string `pathParam:"style=simple,explode=false,name=dashboardId"`
 }
 
 type UpdateDashboardResponse struct {

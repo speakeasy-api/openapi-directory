@@ -77,28 +77,20 @@ func (e *GETModifyAquaConfigurationVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETModifyAquaConfigurationQueryParams struct {
+type GETModifyAquaConfigurationRequest struct {
 	Action GETModifyAquaConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// This parameter is retired. Amazon Redshift automatically determines whether to use AQUA (Advanced Query Accelerator).
 	AquaConfigurationStatus *GETModifyAquaConfigurationAquaConfigurationStatusEnum `queryParam:"style=form,explode=true,name=AquaConfigurationStatus"`
 	// The identifier of the cluster to be modified.
 	ClusterIdentifier string                                `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETModifyAquaConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyAquaConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyAquaConfigurationRequest struct {
-	QueryParams GETModifyAquaConfigurationQueryParams
-	Headers     GETModifyAquaConfigurationHeaders
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyAquaConfigurationResponse struct {

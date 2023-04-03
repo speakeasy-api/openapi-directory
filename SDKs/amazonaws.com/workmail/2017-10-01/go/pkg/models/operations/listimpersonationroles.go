@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListImpersonationRolesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListImpersonationRolesXAmzTargetEnum
 type ListImpersonationRolesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListImpersonationRolesXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ListImpersonationRolesHeaders struct {
+type ListImpersonationRolesRequest struct {
+	ListImpersonationRolesRequest shared.ListImpersonationRolesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListImpersonationRolesHeaders struct {
 	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListImpersonationRolesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListImpersonationRolesRequest struct {
-	QueryParams ListImpersonationRolesQueryParams
-	Headers     ListImpersonationRolesHeaders
-	Request     shared.ListImpersonationRolesRequest `request:"mediaType=application/json"`
 }
 
 type ListImpersonationRolesResponse struct {

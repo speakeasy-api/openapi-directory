@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeletePolicyVersionPathParams struct {
-	// The name of the policy.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-	// The policy version ID.
-	PolicyVersionID string `pathParam:"style=simple,explode=false,name=policyVersionId"`
-}
-
-type DeletePolicyVersionHeaders struct {
+type DeletePolicyVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeletePolicyVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeletePolicyVersionRequest struct {
-	PathParams DeletePolicyVersionPathParams
-	Headers    DeletePolicyVersionHeaders
+	// The name of the policy.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
+	// The policy version ID.
+	PolicyVersionID string `pathParam:"style=simple,explode=false,name=policyVersionId"`
 }
 
 type DeletePolicyVersionResponse struct {

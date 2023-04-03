@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDownloadSharesHeaders struct {
+type DeleteDownloadSharesRequest struct {
+	DeleteDownloadSharesRequest shared.DeleteDownloadSharesRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type DeleteDownloadSharesRequest struct {
-	Headers DeleteDownloadSharesHeaders
-	Request shared.DeleteDownloadSharesRequest `request:"mediaType=application/json"`
 }
 
 type DeleteDownloadSharesResponse struct {

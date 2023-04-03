@@ -30,7 +30,8 @@ func (e *PollForJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PollForJobsHeaders struct {
+type PollForJobsRequest struct {
+	PollForJobsInput  shared.PollForJobsInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type PollForJobsHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        PollForJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type PollForJobsRequest struct {
-	Headers PollForJobsHeaders
-	Request shared.PollForJobsInput `request:"mediaType=application/json"`
 }
 
 type PollForJobsResponse struct {

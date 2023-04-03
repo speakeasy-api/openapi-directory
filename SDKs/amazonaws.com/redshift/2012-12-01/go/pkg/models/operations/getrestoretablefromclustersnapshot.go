@@ -50,7 +50,7 @@ func (e *GETRestoreTableFromClusterSnapshotVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETRestoreTableFromClusterSnapshotQueryParams struct {
+type GETRestoreTableFromClusterSnapshotRequest struct {
 	Action GETRestoreTableFromClusterSnapshotActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the Amazon Redshift cluster to restore the table to.
 	ClusterIdentifier string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -69,23 +69,15 @@ type GETRestoreTableFromClusterSnapshotQueryParams struct {
 	// The name of the database to restore the table to.
 	TargetDatabaseName *string `queryParam:"style=form,explode=true,name=TargetDatabaseName"`
 	// The name of the schema to restore the table to.
-	TargetSchemaName *string                                       `queryParam:"style=form,explode=true,name=TargetSchemaName"`
-	Version          GETRestoreTableFromClusterSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRestoreTableFromClusterSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRestoreTableFromClusterSnapshotRequest struct {
-	QueryParams GETRestoreTableFromClusterSnapshotQueryParams
-	Headers     GETRestoreTableFromClusterSnapshotHeaders
+	TargetSchemaName  *string                                       `queryParam:"style=form,explode=true,name=TargetSchemaName"`
+	Version           GETRestoreTableFromClusterSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRestoreTableFromClusterSnapshotResponse struct {

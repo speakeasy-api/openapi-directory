@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterJobDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterJobDefinitionRequestBodyContainerProperties - Container properties are used for Amazon ECS based job definitions. These properties to describe the container that's launched as part of a job.
 type RegisterJobDefinitionRequestBodyContainerProperties struct {
 	Command                      []string                             `json:"command,omitempty"`
@@ -119,8 +109,14 @@ type RegisterJobDefinitionRequestBody struct {
 }
 
 type RegisterJobDefinitionRequest struct {
-	Headers RegisterJobDefinitionHeaders
-	Request RegisterJobDefinitionRequestBody `request:"mediaType=application/json"`
+	RequestBody       RegisterJobDefinitionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type RegisterJobDefinitionResponse struct {

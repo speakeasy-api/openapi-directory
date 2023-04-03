@@ -50,25 +50,17 @@ func (e *POSTUpdateApplicationVersionVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTUpdateApplicationVersionQueryParams struct {
-	Action  POSTUpdateApplicationVersionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUpdateApplicationVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdateApplicationVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUpdateApplicationVersionRequest struct {
-	QueryParams POSTUpdateApplicationVersionQueryParams
-	Headers     POSTUpdateApplicationVersionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUpdateApplicationVersionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTUpdateApplicationVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUpdateApplicationVersionResponse struct {

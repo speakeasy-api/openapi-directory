@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateSensitivityInspectionTemplatePathParams struct {
-	// The unique identifier for the Amazon Macie resource that the request applies to.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateSensitivityInspectionTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateSensitivityInspectionTemplateRequestBodyExcludes - Specifies managed data identifiers to exclude (not use) when performing automated sensitive data discovery for an Amazon Macie account. For information about the managed data identifiers that Amazon Macie currently provides, see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
 type UpdateSensitivityInspectionTemplateRequestBodyExcludes struct {
 	ManagedDataIdentifierIds []string `json:"managedDataIdentifierIds,omitempty"`
@@ -43,9 +28,16 @@ type UpdateSensitivityInspectionTemplateRequestBody struct {
 }
 
 type UpdateSensitivityInspectionTemplateRequest struct {
-	PathParams UpdateSensitivityInspectionTemplatePathParams
-	Headers    UpdateSensitivityInspectionTemplateHeaders
-	Request    UpdateSensitivityInspectionTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSensitivityInspectionTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier for the Amazon Macie resource that the request applies to.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateSensitivityInspectionTemplateResponse struct {

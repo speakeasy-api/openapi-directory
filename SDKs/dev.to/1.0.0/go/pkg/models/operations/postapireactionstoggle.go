@@ -68,14 +68,10 @@ func (e *PostAPIReactionsToggleReactableTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type PostAPIReactionsToggleQueryParams struct {
+type PostAPIReactionsToggleRequest struct {
 	Category      PostAPIReactionsToggleCategoryEnum      `queryParam:"style=form,explode=true,name=category"`
 	ReactableID   int                                     `queryParam:"style=form,explode=true,name=reactable_id"`
 	ReactableType PostAPIReactionsToggleReactableTypeEnum `queryParam:"style=form,explode=true,name=reactable_type"`
-}
-
-type PostAPIReactionsToggleRequest struct {
-	QueryParams PostAPIReactionsToggleQueryParams
 }
 
 type PostAPIReactionsToggleResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDetachVolumeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDetachVolumeQueryParams struct {
+type GETDetachVolumeRequest struct {
 	Action GETDetachVolumeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The device name.
 	Device *string `queryParam:"style=form,explode=true,name=Device"`
@@ -62,10 +62,7 @@ type GETDetachVolumeQueryParams struct {
 	InstanceID *string                    `queryParam:"style=form,explode=true,name=InstanceId"`
 	Version    GETDetachVolumeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the volume.
-	VolumeID string `queryParam:"style=form,explode=true,name=VolumeId"`
-}
-
-type GETDetachVolumeHeaders struct {
+	VolumeID          string  `queryParam:"style=form,explode=true,name=VolumeId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -73,11 +70,6 @@ type GETDetachVolumeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDetachVolumeRequest struct {
-	QueryParams GETDetachVolumeQueryParams
-	Headers     GETDetachVolumeHeaders
 }
 
 type GETDetachVolumeResponse struct {

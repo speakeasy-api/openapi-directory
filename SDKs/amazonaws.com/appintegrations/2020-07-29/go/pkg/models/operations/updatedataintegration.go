@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDataIntegrationPathParams struct {
-	// A unique identifier for the DataIntegration.
-	Identifier string `pathParam:"style=simple,explode=false,name=Identifier"`
-}
-
-type UpdateDataIntegrationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDataIntegrationRequestBody struct {
 	// A description of the DataIntegration.
 	Description *string `json:"Description,omitempty"`
@@ -29,9 +14,16 @@ type UpdateDataIntegrationRequestBody struct {
 }
 
 type UpdateDataIntegrationRequest struct {
-	PathParams UpdateDataIntegrationPathParams
-	Headers    UpdateDataIntegrationHeaders
-	Request    UpdateDataIntegrationRequestBody `request:"mediaType=application/json"`
+	// A unique identifier for the DataIntegration.
+	Identifier        string                           `pathParam:"style=simple,explode=false,name=Identifier"`
+	RequestBody       UpdateDataIntegrationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateDataIntegrationResponse struct {

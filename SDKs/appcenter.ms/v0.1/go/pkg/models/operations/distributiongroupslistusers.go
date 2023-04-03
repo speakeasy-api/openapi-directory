@@ -6,31 +6,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsListUsersSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type DistributionGroupsListUsersPathParams struct {
+type DistributionGroupsListUsersRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the distribution group
 	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type DistributionGroupsListUsersQueryParams struct {
 	// Whether to exclude pending invitations in the response
 	ExcludePendingInvitations *bool `queryParam:"style=form,explode=true,name=exclude_pending_invitations"`
-}
-
-type DistributionGroupsListUsersRequest struct {
-	PathParams  DistributionGroupsListUsersPathParams
-	QueryParams DistributionGroupsListUsersQueryParams
-	Security    DistributionGroupsListUsersSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type DistributionGroupsListUsersDefaultApplicationJSONErrorCodeEnum string

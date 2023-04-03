@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetPackageFilterPathParams struct {
+type GetPackageFilterRequest struct {
 	Group   string `pathParam:"style=simple,explode=false,name=group"`
 	Name    string `pathParam:"style=simple,explode=false,name=name"`
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetPackageFilterRequest struct {
-	PathParams GetPackageFilterPathParams
 }
 
 type GetPackageFilterResponse struct {

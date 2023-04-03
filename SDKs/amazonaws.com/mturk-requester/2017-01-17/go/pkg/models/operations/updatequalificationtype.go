@@ -30,20 +30,16 @@ func (e *UpdateQualificationTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type UpdateQualificationTypeHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateQualificationTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateQualificationTypeRequest struct {
-	Headers UpdateQualificationTypeHeaders
-	Request shared.UpdateQualificationTypeRequest `request:"mediaType=application/json"`
+	UpdateQualificationTypeRequest shared.UpdateQualificationTypeRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     UpdateQualificationTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateQualificationTypeResponse struct {

@@ -44,16 +44,16 @@ func newSnippets(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // DeleteSnippetsWorkspaceEncodedID - Delete a snippet
 // Deletes a snippet and returns an empty response.
-func (s *snippets) DeleteSnippetsWorkspaceEncodedID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDResponse, error) {
+func (s *snippets) DeleteSnippetsWorkspaceEncodedID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDRequest, security operations.DeleteSnippetsWorkspaceEncodedIDSecurity) (*operations.DeleteSnippetsWorkspaceEncodedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,16 +96,16 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedID(ctx context.Context, request
 // Deletes a snippet comment.
 //
 // Comments can only be removed by the comment author, snippet creator, or workspace admin.
-func (s *snippets) DeleteSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
+func (s *snippets) DeleteSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDRequest, security operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity) (*operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,16 +145,16 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context
 // DeleteSnippetsWorkspaceEncodedIDWatch - Stop watching a snippet
 // Used to stop watching a specific snippet. Returns 204 (No Content)
 // to indicate success.
-func (s *snippets) DeleteSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDWatchRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDWatchResponse, error) {
+func (s *snippets) DeleteSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDWatchRequest, security operations.DeleteSnippetsWorkspaceEncodedIDWatchSecurity) (*operations.DeleteSnippetsWorkspaceEncodedIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -200,16 +200,16 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDWatch(ctx context.Context, re
 //
 // To delete a snippet, regardless of whether or not concurrent changes
 // are being made to it, use `DELETE /snippets/{encoded_id}` instead.
-func (s *snippets) DeleteSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDNodeIDRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDNodeIDResponse, error) {
+func (s *snippets) DeleteSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDNodeIDRequest, security operations.DeleteSnippetsWorkspaceEncodedIDNodeIDSecurity) (*operations.DeleteSnippetsWorkspaceEncodedIDNodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -273,7 +273,7 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, r
 // only supports `application/json` responses and no
 // `multipart/form-data` or `multipart/related`. As a result, it is not
 // possible to include the file contents.
-func (s *snippets) GetSnippets(ctx context.Context, request operations.GetSnippetsRequest) (*operations.GetSnippetsResponse, error) {
+func (s *snippets) GetSnippets(ctx context.Context, request operations.GetSnippetsRequest, security operations.GetSnippetsSecurity) (*operations.GetSnippetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/snippets"
 
@@ -282,11 +282,11 @@ func (s *snippets) GetSnippets(ctx context.Context, request operations.GetSnippe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -334,20 +334,20 @@ func (s *snippets) GetSnippets(ctx context.Context, request operations.GetSnippe
 // Identical to [`/snippets`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-get), except that the result is further filtered
 // by the snippet owner and only those that are owned by `{workspace}` are
 // returned.
-func (s *snippets) GetSnippetsWorkspace(ctx context.Context, request operations.GetSnippetsWorkspaceRequest) (*operations.GetSnippetsWorkspaceResponse, error) {
+func (s *snippets) GetSnippetsWorkspace(ctx context.Context, request operations.GetSnippetsWorkspaceRequest, security operations.GetSnippetsWorkspaceSecurity) (*operations.GetSnippetsWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -576,16 +576,16 @@ func (s *snippets) GetSnippetsWorkspace(ctx context.Context, request operations.
 //	73Oc4FHzBaZ8llq4q1mr5B2mOUCt815qYR8eB1hG2VJ7j35q4RofaH7IG+Xrf/PfJhfmwtfFYoIN
 //	AqxFUD6OMxcvkO+UfKfkOyXfKdsv/AYCHMLVkHAFWgAAAABJRU5ErkJggg==
 //	------------------------------5957323a6b76--
-func (s *snippets) GetSnippetsWorkspaceEncodedID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDRequest) (*operations.GetSnippetsWorkspaceEncodedIDResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDRequest, security operations.GetSnippetsWorkspaceEncodedIDSecurity) (*operations.GetSnippetsWorkspaceEncodedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -671,16 +671,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedID(ctx context.Context, request op
 //
 // The default sorting is oldest to newest and can be overridden with
 // the `sort` query parameter.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDComments(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommentsRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommentsResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDComments(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommentsRequest, security operations.GetSnippetsWorkspaceEncodedIDCommentsSecurity) (*operations.GetSnippetsWorkspaceEncodedIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -728,16 +728,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDComments(ctx context.Context, re
 
 // GetSnippetsWorkspaceEncodedIDCommentsCommentID - Get a comment on a snippet
 // Returns the specific snippet comment.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDRequest, security operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity) (*operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -785,16 +785,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Co
 
 // GetSnippetsWorkspaceEncodedIDCommits - List snippet changes
 // Returns the changes (commits) made on this snippet.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDCommits(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommitsRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommitsResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDCommits(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommitsRequest, security operations.GetSnippetsWorkspaceEncodedIDCommitsSecurity) (*operations.GetSnippetsWorkspaceEncodedIDCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/commits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/commits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -842,16 +842,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDCommits(ctx context.Context, req
 
 // GetSnippetsWorkspaceEncodedIDCommitsRevision - Get a previous snippet change
 // Returns the changes made on this snippet in this commit.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDCommitsRevision(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDCommitsRevision(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionRequest, security operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionSecurity) (*operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/commits/{revision}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/commits/{revision}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -901,16 +901,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDCommitsRevision(ctx context.Cont
 // Convenience resource for getting to a snippet's raw files without the
 // need for first having to retrieve the snippet itself and having to pull
 // out the versioned file links.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDFilesPath(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDFilesPathRequest) (*operations.GetSnippetsWorkspaceEncodedIDFilesPathResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDFilesPath(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDFilesPathRequest, security operations.GetSnippetsWorkspaceEncodedIDFilesPathSecurity) (*operations.GetSnippetsWorkspaceEncodedIDFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/files/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -956,16 +956,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDFilesPath(ctx context.Context, r
 // not.
 //
 // Hitting this endpoint anonymously always returns a 404.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDWatchRequest) (*operations.GetSnippetsWorkspaceEncodedIDWatchResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDWatchRequest, security operations.GetSnippetsWorkspaceEncodedIDWatchSecurity) (*operations.GetSnippetsWorkspaceEncodedIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1002,16 +1002,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDWatch(ctx context.Context, reque
 
 // GetSnippetsWorkspaceEncodedIDWatchers - List users watching a snippet
 // Returns a paginated list of all users watching a specific snippet.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDWatchers(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDWatchersRequest) (*operations.GetSnippetsWorkspaceEncodedIDWatchersResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDWatchers(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDWatchersRequest, security operations.GetSnippetsWorkspaceEncodedIDWatchersSecurity) (*operations.GetSnippetsWorkspaceEncodedIDWatchersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watchers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watchers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1065,16 +1065,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDWatchers(ctx context.Context, re
 // meta data properties like the title.
 //
 // Other than that, the two endpoints are identical in behavior.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDNodeIDRequest) (*operations.GetSnippetsWorkspaceEncodedIDNodeIDResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDNodeIDRequest, security operations.GetSnippetsWorkspaceEncodedIDNodeIDSecurity) (*operations.GetSnippetsWorkspaceEncodedIDNodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1160,16 +1160,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, requ
 //
 // Note that for text files, no character encoding is included as part of
 // the content type.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeIDFilesPath(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDNodeIDFilesPathRequest) (*operations.GetSnippetsWorkspaceEncodedIDNodeIDFilesPathResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeIDFilesPath(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDNodeIDFilesPathRequest, security operations.GetSnippetsWorkspaceEncodedIDNodeIDFilesPathSecurity) (*operations.GetSnippetsWorkspaceEncodedIDNodeIDFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}/files/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}/files/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1228,20 +1228,20 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeIDFilesPath(ctx context.Cont
 // Note that the character encoding of the contents of the diff is
 // unspecified as Git does not track this, making it hard for
 // Bitbucket to reliably determine this.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionDiff(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDRevisionDiffRequest) (*operations.GetSnippetsWorkspaceEncodedIDRevisionDiffResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionDiff(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDRevisionDiffRequest, security operations.GetSnippetsWorkspaceEncodedIDRevisionDiffSecurity) (*operations.GetSnippetsWorkspaceEncodedIDRevisionDiffResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{revision}/diff", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{revision}/diff", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1299,16 +1299,16 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionDiff(ctx context.Context
 // Note that the character encoding of the contents of the patch is
 // unspecified as Git does not track this, making it hard for
 // Bitbucket to reliably determine this.
-func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionPatch(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDRevisionPatchRequest) (*operations.GetSnippetsWorkspaceEncodedIDRevisionPatchResponse, error) {
+func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionPatch(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDRevisionPatchRequest, security operations.GetSnippetsWorkspaceEncodedIDRevisionPatchSecurity) (*operations.GetSnippetsWorkspaceEncodedIDRevisionPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{revision}/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{revision}/patch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1491,7 +1491,7 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionPatch(ctx context.Contex
 //
 // To create the snippet under a workspace, just append the workspace ID
 // to the URL. See [`/2.0/snippets/{workspace}`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-workspace-post).
-func (s *snippets) PostSnippets(ctx context.Context, request operations.PostSnippetsRequest) (*operations.PostSnippetsResponse, error) {
+func (s *snippets) PostSnippets(ctx context.Context, request map[string]interface{}, security operations.PostSnippetsSecurity) (*operations.PostSnippetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/snippets"
 
@@ -1510,7 +1510,7 @@ func (s *snippets) PostSnippets(ctx context.Context, request operations.PostSnip
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1560,11 +1560,11 @@ func (s *snippets) PostSnippets(ctx context.Context, request operations.PostSnip
 // Identical to [`/snippets`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-post), except that the new snippet will be
 // created under the workspace specified in the path parameter
 // `{workspace}`.
-func (s *snippets) PostSnippetsWorkspace(ctx context.Context, request operations.PostSnippetsWorkspaceRequest) (*operations.PostSnippetsWorkspaceResponse, error) {
+func (s *snippets) PostSnippetsWorkspace(ctx context.Context, request operations.PostSnippetsWorkspaceRequest, security operations.PostSnippetsWorkspaceSecurity) (*operations.PostSnippetsWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1579,7 +1579,7 @@ func (s *snippets) PostSnippetsWorkspace(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1633,11 +1633,11 @@ func (s *snippets) PostSnippetsWorkspace(ctx context.Context, request operations
 // The only required field in the body is `content.raw`.
 //
 // To create a threaded reply to an existing comment, include `parent.id`.
-func (s *snippets) PostSnippetsWorkspaceEncodedIDComments(ctx context.Context, request operations.PostSnippetsWorkspaceEncodedIDCommentsRequest) (*operations.PostSnippetsWorkspaceEncodedIDCommentsResponse, error) {
+func (s *snippets) PostSnippetsWorkspaceEncodedIDComments(ctx context.Context, request operations.PostSnippetsWorkspaceEncodedIDCommentsRequest, security operations.PostSnippetsWorkspaceEncodedIDCommentsSecurity) (*operations.PostSnippetsWorkspaceEncodedIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1652,7 +1652,7 @@ func (s *snippets) PostSnippetsWorkspaceEncodedIDComments(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1895,16 +1895,16 @@ func (s *snippets) PostSnippetsWorkspaceEncodedIDComments(ctx context.Context, r
 // The default mode of operation is for file parts to be processed,
 // regardless of whether or not they are listed in `files`, as a
 // convenience to the client.
-func (s *snippets) PutSnippetsWorkspaceEncodedID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDRequest) (*operations.PutSnippetsWorkspaceEncodedIDResponse, error) {
+func (s *snippets) PutSnippetsWorkspaceEncodedID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDRequest, security operations.PutSnippetsWorkspaceEncodedIDSecurity) (*operations.PutSnippetsWorkspaceEncodedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1986,11 +1986,11 @@ func (s *snippets) PutSnippetsWorkspaceEncodedID(ctx context.Context, request op
 // The only required field in the body is `content.raw`.
 //
 // Comments can only be updated by their author.
-func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDRequest) (*operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
+func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDRequest, security operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity) (*operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2005,7 +2005,7 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2053,16 +2053,16 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Co
 
 // PutSnippetsWorkspaceEncodedIDWatch - Watch a snippet
 // Used to start watching a specific snippet. Returns 204 (No Content).
-func (s *snippets) PutSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDWatchRequest) (*operations.PutSnippetsWorkspaceEncodedIDWatchResponse, error) {
+func (s *snippets) PutSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDWatchRequest, security operations.PutSnippetsWorkspaceEncodedIDWatchSecurity) (*operations.PutSnippetsWorkspaceEncodedIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2114,16 +2114,16 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDWatch(ctx context.Context, reque
 // operation.
 //
 // Other than that, the two endpoints are identical in behavior.
-func (s *snippets) PutSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDNodeIDRequest) (*operations.PutSnippetsWorkspaceEncodedIDNodeIDResponse, error) {
+func (s *snippets) PutSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDNodeIDRequest, security operations.PutSnippetsWorkspaceEncodedIDNodeIDSecurity) (*operations.PutSnippetsWorkspaceEncodedIDNodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/{node_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

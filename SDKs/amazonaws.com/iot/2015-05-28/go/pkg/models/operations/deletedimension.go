@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDimensionPathParams struct {
-	// The unique identifier for the dimension that you want to delete.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteDimensionHeaders struct {
+type DeleteDimensionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDimensionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDimensionRequest struct {
-	PathParams DeleteDimensionPathParams
-	Headers    DeleteDimensionHeaders
+	// The unique identifier for the dimension that you want to delete.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DeleteDimensionResponse struct {

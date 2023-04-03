@@ -8,12 +8,14 @@ import (
 	"time"
 )
 
-type ListJobRunsPathParams struct {
-	// The ID of the virtual cluster for which to list the job run.
-	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
-}
-
-type ListJobRunsQueryParams struct {
+type ListJobRunsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The date and time after which the job runs were submitted.
 	CreatedAfter *time.Time `queryParam:"style=form,explode=true,name=createdAfter"`
 	// The date and time before which the job runs were submitted.
@@ -26,22 +28,8 @@ type ListJobRunsQueryParams struct {
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 	// The states of the job run.
 	States []shared.JobRunStateEnum `queryParam:"style=form,explode=true,name=states"`
-}
-
-type ListJobRunsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobRunsRequest struct {
-	PathParams  ListJobRunsPathParams
-	QueryParams ListJobRunsQueryParams
-	Headers     ListJobRunsHeaders
+	// The ID of the virtual cluster for which to list the job run.
+	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
 }
 
 type ListJobRunsResponse struct {

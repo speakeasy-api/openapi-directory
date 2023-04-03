@@ -33,16 +33,16 @@ func newDownloads(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename - Delete a download artifact
 // Deletes the specified download artifact from the repository.
-func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
+func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -81,16 +81,16 @@ func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx con
 
 // GetRepositoriesWorkspaceRepoSlugDownloads - List download artifacts
 // Returns a list of download links associated with the repository.
-func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
+func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest, security operations.GetRepositoriesWorkspaceRepoSlugDownloadsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -133,16 +133,16 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Contex
 //
 //	$ curl -s -L https://api.bitbucket.org/2.0/repositories/evzijst/git-tests/downloads/hello.txt
 //	Hello World
-func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
+func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest, security operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -190,16 +190,16 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx contex
 //
 // When a file is uploaded with the same name as an existing artifact,
 // then the existing file will be replaced.
-func (s *downloads) PostRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugDownloadsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
+func (s *downloads) PostRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugDownloadsRequest, security operations.PostRepositoriesWorkspaceRepoSlugDownloadsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

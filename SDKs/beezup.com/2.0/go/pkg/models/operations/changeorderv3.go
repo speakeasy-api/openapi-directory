@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeOrderV3PathParams struct {
-	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
+type ChangeOrderV3Request struct {
+	RequestBody map[string]string `request:"mediaType=application/json"`
+	AccountID   int               `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
 	// The Order change type
 	ChangeOrderType string `pathParam:"style=simple,explode=false,name=changeOrderType"`
 	// The marketplace technical code
 	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type ChangeOrderV3QueryParams struct {
 	// If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
 	TestMode *bool `queryParam:"style=form,explode=true,name=testMode"`
 	// Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
 	UserName string `queryParam:"style=form,explode=true,name=userName"`
-}
-
-type ChangeOrderV3Request struct {
-	PathParams  ChangeOrderV3PathParams
-	QueryParams ChangeOrderV3QueryParams
-	Request     map[string]string `request:"mediaType=application/json"`
 }
 
 type ChangeOrderV3Response struct {

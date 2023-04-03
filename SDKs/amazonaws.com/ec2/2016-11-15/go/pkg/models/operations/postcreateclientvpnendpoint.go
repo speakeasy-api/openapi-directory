@@ -50,25 +50,17 @@ func (e *POSTCreateClientVpnEndpointVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTCreateClientVpnEndpointQueryParams struct {
-	Action  POSTCreateClientVpnEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateClientVpnEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateClientVpnEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateClientVpnEndpointRequest struct {
-	QueryParams POSTCreateClientVpnEndpointQueryParams
-	Headers     POSTCreateClientVpnEndpointHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateClientVpnEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTCreateClientVpnEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateClientVpnEndpointResponse struct {

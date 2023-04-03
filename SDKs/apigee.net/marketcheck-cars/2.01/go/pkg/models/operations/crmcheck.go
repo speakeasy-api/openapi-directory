@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CrmCheckPathParams struct {
-	// The VIN to identify the car. Must be a valid 17 char VIN
-	Vin string `pathParam:"style=simple,explode=false,name=vin"`
-}
-
-type CrmCheckQueryParams struct {
+type CrmCheckRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// sale date to check whether after this listing has appeared or not. Must be 8 character long, with YYYYMMDD format
 	SaleDate string `queryParam:"style=form,explode=true,name=sale_date"`
-}
-
-type CrmCheckRequest struct {
-	PathParams  CrmCheckPathParams
-	QueryParams CrmCheckQueryParams
+	// The VIN to identify the car. Must be a valid 17 char VIN
+	Vin string `pathParam:"style=simple,explode=false,name=vin"`
 }
 
 type CrmCheckResponse struct {

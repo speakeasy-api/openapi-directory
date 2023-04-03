@@ -71,7 +71,7 @@ func (e *POSTListJobsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListJobsQueryParams struct {
+type POSTListJobsRequest struct {
 	AWSAccessKeyID string                 `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         POSTListJobsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
@@ -79,16 +79,12 @@ type POSTListJobsQueryParams struct {
 	// Pagination limit
 	MaxJobs          *string                   `queryParam:"style=form,explode=true,name=MaxJobs"`
 	Operation        POSTListJobsOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody      []byte                    `request:"mediaType=text/xml"`
 	Signature        string                    `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                    `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                    `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                    `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTListJobsVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListJobsRequest struct {
-	QueryParams POSTListJobsQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTListJobsResponse struct {

@@ -50,7 +50,7 @@ func (e *GETExecutePolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETExecutePolicyQueryParams struct {
+type GETExecutePolicyRequest struct {
 	Action GETExecutePolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName *string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -61,23 +61,15 @@ type GETExecutePolicyQueryParams struct {
 	// <p>The metric value to compare to <code>BreachThreshold</code>. This enables you to execute a policy of type <code>StepScaling</code> and determine which step adjustment to use. For example, if the breach threshold is 50 and you want to use a step adjustment with a lower bound of 0 and an upper bound of 10, you can set the metric value to 59.</p> <p>If you specify a metric value that doesn't correspond to a step adjustment for the policy, the call returns an error.</p> <p>Required if the policy type is <code>StepScaling</code> and not supported otherwise.</p>
 	MetricValue *float64 `queryParam:"style=form,explode=true,name=MetricValue"`
 	// The name or ARN of the policy.
-	PolicyName string                      `queryParam:"style=form,explode=true,name=PolicyName"`
-	Version    GETExecutePolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETExecutePolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETExecutePolicyRequest struct {
-	QueryParams GETExecutePolicyQueryParams
-	Headers     GETExecutePolicyHeaders
+	PolicyName        string                      `queryParam:"style=form,explode=true,name=PolicyName"`
+	Version           GETExecutePolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETExecutePolicyResponse struct {

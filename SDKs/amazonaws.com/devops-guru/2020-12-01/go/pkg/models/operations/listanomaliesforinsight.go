@@ -8,28 +8,6 @@ import (
 	"time"
 )
 
-type ListAnomaliesForInsightPathParams struct {
-	//  The ID of the insight. The returned anomalies belong to this insight.
-	InsightID string `pathParam:"style=simple,explode=false,name=InsightId"`
-}
-
-type ListAnomaliesForInsightQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListAnomaliesForInsightHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListAnomaliesForInsightRequestBodyFilters -  Specifies one or more service names that are used to list anomalies.
 type ListAnomaliesForInsightRequestBodyFilters struct {
 	// A collection of the names of Amazon Web Services services.
@@ -56,10 +34,20 @@ type ListAnomaliesForInsightRequestBody struct {
 }
 
 type ListAnomaliesForInsightRequest struct {
-	PathParams  ListAnomaliesForInsightPathParams
-	QueryParams ListAnomaliesForInsightQueryParams
-	Headers     ListAnomaliesForInsightHeaders
-	Request     ListAnomaliesForInsightRequestBody `request:"mediaType=application/json"`
+	//  The ID of the insight. The returned anomalies belong to this insight.
+	InsightID string `pathParam:"style=simple,explode=false,name=InsightId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListAnomaliesForInsightRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListAnomaliesForInsightResponse struct {

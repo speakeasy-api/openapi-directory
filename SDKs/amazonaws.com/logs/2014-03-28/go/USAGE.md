@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateKmsKeyRequest{
-        Headers: operations.AssociateKmsKeyHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Logs_20140328.AssociateKmsKey",
+        AssociateKmsKeyRequest: shared.AssociateKmsKeyRequest{
+            KmsKeyID: "corrupti",
+            LogGroupName: "provident",
         },
-        Request: shared.AssociateKmsKeyRequest{
-            KmsKeyID: "illum",
-            LogGroupName: "vel",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "Logs_20140328.AssociateKmsKey",
     }
 
     ctx := context.Background()

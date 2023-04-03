@@ -35,7 +35,7 @@ func newSections(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetDistrictForSection - Returns the district for a section
 func (s *sections) GetDistrictForSection(ctx context.Context, request operations.GetDistrictForSectionRequest) (*operations.GetDistrictForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/district", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/district", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *sections) GetDistrictForSection(ctx context.Context, request operations
 // GetSchoolForSection - Returns the school for a section
 func (s *sections) GetSchoolForSection(ctx context.Context, request operations.GetSchoolForSectionRequest) (*operations.GetSchoolForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/school", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/school", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +143,7 @@ func (s *sections) GetSchoolForSection(ctx context.Context, request operations.G
 // GetSection - Returns a specific section
 func (s *sections) GetSection(ctx context.Context, request operations.GetSectionRequest) (*operations.GetSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +204,7 @@ func (s *sections) GetSections(ctx context.Context, request operations.GetSectio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -245,14 +245,14 @@ func (s *sections) GetSections(ctx context.Context, request operations.GetSectio
 // GetStudentsForSection - Returns the students for a section
 func (s *sections) GetStudentsForSection(ctx context.Context, request operations.GetStudentsForSectionRequest) (*operations.GetStudentsForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/students", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/students", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -303,7 +303,7 @@ func (s *sections) GetStudentsForSection(ctx context.Context, request operations
 // GetTeacherForSection - Returns the primary teacher for a section
 func (s *sections) GetTeacherForSection(ctx context.Context, request operations.GetTeacherForSectionRequest) (*operations.GetTeacherForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/teacher", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/teacher", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -357,14 +357,14 @@ func (s *sections) GetTeacherForSection(ctx context.Context, request operations.
 // GetTeachersForSection - Returns the teachers for a section
 func (s *sections) GetTeachersForSection(ctx context.Context, request operations.GetTeachersForSectionRequest) (*operations.GetTeachersForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/teachers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{id}/teachers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

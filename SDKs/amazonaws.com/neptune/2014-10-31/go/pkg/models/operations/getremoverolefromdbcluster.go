@@ -50,30 +50,22 @@ func (e *GETRemoveRoleFromDBClusterVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETRemoveRoleFromDBClusterQueryParams struct {
+type GETRemoveRoleFromDBClusterRequest struct {
 	Action GETRemoveRoleFromDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the DB cluster to disassociate the IAM role from.
 	DBClusterIdentifier string `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	// The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of supported feature names, see <a href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions">DescribeDBEngineVersions</a>.
 	FeatureName *string `queryParam:"style=form,explode=true,name=FeatureName"`
 	// The Amazon Resource Name (ARN) of the IAM role to disassociate from the DB cluster, for example <code>arn:aws:iam::123456789012:role/NeptuneAccessRole</code>.
-	RoleArn string                                `queryParam:"style=form,explode=true,name=RoleArn"`
-	Version GETRemoveRoleFromDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemoveRoleFromDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRemoveRoleFromDBClusterRequest struct {
-	QueryParams GETRemoveRoleFromDBClusterQueryParams
-	Headers     GETRemoveRoleFromDBClusterHeaders
+	RoleArn           string                                `queryParam:"style=form,explode=true,name=RoleArn"`
+	Version           GETRemoveRoleFromDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemoveRoleFromDBClusterResponse struct {

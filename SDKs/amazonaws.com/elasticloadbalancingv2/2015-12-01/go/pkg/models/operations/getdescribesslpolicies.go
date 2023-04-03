@@ -77,7 +77,7 @@ func (e *GETDescribeSSLPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeSSLPoliciesQueryParams struct {
+type GETDescribeSSLPoliciesRequest struct {
 	Action GETDescribeSSLPoliciesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	//  The type of load balancer. The default lists the SSL policies for all load balancers.
 	LoadBalancerType *GETDescribeSSLPoliciesLoadBalancerTypeEnum `queryParam:"style=form,explode=true,name=LoadBalancerType"`
@@ -86,23 +86,15 @@ type GETDescribeSSLPoliciesQueryParams struct {
 	// The names of the policies.
 	Names []string `queryParam:"style=form,explode=true,name=Names"`
 	// The maximum number of results to return with this call.
-	PageSize *int64                            `queryParam:"style=form,explode=true,name=PageSize"`
-	Version  GETDescribeSSLPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeSSLPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeSSLPoliciesRequest struct {
-	QueryParams GETDescribeSSLPoliciesQueryParams
-	Headers     GETDescribeSSLPoliciesHeaders
+	PageSize          *int64                            `queryParam:"style=form,explode=true,name=PageSize"`
+	Version           GETDescribeSSLPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeSSLPoliciesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDatapointsIDPathParams struct {
+type GetDatapointsIDRequest struct {
 	// The id of the datapoint
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetDatapointsIDRequest struct {
-	PathParams GetDatapointsIDPathParams
 }
 
 type GetDatapointsIDResponse struct {

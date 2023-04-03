@@ -33,11 +33,11 @@ func newItems(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CreateVaultItem - Create a new Item
-func (s *items) CreateVaultItem(ctx context.Context, request operations.CreateVaultItemRequest) (*operations.CreateVaultItemResponse, error) {
+func (s *items) CreateVaultItem(ctx context.Context, request operations.CreateVaultItemRequest, security operations.CreateVaultItemSecurity) (*operations.CreateVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FullItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *items) CreateVaultItem(ctx context.Context, request operations.CreateVa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,16 +100,16 @@ func (s *items) CreateVaultItem(ctx context.Context, request operations.CreateVa
 }
 
 // DeleteVaultItem - Delete an Item
-func (s *items) DeleteVaultItem(ctx context.Context, request operations.DeleteVaultItemRequest) (*operations.DeleteVaultItemResponse, error) {
+func (s *items) DeleteVaultItem(ctx context.Context, request operations.DeleteVaultItemRequest, security operations.DeleteVaultItemSecurity) (*operations.DeleteVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -149,16 +149,16 @@ func (s *items) DeleteVaultItem(ctx context.Context, request operations.DeleteVa
 }
 
 // GetVaultItemByID - Get the details of an Item
-func (s *items) GetVaultItemByID(ctx context.Context, request operations.GetVaultItemByIDRequest) (*operations.GetVaultItemByIDResponse, error) {
+func (s *items) GetVaultItemByID(ctx context.Context, request operations.GetVaultItemByIDRequest, security operations.GetVaultItemByIDSecurity) (*operations.GetVaultItemByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -207,20 +207,20 @@ func (s *items) GetVaultItemByID(ctx context.Context, request operations.GetVaul
 }
 
 // GetVaultItems - Get all items for inside a Vault
-func (s *items) GetVaultItems(ctx context.Context, request operations.GetVaultItemsRequest) (*operations.GetVaultItemsResponse, error) {
+func (s *items) GetVaultItems(ctx context.Context, request operations.GetVaultItemsRequest, security operations.GetVaultItemsSecurity) (*operations.GetVaultItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,11 +270,11 @@ func (s *items) GetVaultItems(ctx context.Context, request operations.GetVaultIt
 // Applies a modified [RFC6902 JSON Patch](https://tools.ietf.org/html/rfc6902) document to an Item or ItemField. This endpoint only supports `add`, `remove` and `replace` operations.
 //
 // When modifying a specific ItemField, the ItemField's ID in the `path` attribute of the operation object: `/fields/{fieldId}`
-func (s *items) PatchVaultItem(ctx context.Context, request operations.PatchVaultItemRequest) (*operations.PatchVaultItemResponse, error) {
+func (s *items) PatchVaultItem(ctx context.Context, request operations.PatchVaultItemRequest, security operations.PatchVaultItemSecurity) (*operations.PatchVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,7 +286,7 @@ func (s *items) PatchVaultItem(ctx context.Context, request operations.PatchVaul
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -335,11 +335,11 @@ func (s *items) PatchVaultItem(ctx context.Context, request operations.PatchVaul
 }
 
 // UpdateVaultItem - Update an Item
-func (s *items) UpdateVaultItem(ctx context.Context, request operations.UpdateVaultItemRequest) (*operations.UpdateVaultItemResponse, error) {
+func (s *items) UpdateVaultItem(ctx context.Context, request operations.UpdateVaultItemRequest, security operations.UpdateVaultItemSecurity) (*operations.UpdateVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FullItemInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -351,7 +351,7 @@ func (s *items) UpdateVaultItem(ctx context.Context, request operations.UpdateVa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

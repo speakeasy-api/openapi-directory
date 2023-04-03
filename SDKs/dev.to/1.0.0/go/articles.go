@@ -36,7 +36,7 @@ func newArticles(defaultClient, securityClient HTTPClient, serverURL, language, 
 // This endpoint allows the client to create a new article.
 //
 // "Articles" are all the posts that users create on DEV that typically show up in the feed. They can be a blog post, a discussion question, a help thread etc. but is referred to as article within the code.
-func (s *articles) CreateArticle(ctx context.Context, request operations.CreateArticleRequest) (*operations.CreateArticleResponse, error) {
+func (s *articles) CreateArticle(ctx context.Context, request shared.Article) (*operations.CreateArticleResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/articles"
 
@@ -85,7 +85,7 @@ func (s *articles) CreateArticle(ctx context.Context, request operations.CreateA
 // This endpoint allows the client to retrieve a single published article given its `id`.
 func (s *articles) GetArticleByID(ctx context.Context, request operations.GetArticleByIDRequest) (*operations.GetArticleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +131,7 @@ func (s *articles) GetArticleByID(ctx context.Context, request operations.GetArt
 // This endpoint allows the client to retrieve a single published article given its `path`.
 func (s *articles) GetArticleByPath(ctx context.Context, request operations.GetArticleByPathRequest) (*operations.GetArticleByPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{username}/{slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{username}/{slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +193,7 @@ func (s *articles) GetArticles(ctx context.Context, request operations.GetArticl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,7 +244,7 @@ func (s *articles) GetLatestArticles(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -288,14 +288,14 @@ func (s *articles) GetLatestArticles(ctx context.Context, request operations.Get
 // It supports pagination, each page will contain `30` users by default.
 func (s *articles) GetOrgArticles(ctx context.Context, request operations.GetOrgArticlesRequest) (*operations.GetOrgArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -353,7 +353,7 @@ func (s *articles) GetUserAllArticles(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -409,7 +409,7 @@ func (s *articles) GetUserArticles(ctx context.Context, request operations.GetUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -465,7 +465,7 @@ func (s *articles) GetUserPublishedArticles(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -521,7 +521,7 @@ func (s *articles) GetUserUnpublishedArticles(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -571,14 +571,14 @@ func (s *articles) GetUserUnpublishedArticles(ctx context.Context, request opera
 // will remain.
 func (s *articles) UnpublishArticle(ctx context.Context, request operations.UnpublishArticleRequest) (*operations.UnpublishArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}/unpublish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}/unpublish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -617,9 +617,9 @@ func (s *articles) UnpublishArticle(ctx context.Context, request operations.Unpu
 // "Articles" are all the posts that users create on DEV that typically show up in the feed. They can be a blog post, a discussion question, a help thread etc. but is referred to as article within the code.
 func (s *articles) UpdateArticle(ctx context.Context, request operations.UpdateArticleRequest) (*operations.UpdateArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Article", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -677,7 +677,7 @@ func (s *articles) Videos(ctx context.Context, request operations.VideosRequest)
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

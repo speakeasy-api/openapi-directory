@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LockRulePathParams struct {
-	// The unique ID of the retention rule.
-	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
-}
-
-type LockRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // LockRuleRequestBodyLockConfiguration - Information about a retention rule lock configuration.
 type LockRuleRequestBodyLockConfiguration struct {
 	UnlockDelay *shared.UnlockDelay `json:"UnlockDelay,omitempty"`
@@ -33,9 +18,16 @@ type LockRuleRequestBody struct {
 }
 
 type LockRuleRequest struct {
-	PathParams LockRulePathParams
-	Headers    LockRuleHeaders
-	Request    LockRuleRequestBody `request:"mediaType=application/json"`
+	RequestBody       LockRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID of the retention rule.
+	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 }
 
 type LockRuleResponse struct {

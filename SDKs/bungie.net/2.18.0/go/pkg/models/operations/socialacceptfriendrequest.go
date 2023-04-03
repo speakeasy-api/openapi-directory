@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SocialAcceptFriendRequestSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SocialAcceptFriendRequestPathParams struct {
-	// The membership id of the user you wish to accept.
-	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SocialAcceptFriendRequestRequest struct {
-	PathParams SocialAcceptFriendRequestPathParams
-	Security   SocialAcceptFriendRequestSecurity
+	// The membership id of the user you wish to accept.
+	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
 }
 
 // SocialAcceptFriendRequest200Wildcard - Look at the Response property for more information about the nature of this response

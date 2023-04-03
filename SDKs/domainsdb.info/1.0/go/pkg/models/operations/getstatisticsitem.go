@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStatisticsItemPathParams struct {
-	Zone string `pathParam:"style=simple,explode=false,name=zone"`
-}
-
-type GetStatisticsItemQueryParams struct {
+type GetStatisticsItemRequest struct {
 	// Results per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search page to request
 	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetStatisticsItemRequest struct {
-	PathParams  GetStatisticsItemPathParams
-	QueryParams GetStatisticsItemQueryParams
+	Zone string  `pathParam:"style=simple,explode=false,name=zone"`
 }
 
 type GetStatisticsItemResponse struct {

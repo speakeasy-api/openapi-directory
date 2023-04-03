@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTagPathParams struct {
-	// Globally unique identifier for the tag.
-	TagGid string `pathParam:"style=simple,explode=false,name=tag_gid"`
-}
-
-type UpdateTagQueryParams struct {
+type UpdateTagRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,11 +22,8 @@ type UpdateTagQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type UpdateTagRequest struct {
-	PathParams  UpdateTagPathParams
-	QueryParams UpdateTagQueryParams
+	// Globally unique identifier for the tag.
+	TagGid string `pathParam:"style=simple,explode=false,name=tag_gid"`
 }
 
 // UpdateTag200ApplicationJSON - Successfully updated the specified tag.

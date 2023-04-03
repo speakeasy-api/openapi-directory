@@ -8,10 +8,10 @@ import (
 )
 
 type TaskTemplatesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TaskTemplatesListQueryParams struct {
+type TaskTemplatesListRequest struct {
 	AssigneeGroup *int64  `queryParam:"style=form,explode=true,name=assignee_group"`
 	AssigneeUser  *int64  `queryParam:"style=form,explode=true,name=assignee_user"`
 	Category      *int64  `queryParam:"style=form,explode=true,name=category"`
@@ -19,11 +19,6 @@ type TaskTemplatesListQueryParams struct {
 	PageSize      *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Since         *string `queryParam:"style=form,explode=true,name=since"`
 	Status        *int64  `queryParam:"style=form,explode=true,name=status"`
-}
-
-type TaskTemplatesListRequest struct {
-	QueryParams TaskTemplatesListQueryParams
-	Security    TaskTemplatesListSecurity
 }
 
 // TaskTemplatesList200ApplicationJSON - Paginated Result

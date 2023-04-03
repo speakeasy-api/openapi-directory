@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMapSpritesPathParams struct {
+type GetMapSpritesRequest struct {
 	// <p>The name of the sprite ﬁle. Use the following ﬁle names for the sprite sheet:</p> <ul> <li> <p> <code>sprites.png</code> </p> </li> <li> <p> <code>sprites@2x.png</code> for high pixel density displays</p> </li> </ul> <p>For the JSON document containing image offsets. Use the following ﬁle names:</p> <ul> <li> <p> <code>sprites.json</code> </p> </li> <li> <p> <code>sprites@2x.json</code> for high pixel density displays</p> </li> </ul>
 	FileName string `pathParam:"style=simple,explode=false,name=FileName"`
 	// The map resource associated with the sprite ﬁle.
-	MapName string `pathParam:"style=simple,explode=false,name=MapName"`
-}
-
-type GetMapSpritesQueryParams struct {
-	// The optional <a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html">API key</a> to authorize the request.
-	Key *string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetMapSpritesHeaders struct {
+	MapName           string  `pathParam:"style=simple,explode=false,name=MapName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +19,8 @@ type GetMapSpritesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMapSpritesRequest struct {
-	PathParams  GetMapSpritesPathParams
-	QueryParams GetMapSpritesQueryParams
-	Headers     GetMapSpritesHeaders
+	// The optional <a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html">API key</a> to authorize the request.
+	Key *string `queryParam:"style=form,explode=true,name=key"`
 }
 
 type GetMapSpritesResponse struct {

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelAnnotationImportJobPathParams struct {
-	// The job's ID.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type CancelAnnotationImportJobHeaders struct {
+type CancelAnnotationImportJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type CancelAnnotationImportJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelAnnotationImportJobRequest struct {
-	PathParams CancelAnnotationImportJobPathParams
-	Headers    CancelAnnotationImportJobHeaders
+	// The job's ID.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type CancelAnnotationImportJobResponse struct {

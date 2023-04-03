@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type UserAPITokensListSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
-}
-
-type UserAPITokensListRequest struct {
-	Security UserAPITokensListSecurity
-}
 
 type UserAPITokensList401ApplicationJSONErrorCodeEnum string
 

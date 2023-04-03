@@ -36,16 +36,16 @@ func newHistory(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Get message history for a channel
 func (s *history) GetMessagesByChannel(ctx context.Context, request operations.GetMessagesByChannelRequest) (*operations.GetMessagesByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,16 +105,16 @@ func (s *history) GetMessagesByChannel(ctx context.Context, request operations.G
 // Get presence on a channel
 func (s *history) GetPresenceHistoryOfChannel(ctx context.Context, request operations.GetPresenceHistoryOfChannelRequest) (*operations.GetPresenceHistoryOfChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/presence/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/presence/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

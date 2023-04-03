@@ -50,27 +50,19 @@ func (e *GETUpdateServiceAccessPoliciesVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETUpdateServiceAccessPoliciesQueryParams struct {
-	// The access rules you want to configure. These rules replace any existing rules.
-	AccessPolicies string                                    `queryParam:"style=form,explode=true,name=AccessPolicies"`
-	Action         GETUpdateServiceAccessPoliciesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DomainName     string                                    `queryParam:"style=form,explode=true,name=DomainName"`
-	Version        GETUpdateServiceAccessPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateServiceAccessPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETUpdateServiceAccessPoliciesRequest struct {
-	QueryParams GETUpdateServiceAccessPoliciesQueryParams
-	Headers     GETUpdateServiceAccessPoliciesHeaders
+	// The access rules you want to configure. These rules replace any existing rules.
+	AccessPolicies    string                                    `queryParam:"style=form,explode=true,name=AccessPolicies"`
+	Action            GETUpdateServiceAccessPoliciesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	DomainName        string                                    `queryParam:"style=form,explode=true,name=DomainName"`
+	Version           GETUpdateServiceAccessPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateServiceAccessPoliciesResponse struct {

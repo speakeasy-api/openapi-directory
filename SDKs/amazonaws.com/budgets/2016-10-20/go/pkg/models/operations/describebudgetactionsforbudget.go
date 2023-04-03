@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBudgetActionsForBudgetQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeBudgetActionsForBudgetXAmzTargetEnum
 type DescribeBudgetActionsForBudgetXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeBudgetActionsForBudgetXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DescribeBudgetActionsForBudgetHeaders struct {
+type DescribeBudgetActionsForBudgetRequest struct {
+	DescribeBudgetActionsForBudgetRequest shared.DescribeBudgetActionsForBudgetRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeBudgetActionsForBudgetHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeBudgetActionsForBudgetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeBudgetActionsForBudgetRequest struct {
-	QueryParams DescribeBudgetActionsForBudgetQueryParams
-	Headers     DescribeBudgetActionsForBudgetHeaders
-	Request     shared.DescribeBudgetActionsForBudgetRequest `request:"mediaType=application/json"`
 }
 
 type DescribeBudgetActionsForBudgetResponse struct {

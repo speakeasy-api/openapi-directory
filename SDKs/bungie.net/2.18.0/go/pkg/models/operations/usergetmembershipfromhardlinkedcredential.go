@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserGetMembershipFromHardLinkedCredentialPathParams struct {
+type UserGetMembershipFromHardLinkedCredentialRequest struct {
 	// The credential type. 'SteamId' is the only valid value at present.
 	CrType int64 `pathParam:"style=simple,explode=false,name=crType"`
 	// The credential to look up. Must be a valid SteamID64.
 	Credential string `pathParam:"style=simple,explode=false,name=credential"`
-}
-
-type UserGetMembershipFromHardLinkedCredentialRequest struct {
-	PathParams UserGetMembershipFromHardLinkedCredentialPathParams
 }
 
 // UserGetMembershipFromHardLinkedCredential200Wildcard - Look at the Response property for more information about the nature of this response

@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFunctionsPathParams struct {
-	// The GraphQL API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
-type ListFunctionsQueryParams struct {
-	// The maximum number of results that you want the request to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// An identifier that was returned from the previous call to this operation, which you can use to return the next set of items in the list.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListFunctionsHeaders struct {
+type ListFunctionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListFunctionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListFunctionsRequest struct {
-	PathParams  ListFunctionsPathParams
-	QueryParams ListFunctionsQueryParams
-	Headers     ListFunctionsHeaders
+	// The GraphQL API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The maximum number of results that you want the request to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// An identifier that was returned from the previous call to this operation, which you can use to return the next set of items in the list.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListFunctionsResponse struct {

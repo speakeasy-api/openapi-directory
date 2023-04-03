@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAgentPathParams struct {
+type DeleteAgentRequest struct {
 	Name    string `pathParam:"style=simple,explode=false,name=name"`
 	Runmode string `pathParam:"style=simple,explode=false,name=runmode"`
-}
-
-type DeleteAgentRequest struct {
-	PathParams DeleteAgentPathParams
 }
 
 type DeleteAgentResponse struct {

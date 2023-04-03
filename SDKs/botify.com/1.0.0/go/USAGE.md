@@ -13,43 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            DjangoRestToken: shared.SchemeDjangoRestToken{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            DjangoRestToken: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateUrlsExportRequest{
-        PathParams: operations.CreateUrlsExportPathParams{
-            AnalysisSlug: "corrupti",
-            ProjectSlug: "provident",
-            Username: "Micheal_Sporer",
-        },
-        QueryParams: operations.CreateUrlsExportQueryParams{
-            Area: "new",
-        },
-        Request: &shared.UrlsQuery{
+        UrlsQuery: &shared.UrlsQuery{
             Fields: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             Filters: map[string]interface{}{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "nulla": "corrupti",
+                "illum": "vel",
+                "error": "deserunt",
             },
             Sort: []map[string]interface{}{
                 map[string]interface{}{
-                    "molestiae": "minus",
-                    "placeat": "voluptatum",
+                    "magnam": "debitis",
+                    "ipsa": "delectus",
                 },
                 map[string]interface{}{
-                    "excepturi": "nisi",
-                    "recusandae": "temporibus",
+                    "suscipit": "molestiae",
+                    "minus": "placeat",
                 },
             },
         },
+        AnalysisSlug: "voluptatum",
+        Area: "disappeared",
+        ProjectSlug: "excepturi",
+        Username: "Glen.Walsh33",
     }
 
     ctx := context.Background()

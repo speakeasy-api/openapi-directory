@@ -8,13 +8,8 @@ import (
 )
 
 type PostGetCostEstimateSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostGetCostEstimateRequest struct {
-	Request  *shared.CostEstimateRequest `request:"mediaType=application/json"`
-	Security PostGetCostEstimateSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostGetCostEstimateResponse struct {

@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConnectorsQueryParams struct {
-	// The name prefix that you want to use to search for and list connectors.
-	ConnectorNamePrefix *string `queryParam:"style=form,explode=true,name=connectorNamePrefix"`
-	// The maximum number of connectors to list in one response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// If the response of a ListConnectors operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListConnectorsHeaders struct {
+type ListConnectorsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListConnectorsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConnectorsRequest struct {
-	QueryParams ListConnectorsQueryParams
-	Headers     ListConnectorsHeaders
+	// The name prefix that you want to use to search for and list connectors.
+	ConnectorNamePrefix *string `queryParam:"style=form,explode=true,name=connectorNamePrefix"`
+	// The maximum number of connectors to list in one response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// If the response of a ListConnectors operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListConnectorsResponse struct {

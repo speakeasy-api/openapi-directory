@@ -9,6 +9,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// GetObjectAttributesRequestBodyObjectReference - The reference that identifies an object.
+type GetObjectAttributesRequestBodyObjectReference struct {
+	Selector *string `json:"Selector,omitempty"`
+}
+
+// GetObjectAttributesRequestBodySchemaFacet - A facet.
+type GetObjectAttributesRequestBodySchemaFacet struct {
+	FacetName *string `json:"FacetName,omitempty"`
+	SchemaArn *string `json:"SchemaArn,omitempty"`
+}
+
+type GetObjectAttributesRequestBody struct {
+	// List of attribute names whose values will be retrieved.
+	AttributeNames []string `json:"AttributeNames"`
+	// The reference that identifies an object.
+	ObjectReference GetObjectAttributesRequestBodyObjectReference `json:"ObjectReference"`
+	// A facet.
+	SchemaFacet GetObjectAttributesRequestBodySchemaFacet `json:"SchemaFacet"`
+}
+
 // GetObjectAttributesXAmzConsistencyLevelEnum - The consistency level at which to retrieve the attributes on an object.
 type GetObjectAttributesXAmzConsistencyLevelEnum string
 
@@ -33,43 +53,19 @@ func (e *GetObjectAttributesXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GetObjectAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+type GetObjectAttributesRequest struct {
+	RequestBody       GetObjectAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The consistency level at which to retrieve the attributes on an object.
 	XAmzConsistencyLevel *GetObjectAttributesXAmzConsistencyLevelEnum `header:"style=simple,explode=false,name=x-amz-consistency-level"`
 	// The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where the object resides.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-// GetObjectAttributesRequestBodyObjectReference - The reference that identifies an object.
-type GetObjectAttributesRequestBodyObjectReference struct {
-	Selector *string `json:"Selector,omitempty"`
-}
-
-// GetObjectAttributesRequestBodySchemaFacet - A facet.
-type GetObjectAttributesRequestBodySchemaFacet struct {
-	FacetName *string `json:"FacetName,omitempty"`
-	SchemaArn *string `json:"SchemaArn,omitempty"`
-}
-
-type GetObjectAttributesRequestBody struct {
-	// List of attribute names whose values will be retrieved.
-	AttributeNames []string `json:"AttributeNames"`
-	// The reference that identifies an object.
-	ObjectReference GetObjectAttributesRequestBodyObjectReference `json:"ObjectReference"`
-	// A facet.
-	SchemaFacet GetObjectAttributesRequestBodySchemaFacet `json:"SchemaFacet"`
-}
-
-type GetObjectAttributesRequest struct {
-	Headers GetObjectAttributesHeaders
-	Request GetObjectAttributesRequestBody `request:"mediaType=application/json"`
 }
 
 type GetObjectAttributesResponse struct {

@@ -50,7 +50,7 @@ func (e *GETListImagesInRecycleBinVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETListImagesInRecycleBinQueryParams struct {
+type GETListImagesInRecycleBinRequest struct {
 	Action GETListImagesInRecycleBinActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -59,23 +59,15 @@ type GETListImagesInRecycleBinQueryParams struct {
 	// The maximum number of items to return for this request. To get the next page of items, make another request with the token returned in the output. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token returned from a previous paginated request. Pagination continues from the end of the items returned by the previous request.
-	NextToken *string                              `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListImagesInRecycleBinVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListImagesInRecycleBinHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListImagesInRecycleBinRequest struct {
-	QueryParams GETListImagesInRecycleBinQueryParams
-	Headers     GETListImagesInRecycleBinHeaders
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListImagesInRecycleBinVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListImagesInRecycleBinResponse struct {

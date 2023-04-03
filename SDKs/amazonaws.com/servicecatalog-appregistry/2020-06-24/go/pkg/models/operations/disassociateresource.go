@@ -33,16 +33,7 @@ func (e *DisassociateResourceResourceTypeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type DisassociateResourcePathParams struct {
-	// The name or ID of the application.
-	Application string `pathParam:"style=simple,explode=false,name=application"`
-	// The name or ID of the resource.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-	// The type of the resource that is being disassociated.
-	ResourceType DisassociateResourceResourceTypeEnum `pathParam:"style=simple,explode=false,name=resourceType"`
-}
-
-type DisassociateResourceHeaders struct {
+type DisassociateResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type DisassociateResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateResourceRequest struct {
-	PathParams DisassociateResourcePathParams
-	Headers    DisassociateResourceHeaders
+	// The name or ID of the application.
+	Application string `pathParam:"style=simple,explode=false,name=application"`
+	// The name or ID of the resource.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
+	// The type of the resource that is being disassociated.
+	ResourceType DisassociateResourceResourceTypeEnum `pathParam:"style=simple,explode=false,name=resourceType"`
 }
 
 type DisassociateResourceResponse struct {

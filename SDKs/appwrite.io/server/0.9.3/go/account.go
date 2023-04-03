@@ -35,7 +35,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // AccountCreateRecovery - Create Password Recovery
 // Sends the user an email with a temporary secret key for password reset. When the user clicks the confirmation link he is redirected back to your app password reset URL with the secret key and email address values attached to the URL query string. Use the query string params to submit a request to the [PUT /account/recovery](/docs/client/account#accountUpdateRecovery) endpoint to complete the process. The verification link sent to the user's email address is valid for 1 hour.
-func (s *account) AccountCreateRecovery(ctx context.Context, request operations.AccountCreateRecoveryRequest) (*operations.AccountCreateRecoveryResponse, error) {
+func (s *account) AccountCreateRecovery(ctx context.Context, request operations.AccountCreateRecoveryRequestBody, security operations.AccountCreateRecoverySecurity) (*operations.AccountCreateRecoveryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/recovery"
 
@@ -51,7 +51,7 @@ func (s *account) AccountCreateRecovery(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,7 +89,7 @@ func (s *account) AccountCreateRecovery(ctx context.Context, request operations.
 // Use this endpoint to send a verification message to your user email address to confirm they are the valid owners of that address. Both the **userId** and **secret** arguments will be passed as query parameters to the URL you have provided to be attached to the verification email. The provided URL should redirect the user back to your app and allow you to complete the verification process by verifying both the **userId** and **secret** parameters. Learn more about how to [complete the verification process](/docs/client/account#accountUpdateVerification). The verification link sent to the user's email address is valid for 7 days.
 //
 // Please note that in order to avoid a [Redirect Attack](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md), the only valid redirect URLs are the ones from domains you have set when adding your platforms in the console interface.
-func (s *account) AccountCreateVerification(ctx context.Context, request operations.AccountCreateVerificationRequest) (*operations.AccountCreateVerificationResponse, error) {
+func (s *account) AccountCreateVerification(ctx context.Context, request operations.AccountCreateVerificationRequestBody, security operations.AccountCreateVerificationSecurity) (*operations.AccountCreateVerificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/verification"
 
@@ -105,7 +105,7 @@ func (s *account) AccountCreateVerification(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,7 +141,7 @@ func (s *account) AccountCreateVerification(ctx context.Context, request operati
 
 // AccountDelete - Delete Account
 // Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately.
-func (s *account) AccountDelete(ctx context.Context, request operations.AccountDeleteRequest) (*operations.AccountDeleteResponse, error) {
+func (s *account) AccountDelete(ctx context.Context) (*operations.AccountDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -150,7 +150,7 @@ func (s *account) AccountDelete(ctx context.Context, request operations.AccountD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,16 +177,16 @@ func (s *account) AccountDelete(ctx context.Context, request operations.AccountD
 
 // AccountDeleteSession - Delete Account Session
 // Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted.
-func (s *account) AccountDeleteSession(ctx context.Context, request operations.AccountDeleteSessionRequest) (*operations.AccountDeleteSessionResponse, error) {
+func (s *account) AccountDeleteSession(ctx context.Context, request operations.AccountDeleteSessionRequest, security operations.AccountDeleteSessionSecurity) (*operations.AccountDeleteSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -213,7 +213,7 @@ func (s *account) AccountDeleteSession(ctx context.Context, request operations.A
 
 // AccountDeleteSessions - Delete All Account Sessions
 // Delete all sessions from the user account and remove any sessions cookies from the end client.
-func (s *account) AccountDeleteSessions(ctx context.Context, request operations.AccountDeleteSessionsRequest) (*operations.AccountDeleteSessionsResponse, error) {
+func (s *account) AccountDeleteSessions(ctx context.Context) (*operations.AccountDeleteSessionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sessions"
 
@@ -222,7 +222,7 @@ func (s *account) AccountDeleteSessions(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,7 +249,7 @@ func (s *account) AccountDeleteSessions(ctx context.Context, request operations.
 
 // AccountGet - Get Account
 // Get currently logged in user data as JSON object.
-func (s *account) AccountGet(ctx context.Context, request operations.AccountGetRequest) (*operations.AccountGetResponse, error) {
+func (s *account) AccountGet(ctx context.Context) (*operations.AccountGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -258,7 +258,7 @@ func (s *account) AccountGet(ctx context.Context, request operations.AccountGetR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,7 +294,7 @@ func (s *account) AccountGet(ctx context.Context, request operations.AccountGetR
 
 // AccountGetLogs - Get Account Logs
 // Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log.
-func (s *account) AccountGetLogs(ctx context.Context, request operations.AccountGetLogsRequest) (*operations.AccountGetLogsResponse, error) {
+func (s *account) AccountGetLogs(ctx context.Context) (*operations.AccountGetLogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/logs"
 
@@ -303,7 +303,7 @@ func (s *account) AccountGetLogs(ctx context.Context, request operations.Account
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -339,7 +339,7 @@ func (s *account) AccountGetLogs(ctx context.Context, request operations.Account
 
 // AccountGetPrefs - Get Account Preferences
 // Get currently logged in user preferences as a key-value object.
-func (s *account) AccountGetPrefs(ctx context.Context, request operations.AccountGetPrefsRequest) (*operations.AccountGetPrefsResponse, error) {
+func (s *account) AccountGetPrefs(ctx context.Context) (*operations.AccountGetPrefsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/prefs"
 
@@ -348,7 +348,7 @@ func (s *account) AccountGetPrefs(ctx context.Context, request operations.Accoun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -384,16 +384,16 @@ func (s *account) AccountGetPrefs(ctx context.Context, request operations.Accoun
 
 // AccountGetSession - Get Session By ID
 // Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used.
-func (s *account) AccountGetSession(ctx context.Context, request operations.AccountGetSessionRequest) (*operations.AccountGetSessionResponse, error) {
+func (s *account) AccountGetSession(ctx context.Context, request operations.AccountGetSessionRequest, security operations.AccountGetSessionSecurity) (*operations.AccountGetSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -429,7 +429,7 @@ func (s *account) AccountGetSession(ctx context.Context, request operations.Acco
 
 // AccountGetSessions - Get Account Sessions
 // Get currently logged in user list of active sessions across different devices.
-func (s *account) AccountGetSessions(ctx context.Context, request operations.AccountGetSessionsRequest) (*operations.AccountGetSessionsResponse, error) {
+func (s *account) AccountGetSessions(ctx context.Context) (*operations.AccountGetSessionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sessions"
 
@@ -438,7 +438,7 @@ func (s *account) AccountGetSessions(ctx context.Context, request operations.Acc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -475,7 +475,7 @@ func (s *account) AccountGetSessions(ctx context.Context, request operations.Acc
 // AccountUpdateEmail - Update Account Email
 // Update currently logged in user account email address. After changing user address, user confirmation status is being reset and a new confirmation mail is sent. For security measures, user password is required to complete this request.
 // This endpoint can also be used to convert an anonymous account to a normal one, by passing an email address and a new password.
-func (s *account) AccountUpdateEmail(ctx context.Context, request operations.AccountUpdateEmailRequest) (*operations.AccountUpdateEmailResponse, error) {
+func (s *account) AccountUpdateEmail(ctx context.Context, request operations.AccountUpdateEmailRequestBody, security operations.AccountUpdateEmailSecurity) (*operations.AccountUpdateEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/email"
 
@@ -491,7 +491,7 @@ func (s *account) AccountUpdateEmail(ctx context.Context, request operations.Acc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -527,7 +527,7 @@ func (s *account) AccountUpdateEmail(ctx context.Context, request operations.Acc
 
 // AccountUpdateName - Update Account Name
 // Update currently logged in user account name.
-func (s *account) AccountUpdateName(ctx context.Context, request operations.AccountUpdateNameRequest) (*operations.AccountUpdateNameResponse, error) {
+func (s *account) AccountUpdateName(ctx context.Context, request operations.AccountUpdateNameRequestBody, security operations.AccountUpdateNameSecurity) (*operations.AccountUpdateNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/name"
 
@@ -543,7 +543,7 @@ func (s *account) AccountUpdateName(ctx context.Context, request operations.Acco
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -579,7 +579,7 @@ func (s *account) AccountUpdateName(ctx context.Context, request operations.Acco
 
 // AccountUpdatePassword - Update Account Password
 // Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional.
-func (s *account) AccountUpdatePassword(ctx context.Context, request operations.AccountUpdatePasswordRequest) (*operations.AccountUpdatePasswordResponse, error) {
+func (s *account) AccountUpdatePassword(ctx context.Context, request operations.AccountUpdatePasswordRequestBody, security operations.AccountUpdatePasswordSecurity) (*operations.AccountUpdatePasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/password"
 
@@ -595,7 +595,7 @@ func (s *account) AccountUpdatePassword(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -631,7 +631,7 @@ func (s *account) AccountUpdatePassword(ctx context.Context, request operations.
 
 // AccountUpdatePrefs - Update Account Preferences
 // Update currently logged in user account preferences. You can pass only the specific settings you wish to update.
-func (s *account) AccountUpdatePrefs(ctx context.Context, request operations.AccountUpdatePrefsRequest) (*operations.AccountUpdatePrefsResponse, error) {
+func (s *account) AccountUpdatePrefs(ctx context.Context, request operations.AccountUpdatePrefsRequestBody, security operations.AccountUpdatePrefsSecurity) (*operations.AccountUpdatePrefsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/prefs"
 
@@ -647,7 +647,7 @@ func (s *account) AccountUpdatePrefs(ctx context.Context, request operations.Acc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -685,7 +685,7 @@ func (s *account) AccountUpdatePrefs(ctx context.Context, request operations.Acc
 // Use this endpoint to complete the user account password reset. Both the **userId** and **secret** arguments will be passed as query parameters to the redirect URL you have provided when sending your request to the [POST /account/recovery](/docs/client/account#accountCreateRecovery) endpoint.
 //
 // Please note that in order to avoid a [Redirect Attack](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md) the only valid redirect URLs are the ones from domains you have set when adding your platforms in the console interface.
-func (s *account) AccountUpdateRecovery(ctx context.Context, request operations.AccountUpdateRecoveryRequest) (*operations.AccountUpdateRecoveryResponse, error) {
+func (s *account) AccountUpdateRecovery(ctx context.Context, request operations.AccountUpdateRecoveryRequestBody, security operations.AccountUpdateRecoverySecurity) (*operations.AccountUpdateRecoveryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/recovery"
 
@@ -701,7 +701,7 @@ func (s *account) AccountUpdateRecovery(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -737,7 +737,7 @@ func (s *account) AccountUpdateRecovery(ctx context.Context, request operations.
 
 // AccountUpdateVerification - Complete Email Verification
 // Use this endpoint to complete the user email verification process. Use both the **userId** and **secret** parameters that were attached to your app URL to verify the user email ownership. If confirmed this route will return a 200 status code.
-func (s *account) AccountUpdateVerification(ctx context.Context, request operations.AccountUpdateVerificationRequest) (*operations.AccountUpdateVerificationResponse, error) {
+func (s *account) AccountUpdateVerification(ctx context.Context, request operations.AccountUpdateVerificationRequestBody, security operations.AccountUpdateVerificationSecurity) (*operations.AccountUpdateVerificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/verification"
 
@@ -753,7 +753,7 @@ func (s *account) AccountUpdateVerification(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

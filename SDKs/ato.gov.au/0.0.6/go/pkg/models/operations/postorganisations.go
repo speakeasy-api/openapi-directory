@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostOrganisationsHeaders struct {
+type PostOrganisationsRequest struct {
 	// The API key.
 	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type PostOrganisationsRequest struct {
-	Headers PostOrganisationsHeaders
 	// Organisation resource
-	Request shared.OrganisationInput `request:"mediaType=application/json"`
+	OrganisationInput shared.OrganisationInput `request:"mediaType=application/json"`
 }
 
 type PostOrganisationsResponse struct {

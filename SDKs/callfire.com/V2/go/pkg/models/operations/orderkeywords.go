@@ -8,19 +8,15 @@ import (
 )
 
 type OrderKeywordsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type OrderKeywordsQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type OrderKeywordsRequest struct {
-	QueryParams OrderKeywordsQueryParams
 	// Request object which contains a list of keywords to buy
-	Request  *shared.KeywordPurchaseRequest `request:"mediaType=application/json"`
-	Security OrderKeywordsSecurity
+	KeywordPurchaseRequest *shared.KeywordPurchaseRequest `request:"mediaType=application/json"`
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 type OrderKeywordsResponse struct {

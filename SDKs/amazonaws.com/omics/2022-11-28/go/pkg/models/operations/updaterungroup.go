@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateRunGroupPathParams struct {
-	// The group's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateRunGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateRunGroupRequestBody struct {
 	// The maximum number of CPUs to use.
 	MaxCpus *int64 `json:"maxCpus,omitempty"`
@@ -33,9 +18,16 @@ type UpdateRunGroupRequestBody struct {
 }
 
 type UpdateRunGroupRequest struct {
-	PathParams UpdateRunGroupPathParams
-	Headers    UpdateRunGroupHeaders
-	Request    UpdateRunGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateRunGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The group's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateRunGroupResponse struct {

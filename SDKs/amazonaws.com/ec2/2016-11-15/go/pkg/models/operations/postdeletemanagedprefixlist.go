@@ -50,25 +50,17 @@ func (e *POSTDeleteManagedPrefixListVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTDeleteManagedPrefixListQueryParams struct {
-	Action  POSTDeleteManagedPrefixListActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteManagedPrefixListVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteManagedPrefixListHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteManagedPrefixListRequest struct {
-	QueryParams POSTDeleteManagedPrefixListQueryParams
-	Headers     POSTDeleteManagedPrefixListHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteManagedPrefixListActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTDeleteManagedPrefixListVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteManagedPrefixListResponse struct {

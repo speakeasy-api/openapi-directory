@@ -8,36 +8,23 @@ import (
 )
 
 type CollectionTicketCommentsAddSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type CollectionTicketCommentsAddPathParams struct {
+type CollectionTicketCommentsAddRequest struct {
+	CollectionTicketCommentInput shared.CollectionTicketCommentInput `request:"mediaType=application/json"`
 	// The collection ID
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
-	// ID of the ticket you are acting upon.
-	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
-}
-
-type CollectionTicketCommentsAddQueryParams struct {
 	// Include raw response. Mostly used for debugging purposes
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type CollectionTicketCommentsAddHeaders struct {
+	// ID of the ticket you are acting upon.
+	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type CollectionTicketCommentsAddRequest struct {
-	PathParams  CollectionTicketCommentsAddPathParams
-	QueryParams CollectionTicketCommentsAddQueryParams
-	Headers     CollectionTicketCommentsAddHeaders
-	Request     shared.CollectionTicketCommentInput `request:"mediaType=application/json"`
-	Security    CollectionTicketCommentsAddSecurity
 }
 
 type CollectionTicketCommentsAddResponse struct {

@@ -8,38 +8,29 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRepositoriesWorkspaceRepoSlugRefsTagsPathParams struct {
+type GetRepositoriesWorkspaceRepoSlugRefsTagsRequest struct {
+	// Query string to narrow down the response as per
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugRefsTagsQueryParams struct {
-	// Query string to narrow down the response as per
-	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
-	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Field by which the results should be sorted as per
 	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering). The `name`
 	// field is handled specially for tags in that, if specified as the sort field, it
 	// uses a natural sort order instead of the default lexicographical sort order. For example,
 	// it will return ['1.1', '1.2', '1.10'] instead of ['1.1', '1.10', '1.2'].
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugRefsTagsRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugRefsTagsPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugRefsTagsQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugRefsTagsResponse struct {

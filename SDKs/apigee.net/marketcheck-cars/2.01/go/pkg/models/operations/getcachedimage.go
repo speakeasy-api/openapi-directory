@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCachedImagePathParams struct {
+type GetCachedImageRequest struct {
+	// The API Authentication Key. Mandatory with all API calls.
+	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// ID of the image to fetch
 	ImageID string `pathParam:"style=simple,explode=false,name=imageID"`
 	// ID of the listing to fetch cached images for
 	ListingID string `pathParam:"style=simple,explode=false,name=listingID"`
-}
-
-type GetCachedImageQueryParams struct {
-	// The API Authentication Key. Mandatory with all API calls.
-	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetCachedImageRequest struct {
-	PathParams  GetCachedImagePathParams
-	QueryParams GetCachedImageQueryParams
 }
 
 type GetCachedImageResponse struct {

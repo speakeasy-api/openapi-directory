@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConfiguredTablesQueryParams struct {
-	// The maximum size of the results that is returned per call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token value retrieved from a previous call to access the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListConfiguredTablesHeaders struct {
+type ListConfiguredTablesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListConfiguredTablesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConfiguredTablesRequest struct {
-	QueryParams ListConfiguredTablesQueryParams
-	Headers     ListConfiguredTablesHeaders
+	// The maximum size of the results that is returned per call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token value retrieved from a previous call to access the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListConfiguredTablesResponse struct {

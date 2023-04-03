@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SocialGetPlatformFriendListPathParams struct {
+type SocialGetPlatformFriendListRequest struct {
 	// The platform friend type.
 	FriendPlatform int `pathParam:"style=simple,explode=false,name=friendPlatform"`
 	// The zero based page to return. Page size is 100.
 	Page string `pathParam:"style=simple,explode=false,name=page"`
-}
-
-type SocialGetPlatformFriendListRequest struct {
-	PathParams SocialGetPlatformFriendListPathParams
 }
 
 // SocialGetPlatformFriendList200Wildcard - Look at the Response property for more information about the nature of this response

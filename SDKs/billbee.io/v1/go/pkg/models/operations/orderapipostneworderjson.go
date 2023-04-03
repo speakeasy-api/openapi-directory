@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIPostNewOrderJSONQueryParams struct {
+type OrderAPIPostNewOrderJSONRequest struct {
+	BillbeeInterfacesBillbeeAPIModelOrderInput shared.BillbeeInterfacesBillbeeAPIModelOrderInput `request:"mediaType=application/json"`
 	// Deprecated, if orderData.ApiAccountId is set, it will be used instead of 'shopId'
 	ShopID *int64 `queryParam:"style=form,explode=true,name=shopId"`
-}
-
-type OrderAPIPostNewOrderJSONRequest struct {
-	QueryParams OrderAPIPostNewOrderJSONQueryParams
-	Request     shared.BillbeeInterfacesBillbeeAPIModelOrderInput `request:"mediaType=application/json"`
 }
 
 type OrderAPIPostNewOrderJSONResponse struct {

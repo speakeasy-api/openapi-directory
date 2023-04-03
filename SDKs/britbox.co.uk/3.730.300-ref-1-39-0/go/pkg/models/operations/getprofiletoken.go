@@ -8,10 +8,12 @@ import (
 )
 
 type GetProfileTokenSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetProfileTokenQueryParams struct {
+type GetProfileTokenRequest struct {
+	// The profile id and optional pin with required token scope.
+	ProfileTokenRequest shared.ProfileTokenRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -46,13 +48,6 @@ type GetProfileTokenQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetProfileTokenRequest struct {
-	QueryParams GetProfileTokenQueryParams
-	// The profile id and optional pin with required token scope.
-	Request  shared.ProfileTokenRequest `request:"mediaType=application/json"`
-	Security GetProfileTokenSecurity
 }
 
 type GetProfileTokenResponse struct {

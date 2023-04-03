@@ -58,27 +58,19 @@ func (e *GETUpdateScalingParametersVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETUpdateScalingParametersQueryParams struct {
+type GETUpdateScalingParametersRequest struct {
 	Action     GETUpdateScalingParametersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                               `queryParam:"style=form,explode=true,name=DomainName"`
 	// The desired instance type and desired number of replicas of each index partition.
 	ScalingParameters GETUpdateScalingParametersScalingParameters `queryParam:"style=form,explode=true,name=ScalingParameters"`
 	Version           GETUpdateScalingParametersVersionEnum       `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateScalingParametersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateScalingParametersRequest struct {
-	QueryParams GETUpdateScalingParametersQueryParams
-	Headers     GETUpdateScalingParametersHeaders
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateScalingParametersResponse struct {

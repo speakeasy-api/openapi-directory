@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteWebhooksIDPathParams struct {
+type DeleteWebhooksIDRequest struct {
 	// The `id` of the webhook
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteWebhooksIDRequest struct {
-	PathParams DeleteWebhooksIDPathParams
 }
 
 type DeleteWebhooksIDResponse struct {

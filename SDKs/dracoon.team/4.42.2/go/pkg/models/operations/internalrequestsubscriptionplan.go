@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InternalRequestSubscriptionPlanHeaders struct {
+type InternalRequestSubscriptionPlanRequest struct {
 	// Service Authentication token
 	XSdsServiceToken string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type InternalRequestSubscriptionPlanRequest struct {
-	Headers InternalRequestSubscriptionPlanHeaders
 }
 
 type InternalRequestSubscriptionPlanResponse struct {

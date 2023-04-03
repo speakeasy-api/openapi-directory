@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribePlacementPathParams struct {
-	// The name of the placement within a project.
-	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
-	// The project containing the placement to be described.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type DescribePlacementHeaders struct {
+type DescribePlacementRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribePlacementHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribePlacementRequest struct {
-	PathParams DescribePlacementPathParams
-	Headers    DescribePlacementHeaders
+	// The name of the placement within a project.
+	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
+	// The project containing the placement to be described.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type DescribePlacementResponse struct {

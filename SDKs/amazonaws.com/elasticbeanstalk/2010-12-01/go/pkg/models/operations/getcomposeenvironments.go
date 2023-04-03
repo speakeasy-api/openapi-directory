@@ -50,7 +50,7 @@ func (e *GETComposeEnvironmentsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETComposeEnvironmentsQueryParams struct {
+type GETComposeEnvironmentsRequest struct {
 	Action GETComposeEnvironmentsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the application to which the specified source bundles belong.
 	ApplicationName *string `queryParam:"style=form,explode=true,name=ApplicationName"`
@@ -58,22 +58,14 @@ type GETComposeEnvironmentsQueryParams struct {
 	GroupName *string                           `queryParam:"style=form,explode=true,name=GroupName"`
 	Version   GETComposeEnvironmentsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// A list of version labels, specifying one or more application source bundles that belong to the target application. Each source bundle must include an environment manifest that specifies the name of the environment and the name of the solution stack to use, and optionally can specify environment links to create.
-	VersionLabels []string `queryParam:"style=form,explode=true,name=VersionLabels"`
-}
-
-type GETComposeEnvironmentsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETComposeEnvironmentsRequest struct {
-	QueryParams GETComposeEnvironmentsQueryParams
-	Headers     GETComposeEnvironmentsHeaders
+	VersionLabels     []string `queryParam:"style=form,explode=true,name=VersionLabels"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETComposeEnvironmentsResponse struct {

@@ -37,7 +37,7 @@ func newContribution(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteContributionsID - Delete this contribution
 func (s *contribution) DeleteContributionsID(ctx context.Context, request operations.DeleteContributionsIDRequest) (*operations.DeleteContributionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *contribution) GetContributionRefinements(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,7 +185,7 @@ func (s *contribution) GetContributions(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -226,7 +226,7 @@ func (s *contribution) GetContributions(ctx context.Context, request operations.
 // GetContributionsID - Get a single contribution by id
 func (s *contribution) GetContributionsID(ctx context.Context, request operations.GetContributionsIDRequest) (*operations.GetContributionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +272,7 @@ func (s *contribution) GetContributionsID(ctx context.Context, request operation
 // Returns a list of user ids of users who have liked this conribution
 func (s *contribution) GetContributionsIDLikes(ctx context.Context, request operations.GetContributionsIDLikesRequest) (*operations.GetContributionsIDLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/likes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/likes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +316,7 @@ func (s *contribution) GetContributionsIDLikes(ctx context.Context, request oper
 // GetExportsID - Get a single export job; poll to follow export progress.
 func (s *contribution) GetExportsID(ctx context.Context, request operations.GetExportsIDRequest) (*operations.GetExportsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exports/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/exports/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -359,7 +359,7 @@ func (s *contribution) GetExportsID(ctx context.Context, request operations.GetE
 }
 
 // PostContributions - Create a new contribution
-func (s *contribution) PostContributions(ctx context.Context, request operations.PostContributionsRequest) (*operations.PostContributionsResponse, error) {
+func (s *contribution) PostContributions(ctx context.Context, request shared.Contribution, security operations.PostContributionsSecurity) (*operations.PostContributionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contributions"
 
@@ -378,7 +378,7 @@ func (s *contribution) PostContributions(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -416,9 +416,9 @@ func (s *contribution) PostContributions(ctx context.Context, request operations
 // Allows end users to bring potential issues with publicly visible content to the attention of moderators.
 func (s *contribution) PostContributionsIDFlag(ctx context.Context, request operations.PostContributionsIDFlagRequest) (*operations.PostContributionsIDFlagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/flag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/flag", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Flag", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -470,7 +470,7 @@ func (s *contribution) PostContributionsIDFlag(ctx context.Context, request oper
 // PostContributionsIDLike - Allows a user to mark a contribution as liked
 func (s *contribution) PostContributionsIDLike(ctx context.Context, request operations.PostContributionsIDLikeRequest) (*operations.PostContributionsIDLikeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/like", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/like", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -515,9 +515,9 @@ func (s *contribution) PostContributionsIDLike(ctx context.Context, request oper
 // Allows the contribution to approved of rejected.
 func (s *contribution) PostContributionsIDModerate(ctx context.Context, request operations.PostContributionsIDModerateRequest) (*operations.PostContributionsIDModerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/moderate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/moderate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModerationHistoryItemSubmission", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -594,7 +594,7 @@ func (s *contribution) PostExport(ctx context.Context, request operations.PostEx
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -643,7 +643,7 @@ func (s *contribution) PostExportSummary(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

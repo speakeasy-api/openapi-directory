@@ -8,19 +8,14 @@ import (
 )
 
 type PatchBalanceAccountsIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchBalanceAccountsIDPathParams struct {
-	// The unique identifier of the balance account.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchBalanceAccountsIDRequest struct {
-	PathParams PatchBalanceAccountsIDPathParams
-	Request    *shared.BalanceAccountUpdateRequestInput `request:"mediaType=application/json"`
-	Security   PatchBalanceAccountsIDSecurity
+	BalanceAccountUpdateRequestInput *shared.BalanceAccountUpdateRequestInput `request:"mediaType=application/json"`
+	// The unique identifier of the balance account.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PatchBalanceAccountsIDResponse struct {

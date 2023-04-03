@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFolderPathParams struct {
-	// Folder ID
-	FolderID int64 `pathParam:"style=simple,explode=false,name=folder_id"`
-}
-
 // UpdateFolderXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type UpdateFolderXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *UpdateFolderXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateFolderHeaders struct {
+type UpdateFolderRequest struct {
+	UpdateFolderRequest shared.UpdateFolderRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *UpdateFolderXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type UpdateFolderRequest struct {
-	PathParams UpdateFolderPathParams
-	Headers    UpdateFolderHeaders
-	Request    shared.UpdateFolderRequest `request:"mediaType=application/json"`
+	// Folder ID
+	FolderID int64 `pathParam:"style=simple,explode=false,name=folder_id"`
 }
 
 type UpdateFolderResponse struct {

@@ -8,25 +8,17 @@ import (
 )
 
 type ToggleTextBroadcastRecipientsStatusSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type ToggleTextBroadcastRecipientsStatusPathParams struct {
-	// An id of a text broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ToggleTextBroadcastRecipientsStatusQueryParams struct {
-	// Flag which indicate what to do with texts (true will enable texts in DISABLED status and vice versa)
-	Enable *bool `queryParam:"style=form,explode=true,name=enable"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type ToggleTextBroadcastRecipientsStatusRequest struct {
-	PathParams  ToggleTextBroadcastRecipientsStatusPathParams
-	QueryParams ToggleTextBroadcastRecipientsStatusQueryParams
 	// List of Recipient objects. By recipient we mean either phone number or contact id.
-	Request  []shared.Recipient `request:"mediaType=application/json"`
-	Security ToggleTextBroadcastRecipientsStatusSecurity
+	RequestBody []shared.Recipient `request:"mediaType=application/json"`
+	// Flag which indicate what to do with texts (true will enable texts in DISABLED status and vice versa)
+	Enable *bool `queryParam:"style=form,explode=true,name=enable"`
+	// An id of a text broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ToggleTextBroadcastRecipientsStatusResponse struct {

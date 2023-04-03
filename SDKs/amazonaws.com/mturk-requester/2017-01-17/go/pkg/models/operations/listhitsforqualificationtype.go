@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListHITsForQualificationTypeQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListHITsForQualificationTypeXAmzTargetEnum
 type ListHITsForQualificationTypeXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListHITsForQualificationTypeXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListHITsForQualificationTypeHeaders struct {
+type ListHITsForQualificationTypeRequest struct {
+	ListHITsForQualificationTypeRequest shared.ListHITsForQualificationTypeRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListHITsForQualificationTypeHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListHITsForQualificationTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListHITsForQualificationTypeRequest struct {
-	QueryParams ListHITsForQualificationTypeQueryParams
-	Headers     ListHITsForQualificationTypeHeaders
-	Request     shared.ListHITsForQualificationTypeRequest `request:"mediaType=application/json"`
 }
 
 type ListHITsForQualificationTypeResponse struct {

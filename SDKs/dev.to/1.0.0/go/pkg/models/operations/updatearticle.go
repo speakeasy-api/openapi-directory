@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateArticlePathParams struct {
+type UpdateArticleRequest struct {
+	Article *shared.Article `request:"mediaType=application/json"`
 	// The ID of the user to unpublish.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateArticleRequest struct {
-	PathParams UpdateArticlePathParams
-	Request    *shared.Article `request:"mediaType=application/json"`
 }
 
 type UpdateArticleResponse struct {

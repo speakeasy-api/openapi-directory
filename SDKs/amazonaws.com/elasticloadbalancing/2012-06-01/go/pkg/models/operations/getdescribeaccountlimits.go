@@ -50,28 +50,20 @@ func (e *GETDescribeAccountLimitsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeAccountLimitsQueryParams struct {
+type GETDescribeAccountLimitsRequest struct {
 	Action GETDescribeAccountLimitsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The marker for the next set of results. (You received this marker from a previous call.)
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of results to return with this call.
-	PageSize *int64                              `queryParam:"style=form,explode=true,name=PageSize"`
-	Version  GETDescribeAccountLimitsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAccountLimitsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAccountLimitsRequest struct {
-	QueryParams GETDescribeAccountLimitsQueryParams
-	Headers     GETDescribeAccountLimitsHeaders
+	PageSize          *int64                              `queryParam:"style=form,explode=true,name=PageSize"`
+	Version           GETDescribeAccountLimitsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAccountLimitsResponse struct {

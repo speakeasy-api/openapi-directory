@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAccountAuditConfigurationHeaders struct {
+type DescribeAccountAuditConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -15,10 +15,6 @@ type DescribeAccountAuditConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAccountAuditConfigurationRequest struct {
-	Headers DescribeAccountAuditConfigurationHeaders
 }
 
 type DescribeAccountAuditConfigurationResponse struct {

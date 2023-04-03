@@ -10,7 +10,7 @@ import (
 )
 
 type GetFoodBrandedNamePhpSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=query"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
 // GetFoodBrandedNamePhpLimitEnum - #### Set maximum number of records you want the API to return. The default value is "**10**."
@@ -64,7 +64,7 @@ func (e *GetFoodBrandedNamePhpLimitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFoodBrandedNamePhpQueryParams struct {
+type GetFoodBrandedNamePhpRequest struct {
 	// #### Set maximum number of records you want the API to return. The default value is "**10**."
 	//
 	// **Example**
@@ -83,11 +83,6 @@ type GetFoodBrandedNamePhpQueryParams struct {
 	// > ```&page=1```
 	//
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetFoodBrandedNamePhpRequest struct {
-	QueryParams GetFoodBrandedNamePhpQueryParams
-	Security    GetFoodBrandedNamePhpSecurity
 }
 
 type GetFoodBrandedNamePhpResponse struct {

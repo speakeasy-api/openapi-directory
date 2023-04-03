@@ -13,48 +13,42 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateClusterRequest{
-        Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateClusterRequestBody{
-            AdminUserName: "illum",
-            AdminUserPassword: "vel",
+        RequestBody: operations.CreateClusterRequestBody{
+            AdminUserName: "corrupti",
+            AdminUserPassword: "provident",
             AuthType: "SECRET_ARN",
-            ClientToken: "deserunt",
-            ClusterName: "suscipit",
-            KmsKeyID: "iure",
-            PreferredMaintenanceWindow: "magnam",
-            ShardCapacity: 891773,
-            ShardCount: 56713,
+            ClientToken: "quibusdam",
+            ClusterName: "unde",
+            KmsKeyID: "nulla",
+            PreferredMaintenanceWindow: "corrupti",
+            ShardCapacity: 847252,
+            ShardCount: 423655,
             SubnetIds: []string{
-                "tempora",
+                "deserunt",
                 "suscipit",
+                "iure",
+            },
+            Tags: map[string]string{
+                "debitis": "ipsa",
+                "delectus": "tempora",
+            },
+            VpcSecurityGroupIds: []string{
                 "molestiae",
                 "minus",
             },
-            Tags: map[string]string{
-                "voluptatum": "iusto",
-                "excepturi": "nisi",
-                "recusandae": "temporibus",
-                "ab": "quis",
-            },
-            VpcSecurityGroupIds: []string{
-                "deserunt",
-            },
         },
+        XAmzAlgorithm: "placeat",
+        XAmzContentSha256: "voluptatum",
+        XAmzCredential: "iusto",
+        XAmzDate: "excepturi",
+        XAmzSecurityToken: "nisi",
+        XAmzSignature: "recusandae",
+        XAmzSignedHeaders: "temporibus",
     }
 
     ctx := context.Background()

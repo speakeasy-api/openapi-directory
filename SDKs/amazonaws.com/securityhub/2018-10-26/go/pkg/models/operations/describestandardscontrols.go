@@ -7,32 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeStandardsControlsPathParams struct {
-	// The ARN of a resource that represents your subscription to a supported standard. To get the subscription ARNs of the standards you have enabled, use the <code>GetEnabledStandards</code> operation.
-	StandardsSubscriptionArn string `pathParam:"style=simple,explode=false,name=StandardsSubscriptionArn"`
-}
-
-type DescribeStandardsControlsQueryParams struct {
+type DescribeStandardsControlsRequest struct {
 	// The maximum number of security standard controls to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that is required for pagination. On your first call to the <code>DescribeStandardsControls</code> operation, set the value of this parameter to <code>NULL</code>.</p> <p>For subsequent calls to the operation, to continue listing data, set the value of this parameter to the value returned from the previous response.</p>
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type DescribeStandardsControlsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeStandardsControlsRequest struct {
-	PathParams  DescribeStandardsControlsPathParams
-	QueryParams DescribeStandardsControlsQueryParams
-	Headers     DescribeStandardsControlsHeaders
+	// The ARN of a resource that represents your subscription to a supported standard. To get the subscription ARNs of the standards you have enabled, use the <code>GetEnabledStandards</code> operation.
+	StandardsSubscriptionArn string  `pathParam:"style=simple,explode=false,name=StandardsSubscriptionArn"`
+	XAmzAlgorithm            *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DescribeStandardsControlsResponse struct {

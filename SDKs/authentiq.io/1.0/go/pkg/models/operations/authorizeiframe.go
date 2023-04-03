@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type AuthorizeIframePathParams struct {
+type AuthorizeIframeRequest struct {
 	// Client identifier
 	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type AuthorizeIframeRequest struct {
-	PathParams AuthorizeIframePathParams
 }
 
 type AuthorizeIframeResponse struct {

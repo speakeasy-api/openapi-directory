@@ -34,11 +34,11 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // LocationsAdd - Create Location
 // Create Location
-func (s *locations) LocationsAdd(ctx context.Context, request operations.LocationsAddRequest) (*operations.LocationsAddResponse, error) {
+func (s *locations) LocationsAdd(ctx context.Context, request operations.LocationsAddRequest, security operations.LocationsAddSecurity) (*operations.LocationsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/locations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *locations) LocationsAdd(ctx context.Context, request operations.Locatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *locations) LocationsAdd(ctx context.Context, request operations.Locatio
 
 // LocationsAll - List Locations
 // List Locations
-func (s *locations) LocationsAll(ctx context.Context, request operations.LocationsAllRequest) (*operations.LocationsAllResponse, error) {
+func (s *locations) LocationsAll(ctx context.Context, request operations.LocationsAllRequest, security operations.LocationsAllSecurity) (*operations.LocationsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/locations"
 
@@ -164,13 +164,13 @@ func (s *locations) LocationsAll(ctx context.Context, request operations.Locatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *locations) LocationsAll(ctx context.Context, request operations.Locatio
 
 // LocationsDelete - Delete Location
 // Delete Location
-func (s *locations) LocationsDelete(ctx context.Context, request operations.LocationsDeleteRequest) (*operations.LocationsDeleteResponse, error) {
+func (s *locations) LocationsDelete(ctx context.Context, request operations.LocationsDeleteRequest, security operations.LocationsDeleteSecurity) (*operations.LocationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/locations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *locations) LocationsDelete(ctx context.Context, request operations.Loca
 
 // LocationsOne - Get Location
 // Get Location
-func (s *locations) LocationsOne(ctx context.Context, request operations.LocationsOneRequest) (*operations.LocationsOneResponse, error) {
+func (s *locations) LocationsOne(ctx context.Context, request operations.LocationsOneRequest, security operations.LocationsOneSecurity) (*operations.LocationsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/locations/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *locations) LocationsOne(ctx context.Context, request operations.Locatio
 
 // LocationsUpdate - Update Location
 // Update Location
-func (s *locations) LocationsUpdate(ctx context.Context, request operations.LocationsUpdateRequest) (*operations.LocationsUpdateResponse, error) {
+func (s *locations) LocationsUpdate(ctx context.Context, request operations.LocationsUpdateRequest, security operations.LocationsUpdateSecurity) (*operations.LocationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/locations/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/locations/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *locations) LocationsUpdate(ctx context.Context, request operations.Loca
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

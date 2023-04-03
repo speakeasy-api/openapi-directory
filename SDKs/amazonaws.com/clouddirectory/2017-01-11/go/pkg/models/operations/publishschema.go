@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishSchemaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The Amazon Resource Name (ARN) that is associated with the development schema. For more information, see <a>arns</a>.
-	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
 type PublishSchemaRequestBody struct {
 	// The minor version under which the schema will be published. This parameter is recommended. Schemas have both a major and minor version associated with them.
 	MinorVersion *string `json:"MinorVersion,omitempty"`
@@ -29,8 +17,16 @@ type PublishSchemaRequestBody struct {
 }
 
 type PublishSchemaRequest struct {
-	Headers PublishSchemaHeaders
-	Request PublishSchemaRequestBody `request:"mediaType=application/json"`
+	RequestBody       PublishSchemaRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) that is associated with the development schema. For more information, see <a>arns</a>.
+	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
 }
 
 type PublishSchemaResponse struct {

@@ -50,7 +50,7 @@ func (e *GETMoveByoipCidrToIpamVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETMoveByoipCidrToIpamQueryParams struct {
+type GETMoveByoipCidrToIpamRequest struct {
 	Action GETMoveByoipCidrToIpamActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The BYOIP CIDR.
 	Cidr string `queryParam:"style=form,explode=true,name=Cidr"`
@@ -59,23 +59,15 @@ type GETMoveByoipCidrToIpamQueryParams struct {
 	// The IPAM pool ID.
 	IpamPoolID string `queryParam:"style=form,explode=true,name=IpamPoolId"`
 	// The Amazon Web Services account ID of the owner of the IPAM pool.
-	IpamPoolOwner string                            `queryParam:"style=form,explode=true,name=IpamPoolOwner"`
-	Version       GETMoveByoipCidrToIpamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETMoveByoipCidrToIpamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETMoveByoipCidrToIpamRequest struct {
-	QueryParams GETMoveByoipCidrToIpamQueryParams
-	Headers     GETMoveByoipCidrToIpamHeaders
+	IpamPoolOwner     string                            `queryParam:"style=form,explode=true,name=IpamPoolOwner"`
+	Version           GETMoveByoipCidrToIpamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETMoveByoipCidrToIpamResponse struct {

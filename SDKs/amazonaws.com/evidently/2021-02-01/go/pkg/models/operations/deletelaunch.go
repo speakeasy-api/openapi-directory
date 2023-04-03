@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteLaunchPathParams struct {
-	// The name of the launch to delete.
-	Launch string `pathParam:"style=simple,explode=false,name=launch"`
-	// The name or ARN of the project that contains the launch to delete.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DeleteLaunchHeaders struct {
+type DeleteLaunchRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteLaunchHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteLaunchRequest struct {
-	PathParams DeleteLaunchPathParams
-	Headers    DeleteLaunchHeaders
+	// The name of the launch to delete.
+	Launch string `pathParam:"style=simple,explode=false,name=launch"`
+	// The name or ARN of the project that contains the launch to delete.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type DeleteLaunchResponse struct {

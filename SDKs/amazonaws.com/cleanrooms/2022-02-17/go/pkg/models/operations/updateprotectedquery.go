@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateProtectedQueryPathParams struct {
-	// The identifier for a member of a protected query instance.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-	// The identifier for a protected query instance.
-	ProtectedQueryIdentifier string `pathParam:"style=simple,explode=false,name=protectedQueryIdentifier"`
-}
-
-type UpdateProtectedQueryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateProtectedQueryRequestBodyTargetStatusEnum - The target status of a query. Used to update the execution status of a currently running query.
 type UpdateProtectedQueryRequestBodyTargetStatusEnum string
 
@@ -53,9 +36,18 @@ type UpdateProtectedQueryRequestBody struct {
 }
 
 type UpdateProtectedQueryRequest struct {
-	PathParams UpdateProtectedQueryPathParams
-	Headers    UpdateProtectedQueryHeaders
-	Request    UpdateProtectedQueryRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateProtectedQueryRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier for a member of a protected query instance.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
+	// The identifier for a protected query instance.
+	ProtectedQueryIdentifier string `pathParam:"style=simple,explode=false,name=protectedQueryIdentifier"`
 }
 
 type UpdateProtectedQueryResponse struct {

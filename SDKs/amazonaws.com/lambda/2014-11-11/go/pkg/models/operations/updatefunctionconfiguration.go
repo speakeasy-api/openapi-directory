@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFunctionConfigurationPathParams struct {
-	// The name of the Lambda function.
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type UpdateFunctionConfigurationQueryParams struct {
+type UpdateFunctionConfigurationRequest struct {
 	// A short user-defined function description. Lambda does not use this value. Assign a meaningful description as you see fit.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
+	// The name of the Lambda function.
+	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
 	// The function that Lambda calls to begin executing your function. For Node.js, it is the <i>module-name.export</i> value in your function.
 	Handler *string `queryParam:"style=form,explode=true,name=Handler"`
 	// The amount of memory, in MB, your Lambda function is given. Lambda uses this memory size to infer the amount of CPU allocated to your function. Your function use-case determines your CPU and memory requirements. For example, a database operation might need less memory compared to an image processing function. The default value is 128 MB. The value must be a multiple of 64 MB.
@@ -22,10 +19,7 @@ type UpdateFunctionConfigurationQueryParams struct {
 	// The Amazon Resource Name (ARN) of the IAM role that Lambda will assume when it executes your function.
 	Role *string `queryParam:"style=form,explode=true,name=Role"`
 	// The function execution time at which Lambda should terminate the function. Because the execution time has cost implications, we recommend you set this value based on your expected execution time. The default is 3 seconds.
-	Timeout *int64 `queryParam:"style=form,explode=true,name=Timeout"`
-}
-
-type UpdateFunctionConfigurationHeaders struct {
+	Timeout           *int64  `queryParam:"style=form,explode=true,name=Timeout"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -33,12 +27,6 @@ type UpdateFunctionConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UpdateFunctionConfigurationRequest struct {
-	PathParams  UpdateFunctionConfigurationPathParams
-	QueryParams UpdateFunctionConfigurationQueryParams
-	Headers     UpdateFunctionConfigurationHeaders
 }
 
 type UpdateFunctionConfigurationResponse struct {

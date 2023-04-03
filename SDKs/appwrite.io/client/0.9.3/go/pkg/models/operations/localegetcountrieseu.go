@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LocaleGetCountriesEUSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type LocaleGetCountriesEURequest struct {
-	Security LocaleGetCountriesEUSecurity
-}
-
 type LocaleGetCountriesEUResponse struct {
 	ContentType string
 	StatusCode  int

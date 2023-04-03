@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLayoutPathParams struct {
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-	// The unique identifier of the layout.
-	LayoutID string `pathParam:"style=simple,explode=false,name=layoutId"`
-}
-
-type GetLayoutHeaders struct {
+type GetLayoutRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetLayoutHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLayoutRequest struct {
-	PathParams GetLayoutPathParams
-	Headers    GetLayoutHeaders
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// The unique identifier of the layout.
+	LayoutID string `pathParam:"style=simple,explode=false,name=layoutId"`
 }
 
 type GetLayoutResponse struct {

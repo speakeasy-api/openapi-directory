@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyIDSuperSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyIDSuperPathParams struct {
-	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
-	Country string `pathParam:"style=simple,explode=false,name=country"`
-	// company superdata by id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // CompanyIDSuperLangEnum - Optional data translation (only available in limited jurisdictions)
@@ -47,15 +39,13 @@ func (e *CompanyIDSuperLangEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CompanyIDSuperQueryParams struct {
+type CompanyIDSuperRequest struct {
+	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
+	Country string `pathParam:"style=simple,explode=false,name=country"`
+	// company superdata by id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Optional data translation (only available in limited jurisdictions)
 	Lang *CompanyIDSuperLangEnum `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type CompanyIDSuperRequest struct {
-	PathParams  CompanyIDSuperPathParams
-	QueryParams CompanyIDSuperQueryParams
-	Security    CompanyIDSuperSecurity
 }
 
 // CompanyIDSuperDefaultApplicationJSON - Detailed information about the error

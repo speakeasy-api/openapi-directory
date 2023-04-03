@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWorkflowPathParams struct {
-	// The ID of the migration workflow.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateWorkflowHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateWorkflowRequestBody struct {
 	// The description of the migration workflow.
 	Description *string `json:"description,omitempty"`
@@ -34,9 +19,16 @@ type UpdateWorkflowRequestBody struct {
 }
 
 type UpdateWorkflowRequest struct {
-	PathParams UpdateWorkflowPathParams
-	Headers    UpdateWorkflowHeaders
-	Request    UpdateWorkflowRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateWorkflowRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the migration workflow.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateWorkflowResponse struct {

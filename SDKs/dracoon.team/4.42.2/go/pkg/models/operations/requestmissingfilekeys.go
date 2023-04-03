@@ -42,7 +42,9 @@ func (e *RequestMissingFileKeysUseKeyEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestMissingFileKeysQueryParams struct {
+type RequestMissingFileKeysRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// File ID
 	FileID *int64 `queryParam:"style=form,explode=true,name=file_id"`
 	// Range limit.
@@ -59,16 +61,6 @@ type RequestMissingFileKeysQueryParams struct {
 	UseKey *RequestMissingFileKeysUseKeyEnum `queryParam:"style=form,explode=true,name=use_key"`
 	// User ID
 	UserID *int64 `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-type RequestMissingFileKeysHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestMissingFileKeysRequest struct {
-	QueryParams RequestMissingFileKeysQueryParams
-	Headers     RequestMissingFileKeysHeaders
 }
 
 type RequestMissingFileKeysResponse struct {

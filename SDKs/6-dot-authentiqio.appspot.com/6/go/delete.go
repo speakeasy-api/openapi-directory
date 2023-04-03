@@ -36,14 +36,14 @@ func newDelete(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // KeyRevoke - Revoke an Identity (Key) with a revocation secret
 func (s *delete) KeyRevoke(ctx context.Context, request operations.KeyRevokeRequest) (*operations.KeyRevokeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -117,7 +117,7 @@ func (s *delete) KeyRevokeNosecret(ctx context.Context, request operations.KeyRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,7 +182,7 @@ func (s *delete) KeyRevokeNosecret(ctx context.Context, request operations.KeyRe
 // SignDelete - delete a verification job
 func (s *delete) SignDelete(ctx context.Context, request operations.SignDeleteRequest) (*operations.SignDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

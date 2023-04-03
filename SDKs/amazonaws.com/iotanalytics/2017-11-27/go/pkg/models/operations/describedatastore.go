@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDatastorePathParams struct {
-	// The name of the data store
-	DatastoreName string `pathParam:"style=simple,explode=false,name=datastoreName"`
-}
-
-type DescribeDatastoreQueryParams struct {
-	// If true, additional statistical information about the data store is included in the response. This feature can't be used with a data store whose S3 storage is customer-managed.
-	IncludeStatistics *bool `queryParam:"style=form,explode=true,name=includeStatistics"`
-}
-
-type DescribeDatastoreHeaders struct {
+type DescribeDatastoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeDatastoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDatastoreRequest struct {
-	PathParams  DescribeDatastorePathParams
-	QueryParams DescribeDatastoreQueryParams
-	Headers     DescribeDatastoreHeaders
+	// The name of the data store
+	DatastoreName string `pathParam:"style=simple,explode=false,name=datastoreName"`
+	// If true, additional statistical information about the data store is included in the response. This feature can't be used with a data store whose S3 storage is customer-managed.
+	IncludeStatistics *bool `queryParam:"style=form,explode=true,name=includeStatistics"`
 }
 
 type DescribeDatastoreResponse struct {

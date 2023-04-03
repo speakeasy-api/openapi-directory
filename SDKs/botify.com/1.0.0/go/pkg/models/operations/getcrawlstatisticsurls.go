@@ -33,7 +33,7 @@ func (e *GetCrawlStatisticsUrlsListTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCrawlStatisticsUrlsPathParams struct {
+type GetCrawlStatisticsUrlsRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// URLs list type (crawled URLs or error URLs)
@@ -42,10 +42,6 @@ type GetCrawlStatisticsUrlsPathParams struct {
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetCrawlStatisticsUrlsRequest struct {
-	PathParams GetCrawlStatisticsUrlsPathParams
 }
 
 type GetCrawlStatisticsUrlsResponse struct {

@@ -8,8 +8,8 @@ import (
 )
 
 type DatabaseCreateCollectionSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type DatabaseCreateCollectionRequestBody struct {
@@ -21,11 +21,6 @@ type DatabaseCreateCollectionRequestBody struct {
 	Rules []string `json:"rules"`
 	// An array of strings with write permissions. By default no user is granted with any write permissions. [learn more about permissions](/docs/permissions) and get a full list of available permissions.
 	Write []string `json:"write"`
-}
-
-type DatabaseCreateCollectionRequest struct {
-	Request  *DatabaseCreateCollectionRequestBody `request:"mediaType=application/json"`
-	Security DatabaseCreateCollectionSecurity
 }
 
 type DatabaseCreateCollectionResponse struct {

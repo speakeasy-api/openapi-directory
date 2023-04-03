@@ -13,53 +13,50 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAccessPointRequest{
-        Headers: operations.CreateAccessPointHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateAccessPointRequestBody{
-            ClientToken: "illum",
-            FileSystemID: "vel",
+        RequestBody: operations.CreateAccessPointRequestBody{
+            ClientToken: "corrupti",
+            FileSystemID: "provident",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
-                Gid: 623564,
+                Gid: 715190,
                 SecondaryGids: []int64{
-                    384382,
-                    437587,
-                    297534,
+                    602763,
+                    857946,
+                    544883,
+                    847252,
                 },
-                UID: 891773,
+                UID: 423655,
             },
             RootDirectory: &operations.CreateAccessPointRequestBodyRootDirectory{
                 CreationInfo: &shared.CreationInfo{
-                    OwnerGid: 56713,
-                    OwnerUID: 963663,
-                    Permissions: "tempora",
+                    OwnerGid: 623564,
+                    OwnerUID: 645894,
+                    Permissions: "suscipit",
                 },
-                Path: "suscipit",
+                Path: "iure",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "minus",
-                    Value: "placeat",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
                 shared.Tag{
-                    Key: "voluptatum",
-                    Value: "iusto",
+                    Key: "delectus",
+                    Value: "tempora",
                 },
             },
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "molestiae",
+        XAmzCredential: "minus",
+        XAmzDate: "placeat",
+        XAmzSecurityToken: "voluptatum",
+        XAmzSignature: "iusto",
+        XAmzSignedHeaders: "excepturi",
     }
 
     ctx := context.Background()

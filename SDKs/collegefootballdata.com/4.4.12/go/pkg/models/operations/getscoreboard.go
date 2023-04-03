@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetScoreboardQueryParams struct {
+type GetScoreboardRequest struct {
 	// Classification filter (fbs, fcs, ii, or iii). Defaults to fbs.
 	Classification *string `queryParam:"style=form,explode=true,name=classification"`
 	// Conference abbreviation filter.
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
-}
-
-type GetScoreboardRequest struct {
-	QueryParams GetScoreboardQueryParams
 }
 
 type GetScoreboardResponse struct {

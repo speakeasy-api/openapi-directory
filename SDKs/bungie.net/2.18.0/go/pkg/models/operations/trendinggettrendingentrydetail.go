@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TrendingGetTrendingEntryDetailPathParams struct {
+type TrendingGetTrendingEntryDetailRequest struct {
 	// The identifier for the entity to be returned.
 	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 	// The type of entity to be returned.
 	TrendingEntryType int `pathParam:"style=simple,explode=false,name=trendingEntryType"`
-}
-
-type TrendingGetTrendingEntryDetailRequest struct {
-	PathParams TrendingGetTrendingEntryDetailPathParams
 }
 
 // TrendingGetTrendingEntryDetail200Wildcard - Look at the Response property for more information about the nature of this response

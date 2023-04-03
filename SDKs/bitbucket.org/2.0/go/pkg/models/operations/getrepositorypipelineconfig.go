@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetRepositoryPipelineConfigPathParams struct {
+type GetRepositoryPipelineConfigRequest struct {
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The account.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoryPipelineConfigRequest struct {
-	PathParams GetRepositoryPipelineConfigPathParams
 }
 
 type GetRepositoryPipelineConfigResponse struct {

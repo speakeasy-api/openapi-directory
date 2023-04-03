@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCheckSummariesPathParams struct {
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
-type ListCheckSummariesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListCheckSummariesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListCheckSummariesRequestBody struct {
 	// The ID of a choice.
 	ChoiceID string `json:"ChoiceId"`
@@ -44,10 +23,19 @@ type ListCheckSummariesRequestBody struct {
 }
 
 type ListCheckSummariesRequest struct {
-	PathParams  ListCheckSummariesPathParams
-	QueryParams ListCheckSummariesQueryParams
-	Headers     ListCheckSummariesHeaders
-	Request     ListCheckSummariesRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListCheckSummariesRequestBody `request:"mediaType=application/json"`
+	WorkloadID        string                        `pathParam:"style=simple,explode=false,name=WorkloadId"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListCheckSummariesResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAPIDisplayAdsIDPathParams struct {
+type GetAPIDisplayAdsIDRequest struct {
 	// The ID of the user to unpublish.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIDisplayAdsIDRequest struct {
-	PathParams GetAPIDisplayAdsIDPathParams
 }
 
 type GetAPIDisplayAdsIDResponse struct {

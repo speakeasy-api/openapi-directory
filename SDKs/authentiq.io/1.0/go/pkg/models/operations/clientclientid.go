@@ -8,19 +8,14 @@ import (
 )
 
 type ClientClientIDSecurity struct {
-	ClientRegistrationToken *shared.SchemeClientRegistrationToken `security:"scheme,type=apiKey,subtype=header"`
-	OauthCode               *shared.SchemeOauthCode               `security:"scheme,type=oauth2"`
-	OauthImplicit           *shared.SchemeOauthImplicit           `security:"scheme,type=oauth2"`
-}
-
-type ClientClientIDPathParams struct {
-	// Client identifier
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
+	ClientRegistrationToken *string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	OauthCode               *string `security:"scheme,type=oauth2,name=Authorization"`
+	OauthImplicit           *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClientClientIDRequest struct {
-	PathParams ClientClientIDPathParams
-	Security   ClientClientIDSecurity
+	// Client identifier
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type ClientClientIDResponse struct {

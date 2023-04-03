@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFindingsFilterPathParams struct {
-	// The unique identifier for the Amazon Macie resource that the request applies to.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateFindingsFilterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFindingsFilterRequestBodyActionEnum - The action to perform on findings that match the filter criteria. To suppress (automatically archive) findings that match the criteria, set this value to ARCHIVE. Valid values are:
 type UpdateFindingsFilterRequestBodyActionEnum string
 
@@ -69,9 +54,16 @@ type UpdateFindingsFilterRequestBody struct {
 }
 
 type UpdateFindingsFilterRequest struct {
-	PathParams UpdateFindingsFilterPathParams
-	Headers    UpdateFindingsFilterHeaders
-	Request    UpdateFindingsFilterRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateFindingsFilterRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier for the Amazon Macie resource that the request applies to.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateFindingsFilterResponse struct {

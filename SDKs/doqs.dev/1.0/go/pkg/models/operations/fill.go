@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FillPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type FillRequest struct {
-	PathParams FillPathParams
-	Request    shared.FillTemplateRequest `request:"mediaType=application/json"`
+	FillTemplateRequest shared.FillTemplateRequest `request:"mediaType=application/json"`
+	ID                  string                     `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type FillResponse struct {

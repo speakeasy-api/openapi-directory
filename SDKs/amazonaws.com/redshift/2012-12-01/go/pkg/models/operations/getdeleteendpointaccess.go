@@ -50,26 +50,18 @@ func (e *GETDeleteEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteEndpointAccessQueryParams struct {
+type GETDeleteEndpointAccessRequest struct {
 	Action GETDeleteEndpointAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Redshift-managed VPC endpoint to delete.
-	EndpointName string                             `queryParam:"style=form,explode=true,name=EndpointName"`
-	Version      GETDeleteEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteEndpointAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteEndpointAccessRequest struct {
-	QueryParams GETDeleteEndpointAccessQueryParams
-	Headers     GETDeleteEndpointAccessHeaders
+	EndpointName      string                             `queryParam:"style=form,explode=true,name=EndpointName"`
+	Version           GETDeleteEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteEndpointAccessResponse struct {

@@ -50,26 +50,18 @@ func (e *GETGETLoginProfileVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETLoginProfileQueryParams struct {
+type GETGETLoginProfileRequest struct {
 	Action GETGETLoginProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the user whose login profile you want to retrieve.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                        `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETGETLoginProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETLoginProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETLoginProfileRequest struct {
-	QueryParams GETGETLoginProfileQueryParams
-	Headers     GETGETLoginProfileHeaders
+	UserName          string                        `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETGETLoginProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETLoginProfileResponse struct {

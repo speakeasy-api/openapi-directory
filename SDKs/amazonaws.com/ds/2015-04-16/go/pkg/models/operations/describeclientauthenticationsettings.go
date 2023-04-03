@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeClientAuthenticationSettingsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeClientAuthenticationSettingsXAmzTargetEnum
 type DescribeClientAuthenticationSettingsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeClientAuthenticationSettingsXAmzTargetEnum) UnmarshalJSON(data 
 	}
 }
 
-type DescribeClientAuthenticationSettingsHeaders struct {
+type DescribeClientAuthenticationSettingsRequest struct {
+	DescribeClientAuthenticationSettingsRequest shared.DescribeClientAuthenticationSettingsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeClientAuthenticationSettingsHeaders struct {
 	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeClientAuthenticationSettingsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeClientAuthenticationSettingsRequest struct {
-	QueryParams DescribeClientAuthenticationSettingsQueryParams
-	Headers     DescribeClientAuthenticationSettingsHeaders
-	Request     shared.DescribeClientAuthenticationSettingsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeClientAuthenticationSettingsResponse struct {

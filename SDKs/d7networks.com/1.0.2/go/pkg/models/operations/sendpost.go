@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendPostHeaders struct {
+type SendPostRequest struct {
 	Accept      string `header:"style=simple,explode=false,name=Accept"`
 	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
-type SendPostRequest struct {
-	Headers SendPostHeaders
 	// Message Body
-	Request shared.SendSMSRequest `request:"mediaType=application/json"`
+	SendSMSRequest shared.SendSMSRequest `request:"mediaType=application/json"`
 }
 
 type SendPostResponse struct {

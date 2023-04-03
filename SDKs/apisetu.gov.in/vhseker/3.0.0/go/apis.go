@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Vochse - Vocational Higher Secondary
 // API to verify Vocational Higher Secondary.
-func (s *apIs) Vochse(ctx context.Context, request operations.VochseRequest) (*operations.VochseResponse, error) {
+func (s *apIs) Vochse(ctx context.Context, request operations.VochseRequestBody, security operations.VochseSecurity) (*operations.VochseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vochse/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Vochse(ctx context.Context, request operations.VochseRequest) (*o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

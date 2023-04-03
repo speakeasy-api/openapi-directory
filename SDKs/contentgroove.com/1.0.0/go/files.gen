@@ -26,6 +26,5 @@ pkg/models/operations/postapiv1medias.go
 pkg/models/operations/postapiv1webhooksubscriptions.go
 pkg/models/operations/putapiv1clipsid.go
 pkg/models/operations/putapiv1mediasid.go
-pkg/models/shared/security.go
 pkg/models/callbacks/postapiv1medias.go
 USAGE.md

@@ -7,20 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSourceRepositoriesPathParams struct {
-	// The name of the project in the space.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type ListSourceRepositoriesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListSourceRepositoriesRequestBody struct {
 	// The maximum number of results to show in a single call to this API. If the number of results is larger than the number you specified, the response will include a <code>NextToken</code> element, which you can use to obtain additional results.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -29,9 +15,15 @@ type ListSourceRepositoriesRequestBody struct {
 }
 
 type ListSourceRepositoriesRequest struct {
-	PathParams  ListSourceRepositoriesPathParams
-	QueryParams ListSourceRepositoriesQueryParams
-	Request     ListSourceRepositoriesRequestBody `request:"mediaType=application/json"`
+	RequestBody ListSourceRepositoriesRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name of the project in the space.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type ListSourceRepositoriesResponse struct {

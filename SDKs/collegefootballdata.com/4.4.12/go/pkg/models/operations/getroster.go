@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRosterQueryParams struct {
+type GetRosterRequest struct {
 	// Team name
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Season year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetRosterRequest struct {
-	QueryParams GetRosterQueryParams
 }
 
 type GetRosterResponse struct {

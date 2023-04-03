@@ -8,24 +8,15 @@ import (
 )
 
 type GetCompaniesCompanyIDBillingEntitiesSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCompaniesCompanyIDBillingEntitiesPathParams struct {
-	// The unique identifier of the company account.
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDBillingEntitiesQueryParams struct {
-	// The name of the billing entity.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetCompaniesCompanyIDBillingEntitiesRequest struct {
-	PathParams  GetCompaniesCompanyIDBillingEntitiesPathParams
-	QueryParams GetCompaniesCompanyIDBillingEntitiesQueryParams
-	Security    GetCompaniesCompanyIDBillingEntitiesSecurity
+	// The unique identifier of the company account.
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	// The name of the billing entity.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
 }
 
 type GetCompaniesCompanyIDBillingEntitiesResponse struct {

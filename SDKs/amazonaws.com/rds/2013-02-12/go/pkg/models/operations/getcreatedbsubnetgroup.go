@@ -50,27 +50,19 @@ func (e *GETCreateDBSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateDBSubnetGroupQueryParams struct {
+type GETCreateDBSubnetGroupRequest struct {
 	Action                   GETCreateDBSubnetGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBSubnetGroupDescription string                            `queryParam:"style=form,explode=true,name=DBSubnetGroupDescription"`
 	DBSubnetGroupName        string                            `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
 	SubnetIds                []string                          `queryParam:"style=form,explode=true,name=SubnetIds"`
 	Version                  GETCreateDBSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateDBSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateDBSubnetGroupRequest struct {
-	QueryParams GETCreateDBSubnetGroupQueryParams
-	Headers     GETCreateDBSubnetGroupHeaders
+	XAmzAlgorithm            *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateDBSubnetGroupResponse struct {

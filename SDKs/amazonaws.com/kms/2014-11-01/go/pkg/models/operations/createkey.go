@@ -30,7 +30,8 @@ func (e *CreateKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateKeyHeaders struct {
+type CreateKeyRequest struct {
+	CreateKeyRequest  shared.CreateKeyRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateKeyHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateKeyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateKeyRequest struct {
-	Headers CreateKeyHeaders
-	Request shared.CreateKeyRequest `request:"mediaType=application/json"`
 }
 
 type CreateKeyResponse struct {

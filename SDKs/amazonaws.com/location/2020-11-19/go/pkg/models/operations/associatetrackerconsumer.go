@@ -6,12 +6,15 @@ import (
 	"net/http"
 )
 
-type AssociateTrackerConsumerPathParams struct {
-	// The name of the tracker resource to be associated with a geofence collection.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
+type AssociateTrackerConsumerRequestBody struct {
+	// <p>The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker resource. Used when you need to specify a resource across all Amazon Web Services.</p> <ul> <li> <p>Format example: <code>arn:aws:geo:region:account-id:geofence-collection/ExampleGeofenceCollectionConsumer</code> </p> </li> </ul>
+	ConsumerArn string `json:"ConsumerArn"`
 }
 
-type AssociateTrackerConsumerHeaders struct {
+type AssociateTrackerConsumerRequest struct {
+	RequestBody AssociateTrackerConsumerRequestBody `request:"mediaType=application/json"`
+	// The name of the tracker resource to be associated with a geofence collection.
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,17 +22,6 @@ type AssociateTrackerConsumerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateTrackerConsumerRequestBody struct {
-	// <p>The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker resource. Used when you need to specify a resource across all Amazon Web Services.</p> <ul> <li> <p>Format example: <code>arn:aws:geo:region:account-id:geofence-collection/ExampleGeofenceCollectionConsumer</code> </p> </li> </ul>
-	ConsumerArn string `json:"ConsumerArn"`
-}
-
-type AssociateTrackerConsumerRequest struct {
-	PathParams AssociateTrackerConsumerPathParams
-	Headers    AssociateTrackerConsumerHeaders
-	Request    AssociateTrackerConsumerRequestBody `request:"mediaType=application/json"`
 }
 
 type AssociateTrackerConsumerResponse struct {

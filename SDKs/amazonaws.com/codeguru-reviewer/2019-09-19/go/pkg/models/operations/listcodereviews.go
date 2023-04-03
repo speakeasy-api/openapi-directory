@@ -33,7 +33,7 @@ func (e *ListCodeReviewsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCodeReviewsQueryParams struct {
+type ListCodeReviewsRequest struct {
 	// The maximum number of results that are returned per call. The default is 100.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged.
@@ -45,22 +45,14 @@ type ListCodeReviewsQueryParams struct {
 	// <p>List of states for filtering that needs to be applied before displaying the result. For example, <code>states=[Pending]</code> lists code reviews in the Pending state.</p> <p>The valid code review states are:</p> <ul> <li> <p> <code>Completed</code>: The code review is complete.</p> </li> <li> <p> <code>Pending</code>: The code review started and has not completed or failed.</p> </li> <li> <p> <code>Failed</code>: The code review failed.</p> </li> <li> <p> <code>Deleting</code>: The code review is being deleted.</p> </li> </ul>
 	States []shared.JobStateEnum `queryParam:"style=form,explode=true,name=States"`
 	// The type of code reviews to list in the response.
-	Type ListCodeReviewsTypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type ListCodeReviewsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCodeReviewsRequest struct {
-	QueryParams ListCodeReviewsQueryParams
-	Headers     ListCodeReviewsHeaders
+	Type              ListCodeReviewsTypeEnum `queryParam:"style=form,explode=true,name=Type"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListCodeReviewsResponse struct {

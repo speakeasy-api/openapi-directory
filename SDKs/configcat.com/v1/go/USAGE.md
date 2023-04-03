@@ -13,24 +13,18 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Basic: shared.SchemeBasic{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
         }),
     )
 
     req := operations.GetAuditlogsRequest{
-        PathParams: operations.GetAuditlogsPathParams{
-            ProductID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-        },
-        QueryParams: operations.GetAuditlogsQueryParams{
-            AuditLogType: "organizationAdminLeft",
-            ConfigID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
-            EnvironmentID: "b7392059-2939-46fe-a759-6eb10faaa235",
-            FromUtcDateTime: "2022-04-01T23:59:21.675Z",
-            ToUtcDateTime: "2022-05-24T03:24:11.703Z",
-        },
+        AuditLogType: "integrationLinkAdded",
+        ConfigID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+        EnvironmentID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+        FromUtcDateTime: "2022-02-02T00:14:45.467Z",
+        ProductID: "39205929-396f-4ea7-996e-b10faaa2352c",
+        ToUtcDateTime: "2022-05-24T03:24:11.703Z",
     }
 
     ctx := context.Background()

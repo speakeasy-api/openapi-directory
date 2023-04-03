@@ -50,7 +50,7 @@ func (e *GETListPoliciesGrantingServiceAccessVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETListPoliciesGrantingServiceAccessQueryParams struct {
+type GETListPoliciesGrantingServiceAccessRequest struct {
 	Action GETListPoliciesGrantingServiceAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ARN of the IAM identity (user, group, or role) whose policies you want to list.
 	Arn string `queryParam:"style=form,explode=true,name=Arn"`
@@ -59,21 +59,13 @@ type GETListPoliciesGrantingServiceAccessQueryParams struct {
 	// <p>The service namespace for the Amazon Web Services services whose policies you want to list.</p> <p>To learn the service namespace for a service, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html">Actions, resources, and condition keys for Amazon Web Services services</a> in the <i>IAM User Guide</i>. Choose the name of the service to view details for that service. In the first paragraph, find the service prefix. For example, <code>(service prefix: a4b)</code>. For more information about service namespaces, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces">Amazon Web Services service namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
 	ServiceNamespaces []string                                        `queryParam:"style=form,explode=true,name=ServiceNamespaces"`
 	Version           GETListPoliciesGrantingServiceAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListPoliciesGrantingServiceAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListPoliciesGrantingServiceAccessRequest struct {
-	QueryParams GETListPoliciesGrantingServiceAccessQueryParams
-	Headers     GETListPoliciesGrantingServiceAccessHeaders
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListPoliciesGrantingServiceAccessResponse struct {

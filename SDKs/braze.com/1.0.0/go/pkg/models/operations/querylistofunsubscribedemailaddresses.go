@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type QueryListOfUnsubscribedEmailAddressesQueryParams struct {
+type QueryListOfUnsubscribedEmailAddressesRequest struct {
 	// (Optional*) String
 	//
 	// If provided, we will return whether or not the user has unsubscribed
@@ -31,10 +31,6 @@ type QueryListOfUnsubscribedEmailAddressesQueryParams struct {
 	//
 	// Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API.
 	StartDate *string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type QueryListOfUnsubscribedEmailAddressesRequest struct {
-	QueryParams QueryListOfUnsubscribedEmailAddressesQueryParams
 }
 
 type QueryListOfUnsubscribedEmailAddressesResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type AccountCreateVerificationSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountCreateVerificationRequestBody struct {
 	// URL to redirect the user back to your app from the verification email. Only URLs from hostnames in your project platform list are allowed. This requirement helps to prevent an [open redirect](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) attack against your project API.
 	URL string `json:"url"`
-}
-
-type AccountCreateVerificationRequest struct {
-	Request  *AccountCreateVerificationRequestBody `request:"mediaType=application/json"`
-	Security AccountCreateVerificationSecurity
 }
 
 type AccountCreateVerificationResponse struct {

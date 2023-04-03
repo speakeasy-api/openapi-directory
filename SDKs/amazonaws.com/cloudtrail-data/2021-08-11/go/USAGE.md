@@ -13,45 +13,39 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.PutAuditEventsRequest{
-        QueryParams: operations.PutAuditEventsQueryParams{
-            ChannelArn: "corrupti",
-            ExternalID: "provident",
-        },
-        Headers: operations.PutAuditEventsHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
-        Request: operations.PutAuditEventsRequestBody{
+        RequestBody: operations.PutAuditEventsRequestBody{
             AuditEvents: []shared.AuditEvent{
                 shared.AuditEvent{
-                    EventData: "deserunt",
-                    EventDataChecksum: "suscipit",
-                    ID: "iure",
+                    EventData: "provident",
+                    EventDataChecksum: "distinctio",
+                    ID: "quibusdam",
                 },
                 shared.AuditEvent{
-                    EventData: "magnam",
-                    EventDataChecksum: "debitis",
-                    ID: "ipsa",
+                    EventData: "unde",
+                    EventDataChecksum: "nulla",
+                    ID: "corrupti",
                 },
                 shared.AuditEvent{
-                    EventData: "delectus",
-                    EventDataChecksum: "tempora",
-                    ID: "suscipit",
+                    EventData: "illum",
+                    EventDataChecksum: "vel",
+                    ID: "error",
                 },
             },
         },
+        XAmzAlgorithm: "deserunt",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "iure",
+        XAmzDate: "magnam",
+        XAmzSecurityToken: "debitis",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "delectus",
+        ChannelArn: "tempora",
+        ExternalID: "suscipit",
     }
 
     ctx := context.Background()

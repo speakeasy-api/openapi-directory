@@ -50,25 +50,17 @@ func (e *POSTRevokeSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTRevokeSecurityGroupIngressQueryParams struct {
-	Action  POSTRevokeSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRevokeSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRevokeSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRevokeSecurityGroupIngressRequest struct {
-	QueryParams POSTRevokeSecurityGroupIngressQueryParams
-	Headers     POSTRevokeSecurityGroupIngressHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRevokeSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                    `request:"mediaType=text/xml"`
+	Version           POSTRevokeSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRevokeSecurityGroupIngressResponse struct {

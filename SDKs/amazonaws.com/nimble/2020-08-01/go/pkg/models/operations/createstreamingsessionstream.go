@@ -7,15 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateStreamingSessionStreamPathParams struct {
-	// The streaming session ID.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
+type CreateStreamingSessionStreamRequestBody struct {
+	// The expiration time in seconds.
+	ExpirationInSeconds *int64 `json:"expirationInSeconds,omitempty"`
 }
 
-type CreateStreamingSessionStreamHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+type CreateStreamingSessionStreamRequest struct {
+	RequestBody   CreateStreamingSessionStreamRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
 	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
@@ -24,17 +23,10 @@ type CreateStreamingSessionStreamHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CreateStreamingSessionStreamRequestBody struct {
-	// The expiration time in seconds.
-	ExpirationInSeconds *int64 `json:"expirationInSeconds,omitempty"`
-}
-
-type CreateStreamingSessionStreamRequest struct {
-	PathParams CreateStreamingSessionStreamPathParams
-	Headers    CreateStreamingSessionStreamHeaders
-	Request    CreateStreamingSessionStreamRequestBody `request:"mediaType=application/json"`
+	// The streaming session ID.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type CreateStreamingSessionStreamResponse struct {

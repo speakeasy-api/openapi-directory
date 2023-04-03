@@ -13,26 +13,20 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CancelJobRunRequest{
-        PathParams: operations.CancelJobRunPathParams{
-            JobRunID: "corrupti",
-            VirtualClusterID: "provident",
-        },
-        Headers: operations.CancelJobRunHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "provident",
+        XAmzCredential: "distinctio",
+        XAmzDate: "quibusdam",
+        XAmzSecurityToken: "unde",
+        XAmzSignature: "nulla",
+        XAmzSignedHeaders: "corrupti",
+        JobRunID: "illum",
+        VirtualClusterID: "vel",
     }
 
     ctx := context.Background()

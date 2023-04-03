@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDevicePositionPathParams struct {
+type GetDevicePositionRequest struct {
 	// The device whose position you want to retrieve.
 	DeviceID string `pathParam:"style=simple,explode=false,name=DeviceId"`
 	// The tracker resource receiving the position update.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
-}
-
-type GetDevicePositionHeaders struct {
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetDevicePositionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDevicePositionRequest struct {
-	PathParams GetDevicePositionPathParams
-	Headers    GetDevicePositionHeaders
 }
 
 type GetDevicePositionResponse struct {

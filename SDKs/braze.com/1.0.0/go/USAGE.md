@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.CampaignAnalyticsRequest{
-        QueryParams: operations.CampaignAnalyticsQueryParams{
-            CampaignID: "{{campaign_identifier}}",
-            EndingAt: "2020-06-28T23:59:59-5:00",
-            Length: "7",
-        },
+        CampaignID: "{{campaign_identifier}}",
+        EndingAt: "2020-06-28T23:59:59-5:00",
+        Length: "7",
     }
 
     ctx := context.Background()

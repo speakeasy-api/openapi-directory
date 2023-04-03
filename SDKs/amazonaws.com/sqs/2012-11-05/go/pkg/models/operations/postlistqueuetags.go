@@ -50,25 +50,17 @@ func (e *POSTListQueueTagsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListQueueTagsQueryParams struct {
-	Action  POSTListQueueTagsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTListQueueTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListQueueTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTListQueueTagsRequest struct {
-	QueryParams POSTListQueueTagsQueryParams
-	Headers     POSTListQueueTagsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTListQueueTagsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                       `request:"mediaType=text/xml"`
+	Version           POSTListQueueTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListQueueTagsResponse struct {

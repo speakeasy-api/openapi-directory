@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CanvasDetailsQueryParams struct {
+type CanvasDetailsRequest struct {
 	// (Required) String
 	//
 	// Canvas API Identifier
 	CanvasID *string `queryParam:"style=form,explode=true,name=canvas_id"`
-}
-
-type CanvasDetailsRequest struct {
-	QueryParams CanvasDetailsQueryParams
 }
 
 type CanvasDetailsResponse struct {

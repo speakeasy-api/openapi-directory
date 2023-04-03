@@ -30,20 +30,16 @@ func (e *StartIcd10CMInferenceJobXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type StartIcd10CMInferenceJobHeaders struct {
-	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartIcd10CMInferenceJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartIcd10CMInferenceJobRequest struct {
-	Headers StartIcd10CMInferenceJobHeaders
-	Request shared.StartIcd10CMInferenceJobRequest `request:"mediaType=application/json"`
+	StartIcd10CMInferenceJobRequest shared.StartIcd10CMInferenceJobRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      StartIcd10CMInferenceJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartIcd10CMInferenceJobResponse struct {

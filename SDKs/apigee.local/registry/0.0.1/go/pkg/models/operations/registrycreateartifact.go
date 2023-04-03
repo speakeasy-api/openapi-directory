@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryCreateArtifactPathParams struct {
+type RegistryCreateArtifactRequest struct {
+	ArtifactInput shared.ArtifactInput `request:"mediaType=application/json"`
+	// Required. The ID to use for the artifact, which will become the final component of the artifact's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+	ArtifactID *string `queryParam:"style=form,explode=true,name=artifactId"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryCreateArtifactQueryParams struct {
-	// Required. The ID to use for the artifact, which will become the final component of the artifact's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
-	ArtifactID *string `queryParam:"style=form,explode=true,name=artifactId"`
-}
-
-type RegistryCreateArtifactRequest struct {
-	PathParams  RegistryCreateArtifactPathParams
-	QueryParams RegistryCreateArtifactQueryParams
-	Request     shared.ArtifactInput `request:"mediaType=application/json"`
 }
 
 type RegistryCreateArtifactResponse struct {

@@ -50,29 +50,21 @@ func (e *POSTDescribeCertificatesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeCertificatesQueryParams struct {
+type POSTDescribeCertificatesRequest struct {
 	Action POSTDescribeCertificatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Pagination limit
-	MaxRecords *string                             `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    POSTDescribeCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeCertificatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeCertificatesRequest struct {
-	QueryParams POSTDescribeCertificatesQueryParams
-	Headers     POSTDescribeCertificatesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	MaxRecords        *string                             `queryParam:"style=form,explode=true,name=MaxRecords"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTDescribeCertificatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeCertificatesResponse struct {

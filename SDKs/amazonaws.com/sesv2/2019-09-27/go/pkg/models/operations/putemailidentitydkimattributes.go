@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type PutEmailIdentityDkimAttributesPathParams struct {
-	// The email identity.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-}
-
-type PutEmailIdentityDkimAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutEmailIdentityDkimAttributesRequestBody struct {
 	// <p>Sets the DKIM signing configuration for the identity.</p> <p>When you set this value <code>true</code>, then the messages that are sent from the identity are signed using DKIM. If you set this value to <code>false</code>, your messages are sent without DKIM signing.</p>
 	SigningEnabled *bool `json:"SigningEnabled,omitempty"`
 }
 
 type PutEmailIdentityDkimAttributesRequest struct {
-	PathParams PutEmailIdentityDkimAttributesPathParams
-	Headers    PutEmailIdentityDkimAttributesHeaders
-	Request    PutEmailIdentityDkimAttributesRequestBody `request:"mediaType=application/json"`
+	// The email identity.
+	EmailIdentity     string                                    `pathParam:"style=simple,explode=false,name=EmailIdentity"`
+	RequestBody       PutEmailIdentityDkimAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutEmailIdentityDkimAttributesResponse struct {

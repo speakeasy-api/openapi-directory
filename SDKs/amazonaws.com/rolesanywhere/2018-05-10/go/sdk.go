@@ -116,7 +116,7 @@ func (s *SDK) CreateProfile(ctx context.Context, request operations.CreateProfil
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/profiles"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateProfile(ctx context.Context, request operations.CreateProfil
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -192,7 +192,7 @@ func (s *SDK) CreateTrustAnchor(ctx context.Context, request operations.CreateTr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/trustanchors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *SDK) CreateTrustAnchor(ctx context.Context, request operations.CreateTr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -266,14 +266,14 @@ func (s *SDK) CreateTrustAnchor(ctx context.Context, request operations.CreateTr
 // DeleteCrl - <p>Deletes a certificate revocation list (CRL).</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DeleteCrl</code>. </p>
 func (s *SDK) DeleteCrl(ctx context.Context, request operations.DeleteCrlRequest) (*operations.DeleteCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -332,14 +332,14 @@ func (s *SDK) DeleteCrl(ctx context.Context, request operations.DeleteCrlRequest
 // DeleteProfile - <p>Deletes a profile.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DeleteProfile</code>. </p>
 func (s *SDK) DeleteProfile(ctx context.Context, request operations.DeleteProfileRequest) (*operations.DeleteProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -398,14 +398,14 @@ func (s *SDK) DeleteProfile(ctx context.Context, request operations.DeleteProfil
 // DeleteTrustAnchor - <p>Deletes a trust anchor.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DeleteTrustAnchor</code>. </p>
 func (s *SDK) DeleteTrustAnchor(ctx context.Context, request operations.DeleteTrustAnchorRequest) (*operations.DeleteTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -464,14 +464,14 @@ func (s *SDK) DeleteTrustAnchor(ctx context.Context, request operations.DeleteTr
 // DisableCrl - <p>Disables a certificate revocation list (CRL).</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DisableCrl</code>. </p>
 func (s *SDK) DisableCrl(ctx context.Context, request operations.DisableCrlRequest) (*operations.DisableCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -530,14 +530,14 @@ func (s *SDK) DisableCrl(ctx context.Context, request operations.DisableCrlReque
 // DisableProfile - <p>Disables a profile. When disabled, <a href="https://docs.aws.amazon.com/rolesanywhere/latest/APIReference/API_CreateSession.html">CreateSession</a> requests with this profile fail.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DisableProfile</code>. </p>
 func (s *SDK) DisableProfile(ctx context.Context, request operations.DisableProfileRequest) (*operations.DisableProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -596,14 +596,14 @@ func (s *SDK) DisableProfile(ctx context.Context, request operations.DisableProf
 // DisableTrustAnchor - <p>Disables a trust anchor. When disabled, <a href="https://docs.aws.amazon.com/rolesanywhere/latest/APIReference/API_CreateSession.html">CreateSession</a> requests specifying this trust anchor are unauthorized.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DisableTrustAnchor</code>. </p>
 func (s *SDK) DisableTrustAnchor(ctx context.Context, request operations.DisableTrustAnchorRequest) (*operations.DisableTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -662,14 +662,14 @@ func (s *SDK) DisableTrustAnchor(ctx context.Context, request operations.Disable
 // EnableCrl - <p>Enables a certificate revocation list (CRL). When enabled, certificates stored in the CRL are unauthorized to receive session credentials.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:EnableCrl</code>. </p>
 func (s *SDK) EnableCrl(ctx context.Context, request operations.EnableCrlRequest) (*operations.EnableCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/enable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -728,14 +728,14 @@ func (s *SDK) EnableCrl(ctx context.Context, request operations.EnableCrlRequest
 // EnableProfile - <p>Enables the roles in a profile to receive session credentials in <a href="https://docs.aws.amazon.com/rolesanywhere/latest/APIReference/API_CreateSession.html">CreateSession</a>. </p> <p> <b>Required permissions: </b> <code>rolesanywhere:EnableProfile</code>. </p>
 func (s *SDK) EnableProfile(ctx context.Context, request operations.EnableProfileRequest) (*operations.EnableProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/enable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -794,14 +794,14 @@ func (s *SDK) EnableProfile(ctx context.Context, request operations.EnableProfil
 // EnableTrustAnchor - <p>Enables a trust anchor. When enabled, certificates in the trust anchor chain are authorized for trust validation. </p> <p> <b>Required permissions: </b> <code>rolesanywhere:EnableTrustAnchor</code>. </p>
 func (s *SDK) EnableTrustAnchor(ctx context.Context, request operations.EnableTrustAnchorRequest) (*operations.EnableTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/enable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -860,14 +860,14 @@ func (s *SDK) EnableTrustAnchor(ctx context.Context, request operations.EnableTr
 // GetCrl - <p>Gets a certificate revocation list (CRL).</p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetCrl</code>. </p>
 func (s *SDK) GetCrl(ctx context.Context, request operations.GetCrlRequest) (*operations.GetCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -916,14 +916,14 @@ func (s *SDK) GetCrl(ctx context.Context, request operations.GetCrlRequest) (*op
 // GetProfile - <p>Gets a profile.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetProfile</code>. </p>
 func (s *SDK) GetProfile(ctx context.Context, request operations.GetProfileRequest) (*operations.GetProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -982,14 +982,14 @@ func (s *SDK) GetProfile(ctx context.Context, request operations.GetProfileReque
 // GetSubject - <p>Gets a Subject. A Subject associates a certificate identity with authentication attempts by CreateSession. The Subject resources stores audit information such as status of the last authentication attempt, the certificate data used in the attempt, and the last time the associated identity attempted authentication. </p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetSubject</code>. </p>
 func (s *SDK) GetSubject(ctx context.Context, request operations.GetSubjectRequest) (*operations.GetSubjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subject/{subjectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/subject/{subjectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1048,14 +1048,14 @@ func (s *SDK) GetSubject(ctx context.Context, request operations.GetSubjectReque
 // GetTrustAnchor - <p>Gets a trust anchor.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetTrustAnchor</code>. </p>
 func (s *SDK) GetTrustAnchor(ctx context.Context, request operations.GetTrustAnchorRequest) (*operations.GetTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1126,7 +1126,7 @@ func (s *SDK) ImportCrl(ctx context.Context, request operations.ImportCrlRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crls"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1141,7 +1141,7 @@ func (s *SDK) ImportCrl(ctx context.Context, request operations.ImportCrlRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1207,9 +1207,9 @@ func (s *SDK) ListCrls(ctx context.Context, request operations.ListCrlsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1277,9 +1277,9 @@ func (s *SDK) ListProfiles(ctx context.Context, request operations.ListProfilesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1347,9 +1347,9 @@ func (s *SDK) ListSubjects(ctx context.Context, request operations.ListSubjectsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1417,9 +1417,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1497,9 +1497,9 @@ func (s *SDK) ListTrustAnchors(ctx context.Context, request operations.ListTrust
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1562,7 +1562,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/TagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1577,7 +1577,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1658,7 +1658,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/UntagResource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1673,7 +1673,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1742,9 +1742,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCrl - <p>Updates the certificate revocation list (CRL). CRl is a list of certificates that have been revoked by the issuing certificate Authority (CA). IAM Roles Anywhere validates against the crl list before issuing credentials.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:UpdateCrl</code>. </p>
 func (s *SDK) UpdateCrl(ctx context.Context, request operations.UpdateCrlRequest) (*operations.UpdateCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1759,7 +1759,7 @@ func (s *SDK) UpdateCrl(ctx context.Context, request operations.UpdateCrlRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1828,9 +1828,9 @@ func (s *SDK) UpdateCrl(ctx context.Context, request operations.UpdateCrlRequest
 // UpdateProfile - <p>Updates the profile. A profile is configuration resource to list the roles that RolesAnywhere service is trusted to assume. In addition, by applying a profile you can scope-down permissions with IAM managed policies.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:UpdateProfile</code>. </p>
 func (s *SDK) UpdateProfile(ctx context.Context, request operations.UpdateProfileRequest) (*operations.UpdateProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1845,7 +1845,7 @@ func (s *SDK) UpdateProfile(ctx context.Context, request operations.UpdateProfil
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1914,9 +1914,9 @@ func (s *SDK) UpdateProfile(ctx context.Context, request operations.UpdateProfil
 // UpdateTrustAnchor - <p>Updates the trust anchor.You establish trust between IAM Roles Anywhere and your certificate authority (CA) by configuring a trust anchor. A Trust Anchor is defined either as a reference to a AWS Certificate Manager Private Certificate Authority (ACM PCA), or by uploading a Certificate Authority (CA) certificate. Your AWS workloads can authenticate with the trust anchor using certificates issued by the trusted Certificate Authority (CA) in exchange for temporary AWS credentials.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:UpdateTrustAnchor</code>. </p>
 func (s *SDK) UpdateTrustAnchor(ctx context.Context, request operations.UpdateTrustAnchorRequest) (*operations.UpdateTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1931,7 +1931,7 @@ func (s *SDK) UpdateTrustAnchor(ctx context.Context, request operations.UpdateTr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

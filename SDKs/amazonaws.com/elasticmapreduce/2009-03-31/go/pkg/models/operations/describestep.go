@@ -30,7 +30,8 @@ func (e *DescribeStepXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeStepHeaders struct {
+type DescribeStepRequest struct {
+	DescribeStepInput shared.DescribeStepInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DescribeStepHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeStepXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeStepRequest struct {
-	Headers DescribeStepHeaders
-	Request shared.DescribeStepInput `request:"mediaType=application/json"`
 }
 
 type DescribeStepResponse struct {

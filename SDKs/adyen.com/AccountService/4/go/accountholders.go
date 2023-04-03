@@ -34,7 +34,7 @@ func newAccountHolders(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // PostCloseAccountHolder - Close an account holder
 // Changes the [status of an account holder](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#account-holder-statuses) to **Closed**. This state is final. If an account holder is closed, you can't process transactions, pay out funds, or reopen it. If payments are made to an account of an account holder with a **Closed** [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status), the payments are sent to your liable account.
-func (s *accountHolders) PostCloseAccountHolder(ctx context.Context, request operations.PostCloseAccountHolderRequest) (*operations.PostCloseAccountHolderResponse, error) {
+func (s *accountHolders) PostCloseAccountHolder(ctx context.Context, request shared.CloseAccountHolderRequest, security operations.PostCloseAccountHolderSecurity) (*operations.PostCloseAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/closeAccountHolder"
 
@@ -50,7 +50,7 @@ func (s *accountHolders) PostCloseAccountHolder(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *accountHolders) PostCloseAccountHolder(ctx context.Context, request ope
 
 // PostCreateAccountHolder - Create an account holder
 // Creates an account holder that [represents the sub-merchant's entity](https://docs.adyen.com/marketplaces-and-platforms/classic/account-structure#your-platform) in your platform. The details that you need to provide in the request depend on the sub-merchant's legal entity type. For more information, refer to [Account holder and accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#legal-entity-types).
-func (s *accountHolders) PostCreateAccountHolder(ctx context.Context, request operations.PostCreateAccountHolderRequest) (*operations.PostCreateAccountHolderResponse, error) {
+func (s *accountHolders) PostCreateAccountHolder(ctx context.Context, request shared.CreateAccountHolderRequest, security operations.PostCreateAccountHolderSecurity) (*operations.PostCreateAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createAccountHolder"
 
@@ -122,7 +122,7 @@ func (s *accountHolders) PostCreateAccountHolder(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -176,7 +176,7 @@ func (s *accountHolders) PostCreateAccountHolder(ctx context.Context, request op
 
 // PostGetAccountHolder - Get an account holder
 // Returns the details of an account holder.
-func (s *accountHolders) PostGetAccountHolder(ctx context.Context, request operations.PostGetAccountHolderRequest) (*operations.PostGetAccountHolderResponse, error) {
+func (s *accountHolders) PostGetAccountHolder(ctx context.Context, request shared.GetAccountHolderRequest, security operations.PostGetAccountHolderSecurity) (*operations.PostGetAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getAccountHolder"
 
@@ -192,7 +192,7 @@ func (s *accountHolders) PostGetAccountHolder(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,7 +248,7 @@ func (s *accountHolders) PostGetAccountHolder(ctx context.Context, request opera
 
 // PostGetTaxForm - Get a tax form
 // Generates a tax form for account holders operating in the US. For more information, refer to [Providing tax forms](https://docs.adyen.com/marketplaces-and-platforms/classic/tax-forms).
-func (s *accountHolders) PostGetTaxForm(ctx context.Context, request operations.PostGetTaxFormRequest) (*operations.PostGetTaxFormResponse, error) {
+func (s *accountHolders) PostGetTaxForm(ctx context.Context, request shared.GetTaxFormRequest, security operations.PostGetTaxFormSecurity) (*operations.PostGetTaxFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getTaxForm"
 
@@ -264,7 +264,7 @@ func (s *accountHolders) PostGetTaxForm(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -318,7 +318,7 @@ func (s *accountHolders) PostGetTaxForm(ctx context.Context, request operations.
 
 // PostSuspendAccountHolder - Suspend an account holder
 // Changes the [status of an account holder](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#account-holder-statuses) to **Suspended**.
-func (s *accountHolders) PostSuspendAccountHolder(ctx context.Context, request operations.PostSuspendAccountHolderRequest) (*operations.PostSuspendAccountHolderResponse, error) {
+func (s *accountHolders) PostSuspendAccountHolder(ctx context.Context, request shared.SuspendAccountHolderRequest, security operations.PostSuspendAccountHolderSecurity) (*operations.PostSuspendAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/suspendAccountHolder"
 
@@ -334,7 +334,7 @@ func (s *accountHolders) PostSuspendAccountHolder(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -393,7 +393,7 @@ func (s *accountHolders) PostSuspendAccountHolder(ctx context.Context, request o
 // Account holders can have a **Suspended** [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status) if you suspend them through the [`/suspendAccountHolder`](https://docs.adyen.com/api-explorer/#/Account/v5/post/suspendAccountHolder) endpoint or if a verification deadline expires.
 //
 // You can only unsuspend account holders if they do not have verification checks with a **FAILED** [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status).
-func (s *accountHolders) PostUnSuspendAccountHolder(ctx context.Context, request operations.PostUnSuspendAccountHolderRequest) (*operations.PostUnSuspendAccountHolderResponse, error) {
+func (s *accountHolders) PostUnSuspendAccountHolder(ctx context.Context, request shared.UnSuspendAccountHolderRequest, security operations.PostUnSuspendAccountHolderSecurity) (*operations.PostUnSuspendAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/unSuspendAccountHolder"
 
@@ -409,7 +409,7 @@ func (s *accountHolders) PostUnSuspendAccountHolder(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -483,7 +483,7 @@ func (s *accountHolders) PostUnSuspendAccountHolder(ctx context.Context, request
 //	For example, to update the `address.postalCode`, you must also submit the `address.country`, `.city`, `.street`, `.postalCode`, and possibly `.stateOrProvince` so that the address can be validated.
 //
 // To add a bank account or shareholder, provide the bank account or shareholder details without a `bankAccountUUID` or a `shareholderCode`.
-func (s *accountHolders) PostUpdateAccountHolder(ctx context.Context, request operations.PostUpdateAccountHolderRequest) (*operations.PostUpdateAccountHolderResponse, error) {
+func (s *accountHolders) PostUpdateAccountHolder(ctx context.Context, request shared.UpdateAccountHolderRequest, security operations.PostUpdateAccountHolderSecurity) (*operations.PostUpdateAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateAccountHolder"
 
@@ -499,7 +499,7 @@ func (s *accountHolders) PostUpdateAccountHolder(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -555,7 +555,7 @@ func (s *accountHolders) PostUpdateAccountHolder(ctx context.Context, request op
 
 // PostUpdateAccountHolderState - Update payout or processing state
 // Disables or enables the processing or payout state of an account holder.
-func (s *accountHolders) PostUpdateAccountHolderState(ctx context.Context, request operations.PostUpdateAccountHolderStateRequest) (*operations.PostUpdateAccountHolderStateResponse, error) {
+func (s *accountHolders) PostUpdateAccountHolderState(ctx context.Context, request shared.UpdateAccountHolderStateRequest, security operations.PostUpdateAccountHolderStateSecurity) (*operations.PostUpdateAccountHolderStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateAccountHolderState"
 
@@ -571,7 +571,7 @@ func (s *accountHolders) PostUpdateAccountHolderState(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

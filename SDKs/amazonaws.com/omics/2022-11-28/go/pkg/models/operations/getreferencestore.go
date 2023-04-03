@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReferenceStorePathParams struct {
-	// The store's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetReferenceStoreHeaders struct {
+type GetReferenceStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetReferenceStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReferenceStoreRequest struct {
-	PathParams GetReferenceStorePathParams
-	Headers    GetReferenceStoreHeaders
+	// The store's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetReferenceStoreResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItvRokuPlansQueryParams struct {
+type GetItvRokuPlansRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -20,10 +20,6 @@ type GetItvRokuPlansQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetItvRokuPlansRequest struct {
-	QueryParams GetItvRokuPlansQueryParams
 }
 
 type GetItvRokuPlansResponse struct {

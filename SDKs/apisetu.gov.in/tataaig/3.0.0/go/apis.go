@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Podoc - Policy Document
 // API to verify Policy Document.
-func (s *apIs) Podoc(ctx context.Context, request operations.PodocRequest) (*operations.PodocResponse, error) {
+func (s *apIs) Podoc(ctx context.Context, request operations.PodocRequestBody, security operations.PodocSecurity) (*operations.PodocResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/podoc/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Podoc(ctx context.Context, request operations.PodocRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

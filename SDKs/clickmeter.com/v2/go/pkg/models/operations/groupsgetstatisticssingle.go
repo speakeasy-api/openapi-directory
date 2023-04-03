@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetStatisticsSinglePathParams struct {
-	// Id of the group
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GroupsGetStatisticsSingleTimeFrameEnum - Timeframe of the request. See list at $timeframeList
 type GroupsGetStatisticsSingleTimeFrameEnum string
 
@@ -77,20 +72,17 @@ func (e *GroupsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GroupsGetStatisticsSingleQueryParams struct {
+type GroupsGetStatisticsSingleRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// If using "yesterday" or "today" timeframe you can ask for the hourly detail
 	Hourly *bool `queryParam:"style=form,explode=true,name=hourly"`
+	// Id of the group
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Timeframe of the request. See list at $timeframeList
 	TimeFrame GroupsGetStatisticsSingleTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type GroupsGetStatisticsSingleRequest struct {
-	PathParams  GroupsGetStatisticsSinglePathParams
-	QueryParams GroupsGetStatisticsSingleQueryParams
 }
 
 type GroupsGetStatisticsSingleResponse struct {

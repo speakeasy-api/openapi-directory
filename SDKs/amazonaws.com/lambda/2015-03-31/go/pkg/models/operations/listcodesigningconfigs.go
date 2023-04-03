@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCodeSigningConfigsQueryParams struct {
+type ListCodeSigningConfigsRequest struct {
 	// Specify the pagination token that's returned by a previous request to retrieve the next page of results.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Maximum number of items to return.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListCodeSigningConfigsHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListCodeSigningConfigsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCodeSigningConfigsRequest struct {
-	QueryParams ListCodeSigningConfigsQueryParams
-	Headers     ListCodeSigningConfigsHeaders
 }
 
 type ListCodeSigningConfigsResponse struct {

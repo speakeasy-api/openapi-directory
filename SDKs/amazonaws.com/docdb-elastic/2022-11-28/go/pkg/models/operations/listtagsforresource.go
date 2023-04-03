@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTagsForResourcePathParams struct {
-	// The arn of the Elastic DocumentDB resource.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type ListTagsForResourceHeaders struct {
+type ListTagsForResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type ListTagsForResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTagsForResourceRequest struct {
-	PathParams ListTagsForResourcePathParams
-	Headers    ListTagsForResourceHeaders
+	// The arn of the Elastic DocumentDB resource.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
 }
 
 type ListTagsForResourceResponse struct {

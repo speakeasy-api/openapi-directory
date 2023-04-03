@@ -6,26 +6,18 @@ import (
 	"net/http"
 )
 
-type DeleteConfigurationSetEventDestinationPathParams struct {
+type DeleteConfigurationSetEventDestinationRequest struct {
 	// The name of the configuration set that contains the event destination that you want to delete.
 	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
 	// The name of the event destination that you want to delete.
-	EventDestinationName string `pathParam:"style=simple,explode=false,name=EventDestinationName"`
-}
-
-type DeleteConfigurationSetEventDestinationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteConfigurationSetEventDestinationRequest struct {
-	PathParams DeleteConfigurationSetEventDestinationPathParams
-	Headers    DeleteConfigurationSetEventDestinationHeaders
+	EventDestinationName string  `pathParam:"style=simple,explode=false,name=EventDestinationName"`
+	XAmzAlgorithm        *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteConfigurationSetEventDestinationResponse struct {

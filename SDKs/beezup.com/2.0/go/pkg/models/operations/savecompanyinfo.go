@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveCompanyInfoRequest struct {
-	Request shared.CompanyInfo `request:"mediaType=application/json"`
-}
-
 type SaveCompanyInfoResponse struct {
 	// Bad request or invalid VATNumber.
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

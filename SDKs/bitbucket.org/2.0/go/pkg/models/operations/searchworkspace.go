@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchWorkspacePathParams struct {
-	// The workspace to search in; either the slug or the UUID in curly braces
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type SearchWorkspaceQueryParams struct {
+type SearchWorkspaceRequest struct {
 	// Which page of the search results to retrieve
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// How many search results to retrieve per page
 	Pagelen *int `queryParam:"style=form,explode=true,name=pagelen"`
 	// The search query
 	SearchQuery string `queryParam:"style=form,explode=true,name=search_query"`
-}
-
-type SearchWorkspaceRequest struct {
-	PathParams  SearchWorkspacePathParams
-	QueryParams SearchWorkspaceQueryParams
+	// The workspace to search in; either the slug or the UUID in curly braces
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type SearchWorkspaceResponse struct {

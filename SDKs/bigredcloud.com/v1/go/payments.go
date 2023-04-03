@@ -35,14 +35,14 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PaymentsDelete - Removes an existing Payment.
 func (s *payments) PaymentsDelete(ctx context.Context, request operations.PaymentsDeleteRequest) (*operations.PaymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *payments) PaymentsGet(ctx context.Context) (*operations.PaymentsGetResp
 }
 
 // PaymentsPost - Creates a new Payment.
-func (s *payments) PaymentsPost(ctx context.Context, request operations.PaymentsPostRequest) (*operations.PaymentsPostResponse, error) {
+func (s *payments) PaymentsPost(ctx context.Context, request shared.PaymentDto) (*operations.PaymentsPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payments"
 
@@ -181,7 +181,7 @@ func (s *payments) PaymentsPost(ctx context.Context, request operations.Payments
 }
 
 // PaymentsProcessBatch - Processes a batch of Payments.
-func (s *payments) PaymentsProcessBatch(ctx context.Context, request operations.PaymentsProcessBatchRequest) (*operations.PaymentsProcessBatchResponse, error) {
+func (s *payments) PaymentsProcessBatch(ctx context.Context, request []shared.BatchItemPaymentDto) (*operations.PaymentsProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/payments/batch"
 
@@ -237,9 +237,9 @@ func (s *payments) PaymentsProcessBatch(ctx context.Context, request operations.
 // PaymentsPut - Updates an existing Payment.
 func (s *payments) PaymentsPut(ctx context.Context, request operations.PaymentsPutRequest) (*operations.PaymentsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *payments) PaymentsPut(ctx context.Context, request operations.PaymentsP
 // GetV1PaymentsID - Returns information about a single Payments.
 func (s *payments) GetV1PaymentsID(ctx context.Context, request operations.GetV1PaymentsIDRequest) (*operations.GetV1PaymentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/payments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

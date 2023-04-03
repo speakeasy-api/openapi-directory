@@ -46,7 +46,7 @@ func newUploads(defaultClient, securityClient HTTPClient, serverURL, language, s
 // It is recommended to notify the API about cancelled uploads if possible.
 func (s *uploads) CancelFileUploadByToken(ctx context.Context, request operations.CancelFileUploadByTokenRequest) (*operations.CancelFileUploadByTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -123,9 +123,9 @@ func (s *uploads) CancelFileUploadByToken(ctx context.Context, request operation
 // - `keepShareLinks` is `true`
 func (s *uploads) CompleteFileUploadByToken(ctx context.Context, request operations.CompleteFileUploadByTokenRequest) (*operations.CompleteFileUploadByTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{token}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +137,7 @@ func (s *uploads) CompleteFileUploadByToken(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -252,9 +252,9 @@ func (s *uploads) CompleteFileUploadByToken(ctx context.Context, request operati
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *uploads) UploadFileByTokenAsMultipart1(ctx context.Context, request operations.UploadFileByTokenAsMultipart1Request) (*operations.UploadFileByTokenAsMultipart1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{token}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -266,7 +266,7 @@ func (s *uploads) UploadFileByTokenAsMultipart1(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBundleInfoPathParams struct {
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 type GetBundleInfoRequest struct {
-	PathParams GetBundleInfoPathParams
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetBundleInfoResponse struct {

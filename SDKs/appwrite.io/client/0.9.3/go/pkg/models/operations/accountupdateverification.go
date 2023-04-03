@@ -8,8 +8,8 @@ import (
 )
 
 type AccountUpdateVerificationSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountUpdateVerificationRequestBody struct {
@@ -17,11 +17,6 @@ type AccountUpdateVerificationRequestBody struct {
 	Secret string `json:"secret"`
 	// User unique ID.
 	UserID string `json:"userId"`
-}
-
-type AccountUpdateVerificationRequest struct {
-	Request  *AccountUpdateVerificationRequestBody `request:"mediaType=application/json"`
-	Security AccountUpdateVerificationSecurity
 }
 
 type AccountUpdateVerificationResponse struct {

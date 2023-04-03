@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCACertificatesQueryParams struct {
+type ListCACertificatesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// Determines the order of the results.
 	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
 	// The marker for the next set of results.
@@ -16,21 +23,6 @@ type ListCACertificatesQueryParams struct {
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The name of the provisioning template.
 	TemplateName *string `queryParam:"style=form,explode=true,name=templateName"`
-}
-
-type ListCACertificatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCACertificatesRequest struct {
-	QueryParams ListCACertificatesQueryParams
-	Headers     ListCACertificatesHeaders
 }
 
 type ListCACertificatesResponse struct {

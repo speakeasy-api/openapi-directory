@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPartnerQueryParams struct {
+type ListPartnerRequest struct {
 	Page    *int64 `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ListPartnerRequest struct {
-	QueryParams ListPartnerQueryParams
 }
 
 type ListPartnerResponse struct {

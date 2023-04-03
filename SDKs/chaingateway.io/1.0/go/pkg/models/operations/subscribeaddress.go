@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubscribeAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type SubscribeAddressRequest struct {
-	Headers SubscribeAddressHeaders
-	Request shared.SubscribeAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization           string                         `header:"style=simple,explode=false,name=Authorization"`
+	SubscribeAddressRequest shared.SubscribeAddressRequest `request:"mediaType=application/json"`
 }
 
 type SubscribeAddressResponse struct {

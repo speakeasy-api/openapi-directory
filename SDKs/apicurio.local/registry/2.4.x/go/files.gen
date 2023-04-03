@@ -107,8 +107,8 @@ pkg/models/shared/ruleviolationcause.go
 pkg/models/shared/artifactmetadata.go
 pkg/models/shared/artifactstateenum.go
 pkg/models/shared/artifactreference.go
-pkg/models/shared/contentcreaterequest.go
 pkg/models/shared/ifexistsenum.go
+pkg/models/shared/contentcreaterequest.go
 pkg/models/shared/artifactsearchresults.go
 pkg/models/shared/searchedartifact.go
 pkg/models/shared/sortbyenum.go

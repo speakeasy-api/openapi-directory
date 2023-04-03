@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QuotePutPathParams struct {
+type QuotePutRequest struct {
+	// Information of Quote to update.
+	QuoteDto shared.QuoteDto `request:"mediaType=application/json"`
 	// Id of Quote to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type QuotePutRequest struct {
-	PathParams QuotePutPathParams
-	// Information of Quote to update.
-	Request shared.QuoteDto `request:"mediaType=application/json"`
 }
 
 type QuotePutResponse struct {

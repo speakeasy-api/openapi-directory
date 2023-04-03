@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateVariantStorePathParams struct {
-	// A name for the store.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type UpdateVariantStoreHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateVariantStoreRequestBody struct {
 	// A description for the store.
 	Description *string `json:"description,omitempty"`
 }
 
 type UpdateVariantStoreRequest struct {
-	PathParams UpdateVariantStorePathParams
-	Headers    UpdateVariantStoreHeaders
-	Request    UpdateVariantStoreRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateVariantStoreRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A name for the store.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type UpdateVariantStoreResponse struct {

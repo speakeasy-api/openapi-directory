@@ -36,16 +36,16 @@ func newClientKeyCompanyLevel(defaultClient, securityClient HTTPClient, serverUR
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *clientKeyCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKey(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeyRequest) (*operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeyResponse, error) {
+func (s *clientKeyCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKey(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeyRequest, security operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeySecurity) (*operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/generateClientKey", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/generateClientKey", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

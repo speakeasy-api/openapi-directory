@@ -7,24 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ValidateAssessmentReportIntegrityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ValidateAssessmentReportIntegrityRequestBody struct {
 	//  The relative path of the Amazon S3 bucket that the assessment report is stored in.
 	S3RelativePath string `json:"s3RelativePath"`
 }
 
 type ValidateAssessmentReportIntegrityRequest struct {
-	Headers ValidateAssessmentReportIntegrityHeaders
-	Request ValidateAssessmentReportIntegrityRequestBody `request:"mediaType=application/json"`
+	RequestBody       ValidateAssessmentReportIntegrityRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ValidateAssessmentReportIntegrityResponse struct {

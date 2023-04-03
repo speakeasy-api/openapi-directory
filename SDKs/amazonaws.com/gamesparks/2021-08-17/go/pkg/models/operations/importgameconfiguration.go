@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportGameConfigurationPathParams struct {
-	// The name of the game.
-	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-}
-
-type ImportGameConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ImportGameConfigurationRequestBodyImportSource - The source used to import configuration sections.
 type ImportGameConfigurationRequestBodyImportSource struct {
 	File *string `json:"File,omitempty"`
@@ -33,9 +18,16 @@ type ImportGameConfigurationRequestBody struct {
 }
 
 type ImportGameConfigurationRequest struct {
-	PathParams ImportGameConfigurationPathParams
-	Headers    ImportGameConfigurationHeaders
-	Request    ImportGameConfigurationRequestBody `request:"mediaType=application/json"`
+	// The name of the game.
+	GameName          string                             `pathParam:"style=simple,explode=false,name=GameName"`
+	RequestBody       ImportGameConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ImportGameConfigurationResponse struct {

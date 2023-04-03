@@ -29,6 +29,5 @@ pkg/models/operations/ssmgr.go
 pkg/models/operations/tetcr.go
 pkg/models/operations/tetms.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 pkg/models/shared/academiccertificateschema.go
 USAGE.md

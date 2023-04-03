@@ -10,8 +10,8 @@ import (
 )
 
 type RscerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type RscerRequestBodyCertificateParameters struct {
@@ -54,12 +54,6 @@ type RscerRequestBody struct {
 	Format RscerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type RscerRequest struct {
-	// Request format
-	Request  *RscerRequestBody `request:"mediaType=application/json"`
-	Security RscerSecurity
 }
 
 type Rscer504ApplicationJSONErrorEnum string

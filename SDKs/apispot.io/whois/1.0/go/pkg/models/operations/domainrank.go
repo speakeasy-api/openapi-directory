@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DomainRankPathParams struct {
+type DomainRankRequest struct {
 	// Domain
 	Domain string `pathParam:"style=simple,explode=false,name=domain"`
-}
-
-type DomainRankRequest struct {
-	PathParams DomainRankPathParams
 }
 
 // DomainRank200ApplicationJSON - OK

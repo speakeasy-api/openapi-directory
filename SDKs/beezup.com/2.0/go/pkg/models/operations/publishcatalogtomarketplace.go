@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishCatalogToMarketplacePathParams struct {
+type PublishCatalogToMarketplaceRequest struct {
 	// Account Id to query (required)
 	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// Marketplace Technical Code to query (required)
-	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type PublishCatalogToMarketplaceRequest struct {
-	PathParams PublishCatalogToMarketplacePathParams
-	Request    shared.PublishCatalogToMarketplaceRequest `request:"mediaType=application/json"`
+	MarketplaceTechnicalCode           string                                    `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
+	PublishCatalogToMarketplaceRequest shared.PublishCatalogToMarketplaceRequest `request:"mediaType=application/json"`
 }
 
 type PublishCatalogToMarketplaceResponse struct {

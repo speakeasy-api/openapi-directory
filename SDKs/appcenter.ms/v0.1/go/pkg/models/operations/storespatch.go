@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type StoresPatchSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type StoresPatchPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The name of the store
-	StoreName string `pathParam:"style=simple,explode=false,name=store_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // StoresPatchRequestBody - Store update request
@@ -29,10 +19,14 @@ type StoresPatchRequestBody struct {
 }
 
 type StoresPatchRequest struct {
-	PathParams StoresPatchPathParams
 	// Store update request
-	Request  StoresPatchRequestBody `request:"mediaType=application/json"`
-	Security StoresPatchSecurity
+	RequestBody StoresPatchRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The name of the store
+	StoreName string `pathParam:"style=simple,explode=false,name=store_name"`
 }
 
 type StoresPatchDefaultApplicationJSONCodeEnum string

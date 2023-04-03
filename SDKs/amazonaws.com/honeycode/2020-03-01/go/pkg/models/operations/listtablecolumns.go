@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTableColumnsPathParams struct {
-	// <p>The ID of the table whose columns are being retrieved.</p> <p> If a table with the specified id could not be found, this API throws ResourceNotFoundException. </p>
-	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
-	// <p>The ID of the workbook that contains the table whose columns are being retrieved.</p> <p> If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. </p>
-	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
-}
-
-type ListTableColumnsQueryParams struct {
-	// <p> This parameter is optional. If a nextToken is not specified, the API returns the first page of data. </p> <p> Pagination tokens expire after 1 hour. If you use a token that was returned more than an hour back, the API will throw ValidationException. </p>
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListTableColumnsHeaders struct {
+type ListTableColumnsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListTableColumnsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTableColumnsRequest struct {
-	PathParams  ListTableColumnsPathParams
-	QueryParams ListTableColumnsQueryParams
-	Headers     ListTableColumnsHeaders
+	// <p> This parameter is optional. If a nextToken is not specified, the API returns the first page of data. </p> <p> Pagination tokens expire after 1 hour. If you use a token that was returned more than an hour back, the API will throw ValidationException. </p>
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// <p>The ID of the table whose columns are being retrieved.</p> <p> If a table with the specified id could not be found, this API throws ResourceNotFoundException. </p>
+	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
+	// <p>The ID of the workbook that contains the table whose columns are being retrieved.</p> <p> If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. </p>
+	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
 }
 
 type ListTableColumnsResponse struct {

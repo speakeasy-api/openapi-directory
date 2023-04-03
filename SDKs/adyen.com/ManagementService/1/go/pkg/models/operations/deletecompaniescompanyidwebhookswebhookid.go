@@ -8,20 +8,15 @@ import (
 )
 
 type DeleteCompaniesCompanyIDWebhooksWebhookIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type DeleteCompaniesCompanyIDWebhooksWebhookIDPathParams struct {
+type DeleteCompaniesCompanyIDWebhooksWebhookIDRequest struct {
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 	// Unique identifier of the webhook configuration.
 	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type DeleteCompaniesCompanyIDWebhooksWebhookIDRequest struct {
-	PathParams DeleteCompaniesCompanyIDWebhooksWebhookIDPathParams
-	Security   DeleteCompaniesCompanyIDWebhooksWebhookIDSecurity
 }
 
 type DeleteCompaniesCompanyIDWebhooksWebhookIDResponse struct {

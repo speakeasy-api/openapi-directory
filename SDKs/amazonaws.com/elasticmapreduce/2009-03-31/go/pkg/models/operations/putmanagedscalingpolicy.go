@@ -30,20 +30,16 @@ func (e *PutManagedScalingPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type PutManagedScalingPolicyHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        PutManagedScalingPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type PutManagedScalingPolicyRequest struct {
-	Headers PutManagedScalingPolicyHeaders
-	Request shared.PutManagedScalingPolicyInput `request:"mediaType=application/json"`
+	PutManagedScalingPolicyInput shared.PutManagedScalingPolicyInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   PutManagedScalingPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type PutManagedScalingPolicyResponse struct {

@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ClinicalNoteFieldValuesPartialUpdateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClinicalNoteFieldValuesPartialUpdatePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClinicalNoteFieldValuesPartialUpdateQueryParams struct {
+type ClinicalNoteFieldValuesPartialUpdateRequest struct {
 	Appointment          *int64  `queryParam:"style=form,explode=true,name=appointment"`
 	ClinicalNoteField    *int64  `queryParam:"style=form,explode=true,name=clinical_note_field"`
 	ClinicalNoteTemplate *int64  `queryParam:"style=form,explode=true,name=clinical_note_template"`
 	Doctor               *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	ID                   string  `pathParam:"style=simple,explode=false,name=id"`
 	Since                *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type ClinicalNoteFieldValuesPartialUpdateRequest struct {
-	PathParams  ClinicalNoteFieldValuesPartialUpdatePathParams
-	QueryParams ClinicalNoteFieldValuesPartialUpdateQueryParams
-	Security    ClinicalNoteFieldValuesPartialUpdateSecurity
 }
 
 type ClinicalNoteFieldValuesPartialUpdateResponse struct {

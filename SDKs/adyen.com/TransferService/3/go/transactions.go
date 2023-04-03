@@ -36,7 +36,7 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Returns all transactions related to a balance account with a payment instrument of type **bankAccount**.
 //
 // This endpoint supports cursor-based pagination. The response returns the first page of results, and returns links to the next page when applicable. You can use the links to page through the results. The response also returns links to the previous page when applicable.
-func (s *transactions) GetTransactions(ctx context.Context, request operations.GetTransactionsRequest) (*operations.GetTransactionsResponse, error) {
+func (s *transactions) GetTransactions(ctx context.Context, request operations.GetTransactionsRequest, security operations.GetTransactionsSecurity) (*operations.GetTransactionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactions"
 
@@ -45,11 +45,11 @@ func (s *transactions) GetTransactions(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,16 +101,16 @@ func (s *transactions) GetTransactions(ctx context.Context, request operations.G
 
 // GetTransactionsID - Get a transaction
 // Returns a transaction.
-func (s *transactions) GetTransactionsID(ctx context.Context, request operations.GetTransactionsIDRequest) (*operations.GetTransactionsIDResponse, error) {
+func (s *transactions) GetTransactionsID(ctx context.Context, request operations.GetTransactionsIDRequest, security operations.GetTransactionsIDSecurity) (*operations.GetTransactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CrashGroupsListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CrashGroupsListPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // CrashGroupsListDollarOrderbyEnum - the OData-like $orderby argument
@@ -114,9 +106,11 @@ func (e *CrashGroupsListGroupTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CrashGroupsListQueryParams struct {
+type CrashGroupsListRequest struct {
 	// the OData-like $orderby argument
 	DollarOrderby *CrashGroupsListDollarOrderbyEnum `queryParam:"style=form,explode=true,name=$orderby"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// version
 	AppVersion *string `queryParam:"style=form,explode=true,name=app_version"`
 	// Cassandra request continuation token. The token is used for pagination.
@@ -129,12 +123,8 @@ type CrashGroupsListQueryParams struct {
 	LastOccurrenceFrom *time.Time `queryParam:"style=form,explode=true,name=last_occurrence_from"`
 	// Latest date when the last time a crash occured in a crash group
 	LastOccurrenceTo *time.Time `queryParam:"style=form,explode=true,name=last_occurrence_to"`
-}
-
-type CrashGroupsListRequest struct {
-	PathParams  CrashGroupsListPathParams
-	QueryParams CrashGroupsListQueryParams
-	Security    CrashGroupsListSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CrashGroupsListDefaultApplicationJSON - Error

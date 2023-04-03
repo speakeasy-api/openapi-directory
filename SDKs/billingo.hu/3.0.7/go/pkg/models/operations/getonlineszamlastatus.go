@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOnlineSzamlaStatusPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetOnlineSzamlaStatusRequest struct {
-	PathParams GetOnlineSzamlaStatusPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetOnlineSzamlaStatusResponse struct {

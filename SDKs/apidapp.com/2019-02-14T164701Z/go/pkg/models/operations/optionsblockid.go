@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsBlockIDPathParams struct {
+type OptionsBlockIDRequest struct {
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OptionsBlockIDRequest struct {
-	PathParams OptionsBlockIDPathParams
 }
 
 type OptionsBlockIDResponse struct {

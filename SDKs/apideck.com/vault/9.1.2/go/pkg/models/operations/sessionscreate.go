@@ -8,21 +8,16 @@ import (
 )
 
 type SessionsCreateSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type SessionsCreateHeaders struct {
+type SessionsCreateRequest struct {
+	// Additional redirect uri and/or consumer metadata
+	Session *shared.Session `request:"mediaType=application/json"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
-}
-
-type SessionsCreateRequest struct {
-	Headers SessionsCreateHeaders
-	// Additional redirect uri and/or consumer metadata
-	Request  *shared.Session `request:"mediaType=application/json"`
-	Security SessionsCreateSecurity
 }
 
 type SessionsCreateResponse struct {

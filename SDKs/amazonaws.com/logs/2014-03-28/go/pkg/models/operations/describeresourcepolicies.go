@@ -30,20 +30,16 @@ func (e *DescribeResourcePoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DescribeResourcePoliciesHeaders struct {
-	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeResourcePoliciesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeResourcePoliciesRequest struct {
-	Headers DescribeResourcePoliciesHeaders
-	Request shared.DescribeResourcePoliciesRequest `request:"mediaType=application/json"`
+	DescribeResourcePoliciesRequest shared.DescribeResourcePoliciesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      DescribeResourcePoliciesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeResourcePoliciesResponse struct {

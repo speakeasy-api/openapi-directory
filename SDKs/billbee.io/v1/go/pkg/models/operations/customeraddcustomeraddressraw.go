@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddCustomerAddressRawPathParams struct {
+type CustomerAddCustomerAddressRawRequest struct {
+	// Model containing the address, that should be attached.
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// CustomerId to attach the new address to.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerAddCustomerAddressRawRequest struct {
-	PathParams CustomerAddCustomerAddressRawPathParams
-	// Model containing the address, that should be attached.
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type CustomerAddCustomerAddressRawResponse struct {

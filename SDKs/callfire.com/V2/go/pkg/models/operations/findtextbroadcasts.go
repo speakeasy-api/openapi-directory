@@ -8,10 +8,11 @@ import (
 )
 
 type FindTextBroadcastsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindTextBroadcastsQueryParams struct {
+type FindTextBroadcastsRequest struct {
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Start of the find time interval, formatted in unix time milliseconds. Example: 1473781817000 for Sat, 05 Jan 1985 14:03:37 GMT
@@ -30,11 +31,6 @@ type FindTextBroadcastsQueryParams struct {
 	Running *bool `queryParam:"style=form,explode=true,name=running"`
 	// Specify whether the campaigns should be scheduled or not
 	Scheduled *bool `queryParam:"style=form,explode=true,name=scheduled"`
-}
-
-type FindTextBroadcastsRequest struct {
-	QueryParams FindTextBroadcastsQueryParams
-	Security    FindTextBroadcastsSecurity
 }
 
 type FindTextBroadcastsResponse struct {

@@ -8,25 +8,16 @@ import (
 )
 
 type GetItemFilesSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetItemFilesPathParams struct {
+type GetItemFilesRequest struct {
+	// Tells server to return the base64-encoded file contents in the response.
+	InlineFiles *bool `queryParam:"style=form,explode=true,name=inline_files"`
 	// The UUID of the Item to fetch files from
 	ItemUUID string `pathParam:"style=simple,explode=false,name=itemUuid"`
 	// The UUID of the Vault to fetch Items from
 	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type GetItemFilesQueryParams struct {
-	// Tells server to return the base64-encoded file contents in the response.
-	InlineFiles *bool `queryParam:"style=form,explode=true,name=inline_files"`
-}
-
-type GetItemFilesRequest struct {
-	PathParams  GetItemFilesPathParams
-	QueryParams GetItemFilesQueryParams
-	Security    GetItemFilesSecurity
 }
 
 type GetItemFilesResponse struct {

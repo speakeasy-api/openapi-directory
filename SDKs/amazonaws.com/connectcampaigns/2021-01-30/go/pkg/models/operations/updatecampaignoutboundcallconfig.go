@@ -6,20 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateCampaignOutboundCallConfigPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateCampaignOutboundCallConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionConfig - Answering Machine Detection config
 type UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionConfig struct {
 	EnableAnswerMachineDetection *bool `json:"enableAnswerMachineDetection,omitempty"`
@@ -35,9 +21,15 @@ type UpdateCampaignOutboundCallConfigRequestBody struct {
 }
 
 type UpdateCampaignOutboundCallConfigRequest struct {
-	PathParams UpdateCampaignOutboundCallConfigPathParams
-	Headers    UpdateCampaignOutboundCallConfigHeaders
-	Request    UpdateCampaignOutboundCallConfigRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateCampaignOutboundCallConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	ID                string                                      `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateCampaignOutboundCallConfigResponse struct {

@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStudentsForDistrictPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetStudentsForDistrictQueryParams struct {
+type GetStudentsForDistrictRequest struct {
 	EndingBefore  *string `queryParam:"style=form,explode=true,name=ending_before"`
+	ID            string  `pathParam:"style=simple,explode=false,name=id"`
 	Limit         *int64  `queryParam:"style=form,explode=true,name=limit"`
 	StartingAfter *string `queryParam:"style=form,explode=true,name=starting_after"`
 	Where         *string `queryParam:"style=form,explode=true,name=where"`
-}
-
-type GetStudentsForDistrictRequest struct {
-	PathParams  GetStudentsForDistrictPathParams
-	QueryParams GetStudentsForDistrictQueryParams
 }
 
 type GetStudentsForDistrictResponse struct {

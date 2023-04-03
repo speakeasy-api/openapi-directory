@@ -50,25 +50,17 @@ func (e *POSTUnassignPrivateIPAddressesVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTUnassignPrivateIPAddressesQueryParams struct {
-	Action  POSTUnassignPrivateIPAddressesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUnassignPrivateIPAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUnassignPrivateIPAddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUnassignPrivateIPAddressesRequest struct {
-	QueryParams POSTUnassignPrivateIPAddressesQueryParams
-	Headers     POSTUnassignPrivateIPAddressesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUnassignPrivateIPAddressesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                    `request:"mediaType=text/xml"`
+	Version           POSTUnassignPrivateIPAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUnassignPrivateIPAddressesResponse struct {

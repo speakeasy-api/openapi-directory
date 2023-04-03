@@ -7,30 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFormPathParams struct {
-	// The unique ID for the Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-	// The unique ID for the form.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateFormQueryParams struct {
-	// The unique client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type UpdateFormHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFormRequestBodyUpdatedForm - Updates and saves all of the information about a form, based on form ID.
 type UpdateFormRequestBodyUpdatedForm struct {
 	Cta               *shared.FormCTA                    `json:"cta,omitempty"`
@@ -49,10 +25,22 @@ type UpdateFormRequestBody struct {
 }
 
 type UpdateFormRequest struct {
-	PathParams  UpdateFormPathParams
-	QueryParams UpdateFormQueryParams
-	Headers     UpdateFormHeaders
-	Request     UpdateFormRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateFormRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID for the Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The unique client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the backend environment that is part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The unique ID for the form.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateFormResponse struct {

@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // PostRequest - This is a socket protocol delimited by CRLF (not http)
-func (s *SDK) PostRequest(ctx context.Context, request operations.PostRequestRequest) (*operations.PostRequestResponse, error) {
+func (s *SDK) PostRequest(ctx context.Context, request shared.AllRequestTypesExample) (*operations.PostRequestResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/request"
 

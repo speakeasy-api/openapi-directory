@@ -10,7 +10,7 @@ import (
 )
 
 type GetFoodBrandedSearchPhpSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=query"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
 // GetFoodBrandedSearchPhpDietEnum - #### Filter the search to only include branded foods that are considered compatible with a specific diet.
@@ -93,7 +93,7 @@ func (e *GetFoodBrandedSearchPhpLimitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFoodBrandedSearchPhpQueryParams struct {
+type GetFoodBrandedSearchPhpRequest struct {
 	// #### Filter the search to only include branded foods that contain a specific allergen.
 	//
 	// **Example**
@@ -187,11 +187,6 @@ type GetFoodBrandedSearchPhpQueryParams struct {
 	// > ```&vitamin=Biotin```
 	//
 	Vitamin *string `queryParam:"style=form,explode=true,name=vitamin"`
-}
-
-type GetFoodBrandedSearchPhpRequest struct {
-	QueryParams GetFoodBrandedSearchPhpQueryParams
-	Security    GetFoodBrandedSearchPhpSecurity
 }
 
 type GetFoodBrandedSearchPhpResponse struct {

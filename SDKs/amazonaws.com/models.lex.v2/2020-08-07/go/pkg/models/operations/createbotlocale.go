@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateBotLocalePathParams struct {
-	// The identifier of the bot to create the locale for.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot to create the locale for. This can only be the draft version of the bot.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-}
-
-type CreateBotLocaleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateBotLocaleRequestBodyVoiceSettings - Defines settings for using an Amazon Polly voice to communicate with a user.
 type CreateBotLocaleRequestBodyVoiceSettings struct {
 	Engine  *shared.VoiceEngineEnum `json:"engine,omitempty"`
@@ -42,9 +25,18 @@ type CreateBotLocaleRequestBody struct {
 }
 
 type CreateBotLocaleRequest struct {
-	PathParams CreateBotLocalePathParams
-	Headers    CreateBotLocaleHeaders
-	Request    CreateBotLocaleRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateBotLocaleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot to create the locale for.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot to create the locale for. This can only be the draft version of the bot.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
 }
 
 type CreateBotLocaleResponse struct {

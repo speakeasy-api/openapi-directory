@@ -116,30 +116,22 @@ func (e *GETResetInstanceAttributeVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETResetInstanceAttributeQueryParams struct {
+type GETResetInstanceAttributeRequest struct {
 	Action GETResetInstanceAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The attribute to reset.</p> <important> <p>You can only reset the following attributes: <code>kernel</code> | <code>ramdisk</code> | <code>sourceDestCheck</code>.</p> </important>
 	Attribute GETResetInstanceAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the instance.
-	InstanceID string                               `queryParam:"style=form,explode=true,name=InstanceId"`
-	Version    GETResetInstanceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETResetInstanceAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETResetInstanceAttributeRequest struct {
-	QueryParams GETResetInstanceAttributeQueryParams
-	Headers     GETResetInstanceAttributeHeaders
+	InstanceID        string                               `queryParam:"style=form,explode=true,name=InstanceId"`
+	Version           GETResetInstanceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETResetInstanceAttributeResponse struct {

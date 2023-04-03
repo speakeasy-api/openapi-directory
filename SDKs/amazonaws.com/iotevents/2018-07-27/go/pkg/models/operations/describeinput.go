@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeInputPathParams struct {
-	// The name of the input.
-	InputName string `pathParam:"style=simple,explode=false,name=inputName"`
-}
-
-type DescribeInputHeaders struct {
+type DescribeInputRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeInputHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeInputRequest struct {
-	PathParams DescribeInputPathParams
-	Headers    DescribeInputHeaders
+	// The name of the input.
+	InputName string `pathParam:"style=simple,explode=false,name=inputName"`
 }
 
 type DescribeInputResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type EinVerificationBasicSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type EinVerificationBasicQueryParams struct {
-	// Nine letter EIN number with or without hyphens
-	Ein string `queryParam:"style=form,explode=true,name=ein"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type EinVerificationBasicRequest struct {
-	QueryParams EinVerificationBasicQueryParams
-	Security    EinVerificationBasicSecurity
+	// Nine letter EIN number with or without hyphens
+	Ein string `queryParam:"style=form,explode=true,name=ein"`
 }
 
 // EinVerificationBasicDefaultApplicationJSON - Detailed information about the error

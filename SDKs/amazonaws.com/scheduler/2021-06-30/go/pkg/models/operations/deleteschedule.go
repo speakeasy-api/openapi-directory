@@ -6,19 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSchedulePathParams struct {
+type DeleteScheduleRequest struct {
 	// The name of the schedule to delete.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type DeleteScheduleQueryParams struct {
-	//  Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a client token, EventBridge Scheduler uses a randomly generated token for the request to ensure idempotency.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-	// The name of the schedule group associated with this schedule. If you omit this, the default schedule group is used.
-	GroupName *string `queryParam:"style=form,explode=true,name=groupName"`
-}
-
-type DeleteScheduleHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +16,10 @@ type DeleteScheduleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteScheduleRequest struct {
-	PathParams  DeleteSchedulePathParams
-	QueryParams DeleteScheduleQueryParams
-	Headers     DeleteScheduleHeaders
+	//  Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a client token, EventBridge Scheduler uses a randomly generated token for the request to ensure idempotency.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the schedule group associated with this schedule. If you omit this, the default schedule group is used.
+	GroupName *string `queryParam:"style=form,explode=true,name=groupName"`
 }
 
 type DeleteScheduleResponse struct {

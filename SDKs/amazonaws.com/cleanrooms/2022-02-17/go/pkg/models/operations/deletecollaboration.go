@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCollaborationPathParams struct {
-	// The identifier for the collaboration.
-	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
-}
-
-type DeleteCollaborationHeaders struct {
+type DeleteCollaborationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteCollaborationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCollaborationRequest struct {
-	PathParams DeleteCollaborationPathParams
-	Headers    DeleteCollaborationHeaders
+	// The identifier for the collaboration.
+	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
 }
 
 type DeleteCollaborationResponse struct {

@@ -50,30 +50,22 @@ func (e *GETGETConsoleOutputVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETConsoleOutputQueryParams struct {
+type GETGETConsoleOutputRequest struct {
 	Action GETGETConsoleOutputActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the instance.
 	InstanceID string `queryParam:"style=form,explode=true,name=InstanceId"`
 	// <p>When enabled, retrieves the latest console output for the instance.</p> <p>Default: disabled (<code>false</code>)</p>
-	Latest  *bool                          `queryParam:"style=form,explode=true,name=Latest"`
-	Version GETGETConsoleOutputVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETConsoleOutputHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETConsoleOutputRequest struct {
-	QueryParams GETGETConsoleOutputQueryParams
-	Headers     GETGETConsoleOutputHeaders
+	Latest            *bool                          `queryParam:"style=form,explode=true,name=Latest"`
+	Version           GETGETConsoleOutputVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETConsoleOutputResponse struct {

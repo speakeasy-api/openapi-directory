@@ -122,7 +122,7 @@ func (s *SDK) ConvertAPI(ctx context.Context, request operations.ConvertAPIReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transform"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -134,7 +134,7 @@ func (s *SDK) ConvertAPI(ctx context.Context, request operations.ConvertAPIReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

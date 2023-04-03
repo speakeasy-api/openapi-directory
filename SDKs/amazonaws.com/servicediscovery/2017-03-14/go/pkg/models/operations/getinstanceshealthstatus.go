@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInstancesHealthStatusQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetInstancesHealthStatusXAmzTargetEnum
 type GetInstancesHealthStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetInstancesHealthStatusXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GetInstancesHealthStatusHeaders struct {
+type GetInstancesHealthStatusRequest struct {
+	GetInstancesHealthStatusRequest shared.GetInstancesHealthStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetInstancesHealthStatusHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetInstancesHealthStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetInstancesHealthStatusRequest struct {
-	QueryParams GetInstancesHealthStatusQueryParams
-	Headers     GetInstancesHealthStatusHeaders
-	Request     shared.GetInstancesHealthStatusRequest `request:"mediaType=application/json"`
 }
 
 type GetInstancesHealthStatusResponse struct {

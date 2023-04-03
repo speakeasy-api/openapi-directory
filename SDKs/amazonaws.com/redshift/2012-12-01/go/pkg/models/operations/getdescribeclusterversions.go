@@ -50,7 +50,7 @@ func (e *GETDescribeClusterVersionsVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribeClusterVersionsQueryParams struct {
+type GETDescribeClusterVersionsRequest struct {
 	Action GETDescribeClusterVersionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of a specific cluster parameter group family to return details for.</p> <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 alphanumeric characters</p> </li> <li> <p>First character must be a letter</p> </li> <li> <p>Cannot end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
 	ClusterParameterGroupFamily *string `queryParam:"style=form,explode=true,name=ClusterParameterGroupFamily"`
@@ -59,23 +59,15 @@ type GETDescribeClusterVersionsQueryParams struct {
 	// An optional parameter that specifies the starting point to return a set of response records. When the results of a <a>DescribeClusterVersions</a> request exceed the value specified in <code>MaxRecords</code>, Amazon Web Services returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. </p> <p>Default: <code>100</code> </p> <p>Constraints: minimum 20, maximum 100.</p>
-	MaxRecords *int64                                `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeClusterVersionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeClusterVersionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeClusterVersionsRequest struct {
-	QueryParams GETDescribeClusterVersionsQueryParams
-	Headers     GETDescribeClusterVersionsHeaders
+	MaxRecords        *int64                                `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeClusterVersionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeClusterVersionsResponse struct {

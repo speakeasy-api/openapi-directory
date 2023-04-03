@@ -8,27 +8,19 @@ import (
 )
 
 type GetCallBroadcastBatchesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetCallBroadcastBatchesPathParams struct {
-	// An id of a call broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetCallBroadcastBatchesQueryParams struct {
+type GetCallBroadcastBatchesRequest struct {
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// An id of a call broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// To set the maximum number of records to return in a paged list response. The default is 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetCallBroadcastBatchesRequest struct {
-	PathParams  GetCallBroadcastBatchesPathParams
-	QueryParams GetCallBroadcastBatchesQueryParams
-	Security    GetCallBroadcastBatchesSecurity
 }
 
 type GetCallBroadcastBatchesResponse struct {

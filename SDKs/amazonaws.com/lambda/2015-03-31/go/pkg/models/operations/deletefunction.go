@@ -6,17 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteFunctionPathParams struct {
+type DeleteFunctionRequest struct {
 	// <p>The name of the Lambda function or version.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code> (name-only), <code>my-function:1</code> (with version).</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>You can append a version number or alias to any of the formats. The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
 	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type DeleteFunctionQueryParams struct {
 	// Specify a version to delete. You can't delete a version that an alias references.
-	Qualifier *string `queryParam:"style=form,explode=true,name=Qualifier"`
-}
-
-type DeleteFunctionHeaders struct {
+	Qualifier         *string `queryParam:"style=form,explode=true,name=Qualifier"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +18,6 @@ type DeleteFunctionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFunctionRequest struct {
-	PathParams  DeleteFunctionPathParams
-	QueryParams DeleteFunctionQueryParams
-	Headers     DeleteFunctionHeaders
 }
 
 type DeleteFunctionResponse struct {

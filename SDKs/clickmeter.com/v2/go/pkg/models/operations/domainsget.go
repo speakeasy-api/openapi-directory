@@ -39,7 +39,7 @@ func (e *DomainsGetTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DomainsGetQueryParams struct {
+type DomainsGetRequest struct {
 	// Limit results to this number
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Filter domains with this anmen
@@ -48,10 +48,6 @@ type DomainsGetQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Type of domain ("system"/"go"/"personal"/"dedicated"). If not specified default is "system"
 	Type *DomainsGetTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DomainsGetRequest struct {
-	QueryParams DomainsGetQueryParams
 }
 
 type DomainsGetResponse struct {

@@ -13,21 +13,16 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostRequestSubjectErasureRequest{
-        Security: operations.PostRequestSubjectErasureSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &shared.SubjectErasureByPspReferenceRequest{
-            ForceErasure: false,
-            MerchantAccount: "corrupti",
-            PspReference: "provident",
-        },
+    req := shared.SubjectErasureByPspReferenceRequest{
+        ForceErasure: false,
+        MerchantAccount: "corrupti",
+        PspReference: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.General.PostRequestSubjectErasure(ctx, req)
+    res, err := s.General.PostRequestSubjectErasure(ctx, req, operations.PostRequestSubjectErasureSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -34,16 +34,16 @@ func newDestiny2(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // Destiny2AwaGetActionToken - Returns the action token if user approves the request.
-func (s *destiny2) Destiny2AwaGetActionToken(ctx context.Context, request operations.Destiny2AwaGetActionTokenRequest) (*operations.Destiny2AwaGetActionTokenResponse, error) {
+func (s *destiny2) Destiny2AwaGetActionToken(ctx context.Context, request operations.Destiny2AwaGetActionTokenRequest, security operations.Destiny2AwaGetActionTokenSecurity) (*operations.Destiny2AwaGetActionTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Awa/GetActionToken/{correlationId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Awa/GetActionToken/{correlationId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -78,7 +78,7 @@ func (s *destiny2) Destiny2AwaGetActionToken(ctx context.Context, request operat
 }
 
 // Destiny2AwaInitializeRequest - Initialize a request to perform an advanced write action.
-func (s *destiny2) Destiny2AwaInitializeRequest(ctx context.Context, request operations.Destiny2AwaInitializeRequestRequest) (*operations.Destiny2AwaInitializeRequestResponse, error) {
+func (s *destiny2) Destiny2AwaInitializeRequest(ctx context.Context) (*operations.Destiny2AwaInitializeRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Awa/Initialize/"
 
@@ -87,7 +87,7 @@ func (s *destiny2) Destiny2AwaInitializeRequest(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,7 +166,7 @@ func (s *destiny2) Destiny2AwaProvideAuthorizationResult(ctx context.Context) (*
 }
 
 // Destiny2ClearLoadout - Clear the identifiers and items of a loadout.
-func (s *destiny2) Destiny2ClearLoadout(ctx context.Context, request operations.Destiny2ClearLoadoutRequest) (*operations.Destiny2ClearLoadoutResponse, error) {
+func (s *destiny2) Destiny2ClearLoadout(ctx context.Context) (*operations.Destiny2ClearLoadoutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Loadouts/ClearLoadout/"
 
@@ -175,7 +175,7 @@ func (s *destiny2) Destiny2ClearLoadout(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -210,7 +210,7 @@ func (s *destiny2) Destiny2ClearLoadout(ctx context.Context, request operations.
 }
 
 // Destiny2EquipItem - Equip an item. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
-func (s *destiny2) Destiny2EquipItem(ctx context.Context, request operations.Destiny2EquipItemRequest) (*operations.Destiny2EquipItemResponse, error) {
+func (s *destiny2) Destiny2EquipItem(ctx context.Context) (*operations.Destiny2EquipItemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/EquipItem/"
 
@@ -219,7 +219,7 @@ func (s *destiny2) Destiny2EquipItem(ctx context.Context, request operations.Des
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,7 +254,7 @@ func (s *destiny2) Destiny2EquipItem(ctx context.Context, request operations.Des
 }
 
 // Destiny2EquipItems - Equip a list of items by itemInstanceIds. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Any items not found on your character will be ignored.
-func (s *destiny2) Destiny2EquipItems(ctx context.Context, request operations.Destiny2EquipItemsRequest) (*operations.Destiny2EquipItemsResponse, error) {
+func (s *destiny2) Destiny2EquipItems(ctx context.Context) (*operations.Destiny2EquipItemsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/EquipItems/"
 
@@ -263,7 +263,7 @@ func (s *destiny2) Destiny2EquipItems(ctx context.Context, request operations.De
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -298,7 +298,7 @@ func (s *destiny2) Destiny2EquipItems(ctx context.Context, request operations.De
 }
 
 // Destiny2EquipLoadout - Equip a loadout. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
-func (s *destiny2) Destiny2EquipLoadout(ctx context.Context, request operations.Destiny2EquipLoadoutRequest) (*operations.Destiny2EquipLoadoutResponse, error) {
+func (s *destiny2) Destiny2EquipLoadout(ctx context.Context) (*operations.Destiny2EquipLoadoutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Loadouts/EquipLoadout/"
 
@@ -307,7 +307,7 @@ func (s *destiny2) Destiny2EquipLoadout(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -344,14 +344,14 @@ func (s *destiny2) Destiny2EquipLoadout(ctx context.Context, request operations.
 // Destiny2GetActivityHistory - Gets activity history stats for indicated character.
 func (s *destiny2) Destiny2GetActivityHistory(ctx context.Context, request operations.Destiny2GetActivityHistoryRequest) (*operations.Destiny2GetActivityHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -392,14 +392,14 @@ func (s *destiny2) Destiny2GetActivityHistory(ctx context.Context, request opera
 // Destiny2GetCharacter - Returns character information for the supplied character.
 func (s *destiny2) Destiny2GetCharacter(ctx context.Context, request operations.Destiny2GetCharacterRequest) (*operations.Destiny2GetCharacterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -440,14 +440,14 @@ func (s *destiny2) Destiny2GetCharacter(ctx context.Context, request operations.
 // Destiny2GetClanAggregateStats - Gets aggregated stats for a clan using the same categories as the clan leaderboards. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 func (s *destiny2) Destiny2GetClanAggregateStats(ctx context.Context, request operations.Destiny2GetClanAggregateStatsRequest) (*operations.Destiny2GetClanAggregateStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -532,14 +532,14 @@ func (s *destiny2) Destiny2GetClanBannerSource(ctx context.Context) (*operations
 // Destiny2GetClanLeaderboards - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 func (s *destiny2) Destiny2GetClanLeaderboards(ctx context.Context, request operations.Destiny2GetClanLeaderboardsRequest) (*operations.Destiny2GetClanLeaderboardsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -580,7 +580,7 @@ func (s *destiny2) Destiny2GetClanLeaderboards(ctx context.Context, request oper
 // Destiny2GetClanWeeklyRewardState - Returns information on the weekly clan rewards and if the clan has earned them or not. Note that this will always report rewards as not redeemed.
 func (s *destiny2) Destiny2GetClanWeeklyRewardState(ctx context.Context, request operations.Destiny2GetClanWeeklyRewardStateRequest) (*operations.Destiny2GetClanWeeklyRewardStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Clan/{groupId}/WeeklyRewardState/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Clan/{groupId}/WeeklyRewardState/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -624,14 +624,14 @@ func (s *destiny2) Destiny2GetClanWeeklyRewardState(ctx context.Context, request
 // Destiny2GetCollectibleNodeDetails - Given a Presentation Node that has Collectibles as direct descendants, this will return item details about those descendants in the context of the requesting character.
 func (s *destiny2) Destiny2GetCollectibleNodeDetails(ctx context.Context, request operations.Destiny2GetCollectibleNodeDetailsRequest) (*operations.Destiny2GetCollectibleNodeDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Collectibles/{collectiblePresentationNodeHash}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Collectibles/{collectiblePresentationNodeHash}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -672,7 +672,7 @@ func (s *destiny2) Destiny2GetCollectibleNodeDetails(ctx context.Context, reques
 // Destiny2GetDestinyAggregateActivityStats - Gets all activities the character has participated in together with aggregate statistics for those activities.
 func (s *destiny2) Destiny2GetDestinyAggregateActivityStats(ctx context.Context, request operations.Destiny2GetDestinyAggregateActivityStatsRequest) (*operations.Destiny2GetDestinyAggregateActivityStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -716,7 +716,7 @@ func (s *destiny2) Destiny2GetDestinyAggregateActivityStats(ctx context.Context,
 // Destiny2GetDestinyEntityDefinition - Returns the static definition of an entity of the given Type and hash identifier. Examine the API Documentation for the Type Names of entities that have their own definitions. Note that the return type will always *inherit from* DestinyDefinition, but the specific type returned will be the requested entity type if it can be found. Please don't use this as a chatty alternative to the Manifest database if you require large sets of data, but for simple and one-off accesses this should be handy.
 func (s *destiny2) Destiny2GetDestinyEntityDefinition(ctx context.Context, request operations.Destiny2GetDestinyEntityDefinitionRequest) (*operations.Destiny2GetDestinyEntityDefinitionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Manifest/{entityType}/{hashIdentifier}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Manifest/{entityType}/{hashIdentifier}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -804,14 +804,14 @@ func (s *destiny2) Destiny2GetDestinyManifest(ctx context.Context) (*operations.
 // Destiny2GetHistoricalStats - Gets historical stats for indicated character.
 func (s *destiny2) Destiny2GetHistoricalStats(ctx context.Context, request operations.Destiny2GetHistoricalStatsRequest) (*operations.Destiny2GetHistoricalStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -896,14 +896,14 @@ func (s *destiny2) Destiny2GetHistoricalStatsDefinition(ctx context.Context) (*o
 // Destiny2GetHistoricalStatsForAccount - Gets aggregate historical stats organized around each character for a given account.
 func (s *destiny2) Destiny2GetHistoricalStatsForAccount(ctx context.Context, request operations.Destiny2GetHistoricalStatsForAccountRequest) (*operations.Destiny2GetHistoricalStatsForAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -944,14 +944,14 @@ func (s *destiny2) Destiny2GetHistoricalStatsForAccount(ctx context.Context, req
 // Destiny2GetItem - Retrieve the details of an instanced Destiny Item. An instanced Destiny item is one with an ItemInstanceId. Non-instanced items, such as materials, have no useful instance-specific details and thus are not queryable here.
 func (s *destiny2) Destiny2GetItem(ctx context.Context, request operations.Destiny2GetItemRequest) (*operations.Destiny2GetItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -992,14 +992,14 @@ func (s *destiny2) Destiny2GetItem(ctx context.Context, request operations.Desti
 // Destiny2GetLeaderboards - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint has not yet been implemented. It is being returned for a preview of future functionality, and for public comment/suggestion/preparation.
 func (s *destiny2) Destiny2GetLeaderboards(ctx context.Context, request operations.Destiny2GetLeaderboardsRequest) (*operations.Destiny2GetLeaderboardsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1040,14 +1040,14 @@ func (s *destiny2) Destiny2GetLeaderboards(ctx context.Context, request operatio
 // Destiny2GetLeaderboardsForCharacter - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 func (s *destiny2) Destiny2GetLeaderboardsForCharacter(ctx context.Context, request operations.Destiny2GetLeaderboardsForCharacterRequest) (*operations.Destiny2GetLeaderboardsForCharacterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1088,14 +1088,14 @@ func (s *destiny2) Destiny2GetLeaderboardsForCharacter(ctx context.Context, requ
 // Destiny2GetLinkedProfiles - Returns a summary information about all profiles linked to the requesting membership type/membership ID that have valid Destiny information. The passed-in Membership Type/Membership ID may be a Bungie.Net membership or a Destiny membership. It only returns the minimal amount of data to begin making more substantive requests, but will hopefully serve as a useful alternative to UserServices for people who just care about Destiny data. Note that it will only return linked accounts whose linkages you are allowed to view.
 func (s *destiny2) Destiny2GetLinkedProfiles(ctx context.Context, request operations.Destiny2GetLinkedProfilesRequest) (*operations.Destiny2GetLinkedProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1136,7 +1136,7 @@ func (s *destiny2) Destiny2GetLinkedProfiles(ctx context.Context, request operat
 // Destiny2GetPostGameCarnageReport - Gets the available post game carnage report for the activity ID.
 func (s *destiny2) Destiny2GetPostGameCarnageReport(ctx context.Context, request operations.Destiny2GetPostGameCarnageReportRequest) (*operations.Destiny2GetPostGameCarnageReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1180,14 +1180,14 @@ func (s *destiny2) Destiny2GetPostGameCarnageReport(ctx context.Context, request
 // Destiny2GetProfile - Returns Destiny Profile information for the supplied membership.
 func (s *destiny2) Destiny2GetProfile(ctx context.Context, request operations.Destiny2GetProfileRequest) (*operations.Destiny2GetProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1228,7 +1228,7 @@ func (s *destiny2) Destiny2GetProfile(ctx context.Context, request operations.De
 // Destiny2GetPublicMilestoneContent - Gets custom localized content for the milestone of the given hash, if it exists.
 func (s *destiny2) Destiny2GetPublicMilestoneContent(ctx context.Context, request operations.Destiny2GetPublicMilestoneContentRequest) (*operations.Destiny2GetPublicMilestoneContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Milestones/{milestoneHash}/Content/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Milestones/{milestoneHash}/Content/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1323,7 +1323,7 @@ func (s *destiny2) Destiny2GetPublicVendors(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1364,7 +1364,7 @@ func (s *destiny2) Destiny2GetPublicVendors(ctx context.Context, request operati
 // Destiny2GetUniqueWeaponHistory - Gets details about unique weapon usage, including all exotic weapons.
 func (s *destiny2) Destiny2GetUniqueWeaponHistory(ctx context.Context, request operations.Destiny2GetUniqueWeaponHistoryRequest) (*operations.Destiny2GetUniqueWeaponHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1408,14 +1408,14 @@ func (s *destiny2) Destiny2GetUniqueWeaponHistory(ctx context.Context, request o
 // Destiny2GetVendor - Get the details of a specific Vendor.
 func (s *destiny2) Destiny2GetVendor(ctx context.Context, request operations.Destiny2GetVendorRequest) (*operations.Destiny2GetVendorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1456,14 +1456,14 @@ func (s *destiny2) Destiny2GetVendor(ctx context.Context, request operations.Des
 // Destiny2GetVendors - Get currently available vendors from the list of vendors that can possibly have rotating inventory. Note that this does not include things like preview vendors and vendors-as-kiosks, neither of whom have rotating/dynamic inventories. Use their definitions as-is for those.
 func (s *destiny2) Destiny2GetVendors(ctx context.Context, request operations.Destiny2GetVendorsRequest) (*operations.Destiny2GetVendorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1502,7 +1502,7 @@ func (s *destiny2) Destiny2GetVendors(ctx context.Context, request operations.De
 }
 
 // Destiny2InsertSocketPlug - Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
-func (s *destiny2) Destiny2InsertSocketPlug(ctx context.Context, request operations.Destiny2InsertSocketPlugRequest) (*operations.Destiny2InsertSocketPlugResponse, error) {
+func (s *destiny2) Destiny2InsertSocketPlug(ctx context.Context) (*operations.Destiny2InsertSocketPlugResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/InsertSocketPlug/"
 
@@ -1511,7 +1511,7 @@ func (s *destiny2) Destiny2InsertSocketPlug(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1546,7 +1546,7 @@ func (s *destiny2) Destiny2InsertSocketPlug(ctx context.Context, request operati
 }
 
 // Destiny2InsertSocketPlugFree - Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
-func (s *destiny2) Destiny2InsertSocketPlugFree(ctx context.Context, request operations.Destiny2InsertSocketPlugFreeRequest) (*operations.Destiny2InsertSocketPlugFreeResponse, error) {
+func (s *destiny2) Destiny2InsertSocketPlugFree(ctx context.Context) (*operations.Destiny2InsertSocketPlugFreeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/InsertSocketPlugFree/"
 
@@ -1555,7 +1555,7 @@ func (s *destiny2) Destiny2InsertSocketPlugFree(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1590,7 +1590,7 @@ func (s *destiny2) Destiny2InsertSocketPlugFree(ctx context.Context, request ope
 }
 
 // Destiny2PullFromPostmaster - Extract an item from the Postmaster, with whatever implications that may entail. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item.
-func (s *destiny2) Destiny2PullFromPostmaster(ctx context.Context, request operations.Destiny2PullFromPostmasterRequest) (*operations.Destiny2PullFromPostmasterResponse, error) {
+func (s *destiny2) Destiny2PullFromPostmaster(ctx context.Context) (*operations.Destiny2PullFromPostmasterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/PullFromPostmaster/"
 
@@ -1599,7 +1599,7 @@ func (s *destiny2) Destiny2PullFromPostmaster(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1634,16 +1634,16 @@ func (s *destiny2) Destiny2PullFromPostmaster(ctx context.Context, request opera
 }
 
 // Destiny2ReportOffensivePostGameCarnageReportPlayer - Report a player that you met in an activity that was engaging in ToS-violating activities. Both you and the offending player must have played in the activityId passed in. Please use this judiciously and only when you have strong suspicions of violation, pretty please.
-func (s *destiny2) Destiny2ReportOffensivePostGameCarnageReportPlayer(ctx context.Context, request operations.Destiny2ReportOffensivePostGameCarnageReportPlayerRequest) (*operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse, error) {
+func (s *destiny2) Destiny2ReportOffensivePostGameCarnageReportPlayer(ctx context.Context, request operations.Destiny2ReportOffensivePostGameCarnageReportPlayerRequest, security operations.Destiny2ReportOffensivePostGameCarnageReportPlayerSecurity) (*operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1680,14 +1680,14 @@ func (s *destiny2) Destiny2ReportOffensivePostGameCarnageReportPlayer(ctx contex
 // Destiny2SearchDestinyEntities - Gets a page list of Destiny items.
 func (s *destiny2) Destiny2SearchDestinyEntities(ctx context.Context, request operations.Destiny2SearchDestinyEntitiesRequest) (*operations.Destiny2SearchDestinyEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Armory/Search/{type}/{searchTerm}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Armory/Search/{type}/{searchTerm}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1728,7 +1728,7 @@ func (s *destiny2) Destiny2SearchDestinyEntities(ctx context.Context, request op
 // Destiny2SearchDestinyPlayerByBungieName - Returns a list of Destiny memberships given a global Bungie Display Name. This method will hide overridden memberships due to cross save.
 func (s *destiny2) Destiny2SearchDestinyPlayerByBungieName(ctx context.Context, request operations.Destiny2SearchDestinyPlayerByBungieNameRequest) (*operations.Destiny2SearchDestinyPlayerByBungieNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/SearchDestinyPlayerByBungieName/{membershipType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/SearchDestinyPlayerByBungieName/{membershipType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1770,7 +1770,7 @@ func (s *destiny2) Destiny2SearchDestinyPlayerByBungieName(ctx context.Context, 
 }
 
 // Destiny2SetItemLockState - Set the Lock State for an instanced item. You must have a valid Destiny Account.
-func (s *destiny2) Destiny2SetItemLockState(ctx context.Context, request operations.Destiny2SetItemLockStateRequest) (*operations.Destiny2SetItemLockStateResponse, error) {
+func (s *destiny2) Destiny2SetItemLockState(ctx context.Context) (*operations.Destiny2SetItemLockStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/SetLockState/"
 
@@ -1779,7 +1779,7 @@ func (s *destiny2) Destiny2SetItemLockState(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1814,7 +1814,7 @@ func (s *destiny2) Destiny2SetItemLockState(ctx context.Context, request operati
 }
 
 // Destiny2SetQuestTrackedState - Set the Tracking State for an instanced item, if that item is a Quest or Bounty. You must have a valid Destiny Account. Yeah, it's an item.
-func (s *destiny2) Destiny2SetQuestTrackedState(ctx context.Context, request operations.Destiny2SetQuestTrackedStateRequest) (*operations.Destiny2SetQuestTrackedStateResponse, error) {
+func (s *destiny2) Destiny2SetQuestTrackedState(ctx context.Context) (*operations.Destiny2SetQuestTrackedStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/SetTrackedState/"
 
@@ -1823,7 +1823,7 @@ func (s *destiny2) Destiny2SetQuestTrackedState(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1858,7 +1858,7 @@ func (s *destiny2) Destiny2SetQuestTrackedState(ctx context.Context, request ope
 }
 
 // Destiny2SnapshotLoadout - Snapshot a loadout with the currently equipped items.
-func (s *destiny2) Destiny2SnapshotLoadout(ctx context.Context, request operations.Destiny2SnapshotLoadoutRequest) (*operations.Destiny2SnapshotLoadoutResponse, error) {
+func (s *destiny2) Destiny2SnapshotLoadout(ctx context.Context) (*operations.Destiny2SnapshotLoadoutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Loadouts/SnapshotLoadout/"
 
@@ -1867,7 +1867,7 @@ func (s *destiny2) Destiny2SnapshotLoadout(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1902,7 +1902,7 @@ func (s *destiny2) Destiny2SnapshotLoadout(ctx context.Context, request operatio
 }
 
 // Destiny2TransferItem - Transfer an item to/from your vault. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item. itshappening.gif
-func (s *destiny2) Destiny2TransferItem(ctx context.Context, request operations.Destiny2TransferItemRequest) (*operations.Destiny2TransferItemResponse, error) {
+func (s *destiny2) Destiny2TransferItem(ctx context.Context) (*operations.Destiny2TransferItemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/TransferItem/"
 
@@ -1911,7 +1911,7 @@ func (s *destiny2) Destiny2TransferItem(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1946,7 +1946,7 @@ func (s *destiny2) Destiny2TransferItem(ctx context.Context, request operations.
 }
 
 // Destiny2UpdateLoadoutIdentifiers - Update the color, icon, and name of a loadout.
-func (s *destiny2) Destiny2UpdateLoadoutIdentifiers(ctx context.Context, request operations.Destiny2UpdateLoadoutIdentifiersRequest) (*operations.Destiny2UpdateLoadoutIdentifiersResponse, error) {
+func (s *destiny2) Destiny2UpdateLoadoutIdentifiers(ctx context.Context) (*operations.Destiny2UpdateLoadoutIdentifiersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Loadouts/UpdateLoadoutIdentifiers/"
 
@@ -1955,7 +1955,7 @@ func (s *destiny2) Destiny2UpdateLoadoutIdentifiers(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

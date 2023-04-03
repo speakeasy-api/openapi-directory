@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRankingsQueryParams struct {
+type GetRankingsRequest struct {
 	// Season type filter (regular or postseason)
 	SeasonType *string `queryParam:"style=form,explode=true,name=seasonType"`
 	// Week filter
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year/season filter for games
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetRankingsRequest struct {
-	QueryParams GetRankingsQueryParams
 }
 
 type GetRankingsResponse struct {

@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ImporterExporterCodeVerificationAPISecurity struct {
-	APIKey   *shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID *shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ImporterExporterCodeVerificationAPIPathParams struct {
-	// Importer-Exporter code
-	Iec string `pathParam:"style=simple,explode=false,name=iec"`
+	APIKey   *string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID *string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type ImporterExporterCodeVerificationAPIRequest struct {
-	PathParams ImporterExporterCodeVerificationAPIPathParams
-	Security   ImporterExporterCodeVerificationAPISecurity
+	// Importer-Exporter code
+	Iec string `pathParam:"style=simple,explode=false,name=iec"`
 }
 
 type ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum string

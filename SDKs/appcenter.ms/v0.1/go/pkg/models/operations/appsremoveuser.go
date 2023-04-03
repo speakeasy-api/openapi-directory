@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppsRemoveUserSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AppsRemoveUserPathParams struct {
+type AppsRemoveUserRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The user email of the user to delete
 	UserEmail string `pathParam:"style=simple,explode=false,name=user_email"`
-}
-
-type AppsRemoveUserRequest struct {
-	PathParams AppsRemoveUserPathParams
-	Security   AppsRemoveUserSecurity
 }
 
 type AppsRemoveUserDefaultApplicationJSONErrorCodeEnum string

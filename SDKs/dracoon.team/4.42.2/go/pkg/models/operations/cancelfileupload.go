@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelFileUploadPathParams struct {
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type CancelFileUploadHeaders struct {
+type CancelFileUploadRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CancelFileUploadRequest struct {
-	PathParams CancelFileUploadPathParams
-	Headers    CancelFileUploadHeaders
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type CancelFileUploadResponse struct {

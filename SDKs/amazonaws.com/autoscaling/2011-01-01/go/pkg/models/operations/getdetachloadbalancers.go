@@ -50,28 +50,20 @@ func (e *GETDetachLoadBalancersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDetachLoadBalancersQueryParams struct {
+type GETDetachLoadBalancersRequest struct {
 	Action GETDetachLoadBalancersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The names of the load balancers. You can specify up to 10 load balancers.
 	LoadBalancerNames []string                          `queryParam:"style=form,explode=true,name=LoadBalancerNames"`
 	Version           GETDetachLoadBalancersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDetachLoadBalancersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDetachLoadBalancersRequest struct {
-	QueryParams GETDetachLoadBalancersQueryParams
-	Headers     GETDetachLoadBalancersHeaders
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDetachLoadBalancersResponse struct {

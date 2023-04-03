@@ -13,35 +13,31 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchGetCollectionRequest{
-        Headers: operations.BatchGetCollectionHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "OpenSearchServerless.BatchGetCollection",
-        },
-        Request: shared.BatchGetCollectionRequest{
+        BatchGetCollectionRequest: shared.BatchGetCollectionRequest{
             Ids: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             Names: []string{
-                "magnam",
-                "debitis",
+                "nulla",
+                "corrupti",
+                "illum",
             },
         },
+        XAmzAlgorithm: "vel",
+        XAmzContentSha256: "error",
+        XAmzCredential: "deserunt",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "iure",
+        XAmzSignature: "magnam",
+        XAmzSignedHeaders: "debitis",
+        XAmzTarget: "OpenSearchServerless.BatchGetCollection",
     }
 
     ctx := context.Background()

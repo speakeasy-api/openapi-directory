@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteS3FileUploadPathParams struct {
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type CompleteS3FileUploadHeaders struct {
+type CompleteS3FileUploadRequest struct {
+	CompleteS3FileUploadRequest shared.CompleteS3FileUploadRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CompleteS3FileUploadRequest struct {
-	PathParams CompleteS3FileUploadPathParams
-	Headers    CompleteS3FileUploadHeaders
-	Request    shared.CompleteS3FileUploadRequest `request:"mediaType=application/json"`
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type CompleteS3FileUploadResponse struct {

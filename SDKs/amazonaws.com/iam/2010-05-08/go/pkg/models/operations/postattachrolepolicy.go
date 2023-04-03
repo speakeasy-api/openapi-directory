@@ -50,25 +50,17 @@ func (e *POSTAttachRolePolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTAttachRolePolicyQueryParams struct {
-	Action  POSTAttachRolePolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAttachRolePolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAttachRolePolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAttachRolePolicyRequest struct {
-	QueryParams POSTAttachRolePolicyQueryParams
-	Headers     POSTAttachRolePolicyHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAttachRolePolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTAttachRolePolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAttachRolePolicyResponse struct {

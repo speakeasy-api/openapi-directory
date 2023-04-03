@@ -8,24 +8,15 @@ import (
 )
 
 type InsurancesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type InsurancesReadPathParams struct {
+type InsurancesReadRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type InsurancesReadQueryParams struct {
 	// One of `"emdeon"`, `"gateway"`, `"ihcfa"`
 	PayerType string `queryParam:"style=form,explode=true,name=payer_type"`
 	// Search term, which can be either a partial name, partial ID or the state.
 	Term *string `queryParam:"style=form,explode=true,name=term"`
-}
-
-type InsurancesReadRequest struct {
-	PathParams  InsurancesReadPathParams
-	QueryParams InsurancesReadQueryParams
-	Security    InsurancesReadSecurity
 }
 
 type InsurancesReadResponse struct {

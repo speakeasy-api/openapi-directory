@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveCustomerPathParams struct {
-	// Customer ID
-	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
-}
-
-type RemoveCustomerHeaders struct {
+type RemoveCustomerRequest struct {
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RemoveCustomerRequest struct {
-	PathParams RemoveCustomerPathParams
-	Headers    RemoveCustomerHeaders
+	// Customer ID
+	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
 }
 
 type RemoveCustomerResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrganisationsQueryParams struct {
+type GetOrganisationsRequest struct {
+	// The API key.
+	APIKey string `header:"style=simple,explode=false,name=apiKey"`
 	// The identifier, for example, `123456789`.
 	Identifier *string `queryParam:"style=form,explode=true,name=identifier"`
 	// The registered identifier, for example, `ACN` or `ABN`.
 	RegisteredIdentifier *string `queryParam:"style=form,explode=true,name=registeredIdentifier"`
-}
-
-type GetOrganisationsHeaders struct {
-	// The API key.
-	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetOrganisationsRequest struct {
-	QueryParams GetOrganisationsQueryParams
-	Headers     GetOrganisationsHeaders
 }
 
 type GetOrganisationsResponse struct {

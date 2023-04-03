@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateUserAccessLoggingSettingsPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type AssociateUserAccessLoggingSettingsQueryParams struct {
-	// The ARN of the user access logging settings.
-	UserAccessLoggingSettingsArn string `queryParam:"style=form,explode=true,name=userAccessLoggingSettingsArn"`
-}
-
-type AssociateUserAccessLoggingSettingsHeaders struct {
+type AssociateUserAccessLoggingSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type AssociateUserAccessLoggingSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateUserAccessLoggingSettingsRequest struct {
-	PathParams  AssociateUserAccessLoggingSettingsPathParams
-	QueryParams AssociateUserAccessLoggingSettingsQueryParams
-	Headers     AssociateUserAccessLoggingSettingsHeaders
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
+	// The ARN of the user access logging settings.
+	UserAccessLoggingSettingsArn string `queryParam:"style=form,explode=true,name=userAccessLoggingSettingsArn"`
 }
 
 type AssociateUserAccessLoggingSettingsResponse struct {

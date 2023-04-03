@@ -50,26 +50,18 @@ func (e *GETDescribeResizeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeResizeQueryParams struct {
+type GETDescribeResizeRequest struct {
 	Action GETDescribeResizeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of a cluster whose resize progress you are requesting. This parameter is case-sensitive.</p> <p>By default, resize operations for all clusters defined for an Amazon Web Services account are returned.</p>
 	ClusterIdentifier string                       `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETDescribeResizeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeResizeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeResizeRequest struct {
-	QueryParams GETDescribeResizeQueryParams
-	Headers     GETDescribeResizeHeaders
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeResizeResponse struct {

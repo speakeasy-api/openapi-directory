@@ -30,20 +30,16 @@ func (e *GetDeployablePatchSnapshotForInstanceXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type GetDeployablePatchSnapshotForInstanceHeaders struct {
-	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetDeployablePatchSnapshotForInstanceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetDeployablePatchSnapshotForInstanceRequest struct {
-	Headers GetDeployablePatchSnapshotForInstanceHeaders
-	Request shared.GetDeployablePatchSnapshotForInstanceRequest `request:"mediaType=application/json"`
+	GetDeployablePatchSnapshotForInstanceRequest shared.GetDeployablePatchSnapshotForInstanceRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                                *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                            *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                               *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                     *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                            *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                                *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                            *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                                   GetDeployablePatchSnapshotForInstanceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetDeployablePatchSnapshotForInstanceResponse struct {

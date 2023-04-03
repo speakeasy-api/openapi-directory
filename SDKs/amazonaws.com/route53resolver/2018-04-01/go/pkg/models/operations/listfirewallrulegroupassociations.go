@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFirewallRuleGroupAssociationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListFirewallRuleGroupAssociationsXAmzTargetEnum
 type ListFirewallRuleGroupAssociationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListFirewallRuleGroupAssociationsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type ListFirewallRuleGroupAssociationsHeaders struct {
+type ListFirewallRuleGroupAssociationsRequest struct {
+	ListFirewallRuleGroupAssociationsRequest shared.ListFirewallRuleGroupAssociationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListFirewallRuleGroupAssociationsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListFirewallRuleGroupAssociationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListFirewallRuleGroupAssociationsRequest struct {
-	QueryParams ListFirewallRuleGroupAssociationsQueryParams
-	Headers     ListFirewallRuleGroupAssociationsHeaders
-	Request     shared.ListFirewallRuleGroupAssociationsRequest `request:"mediaType=application/json"`
 }
 
 type ListFirewallRuleGroupAssociationsResponse struct {

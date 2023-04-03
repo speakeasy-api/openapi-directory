@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeImportPathParams struct {
-	// The unique identifier of the import to describe.
-	ImportID string `pathParam:"style=simple,explode=false,name=importId"`
-}
-
-type DescribeImportHeaders struct {
+type DescribeImportRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeImportHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeImportRequest struct {
-	PathParams DescribeImportPathParams
-	Headers    DescribeImportHeaders
+	// The unique identifier of the import to describe.
+	ImportID string `pathParam:"style=simple,explode=false,name=importId"`
 }
 
 type DescribeImportResponse struct {

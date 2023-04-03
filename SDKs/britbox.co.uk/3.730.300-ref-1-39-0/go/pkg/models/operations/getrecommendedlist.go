@@ -8,10 +8,10 @@ import (
 )
 
 type GetRecommendedListSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRecommendedListQueryParams struct {
+type GetRecommendedListRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -58,11 +58,6 @@ type GetRecommendedListQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetRecommendedListRequest struct {
-	QueryParams GetRecommendedListQueryParams
-	Security    GetRecommendedListSecurity
 }
 
 type GetRecommendedListResponse struct {

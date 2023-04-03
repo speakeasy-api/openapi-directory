@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTasksForSectionPathParams struct {
-	// The globally unique identifier for the section.
-	SectionGid string `pathParam:"style=simple,explode=false,name=section_gid"`
-}
-
-type GetTasksForSectionQueryParams struct {
+type GetTasksForSectionRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,11 +22,8 @@ type GetTasksForSectionQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetTasksForSectionRequest struct {
-	PathParams  GetTasksForSectionPathParams
-	QueryParams GetTasksForSectionQueryParams
+	// The globally unique identifier for the section.
+	SectionGid string `pathParam:"style=simple,explode=false,name=section_gid"`
 }
 
 // GetTasksForSection200ApplicationJSON - Successfully retrieved the section's tasks.

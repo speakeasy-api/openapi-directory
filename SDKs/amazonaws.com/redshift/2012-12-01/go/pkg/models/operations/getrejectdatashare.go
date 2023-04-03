@@ -50,26 +50,18 @@ func (e *GETRejectDataShareVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRejectDataShareQueryParams struct {
+type GETRejectDataShareRequest struct {
 	Action GETRejectDataShareActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the datashare to reject.
-	DataShareArn string                        `queryParam:"style=form,explode=true,name=DataShareArn"`
-	Version      GETRejectDataShareVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRejectDataShareHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRejectDataShareRequest struct {
-	QueryParams GETRejectDataShareQueryParams
-	Headers     GETRejectDataShareHeaders
+	DataShareArn      string                        `queryParam:"style=form,explode=true,name=DataShareArn"`
+	Version           GETRejectDataShareVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRejectDataShareResponse struct {

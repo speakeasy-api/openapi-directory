@@ -50,28 +50,20 @@ func (e *GETDeauthorizeDataShareVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeauthorizeDataShareQueryParams struct {
+type GETDeauthorizeDataShareRequest struct {
 	Action GETDeauthorizeDataShareActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the data consumer that is to have authorization removed from the datashare. This identifier is an Amazon Web Services account ID or a keyword, such as ADX.
 	ConsumerIdentifier string `queryParam:"style=form,explode=true,name=ConsumerIdentifier"`
 	// The Amazon Resource Name (ARN) of the datashare to remove authorization from.
-	DataShareArn string                             `queryParam:"style=form,explode=true,name=DataShareArn"`
-	Version      GETDeauthorizeDataShareVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeauthorizeDataShareHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeauthorizeDataShareRequest struct {
-	QueryParams GETDeauthorizeDataShareQueryParams
-	Headers     GETDeauthorizeDataShareHeaders
+	DataShareArn      string                             `queryParam:"style=form,explode=true,name=DataShareArn"`
+	Version           GETDeauthorizeDataShareVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeauthorizeDataShareResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainsUpdatesListQueryParams struct {
+type GetDomainsUpdatesListRequest struct {
 	// API key
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetDomainsUpdatesListRequest struct {
-	QueryParams GetDomainsUpdatesListQueryParams
 }
 
 type GetDomainsUpdatesListResponse struct {

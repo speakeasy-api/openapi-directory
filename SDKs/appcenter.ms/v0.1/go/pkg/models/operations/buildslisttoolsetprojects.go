@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsListToolsetProjectsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BuildsListToolsetProjectsPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The branch name
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BuildsListToolsetProjectsOsEnum - The desired OS for the project scan; normally the same as the app OS
@@ -85,19 +75,19 @@ func (e *BuildsListToolsetProjectsPlatformEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type BuildsListToolsetProjectsQueryParams struct {
+type BuildsListToolsetProjectsRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The branch name
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The depth of the repository to search for project files
 	MaxSearchDepth *int64 `queryParam:"style=form,explode=true,name=maxSearchDepth"`
 	// The desired OS for the project scan; normally the same as the app OS
 	Os BuildsListToolsetProjectsOsEnum `queryParam:"style=form,explode=true,name=os"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The desired platform for the project scan
 	Platform BuildsListToolsetProjectsPlatformEnum `queryParam:"style=form,explode=true,name=platform"`
-}
-
-type BuildsListToolsetProjectsRequest struct {
-	PathParams  BuildsListToolsetProjectsPathParams
-	QueryParams BuildsListToolsetProjectsQueryParams
-	Security    BuildsListToolsetProjectsSecurity
 }
 
 // BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurationsSigningConfig - Android signing config. Null if not specified

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccessControlConfigurationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListAccessControlConfigurationsXAmzTargetEnum
 type ListAccessControlConfigurationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAccessControlConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListAccessControlConfigurationsHeaders struct {
+type ListAccessControlConfigurationsRequest struct {
+	ListAccessControlConfigurationsRequest shared.ListAccessControlConfigurationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAccessControlConfigurationsHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAccessControlConfigurationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAccessControlConfigurationsRequest struct {
-	QueryParams ListAccessControlConfigurationsQueryParams
-	Headers     ListAccessControlConfigurationsHeaders
-	Request     shared.ListAccessControlConfigurationsRequest `request:"mediaType=application/json"`
 }
 
 type ListAccessControlConfigurationsResponse struct {

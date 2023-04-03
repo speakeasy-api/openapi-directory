@@ -87,20 +87,20 @@ func newSource(defaultClient, securityClient HTTPClient, serverURL, language, sd
 //
 // In the response you can see that the file was renamed to `README.rst`
 // by the commit made on 2011-05-16, and was previously named `README.txt`.
-func (s *source) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse, error) {
+func (s *source) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -153,20 +153,20 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx conte
 // without having to know the name or SHA1 of the repo's main branch.
 //
 // To create new commits, [POST to this endpoint](#post)
-func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcRequest) (*operations.GetRepositoriesWorkspaceRepoSlugSrcResponse, error) {
+func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -419,20 +419,20 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 //
 // See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
 // details.
-func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
+func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -606,20 +606,20 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Conte
 //
 // Note that this API does not support the creation or manipulation of
 // subrepos / submodules.
-func (s *source) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugSrcRequest) (*operations.PostRepositoriesWorkspaceRepoSlugSrcResponse, error) {
+func (s *source) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, security operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

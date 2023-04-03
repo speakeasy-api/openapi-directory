@@ -35,7 +35,7 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetContact - Returns a specific student contact
 func (s *contacts) GetContact(ctx context.Context, request operations.GetContactRequest) (*operations.GetContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *contacts) GetContacts(ctx context.Context, request operations.GetContac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -137,7 +137,7 @@ func (s *contacts) GetContacts(ctx context.Context, request operations.GetContac
 // GetDistrictForStudentContact - Returns the district for a student contact
 func (s *contacts) GetDistrictForStudentContact(ctx context.Context, request operations.GetDistrictForStudentContactRequest) (*operations.GetDistrictForStudentContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}/district", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}/district", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *contacts) GetDistrictForStudentContact(ctx context.Context, request ope
 // GetStudentForContact - Returns the student for a student contact
 func (s *contacts) GetStudentForContact(ctx context.Context, request operations.GetStudentForContactRequest) (*operations.GetStudentForContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}/student", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}/student", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEarthObservationJobPathParams struct {
+type GetEarthObservationJobRequest struct {
 	// The Amazon Resource Name (ARN) of the Earth Observation job.
-	Arn string `pathParam:"style=simple,explode=false,name=Arn"`
-}
-
-type GetEarthObservationJobHeaders struct {
+	Arn               string  `pathParam:"style=simple,explode=false,name=Arn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetEarthObservationJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEarthObservationJobRequest struct {
-	PathParams GetEarthObservationJobPathParams
-	Headers    GetEarthObservationJobHeaders
 }
 
 type GetEarthObservationJobResponse struct {

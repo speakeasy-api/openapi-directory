@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExecuteTransactionPathParams struct {
-	// The identifier of the Roku transaction (subscribe/upgrade/downgrade/cancellation).
-	Transactionid string `pathParam:"style=simple,explode=false,name=transactionid"`
-}
-
-type ExecuteTransactionQueryParams struct {
+type ExecuteTransactionRequest struct {
+	// Details of a transaction request.
+	ItvRokuTransactionRequest shared.ItvRokuTransactionRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -25,13 +22,8 @@ type ExecuteTransactionQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ExecuteTransactionRequest struct {
-	PathParams  ExecuteTransactionPathParams
-	QueryParams ExecuteTransactionQueryParams
-	// Details of a transaction request.
-	Request shared.ItvRokuTransactionRequest `request:"mediaType=application/json"`
+	// The identifier of the Roku transaction (subscribe/upgrade/downgrade/cancellation).
+	Transactionid string `pathParam:"style=simple,explode=false,name=transactionid"`
 }
 
 type ExecuteTransactionResponse struct {

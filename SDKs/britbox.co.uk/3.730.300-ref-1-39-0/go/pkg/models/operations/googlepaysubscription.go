@@ -8,10 +8,12 @@ import (
 )
 
 type GooglePaySubscriptionSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GooglePaySubscriptionQueryParams struct {
+type GooglePaySubscriptionRequest struct {
+	// Details of googlePay subscription request.
+	ItvGooglePaySubscriptionRequest shared.ItvGooglePaySubscriptionRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -24,13 +26,6 @@ type GooglePaySubscriptionQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GooglePaySubscriptionRequest struct {
-	QueryParams GooglePaySubscriptionQueryParams
-	// Details of googlePay subscription request.
-	Request  shared.ItvGooglePaySubscriptionRequest `request:"mediaType=application/json"`
-	Security GooglePaySubscriptionSecurity
 }
 
 type GooglePaySubscriptionResponse struct {

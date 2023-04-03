@@ -50,30 +50,22 @@ func (e *GETDescribeCacheSubnetGroupsVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeCacheSubnetGroupsQueryParams struct {
+type GETDescribeCacheSubnetGroupsRequest struct {
 	Action GETDescribeCacheSubnetGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the cache subnet group to return details for.
 	CacheSubnetGroupName *string `queryParam:"style=form,explode=true,name=CacheSubnetGroupName"`
 	// An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a marker is included in the response so that the remaining results can be retrieved.</p> <p>Default: 100</p> <p>Constraints: minimum 20; maximum 100.</p>
-	MaxRecords *int64                                  `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeCacheSubnetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeCacheSubnetGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeCacheSubnetGroupsRequest struct {
-	QueryParams GETDescribeCacheSubnetGroupsQueryParams
-	Headers     GETDescribeCacheSubnetGroupsHeaders
+	MaxRecords        *int64                                  `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeCacheSubnetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeCacheSubnetGroupsResponse struct {

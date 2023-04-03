@@ -43,7 +43,7 @@ func (s *privateDockerImagesRegistry) GetRegistryNamespaces(ctx context.Context,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -96,14 +96,14 @@ func (s *privateDockerImagesRegistry) GetRegistryNamespaces(ctx context.Context,
 // - The namespace can only contain lowercase letters, numbers or underscores (_).
 func (s *privateDockerImagesRegistry) GetRegistryNamespacesNamespace(ctx context.Context, request operations.GetRegistryNamespacesNamespaceRequest) (*operations.GetRegistryNamespacesNamespaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -156,14 +156,14 @@ func (s *privateDockerImagesRegistry) GetRegistryNamespacesNamespace(ctx context
 // - The namespace can only contain lowercase letters, numbers or underscores (_).
 func (s *privateDockerImagesRegistry) PutRegistryNamespacesNamespace(ctx context.Context, request operations.PutRegistryNamespacesNamespaceRequest) (*operations.PutRegistryNamespacesNamespaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

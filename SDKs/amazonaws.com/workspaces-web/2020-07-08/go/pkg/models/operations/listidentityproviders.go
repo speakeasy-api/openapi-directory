@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListIdentityProvidersPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type ListIdentityProvidersQueryParams struct {
-	// The maximum number of results to be included in the next page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The pagination token used to retrieve the next page of results for this operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListIdentityProvidersHeaders struct {
+type ListIdentityProvidersRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListIdentityProvidersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListIdentityProvidersRequest struct {
-	PathParams  ListIdentityProvidersPathParams
-	QueryParams ListIdentityProvidersQueryParams
-	Headers     ListIdentityProvidersHeaders
+	// The maximum number of results to be included in the next page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The pagination token used to retrieve the next page of results for this operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
 }
 
 type ListIdentityProvidersResponse struct {

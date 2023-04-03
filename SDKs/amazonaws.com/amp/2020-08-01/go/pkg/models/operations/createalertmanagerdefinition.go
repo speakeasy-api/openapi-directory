@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAlertManagerDefinitionPathParams struct {
-	// The ID of the workspace in which to create the alert manager definition.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type CreateAlertManagerDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateAlertManagerDefinitionRequestBody struct {
 	// An identifier used to ensure the idempotency of a write request.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -30,9 +15,16 @@ type CreateAlertManagerDefinitionRequestBody struct {
 }
 
 type CreateAlertManagerDefinitionRequest struct {
-	PathParams CreateAlertManagerDefinitionPathParams
-	Headers    CreateAlertManagerDefinitionHeaders
-	Request    CreateAlertManagerDefinitionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateAlertManagerDefinitionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the workspace in which to create the alert manager definition.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type CreateAlertManagerDefinitionResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkerConfigurationsQueryParams struct {
-	// The maximum number of worker configurations to list in one response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// If the response of a ListWorkerConfigurations operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListWorkerConfigurationsHeaders struct {
+type ListWorkerConfigurationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListWorkerConfigurationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWorkerConfigurationsRequest struct {
-	QueryParams ListWorkerConfigurationsQueryParams
-	Headers     ListWorkerConfigurationsHeaders
+	// The maximum number of worker configurations to list in one response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// If the response of a ListWorkerConfigurations operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListWorkerConfigurationsResponse struct {

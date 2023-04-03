@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateLoggerDefinitionVersionPathParams struct {
-	// The ID of the logger definition.
-	LoggerDefinitionID string `pathParam:"style=simple,explode=false,name=LoggerDefinitionId"`
-}
-
-type CreateLoggerDefinitionVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 type CreateLoggerDefinitionVersionRequestBody struct {
 	// A list of loggers.
 	Loggers []shared.Logger `json:"Loggers,omitempty"`
 }
 
 type CreateLoggerDefinitionVersionRequest struct {
-	PathParams CreateLoggerDefinitionVersionPathParams
-	Headers    CreateLoggerDefinitionVersionHeaders
-	Request    CreateLoggerDefinitionVersionRequestBody `request:"mediaType=application/json"`
+	// The ID of the logger definition.
+	LoggerDefinitionID string                                   `pathParam:"style=simple,explode=false,name=LoggerDefinitionId"`
+	RequestBody        CreateLoggerDefinitionVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateLoggerDefinitionVersionResponse struct {

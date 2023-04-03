@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBotRecommendationPathParams struct {
+type DescribeBotRecommendationRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The unique identifier of the bot associated with the bot recommendation.
 	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 	// The identifier of the bot recommendation to describe.
@@ -16,21 +23,6 @@ type DescribeBotRecommendationPathParams struct {
 	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
 	// The identifier of the language and locale of the bot recommendation to describe. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
 	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type DescribeBotRecommendationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBotRecommendationRequest struct {
-	PathParams DescribeBotRecommendationPathParams
-	Headers    DescribeBotRecommendationHeaders
 }
 
 type DescribeBotRecommendationResponse struct {

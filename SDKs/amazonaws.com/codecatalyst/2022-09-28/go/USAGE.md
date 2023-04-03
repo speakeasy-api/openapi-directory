@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.CreateAccessTokenRequest{
-        Request: operations.CreateAccessTokenRequestBody{
-            ExpiresTime: "2021-10-25T05:21:43.948Z",
-            Name: "distinctio",
-        },
+    req := operations.CreateAccessTokenRequestBody{
+        ExpiresTime: "2021-10-25T05:21:43.948Z",
+        Name: "distinctio",
     }
 
     ctx := context.Background()

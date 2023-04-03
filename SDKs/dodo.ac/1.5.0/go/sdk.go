@@ -103,9 +103,9 @@ func (s *SDK) GetNhArt(ctx context.Context, request operations.GetNhArtRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -167,16 +167,16 @@ func (s *SDK) GetNhArt(ctx context.Context, request operations.GetNhArtRequest) 
 // Retrieve information about a specific artwork in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhArtArtwork(ctx context.Context, request operations.GetNhArtArtworkRequest) (*operations.GetNhArtArtworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/art/{artwork}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/art/{artwork}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -245,9 +245,9 @@ func (s *SDK) GetNhBugs(ctx context.Context, request operations.GetNhBugsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,16 +309,16 @@ func (s *SDK) GetNhBugs(ctx context.Context, request operations.GetNhBugsRequest
 // Retrieve information about a specific bug in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhBugsBug(ctx context.Context, request operations.GetNhBugsBugRequest) (*operations.GetNhBugsBugResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/bugs/{bug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/bugs/{bug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -397,9 +397,9 @@ func (s *SDK) GetNhClothing(ctx context.Context, request operations.GetNhClothin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -461,16 +461,16 @@ func (s *SDK) GetNhClothing(ctx context.Context, request operations.GetNhClothin
 // Retrieve information about a specific clothing item in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhClothingClothing(ctx context.Context, request operations.GetNhClothingClothingRequest) (*operations.GetNhClothingClothingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/clothing/{clothing}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/clothing/{clothing}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -539,9 +539,9 @@ func (s *SDK) GetNhEvents(ctx context.Context, request operations.GetNhEventsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -610,9 +610,9 @@ func (s *SDK) GetNhFish(ctx context.Context, request operations.GetNhFishRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -674,16 +674,16 @@ func (s *SDK) GetNhFish(ctx context.Context, request operations.GetNhFishRequest
 // Retrieve information about a specific fish in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhFishFish(ctx context.Context, request operations.GetNhFishFishRequest) (*operations.GetNhFishFishResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/fish/{fish}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/fish/{fish}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -762,9 +762,9 @@ func (s *SDK) GetNhFossilsAll(ctx context.Context, request operations.GetNhFossi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -826,16 +826,16 @@ func (s *SDK) GetNhFossilsAll(ctx context.Context, request operations.GetNhFossi
 // Retrieve information about a specific fossil group with their respective individual fossils in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhFossilsAllFossil(ctx context.Context, request operations.GetNhFossilsAllFossilRequest) (*operations.GetNhFossilsAllFossilResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/fossils/all/{fossil}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/fossils/all/{fossil}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -904,9 +904,9 @@ func (s *SDK) GetNhFossilsGroups(ctx context.Context, request operations.GetNhFo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -968,16 +968,16 @@ func (s *SDK) GetNhFossilsGroups(ctx context.Context, request operations.GetNhFo
 // Retrieve information about a specific fossil group in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhFossilsGroupsFossilGroup(ctx context.Context, request operations.GetNhFossilsGroupsFossilGroupRequest) (*operations.GetNhFossilsGroupsFossilGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/fossils/groups/{fossil_group}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/fossils/groups/{fossil_group}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1046,9 +1046,9 @@ func (s *SDK) GetNhFossilsIndividuals(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1110,16 +1110,16 @@ func (s *SDK) GetNhFossilsIndividuals(ctx context.Context, request operations.Ge
 // Retrieve information about a specific individual fossil in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhFossilsIndividualsFossil(ctx context.Context, request operations.GetNhFossilsIndividualsFossilRequest) (*operations.GetNhFossilsIndividualsFossilResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/fossils/individuals/{fossil}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/fossils/individuals/{fossil}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1188,9 +1188,9 @@ func (s *SDK) GetNhFurniture(ctx context.Context, request operations.GetNhFurnit
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1252,16 +1252,16 @@ func (s *SDK) GetNhFurniture(ctx context.Context, request operations.GetNhFurnit
 // Retrieve information about a specific furniture in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhFurnitureFurniture(ctx context.Context, request operations.GetNhFurnitureFurnitureRequest) (*operations.GetNhFurnitureFurnitureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/furniture/{furniture}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/furniture/{furniture}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1330,9 +1330,9 @@ func (s *SDK) GetNhInterior(ctx context.Context, request operations.GetNhInterio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1394,16 +1394,16 @@ func (s *SDK) GetNhInterior(ctx context.Context, request operations.GetNhInterio
 // Retrieve information about a specific interior item in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhInteriorItem(ctx context.Context, request operations.GetNhInteriorItemRequest) (*operations.GetNhInteriorItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/interior/{item}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/interior/{item}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1472,9 +1472,9 @@ func (s *SDK) GetNhItems(ctx context.Context, request operations.GetNhItemsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1536,16 +1536,16 @@ func (s *SDK) GetNhItems(ctx context.Context, request operations.GetNhItemsReque
 // Retrieve information about a miscellaneous item (such as materials, star fragments, fruits, fences, and plants) in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhItemsItem(ctx context.Context, request operations.GetNhItemsItemRequest) (*operations.GetNhItemsItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/items/{item}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/items/{item}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1614,9 +1614,9 @@ func (s *SDK) GetNhPhotos(ctx context.Context, request operations.GetNhPhotosReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1678,16 +1678,16 @@ func (s *SDK) GetNhPhotos(ctx context.Context, request operations.GetNhPhotosReq
 // Retrieve information about a character photo or poster in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhPhotosItem(ctx context.Context, request operations.GetNhPhotosItemRequest) (*operations.GetNhPhotosItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/photos/{item}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/photos/{item}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1756,9 +1756,9 @@ func (s *SDK) GetNhRecipes(ctx context.Context, request operations.GetNhRecipesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1820,16 +1820,16 @@ func (s *SDK) GetNhRecipes(ctx context.Context, request operations.GetNhRecipesR
 // Retrieve information about a specific recipe in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhRecipesItem(ctx context.Context, request operations.GetNhRecipesItemRequest) (*operations.GetNhRecipesItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/recipes/{item}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/recipes/{item}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1898,9 +1898,9 @@ func (s *SDK) GetNhSea(ctx context.Context, request operations.GetNhSeaRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1962,16 +1962,16 @@ func (s *SDK) GetNhSea(ctx context.Context, request operations.GetNhSeaRequest) 
 // Retrieve information about a specific sea creature in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhSeaSeaCreature(ctx context.Context, request operations.GetNhSeaSeaCreatureRequest) (*operations.GetNhSeaSeaCreatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/sea/{sea_creature}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/sea/{sea_creature}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2050,9 +2050,9 @@ func (s *SDK) GetNhTools(ctx context.Context, request operations.GetNhToolsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2114,16 +2114,16 @@ func (s *SDK) GetNhTools(ctx context.Context, request operations.GetNhToolsReque
 // Retrieve information about a specific tool in *Animal Crossing: New Horizons*.
 func (s *SDK) GetNhToolsTool(ctx context.Context, request operations.GetNhToolsToolRequest) (*operations.GetNhToolsToolResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nh/tools/{tool}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/nh/tools/{tool}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2192,9 +2192,9 @@ func (s *SDK) GetVillagers(ctx context.Context, request operations.GetVillagersR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

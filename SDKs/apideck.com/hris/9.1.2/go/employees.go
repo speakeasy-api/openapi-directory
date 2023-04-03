@@ -34,11 +34,11 @@ func newEmployees(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // EmployeesAdd - Create Employee
 // Create Employee
-func (s *employees) EmployeesAdd(ctx context.Context, request operations.EmployeesAddRequest) (*operations.EmployeesAddResponse, error) {
+func (s *employees) EmployeesAdd(ctx context.Context, request operations.EmployeesAddRequest, security operations.EmployeesAddSecurity) (*operations.EmployeesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hris/employees"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmployeeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *employees) EmployeesAdd(ctx context.Context, request operations.Employe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *employees) EmployeesAdd(ctx context.Context, request operations.Employe
 
 // EmployeesAll - List Employees
 // List Employees
-func (s *employees) EmployeesAll(ctx context.Context, request operations.EmployeesAllRequest) (*operations.EmployeesAllResponse, error) {
+func (s *employees) EmployeesAll(ctx context.Context, request operations.EmployeesAllRequest, security operations.EmployeesAllSecurity) (*operations.EmployeesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hris/employees"
 
@@ -164,13 +164,13 @@ func (s *employees) EmployeesAll(ctx context.Context, request operations.Employe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *employees) EmployeesAll(ctx context.Context, request operations.Employe
 
 // EmployeesDelete - Delete Employee
 // Delete Employee
-func (s *employees) EmployeesDelete(ctx context.Context, request operations.EmployeesDeleteRequest) (*operations.EmployeesDeleteResponse, error) {
+func (s *employees) EmployeesDelete(ctx context.Context, request operations.EmployeesDeleteRequest, security operations.EmployeesDeleteSecurity) (*operations.EmployeesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/employees/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/employees/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *employees) EmployeesDelete(ctx context.Context, request operations.Empl
 
 // EmployeesOne - Get Employee
 // Get Employee
-func (s *employees) EmployeesOne(ctx context.Context, request operations.EmployeesOneRequest) (*operations.EmployeesOneResponse, error) {
+func (s *employees) EmployeesOne(ctx context.Context, request operations.EmployeesOneRequest, security operations.EmployeesOneSecurity) (*operations.EmployeesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/employees/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/employees/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *employees) EmployeesOne(ctx context.Context, request operations.Employe
 
 // EmployeesUpdate - Update Employee
 // Update Employee
-func (s *employees) EmployeesUpdate(ctx context.Context, request operations.EmployeesUpdateRequest) (*operations.EmployeesUpdateResponse, error) {
+func (s *employees) EmployeesUpdate(ctx context.Context, request operations.EmployeesUpdateRequest, security operations.EmployeesUpdateSecurity) (*operations.EmployeesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/employees/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/employees/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmployeeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *employees) EmployeesUpdate(ctx context.Context, request operations.Empl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

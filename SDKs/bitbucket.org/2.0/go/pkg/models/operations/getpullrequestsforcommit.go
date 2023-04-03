@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPullrequestsForCommitPathParams struct {
+type GetPullrequestsForCommitRequest struct {
 	// The SHA1 of the commit
 	Commit string `pathParam:"style=simple,explode=false,name=commit"`
-	// The repository; either the UUID in curly braces, or the slug
-	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetPullrequestsForCommitQueryParams struct {
 	// Which page to retrieve
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// How many pull requests to retrieve per page
 	Pagelen *int `queryParam:"style=form,explode=true,name=pagelen"`
-}
-
-type GetPullrequestsForCommitRequest struct {
-	PathParams  GetPullrequestsForCommitPathParams
-	QueryParams GetPullrequestsForCommitQueryParams
+	// The repository; either the UUID in curly braces, or the slug
+	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
+	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetPullrequestsForCommitResponse struct {

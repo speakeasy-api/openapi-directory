@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIUpdateStateJSONPathParams struct {
+type OrderAPIUpdateStateJSONRequest struct {
+	// The data used to change the state
+	RechnungsdruckWebAppControllersAPIOrderStateUpdate shared.RechnungsdruckWebAppControllersAPIOrderStateUpdate `request:"mediaType=application/json"`
 	// The internal id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIUpdateStateJSONRequest struct {
-	PathParams OrderAPIUpdateStateJSONPathParams
-	// The data used to change the state
-	Request shared.RechnungsdruckWebAppControllersAPIOrderStateUpdate `request:"mediaType=application/json"`
 }
 
 type OrderAPIUpdateStateJSONResponse struct {

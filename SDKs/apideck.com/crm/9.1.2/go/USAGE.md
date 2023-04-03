@@ -14,20 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.ActivitiesAddRequest{
-        Security: operations.ActivitiesAddSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.ActivitiesAddQueryParams{
-            Raw: false,
-        },
-        Headers: operations.ActivitiesAddHeaders{
-            XApideckAppID: "corrupti",
-            XApideckConsumerID: "provident",
-            XApideckServiceID: "distinctio",
-        },
-        Request: shared.ActivityInput{
+        ActivityInput: shared.ActivityInput{
             AccountID: "12345",
             ActivityDate: "2021-05-01",
             ActivityDatetime: "2021-05-01T12:00:00.000Z",
@@ -35,17 +22,6 @@ func main() {
             Archived: false,
             AssetID: "12345",
             Attendees: []shared.ActivityAttendeeInput{
-                shared.ActivityAttendeeInput{
-                    EmailAddress: "elon@musk.com",
-                    FirstName: "Elon",
-                    IsOrganizer: true,
-                    LastName: "Musk",
-                    MiddleName: "D.",
-                    Name: "Elon Musk",
-                    Prefix: "Mr.",
-                    Status: "accepted",
-                    Suffix: "PhD",
-                },
                 shared.ActivityAttendeeInput{
                     EmailAddress: "elon@musk.com",
                     FirstName: "Elon",
@@ -91,17 +67,17 @@ func main() {
                     Description: "Employee Level",
                     ID: "2389328923893298",
                     Name: "employee_level",
-                    Value: []string{
-                        "illum",
-                        "vel",
-                        "error",
-                    },
+                    Value: true,
                 },
                 shared.CustomField{
                     Description: "Employee Level",
                     ID: "2389328923893298",
                     Name: "employee_level",
-                    Value: true,
+                    Value: []string{
+                        "nulla",
+                        "corrupti",
+                        "illum",
+                    },
                 },
                 shared.CustomField{
                     Description: "Employee Level",
@@ -164,10 +140,16 @@ func main() {
             VideoConferenceID: "zoom:88120759396",
             VideoConferenceURL: "https://us02web.zoom.us/j/88120759396",
         },
+        Raw: false,
+        XApideckAppID: "error",
+        XApideckConsumerID: "deserunt",
+        XApideckServiceID: "suscipit",
     }
 
     ctx := context.Background()
-    res, err := s.Activities.ActivitiesAdd(ctx, req)
+    res, err := s.Activities.ActivitiesAdd(ctx, req, operations.ActivitiesAddSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

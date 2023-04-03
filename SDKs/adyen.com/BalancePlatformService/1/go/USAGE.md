@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAccountHoldersIDRequest{
-        Security: operations.GetAccountHoldersIDSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.GetAccountHoldersIDPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.AccountHolders.GetAccountHoldersID(ctx, req)
+    res, err := s.AccountHolders.GetAccountHoldersID(ctx, req, operations.GetAccountHoldersIDSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

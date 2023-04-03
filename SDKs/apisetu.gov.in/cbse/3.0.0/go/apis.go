@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Hpcer - Class XII Passing Certificate
 // API to verify Class XII Passing Certificate.
-func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequest) (*operations.HpcerResponse, error) {
+func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequestBody, security operations.HpcerSecurity) (*operations.HpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hpcer/certificate"
 
@@ -50,7 +50,7 @@ func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -147,7 +147,7 @@ func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequest) (*ope
 
 // Hscer - Class XII Marksheet
 // API to verify Class XII Marksheet.
-func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*operations.HscerResponse, error) {
+func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequestBody, security operations.HscerSecurity) (*operations.HscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hscer/certificate"
 
@@ -163,7 +163,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -269,7 +269,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 // Hsmgr - Class XII Migration Certificate
 // API to verify Class XII Migration Certificate.
-func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequest) (*operations.HsmgrResponse, error) {
+func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequestBody, security operations.HsmgrSecurity) (*operations.HsmgrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hsmgr/certificate"
 
@@ -285,7 +285,7 @@ func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,7 +382,7 @@ func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequest) (*ope
 
 // Nchsc - NCHMCT Skill Certificate (X)
 // API to verify NCHMCT Skill Certificate (X).
-func (s *apIs) Nchsc(ctx context.Context, request operations.NchscRequest) (*operations.NchscResponse, error) {
+func (s *apIs) Nchsc(ctx context.Context, request operations.NchscRequestBody, security operations.NchscSecurity) (*operations.NchscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nchsc/certificate"
 
@@ -398,7 +398,7 @@ func (s *apIs) Nchsc(ctx context.Context, request operations.NchscRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -495,7 +495,7 @@ func (s *apIs) Nchsc(ctx context.Context, request operations.NchscRequest) (*ope
 
 // Nctsc - NCHMCT Skill Certificate (XII)
 // API to verify NCHMCT Skill Certificate (XII).
-func (s *apIs) Nctsc(ctx context.Context, request operations.NctscRequest) (*operations.NctscResponse, error) {
+func (s *apIs) Nctsc(ctx context.Context, request operations.NctscRequestBody, security operations.NctscSecurity) (*operations.NctscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nctsc/certificate"
 
@@ -511,7 +511,7 @@ func (s *apIs) Nctsc(ctx context.Context, request operations.NctscRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,7 +608,7 @@ func (s *apIs) Nctsc(ctx context.Context, request operations.NctscRequest) (*ope
 
 // Nsesc - NSE Skill Certificate (X)
 // API to verify NSE Skill Certificate (X).
-func (s *apIs) Nsesc(ctx context.Context, request operations.NsescRequest) (*operations.NsescResponse, error) {
+func (s *apIs) Nsesc(ctx context.Context, request operations.NsescRequestBody, security operations.NsescSecurity) (*operations.NsescResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nsesc/certificate"
 
@@ -624,7 +624,7 @@ func (s *apIs) Nsesc(ctx context.Context, request operations.NsescRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -721,7 +721,7 @@ func (s *apIs) Nsesc(ctx context.Context, request operations.NsescRequest) (*ope
 
 // Nstsc - NSE Skill Certificate (XII)
 // API to verify NSE Skill Certificate (XII).
-func (s *apIs) Nstsc(ctx context.Context, request operations.NstscRequest) (*operations.NstscResponse, error) {
+func (s *apIs) Nstsc(ctx context.Context, request operations.NstscRequestBody, security operations.NstscSecurity) (*operations.NstscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nstsc/certificate"
 
@@ -737,7 +737,7 @@ func (s *apIs) Nstsc(ctx context.Context, request operations.NstscRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -834,7 +834,7 @@ func (s *apIs) Nstsc(ctx context.Context, request operations.NstscRequest) (*ope
 
 // Ntltr - NEET Rank Letter
 // API to verify NEET Rank Letter.
-func (s *apIs) Ntltr(ctx context.Context, request operations.NtltrRequest) (*operations.NtltrResponse, error) {
+func (s *apIs) Ntltr(ctx context.Context, request operations.NtltrRequestBody, security operations.NtltrSecurity) (*operations.NtltrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ntltr/certificate"
 
@@ -850,7 +850,7 @@ func (s *apIs) Ntltr(ctx context.Context, request operations.NtltrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -947,7 +947,7 @@ func (s *apIs) Ntltr(ctx context.Context, request operations.NtltrRequest) (*ope
 
 // Ntmks - NEET Marksheet
 // API to verify NEET Marksheet.
-func (s *apIs) Ntmks(ctx context.Context, request operations.NtmksRequest) (*operations.NtmksResponse, error) {
+func (s *apIs) Ntmks(ctx context.Context, request operations.NtmksRequestBody, security operations.NtmksSecurity) (*operations.NtmksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ntmks/certificate"
 
@@ -963,7 +963,7 @@ func (s *apIs) Ntmks(ctx context.Context, request operations.NtmksRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1060,7 +1060,7 @@ func (s *apIs) Ntmks(ctx context.Context, request operations.NtmksRequest) (*ope
 
 // Skhsc - Skill Certificate (X)
 // API to verify Skill Certificate (X).
-func (s *apIs) Skhsc(ctx context.Context, request operations.SkhscRequest) (*operations.SkhscResponse, error) {
+func (s *apIs) Skhsc(ctx context.Context, request operations.SkhscRequestBody, security operations.SkhscSecurity) (*operations.SkhscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/skhsc/certificate"
 
@@ -1076,7 +1076,7 @@ func (s *apIs) Skhsc(ctx context.Context, request operations.SkhscRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1173,7 +1173,7 @@ func (s *apIs) Skhsc(ctx context.Context, request operations.SkhscRequest) (*ope
 
 // Sktsc - Skill Certificate (XII)
 // API to verify Skill Certificate (XII).
-func (s *apIs) Sktsc(ctx context.Context, request operations.SktscRequest) (*operations.SktscResponse, error) {
+func (s *apIs) Sktsc(ctx context.Context, request operations.SktscRequestBody, security operations.SktscSecurity) (*operations.SktscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sktsc/certificate"
 
@@ -1189,7 +1189,7 @@ func (s *apIs) Sktsc(ctx context.Context, request operations.SktscRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1286,7 +1286,7 @@ func (s *apIs) Sktsc(ctx context.Context, request operations.SktscRequest) (*ope
 
 // Spcer - Class X Passing Certificate
 // API to verify Class X Passing Certificate.
-func (s *apIs) Spcer(ctx context.Context, request operations.SpcerRequest) (*operations.SpcerResponse, error) {
+func (s *apIs) Spcer(ctx context.Context, request operations.SpcerRequestBody, security operations.SpcerSecurity) (*operations.SpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/spcer/certificate"
 
@@ -1302,7 +1302,7 @@ func (s *apIs) Spcer(ctx context.Context, request operations.SpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1399,7 +1399,7 @@ func (s *apIs) Spcer(ctx context.Context, request operations.SpcerRequest) (*ope
 
 // Sscer - Class X Marksheet
 // API to verify Class X Marksheet.
-func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*operations.SscerResponse, error) {
+func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequestBody, security operations.SscerSecurity) (*operations.SscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sscer/certificate"
 
@@ -1415,7 +1415,7 @@ func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1521,7 +1521,7 @@ func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*ope
 
 // Ssmgr - Class X Migration Certificate
 // API to verify Class X Migration Certificate.
-func (s *apIs) Ssmgr(ctx context.Context, request operations.SsmgrRequest) (*operations.SsmgrResponse, error) {
+func (s *apIs) Ssmgr(ctx context.Context, request operations.SsmgrRequestBody, security operations.SsmgrSecurity) (*operations.SsmgrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ssmgr/certificate"
 
@@ -1537,7 +1537,7 @@ func (s *apIs) Ssmgr(ctx context.Context, request operations.SsmgrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1634,7 +1634,7 @@ func (s *apIs) Ssmgr(ctx context.Context, request operations.SsmgrRequest) (*ope
 
 // Tetcr - Teachers Eligibility Test Certificate
 // API to verify Teachers Eligibility Test Certificate.
-func (s *apIs) Tetcr(ctx context.Context, request operations.TetcrRequest) (*operations.TetcrResponse, error) {
+func (s *apIs) Tetcr(ctx context.Context, request operations.TetcrRequestBody, security operations.TetcrSecurity) (*operations.TetcrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tetcr/certificate"
 
@@ -1650,7 +1650,7 @@ func (s *apIs) Tetcr(ctx context.Context, request operations.TetcrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1747,7 +1747,7 @@ func (s *apIs) Tetcr(ctx context.Context, request operations.TetcrRequest) (*ope
 
 // Tetms - Teachers Eligibility Test Mark Sheet
 // API to verify Teachers Eligibility Test Mark Sheet.
-func (s *apIs) Tetms(ctx context.Context, request operations.TetmsRequest) (*operations.TetmsResponse, error) {
+func (s *apIs) Tetms(ctx context.Context, request operations.TetmsRequestBody, security operations.TetmsSecurity) (*operations.TetmsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tetms/certificate"
 
@@ -1763,7 +1763,7 @@ func (s *apIs) Tetms(ctx context.Context, request operations.TetmsRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

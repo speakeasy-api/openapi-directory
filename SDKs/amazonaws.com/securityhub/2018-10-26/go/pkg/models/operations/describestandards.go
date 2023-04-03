@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeStandardsQueryParams struct {
+type DescribeStandardsRequest struct {
 	// The maximum number of standards to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// <p>The token that is required for pagination. On your first call to the <code>DescribeStandards</code> operation, set the value of this parameter to <code>NULL</code>.</p> <p>For subsequent calls to the operation, to continue listing data, set the value of this parameter to the value returned from the previous response.</p>
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type DescribeStandardsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type DescribeStandardsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeStandardsRequest struct {
-	QueryParams DescribeStandardsQueryParams
-	Headers     DescribeStandardsHeaders
 }
 
 type DescribeStandardsResponse struct {

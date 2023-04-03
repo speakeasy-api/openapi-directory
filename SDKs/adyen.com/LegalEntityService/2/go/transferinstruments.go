@@ -34,16 +34,16 @@ func newTransferInstruments(defaultClient, securityClient HTTPClient, serverURL,
 
 // DeleteTransferInstrumentsID - Delete a transfer instrument
 // Deletes a transfer instrument.
-func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, request operations.DeleteTransferInstrumentsIDRequest) (*operations.DeleteTransferInstrumentsIDResponse, error) {
+func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, request operations.DeleteTransferInstrumentsIDRequest, security operations.DeleteTransferInstrumentsIDSecurity) (*operations.DeleteTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,16 +88,16 @@ func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, r
 
 // GetTransferInstrumentsID - Get a transfer instrument
 // Returns the details of a transfer instrument.
-func (s *transferInstruments) GetTransferInstrumentsID(ctx context.Context, request operations.GetTransferInstrumentsIDRequest) (*operations.GetTransferInstrumentsIDResponse, error) {
+func (s *transferInstruments) GetTransferInstrumentsID(ctx context.Context, request operations.GetTransferInstrumentsIDRequest, security operations.GetTransferInstrumentsIDSecurity) (*operations.GetTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -151,11 +151,11 @@ func (s *transferInstruments) GetTransferInstrumentsID(ctx context.Context, requ
 
 // PatchTransferInstrumentsID - Update a transfer instrument
 // Updates a transfer instrument.
-func (s *transferInstruments) PatchTransferInstrumentsID(ctx context.Context, request operations.PatchTransferInstrumentsIDRequest) (*operations.PatchTransferInstrumentsIDResponse, error) {
+func (s *transferInstruments) PatchTransferInstrumentsID(ctx context.Context, request operations.PatchTransferInstrumentsIDRequest, security operations.PatchTransferInstrumentsIDSecurity) (*operations.PatchTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferInstrumentInfo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -167,7 +167,7 @@ func (s *transferInstruments) PatchTransferInstrumentsID(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *transferInstruments) PatchTransferInstrumentsID(ctx context.Context, re
 // A transfer instrument is a bank account that a legal entity owns. Adyen performs verification checks on the transfer instrument as required by payment industry regulations. We inform you of the verification results through webhooks or API responses.
 //
 // When the transfer instrument passes the verification checks, you can start sending funds from the balance platform to the transfer instrument (such as payouts).
-func (s *transferInstruments) PostTransferInstruments(ctx context.Context, request operations.PostTransferInstrumentsRequest) (*operations.PostTransferInstrumentsResponse, error) {
+func (s *transferInstruments) PostTransferInstruments(ctx context.Context, request shared.TransferInstrumentInfo, security operations.PostTransferInstrumentsSecurity) (*operations.PostTransferInstrumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transferInstruments"
 
@@ -241,7 +241,7 @@ func (s *transferInstruments) PostTransferInstruments(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

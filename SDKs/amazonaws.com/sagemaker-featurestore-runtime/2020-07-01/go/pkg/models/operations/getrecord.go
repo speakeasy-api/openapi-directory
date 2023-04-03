@@ -7,32 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecordPathParams struct {
+type GetRecordRequest struct {
 	// The name of the feature group from which you want to retrieve a record.
 	FeatureGroupName string `pathParam:"style=simple,explode=false,name=FeatureGroupName"`
-}
-
-type GetRecordQueryParams struct {
 	// List of names of Features to be retrieved. If not specified, the latest value for all the Features are returned.
 	FeatureName []string `queryParam:"style=form,explode=true,name=FeatureName"`
 	// The value that corresponds to <code>RecordIdentifier</code> type and uniquely identifies the record in the <code>FeatureGroup</code>.
-	RecordIdentifierValueAsString string `queryParam:"style=form,explode=true,name=RecordIdentifierValueAsString"`
-}
-
-type GetRecordHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRecordRequest struct {
-	PathParams  GetRecordPathParams
-	QueryParams GetRecordQueryParams
-	Headers     GetRecordHeaders
+	RecordIdentifierValueAsString string  `queryParam:"style=form,explode=true,name=RecordIdentifierValueAsString"`
+	XAmzAlgorithm                 *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetRecordResponse struct {

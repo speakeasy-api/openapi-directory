@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMergeConflictsQueryParams struct {
-	// Pagination limit
-	MaxMergeHunks *string `queryParam:"style=form,explode=true,name=maxMergeHunks"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // DescribeMergeConflictsXAmzTargetEnum
 type DescribeMergeConflictsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *DescribeMergeConflictsXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type DescribeMergeConflictsHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeMergeConflictsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeMergeConflictsRequest struct {
-	QueryParams DescribeMergeConflictsQueryParams
-	Headers     DescribeMergeConflictsHeaders
-	Request     shared.DescribeMergeConflictsInput `request:"mediaType=application/json"`
+	DescribeMergeConflictsInput shared.DescribeMergeConflictsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  DescribeMergeConflictsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxMergeHunks *string `queryParam:"style=form,explode=true,name=maxMergeHunks"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type DescribeMergeConflictsResponse struct {

@@ -8,12 +8,18 @@ import (
 )
 
 type DeleteRepositoriesWorkspaceRepoSlugSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteRepositoriesWorkspaceRepoSlugPathParams struct {
+type DeleteRepositoriesWorkspaceRepoSlugRequest struct {
+	// If a repository has been moved to a new location, use this parameter to
+	// show users a friendly message in the Bitbucket UI that the repository
+	// has moved to a new location. However, a GET to this endpoint will still
+	// return a 404.
+	//
+	RedirectTo *string `queryParam:"style=form,explode=true,name=redirect_to"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
@@ -22,21 +28,6 @@ type DeleteRepositoriesWorkspaceRepoSlugPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteRepositoriesWorkspaceRepoSlugQueryParams struct {
-	// If a repository has been moved to a new location, use this parameter to
-	// show users a friendly message in the Bitbucket UI that the repository
-	// has moved to a new location. However, a GET to this endpoint will still
-	// return a 404.
-	//
-	RedirectTo *string `queryParam:"style=form,explode=true,name=redirect_to"`
-}
-
-type DeleteRepositoriesWorkspaceRepoSlugRequest struct {
-	PathParams  DeleteRepositoriesWorkspaceRepoSlugPathParams
-	QueryParams DeleteRepositoriesWorkspaceRepoSlugQueryParams
-	Security    DeleteRepositoriesWorkspaceRepoSlugSecurity
 }
 
 type DeleteRepositoriesWorkspaceRepoSlugResponse struct {

@@ -96,7 +96,7 @@ func (e *GroupsGetStatisticsAggregatedSingleTimeFrameEnum) UnmarshalJSON(data []
 	}
 }
 
-type GroupsGetStatisticsAggregatedSingleQueryParams struct {
+type GroupsGetStatisticsAggregatedSingleRequest struct {
 	// Is the group is marked as favourite
 	Favourite *bool `queryParam:"style=form,explode=true,name=favourite"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
@@ -111,10 +111,6 @@ type GroupsGetStatisticsAggregatedSingleQueryParams struct {
 	TimeFrame GroupsGetStatisticsAggregatedSingleTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type GroupsGetStatisticsAggregatedSingleRequest struct {
-	QueryParams GroupsGetStatisticsAggregatedSingleQueryParams
 }
 
 type GroupsGetStatisticsAggregatedSingleResponse struct {

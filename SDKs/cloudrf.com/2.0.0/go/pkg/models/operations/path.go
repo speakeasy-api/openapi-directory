@@ -8,7 +8,7 @@ import (
 )
 
 type PathSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 // PathRequestBody - A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
@@ -23,12 +23,6 @@ type PathRequestBody struct {
 	// Site name
 	Site        *string             `json:"site,omitempty"`
 	Transmitter *shared.Transmitter `json:"transmitter,omitempty"`
-}
-
-type PathRequest struct {
-	// A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
-	Request  PathRequestBody `request:"mediaType=application/json"`
-	Security PathSecurity
 }
 
 type PathResponse struct {

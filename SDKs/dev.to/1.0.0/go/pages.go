@@ -36,7 +36,7 @@ func newPages(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This endpoint allows the client to delete a single Page object, specified by ID.
 func (s *pages) DeleteAPIPagesID(ctx context.Context, request operations.DeleteAPIPagesIDRequest) (*operations.DeleteAPIPagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *pages) GetAPIPages(ctx context.Context) (*operations.GetAPIPagesRespons
 // This endpoint allows the client to retrieve details for a single Page object, specified by ID.
 func (s *pages) GetAPIPagesID(ctx context.Context, request operations.GetAPIPagesIDRequest) (*operations.GetAPIPagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *pages) GetAPIPagesID(ctx context.Context, request operations.GetAPIPage
 
 // PostAPIPages - pages
 // This endpoint allows the client to create a new page.
-func (s *pages) PostAPIPages(ctx context.Context, request operations.PostAPIPagesRequest) (*operations.PostAPIPagesResponse, error) {
+func (s *pages) PostAPIPages(ctx context.Context, request operations.PostAPIPagesRequestBody) (*operations.PostAPIPagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/pages"
 
@@ -221,9 +221,9 @@ func (s *pages) PostAPIPages(ctx context.Context, request operations.PostAPIPage
 // This endpoint allows the client to retrieve details for a single Page object, specified by ID.
 func (s *pages) PutAPIPagesID(ctx context.Context, request operations.PutAPIPagesIDRequest) (*operations.PutAPIPagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Page", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

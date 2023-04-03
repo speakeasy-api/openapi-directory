@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStepsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListStepsXAmzTargetEnum
 type ListStepsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListStepsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListStepsHeaders struct {
+type ListStepsRequest struct {
+	ListStepsInput shared.ListStepsInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                 `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListStepsHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListStepsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListStepsRequest struct {
-	QueryParams ListStepsQueryParams
-	Headers     ListStepsHeaders
-	Request     shared.ListStepsInput `request:"mediaType=application/json"`
 }
 
 type ListStepsResponse struct {

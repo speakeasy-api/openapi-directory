@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesCreateReleaseUploadSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReleasesCreateReleaseUploadPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ReleasesCreateReleaseUploadRequestBody - Optional parameters to create releases with user defined metadata
@@ -29,10 +21,12 @@ type ReleasesCreateReleaseUploadRequestBody struct {
 }
 
 type ReleasesCreateReleaseUploadRequest struct {
-	PathParams ReleasesCreateReleaseUploadPathParams
 	// Optional parameters to create releases with user defined metadata
-	Request  *ReleasesCreateReleaseUploadRequestBody `request:"mediaType=application/json"`
-	Security ReleasesCreateReleaseUploadSecurity
+	RequestBody *ReleasesCreateReleaseUploadRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum string

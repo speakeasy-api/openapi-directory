@@ -8,16 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateOrganizationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum - <p>Whether to automatically enable Security Hub <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default standards</a> for new member accounts in the organization.</p> <p>By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically enabled with default Security Hub standards.</p> <p>To opt out of enabling default standards for new member accounts, set this parameter equal to <code>NONE</code>.</p>
 type UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum string
 
@@ -50,8 +40,14 @@ type UpdateOrganizationConfigurationRequestBody struct {
 }
 
 type UpdateOrganizationConfigurationRequest struct {
-	Headers UpdateOrganizationConfigurationHeaders
-	Request UpdateOrganizationConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateOrganizationConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateOrganizationConfigurationResponse struct {

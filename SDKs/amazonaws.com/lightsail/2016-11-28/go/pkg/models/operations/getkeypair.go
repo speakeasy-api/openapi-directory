@@ -30,7 +30,8 @@ func (e *GetKeyPairXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetKeyPairHeaders struct {
+type GetKeyPairRequest struct {
+	GetKeyPairRequest shared.GetKeyPairRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetKeyPairHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetKeyPairXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetKeyPairRequest struct {
-	Headers GetKeyPairHeaders
-	Request shared.GetKeyPairRequest `request:"mediaType=application/json"`
 }
 
 type GetKeyPairResponse struct {

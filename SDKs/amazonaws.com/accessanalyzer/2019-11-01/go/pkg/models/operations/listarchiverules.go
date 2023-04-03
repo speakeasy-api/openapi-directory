@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListArchiveRulesPathParams struct {
-	// The name of the analyzer to retrieve rules from.
-	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
-}
-
-type ListArchiveRulesQueryParams struct {
-	// The maximum number of results to return in the request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used for pagination of results returned.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListArchiveRulesHeaders struct {
+type ListArchiveRulesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListArchiveRulesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListArchiveRulesRequest struct {
-	PathParams  ListArchiveRulesPathParams
-	QueryParams ListArchiveRulesQueryParams
-	Headers     ListArchiveRulesHeaders
+	// The name of the analyzer to retrieve rules from.
+	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
+	// The maximum number of results to return in the request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used for pagination of results returned.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListArchiveRulesResponse struct {

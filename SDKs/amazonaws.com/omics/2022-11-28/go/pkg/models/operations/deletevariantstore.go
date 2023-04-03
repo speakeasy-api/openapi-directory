@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteVariantStorePathParams struct {
-	// The store's name.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteVariantStoreQueryParams struct {
-	// Whether to force deletion.
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-}
-
-type DeleteVariantStoreHeaders struct {
+type DeleteVariantStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteVariantStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVariantStoreRequest struct {
-	PathParams  DeleteVariantStorePathParams
-	QueryParams DeleteVariantStoreQueryParams
-	Headers     DeleteVariantStoreHeaders
+	// Whether to force deletion.
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
+	// The store's name.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DeleteVariantStoreResponse struct {

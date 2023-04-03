@@ -7,17 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAnomalyPathParams struct {
-	//  The ID of the anomaly.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DescribeAnomalyQueryParams struct {
+type DescribeAnomalyRequest struct {
 	// The ID of the member account.
 	AccountID *string `queryParam:"style=form,explode=true,name=AccountId"`
-}
-
-type DescribeAnomalyHeaders struct {
+	//  The ID of the anomaly.
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +19,6 @@ type DescribeAnomalyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAnomalyRequest struct {
-	PathParams  DescribeAnomalyPathParams
-	QueryParams DescribeAnomalyQueryParams
-	Headers     DescribeAnomalyHeaders
 }
 
 type DescribeAnomalyResponse struct {

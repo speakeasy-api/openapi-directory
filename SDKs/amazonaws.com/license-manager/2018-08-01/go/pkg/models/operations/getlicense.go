@@ -30,7 +30,8 @@ func (e *GetLicenseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLicenseHeaders struct {
+type GetLicenseRequest struct {
+	GetLicenseRequest shared.GetLicenseRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetLicenseHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetLicenseXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetLicenseRequest struct {
-	Headers GetLicenseHeaders
-	Request shared.GetLicenseRequest `request:"mediaType=application/json"`
 }
 
 type GetLicenseResponse struct {

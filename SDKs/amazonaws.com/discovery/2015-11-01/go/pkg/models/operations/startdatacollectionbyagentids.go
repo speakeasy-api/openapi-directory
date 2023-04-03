@@ -30,20 +30,16 @@ func (e *StartDataCollectionByAgentIdsXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type StartDataCollectionByAgentIdsHeaders struct {
-	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartDataCollectionByAgentIdsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartDataCollectionByAgentIdsRequest struct {
-	Headers StartDataCollectionByAgentIdsHeaders
-	Request shared.StartDataCollectionByAgentIdsRequest `request:"mediaType=application/json"`
+	StartDataCollectionByAgentIdsRequest shared.StartDataCollectionByAgentIdsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                       *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                             *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                    *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                           StartDataCollectionByAgentIdsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartDataCollectionByAgentIdsResponse struct {

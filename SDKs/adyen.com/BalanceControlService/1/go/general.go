@@ -42,7 +42,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 // * The source and destination merchant accounts must have at least one common processing currency.
 //
 // When sending multiple API requests with the same source and destination merchant accounts, send the requests sequentially and *not* in parallel. Some requests may not be processed if the requests are sent in parallel.
-func (s *general) PostBalanceTransfer(ctx context.Context, request operations.PostBalanceTransferRequest) (*operations.PostBalanceTransferResponse, error) {
+func (s *general) PostBalanceTransfer(ctx context.Context, request shared.BalanceTransferRequest, security operations.PostBalanceTransferSecurity) (*operations.PostBalanceTransferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/balanceTransfer"
 
@@ -58,7 +58,7 @@ func (s *general) PostBalanceTransfer(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

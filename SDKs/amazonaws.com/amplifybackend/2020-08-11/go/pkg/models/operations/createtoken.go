@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTokenPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type CreateTokenHeaders struct {
+type CreateTokenRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CreateTokenHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CreateTokenRequest struct {
-	PathParams CreateTokenPathParams
-	Headers    CreateTokenHeaders
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
 }
 
 type CreateTokenResponse struct {

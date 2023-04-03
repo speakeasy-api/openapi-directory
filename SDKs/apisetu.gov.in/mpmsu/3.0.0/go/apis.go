@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Micer - Migration Certificate
 // API to verify Migration Certificate.
-func (s *apIs) Micer(ctx context.Context, request operations.MicerRequest) (*operations.MicerResponse, error) {
+func (s *apIs) Micer(ctx context.Context, request operations.MicerRequestBody, security operations.MicerSecurity) (*operations.MicerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/micer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Micer(ctx context.Context, request operations.MicerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Micer(ctx context.Context, request operations.MicerRequest) (*ope
 
 // Pvcer - Provisional Certificate
 // API to verify Provisional Certificate.
-func (s *apIs) Pvcer(ctx context.Context, request operations.PvcerRequest) (*operations.PvcerResponse, error) {
+func (s *apIs) Pvcer(ctx context.Context, request operations.PvcerRequestBody, security operations.PvcerSecurity) (*operations.PvcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pvcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Pvcer(ctx context.Context, request operations.PvcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

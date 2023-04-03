@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type StartCanaryPathParams struct {
-	// The name of the canary that you want to run. To find canary names, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type StartCanaryHeaders struct {
+type StartCanaryRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type StartCanaryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StartCanaryRequest struct {
-	PathParams StartCanaryPathParams
-	Headers    StartCanaryHeaders
+	// The name of the canary that you want to run. To find canary names, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type StartCanaryResponse struct {

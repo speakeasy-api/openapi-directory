@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSubscriptionNotificationConfigurationPathParams struct {
-	// The subscription ID for the notification subscription.
-	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
-}
-
-type CreateSubscriptionNotificationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum - The HTTPS method used for the notification subscription.
 type CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum string
 
@@ -64,9 +49,16 @@ type CreateSubscriptionNotificationConfigurationRequestBody struct {
 }
 
 type CreateSubscriptionNotificationConfigurationRequest struct {
-	PathParams CreateSubscriptionNotificationConfigurationPathParams
-	Headers    CreateSubscriptionNotificationConfigurationHeaders
-	Request    CreateSubscriptionNotificationConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSubscriptionNotificationConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The subscription ID for the notification subscription.
+	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
 type CreateSubscriptionNotificationConfigurationResponse struct {

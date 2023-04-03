@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectUsernameProjectBuildNumPathParams struct {
+type GetProjectUsernameProjectBuildNumRequest struct {
 	// XXXXXXXXXX
 	//
 	BuildNum int64 `pathParam:"style=simple,explode=false,name=build_num"`
@@ -17,10 +17,6 @@ type GetProjectUsernameProjectBuildNumPathParams struct {
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetProjectUsernameProjectBuildNumRequest struct {
-	PathParams GetProjectUsernameProjectBuildNumPathParams
 }
 
 type GetProjectUsernameProjectBuildNumResponse struct {

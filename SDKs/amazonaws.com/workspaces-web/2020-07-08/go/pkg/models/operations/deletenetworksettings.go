@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteNetworkSettingsPathParams struct {
-	// The ARN of the network settings.
-	NetworkSettingsArn string `pathParam:"style=simple,explode=false,name=networkSettingsArn"`
-}
-
-type DeleteNetworkSettingsHeaders struct {
+type DeleteNetworkSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteNetworkSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteNetworkSettingsRequest struct {
-	PathParams DeleteNetworkSettingsPathParams
-	Headers    DeleteNetworkSettingsHeaders
+	// The ARN of the network settings.
+	NetworkSettingsArn string `pathParam:"style=simple,explode=false,name=networkSettingsArn"`
 }
 
 type DeleteNetworkSettingsResponse struct {

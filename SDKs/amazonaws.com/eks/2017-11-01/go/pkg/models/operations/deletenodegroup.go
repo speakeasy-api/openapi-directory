@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteNodegroupPathParams struct {
-	// The name of the Amazon EKS cluster that is associated with your node group.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The name of the node group to delete.
-	NodegroupName string `pathParam:"style=simple,explode=false,name=nodegroupName"`
-}
-
-type DeleteNodegroupHeaders struct {
+type DeleteNodegroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteNodegroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteNodegroupRequest struct {
-	PathParams DeleteNodegroupPathParams
-	Headers    DeleteNodegroupHeaders
+	// The name of the Amazon EKS cluster that is associated with your node group.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The name of the node group to delete.
+	NodegroupName string `pathParam:"style=simple,explode=false,name=nodegroupName"`
 }
 
 type DeleteNodegroupResponse struct {

@@ -60,7 +60,14 @@ func (e *ListAccessPoliciesResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAccessPoliciesQueryParams struct {
+type ListAccessPoliciesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The ARN of the IAM user. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM ARNs</a> in the <i>IAM User Guide</i>. This parameter is required if you specify <code>IAM</code> for <code>identityType</code>.
 	IamArn *string `queryParam:"style=form,explode=true,name=iamArn"`
 	// The ID of the identity. This parameter is required if you specify <code>USER</code> or <code>GROUP</code> for <code>identityType</code>.
@@ -75,21 +82,6 @@ type ListAccessPoliciesQueryParams struct {
 	ResourceID *string `queryParam:"style=form,explode=true,name=resourceId"`
 	// The type of resource (portal or project). This parameter is required if you specify <code>resourceId</code>.
 	ResourceType *ListAccessPoliciesResourceTypeEnum `queryParam:"style=form,explode=true,name=resourceType"`
-}
-
-type ListAccessPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAccessPoliciesRequest struct {
-	QueryParams ListAccessPoliciesQueryParams
-	Headers     ListAccessPoliciesHeaders
 }
 
 type ListAccessPoliciesResponse struct {

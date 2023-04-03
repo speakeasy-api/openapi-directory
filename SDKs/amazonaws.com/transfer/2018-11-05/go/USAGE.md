@@ -13,53 +13,49 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAccessRequest{
-        Headers: operations.CreateAccessHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "TransferService.CreateAccess",
-        },
-        Request: shared.CreateAccessRequest{
-            ExternalID: "illum",
-            HomeDirectory: "vel",
+        CreateAccessRequest: shared.CreateAccessRequest{
+            ExternalID: "corrupti",
+            HomeDirectory: "provident",
             HomeDirectoryMappings: []shared.HomeDirectoryMapEntry{
                 shared.HomeDirectoryMapEntry{
-                    Entry: "deserunt",
-                    Target: "suscipit",
+                    Entry: "quibusdam",
+                    Target: "unde",
                 },
                 shared.HomeDirectoryMapEntry{
-                    Entry: "iure",
-                    Target: "magnam",
+                    Entry: "nulla",
+                    Target: "corrupti",
                 },
                 shared.HomeDirectoryMapEntry{
-                    Entry: "debitis",
-                    Target: "ipsa",
+                    Entry: "illum",
+                    Target: "vel",
                 },
             },
             HomeDirectoryType: "LOGICAL",
-            Policy: "tempora",
+            Policy: "deserunt",
             PosixProfile: &shared.PosixProfile{
-                Gid: 383441,
+                Gid: 384382,
                 SecondaryGids: []int64{
-                    791725,
-                    812169,
+                    297534,
+                    891773,
                 },
-                UID: 528895,
+                UID: 56713,
             },
-            Role: "iusto",
-            ServerID: "excepturi",
+            Role: "delectus",
+            ServerID: "tempora",
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "molestiae",
+        XAmzCredential: "minus",
+        XAmzDate: "placeat",
+        XAmzSecurityToken: "voluptatum",
+        XAmzSignature: "iusto",
+        XAmzSignedHeaders: "excepturi",
+        XAmzTarget: "TransferService.CreateAccess",
     }
 
     ctx := context.Background()

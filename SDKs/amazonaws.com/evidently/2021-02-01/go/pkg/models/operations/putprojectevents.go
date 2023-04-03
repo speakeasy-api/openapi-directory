@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutProjectEventsPathParams struct {
-	// The name or ARN of the project to write the events to.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type PutProjectEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutProjectEventsRequestBody struct {
 	// An array of event structures that contain the performance data that is being sent to Evidently.
 	Events []shared.Event `json:"events"`
 }
 
 type PutProjectEventsRequest struct {
-	PathParams PutProjectEventsPathParams
-	Headers    PutProjectEventsHeaders
-	Request    PutProjectEventsRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutProjectEventsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name or ARN of the project to write the events to.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type PutProjectEventsResponse struct {

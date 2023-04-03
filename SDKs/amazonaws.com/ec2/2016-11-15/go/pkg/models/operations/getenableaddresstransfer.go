@@ -50,7 +50,7 @@ func (e *GETEnableAddressTransferVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableAddressTransferQueryParams struct {
+type GETEnableAddressTransferRequest struct {
 	Action GETEnableAddressTransferActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The allocation ID of an Elastic IP address.
 	AllocationID string `queryParam:"style=form,explode=true,name=AllocationId"`
@@ -59,21 +59,13 @@ type GETEnableAddressTransferQueryParams struct {
 	// The ID of the account that you want to transfer the Elastic IP address to.
 	TransferAccountID string                              `queryParam:"style=form,explode=true,name=TransferAccountId"`
 	Version           GETEnableAddressTransferVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableAddressTransferHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableAddressTransferRequest struct {
-	QueryParams GETEnableAddressTransferQueryParams
-	Headers     GETEnableAddressTransferHeaders
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableAddressTransferResponse struct {

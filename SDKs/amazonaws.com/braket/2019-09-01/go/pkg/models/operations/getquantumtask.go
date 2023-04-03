@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQuantumTaskPathParams struct {
-	// the ARN of the task to retrieve.
-	QuantumTaskArn string `pathParam:"style=simple,explode=false,name=quantumTaskArn"`
-}
-
-type GetQuantumTaskHeaders struct {
+type GetQuantumTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetQuantumTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetQuantumTaskRequest struct {
-	PathParams GetQuantumTaskPathParams
-	Headers    GetQuantumTaskHeaders
+	// the ARN of the task to retrieve.
+	QuantumTaskArn string `pathParam:"style=simple,explode=false,name=quantumTaskArn"`
 }
 
 type GetQuantumTaskResponse struct {

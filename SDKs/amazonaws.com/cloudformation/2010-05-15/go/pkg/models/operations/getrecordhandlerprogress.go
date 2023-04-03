@@ -185,7 +185,7 @@ func (e *GETRecordHandlerProgressVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRecordHandlerProgressQueryParams struct {
+type GETRecordHandlerProgressRequest struct {
 	Action GETRecordHandlerProgressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Reserved for use by the <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html">CloudFormation CLI</a>.
 	BearerToken string `queryParam:"style=form,explode=true,name=BearerToken"`
@@ -200,23 +200,15 @@ type GETRecordHandlerProgressQueryParams struct {
 	// Reserved for use by the <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html">CloudFormation CLI</a>.
 	ResourceModel *string `queryParam:"style=form,explode=true,name=ResourceModel"`
 	// Reserved for use by the <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html">CloudFormation CLI</a>.
-	StatusMessage *string                             `queryParam:"style=form,explode=true,name=StatusMessage"`
-	Version       GETRecordHandlerProgressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRecordHandlerProgressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRecordHandlerProgressRequest struct {
-	QueryParams GETRecordHandlerProgressQueryParams
-	Headers     GETRecordHandlerProgressHeaders
+	StatusMessage     *string                             `queryParam:"style=form,explode=true,name=StatusMessage"`
+	Version           GETRecordHandlerProgressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRecordHandlerProgressResponse struct {

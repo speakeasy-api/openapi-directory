@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImagePipelineQueryParams struct {
-	// The Amazon Resource Name (ARN) of the image pipeline that you want to retrieve.
-	ImagePipelineArn string `queryParam:"style=form,explode=true,name=imagePipelineArn"`
-}
-
-type GetImagePipelineHeaders struct {
+type GetImagePipelineRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetImagePipelineHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetImagePipelineRequest struct {
-	QueryParams GetImagePipelineQueryParams
-	Headers     GetImagePipelineHeaders
+	// The Amazon Resource Name (ARN) of the image pipeline that you want to retrieve.
+	ImagePipelineArn string `queryParam:"style=form,explode=true,name=imagePipelineArn"`
 }
 
 type GetImagePipelineResponse struct {

@@ -50,30 +50,22 @@ func (e *GETDescribeDataSharesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeDataSharesQueryParams struct {
+type GETDescribeDataSharesRequest struct {
 	Action GETDescribeDataSharesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the datashare to describe details of.
 	DataShareArn *string `queryParam:"style=form,explode=true,name=DataShareArn"`
 	// An optional parameter that specifies the starting point to return a set of response records. When the results of a <a>DescribeDataShares</a> request exceed the value specified in <code>MaxRecords</code>, Amazon Web Services returns a value in the <code>Marker</code> field of the response. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned marker value.
-	MaxRecords *int64                           `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeDataSharesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDataSharesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDataSharesRequest struct {
-	QueryParams GETDescribeDataSharesQueryParams
-	Headers     GETDescribeDataSharesHeaders
+	MaxRecords        *int64                           `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeDataSharesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDataSharesResponse struct {

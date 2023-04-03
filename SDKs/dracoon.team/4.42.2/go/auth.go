@@ -59,7 +59,7 @@ func (s *auth) CompleteOpenIDLogin(ctx context.Context, request operations.Compl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -142,7 +142,7 @@ func (s *auth) InitiateOpenIDLogin(ctx context.Context, request operations.Initi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -222,7 +222,7 @@ func (s *auth) InitiateOpenIDLogin(ctx context.Context, request operations.Initi
 //
 // </details>
 // https://tools.ietf.org/html/rfc2865 - Remote Authentication Dial In User Service (RADIUS)
-func (s *auth) Login(ctx context.Context, request operations.LoginRequest) (*operations.LoginResponse, error) {
+func (s *auth) Login(ctx context.Context, request shared.LoginRequest) (*operations.LoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/auth/login"
 
@@ -386,7 +386,7 @@ func (s *auth) Ping(ctx context.Context) (*operations.PingResponse, error) {
 //
 // ### Further Information:
 // None.
-func (s *auth) RecoverUserName(ctx context.Context, request operations.RecoverUserNameRequest) (*operations.RecoverUserNameResponse, error) {
+func (s *auth) RecoverUserName(ctx context.Context, request shared.RecoverUserNameRequest) (*operations.RecoverUserNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/auth/recover_username"
 
@@ -456,7 +456,7 @@ func (s *auth) RecoverUserName(ctx context.Context, request operations.RecoverUs
 //
 // ### Further Information:
 // None.
-func (s *auth) RequestPasswordReset(ctx context.Context, request operations.RequestPasswordResetRequest) (*operations.RequestPasswordResetResponse, error) {
+func (s *auth) RequestPasswordReset(ctx context.Context, request shared.ResetPasswordRequest) (*operations.RequestPasswordResetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/auth/reset_password"
 
@@ -526,9 +526,9 @@ func (s *auth) RequestPasswordReset(ctx context.Context, request operations.Requ
 // Forbidden characters in passwords: [`&`, `'`, `<`, `>`]
 func (s *auth) ResetPassword(ctx context.Context, request operations.ResetPasswordRequest) (*operations.ResetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/auth/reset_password/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/auth/reset_password/{token}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResetPasswordWithTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -604,7 +604,7 @@ func (s *auth) ResetPassword(ctx context.Context, request operations.ResetPasswo
 // None.
 func (s *auth) ValidateResetPasswordToken(ctx context.Context, request operations.ValidateResetPasswordTokenRequest) (*operations.ValidateResetPasswordTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/auth/reset_password/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/auth/reset_password/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

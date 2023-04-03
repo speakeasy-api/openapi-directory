@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type Destiny2TransferItemSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type Destiny2TransferItemRequest struct {
-	Security Destiny2TransferItemSecurity
-}
 
 // Destiny2TransferItem200Wildcard - Look at the Response property for more information about the nature of this response
 type Destiny2TransferItem200Wildcard struct {

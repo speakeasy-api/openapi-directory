@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTimelineEventQueryParams struct {
-	// The ID of the event. You can get an event's ID when you create it, or by using <code>ListTimelineEvents</code>.
-	EventID string `queryParam:"style=form,explode=true,name=eventId"`
-	// The Amazon Resource Name (ARN) of the incident that includes the timeline event.
-	IncidentRecordArn string `queryParam:"style=form,explode=true,name=incidentRecordArn"`
-}
-
-type GetTimelineEventHeaders struct {
+type GetTimelineEventRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetTimelineEventHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTimelineEventRequest struct {
-	QueryParams GetTimelineEventQueryParams
-	Headers     GetTimelineEventHeaders
+	// The ID of the event. You can get an event's ID when you create it, or by using <code>ListTimelineEvents</code>.
+	EventID string `queryParam:"style=form,explode=true,name=eventId"`
+	// The Amazon Resource Name (ARN) of the incident that includes the timeline event.
+	IncidentRecordArn string `queryParam:"style=form,explode=true,name=incidentRecordArn"`
 }
 
 type GetTimelineEventResponse struct {

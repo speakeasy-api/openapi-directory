@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Dgmst - Degree/ Diploma Marksheet
 // API to verify Degree/ Diploma Marksheet.
-func (s *apIs) Dgmst(ctx context.Context, request operations.DgmstRequest) (*operations.DgmstResponse, error) {
+func (s *apIs) Dgmst(ctx context.Context, request operations.DgmstRequestBody, security operations.DgmstSecurity) (*operations.DgmstResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dgmst/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Dgmst(ctx context.Context, request operations.DgmstRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

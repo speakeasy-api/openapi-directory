@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDetectorsPathParams struct {
-	// The name of the detector model whose detectors (instances) are listed.
-	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
-}
-
-type ListDetectorsQueryParams struct {
-	// The maximum number of results to be returned per request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token that you can use to return the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// A filter that limits results to those detectors (instances) in the given state.
-	StateName *string `queryParam:"style=form,explode=true,name=stateName"`
-}
-
-type ListDetectorsHeaders struct {
+type ListDetectorsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListDetectorsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDetectorsRequest struct {
-	PathParams  ListDetectorsPathParams
-	QueryParams ListDetectorsQueryParams
-	Headers     ListDetectorsHeaders
+	// The name of the detector model whose detectors (instances) are listed.
+	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
+	// The maximum number of results to be returned per request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token that you can use to return the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// A filter that limits results to those detectors (instances) in the given state.
+	StateName *string `queryParam:"style=form,explode=true,name=stateName"`
 }
 
 type ListDetectorsResponse struct {

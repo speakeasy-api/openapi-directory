@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type UsersGetUserMetadataSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersGetUserMetadataRequest struct {
-	Security UsersGetUserMetadataSecurity
-}
 
 type UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum string
 

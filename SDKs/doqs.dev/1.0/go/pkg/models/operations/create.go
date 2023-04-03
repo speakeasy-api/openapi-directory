@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRequest struct {
-	Request shared.BodyCreate `request:"mediaType=multipart/form-data"`
-}
-
 type CreateResponse struct {
 	ContentType string
 	// Client Error

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStatisticsCollectionQueryParams struct {
+type GetStatisticsCollectionRequest struct {
 	// Results per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search page to request
 	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetStatisticsCollectionRequest struct {
-	QueryParams GetStatisticsCollectionQueryParams
 }
 
 type GetStatisticsCollectionResponse struct {

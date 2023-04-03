@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestDownloadShareQrPathParams struct {
-	// Share ID
-	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
-}
-
 // RequestDownloadShareQrXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestDownloadShareQrXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestDownloadShareQrXSdsDateFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type RequestDownloadShareQrHeaders struct {
+type RequestDownloadShareQrRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestDownloadShareQrXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestDownloadShareQrRequest struct {
-	PathParams RequestDownloadShareQrPathParams
-	Headers    RequestDownloadShareQrHeaders
+	// Share ID
+	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
 }
 
 type RequestDownloadShareQrResponse struct {

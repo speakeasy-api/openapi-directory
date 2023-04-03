@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type ListPublicKeys20181105QueryParams struct {
+type ListPublicKeys20181105Request struct {
 	// Use this when paginating results to indicate where to begin in your list of public keys. The results include public keys in the list that occur after the marker. To get the next page of results, set the <code>Marker</code> to the value of the <code>NextMarker</code> from the current page's response (which is also the ID of the last public key on that page).
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of public keys you want in the response body.
-	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListPublicKeys20181105Headers struct {
+	MaxItems          *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type ListPublicKeys20181105Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListPublicKeys20181105Request struct {
-	QueryParams ListPublicKeys20181105QueryParams
-	Headers     ListPublicKeys20181105Headers
 }
 
 type ListPublicKeys20181105Response struct {

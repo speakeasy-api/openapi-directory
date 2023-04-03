@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePermissionGroupPathParams struct {
+type CreatePermissionGroupRequest struct {
+	CreatePermissionGroupRequest shared.CreatePermissionGroupRequest `request:"mediaType=application/json"`
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type CreatePermissionGroupRequest struct {
-	PathParams CreatePermissionGroupPathParams
-	Request    shared.CreatePermissionGroupRequest `request:"mediaType=application/json"`
 }
 
 type CreatePermissionGroupResponse struct {

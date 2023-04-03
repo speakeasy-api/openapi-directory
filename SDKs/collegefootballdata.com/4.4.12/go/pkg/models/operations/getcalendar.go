@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCalendarQueryParams struct {
+type GetCalendarRequest struct {
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetCalendarRequest struct {
-	QueryParams GetCalendarQueryParams
 }
 
 type GetCalendarResponse struct {

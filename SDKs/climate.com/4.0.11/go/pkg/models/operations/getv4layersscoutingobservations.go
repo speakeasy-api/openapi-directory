@@ -9,28 +9,19 @@ import (
 )
 
 type GetV4LayersScoutingObservationsSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV4LayersScoutingObservationsQueryParams struct {
-	// Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
-	OccurredAfter *time.Time `queryParam:"style=form,explode=true,name=occurredAfter"`
-	// Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
-	OccurredBefore *time.Time `queryParam:"style=form,explode=true,name=occurredBefore"`
-}
-
-type GetV4LayersScoutingObservationsHeaders struct {
+type GetV4LayersScoutingObservationsRequest struct {
 	// Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
 	XLimit *int `header:"style=simple,explode=false,name=X-Limit"`
 	// Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
 	XNextToken *string `header:"style=simple,explode=false,name=X-Next-Token"`
-}
-
-type GetV4LayersScoutingObservationsRequest struct {
-	QueryParams GetV4LayersScoutingObservationsQueryParams
-	Headers     GetV4LayersScoutingObservationsHeaders
-	Security    GetV4LayersScoutingObservationsSecurity
+	// Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
+	OccurredAfter *time.Time `queryParam:"style=form,explode=true,name=occurredAfter"`
+	// Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
+	OccurredBefore *time.Time `queryParam:"style=form,explode=true,name=occurredBefore"`
 }
 
 type GetV4LayersScoutingObservationsResponse struct {

@@ -34,11 +34,11 @@ func newModifierGroups(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // ModifierGroupsAdd - Create Modifier Group
 // Create Modifier Group
-func (s *modifierGroups) ModifierGroupsAdd(ctx context.Context, request operations.ModifierGroupsAddRequest) (*operations.ModifierGroupsAddResponse, error) {
+func (s *modifierGroups) ModifierGroupsAdd(ctx context.Context, request operations.ModifierGroupsAddRequest, security operations.ModifierGroupsAddSecurity) (*operations.ModifierGroupsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/modifier-groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifierGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *modifierGroups) ModifierGroupsAdd(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *modifierGroups) ModifierGroupsAdd(ctx context.Context, request operatio
 
 // ModifierGroupsAll - List Modifier Groups
 // List Modifier Groups
-func (s *modifierGroups) ModifierGroupsAll(ctx context.Context, request operations.ModifierGroupsAllRequest) (*operations.ModifierGroupsAllResponse, error) {
+func (s *modifierGroups) ModifierGroupsAll(ctx context.Context, request operations.ModifierGroupsAllRequest, security operations.ModifierGroupsAllSecurity) (*operations.ModifierGroupsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/modifier-groups"
 
@@ -164,13 +164,13 @@ func (s *modifierGroups) ModifierGroupsAll(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *modifierGroups) ModifierGroupsAll(ctx context.Context, request operatio
 
 // ModifierGroupsDelete - Delete Modifier Group
 // Delete Modifier Group
-func (s *modifierGroups) ModifierGroupsDelete(ctx context.Context, request operations.ModifierGroupsDeleteRequest) (*operations.ModifierGroupsDeleteResponse, error) {
+func (s *modifierGroups) ModifierGroupsDelete(ctx context.Context, request operations.ModifierGroupsDeleteRequest, security operations.ModifierGroupsDeleteSecurity) (*operations.ModifierGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/modifier-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/modifier-groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *modifierGroups) ModifierGroupsDelete(ctx context.Context, request opera
 
 // ModifierGroupsOne - Get Modifier Group
 // Get Modifier Group
-func (s *modifierGroups) ModifierGroupsOne(ctx context.Context, request operations.ModifierGroupsOneRequest) (*operations.ModifierGroupsOneResponse, error) {
+func (s *modifierGroups) ModifierGroupsOne(ctx context.Context, request operations.ModifierGroupsOneRequest, security operations.ModifierGroupsOneSecurity) (*operations.ModifierGroupsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/modifier-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/modifier-groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *modifierGroups) ModifierGroupsOne(ctx context.Context, request operatio
 
 // ModifierGroupsUpdate - Update Modifier Group
 // Update Modifier Group
-func (s *modifierGroups) ModifierGroupsUpdate(ctx context.Context, request operations.ModifierGroupsUpdateRequest) (*operations.ModifierGroupsUpdateResponse, error) {
+func (s *modifierGroups) ModifierGroupsUpdate(ctx context.Context, request operations.ModifierGroupsUpdateRequest, security operations.ModifierGroupsUpdateSecurity) (*operations.ModifierGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/modifier-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/modifier-groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifierGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *modifierGroups) ModifierGroupsUpdate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

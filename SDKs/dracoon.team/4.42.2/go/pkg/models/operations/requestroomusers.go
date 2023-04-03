@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestRoomUsersPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type RequestRoomUsersQueryParams struct {
+type RequestRoomUsersRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Range limit.
@@ -23,19 +20,10 @@ type RequestRoomUsersQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Range offset
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 	// Sort string
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type RequestRoomUsersHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestRoomUsersRequest struct {
-	PathParams  RequestRoomUsersPathParams
-	QueryParams RequestRoomUsersQueryParams
-	Headers     RequestRoomUsersHeaders
 }
 
 type RequestRoomUsersResponse struct {

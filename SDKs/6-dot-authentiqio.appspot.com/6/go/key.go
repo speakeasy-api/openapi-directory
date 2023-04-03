@@ -36,7 +36,7 @@ func newKey(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // HeadKeyPK - HEAD info on Authentiq ID
 func (s *key) HeadKeyPK(ctx context.Context, request operations.HeadKeyPKRequest) (*operations.HeadKeyPKResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -92,9 +92,9 @@ func (s *key) HeadKeyPK(ctx context.Context, request operations.HeadKeyPKRequest
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *key) KeyBind(ctx context.Context, request operations.KeyBindRequest) (*operations.KeyBindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -170,7 +170,7 @@ func (s *key) KeyBind(ctx context.Context, request operations.KeyBindRequest) (*
 // v5: `JWT(sub, pk, devtoken, ...)`
 //
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
-func (s *key) KeyRegister(ctx context.Context, request operations.KeyRegisterRequest) (*operations.KeyRegisterResponse, error) {
+func (s *key) KeyRegister(ctx context.Context, request []byte) (*operations.KeyRegisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/key"
 
@@ -246,7 +246,7 @@ func (s *key) KeyRegister(ctx context.Context, request operations.KeyRegisterReq
 // KeyRetrieve - Get public details of an Authentiq ID.
 func (s *key) KeyRetrieve(ctx context.Context, request operations.KeyRetrieveRequest) (*operations.KeyRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -312,14 +312,14 @@ func (s *key) KeyRetrieve(ctx context.Context, request operations.KeyRetrieveReq
 // KeyRevoke - Revoke an Identity (Key) with a revocation secret
 func (s *key) KeyRevoke(ctx context.Context, request operations.KeyRevokeRequest) (*operations.KeyRevokeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -393,7 +393,7 @@ func (s *key) KeyRevokeNosecret(ctx context.Context, request operations.KeyRevok
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -464,9 +464,9 @@ func (s *key) KeyRevokeNosecret(ctx context.Context, request operations.KeyRevok
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *key) KeyUpdate(ctx context.Context, request operations.KeyUpdateRequest) (*operations.KeyUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

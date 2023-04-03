@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Drvlc - Driving License
 // API to verify Driving License.
-func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequest) (*operations.DrvlcResponse, error) {
+func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequestBody, security operations.DrvlcSecurity) (*operations.DrvlcResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/drvlc/certificate"
 
@@ -50,7 +50,7 @@ func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequest) (*ope
 
 // Fitcer - Fitness Certificate
 // API to verify Fitness Certificate.
-func (s *apIs) Fitcer(ctx context.Context, request operations.FitcerRequest) (*operations.FitcerResponse, error) {
+func (s *apIs) Fitcer(ctx context.Context, request operations.FitcerRequestBody, security operations.FitcerSecurity) (*operations.FitcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fitcer/certificate"
 
@@ -172,7 +172,7 @@ func (s *apIs) Fitcer(ctx context.Context, request operations.FitcerRequest) (*o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -278,7 +278,7 @@ func (s *apIs) Fitcer(ctx context.Context, request operations.FitcerRequest) (*o
 
 // Rvcer - Registration of Vehicles
 // API to verify Registration of Vehicles.
-func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequest) (*operations.RvcerResponse, error) {
+func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequestBody, security operations.RvcerSecurity) (*operations.RvcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rvcer/certificate"
 
@@ -294,7 +294,7 @@ func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -400,7 +400,7 @@ func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequest) (*ope
 
 // Vhinsc - Vehicle Insurance Certificate
 // API to verify Vehicle Insurance Certificate.
-func (s *apIs) Vhinsc(ctx context.Context, request operations.VhinscRequest) (*operations.VhinscResponse, error) {
+func (s *apIs) Vhinsc(ctx context.Context, request operations.VhinscRequestBody, security operations.VhinscSecurity) (*operations.VhinscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vhinsc/certificate"
 
@@ -416,7 +416,7 @@ func (s *apIs) Vhinsc(ctx context.Context, request operations.VhinscRequest) (*o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -513,7 +513,7 @@ func (s *apIs) Vhinsc(ctx context.Context, request operations.VhinscRequest) (*o
 
 // Vhtax - Vehicle Tax Receipt
 // API to verify Vehicle Tax Receipt.
-func (s *apIs) Vhtax(ctx context.Context, request operations.VhtaxRequest) (*operations.VhtaxResponse, error) {
+func (s *apIs) Vhtax(ctx context.Context, request operations.VhtaxRequestBody, security operations.VhtaxSecurity) (*operations.VhtaxResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vhtax/certificate"
 
@@ -529,7 +529,7 @@ func (s *apIs) Vhtax(ctx context.Context, request operations.VhtaxRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

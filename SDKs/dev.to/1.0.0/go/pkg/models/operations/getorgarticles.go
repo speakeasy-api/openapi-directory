@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrgArticlesPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetOrgArticlesQueryParams struct {
+type GetOrgArticlesRequest struct {
 	// Pagination page
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
-	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetOrgArticlesRequest struct {
-	PathParams  GetOrgArticlesPathParams
-	QueryParams GetOrgArticlesQueryParams
+	PerPage  *int   `queryParam:"style=form,explode=true,name=per_page"`
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetOrgArticlesResponse struct {

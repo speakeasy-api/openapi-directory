@@ -50,25 +50,17 @@ func (e *POSTDeleteNetworkACLVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteNetworkACLQueryParams struct {
-	Action  POSTDeleteNetworkACLActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteNetworkACLVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteNetworkACLHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteNetworkACLRequest struct {
-	QueryParams POSTDeleteNetworkACLQueryParams
-	Headers     POSTDeleteNetworkACLHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteNetworkACLActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTDeleteNetworkACLVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteNetworkACLResponse struct {

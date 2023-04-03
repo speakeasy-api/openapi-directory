@@ -33,7 +33,7 @@ func newScheduler(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // ExecuteDestinationCheckConnection - Run check connection for a given destination configuration
-func (s *scheduler) ExecuteDestinationCheckConnection(ctx context.Context, request operations.ExecuteDestinationCheckConnectionRequest) (*operations.ExecuteDestinationCheckConnectionResponse, error) {
+func (s *scheduler) ExecuteDestinationCheckConnection(ctx context.Context, request shared.DestinationCoreConfig) (*operations.ExecuteDestinationCheckConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/scheduler/destinations/check_connection"
 
@@ -97,7 +97,7 @@ func (s *scheduler) ExecuteDestinationCheckConnection(ctx context.Context, reque
 }
 
 // ExecuteSourceCheckConnection - Run check connection for a given source configuration
-func (s *scheduler) ExecuteSourceCheckConnection(ctx context.Context, request operations.ExecuteSourceCheckConnectionRequest) (*operations.ExecuteSourceCheckConnectionResponse, error) {
+func (s *scheduler) ExecuteSourceCheckConnection(ctx context.Context, request shared.SourceCoreConfig) (*operations.ExecuteSourceCheckConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/scheduler/sources/check_connection"
 
@@ -161,7 +161,7 @@ func (s *scheduler) ExecuteSourceCheckConnection(ctx context.Context, request op
 }
 
 // ExecuteSourceDiscoverSchema - Run discover schema for a given source a source configuration
-func (s *scheduler) ExecuteSourceDiscoverSchema(ctx context.Context, request operations.ExecuteSourceDiscoverSchemaRequest) (*operations.ExecuteSourceDiscoverSchemaResponse, error) {
+func (s *scheduler) ExecuteSourceDiscoverSchema(ctx context.Context, request shared.SourceCoreConfig) (*operations.ExecuteSourceDiscoverSchemaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/scheduler/sources/discover_schema"
 

@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHealthEventPathParams struct {
+type GetHealthEventRequest struct {
 	// The internally generated identifier of a health event. Because <code>EventID</code> contains the forward slash (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
 	EventID string `pathParam:"style=simple,explode=false,name=EventId"`
 	// The name of the monitor.
-	MonitorName string `pathParam:"style=simple,explode=false,name=MonitorName"`
-}
-
-type GetHealthEventHeaders struct {
+	MonitorName       string  `pathParam:"style=simple,explode=false,name=MonitorName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetHealthEventHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetHealthEventRequest struct {
-	PathParams GetHealthEventPathParams
-	Headers    GetHealthEventHeaders
 }
 
 type GetHealthEventResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamGameStatsQueryParams struct {
+type GetTeamGameStatsRequest struct {
 	// Division classification filter (fbs/fcs/ii/iii)
 	Classification *string `queryParam:"style=form,explode=true,name=classification"`
 	// Conference abbreviation filter
@@ -22,10 +22,6 @@ type GetTeamGameStatsQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year/season filter for games
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTeamGameStatsRequest struct {
-	QueryParams GetTeamGameStatsQueryParams
 }
 
 type GetTeamGameStatsResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateS3ConfigHeaders struct {
+type CreateS3ConfigRequest struct {
+	S3ConfigCreateRequest shared.S3ConfigCreateRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CreateS3ConfigRequest struct {
-	Headers CreateS3ConfigHeaders
-	Request shared.S3ConfigCreateRequest `request:"mediaType=application/json"`
 }
 
 type CreateS3ConfigResponse struct {

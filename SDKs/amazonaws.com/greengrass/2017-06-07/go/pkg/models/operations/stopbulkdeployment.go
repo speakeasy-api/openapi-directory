@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type StopBulkDeploymentPathParams struct {
+type StopBulkDeploymentRequest struct {
 	// The ID of the bulk deployment.
-	BulkDeploymentID string `pathParam:"style=simple,explode=false,name=BulkDeploymentId"`
-}
-
-type StopBulkDeploymentHeaders struct {
+	BulkDeploymentID  string  `pathParam:"style=simple,explode=false,name=BulkDeploymentId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type StopBulkDeploymentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopBulkDeploymentRequest struct {
-	PathParams StopBulkDeploymentPathParams
-	Headers    StopBulkDeploymentHeaders
 }
 
 type StopBulkDeploymentResponse struct {

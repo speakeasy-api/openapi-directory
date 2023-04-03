@@ -8,17 +8,13 @@ import (
 )
 
 type IsKeywordAvailableSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type IsKeywordAvailablePathParams struct {
-	// To specify a keyword to search for. Example: SUN, MOON
-	Keyword string `pathParam:"style=simple,explode=false,name=keyword"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type IsKeywordAvailableRequest struct {
-	PathParams IsKeywordAvailablePathParams
-	Security   IsKeywordAvailableSecurity
+	// To specify a keyword to search for. Example: SUN, MOON
+	Keyword string `pathParam:"style=simple,explode=false,name=keyword"`
 }
 
 type IsKeywordAvailableResponse struct {

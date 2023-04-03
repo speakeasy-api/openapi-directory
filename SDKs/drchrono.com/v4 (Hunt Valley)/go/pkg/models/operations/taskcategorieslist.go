@@ -8,18 +8,13 @@ import (
 )
 
 type TaskCategoriesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TaskCategoriesListQueryParams struct {
-	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
-	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
-	Since    *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TaskCategoriesListRequest struct {
-	QueryParams TaskCategoriesListQueryParams
-	Security    TaskCategoriesListSecurity
+	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
+	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
+	Since    *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 // TaskCategoriesList200ApplicationJSON - Paginated Result

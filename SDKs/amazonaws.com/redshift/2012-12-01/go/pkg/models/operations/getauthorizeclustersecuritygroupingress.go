@@ -50,7 +50,7 @@ func (e *GETAuthorizeClusterSecurityGroupIngressVersionEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETAuthorizeClusterSecurityGroupIngressQueryParams struct {
+type GETAuthorizeClusterSecurityGroupIngressRequest struct {
 	Action GETAuthorizeClusterSecurityGroupIngressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IP range to be added the Amazon Redshift security group.
 	Cidrip *string `queryParam:"style=form,explode=true,name=CIDRIP"`
@@ -61,21 +61,13 @@ type GETAuthorizeClusterSecurityGroupIngressQueryParams struct {
 	// <p>The Amazon Web Services account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value. </p> <p>Example: <code>111122223333</code> </p>
 	Ec2SecurityGroupOwnerID *string                                            `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`
 	Version                 GETAuthorizeClusterSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAuthorizeClusterSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAuthorizeClusterSecurityGroupIngressRequest struct {
-	QueryParams GETAuthorizeClusterSecurityGroupIngressQueryParams
-	Headers     GETAuthorizeClusterSecurityGroupIngressHeaders
+	XAmzAlgorithm           *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAuthorizeClusterSecurityGroupIngressResponse struct {

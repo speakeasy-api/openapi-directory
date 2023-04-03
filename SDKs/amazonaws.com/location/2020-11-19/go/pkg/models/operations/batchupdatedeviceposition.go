@@ -7,12 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchUpdateDevicePositionPathParams struct {
-	// The name of the tracker resource to update.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
+type BatchUpdateDevicePositionRequestBody struct {
+	// Contains the position update details for each device.
+	Updates []shared.DevicePositionUpdate `json:"Updates"`
 }
 
-type BatchUpdateDevicePositionHeaders struct {
+type BatchUpdateDevicePositionRequest struct {
+	RequestBody BatchUpdateDevicePositionRequestBody `request:"mediaType=application/json"`
+	// The name of the tracker resource to update.
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,17 +23,6 @@ type BatchUpdateDevicePositionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type BatchUpdateDevicePositionRequestBody struct {
-	// Contains the position update details for each device.
-	Updates []shared.DevicePositionUpdate `json:"Updates"`
-}
-
-type BatchUpdateDevicePositionRequest struct {
-	PathParams BatchUpdateDevicePositionPathParams
-	Headers    BatchUpdateDevicePositionHeaders
-	Request    BatchUpdateDevicePositionRequestBody `request:"mediaType=application/json"`
 }
 
 type BatchUpdateDevicePositionResponse struct {

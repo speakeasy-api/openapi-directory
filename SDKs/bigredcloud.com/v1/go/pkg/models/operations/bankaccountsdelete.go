@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type BankAccountsDeletePathParams struct {
+type BankAccountsDeleteRequest struct {
 	// Id of Bank Account to remove.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type BankAccountsDeleteQueryParams struct {
 	// Timestamp of Bank Account to remove. Should be encoded in Base64.
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type BankAccountsDeleteRequest struct {
-	PathParams  BankAccountsDeletePathParams
-	QueryParams BankAccountsDeleteQueryParams
 }
 
 type BankAccountsDeleteResponse struct {

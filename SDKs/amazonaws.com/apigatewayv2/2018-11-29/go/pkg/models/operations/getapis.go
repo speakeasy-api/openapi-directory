@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApisQueryParams struct {
-	// The maximum number of elements to be returned for this resource.
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// The next page of elements from this collection. Not valid for the last element of the collection.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetApisHeaders struct {
+type GetApisRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetApisHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetApisRequest struct {
-	QueryParams GetApisQueryParams
-	Headers     GetApisHeaders
+	// The maximum number of elements to be returned for this resource.
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// The next page of elements from this collection. Not valid for the last element of the collection.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetApisResponse struct {

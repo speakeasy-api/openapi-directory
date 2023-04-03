@@ -50,21 +50,17 @@ func (e *POSTSelectVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTSelectQueryParams struct {
+type POSTSelectRequest struct {
 	AWSAccessKeyID string               `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         POSTSelectActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
 	NextToken        *string               `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody      []byte                `request:"mediaType=text/xml"`
 	Signature        string                `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTSelectVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTSelectRequest struct {
-	QueryParams POSTSelectQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTSelectResponse struct {

@@ -33,7 +33,7 @@ func newAdmin(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AdminGetUser - Get a user by id
 func (s *admin) AdminGetUser(ctx context.Context, request operations.AdminGetUserRequest) (*operations.AdminGetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -77,14 +77,14 @@ func (s *admin) AdminGetUser(ctx context.Context, request operations.AdminGetUse
 // AdminListUsers - Get a list of users
 func (s *admin) AdminListUsers(ctx context.Context, request operations.AdminListUsersRequest) (*operations.AdminListUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/list/{flag}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/list/{flag}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -125,7 +125,7 @@ func (s *admin) AdminListUsers(ctx context.Context, request operations.AdminList
 // AnonymizeUser - Anonymize a user
 func (s *admin) AnonymizeUser(ctx context.Context, request operations.AnonymizeUserRequest) (*operations.AnonymizeUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/anonymize.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/anonymize.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -169,9 +169,9 @@ func (s *admin) AnonymizeUser(ctx context.Context, request operations.AnonymizeU
 // DeleteUser - Delete a user
 func (s *admin) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -220,7 +220,7 @@ func (s *admin) DeleteUser(ctx context.Context, request operations.DeleteUserReq
 // LogOutUser - Log a user out
 func (s *admin) LogOutUser(ctx context.Context, request operations.LogOutUserRequest) (*operations.LogOutUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/log_out.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/log_out.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -264,7 +264,7 @@ func (s *admin) LogOutUser(ctx context.Context, request operations.LogOutUserReq
 // RefreshGravatar - Refresh gravatar
 func (s *admin) RefreshGravatar(ctx context.Context, request operations.RefreshGravatarRequest) (*operations.RefreshGravatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_avatar/{username}/refresh_gravatar.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user_avatar/{username}/refresh_gravatar.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -308,9 +308,9 @@ func (s *admin) RefreshGravatar(ctx context.Context, request operations.RefreshG
 // SilenceUser - Silence a user
 func (s *admin) SilenceUser(ctx context.Context, request operations.SilenceUserRequest) (*operations.SilenceUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/silence.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/silence.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -359,9 +359,9 @@ func (s *admin) SilenceUser(ctx context.Context, request operations.SilenceUserR
 // SuspendUser - Suspend a user
 func (s *admin) SuspendUser(ctx context.Context, request operations.SuspendUserRequest) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/suspend.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/suspend.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

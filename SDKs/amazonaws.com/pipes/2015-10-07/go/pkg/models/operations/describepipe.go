@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribePipePathParams struct {
+type DescribePipeRequest struct {
 	// The name of the pipe.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type DescribePipeHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribePipeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribePipeRequest struct {
-	PathParams DescribePipePathParams
-	Headers    DescribePipeHeaders
 }
 
 type DescribePipeResponse struct {

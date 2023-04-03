@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRoleAliasesQueryParams struct {
-	// Return the list of role aliases in ascending alphabetical order.
-	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
-	// A marker used to get the next set of results.
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-	// The maximum number of results to return at one time.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListRoleAliasesHeaders struct {
+type ListRoleAliasesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListRoleAliasesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRoleAliasesRequest struct {
-	QueryParams ListRoleAliasesQueryParams
-	Headers     ListRoleAliasesHeaders
+	// Return the list of role aliases in ascending alphabetical order.
+	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
+	// A marker used to get the next set of results.
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
+	// The maximum number of results to return at one time.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type ListRoleAliasesResponse struct {

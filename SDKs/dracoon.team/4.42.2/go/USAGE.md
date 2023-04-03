@@ -13,18 +13,14 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
     req := operations.CompleteOpenIDLoginRequest{
-        QueryParams: operations.CompleteOpenIDLoginQueryParams{
-            Code: "corrupti",
-            IDToken: "provident",
-            State: "distinctio",
-        },
+        Code: "corrupti",
+        IDToken: "provident",
+        State: "distinctio",
     }
 
     ctx := context.Background()

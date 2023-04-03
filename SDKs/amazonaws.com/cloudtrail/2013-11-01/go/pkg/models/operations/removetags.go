@@ -30,7 +30,8 @@ func (e *RemoveTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RemoveTagsHeaders struct {
+type RemoveTagsRequest struct {
+	RemoveTagsRequest shared.RemoveTagsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type RemoveTagsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        RemoveTagsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type RemoveTagsRequest struct {
-	Headers RemoveTagsHeaders
-	Request shared.RemoveTagsRequest `request:"mediaType=application/json"`
 }
 
 type RemoveTagsResponse struct {

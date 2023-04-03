@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type InterferenceSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
-type InterferenceQueryParams struct {
+type InterferenceRequest struct {
 	// Interference layer name eg. QRM_map
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// Network name eg. Overlapping broadcast stations
 	Network string `queryParam:"style=form,explode=true,name=network"`
-}
-
-type InterferenceRequest struct {
-	QueryParams InterferenceQueryParams
-	Security    InterferenceSecurity
 }
 
 type InterferenceResponse struct {

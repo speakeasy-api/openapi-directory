@@ -30,7 +30,8 @@ func (e *DescribeSubscriptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeSubscriptionHeaders struct {
+type DescribeSubscriptionRequest struct {
+	RequestBody       map[string]interface{}             `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DescribeSubscriptionHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeSubscriptionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeSubscriptionRequest struct {
-	Headers DescribeSubscriptionHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DescribeSubscriptionResponse struct {

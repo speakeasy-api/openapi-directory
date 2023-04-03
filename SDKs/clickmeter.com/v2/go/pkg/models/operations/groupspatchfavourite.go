@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPatchFavouritePathParams struct {
+type GroupsPatchFavouriteRequest struct {
 	// Id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsPatchFavouriteRequest struct {
-	PathParams GroupsPatchFavouritePathParams
 }
 
 type GroupsPatchFavouriteResponse struct {

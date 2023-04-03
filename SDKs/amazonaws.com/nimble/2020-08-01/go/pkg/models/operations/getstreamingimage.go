@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStreamingImagePathParams struct {
-	// The streaming image ID.
-	StreamingImageID string `pathParam:"style=simple,explode=false,name=streamingImageId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetStreamingImageHeaders struct {
+type GetStreamingImageRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetStreamingImageHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStreamingImageRequest struct {
-	PathParams GetStreamingImagePathParams
-	Headers    GetStreamingImageHeaders
+	// The streaming image ID.
+	StreamingImageID string `pathParam:"style=simple,explode=false,name=streamingImageId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetStreamingImageResponse struct {

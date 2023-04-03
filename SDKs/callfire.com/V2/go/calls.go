@@ -35,11 +35,11 @@ func newCalls(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // AddCallBroadcastBatch - Add batches to a call broadcast
 // The 'add batch' API allows user to add additional batches to an already created voice broadcast campaign. The added batch will go through the CallFire validation process, unlike in the recipients version of this API. That is why you can use the scrubDuplicates flag to remove duplicates from your batch. Batches may be added as a contact list id, a list of contact ids, or a list of numbers
-func (s *calls) AddCallBroadcastBatch(ctx context.Context, request operations.AddCallBroadcastBatchRequest) (*operations.AddCallBroadcastBatchResponse, error) {
+func (s *calls) AddCallBroadcastBatch(ctx context.Context, request operations.AddCallBroadcastBatchRequest, security operations.AddCallBroadcastBatchSecurity) (*operations.AddCallBroadcastBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -51,11 +51,11 @@ func (s *calls) AddCallBroadcastBatch(ctx context.Context, request operations.Ad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -109,11 +109,11 @@ func (s *calls) AddCallBroadcastBatch(ctx context.Context, request operations.Ad
 
 // AddCallBroadcastRecipients - Add recipients to a call broadcast
 // Use this API to add the recipients to an existing voice broadcast. Post a list of Recipient objects to be added to the voice broadcast campaign. These contacts will not go through validation process, and will be acted upon as they are added. Recipients may be added as a list of contact ids, or list of numbers
-func (s *calls) AddCallBroadcastRecipients(ctx context.Context, request operations.AddCallBroadcastRecipientsRequest) (*operations.AddCallBroadcastRecipientsResponse, error) {
+func (s *calls) AddCallBroadcastRecipients(ctx context.Context, request operations.AddCallBroadcastRecipientsRequest, security operations.AddCallBroadcastRecipientsSecurity) (*operations.AddCallBroadcastRecipientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/recipients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/recipients", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -125,11 +125,11 @@ func (s *calls) AddCallBroadcastRecipients(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,16 +183,16 @@ func (s *calls) AddCallBroadcastRecipients(ctx context.Context, request operatio
 
 // ArchiveVoiceBroadcast - Archive voice broadcast
 // Archives a voice broadcast (voice broadcast will be hidden in search results)
-func (s *calls) ArchiveVoiceBroadcast(ctx context.Context, request operations.ArchiveVoiceBroadcastRequest) (*operations.ArchiveVoiceBroadcastResponse, error) {
+func (s *calls) ArchiveVoiceBroadcast(ctx context.Context, request operations.ArchiveVoiceBroadcastRequest, security operations.ArchiveVoiceBroadcastSecurity) (*operations.ArchiveVoiceBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,11 +236,11 @@ func (s *calls) ArchiveVoiceBroadcast(ctx context.Context, request operations.Ar
 
 // CreateCallBroadcast - Create a call broadcast
 // Creates a call broadcast campaign using the Call Broadcast API. Send a CallBroadcast in the message body to add details in a voice broadcast campaign. The campaign can be created without contacts and bare minimum configuration, but contacts will have to be added further on to use the campaign
-func (s *calls) CreateCallBroadcast(ctx context.Context, request operations.CreateCallBroadcastRequest) (*operations.CreateCallBroadcastResponse, error) {
+func (s *calls) CreateCallBroadcast(ctx context.Context, request operations.CreateCallBroadcastRequest, security operations.CreateCallBroadcastSecurity) (*operations.CreateCallBroadcastResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calls/broadcasts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallBroadcastInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -252,11 +252,11 @@ func (s *calls) CreateCallBroadcast(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -310,7 +310,7 @@ func (s *calls) CreateCallBroadcast(ctx context.Context, request operations.Crea
 
 // FindCallBroadcasts - Find call broadcasts
 // Searches for all voice broadcasts created by user. Can query on label, name, and the current running status of the campaign. Returns a paged list of voice broadcasts
-func (s *calls) FindCallBroadcasts(ctx context.Context, request operations.FindCallBroadcastsRequest) (*operations.FindCallBroadcastsResponse, error) {
+func (s *calls) FindCallBroadcasts(ctx context.Context, request operations.FindCallBroadcastsRequest, security operations.FindCallBroadcastsSecurity) (*operations.FindCallBroadcastsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calls/broadcasts"
 
@@ -319,11 +319,11 @@ func (s *calls) FindCallBroadcasts(ctx context.Context, request operations.FindC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,7 +377,7 @@ func (s *calls) FindCallBroadcasts(ctx context.Context, request operations.FindC
 
 // FindCalls - Find calls
 // To search for all calls sent or received by the user. Use "id=0" for the campaignId parameter to query for all calls sent through the POST /calls API. See [call states and results](https://developers.callfire.com/results-responses-errors.html)
-func (s *calls) FindCalls(ctx context.Context, request operations.FindCallsRequest) (*operations.FindCallsResponse, error) {
+func (s *calls) FindCalls(ctx context.Context, request operations.FindCallsRequest, security operations.FindCallsSecurity) (*operations.FindCallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calls"
 
@@ -386,11 +386,11 @@ func (s *calls) FindCalls(ctx context.Context, request operations.FindCallsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -444,20 +444,20 @@ func (s *calls) FindCalls(ctx context.Context, request operations.FindCallsReque
 
 // GetCall - Find a specific call
 // Returns a single Call instance for a given call id.
-func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest) (*operations.GetCallResponse, error) {
+func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest, security operations.GetCallSecurity) (*operations.GetCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -511,20 +511,20 @@ func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest) 
 
 // GetCallBroadcast - Find a specific call broadcast
 // Returns a single CallBroadcast instance for a given call broadcast campaign id
-func (s *calls) GetCallBroadcast(ctx context.Context, request operations.GetCallBroadcastRequest) (*operations.GetCallBroadcastResponse, error) {
+func (s *calls) GetCallBroadcast(ctx context.Context, request operations.GetCallBroadcastRequest, security operations.GetCallBroadcastSecurity) (*operations.GetCallBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -578,20 +578,20 @@ func (s *calls) GetCallBroadcast(ctx context.Context, request operations.GetCall
 
 // GetCallBroadcastBatches - Find batches in a call broadcast
 // This endpoint will enable the user to page through all of the batches for a particular voice broadcast campaign
-func (s *calls) GetCallBroadcastBatches(ctx context.Context, request operations.GetCallBroadcastBatchesRequest) (*operations.GetCallBroadcastBatchesResponse, error) {
+func (s *calls) GetCallBroadcastBatches(ctx context.Context, request operations.GetCallBroadcastBatchesRequest, security operations.GetCallBroadcastBatchesSecurity) (*operations.GetCallBroadcastBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -645,20 +645,20 @@ func (s *calls) GetCallBroadcastBatches(ctx context.Context, request operations.
 
 // GetCallBroadcastCalls - Find calls in a call broadcast
 // This endpoint will enable the user to page through all calls for a particular call broadcast campaign
-func (s *calls) GetCallBroadcastCalls(ctx context.Context, request operations.GetCallBroadcastCallsRequest) (*operations.GetCallBroadcastCallsResponse, error) {
+func (s *calls) GetCallBroadcastCalls(ctx context.Context, request operations.GetCallBroadcastCallsRequest, security operations.GetCallBroadcastCallsSecurity) (*operations.GetCallBroadcastCallsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/calls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/calls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -712,20 +712,20 @@ func (s *calls) GetCallBroadcastCalls(ctx context.Context, request operations.Ge
 
 // GetCallBroadcastStats - Get statistics on call broadcast
 // Returns broadcast statistics like total number of sent/received actions, total cost, number of remaining outbound actions, error count, etc
-func (s *calls) GetCallBroadcastStats(ctx context.Context, request operations.GetCallBroadcastStatsRequest) (*operations.GetCallBroadcastStatsResponse, error) {
+func (s *calls) GetCallBroadcastStats(ctx context.Context, request operations.GetCallBroadcastStatsRequest, security operations.GetCallBroadcastStatsSecurity) (*operations.GetCallBroadcastStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -779,20 +779,20 @@ func (s *calls) GetCallBroadcastStats(ctx context.Context, request operations.Ge
 
 // GetCallRecording - Get call recording by id
 // Returns metadata of recording of a particular call. Metadata contains a link to a MP3 recording
-func (s *calls) GetCallRecording(ctx context.Context, request operations.GetCallRecordingRequest) (*operations.GetCallRecordingResponse, error) {
+func (s *calls) GetCallRecording(ctx context.Context, request operations.GetCallRecordingRequest, security operations.GetCallRecordingSecurity) (*operations.GetCallRecordingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -846,20 +846,20 @@ func (s *calls) GetCallRecording(ctx context.Context, request operations.GetCall
 
 // GetCallRecordingByName - Get call recording by name
 // Returns recording metadata of particular call. Metadata contains link to a MP3 recording
-func (s *calls) GetCallRecordingByName(ctx context.Context, request operations.GetCallRecordingByNameRequest) (*operations.GetCallRecordingByNameResponse, error) {
+func (s *calls) GetCallRecordingByName(ctx context.Context, request operations.GetCallRecordingByNameRequest, security operations.GetCallRecordingByNameSecurity) (*operations.GetCallRecordingByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -913,16 +913,16 @@ func (s *calls) GetCallRecordingByName(ctx context.Context, request operations.G
 
 // GetCallRecordingMp3 - Get call recording in mp3 format
 // Returns an MP3 recording of particular call, response contains binary data, content type is 'audio/mpeg'
-func (s *calls) GetCallRecordingMp3(ctx context.Context, request operations.GetCallRecordingMp3Request) (*operations.GetCallRecordingMp3Response, error) {
+func (s *calls) GetCallRecordingMp3(ctx context.Context, request operations.GetCallRecordingMp3Request, security operations.GetCallRecordingMp3Security) (*operations.GetCallRecordingMp3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}.mp3", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}.mp3", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -976,16 +976,16 @@ func (s *calls) GetCallRecordingMp3(ctx context.Context, request operations.GetC
 
 // GetCallRecordingMp3ByName - Get call mp3 recording by name
 // Returns a MP3 recording of a particular call, response contains binary data, content type is 'audio/mpeg'
-func (s *calls) GetCallRecordingMp3ByName(ctx context.Context, request operations.GetCallRecordingMp3ByNameRequest) (*operations.GetCallRecordingMp3ByNameResponse, error) {
+func (s *calls) GetCallRecordingMp3ByName(ctx context.Context, request operations.GetCallRecordingMp3ByNameRequest, security operations.GetCallRecordingMp3ByNameSecurity) (*operations.GetCallRecordingMp3ByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}.mp3", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}.mp3", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1031,20 +1031,20 @@ func (s *calls) GetCallRecordingMp3ByName(ctx context.Context, request operation
 
 // GetCallRecordings - Get call recordings for a call
 // Returns a list of recordings metadata of particular call. Metadata contains link to a MP3 recording
-func (s *calls) GetCallRecordings(ctx context.Context, request operations.GetCallRecordingsRequest) (*operations.GetCallRecordingsResponse, error) {
+func (s *calls) GetCallRecordings(ctx context.Context, request operations.GetCallRecordingsRequest, security operations.GetCallRecordingsSecurity) (*operations.GetCallRecordingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1098,11 +1098,11 @@ func (s *calls) GetCallRecordings(ctx context.Context, request operations.GetCal
 
 // SendCalls - Send calls
 // Use the /calls API to send individual calls quickly. A verified Caller ID and sufficient credits are required to make a call. CallRecipient represents a single recipient identified by phone number or contact id in CallFire system. You can attach user-defined attributes to a Call action via CallRecipient.attributes property, attributes are available in Call action response
-func (s *calls) SendCalls(ctx context.Context, request operations.SendCallsRequest) (*operations.SendCallsResponse, error) {
+func (s *calls) SendCalls(ctx context.Context, request operations.SendCallsRequest, security operations.SendCallsSecurity) (*operations.SendCallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/calls"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1114,11 +1114,11 @@ func (s *calls) SendCalls(ctx context.Context, request operations.SendCallsReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1172,16 +1172,16 @@ func (s *calls) SendCalls(ctx context.Context, request operations.SendCallsReque
 
 // StartVoiceBroadcast - Start voice broadcast
 // Start a voice broadcast
-func (s *calls) StartVoiceBroadcast(ctx context.Context, request operations.StartVoiceBroadcastRequest) (*operations.StartVoiceBroadcastResponse, error) {
+func (s *calls) StartVoiceBroadcast(ctx context.Context, request operations.StartVoiceBroadcastRequest, security operations.StartVoiceBroadcastSecurity) (*operations.StartVoiceBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1225,16 +1225,16 @@ func (s *calls) StartVoiceBroadcast(ctx context.Context, request operations.Star
 
 // StopVoiceBroadcast - Stop voice broadcast
 // Stop a voice broadcast
-func (s *calls) StopVoiceBroadcast(ctx context.Context, request operations.StopVoiceBroadcastRequest) (*operations.StopVoiceBroadcastResponse, error) {
+func (s *calls) StopVoiceBroadcast(ctx context.Context, request operations.StopVoiceBroadcastRequest, security operations.StopVoiceBroadcastSecurity) (*operations.StopVoiceBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1278,11 +1278,11 @@ func (s *calls) StopVoiceBroadcast(ctx context.Context, request operations.StopV
 
 // ToggleCallBroadcastRecipientsStatus - Disable/enable undialed recipients in broadcast
 // This operation lets the user to disable/enable undialed recipients in created broadcast
-func (s *calls) ToggleCallBroadcastRecipientsStatus(ctx context.Context, request operations.ToggleCallBroadcastRecipientsStatusRequest) (*operations.ToggleCallBroadcastRecipientsStatusResponse, error) {
+func (s *calls) ToggleCallBroadcastRecipientsStatus(ctx context.Context, request operations.ToggleCallBroadcastRecipientsStatusRequest, security operations.ToggleCallBroadcastRecipientsStatusSecurity) (*operations.ToggleCallBroadcastRecipientsStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/toggleRecipientsStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/toggleRecipientsStatus", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1294,11 +1294,11 @@ func (s *calls) ToggleCallBroadcastRecipientsStatus(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1342,11 +1342,11 @@ func (s *calls) ToggleCallBroadcastRecipientsStatus(ctx context.Context, request
 
 // UpdateCallBroadcast - Update a call broadcast
 // This operation lets the user modify the configuration of a voice broadcast campaign after call broadcast campaign is created. See CallBroadcast for more information on what can/can't be updated on this API
-func (s *calls) UpdateCallBroadcast(ctx context.Context, request operations.UpdateCallBroadcastRequest) (*operations.UpdateCallBroadcastResponse, error) {
+func (s *calls) UpdateCallBroadcast(ctx context.Context, request operations.UpdateCallBroadcastRequest, security operations.UpdateCallBroadcastSecurity) (*operations.UpdateCallBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallBroadcastInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1358,11 +1358,11 @@ func (s *calls) UpdateCallBroadcast(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

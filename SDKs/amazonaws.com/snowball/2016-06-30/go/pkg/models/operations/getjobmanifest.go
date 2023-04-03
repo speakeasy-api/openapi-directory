@@ -30,20 +30,16 @@ func (e *GetJobManifestXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetJobManifestHeaders struct {
-	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetJobManifestXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetJobManifestRequest struct {
-	Headers GetJobManifestHeaders
-	Request shared.GetJobManifestRequest `request:"mediaType=application/json"`
+	GetJobManifestRequest shared.GetJobManifestRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            GetJobManifestXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetJobManifestResponse struct {

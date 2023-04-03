@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectUsernameProjectPathParams struct {
-	// XXXXXXXXX
-	//
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// XXXXXXXXX
-	//
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetProjectUsernameProjectQueryParams struct {
+type GetProjectUsernameProjectRequest struct {
 	// Restricts which builds are returned.
 	// Set to "completed", "successful", "failed", "running", or defaults to no filter.
 	//
@@ -27,11 +18,12 @@ type GetProjectUsernameProjectQueryParams struct {
 	// The API returns builds starting from this offset, defaults to 0.
 	//
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetProjectUsernameProjectRequest struct {
-	PathParams  GetProjectUsernameProjectPathParams
-	QueryParams GetProjectUsernameProjectQueryParams
+	// XXXXXXXXX
+	//
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// XXXXXXXXX
+	//
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetProjectUsernameProjectResponse struct {

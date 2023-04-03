@@ -36,7 +36,7 @@ func newTransfers(defaultClient, securityClient HTTPClient, serverURL, language,
 // Starts a transfer request to move funds within your balance platform, or send funds to a [transfer instrument](https://docs.adyen.com/api-explorer/#/legalentity/v1/post/transferInstruments). Adyen sends the outcome of the transfer request through webhooks.
 //
 // To use this endpoint, you need an additional role for your API credential and transfers must be enabled for the source balance account. Your Adyen contact will set these up for you.
-func (s *transfers) PostTransfers(ctx context.Context, request operations.PostTransfersRequest) (*operations.PostTransfersResponse, error) {
+func (s *transfers) PostTransfers(ctx context.Context, request shared.TransferInfoOld, security operations.PostTransfersSecurity) (*operations.PostTransfersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transfers"
 
@@ -52,7 +52,7 @@ func (s *transfers) PostTransfers(ctx context.Context, request operations.PostTr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newEmail(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // EmailSendEmailStatement - Sends a Statement email.
 // If "toAddress" is not empty then email will be sent to this address. Otherwise email will be sent to Statement Customer's address.
-func (s *email) EmailSendEmailStatement(ctx context.Context, request operations.EmailSendEmailStatementRequest) (*operations.EmailSendEmailStatementResponse, error) {
+func (s *email) EmailSendEmailStatement(ctx context.Context, request shared.EmailStatementDto) (*operations.EmailSendEmailStatementResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/sendEmailStatement"
 
@@ -88,7 +89,7 @@ func (s *email) EmailSendEmailStatement(ctx context.Context, request operations.
 
 // EmailSendQuote - Sends a Quote email.
 // If "toAddress" is not empty then email will be sent to this address. Otherwise email will be sent to Statement Customer's address.
-func (s *email) EmailSendQuote(ctx context.Context, request operations.EmailSendQuoteRequest) (*operations.EmailSendQuoteResponse, error) {
+func (s *email) EmailSendQuote(ctx context.Context, request shared.EmailQuoteDto) (*operations.EmailSendQuoteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/sendQuote"
 
@@ -143,7 +144,7 @@ func (s *email) EmailSendQuote(ctx context.Context, request operations.EmailSend
 
 // EmailSendSalesInvoice - Sends a Sales Invoice email.
 // If "toAddress" is not empty then email will be sent to this address. Otherwise email will be sent to Sales Invoice Customer's address.
-func (s *email) EmailSendSalesInvoice(ctx context.Context, request operations.EmailSendSalesInvoiceRequest) (*operations.EmailSendSalesInvoiceResponse, error) {
+func (s *email) EmailSendSalesInvoice(ctx context.Context, request shared.SalesInvoiceEmailInfoDto) (*operations.EmailSendSalesInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/sendSalesInvoice"
 

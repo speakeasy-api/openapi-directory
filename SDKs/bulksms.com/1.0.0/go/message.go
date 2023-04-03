@@ -67,7 +67,7 @@ func newMessage(defaultClient, securityClient HTTPClient, serverURL, language, s
 // | status.id| String  |  | See the message `status.id` field for more information. `filter=status.id%3DFAILED.EXPIRED`|
 // | submission.date | String | Formatted Date | A fully specified date (e.g. 2017-01-01T10:00:00+01:00).  Use this field with `<=`, `<`, `>` or `>=` to limit the values. <br/>`filter=submission.date%3E%3D2017-01-01T10%3A00%3A00%2B01%3A00` |
 // | userSuppliedId  | String | | Use a string value you specified in the `userSuppliedId` property when you sent the message. Only `SENT` messages will be retrieved. <br/>`filter=userSuppliedId%3Dacc009876` |
-func (s *message) GetMessages(ctx context.Context, request operations.GetMessagesRequest) (*operations.GetMessagesResponse, error) {
+func (s *message) GetMessages(ctx context.Context, request operations.GetMessagesRequest, security operations.GetMessagesSecurity) (*operations.GetMessagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/messages"
 
@@ -76,11 +76,11 @@ func (s *message) GetMessages(ctx context.Context, request operations.GetMessage
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,7 @@ func (s *message) GetMessages(ctx context.Context, request operations.GetMessage
 //
 // to=%2b27000000000&body=Hello+World
 // ```
-func (s *message) GetMessagesSend(ctx context.Context, request operations.GetMessagesSendRequest) (*operations.GetMessagesSendResponse, error) {
+func (s *message) GetMessagesSend(ctx context.Context, request operations.GetMessagesSendRequest, security operations.GetMessagesSendSecurity) (*operations.GetMessagesSendResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/messages/send"
 
@@ -153,11 +153,11 @@ func (s *message) GetMessagesSend(ctx context.Context, request operations.GetMes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -210,7 +210,7 @@ func (s *message) GetMessagesSend(ctx context.Context, request operations.GetMes
 // ```
 func (s *message) GetMessagesID(ctx context.Context, request operations.GetMessagesIDRequest) (*operations.GetMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,16 +267,16 @@ func (s *message) GetMessagesID(ctx context.Context, request operations.GetMessa
 // Get the messages related to a sent message identified by `id`.
 //
 // For more information how this work, see the `relatedSentMessageId` field in the message.
-func (s *message) GetMessagesIDRelatedReceivedMessages(ctx context.Context, request operations.GetMessagesIDRelatedReceivedMessagesRequest) (*operations.GetMessagesIDRelatedReceivedMessagesResponse, error) {
+func (s *message) GetMessagesIDRelatedReceivedMessages(ctx context.Context, request operations.GetMessagesIDRelatedReceivedMessagesRequest, security operations.GetMessagesIDRelatedReceivedMessagesSecurity) (*operations.GetMessagesIDRelatedReceivedMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}/relatedReceivedMessages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}/relatedReceivedMessages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -382,11 +382,11 @@ func (s *message) GetMessagesIDRelatedReceivedMessages(ctx context.Context, requ
 //	}
 //
 // ```
-func (s *message) PostMessages(ctx context.Context, request operations.PostMessagesRequest) (*operations.PostMessagesResponse, error) {
+func (s *message) PostMessages(ctx context.Context, request operations.PostMessagesRequest, security operations.PostMessagesSecurity) (*operations.PostMessagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/messages"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -401,11 +401,11 @@ func (s *message) PostMessages(ctx context.Context, request operations.PostMessa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

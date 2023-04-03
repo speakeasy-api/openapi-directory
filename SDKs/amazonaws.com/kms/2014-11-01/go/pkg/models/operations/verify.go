@@ -30,7 +30,8 @@ func (e *VerifyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type VerifyHeaders struct {
+type VerifyRequest struct {
+	VerifyRequest     shared.VerifyRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type VerifyHeaders struct {
 	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        VerifyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type VerifyRequest struct {
-	Headers VerifyHeaders
-	Request shared.VerifyRequest `request:"mediaType=application/json"`
 }
 
 type VerifyResponse struct {

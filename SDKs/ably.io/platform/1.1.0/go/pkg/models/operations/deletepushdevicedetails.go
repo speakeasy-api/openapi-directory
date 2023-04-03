@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePushDeviceDetailsQueryParams struct {
+type DeletePushDeviceDetailsRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
 	// Filter to restrict to subscriptions associated with that channel.
 	Channel *string `queryParam:"style=form,explode=true,name=channel"`
 	// Must be set when deviceId is empty, cannot be used with deviceId.
@@ -16,16 +18,6 @@ type DeletePushDeviceDetailsQueryParams struct {
 	DeviceID *string `queryParam:"style=form,explode=true,name=deviceId"`
 	// The response format you would like
 	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type DeletePushDeviceDetailsHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type DeletePushDeviceDetailsRequest struct {
-	QueryParams DeletePushDeviceDetailsQueryParams
-	Headers     DeletePushDeviceDetailsHeaders
 }
 
 type DeletePushDeviceDetailsResponse struct {

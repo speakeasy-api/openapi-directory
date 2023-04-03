@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelCatalogExclusionFiltersPathParams struct {
+type GetChannelCatalogExclusionFiltersRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type GetChannelCatalogExclusionFiltersRequest struct {
-	PathParams GetChannelCatalogExclusionFiltersPathParams
 }
 
 type GetChannelCatalogExclusionFiltersResponse struct {

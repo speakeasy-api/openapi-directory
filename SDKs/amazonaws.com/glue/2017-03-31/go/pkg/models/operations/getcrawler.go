@@ -30,7 +30,8 @@ func (e *GetCrawlerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCrawlerHeaders struct {
+type GetCrawlerRequest struct {
+	GetCrawlerRequest shared.GetCrawlerRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetCrawlerHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetCrawlerXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetCrawlerRequest struct {
-	Headers GetCrawlerHeaders
-	Request shared.GetCrawlerRequest `request:"mediaType=application/json"`
 }
 
 type GetCrawlerResponse struct {

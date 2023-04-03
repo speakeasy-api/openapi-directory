@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListConflictingAliases20200531QueryParams struct {
+type ListConflictingAliases20200531Request struct {
 	// The alias (also called a CNAME) to search for conflicting aliases.
 	Alias string `queryParam:"style=form,explode=true,name=Alias"`
 	// The ID of a distribution in your account that has an attached SSL/TLS certificate that includes the provided alias.
@@ -14,10 +14,7 @@ type ListConflictingAliases20200531QueryParams struct {
 	// Use this field when paginating results to indicate where to begin in the list of conflicting aliases. The response includes conflicting aliases in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of conflicting aliases that you want in the response.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListConflictingAliases20200531Headers struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,11 +22,6 @@ type ListConflictingAliases20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConflictingAliases20200531Request struct {
-	QueryParams ListConflictingAliases20200531QueryParams
-	Headers     ListConflictingAliases20200531Headers
 }
 
 type ListConflictingAliases20200531Response struct {

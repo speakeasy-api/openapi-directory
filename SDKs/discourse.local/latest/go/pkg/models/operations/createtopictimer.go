@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateTopicTimerPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CreateTopicTimerHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type CreateTopicTimerRequestBody struct {
 	BasedOnLastPost *bool   `json:"based_on_last_post,omitempty"`
 	CategoryID      *int64  `json:"category_id,omitempty"`
@@ -23,9 +14,10 @@ type CreateTopicTimerRequestBody struct {
 }
 
 type CreateTopicTimerRequest struct {
-	PathParams CreateTopicTimerPathParams
-	Headers    CreateTopicTimerHeaders
-	Request    *CreateTopicTimerRequestBody `request:"mediaType=application/json"`
+	APIKey      string                       `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                       `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *CreateTopicTimerRequestBody `request:"mediaType=application/json"`
+	ID          string                       `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // CreateTopicTimer200ApplicationJSON - topic updated

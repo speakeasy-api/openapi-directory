@@ -50,30 +50,22 @@ func (e *GETRollbackStackVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRollbackStackQueryParams struct {
+type GETRollbackStackRequest struct {
 	Action GETRollbackStackActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier for this <code>RollbackStack</code> request.
 	ClientRequestToken *string `queryParam:"style=form,explode=true,name=ClientRequestToken"`
 	// The Amazon Resource Name (ARN) of an Identity and Access Management role that CloudFormation assumes to rollback the stack.
 	RoleARN *string `queryParam:"style=form,explode=true,name=RoleARN"`
 	// The name that's associated with the stack.
-	StackName string                      `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETRollbackStackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRollbackStackHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRollbackStackRequest struct {
-	QueryParams GETRollbackStackQueryParams
-	Headers     GETRollbackStackHeaders
+	StackName         string                      `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETRollbackStackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRollbackStackResponse struct {

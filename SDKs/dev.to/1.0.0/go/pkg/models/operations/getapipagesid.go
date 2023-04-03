@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIPagesIDPathParams struct {
+type GetAPIPagesIDRequest struct {
 	// The ID of the page.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPIPagesIDRequest struct {
-	PathParams GetAPIPagesIDPathParams
 }
 
 type GetAPIPagesIDResponse struct {

@@ -80,30 +80,22 @@ func (e *GETDescribeEnvironmentManagedActionsVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETDescribeEnvironmentManagedActionsQueryParams struct {
+type GETDescribeEnvironmentManagedActionsRequest struct {
 	Action GETDescribeEnvironmentManagedActionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The environment ID of the target environment.
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=EnvironmentId"`
 	// The name of the target environment.
 	EnvironmentName *string `queryParam:"style=form,explode=true,name=EnvironmentName"`
 	// To show only actions with a particular status, specify a status.
-	Status  *GETDescribeEnvironmentManagedActionsStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-	Version GETDescribeEnvironmentManagedActionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEnvironmentManagedActionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEnvironmentManagedActionsRequest struct {
-	QueryParams GETDescribeEnvironmentManagedActionsQueryParams
-	Headers     GETDescribeEnvironmentManagedActionsHeaders
+	Status            *GETDescribeEnvironmentManagedActionsStatusEnum `queryParam:"style=form,explode=true,name=Status"`
+	Version           GETDescribeEnvironmentManagedActionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEnvironmentManagedActionsResponse struct {

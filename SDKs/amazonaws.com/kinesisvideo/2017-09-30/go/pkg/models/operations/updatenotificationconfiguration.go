@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateNotificationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateNotificationConfigurationRequestBodyNotificationConfiguration - The structure that contains the notification information for the KVS images delivery. If this parameter is null, the configuration will be deleted from the stream.
 type UpdateNotificationConfigurationRequestBodyNotificationConfiguration struct {
 	DestinationConfig *shared.NotificationDestinationConfig `json:"DestinationConfig,omitempty"`
@@ -33,8 +23,14 @@ type UpdateNotificationConfigurationRequestBody struct {
 }
 
 type UpdateNotificationConfigurationRequest struct {
-	Headers UpdateNotificationConfigurationHeaders
-	Request UpdateNotificationConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateNotificationConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateNotificationConfigurationResponse struct {

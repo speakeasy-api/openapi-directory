@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkforcesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListWorkforcesXAmzTargetEnum
 type ListWorkforcesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListWorkforcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListWorkforcesHeaders struct {
+type ListWorkforcesRequest struct {
+	ListWorkforcesRequest shared.ListWorkforcesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListWorkforcesHeaders struct {
 	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListWorkforcesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListWorkforcesRequest struct {
-	QueryParams ListWorkforcesQueryParams
-	Headers     ListWorkforcesHeaders
-	Request     shared.ListWorkforcesRequest `request:"mediaType=application/json"`
 }
 
 type ListWorkforcesResponse struct {

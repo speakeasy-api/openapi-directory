@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateSubscriptionSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdateSubscriptionPathParams struct {
-	// The identifier of the current subscription membership
-	// associated with the account.
-	//
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateSubscriptionQueryParams struct {
+type UpdateSubscriptionRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -41,6 +34,10 @@ type UpdateSubscriptionQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the current subscription membership
+	// associated with the account.
+	//
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -55,12 +52,6 @@ type UpdateSubscriptionQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The id of the plan to switch to if switching plans.
 	PlanID *string `queryParam:"style=form,explode=true,name=planId"`
-}
-
-type UpdateSubscriptionRequest struct {
-	PathParams  UpdateSubscriptionPathParams
-	QueryParams UpdateSubscriptionQueryParams
-	Security    UpdateSubscriptionSecurity
 }
 
 type UpdateSubscriptionResponse struct {

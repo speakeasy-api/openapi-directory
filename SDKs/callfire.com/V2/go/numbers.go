@@ -34,7 +34,7 @@ func newNumbers(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // FindNumberLeaseConfigs - Find lease configs
 // Searches for all number lease configs for the user. Returns a paged list of NumberConfig
-func (s *numbers) FindNumberLeaseConfigs(ctx context.Context, request operations.FindNumberLeaseConfigsRequest) (*operations.FindNumberLeaseConfigsResponse, error) {
+func (s *numbers) FindNumberLeaseConfigs(ctx context.Context, request operations.FindNumberLeaseConfigsRequest, security operations.FindNumberLeaseConfigsSecurity) (*operations.FindNumberLeaseConfigsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/leases/configs"
 
@@ -43,11 +43,11 @@ func (s *numbers) FindNumberLeaseConfigs(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *numbers) FindNumberLeaseConfigs(ctx context.Context, request operations
 
 // FindNumberLeases - Find leases
 // Searches for all numbers leased by account user. This API is useful for finding all numbers currently owned by the user. Returns a paged list of number leases.
-func (s *numbers) FindNumberLeases(ctx context.Context, request operations.FindNumberLeasesRequest) (*operations.FindNumberLeasesResponse, error) {
+func (s *numbers) FindNumberLeases(ctx context.Context, request operations.FindNumberLeasesRequest, security operations.FindNumberLeasesSecurity) (*operations.FindNumberLeasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/leases"
 
@@ -110,11 +110,11 @@ func (s *numbers) FindNumberLeases(ctx context.Context, request operations.FindN
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,7 +168,7 @@ func (s *numbers) FindNumberLeases(ctx context.Context, request operations.FindN
 
 // FindNumberRegions - Find number regions
 // Searches for region information. Use this API to obtain detailed region information that can be used to query for more specific phone numbers than a general query.
-func (s *numbers) FindNumberRegions(ctx context.Context, request operations.FindNumberRegionsRequest) (*operations.FindNumberRegionsResponse, error) {
+func (s *numbers) FindNumberRegions(ctx context.Context, request operations.FindNumberRegionsRequest, security operations.FindNumberRegionsSecurity) (*operations.FindNumberRegionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/regions"
 
@@ -177,11 +177,11 @@ func (s *numbers) FindNumberRegions(ctx context.Context, request operations.Find
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *numbers) FindNumberRegions(ctx context.Context, request operations.Find
 
 // FindNumbersLocal - Find local numbers
 // Searches for numbers available for purchase in CallFire local numbers catalog . At least one additional parameter is required. User may filter local numbers by their region information. If all numbers with desirable zip code is already busy search will return available numbers with nearest zip code.
-func (s *numbers) FindNumbersLocal(ctx context.Context, request operations.FindNumbersLocalRequest) (*operations.FindNumbersLocalResponse, error) {
+func (s *numbers) FindNumbersLocal(ctx context.Context, request operations.FindNumbersLocalRequest, security operations.FindNumbersLocalSecurity) (*operations.FindNumbersLocalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/local"
 
@@ -244,11 +244,11 @@ func (s *numbers) FindNumbersLocal(ctx context.Context, request operations.FindN
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -302,7 +302,7 @@ func (s *numbers) FindNumbersLocal(ctx context.Context, request operations.FindN
 
 // FindNumbersTollfree - Find tollfree numbers
 // Searches for the toll free numbers which are available for purchase in the CallFire catalog
-func (s *numbers) FindNumbersTollfree(ctx context.Context, request operations.FindNumbersTollfreeRequest) (*operations.FindNumbersTollfreeResponse, error) {
+func (s *numbers) FindNumbersTollfree(ctx context.Context, request operations.FindNumbersTollfreeRequest, security operations.FindNumbersTollfreeSecurity) (*operations.FindNumbersTollfreeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/numbers/tollfree"
 
@@ -311,11 +311,11 @@ func (s *numbers) FindNumbersTollfree(ctx context.Context, request operations.Fi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,20 +369,20 @@ func (s *numbers) FindNumbersTollfree(ctx context.Context, request operations.Fi
 
 // GetNumberLease - Find a specific lease
 // Returns a single NumberLease instance for a given number
-func (s *numbers) GetNumberLease(ctx context.Context, request operations.GetNumberLeaseRequest) (*operations.GetNumberLeaseResponse, error) {
+func (s *numbers) GetNumberLease(ctx context.Context, request operations.GetNumberLeaseRequest, security operations.GetNumberLeaseSecurity) (*operations.GetNumberLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -436,20 +436,20 @@ func (s *numbers) GetNumberLease(ctx context.Context, request operations.GetNumb
 
 // GetNumberLeaseConfig - Find a specific lease config
 // Returns a single NumberConfig instance for a given number lease
-func (s *numbers) GetNumberLeaseConfig(ctx context.Context, request operations.GetNumberLeaseConfigRequest) (*operations.GetNumberLeaseConfigResponse, error) {
+func (s *numbers) GetNumberLeaseConfig(ctx context.Context, request operations.GetNumberLeaseConfigRequest, security operations.GetNumberLeaseConfigSecurity) (*operations.GetNumberLeaseConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/configs/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/configs/{number}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -503,11 +503,11 @@ func (s *numbers) GetNumberLeaseConfig(ctx context.Context, request operations.G
 
 // UpdateNumberLease - Update a lease
 // Updates a number lease instance. Ability to turn on/off autoRenew and toggle call/text features for a particular number
-func (s *numbers) UpdateNumberLease(ctx context.Context, request operations.UpdateNumberLeaseRequest) (*operations.UpdateNumberLeaseResponse, error) {
+func (s *numbers) UpdateNumberLease(ctx context.Context, request operations.UpdateNumberLeaseRequest, security operations.UpdateNumberLeaseSecurity) (*operations.UpdateNumberLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NumberLeaseInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -519,7 +519,7 @@ func (s *numbers) UpdateNumberLease(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -563,11 +563,11 @@ func (s *numbers) UpdateNumberLease(ctx context.Context, request operations.Upda
 
 // UpdateNumberLeaseConfig - Update a lease config
 // Updates a phone number lease configuration. Use this API endpoint to add an Inbound IVR or Call Tracking feature to a CallFire phone number. Call tracking configuration allows you to track the incoming calls, to analyze and to respond customers using sms or voice replies. For more information see [call tracking page](https://www.callfire.com/products/call-tracking)
-func (s *numbers) UpdateNumberLeaseConfig(ctx context.Context, request operations.UpdateNumberLeaseConfigRequest) (*operations.UpdateNumberLeaseConfigResponse, error) {
+func (s *numbers) UpdateNumberLeaseConfig(ctx context.Context, request operations.UpdateNumberLeaseConfigRequest, security operations.UpdateNumberLeaseConfigSecurity) (*operations.UpdateNumberLeaseConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/configs/{number}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/numbers/leases/configs/{number}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NumberConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -579,7 +579,7 @@ func (s *numbers) UpdateNumberLeaseConfig(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

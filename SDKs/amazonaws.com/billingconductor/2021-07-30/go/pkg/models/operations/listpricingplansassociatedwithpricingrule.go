@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPricingPlansAssociatedWithPricingRuleQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListPricingPlansAssociatedWithPricingRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListPricingPlansAssociatedWithPricingRuleRequestBody struct {
 	//  The pricing plan billing period for which associations will be listed.
 	BillingPeriod *string `json:"BillingPeriod,omitempty"`
@@ -36,9 +19,18 @@ type ListPricingPlansAssociatedWithPricingRuleRequestBody struct {
 }
 
 type ListPricingPlansAssociatedWithPricingRuleRequest struct {
-	QueryParams ListPricingPlansAssociatedWithPricingRuleQueryParams
-	Headers     ListPricingPlansAssociatedWithPricingRuleHeaders
-	Request     ListPricingPlansAssociatedWithPricingRuleRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                              `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListPricingPlansAssociatedWithPricingRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListPricingPlansAssociatedWithPricingRuleResponse struct {

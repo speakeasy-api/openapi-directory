@@ -10,7 +10,7 @@ import (
 )
 
 type GetWatchedListSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetWatchedListOrderByEnum - What to order by.
@@ -39,7 +39,7 @@ func (e *GetWatchedListOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWatchedListQueryParams struct {
+type GetWatchedListRequest struct {
 	// Filter by whether an item has been fully watched (completed) or not.
 	//
 	// If `undefined` then both partially and fully watched items are returned.
@@ -98,11 +98,6 @@ type GetWatchedListQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetWatchedListRequest struct {
-	QueryParams GetWatchedListQueryParams
-	Security    GetWatchedListSecurity
 }
 
 type GetWatchedListResponse struct {

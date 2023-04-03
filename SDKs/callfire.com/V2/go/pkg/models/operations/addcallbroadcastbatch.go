@@ -8,25 +8,17 @@ import (
 )
 
 type AddCallBroadcastBatchSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type AddCallBroadcastBatchPathParams struct {
-	// An id of a call broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type AddCallBroadcastBatchQueryParams struct {
-	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
-	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type AddCallBroadcastBatchRequest struct {
-	PathParams  AddCallBroadcastBatchPathParams
-	QueryParams AddCallBroadcastBatchQueryParams
 	// A request object
-	Request  *shared.BatchRequest `request:"mediaType=application/json"`
-	Security AddCallBroadcastBatchSecurity
+	BatchRequest *shared.BatchRequest `request:"mediaType=application/json"`
+	// An id of a call broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
 }
 
 type AddCallBroadcastBatchResponse struct {

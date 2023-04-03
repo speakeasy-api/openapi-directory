@@ -48,7 +48,14 @@ func (e *ListExecutionsStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListExecutionsQueryParams struct {
+type ListExecutionsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of tasks to list per page.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// A pagination token to continue to the next page of tasks.
@@ -57,21 +64,6 @@ type ListExecutionsQueryParams struct {
 	State *ListExecutionsStateEnum `queryParam:"style=form,explode=true,name=state"`
 	// The ID of the task.
 	TaskID string `queryParam:"style=form,explode=true,name=taskId"`
-}
-
-type ListExecutionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListExecutionsRequest struct {
-	QueryParams ListExecutionsQueryParams
-	Headers     ListExecutionsHeaders
 }
 
 type ListExecutionsResponse struct {

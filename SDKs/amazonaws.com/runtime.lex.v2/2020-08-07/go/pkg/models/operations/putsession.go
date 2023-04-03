@@ -7,29 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutSessionPathParams struct {
-	// The alias identifier of the bot that receives the session data.
-	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
-	// The identifier of the bot that receives the session data.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The locale where the session is in use.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-	// The identifier of the session that receives the session data.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type PutSessionHeaders struct {
-	// <p>The message that Amazon Lex V2 returns in the response can be either text or speech depending on the value of this parameter. </p> <ul> <li> <p>If the value is <code>text/plain; charset=utf-8</code>, Amazon Lex V2 returns text in the response.</p> </li> </ul>
-	ResponseContentType *string `header:"style=simple,explode=false,name=ResponseContentType"`
-	XAmzAlgorithm       *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256   *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential      *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate            *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken   *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature       *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders   *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutSessionRequestBodySessionState - The state of the user's session with Amazon Lex V2.
 type PutSessionRequestBodySessionState struct {
 	ActiveContexts       []shared.ActiveContext `json:"activeContexts,omitempty"`
@@ -50,9 +27,24 @@ type PutSessionRequestBody struct {
 }
 
 type PutSessionRequest struct {
-	PathParams PutSessionPathParams
-	Headers    PutSessionHeaders
-	Request    PutSessionRequestBody `request:"mediaType=application/json"`
+	RequestBody PutSessionRequestBody `request:"mediaType=application/json"`
+	// <p>The message that Amazon Lex V2 returns in the response can be either text or speech depending on the value of this parameter. </p> <ul> <li> <p>If the value is <code>text/plain; charset=utf-8</code>, Amazon Lex V2 returns text in the response.</p> </li> </ul>
+	ResponseContentType *string `header:"style=simple,explode=false,name=ResponseContentType"`
+	XAmzAlgorithm       *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The alias identifier of the bot that receives the session data.
+	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
+	// The identifier of the bot that receives the session data.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The locale where the session is in use.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// The identifier of the session that receives the session data.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type PutSessionResponse struct {

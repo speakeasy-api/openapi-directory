@@ -50,30 +50,22 @@ func (e *GETCreateSpotDatafeedSubscriptionVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETCreateSpotDatafeedSubscriptionQueryParams struct {
+type GETCreateSpotDatafeedSubscriptionRequest struct {
 	Action GETCreateSpotDatafeedSubscriptionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Amazon S3 bucket in which to store the Spot Instance data feed. For more information about bucket names, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules">Rules for bucket naming</a> in the <i>Amazon S3 Developer Guide</i>.
 	Bucket string `queryParam:"style=form,explode=true,name=Bucket"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The prefix for the data feed file names.
-	Prefix  *string                                      `queryParam:"style=form,explode=true,name=Prefix"`
-	Version GETCreateSpotDatafeedSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateSpotDatafeedSubscriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateSpotDatafeedSubscriptionRequest struct {
-	QueryParams GETCreateSpotDatafeedSubscriptionQueryParams
-	Headers     GETCreateSpotDatafeedSubscriptionHeaders
+	Prefix            *string                                      `queryParam:"style=form,explode=true,name=Prefix"`
+	Version           GETCreateSpotDatafeedSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateSpotDatafeedSubscriptionResponse struct {

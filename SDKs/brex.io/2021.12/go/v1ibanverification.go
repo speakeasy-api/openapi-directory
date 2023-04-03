@@ -35,7 +35,7 @@ func newV1IbanVerification(defaultClient, securityClient HTTPClient, serverURL, 
 
 // IbanBasic - Checks validity of an IBAN number
 // Basic verification of an IBAN number validating its structure
-func (s *v1IbanVerification) IbanBasic(ctx context.Context, request operations.IbanBasicRequest) (*operations.IbanBasicResponse, error) {
+func (s *v1IbanVerification) IbanBasic(ctx context.Context, request operations.IbanBasicRequestBody, security operations.IbanBasicSecurity) (*operations.IbanBasicResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/iban-verification/check-iban"
 
@@ -54,7 +54,7 @@ func (s *v1IbanVerification) IbanBasic(ctx context.Context, request operations.I
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *v1IbanVerification) IbanBasic(ctx context.Context, request operations.I
 
 // IbanComprehensive - Checks validity of an IBAN number
 // Comprehensive verification of IBAN number using a service provider for verification
-func (s *v1IbanVerification) IbanComprehensive(ctx context.Context, request operations.IbanComprehensiveRequest) (*operations.IbanComprehensiveResponse, error) {
+func (s *v1IbanVerification) IbanComprehensive(ctx context.Context, request operations.IbanComprehensiveRequestBody, security operations.IbanComprehensiveSecurity) (*operations.IbanComprehensiveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/iban-verification/comprehensive-check-iban"
 
@@ -119,7 +119,7 @@ func (s *v1IbanVerification) IbanComprehensive(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

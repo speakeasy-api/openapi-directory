@@ -50,28 +50,20 @@ func (e *GETUpdateTerminationProtectionVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETUpdateTerminationProtectionQueryParams struct {
+type GETUpdateTerminationProtectionRequest struct {
 	Action GETUpdateTerminationProtectionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Whether to enable termination protection on the specified stack.
 	EnableTerminationProtection bool `queryParam:"style=form,explode=true,name=EnableTerminationProtection"`
 	// The name or unique ID of the stack for which you want to set termination protection.
-	StackName string                                    `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETUpdateTerminationProtectionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateTerminationProtectionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateTerminationProtectionRequest struct {
-	QueryParams GETUpdateTerminationProtectionQueryParams
-	Headers     GETUpdateTerminationProtectionHeaders
+	StackName         string                                    `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETUpdateTerminationProtectionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateTerminationProtectionResponse struct {

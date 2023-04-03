@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1DonationsShowSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAPIV1DonationsShowQueryParams struct {
-	// The id of a donation. Ids are returned when a donation is created.
-	ID string `queryParam:"style=form,explode=true,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetAPIV1DonationsShowRequest struct {
-	QueryParams GetAPIV1DonationsShowQueryParams
-	Security    GetAPIV1DonationsShowSecurity
+	// The id of a donation. Ids are returned when a donation is created.
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetAPIV1DonationsShowResponse struct {

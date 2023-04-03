@@ -13,37 +13,35 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchExecuteStatementRequest{
-        Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "RedshiftData.BatchExecuteStatement",
-        },
-        Request: shared.BatchExecuteStatementInput{
-            ClientToken: "illum",
-            ClusterIdentifier: "vel",
-            Database: "error",
-            DbUser: "deserunt",
-            SecretArn: "suscipit",
+        BatchExecuteStatementInput: shared.BatchExecuteStatementInput{
+            ClientToken: "corrupti",
+            ClusterIdentifier: "provident",
+            Database: "distinctio",
+            DbUser: "quibusdam",
+            SecretArn: "unde",
             Sqls: []string{
-                "magnam",
-                "debitis",
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
             },
-            StatementName: "ipsa",
+            StatementName: "deserunt",
             WithEvent: false,
-            WorkgroupName: "delectus",
+            WorkgroupName: "suscipit",
         },
+        XAmzAlgorithm: "iure",
+        XAmzContentSha256: "magnam",
+        XAmzCredential: "debitis",
+        XAmzDate: "ipsa",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "tempora",
+        XAmzSignedHeaders: "suscipit",
+        XAmzTarget: "RedshiftData.BatchExecuteStatement",
     }
 
     ctx := context.Background()

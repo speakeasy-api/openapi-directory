@@ -8,27 +8,18 @@ import (
 )
 
 type PatchMerchantsMerchantIDStoresReferenceTerminalLogosSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchMerchantsMerchantIDStoresReferenceTerminalLogosPathParams struct {
-	// The unique identifier of the merchant account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-	// The reference that identifies the store.
-	Reference string `pathParam:"style=simple,explode=false,name=reference"`
-}
-
-type PatchMerchantsMerchantIDStoresReferenceTerminalLogosQueryParams struct {
-	// The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T
-	Model string `queryParam:"style=form,explode=true,name=model"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchMerchantsMerchantIDStoresReferenceTerminalLogosRequest struct {
-	PathParams  PatchMerchantsMerchantIDStoresReferenceTerminalLogosPathParams
-	QueryParams PatchMerchantsMerchantIDStoresReferenceTerminalLogosQueryParams
-	Request     *shared.Logo `request:"mediaType=application/json"`
-	Security    PatchMerchantsMerchantIDStoresReferenceTerminalLogosSecurity
+	Logo *shared.Logo `request:"mediaType=application/json"`
+	// The unique identifier of the merchant account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
+	// The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T
+	Model string `queryParam:"style=form,explode=true,name=model"`
+	// The reference that identifies the store.
+	Reference string `pathParam:"style=simple,explode=false,name=reference"`
 }
 
 type PatchMerchantsMerchantIDStoresReferenceTerminalLogosResponse struct {

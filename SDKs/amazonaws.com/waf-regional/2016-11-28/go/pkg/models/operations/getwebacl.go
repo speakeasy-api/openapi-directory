@@ -30,7 +30,8 @@ func (e *GetWebACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWebACLHeaders struct {
+type GetWebACLRequest struct {
+	GetWebACLRequest  shared.GetWebACLRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetWebACLHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetWebACLXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetWebACLRequest struct {
-	Headers GetWebACLHeaders
-	Request shared.GetWebACLRequest `request:"mediaType=application/json"`
 }
 
 type GetWebACLResponse struct {

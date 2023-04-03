@@ -50,27 +50,19 @@ func (e *POSTDescribeTargetGroupsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeTargetGroupsQueryParams struct {
+type POSTDescribeTargetGroupsRequest struct {
 	Action POSTDescribeTargetGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
-	Marker  *string                             `queryParam:"style=form,explode=true,name=Marker"`
-	Version POSTDescribeTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeTargetGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeTargetGroupsRequest struct {
-	QueryParams POSTDescribeTargetGroupsQueryParams
-	Headers     POSTDescribeTargetGroupsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Marker            *string                             `queryParam:"style=form,explode=true,name=Marker"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTDescribeTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeTargetGroupsResponse struct {

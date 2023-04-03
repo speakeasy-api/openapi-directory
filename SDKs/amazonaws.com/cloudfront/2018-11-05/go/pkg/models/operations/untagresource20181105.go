@@ -29,22 +29,6 @@ func (e *UntagResource20181105OperationEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UntagResource20181105QueryParams struct {
-	Operation UntagResource20181105OperationEnum `queryParam:"style=form,explode=true,name=Operation"`
-	//  An ARN of a CloudFront resource.
-	Resource string `queryParam:"style=form,explode=true,name=Resource"`
-}
-
-type UntagResource20181105Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UntagResource20181105RequestBodyTagKeys -  A complex type that contains zero or more <code>Tag</code> elements.
 type UntagResource20181105RequestBodyTagKeys struct {
 	Items []string
@@ -56,9 +40,17 @@ type UntagResource20181105RequestBody struct {
 }
 
 type UntagResource20181105Request struct {
-	QueryParams UntagResource20181105QueryParams
-	Headers     UntagResource20181105Headers
-	Request     []byte `request:"mediaType=text/xml"`
+	Operation   UntagResource20181105OperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody []byte                             `request:"mediaType=text/xml"`
+	//  An ARN of a CloudFront resource.
+	Resource          string  `queryParam:"style=form,explode=true,name=Resource"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UntagResource20181105Response struct {

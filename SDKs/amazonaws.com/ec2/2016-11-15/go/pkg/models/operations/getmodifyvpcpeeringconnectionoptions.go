@@ -64,7 +64,7 @@ func (e *GETModifyVpcPeeringConnectionOptionsVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETModifyVpcPeeringConnectionOptionsQueryParams struct {
+type GETModifyVpcPeeringConnectionOptionsRequest struct {
 	// The VPC peering connection options for the accepter VPC.
 	AccepterPeeringConnectionOptions *GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions `queryParam:"style=form,explode=true,name=AccepterPeeringConnectionOptions"`
 	Action                           GETModifyVpcPeeringConnectionOptionsActionEnum                        `queryParam:"style=form,explode=true,name=Action"`
@@ -74,22 +74,14 @@ type GETModifyVpcPeeringConnectionOptionsQueryParams struct {
 	RequesterPeeringConnectionOptions *GETModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions `queryParam:"style=form,explode=true,name=RequesterPeeringConnectionOptions"`
 	Version                           GETModifyVpcPeeringConnectionOptionsVersionEnum                        `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC peering connection.
-	VpcPeeringConnectionID string `queryParam:"style=form,explode=true,name=VpcPeeringConnectionId"`
-}
-
-type GETModifyVpcPeeringConnectionOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpcPeeringConnectionOptionsRequest struct {
-	QueryParams GETModifyVpcPeeringConnectionOptionsQueryParams
-	Headers     GETModifyVpcPeeringConnectionOptionsHeaders
+	VpcPeeringConnectionID string  `queryParam:"style=form,explode=true,name=VpcPeeringConnectionId"`
+	XAmzAlgorithm          *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyVpcPeeringConnectionOptionsResponse struct {

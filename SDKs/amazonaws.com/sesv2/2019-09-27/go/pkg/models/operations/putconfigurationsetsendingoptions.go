@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type PutConfigurationSetSendingOptionsPathParams struct {
-	// The name of the configuration set to enable or disable email sending for.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type PutConfigurationSetSendingOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutConfigurationSetSendingOptionsRequestBody struct {
 	// If <code>true</code>, email sending is enabled for the configuration set. If <code>false</code>, email sending is disabled for the configuration set.
 	SendingEnabled *bool `json:"SendingEnabled,omitempty"`
 }
 
 type PutConfigurationSetSendingOptionsRequest struct {
-	PathParams PutConfigurationSetSendingOptionsPathParams
-	Headers    PutConfigurationSetSendingOptionsHeaders
-	Request    PutConfigurationSetSendingOptionsRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set to enable or disable email sending for.
+	ConfigurationSetName string                                       `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	RequestBody          PutConfigurationSetSendingOptionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutConfigurationSetSendingOptionsResponse struct {

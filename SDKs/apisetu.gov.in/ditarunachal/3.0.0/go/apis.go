@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Ilpmt - Inner Line Permit
 // API to verify Inner Line Permit.
-func (s *apIs) Ilpmt(ctx context.Context, request operations.IlpmtRequest) (*operations.IlpmtResponse, error) {
+func (s *apIs) Ilpmt(ctx context.Context, request operations.IlpmtRequestBody, security operations.IlpmtSecurity) (*operations.IlpmtResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ilpmt/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Ilpmt(ctx context.Context, request operations.IlpmtRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

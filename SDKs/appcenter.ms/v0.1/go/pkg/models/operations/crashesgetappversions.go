@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CrashesGetAppVersionsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashesGetAppVersionsPathParams struct {
+type CrashesGetAppVersionsRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashesGetAppVersionsRequest struct {
-	PathParams CrashesGetAppVersionsPathParams
-	Security   CrashesGetAppVersionsSecurity
 }
 
 // CrashesGetAppVersionsDefaultApplicationJSON - Error

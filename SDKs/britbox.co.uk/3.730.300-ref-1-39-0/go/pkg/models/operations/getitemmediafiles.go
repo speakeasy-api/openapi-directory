@@ -8,15 +8,10 @@ import (
 )
 
 type GetItemMediaFilesSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetItemMediaFilesPathParams struct {
-	// The identifier of the item whose video files to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetItemMediaFilesQueryParams struct {
+type GetItemMediaFilesRequest struct {
 	// The video delivery type you require.
 	Delivery []shared.MediaFileDeliveryEnum `queryParam:"style=form,explode=false,name=delivery"`
 	// The type of device the content is targeting.
@@ -52,6 +47,8 @@ type GetItemMediaFilesQueryParams struct {
 	// When not provided, Rocket API uses the legacy `User-Agent` header-based logic to find matching media files.
 	//
 	Formats []shared.MediaFileFormatsEnum `queryParam:"style=form,explode=false,name=formats"`
+	// The identifier of the item whose video files to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -70,12 +67,6 @@ type GetItemMediaFilesQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetItemMediaFilesRequest struct {
-	PathParams  GetItemMediaFilesPathParams
-	QueryParams GetItemMediaFilesQueryParams
-	Security    GetItemMediaFilesSecurity
 }
 
 type GetItemMediaFilesResponse struct {

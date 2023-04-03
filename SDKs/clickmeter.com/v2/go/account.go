@@ -36,7 +36,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 // AccountDeleteDomainWhitelist - Delete an domain entry
 func (s *account) AccountDeleteDomainWhitelist(ctx context.Context, request operations.AccountDeleteDomainWhitelistRequest) (*operations.AccountDeleteDomainWhitelistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/domainwhitelist/{whitelistId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/domainwhitelist/{whitelistId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -104,7 +104,7 @@ func (s *account) AccountDeleteDomainWhitelist(ctx context.Context, request oper
 // AccountDeleteGuest - Delete a guest
 func (s *account) AccountDeleteGuest(ctx context.Context, request operations.AccountDeleteGuestRequest) (*operations.AccountDeleteGuestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *account) AccountDeleteGuest(ctx context.Context, request operations.Acc
 // AccountDeleteIPBlacklist - Delete an ip blacklist entry
 func (s *account) AccountDeleteIPBlacklist(ctx context.Context, request operations.AccountDeleteIPBlacklistRequest) (*operations.AccountDeleteIPBlacklistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/ipblacklist/{blacklistId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/ipblacklist/{blacklistId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -315,7 +315,7 @@ func (s *account) AccountGetDomainWhitelist(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -366,7 +366,7 @@ func (s *account) AccountGetDomainWhitelist(ctx context.Context, request operati
 // AccountGetGuest - Retrieve a guest
 func (s *account) AccountGetGuest(ctx context.Context, request operations.AccountGetGuestRequest) (*operations.AccountGetGuestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -441,7 +441,7 @@ func (s *account) AccountGetGuests(ctx context.Context, request operations.Accou
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -499,7 +499,7 @@ func (s *account) AccountGetGuestsCount(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -571,7 +571,7 @@ func (s *account) AccountGetIPBlacklist(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -622,14 +622,14 @@ func (s *account) AccountGetIPBlacklist(ctx context.Context, request operations.
 // AccountGetPermissions - Retrieve permissions for a guest
 func (s *account) AccountGetPermissions(ctx context.Context, request operations.AccountGetPermissionsRequest) (*operations.AccountGetPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -680,14 +680,14 @@ func (s *account) AccountGetPermissions(ctx context.Context, request operations.
 // AccountGetPermissionsCount - Retrieve count of the permissions for a guest
 func (s *account) AccountGetPermissionsCount(ctx context.Context, request operations.AccountGetPermissionsCountRequest) (*operations.AccountGetPermissionsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -820,9 +820,9 @@ func (s *account) AccountGetPlan(ctx context.Context) (*operations.AccountGetPla
 // AccountPatchPermissionsForm - Change the permission on a shared object
 func (s *account) AccountPatchPermissionsForm(ctx context.Context, request operations.AccountPatchPermissionsFormRequest) (*operations.AccountPatchPermissionsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -898,9 +898,9 @@ func (s *account) AccountPatchPermissionsForm(ctx context.Context, request opera
 // AccountPatchPermissionsJSON - Change the permission on a shared object
 func (s *account) AccountPatchPermissionsJSON(ctx context.Context, request operations.AccountPatchPermissionsJSONRequest) (*operations.AccountPatchPermissionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -976,9 +976,9 @@ func (s *account) AccountPatchPermissionsJSON(ctx context.Context, request opera
 // AccountPatchPermissionsRaw - Change the permission on a shared object
 func (s *account) AccountPatchPermissionsRaw(ctx context.Context, request operations.AccountPatchPermissionsRawRequest) (*operations.AccountPatchPermissionsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1054,9 +1054,9 @@ func (s *account) AccountPatchPermissionsRaw(ctx context.Context, request operat
 // AccountPostGuestForm - Update a guest
 func (s *account) AccountPostGuestForm(ctx context.Context, request operations.AccountPostGuestFormRequest) (*operations.AccountPostGuestFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoAccountingGuest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1132,9 +1132,9 @@ func (s *account) AccountPostGuestForm(ctx context.Context, request operations.A
 // AccountPostGuestJSON - Update a guest
 func (s *account) AccountPostGuestJSON(ctx context.Context, request operations.AccountPostGuestJSONRequest) (*operations.AccountPostGuestJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoAccountingGuest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1210,9 +1210,9 @@ func (s *account) AccountPostGuestJSON(ctx context.Context, request operations.A
 // AccountPostGuestRaw - Update a guest
 func (s *account) AccountPostGuestRaw(ctx context.Context, request operations.AccountPostGuestRawRequest) (*operations.AccountPostGuestRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1286,7 +1286,7 @@ func (s *account) AccountPostGuestRaw(ctx context.Context, request operations.Ac
 }
 
 // AccountPostForm - Update current account data
-func (s *account) AccountPostForm(ctx context.Context, request operations.AccountPostFormRequest) (*operations.AccountPostFormResponse, error) {
+func (s *account) AccountPostForm(ctx context.Context, request shared.APICoreDtoAccountingUser) (*operations.AccountPostFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -1364,7 +1364,7 @@ func (s *account) AccountPostForm(ctx context.Context, request operations.Accoun
 }
 
 // AccountPostJSON - Update current account data
-func (s *account) AccountPostJSON(ctx context.Context, request operations.AccountPostJSONRequest) (*operations.AccountPostJSONResponse, error) {
+func (s *account) AccountPostJSON(ctx context.Context, request shared.APICoreDtoAccountingUser) (*operations.AccountPostJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -1442,7 +1442,7 @@ func (s *account) AccountPostJSON(ctx context.Context, request operations.Accoun
 }
 
 // AccountPostRaw - Update current account data
-func (s *account) AccountPostRaw(ctx context.Context, request operations.AccountPostRawRequest) (*operations.AccountPostRawResponse, error) {
+func (s *account) AccountPostRaw(ctx context.Context, request []byte) (*operations.AccountPostRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -1520,7 +1520,7 @@ func (s *account) AccountPostRaw(ctx context.Context, request operations.Account
 }
 
 // AccountPutDomainWhitelistForm - Create an domain entry
-func (s *account) AccountPutDomainWhitelistForm(ctx context.Context, request operations.AccountPutDomainWhitelistFormRequest) (*operations.AccountPutDomainWhitelistFormResponse, error) {
+func (s *account) AccountPutDomainWhitelistForm(ctx context.Context, request shared.APICoreDtoAccountingDomainWhitelistEntry) (*operations.AccountPutDomainWhitelistFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/domainwhitelist"
 
@@ -1598,7 +1598,7 @@ func (s *account) AccountPutDomainWhitelistForm(ctx context.Context, request ope
 }
 
 // AccountPutDomainWhitelistJSON - Create an domain entry
-func (s *account) AccountPutDomainWhitelistJSON(ctx context.Context, request operations.AccountPutDomainWhitelistJSONRequest) (*operations.AccountPutDomainWhitelistJSONResponse, error) {
+func (s *account) AccountPutDomainWhitelistJSON(ctx context.Context, request shared.APICoreDtoAccountingDomainWhitelistEntry) (*operations.AccountPutDomainWhitelistJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/domainwhitelist"
 
@@ -1676,7 +1676,7 @@ func (s *account) AccountPutDomainWhitelistJSON(ctx context.Context, request ope
 }
 
 // AccountPutDomainWhitelistRaw - Create an domain entry
-func (s *account) AccountPutDomainWhitelistRaw(ctx context.Context, request operations.AccountPutDomainWhitelistRawRequest) (*operations.AccountPutDomainWhitelistRawResponse, error) {
+func (s *account) AccountPutDomainWhitelistRaw(ctx context.Context, request []byte) (*operations.AccountPutDomainWhitelistRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/domainwhitelist"
 
@@ -1754,7 +1754,7 @@ func (s *account) AccountPutDomainWhitelistRaw(ctx context.Context, request oper
 }
 
 // AccountPutGuestForm - Create a guest
-func (s *account) AccountPutGuestForm(ctx context.Context, request operations.AccountPutGuestFormRequest) (*operations.AccountPutGuestFormResponse, error) {
+func (s *account) AccountPutGuestForm(ctx context.Context, request shared.APICoreDtoAccountingGuest) (*operations.AccountPutGuestFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/guests"
 
@@ -1832,7 +1832,7 @@ func (s *account) AccountPutGuestForm(ctx context.Context, request operations.Ac
 }
 
 // AccountPutGuestJSON - Create a guest
-func (s *account) AccountPutGuestJSON(ctx context.Context, request operations.AccountPutGuestJSONRequest) (*operations.AccountPutGuestJSONResponse, error) {
+func (s *account) AccountPutGuestJSON(ctx context.Context, request shared.APICoreDtoAccountingGuest) (*operations.AccountPutGuestJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/guests"
 
@@ -1910,7 +1910,7 @@ func (s *account) AccountPutGuestJSON(ctx context.Context, request operations.Ac
 }
 
 // AccountPutGuestRaw - Create a guest
-func (s *account) AccountPutGuestRaw(ctx context.Context, request operations.AccountPutGuestRawRequest) (*operations.AccountPutGuestRawResponse, error) {
+func (s *account) AccountPutGuestRaw(ctx context.Context, request []byte) (*operations.AccountPutGuestRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/guests"
 
@@ -1988,7 +1988,7 @@ func (s *account) AccountPutGuestRaw(ctx context.Context, request operations.Acc
 }
 
 // AccountPutIPBlacklistForm - Create an ip blacklist entry
-func (s *account) AccountPutIPBlacklistForm(ctx context.Context, request operations.AccountPutIPBlacklistFormRequest) (*operations.AccountPutIPBlacklistFormResponse, error) {
+func (s *account) AccountPutIPBlacklistForm(ctx context.Context, request shared.APICoreDtoAccountingIPBlacklistEntry) (*operations.AccountPutIPBlacklistFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/ipblacklist"
 
@@ -2066,7 +2066,7 @@ func (s *account) AccountPutIPBlacklistForm(ctx context.Context, request operati
 }
 
 // AccountPutIPBlacklistJSON - Create an ip blacklist entry
-func (s *account) AccountPutIPBlacklistJSON(ctx context.Context, request operations.AccountPutIPBlacklistJSONRequest) (*operations.AccountPutIPBlacklistJSONResponse, error) {
+func (s *account) AccountPutIPBlacklistJSON(ctx context.Context, request shared.APICoreDtoAccountingIPBlacklistEntry) (*operations.AccountPutIPBlacklistJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/ipblacklist"
 
@@ -2144,7 +2144,7 @@ func (s *account) AccountPutIPBlacklistJSON(ctx context.Context, request operati
 }
 
 // AccountPutIPBlacklistRaw - Create an ip blacklist entry
-func (s *account) AccountPutIPBlacklistRaw(ctx context.Context, request operations.AccountPutIPBlacklistRawRequest) (*operations.AccountPutIPBlacklistRawResponse, error) {
+func (s *account) AccountPutIPBlacklistRaw(ctx context.Context, request []byte) (*operations.AccountPutIPBlacklistRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/ipblacklist"
 
@@ -2224,9 +2224,9 @@ func (s *account) AccountPutIPBlacklistRaw(ctx context.Context, request operatio
 // PostAccountGuestsGuestIDTypePermissionsPatchForm - Change the permission on a shared object
 func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchForm(ctx context.Context, request operations.PostAccountGuestsGuestIDTypePermissionsPatchFormRequest) (*operations.PostAccountGuestsGuestIDTypePermissionsPatchFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2302,9 +2302,9 @@ func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchForm(ctx context.C
 // PostAccountGuestsGuestIDTypePermissionsPatchJSON - Change the permission on a shared object
 func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchJSON(ctx context.Context, request operations.PostAccountGuestsGuestIDTypePermissionsPatchJSONRequest) (*operations.PostAccountGuestsGuestIDTypePermissionsPatchJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2380,9 +2380,9 @@ func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchJSON(ctx context.C
 // PostAccountGuestsGuestIDTypePermissionsPatchRaw - Change the permission on a shared object
 func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchRaw(ctx context.Context, request operations.PostAccountGuestsGuestIDTypePermissionsPatchRawRequest) (*operations.PostAccountGuestsGuestIDTypePermissionsPatchRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

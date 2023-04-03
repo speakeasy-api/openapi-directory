@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SelectResourceConfigQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // SelectResourceConfigXAmzTargetEnum
 type SelectResourceConfigXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *SelectResourceConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SelectResourceConfigHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        SelectResourceConfigXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type SelectResourceConfigRequest struct {
-	QueryParams SelectResourceConfigQueryParams
-	Headers     SelectResourceConfigHeaders
-	Request     shared.SelectResourceConfigRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken                   *string                            `queryParam:"style=form,explode=true,name=NextToken"`
+	SelectResourceConfigRequest shared.SelectResourceConfigRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  SelectResourceConfigXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type SelectResourceConfigResponse struct {

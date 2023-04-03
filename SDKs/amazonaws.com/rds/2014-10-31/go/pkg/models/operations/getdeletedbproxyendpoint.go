@@ -50,26 +50,18 @@ func (e *GETDeleteDBProxyEndpointVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDBProxyEndpointQueryParams struct {
+type GETDeleteDBProxyEndpointRequest struct {
 	Action GETDeleteDBProxyEndpointActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the DB proxy endpoint to delete.
 	DBProxyEndpointName string                              `queryParam:"style=form,explode=true,name=DBProxyEndpointName"`
 	Version             GETDeleteDBProxyEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBProxyEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBProxyEndpointRequest struct {
-	QueryParams GETDeleteDBProxyEndpointQueryParams
-	Headers     GETDeleteDBProxyEndpointHeaders
+	XAmzAlgorithm       *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBProxyEndpointResponse struct {

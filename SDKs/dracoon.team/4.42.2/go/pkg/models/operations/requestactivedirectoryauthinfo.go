@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestActiveDirectoryAuthInfoQueryParams struct {
+type RequestActiveDirectoryAuthInfoRequest struct {
 	// Show only global available items
 	IsGlobalAvailable *bool `queryParam:"style=form,explode=true,name=is_global_available"`
-}
-
-type RequestActiveDirectoryAuthInfoRequest struct {
-	QueryParams RequestActiveDirectoryAuthInfoQueryParams
 }
 
 type RequestActiveDirectoryAuthInfoResponse struct {

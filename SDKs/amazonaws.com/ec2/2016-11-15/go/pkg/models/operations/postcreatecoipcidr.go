@@ -50,25 +50,17 @@ func (e *POSTCreateCoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateCoipCidrQueryParams struct {
-	Action  POSTCreateCoipCidrActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateCoipCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateCoipCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateCoipCidrRequest struct {
-	QueryParams POSTCreateCoipCidrQueryParams
-	Headers     POSTCreateCoipCidrHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateCoipCidrActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                        `request:"mediaType=text/xml"`
+	Version           POSTCreateCoipCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateCoipCidrResponse struct {

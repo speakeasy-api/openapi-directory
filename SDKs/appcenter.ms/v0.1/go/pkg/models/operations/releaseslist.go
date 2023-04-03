@@ -6,21 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesListPathParams struct {
+type ReleasesListRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ReleasesListQueryParams struct {
 	// When *true*, filters out releases that were uploaded but were never distributed. Releases that under deleted distribution groups will not be filtered out.
 	PublishedOnly *bool `queryParam:"style=form,explode=true,name=published_only"`
 	// The id of a release
@@ -29,12 +25,6 @@ type ReleasesListQueryParams struct {
 	Scope *string `queryParam:"style=form,explode=true,name=scope"`
 	// The number of releases to return
 	Top *float64 `queryParam:"style=form,explode=true,name=top"`
-}
-
-type ReleasesListRequest struct {
-	PathParams  ReleasesListPathParams
-	QueryParams ReleasesListQueryParams
-	Security    ReleasesListSecurity
 }
 
 // ReleasesList200ApplicationJSONBuild - Build information for the release

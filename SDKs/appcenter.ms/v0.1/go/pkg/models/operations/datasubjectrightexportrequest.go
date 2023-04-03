@@ -6,17 +6,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
-
-type DataSubjectRightExportRequestSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DataSubjectRightExportRequestRequest struct {
-	Security DataSubjectRightExportRequestSecurity
-}
 
 type DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum string
 

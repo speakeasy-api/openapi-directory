@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV1SalesCreditNotesIDPathParams struct {
+type GetV1SalesCreditNotesIDRequest struct {
 	// Id of Sales Credit Note to return.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV1SalesCreditNotesIDRequest struct {
-	PathParams GetV1SalesCreditNotesIDPathParams
 }
 
 type GetV1SalesCreditNotesIDResponse struct {

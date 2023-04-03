@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveNodeCommentPathParams struct {
-	// Comment ID
-	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
-}
-
-type RemoveNodeCommentHeaders struct {
+type RemoveNodeCommentRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveNodeCommentRequest struct {
-	PathParams RemoveNodeCommentPathParams
-	Headers    RemoveNodeCommentHeaders
+	// Comment ID
+	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 }
 
 type RemoveNodeCommentResponse struct {

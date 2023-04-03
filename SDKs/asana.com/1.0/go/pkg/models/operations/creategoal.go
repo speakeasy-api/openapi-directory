@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGoalQueryParams struct {
+// CreateGoalRequestBodyInput - The goal to create.
+type CreateGoalRequestBodyInput struct {
+	Data *shared.GoalRequestInput `json:"data,omitempty"`
+}
+
+type CreateGoalRequest struct {
+	// The goal to create.
+	RequestBody CreateGoalRequestBodyInput `request:"mediaType=application/json"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,17 +29,6 @@ type CreateGoalQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// CreateGoalRequestBodyInput - The goal to create.
-type CreateGoalRequestBodyInput struct {
-	Data *shared.GoalRequestInput `json:"data,omitempty"`
-}
-
-type CreateGoalRequest struct {
-	QueryParams CreateGoalQueryParams
-	// The goal to create.
-	Request CreateGoalRequestBodyInput `request:"mediaType=application/json"`
 }
 
 // CreateGoal201ApplicationJSON - Successfully created a new goal.

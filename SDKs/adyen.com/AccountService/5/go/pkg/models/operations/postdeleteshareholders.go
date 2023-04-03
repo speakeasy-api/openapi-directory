@@ -8,13 +8,8 @@ import (
 )
 
 type PostDeleteShareholdersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostDeleteShareholdersRequest struct {
-	Request  *shared.DeleteShareholderRequest `request:"mediaType=application/json"`
-	Security PostDeleteShareholdersSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostDeleteShareholdersResponse struct {

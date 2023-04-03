@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShipmentShipWithLabelJSONRequest struct {
-	// Details on the order and the shipping methods, that should be used.
-	Request shared.RechnungsdruckWebAppControllersAPIShipmentWithLabel `request:"mediaType=application/json"`
-}
-
 type ShipmentShipWithLabelJSONResponse struct {
 	Body        []byte
 	ContentType string

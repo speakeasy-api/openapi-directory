@@ -35,7 +35,7 @@ func newAuthentication(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // PostLogin - Log in to get an API token
 // Submit your email and password to get an API token
-func (s *authentication) PostLogin(ctx context.Context, request operations.PostLoginRequest) (*operations.PostLoginResponse, error) {
+func (s *authentication) PostLogin(ctx context.Context, request operations.PostLoginSample) (*operations.PostLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/login"
 

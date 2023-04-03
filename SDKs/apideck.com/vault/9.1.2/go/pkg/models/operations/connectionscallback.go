@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConnectionsCallbackQueryParams struct {
+type ConnectionsCallbackRequest struct {
 	// An authorization code from the connector which Apideck Vault will later exchange for an access token.
 	Code string `queryParam:"style=form,explode=true,name=code"`
 	// An opaque value the applications adds to the initial request that the authorization server includes when redirecting the back to the application. This value must be used by the application to prevent CSRF attacks.
 	State string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ConnectionsCallbackRequest struct {
-	QueryParams ConnectionsCallbackQueryParams
 }
 
 type ConnectionsCallbackResponse struct {

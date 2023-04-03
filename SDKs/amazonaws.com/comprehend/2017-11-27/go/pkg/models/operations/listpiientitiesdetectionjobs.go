@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPiiEntitiesDetectionJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListPiiEntitiesDetectionJobsXAmzTargetEnum
 type ListPiiEntitiesDetectionJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListPiiEntitiesDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListPiiEntitiesDetectionJobsHeaders struct {
+type ListPiiEntitiesDetectionJobsRequest struct {
+	ListPiiEntitiesDetectionJobsRequest shared.ListPiiEntitiesDetectionJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListPiiEntitiesDetectionJobsHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListPiiEntitiesDetectionJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListPiiEntitiesDetectionJobsRequest struct {
-	QueryParams ListPiiEntitiesDetectionJobsQueryParams
-	Headers     ListPiiEntitiesDetectionJobsHeaders
-	Request     shared.ListPiiEntitiesDetectionJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListPiiEntitiesDetectionJobsResponse struct {

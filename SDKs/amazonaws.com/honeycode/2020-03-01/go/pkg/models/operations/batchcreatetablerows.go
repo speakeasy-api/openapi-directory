@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchCreateTableRowsPathParams struct {
-	// <p>The ID of the table where the new rows are being added.</p> <p> If a table with the specified ID could not be found, this API throws ResourceNotFoundException. </p>
-	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
-	// <p>The ID of the workbook where the new rows are being added.</p> <p> If a workbook with the specified ID could not be found, this API throws ResourceNotFoundException. </p>
-	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
-}
-
-type BatchCreateTableRowsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchCreateTableRowsRequestBody struct {
 	// <p> The request token for performing the batch create operation. Request tokens help to identify duplicate requests. If a call times out or fails due to a transient error like a failed network connection, you can retry the call with the same request token. The service ensures that if the first call using that request token is successfully performed, the second call will not perform the operation again. </p> <p> Note that request tokens are valid only for a few minutes. You cannot use request tokens to dedupe requests spanning hours or days. </p>
 	ClientRequestToken *string `json:"clientRequestToken,omitempty"`
@@ -32,9 +15,18 @@ type BatchCreateTableRowsRequestBody struct {
 }
 
 type BatchCreateTableRowsRequest struct {
-	PathParams BatchCreateTableRowsPathParams
-	Headers    BatchCreateTableRowsHeaders
-	Request    BatchCreateTableRowsRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchCreateTableRowsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>The ID of the table where the new rows are being added.</p> <p> If a table with the specified ID could not be found, this API throws ResourceNotFoundException. </p>
+	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
+	// <p>The ID of the workbook where the new rows are being added.</p> <p> If a workbook with the specified ID could not be found, this API throws ResourceNotFoundException. </p>
+	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
 }
 
 type BatchCreateTableRowsResponse struct {

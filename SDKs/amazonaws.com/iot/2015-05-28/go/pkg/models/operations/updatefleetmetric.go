@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFleetMetricPathParams struct {
-	// The name of the fleet metric to update.
-	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
-}
-
-type UpdateFleetMetricHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFleetMetricRequestBodyAggregationType - The type of aggregation queries.
 type UpdateFleetMetricRequestBodyAggregationType struct {
 	Name   *shared.AggregationTypeNameEnum `json:"name,omitempty"`
@@ -151,9 +136,16 @@ type UpdateFleetMetricRequestBody struct {
 }
 
 type UpdateFleetMetricRequest struct {
-	PathParams UpdateFleetMetricPathParams
-	Headers    UpdateFleetMetricHeaders
-	Request    UpdateFleetMetricRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateFleetMetricRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the fleet metric to update.
+	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
 }
 
 type UpdateFleetMetricResponse struct {

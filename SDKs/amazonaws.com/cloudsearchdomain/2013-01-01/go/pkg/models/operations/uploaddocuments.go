@@ -9,31 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// UploadDocumentsFormatEnum
-type UploadDocumentsFormatEnum string
-
-const (
-	UploadDocumentsFormatEnumSDK UploadDocumentsFormatEnum = "sdk"
-)
-
-func (e *UploadDocumentsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "sdk":
-		*e = UploadDocumentsFormatEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UploadDocumentsFormatEnum: %s", s)
-	}
-}
-
-type UploadDocumentsQueryParams struct {
-	Format UploadDocumentsFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
 // UploadDocumentsContentTypeEnum - <p>The format of the batch you are uploading. Amazon CloudSearch supports two document batch formats:</p> <ul> <li>application/json</li> <li>application/xml</li> </ul>
 type UploadDocumentsContentTypeEnum string
 
@@ -58,9 +33,36 @@ func (e *UploadDocumentsContentTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UploadDocumentsHeaders struct {
+type UploadDocumentsRequestBody struct {
+	// A batch of documents formatted in JSON or HTML.
+	Documents string `json:"documents"`
+}
+
+// UploadDocumentsFormatEnum
+type UploadDocumentsFormatEnum string
+
+const (
+	UploadDocumentsFormatEnumSDK UploadDocumentsFormatEnum = "sdk"
+)
+
+func (e *UploadDocumentsFormatEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "sdk":
+		*e = UploadDocumentsFormatEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UploadDocumentsFormatEnum: %s", s)
+	}
+}
+
+type UploadDocumentsRequest struct {
 	// <p>The format of the batch you are uploading. Amazon CloudSearch supports two document batch formats:</p> <ul> <li>application/json</li> <li>application/xml</li> </ul>
 	ContentType       UploadDocumentsContentTypeEnum `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody       UploadDocumentsRequestBody     `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -68,17 +70,7 @@ type UploadDocumentsHeaders struct {
 	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UploadDocumentsRequestBody struct {
-	// A batch of documents formatted in JSON or HTML.
-	Documents string `json:"documents"`
-}
-
-type UploadDocumentsRequest struct {
-	QueryParams UploadDocumentsQueryParams
-	Headers     UploadDocumentsHeaders
-	Request     UploadDocumentsRequestBody `request:"mediaType=application/json"`
+	Format            UploadDocumentsFormatEnum      `queryParam:"style=form,explode=true,name=format"`
 }
 
 type UploadDocumentsResponse struct {

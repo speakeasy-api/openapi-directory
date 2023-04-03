@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDataSourceSyncJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDataSourceSyncJobsXAmzTargetEnum
 type ListDataSourceSyncJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDataSourceSyncJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ListDataSourceSyncJobsHeaders struct {
+type ListDataSourceSyncJobsRequest struct {
+	ListDataSourceSyncJobsRequest shared.ListDataSourceSyncJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDataSourceSyncJobsHeaders struct {
 	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDataSourceSyncJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDataSourceSyncJobsRequest struct {
-	QueryParams ListDataSourceSyncJobsQueryParams
-	Headers     ListDataSourceSyncJobsHeaders
-	Request     shared.ListDataSourceSyncJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListDataSourceSyncJobsResponse struct {

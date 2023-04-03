@@ -13,10 +13,6 @@ type PostAdminJwtRequestBody struct {
 	Scope *string `multipartForm:"name=scope"`
 }
 
-type PostAdminJwtRequest struct {
-	Request *PostAdminJwtRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAdminJwtResponse struct {
 	ContentType                          string
 	StatusCode                           int

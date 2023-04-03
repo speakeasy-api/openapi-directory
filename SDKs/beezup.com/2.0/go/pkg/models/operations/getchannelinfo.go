@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelInfoPathParams struct {
+type GetChannelInfoRequest struct {
 	// The channel identifier
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-}
-
-type GetChannelInfoRequest struct {
-	PathParams GetChannelInfoPathParams
 }
 
 type GetChannelInfoResponse struct {

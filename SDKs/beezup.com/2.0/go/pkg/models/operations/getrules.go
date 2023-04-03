@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRulesPathParams struct {
+type GetRulesRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetRulesRequest struct {
-	PathParams GetRulesPathParams
 }
 
 type GetRulesResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTrustStorePathParams struct {
-	// The ARN of the trust store.
-	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
-}
-
-type GetTrustStoreHeaders struct {
+type GetTrustStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetTrustStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTrustStoreRequest struct {
-	PathParams GetTrustStorePathParams
-	Headers    GetTrustStoreHeaders
+	// The ARN of the trust store.
+	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
 }
 
 type GetTrustStoreResponse struct {

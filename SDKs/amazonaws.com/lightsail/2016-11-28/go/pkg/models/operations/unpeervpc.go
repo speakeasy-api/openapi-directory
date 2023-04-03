@@ -30,7 +30,8 @@ func (e *UnpeerVpcXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UnpeerVpcHeaders struct {
+type UnpeerVpcRequest struct {
+	RequestBody       map[string]interface{}  `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type UnpeerVpcHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        UnpeerVpcXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type UnpeerVpcRequest struct {
-	Headers UnpeerVpcHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UnpeerVpcResponse struct {

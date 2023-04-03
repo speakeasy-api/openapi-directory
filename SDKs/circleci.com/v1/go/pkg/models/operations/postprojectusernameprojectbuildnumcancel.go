@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProjectUsernameProjectBuildNumCancelPathParams struct {
+type PostProjectUsernameProjectBuildNumCancelRequest struct {
 	// XXXXXXXXXX
 	//
 	BuildNum int64 `pathParam:"style=simple,explode=false,name=build_num"`
@@ -17,10 +17,6 @@ type PostProjectUsernameProjectBuildNumCancelPathParams struct {
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type PostProjectUsernameProjectBuildNumCancelRequest struct {
-	PathParams PostProjectUsernameProjectBuildNumCancelPathParams
 }
 
 type PostProjectUsernameProjectBuildNumCancelResponse struct {

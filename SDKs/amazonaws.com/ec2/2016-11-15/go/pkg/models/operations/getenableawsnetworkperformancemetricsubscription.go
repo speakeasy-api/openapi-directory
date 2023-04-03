@@ -92,7 +92,7 @@ func (e *GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum) UnmarshalJ
 	}
 }
 
-type GETEnableAwsNetworkPerformanceMetricSubscriptionQueryParams struct {
+type GETEnableAwsNetworkPerformanceMetricSubscriptionRequest struct {
 	Action GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The target Region or Availability Zone that the metric subscription is enabled for. For example, <code>eu-west-1</code>.
 	Destination *string `queryParam:"style=form,explode=true,name=Destination"`
@@ -103,23 +103,15 @@ type GETEnableAwsNetworkPerformanceMetricSubscriptionQueryParams struct {
 	// The source Region or Availability Zone that the metric subscription is enabled for. For example, <code>us-east-1</code>.
 	Source *string `queryParam:"style=form,explode=true,name=Source"`
 	// The statistic used for the enabled subscription.
-	Statistic *GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum `queryParam:"style=form,explode=true,name=Statistic"`
-	Version   GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableAwsNetworkPerformanceMetricSubscriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableAwsNetworkPerformanceMetricSubscriptionRequest struct {
-	QueryParams GETEnableAwsNetworkPerformanceMetricSubscriptionQueryParams
-	Headers     GETEnableAwsNetworkPerformanceMetricSubscriptionHeaders
+	Statistic         *GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum `queryParam:"style=form,explode=true,name=Statistic"`
+	Version           GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableAwsNetworkPerformanceMetricSubscriptionResponse struct {

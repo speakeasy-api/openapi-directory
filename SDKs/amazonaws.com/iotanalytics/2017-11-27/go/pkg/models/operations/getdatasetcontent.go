@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDatasetContentPathParams struct {
-	// The name of the dataset whose contents are retrieved.
-	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
-}
-
-type GetDatasetContentQueryParams struct {
-	// The version of the dataset whose contents are retrieved. You can also use the strings "$LATEST" or "$LATEST_SUCCEEDED" to retrieve the contents of the latest or latest successfully completed dataset. If not specified, "$LATEST_SUCCEEDED" is the default.
-	VersionID *string `queryParam:"style=form,explode=true,name=versionId"`
-}
-
-type GetDatasetContentHeaders struct {
+type GetDatasetContentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type GetDatasetContentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDatasetContentRequest struct {
-	PathParams  GetDatasetContentPathParams
-	QueryParams GetDatasetContentQueryParams
-	Headers     GetDatasetContentHeaders
+	// The name of the dataset whose contents are retrieved.
+	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
+	// The version of the dataset whose contents are retrieved. You can also use the strings "$LATEST" or "$LATEST_SUCCEEDED" to retrieve the contents of the latest or latest successfully completed dataset. If not specified, "$LATEST_SUCCEEDED" is the default.
+	VersionID *string `queryParam:"style=form,explode=true,name=versionId"`
 }
 
 type GetDatasetContentResponse struct {

@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETAddPermissionPathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETAddPermissionActionEnum
 type GETAddPermissionActionEnum string
 
@@ -57,31 +50,26 @@ func (e *GETAddPermissionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAddPermissionQueryParams struct {
+type GETAddPermissionRequest struct {
 	// The Amazon Web Services account numbers of the <a href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive permission. For information about locating the Amazon Web Services account identification, see <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication">Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
-	AWSAccountIds []string                   `queryParam:"style=form,explode=true,name=AWSAccountIds"`
+	AWSAccountIds []string `queryParam:"style=form,explode=true,name=AWSAccountIds"`
+	// The AWS account number
+	AccountNumber int64                      `pathParam:"style=simple,explode=false,name=AccountNumber"`
 	Action        GETAddPermissionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The action the client wants to allow for the specified principal. Valid values: the name of any action or <code>*</code>.</p> <p>For more information about these actions, see <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-overview-of-managing-access.html">Overview of Managing Access Permissions to Your Amazon Simple Queue Service Resource</a> in the <i>Amazon SQS Developer Guide</i>.</p> <p>Specifying <code>SendMessage</code>, <code>DeleteMessage</code>, or <code>ChangeMessageVisibility</code> for <code>ActionName.n</code> also grants permissions for the corresponding batch versions of those actions: <code>SendMessageBatch</code>, <code>DeleteMessageBatch</code>, and <code>ChangeMessageVisibilityBatch</code>.</p>
 	Actions []string `queryParam:"style=form,explode=true,name=Actions"`
 	// The unique identification of the permission you're setting (for example, <code>AliceSendMessage</code>). Maximum 80 characters. Allowed characters include alphanumeric characters, hyphens (<code>-</code>), and underscores (<code>_</code>).
-	Label   string                      `queryParam:"style=form,explode=true,name=Label"`
-	Version GETAddPermissionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddPermissionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddPermissionRequest struct {
-	PathParams  GETAddPermissionPathParams
-	QueryParams GETAddPermissionQueryParams
-	Headers     GETAddPermissionHeaders
+	Label string `queryParam:"style=form,explode=true,name=Label"`
+	// The name of the queue
+	QueueName         string                      `pathParam:"style=simple,explode=false,name=QueueName"`
+	Version           GETAddPermissionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddPermissionResponse struct {

@@ -50,27 +50,19 @@ func (e *GETDescribeEngineDefaultParametersVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETDescribeEngineDefaultParametersQueryParams struct {
+type GETDescribeEngineDefaultParametersRequest struct {
 	Action                 GETDescribeEngineDefaultParametersActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBParameterGroupFamily string                                        `queryParam:"style=form,explode=true,name=DBParameterGroupFamily"`
 	Marker                 *string                                       `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords             *int64                                        `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version                GETDescribeEngineDefaultParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEngineDefaultParametersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEngineDefaultParametersRequest struct {
-	QueryParams GETDescribeEngineDefaultParametersQueryParams
-	Headers     GETDescribeEngineDefaultParametersHeaders
+	XAmzAlgorithm          *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEngineDefaultParametersResponse struct {

@@ -37,16 +37,16 @@ func newPullrequests(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Remove a user from the default reviewers
 // Removes a default reviewer from the repository.
-func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
+func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTarget
 // DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove - Unapprove a pull request
 // Redact the authenticated user's approval of the specified pull
 // request.
-func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse, error) {
+func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -136,16 +136,16 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 
 // DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Delete a comment on a pull request
 // Deletes a specific pull request comment.
-func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
+func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,16 +183,16 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 }
 
 // DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges - Remove change request for a pull request
-func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesResponse, error) {
+func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/request-changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/request-changes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,14 +235,14 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 // Returns a paginated list of all pull requests as part of which this commit was reviewed. Pull Request Commit Links app must be installed first before using this API; installation automatically occurs when 'Go to pull request' is clicked from the web interface for a commit's details.
 func (s *pullrequests) GetPullrequestsForCommit(ctx context.Context, request operations.GetPullrequestsForCommitRequest) (*operations.GetPullrequestsForCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/pullrequests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/pullrequests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -302,20 +302,20 @@ func (s *pullrequests) GetPullrequestsForCommit(ctx context.Context, request ope
 //
 // This endpoint also supports filtering and sorting of the results. See
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
-func (s *pullrequests) GetPullrequestsSelectedUser(ctx context.Context, request operations.GetPullrequestsSelectedUserRequest) (*operations.GetPullrequestsSelectedUserResponse, error) {
+func (s *pullrequests) GetPullrequestsSelectedUser(ctx context.Context, request operations.GetPullrequestsSelectedUserRequest, security operations.GetPullrequestsSelectedUserSecurity) (*operations.GetPullrequestsSelectedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pullrequests/{selected_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pullrequests/{selected_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -366,16 +366,16 @@ func (s *pullrequests) GetPullrequestsSelectedUser(ctx context.Context, request 
 // new pull request that is created. To obtain the repository's default reviewers
 // as well as the default reviewers inherited from the project, use the
 // [effective-default-reveiwers](#api-repositories-workspace-repo-slug-effective-default-reviewers-get) endpoint.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersRequest, security operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -425,16 +425,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewers(ctx cont
 // This can be used to test whether a user is among the repository's
 // default reviewers list. A 404 indicates that that specified user is not
 // a default reviewer.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, security operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -515,16 +515,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 //	}
 //
 // ```
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersRequest, security operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/effective-default-reviewers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/effective-default-reviewers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -578,20 +578,20 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers
 //
 // This endpoint also supports filtering and sorting of the results. See
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -929,16 +929,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	}
 //
 // ```
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsActivity(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsActivity(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivitySecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsActivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/activity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/activity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -977,16 +977,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsActivity(ctx 
 
 // GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID - Get a pull request
 // Returns the specified pull request.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1324,16 +1324,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	}
 //
 // ```
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivity(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivityRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivityResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivity(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivityRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivitySecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/activity", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/activity", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1381,16 +1381,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 // This endpoint also supports filtering and sorting of the results. See
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
 // details.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1438,16 +1438,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 
 // GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Get a comment on a pull request
 // Returns a specific pull request comment.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1498,16 +1498,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //
 // These are the commits that are being merged into the destination
 // branch when the pull requests gets accepted.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommits(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommitsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommitsResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommits(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommitsRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommitsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/commits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/commits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1547,16 +1547,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 // GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiff - List changes in a pull request
 // Redirects to the [repository diff](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-diff-spec-get)
 // with the revspec that corresponds to the pull request.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiff(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiff(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/diff", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/diff", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1584,16 +1584,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 // GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstat - Get the diff stat for a pull request
 // Redirects to the [repository diffstat](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-diffstat-spec-get)
 // with the revspec that corresponds to the pull request.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstat(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstat(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/diffstat", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/diffstat", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1672,16 +1672,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	}
 //
 // ```
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskIDResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/merge/task-status/{task_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/merge/task-status/{task_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1713,16 +1713,16 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 // GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatch - Get the patch for a pull request
 // Redirects to the [repository patch](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-patch-spec-get)
 // with the revspec that corresponds to pull request.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/patch", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1750,20 +1750,20 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 // GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses - List commit statuses for a pull request
 // Returns all statuses (e.g. build results) for the given pull
 // request.
-func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse, error) {
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1880,11 +1880,11 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //
 // * `description` - a string
 // * `close_source_branch` - boolean that specifies if the source branch should be closed upon merging
-func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequests(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsResponse, error) {
+func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequests(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsRequest, security operations.PostRepositoriesWorkspaceRepoSlugPullrequestsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1896,7 +1896,7 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequests(ctx context
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1946,16 +1946,16 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequests(ctx context
 
 // PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove - Approve a pull request
 // Approve the specified pull request as the authenticated user.
-func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse, error) {
+func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveRequest, security operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2005,11 +2005,11 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 // Creates a new pull request comment.
 //
 // Returns the newly created pull request comment.
-func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsResponse, error) {
+func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsRequest, security operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2024,7 +2024,7 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2074,16 +2074,16 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 
 // PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDecline - Decline a pull request
 // Declines the pull request.
-func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDecline(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineResponse, error) {
+func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDecline(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineRequest, security operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/decline", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/decline", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2129,11 +2129,11 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 
 // PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMerge - Merge a pull request
 // Merges the pull request.
-func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMerge(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeResponse, error) {
+func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMerge(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeRequest, security operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/merge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/merge", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2145,11 +2145,11 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2195,16 +2195,16 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 }
 
 // PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges - Request changes for a pull request
-func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesResponse, error) {
+func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRequest, security operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/request-changes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/request-changes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2257,16 +2257,16 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 // reviewers.
 //
 // This method is idempotent. Adding a user a second time has no effect.
-func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest) (*operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
+func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest, security operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2320,11 +2320,11 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 // This can be used to change the pull request's branches or description.
 //
 // Only open pull requests can be mutated.
-func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDResponse, error) {
+func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2336,7 +2336,7 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2386,11 +2386,11 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 
 // PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Update a comment on a pull request
 // Updates a specific pull request comment.
-func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
+func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2405,7 +2405,7 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

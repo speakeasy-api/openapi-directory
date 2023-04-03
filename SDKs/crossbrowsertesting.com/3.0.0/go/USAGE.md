@@ -14,26 +14,19 @@ func main() {
     s := sdk.New()
 
     req := operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDRequest{
-        Security: operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDPathParams{
-            BaseVersionID: 548814,
-            TargetScreenshotTestID: 592845,
-            TargetVersionID: 715190,
-        },
-        QueryParams: operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDQueryParams{
-            Callback: "quibusdam",
-            Format: "unde",
-            Tolerance: 8579.46,
-        },
+        BaseVersionID: 548814,
+        Callback: "provident",
+        Format: "distinctio",
+        TargetScreenshotTestID: 844266,
+        TargetVersionID: 602763,
+        Tolerance: 8579.46,
     }
 
     ctx := context.Background()
-    res, err := s.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionID(ctx, req)
+    res, err := s.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionID(ctx, req, operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

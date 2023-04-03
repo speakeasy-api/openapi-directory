@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateProvisioningTemplatePathParams struct {
-	// The name of the provisioning template.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type UpdateProvisioningTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateProvisioningTemplateRequestBodyPreProvisioningHook - Structure that contains <code>payloadVersion</code> and <code>targetArn</code>.
 type UpdateProvisioningTemplateRequestBodyPreProvisioningHook struct {
 	PayloadVersion *string `json:"payloadVersion,omitempty"`
@@ -43,9 +28,16 @@ type UpdateProvisioningTemplateRequestBody struct {
 }
 
 type UpdateProvisioningTemplateRequest struct {
-	PathParams UpdateProvisioningTemplatePathParams
-	Headers    UpdateProvisioningTemplateHeaders
-	Request    UpdateProvisioningTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateProvisioningTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the provisioning template.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
 }
 
 type UpdateProvisioningTemplateResponse struct {

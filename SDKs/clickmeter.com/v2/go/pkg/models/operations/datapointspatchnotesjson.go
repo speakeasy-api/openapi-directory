@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsPatchNotesJSONPathParams struct {
+type DataPointsPatchNotesJSONRequest struct {
+	// Patch requests
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 	// Id of the datapoint
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DataPointsPatchNotesJSONRequest struct {
-	PathParams DataPointsPatchNotesJSONPathParams
-	// Patch requests
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 }
 
 type DataPointsPatchNotesJSONResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDomainsQueryParams struct {
-	// Pagination limit
-	MaximumPageSize *string `queryParam:"style=form,explode=true,name=maximumPageSize"`
-	// Pagination token
-	NextPageToken *string `queryParam:"style=form,explode=true,name=nextPageToken"`
-}
-
 // ListDomainsXAmzTargetEnum
 type ListDomainsXAmzTargetEnum string
 
@@ -37,7 +30,8 @@ func (e *ListDomainsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListDomainsHeaders struct {
+type ListDomainsRequest struct {
+	ListDomainsInput  shared.ListDomainsInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +40,10 @@ type ListDomainsHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDomainsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDomainsRequest struct {
-	QueryParams ListDomainsQueryParams
-	Headers     ListDomainsHeaders
-	Request     shared.ListDomainsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaximumPageSize *string `queryParam:"style=form,explode=true,name=maximumPageSize"`
+	// Pagination token
+	NextPageToken *string `queryParam:"style=form,explode=true,name=nextPageToken"`
 }
 
 type ListDomainsResponse struct {

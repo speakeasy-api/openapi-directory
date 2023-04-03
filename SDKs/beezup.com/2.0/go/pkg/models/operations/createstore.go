@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateStoreRequest struct {
-	Request shared.CreateStoreRequest `request:"mediaType=application/json"`
-}
-
 type CreateStoreResponse struct {
 	// The customer has a store with the same name
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

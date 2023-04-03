@@ -50,7 +50,7 @@ func newAttachments(defaultClient, securityClient HTTPClient, serverURL, languag
 // **Step 3**: Now you can use the value of `fetchURL` from the PreSignInfo object in the body of your SMS messages and send those using the usual messaging API (described elsewhere in this document).  If you send the same file to many recipients, it is safe to use the same URL for all of them.
 //
 // If you need to, take a closer look at the example program (on the right-hand side) to get a better idea of how to implement this process.
-func (s *attachments) PostRmmPreSignAttachment(ctx context.Context, request operations.PostRmmPreSignAttachmentRequest) (*operations.PostRmmPreSignAttachmentResponse, error) {
+func (s *attachments) PostRmmPreSignAttachment(ctx context.Context, request shared.PreSignRequest, security operations.PostRmmPreSignAttachmentSecurity) (*operations.PostRmmPreSignAttachmentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rmm/pre-sign-attachment"
 
@@ -69,7 +69,7 @@ func (s *attachments) PostRmmPreSignAttachment(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

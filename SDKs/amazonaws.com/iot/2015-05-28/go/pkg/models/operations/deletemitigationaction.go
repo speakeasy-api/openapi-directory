@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteMitigationActionPathParams struct {
-	// The name of the mitigation action that you want to delete.
-	ActionName string `pathParam:"style=simple,explode=false,name=actionName"`
-}
-
-type DeleteMitigationActionHeaders struct {
+type DeleteMitigationActionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteMitigationActionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMitigationActionRequest struct {
-	PathParams DeleteMitigationActionPathParams
-	Headers    DeleteMitigationActionHeaders
+	// The name of the mitigation action that you want to delete.
+	ActionName string `pathParam:"style=simple,explode=false,name=actionName"`
 }
 
 type DeleteMitigationActionResponse struct {

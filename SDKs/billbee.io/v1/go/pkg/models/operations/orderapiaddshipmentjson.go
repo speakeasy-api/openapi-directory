@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIAddShipmentJSONPathParams struct {
+type OrderAPIAddShipmentJSONRequest struct {
+	// The shipment data to create the shipment
+	RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel shared.RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel `request:"mediaType=application/json"`
 	// The internal billbee id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIAddShipmentJSONRequest struct {
-	PathParams OrderAPIAddShipmentJSONPathParams
-	// The shipment data to create the shipment
-	Request shared.RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel `request:"mediaType=application/json"`
 }
 
 type OrderAPIAddShipmentJSONResponse struct {

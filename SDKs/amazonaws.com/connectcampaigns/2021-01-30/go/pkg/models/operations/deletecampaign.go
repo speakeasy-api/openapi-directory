@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCampaignPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCampaignHeaders struct {
+type DeleteCampaignRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -18,11 +14,7 @@ type DeleteCampaignHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCampaignRequest struct {
-	PathParams DeleteCampaignPathParams
-	Headers    DeleteCampaignHeaders
+	ID                string  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteCampaignResponse struct {

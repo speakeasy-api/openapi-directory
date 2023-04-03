@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetChildrenRequest{
-        PathParams: operations.GetChildrenPathParams{
-            Count: 548814,
-            Cursor: "provident",
-            Sha1: "distinctio",
-        },
+        Count: 548814,
+        Cursor: "provident",
+        Sha1: "distinctio",
     }
 
     ctx := context.Background()

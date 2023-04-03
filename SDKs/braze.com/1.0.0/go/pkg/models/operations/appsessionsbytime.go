@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type AppSessionsByTimeQueryParams struct {
+type AppSessionsByTimeRequest struct {
 	// (Optional) String
 	//
 	// App API identifier retrieved from the Developer Console to limit analytics to a specific app.
@@ -27,10 +27,6 @@ type AppSessionsByTimeQueryParams struct {
 	//
 	// Unit of time between data points - can be "day" or "hour" (defaults to "day").
 	Unit *string `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type AppSessionsByTimeRequest struct {
-	QueryParams AppSessionsByTimeQueryParams
 }
 
 type AppSessionsByTimeResponse struct {

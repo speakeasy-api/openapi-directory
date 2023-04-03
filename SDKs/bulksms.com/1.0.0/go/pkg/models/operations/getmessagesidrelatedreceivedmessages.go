@@ -8,17 +8,13 @@ import (
 )
 
 type GetMessagesIDRelatedReceivedMessagesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMessagesIDRelatedReceivedMessagesPathParams struct {
-	// The `id` of the sent message
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetMessagesIDRelatedReceivedMessagesRequest struct {
-	PathParams GetMessagesIDRelatedReceivedMessagesPathParams
-	Security   GetMessagesIDRelatedReceivedMessagesSecurity
+	// The `id` of the sent message
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetMessagesIDRelatedReceivedMessagesResponse struct {

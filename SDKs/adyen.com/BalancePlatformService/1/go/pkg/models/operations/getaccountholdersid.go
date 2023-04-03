@@ -8,18 +8,13 @@ import (
 )
 
 type GetAccountHoldersIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAccountHoldersIDPathParams struct {
-	// The unique identifier of the account holder.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetAccountHoldersIDRequest struct {
-	PathParams GetAccountHoldersIDPathParams
-	Security   GetAccountHoldersIDSecurity
+	// The unique identifier of the account holder.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAccountHoldersIDResponse struct {

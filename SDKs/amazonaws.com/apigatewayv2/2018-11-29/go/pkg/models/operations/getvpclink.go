@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVpcLinkPathParams struct {
-	// The ID of the VPC link.
-	VpcLinkID string `pathParam:"style=simple,explode=false,name=vpcLinkId"`
-}
-
-type GetVpcLinkHeaders struct {
+type GetVpcLinkRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetVpcLinkHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetVpcLinkRequest struct {
-	PathParams GetVpcLinkPathParams
-	Headers    GetVpcLinkHeaders
+	// The ID of the VPC link.
+	VpcLinkID string `pathParam:"style=simple,explode=false,name=vpcLinkId"`
 }
 
 type GetVpcLinkResponse struct {

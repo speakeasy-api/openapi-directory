@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSafetyRulePathParams struct {
+type DeleteSafetyRuleRequest struct {
 	// The ARN of the safety rule.
-	SafetyRuleArn string `pathParam:"style=simple,explode=false,name=SafetyRuleArn"`
-}
-
-type DeleteSafetyRuleHeaders struct {
+	SafetyRuleArn     string  `pathParam:"style=simple,explode=false,name=SafetyRuleArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteSafetyRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSafetyRuleRequest struct {
-	PathParams DeleteSafetyRulePathParams
-	Headers    DeleteSafetyRuleHeaders
 }
 
 type DeleteSafetyRuleResponse struct {

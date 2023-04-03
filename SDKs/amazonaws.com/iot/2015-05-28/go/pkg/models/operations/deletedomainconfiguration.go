@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDomainConfigurationPathParams struct {
-	// The name of the domain configuration to be deleted.
-	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
-}
-
-type DeleteDomainConfigurationHeaders struct {
+type DeleteDomainConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDomainConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDomainConfigurationRequest struct {
-	PathParams DeleteDomainConfigurationPathParams
-	Headers    DeleteDomainConfigurationHeaders
+	// The name of the domain configuration to be deleted.
+	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
 }
 
 type DeleteDomainConfigurationResponse struct {

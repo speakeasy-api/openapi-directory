@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteContentPathParams struct {
-	// The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
-	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
-}
-
-type DeleteContentHeaders struct {
+type DeleteContentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteContentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteContentRequest struct {
-	PathParams DeleteContentPathParams
-	Headers    DeleteContentHeaders
+	// The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	ContentID string `pathParam:"style=simple,explode=false,name=contentId"`
+	// The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
 }
 
 type DeleteContentResponse struct {

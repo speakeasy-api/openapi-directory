@@ -8,23 +8,14 @@ import (
 )
 
 type GroupV2GetInvitedIndividualsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2GetInvitedIndividualsPathParams struct {
-	// ID of the group.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetInvitedIndividualsQueryParams struct {
-	// Page number (starting with 1). Each page has a fixed size of 50 items per page.
-	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2GetInvitedIndividualsRequest struct {
-	PathParams  GroupV2GetInvitedIndividualsPathParams
-	QueryParams GroupV2GetInvitedIndividualsQueryParams
-	Security    GroupV2GetInvitedIndividualsSecurity
+	// Page number (starting with 1). Each page has a fixed size of 50 items per page.
+	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	// ID of the group.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2GetInvitedIndividuals200Wildcard - Look at the Response property for more information about the nature of this response

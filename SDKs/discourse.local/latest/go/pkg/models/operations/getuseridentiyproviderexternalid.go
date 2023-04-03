@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type GetUserIdentiyProviderExternalIDPathParams struct {
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
+type GetUserIdentiyProviderExternalIDRequest struct {
+	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
+	ExternalID  string `pathParam:"style=simple,explode=false,name=external_id"`
 	// Authentication provider name. Can be found in the provider callback
 	// URL: `/auth/{provider}/callback`
 	Provider string `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type GetUserIdentiyProviderExternalIDHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type GetUserIdentiyProviderExternalIDRequest struct {
-	PathParams GetUserIdentiyProviderExternalIDPathParams
-	Headers    GetUserIdentiyProviderExternalIDHeaders
 }
 
 type GetUserIdentiyProviderExternalID200ApplicationJSONUserCustomFields struct {

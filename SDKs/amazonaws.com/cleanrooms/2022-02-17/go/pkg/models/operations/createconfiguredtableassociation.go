@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateConfiguredTableAssociationPathParams struct {
-	// A unique identifier for one of your memberships for a collaboration. The configured table is associated to the collaboration that this membership belongs to. Currently accepts a membership ID.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
-type CreateConfiguredTableAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateConfiguredTableAssociationRequestBody struct {
 	// A unique identifier for the configured table to be associated to. Currently accepts a configured table ID.
 	ConfiguredTableIdentifier string `json:"configuredTableIdentifier"`
@@ -36,9 +21,16 @@ type CreateConfiguredTableAssociationRequestBody struct {
 }
 
 type CreateConfiguredTableAssociationRequest struct {
-	PathParams CreateConfiguredTableAssociationPathParams
-	Headers    CreateConfiguredTableAssociationHeaders
-	Request    CreateConfiguredTableAssociationRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateConfiguredTableAssociationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier for one of your memberships for a collaboration. The configured table is associated to the collaboration that this membership belongs to. Currently accepts a membership ID.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
 }
 
 type CreateConfiguredTableAssociationResponse struct {

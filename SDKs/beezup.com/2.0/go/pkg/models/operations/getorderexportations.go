@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderExportationsQueryParams struct {
-	// The page number you want to get
-	PageNumber int `queryParam:"style=form,explode=true,name=pageNumber"`
-	// The entry count you want to get
-	PageSize int `queryParam:"style=form,explode=true,name=pageSize"`
-	// The store identifier to regroup the order exportations
-	StoreID string `queryParam:"style=form,explode=true,name=storeId"`
-}
-
-type GetOrderExportationsHeaders struct {
+type GetOrderExportationsRequest struct {
 	// ETag value to identify the last known version of requested resource.\
 	// To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\
 	// If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\
 	// For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
 	//
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetOrderExportationsRequest struct {
-	QueryParams GetOrderExportationsQueryParams
-	Headers     GetOrderExportationsHeaders
+	// The page number you want to get
+	PageNumber int `queryParam:"style=form,explode=true,name=pageNumber"`
+	// The entry count you want to get
+	PageSize int `queryParam:"style=form,explode=true,name=pageSize"`
+	// The store identifier to regroup the order exportations
+	StoreID string `queryParam:"style=form,explode=true,name=storeId"`
 }
 
 type GetOrderExportationsResponse struct {

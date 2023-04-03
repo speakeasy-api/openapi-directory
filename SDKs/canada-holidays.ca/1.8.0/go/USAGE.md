@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.HolidayRequest{
-        PathParams: operations.HolidayPathParams{
-            HolidayID: 2,
-        },
-        QueryParams: operations.HolidayQueryParams{
-            Optional: "true",
-            Year: 592845,
-        },
+        HolidayID: 2,
+        Optional: "true",
+        Year: 592845,
     }
 
     ctx := context.Background()

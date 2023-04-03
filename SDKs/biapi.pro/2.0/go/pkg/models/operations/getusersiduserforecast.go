@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetUsersIDUserForecastPathParams struct {
+type GetUsersIDUserForecastRequest struct {
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserForecastRequest struct {
-	PathParams GetUsersIDUserForecastPathParams
 }
 
 type GetUsersIDUserForecastResponse struct {

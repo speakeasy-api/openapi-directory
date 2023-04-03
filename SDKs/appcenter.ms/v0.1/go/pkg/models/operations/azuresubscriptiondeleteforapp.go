@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AzureSubscriptionDeleteForAppSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AzureSubscriptionDeleteForAppPathParams struct {
+type AzureSubscriptionDeleteForAppRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The unique ID (UUID) of the azure subscription
 	AzureSubscriptionID string `pathParam:"style=simple,explode=false,name=azure_subscription_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AzureSubscriptionDeleteForAppRequest struct {
-	PathParams AzureSubscriptionDeleteForAppPathParams
-	Security   AzureSubscriptionDeleteForAppSecurity
 }
 
 type AzureSubscriptionDeleteForAppDefaultApplicationJSONErrorCodeEnum string

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPutRequest struct {
-	// The body of the group
-	Request shared.APICoreDtoGroupsGroup `request:"mediaType=application/json"`
-}
-
 type GroupsPutResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

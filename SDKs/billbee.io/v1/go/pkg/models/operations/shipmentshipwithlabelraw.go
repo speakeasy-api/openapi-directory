@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShipmentShipWithLabelRawRequest struct {
-	// Details on the order and the shipping methods, that should be used.
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type ShipmentShipWithLabelRawResponse struct {
 	Body        []byte
 	ContentType string

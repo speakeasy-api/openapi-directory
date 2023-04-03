@@ -37,7 +37,7 @@ func newTeamMembers(defaultClient, securityClient HTTPClient, serverURL, languag
 // To preserve referential integrity in the database, the user account  will not be deleted from the database. Rather, the password will be set to the empty string, effectively preventing that user from logging in. Furthermore, all active sessions for that user will be deleted, as will any password reset tokens.
 func (s *teamMembers) DeleteUserUserID(ctx context.Context, request operations.DeleteUserUserIDRequest) (*operations.DeleteUserUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +83,7 @@ func (s *teamMembers) DeleteUserUserID(ctx context.Context, request operations.D
 // Retrieve the information associated with a user's account
 func (s *teamMembers) GetUserUserID(ctx context.Context, request operations.GetUserUserIDRequest) (*operations.GetUserUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *teamMembers) GetUsers(ctx context.Context) (*operations.GetUsersRespons
 
 // PostUser - Create a user
 // Use this endpoint to create a team member (user) record
-func (s *teamMembers) PostUser(ctx context.Context, request operations.PostUserRequest) (*operations.PostUserResponse, error) {
+func (s *teamMembers) PostUser(ctx context.Context, request operations.PostUserSample) (*operations.PostUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
 

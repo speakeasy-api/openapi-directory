@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeactivateSubscriptionPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeactivateSubscriptionRequest struct {
-	PathParams DeactivateSubscriptionPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeactivateSubscriptionResponse struct {

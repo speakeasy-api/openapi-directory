@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsPatchNotesFormPathParams struct {
+type DataPointsPatchNotesFormRequest struct {
+	// Patch requests
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of the datapoint
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DataPointsPatchNotesFormRequest struct {
-	PathParams DataPointsPatchNotesFormPathParams
-	// Patch requests
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type DataPointsPatchNotesFormResponse struct {

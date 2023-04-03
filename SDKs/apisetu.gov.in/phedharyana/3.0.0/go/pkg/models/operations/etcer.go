@@ -10,8 +10,8 @@ import (
 )
 
 type EtcerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type EtcerRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type EtcerRequestBody struct {
 	Format EtcerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type EtcerRequest struct {
-	// Request format
-	Request  *EtcerRequestBody `request:"mediaType=application/json"`
-	Security EtcerSecurity
 }
 
 type Etcer504ApplicationJSONErrorEnum string

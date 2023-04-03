@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRunTasksPathParams struct {
-	// The run's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // ListRunTasksStatusEnum - Filter the list by status.
 type ListRunTasksStatusEnum string
 
@@ -53,16 +48,7 @@ func (e *ListRunTasksStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListRunTasksQueryParams struct {
-	// The maximum number of run tasks to return in one page of results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Specify the pagination token from a previous request to retrieve the next page of results.
-	StartingToken *string `queryParam:"style=form,explode=true,name=startingToken"`
-	// Filter the list by status.
-	Status *ListRunTasksStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListRunTasksHeaders struct {
+type ListRunTasksRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -70,12 +56,14 @@ type ListRunTasksHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRunTasksRequest struct {
-	PathParams  ListRunTasksPathParams
-	QueryParams ListRunTasksQueryParams
-	Headers     ListRunTasksHeaders
+	// The run's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The maximum number of run tasks to return in one page of results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Specify the pagination token from a previous request to retrieve the next page of results.
+	StartingToken *string `queryParam:"style=form,explode=true,name=startingToken"`
+	// Filter the list by status.
+	Status *ListRunTasksStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListRunTasksResponse struct {

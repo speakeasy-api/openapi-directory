@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type DeleteUserPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteUserRequestBody struct {
 	BlockEmail  *bool `json:"block_email,omitempty"`
 	BlockIP     *bool `json:"block_ip,omitempty"`
@@ -18,8 +14,8 @@ type DeleteUserRequestBody struct {
 }
 
 type DeleteUserRequest struct {
-	PathParams DeleteUserPathParams
-	Request    *DeleteUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *DeleteUserRequestBody `request:"mediaType=application/json"`
+	ID          int64                  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // DeleteUser200ApplicationJSON - response

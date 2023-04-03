@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserGetCredentialTypesForTargetAccountPathParams struct {
+type UserGetCredentialTypesForTargetAccountRequest struct {
 	// The user's membership id
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
-}
-
-type UserGetCredentialTypesForTargetAccountRequest struct {
-	PathParams UserGetCredentialTypesForTargetAccountPathParams
 }
 
 // UserGetCredentialTypesForTargetAccount200Wildcard - Look at the Response property for more information about the nature of this response

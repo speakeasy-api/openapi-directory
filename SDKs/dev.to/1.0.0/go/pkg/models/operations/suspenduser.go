@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SuspendUserPathParams struct {
+type SuspendUserRequest struct {
 	// The ID of the user to suspend.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SuspendUserRequest struct {
-	PathParams SuspendUserPathParams
 }
 
 type SuspendUserResponse struct {

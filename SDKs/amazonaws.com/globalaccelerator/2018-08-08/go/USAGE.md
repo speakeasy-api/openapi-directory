@@ -13,40 +13,33 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddCustomRoutingEndpointsRequest{
-        Headers: operations.AddCustomRoutingEndpointsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints",
-        },
-        Request: shared.AddCustomRoutingEndpointsRequest{
+        AddCustomRoutingEndpointsRequest: shared.AddCustomRoutingEndpointsRequest{
             EndpointConfigurations: []shared.CustomRoutingEndpointConfiguration{
                 shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "vel",
+                    EndpointID: "provident",
                 },
                 shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "error",
+                    EndpointID: "distinctio",
                 },
                 shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "deserunt",
-                },
-                shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "suscipit",
+                    EndpointID: "quibusdam",
                 },
             },
-            EndpointGroupArn: "iure",
+            EndpointGroupArn: "unde",
         },
+        XAmzAlgorithm: "nulla",
+        XAmzContentSha256: "corrupti",
+        XAmzCredential: "illum",
+        XAmzDate: "vel",
+        XAmzSecurityToken: "error",
+        XAmzSignature: "deserunt",
+        XAmzSignedHeaders: "suscipit",
+        XAmzTarget: "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints",
     }
 
     ctx := context.Background()

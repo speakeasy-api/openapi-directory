@@ -32,16 +32,16 @@ func newAnalytics(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // AnalyticsAudienceNameExists - Returns whether audience definition exists.
-func (s *analytics) AnalyticsAudienceNameExists(ctx context.Context, request operations.AnalyticsAudienceNameExistsRequest) (*operations.AnalyticsAudienceNameExistsResponse, error) {
+func (s *analytics) AnalyticsAudienceNameExists(ctx context.Context, request operations.AnalyticsAudienceNameExistsRequest, security operations.AnalyticsAudienceNameExistsSecurity) (*operations.AnalyticsAudienceNameExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,20 +79,20 @@ func (s *analytics) AnalyticsAudienceNameExists(ctx context.Context, request ope
 }
 
 // AnalyticsCrashFreeDevicePercentages - Percentage of crash-free device by day in the time range based on the selected versions. Api will return -1 if crash devices is greater than active devices.
-func (s *analytics) AnalyticsCrashFreeDevicePercentages(ctx context.Context, request operations.AnalyticsCrashFreeDevicePercentagesRequest) (*operations.AnalyticsCrashFreeDevicePercentagesResponse, error) {
+func (s *analytics) AnalyticsCrashFreeDevicePercentages(ctx context.Context, request operations.AnalyticsCrashFreeDevicePercentagesRequest, security operations.AnalyticsCrashFreeDevicePercentagesSecurity) (*operations.AnalyticsCrashFreeDevicePercentagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -138,20 +138,20 @@ func (s *analytics) AnalyticsCrashFreeDevicePercentages(ctx context.Context, req
 
 // AnalyticsCrashGroupCounts - Available for UWP apps only.
 // Count of crashes by day in the time range of the selected crash group with selected version. Available for UWP apps only.
-func (s *analytics) AnalyticsCrashGroupCounts(ctx context.Context, request operations.AnalyticsCrashGroupCountsRequest) (*operations.AnalyticsCrashGroupCountsResponse, error) {
+func (s *analytics) AnalyticsCrashGroupCounts(ctx context.Context, request operations.AnalyticsCrashGroupCountsRequest, security operations.AnalyticsCrashGroupCountsSecurity) (*operations.AnalyticsCrashGroupCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,20 +197,20 @@ func (s *analytics) AnalyticsCrashGroupCounts(ctx context.Context, request opera
 
 // AnalyticsCrashGroupModelCounts - Available for UWP apps only.
 // Top models of the selected crash group with selected version. Available for UWP apps only.
-func (s *analytics) AnalyticsCrashGroupModelCounts(ctx context.Context, request operations.AnalyticsCrashGroupModelCountsRequest) (*operations.AnalyticsCrashGroupModelCountsResponse, error) {
+func (s *analytics) AnalyticsCrashGroupModelCounts(ctx context.Context, request operations.AnalyticsCrashGroupModelCountsRequest, security operations.AnalyticsCrashGroupModelCountsSecurity) (*operations.AnalyticsCrashGroupModelCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -256,20 +256,20 @@ func (s *analytics) AnalyticsCrashGroupModelCounts(ctx context.Context, request 
 
 // AnalyticsCrashGroupOperatingSystemCounts - Available for UWP apps only.
 // Top OSes of the selected crash group with selected version. Available for UWP apps only.
-func (s *analytics) AnalyticsCrashGroupOperatingSystemCounts(ctx context.Context, request operations.AnalyticsCrashGroupOperatingSystemCountsRequest) (*operations.AnalyticsCrashGroupOperatingSystemCountsResponse, error) {
+func (s *analytics) AnalyticsCrashGroupOperatingSystemCounts(ctx context.Context, request operations.AnalyticsCrashGroupOperatingSystemCountsRequest, security operations.AnalyticsCrashGroupOperatingSystemCountsSecurity) (*operations.AnalyticsCrashGroupOperatingSystemCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -315,20 +315,20 @@ func (s *analytics) AnalyticsCrashGroupOperatingSystemCounts(ctx context.Context
 
 // AnalyticsCrashGroupTotals - Available for UWP apps only.
 // Overall crashes and affected users count of the selected crash group with selected version. Available for UWP apps only.
-func (s *analytics) AnalyticsCrashGroupTotals(ctx context.Context, request operations.AnalyticsCrashGroupTotalsRequest) (*operations.AnalyticsCrashGroupTotalsResponse, error) {
+func (s *analytics) AnalyticsCrashGroupTotals(ctx context.Context, request operations.AnalyticsCrashGroupTotalsRequest, security operations.AnalyticsCrashGroupTotalsSecurity) (*operations.AnalyticsCrashGroupTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -373,11 +373,11 @@ func (s *analytics) AnalyticsCrashGroupTotals(ctx context.Context, request opera
 }
 
 // AnalyticsCrashGroupsTotals - Overall crashes and affected users count of the selected crash groups with selected versions.
-func (s *analytics) AnalyticsCrashGroupsTotals(ctx context.Context, request operations.AnalyticsCrashGroupsTotalsRequest) (*operations.AnalyticsCrashGroupsTotalsResponse, error) {
+func (s *analytics) AnalyticsCrashGroupsTotals(ctx context.Context, request operations.AnalyticsCrashGroupsTotalsRequest, security operations.AnalyticsCrashGroupsTotalsSecurity) (*operations.AnalyticsCrashGroupsTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -392,7 +392,7 @@ func (s *analytics) AnalyticsCrashGroupsTotals(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -437,11 +437,11 @@ func (s *analytics) AnalyticsCrashGroupsTotals(ctx context.Context, request oper
 }
 
 // AnalyticsCreateOrUpdateAudience - Creates or updates audience definition.
-func (s *analytics) AnalyticsCreateOrUpdateAudience(ctx context.Context, request operations.AnalyticsCreateOrUpdateAudienceRequest) (*operations.AnalyticsCreateOrUpdateAudienceResponse, error) {
+func (s *analytics) AnalyticsCreateOrUpdateAudience(ctx context.Context, request operations.AnalyticsCreateOrUpdateAudienceRequest, security operations.AnalyticsCreateOrUpdateAudienceSecurity) (*operations.AnalyticsCreateOrUpdateAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -456,7 +456,7 @@ func (s *analytics) AnalyticsCreateOrUpdateAudience(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -501,16 +501,16 @@ func (s *analytics) AnalyticsCreateOrUpdateAudience(ctx context.Context, request
 }
 
 // AnalyticsDeleteAudience - Deletes audience definition.
-func (s *analytics) AnalyticsDeleteAudience(ctx context.Context, request operations.AnalyticsDeleteAudienceRequest) (*operations.AnalyticsDeleteAudienceResponse, error) {
+func (s *analytics) AnalyticsDeleteAudience(ctx context.Context, request operations.AnalyticsDeleteAudienceRequest, security operations.AnalyticsDeleteAudienceSecurity) (*operations.AnalyticsDeleteAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -548,11 +548,11 @@ func (s *analytics) AnalyticsDeleteAudience(ctx context.Context, request operati
 }
 
 // AnalyticsDistributionReleaseCounts - Count of total downloads for the provided distribution releases.
-func (s *analytics) AnalyticsDistributionReleaseCounts(ctx context.Context, request operations.AnalyticsDistributionReleaseCountsRequest) (*operations.AnalyticsDistributionReleaseCountsResponse, error) {
+func (s *analytics) AnalyticsDistributionReleaseCounts(ctx context.Context, request operations.AnalyticsDistributionReleaseCountsRequest, security operations.AnalyticsDistributionReleaseCountsSecurity) (*operations.AnalyticsDistributionReleaseCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/distribution/release_counts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/distribution/release_counts", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -567,7 +567,7 @@ func (s *analytics) AnalyticsDistributionReleaseCounts(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -612,16 +612,16 @@ func (s *analytics) AnalyticsDistributionReleaseCounts(ctx context.Context, requ
 }
 
 // AnalyticsEventProperties - Event properties.
-func (s *analytics) AnalyticsEventProperties(ctx context.Context, request operations.AnalyticsEventPropertiesRequest) (*operations.AnalyticsEventPropertiesResponse, error) {
+func (s *analytics) AnalyticsEventProperties(ctx context.Context, request operations.AnalyticsEventPropertiesRequest, security operations.AnalyticsEventPropertiesSecurity) (*operations.AnalyticsEventPropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -666,16 +666,16 @@ func (s *analytics) AnalyticsEventProperties(ctx context.Context, request operat
 }
 
 // AnalyticsEventsDelete - Delete the set of Events with the specified event names.
-func (s *analytics) AnalyticsEventsDelete(ctx context.Context, request operations.AnalyticsEventsDeleteRequest) (*operations.AnalyticsEventsDeleteResponse, error) {
+func (s *analytics) AnalyticsEventsDelete(ctx context.Context, request operations.AnalyticsEventsDeleteRequest, security operations.AnalyticsEventsDeleteSecurity) (*operations.AnalyticsEventsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -711,16 +711,16 @@ func (s *analytics) AnalyticsEventsDelete(ctx context.Context, request operation
 }
 
 // AnalyticsEventsDeleteLogs - Delete the set of Events with the specified event names.
-func (s *analytics) AnalyticsEventsDeleteLogs(ctx context.Context, request operations.AnalyticsEventsDeleteLogsRequest) (*operations.AnalyticsEventsDeleteLogsResponse, error) {
+func (s *analytics) AnalyticsEventsDeleteLogs(ctx context.Context, request operations.AnalyticsEventsDeleteLogsRequest, security operations.AnalyticsEventsDeleteLogsSecurity) (*operations.AnalyticsEventsDeleteLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/event_logs/{event_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/event_logs/{event_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -756,20 +756,20 @@ func (s *analytics) AnalyticsEventsDeleteLogs(ctx context.Context, request opera
 }
 
 // AnalyticsGenericLogFlow - Logs received between the specified start time and the current time. The API will return a maximum of 100 logs per call.
-func (s *analytics) AnalyticsGenericLogFlow(ctx context.Context, request operations.AnalyticsGenericLogFlowRequest) (*operations.AnalyticsGenericLogFlowResponse, error) {
+func (s *analytics) AnalyticsGenericLogFlow(ctx context.Context, request operations.AnalyticsGenericLogFlowRequest, security operations.AnalyticsGenericLogFlowSecurity) (*operations.AnalyticsGenericLogFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/generic_log_flow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/generic_log_flow", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -814,16 +814,16 @@ func (s *analytics) AnalyticsGenericLogFlow(ctx context.Context, request operati
 }
 
 // AnalyticsGetAudience - Gets audience definition.
-func (s *analytics) AnalyticsGetAudience(ctx context.Context, request operations.AnalyticsGetAudienceRequest) (*operations.AnalyticsGetAudienceResponse, error) {
+func (s *analytics) AnalyticsGetAudience(ctx context.Context, request operations.AnalyticsGetAudienceRequest, security operations.AnalyticsGetAudienceSecurity) (*operations.AnalyticsGetAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -868,20 +868,20 @@ func (s *analytics) AnalyticsGetAudience(ctx context.Context, request operations
 }
 
 // AnalyticsListAudiences - Get list of audiences.
-func (s *analytics) AnalyticsListAudiences(ctx context.Context, request operations.AnalyticsListAudiencesRequest) (*operations.AnalyticsListAudiencesResponse, error) {
+func (s *analytics) AnalyticsListAudiences(ctx context.Context, request operations.AnalyticsListAudiencesRequest, security operations.AnalyticsListAudiencesSecurity) (*operations.AnalyticsListAudiencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -926,16 +926,16 @@ func (s *analytics) AnalyticsListAudiences(ctx context.Context, request operatio
 }
 
 // AnalyticsListCustomProperties - Get list of custom properties.
-func (s *analytics) AnalyticsListCustomProperties(ctx context.Context, request operations.AnalyticsListCustomPropertiesRequest) (*operations.AnalyticsListCustomPropertiesResponse, error) {
+func (s *analytics) AnalyticsListCustomProperties(ctx context.Context, request operations.AnalyticsListCustomPropertiesRequest, security operations.AnalyticsListCustomPropertiesSecurity) (*operations.AnalyticsListCustomPropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/custom_properties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/custom_properties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -980,16 +980,16 @@ func (s *analytics) AnalyticsListCustomProperties(ctx context.Context, request o
 }
 
 // AnalyticsListDeviceProperties - Get list of device properties.
-func (s *analytics) AnalyticsListDeviceProperties(ctx context.Context, request operations.AnalyticsListDevicePropertiesRequest) (*operations.AnalyticsListDevicePropertiesResponse, error) {
+func (s *analytics) AnalyticsListDeviceProperties(ctx context.Context, request operations.AnalyticsListDevicePropertiesRequest, security operations.AnalyticsListDevicePropertiesSecurity) (*operations.AnalyticsListDevicePropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1034,20 +1034,20 @@ func (s *analytics) AnalyticsListDeviceProperties(ctx context.Context, request o
 }
 
 // AnalyticsListDevicePropertyValues - Get list of device property values.
-func (s *analytics) AnalyticsListDevicePropertyValues(ctx context.Context, request operations.AnalyticsListDevicePropertyValuesRequest) (*operations.AnalyticsListDevicePropertyValuesResponse, error) {
+func (s *analytics) AnalyticsListDevicePropertyValues(ctx context.Context, request operations.AnalyticsListDevicePropertyValuesRequest, security operations.AnalyticsListDevicePropertyValuesSecurity) (*operations.AnalyticsListDevicePropertyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties/{property_name}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties/{property_name}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1092,20 +1092,20 @@ func (s *analytics) AnalyticsListDevicePropertyValues(ctx context.Context, reque
 }
 
 // AnalyticsLogFlow - Logs received between the specified start time and the current time. The API will return a maximum of 100 logs per call.
-func (s *analytics) AnalyticsLogFlow(ctx context.Context, request operations.AnalyticsLogFlowRequest) (*operations.AnalyticsLogFlowResponse, error) {
+func (s *analytics) AnalyticsLogFlow(ctx context.Context, request operations.AnalyticsLogFlowRequest, security operations.AnalyticsLogFlowSecurity) (*operations.AnalyticsLogFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/log_flow", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/log_flow", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1150,11 +1150,11 @@ func (s *analytics) AnalyticsLogFlow(ctx context.Context, request operations.Ana
 }
 
 // AnalyticsTestAudience - Tests audience definition.
-func (s *analytics) AnalyticsTestAudience(ctx context.Context, request operations.AnalyticsTestAudienceRequest) (*operations.AnalyticsTestAudienceResponse, error) {
+func (s *analytics) AnalyticsTestAudience(ctx context.Context, request operations.AnalyticsTestAudienceRequest, security operations.AnalyticsTestAudienceSecurity) (*operations.AnalyticsTestAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/definition/test", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/definition/test", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1169,7 +1169,7 @@ func (s *analytics) AnalyticsTestAudience(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1216,16 +1216,16 @@ func (s *analytics) AnalyticsTestAudience(ctx context.Context, request operation
 // AppBlockLogs - **Warning, this operation is not reversible.**
 //
 // A successful call to this API will permanently stop ingesting any logs received via SDK by app_id, and cannot be restored. We advise caution when using this API, it is designed to permanently disable an app_id.
-func (s *analytics) AppBlockLogs(ctx context.Context, request operations.AppBlockLogsRequest) (*operations.AppBlockLogsResponse, error) {
+func (s *analytics) AppBlockLogs(ctx context.Context, request operations.AppBlockLogsRequest, security operations.AppBlockLogsSecurity) (*operations.AppBlockLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1261,20 +1261,20 @@ func (s *analytics) AppBlockLogs(ctx context.Context, request operations.AppBloc
 }
 
 // CrashesListSessionLogs - Get session logs by crash ID
-func (s *analytics) CrashesListSessionLogs(ctx context.Context, request operations.CrashesListSessionLogsRequest) (*operations.CrashesListSessionLogsResponse, error) {
+func (s *analytics) CrashesListSessionLogs(ctx context.Context, request operations.CrashesListSessionLogsRequest, security operations.CrashesListSessionLogsSecurity) (*operations.CrashesListSessionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/session_logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/session_logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1321,16 +1321,16 @@ func (s *analytics) CrashesListSessionLogs(ctx context.Context, request operatio
 // DevicesBlockLogs - **Warning, this operation is not reversible.**
 //
 //	A successful call to this API will permanently stop ingesting any logs received via SDK for the given installation ID, and cannot be restored. We advise caution when using this API, it is designed to permanently disable collection from a specific installation of the app on a device, usually following the request from a user.
-func (s *analytics) DevicesBlockLogs(ctx context.Context, request operations.DevicesBlockLogsRequest) (*operations.DevicesBlockLogsResponse, error) {
+func (s *analytics) DevicesBlockLogs(ctx context.Context, request operations.DevicesBlockLogsRequest, security operations.DevicesBlockLogsSecurity) (*operations.DevicesBlockLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

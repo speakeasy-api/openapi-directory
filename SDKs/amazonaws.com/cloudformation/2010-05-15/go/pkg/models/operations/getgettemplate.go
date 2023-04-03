@@ -74,30 +74,22 @@ func (e *GETGETTemplateVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETTemplateQueryParams struct {
+type GETGETTemplateRequest struct {
 	Action GETGETTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name or Amazon Resource Name (ARN) of a change set for which CloudFormation returns the associated template. If you specify a name, you must also specify the <code>StackName</code>.
 	ChangeSetName *string `queryParam:"style=form,explode=true,name=ChangeSetName"`
 	// <p>The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:</p> <ul> <li> <p>Running stacks: You can specify either the stack's name or its unique stack ID.</p> </li> <li> <p>Deleted stacks: You must specify the unique stack ID.</p> </li> </ul> <p>Default: There is no default value.</p>
 	StackName *string `queryParam:"style=form,explode=true,name=StackName"`
 	// <p>For templates that include transforms, the stage of the template that CloudFormation returns. To get the user-submitted template, specify <code>Original</code>. To get the template after CloudFormation has processed all transforms, specify <code>Processed</code>.</p> <p>If the template doesn't include transforms, <code>Original</code> and <code>Processed</code> return the same template. By default, CloudFormation specifies <code>Processed</code>.</p>
-	TemplateStage *GETGETTemplateTemplateStageEnum `queryParam:"style=form,explode=true,name=TemplateStage"`
-	Version       GETGETTemplateVersionEnum        `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETTemplateRequest struct {
-	QueryParams GETGETTemplateQueryParams
-	Headers     GETGETTemplateHeaders
+	TemplateStage     *GETGETTemplateTemplateStageEnum `queryParam:"style=form,explode=true,name=TemplateStage"`
+	Version           GETGETTemplateVersionEnum        `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETTemplateResponse struct {

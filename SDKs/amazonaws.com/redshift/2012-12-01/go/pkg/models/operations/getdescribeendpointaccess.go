@@ -50,7 +50,7 @@ func (e *GETDescribeEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeEndpointAccessQueryParams struct {
+type GETDescribeEndpointAccessRequest struct {
 	Action GETDescribeEndpointAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cluster identifier associated with the described endpoint.
 	ClusterIdentifier *string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -64,10 +64,7 @@ type GETDescribeEndpointAccessQueryParams struct {
 	ResourceOwner *string                              `queryParam:"style=form,explode=true,name=ResourceOwner"`
 	Version       GETDescribeEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The virtual private cloud (VPC) identifier with access to the cluster.
-	VpcID *string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDescribeEndpointAccessHeaders struct {
+	VpcID             *string `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -75,11 +72,6 @@ type GETDescribeEndpointAccessHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEndpointAccessRequest struct {
-	QueryParams GETDescribeEndpointAccessQueryParams
-	Headers     GETDescribeEndpointAccessHeaders
 }
 
 type GETDescribeEndpointAccessResponse struct {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeUpdatePathParams struct {
-	// The name of the Amazon EKS cluster associated with the update.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The ID of the update to describe.
-	UpdateID string `pathParam:"style=simple,explode=false,name=updateId"`
-}
-
-type DescribeUpdateQueryParams struct {
-	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>. This parameter is required if the update is an add-on update.
-	AddonName *string `queryParam:"style=form,explode=true,name=addonName"`
-	// The name of the Amazon EKS node group associated with the update. This parameter is required if the update is a node group update.
-	NodegroupName *string `queryParam:"style=form,explode=true,name=nodegroupName"`
-}
-
-type DescribeUpdateHeaders struct {
+type DescribeUpdateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type DescribeUpdateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeUpdateRequest struct {
-	PathParams  DescribeUpdatePathParams
-	QueryParams DescribeUpdateQueryParams
-	Headers     DescribeUpdateHeaders
+	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>. This parameter is required if the update is an add-on update.
+	AddonName *string `queryParam:"style=form,explode=true,name=addonName"`
+	// The name of the Amazon EKS cluster associated with the update.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The name of the Amazon EKS node group associated with the update. This parameter is required if the update is a node group update.
+	NodegroupName *string `queryParam:"style=form,explode=true,name=nodegroupName"`
+	// The ID of the update to describe.
+	UpdateID string `pathParam:"style=simple,explode=false,name=updateId"`
 }
 
 type DescribeUpdateResponse struct {

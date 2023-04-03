@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostNamespacesDeleteImagesPathParams struct {
+type PostNamespacesDeleteImagesRequest struct {
+	// Delete request.
+	PostNamespacesDeleteImagesRequest shared.PostNamespacesDeleteImagesRequest `request:"mediaType=application/json"`
 	// Namespace of the repository.
 	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-}
-
-type PostNamespacesDeleteImagesRequest struct {
-	PathParams PostNamespacesDeleteImagesPathParams
-	// Delete request.
-	Request shared.PostNamespacesDeleteImagesRequest `request:"mediaType=application/json"`
 }
 
 type PostNamespacesDeleteImagesResponse struct {

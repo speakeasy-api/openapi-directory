@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePricingPlanHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	//  The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented in a future update.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 type CreatePricingPlanRequestBody struct {
 	// The description of the pricing plan.
 	Description *string `json:"Description,omitempty"`
@@ -31,8 +19,16 @@ type CreatePricingPlanRequestBody struct {
 }
 
 type CreatePricingPlanRequest struct {
-	Headers CreatePricingPlanHeaders
-	Request CreatePricingPlanRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreatePricingPlanRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented in a future update.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreatePricingPlanResponse struct {

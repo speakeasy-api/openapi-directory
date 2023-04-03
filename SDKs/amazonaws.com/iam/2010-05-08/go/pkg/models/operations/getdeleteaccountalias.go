@@ -50,26 +50,18 @@ func (e *GETDeleteAccountAliasVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteAccountAliasQueryParams struct {
-	// <p>The name of the account alias to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of lowercase letters, digits, and dashes. You cannot start or finish with a dash, nor can you have two dashes in a row.</p>
-	AccountAlias string                           `queryParam:"style=form,explode=true,name=AccountAlias"`
-	Action       GETDeleteAccountAliasActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version      GETDeleteAccountAliasVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteAccountAliasHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETDeleteAccountAliasRequest struct {
-	QueryParams GETDeleteAccountAliasQueryParams
-	Headers     GETDeleteAccountAliasHeaders
+	// <p>The name of the account alias to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of lowercase letters, digits, and dashes. You cannot start or finish with a dash, nor can you have two dashes in a row.</p>
+	AccountAlias      string                           `queryParam:"style=form,explode=true,name=AccountAlias"`
+	Action            GETDeleteAccountAliasActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           GETDeleteAccountAliasVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteAccountAliasResponse struct {

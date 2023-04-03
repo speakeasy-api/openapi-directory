@@ -8,25 +8,17 @@ import (
 	"time"
 )
 
-type PutUsersIDUserConnectionsIDConnectionPathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
+type PutUsersIDUserConnectionsIDConnectionRequest struct {
+	// do the connection synchronization in background
+	Background   *bool   `queryParam:"style=form,explode=true,name=background"`
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionQueryParams struct {
-	// do the connection synchronization in background
-	Background *bool   `queryParam:"style=form,explode=true,name=background"`
-	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
 	// if supplied, get transactions inserted since this date
 	LastUpdate *time.Time `queryParam:"style=form,explode=true,name=last_update"`
 	// Whether the connection synchronization is asked by the PSU or not (default is true)
 	PsuRequested *bool `queryParam:"style=form,explode=true,name=psu_requested"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionRequest struct {
-	PathParams  PutUsersIDUserConnectionsIDConnectionPathParams
-	QueryParams PutUsersIDUserConnectionsIDConnectionQueryParams
 }
 
 type PutUsersIDUserConnectionsIDConnectionResponse struct {

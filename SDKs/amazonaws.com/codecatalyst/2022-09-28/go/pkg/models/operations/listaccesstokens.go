@@ -7,13 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAccessTokensQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListAccessTokensRequestBody struct {
 	// The maximum number of results to show in a single call to this API. If the number of results is larger than the number you specified, the response will include a <code>NextToken</code> element, which you can use to obtain additional results.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -22,8 +15,11 @@ type ListAccessTokensRequestBody struct {
 }
 
 type ListAccessTokensRequest struct {
-	QueryParams ListAccessTokensQueryParams
-	Request     ListAccessTokensRequestBody `request:"mediaType=application/json"`
+	RequestBody ListAccessTokensRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAccessTokensResponse struct {

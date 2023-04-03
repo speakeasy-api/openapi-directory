@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUsersIDUserConnectionsPathParams struct {
+type DeleteUsersIDUserConnectionsRequest struct {
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type DeleteUsersIDUserConnectionsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type DeleteUsersIDUserConnectionsRequest struct {
-	PathParams  DeleteUsersIDUserConnectionsPathParams
-	QueryParams DeleteUsersIDUserConnectionsQueryParams
 }
 
 type DeleteUsersIDUserConnectionsResponse struct {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type SegmentDetailsQueryParams struct {
+type SegmentDetailsRequest struct {
 	// (Required) String
 	//
 	// Segment API identifier
 	SegmentID *string `queryParam:"style=form,explode=true,name=segment_id"`
-}
-
-type SegmentDetailsRequest struct {
-	QueryParams SegmentDetailsQueryParams
 }
 
 type SegmentDetailsResponse struct {

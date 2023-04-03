@@ -50,26 +50,18 @@ func (e *GETStopMetricStreamsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStopMetricStreamsQueryParams struct {
+type GETStopMetricStreamsRequest struct {
 	Action GETStopMetricStreamsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The array of the names of metric streams to stop streaming.</p> <p>This is an "all or nothing" operation. If you do not have permission to access all of the metric streams that you list here, then none of the streams that you list in the operation will stop streaming.</p>
-	Names   []string                        `queryParam:"style=form,explode=true,name=Names"`
-	Version GETStopMetricStreamsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStopMetricStreamsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStopMetricStreamsRequest struct {
-	QueryParams GETStopMetricStreamsQueryParams
-	Headers     GETStopMetricStreamsHeaders
+	Names             []string                        `queryParam:"style=form,explode=true,name=Names"`
+	Version           GETStopMetricStreamsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStopMetricStreamsResponse struct {

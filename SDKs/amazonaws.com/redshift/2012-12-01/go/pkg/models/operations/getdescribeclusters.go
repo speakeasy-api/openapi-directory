@@ -50,7 +50,7 @@ func (e *GETDescribeClustersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeClustersQueryParams struct {
+type GETDescribeClustersRequest struct {
 	Action GETDescribeClustersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of a cluster whose properties you are requesting. This parameter is case sensitive.</p> <p>The default is that all clusters defined for an account are returned.</p>
 	ClusterIdentifier *string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -61,23 +61,15 @@ type GETDescribeClustersQueryParams struct {
 	// A tag key or keys for which you want to return all matching clusters that are associated with the specified key or keys. For example, suppose that you have clusters that are tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with the clusters that have either or both of these tag keys associated with them.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// A tag value or values for which you want to return all matching clusters that are associated with the specified tag value or values. For example, suppose that you have clusters that are tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with the clusters that have either or both of these tag values associated with them.
-	TagValues []string                       `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeClustersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeClustersRequest struct {
-	QueryParams GETDescribeClustersQueryParams
-	Headers     GETDescribeClustersHeaders
+	TagValues         []string                       `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeClustersResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSettingValueBySdkkeyPathParams struct {
-	// The key or id of the Setting.
-	SettingKeyOrID string `pathParam:"style=simple,explode=false,name=settingKeyOrId"`
-}
-
-type GetSettingValueBySdkkeyHeaders struct {
+type GetSettingValueBySdkkeyRequest struct {
 	// The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
 	XConfigcatSdkkey *string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
-}
-
-type GetSettingValueBySdkkeyRequest struct {
-	PathParams GetSettingValueBySdkkeyPathParams
-	Headers    GetSettingValueBySdkkeyHeaders
+	// The key or id of the Setting.
+	SettingKeyOrID string `pathParam:"style=simple,explode=false,name=settingKeyOrId"`
 }
 
 type GetSettingValueBySdkkeyResponse struct {

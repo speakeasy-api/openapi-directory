@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutV2Scim20UsersIDPathParams struct {
-	// The user ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PutV2Scim20UsersIDRequestBody struct {
 	// If this is omitted from the request, it will default to false resulting in a deactivated user.
 	Enabled *bool                `json:"enabled,omitempty"`
@@ -20,8 +15,9 @@ type PutV2Scim20UsersIDRequestBody struct {
 }
 
 type PutV2Scim20UsersIDRequest struct {
-	PathParams PutV2Scim20UsersIDPathParams
-	Request    PutV2Scim20UsersIDRequestBody `request:"mediaType=application/scim+json"`
+	RequestBody PutV2Scim20UsersIDRequestBody `request:"mediaType=application/scim+json"`
+	// The user ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // PutV2Scim20UsersID500ApplicationScimPlusJSON - Internal Error

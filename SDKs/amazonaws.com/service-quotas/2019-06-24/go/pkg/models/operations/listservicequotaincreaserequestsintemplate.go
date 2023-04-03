@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListServiceQuotaIncreaseRequestsInTemplateQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListServiceQuotaIncreaseRequestsInTemplateXAmzTargetEnum
 type ListServiceQuotaIncreaseRequestsInTemplateXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListServiceQuotaIncreaseRequestsInTemplateXAmzTargetEnum) UnmarshalJSON
 	}
 }
 
-type ListServiceQuotaIncreaseRequestsInTemplateHeaders struct {
+type ListServiceQuotaIncreaseRequestsInTemplateRequest struct {
+	ListServiceQuotaIncreaseRequestsInTemplateRequest shared.ListServiceQuotaIncreaseRequestsInTemplateRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListServiceQuotaIncreaseRequestsInTemplateHeaders struct {
 	XAmzSignature     *string                                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListServiceQuotaIncreaseRequestsInTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListServiceQuotaIncreaseRequestsInTemplateRequest struct {
-	QueryParams ListServiceQuotaIncreaseRequestsInTemplateQueryParams
-	Headers     ListServiceQuotaIncreaseRequestsInTemplateHeaders
-	Request     shared.ListServiceQuotaIncreaseRequestsInTemplateRequest `request:"mediaType=application/json"`
 }
 
 type ListServiceQuotaIncreaseRequestsInTemplateResponse struct {

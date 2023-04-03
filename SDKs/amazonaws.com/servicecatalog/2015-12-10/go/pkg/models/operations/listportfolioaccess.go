@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPortfolioAccessQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // ListPortfolioAccessXAmzTargetEnum
 type ListPortfolioAccessXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListPortfolioAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPortfolioAccessHeaders struct {
+type ListPortfolioAccessRequest struct {
+	ListPortfolioAccessInput shared.ListPortfolioAccessInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken         *string                           `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListPortfolioAccessHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListPortfolioAccessXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListPortfolioAccessRequest struct {
-	QueryParams ListPortfolioAccessQueryParams
-	Headers     ListPortfolioAccessHeaders
-	Request     shared.ListPortfolioAccessInput `request:"mediaType=application/json"`
 }
 
 type ListPortfolioAccessResponse struct {

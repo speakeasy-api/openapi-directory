@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeRouteCalculatorPathParams struct {
+type DescribeRouteCalculatorRequest struct {
 	// The name of the route calculator resource.
-	CalculatorName string `pathParam:"style=simple,explode=false,name=CalculatorName"`
-}
-
-type DescribeRouteCalculatorHeaders struct {
+	CalculatorName    string  `pathParam:"style=simple,explode=false,name=CalculatorName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeRouteCalculatorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeRouteCalculatorRequest struct {
-	PathParams DescribeRouteCalculatorPathParams
-	Headers    DescribeRouteCalculatorHeaders
 }
 
 type DescribeRouteCalculatorResponse struct {

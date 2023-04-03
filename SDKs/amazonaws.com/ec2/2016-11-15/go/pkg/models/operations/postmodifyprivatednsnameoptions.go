@@ -50,25 +50,17 @@ func (e *POSTModifyPrivateDNSNameOptionsVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type POSTModifyPrivateDNSNameOptionsQueryParams struct {
-	Action  POSTModifyPrivateDNSNameOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyPrivateDNSNameOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyPrivateDNSNameOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyPrivateDNSNameOptionsRequest struct {
-	QueryParams POSTModifyPrivateDNSNameOptionsQueryParams
-	Headers     POSTModifyPrivateDNSNameOptionsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyPrivateDNSNameOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                     `request:"mediaType=text/xml"`
+	Version           POSTModifyPrivateDNSNameOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyPrivateDNSNameOptionsResponse struct {

@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEnvironmentsQueryParams struct {
+type ListEnvironmentsRequest struct {
 	// The maximum number of results to retrieve per page. For example, <code>5</code> environments per page.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Retrieves the next page of the results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListEnvironmentsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListEnvironmentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEnvironmentsRequest struct {
-	QueryParams ListEnvironmentsQueryParams
-	Headers     ListEnvironmentsHeaders
 }
 
 type ListEnvironmentsResponse struct {

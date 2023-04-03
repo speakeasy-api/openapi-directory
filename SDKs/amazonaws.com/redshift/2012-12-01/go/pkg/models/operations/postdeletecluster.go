@@ -50,25 +50,17 @@ func (e *POSTDeleteClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteClusterQueryParams struct {
-	Action  POSTDeleteClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteClusterRequest struct {
-	QueryParams POSTDeleteClusterQueryParams
-	Headers     POSTDeleteClusterHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                       `request:"mediaType=text/xml"`
+	Version           POSTDeleteClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteClusterResponse struct {

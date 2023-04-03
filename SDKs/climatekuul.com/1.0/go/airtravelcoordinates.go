@@ -32,15 +32,25 @@ func newAirtravelCoordinates(defaultClient, securityClient HTTPClient, serverURL
 }
 
 // AirtravelCoordinates - airtravelCoordinates
-func (s *airtravelCoordinates) AirtravelCoordinates(ctx context.Context, request operations.AirtravelCoordinatesRequest) (*operations.AirtravelCoordinatesResponse, error) {
+func (s *airtravelCoordinates) AirtravelCoordinates(ctx context.Context, request operations.AirtravelCoordinatesRequest, opts ...operations.Option) (*operations.AirtravelCoordinatesResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.AirtravelCoordinatesServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelCoordinates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +62,7 @@ func (s *airtravelCoordinates) AirtravelCoordinates(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -80,10 +90,20 @@ func (s *airtravelCoordinates) AirtravelCoordinates(ctx context.Context, request
 }
 
 // ConfirmCarbonOffset4 - confirmCarbonOffset
-func (s *airtravelCoordinates) ConfirmCarbonOffset4(ctx context.Context, request operations.ConfirmCarbonOffset4Request) (*operations.ConfirmCarbonOffset4Response, error) {
+func (s *airtravelCoordinates) ConfirmCarbonOffset4(ctx context.Context, request operations.ConfirmCarbonOffset4RequestBody, opts ...operations.Option) (*operations.ConfirmCarbonOffset4Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmCarbonOffset4ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelCoordinates/confirmCarbonOffset"
@@ -126,10 +146,20 @@ func (s *airtravelCoordinates) ConfirmCarbonOffset4(ctx context.Context, request
 }
 
 // ConfirmPayment4 - confirmPayment
-func (s *airtravelCoordinates) ConfirmPayment4(ctx context.Context, request operations.ConfirmPayment4Request) (*operations.ConfirmPayment4Response, error) {
+func (s *airtravelCoordinates) ConfirmPayment4(ctx context.Context, request operations.ConfirmPayment4RequestBody, opts ...operations.Option) (*operations.ConfirmPayment4Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPayment4ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelCoordinates/confirmPayment"
@@ -172,10 +202,20 @@ func (s *airtravelCoordinates) ConfirmPayment4(ctx context.Context, request oper
 }
 
 // ConfirmPaymentOfTransaction4 - confirmTransaction
-func (s *airtravelCoordinates) ConfirmPaymentOfTransaction4(ctx context.Context, request operations.ConfirmPaymentOfTransaction4Request) (*operations.ConfirmPaymentOfTransaction4Response, error) {
+func (s *airtravelCoordinates) ConfirmPaymentOfTransaction4(ctx context.Context, request operations.ConfirmPaymentOfTransaction4RequestBody, opts ...operations.Option) (*operations.ConfirmPaymentOfTransaction4Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPaymentOfTransaction4ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelCoordinates/confirmTransaction"
@@ -218,10 +258,20 @@ func (s *airtravelCoordinates) ConfirmPaymentOfTransaction4(ctx context.Context,
 }
 
 // ConfirmsPlanting4 - confirmPlanting
-func (s *airtravelCoordinates) ConfirmsPlanting4(ctx context.Context, request operations.ConfirmsPlanting4Request) (*operations.ConfirmsPlanting4Response, error) {
+func (s *airtravelCoordinates) ConfirmsPlanting4(ctx context.Context, request operations.ConfirmsPlanting4RequestBody, opts ...operations.Option) (*operations.ConfirmsPlanting4Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmsPlanting4ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelCoordinates/confirmPlanting"

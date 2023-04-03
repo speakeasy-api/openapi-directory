@@ -30,20 +30,16 @@ func (e *ListRuleGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListRuleGroupsHeaders struct {
-	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListRuleGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListRuleGroupsRequest struct {
-	Headers ListRuleGroupsHeaders
-	Request shared.ListRuleGroupsRequest `request:"mediaType=application/json"`
+	ListRuleGroupsRequest shared.ListRuleGroupsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            ListRuleGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ListRuleGroupsResponse struct {

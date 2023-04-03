@@ -40,20 +40,20 @@ func newTerminalSettingsCompanyLevel(defaultClient, securityClient HTTPClient, s
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalLogos(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalLogosRequest) (*operations.GetCompaniesCompanyIDTerminalLogosResponse, error) {
+func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalLogos(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalLogosRequest, security operations.GetCompaniesCompanyIDTerminalLogosSecurity) (*operations.GetCompaniesCompanyIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -114,16 +114,16 @@ func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalLogos(ctx co
 //
 // For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
 // * Management API—Terminal settings Advanced read and write
-func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalSettings(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalSettingsRequest) (*operations.GetCompaniesCompanyIDTerminalSettingsResponse, error) {
+func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalSettings(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalSettingsRequest, security operations.GetCompaniesCompanyIDTerminalSettingsSecurity) (*operations.GetCompaniesCompanyIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,11 +183,11 @@ func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalSettings(ctx
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalLogos(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalLogosRequest) (*operations.PatchCompaniesCompanyIDTerminalLogosResponse, error) {
+func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalLogos(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalLogosRequest, security operations.PatchCompaniesCompanyIDTerminalLogosSecurity) (*operations.PatchCompaniesCompanyIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -199,11 +199,11 @@ func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalLogos(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -264,11 +264,11 @@ func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalLogos(ctx 
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalSettings(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalSettingsRequest) (*operations.PatchCompaniesCompanyIDTerminalSettingsResponse, error) {
+func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalSettings(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalSettingsRequest, security operations.PatchCompaniesCompanyIDTerminalSettingsSecurity) (*operations.PatchCompaniesCompanyIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -280,7 +280,7 @@ func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalSettings(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

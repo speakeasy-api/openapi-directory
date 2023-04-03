@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type SetNotificationLevelPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SetNotificationLevelHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type SetNotificationLevelRequestBodyNotificationLevelEnum string
 
 const (
@@ -51,9 +42,10 @@ type SetNotificationLevelRequestBody struct {
 }
 
 type SetNotificationLevelRequest struct {
-	PathParams SetNotificationLevelPathParams
-	Headers    SetNotificationLevelHeaders
-	Request    *SetNotificationLevelRequestBody `request:"mediaType=application/json"`
+	APIKey      string                           `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                           `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *SetNotificationLevelRequestBody `request:"mediaType=application/json"`
+	ID          string                           `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // SetNotificationLevel200ApplicationJSON - topic updated

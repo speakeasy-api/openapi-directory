@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDomainConfigurationPathParams struct {
-	// The name of the domain configuration to be updated.
-	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
-}
-
-type UpdateDomainConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateDomainConfigurationRequestBodyAuthorizerConfig - An object that specifies the authorization service for a domain.
 type UpdateDomainConfigurationRequestBodyAuthorizerConfig struct {
 	AllowAuthorizerOverride *bool   `json:"allowAuthorizerOverride,omitempty"`
@@ -64,9 +49,16 @@ type UpdateDomainConfigurationRequestBody struct {
 }
 
 type UpdateDomainConfigurationRequest struct {
-	PathParams UpdateDomainConfigurationPathParams
-	Headers    UpdateDomainConfigurationHeaders
-	Request    UpdateDomainConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDomainConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the domain configuration to be updated.
+	DomainConfigurationName string `pathParam:"style=simple,explode=false,name=domainConfigurationName"`
 }
 
 type UpdateDomainConfigurationResponse struct {

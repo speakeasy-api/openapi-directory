@@ -8,8 +8,8 @@ import (
 )
 
 type AccountUpdateEmailSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountUpdateEmailRequestBody struct {
@@ -17,11 +17,6 @@ type AccountUpdateEmailRequestBody struct {
 	Email string `json:"email"`
 	// User password. Must be between 6 to 32 chars.
 	Password string `json:"password"`
-}
-
-type AccountUpdateEmailRequest struct {
-	Request  *AccountUpdateEmailRequestBody `request:"mediaType=application/json"`
-	Security AccountUpdateEmailSecurity
 }
 
 type AccountUpdateEmailResponse struct {

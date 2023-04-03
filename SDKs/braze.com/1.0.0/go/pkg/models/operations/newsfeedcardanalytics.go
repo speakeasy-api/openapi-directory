@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type NewsFeedCardAnalyticsQueryParams struct {
+type NewsFeedCardAnalyticsRequest struct {
 	// (Required) String
 	//
 	// Card API identifier
@@ -23,10 +23,6 @@ type NewsFeedCardAnalyticsQueryParams struct {
 	//
 	// Unit of time between data points - can be "day" or "hour" (defaults to "day")
 	Unit *string `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type NewsFeedCardAnalyticsRequest struct {
-	QueryParams NewsFeedCardAnalyticsQueryParams
 }
 
 type NewsFeedCardAnalyticsResponse struct {

@@ -40,14 +40,14 @@ func newIndividuals(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete an individual with the specified identifier
 func (s *individuals) DeleteIndividualsPartyID(ctx context.Context, request operations.DeleteIndividualsPartyIDRequest) (*operations.DeleteIndividualsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -115,9 +115,9 @@ func (s *individuals) GetIndividuals(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -181,14 +181,14 @@ func (s *individuals) GetIndividuals(ctx context.Context, request operations.Get
 // Retrieve an individual with the specified identifier
 func (s *individuals) GetIndividualsPartyID(ctx context.Context, request operations.GetIndividualsPartyIDRequest) (*operations.GetIndividualsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -250,7 +250,7 @@ func (s *individuals) PostIndividuals(ctx context.Context, request operations.Po
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/individuals"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IndividualInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -265,7 +265,7 @@ func (s *individuals) PostIndividuals(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -327,9 +327,9 @@ func (s *individuals) PostIndividuals(ctx context.Context, request operations.Po
 // Update an individual
 func (s *individuals) PutIndividualsPartyID(ctx context.Context, request operations.PutIndividualsPartyIDRequest) (*operations.PutIndividualsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IndividualInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -344,7 +344,7 @@ func (s *individuals) PutIndividualsPartyID(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

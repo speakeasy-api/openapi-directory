@@ -30,7 +30,8 @@ func (e *GetContainerServicePowersXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetContainerServicePowersHeaders struct {
+type GetContainerServicePowersRequest struct {
+	RequestBody       map[string]interface{}                  `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetContainerServicePowersHeaders struct {
 	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetContainerServicePowersXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetContainerServicePowersRequest struct {
-	Headers GetContainerServicePowersHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetContainerServicePowersResponse struct {

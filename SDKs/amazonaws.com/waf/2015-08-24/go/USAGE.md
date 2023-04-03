@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateByteMatchSetRequest{
-        Headers: operations.CreateByteMatchSetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSWAF_20150824.CreateByteMatchSet",
+        CreateByteMatchSetRequest: shared.CreateByteMatchSetRequest{
+            ChangeToken: "corrupti",
+            Name: "provident",
         },
-        Request: shared.CreateByteMatchSetRequest{
-            ChangeToken: "illum",
-            Name: "vel",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "AWSWAF_20150824.CreateByteMatchSet",
     }
 
     ctx := context.Background()

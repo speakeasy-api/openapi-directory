@@ -33,16 +33,16 @@ func newPlatform(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetBalancePlatformsID - Get a balance platform
 // Returns a balance platform.
-func (s *platform) GetBalancePlatformsID(ctx context.Context, request operations.GetBalancePlatformsIDRequest) (*operations.GetBalancePlatformsIDResponse, error) {
+func (s *platform) GetBalancePlatformsID(ctx context.Context, request operations.GetBalancePlatformsIDRequest, security operations.GetBalancePlatformsIDSecurity) (*operations.GetBalancePlatformsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -98,20 +98,20 @@ func (s *platform) GetBalancePlatformsID(ctx context.Context, request operations
 // Returns a paginated list of all the account holders that belong to the balance platform. To fetch multiple pages, use the query parameters.
 //
 // For example, to limit the page to 5 account holders and to skip the first 20, use `/balancePlatforms/{id}/accountHolders?limit=5&offset=20`.
-func (s *platform) GetBalancePlatformsIDAccountHolders(ctx context.Context, request operations.GetBalancePlatformsIDAccountHoldersRequest) (*operations.GetBalancePlatformsIDAccountHoldersResponse, error) {
+func (s *platform) GetBalancePlatformsIDAccountHolders(ctx context.Context, request operations.GetBalancePlatformsIDAccountHoldersRequest, security operations.GetBalancePlatformsIDAccountHoldersSecurity) (*operations.GetBalancePlatformsIDAccountHoldersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}/accountHolders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}/accountHolders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

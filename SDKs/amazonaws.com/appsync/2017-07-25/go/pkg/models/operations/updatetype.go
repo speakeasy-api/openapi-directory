@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTypePathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The new type name.
-	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
-}
-
-type UpdateTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateTypeRequestBodyFormatEnum - The new type format: SDL or JSON.
 type UpdateTypeRequestBodyFormatEnum string
 
@@ -58,9 +41,18 @@ type UpdateTypeRequestBody struct {
 }
 
 type UpdateTypeRequest struct {
-	PathParams UpdateTypePathParams
-	Headers    UpdateTypeHeaders
-	Request    UpdateTypeRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateTypeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The new type name.
+	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
 }
 
 type UpdateTypeResponse struct {

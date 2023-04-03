@@ -35,7 +35,7 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 
 // FetchOperations - Retrieve the operations accessible to a a given user.
 // Retrieve the **operations** accessible to the authenticated user. Filter the results by resource owner if the `resourceOwnerId` query parameter is specified.
-func (s *operationsT) FetchOperations(ctx context.Context, request operations.FetchOperationsRequest) (*operations.FetchOperationsResponse, error) {
+func (s *operationsT) FetchOperations(ctx context.Context, request operations.FetchOperationsRequest, security operations.FetchOperationsSecurity) (*operations.FetchOperationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/operations/all"
 
@@ -44,11 +44,11 @@ func (s *operationsT) FetchOperations(ctx context.Context, request operations.Fe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

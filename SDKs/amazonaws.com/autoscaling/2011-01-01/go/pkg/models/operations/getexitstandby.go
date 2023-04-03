@@ -50,28 +50,20 @@ func (e *GETExitStandbyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETExitStandbyQueryParams struct {
+type GETExitStandbyRequest struct {
 	Action GETExitStandbyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The IDs of the instances. You can specify up to 20 instances.
-	InstanceIds []string                  `queryParam:"style=form,explode=true,name=InstanceIds"`
-	Version     GETExitStandbyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETExitStandbyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETExitStandbyRequest struct {
-	QueryParams GETExitStandbyQueryParams
-	Headers     GETExitStandbyHeaders
+	InstanceIds       []string                  `queryParam:"style=form,explode=true,name=InstanceIds"`
+	Version           GETExitStandbyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETExitStandbyResponse struct {

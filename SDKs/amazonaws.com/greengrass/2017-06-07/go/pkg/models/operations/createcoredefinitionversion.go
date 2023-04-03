@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCoreDefinitionVersionPathParams struct {
-	// The ID of the core definition.
-	CoreDefinitionID string `pathParam:"style=simple,explode=false,name=CoreDefinitionId"`
-}
-
-type CreateCoreDefinitionVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 type CreateCoreDefinitionVersionRequestBody struct {
 	// A list of cores in the core definition version.
 	Cores []shared.Core `json:"Cores,omitempty"`
 }
 
 type CreateCoreDefinitionVersionRequest struct {
-	PathParams CreateCoreDefinitionVersionPathParams
-	Headers    CreateCoreDefinitionVersionHeaders
-	Request    CreateCoreDefinitionVersionRequestBody `request:"mediaType=application/json"`
+	// The ID of the core definition.
+	CoreDefinitionID  string                                 `pathParam:"style=simple,explode=false,name=CoreDefinitionId"`
+	RequestBody       CreateCoreDefinitionVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateCoreDefinitionVersionResponse struct {

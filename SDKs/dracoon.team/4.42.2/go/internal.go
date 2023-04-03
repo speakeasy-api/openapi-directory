@@ -56,7 +56,7 @@ func (s *internal) InternalRequestSubscriptionPlan(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -121,7 +121,7 @@ func (s *internal) InternalSetSubscriptionPlan(ctx context.Context, request oper
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/internal/tenant/subscription_plan"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionPlanRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -136,7 +136,7 @@ func (s *internal) InternalSetSubscriptionPlan(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

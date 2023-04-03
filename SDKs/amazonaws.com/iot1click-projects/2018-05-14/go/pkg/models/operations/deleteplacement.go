@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeletePlacementPathParams struct {
-	// The name of the empty placement to delete.
-	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
-	// The project containing the empty placement to delete.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type DeletePlacementHeaders struct {
+type DeletePlacementRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeletePlacementHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeletePlacementRequest struct {
-	PathParams DeletePlacementPathParams
-	Headers    DeletePlacementHeaders
+	// The name of the empty placement to delete.
+	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
+	// The project containing the empty placement to delete.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type DeletePlacementResponse struct {

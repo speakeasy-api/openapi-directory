@@ -8,17 +8,12 @@ import (
 )
 
 type TaskNotesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TaskNotesCreateQueryParams struct {
-	Since *string `queryParam:"style=form,explode=true,name=since"`
-	Task  *int64  `queryParam:"style=form,explode=true,name=task"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TaskNotesCreateRequest struct {
-	QueryParams TaskNotesCreateQueryParams
-	Security    TaskNotesCreateSecurity
+	Since *string `queryParam:"style=form,explode=true,name=since"`
+	Task  *int64  `queryParam:"style=form,explode=true,name=task"`
 }
 
 type TaskNotesCreateResponse struct {

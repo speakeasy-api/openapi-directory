@@ -50,25 +50,17 @@ func (e *POSTEnableMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTEnableMFADeviceQueryParams struct {
-	Action  POSTEnableMFADeviceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTEnableMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTEnableMFADeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTEnableMFADeviceRequest struct {
-	QueryParams POSTEnableMFADeviceQueryParams
-	Headers     POSTEnableMFADeviceHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTEnableMFADeviceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                         `request:"mediaType=text/xml"`
+	Version           POSTEnableMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTEnableMFADeviceResponse struct {

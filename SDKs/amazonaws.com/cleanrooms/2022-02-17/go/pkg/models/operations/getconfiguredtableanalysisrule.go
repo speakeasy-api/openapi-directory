@@ -33,14 +33,7 @@ func (e *GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum) UnmarshalJSON(data 
 	}
 }
 
-type GetConfiguredTableAnalysisRulePathParams struct {
-	// The analysis rule to be retrieved. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
-	AnalysisRuleType GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=analysisRuleType"`
-	// The unique identifier for the configured table to retrieve. Currently accepts the configured table ID.
-	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
-}
-
-type GetConfiguredTableAnalysisRuleHeaders struct {
+type GetConfiguredTableAnalysisRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -48,11 +41,10 @@ type GetConfiguredTableAnalysisRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetConfiguredTableAnalysisRuleRequest struct {
-	PathParams GetConfiguredTableAnalysisRulePathParams
-	Headers    GetConfiguredTableAnalysisRuleHeaders
+	// The analysis rule to be retrieved. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
+	AnalysisRuleType GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum `pathParam:"style=simple,explode=false,name=analysisRuleType"`
+	// The unique identifier for the configured table to retrieve. Currently accepts the configured table ID.
+	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
 }
 
 type GetConfiguredTableAnalysisRuleResponse struct {

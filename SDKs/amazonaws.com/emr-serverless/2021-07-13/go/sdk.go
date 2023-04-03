@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CancelJobRun - Cancels a job run.
 func (s *SDK) CancelJobRun(ctx context.Context, request operations.CancelJobRunRequest) (*operations.CancelJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -192,7 +192,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/applications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -286,14 +286,14 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 // DeleteApplication - Deletes an application. An application has to be in a stopped or created state in order to be deleted.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -362,14 +362,14 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 // GetApplication - Displays detailed information about a specified application.
 func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicationRequest) (*operations.GetApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -438,14 +438,14 @@ func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicat
 // GetDashboardForJobRun - Returns a URL to access the job run dashboard.
 func (s *SDK) GetDashboardForJobRun(ctx context.Context, request operations.GetDashboardForJobRunRequest) (*operations.GetDashboardForJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}/dashboard", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}/dashboard", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -514,14 +514,14 @@ func (s *SDK) GetDashboardForJobRun(ctx context.Context, request operations.GetD
 // GetJobRun - Displays detailed information about a job run.
 func (s *SDK) GetJobRun(ctx context.Context, request operations.GetJobRunRequest) (*operations.GetJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -597,9 +597,9 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -660,16 +660,16 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 // ListJobRuns - Lists job runs based on a set of parameters.
 func (s *SDK) ListJobRuns(ctx context.Context, request operations.ListJobRunsRequest) (*operations.ListJobRunsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -730,14 +730,14 @@ func (s *SDK) ListJobRuns(ctx context.Context, request operations.ListJobRunsReq
 // ListTagsForResource - Lists the tags assigned to the resources.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -806,14 +806,14 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // StartApplication - Starts a specified application and initializes initial capacity if configured.
 func (s *SDK) StartApplication(ctx context.Context, request operations.StartApplicationRequest) (*operations.StartApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -892,9 +892,9 @@ func (s *SDK) StartApplication(ctx context.Context, request operations.StartAppl
 // StartJobRun - Starts a job run.
 func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunRequest) (*operations.StartJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -909,7 +909,7 @@ func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -988,14 +988,14 @@ func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunReq
 // StopApplication - Stops a specified application and releases initial capacity if configured. All scheduled and running jobs must be completed or cancelled before stopping an application.
 func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplicationRequest) (*operations.StopApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1064,9 +1064,9 @@ func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplic
 // TagResource - Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1081,7 +1081,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1150,16 +1150,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from resources.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1230,9 +1230,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateApplication - Updates a specified application. An application has to be in a stopped or created state in order to be updated.
 func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1247,7 +1247,7 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

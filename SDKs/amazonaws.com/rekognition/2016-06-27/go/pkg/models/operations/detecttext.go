@@ -30,7 +30,8 @@ func (e *DetectTextXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DetectTextHeaders struct {
+type DetectTextRequest struct {
+	DetectTextRequest shared.DetectTextRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DetectTextHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DetectTextXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DetectTextRequest struct {
-	Headers DetectTextHeaders
-	Request shared.DetectTextRequest `request:"mediaType=application/json"`
 }
 
 type DetectTextResponse struct {

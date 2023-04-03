@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteWebhookSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteWebhookPathParams struct {
-	// An Id of a webhook
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteWebhookRequest struct {
-	PathParams DeleteWebhookPathParams
-	Security   DeleteWebhookSecurity
+	// An Id of a webhook
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteWebhookResponse struct {

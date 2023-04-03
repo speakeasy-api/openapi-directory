@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateFleetMetricPathParams struct {
-	// The name of the fleet metric to create.
-	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
-}
-
-type CreateFleetMetricHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateFleetMetricRequestBodyAggregationType - The type of aggregation queries.
 type CreateFleetMetricRequestBodyAggregationType struct {
 	Name   *shared.AggregationTypeNameEnum `json:"name,omitempty"`
@@ -151,9 +136,16 @@ type CreateFleetMetricRequestBody struct {
 }
 
 type CreateFleetMetricRequest struct {
-	PathParams CreateFleetMetricPathParams
-	Headers    CreateFleetMetricHeaders
-	Request    CreateFleetMetricRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateFleetMetricRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the fleet metric to create.
+	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
 }
 
 type CreateFleetMetricResponse struct {

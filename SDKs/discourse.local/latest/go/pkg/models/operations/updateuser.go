@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateUserPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type UpdateUserHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type UpdateUserRequestBody struct {
 	Email       *string                `json:"email,omitempty"`
 	ExternalIds map[string]interface{} `json:"external_ids,omitempty"`
@@ -23,9 +14,10 @@ type UpdateUserRequestBody struct {
 }
 
 type UpdateUserRequest struct {
-	PathParams UpdateUserPathParams
-	Headers    UpdateUserHeaders
-	Request    *UpdateUserRequestBody `request:"mediaType=application/json"`
+	APIKey      string                 `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                 `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *UpdateUserRequestBody `request:"mediaType=application/json"`
+	Username    string                 `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // UpdateUser200ApplicationJSON - user updated

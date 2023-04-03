@@ -40,7 +40,7 @@ func (e *GetArticlesStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetArticlesQueryParams struct {
+type GetArticlesRequest struct {
 	// Adding this will allow the client to return the list of articles
 	// belonging to the requested collection, ordered by ascending publication date.
 	CollectionID *int `queryParam:"style=form,explode=true,name=collection_id"`
@@ -72,10 +72,6 @@ type GetArticlesQueryParams struct {
 	//             If `state=all` the number of items returned will be `1000` instead of the default `30`.
 	//             This parameter can be used in conjuction with `state`.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetArticlesRequest struct {
-	QueryParams GetArticlesQueryParams
 }
 
 type GetArticlesResponse struct {

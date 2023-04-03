@@ -36,14 +36,14 @@ func newOrganisationsBusinessNames(defaultClient, securityClient HTTPClient, ser
 // Delete a business name
 func (s *organisationsBusinessNames) DeleteOrganisationsPartyIDBusinessNamesProductID(ctx context.Context, request operations.DeleteOrganisationsPartyIDBusinessNamesProductIDRequest) (*operations.DeleteOrganisationsPartyIDBusinessNamesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -93,14 +93,14 @@ func (s *organisationsBusinessNames) DeleteOrganisationsPartyIDBusinessNamesProd
 // GetOrganisationsPartyIDBusinessNames - Retrieve a list of business names
 func (s *organisationsBusinessNames) GetOrganisationsPartyIDBusinessNames(ctx context.Context, request operations.GetOrganisationsPartyIDBusinessNamesRequest) (*operations.GetOrganisationsPartyIDBusinessNamesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -162,14 +162,14 @@ func (s *organisationsBusinessNames) GetOrganisationsPartyIDBusinessNames(ctx co
 // Retrieve a business name
 func (s *organisationsBusinessNames) GetOrganisationsPartyIDBusinessNamesProductID(ctx context.Context, request operations.GetOrganisationsPartyIDBusinessNamesProductIDRequest) (*operations.GetOrganisationsPartyIDBusinessNamesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -229,9 +229,9 @@ func (s *organisationsBusinessNames) GetOrganisationsPartyIDBusinessNamesProduct
 // Create a business name
 func (s *organisationsBusinessNames) PostOrganisationsPartyIDBusinessNames(ctx context.Context, request operations.PostOrganisationsPartyIDBusinessNamesRequest) (*operations.PostOrganisationsPartyIDBusinessNamesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessNameInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -246,7 +246,7 @@ func (s *organisationsBusinessNames) PostOrganisationsPartyIDBusinessNames(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -308,9 +308,9 @@ func (s *organisationsBusinessNames) PostOrganisationsPartyIDBusinessNames(ctx c
 // Update a business name
 func (s *organisationsBusinessNames) PutOrganisationsPartyIDBusinessNamesProductID(ctx context.Context, request operations.PutOrganisationsPartyIDBusinessNamesProductIDRequest) (*operations.PutOrganisationsPartyIDBusinessNamesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/business-names/{productId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessNameInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -325,7 +325,7 @@ func (s *organisationsBusinessNames) PutOrganisationsPartyIDBusinessNamesProduct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

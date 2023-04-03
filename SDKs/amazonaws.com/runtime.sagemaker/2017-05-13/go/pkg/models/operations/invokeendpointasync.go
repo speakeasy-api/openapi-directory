@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvokeEndpointAsyncPathParams struct {
+type InvokeEndpointAsyncRequest struct {
 	// The name of the endpoint that you specified when you created the endpoint using the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"> <code>CreateEndpoint</code> </a> API.
-	EndpointName string `pathParam:"style=simple,explode=false,name=EndpointName"`
-}
-
-type InvokeEndpointAsyncHeaders struct {
+	EndpointName      string  `pathParam:"style=simple,explode=false,name=EndpointName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -34,11 +31,6 @@ type InvokeEndpointAsyncHeaders struct {
 	XAmznSageMakerInvocationTimeoutSeconds *int64 `header:"style=simple,explode=false,name=X-Amzn-SageMaker-InvocationTimeoutSeconds"`
 	// Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or 21,600 seconds.
 	XAmznSageMakerRequestTTLSeconds *int64 `header:"style=simple,explode=false,name=X-Amzn-SageMaker-RequestTTLSeconds"`
-}
-
-type InvokeEndpointAsyncRequest struct {
-	PathParams InvokeEndpointAsyncPathParams
-	Headers    InvokeEndpointAsyncHeaders
 }
 
 type InvokeEndpointAsyncResponse struct {

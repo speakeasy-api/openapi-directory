@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetUserEmailsPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type GetUserEmailsRequest struct {
-	PathParams GetUserEmailsPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetUserEmails200ApplicationJSON - success response

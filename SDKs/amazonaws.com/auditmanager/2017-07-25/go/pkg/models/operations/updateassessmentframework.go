@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAssessmentFrameworkPathParams struct {
-	//  The unique identifier for the framework.
-	FrameworkID string `pathParam:"style=simple,explode=false,name=frameworkId"`
-}
-
-type UpdateAssessmentFrameworkHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateAssessmentFrameworkRequestBody struct {
 	//  The compliance type that the new custom framework supports, such as CIS or HIPAA.
 	ComplianceType *string `json:"complianceType,omitempty"`
@@ -34,9 +19,16 @@ type UpdateAssessmentFrameworkRequestBody struct {
 }
 
 type UpdateAssessmentFrameworkRequest struct {
-	PathParams UpdateAssessmentFrameworkPathParams
-	Headers    UpdateAssessmentFrameworkHeaders
-	Request    UpdateAssessmentFrameworkRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAssessmentFrameworkRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique identifier for the framework.
+	FrameworkID string `pathParam:"style=simple,explode=false,name=frameworkId"`
 }
 
 type UpdateAssessmentFrameworkResponse struct {

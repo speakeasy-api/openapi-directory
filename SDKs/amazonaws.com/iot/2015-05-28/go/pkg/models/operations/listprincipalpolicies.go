@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPrincipalPoliciesQueryParams struct {
-	// Specifies the order for results. If true, results are returned in ascending creation order.
-	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
-	// The marker for the next set of results.
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-	// The result page size.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListPrincipalPoliciesHeaders struct {
+type ListPrincipalPoliciesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,13 +15,14 @@ type ListPrincipalPoliciesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Specifies the order for results. If true, results are returned in ascending creation order.
+	IsAscendingOrder *bool `queryParam:"style=form,explode=true,name=isAscendingOrder"`
+	// The marker for the next set of results.
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
+	// The result page size.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// The principal. Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).
 	XAmznIotPrincipal string `header:"style=simple,explode=false,name=x-amzn-iot-principal"`
-}
-
-type ListPrincipalPoliciesRequest struct {
-	QueryParams ListPrincipalPoliciesQueryParams
-	Headers     ListPrincipalPoliciesHeaders
 }
 
 type ListPrincipalPoliciesResponse struct {

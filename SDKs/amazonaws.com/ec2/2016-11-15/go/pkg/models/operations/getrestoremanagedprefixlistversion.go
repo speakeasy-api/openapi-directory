@@ -50,7 +50,7 @@ func (e *GETRestoreManagedPrefixListVersionVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETRestoreManagedPrefixListVersionQueryParams struct {
+type GETRestoreManagedPrefixListVersionRequest struct {
 	Action GETRestoreManagedPrefixListVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The current version number for the prefix list.
 	CurrentVersion int64 `queryParam:"style=form,explode=true,name=CurrentVersion"`
@@ -59,23 +59,15 @@ type GETRestoreManagedPrefixListVersionQueryParams struct {
 	// The ID of the prefix list.
 	PrefixListID string `queryParam:"style=form,explode=true,name=PrefixListId"`
 	// The version to restore.
-	PreviousVersion int64                                         `queryParam:"style=form,explode=true,name=PreviousVersion"`
-	Version         GETRestoreManagedPrefixListVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRestoreManagedPrefixListVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRestoreManagedPrefixListVersionRequest struct {
-	QueryParams GETRestoreManagedPrefixListVersionQueryParams
-	Headers     GETRestoreManagedPrefixListVersionHeaders
+	PreviousVersion   int64                                         `queryParam:"style=form,explode=true,name=PreviousVersion"`
+	Version           GETRestoreManagedPrefixListVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRestoreManagedPrefixListVersionResponse struct {

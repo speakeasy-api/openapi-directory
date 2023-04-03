@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListManagedJobTemplatesQueryParams struct {
-	// Maximum number of entries that can be returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// An optional parameter for template name. If specified, only the versions of the managed job templates that have the specified template name will be returned.
-	TemplateName *string `queryParam:"style=form,explode=true,name=templateName"`
-}
-
-type ListManagedJobTemplatesHeaders struct {
+type ListManagedJobTemplatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListManagedJobTemplatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListManagedJobTemplatesRequest struct {
-	QueryParams ListManagedJobTemplatesQueryParams
-	Headers     ListManagedJobTemplatesHeaders
+	// Maximum number of entries that can be returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// An optional parameter for template name. If specified, only the versions of the managed job templates that have the specified template name will be returned.
+	TemplateName *string `queryParam:"style=form,explode=true,name=templateName"`
 }
 
 type ListManagedJobTemplatesResponse struct {

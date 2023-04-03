@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDeploymentPathParams struct {
-	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type CreateDeploymentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 // CreateDeploymentRequestBodyDeploymentTypeEnum - The type of deployment. When used for ”CreateDeployment”, only ”NewDeployment” and ”Redeployment” are valid.
 type CreateDeploymentRequestBodyDeploymentTypeEnum string
 
@@ -66,9 +49,18 @@ type CreateDeploymentRequestBody struct {
 }
 
 type CreateDeploymentRequest struct {
-	PathParams CreateDeploymentPathParams
-	Headers    CreateDeploymentHeaders
-	Request    CreateDeploymentRequestBody `request:"mediaType=application/json"`
+	// The ID of the Greengrass group.
+	GroupID           string                      `pathParam:"style=simple,explode=false,name=GroupId"`
+	RequestBody       CreateDeploymentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateDeploymentResponse struct {

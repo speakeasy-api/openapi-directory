@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateNetworkSettingsPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type AssociateNetworkSettingsQueryParams struct {
-	// The ARN of the network settings.
-	NetworkSettingsArn string `queryParam:"style=form,explode=true,name=networkSettingsArn"`
-}
-
-type AssociateNetworkSettingsHeaders struct {
+type AssociateNetworkSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type AssociateNetworkSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateNetworkSettingsRequest struct {
-	PathParams  AssociateNetworkSettingsPathParams
-	QueryParams AssociateNetworkSettingsQueryParams
-	Headers     AssociateNetworkSettingsHeaders
+	// The ARN of the network settings.
+	NetworkSettingsArn string `queryParam:"style=form,explode=true,name=networkSettingsArn"`
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
 }
 
 type AssociateNetworkSettingsResponse struct {

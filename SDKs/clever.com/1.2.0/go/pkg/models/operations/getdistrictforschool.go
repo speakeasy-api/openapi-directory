@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDistrictForSchoolPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetDistrictForSchoolRequest struct {
-	PathParams GetDistrictForSchoolPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetDistrictForSchoolResponse struct {

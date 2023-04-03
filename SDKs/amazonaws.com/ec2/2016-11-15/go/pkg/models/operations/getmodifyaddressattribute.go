@@ -50,30 +50,22 @@ func (e *GETModifyAddressAttributeVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETModifyAddressAttributeQueryParams struct {
+type GETModifyAddressAttributeRequest struct {
 	Action GETModifyAddressAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// [EC2-VPC] The allocation ID.
 	AllocationID string `queryParam:"style=form,explode=true,name=AllocationId"`
 	// The domain name to modify for the IP address.
 	DomainName *string `queryParam:"style=form,explode=true,name=DomainName"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETModifyAddressAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyAddressAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyAddressAttributeRequest struct {
-	QueryParams GETModifyAddressAttributeQueryParams
-	Headers     GETModifyAddressAttributeHeaders
+	DryRun            *bool                                `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETModifyAddressAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyAddressAttributeResponse struct {

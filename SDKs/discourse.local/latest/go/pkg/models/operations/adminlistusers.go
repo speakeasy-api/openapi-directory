@@ -8,6 +8,27 @@ import (
 	"net/http"
 )
 
+// AdminListUsersAscEnum
+type AdminListUsersAscEnum string
+
+const (
+	AdminListUsersAscEnumTrue AdminListUsersAscEnum = "true"
+)
+
+func (e *AdminListUsersAscEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "true":
+		*e = AdminListUsersAscEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AdminListUsersAscEnum: %s", s)
+	}
+}
+
 // AdminListUsersFlagEnum
 type AdminListUsersFlagEnum string
 
@@ -41,31 +62,6 @@ func (e *AdminListUsersFlagEnum) UnmarshalJSON(data []byte) error {
 		return nil
 	default:
 		return fmt.Errorf("invalid value for AdminListUsersFlagEnum: %s", s)
-	}
-}
-
-type AdminListUsersPathParams struct {
-	Flag AdminListUsersFlagEnum `pathParam:"style=simple,explode=false,name=flag"`
-}
-
-// AdminListUsersAscEnum
-type AdminListUsersAscEnum string
-
-const (
-	AdminListUsersAscEnumTrue AdminListUsersAscEnum = "true"
-)
-
-func (e *AdminListUsersAscEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		*e = AdminListUsersAscEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AdminListUsersAscEnum: %s", s)
 	}
 }
 
@@ -120,16 +116,12 @@ func (e *AdminListUsersOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AdminListUsersQueryParams struct {
+type AdminListUsersRequest struct {
 	Asc        *AdminListUsersAscEnum   `queryParam:"style=form,explode=true,name=asc"`
+	Flag       AdminListUsersFlagEnum   `pathParam:"style=simple,explode=false,name=flag"`
 	Order      *AdminListUsersOrderEnum `queryParam:"style=form,explode=true,name=order"`
 	Page       *int64                   `queryParam:"style=form,explode=true,name=page"`
 	ShowEmails *bool                    `queryParam:"style=form,explode=true,name=show_emails"`
-}
-
-type AdminListUsersRequest struct {
-	PathParams  AdminListUsersPathParams
-	QueryParams AdminListUsersQueryParams
 }
 
 type AdminListUsers200ApplicationJSON struct {

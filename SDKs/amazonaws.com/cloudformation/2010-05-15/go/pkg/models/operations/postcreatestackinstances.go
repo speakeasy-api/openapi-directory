@@ -50,25 +50,17 @@ func (e *POSTCreateStackInstancesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateStackInstancesQueryParams struct {
-	Action  POSTCreateStackInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateStackInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateStackInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateStackInstancesRequest struct {
-	QueryParams POSTCreateStackInstancesQueryParams
-	Headers     POSTCreateStackInstancesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateStackInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTCreateStackInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateStackInstancesResponse struct {

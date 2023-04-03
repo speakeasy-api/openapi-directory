@@ -50,25 +50,17 @@ func (e *POSTTerminateEnvironmentVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTTerminateEnvironmentQueryParams struct {
-	Action  POSTTerminateEnvironmentActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTTerminateEnvironmentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTTerminateEnvironmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTTerminateEnvironmentRequest struct {
-	QueryParams POSTTerminateEnvironmentQueryParams
-	Headers     POSTTerminateEnvironmentHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTTerminateEnvironmentActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTTerminateEnvironmentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTTerminateEnvironmentResponse struct {

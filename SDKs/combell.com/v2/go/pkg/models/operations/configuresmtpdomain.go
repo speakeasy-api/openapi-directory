@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureSMTPDomainPathParams struct {
+type ConfigureSMTPDomainRequest struct {
+	// Contains the smtp domain information.
+	UpdateSMTPDomainRequest *shared.UpdateSMTPDomainRequest `request:"mediaType=application/json"`
 	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 	// Smtp domain name.
 	Hostname string `pathParam:"style=simple,explode=false,name=hostname"`
-}
-
-type ConfigureSMTPDomainQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
-type ConfigureSMTPDomainRequest struct {
-	PathParams  ConfigureSMTPDomainPathParams
-	QueryParams ConfigureSMTPDomainQueryParams
-	// Contains the smtp domain information.
-	Request *shared.UpdateSMTPDomainRequest `request:"mediaType=application/json"`
 }
 
 type ConfigureSMTPDomainResponse struct {

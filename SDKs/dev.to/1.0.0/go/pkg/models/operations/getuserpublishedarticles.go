@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserPublishedArticlesQueryParams struct {
+type GetUserPublishedArticlesRequest struct {
 	// Pagination page
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type GetUserPublishedArticlesRequest struct {
-	QueryParams GetUserPublishedArticlesQueryParams
 }
 
 type GetUserPublishedArticlesResponse struct {

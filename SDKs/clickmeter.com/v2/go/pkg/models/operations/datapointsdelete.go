@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsDeletePathParams struct {
+type DataPointsDeleteRequest struct {
 	// The id of the datapoint
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DataPointsDeleteRequest struct {
-	PathParams DataPointsDeletePathParams
 }
 
 type DataPointsDeleteResponse struct {

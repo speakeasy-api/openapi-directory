@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSmsTemplatePathParams struct {
-	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
-	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
-}
-
-type CreateSmsTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateSMSTemplateRequestBodySMSTemplateRequest - Specifies the content and settings for a message template that can be used in text messages that are sent through the SMS channel.
 type CreateSMSTemplateRequestBodySMSTemplateRequest struct {
 	Body                 *string           `json:"Body,omitempty"`
@@ -37,9 +22,16 @@ type CreateSmsTemplateRequestBody struct {
 }
 
 type CreateSmsTemplateRequest struct {
-	PathParams CreateSmsTemplatePathParams
-	Headers    CreateSmsTemplateHeaders
-	Request    CreateSmsTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSmsTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
 }
 
 type CreateSmsTemplateResponse struct {

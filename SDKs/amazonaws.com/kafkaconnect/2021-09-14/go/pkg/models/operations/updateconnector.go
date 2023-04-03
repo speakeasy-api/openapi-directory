@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConnectorPathParams struct {
-	// The Amazon Resource Name (ARN) of the connector that you want to update.
-	ConnectorArn string `pathParam:"style=simple,explode=false,name=connectorArn"`
-}
-
-type UpdateConnectorQueryParams struct {
-	// The current version of the connector that you want to update.
-	CurrentVersion string `queryParam:"style=form,explode=true,name=currentVersion"`
-}
-
-type UpdateConnectorHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateConnectorRequestBodyCapacity - The target capacity for the connector. The capacity can be auto scaled or provisioned.
 type UpdateConnectorRequestBodyCapacity struct {
 	AutoScaling         *shared.AutoScalingUpdate         `json:"autoScaling,omitempty"`
@@ -39,10 +19,18 @@ type UpdateConnectorRequestBody struct {
 }
 
 type UpdateConnectorRequest struct {
-	PathParams  UpdateConnectorPathParams
-	QueryParams UpdateConnectorQueryParams
-	Headers     UpdateConnectorHeaders
-	Request     UpdateConnectorRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateConnectorRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) of the connector that you want to update.
+	ConnectorArn string `pathParam:"style=simple,explode=false,name=connectorArn"`
+	// The current version of the connector that you want to update.
+	CurrentVersion string `queryParam:"style=form,explode=true,name=currentVersion"`
 }
 
 type UpdateConnectorResponse struct {

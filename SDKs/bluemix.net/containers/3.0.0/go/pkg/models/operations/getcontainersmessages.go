@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetContainersMessagesHeaders struct {
+type GetContainersMessagesRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. To retrieve your space ID, run `cf space <space_name> --guid` and replace `<space_name>` with the name of the space where you want to create or work with your container.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetContainersMessagesRequest struct {
-	Headers GetContainersMessagesHeaders
 }
 
 // GetContainersMessages200ApplicationJSON - OK. A list of messages is returned.

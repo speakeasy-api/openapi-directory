@@ -30,7 +30,8 @@ func (e *GetHostXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetHostHeaders struct {
+type GetHostRequest struct {
+	GetHostInput      shared.GetHostInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetHostHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetHostXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetHostRequest struct {
-	Headers GetHostHeaders
-	Request shared.GetHostInput `request:"mediaType=application/json"`
 }
 
 type GetHostResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamMembershipsQueryParams struct {
+type GetTeamMembershipsRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -28,10 +28,6 @@ type GetTeamMembershipsQueryParams struct {
 	User *string `queryParam:"style=form,explode=true,name=user"`
 	// Globally unique identifier for the workspace. This parameter must be used with the user parameter.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetTeamMembershipsRequest struct {
-	QueryParams GetTeamMembershipsQueryParams
 }
 
 // GetTeamMemberships200ApplicationJSON - Successfully retrieved the requested team memberships.

@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // AssociateAttributeGroup - Associates an attribute group with an application to augment the application's metadata with the group's attributes. This feature enables applications to be described with user-defined details that are machine-readable, such as third-party integrations.
 func (s *SDK) AssociateAttributeGroup(ctx context.Context, request operations.AssociateAttributeGroupRequest) (*operations.AssociateAttributeGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-groups/{attributeGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-groups/{attributeGroup}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -210,14 +210,14 @@ func (s *SDK) AssociateAttributeGroup(ctx context.Context, request operations.As
 // AssociateResource -  Associates a resource with an application. The resource can be specified by its ARN or name. The application can be specified by ARN, ID, or name.
 func (s *SDK) AssociateResource(ctx context.Context, request operations.AssociateResourceRequest) (*operations.AssociateResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -318,7 +318,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/applications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +333,7 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -424,7 +424,7 @@ func (s *SDK) CreateAttributeGroup(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/attribute-groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,7 +439,7 @@ func (s *SDK) CreateAttributeGroup(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -518,14 +518,14 @@ func (s *SDK) CreateAttributeGroup(ctx context.Context, request operations.Creat
 // DeleteApplication - Deletes an application that is specified either by its application ID, name, or ARN. All associated attribute groups and resources must be disassociated from it before deleting an application.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -594,14 +594,14 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 // DeleteAttributeGroup - Deletes an attribute group, specified either by its attribute group ID, name, or ARN.
 func (s *SDK) DeleteAttributeGroup(ctx context.Context, request operations.DeleteAttributeGroupRequest) (*operations.DeleteAttributeGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -670,14 +670,14 @@ func (s *SDK) DeleteAttributeGroup(ctx context.Context, request operations.Delet
 // DisassociateAttributeGroup - Disassociates an attribute group from an application to remove the extra attributes contained in the attribute group from the application's metadata. This operation reverts <code>AssociateAttributeGroup</code>.
 func (s *SDK) DisassociateAttributeGroup(ctx context.Context, request operations.DisassociateAttributeGroupRequest) (*operations.DisassociateAttributeGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-groups/{attributeGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-groups/{attributeGroup}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -746,14 +746,14 @@ func (s *SDK) DisassociateAttributeGroup(ctx context.Context, request operations
 // DisassociateResource - Disassociates a resource from application. Both the resource and the application can be specified either by ID or name.
 func (s *SDK) DisassociateResource(ctx context.Context, request operations.DisassociateResourceRequest) (*operations.DisassociateResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -832,14 +832,14 @@ func (s *SDK) DisassociateResource(ctx context.Context, request operations.Disas
 // GetApplication -  Retrieves metadata information about one of your applications. The application can be specified by its ARN, ID, or name (which is unique within one account in one region at a given point in time). Specify by ARN or ID in automated workflows if you want to make sure that the exact same application is returned or a <code>ResourceNotFoundException</code> is thrown, avoiding the ABA addressing problem.
 func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicationRequest) (*operations.GetApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -918,14 +918,14 @@ func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicat
 // GetAssociatedResource - Gets the resource associated with the application.
 func (s *SDK) GetAssociatedResource(ctx context.Context, request operations.GetAssociatedResourceRequest) (*operations.GetAssociatedResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -994,14 +994,14 @@ func (s *SDK) GetAssociatedResource(ctx context.Context, request operations.GetA
 // GetAttributeGroup -  Retrieves an attribute group by its ARN, ID, or name. The attribute group can be specified by its ARN, ID, or name.
 func (s *SDK) GetAttributeGroup(ctx context.Context, request operations.GetAttributeGroupRequest) (*operations.GetAttributeGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1087,7 +1087,7 @@ func (s *SDK) GetConfiguration(ctx context.Context, request operations.GetConfig
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1143,9 +1143,9 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1206,16 +1206,16 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 // ListAssociatedAttributeGroups - Lists all attribute groups that are associated with specified application. Results are paginated.
 func (s *SDK) ListAssociatedAttributeGroups(ctx context.Context, request operations.ListAssociatedAttributeGroupsRequest) (*operations.ListAssociatedAttributeGroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1286,16 +1286,16 @@ func (s *SDK) ListAssociatedAttributeGroups(ctx context.Context, request operati
 // ListAssociatedResources - <p> Lists all of the resources that are associated with the specified application. Results are paginated. </p> <note> <p> If you share an application, and a consumer account associates a tag query to the application, all of the users who can access the application can also view the tag values in all accounts that are associated with it using this API. </p> </note>
 func (s *SDK) ListAssociatedResources(ctx context.Context, request operations.ListAssociatedResourcesRequest) (*operations.ListAssociatedResourcesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1373,9 +1373,9 @@ func (s *SDK) ListAttributeGroups(ctx context.Context, request operations.ListAt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1436,16 +1436,16 @@ func (s *SDK) ListAttributeGroups(ctx context.Context, request operations.ListAt
 // ListAttributeGroupsForApplication - Lists the details of all attribute groups associated with a specific application. The results display in pages.
 func (s *SDK) ListAttributeGroupsForApplication(ctx context.Context, request operations.ListAttributeGroupsForApplicationRequest) (*operations.ListAttributeGroupsForApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-group-details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/attribute-group-details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1516,14 +1516,14 @@ func (s *SDK) ListAttributeGroupsForApplication(ctx context.Context, request ope
 // ListTagsForResource - Lists all of the tags on the resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1594,7 +1594,7 @@ func (s *SDK) PutConfiguration(ctx context.Context, request operations.PutConfig
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1609,7 +1609,7 @@ func (s *SDK) PutConfiguration(ctx context.Context, request operations.PutConfig
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1669,14 +1669,14 @@ func (s *SDK) PutConfiguration(ctx context.Context, request operations.PutConfig
 // SyncResource - <p>Syncs the resource with current AppRegistry records.</p> <p>Specifically, the resource’s AppRegistry system tags sync with its associated application. We remove the resource's AppRegistry system tags if it does not associate with the application. The caller must have permissions to read and update the resource.</p>
 func (s *SDK) SyncResource(ctx context.Context, request operations.SyncResourceRequest) (*operations.SyncResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sync/{resourceType}/{resource}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sync/{resourceType}/{resource}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1765,9 +1765,9 @@ func (s *SDK) SyncResource(ctx context.Context, request operations.SyncResourceR
 // TagResource - <p>Assigns one or more tags (key-value pairs) to the specified resource.</p> <p>Each tag consists of a key and an optional value. If a tag with the same key is already associated with the resource, this action updates its value.</p> <p>This operation returns an empty response if the call was successful.</p>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1782,7 +1782,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1851,16 +1851,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - <p>Removes tags from a resource.</p> <p>This operation returns an empty response if the call was successful.</p>
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1931,9 +1931,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateApplication - Updates an existing application with new attributes.
 func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1948,7 +1948,7 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2037,9 +2037,9 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 // UpdateAttributeGroup - Updates an existing attribute group with new details.
 func (s *SDK) UpdateAttributeGroup(ctx context.Context, request operations.UpdateAttributeGroupRequest) (*operations.UpdateAttributeGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2054,7 +2054,7 @@ func (s *SDK) UpdateAttributeGroup(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

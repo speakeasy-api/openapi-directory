@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostWebhooksIDWebhookPathParams struct {
-	IDWebhook int64 `pathParam:"style=simple,explode=false,name=id_webhook"`
-}
-
-type PostWebhooksIDWebhookQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostWebhooksIDWebhookRequestBody struct {
 	// a date to delete the webhook or 'null' to enable it
 	Deleted *string `multipartForm:"name=deleted"`
@@ -31,9 +23,9 @@ type PostWebhooksIDWebhookRequestBody struct {
 }
 
 type PostWebhooksIDWebhookRequest struct {
-	PathParams  PostWebhooksIDWebhookPathParams
-	QueryParams PostWebhooksIDWebhookQueryParams
-	Request     *PostWebhooksIDWebhookRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostWebhooksIDWebhookRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                           `queryParam:"style=form,explode=true,name=expand"`
+	IDWebhook   int64                             `pathParam:"style=simple,explode=false,name=id_webhook"`
 }
 
 type PostWebhooksIDWebhookResponse struct {

@@ -35,11 +35,11 @@ func newImageOcr(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // ImageOcrImageLinesWithLocation - Convert a scanned image into words with location
 // Converts an uploaded image in common formats such as JPEG, PNG into lines/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrImageLinesWithLocation(ctx context.Context, request operations.ImageOcrImageLinesWithLocationRequest) (*operations.ImageOcrImageLinesWithLocationResponse, error) {
+func (s *imageOcr) ImageOcrImageLinesWithLocation(ctx context.Context, request operations.ImageOcrImageLinesWithLocationRequest, security operations.ImageOcrImageLinesWithLocationSecurity) (*operations.ImageOcrImageLinesWithLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/image/to/lines-with-location"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,9 +54,9 @@ func (s *imageOcr) ImageOcrImageLinesWithLocation(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -113,11 +113,11 @@ func (s *imageOcr) ImageOcrImageLinesWithLocation(ctx context.Context, request o
 
 // ImageOcrImageWordsWithLocation - Convert a scanned image into words with location
 // Converts an uploaded image in common formats such as JPEG, PNG into words/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrImageWordsWithLocation(ctx context.Context, request operations.ImageOcrImageWordsWithLocationRequest) (*operations.ImageOcrImageWordsWithLocationResponse, error) {
+func (s *imageOcr) ImageOcrImageWordsWithLocation(ctx context.Context, request operations.ImageOcrImageWordsWithLocationRequest, security operations.ImageOcrImageWordsWithLocationSecurity) (*operations.ImageOcrImageWordsWithLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/image/to/words-with-location"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -132,9 +132,9 @@ func (s *imageOcr) ImageOcrImageWordsWithLocation(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -191,7 +191,7 @@ func (s *imageOcr) ImageOcrImageWordsWithLocation(ctx context.Context, request o
 
 // ImageOcrPhotoRecognizeBusinessCard - Recognize a photo of a business card, extract key business information
 // Analyzes a photograph of a business card as input, and outputs key business information such as the name of the person, name of the business, the address of the business, the phone number, the email address and more.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrPhotoRecognizeBusinessCard(ctx context.Context, request operations.ImageOcrPhotoRecognizeBusinessCardRequest) (*operations.ImageOcrPhotoRecognizeBusinessCardResponse, error) {
+func (s *imageOcr) ImageOcrPhotoRecognizeBusinessCard(ctx context.Context, request operations.ImageOcrPhotoRecognizeBusinessCardRequestBody, security operations.ImageOcrPhotoRecognizeBusinessCardSecurity) (*operations.ImageOcrPhotoRecognizeBusinessCardResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/photo/recognize/business-card"
 
@@ -210,7 +210,7 @@ func (s *imageOcr) ImageOcrPhotoRecognizeBusinessCard(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,11 +267,11 @@ func (s *imageOcr) ImageOcrPhotoRecognizeBusinessCard(ctx context.Context, reque
 
 // ImageOcrPhotoRecognizeFormAdvanced - Recognize a photo of a form, extract key fields using stored templates
 // Analyzes a photograph of a form as input, and outputs key business fields and information.  Customzie data to be extracted by defining fields for the form.  Uses template definitions stored in Cloudmersive Configuration; to configure stored templates in a configuration bucket, log into Cloudmersive Management Portal and navigate to Settings &gt; API Configuration &gt; Create Bucket.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrPhotoRecognizeFormAdvanced(ctx context.Context, request operations.ImageOcrPhotoRecognizeFormAdvancedRequest) (*operations.ImageOcrPhotoRecognizeFormAdvancedResponse, error) {
+func (s *imageOcr) ImageOcrPhotoRecognizeFormAdvanced(ctx context.Context, request operations.ImageOcrPhotoRecognizeFormAdvancedRequest, security operations.ImageOcrPhotoRecognizeFormAdvancedSecurity) (*operations.ImageOcrPhotoRecognizeFormAdvancedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/photo/recognize/form/advanced"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -286,9 +286,9 @@ func (s *imageOcr) ImageOcrPhotoRecognizeFormAdvanced(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -345,11 +345,11 @@ func (s *imageOcr) ImageOcrPhotoRecognizeFormAdvanced(ctx context.Context, reque
 
 // ImageOcrPhotoRecognizeReceipt - Recognize a photo of a receipt, extract key business information
 // Analyzes a photograph of a receipt as input, and outputs key business information such as the name of the business, the address of the business, the phone number of the business, the total of the receipt, the date of the receipt, and more.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrPhotoRecognizeReceipt(ctx context.Context, request operations.ImageOcrPhotoRecognizeReceiptRequest) (*operations.ImageOcrPhotoRecognizeReceiptResponse, error) {
+func (s *imageOcr) ImageOcrPhotoRecognizeReceipt(ctx context.Context, request operations.ImageOcrPhotoRecognizeReceiptRequest, security operations.ImageOcrPhotoRecognizeReceiptSecurity) (*operations.ImageOcrPhotoRecognizeReceiptResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/photo/recognize/receipt"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,9 +364,9 @@ func (s *imageOcr) ImageOcrPhotoRecognizeReceipt(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -423,11 +423,11 @@ func (s *imageOcr) ImageOcrPhotoRecognizeReceipt(ctx context.Context, request op
 
 // ImageOcrPhotoToText - Convert a photo of a document into text
 // Converts an uploaded photo of a document in common formats such as JPEG, PNG into text via Optical Character Recognition.  This API is intended to be run on photos of documents, e.g. taken with a smartphone and supports cases where other content, such as a desk, are in the frame and the camera is crooked.  If you want to OCR a scanned image, use the image/toText API call instead as it is designed for scanned images.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrPhotoToText(ctx context.Context, request operations.ImageOcrPhotoToTextRequest) (*operations.ImageOcrPhotoToTextResponse, error) {
+func (s *imageOcr) ImageOcrPhotoToText(ctx context.Context, request operations.ImageOcrPhotoToTextRequest, security operations.ImageOcrPhotoToTextSecurity) (*operations.ImageOcrPhotoToTextResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/photo/toText"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -442,9 +442,9 @@ func (s *imageOcr) ImageOcrPhotoToText(ctx context.Context, request operations.I
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -501,11 +501,11 @@ func (s *imageOcr) ImageOcrPhotoToText(ctx context.Context, request operations.I
 
 // ImageOcrPhotoWordsWithLocation - Convert a photo of a document or receipt into words with location
 // Converts a photo of a document or receipt in common formats such as JPEG, PNG into words/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on photographs of documents.  If you want to OCR scanned documents (e.g. taken with a scanner), be sure to use the image/toText API instead, as it is designed for that use case.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrPhotoWordsWithLocation(ctx context.Context, request operations.ImageOcrPhotoWordsWithLocationRequest) (*operations.ImageOcrPhotoWordsWithLocationResponse, error) {
+func (s *imageOcr) ImageOcrPhotoWordsWithLocation(ctx context.Context, request operations.ImageOcrPhotoWordsWithLocationRequest, security operations.ImageOcrPhotoWordsWithLocationSecurity) (*operations.ImageOcrPhotoWordsWithLocationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/photo/to/words-with-location"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -520,9 +520,9 @@ func (s *imageOcr) ImageOcrPhotoWordsWithLocation(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -579,11 +579,11 @@ func (s *imageOcr) ImageOcrPhotoWordsWithLocation(ctx context.Context, request o
 
 // ImageOcrPost - Convert a scanned image into text
 // Converts an uploaded image in common formats such as JPEG, PNG into text via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
-func (s *imageOcr) ImageOcrPost(ctx context.Context, request operations.ImageOcrPostRequest) (*operations.ImageOcrPostResponse, error) {
+func (s *imageOcr) ImageOcrPost(ctx context.Context, request operations.ImageOcrPostRequest, security operations.ImageOcrPostSecurity) (*operations.ImageOcrPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/image/toText"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -598,9 +598,9 @@ func (s *imageOcr) ImageOcrPost(ctx context.Context, request operations.ImageOcr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

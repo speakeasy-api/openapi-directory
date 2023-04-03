@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Ercer - Registration Certificate of Establishment Employing Contract Labour
 // API to verify Registration Certificate of Establishment Employing Contract Labour.
-func (s *apIs) Ercer(ctx context.Context, request operations.ErcerRequest) (*operations.ErcerResponse, error) {
+func (s *apIs) Ercer(ctx context.Context, request operations.ErcerRequestBody, security operations.ErcerSecurity) (*operations.ErcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ercer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Ercer(ctx context.Context, request operations.ErcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Ercer(ctx context.Context, request operations.ErcerRequest) (*ope
 
 // Pfdaw - Permission/ Certificate for Well
 // API to verify Permission/ Certificate for Well.
-func (s *apIs) Pfdaw(ctx context.Context, request operations.PfdawRequest) (*operations.PfdawResponse, error) {
+func (s *apIs) Pfdaw(ctx context.Context, request operations.PfdawRequestBody, security operations.PfdawSecurity) (*operations.PfdawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pfdaw/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Pfdaw(ctx context.Context, request operations.PfdawRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Pfdaw(ctx context.Context, request operations.PfdawRequest) (*ope
 
 // Tpcer - Permission/ Certificate for Transportation (Petroleum Products, Water etc.)
 // API to verify Permission/ Certificate for Transportation (Petroleum Products, Water etc.).
-func (s *apIs) Tpcer(ctx context.Context, request operations.TpcerRequest) (*operations.TpcerResponse, error) {
+func (s *apIs) Tpcer(ctx context.Context, request operations.TpcerRequestBody, security operations.TpcerSecurity) (*operations.TpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tpcer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Tpcer(ctx context.Context, request operations.TpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

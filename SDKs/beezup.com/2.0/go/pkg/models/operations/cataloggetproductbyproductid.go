@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetProductByProductIDPathParams struct {
+type CatalogGetProductByProductIDRequest struct {
 	// The product identifier you want to get
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetProductByProductIDRequest struct {
-	PathParams CatalogGetProductByProductIDPathParams
 }
 
 type CatalogGetProductByProductIDResponse struct {

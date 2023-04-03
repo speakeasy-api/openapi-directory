@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDirectoryHeaders struct {
+type DeleteDirectoryRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -17,10 +17,6 @@ type DeleteDirectoryHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The ARN of the directory to delete.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-type DeleteDirectoryRequest struct {
-	Headers DeleteDirectoryHeaders
 }
 
 type DeleteDirectoryResponse struct {

@@ -30,20 +30,16 @@ func (e *PutCommentReactionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutCommentReactionHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        PutCommentReactionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type PutCommentReactionRequest struct {
-	Headers PutCommentReactionHeaders
-	Request shared.PutCommentReactionInput `request:"mediaType=application/json"`
+	PutCommentReactionInput shared.PutCommentReactionInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              PutCommentReactionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type PutCommentReactionResponse struct {

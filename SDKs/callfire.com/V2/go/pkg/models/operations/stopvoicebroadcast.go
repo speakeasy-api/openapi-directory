@@ -8,17 +8,13 @@ import (
 )
 
 type StopVoiceBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type StopVoiceBroadcastPathParams struct {
-	// An id of voice broadcast to stop
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type StopVoiceBroadcastRequest struct {
-	PathParams StopVoiceBroadcastPathParams
-	Security   StopVoiceBroadcastSecurity
+	// An id of voice broadcast to stop
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StopVoiceBroadcastResponse struct {

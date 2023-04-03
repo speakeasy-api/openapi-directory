@@ -6,16 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteIntegrationResponsePathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The integration ID.
-	IntegrationID string `pathParam:"style=simple,explode=false,name=integrationId"`
-	// The integration response ID.
-	IntegrationResponseID string `pathParam:"style=simple,explode=false,name=integrationResponseId"`
-}
-
-type DeleteIntegrationResponseHeaders struct {
+type DeleteIntegrationResponseRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -23,11 +14,12 @@ type DeleteIntegrationResponseHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteIntegrationResponseRequest struct {
-	PathParams DeleteIntegrationResponsePathParams
-	Headers    DeleteIntegrationResponseHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The integration ID.
+	IntegrationID string `pathParam:"style=simple,explode=false,name=integrationId"`
+	// The integration response ID.
+	IntegrationResponseID string `pathParam:"style=simple,explode=false,name=integrationResponseId"`
 }
 
 type DeleteIntegrationResponseResponse struct {

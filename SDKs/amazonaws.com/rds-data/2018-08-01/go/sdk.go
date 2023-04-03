@@ -116,7 +116,7 @@ func (s *SDK) BatchExecuteStatement(ctx context.Context, request operations.Batc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/BatchExecute"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchExecuteStatement(ctx context.Context, request operations.Batc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -232,7 +232,7 @@ func (s *SDK) BeginTransaction(ctx context.Context, request operations.BeginTran
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/BeginTransaction"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *SDK) BeginTransaction(ctx context.Context, request operations.BeginTran
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -348,7 +348,7 @@ func (s *SDK) CommitTransaction(ctx context.Context, request operations.CommitTr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/CommitTransaction"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -363,7 +363,7 @@ func (s *SDK) CommitTransaction(ctx context.Context, request operations.CommitTr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -474,7 +474,7 @@ func (s *SDK) ExecuteSQL(ctx context.Context, request operations.ExecuteSQLReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ExecuteSql"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -489,7 +489,7 @@ func (s *SDK) ExecuteSQL(ctx context.Context, request operations.ExecuteSQLReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -580,7 +580,7 @@ func (s *SDK) ExecuteStatement(ctx context.Context, request operations.ExecuteSt
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Execute"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -595,7 +595,7 @@ func (s *SDK) ExecuteStatement(ctx context.Context, request operations.ExecuteSt
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -696,7 +696,7 @@ func (s *SDK) RollbackTransaction(ctx context.Context, request operations.Rollba
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/RollbackTransaction"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -711,7 +711,7 @@ func (s *SDK) RollbackTransaction(ctx context.Context, request operations.Rollba
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

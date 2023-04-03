@@ -8,10 +8,11 @@ import (
 )
 
 type FindTextAutoReplysSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindTextAutoReplysQueryParams struct {
+type FindTextAutoReplysRequest struct {
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// To set the maximum number of records to return in a paged list response. The default is 100
@@ -20,11 +21,6 @@ type FindTextAutoReplysQueryParams struct {
 	Number *string `queryParam:"style=form,explode=true,name=number"`
 	// Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type FindTextAutoReplysRequest struct {
-	QueryParams FindTextAutoReplysQueryParams
-	Security    FindTextAutoReplysSecurity
 }
 
 type FindTextAutoReplysResponse struct {

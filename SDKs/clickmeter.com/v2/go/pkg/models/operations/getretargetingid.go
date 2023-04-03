@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRetargetingIDPathParams struct {
+type GetRetargetingIDRequest struct {
 	// The id of the retargeting script
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetRetargetingIDRequest struct {
-	PathParams GetRetargetingIDPathParams
 }
 
 type GetRetargetingIDResponse struct {

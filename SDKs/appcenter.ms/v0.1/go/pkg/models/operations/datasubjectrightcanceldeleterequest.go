@@ -6,17 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type DataSubjectRightCancelDeleteRequestSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DataSubjectRightCancelDeleteRequestPathParams struct {
-	// Unique request ID (GUID)
-	Token string `pathParam:"style=simple,explode=false,name=token"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DataSubjectRightCancelDeleteRequestRequestBody struct {
@@ -25,9 +19,9 @@ type DataSubjectRightCancelDeleteRequestRequestBody struct {
 }
 
 type DataSubjectRightCancelDeleteRequestRequest struct {
-	PathParams DataSubjectRightCancelDeleteRequestPathParams
-	Request    *DataSubjectRightCancelDeleteRequestRequestBody `request:"mediaType=application/json"`
-	Security   DataSubjectRightCancelDeleteRequestSecurity
+	RequestBody *DataSubjectRightCancelDeleteRequestRequestBody `request:"mediaType=application/json"`
+	// Unique request ID (GUID)
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum string

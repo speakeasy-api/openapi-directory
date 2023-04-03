@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type UpdateGatewayPathParams struct {
-	// The ID of the gateway to update.
-	GatewayID string `pathParam:"style=simple,explode=false,name=gatewayId"`
-}
-
-type UpdateGatewayHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateGatewayRequestBody struct {
 	// A unique, friendly name for the gateway.
 	GatewayName string `json:"gatewayName"`
 }
 
 type UpdateGatewayRequest struct {
-	PathParams UpdateGatewayPathParams
-	Headers    UpdateGatewayHeaders
-	Request    UpdateGatewayRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateGatewayRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the gateway to update.
+	GatewayID string `pathParam:"style=simple,explode=false,name=gatewayId"`
 }
 
 type UpdateGatewayResponse struct {

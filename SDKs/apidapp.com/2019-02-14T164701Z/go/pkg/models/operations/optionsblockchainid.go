@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsBlockchainIDPathParams struct {
+type OptionsBlockchainIDRequest struct {
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OptionsBlockchainIDRequest struct {
-	PathParams OptionsBlockchainIDPathParams
 }
 
 type OptionsBlockchainIDResponse struct {

@@ -7,23 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteMfaTotpSetupPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteMfaTotpSetupQueryParams struct {
-	ValidOtp string `queryParam:"style=form,explode=true,name=valid_otp"`
-}
-
-type DeleteMfaTotpSetupHeaders struct {
+type DeleteMfaTotpSetupRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type DeleteMfaTotpSetupRequest struct {
-	PathParams  DeleteMfaTotpSetupPathParams
-	QueryParams DeleteMfaTotpSetupQueryParams
-	Headers     DeleteMfaTotpSetupHeaders
+	ID            int64   `pathParam:"style=simple,explode=false,name=id"`
+	ValidOtp      string  `queryParam:"style=form,explode=true,name=valid_otp"`
 }
 
 type DeleteMfaTotpSetupResponse struct {

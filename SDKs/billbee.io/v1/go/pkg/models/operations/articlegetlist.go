@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ArticleGetListQueryParams struct {
+type ArticleGetListRequest struct {
 	MaximumBillBeeArticleID *int64 `queryParam:"style=form,explode=true,name=maximumBillBeeArticleId"`
 	// Optional the oldest create date of the articles to be returned
 	MinCreatedAt            *time.Time `queryParam:"style=form,explode=true,name=minCreatedAt"`
@@ -17,10 +17,6 @@ type ArticleGetListQueryParams struct {
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The pagesize for the result list. Values between 1 and 250 are allowed
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ArticleGetListRequest struct {
-	QueryParams ArticleGetListQueryParams
 }
 
 type ArticleGetListResponse struct {

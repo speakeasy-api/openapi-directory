@@ -30,7 +30,8 @@ func (e *GetJobRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetJobRunHeaders struct {
+type GetJobRunRequest struct {
+	GetJobRunRequest  shared.GetJobRunRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetJobRunHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetJobRunXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetJobRunRequest struct {
-	Headers GetJobRunHeaders
-	Request shared.GetJobRunRequest `request:"mediaType=application/json"`
 }
 
 type GetJobRunResponse struct {

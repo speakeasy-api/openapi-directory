@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.AllGamesExampleParametersRequest{
-        QueryParams: operations.AllGamesExampleParametersQueryParams{
-            Seasons: "2018",
-            TeamIds: "1",
-        },
+        Seasons: "2018",
+        TeamIds: "1",
     }
 
     ctx := context.Background()

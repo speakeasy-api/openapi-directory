@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProvisioningTemplatesQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListProvisioningTemplatesHeaders struct {
+type ListProvisioningTemplatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListProvisioningTemplatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProvisioningTemplatesRequest struct {
-	QueryParams ListProvisioningTemplatesQueryParams
-	Headers     ListProvisioningTemplatesHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListProvisioningTemplatesResponse struct {

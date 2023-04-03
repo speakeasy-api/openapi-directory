@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMetadataOfChannelPathParams struct {
-	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
-	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
-type GetMetadataOfChannelQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetMetadataOfChannelHeaders struct {
+type GetMetadataOfChannelRequest struct {
 	// The version of the API you wish to use.
 	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetMetadataOfChannelRequest struct {
-	PathParams  GetMetadataOfChannelPathParams
-	QueryParams GetMetadataOfChannelQueryParams
-	Headers     GetMetadataOfChannelHeaders
+	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type GetMetadataOfChannelResponse struct {

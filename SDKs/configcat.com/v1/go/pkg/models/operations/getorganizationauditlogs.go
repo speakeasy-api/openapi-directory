@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type GetOrganizationAuditlogsPathParams struct {
-	// The identifier of the Organization.
-	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
-}
-
 // GetOrganizationAuditlogsAuditLogTypeEnum - Filter Audit logs by Audit log type.
 type GetOrganizationAuditlogsAuditLogTypeEnum string
 
@@ -258,7 +253,7 @@ func (e *GetOrganizationAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GetOrganizationAuditlogsQueryParams struct {
+type GetOrganizationAuditlogsRequest struct {
 	// Filter Audit logs by Audit log type.
 	AuditLogType *GetOrganizationAuditlogsAuditLogTypeEnum `queryParam:"style=form,explode=true,name=auditLogType"`
 	// The identifier of the Config.
@@ -267,15 +262,12 @@ type GetOrganizationAuditlogsQueryParams struct {
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=environmentId"`
 	// Filter Audit logs by starting UTC date.
 	FromUtcDateTime *time.Time `queryParam:"style=form,explode=true,name=fromUtcDateTime"`
+	// The identifier of the Organization.
+	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The identifier of the Product.
 	ProductID *string `queryParam:"style=form,explode=true,name=productId"`
 	// Filter Audit logs by ending UTC date.
 	ToUtcDateTime *time.Time `queryParam:"style=form,explode=true,name=toUtcDateTime"`
-}
-
-type GetOrganizationAuditlogsRequest struct {
-	PathParams  GetOrganizationAuditlogsPathParams
-	QueryParams GetOrganizationAuditlogsQueryParams
 }
 
 type GetOrganizationAuditlogsResponse struct {

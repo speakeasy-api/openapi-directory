@@ -50,29 +50,21 @@ func (e *POSTListInstanceProfilesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListInstanceProfilesQueryParams struct {
+type POSTListInstanceProfilesRequest struct {
 	Action POSTListInstanceProfilesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Pagination limit
-	MaxItems *string                             `queryParam:"style=form,explode=true,name=MaxItems"`
-	Version  POSTListInstanceProfilesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListInstanceProfilesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTListInstanceProfilesRequest struct {
-	QueryParams POSTListInstanceProfilesQueryParams
-	Headers     POSTListInstanceProfilesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	MaxItems          *string                             `queryParam:"style=form,explode=true,name=MaxItems"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTListInstanceProfilesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListInstanceProfilesResponse struct {

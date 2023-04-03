@@ -50,25 +50,17 @@ func (e *POSTDeleteServiceLinkedRoleVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTDeleteServiceLinkedRoleQueryParams struct {
-	Action  POSTDeleteServiceLinkedRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteServiceLinkedRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteServiceLinkedRoleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteServiceLinkedRoleRequest struct {
-	QueryParams POSTDeleteServiceLinkedRoleQueryParams
-	Headers     POSTDeleteServiceLinkedRoleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteServiceLinkedRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTDeleteServiceLinkedRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteServiceLinkedRoleResponse struct {

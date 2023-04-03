@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type RemoveTopicPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RemoveTopicHeaders struct {
+type RemoveTopicRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type RemoveTopicRequest struct {
-	PathParams RemoveTopicPathParams
-	Headers    RemoveTopicHeaders
+	ID          string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RemoveTopicResponse struct {

@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSlotPathParams struct {
-	// The identifier of the bot associated with the slot.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot associated with the slot.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the intent that contains the slot.
-	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
-	// The identifier of the language and locale that the slot will be used in. The string must match one of the supported locales. All of the bots, intents, slot types used by the slot must have the same locale. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type CreateSlotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateSlotRequestBodyMultipleValuesSetting - Indicates whether a slot can return multiple values.
 type CreateSlotRequestBodyMultipleValuesSetting struct {
 	AllowMultipleValues *bool `json:"allowMultipleValues,omitempty"`
@@ -73,9 +52,22 @@ type CreateSlotRequestBody struct {
 }
 
 type CreateSlotRequest struct {
-	PathParams CreateSlotPathParams
-	Headers    CreateSlotHeaders
-	Request    CreateSlotRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateSlotRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot associated with the slot.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot associated with the slot.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the intent that contains the slot.
+	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
+	// The identifier of the language and locale that the slot will be used in. The string must match one of the supported locales. All of the bots, intents, slot types used by the slot must have the same locale. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type CreateSlotResponse struct {

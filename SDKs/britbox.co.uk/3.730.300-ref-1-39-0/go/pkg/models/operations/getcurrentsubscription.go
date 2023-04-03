@@ -8,15 +8,10 @@ import (
 )
 
 type GetCurrentSubscriptionSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetCurrentSubscriptionPathParams struct {
-	// The identifier of the payment platform (stripe/itunes).
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type GetCurrentSubscriptionQueryParams struct {
+type GetCurrentSubscriptionRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -29,12 +24,8 @@ type GetCurrentSubscriptionQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetCurrentSubscriptionRequest struct {
-	PathParams  GetCurrentSubscriptionPathParams
-	QueryParams GetCurrentSubscriptionQueryParams
-	Security    GetCurrentSubscriptionSecurity
+	// The identifier of the payment platform (stripe/itunes).
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type GetCurrentSubscriptionResponse struct {

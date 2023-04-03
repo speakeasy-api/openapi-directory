@@ -113,16 +113,16 @@ func New(opts ...SDKOption) *SDK {
 // DescribeJobExecution - Gets details of a job execution.
 func (s *SDK) DescribeJobExecution(ctx context.Context, request operations.DescribeJobExecutionRequest) (*operations.DescribeJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -223,14 +223,14 @@ func (s *SDK) DescribeJobExecution(ctx context.Context, request operations.Descr
 // GetPendingJobExecutions - Gets the list of all jobs for a thing that are not in a terminal status.
 func (s *SDK) GetPendingJobExecutions(ctx context.Context, request operations.GetPendingJobExecutionsRequest) (*operations.GetPendingJobExecutionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -319,9 +319,9 @@ func (s *SDK) GetPendingJobExecutions(ctx context.Context, request operations.Ge
 // StartNextPendingJobExecution - Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.
 func (s *SDK) StartNextPendingJobExecution(ctx context.Context, request operations.StartNextPendingJobExecutionRequest) (*operations.StartNextPendingJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/$next", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/$next", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -336,7 +336,7 @@ func (s *SDK) StartNextPendingJobExecution(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -425,9 +425,9 @@ func (s *SDK) StartNextPendingJobExecution(ctx context.Context, request operatio
 // UpdateJobExecution - Updates the status of a job execution.
 func (s *SDK) UpdateJobExecution(ctx context.Context, request operations.UpdateJobExecutionRequest) (*operations.UpdateJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -442,7 +442,7 @@ func (s *SDK) UpdateJobExecution(ctx context.Context, request operations.UpdateJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

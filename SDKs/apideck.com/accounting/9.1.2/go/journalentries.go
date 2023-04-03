@@ -34,11 +34,11 @@ func newJournalEntries(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // JournalEntriesAdd - Create Journal Entry
 // Create Journal Entry
-func (s *journalEntries) JournalEntriesAdd(ctx context.Context, request operations.JournalEntriesAddRequest) (*operations.JournalEntriesAddResponse, error) {
+func (s *journalEntries) JournalEntriesAdd(ctx context.Context, request operations.JournalEntriesAddRequest, security operations.JournalEntriesAddSecurity) (*operations.JournalEntriesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/journal-entries"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JournalEntryInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *journalEntries) JournalEntriesAdd(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *journalEntries) JournalEntriesAdd(ctx context.Context, request operatio
 
 // JournalEntriesAll - List Journal Entries
 // List Journal Entries
-func (s *journalEntries) JournalEntriesAll(ctx context.Context, request operations.JournalEntriesAllRequest) (*operations.JournalEntriesAllResponse, error) {
+func (s *journalEntries) JournalEntriesAll(ctx context.Context, request operations.JournalEntriesAllRequest, security operations.JournalEntriesAllSecurity) (*operations.JournalEntriesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/journal-entries"
 
@@ -164,13 +164,13 @@ func (s *journalEntries) JournalEntriesAll(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *journalEntries) JournalEntriesAll(ctx context.Context, request operatio
 
 // JournalEntriesDelete - Delete Journal Entry
 // Delete Journal Entry
-func (s *journalEntries) JournalEntriesDelete(ctx context.Context, request operations.JournalEntriesDeleteRequest) (*operations.JournalEntriesDeleteResponse, error) {
+func (s *journalEntries) JournalEntriesDelete(ctx context.Context, request operations.JournalEntriesDeleteRequest, security operations.JournalEntriesDeleteSecurity) (*operations.JournalEntriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/journal-entries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/journal-entries/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *journalEntries) JournalEntriesDelete(ctx context.Context, request opera
 
 // JournalEntriesOne - Get Journal Entry
 // Get Journal Entry
-func (s *journalEntries) JournalEntriesOne(ctx context.Context, request operations.JournalEntriesOneRequest) (*operations.JournalEntriesOneResponse, error) {
+func (s *journalEntries) JournalEntriesOne(ctx context.Context, request operations.JournalEntriesOneRequest, security operations.JournalEntriesOneSecurity) (*operations.JournalEntriesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/journal-entries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/journal-entries/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *journalEntries) JournalEntriesOne(ctx context.Context, request operatio
 
 // JournalEntriesUpdate - Update Journal Entry
 // Update Journal Entry
-func (s *journalEntries) JournalEntriesUpdate(ctx context.Context, request operations.JournalEntriesUpdateRequest) (*operations.JournalEntriesUpdateResponse, error) {
+func (s *journalEntries) JournalEntriesUpdate(ctx context.Context, request operations.JournalEntriesUpdateRequest, security operations.JournalEntriesUpdateSecurity) (*operations.JournalEntriesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/journal-entries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/journal-entries/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JournalEntryInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *journalEntries) JournalEntriesUpdate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

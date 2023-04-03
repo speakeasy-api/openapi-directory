@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkflowPathParams struct {
-	// The workflow's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GetWorkflowTypeEnum - The workflow's type.
 type GetWorkflowTypeEnum string
 
@@ -38,14 +33,7 @@ func (e *GetWorkflowTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetWorkflowQueryParams struct {
-	// The export format for the workflow.
-	Export []shared.WorkflowExportEnum `queryParam:"style=form,explode=true,name=export"`
-	// The workflow's type.
-	Type *GetWorkflowTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetWorkflowHeaders struct {
+type GetWorkflowRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -53,12 +41,12 @@ type GetWorkflowHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetWorkflowRequest struct {
-	PathParams  GetWorkflowPathParams
-	QueryParams GetWorkflowQueryParams
-	Headers     GetWorkflowHeaders
+	// The export format for the workflow.
+	Export []shared.WorkflowExportEnum `queryParam:"style=form,explode=true,name=export"`
+	// The workflow's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The workflow's type.
+	Type *GetWorkflowTypeEnum `queryParam:"style=form,explode=true,name=type"`
 }
 
 type GetWorkflowResponse struct {

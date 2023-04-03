@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBillingGroupPathParams struct {
-	// The name of the billing group.
-	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
-}
-
-type DescribeBillingGroupHeaders struct {
+type DescribeBillingGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeBillingGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBillingGroupRequest struct {
-	PathParams DescribeBillingGroupPathParams
-	Headers    DescribeBillingGroupHeaders
+	// The name of the billing group.
+	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
 }
 
 type DescribeBillingGroupResponse struct {

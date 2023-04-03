@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ProductsPostRequest struct {
-	// Information of Product to create.
-	Request shared.ProductDto `request:"mediaType=application/json"`
-}
 
 type ProductsPostResponse struct {
 	ContentType string

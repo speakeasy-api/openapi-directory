@@ -8,17 +8,12 @@ import (
 )
 
 type GetImagesIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetImagesIDPathParams struct {
-	// The ID of the image resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetImagesIDRequest struct {
-	PathParams GetImagesIDPathParams
-	Security   GetImagesIDSecurity
+	// The ID of the image resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetImagesID200ApplicationVndAPIPlusJSON - Success

@@ -8,8 +8,8 @@ import (
 )
 
 type UsersCreateSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type UsersCreateRequestBody struct {
@@ -19,11 +19,6 @@ type UsersCreateRequestBody struct {
 	Name *string `json:"name,omitempty"`
 	// User password. Must be between 6 to 32 chars.
 	Password string `json:"password"`
-}
-
-type UsersCreateRequest struct {
-	Request  *UsersCreateRequestBody `request:"mediaType=application/json"`
-	Security UsersCreateSecurity
 }
 
 type UsersCreateResponse struct {

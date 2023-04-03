@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProfileObjectTypeTemplatePathParams struct {
+type GetProfileObjectTypeTemplateRequest struct {
 	// A unique identifier for the object template.
-	TemplateID string `pathParam:"style=simple,explode=false,name=TemplateId"`
-}
-
-type GetProfileObjectTypeTemplateHeaders struct {
+	TemplateID        string  `pathParam:"style=simple,explode=false,name=TemplateId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetProfileObjectTypeTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetProfileObjectTypeTemplateRequest struct {
-	PathParams GetProfileObjectTypeTemplatePathParams
-	Headers    GetProfileObjectTypeTemplateHeaders
 }
 
 type GetProfileObjectTypeTemplateResponse struct {

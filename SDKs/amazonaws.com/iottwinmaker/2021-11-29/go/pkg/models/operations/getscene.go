@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetScenePathParams struct {
-	// The ID of the scene.
-	SceneID string `pathParam:"style=simple,explode=false,name=sceneId"`
-	// The ID of the workspace that contains the scene.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type GetSceneHeaders struct {
+type GetSceneRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetSceneHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSceneRequest struct {
-	PathParams GetScenePathParams
-	Headers    GetSceneHeaders
+	// The ID of the scene.
+	SceneID string `pathParam:"style=simple,explode=false,name=sceneId"`
+	// The ID of the workspace that contains the scene.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type GetSceneResponse struct {

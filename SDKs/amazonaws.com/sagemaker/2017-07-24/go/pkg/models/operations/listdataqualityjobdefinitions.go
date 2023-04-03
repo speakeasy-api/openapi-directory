@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDataQualityJobDefinitionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDataQualityJobDefinitionsXAmzTargetEnum
 type ListDataQualityJobDefinitionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDataQualityJobDefinitionsXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListDataQualityJobDefinitionsHeaders struct {
+type ListDataQualityJobDefinitionsRequest struct {
+	ListDataQualityJobDefinitionsRequest shared.ListDataQualityJobDefinitionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDataQualityJobDefinitionsHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDataQualityJobDefinitionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDataQualityJobDefinitionsRequest struct {
-	QueryParams ListDataQualityJobDefinitionsQueryParams
-	Headers     ListDataQualityJobDefinitionsHeaders
-	Request     shared.ListDataQualityJobDefinitionsRequest `request:"mediaType=application/json"`
 }
 
 type ListDataQualityJobDefinitionsResponse struct {

@@ -13,27 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETCreateDomainRequest{
-        QueryParams: operations.GETCreateDomainQueryParams{
-            Action: "CreateDomain",
-            DomainName: "corrupti",
-            Version: "2011-02-01",
-        },
-        Headers: operations.GETCreateDomainHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
+        Action: "CreateDomain",
+        DomainName: "corrupti",
+        Version: "2011-02-01",
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
     }
 
     ctx := context.Background()

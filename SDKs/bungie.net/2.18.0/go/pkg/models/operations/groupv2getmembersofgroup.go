@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupV2GetMembersOfGroupPathParams struct {
-	// The ID of the group.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetMembersOfGroupQueryParams struct {
+type GroupV2GetMembersOfGroupRequest struct {
 	// Page number (starting with 1). Each page has a fixed size of 50 items per page.
 	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	// The ID of the group.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// Filter out other member types. Use None for all members.
 	MemberType *int `queryParam:"style=form,explode=true,name=memberType"`
 	// The name fragment upon which a search should be executed for members with matching display or unique names.
 	NameSearch *string `queryParam:"style=form,explode=true,name=nameSearch"`
-}
-
-type GroupV2GetMembersOfGroupRequest struct {
-	PathParams  GroupV2GetMembersOfGroupPathParams
-	QueryParams GroupV2GetMembersOfGroupQueryParams
 }
 
 // GroupV2GetMembersOfGroup200Wildcard - Look at the Response property for more information about the nature of this response

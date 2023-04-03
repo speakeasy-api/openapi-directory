@@ -103,7 +103,7 @@ func (s *scim) GetV2Scim20ResourceTypes(ctx context.Context) (*operations.GetV2S
 // Returns a resource type by name.
 func (s *scim) GetV2Scim20ResourceTypesName(ctx context.Context, request operations.GetV2Scim20ResourceTypesNameRequest) (*operations.GetV2Scim20ResourceTypesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/ResourceTypes/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/ResourceTypes/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -243,7 +243,7 @@ func (s *scim) GetV2Scim20Schemas(ctx context.Context) (*operations.GetV2Scim20S
 // Returns a schema by ID.
 func (s *scim) GetV2Scim20SchemasID(ctx context.Context, request operations.GetV2Scim20SchemasIDRequest) (*operations.GetV2Scim20SchemasIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Schemas/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Schemas/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -419,7 +419,7 @@ func (s *scim) GetV2Scim20Users(ctx context.Context, request operations.GetV2Sci
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -511,7 +511,7 @@ func (s *scim) GetV2Scim20Users(ctx context.Context, request operations.GetV2Sci
 // Returns a user by ID.
 func (s *scim) GetV2Scim20UsersID(ctx context.Context, request operations.GetV2Scim20UsersIDRequest) (*operations.GetV2Scim20UsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -605,7 +605,7 @@ func (s *scim) GetV2Scim20UsersID(ctx context.Context, request operations.GetV2S
 // PostV2Scim20Users - Create user
 // Creates a user. If the user already exists by email, they are assigned
 // to the organization on the "company" team.
-func (s *scim) PostV2Scim20Users(ctx context.Context, request operations.PostV2Scim20UsersRequest) (*operations.PostV2Scim20UsersResponse, error) {
+func (s *scim) PostV2Scim20Users(ctx context.Context, request operations.PostV2Scim20UsersRequestBody) (*operations.PostV2Scim20UsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/scim/2.0/Users"
 
@@ -723,9 +723,9 @@ func (s *scim) PostV2Scim20Users(ctx context.Context, request operations.PostV2S
 // and deactivate the user.
 func (s *scim) PutV2Scim20UsersID(ctx context.Context, request operations.PutV2Scim20UsersIDRequest) (*operations.PutV2Scim20UsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

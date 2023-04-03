@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2EditGroupMembershipSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2EditGroupMembershipPathParams struct {
+type GroupV2EditGroupMembershipRequest struct {
 	// ID of the group to which the member belongs.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// New membertype for the specified member.
@@ -20,11 +19,6 @@ type GroupV2EditGroupMembershipPathParams struct {
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Membership type of the provide membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2EditGroupMembershipRequest struct {
-	PathParams GroupV2EditGroupMembershipPathParams
-	Security   GroupV2EditGroupMembershipSecurity
 }
 
 // GroupV2EditGroupMembership200Wildcard - Look at the Response property for more information about the nature of this response

@@ -14,18 +14,13 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteSettingsOrganizationsOrganizationNameRequest{
-        Security: operations.DeleteSettingsOrganizationsOrganizationNameSecurity{
-            OAuth2: shared.SchemeOAuth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-        PathParams: operations.DeleteSettingsOrganizationsOrganizationNamePathParams{
-            OrganizationName: "corrupti",
-        },
+        OrganizationName: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.DeleteSettingsOrganizationsOrganizationName(ctx, req)
+    res, err := s.DeleteSettingsOrganizationsOrganizationName(ctx, req, operations.DeleteSettingsOrganizationsOrganizationNameSecurity{
+        OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

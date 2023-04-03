@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteReferenceStorePathParams struct {
-	// The store's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteReferenceStoreHeaders struct {
+type DeleteReferenceStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteReferenceStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteReferenceStoreRequest struct {
-	PathParams DeleteReferenceStorePathParams
-	Headers    DeleteReferenceStoreHeaders
+	// The store's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteReferenceStoreResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationTechnicalProgressionPathParams struct {
+type ImportationTechnicalProgressionRequest struct {
 	// The execution identifier of you catalog importation
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationTechnicalProgressionRequest struct {
-	PathParams ImportationTechnicalProgressionPathParams
 }
 
 type ImportationTechnicalProgressionResponse struct {

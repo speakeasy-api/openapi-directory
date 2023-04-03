@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EvaluateMappingTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type EvaluateMappingTemplateRequestBody struct {
 	// The map that holds all of the contextual information for your resolver invocation. A <code>context</code> is required for this action.
 	Context string `json:"context"`
@@ -25,8 +15,14 @@ type EvaluateMappingTemplateRequestBody struct {
 }
 
 type EvaluateMappingTemplateRequest struct {
-	Headers EvaluateMappingTemplateHeaders
-	Request EvaluateMappingTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       EvaluateMappingTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type EvaluateMappingTemplateResponse struct {

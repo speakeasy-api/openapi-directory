@@ -11,7 +11,7 @@ import (
 )
 
 type GetItemUsagesSecurity struct {
-	Jwtsa shared.SchemeJwtsa `security:"scheme,type=http,subtype=bearer"`
+	Jwtsa string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetItemUsagesRequestBodyType string
@@ -80,11 +80,6 @@ func (u GetItemUsagesRequestBody) MarshalJSON() ([]byte, error) {
 	}
 
 	return nil, nil
-}
-
-type GetItemUsagesRequest struct {
-	Request  *GetItemUsagesRequestBody `request:"mediaType=application/json"`
-	Security GetItemUsagesSecurity
 }
 
 // GetItemUsages200ApplicationJSON - Item usages response object

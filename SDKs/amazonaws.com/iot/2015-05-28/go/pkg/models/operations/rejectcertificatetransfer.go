@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type RejectCertificateTransferPathParams struct {
-	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type RejectCertificateTransferHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type RejectCertificateTransferRequestBody struct {
 	// The reason the certificate transfer was rejected.
 	RejectReason *string `json:"rejectReason,omitempty"`
 }
 
 type RejectCertificateTransferRequest struct {
-	PathParams RejectCertificateTransferPathParams
-	Headers    RejectCertificateTransferHeaders
-	Request    RejectCertificateTransferRequestBody `request:"mediaType=application/json"`
+	RequestBody       RejectCertificateTransferRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 }
 
 type RejectCertificateTransferResponse struct {

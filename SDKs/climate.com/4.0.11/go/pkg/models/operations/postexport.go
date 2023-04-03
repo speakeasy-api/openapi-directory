@@ -8,13 +8,8 @@ import (
 )
 
 type PostExportSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type PostExportRequest struct {
-	Request  *shared.Export `request:"mediaType=application/json"`
-	Security PostExportSecurity
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostExportResponse struct {

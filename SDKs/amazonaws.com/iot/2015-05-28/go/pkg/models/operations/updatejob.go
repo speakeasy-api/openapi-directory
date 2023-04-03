@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateJobPathParams struct {
-	// The ID of the job to be updated.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type UpdateJobQueryParams struct {
-	// <p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>
-	NamespaceID *string `queryParam:"style=form,explode=true,name=namespaceId"`
-}
-
-type UpdateJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateJobRequestBodyAbortConfig - The criteria that determine when and how a job abort takes place.
 type UpdateJobRequestBodyAbortConfig struct {
 	CriteriaList []shared.AbortCriteria `json:"criteriaList,omitempty"`
@@ -70,10 +50,18 @@ type UpdateJobRequestBody struct {
 }
 
 type UpdateJobRequest struct {
-	PathParams  UpdateJobPathParams
-	QueryParams UpdateJobQueryParams
-	Headers     UpdateJobHeaders
-	Request     UpdateJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the job to be updated.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// <p>The namespace used to indicate that a job is a customer-managed job.</p> <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p> <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note> <p>The <code>namespaceId</code> feature is in public preview.</p> </note>
+	NamespaceID *string `queryParam:"style=form,explode=true,name=namespaceId"`
 }
 
 type UpdateJobResponse struct {

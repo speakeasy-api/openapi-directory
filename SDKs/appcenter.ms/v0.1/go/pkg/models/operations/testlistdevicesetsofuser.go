@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestListDeviceSetsOfUserSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TestListDeviceSetsOfUserPathParams struct {
+type TestListDeviceSetsOfUserRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type TestListDeviceSetsOfUserRequest struct {
-	PathParams TestListDeviceSetsOfUserPathParams
-	Security   TestListDeviceSetsOfUserSecurity
 }
 
 type TestListDeviceSetsOfUserDeviceSetDeviceConfigurationsImage struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetImagesPathParams struct {
+type ArticleGetImagesRequest struct {
 	// The Id of the product
 	ProductID int64 `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ArticleGetImagesRequest struct {
-	PathParams ArticleGetImagesPathParams
 }
 
 type ArticleGetImagesResponse struct {

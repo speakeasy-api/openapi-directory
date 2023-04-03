@@ -50,28 +50,20 @@ func (e *GETListDashboardsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListDashboardsQueryParams struct {
+type GETListDashboardsRequest struct {
 	Action GETListDashboardsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// If you specify this parameter, only the dashboards with names starting with the specified string are listed. The maximum length is 255, and valid characters are A-Z, a-z, 0-9, ".", "-", and "_".
 	DashboardNamePrefix *string `queryParam:"style=form,explode=true,name=DashboardNamePrefix"`
 	// The token returned by a previous call to indicate that there is more data available.
-	NextToken *string                      `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListDashboardsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListDashboardsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListDashboardsRequest struct {
-	QueryParams GETListDashboardsQueryParams
-	Headers     GETListDashboardsHeaders
+	NextToken         *string                      `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListDashboardsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListDashboardsResponse struct {

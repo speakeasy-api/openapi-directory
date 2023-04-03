@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderInvoiceDesignSettingsPreviewHeaders struct {
-	// Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
-	AcceptEncoding string `header:"style=simple,explode=false,name=Accept-Encoding"`
-}
-
 type GetOrderInvoiceDesignSettingsPreviewRequest struct {
-	Headers GetOrderInvoiceDesignSettingsPreviewHeaders
-	Request shared.OrderInvoiceDesignSettings `request:"mediaType=application/json"`
+	// Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+	AcceptEncoding             string                            `header:"style=simple,explode=false,name=Accept-Encoding"`
+	OrderInvoiceDesignSettings shared.OrderInvoiceDesignSettings `request:"mediaType=application/json"`
 }
 
 type GetOrderInvoiceDesignSettingsPreviewResponse struct {

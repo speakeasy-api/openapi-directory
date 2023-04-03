@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListReportsForReportGroupQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListReportsForReportGroupXAmzTargetEnum
 type ListReportsForReportGroupXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListReportsForReportGroupXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ListReportsForReportGroupHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListReportsForReportGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListReportsForReportGroupRequest struct {
-	QueryParams ListReportsForReportGroupQueryParams
-	Headers     ListReportsForReportGroupHeaders
-	Request     shared.ListReportsForReportGroupInput `request:"mediaType=application/json"`
+	ListReportsForReportGroupInput shared.ListReportsForReportGroupInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     ListReportsForReportGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListReportsForReportGroupResponse struct {

@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type GetInvalidation20180618PathParams struct {
+type GetInvalidation20180618Request struct {
 	// The distribution's ID.
 	DistributionID string `pathParam:"style=simple,explode=false,name=DistributionId"`
 	// The identifier for the invalidation request, for example, <code>IDFDVBD632BHDS5</code>.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetInvalidation20180618Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type GetInvalidation20180618Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetInvalidation20180618Request struct {
-	PathParams GetInvalidation20180618PathParams
-	Headers    GetInvalidation20180618Headers
 }
 
 type GetInvalidation20180618Response struct {

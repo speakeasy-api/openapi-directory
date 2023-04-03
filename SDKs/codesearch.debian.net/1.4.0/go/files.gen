@@ -15,6 +15,5 @@ pkg/utils/utils.go
 pkg/models/operations/search.go
 pkg/models/operations/searchperpackage.go
 pkg/models/shared/searchresult.go
-pkg/models/shared/security.go
 pkg/models/shared/packagesearchresult.go
 USAGE.md

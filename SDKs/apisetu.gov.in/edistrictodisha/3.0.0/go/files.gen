@@ -19,5 +19,4 @@ pkg/models/operations/obcer.go
 pkg/models/operations/ror1b.go
 pkg/models/operations/slcer.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

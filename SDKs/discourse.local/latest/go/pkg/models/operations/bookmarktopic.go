@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type BookmarkTopicPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type BookmarkTopicHeaders struct {
+type BookmarkTopicRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type BookmarkTopicRequest struct {
-	PathParams BookmarkTopicPathParams
-	Headers    BookmarkTopicHeaders
+	ID          string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type BookmarkTopicResponse struct {

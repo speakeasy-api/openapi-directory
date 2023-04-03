@@ -100,9 +100,9 @@ func (s *orders) LayoutAPIGetList(ctx context.Context) (*operations.LayoutAPIGet
 // OrderAPIAddShipmentForm - Add a shipment to a given order
 func (s *orders) OrderAPIAddShipmentForm(ctx context.Context, request operations.OrderAPIAddShipmentFormRequest) (*operations.OrderAPIAddShipmentFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/shipment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/shipment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -161,9 +161,9 @@ func (s *orders) OrderAPIAddShipmentForm(ctx context.Context, request operations
 // OrderAPIAddShipmentJSON - Add a shipment to a given order
 func (s *orders) OrderAPIAddShipmentJSON(ctx context.Context, request operations.OrderAPIAddShipmentJSONRequest) (*operations.OrderAPIAddShipmentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/shipment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/shipment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -222,9 +222,9 @@ func (s *orders) OrderAPIAddShipmentJSON(ctx context.Context, request operations
 // OrderAPIAddShipmentRaw - Add a shipment to a given order
 func (s *orders) OrderAPIAddShipmentRaw(ctx context.Context, request operations.OrderAPIAddShipmentRawRequest) (*operations.OrderAPIAddShipmentRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/shipment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/shipment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,14 +283,14 @@ func (s *orders) OrderAPIAddShipmentRaw(ctx context.Context, request operations.
 // OrderAPICreateDeliveryNote - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
 func (s *orders) OrderAPICreateDeliveryNote(ctx context.Context, request operations.OrderAPICreateDeliveryNoteRequest) (*operations.OrderAPICreateDeliveryNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateDeliveryNote/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateDeliveryNote/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -338,14 +338,14 @@ func (s *orders) OrderAPICreateDeliveryNote(ctx context.Context, request operati
 // OrderAPICreateInvoice - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
 func (s *orders) OrderAPICreateInvoice(ctx context.Context, request operations.OrderAPICreateInvoiceRequest) (*operations.OrderAPICreateInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateInvoice/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateInvoice/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -393,7 +393,7 @@ func (s *orders) OrderAPICreateInvoice(ctx context.Context, request operations.O
 // OrderAPIFind - Find a single order by its external id (order number)
 func (s *orders) OrderAPIFind(ctx context.Context, request operations.OrderAPIFindRequest) (*operations.OrderAPIFindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/find/{id}/{partner}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/find/{id}/{partner}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -444,14 +444,14 @@ func (s *orders) OrderAPIFind(ctx context.Context, request operations.OrderAPIFi
 // OrderAPIGet - Get a single order by its internal billbee id. This request is throttled to 6 calls per order in one minute
 func (s *orders) OrderAPIGet(ctx context.Context, request operations.OrderAPIGetRequest) (*operations.OrderAPIGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -513,7 +513,7 @@ func (s *orders) OrderAPIGet(ctx context.Context, request operations.OrderAPIGet
 // OrderAPIGetByExtRef - Get a single order by its external order number
 func (s *orders) OrderAPIGetByExtRef(ctx context.Context, request operations.OrderAPIGetByExtRefRequest) (*operations.OrderAPIGetByExtRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/findbyextref/{extRef}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/findbyextref/{extRef}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -585,7 +585,7 @@ func (s *orders) OrderAPIGetInvoiceList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -640,7 +640,7 @@ func (s *orders) OrderAPIGetList(ctx context.Context, request operations.OrderAP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -753,9 +753,9 @@ func (s *orders) OrderAPIGetPatchableFields(ctx context.Context) (*operations.Or
 // OrderAPIParsePlaceholdersForm - Parses a text and replaces all placeholders
 func (s *orders) OrderAPIParsePlaceholdersForm(ctx context.Context, request operations.OrderAPIParsePlaceholdersFormRequest) (*operations.OrderAPIParsePlaceholdersFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/parse-placeholders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/parse-placeholders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderAPIControllerParseTextContainer", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -814,9 +814,9 @@ func (s *orders) OrderAPIParsePlaceholdersForm(ctx context.Context, request oper
 // OrderAPIParsePlaceholdersJSON - Parses a text and replaces all placeholders
 func (s *orders) OrderAPIParsePlaceholdersJSON(ctx context.Context, request operations.OrderAPIParsePlaceholdersJSONRequest) (*operations.OrderAPIParsePlaceholdersJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/parse-placeholders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/parse-placeholders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderAPIControllerParseTextContainer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -875,9 +875,9 @@ func (s *orders) OrderAPIParsePlaceholdersJSON(ctx context.Context, request oper
 // OrderAPIParsePlaceholdersRaw - Parses a text and replaces all placeholders
 func (s *orders) OrderAPIParsePlaceholdersRaw(ctx context.Context, request operations.OrderAPIParsePlaceholdersRawRequest) (*operations.OrderAPIParsePlaceholdersRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/parse-placeholders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/parse-placeholders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -936,9 +936,9 @@ func (s *orders) OrderAPIParsePlaceholdersRaw(ctx context.Context, request opera
 // OrderAPIPatchOrder - Updates one or more fields of an order
 func (s *orders) OrderAPIPatchOrder(ctx context.Context, request operations.OrderAPIPatchOrderRequest) (*operations.OrderAPIPatchOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1015,7 +1015,7 @@ func (s *orders) OrderAPIPostNewOrderForm(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelOrderInput", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1030,7 +1030,7 @@ func (s *orders) OrderAPIPostNewOrderForm(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1099,7 +1099,7 @@ func (s *orders) OrderAPIPostNewOrderJSON(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelOrderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1114,7 +1114,7 @@ func (s *orders) OrderAPIPostNewOrderJSON(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1183,7 +1183,7 @@ func (s *orders) OrderAPIPostNewOrderRaw(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1198,7 +1198,7 @@ func (s *orders) OrderAPIPostNewOrderRaw(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1263,9 +1263,9 @@ func (s *orders) OrderAPIPostNewOrderRaw(ctx context.Context, request operations
 // OrderAPISendMessageForm - Sends a message to the buyer
 func (s *orders) OrderAPISendMessageForm(ctx context.Context, request operations.OrderAPISendMessageFormRequest) (*operations.OrderAPISendMessageFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/send-message", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/send-message", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1324,9 +1324,9 @@ func (s *orders) OrderAPISendMessageForm(ctx context.Context, request operations
 // OrderAPISendMessageJSON - Sends a message to the buyer
 func (s *orders) OrderAPISendMessageJSON(ctx context.Context, request operations.OrderAPISendMessageJSONRequest) (*operations.OrderAPISendMessageJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/send-message", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/send-message", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1385,9 +1385,9 @@ func (s *orders) OrderAPISendMessageJSON(ctx context.Context, request operations
 // OrderAPISendMessageRaw - Sends a message to the buyer
 func (s *orders) OrderAPISendMessageRaw(ctx context.Context, request operations.OrderAPISendMessageRawRequest) (*operations.OrderAPISendMessageRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/send-message", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/send-message", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1447,9 +1447,9 @@ func (s *orders) OrderAPISendMessageRaw(ctx context.Context, request operations.
 // When a tag is already attached, it is ignored. Tags are not case sensitive. All given tags are added to the existing tags.
 func (s *orders) OrderAPITagsCreateForm(ctx context.Context, request operations.OrderAPITagsCreateFormRequest) (*operations.OrderAPITagsCreateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderTagCreate", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1509,9 +1509,9 @@ func (s *orders) OrderAPITagsCreateForm(ctx context.Context, request operations.
 // When a tag is already attached, it is ignored. Tags are not case sensitive. All given tags are added to the existing tags.
 func (s *orders) OrderAPITagsCreateJSON(ctx context.Context, request operations.OrderAPITagsCreateJSONRequest) (*operations.OrderAPITagsCreateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderTagCreate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1571,9 +1571,9 @@ func (s *orders) OrderAPITagsCreateJSON(ctx context.Context, request operations.
 // When a tag is already attached, it is ignored. Tags are not case sensitive. All given tags are added to the existing tags.
 func (s *orders) OrderAPITagsCreateRaw(ctx context.Context, request operations.OrderAPITagsCreateRawRequest) (*operations.OrderAPITagsCreateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1633,9 +1633,9 @@ func (s *orders) OrderAPITagsCreateRaw(ctx context.Context, request operations.O
 // All existing tags will be replaced by the given list of new tags. To just add tags, use POST method.
 func (s *orders) OrderAPITagsUpdateForm(ctx context.Context, request operations.OrderAPITagsUpdateFormRequest) (*operations.OrderAPITagsUpdateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderTagCreate", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1695,9 +1695,9 @@ func (s *orders) OrderAPITagsUpdateForm(ctx context.Context, request operations.
 // All existing tags will be replaced by the given list of new tags. To just add tags, use POST method.
 func (s *orders) OrderAPITagsUpdateJSON(ctx context.Context, request operations.OrderAPITagsUpdateJSONRequest) (*operations.OrderAPITagsUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderTagCreate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1757,9 +1757,9 @@ func (s *orders) OrderAPITagsUpdateJSON(ctx context.Context, request operations.
 // All existing tags will be replaced by the given list of new tags. To just add tags, use POST method.
 func (s *orders) OrderAPITagsUpdateRaw(ctx context.Context, request operations.OrderAPITagsUpdateRawRequest) (*operations.OrderAPITagsUpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1818,9 +1818,9 @@ func (s *orders) OrderAPITagsUpdateRaw(ctx context.Context, request operations.O
 // OrderAPITriggerEventForm - Triggers a rule event
 func (s *orders) OrderAPITriggerEventForm(ctx context.Context, request operations.OrderAPITriggerEventFormRequest) (*operations.OrderAPITriggerEventFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/trigger-event", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/trigger-event", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderAPIControllerTriggerEventContainer", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1879,9 +1879,9 @@ func (s *orders) OrderAPITriggerEventForm(ctx context.Context, request operation
 // OrderAPITriggerEventJSON - Triggers a rule event
 func (s *orders) OrderAPITriggerEventJSON(ctx context.Context, request operations.OrderAPITriggerEventJSONRequest) (*operations.OrderAPITriggerEventJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/trigger-event", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/trigger-event", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderAPIControllerTriggerEventContainer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1940,9 +1940,9 @@ func (s *orders) OrderAPITriggerEventJSON(ctx context.Context, request operation
 // OrderAPITriggerEventRaw - Triggers a rule event
 func (s *orders) OrderAPITriggerEventRaw(ctx context.Context, request operations.OrderAPITriggerEventRawRequest) (*operations.OrderAPITriggerEventRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/trigger-event", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/trigger-event", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2022,9 +2022,9 @@ func (s *orders) OrderAPITriggerEventRaw(ctx context.Context, request operations
 // - 16: fulfilling
 func (s *orders) OrderAPIUpdateStateForm(ctx context.Context, request operations.OrderAPIUpdateStateFormRequest) (*operations.OrderAPIUpdateStateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/orderstate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/orderstate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderStateUpdate", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2104,9 +2104,9 @@ func (s *orders) OrderAPIUpdateStateForm(ctx context.Context, request operations
 // - 16: fulfilling
 func (s *orders) OrderAPIUpdateStateJSON(ctx context.Context, request operations.OrderAPIUpdateStateJSONRequest) (*operations.OrderAPIUpdateStateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/orderstate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/orderstate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIOrderStateUpdate", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2186,9 +2186,9 @@ func (s *orders) OrderAPIUpdateStateJSON(ctx context.Context, request operations
 // - 16: fulfilling
 func (s *orders) OrderAPIUpdateStateRaw(ctx context.Context, request operations.OrderAPIUpdateStateRawRequest) (*operations.OrderAPIUpdateStateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/orderstate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/{id}/orderstate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2247,7 +2247,7 @@ func (s *orders) OrderAPIUpdateStateRaw(ctx context.Context, request operations.
 // SearchSearchForm - Search for products, customers and orders.
 // Type can be "order", "product" and / or "customer"
 // Term can contains lucene query syntax
-func (s *orders) SearchSearchForm(ctx context.Context, request operations.SearchSearchFormRequest) (*operations.SearchSearchFormResponse, error) {
+func (s *orders) SearchSearchForm(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPISearchControllerSearchModel) (*operations.SearchSearchFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/search"
 
@@ -2324,7 +2324,7 @@ func (s *orders) SearchSearchForm(ctx context.Context, request operations.Search
 // SearchSearchJSON - Search for products, customers and orders.
 // Type can be "order", "product" and / or "customer"
 // Term can contains lucene query syntax
-func (s *orders) SearchSearchJSON(ctx context.Context, request operations.SearchSearchJSONRequest) (*operations.SearchSearchJSONResponse, error) {
+func (s *orders) SearchSearchJSON(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPISearchControllerSearchModel) (*operations.SearchSearchJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/search"
 
@@ -2401,7 +2401,7 @@ func (s *orders) SearchSearchJSON(ctx context.Context, request operations.Search
 // SearchSearchRaw - Search for products, customers and orders.
 // Type can be "order", "product" and / or "customer"
 // Term can contains lucene query syntax
-func (s *orders) SearchSearchRaw(ctx context.Context, request operations.SearchSearchRawRequest) (*operations.SearchSearchRawResponse, error) {
+func (s *orders) SearchSearchRaw(ctx context.Context, request []byte) (*operations.SearchSearchRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/search"
 

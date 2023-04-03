@@ -8,23 +8,15 @@ import (
 )
 
 type RemoveContactListItemsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type RemoveContactListItemsPathParams struct {
-	// A id of a contact list
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RemoveContactListItemsQueryParams struct {
-	// An id of a contact entity in the CallFire system
-	ContactID []int64 `queryParam:"style=form,explode=true,name=contactId"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type RemoveContactListItemsRequest struct {
-	PathParams  RemoveContactListItemsPathParams
-	QueryParams RemoveContactListItemsQueryParams
-	Security    RemoveContactListItemsSecurity
+	// An id of a contact entity in the CallFire system
+	ContactID []int64 `queryParam:"style=form,explode=true,name=contactId"`
+	// A id of a contact list
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RemoveContactListItemsResponse struct {

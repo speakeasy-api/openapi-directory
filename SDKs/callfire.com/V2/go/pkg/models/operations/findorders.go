@@ -8,10 +8,11 @@ import (
 )
 
 type FindOrdersSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindOrdersQueryParams struct {
+type FindOrdersRequest struct {
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Start of the find time interval, formatted in unix time milliseconds. Example: 1473781817000
@@ -24,11 +25,6 @@ type FindOrdersQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Filter by order status, accepts multiple values in comma separated string, available values: [PROCESSING, FINISHED, PAYMENT_ERROR, VOID, WAIT_FOR_PAYMENT, PARTIALLY_ADJUSTED, ADJUSTED]
 	Status []string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type FindOrdersRequest struct {
-	QueryParams FindOrdersQueryParams
-	Security    FindOrdersSecurity
 }
 
 type FindOrdersResponse struct {

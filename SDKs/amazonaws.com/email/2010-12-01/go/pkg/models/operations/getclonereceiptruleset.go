@@ -50,28 +50,20 @@ func (e *GETCloneReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCloneReceiptRuleSetQueryParams struct {
+type GETCloneReceiptRuleSetRequest struct {
 	Action GETCloneReceiptRuleSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the rule set to clone.
 	OriginalRuleSetName string `queryParam:"style=form,explode=true,name=OriginalRuleSetName"`
 	// <p>The name of the rule set to create. The name must:</p> <ul> <li> <p>This value can only contain ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-).</p> </li> <li> <p>Start and end with a letter or number.</p> </li> <li> <p>Contain less than 64 characters.</p> </li> </ul>
-	RuleSetName string                            `queryParam:"style=form,explode=true,name=RuleSetName"`
-	Version     GETCloneReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCloneReceiptRuleSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCloneReceiptRuleSetRequest struct {
-	QueryParams GETCloneReceiptRuleSetQueryParams
-	Headers     GETCloneReceiptRuleSetHeaders
+	RuleSetName       string                            `queryParam:"style=form,explode=true,name=RuleSetName"`
+	Version           GETCloneReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCloneReceiptRuleSetResponse struct {

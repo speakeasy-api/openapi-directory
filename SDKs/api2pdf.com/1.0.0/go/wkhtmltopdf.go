@@ -37,7 +37,7 @@ func newWkhtmltopdf(defaultClient, securityClient HTTPClient, serverURL, languag
 // Convert HTML to a PDF using WkHtmlToPdf on AWS Lambda.
 // ### Authorize via Header of Request
 // **Authorization: YOUR-API-KEY**
-func (s *wkhtmltopdf) WkhtmltopdfFromHTMLPost(ctx context.Context, request operations.WkhtmltopdfFromHTMLPostRequest) (*operations.WkhtmltopdfFromHTMLPostResponse, error) {
+func (s *wkhtmltopdf) WkhtmltopdfFromHTMLPost(ctx context.Context, request shared.WkHTMLToPdfHTMLToPdfRequest) (*operations.WkhtmltopdfFromHTMLPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wkhtmltopdf/html"
 
@@ -103,7 +103,7 @@ func (s *wkhtmltopdf) WkhtmltopdfFromHTMLPost(ctx context.Context, request opera
 // **apikey=YOUR-API-KEY**
 // ### Example
 // ``` https://v2018.api2pdf.com/wkhtmltopdf/url?url={UrlToConvert}&apikey={YourApiKey} ```
-func (s *wkhtmltopdf) WkhtmltopdfFromURLGET(ctx context.Context, request operations.WkhtmltopdfFromURLGETRequest) (*operations.WkhtmltopdfFromURLGETResponse, error) {
+func (s *wkhtmltopdf) WkhtmltopdfFromURLGET(ctx context.Context, request operations.WkhtmltopdfFromURLGETRequest, security operations.WkhtmltopdfFromURLGETSecurity) (*operations.WkhtmltopdfFromURLGETResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wkhtmltopdf/url"
 
@@ -112,11 +112,11 @@ func (s *wkhtmltopdf) WkhtmltopdfFromURLGET(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *wkhtmltopdf) WkhtmltopdfFromURLGET(ctx context.Context, request operati
 // Convert a URL or Web Page to PDF using WkHtmlToPdf on AWS Lambda..
 // ### Authorize via Header of Request
 // **Authorization: YOUR-API-KEY**
-func (s *wkhtmltopdf) WkhtmltopdfFromURLPost(ctx context.Context, request operations.WkhtmltopdfFromURLPostRequest) (*operations.WkhtmltopdfFromURLPostResponse, error) {
+func (s *wkhtmltopdf) WkhtmltopdfFromURLPost(ctx context.Context, request shared.WkHTMLToPdfURLToPdfRequest) (*operations.WkhtmltopdfFromURLPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/wkhtmltopdf/url"
 

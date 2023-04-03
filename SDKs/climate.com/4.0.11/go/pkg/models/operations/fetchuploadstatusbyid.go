@@ -8,18 +8,13 @@ import (
 )
 
 type FetchUploadStatusByIDSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type FetchUploadStatusByIDPathParams struct {
-	// Unique identifier of an Upload.
-	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchUploadStatusByIDRequest struct {
-	PathParams FetchUploadStatusByIDPathParams
-	Security   FetchUploadStatusByIDSecurity
+	// Unique identifier of an Upload.
+	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
 }
 
 type FetchUploadStatusByIDResponse struct {

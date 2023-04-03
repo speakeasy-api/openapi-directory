@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Oauth: shared.SchemeOauth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            Oauth: "Bearer YOUR_ACCESS_TOKEN_HERE",
         }),
     )
 
     req := operations.GetContactRequest{
-        PathParams: operations.GetContactPathParams{
-            ID: "corrupti",
-        },
+        ID: "corrupti",
     }
 
     ctx := context.Background()

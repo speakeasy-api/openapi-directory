@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateResourceProfileDetectionsQueryParams struct {
-	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type UpdateResourceProfileDetectionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateResourceProfileDetectionsRequestBody struct {
 	// An array of objects, one for each custom data identifier or managed data identifier that detected the type of sensitive data to start excluding or including in the bucket's score. To start including all sensitive data types in the score, don't specify any values for this array.
 	SuppressDataIdentifiers []shared.SuppressDataIdentifier `json:"suppressDataIdentifiers,omitempty"`
 }
 
 type UpdateResourceProfileDetectionsRequest struct {
-	QueryParams UpdateResourceProfileDetectionsQueryParams
-	Headers     UpdateResourceProfileDetectionsHeaders
-	Request     UpdateResourceProfileDetectionsRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateResourceProfileDetectionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type UpdateResourceProfileDetectionsResponse struct {

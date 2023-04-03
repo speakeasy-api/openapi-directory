@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamSeasonStatsQueryParams struct {
+type GetTeamSeasonStatsRequest struct {
 	// Conference abbreviation filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Starting week filter
@@ -18,10 +18,6 @@ type GetTeamSeasonStatsQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter (required if no team specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTeamSeasonStatsRequest struct {
-	QueryParams GetTeamSeasonStatsQueryParams
 }
 
 type GetTeamSeasonStatsResponse struct {

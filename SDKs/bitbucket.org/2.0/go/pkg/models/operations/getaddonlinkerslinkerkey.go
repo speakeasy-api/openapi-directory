@@ -8,20 +8,15 @@ import (
 )
 
 type GetAddonLinkersLinkerKeySecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetAddonLinkersLinkerKeyPathParams struct {
-	// The unique key of a [linker module](/cloud/bitbucket/modules/linker/)
-	// as defined in an application descriptor.
-	LinkerKey string `pathParam:"style=simple,explode=false,name=linker_key"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetAddonLinkersLinkerKeyRequest struct {
-	PathParams GetAddonLinkersLinkerKeyPathParams
-	Security   GetAddonLinkersLinkerKeySecurity
+	// The unique key of a [linker module](/cloud/bitbucket/modules/linker/)
+	// as defined in an application descriptor.
+	LinkerKey string `pathParam:"style=simple,explode=false,name=linker_key"`
 }
 
 type GetAddonLinkersLinkerKeyResponse struct {

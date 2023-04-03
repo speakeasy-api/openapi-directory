@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTemplatesQueryParams struct {
+type ListTemplatesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
 	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
 	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
@@ -16,21 +23,6 @@ type ListTemplatesQueryParams struct {
 	Prefix *string `queryParam:"style=form,explode=true,name=prefix"`
 	// The type of message template to include in the results. Valid values are: EMAIL, PUSH, SMS, and VOICE. To include all types of templates in the results, don't include this parameter in your request.
 	TemplateType *string `queryParam:"style=form,explode=true,name=template-type"`
-}
-
-type ListTemplatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTemplatesRequest struct {
-	QueryParams ListTemplatesQueryParams
-	Headers     ListTemplatesHeaders
 }
 
 type ListTemplatesResponse struct {

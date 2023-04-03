@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSystemSettingsHeaders struct {
+type UpdateSystemSettingsRequest struct {
+	ConfigOptionList shared.ConfigOptionList `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateSystemSettingsRequest struct {
-	Headers UpdateSystemSettingsHeaders
-	Request shared.ConfigOptionList `request:"mediaType=application/json"`
 }
 
 type UpdateSystemSettingsResponse struct {

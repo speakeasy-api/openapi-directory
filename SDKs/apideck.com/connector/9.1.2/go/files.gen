@@ -35,7 +35,6 @@ pkg/models/shared/apiresourcecoverage.go
 pkg/models/shared/resourcestatusenum.go
 pkg/models/shared/supportedproperty.go
 pkg/models/shared/paginationcoverage.go
-pkg/models/shared/security.go
 pkg/models/shared/getapiresourceresponse.go
 pkg/models/shared/apiresource.go
 pkg/models/shared/getapisresponse.go
@@ -57,4 +56,5 @@ pkg/models/shared/connectorsetting.go
 pkg/models/shared/connectordoc.go
 pkg/models/shared/connectorsfilter.go
 pkg/models/shared/getconnectorresponse.go
+pkg/models/shared/security.go
 USAGE.md

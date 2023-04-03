@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CancelOrder - Cancels the specified order for an Outpost.
 func (s *SDK) CancelOrder(ctx context.Context, request operations.CancelOrderRequest) (*operations.CancelOrderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{OrderId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{OrderId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -212,7 +212,7 @@ func (s *SDK) CreateOrder(ctx context.Context, request operations.CreateOrderReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) CreateOrder(ctx context.Context, request operations.CreateOrderReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -328,7 +328,7 @@ func (s *SDK) CreateOutpost(ctx context.Context, request operations.CreateOutpos
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/outposts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -343,7 +343,7 @@ func (s *SDK) CreateOutpost(ctx context.Context, request operations.CreateOutpos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -444,7 +444,7 @@ func (s *SDK) CreateSite(ctx context.Context, request operations.CreateSiteReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sites"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -459,7 +459,7 @@ func (s *SDK) CreateSite(ctx context.Context, request operations.CreateSiteReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -548,14 +548,14 @@ func (s *SDK) CreateSite(ctx context.Context, request operations.CreateSiteReque
 // DeleteOutpost - Deletes the specified Outpost.
 func (s *SDK) DeleteOutpost(ctx context.Context, request operations.DeleteOutpostRequest) (*operations.DeleteOutpostResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -644,14 +644,14 @@ func (s *SDK) DeleteOutpost(ctx context.Context, request operations.DeleteOutpos
 // DeleteSite - Deletes the specified site.
 func (s *SDK) DeleteSite(ctx context.Context, request operations.DeleteSiteRequest) (*operations.DeleteSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -740,14 +740,14 @@ func (s *SDK) DeleteSite(ctx context.Context, request operations.DeleteSiteReque
 // GetCatalogItem - Gets information about the specified catalog item.
 func (s *SDK) GetCatalogItem(ctx context.Context, request operations.GetCatalogItemRequest) (*operations.GetCatalogItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalog/item/{CatalogItemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/catalog/item/{CatalogItemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -816,14 +816,14 @@ func (s *SDK) GetCatalogItem(ctx context.Context, request operations.GetCatalogI
 // GetConnection - <note> <p> Amazon Web Services uses this action to install Outpost servers.</p> </note> <p> Gets information about the specified connection. </p> <p> Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to secure it. For more information, see <a href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services managed policies for Amazon Web Services Outposts</a> and <a href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User Guide</i>. </p>
 func (s *SDK) GetConnection(ctx context.Context, request operations.GetConnectionRequest) (*operations.GetConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{ConnectionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connections/{ConnectionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -902,14 +902,14 @@ func (s *SDK) GetConnection(ctx context.Context, request operations.GetConnectio
 // GetOrder - Gets information about the specified order.
 func (s *SDK) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{OrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{OrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -978,14 +978,14 @@ func (s *SDK) GetOrder(ctx context.Context, request operations.GetOrderRequest) 
 // GetOutpost - Gets information about the specified Outpost.
 func (s *SDK) GetOutpost(ctx context.Context, request operations.GetOutpostRequest) (*operations.GetOutpostResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1064,16 +1064,16 @@ func (s *SDK) GetOutpost(ctx context.Context, request operations.GetOutpostReque
 // GetOutpostInstanceTypes - Gets the instance types for the specified Outpost.
 func (s *SDK) GetOutpostInstanceTypes(ctx context.Context, request operations.GetOutpostInstanceTypesRequest) (*operations.GetOutpostInstanceTypesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}/instanceTypes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}/instanceTypes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1154,14 +1154,14 @@ func (s *SDK) GetOutpostInstanceTypes(ctx context.Context, request operations.Ge
 // GetSite - Gets information about the specified Outpost site.
 func (s *SDK) GetSite(ctx context.Context, request operations.GetSiteRequest) (*operations.GetSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1240,16 +1240,16 @@ func (s *SDK) GetSite(ctx context.Context, request operations.GetSiteRequest) (*
 // GetSiteAddress -  Gets the site address of the specified site.
 func (s *SDK) GetSiteAddress(ctx context.Context, request operations.GetSiteAddressRequest) (*operations.GetSiteAddressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}/address#AddressType", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}/address#AddressType", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1330,16 +1330,16 @@ func (s *SDK) GetSiteAddress(ctx context.Context, request operations.GetSiteAddr
 // ListAssets - <p>Lists the hardware assets for the specified Outpost.</p> <p>Use filters to return specific results. If you specify multiple filters, the results include only the resources that match all of the specified filters. For a filter where you can specify multiple values, the results include items that match any of the values that you specify for the filter.</p>
 func (s *SDK) ListAssets(ctx context.Context, request operations.ListAssetsRequest) (*operations.ListAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}/assets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}/assets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1427,9 +1427,9 @@ func (s *SDK) ListCatalogItems(ctx context.Context, request operations.ListCatal
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1507,9 +1507,9 @@ func (s *SDK) ListOrders(ctx context.Context, request operations.ListOrdersReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1597,9 +1597,9 @@ func (s *SDK) ListOutposts(ctx context.Context, request operations.ListOutpostsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1677,9 +1677,9 @@ func (s *SDK) ListSites(ctx context.Context, request operations.ListSitesRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1750,14 +1750,14 @@ func (s *SDK) ListSites(ctx context.Context, request operations.ListSitesRequest
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1828,7 +1828,7 @@ func (s *SDK) StartConnection(ctx context.Context, request operations.StartConne
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connections"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1843,7 +1843,7 @@ func (s *SDK) StartConnection(ctx context.Context, request operations.StartConne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1922,9 +1922,9 @@ func (s *SDK) StartConnection(ctx context.Context, request operations.StartConne
 // TagResource - Adds tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1939,7 +1939,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2008,16 +2008,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2088,9 +2088,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateOutpost -  Updates an Outpost.
 func (s *SDK) UpdateOutpost(ctx context.Context, request operations.UpdateOutpostRequest) (*operations.UpdateOutpostResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/outposts/{OutpostId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2105,7 +2105,7 @@ func (s *SDK) UpdateOutpost(ctx context.Context, request operations.UpdateOutpos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2194,9 +2194,9 @@ func (s *SDK) UpdateOutpost(ctx context.Context, request operations.UpdateOutpos
 // UpdateSite - Updates the specified site.
 func (s *SDK) UpdateSite(ctx context.Context, request operations.UpdateSiteRequest) (*operations.UpdateSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2211,7 +2211,7 @@ func (s *SDK) UpdateSite(ctx context.Context, request operations.UpdateSiteReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2300,9 +2300,9 @@ func (s *SDK) UpdateSite(ctx context.Context, request operations.UpdateSiteReque
 // UpdateSiteAddress - <p>Updates the address of the specified site.</p> <p>You can't update a site address if there is an order in progress. You must wait for the order to complete or cancel the order.</p> <p>You can update the operating address before you place an order at the site, or after all Outposts that belong to the site have been deactivated.</p>
 func (s *SDK) UpdateSiteAddress(ctx context.Context, request operations.UpdateSiteAddressRequest) (*operations.UpdateSiteAddressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}/address", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}/address", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2317,7 +2317,7 @@ func (s *SDK) UpdateSiteAddress(ctx context.Context, request operations.UpdateSi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2406,9 +2406,9 @@ func (s *SDK) UpdateSiteAddress(ctx context.Context, request operations.UpdateSi
 // UpdateSiteRackPhysicalProperties - <p>Update the physical and logistical details for a rack at a site. For more information about hardware requirements for racks, see <a href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-requirements.html#checklist">Network readiness checklist</a> in the Amazon Web Services Outposts User Guide. </p> <p>To update a rack at a site with an order of <code>IN_PROGRESS</code>, you must wait for the order to complete or cancel the order.</p>
 func (s *SDK) UpdateSiteRackPhysicalProperties(ctx context.Context, request operations.UpdateSiteRackPhysicalPropertiesRequest) (*operations.UpdateSiteRackPhysicalPropertiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}/rackPhysicalProperties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sites/{SiteId}/rackPhysicalProperties", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2423,7 +2423,7 @@ func (s *SDK) UpdateSiteRackPhysicalProperties(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

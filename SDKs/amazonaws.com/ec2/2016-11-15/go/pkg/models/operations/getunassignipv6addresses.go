@@ -50,7 +50,7 @@ func (e *GETUnassignIpv6AddressesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUnassignIpv6AddressesQueryParams struct {
+type GETUnassignIpv6AddressesRequest struct {
 	Action GETUnassignIpv6AddressesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IPv6 addresses to unassign from the network interface.
 	Ipv6Addresses []string `queryParam:"style=form,explode=true,name=Ipv6Addresses"`
@@ -59,21 +59,13 @@ type GETUnassignIpv6AddressesQueryParams struct {
 	// The ID of the network interface.
 	NetworkInterfaceID string                              `queryParam:"style=form,explode=true,name=NetworkInterfaceId"`
 	Version            GETUnassignIpv6AddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUnassignIpv6AddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUnassignIpv6AddressesRequest struct {
-	QueryParams GETUnassignIpv6AddressesQueryParams
-	Headers     GETUnassignIpv6AddressesHeaders
+	XAmzAlgorithm      *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUnassignIpv6AddressesResponse struct {

@@ -77,7 +77,7 @@ func (e *GETSetAlarmStateVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetAlarmStateQueryParams struct {
+type GETSetAlarmStateRequest struct {
 	Action GETSetAlarmStateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the alarm.
 	AlarmName string `queryParam:"style=form,explode=true,name=AlarmName"`
@@ -86,23 +86,15 @@ type GETSetAlarmStateQueryParams struct {
 	// <p>The reason that this alarm is set to this specific state, in JSON format.</p> <p>For SNS or EC2 alarm actions, this is just informational. But for EC2 Auto Scaling or application Auto Scaling alarm actions, the Auto Scaling policy uses the information in this field to take the correct action.</p>
 	StateReasonData *string `queryParam:"style=form,explode=true,name=StateReasonData"`
 	// The value of the state.
-	StateValue GETSetAlarmStateStateValueEnum `queryParam:"style=form,explode=true,name=StateValue"`
-	Version    GETSetAlarmStateVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetAlarmStateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetAlarmStateRequest struct {
-	QueryParams GETSetAlarmStateQueryParams
-	Headers     GETSetAlarmStateHeaders
+	StateValue        GETSetAlarmStateStateValueEnum `queryParam:"style=form,explode=true,name=StateValue"`
+	Version           GETSetAlarmStateVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetAlarmStateResponse struct {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRouteResponsesPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The route ID.
-	RouteID string `pathParam:"style=simple,explode=false,name=routeId"`
-}
-
-type GetRouteResponsesQueryParams struct {
-	// The maximum number of elements to be returned for this resource.
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// The next page of elements from this collection. Not valid for the last element of the collection.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetRouteResponsesHeaders struct {
+type GetRouteResponsesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type GetRouteResponsesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRouteResponsesRequest struct {
-	PathParams  GetRouteResponsesPathParams
-	QueryParams GetRouteResponsesQueryParams
-	Headers     GetRouteResponsesHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The maximum number of elements to be returned for this resource.
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// The next page of elements from this collection. Not valid for the last element of the collection.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The route ID.
+	RouteID string `pathParam:"style=simple,explode=false,name=routeId"`
 }
 
 type GetRouteResponsesResponse struct {

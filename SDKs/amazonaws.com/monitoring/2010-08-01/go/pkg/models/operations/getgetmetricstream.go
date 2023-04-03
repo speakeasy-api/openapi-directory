@@ -50,26 +50,18 @@ func (e *GETGETMetricStreamVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETMetricStreamQueryParams struct {
+type GETGETMetricStreamRequest struct {
 	Action GETGETMetricStreamActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the metric stream to retrieve information about.
-	Name    string                        `queryParam:"style=form,explode=true,name=Name"`
-	Version GETGETMetricStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETMetricStreamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETMetricStreamRequest struct {
-	QueryParams GETGETMetricStreamQueryParams
-	Headers     GETGETMetricStreamHeaders
+	Name              string                        `queryParam:"style=form,explode=true,name=Name"`
+	Version           GETGETMetricStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETMetricStreamResponse struct {

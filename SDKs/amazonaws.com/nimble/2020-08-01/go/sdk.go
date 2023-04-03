@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AcceptEulas - Accept EULAs.
 func (s *SDK) AcceptEulas(ctx context.Context, request operations.AcceptEulasRequest) (*operations.AcceptEulasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/eula-acceptances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/eula-acceptances", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AcceptEulas(ctx context.Context, request operations.AcceptEulasReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -240,9 +240,9 @@ func (s *SDK) AcceptEulas(ctx context.Context, request operations.AcceptEulasReq
 // CreateLaunchProfile - Create a launch profile.
 func (s *SDK) CreateLaunchProfile(ctx context.Context, request operations.CreateLaunchProfileRequest) (*operations.CreateLaunchProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) CreateLaunchProfile(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -366,9 +366,9 @@ func (s *SDK) CreateLaunchProfile(ctx context.Context, request operations.Create
 // CreateStreamingImage - Creates a streaming image resource in a studio.
 func (s *SDK) CreateStreamingImage(ctx context.Context, request operations.CreateStreamingImageRequest) (*operations.CreateStreamingImageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -383,7 +383,7 @@ func (s *SDK) CreateStreamingImage(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -492,9 +492,9 @@ func (s *SDK) CreateStreamingImage(ctx context.Context, request operations.Creat
 // CreateStreamingSession - <p>Creates a streaming session in a studio.</p> <p>After invoking this operation, you must poll GetStreamingSession until the streaming session is in the <code>READY</code> state.</p>
 func (s *SDK) CreateStreamingSession(ctx context.Context, request operations.CreateStreamingSessionRequest) (*operations.CreateStreamingSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -509,7 +509,7 @@ func (s *SDK) CreateStreamingSession(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -618,9 +618,9 @@ func (s *SDK) CreateStreamingSession(ctx context.Context, request operations.Cre
 // CreateStreamingSessionStream - <p>Creates a streaming session stream for a streaming session.</p> <p>After invoking this API, invoke GetStreamingSessionStream with the returned streamId to poll the resource until it is in the <code>READY</code> state.</p>
 func (s *SDK) CreateStreamingSessionStream(ctx context.Context, request operations.CreateStreamingSessionStreamRequest) (*operations.CreateStreamingSessionStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/streams", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/streams", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -635,7 +635,7 @@ func (s *SDK) CreateStreamingSessionStream(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -746,7 +746,7 @@ func (s *SDK) CreateStudio(ctx context.Context, request operations.CreateStudioR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2020-08-01/studios"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -761,7 +761,7 @@ func (s *SDK) CreateStudio(ctx context.Context, request operations.CreateStudioR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -870,9 +870,9 @@ func (s *SDK) CreateStudio(ctx context.Context, request operations.CreateStudioR
 // CreateStudioComponent - Creates a studio component resource.
 func (s *SDK) CreateStudioComponent(ctx context.Context, request operations.CreateStudioComponentRequest) (*operations.CreateStudioComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -887,7 +887,7 @@ func (s *SDK) CreateStudioComponent(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -996,14 +996,14 @@ func (s *SDK) CreateStudioComponent(ctx context.Context, request operations.Crea
 // DeleteLaunchProfile - Permanently delete a launch profile.
 func (s *SDK) DeleteLaunchProfile(ctx context.Context, request operations.DeleteLaunchProfileRequest) (*operations.DeleteLaunchProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1112,14 +1112,14 @@ func (s *SDK) DeleteLaunchProfile(ctx context.Context, request operations.Delete
 // DeleteLaunchProfileMember - Delete a user from launch profile membership.
 func (s *SDK) DeleteLaunchProfileMember(ctx context.Context, request operations.DeleteLaunchProfileMemberRequest) (*operations.DeleteLaunchProfileMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership/{principalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1228,14 +1228,14 @@ func (s *SDK) DeleteLaunchProfileMember(ctx context.Context, request operations.
 // DeleteStreamingImage - Delete streaming image.
 func (s *SDK) DeleteStreamingImage(ctx context.Context, request operations.DeleteStreamingImageRequest) (*operations.DeleteStreamingImageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images/{streamingImageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images/{streamingImageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1344,14 +1344,14 @@ func (s *SDK) DeleteStreamingImage(ctx context.Context, request operations.Delet
 // DeleteStreamingSession - <p>Deletes streaming session resource.</p> <p>After invoking this operation, use GetStreamingSession to poll the resource until it transitions to a <code>DELETED</code> state.</p> <p>A streaming session will count against your streaming session quota until it is marked <code>DELETED</code>.</p>
 func (s *SDK) DeleteStreamingSession(ctx context.Context, request operations.DeleteStreamingSessionRequest) (*operations.DeleteStreamingSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1460,14 +1460,14 @@ func (s *SDK) DeleteStreamingSession(ctx context.Context, request operations.Del
 // DeleteStudio - Delete a studio resource.
 func (s *SDK) DeleteStudio(ctx context.Context, request operations.DeleteStudioRequest) (*operations.DeleteStudioResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1576,14 +1576,14 @@ func (s *SDK) DeleteStudio(ctx context.Context, request operations.DeleteStudioR
 // DeleteStudioComponent - Deletes a studio component resource.
 func (s *SDK) DeleteStudioComponent(ctx context.Context, request operations.DeleteStudioComponentRequest) (*operations.DeleteStudioComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components/{studioComponentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components/{studioComponentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1692,14 +1692,14 @@ func (s *SDK) DeleteStudioComponent(ctx context.Context, request operations.Dele
 // DeleteStudioMember - Delete a user from studio membership.
 func (s *SDK) DeleteStudioMember(ctx context.Context, request operations.DeleteStudioMemberRequest) (*operations.DeleteStudioMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership/{principalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1808,14 +1808,14 @@ func (s *SDK) DeleteStudioMember(ctx context.Context, request operations.DeleteS
 // GetEula - Get EULA.
 func (s *SDK) GetEula(ctx context.Context, request operations.GetEulaRequest) (*operations.GetEulaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/eulas/{eulaId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/eulas/{eulaId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1924,14 +1924,14 @@ func (s *SDK) GetEula(ctx context.Context, request operations.GetEulaRequest) (*
 // GetLaunchProfile - Get a launch profile.
 func (s *SDK) GetLaunchProfile(ctx context.Context, request operations.GetLaunchProfileRequest) (*operations.GetLaunchProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2040,14 +2040,14 @@ func (s *SDK) GetLaunchProfile(ctx context.Context, request operations.GetLaunch
 // GetLaunchProfileDetails - Launch profile details include the launch profile resource and summary information of resources that are used by, or available to, the launch profile. This includes the name and description of all studio components used by the launch profiles, and the name and description of streaming images that can be used with this launch profile.
 func (s *SDK) GetLaunchProfileDetails(ctx context.Context, request operations.GetLaunchProfileDetailsRequest) (*operations.GetLaunchProfileDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/details", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2156,16 +2156,16 @@ func (s *SDK) GetLaunchProfileDetails(ctx context.Context, request operations.Ge
 // GetLaunchProfileInitialization - Get a launch profile initialization.
 func (s *SDK) GetLaunchProfileInitialization(ctx context.Context, request operations.GetLaunchProfileInitializationRequest) (*operations.GetLaunchProfileInitializationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/init#launchProfileProtocolVersions&launchPurpose&platform", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/init#launchProfileProtocolVersions&launchPurpose&platform", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2276,14 +2276,14 @@ func (s *SDK) GetLaunchProfileInitialization(ctx context.Context, request operat
 // GetLaunchProfileMember - Get a user persona in launch profile membership.
 func (s *SDK) GetLaunchProfileMember(ctx context.Context, request operations.GetLaunchProfileMemberRequest) (*operations.GetLaunchProfileMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership/{principalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2392,14 +2392,14 @@ func (s *SDK) GetLaunchProfileMember(ctx context.Context, request operations.Get
 // GetStreamingImage - Get streaming image.
 func (s *SDK) GetStreamingImage(ctx context.Context, request operations.GetStreamingImageRequest) (*operations.GetStreamingImageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images/{streamingImageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images/{streamingImageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2508,14 +2508,14 @@ func (s *SDK) GetStreamingImage(ctx context.Context, request operations.GetStrea
 // GetStreamingSession - <p>Gets StreamingSession resource.</p> <p>Invoke this operation to poll for a streaming session state while creating or deleting a session.</p>
 func (s *SDK) GetStreamingSession(ctx context.Context, request operations.GetStreamingSessionRequest) (*operations.GetStreamingSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2624,14 +2624,14 @@ func (s *SDK) GetStreamingSession(ctx context.Context, request operations.GetStr
 // GetStreamingSessionBackup - <p>Gets <code>StreamingSessionBackup</code> resource.</p> <p>Invoke this operation to poll for a streaming session backup while stopping a streaming session.</p>
 func (s *SDK) GetStreamingSessionBackup(ctx context.Context, request operations.GetStreamingSessionBackupRequest) (*operations.GetStreamingSessionBackupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-session-backups/{backupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-session-backups/{backupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2730,14 +2730,14 @@ func (s *SDK) GetStreamingSessionBackup(ctx context.Context, request operations.
 // GetStreamingSessionStream - <p>Gets a StreamingSessionStream for a streaming session.</p> <p>Invoke this operation to poll the resource after invoking <code>CreateStreamingSessionStream</code>.</p> <p>After the <code>StreamingSessionStream</code> changes to the <code>READY</code> state, the url property will contain a stream to be used with the DCV streaming client.</p>
 func (s *SDK) GetStreamingSessionStream(ctx context.Context, request operations.GetStreamingSessionStreamRequest) (*operations.GetStreamingSessionStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/streams/{streamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/streams/{streamId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2846,14 +2846,14 @@ func (s *SDK) GetStreamingSessionStream(ctx context.Context, request operations.
 // GetStudio - Get a studio resource.
 func (s *SDK) GetStudio(ctx context.Context, request operations.GetStudioRequest) (*operations.GetStudioResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2962,14 +2962,14 @@ func (s *SDK) GetStudio(ctx context.Context, request operations.GetStudioRequest
 // GetStudioComponent - Gets a studio component resource.
 func (s *SDK) GetStudioComponent(ctx context.Context, request operations.GetStudioComponentRequest) (*operations.GetStudioComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components/{studioComponentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components/{studioComponentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3078,14 +3078,14 @@ func (s *SDK) GetStudioComponent(ctx context.Context, request operations.GetStud
 // GetStudioMember - Get a user's membership in a studio.
 func (s *SDK) GetStudioMember(ctx context.Context, request operations.GetStudioMemberRequest) (*operations.GetStudioMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership/{principalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3194,16 +3194,16 @@ func (s *SDK) GetStudioMember(ctx context.Context, request operations.GetStudioM
 // ListEulaAcceptances - List EULA acceptances.
 func (s *SDK) ListEulaAcceptances(ctx context.Context, request operations.ListEulaAcceptancesRequest) (*operations.ListEulaAcceptancesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/eula-acceptances", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/eula-acceptances", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3321,9 +3321,9 @@ func (s *SDK) ListEulas(ctx context.Context, request operations.ListEulasRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3434,16 +3434,16 @@ func (s *SDK) ListEulas(ctx context.Context, request operations.ListEulasRequest
 // ListLaunchProfileMembers - Get all users in a given launch profile membership.
 func (s *SDK) ListLaunchProfileMembers(ctx context.Context, request operations.ListLaunchProfileMembersRequest) (*operations.ListLaunchProfileMembersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3554,16 +3554,16 @@ func (s *SDK) ListLaunchProfileMembers(ctx context.Context, request operations.L
 // ListLaunchProfiles - List all the launch profiles a studio.
 func (s *SDK) ListLaunchProfiles(ctx context.Context, request operations.ListLaunchProfilesRequest) (*operations.ListLaunchProfilesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3674,16 +3674,16 @@ func (s *SDK) ListLaunchProfiles(ctx context.Context, request operations.ListLau
 // ListStreamingImages - <p>List the streaming image resources available to this studio.</p> <p>This list will contain both images provided by Amazon Web Services, as well as streaming images that you have created in your studio.</p>
 func (s *SDK) ListStreamingImages(ctx context.Context, request operations.ListStreamingImagesRequest) (*operations.ListStreamingImagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3794,16 +3794,16 @@ func (s *SDK) ListStreamingImages(ctx context.Context, request operations.ListSt
 // ListStreamingSessionBackups - Lists the backups of a streaming session in a studio.
 func (s *SDK) ListStreamingSessionBackups(ctx context.Context, request operations.ListStreamingSessionBackupsRequest) (*operations.ListStreamingSessionBackupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-session-backups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-session-backups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3904,16 +3904,16 @@ func (s *SDK) ListStreamingSessionBackups(ctx context.Context, request operation
 // ListStreamingSessions - Lists the streaming sessions in a studio.
 func (s *SDK) ListStreamingSessions(ctx context.Context, request operations.ListStreamingSessionsRequest) (*operations.ListStreamingSessionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4024,16 +4024,16 @@ func (s *SDK) ListStreamingSessions(ctx context.Context, request operations.List
 // ListStudioComponents - Lists the <code>StudioComponents</code> in a studio.
 func (s *SDK) ListStudioComponents(ctx context.Context, request operations.ListStudioComponentsRequest) (*operations.ListStudioComponentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4144,16 +4144,16 @@ func (s *SDK) ListStudioComponents(ctx context.Context, request operations.ListS
 // ListStudioMembers - <p>Get all users in a given studio membership.</p> <note> <p> <code>ListStudioMembers</code> only returns admin members.</p> </note>
 func (s *SDK) ListStudioMembers(ctx context.Context, request operations.ListStudioMembersRequest) (*operations.ListStudioMembersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4271,9 +4271,9 @@ func (s *SDK) ListStudios(ctx context.Context, request operations.ListStudiosReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4384,14 +4384,14 @@ func (s *SDK) ListStudios(ctx context.Context, request operations.ListStudiosReq
 // ListTagsForResource - <p>Gets the tags for a resource, given its Amazon Resource Names (ARN).</p> <p>This operation supports ARNs for all resource types in Nimble Studio that support tags, including studio, studio component, launch profile, streaming image, and streaming session. All resources that can be tagged will contain an ARN property, so you do not have to create this ARN yourself.</p>
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4500,9 +4500,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // PutLaunchProfileMembers - Add/update users with given persona to launch profile membership.
 func (s *SDK) PutLaunchProfileMembers(ctx context.Context, request operations.PutLaunchProfileMembersRequest) (*operations.PutLaunchProfileMembersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4517,7 +4517,7 @@ func (s *SDK) PutLaunchProfileMembers(ctx context.Context, request operations.Pu
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4626,9 +4626,9 @@ func (s *SDK) PutLaunchProfileMembers(ctx context.Context, request operations.Pu
 // PutStudioMembers - Add/update users with given persona to studio membership.
 func (s *SDK) PutStudioMembers(ctx context.Context, request operations.PutStudioMembersRequest) (*operations.PutStudioMembersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/membership", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4643,7 +4643,7 @@ func (s *SDK) PutStudioMembers(ctx context.Context, request operations.PutStudio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4752,9 +4752,9 @@ func (s *SDK) PutStudioMembers(ctx context.Context, request operations.PutStudio
 // StartStreamingSession - Transitions sessions from the <code>STOPPED</code> state into the <code>READY</code> state. The <code>START_IN_PROGRESS</code> state is the intermediate state between the <code>STOPPED</code> and <code>READY</code> states.
 func (s *SDK) StartStreamingSession(ctx context.Context, request operations.StartStreamingSessionRequest) (*operations.StartStreamingSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4769,7 +4769,7 @@ func (s *SDK) StartStreamingSession(ctx context.Context, request operations.Star
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4878,14 +4878,14 @@ func (s *SDK) StartStreamingSession(ctx context.Context, request operations.Star
 // StartStudioSSOConfigurationRepair - <p>Repairs the IAM Identity Center configuration for a given studio.</p> <p>If the studio has a valid IAM Identity Center configuration currently associated with it, this operation will fail with a validation error.</p> <p>If the studio does not have a valid IAM Identity Center configuration currently associated with it, then a new IAM Identity Center application is created for the studio and the studio is changed to the <code>READY</code> state.</p> <p>After the IAM Identity Center application is repaired, you must use the Amazon Nimble Studio console to add administrators and users to your studio.</p>
 func (s *SDK) StartStudioSSOConfigurationRepair(ctx context.Context, request operations.StartStudioSSOConfigurationRepairRequest) (*operations.StartStudioSSOConfigurationRepairResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/sso-configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/sso-configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4994,9 +4994,9 @@ func (s *SDK) StartStudioSSOConfigurationRepair(ctx context.Context, request ope
 // StopStreamingSession - Transitions sessions from the <code>READY</code> state into the <code>STOPPED</code> state. The <code>STOP_IN_PROGRESS</code> state is the intermediate state between the <code>READY</code> and <code>STOPPED</code> states.
 func (s *SDK) StopStreamingSession(ctx context.Context, request operations.StopStreamingSessionRequest) (*operations.StopStreamingSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/stop", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5011,7 +5011,7 @@ func (s *SDK) StopStreamingSession(ctx context.Context, request operations.StopS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5120,9 +5120,9 @@ func (s *SDK) StopStreamingSession(ctx context.Context, request operations.StopS
 // TagResource - Creates tags for a resource, given its ARN.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5137,7 +5137,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5246,16 +5246,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deletes the tags for a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5366,9 +5366,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateLaunchProfile - Update a launch profile.
 func (s *SDK) UpdateLaunchProfile(ctx context.Context, request operations.UpdateLaunchProfileRequest) (*operations.UpdateLaunchProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5383,7 +5383,7 @@ func (s *SDK) UpdateLaunchProfile(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5492,9 +5492,9 @@ func (s *SDK) UpdateLaunchProfile(ctx context.Context, request operations.Update
 // UpdateLaunchProfileMember - Update a user persona in launch profile membership.
 func (s *SDK) UpdateLaunchProfileMember(ctx context.Context, request operations.UpdateLaunchProfileMemberRequest) (*operations.UpdateLaunchProfileMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership/{principalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/launch-profiles/{launchProfileId}/membership/{principalId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5509,7 +5509,7 @@ func (s *SDK) UpdateLaunchProfileMember(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5618,9 +5618,9 @@ func (s *SDK) UpdateLaunchProfileMember(ctx context.Context, request operations.
 // UpdateStreamingImage - Update streaming image.
 func (s *SDK) UpdateStreamingImage(ctx context.Context, request operations.UpdateStreamingImageRequest) (*operations.UpdateStreamingImageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images/{streamingImageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/streaming-images/{streamingImageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5635,7 +5635,7 @@ func (s *SDK) UpdateStreamingImage(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5744,9 +5744,9 @@ func (s *SDK) UpdateStreamingImage(ctx context.Context, request operations.Updat
 // UpdateStudio - <p>Update a Studio resource.</p> <p>Currently, this operation only supports updating the displayName of your studio.</p>
 func (s *SDK) UpdateStudio(ctx context.Context, request operations.UpdateStudioRequest) (*operations.UpdateStudioResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5761,7 +5761,7 @@ func (s *SDK) UpdateStudio(ctx context.Context, request operations.UpdateStudioR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5870,9 +5870,9 @@ func (s *SDK) UpdateStudio(ctx context.Context, request operations.UpdateStudioR
 // UpdateStudioComponent - Updates a studio component resource.
 func (s *SDK) UpdateStudioComponent(ctx context.Context, request operations.UpdateStudioComponentRequest) (*operations.UpdateStudioComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components/{studioComponentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-08-01/studios/{studioId}/studio-components/{studioComponentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5887,7 +5887,7 @@ func (s *SDK) UpdateStudioComponent(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

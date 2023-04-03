@@ -13,62 +13,49 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateConnectorRequest{
-        Headers: operations.CreateConnectorHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateConnectorRequestBody{
+        RequestBody: operations.CreateConnectorRequestBody{
             Capacity: operations.CreateConnectorRequestBodyCapacity{
                 AutoScaling: &shared.AutoScaling{
-                    MaxWorkerCount: 847252,
-                    McuCount: 423655,
-                    MinWorkerCount: 623564,
+                    MaxWorkerCount: 548814,
+                    McuCount: 592845,
+                    MinWorkerCount: 715190,
                     ScaleInPolicy: &shared.ScaleInPolicy{
-                        CPUUtilizationPercentage: 645894,
+                        CPUUtilizationPercentage: 844266,
                     },
                     ScaleOutPolicy: &shared.ScaleOutPolicy{
-                        CPUUtilizationPercentage: 384382,
+                        CPUUtilizationPercentage: 602763,
                     },
                 },
                 ProvisionedCapacity: &shared.ProvisionedCapacity{
-                    McuCount: 437587,
-                    WorkerCount: 297534,
+                    McuCount: 857946,
+                    WorkerCount: 544883,
                 },
             },
             ConnectorConfiguration: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            ConnectorDescription: "iusto",
-            ConnectorName: "excepturi",
+            ConnectorDescription: "delectus",
+            ConnectorName: "tempora",
             KafkaCluster: operations.CreateConnectorRequestBodyKafkaCluster{
                 ApacheKafkaCluster: &shared.ApacheKafkaCluster{
-                    BootstrapServers: "nisi",
+                    BootstrapServers: "suscipit",
                     Vpc: shared.Vpc{
                         SecurityGroups: []string{
-                            "temporibus",
-                            "ab",
-                            "quis",
-                            "veritatis",
+                            "minus",
+                            "placeat",
                         },
                         Subnets: []string{
-                            "perferendis",
-                            "ipsam",
-                            "repellendus",
+                            "iusto",
+                            "excepturi",
+                            "nisi",
                         },
                     },
                 },
@@ -79,56 +66,51 @@ func main() {
             KafkaClusterEncryptionInTransit: operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit{
                 EncryptionType: "TLS",
             },
-            KafkaConnectVersion: "odit",
+            KafkaConnectVersion: "ab",
             LogDelivery: &operations.CreateConnectorRequestBodyLogDelivery{
                 WorkerLogDelivery: &shared.WorkerLogDelivery{
                     CloudWatchLogs: &shared.CloudWatchLogsLogDelivery{
                         Enabled: false,
-                        LogGroup: "at",
+                        LogGroup: "quis",
                     },
                     Firehose: &shared.FirehoseLogDelivery{
-                        DeliveryStream: "at",
+                        DeliveryStream: "veritatis",
                         Enabled: false,
                     },
                     S3: &shared.S3LogDelivery{
-                        Bucket: "maiores",
+                        Bucket: "deserunt",
                         Enabled: false,
-                        Prefix: "molestiae",
+                        Prefix: "perferendis",
                     },
                 },
             },
             Plugins: []shared.Plugin{
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "quod",
-                        Revision: 461479,
+                        CustomPluginArn: "repellendus",
+                        Revision: 957156,
                     },
                 },
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "totam",
-                        Revision: 780529,
-                    },
-                },
-                shared.Plugin{
-                    CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "dolorum",
-                        Revision: 118274,
-                    },
-                },
-                shared.Plugin{
-                    CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "nam",
-                        Revision: 639921,
+                        CustomPluginArn: "quo",
+                        Revision: 140350,
                     },
                 },
             },
-            ServiceExecutionRoleArn: "occaecati",
+            ServiceExecutionRoleArn: "at",
             WorkerConfiguration: &operations.CreateConnectorRequestBodyWorkerConfiguration{
-                Revision: 143353,
-                WorkerConfigurationArn: "deleniti",
+                Revision: 870088,
+                WorkerConfigurationArn: "maiores",
             },
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "quod",
+        XAmzCredential: "quod",
+        XAmzDate: "esse",
+        XAmzSecurityToken: "totam",
+        XAmzSignature: "porro",
+        XAmzSignedHeaders: "dolorum",
     }
 
     ctx := context.Background()

@@ -8,6 +8,16 @@ import (
 	"net/http"
 )
 
+type SetRequestBodyCsvfile struct {
+	Content []byte `multipartForm:"content"`
+	Csvfile string `multipartForm:"name=csvfile"`
+}
+
+type SetRequestBody struct {
+	// csv file with filters
+	Csvfile SetRequestBodyCsvfile `multipartForm:"file"`
+}
+
 // SetCountryEnum - To filter listing on Country in which they are listed
 type SetCountryEnum string
 
@@ -35,26 +45,12 @@ func (e *SetCountryEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SetQueryParams struct {
+type SetRequest struct {
+	RequestBody SetRequestBody `request:"mediaType=multipart/form-data"`
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on Country in which they are listed
 	Country SetCountryEnum `queryParam:"style=form,explode=true,name=country"`
-}
-
-type SetRequestBodyCsvfile struct {
-	Content []byte `multipartForm:"content"`
-	Csvfile string `multipartForm:"name=csvfile"`
-}
-
-type SetRequestBody struct {
-	// csv file with filters
-	Csvfile SetRequestBodyCsvfile `multipartForm:"file"`
-}
-
-type SetRequest struct {
-	QueryParams SetQueryParams
-	Request     SetRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 type SetResponse struct {

@@ -50,7 +50,7 @@ func (e *GETCopyClusterSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCopyClusterSnapshotQueryParams struct {
+type GETCopyClusterSnapshotRequest struct {
 	Action GETCopyClusterSnapshotActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The number of days that a manual snapshot is retained. If the value is -1, the manual snapshot is retained indefinitely. </p> <p>The value must be either -1 or an integer between 1 and 3,653.</p> <p>The default value is -1.</p>
 	ManualSnapshotRetentionPeriod *int64 `queryParam:"style=form,explode=true,name=ManualSnapshotRetentionPeriod"`
@@ -61,21 +61,13 @@ type GETCopyClusterSnapshotQueryParams struct {
 	// <p>The identifier given to the new manual snapshot.</p> <p>Constraints:</p> <ul> <li> <p>Cannot be null, empty, or blank.</p> </li> <li> <p>Must contain from 1 to 255 alphanumeric characters or hyphens.</p> </li> <li> <p>First character must be a letter.</p> </li> <li> <p>Cannot end with a hyphen or contain two consecutive hyphens.</p> </li> <li> <p>Must be unique for the Amazon Web Services account that is making the request.</p> </li> </ul>
 	TargetSnapshotIdentifier string                            `queryParam:"style=form,explode=true,name=TargetSnapshotIdentifier"`
 	Version                  GETCopyClusterSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCopyClusterSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCopyClusterSnapshotRequest struct {
-	QueryParams GETCopyClusterSnapshotQueryParams
-	Headers     GETCopyClusterSnapshotHeaders
+	XAmzAlgorithm            *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCopyClusterSnapshotResponse struct {

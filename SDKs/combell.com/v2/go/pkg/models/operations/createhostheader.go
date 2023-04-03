@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateHostHeaderPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	SiteName string `pathParam:"style=simple,explode=false,name=siteName"`
-}
-
-type CreateHostHeaderQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// Name of the site on the linux hosting.
-	SiteName string `queryParam:"style=form,explode=true,name=site_name"`
-}
-
 type CreateHostHeaderRequest struct {
-	PathParams  CreateHostHeaderPathParams
-	QueryParams CreateHostHeaderQueryParams
 	// Add host header request
-	Request *shared.AddHostHeaderRequest `request:"mediaType=application/json"`
+	AddHostHeaderRequest *shared.AddHostHeaderRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	SiteNamePathParameter string `pathParam:"style=simple,explode=false,name=siteName"`
+	// Name of the site on the linux hosting.
+	SiteNameQueryParameter string `queryParam:"style=form,explode=true,name=site_name"`
 }
 
 type CreateHostHeaderResponse struct {

@@ -34,7 +34,7 @@ func newDestination(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // CheckConnectionToDestination - Check connection to the destination
-func (s *destination) CheckConnectionToDestination(ctx context.Context, request operations.CheckConnectionToDestinationRequest) (*operations.CheckConnectionToDestinationResponse, error) {
+func (s *destination) CheckConnectionToDestination(ctx context.Context, request shared.DestinationIDRequestBody) (*operations.CheckConnectionToDestinationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/check_connection"
 
@@ -108,7 +108,7 @@ func (s *destination) CheckConnectionToDestination(ctx context.Context, request 
 }
 
 // CheckConnectionToDestinationForUpdate - Check connection for a proposed update to a destination
-func (s *destination) CheckConnectionToDestinationForUpdate(ctx context.Context, request operations.CheckConnectionToDestinationForUpdateRequest) (*operations.CheckConnectionToDestinationForUpdateResponse, error) {
+func (s *destination) CheckConnectionToDestinationForUpdate(ctx context.Context, request shared.DestinationUpdate) (*operations.CheckConnectionToDestinationForUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/check_connection_for_update"
 
@@ -182,7 +182,7 @@ func (s *destination) CheckConnectionToDestinationForUpdate(ctx context.Context,
 }
 
 // CloneDestination - Clone destination
-func (s *destination) CloneDestination(ctx context.Context, request operations.CloneDestinationRequest) (*operations.CloneDestinationResponse, error) {
+func (s *destination) CloneDestination(ctx context.Context, request shared.DestinationCloneRequestBody) (*operations.CloneDestinationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/clone"
 
@@ -256,7 +256,7 @@ func (s *destination) CloneDestination(ctx context.Context, request operations.C
 }
 
 // CreateDestination - Create a destination
-func (s *destination) CreateDestination(ctx context.Context, request operations.CreateDestinationRequest) (*operations.CreateDestinationResponse, error) {
+func (s *destination) CreateDestination(ctx context.Context, request shared.DestinationCreate) (*operations.CreateDestinationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/create"
 
@@ -320,7 +320,7 @@ func (s *destination) CreateDestination(ctx context.Context, request operations.
 }
 
 // DeleteDestination - Delete the destination
-func (s *destination) DeleteDestination(ctx context.Context, request operations.DeleteDestinationRequest) (*operations.DeleteDestinationResponse, error) {
+func (s *destination) DeleteDestination(ctx context.Context, request shared.DestinationIDRequestBody) (*operations.DeleteDestinationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/delete"
 
@@ -385,7 +385,7 @@ func (s *destination) DeleteDestination(ctx context.Context, request operations.
 }
 
 // GetDestination - Get configured destination
-func (s *destination) GetDestination(ctx context.Context, request operations.GetDestinationRequest) (*operations.GetDestinationResponse, error) {
+func (s *destination) GetDestination(ctx context.Context, request shared.DestinationIDRequestBody) (*operations.GetDestinationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/get"
 
@@ -459,7 +459,7 @@ func (s *destination) GetDestination(ctx context.Context, request operations.Get
 }
 
 // ListDestinationsForWorkspace - List configured destinations for a workspace
-func (s *destination) ListDestinationsForWorkspace(ctx context.Context, request operations.ListDestinationsForWorkspaceRequest) (*operations.ListDestinationsForWorkspaceResponse, error) {
+func (s *destination) ListDestinationsForWorkspace(ctx context.Context, request shared.WorkspaceIDRequestBody) (*operations.ListDestinationsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/list"
 
@@ -533,7 +533,7 @@ func (s *destination) ListDestinationsForWorkspace(ctx context.Context, request 
 }
 
 // SearchDestinations - Search destinations
-func (s *destination) SearchDestinations(ctx context.Context, request operations.SearchDestinationsRequest) (*operations.SearchDestinationsResponse, error) {
+func (s *destination) SearchDestinations(ctx context.Context, request shared.DestinationSearch) (*operations.SearchDestinationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/search"
 
@@ -597,7 +597,7 @@ func (s *destination) SearchDestinations(ctx context.Context, request operations
 }
 
 // UpdateDestination - Update a destination
-func (s *destination) UpdateDestination(ctx context.Context, request operations.UpdateDestinationRequest) (*operations.UpdateDestinationResponse, error) {
+func (s *destination) UpdateDestination(ctx context.Context, request shared.DestinationUpdate) (*operations.UpdateDestinationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destinations/update"
 

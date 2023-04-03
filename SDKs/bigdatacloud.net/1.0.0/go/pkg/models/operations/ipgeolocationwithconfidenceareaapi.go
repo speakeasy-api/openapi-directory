@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type IPGeolocationWithConfidenceAreaAPIQueryParams struct {
+type IPGeolocationWithConfidenceAreaAPIRequest struct {
 	// IPv4 IP address in a string or numeric format. If omitted, the caller’s IP address is assumed
 	//
 	IP *string `queryParam:"style=form,explode=true,name=ip"`
@@ -16,10 +16,6 @@ type IPGeolocationWithConfidenceAreaAPIQueryParams struct {
 	// Preferred language for locality names in ISO 639-1 format, such as 'en' for English, 'es' for Spanish etc. Please note: 147 common world languages are supported, full list here, but not all languages are available for every location. If requested language is not available for a requested location it will default to English, if no English is available, the native, local names will be provided
 	//
 	LocalityLanguage *string `queryParam:"style=form,explode=true,name=localityLanguage"`
-}
-
-type IPGeolocationWithConfidenceAreaAPIRequest struct {
-	QueryParams IPGeolocationWithConfidenceAreaAPIQueryParams
 }
 
 type IPGeolocationWithConfidenceAreaAPIResponse struct {

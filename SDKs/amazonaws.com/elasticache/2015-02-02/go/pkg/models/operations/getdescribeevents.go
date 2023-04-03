@@ -90,7 +90,7 @@ func (e *GETDescribeEventsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeEventsQueryParams struct {
+type GETDescribeEventsRequest struct {
 	Action GETDescribeEventsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The number of minutes worth of events to retrieve.
 	Duration *int64 `queryParam:"style=form,explode=true,name=Duration"`
@@ -105,23 +105,15 @@ type GETDescribeEventsQueryParams struct {
 	// The event source to retrieve events for. If no value is specified, all events are returned.
 	SourceType *GETDescribeEventsSourceTypeEnum `queryParam:"style=form,explode=true,name=SourceType"`
 	// <p>The beginning of the time interval to retrieve events for, specified in ISO 8601 format.</p> <p> <b>Example:</b> 2017-03-30T07:03:49.555Z</p>
-	StartTime *time.Time                   `queryParam:"style=form,explode=true,name=StartTime"`
-	Version   GETDescribeEventsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEventsRequest struct {
-	QueryParams GETDescribeEventsQueryParams
-	Headers     GETDescribeEventsHeaders
+	StartTime         *time.Time                   `queryParam:"style=form,explode=true,name=StartTime"`
+	Version           GETDescribeEventsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEventsResponse struct {

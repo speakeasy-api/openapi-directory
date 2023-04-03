@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetCloudFrontOriginAccessIdentity20200531PathParams struct {
+type GetCloudFrontOriginAccessIdentity20200531Request struct {
 	// The identity's ID.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetCloudFrontOriginAccessIdentity20200531Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetCloudFrontOriginAccessIdentity20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCloudFrontOriginAccessIdentity20200531Request struct {
-	PathParams GetCloudFrontOriginAccessIdentity20200531PathParams
-	Headers    GetCloudFrontOriginAccessIdentity20200531Headers
 }
 
 type GetCloudFrontOriginAccessIdentity20200531Response struct {

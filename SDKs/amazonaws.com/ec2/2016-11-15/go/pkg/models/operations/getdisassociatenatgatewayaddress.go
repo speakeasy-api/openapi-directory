@@ -50,7 +50,7 @@ func (e *GETDisassociateNatGatewayAddressVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDisassociateNatGatewayAddressQueryParams struct {
+type GETDisassociateNatGatewayAddressRequest struct {
 	Action GETDisassociateNatGatewayAddressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The association IDs of EIPs that have been associated with the NAT gateway.
 	AssociationID []string `queryParam:"style=form,explode=true,name=AssociationId"`
@@ -59,23 +59,15 @@ type GETDisassociateNatGatewayAddressQueryParams struct {
 	// The maximum amount of time to wait (in seconds) before forcibly releasing the IP addresses if connections are still in progress. Default value is 350 seconds.
 	MaxDrainDurationSeconds *int64 `queryParam:"style=form,explode=true,name=MaxDrainDurationSeconds"`
 	// The NAT gateway ID.
-	NatGatewayID string                                      `queryParam:"style=form,explode=true,name=NatGatewayId"`
-	Version      GETDisassociateNatGatewayAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateNatGatewayAddressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateNatGatewayAddressRequest struct {
-	QueryParams GETDisassociateNatGatewayAddressQueryParams
-	Headers     GETDisassociateNatGatewayAddressHeaders
+	NatGatewayID      string                                      `queryParam:"style=form,explode=true,name=NatGatewayId"`
+	Version           GETDisassociateNatGatewayAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateNatGatewayAddressResponse struct {

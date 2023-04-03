@@ -50,26 +50,18 @@ func (e *GETDeleteDashboardsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDashboardsQueryParams struct {
+type GETDeleteDashboardsRequest struct {
 	Action GETDeleteDashboardsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The dashboards to be deleted. This parameter is required.
-	DashboardNames []string                       `queryParam:"style=form,explode=true,name=DashboardNames"`
-	Version        GETDeleteDashboardsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDashboardsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDashboardsRequest struct {
-	QueryParams GETDeleteDashboardsQueryParams
-	Headers     GETDeleteDashboardsHeaders
+	DashboardNames    []string                       `queryParam:"style=form,explode=true,name=DashboardNames"`
+	Version           GETDeleteDashboardsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDashboardsResponse struct {

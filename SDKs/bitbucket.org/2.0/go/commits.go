@@ -76,9 +76,9 @@ func newCommits(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
 func (s *commits) BulkCreateOrUpdateAnnotations(ctx context.Context, request operations.BulkCreateOrUpdateAnnotationsRequest) (*operations.BulkCreateOrUpdateAnnotationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -157,9 +157,9 @@ func (s *commits) BulkCreateOrUpdateAnnotations(ctx context.Context, request ope
 // Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
 func (s *commits) CreateOrUpdateAnnotation(ctx context.Context, request operations.CreateOrUpdateAnnotationRequest) (*operations.CreateOrUpdateAnnotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -270,9 +270,9 @@ func (s *commits) CreateOrUpdateAnnotation(ctx context.Context, request operatio
 // Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
 func (s *commits) CreateOrUpdateReport(ctx context.Context, request operations.CreateOrUpdateReportRequest) (*operations.CreateOrUpdateReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -335,7 +335,7 @@ func (s *commits) CreateOrUpdateReport(ctx context.Context, request operations.C
 // Deletes a single Annotation matching the provided ID.
 func (s *commits) DeleteAnnotation(ctx context.Context, request operations.DeleteAnnotationRequest) (*operations.DeleteAnnotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -371,7 +371,7 @@ func (s *commits) DeleteAnnotation(ctx context.Context, request operations.Delet
 // Deletes a single Report matching the provided ID.
 func (s *commits) DeleteReport(ctx context.Context, request operations.DeleteReportRequest) (*operations.DeleteReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -410,16 +410,16 @@ func (s *commits) DeleteReport(ctx context.Context, request operations.DeleteRep
 // the repository. In contrast, just the fact that a repository is
 // publicly accessible to users does not give them the ability to approve
 // commits.
-func (s *commits) DeleteRepositoriesWorkspaceRepoSlugCommitCommitApprove(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse, error) {
+func (s *commits) DeleteRepositoriesWorkspaceRepoSlugCommitCommitApprove(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -462,16 +462,16 @@ func (s *commits) DeleteRepositoriesWorkspaceRepoSlugCommitCommitApprove(ctx con
 // of the original comment tree. Instead, the `deleted` element is set to
 // `true` and the content is blanked out. The comment will continue to be
 // returned by the collections and self endpoints.
-func (s *commits) DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse, error) {
+func (s *commits) DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -502,7 +502,7 @@ func (s *commits) DeleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsComment
 // Returns a single Annotation matching the provided ID.
 func (s *commits) GetAnnotation(ctx context.Context, request operations.GetAnnotationRequest) (*operations.GetAnnotationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -557,7 +557,7 @@ func (s *commits) GetAnnotation(ctx context.Context, request operations.GetAnnot
 // Returns a paginated list of Annotations for a specified report.
 func (s *commits) GetAnnotationsForReport(ctx context.Context, request operations.GetAnnotationsForReportRequest) (*operations.GetAnnotationsForReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -602,7 +602,7 @@ func (s *commits) GetAnnotationsForReport(ctx context.Context, request operation
 // Returns a single Report matching the provided ID.
 func (s *commits) GetReport(ctx context.Context, request operations.GetReportRequest) (*operations.GetReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -657,7 +657,7 @@ func (s *commits) GetReport(ctx context.Context, request operations.GetReportReq
 // Returns a paginated list of Reports linked to this commit.
 func (s *commits) GetReportsForCommit(ctx context.Context, request operations.GetReportsForCommitRequest) (*operations.GetReportsForCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -805,16 +805,16 @@ func (s *commits) GetReportsForCommit(ctx context.Context, request operations.Ge
 //	}
 //
 // ```
-func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommit(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommit(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitCommitSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -865,20 +865,20 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommit(ctx context.Conte
 //
 // The default sorting is oldest to newest and can be overridden with
 // the `sort` query parameter.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -914,16 +914,16 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx conte
 
 // GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID - Get a commit comment
 // Returns the specified commit comment.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1003,16 +1003,16 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(
 //
 // When the include and exclude parameters are more than can fit in a
 // query string, clients can use a `x-www-form-urlencoded` POST instead.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugCommits(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitsResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugCommits(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitsRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1095,16 +1095,16 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugCommits(ctx context.Context, r
 //
 // When the include and exclude parameters are more than can fit in a
 // query string, clients can use a `x-www-form-urlencoded` POST instead.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitsRevision(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitsRevision(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitsRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits/{revision}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits/{revision}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1185,20 +1185,20 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugCommitsRevision(ctx context.Co
 // The raw diff is returned as-is, in whatever encoding the files in the
 // repository use. It is not decoded into unicode. As such, the
 // content-type is `text/plain`.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugDiffSpec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDiffSpecRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDiffSpecResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugDiffSpec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDiffSpecRequest, security operations.GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDiffSpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/diff/{spec}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/diff/{spec}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1298,20 +1298,20 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugDiffSpec(ctx context.Context, 
 //	}
 //
 // ```
-func (s *commits) GetRepositoriesWorkspaceRepoSlugDiffstatSpec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugDiffstatSpec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecRequest, security operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDiffstatSpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/diffstat/{spec}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/diffstat/{spec}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1361,16 +1361,16 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugDiffstatSpec(ctx context.Conte
 //
 // If more than one best common ancestor exists, only one will be returned. It is
 // unspecified which will be returned.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugMergeBaseRevspec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest) (*operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugMergeBaseRevspec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest, security operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/merge-base/{revspec}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/merge-base/{revspec}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1436,16 +1436,16 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugMergeBaseRevspec(ctx context.C
 // The raw patch is returned as-is, in whatever encoding the files in the
 // repository use. It is not decoded into unicode. As such, the
 // content-type is `text/plain`.
-func (s *commits) GetRepositoriesWorkspaceRepoSlugPatchSpec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPatchSpecRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPatchSpecResponse, error) {
+func (s *commits) GetRepositoriesWorkspaceRepoSlugPatchSpec(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPatchSpecRequest, security operations.GetRepositoriesWorkspaceRepoSlugPatchSpecSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPatchSpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/patch/{spec}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/patch/{spec}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1487,16 +1487,16 @@ func (s *commits) GetRepositoriesWorkspaceRepoSlugPatchSpec(ctx context.Context,
 // the repository. In contrast, just the fact that a repository is
 // publicly accessible to users does not give them the ability to approve
 // commits.
-func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitApprove(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest) (*operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse, error) {
+func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitApprove(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest, security operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/approve", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/approve", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1554,11 +1554,11 @@ func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitApprove(ctx conte
 //	       "parent": {"id": 5728901}}'
 //
 // ```
-func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse, error) {
+func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest, security operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1573,7 +1573,7 @@ func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1609,16 +1609,16 @@ func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitCommitComments(ctx cont
 // parameters in the request body to avoid URL length issues.
 //
 // **Note that this resource does NOT support new commit creation.**
-func (s *commits) PostRepositoriesWorkspaceRepoSlugCommits(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugCommitsResponse, error) {
+func (s *commits) PostRepositoriesWorkspaceRepoSlugCommits(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitsRequest, security operations.PostRepositoriesWorkspaceRepoSlugCommitsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1668,16 +1668,16 @@ func (s *commits) PostRepositoriesWorkspaceRepoSlugCommits(ctx context.Context, 
 // parameters in the request body to avoid URL length issues.
 //
 // **Note that this resource does NOT support new commit creation.**
-func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitsRevision(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionRequest) (*operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionResponse, error) {
+func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitsRevision(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionRequest, security operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugCommitsRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits/{revision}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commits/{revision}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1732,11 +1732,11 @@ func (s *commits) PostRepositoriesWorkspaceRepoSlugCommitsRevision(ctx context.C
 //	  -d '{"content": {"raw": "One more thing!"}'
 //
 // ```
-func (s *commits) PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse, error) {
+func (s *commits) PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/comments/{comment_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1751,7 +1751,7 @@ func (s *commits) PutRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentID(
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

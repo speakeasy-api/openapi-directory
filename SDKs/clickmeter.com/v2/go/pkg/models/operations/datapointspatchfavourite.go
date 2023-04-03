@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsPatchFavouritePathParams struct {
+type DataPointsPatchFavouriteRequest struct {
 	// Id of the datapoint
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DataPointsPatchFavouriteRequest struct {
-	PathParams DataPointsPatchFavouritePathParams
 }
 
 type DataPointsPatchFavouriteResponse struct {

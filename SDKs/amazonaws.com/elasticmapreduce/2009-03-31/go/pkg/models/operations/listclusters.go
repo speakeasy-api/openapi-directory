@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListClustersQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListClustersXAmzTargetEnum
 type ListClustersXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListClustersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListClustersHeaders struct {
+type ListClustersRequest struct {
+	ListClustersInput shared.ListClustersInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                    `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListClustersHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListClustersXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListClustersRequest struct {
-	QueryParams ListClustersQueryParams
-	Headers     ListClustersHeaders
-	Request     shared.ListClustersInput `request:"mediaType=application/json"`
 }
 
 type ListClustersResponse struct {

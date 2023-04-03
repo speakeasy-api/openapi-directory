@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSourceRequest struct {
-	Request shared.SourceUpdate `request:"mediaType=application/json"`
-}
-
 type UpdateSourceResponse struct {
 	ContentType string
 	// Input failed validation

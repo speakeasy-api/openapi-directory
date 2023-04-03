@@ -50,25 +50,17 @@ func (e *POSTDeleteDBSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteDBSnapshotQueryParams struct {
-	Action  POSTDeleteDBSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteDBSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteDBSnapshotRequest struct {
-	QueryParams POSTDeleteDBSnapshotQueryParams
-	Headers     POSTDeleteDBSnapshotHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteDBSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTDeleteDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteDBSnapshotResponse struct {

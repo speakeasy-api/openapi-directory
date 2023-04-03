@@ -50,25 +50,17 @@ func (e *POSTCreateCacheClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateCacheClusterQueryParams struct {
-	Action  POSTCreateCacheClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateCacheClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateCacheClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateCacheClusterRequest struct {
-	QueryParams POSTCreateCacheClusterQueryParams
-	Headers     POSTCreateCacheClusterHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateCacheClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTCreateCacheClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateCacheClusterResponse struct {

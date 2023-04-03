@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1MediasSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type PostAPIV1MediasRequestBodyDataAttributes struct {
@@ -24,11 +23,6 @@ type PostAPIV1MediasRequestBodyData struct {
 
 type PostAPIV1MediasRequestBody struct {
 	Data PostAPIV1MediasRequestBodyData `json:"data"`
-}
-
-type PostAPIV1MediasRequest struct {
-	Request  PostAPIV1MediasRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV1MediasSecurity
 }
 
 type PostAPIV1MediasResponse struct {

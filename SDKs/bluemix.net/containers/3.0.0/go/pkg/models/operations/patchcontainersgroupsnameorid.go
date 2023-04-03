@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchContainersGroupsNameOrIDPathParams struct {
-	// The name or unique ID of the container group that you want to update.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PatchContainersGroupsNameOrIDHeaders struct {
+type PatchContainersGroupsNameOrIDRequest struct {
+	// The container group parameter that you want to update.
+	ContainersGroupsNameOrIDPatchUpdatedInfo shared.ContainersGroupsNameOrIDPatchUpdatedInfo `request:"mediaType=application/json"`
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PatchContainersGroupsNameOrIDRequest struct {
-	PathParams PatchContainersGroupsNameOrIDPathParams
-	Headers    PatchContainersGroupsNameOrIDHeaders
-	// The container group parameter that you want to update.
-	Request shared.ContainersGroupsNameOrIDPatchUpdatedInfo `request:"mediaType=application/json"`
+	// The name or unique ID of the container group that you want to update.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type PatchContainersGroupsNameOrIDResponse struct {

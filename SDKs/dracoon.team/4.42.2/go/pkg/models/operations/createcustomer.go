@@ -44,16 +44,12 @@ func (e *CreateCustomerXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateCustomerHeaders struct {
+type CreateCustomerRequest struct {
+	NewCustomerRequest shared.NewCustomerRequest `request:"mediaType=application/json"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *CreateCustomerXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type CreateCustomerRequest struct {
-	Headers CreateCustomerHeaders
-	Request shared.NewCustomerRequest `request:"mediaType=application/json"`
 }
 
 type CreateCustomer400ApplicationJSONType string

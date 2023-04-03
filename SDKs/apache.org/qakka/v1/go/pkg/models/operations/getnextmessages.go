@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNextMessagesPathParams struct {
-	// Name of Queue
-	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
-}
-
-type GetNextMessagesQueryParams struct {
+type GetNextMessagesRequest struct {
 	// Number of messages to get
 	Count *string `queryParam:"style=form,explode=true,name=count"`
-}
-
-type GetNextMessagesRequest struct {
-	PathParams  GetNextMessagesPathParams
-	QueryParams GetNextMessagesQueryParams
+	// Name of Queue
+	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
 }
 
 type GetNextMessagesResponse struct {

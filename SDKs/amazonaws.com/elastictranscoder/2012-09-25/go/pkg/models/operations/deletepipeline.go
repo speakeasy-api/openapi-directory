@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePipelinePathParams struct {
+type DeletePipelineRequest struct {
 	// The identifier of the pipeline that you want to delete.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeletePipelineHeaders struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeletePipelineHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeletePipelineRequest struct {
-	PathParams DeletePipelinePathParams
-	Headers    DeletePipelineHeaders
 }
 
 type DeletePipelineResponse struct {

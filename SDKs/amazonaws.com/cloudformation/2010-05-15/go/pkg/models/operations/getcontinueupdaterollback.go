@@ -50,7 +50,7 @@ func (e *GETContinueUpdateRollbackVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETContinueUpdateRollbackQueryParams struct {
+type GETContinueUpdateRollbackRequest struct {
 	Action GETContinueUpdateRollbackActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier for this <code>ContinueUpdateRollback</code> request. Specify this token if you plan to retry requests so that CloudFormationknows that you're not attempting to continue the rollback to a stack with the same name. You might retry <code>ContinueUpdateRollback</code> requests to ensure that CloudFormation successfully received them.
 	ClientRequestToken *string `queryParam:"style=form,explode=true,name=ClientRequestToken"`
@@ -59,23 +59,15 @@ type GETContinueUpdateRollbackQueryParams struct {
 	// <p>The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to roll back the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always uses this role for all future operations on the stack. Provided that users have permission to operate on the stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants least permission.</p> <p>If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no role is available, CloudFormation uses a temporary session that's generated from your user credentials.</p>
 	RoleARN *string `queryParam:"style=form,explode=true,name=RoleARN"`
 	// <p>The name or the unique ID of the stack that you want to continue rolling back.</p> <note> <p>Don't specify the name of a nested stack (a stack that was created by using the <code>AWS::CloudFormation::Stack</code> resource). Instead, use this operation on the parent stack (the stack that contains the <code>AWS::CloudFormation::Stack</code> resource).</p> </note>
-	StackName string                               `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETContinueUpdateRollbackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETContinueUpdateRollbackHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETContinueUpdateRollbackRequest struct {
-	QueryParams GETContinueUpdateRollbackQueryParams
-	Headers     GETContinueUpdateRollbackHeaders
+	StackName         string                               `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETContinueUpdateRollbackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETContinueUpdateRollbackResponse struct {

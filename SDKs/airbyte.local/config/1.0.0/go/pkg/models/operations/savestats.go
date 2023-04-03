@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveStatsRequest struct {
-	Request shared.SaveStatsRequestBody `request:"mediaType=application/json"`
-}
-
 type SaveStatsResponse struct {
 	ContentType string
 	// Successful Operation

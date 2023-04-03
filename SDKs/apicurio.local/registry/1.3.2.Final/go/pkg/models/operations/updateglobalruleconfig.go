@@ -33,14 +33,10 @@ func (e *UpdateGlobalRuleConfigRuleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateGlobalRuleConfigPathParams struct {
-	// The unique name/type of a rule.
-	Rule UpdateGlobalRuleConfigRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
 type UpdateGlobalRuleConfigRequest struct {
-	PathParams UpdateGlobalRuleConfigPathParams
-	Request    shared.Rule `request:"mediaType=application/json"`
+	Rule1 shared.Rule `request:"mediaType=application/json"`
+	// The unique name/type of a rule.
+	RulePathParameter UpdateGlobalRuleConfigRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
 }
 
 type UpdateGlobalRuleConfigResponse struct {

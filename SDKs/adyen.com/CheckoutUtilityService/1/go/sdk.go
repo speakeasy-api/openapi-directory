@@ -112,7 +112,7 @@ func New(opts ...SDKOption) *SDK {
 
 // PostOriginKeys - Create originKey values for one or more merchant domains.
 // This operation takes the origin domains and returns a JSON object containing the corresponding origin keys for the domains.
-func (s *SDK) PostOriginKeys(ctx context.Context, request operations.PostOriginKeysRequest) (*operations.PostOriginKeysResponse, error) {
+func (s *SDK) PostOriginKeys(ctx context.Context, request shared.CheckoutUtilityRequest) (*operations.PostOriginKeysResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/originKeys"
 

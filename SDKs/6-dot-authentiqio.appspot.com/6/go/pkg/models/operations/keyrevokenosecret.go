@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyRevokeNosecretQueryParams struct {
+type KeyRevokeNosecretRequest struct {
 	// verification code sent by email
 	Code *string `queryParam:"style=form,explode=true,name=code"`
 	// primary email associated to Key (ID)
 	Email string `queryParam:"style=form,explode=true,name=email"`
 	// primary phone number, international representation
 	Phone string `queryParam:"style=form,explode=true,name=phone"`
-}
-
-type KeyRevokeNosecretRequest struct {
-	QueryParams KeyRevokeNosecretQueryParams
 }
 
 // KeyRevokeNosecret200ApplicationJSON - Successfully deleted

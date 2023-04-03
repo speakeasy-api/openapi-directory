@@ -50,25 +50,17 @@ func (e *POSTResizeClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTResizeClusterQueryParams struct {
-	Action  POSTResizeClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTResizeClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTResizeClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTResizeClusterRequest struct {
-	QueryParams POSTResizeClusterQueryParams
-	Headers     POSTResizeClusterHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTResizeClusterActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                       `request:"mediaType=text/xml"`
+	Version           POSTResizeClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTResizeClusterResponse struct {

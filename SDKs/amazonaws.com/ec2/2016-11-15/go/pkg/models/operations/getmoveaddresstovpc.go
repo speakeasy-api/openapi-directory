@@ -50,28 +50,20 @@ func (e *GETMoveAddressToVpcVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETMoveAddressToVpcQueryParams struct {
+type GETMoveAddressToVpcRequest struct {
 	Action GETMoveAddressToVpcActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The Elastic IP address.
-	PublicIP string                         `queryParam:"style=form,explode=true,name=PublicIp"`
-	Version  GETMoveAddressToVpcVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETMoveAddressToVpcHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETMoveAddressToVpcRequest struct {
-	QueryParams GETMoveAddressToVpcQueryParams
-	Headers     GETMoveAddressToVpcHeaders
+	PublicIP          string                         `queryParam:"style=form,explode=true,name=PublicIp"`
+	Version           GETMoveAddressToVpcVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETMoveAddressToVpcResponse struct {

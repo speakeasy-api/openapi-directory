@@ -13,28 +13,23 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostAssignTerminalsRequest{
-        Security: operations.PostAssignTerminalsSecurity{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &shared.AssignTerminalsRequest{
-            CompanyAccount: "corrupti",
-            MerchantAccount: "provident",
-            MerchantInventory: false,
-            Store: "distinctio",
-            Terminals: []string{
-                "unde",
-                "nulla",
-                "corrupti",
-                "illum",
-            },
+    req := shared.AssignTerminalsRequest{
+        CompanyAccount: "corrupti",
+        MerchantAccount: "provident",
+        MerchantInventory: false,
+        Store: "distinctio",
+        Terminals: []string{
+            "unde",
+            "nulla",
+            "corrupti",
+            "illum",
         },
     }
 
     ctx := context.Background()
-    res, err := s.General.PostAssignTerminals(ctx, req)
+    res, err := s.General.PostAssignTerminals(ctx, req, operations.PostAssignTerminalsSecurity{
+        APIKeyAuth: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

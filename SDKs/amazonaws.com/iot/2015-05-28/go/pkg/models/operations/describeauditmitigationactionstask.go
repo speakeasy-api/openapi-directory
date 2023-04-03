@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAuditMitigationActionsTaskPathParams struct {
-	// The unique identifier for the audit mitigation task.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type DescribeAuditMitigationActionsTaskHeaders struct {
+type DescribeAuditMitigationActionsTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeAuditMitigationActionsTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAuditMitigationActionsTaskRequest struct {
-	PathParams DescribeAuditMitigationActionsTaskPathParams
-	Headers    DescribeAuditMitigationActionsTaskHeaders
+	// The unique identifier for the audit mitigation task.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type DescribeAuditMitigationActionsTaskResponse struct {

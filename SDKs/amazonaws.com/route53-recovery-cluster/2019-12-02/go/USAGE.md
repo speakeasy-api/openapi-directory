@@ -13,26 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetRoutingControlStateRequest{
-        Headers: operations.GetRoutingControlStateHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "ToggleCustomerAPI.GetRoutingControlState",
+        GetRoutingControlStateRequest: shared.GetRoutingControlStateRequest{
+            RoutingControlArn: "corrupti",
         },
-        Request: shared.GetRoutingControlStateRequest{
-            RoutingControlArn: "illum",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        XAmzTarget: "ToggleCustomerAPI.GetRoutingControlState",
     }
 
     ctx := context.Background()

@@ -33,16 +33,12 @@ func (e *UpdateArtifactRuleConfigRuleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateArtifactRuleConfigPathParams struct {
+type UpdateArtifactRuleConfigRequest struct {
+	Rule1 shared.Rule `request:"mediaType=application/json"`
 	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The unique name/type of a rule.
-	Rule UpdateArtifactRuleConfigRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
-type UpdateArtifactRuleConfigRequest struct {
-	PathParams UpdateArtifactRuleConfigPathParams
-	Request    shared.Rule `request:"mediaType=application/json"`
+	RulePathParameter UpdateArtifactRuleConfigRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
 }
 
 type UpdateArtifactRuleConfigResponse struct {

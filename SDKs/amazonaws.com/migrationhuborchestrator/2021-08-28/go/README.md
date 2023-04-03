@@ -24,83 +24,79 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateWorkflowRequest{
-        Headers: operations.CreateWorkflowHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateWorkflowRequestBody{
-            ApplicationConfigurationID: "illum",
-            Description: "vel",
+        RequestBody: operations.CreateWorkflowRequestBody{
+            ApplicationConfigurationID: "corrupti",
+            Description: "provident",
             InputParameters: map[string]shared.StepInput{
-                "deserunt": shared.StepInput{
-                    IntegerValue: 384382,
+                "quibusdam": shared.StepInput{
+                    IntegerValue: 602763,
                     ListOfStringsValue: []string{
-                        "magnam",
-                        "debitis",
+                        "corrupti",
+                        "illum",
+                        "vel",
+                        "error",
                     },
                     MapOfStringValue: map[string]string{
-                        "delectus": "tempora",
+                        "suscipit": "iure",
+                        "magnam": "debitis",
+                        "ipsa": "delectus",
                     },
-                    StringValue: "suscipit",
+                    StringValue: "tempora",
                 },
-                "molestiae": shared.StepInput{
-                    IntegerValue: 791725,
+                "suscipit": shared.StepInput{
+                    IntegerValue: 477665,
                     ListOfStringsValue: []string{
+                        "placeat",
                         "voluptatum",
                         "iusto",
                         "excepturi",
-                        "nisi",
                     },
                     MapOfStringValue: map[string]string{
-                        "temporibus": "ab",
-                        "quis": "veritatis",
-                        "deserunt": "perferendis",
-                        "ipsam": "repellendus",
+                        "recusandae": "temporibus",
+                        "ab": "quis",
                     },
-                    StringValue: "sapiente",
+                    StringValue: "veritatis",
                 },
-                "quo": shared.StepInput{
-                    IntegerValue: 140350,
+                "deserunt": shared.StepInput{
+                    IntegerValue: 20218,
                     ListOfStringsValue: []string{
-                        "at",
-                        "maiores",
-                        "molestiae",
-                        "quod",
+                        "repellendus",
+                        "sapiente",
                     },
                     MapOfStringValue: map[string]string{
-                        "esse": "totam",
-                        "porro": "dolorum",
-                        "dicta": "nam",
-                        "officia": "occaecati",
+                        "odit": "at",
+                        "at": "maiores",
+                        "molestiae": "quod",
+                        "quod": "esse",
                     },
-                    StringValue: "fugit",
+                    StringValue: "totam",
                 },
             },
-            Name: "deleniti",
+            Name: "porro",
             StepTargets: []string{
-                "optio",
-                "totam",
-                "beatae",
-                "commodi",
+                "dicta",
+                "nam",
+                "officia",
             },
             Tags: map[string]string{
-                "modi": "qui",
-                "impedit": "cum",
+                "fugit": "deleniti",
+                "hic": "optio",
+                "totam": "beatae",
             },
-            TemplateID: "esse",
+            TemplateID: "commodi",
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "modi",
+        XAmzCredential: "qui",
+        XAmzDate: "impedit",
+        XAmzSecurityToken: "cum",
+        XAmzSignature: "esse",
+        XAmzSignedHeaders: "ipsum",
     }
 
     ctx := context.Background()
@@ -117,7 +113,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -151,4 +147,15 @@ func main() {
 * `UpdateWorkflowStepGroup` - Update the step group in a migration workflow.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

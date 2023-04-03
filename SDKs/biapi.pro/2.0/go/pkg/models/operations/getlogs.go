@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetLogsQueryParams struct {
+type GetLogsRequest struct {
 	// UUID of a connector
 	ConnectorUUID *string `queryParam:"style=form,explode=true,name=connector_uuid"`
 	// connections log error filter
@@ -34,10 +34,6 @@ type GetLogsQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// period to group logs
 	Period *string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetLogsRequest struct {
-	QueryParams GetLogsQueryParams
 }
 
 // GetLogs200ApplicationJSON - connectionlogs

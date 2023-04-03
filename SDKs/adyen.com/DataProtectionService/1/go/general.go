@@ -34,7 +34,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostRequestSubjectErasure - Submit a Subject Erasure Request.
 // Sends the PSP reference containing the shopper data that should be deleted.
-func (s *general) PostRequestSubjectErasure(ctx context.Context, request operations.PostRequestSubjectErasureRequest) (*operations.PostRequestSubjectErasureResponse, error) {
+func (s *general) PostRequestSubjectErasure(ctx context.Context, request shared.SubjectErasureByPspReferenceRequest, security operations.PostRequestSubjectErasureSecurity) (*operations.PostRequestSubjectErasureResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/requestSubjectErasure"
 
@@ -50,7 +50,7 @@ func (s *general) PostRequestSubjectErasure(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

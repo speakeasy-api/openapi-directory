@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomersGetAccountTransPathParams struct {
+type CustomersGetAccountTransRequest struct {
 	// Id of Customer to return account transaction.
 	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type CustomersGetAccountTransRequest struct {
-	PathParams CustomersGetAccountTransPathParams
 }
 
 type CustomersGetAccountTransResponse struct {

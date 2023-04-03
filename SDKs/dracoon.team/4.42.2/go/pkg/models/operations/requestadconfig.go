@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestAdConfigPathParams struct {
-	// Active Directory ID
-	AdID int `pathParam:"style=simple,explode=false,name=ad_id"`
-}
-
-type RequestAdConfigHeaders struct {
+type RequestAdConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestAdConfigRequest struct {
-	PathParams RequestAdConfigPathParams
-	Headers    RequestAdConfigHeaders
+	// Active Directory ID
+	AdID int `pathParam:"style=simple,explode=false,name=ad_id"`
 }
 
 type RequestAdConfigResponse struct {

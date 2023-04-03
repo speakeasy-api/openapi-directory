@@ -50,28 +50,20 @@ func (e *GETRemoveTagsFromResourceVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETRemoveTagsFromResourceQueryParams struct {
+type GETRemoveTagsFromResourceRequest struct {
 	Action GETRemoveTagsFromResourceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the resource from which you want the tags removed, for example <code>arn:aws:elasticache:us-west-2:0123456789:cluster:myCluster</code> or <code>arn:aws:elasticache:us-west-2:0123456789:snapshot:mySnapshot</code>.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Service Namespaces</a>.</p>
 	ResourceName string `queryParam:"style=form,explode=true,name=ResourceName"`
 	// A list of <code>TagKeys</code> identifying the tags you want removed from the named resource.
-	TagKeys []string                             `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETRemoveTagsFromResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemoveTagsFromResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRemoveTagsFromResourceRequest struct {
-	QueryParams GETRemoveTagsFromResourceQueryParams
-	Headers     GETRemoveTagsFromResourceHeaders
+	TagKeys           []string                             `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETRemoveTagsFromResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemoveTagsFromResourceResponse struct {

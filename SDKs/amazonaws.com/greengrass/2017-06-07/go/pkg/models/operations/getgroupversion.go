@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGroupVersionPathParams struct {
+type GetGroupVersionRequest struct {
 	// The ID of the Greengrass group.
 	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
 	// The ID of the group version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListGroupVersions'' requests. If the version is the last one that was associated with a group, the value also maps to the ''LatestVersion'' property of the corresponding ''GroupInformation'' object.
-	GroupVersionID string `pathParam:"style=simple,explode=false,name=GroupVersionId"`
-}
-
-type GetGroupVersionHeaders struct {
+	GroupVersionID    string  `pathParam:"style=simple,explode=false,name=GroupVersionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetGroupVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGroupVersionRequest struct {
-	PathParams GetGroupVersionPathParams
-	Headers    GetGroupVersionHeaders
 }
 
 type GetGroupVersionResponse struct {

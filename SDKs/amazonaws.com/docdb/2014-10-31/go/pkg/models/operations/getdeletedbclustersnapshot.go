@@ -50,26 +50,18 @@ func (e *GETDeleteDBClusterSnapshotVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDeleteDBClusterSnapshotQueryParams struct {
+type GETDeleteDBClusterSnapshotRequest struct {
 	Action GETDeleteDBClusterSnapshotActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identifier of the cluster snapshot to delete.</p> <p>Constraints: Must be the name of an existing cluster snapshot in the <code>available</code> state.</p>
 	DBClusterSnapshotIdentifier string                                `queryParam:"style=form,explode=true,name=DBClusterSnapshotIdentifier"`
 	Version                     GETDeleteDBClusterSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBClusterSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBClusterSnapshotRequest struct {
-	QueryParams GETDeleteDBClusterSnapshotQueryParams
-	Headers     GETDeleteDBClusterSnapshotHeaders
+	XAmzAlgorithm               *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBClusterSnapshotResponse struct {

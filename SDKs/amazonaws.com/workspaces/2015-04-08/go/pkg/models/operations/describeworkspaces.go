@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeWorkspacesQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeWorkspacesXAmzTargetEnum
 type DescribeWorkspacesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeWorkspacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeWorkspacesHeaders struct {
+type DescribeWorkspacesRequest struct {
+	DescribeWorkspacesRequest shared.DescribeWorkspacesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeWorkspacesHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeWorkspacesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeWorkspacesRequest struct {
-	QueryParams DescribeWorkspacesQueryParams
-	Headers     DescribeWorkspacesHeaders
-	Request     shared.DescribeWorkspacesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeWorkspacesResponse struct {

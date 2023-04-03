@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type CheckPublicDownloadSharePasswordPathParams struct {
+type CheckPublicDownloadSharePasswordRequest struct {
 	// Access key
 	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-}
-
-type CheckPublicDownloadSharePasswordQueryParams struct {
 	// Download share password
 	Password *string `queryParam:"style=form,explode=true,name=password"`
-}
-
-type CheckPublicDownloadSharePasswordRequest struct {
-	PathParams  CheckPublicDownloadSharePasswordPathParams
-	QueryParams CheckPublicDownloadSharePasswordQueryParams
 }
 
 type CheckPublicDownloadSharePasswordResponse struct {

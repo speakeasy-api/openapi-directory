@@ -50,28 +50,20 @@ func (e *GETAssociateEnvironmentOperationsRoleVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETAssociateEnvironmentOperationsRoleQueryParams struct {
+type GETAssociateEnvironmentOperationsRoleRequest struct {
 	Action GETAssociateEnvironmentOperationsRoleActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the environment to which to set the operations role.
 	EnvironmentName string `queryParam:"style=form,explode=true,name=EnvironmentName"`
 	// The Amazon Resource Name (ARN) of an existing IAM role to be used as the environment's operations role.
-	OperationsRole string                                           `queryParam:"style=form,explode=true,name=OperationsRole"`
-	Version        GETAssociateEnvironmentOperationsRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssociateEnvironmentOperationsRoleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateEnvironmentOperationsRoleRequest struct {
-	QueryParams GETAssociateEnvironmentOperationsRoleQueryParams
-	Headers     GETAssociateEnvironmentOperationsRoleHeaders
+	OperationsRole    string                                           `queryParam:"style=form,explode=true,name=OperationsRole"`
+	Version           GETAssociateEnvironmentOperationsRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssociateEnvironmentOperationsRoleResponse struct {

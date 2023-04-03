@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteVirtualNodePathParams struct {
-	// The name of the service mesh in which to delete the virtual node.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual node to delete.
-	VirtualNodeName string `pathParam:"style=simple,explode=false,name=virtualNodeName"`
-}
-
-type DeleteVirtualNodeHeaders struct {
+type DeleteVirtualNodeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DeleteVirtualNodeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVirtualNodeRequest struct {
-	PathParams DeleteVirtualNodePathParams
-	Headers    DeleteVirtualNodeHeaders
+	// The name of the service mesh in which to delete the virtual node.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the virtual node to delete.
+	VirtualNodeName string `pathParam:"style=simple,explode=false,name=virtualNodeName"`
 }
 
 type DeleteVirtualNodeResponse struct {

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCustomMetricPathParams struct {
-	//  The name of the custom metric.
-	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
-}
-
-type DeleteCustomMetricHeaders struct {
+type DeleteCustomMetricRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteCustomMetricHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCustomMetricRequest struct {
-	PathParams DeleteCustomMetricPathParams
-	Headers    DeleteCustomMetricHeaders
+	//  The name of the custom metric.
+	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
 }
 
 type DeleteCustomMetricResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClassificationsLegalEntityTypesHeaders struct {
+type GetClassificationsLegalEntityTypesRequest struct {
 	// The API key.
 	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetClassificationsLegalEntityTypesRequest struct {
-	Headers GetClassificationsLegalEntityTypesHeaders
 }
 
 type GetClassificationsLegalEntityTypesResponse struct {

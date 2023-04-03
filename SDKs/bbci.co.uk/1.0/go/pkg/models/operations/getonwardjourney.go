@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOnwardJourneyPathParams struct {
-	// The programme identifier.
-	Pid string `pathParam:"style=simple,explode=false,name=pid"`
-}
-
-type GetOnwardJourneyQueryParams struct {
+type GetOnwardJourneyRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The programme identifier.
+	Pid string `pathParam:"style=simple,explode=false,name=pid"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetOnwardJourneyRequest struct {
-	PathParams  GetOnwardJourneyPathParams
-	QueryParams GetOnwardJourneyQueryParams
 }
 
 type GetOnwardJourneyResponse struct {

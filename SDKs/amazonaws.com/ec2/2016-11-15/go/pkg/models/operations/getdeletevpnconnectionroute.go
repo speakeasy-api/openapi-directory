@@ -50,16 +50,13 @@ func (e *GETDeleteVpnConnectionRouteVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDeleteVpnConnectionRouteQueryParams struct {
+type GETDeleteVpnConnectionRouteRequest struct {
 	Action GETDeleteVpnConnectionRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR block associated with the local subnet of the customer network.
 	DestinationCidrBlock string                                 `queryParam:"style=form,explode=true,name=DestinationCidrBlock"`
 	Version              GETDeleteVpnConnectionRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPN connection.
-	VpnConnectionID string `queryParam:"style=form,explode=true,name=VpnConnectionId"`
-}
-
-type GETDeleteVpnConnectionRouteHeaders struct {
+	VpnConnectionID   string  `queryParam:"style=form,explode=true,name=VpnConnectionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -67,11 +64,6 @@ type GETDeleteVpnConnectionRouteHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteVpnConnectionRouteRequest struct {
-	QueryParams GETDeleteVpnConnectionRouteQueryParams
-	Headers     GETDeleteVpnConnectionRouteHeaders
 }
 
 type GETDeleteVpnConnectionRouteResponse struct {

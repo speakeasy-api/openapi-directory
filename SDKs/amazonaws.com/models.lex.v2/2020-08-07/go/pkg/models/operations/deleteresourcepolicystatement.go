@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteResourcePolicyStatementPathParams struct {
-	// The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-	// The name of the statement (SID) to delete from the policy.
-	StatementID string `pathParam:"style=simple,explode=false,name=statementId"`
-}
-
-type DeleteResourcePolicyStatementQueryParams struct {
-	// <p>The identifier of the revision of the policy to delete the statement from. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.</p> <p>If you don't specify a revision, Amazon Lex removes the current contents of the statement. </p>
-	ExpectedRevisionID *string `queryParam:"style=form,explode=true,name=expectedRevisionId"`
-}
-
-type DeleteResourcePolicyStatementHeaders struct {
+type DeleteResourcePolicyStatementRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteResourcePolicyStatementHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteResourcePolicyStatementRequest struct {
-	PathParams  DeleteResourcePolicyStatementPathParams
-	QueryParams DeleteResourcePolicyStatementQueryParams
-	Headers     DeleteResourcePolicyStatementHeaders
+	// <p>The identifier of the revision of the policy to delete the statement from. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.</p> <p>If you don't specify a revision, Amazon Lex removes the current contents of the statement. </p>
+	ExpectedRevisionID *string `queryParam:"style=form,explode=true,name=expectedRevisionId"`
+	// The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
+	// The name of the statement (SID) to delete from the policy.
+	StatementID string `pathParam:"style=simple,explode=false,name=statementId"`
 }
 
 type DeleteResourcePolicyStatementResponse struct {

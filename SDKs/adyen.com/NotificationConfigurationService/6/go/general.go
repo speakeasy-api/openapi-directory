@@ -34,7 +34,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostCreateNotificationConfiguration - Subscribe to notifications
 // Creates a subscription to notifications informing you of events on your platform. After the subscription is created, the events specified in the configuration will be sent to the URL specified in the configuration. Subscriptions must be configured on a per-event basis (as opposed to, for example, a per-account holder basis), so all event notifications of a marketplace and of a given type will be sent to the same endpoint(s). A marketplace may have multiple endpoints if desired; an event notification may be sent to as many or as few different endpoints as configured.
-func (s *general) PostCreateNotificationConfiguration(ctx context.Context, request operations.PostCreateNotificationConfigurationRequest) (*operations.PostCreateNotificationConfigurationResponse, error) {
+func (s *general) PostCreateNotificationConfiguration(ctx context.Context, request shared.CreateNotificationConfigurationRequest, security operations.PostCreateNotificationConfigurationSecurity) (*operations.PostCreateNotificationConfigurationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createNotificationConfiguration"
 
@@ -50,7 +50,7 @@ func (s *general) PostCreateNotificationConfiguration(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -104,7 +104,7 @@ func (s *general) PostCreateNotificationConfiguration(ctx context.Context, reque
 
 // PostDeleteNotificationConfigurations - Delete a notification subscription configuration
 // Deletes an existing notification subscription configuration. After the subscription is deleted, no further event notifications will be sent to the URL defined in the subscription.
-func (s *general) PostDeleteNotificationConfigurations(ctx context.Context, request operations.PostDeleteNotificationConfigurationsRequest) (*operations.PostDeleteNotificationConfigurationsResponse, error) {
+func (s *general) PostDeleteNotificationConfigurations(ctx context.Context, request shared.DeleteNotificationConfigurationRequest, security operations.PostDeleteNotificationConfigurationsSecurity) (*operations.PostDeleteNotificationConfigurationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteNotificationConfigurations"
 
@@ -120,7 +120,7 @@ func (s *general) PostDeleteNotificationConfigurations(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,7 +174,7 @@ func (s *general) PostDeleteNotificationConfigurations(ctx context.Context, requ
 
 // PostGetNotificationConfiguration - Get a notification subscription configuration
 // Returns the details of the configuration of a notification subscription.
-func (s *general) PostGetNotificationConfiguration(ctx context.Context, request operations.PostGetNotificationConfigurationRequest) (*operations.PostGetNotificationConfigurationResponse, error) {
+func (s *general) PostGetNotificationConfiguration(ctx context.Context, request shared.GetNotificationConfigurationRequest, security operations.PostGetNotificationConfigurationSecurity) (*operations.PostGetNotificationConfigurationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getNotificationConfiguration"
 
@@ -190,7 +190,7 @@ func (s *general) PostGetNotificationConfiguration(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -244,7 +244,7 @@ func (s *general) PostGetNotificationConfiguration(ctx context.Context, request 
 
 // PostGetNotificationConfigurationList - Get a list of notification subscription configurations
 // Returns the details of the configurations of all of the notification subscriptions in the platform of the executing user.
-func (s *general) PostGetNotificationConfigurationList(ctx context.Context, request operations.PostGetNotificationConfigurationListRequest) (*operations.PostGetNotificationConfigurationListResponse, error) {
+func (s *general) PostGetNotificationConfigurationList(ctx context.Context, request map[string]interface{}, security operations.PostGetNotificationConfigurationListSecurity) (*operations.PostGetNotificationConfigurationListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getNotificationConfigurationList"
 
@@ -260,7 +260,7 @@ func (s *general) PostGetNotificationConfigurationList(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -314,7 +314,7 @@ func (s *general) PostGetNotificationConfigurationList(ctx context.Context, requ
 
 // PostTestNotificationConfiguration - Test a notification configuration
 // Tests an existing notification subscription configuration. For each event type specified, a test notification will be generated and sent to the URL configured in the subscription specified.
-func (s *general) PostTestNotificationConfiguration(ctx context.Context, request operations.PostTestNotificationConfigurationRequest) (*operations.PostTestNotificationConfigurationResponse, error) {
+func (s *general) PostTestNotificationConfiguration(ctx context.Context, request shared.TestNotificationConfigurationRequest, security operations.PostTestNotificationConfigurationSecurity) (*operations.PostTestNotificationConfigurationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/testNotificationConfiguration"
 
@@ -330,7 +330,7 @@ func (s *general) PostTestNotificationConfiguration(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -384,7 +384,7 @@ func (s *general) PostTestNotificationConfiguration(ctx context.Context, request
 
 // PostUpdateNotificationConfiguration - Update a notification subscription configuration
 // Updates an existing notification subscription configuration. If you are updating the event types, you must provide all event types, otherwise the previous event type configuration will be overwritten.
-func (s *general) PostUpdateNotificationConfiguration(ctx context.Context, request operations.PostUpdateNotificationConfigurationRequest) (*operations.PostUpdateNotificationConfigurationResponse, error) {
+func (s *general) PostUpdateNotificationConfiguration(ctx context.Context, request shared.UpdateNotificationConfigurationRequest, security operations.PostUpdateNotificationConfigurationSecurity) (*operations.PostUpdateNotificationConfigurationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateNotificationConfiguration"
 
@@ -400,7 +400,7 @@ func (s *general) PostUpdateNotificationConfiguration(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

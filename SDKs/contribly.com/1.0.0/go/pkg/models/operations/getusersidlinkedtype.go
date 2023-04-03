@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDLinkedTypePathParams struct {
+type GetUsersIDLinkedTypeRequest struct {
 	// Id of the user to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Type of the linked profile to fetch
 	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type GetUsersIDLinkedTypeRequest struct {
-	PathParams GetUsersIDLinkedTypePathParams
 }
 
 type GetUsersIDLinkedTypeResponse struct {

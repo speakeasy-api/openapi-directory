@@ -8,23 +8,18 @@ import (
 )
 
 type DeleteUsersSelectedUserSSHKeysKeyIDSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteUsersSelectedUserSSHKeysKeyIDPathParams struct {
+type DeleteUsersSelectedUserSSHKeysKeyIDRequest struct {
 	// The SSH key's UUID value.
 	KeyID string `pathParam:"style=simple,explode=false,name=key_id"`
 	// This can either be the UUID of the account, surrounded by curly-braces, for
 	// example: `{account UUID}`, OR an Atlassian Account ID.
 	//
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type DeleteUsersSelectedUserSSHKeysKeyIDRequest struct {
-	PathParams DeleteUsersSelectedUserSSHKeysKeyIDPathParams
-	Security   DeleteUsersSelectedUserSSHKeysKeyIDSecurity
 }
 
 type DeleteUsersSelectedUserSSHKeysKeyIDResponse struct {

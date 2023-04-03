@@ -122,7 +122,7 @@ func (e *GETModifyHostsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyHostsQueryParams struct {
+type GETModifyHostsRequest struct {
 	Action GETModifyHostsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Specify whether to enable or disable auto-placement.
 	AutoPlacement *GETModifyHostsAutoPlacementEnum `queryParam:"style=form,explode=true,name=AutoPlacement"`
@@ -135,23 +135,15 @@ type GETModifyHostsQueryParams struct {
 	// <p>Specifies the instance family to be supported by the Dedicated Host. Specify this parameter to modify a Dedicated Host to support multiple instance types within its current instance family.</p> <p>If you want to modify a Dedicated Host to support a specific instance type only, omit this parameter and specify <b>InstanceType</b> instead. You cannot specify <b>InstanceFamily</b> and <b>InstanceType</b> in the same request.</p>
 	InstanceFamily *string `queryParam:"style=form,explode=true,name=InstanceFamily"`
 	// <p>Specifies the instance type to be supported by the Dedicated Host. Specify this parameter to modify a Dedicated Host to support only a specific instance type.</p> <p>If you want to modify a Dedicated Host to support multiple instance types in its current instance family, omit this parameter and specify <b>InstanceFamily</b> instead. You cannot specify <b>InstanceType</b> and <b>InstanceFamily</b> in the same request.</p>
-	InstanceType *string                   `queryParam:"style=form,explode=true,name=InstanceType"`
-	Version      GETModifyHostsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyHostsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyHostsRequest struct {
-	QueryParams GETModifyHostsQueryParams
-	Headers     GETModifyHostsHeaders
+	InstanceType      *string                   `queryParam:"style=form,explode=true,name=InstanceType"`
+	Version           GETModifyHostsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyHostsResponse struct {

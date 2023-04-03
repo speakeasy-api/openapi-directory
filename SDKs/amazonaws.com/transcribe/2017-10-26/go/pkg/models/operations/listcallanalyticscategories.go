@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCallAnalyticsCategoriesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListCallAnalyticsCategoriesXAmzTargetEnum
 type ListCallAnalyticsCategoriesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListCallAnalyticsCategoriesXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListCallAnalyticsCategoriesHeaders struct {
+type ListCallAnalyticsCategoriesRequest struct {
+	ListCallAnalyticsCategoriesRequest shared.ListCallAnalyticsCategoriesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListCallAnalyticsCategoriesHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListCallAnalyticsCategoriesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListCallAnalyticsCategoriesRequest struct {
-	QueryParams ListCallAnalyticsCategoriesQueryParams
-	Headers     ListCallAnalyticsCategoriesHeaders
-	Request     shared.ListCallAnalyticsCategoriesRequest `request:"mediaType=application/json"`
 }
 
 type ListCallAnalyticsCategoriesResponse struct {

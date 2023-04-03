@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomVocabularyPathParams struct {
-	// The unique identifier of the bot to remove the custom vocabulary from.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot to remove the custom vocabulary from.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The locale identifier for the locale that contains the custom vocabulary to remove.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type DeleteCustomVocabularyHeaders struct {
+type DeleteCustomVocabularyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DeleteCustomVocabularyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCustomVocabularyRequest struct {
-	PathParams DeleteCustomVocabularyPathParams
-	Headers    DeleteCustomVocabularyHeaders
+	// The unique identifier of the bot to remove the custom vocabulary from.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot to remove the custom vocabulary from.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The locale identifier for the locale that contains the custom vocabulary to remove.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type DeleteCustomVocabularyResponse struct {

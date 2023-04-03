@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAvailableResourceMetricsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListAvailableResourceMetricsXAmzTargetEnum
 type ListAvailableResourceMetricsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAvailableResourceMetricsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListAvailableResourceMetricsHeaders struct {
+type ListAvailableResourceMetricsRequest struct {
+	ListAvailableResourceMetricsRequest shared.ListAvailableResourceMetricsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAvailableResourceMetricsHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAvailableResourceMetricsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAvailableResourceMetricsRequest struct {
-	QueryParams ListAvailableResourceMetricsQueryParams
-	Headers     ListAvailableResourceMetricsHeaders
-	Request     shared.ListAvailableResourceMetricsRequest `request:"mediaType=application/json"`
 }
 
 type ListAvailableResourceMetricsResponse struct {

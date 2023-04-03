@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListVirtualNodesPathParams struct {
-	// The name of the service mesh in which to list virtual nodes.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-}
-
-type ListVirtualNodesQueryParams struct {
+type ListVirtualNodesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of mesh results returned by <code>ListVirtualNodes</code> in
 	//          paginated output. When this parameter is used, <code>ListVirtualNodes</code> only returns
 	//          <code>limit</code> results in a single page along with a <code>nextToken</code>
@@ -22,27 +24,13 @@ type ListVirtualNodesQueryParams struct {
 	//          parameter is not used, then <code>ListVirtualNodes</code> returns up to
 	//          100 results and a <code>nextToken</code> value if applicable.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// The name of the service mesh in which to list virtual nodes.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
 	// The <code>nextToken</code> value returned from a previous paginated
 	//          <code>ListVirtualNodes</code> request where <code>limit</code> was used and the
 	//          results exceeded the value of that parameter. Pagination continues from the end of the
 	//          previous results that returned the <code>nextToken</code> value.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListVirtualNodesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListVirtualNodesRequest struct {
-	PathParams  ListVirtualNodesPathParams
-	QueryParams ListVirtualNodesQueryParams
-	Headers     ListVirtualNodesHeaders
 }
 
 type ListVirtualNodesResponse struct {

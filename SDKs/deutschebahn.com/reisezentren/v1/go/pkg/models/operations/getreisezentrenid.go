@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetReisezentrenIDPathParams struct {
+type GetReisezentrenIDRequest struct {
 	// Station id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetReisezentrenIDRequest struct {
-	PathParams GetReisezentrenIDPathParams
 }
 
 type GetReisezentrenIDResponse struct {

@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // CreateAlertManagerDefinition - Create an alert manager definition.
 func (s *SDK) CreateAlertManagerDefinition(ctx context.Context, request operations.CreateAlertManagerDefinitionRequest) (*operations.CreateAlertManagerDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateAlertManagerDefinition(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -240,9 +240,9 @@ func (s *SDK) CreateAlertManagerDefinition(ctx context.Context, request operatio
 // CreateLoggingConfiguration - Create logging configuration.
 func (s *SDK) CreateLoggingConfiguration(ctx context.Context, request operations.CreateLoggingConfigurationRequest) (*operations.CreateLoggingConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *SDK) CreateLoggingConfiguration(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -336,9 +336,9 @@ func (s *SDK) CreateLoggingConfiguration(ctx context.Context, request operations
 // CreateRuleGroupsNamespace - Create a rule group namespace.
 func (s *SDK) CreateRuleGroupsNamespace(ctx context.Context, request operations.CreateRuleGroupsNamespaceRequest) (*operations.CreateRuleGroupsNamespaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -353,7 +353,7 @@ func (s *SDK) CreateRuleGroupsNamespace(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -464,7 +464,7 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workspaces"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -479,7 +479,7 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -578,16 +578,16 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 // DeleteAlertManagerDefinition - Deletes an alert manager definition.
 func (s *SDK) DeleteAlertManagerDefinition(ctx context.Context, request operations.DeleteAlertManagerDefinitionRequest) (*operations.DeleteAlertManagerDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -679,16 +679,16 @@ func (s *SDK) DeleteAlertManagerDefinition(ctx context.Context, request operatio
 // DeleteLoggingConfiguration - Delete logging configuration.
 func (s *SDK) DeleteLoggingConfiguration(ctx context.Context, request operations.DeleteLoggingConfigurationRequest) (*operations.DeleteLoggingConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -770,16 +770,16 @@ func (s *SDK) DeleteLoggingConfiguration(ctx context.Context, request operations
 // DeleteRuleGroupsNamespace - Delete a rule groups namespace.
 func (s *SDK) DeleteRuleGroupsNamespace(ctx context.Context, request operations.DeleteRuleGroupsNamespaceRequest) (*operations.DeleteRuleGroupsNamespaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -871,16 +871,16 @@ func (s *SDK) DeleteRuleGroupsNamespace(ctx context.Context, request operations.
 // DeleteWorkspace - Deletes an AMP workspace.
 func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest) (*operations.DeleteWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -972,14 +972,14 @@ func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWork
 // DescribeAlertManagerDefinition - Describes an alert manager definition.
 func (s *SDK) DescribeAlertManagerDefinition(ctx context.Context, request operations.DescribeAlertManagerDefinitionRequest) (*operations.DescribeAlertManagerDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1068,14 +1068,14 @@ func (s *SDK) DescribeAlertManagerDefinition(ctx context.Context, request operat
 // DescribeLoggingConfiguration - Describes logging configuration.
 func (s *SDK) DescribeLoggingConfiguration(ctx context.Context, request operations.DescribeLoggingConfigurationRequest) (*operations.DescribeLoggingConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1154,14 +1154,14 @@ func (s *SDK) DescribeLoggingConfiguration(ctx context.Context, request operatio
 // DescribeRuleGroupsNamespace - Describe a rule groups namespace.
 func (s *SDK) DescribeRuleGroupsNamespace(ctx context.Context, request operations.DescribeRuleGroupsNamespaceRequest) (*operations.DescribeRuleGroupsNamespaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1250,14 +1250,14 @@ func (s *SDK) DescribeRuleGroupsNamespace(ctx context.Context, request operation
 // DescribeWorkspace - Describes an existing AMP workspace.
 func (s *SDK) DescribeWorkspace(ctx context.Context, request operations.DescribeWorkspaceRequest) (*operations.DescribeWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1346,16 +1346,16 @@ func (s *SDK) DescribeWorkspace(ctx context.Context, request operations.Describe
 // ListRuleGroupsNamespaces - Lists rule groups namespaces.
 func (s *SDK) ListRuleGroupsNamespaces(ctx context.Context, request operations.ListRuleGroupsNamespacesRequest) (*operations.ListRuleGroupsNamespacesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1446,14 +1446,14 @@ func (s *SDK) ListRuleGroupsNamespaces(ctx context.Context, request operations.L
 // ListTagsForResource - Lists the tags you have assigned to the resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1549,9 +1549,9 @@ func (s *SDK) ListWorkspaces(ctx context.Context, request operations.ListWorkspa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1632,9 +1632,9 @@ func (s *SDK) ListWorkspaces(ctx context.Context, request operations.ListWorkspa
 // PutAlertManagerDefinition - Update an alert manager definition.
 func (s *SDK) PutAlertManagerDefinition(ctx context.Context, request operations.PutAlertManagerDefinitionRequest) (*operations.PutAlertManagerDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alertmanager/definition", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1649,7 +1649,7 @@ func (s *SDK) PutAlertManagerDefinition(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1758,9 +1758,9 @@ func (s *SDK) PutAlertManagerDefinition(ctx context.Context, request operations.
 // PutRuleGroupsNamespace - Update a rule groups namespace.
 func (s *SDK) PutRuleGroupsNamespace(ctx context.Context, request operations.PutRuleGroupsNamespaceRequest) (*operations.PutRuleGroupsNamespaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/rulegroupsnamespaces/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1775,7 +1775,7 @@ func (s *SDK) PutRuleGroupsNamespace(ctx context.Context, request operations.Put
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1884,9 +1884,9 @@ func (s *SDK) PutRuleGroupsNamespace(ctx context.Context, request operations.Put
 // TagResource - Creates tags for the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1901,7 +1901,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1990,16 +1990,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deletes tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2090,9 +2090,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateLoggingConfiguration - Update logging configuration.
 func (s *SDK) UpdateLoggingConfiguration(ctx context.Context, request operations.UpdateLoggingConfigurationRequest) (*operations.UpdateLoggingConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/logging", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2107,7 +2107,7 @@ func (s *SDK) UpdateLoggingConfiguration(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2196,9 +2196,9 @@ func (s *SDK) UpdateLoggingConfiguration(ctx context.Context, request operations
 // UpdateWorkspaceAlias - Updates an AMP workspace alias.
 func (s *SDK) UpdateWorkspaceAlias(ctx context.Context, request operations.UpdateWorkspaceAliasRequest) (*operations.UpdateWorkspaceAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alias", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/alias", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2213,7 +2213,7 @@ func (s *SDK) UpdateWorkspaceAlias(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeletePresetPathParams struct {
+type DeletePresetRequest struct {
 	// The identifier of the preset for which you want to get detailed information.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeletePresetHeaders struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeletePresetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeletePresetRequest struct {
-	PathParams DeletePresetPathParams
-	Headers    DeletePresetHeaders
 }
 
 type DeletePresetResponse struct {

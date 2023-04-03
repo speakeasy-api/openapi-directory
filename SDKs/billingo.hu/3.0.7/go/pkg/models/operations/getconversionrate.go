@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConversionRateQueryParams struct {
+type GetConversionRateRequest struct {
 	From shared.CurrencyEnum `queryParam:"style=form,explode=true,name=from"`
 	To   shared.CurrencyEnum `queryParam:"style=form,explode=true,name=to"`
-}
-
-type GetConversionRateRequest struct {
-	QueryParams GetConversionRateQueryParams
 }
 
 type GetConversionRateResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationGetProductSampleCustomColumnValuePathParams struct {
+type ImportationGetProductSampleCustomColumnValueRequest struct {
 	// The custom column identifier
 	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
 	// The execution identifier of you catalog importation
@@ -16,10 +16,6 @@ type ImportationGetProductSampleCustomColumnValuePathParams struct {
 	ProductSampleIndex int `pathParam:"style=simple,explode=false,name=productSampleIndex"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationGetProductSampleCustomColumnValueRequest struct {
-	PathParams ImportationGetProductSampleCustomColumnValuePathParams
 }
 
 type ImportationGetProductSampleCustomColumnValueResponse struct {

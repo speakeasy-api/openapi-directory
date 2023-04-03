@@ -50,25 +50,17 @@ func (e *POSTRestoreDBInstanceFromDBSnapshotVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTRestoreDBInstanceFromDBSnapshotQueryParams struct {
-	Action  POSTRestoreDBInstanceFromDBSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRestoreDBInstanceFromDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRestoreDBInstanceFromDBSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRestoreDBInstanceFromDBSnapshotRequest struct {
-	QueryParams POSTRestoreDBInstanceFromDBSnapshotQueryParams
-	Headers     POSTRestoreDBInstanceFromDBSnapshotHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRestoreDBInstanceFromDBSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTRestoreDBInstanceFromDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRestoreDBInstanceFromDBSnapshotResponse struct {

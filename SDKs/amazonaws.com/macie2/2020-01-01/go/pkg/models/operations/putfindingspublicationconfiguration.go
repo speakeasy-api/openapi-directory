@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type PutFindingsPublicationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration - Specifies configuration settings that determine which findings are published to Security Hub automatically. For information about how Macie publishes findings to Security Hub, see <a href="https://docs.aws.amazon.com/macie/latest/user/securityhub-integration.html">Amazon Macie integration with Security Hub</a> in the <i>Amazon Macie User Guide</i>.
 type PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration struct {
 	PublishClassificationFindings *bool `json:"publishClassificationFindings,omitempty"`
@@ -30,8 +20,14 @@ type PutFindingsPublicationConfigurationRequestBody struct {
 }
 
 type PutFindingsPublicationConfigurationRequest struct {
-	Headers PutFindingsPublicationConfigurationHeaders
-	Request PutFindingsPublicationConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutFindingsPublicationConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutFindingsPublicationConfigurationResponse struct {

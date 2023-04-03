@@ -15,10 +15,6 @@ type PostCategorizeRequestBody struct {
 	Wording string `multipartForm:"name=wording"`
 }
 
-type PostCategorizeRequest struct {
-	Request PostCategorizeRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostCategorizeResponse struct {
 	ContentType                            string
 	StatusCode                             int

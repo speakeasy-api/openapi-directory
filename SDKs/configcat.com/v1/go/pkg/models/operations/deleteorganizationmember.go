@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteOrganizationMemberPathParams struct {
+type DeleteOrganizationMemberRequest struct {
 	// The identifier of the Organization.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The identifier of the Member.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteOrganizationMemberRequest struct {
-	PathParams DeleteOrganizationMemberPathParams
 }
 
 type DeleteOrganizationMemberResponse struct {

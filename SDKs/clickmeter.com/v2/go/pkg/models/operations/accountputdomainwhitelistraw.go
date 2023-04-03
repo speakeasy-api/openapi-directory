@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutDomainWhitelistRawRequest struct {
-	// The entry to add
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AccountPutDomainWhitelistRawResponse struct {
 	APICoreDtoAccountingDomainWhitelistEntry *shared.APICoreDtoAccountingDomainWhitelistEntry
 	Body                                     []byte

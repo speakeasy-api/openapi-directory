@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAutomationStepExecutionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeAutomationStepExecutionsXAmzTargetEnum
 type DescribeAutomationStepExecutionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeAutomationStepExecutionsXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type DescribeAutomationStepExecutionsHeaders struct {
+type DescribeAutomationStepExecutionsRequest struct {
+	DescribeAutomationStepExecutionsRequest shared.DescribeAutomationStepExecutionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeAutomationStepExecutionsHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeAutomationStepExecutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeAutomationStepExecutionsRequest struct {
-	QueryParams DescribeAutomationStepExecutionsQueryParams
-	Headers     DescribeAutomationStepExecutionsHeaders
-	Request     shared.DescribeAutomationStepExecutionsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeAutomationStepExecutionsResponse struct {

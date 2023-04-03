@@ -24,159 +24,162 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchMeterUsageRequest{
-        Headers: operations.BatchMeterUsageHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
-        },
-        Request: shared.BatchMeterUsageRequest{
-            ProductCode: "illum",
+        BatchMeterUsageRequest: shared.BatchMeterUsageRequest{
+            ProductCode: "corrupti",
             UsageRecords: []shared.UsageRecord{
                 shared.UsageRecord{
-                    CustomerIdentifier: "error",
-                    Dimension: "deserunt",
-                    Quantity: 384382,
-                    Timestamp: "2022-09-14T09:35:47.986Z",
+                    CustomerIdentifier: "distinctio",
+                    Dimension: "quibusdam",
+                    Quantity: 602763,
+                    Timestamp: "2021-05-14T08:28:11.899Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 56713,
+                            AllocatedUsageQuantity: 423655,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "tempora",
+                                    Key: "deserunt",
                                     Value: "suscipit",
                                 },
                                 shared.Tag{
-                                    Key: "molestiae",
-                                    Value: "minus",
+                                    Key: "iure",
+                                    Value: "magnam",
                                 },
                                 shared.Tag{
-                                    Key: "placeat",
-                                    Value: "voluptatum",
-                                },
-                                shared.Tag{
-                                    Key: "iusto",
-                                    Value: "excepturi",
+                                    Key: "debitis",
+                                    Value: "ipsa",
                                 },
                             },
                         },
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 392785,
+                            AllocatedUsageQuantity: 963663,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "temporibus",
-                                    Value: "ab",
+                                    Key: "suscipit",
+                                    Value: "molestiae",
                                 },
                                 shared.Tag{
-                                    Key: "quis",
-                                    Value: "veritatis",
-                                },
-                                shared.Tag{
-                                    Key: "deserunt",
-                                    Value: "perferendis",
-                                },
-                                shared.Tag{
-                                    Key: "ipsam",
-                                    Value: "repellendus",
+                                    Key: "minus",
+                                    Value: "placeat",
                                 },
                             },
                         },
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 957156,
+                            AllocatedUsageQuantity: 528895,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "odit",
-                                    Value: "at",
+                                    Key: "excepturi",
+                                    Value: "nisi",
                                 },
                                 shared.Tag{
-                                    Key: "at",
-                                    Value: "maiores",
-                                },
-                                shared.Tag{
-                                    Key: "molestiae",
-                                    Value: "quod",
-                                },
-                                shared.Tag{
-                                    Key: "quod",
-                                    Value: "esse",
+                                    Key: "recusandae",
+                                    Value: "temporibus",
                                 },
                             },
                         },
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 520478,
+                            AllocatedUsageQuantity: 71036,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "dolorum",
-                                    Value: "dicta",
+                                    Key: "veritatis",
+                                    Value: "deserunt",
                                 },
                                 shared.Tag{
-                                    Key: "nam",
-                                    Value: "officia",
-                                },
-                                shared.Tag{
-                                    Key: "occaecati",
-                                    Value: "fugit",
-                                },
-                                shared.Tag{
-                                    Key: "deleniti",
-                                    Value: "hic",
+                                    Key: "perferendis",
+                                    Value: "ipsam",
                                 },
                             },
                         },
                     },
                 },
                 shared.UsageRecord{
-                    CustomerIdentifier: "optio",
-                    Dimension: "totam",
-                    Quantity: 105907,
-                    Timestamp: "2022-07-12T03:15:36.542Z",
+                    CustomerIdentifier: "repellendus",
+                    Dimension: "sapiente",
+                    Quantity: 778157,
+                    Timestamp: "2022-02-17T10:41:36.857Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 186332,
+                            AllocatedUsageQuantity: 978619,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "cum",
-                                    Value: "esse",
+                                    Key: "quod",
+                                    Value: "quod",
                                 },
                                 shared.Tag{
-                                    Key: "ipsum",
-                                    Value: "excepturi",
-                                },
-                                shared.Tag{
-                                    Key: "aspernatur",
-                                    Value: "perferendis",
-                                },
-                                shared.Tag{
-                                    Key: "ad",
-                                    Value: "natus",
+                                    Key: "esse",
+                                    Value: "totam",
                                 },
                             },
                         },
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 149675,
+                            AllocatedUsageQuantity: 780529,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "dolor",
-                                    Value: "natus",
+                                    Key: "dicta",
+                                    Value: "nam",
                                 },
                                 shared.Tag{
-                                    Key: "laboriosam",
-                                    Value: "hic",
+                                    Key: "officia",
+                                    Value: "occaecati",
                                 },
                                 shared.Tag{
-                                    Key: "saepe",
-                                    Value: "fuga",
+                                    Key: "fugit",
+                                    Value: "deleniti",
+                                },
+                            },
+                        },
+                        shared.UsageAllocation{
+                            AllocatedUsageQuantity: 944669,
+                            Tags: []shared.Tag{
+                                shared.Tag{
+                                    Key: "totam",
+                                    Value: "beatae",
+                                },
+                                shared.Tag{
+                                    Key: "commodi",
+                                    Value: "molestiae",
+                                },
+                                shared.Tag{
+                                    Key: "modi",
+                                    Value: "qui",
+                                },
+                                shared.Tag{
+                                    Key: "impedit",
+                                    Value: "cum",
+                                },
+                            },
+                        },
+                        shared.UsageAllocation{
+                            AllocatedUsageQuantity: 456150,
+                            Tags: []shared.Tag{
+                                shared.Tag{
+                                    Key: "excepturi",
+                                    Value: "aspernatur",
+                                },
+                            },
+                        },
+                    },
+                },
+                shared.UsageRecord{
+                    CustomerIdentifier: "perferendis",
+                    Dimension: "ad",
+                    Quantity: 617636,
+                    Timestamp: "2022-05-22T14:02:28.908Z",
+                    UsageAllocations: []shared.UsageAllocation{
+                        shared.UsageAllocation{
+                            AllocatedUsageQuantity: 616934,
+                            Tags: []shared.Tag{
+                                shared.Tag{
+                                    Key: "hic",
+                                    Value: "saepe",
+                                },
+                                shared.Tag{
+                                    Key: "fuga",
+                                    Value: "in",
                                 },
                             },
                         },
@@ -184,6 +187,14 @@ func main() {
                 },
             },
         },
+        XAmzAlgorithm: "corporis",
+        XAmzContentSha256: "iste",
+        XAmzCredential: "iure",
+        XAmzDate: "saepe",
+        XAmzSecurityToken: "quidem",
+        XAmzSignature: "architecto",
+        XAmzSignedHeaders: "ipsa",
+        XAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
     }
 
     ctx := context.Background()
@@ -200,7 +211,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -210,4 +221,15 @@ func main() {
 * `ResolveCustomer` - <p> <code>ResolveCustomer</code> is called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a registration token through their browser. The registration token is resolved through this API to obtain a <code>CustomerIdentifier</code> along with the <code>CustomerAWSAccountId</code> and <code>ProductCode</code>.</p> <note> <p>The API needs to called from the seller account id used to publish the SaaS application to successfully resolve the token.</p> <p>For an example of using <code>ResolveCustomer</code>, see <a href="https://docs.aws.amazon.com/marketplace/latest/userguide/saas-code-examples.html#saas-resolvecustomer-example"> ResolveCustomer code example</a> in the <i>AWS Marketplace Seller Guide</i>.</p> </note>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

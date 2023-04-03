@@ -50,7 +50,7 @@ func (e *GETDescribeGlobalReplicationGroupsVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETDescribeGlobalReplicationGroupsQueryParams struct {
+type GETDescribeGlobalReplicationGroupsRequest struct {
 	Action GETDescribeGlobalReplicationGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Global datastore
 	GlobalReplicationGroupID *string `queryParam:"style=form,explode=true,name=GlobalReplicationGroupId"`
@@ -59,23 +59,15 @@ type GETDescribeGlobalReplicationGroupsQueryParams struct {
 	// The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved.
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// Returns the list of members that comprise the Global datastore.
-	ShowMemberInfo *bool                                         `queryParam:"style=form,explode=true,name=ShowMemberInfo"`
-	Version        GETDescribeGlobalReplicationGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeGlobalReplicationGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeGlobalReplicationGroupsRequest struct {
-	QueryParams GETDescribeGlobalReplicationGroupsQueryParams
-	Headers     GETDescribeGlobalReplicationGroupsHeaders
+	ShowMemberInfo    *bool                                         `queryParam:"style=form,explode=true,name=ShowMemberInfo"`
+	Version           GETDescribeGlobalReplicationGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeGlobalReplicationGroupsResponse struct {

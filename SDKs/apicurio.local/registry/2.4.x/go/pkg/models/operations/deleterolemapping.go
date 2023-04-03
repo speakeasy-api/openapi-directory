@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRoleMappingPathParams struct {
+type DeleteRoleMappingRequest struct {
 	// Unique id of a principal (typically either a user or service account).
 	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
-}
-
-type DeleteRoleMappingRequest struct {
-	PathParams DeleteRoleMappingPathParams
 }
 
 type DeleteRoleMappingResponse struct {

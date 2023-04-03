@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResourcesAssociatedToCustomLineItemQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListResourcesAssociatedToCustomLineItemHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListResourcesAssociatedToCustomLineItemRequestBodyFilters -  A filter that specifies the type of resource associations that should be retrieved for a custom line item.
 type ListResourcesAssociatedToCustomLineItemRequestBodyFilters struct {
 	Relationship *shared.CustomLineItemRelationshipEnum `json:"Relationship,omitempty"`
@@ -43,9 +26,18 @@ type ListResourcesAssociatedToCustomLineItemRequestBody struct {
 }
 
 type ListResourcesAssociatedToCustomLineItemRequest struct {
-	QueryParams ListResourcesAssociatedToCustomLineItemQueryParams
-	Headers     ListResourcesAssociatedToCustomLineItemHeaders
-	Request     ListResourcesAssociatedToCustomLineItemRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListResourcesAssociatedToCustomLineItemRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListResourcesAssociatedToCustomLineItemResponse struct {

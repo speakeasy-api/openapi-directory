@@ -8,18 +8,13 @@ import (
 )
 
 type GetBalanceAccountsIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetBalanceAccountsIDPathParams struct {
-	// The unique identifier of the balance account.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetBalanceAccountsIDRequest struct {
-	PathParams GetBalanceAccountsIDPathParams
-	Security   GetBalanceAccountsIDSecurity
+	// The unique identifier of the balance account.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBalanceAccountsIDResponse struct {

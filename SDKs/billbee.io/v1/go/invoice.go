@@ -34,14 +34,14 @@ func newInvoice(defaultClient, securityClient HTTPClient, serverURL, language, s
 // OrderAPICreateInvoice - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
 func (s *invoice) OrderAPICreateInvoice(ctx context.Context, request operations.OrderAPICreateInvoiceRequest) (*operations.OrderAPICreateInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateInvoice/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateInvoice/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -96,7 +96,7 @@ func (s *invoice) OrderAPIGetInvoiceList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

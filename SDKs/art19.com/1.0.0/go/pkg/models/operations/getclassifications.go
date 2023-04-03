@@ -10,7 +10,7 @@ import (
 )
 
 type GetClassificationsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetClassificationsSortEnum string
@@ -73,7 +73,7 @@ func (e *GetClassificationsTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetClassificationsQueryParams struct {
+type GetClassificationsRequest struct {
 	// The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
 	// The brackets *MUST* be percent-encoded, per the requirements in
 	// [RFC 3986 § 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
@@ -104,11 +104,6 @@ type GetClassificationsQueryParams struct {
 	// depends on the privileges of the provided credential.
 	//
 	Type *GetClassificationsTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetClassificationsRequest struct {
-	QueryParams GetClassificationsQueryParams
-	Security    GetClassificationsSecurity
 }
 
 // GetClassifications400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

@@ -30,7 +30,8 @@ func (e *DeleteDiskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteDiskHeaders struct {
+type DeleteDiskRequest struct {
+	DeleteDiskRequest shared.DeleteDiskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteDiskHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteDiskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteDiskRequest struct {
-	Headers DeleteDiskHeaders
-	Request shared.DeleteDiskRequest `request:"mediaType=application/json"`
 }
 
 type DeleteDiskResponse struct {

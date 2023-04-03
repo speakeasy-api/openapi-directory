@@ -8,28 +8,19 @@ import (
 )
 
 type GetMerchantsMerchantIDUsersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetMerchantsMerchantIDUsersPathParams struct {
+type GetMerchantsMerchantIDUsersRequest struct {
 	// Unique identifier of the merchant.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type GetMerchantsMerchantIDUsersQueryParams struct {
 	// The number of the page to fetch.
 	PageNumber *int `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The partial or complete username to select all users that match.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetMerchantsMerchantIDUsersRequest struct {
-	PathParams  GetMerchantsMerchantIDUsersPathParams
-	QueryParams GetMerchantsMerchantIDUsersQueryParams
-	Security    GetMerchantsMerchantIDUsersSecurity
 }
 
 type GetMerchantsMerchantIDUsersResponse struct {

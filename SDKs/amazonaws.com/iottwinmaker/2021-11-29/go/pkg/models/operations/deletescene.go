@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteScenePathParams struct {
-	// The ID of the scene to delete.
-	SceneID string `pathParam:"style=simple,explode=false,name=sceneId"`
-	// The ID of the workspace.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteSceneHeaders struct {
+type DeleteSceneRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteSceneHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSceneRequest struct {
-	PathParams DeleteScenePathParams
-	Headers    DeleteSceneHeaders
+	// The ID of the scene to delete.
+	SceneID string `pathParam:"style=simple,explode=false,name=sceneId"`
+	// The ID of the workspace.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteSceneResponse struct {

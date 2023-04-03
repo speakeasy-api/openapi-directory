@@ -65,7 +65,7 @@ func (e *GETModifyVpcAttributeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyVpcAttributeQueryParams struct {
+type GETModifyVpcAttributeRequest struct {
 	Action GETModifyVpcAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not.</p> <p>You cannot modify the DNS resolution and DNS hostnames attributes in the same request. Use separate requests for each attribute. You can only enable DNS hostnames if you've enabled DNS support.</p>
 	EnableDNSHostnames *GETModifyVpcAttributeEnableDNSHostnames `queryParam:"style=form,explode=true,name=EnableDnsHostnames"`
@@ -75,10 +75,7 @@ type GETModifyVpcAttributeQueryParams struct {
 	EnableNetworkAddressUsageMetrics *GETModifyVpcAttributeEnableNetworkAddressUsageMetrics `queryParam:"style=form,explode=true,name=EnableNetworkAddressUsageMetrics"`
 	Version                          GETModifyVpcAttributeVersionEnum                       `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETModifyVpcAttributeHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -86,11 +83,6 @@ type GETModifyVpcAttributeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpcAttributeRequest struct {
-	QueryParams GETModifyVpcAttributeQueryParams
-	Headers     GETModifyVpcAttributeHeaders
 }
 
 type GETModifyVpcAttributeResponse struct {

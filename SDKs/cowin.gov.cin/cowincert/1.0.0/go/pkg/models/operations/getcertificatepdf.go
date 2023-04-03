@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetCertificatePdfSecurity struct {
-	CertAuth shared.SchemeCertAuth `security:"scheme,type=oauth2"`
-}
-
-type GetCertificatePdfRequest struct {
-	Request  shared.CertificateRequest `request:"mediaType=application/json"`
-	Security GetCertificatePdfSecurity
+	CertAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetCertificatePdfResponse struct {

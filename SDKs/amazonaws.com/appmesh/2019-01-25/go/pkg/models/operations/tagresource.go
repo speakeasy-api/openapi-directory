@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagResourceQueryParams struct {
-	// The Amazon Resource Name (ARN) of the resource to add tags to.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type TagResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type TagResourceRequestBody struct {
 	// The tags to add to the resource. A tag is an array of key-value pairs. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
 	Tags []shared.TagRef `json:"tags"`
 }
 
 type TagResourceRequest struct {
-	QueryParams TagResourceQueryParams
-	Headers     TagResourceHeaders
-	Request     TagResourceRequestBody `request:"mediaType=application/json"`
+	RequestBody       TagResourceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The Amazon Resource Name (ARN) of the resource to add tags to.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type TagResourceResponse struct {

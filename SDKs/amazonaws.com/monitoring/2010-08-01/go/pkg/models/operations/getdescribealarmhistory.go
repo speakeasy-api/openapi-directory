@@ -103,7 +103,7 @@ func (e *GETDescribeAlarmHistoryVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeAlarmHistoryQueryParams struct {
+type GETDescribeAlarmHistoryRequest struct {
 	Action GETDescribeAlarmHistoryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the alarm.
 	AlarmName *string `queryParam:"style=form,explode=true,name=AlarmName"`
@@ -120,23 +120,15 @@ type GETDescribeAlarmHistoryQueryParams struct {
 	// Specified whether to return the newest or oldest alarm history first. Specify <code>TimestampDescending</code> to have the newest event history returned first, and specify <code>TimestampAscending</code> to have the oldest history returned first.
 	ScanBy *GETDescribeAlarmHistoryScanByEnum `queryParam:"style=form,explode=true,name=ScanBy"`
 	// The starting date to retrieve alarm history.
-	StartDate *time.Time                         `queryParam:"style=form,explode=true,name=StartDate"`
-	Version   GETDescribeAlarmHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAlarmHistoryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAlarmHistoryRequest struct {
-	QueryParams GETDescribeAlarmHistoryQueryParams
-	Headers     GETDescribeAlarmHistoryHeaders
+	StartDate         *time.Time                         `queryParam:"style=form,explode=true,name=StartDate"`
+	Version           GETDescribeAlarmHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAlarmHistoryResponse struct {

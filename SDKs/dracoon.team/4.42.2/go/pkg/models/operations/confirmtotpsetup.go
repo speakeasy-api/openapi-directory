@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfirmTotpSetupHeaders struct {
+type ConfirmTotpSetupRequest struct {
+	MfaTotpConfirmationRequest shared.MfaTotpConfirmationRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ConfirmTotpSetupRequest struct {
-	Headers ConfirmTotpSetupHeaders
-	Request shared.MfaTotpConfirmationRequest `request:"mediaType=application/json"`
 }
 
 type ConfirmTotpSetupResponse struct {

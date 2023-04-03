@@ -27,7 +27,6 @@ pkg/models/shared/token.go
 pkg/models/shared/oauth2error.go
 pkg/models/shared/userinfo.go
 pkg/models/shared/address.go
-pkg/models/shared/security.go
 pkg/models/shared/client.go
 pkg/models/shared/problemdetail.go
 USAGE.md

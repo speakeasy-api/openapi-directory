@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConfiguredTableAssociationPathParams struct {
-	// The unique ID for the configured table association to retrieve. Currently accepts the configured table ID.
-	ConfiguredTableAssociationIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableAssociationIdentifier"`
-	// A unique identifier for the membership that the configured table association belongs to. Currently accepts the membership ID.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-}
-
-type GetConfiguredTableAssociationHeaders struct {
+type GetConfiguredTableAssociationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetConfiguredTableAssociationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetConfiguredTableAssociationRequest struct {
-	PathParams GetConfiguredTableAssociationPathParams
-	Headers    GetConfiguredTableAssociationHeaders
+	// The unique ID for the configured table association to retrieve. Currently accepts the configured table ID.
+	ConfiguredTableAssociationIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableAssociationIdentifier"`
+	// A unique identifier for the membership that the configured table association belongs to. Currently accepts the membership ID.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
 }
 
 type GetConfiguredTableAssociationResponse struct {

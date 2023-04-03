@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveRoomRescueKeyPairPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type RemoveRoomRescueKeyPairQueryParams struct {
-	// Version (NEW)
-	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type RemoveRoomRescueKeyPairHeaders struct {
+type RemoveRoomRescueKeyPairRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveRoomRescueKeyPairRequest struct {
-	PathParams  RemoveRoomRescueKeyPairPathParams
-	QueryParams RemoveRoomRescueKeyPairQueryParams
-	Headers     RemoveRoomRescueKeyPairHeaders
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
+	// Version (NEW)
+	Version *string `queryParam:"style=form,explode=true,name=version"`
 }
 
 type RemoveRoomRescueKeyPairResponse struct {

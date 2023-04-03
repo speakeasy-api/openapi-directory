@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammesByChannelPathParams struct {
-	// The channel identifier to limit results to.
-	Channel string `pathParam:"style=simple,explode=false,name=channel"`
-}
-
-type GetProgrammesByChannelQueryParams struct {
+type GetProgrammesByChannelRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The channel identifier to limit results to.
+	Channel string `pathParam:"style=simple,explode=false,name=channel"`
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// The page index.
@@ -23,11 +20,6 @@ type GetProgrammesByChannelQueryParams struct {
 	PerPage int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetProgrammesByChannelRequest struct {
-	PathParams  GetProgrammesByChannelPathParams
-	QueryParams GetProgrammesByChannelQueryParams
 }
 
 type GetProgrammesByChannelResponse struct {

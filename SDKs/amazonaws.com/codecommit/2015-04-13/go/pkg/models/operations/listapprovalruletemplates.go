@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListApprovalRuleTemplatesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListApprovalRuleTemplatesXAmzTargetEnum
 type ListApprovalRuleTemplatesXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListApprovalRuleTemplatesXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ListApprovalRuleTemplatesHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListApprovalRuleTemplatesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListApprovalRuleTemplatesRequest struct {
-	QueryParams ListApprovalRuleTemplatesQueryParams
-	Headers     ListApprovalRuleTemplatesHeaders
-	Request     shared.ListApprovalRuleTemplatesInput `request:"mediaType=application/json"`
+	ListApprovalRuleTemplatesInput shared.ListApprovalRuleTemplatesInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     ListApprovalRuleTemplatesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListApprovalRuleTemplatesResponse struct {

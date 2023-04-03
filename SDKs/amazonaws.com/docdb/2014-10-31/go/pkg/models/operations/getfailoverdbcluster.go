@@ -50,28 +50,20 @@ func (e *GETFailoverDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETFailoverDBClusterQueryParams struct {
+type GETFailoverDBClusterRequest struct {
 	Action GETFailoverDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>A cluster identifier to force a failover for. This parameter is not case sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identifier of an existing <code>DBCluster</code>.</p> </li> </ul>
 	DBClusterIdentifier *string `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	// <p>The name of the instance to promote to the primary instance.</p> <p>You must specify the instance identifier for an Amazon DocumentDB replica in the cluster. For example, <code>mydbcluster-replica1</code>.</p>
 	TargetDBInstanceIdentifier *string                         `queryParam:"style=form,explode=true,name=TargetDBInstanceIdentifier"`
 	Version                    GETFailoverDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETFailoverDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETFailoverDBClusterRequest struct {
-	QueryParams GETFailoverDBClusterQueryParams
-	Headers     GETFailoverDBClusterHeaders
+	XAmzAlgorithm              *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETFailoverDBClusterResponse struct {

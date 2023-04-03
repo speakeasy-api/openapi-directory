@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type QueryHardBouncedEmailsQueryParams struct {
+type QueryHardBouncedEmailsRequest struct {
 	// (Optional*) String
 	//
 	// If provided, we will return whether or not the user has hard bounced.
@@ -34,10 +34,6 @@ type QueryHardBouncedEmailsQueryParams struct {
 	// *You must provide either an `email` or a `start_date`, and an `end_date`.
 	//
 	StartDate *string `queryParam:"style=form,explode=true,name=start_date"`
-}
-
-type QueryHardBouncedEmailsRequest struct {
-	QueryParams QueryHardBouncedEmailsQueryParams
 }
 
 type QueryHardBouncedEmailsResponse struct {

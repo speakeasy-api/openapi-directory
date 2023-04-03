@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeRecommendationLimitationsQueryParams struct {
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeRecommendationLimitationsXAmzTargetEnum
 type DescribeRecommendationLimitationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeRecommendationLimitationsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DescribeRecommendationLimitationsHeaders struct {
+type DescribeRecommendationLimitationsRequest struct {
+	DescribeRecommendationLimitationsRequest shared.DescribeRecommendationLimitationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeRecommendationLimitationsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeRecommendationLimitationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeRecommendationLimitationsRequest struct {
-	QueryParams DescribeRecommendationLimitationsQueryParams
-	Headers     DescribeRecommendationLimitationsHeaders
-	Request     shared.DescribeRecommendationLimitationsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeRecommendationLimitationsResponse struct {

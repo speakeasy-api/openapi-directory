@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConnectorsIDConnectorPathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-}
-
-type PutConnectorsIDConnectorQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutConnectorsIDConnectorRequestBody struct {
 	// the authentication mechanism to use for this connector
 	AuthMechanism *string `multipartForm:"name=auth_mechanism"`
@@ -27,9 +19,9 @@ type PutConnectorsIDConnectorRequestBody struct {
 }
 
 type PutConnectorsIDConnectorRequest struct {
-	PathParams  PutConnectorsIDConnectorPathParams
-	QueryParams PutConnectorsIDConnectorQueryParams
-	Request     *PutConnectorsIDConnectorRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutConnectorsIDConnectorRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                              `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64                                `pathParam:"style=simple,explode=false,name=id_connector"`
 }
 
 type PutConnectorsIDConnectorResponse struct {

@@ -35,14 +35,14 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // CustomersDelete - Removes an existing Customer.
 func (s *customers) CustomersDelete(ctx context.Context, request operations.CustomersDeleteRequest) (*operations.CustomersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -129,7 +129,7 @@ func (s *customers) CustomersGet(ctx context.Context) (*operations.CustomersGetR
 // CustomersGetAccountTrans - Returns a list of Customer's account transactions.
 func (s *customers) CustomersGetAccountTrans(ctx context.Context, request operations.CustomersGetAccountTransRequest) (*operations.CustomersGetAccountTransResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/accountTrans", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/accountTrans", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *customers) CustomersGetAccountTrans(ctx context.Context, request operat
 // CustomersGetOpeningBalance - Returns a Customer's opening balances, calculated for the next periods: current month, one month old, two months old, three and more months old.
 func (s *customers) CustomersGetOpeningBalance(ctx context.Context, request operations.CustomersGetOpeningBalanceRequest) (*operations.CustomersGetOpeningBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalance", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalance", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +217,7 @@ func (s *customers) CustomersGetOpeningBalance(ctx context.Context, request oper
 // CustomersGetOpeningBalanceList - Returns a list of Customer's opening balance transactions.
 func (s *customers) CustomersGetOpeningBalanceList(ctx context.Context, request operations.CustomersGetOpeningBalanceListRequest) (*operations.CustomersGetOpeningBalanceListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalanceList", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalanceList", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *customers) CustomersGetOpeningBalanceList(ctx context.Context, request 
 // CustomersGetQuotes - Returns a list of Customer's quotes.
 func (s *customers) CustomersGetQuotes(ctx context.Context, request operations.CustomersGetQuotesRequest) (*operations.CustomersGetQuotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/quotes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/quotes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -303,7 +303,7 @@ func (s *customers) CustomersGetQuotes(ctx context.Context, request operations.C
 }
 
 // CustomersPost - Creates a new Customer.
-func (s *customers) CustomersPost(ctx context.Context, request operations.CustomersPostRequest) (*operations.CustomersPostResponse, error) {
+func (s *customers) CustomersPost(ctx context.Context, request shared.CustomerDto) (*operations.CustomersPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/customers"
 
@@ -357,7 +357,7 @@ func (s *customers) CustomersPost(ctx context.Context, request operations.Custom
 }
 
 // CustomersProcessBatch - Processes a batch of Customers.
-func (s *customers) CustomersProcessBatch(ctx context.Context, request operations.CustomersProcessBatchRequest) (*operations.CustomersProcessBatchResponse, error) {
+func (s *customers) CustomersProcessBatch(ctx context.Context, request []shared.BatchItemCustomerDto) (*operations.CustomersProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/customers/batch"
 
@@ -413,9 +413,9 @@ func (s *customers) CustomersProcessBatch(ctx context.Context, request operation
 // CustomersPut - Updates an existing Customer.
 func (s *customers) CustomersPut(ctx context.Context, request operations.CustomersPutRequest) (*operations.CustomersPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -467,14 +467,14 @@ func (s *customers) CustomersPut(ctx context.Context, request operations.Custome
 // GetV1CustomersID - Returns information about a single Customer. You may specify that Customer's ledger balance should be calculated.
 func (s *customers) GetV1CustomersID(ctx context.Context, request operations.GetV1CustomersIDRequest) (*operations.GetV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateFeaturePathParams struct {
-	// The name or ARN of the project that is to contain the new feature.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type CreateFeatureHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateFeatureRequestBodyEvaluationStrategyEnum - Specify <code>ALL_RULES</code> to activate the traffic allocation specified by any ongoing launches or experiments. Specify <code>DEFAULT_VARIATION</code> to serve the default variation to all users instead.
 type CreateFeatureRequestBodyEvaluationStrategyEnum string
 
@@ -66,9 +51,16 @@ type CreateFeatureRequestBody struct {
 }
 
 type CreateFeatureRequest struct {
-	PathParams CreateFeaturePathParams
-	Headers    CreateFeatureHeaders
-	Request    CreateFeatureRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateFeatureRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name or ARN of the project that is to contain the new feature.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type CreateFeatureResponse struct {

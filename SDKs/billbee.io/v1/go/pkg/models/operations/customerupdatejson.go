@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerUpdateJSONPathParams struct {
+type CustomerUpdateJSONRequest struct {
+	BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput `request:"mediaType=application/json"`
 	// The id of the customer
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerUpdateJSONRequest struct {
-	PathParams CustomerUpdateJSONPathParams
-	Request    shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput `request:"mediaType=application/json"`
 }
 
 type CustomerUpdateJSONResponse struct {

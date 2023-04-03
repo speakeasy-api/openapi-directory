@@ -14,13 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.CreateArtifactRuleRequest{
-        PathParams: operations.CreateArtifactRulePathParams{
-            ArtifactID: "corrupti",
-        },
-        Request: shared.Rule{
-            Config: "provident",
+        Rule: shared.Rule{
+            Config: "corrupti",
             Type: "VALIDITY",
         },
+        ArtifactID: "provident",
     }
 
     ctx := context.Background()

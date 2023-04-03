@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSessionPathParams struct {
-	// The alias in use for the bot that contains the session data.
-	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
-	// The name of the bot that contains the session data.
-	BotName string `pathParam:"style=simple,explode=false,name=botName"`
-	// The identifier of the user associated with the session data.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteSessionHeaders struct {
+type DeleteSessionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DeleteSessionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSessionRequest struct {
-	PathParams DeleteSessionPathParams
-	Headers    DeleteSessionHeaders
+	// The alias in use for the bot that contains the session data.
+	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
+	// The name of the bot that contains the session data.
+	BotName string `pathParam:"style=simple,explode=false,name=botName"`
+	// The identifier of the user associated with the session data.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type DeleteSessionResponse struct {

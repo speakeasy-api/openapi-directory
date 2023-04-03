@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AutoDeleteAutoImportPathParams struct {
+type AutoDeleteAutoImportRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type AutoDeleteAutoImportRequest struct {
-	PathParams AutoDeleteAutoImportPathParams
 }
 
 type AutoDeleteAutoImportResponse struct {

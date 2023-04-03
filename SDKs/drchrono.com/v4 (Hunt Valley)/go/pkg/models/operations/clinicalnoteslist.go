@@ -8,10 +8,10 @@ import (
 )
 
 type ClinicalNotesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ClinicalNotesListQueryParams struct {
+type ClinicalNotesListRequest struct {
 	Cursor    *string `queryParam:"style=form,explode=true,name=cursor"`
 	Date      *string `queryParam:"style=form,explode=true,name=date"`
 	DateRange *string `queryParam:"style=form,explode=true,name=date_range"`
@@ -20,11 +20,6 @@ type ClinicalNotesListQueryParams struct {
 	PageSize  *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Patient   *int64  `queryParam:"style=form,explode=true,name=patient"`
 	Since     *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type ClinicalNotesListRequest struct {
-	QueryParams ClinicalNotesListQueryParams
-	Security    ClinicalNotesListSecurity
 }
 
 // ClinicalNotesList200ApplicationJSON - Paginated Result

@@ -50,28 +50,20 @@ func (e *GETUntagMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUntagMFADeviceQueryParams struct {
+type GETUntagMFADeviceRequest struct {
 	Action GETUntagMFADeviceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier for the IAM virtual MFA device from which you want to remove tags. For virtual MFA devices, the serial number is the same as the ARN.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	SerialNumber string `queryParam:"style=form,explode=true,name=SerialNumber"`
 	// A list of key names as a simple array of strings. The tags with matching keys are removed from the specified instance profile.
-	TagKeys []string                     `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETUntagMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUntagMFADeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUntagMFADeviceRequest struct {
-	QueryParams GETUntagMFADeviceQueryParams
-	Headers     GETUntagMFADeviceHeaders
+	TagKeys           []string                     `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETUntagMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUntagMFADeviceResponse struct {

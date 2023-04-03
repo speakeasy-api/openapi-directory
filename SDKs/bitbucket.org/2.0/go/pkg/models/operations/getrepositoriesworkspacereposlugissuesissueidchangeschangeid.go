@@ -8,12 +8,12 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDPathParams struct {
+type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDRequest struct {
 	// The issue change id
 	ChangeID string `pathParam:"style=simple,explode=false,name=change_id"`
 	// The issue id
@@ -26,11 +26,6 @@ type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDPathParams stru
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDRequest struct {
-	PathParams GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDPathParams
-	Security   GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDSecurity
 }
 
 type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryGetAPIPathParams struct {
+type RegistryGetAPIRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryGetAPIRequest struct {
-	PathParams RegistryGetAPIPathParams
 }
 
 type RegistryGetAPIResponse struct {

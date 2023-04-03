@@ -8,17 +8,12 @@ import (
 )
 
 type GetSeriesIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetSeriesIDPathParams struct {
-	// The ID of the series resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetSeriesIDRequest struct {
-	PathParams GetSeriesIDPathParams
-	Security   GetSeriesIDSecurity
+	// The ID of the series resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetSeriesID200ApplicationVndAPIPlusJSON - Success

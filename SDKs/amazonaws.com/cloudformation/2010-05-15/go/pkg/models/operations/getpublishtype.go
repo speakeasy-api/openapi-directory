@@ -77,7 +77,7 @@ func (e *GETPublishTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETPublishTypeQueryParams struct {
+type GETPublishTypeRequest struct {
 	Action GETPublishTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the extension.</p> <p>Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
 	Arn *string `queryParam:"style=form,explode=true,name=Arn"`
@@ -86,23 +86,15 @@ type GETPublishTypeQueryParams struct {
 	// <p>The type of the extension.</p> <p>Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
 	Type *GETPublishTypeTypeEnum `queryParam:"style=form,explode=true,name=Type"`
 	// <p>The name of the extension.</p> <p>Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
-	TypeName *string                   `queryParam:"style=form,explode=true,name=TypeName"`
-	Version  GETPublishTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPublishTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPublishTypeRequest struct {
-	QueryParams GETPublishTypeQueryParams
-	Headers     GETPublishTypeHeaders
+	TypeName          *string                   `queryParam:"style=form,explode=true,name=TypeName"`
+	Version           GETPublishTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPublishTypeResponse struct {

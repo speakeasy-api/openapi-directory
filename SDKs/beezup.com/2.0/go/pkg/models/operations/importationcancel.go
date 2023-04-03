@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationCancelPathParams struct {
+type ImportationCancelRequest struct {
 	// The execution identifier of you catalog importation
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationCancelRequest struct {
-	PathParams ImportationCancelPathParams
 }
 
 type ImportationCancelResponse struct {

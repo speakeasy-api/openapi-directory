@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteMonitorPathParams struct {
+type DeleteMonitorRequest struct {
 	// The name of the monitor to delete.
-	MonitorName string `pathParam:"style=simple,explode=false,name=MonitorName"`
-}
-
-type DeleteMonitorHeaders struct {
+	MonitorName       string  `pathParam:"style=simple,explode=false,name=MonitorName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteMonitorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMonitorRequest struct {
-	PathParams DeleteMonitorPathParams
-	Headers    DeleteMonitorHeaders
 }
 
 type DeleteMonitorResponse struct {

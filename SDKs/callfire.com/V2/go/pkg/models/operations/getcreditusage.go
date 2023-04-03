@@ -8,19 +8,15 @@ import (
 )
 
 type GetCreditUsageSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetCreditUsageQueryParams struct {
+type GetCreditUsageRequest struct {
 	// Beginning of usage period formatted in unix time milliseconds. Example: 1473781817000
 	IntervalBegin *int64 `queryParam:"style=form,explode=true,name=intervalBegin"`
 	// End of usage period formatted in unix time milliseconds. Example: 1473781817000
 	IntervalEnd *int64 `queryParam:"style=form,explode=true,name=intervalEnd"`
-}
-
-type GetCreditUsageRequest struct {
-	QueryParams GetCreditUsageQueryParams
-	Security    GetCreditUsageSecurity
 }
 
 type GetCreditUsageResponse struct {

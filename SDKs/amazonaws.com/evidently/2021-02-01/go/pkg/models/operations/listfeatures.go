@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFeaturesPathParams struct {
-	// The name or ARN of the project to return the feature list from.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type ListFeaturesQueryParams struct {
-	// The maximum number of results to include in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use when requesting the next set of results. You received this token from a previous <code>ListFeatures</code> operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListFeaturesHeaders struct {
+type ListFeaturesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListFeaturesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListFeaturesRequest struct {
-	PathParams  ListFeaturesPathParams
-	QueryParams ListFeaturesQueryParams
-	Headers     ListFeaturesHeaders
+	// The maximum number of results to include in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use when requesting the next set of results. You received this token from a previous <code>ListFeatures</code> operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name or ARN of the project to return the feature list from.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type ListFeaturesResponse struct {

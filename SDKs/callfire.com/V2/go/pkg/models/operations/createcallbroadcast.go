@@ -8,21 +8,17 @@ import (
 )
 
 type CreateCallBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type CreateCallBroadcastQueryParams struct {
+type CreateCallBroadcastRequest struct {
+	// A CallBroadcast object
+	CallBroadcastInput *shared.CallBroadcastInput `request:"mediaType=application/json"`
 	// Specify whether to immediately start this campaign (not required)
 	Start *bool `queryParam:"style=form,explode=true,name=start"`
 	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
 	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
-}
-
-type CreateCallBroadcastRequest struct {
-	QueryParams CreateCallBroadcastQueryParams
-	// A CallBroadcast object
-	Request  *shared.CallBroadcastInput `request:"mediaType=application/json"`
-	Security CreateCallBroadcastSecurity
 }
 
 type CreateCallBroadcastResponse struct {

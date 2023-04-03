@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryReplaceArtifactPathParams struct {
+type RegistryReplaceArtifactRequest struct {
+	ArtifactInput shared.ArtifactInput `request:"mediaType=application/json"`
 	// The artifact id.
 	Artifact string `pathParam:"style=simple,explode=false,name=artifact"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryReplaceArtifactRequest struct {
-	PathParams RegistryReplaceArtifactPathParams
-	Request    shared.ArtifactInput `request:"mediaType=application/json"`
 }
 
 type RegistryReplaceArtifactResponse struct {

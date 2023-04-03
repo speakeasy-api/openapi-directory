@@ -15,10 +15,6 @@ type CreateAccessTokenRequestBody struct {
 	Name string `json:"name"`
 }
 
-type CreateAccessTokenRequest struct {
-	Request CreateAccessTokenRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateAccessTokenResponse struct {
 	// AccessDeniedException
 	AccessDeniedException interface{}

@@ -50,26 +50,18 @@ func (e *GETRebootDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRebootDBClusterQueryParams struct {
+type GETRebootDBClusterRequest struct {
 	Action GETRebootDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB cluster identifier. This parameter is stored as a lowercase string.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identifier of an existing DBCluster.</p> </li> </ul>
 	DBClusterIdentifier string                        `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	Version             GETRebootDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRebootDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRebootDBClusterRequest struct {
-	QueryParams GETRebootDBClusterQueryParams
-	Headers     GETRebootDBClusterHeaders
+	XAmzAlgorithm       *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRebootDBClusterResponse struct {

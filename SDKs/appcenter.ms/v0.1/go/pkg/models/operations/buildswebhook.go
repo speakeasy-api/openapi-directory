@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type BuildsWebhookRequest struct {
-	Request map[string]interface{} `request:"mediaType=application/json"`
-}
-
 // BuildsWebhookDefaultApplicationJSON - Bad Request
 type BuildsWebhookDefaultApplicationJSON struct {
 	Code    string `json:"code"`

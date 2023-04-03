@@ -50,28 +50,20 @@ func (e *GETDescribeDomainEndpointOptionsVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDescribeDomainEndpointOptionsQueryParams struct {
+type GETDescribeDomainEndpointOptionsRequest struct {
 	Action GETDescribeDomainEndpointOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Whether to retrieve the latest configuration (which might be in a Processing state) or the current, active configuration. Defaults to <code>false</code>.
 	Deployed *bool `queryParam:"style=form,explode=true,name=Deployed"`
 	// A string that represents the name of a domain.
-	DomainName string                                      `queryParam:"style=form,explode=true,name=DomainName"`
-	Version    GETDescribeDomainEndpointOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDomainEndpointOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDomainEndpointOptionsRequest struct {
-	QueryParams GETDescribeDomainEndpointOptionsQueryParams
-	Headers     GETDescribeDomainEndpointOptionsHeaders
+	DomainName        string                                      `queryParam:"style=form,explode=true,name=DomainName"`
+	Version           GETDescribeDomainEndpointOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDomainEndpointOptionsResponse struct {

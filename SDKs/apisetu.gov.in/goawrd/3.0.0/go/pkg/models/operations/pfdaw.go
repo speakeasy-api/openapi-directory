@@ -10,8 +10,8 @@ import (
 )
 
 type PfdawSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type PfdawRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type PfdawRequestBody struct {
 	Format PfdawRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type PfdawRequest struct {
-	// Request format
-	Request  *PfdawRequestBody `request:"mediaType=application/json"`
-	Security PfdawSecurity
 }
 
 type Pfdaw504ApplicationJSONErrorEnum string

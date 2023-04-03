@@ -50,28 +50,20 @@ func (e *GETRebootCacheClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRebootCacheClusterQueryParams struct {
+type GETRebootCacheClusterRequest struct {
 	Action GETRebootCacheClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cluster identifier. This parameter is stored as a lowercase string.
 	CacheClusterID string `queryParam:"style=form,explode=true,name=CacheClusterId"`
 	// A list of cache node IDs to reboot. A node ID is a numeric identifier (0001, 0002, etc.). To reboot an entire cluster, specify all of the cache node IDs.
 	CacheNodeIdsToReboot []string                         `queryParam:"style=form,explode=true,name=CacheNodeIdsToReboot"`
 	Version              GETRebootCacheClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRebootCacheClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRebootCacheClusterRequest struct {
-	QueryParams GETRebootCacheClusterQueryParams
-	Headers     GETRebootCacheClusterHeaders
+	XAmzAlgorithm        *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRebootCacheClusterResponse struct {

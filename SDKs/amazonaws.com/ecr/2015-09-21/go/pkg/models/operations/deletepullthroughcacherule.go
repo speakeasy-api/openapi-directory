@@ -30,20 +30,16 @@ func (e *DeletePullThroughCacheRuleXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DeletePullThroughCacheRuleHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeletePullThroughCacheRuleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeletePullThroughCacheRuleRequest struct {
-	Headers DeletePullThroughCacheRuleHeaders
-	Request shared.DeletePullThroughCacheRuleRequest `request:"mediaType=application/json"`
+	DeletePullThroughCacheRuleRequest shared.DeletePullThroughCacheRuleRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                 *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                        DeletePullThroughCacheRuleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeletePullThroughCacheRuleResponse struct {

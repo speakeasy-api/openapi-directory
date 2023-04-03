@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostAdminUsersCreateRequest struct {
-	Request *shared.UserInviteParam `request:"mediaType=application/json"`
-}
 
 type PostAdminUsersCreateResponse struct {
 	ContentType string

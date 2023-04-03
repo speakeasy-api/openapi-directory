@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePinRequestQueryParams struct {
+type CreatePinRequestRequest struct {
+	// Data for creating the PIN request.
+	EeCreatePinRequest shared.EeCreatePinRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type CreatePinRequestQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type CreatePinRequestRequest struct {
-	QueryParams CreatePinRequestQueryParams
-	// Data for creating the PIN request.
-	Request shared.EeCreatePinRequest `request:"mediaType=application/json"`
 }
 
 type CreatePinRequestResponse struct {

@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAccessLogSettingsPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The stage name. Stage names can only contain alphanumeric characters, hyphens, and underscores. Maximum length is 128 characters.
-	StageName string `pathParam:"style=simple,explode=false,name=stageName"`
-}
-
-type DeleteAccessLogSettingsHeaders struct {
+type DeleteAccessLogSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteAccessLogSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAccessLogSettingsRequest struct {
-	PathParams DeleteAccessLogSettingsPathParams
-	Headers    DeleteAccessLogSettingsHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The stage name. Stage names can only contain alphanumeric characters, hyphens, and underscores. Maximum length is 128 characters.
+	StageName string `pathParam:"style=simple,explode=false,name=stageName"`
 }
 
 type DeleteAccessLogSettingsResponse struct {

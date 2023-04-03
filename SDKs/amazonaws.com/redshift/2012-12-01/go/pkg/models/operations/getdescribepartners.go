@@ -50,7 +50,7 @@ func (e *GETDescribePartnersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribePartnersQueryParams struct {
+type GETDescribePartnersRequest struct {
 	// The Amazon Web Services account ID that owns the cluster.
 	AccountID string                        `queryParam:"style=form,explode=true,name=AccountId"`
 	Action    GETDescribePartnersActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -59,23 +59,15 @@ type GETDescribePartnersQueryParams struct {
 	// The name of the database whose partner integration is being described. If database name is not specified, then all databases in the cluster are described.
 	DatabaseName *string `queryParam:"style=form,explode=true,name=DatabaseName"`
 	// The name of the partner that is being described. If partner name is not specified, then all partner integrations are described.
-	PartnerName *string                        `queryParam:"style=form,explode=true,name=PartnerName"`
-	Version     GETDescribePartnersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribePartnersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribePartnersRequest struct {
-	QueryParams GETDescribePartnersQueryParams
-	Headers     GETDescribePartnersHeaders
+	PartnerName       *string                        `queryParam:"style=form,explode=true,name=PartnerName"`
+	Version           GETDescribePartnersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribePartnersResponse struct {

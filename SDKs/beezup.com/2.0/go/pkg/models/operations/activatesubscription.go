@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ActivateSubscriptionPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type ActivateSubscriptionRequest struct {
-	PathParams ActivateSubscriptionPathParams
-	Request    *shared.ActivateSubscriptionRequest `request:"mediaType=application/json"`
+	ActivateSubscriptionRequest *shared.ActivateSubscriptionRequest `request:"mediaType=application/json"`
+	ID                          string                              `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ActivateSubscriptionResponse struct {

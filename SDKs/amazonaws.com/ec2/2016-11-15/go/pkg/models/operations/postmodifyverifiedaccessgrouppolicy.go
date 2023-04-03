@@ -50,25 +50,17 @@ func (e *POSTModifyVerifiedAccessGroupPolicyVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTModifyVerifiedAccessGroupPolicyQueryParams struct {
-	Action  POSTModifyVerifiedAccessGroupPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyVerifiedAccessGroupPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyVerifiedAccessGroupPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyVerifiedAccessGroupPolicyRequest struct {
-	QueryParams POSTModifyVerifiedAccessGroupPolicyQueryParams
-	Headers     POSTModifyVerifiedAccessGroupPolicyHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyVerifiedAccessGroupPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTModifyVerifiedAccessGroupPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyVerifiedAccessGroupPolicyResponse struct {

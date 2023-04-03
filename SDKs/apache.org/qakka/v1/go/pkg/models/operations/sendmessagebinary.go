@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendMessageBinaryPathParams struct {
-	// Name of Queue
-	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
-}
-
-type SendMessageBinaryQueryParams struct {
+type SendMessageBinaryRequest struct {
+	// Data to be send with Queue Message
+	RequestBody []byte `request:"mediaType=application/octet-stream"`
 	// Content type of the data to be sent with Queue Message
 	ContentType string  `queryParam:"style=form,explode=true,name=contentType"`
 	Delay       *string `queryParam:"style=form,explode=true,name=delay"`
 	Expiration  *string `queryParam:"style=form,explode=true,name=expiration"`
+	// Name of Queue
+	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
 	// Regions to which message is to be sent
 	Regions *string `queryParam:"style=form,explode=true,name=regions"`
-}
-
-type SendMessageBinaryRequest struct {
-	PathParams  SendMessageBinaryPathParams
-	QueryParams SendMessageBinaryQueryParams
-	// Data to be send with Queue Message
-	Request []byte `request:"mediaType=application/octet-stream"`
 }
 
 type SendMessageBinaryResponse struct {

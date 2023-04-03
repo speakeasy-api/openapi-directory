@@ -30,7 +30,8 @@ func (e *CreateHubXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateHubHeaders struct {
+type CreateHubRequest struct {
+	CreateHubRequest  shared.CreateHubRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateHubHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateHubXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateHubRequest struct {
-	Headers CreateHubHeaders
-	Request shared.CreateHubRequest `request:"mediaType=application/json"`
 }
 
 type CreateHubResponse struct {

@@ -6,16 +6,7 @@ import (
 	"net/http"
 )
 
-type AbortMultipartUploadPathParams struct {
-	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The upload ID of the multipart upload to delete.
-	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
-	// The name of the vault.
-	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
-}
-
-type AbortMultipartUploadHeaders struct {
+type AbortMultipartUploadRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -23,11 +14,12 @@ type AbortMultipartUploadHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AbortMultipartUploadRequest struct {
-	PathParams AbortMultipartUploadPathParams
-	Headers    AbortMultipartUploadHeaders
+	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	// The upload ID of the multipart upload to delete.
+	UploadID string `pathParam:"style=simple,explode=false,name=uploadId"`
+	// The name of the vault.
+	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
 }
 
 type AbortMultipartUploadResponse struct {

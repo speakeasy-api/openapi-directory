@@ -50,25 +50,17 @@ func (e *POSTAdvertiseByoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTAdvertiseByoipCidrQueryParams struct {
-	Action  POSTAdvertiseByoipCidrActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAdvertiseByoipCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAdvertiseByoipCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAdvertiseByoipCidrRequest struct {
-	QueryParams POSTAdvertiseByoipCidrQueryParams
-	Headers     POSTAdvertiseByoipCidrHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAdvertiseByoipCidrActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTAdvertiseByoipCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAdvertiseByoipCidrResponse struct {

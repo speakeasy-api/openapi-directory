@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateComponentPathParams struct {
-	// The unique ID of the Amplify app to associate with the component.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type CreateComponentQueryParams struct {
-	// The unique client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type CreateComponentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateComponentRequestBodyComponentToCreate - Represents all of the information that is required to create a component.
 type CreateComponentRequestBodyComponentToCreate struct {
 	BindingProperties    map[string]shared.ComponentBindingPropertiesValue `json:"bindingProperties,omitempty"`
@@ -52,10 +30,20 @@ type CreateComponentRequestBody struct {
 }
 
 type CreateComponentRequest struct {
-	PathParams  CreateComponentPathParams
-	QueryParams CreateComponentQueryParams
-	Headers     CreateComponentHeaders
-	Request     CreateComponentRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateComponentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID of the Amplify app to associate with the component.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The unique client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
 }
 
 type CreateComponentResponse struct {

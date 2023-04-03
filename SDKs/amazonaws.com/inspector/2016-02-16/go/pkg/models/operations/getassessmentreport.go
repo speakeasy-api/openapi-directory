@@ -30,20 +30,16 @@ func (e *GetAssessmentReportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAssessmentReportHeaders struct {
-	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetAssessmentReportXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetAssessmentReportRequest struct {
-	Headers GetAssessmentReportHeaders
-	Request shared.GetAssessmentReportRequest `request:"mediaType=application/json"`
+	GetAssessmentReportRequest shared.GetAssessmentReportRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 GetAssessmentReportXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetAssessmentReportResponse struct {

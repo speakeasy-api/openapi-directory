@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppsCreateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // AppsCreateRequestBodyOsEnum - The OS the app will be running on
@@ -120,12 +119,6 @@ type AppsCreateRequestBody struct {
 	Platform AppsCreateRequestBodyPlatformEnum `json:"platform"`
 	// A one-word descriptive release-type value that starts with a capital letter but is otherwise lowercase
 	ReleaseType *string `json:"release_type,omitempty"`
-}
-
-type AppsCreateRequest struct {
-	// The data for the app
-	Request  AppsCreateRequestBody `request:"mediaType=application/json"`
-	Security AppsCreateSecurity
 }
 
 type AppsCreateDefaultApplicationJSONErrorCodeEnum string

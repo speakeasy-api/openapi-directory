@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCustomDataIdentifierPathParams struct {
-	// The unique identifier for the Amazon Macie resource that the request applies to.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteCustomDataIdentifierHeaders struct {
+type DeleteCustomDataIdentifierRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteCustomDataIdentifierHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCustomDataIdentifierRequest struct {
-	PathParams DeleteCustomDataIdentifierPathParams
-	Headers    DeleteCustomDataIdentifierHeaders
+	// The unique identifier for the Amazon Macie resource that the request applies to.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteCustomDataIdentifierResponse struct {

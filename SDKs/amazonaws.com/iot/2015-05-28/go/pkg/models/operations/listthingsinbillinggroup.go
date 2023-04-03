@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListThingsInBillingGroupPathParams struct {
-	// The name of the billing group.
-	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
-}
-
-type ListThingsInBillingGroupQueryParams struct {
-	// The maximum number of results to return per request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListThingsInBillingGroupHeaders struct {
+type ListThingsInBillingGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListThingsInBillingGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListThingsInBillingGroupRequest struct {
-	PathParams  ListThingsInBillingGroupPathParams
-	QueryParams ListThingsInBillingGroupQueryParams
-	Headers     ListThingsInBillingGroupHeaders
+	// The name of the billing group.
+	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
+	// The maximum number of results to return per request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListThingsInBillingGroupResponse struct {

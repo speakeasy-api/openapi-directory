@@ -101,7 +101,7 @@ func (e *GETListPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListPoliciesQueryParams struct {
+type GETListPoliciesRequest struct {
 	Action GETListPoliciesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the <code>Marker</code> element in the response that you received to indicate where the next call should start.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -114,23 +114,15 @@ type GETListPoliciesQueryParams struct {
 	// <p>The policy usage method to use for filtering the results.</p> <p>To list only permissions policies, set <code>PolicyUsageFilter</code> to <code>PermissionsPolicy</code>. To list only the policies used to set permissions boundaries, set the value to <code>PermissionsBoundary</code>.</p> <p>This parameter is optional. If it is not included, all policies are returned. </p>
 	PolicyUsageFilter *GETListPoliciesPolicyUsageFilterEnum `queryParam:"style=form,explode=true,name=PolicyUsageFilter"`
 	// <p>The scope to use for filtering the results.</p> <p>To list only Amazon Web Services managed policies, set <code>Scope</code> to <code>AWS</code>. To list only the customer managed policies in your Amazon Web Services account, set <code>Scope</code> to <code>Local</code>.</p> <p>This parameter is optional. If it is not included, or if it is set to <code>All</code>, all policies are returned.</p>
-	Scope   *GETListPoliciesScopeEnum  `queryParam:"style=form,explode=true,name=Scope"`
-	Version GETListPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListPoliciesRequest struct {
-	QueryParams GETListPoliciesQueryParams
-	Headers     GETListPoliciesHeaders
+	Scope             *GETListPoliciesScopeEnum  `queryParam:"style=form,explode=true,name=Scope"`
+	Version           GETListPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListPoliciesResponse struct {

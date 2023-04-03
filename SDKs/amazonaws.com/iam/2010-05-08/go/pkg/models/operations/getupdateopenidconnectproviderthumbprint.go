@@ -50,28 +50,20 @@ func (e *GETUpdateOpenIDConnectProviderThumbprintVersionEnum) UnmarshalJSON(data
 	}
 }
 
-type GETUpdateOpenIDConnectProviderThumbprintQueryParams struct {
+type GETUpdateOpenIDConnectProviderThumbprintRequest struct {
 	Action GETUpdateOpenIDConnectProviderThumbprintActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the IAM OIDC provider resource object for which you want to update the thumbprint. You can get a list of OIDC provider ARNs by using the <a>ListOpenIDConnectProviders</a> operation.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
 	OpenIDConnectProviderArn string `queryParam:"style=form,explode=true,name=OpenIDConnectProviderArn"`
 	// A list of certificate thumbprints that are associated with the specified IAM OpenID Connect provider. For more information, see <a>CreateOpenIDConnectProvider</a>.
-	ThumbprintList []string                                            `queryParam:"style=form,explode=true,name=ThumbprintList"`
-	Version        GETUpdateOpenIDConnectProviderThumbprintVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateOpenIDConnectProviderThumbprintHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateOpenIDConnectProviderThumbprintRequest struct {
-	QueryParams GETUpdateOpenIDConnectProviderThumbprintQueryParams
-	Headers     GETUpdateOpenIDConnectProviderThumbprintHeaders
+	ThumbprintList    []string                                            `queryParam:"style=form,explode=true,name=ThumbprintList"`
+	Version           GETUpdateOpenIDConnectProviderThumbprintVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateOpenIDConnectProviderThumbprintResponse struct {

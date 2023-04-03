@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteKnowledgeBasePathParams struct {
-	// The knowledge base to delete content from. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
-}
-
-type DeleteKnowledgeBaseHeaders struct {
+type DeleteKnowledgeBaseRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteKnowledgeBaseHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteKnowledgeBaseRequest struct {
-	PathParams DeleteKnowledgeBasePathParams
-	Headers    DeleteKnowledgeBaseHeaders
+	// The knowledge base to delete content from. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	KnowledgeBaseID string `pathParam:"style=simple,explode=false,name=knowledgeBaseId"`
 }
 
 type DeleteKnowledgeBaseResponse struct {

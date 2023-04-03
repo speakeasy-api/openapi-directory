@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteOperationRequest struct {
-	Request shared.OperationIDRequestBody `request:"mediaType=application/json"`
-}
-
 type DeleteOperationResponse struct {
 	ContentType string
 	// Input failed validation

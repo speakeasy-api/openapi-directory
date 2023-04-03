@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WriteDiscoverCatalogResultRequest struct {
-	Request shared.SourceDiscoverSchemaWriteRequestBody `request:"mediaType=application/json"`
-}
-
 type WriteDiscoverCatalogResultResponse struct {
 	ContentType string
 	// Successful Operation

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProjectUsernameProjectBuildNumRetryPathParams struct {
+type PostProjectUsernameProjectBuildNumRetryRequest struct {
 	// XXXXXXXXXX
 	//
 	BuildNum int64 `pathParam:"style=simple,explode=false,name=build_num"`
@@ -17,10 +17,6 @@ type PostProjectUsernameProjectBuildNumRetryPathParams struct {
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type PostProjectUsernameProjectBuildNumRetryRequest struct {
-	PathParams PostProjectUsernameProjectBuildNumRetryPathParams
 }
 
 type PostProjectUsernameProjectBuildNumRetryResponse struct {

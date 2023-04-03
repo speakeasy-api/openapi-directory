@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteSSHKeyPathParams struct {
+type DeleteSSHKeyRequest struct {
 	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 	// Fingerprint of public key.
 	Fingerprint string `pathParam:"style=simple,explode=false,name=fingerprint"`
-}
-
-type DeleteSSHKeyQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
-type DeleteSSHKeyRequest struct {
-	PathParams  DeleteSSHKeyPathParams
-	QueryParams DeleteSSHKeyQueryParams
 }
 
 type DeleteSSHKeyResponse struct {

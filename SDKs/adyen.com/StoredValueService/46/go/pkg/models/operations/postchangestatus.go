@@ -8,13 +8,8 @@ import (
 )
 
 type PostChangeStatusSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostChangeStatusRequest struct {
-	Request  *shared.StoredValueStatusChangeRequest `request:"mediaType=application/json"`
-	Security PostChangeStatusSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostChangeStatusResponse struct {

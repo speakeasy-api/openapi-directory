@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamMatchupQueryParams struct {
+type GetTeamMatchupRequest struct {
 	// Maximum year
 	MaxYear *int64 `queryParam:"style=form,explode=true,name=maxYear"`
 	// Minimum year
@@ -16,10 +16,6 @@ type GetTeamMatchupQueryParams struct {
 	Team1 string `queryParam:"style=form,explode=true,name=team1"`
 	// Second team
 	Team2 string `queryParam:"style=form,explode=true,name=team2"`
-}
-
-type GetTeamMatchupRequest struct {
-	QueryParams GetTeamMatchupQueryParams
 }
 
 type GetTeamMatchupResponse struct {

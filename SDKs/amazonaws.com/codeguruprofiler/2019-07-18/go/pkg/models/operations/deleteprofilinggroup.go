@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteProfilingGroupPathParams struct {
-	// The name of the profiling group to delete.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type DeleteProfilingGroupHeaders struct {
+type DeleteProfilingGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteProfilingGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteProfilingGroupRequest struct {
-	PathParams DeleteProfilingGroupPathParams
-	Headers    DeleteProfilingGroupHeaders
+	// The name of the profiling group to delete.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 }
 
 type DeleteProfilingGroupResponse struct {

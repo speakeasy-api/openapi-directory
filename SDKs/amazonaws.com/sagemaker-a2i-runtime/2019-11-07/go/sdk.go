@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // DeleteHumanLoop - <p>Deletes the specified human loop for a flow definition.</p> <p>If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code>. </p>
 func (s *SDK) DeleteHumanLoop(ctx context.Context, request operations.DeleteHumanLoopRequest) (*operations.DeleteHumanLoopResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/human-loops/{HumanLoopName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/human-loops/{HumanLoopName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -200,14 +200,14 @@ func (s *SDK) DeleteHumanLoop(ctx context.Context, request operations.DeleteHuma
 // DescribeHumanLoop - Returns information about the specified human loop. If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code> error.
 func (s *SDK) DescribeHumanLoop(ctx context.Context, request operations.DescribeHumanLoopRequest) (*operations.DescribeHumanLoopResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/human-loops/{HumanLoopName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/human-loops/{HumanLoopName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -293,9 +293,9 @@ func (s *SDK) ListHumanLoops(ctx context.Context, request operations.ListHumanLo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -378,7 +378,7 @@ func (s *SDK) StartHumanLoop(ctx context.Context, request operations.StartHumanL
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/human-loops"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -393,7 +393,7 @@ func (s *SDK) StartHumanLoop(ctx context.Context, request operations.StartHumanL
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -484,7 +484,7 @@ func (s *SDK) StopHumanLoop(ctx context.Context, request operations.StopHumanLoo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/human-loops/stop"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -499,7 +499,7 @@ func (s *SDK) StopHumanLoop(ctx context.Context, request operations.StopHumanLoo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

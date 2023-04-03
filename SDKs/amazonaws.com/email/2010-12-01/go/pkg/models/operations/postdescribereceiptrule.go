@@ -50,25 +50,17 @@ func (e *POSTDescribeReceiptRuleVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDescribeReceiptRuleQueryParams struct {
-	Action  POSTDescribeReceiptRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeReceiptRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeReceiptRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeReceiptRuleRequest struct {
-	QueryParams POSTDescribeReceiptRuleQueryParams
-	Headers     POSTDescribeReceiptRuleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeReceiptRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTDescribeReceiptRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeReceiptRuleResponse struct {

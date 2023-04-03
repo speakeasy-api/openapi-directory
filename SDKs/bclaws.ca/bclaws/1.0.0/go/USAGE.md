@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetContentAspectIDRequest{
-        PathParams: operations.GetContentAspectIDPathParams{
-            AspectID: "oic",
-        },
+        AspectID: "oic",
     }
 
     ctx := context.Background()

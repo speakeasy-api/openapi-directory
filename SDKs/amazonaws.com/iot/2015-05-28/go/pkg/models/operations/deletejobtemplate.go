@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteJobTemplatePathParams struct {
-	// The unique identifier of the job template to delete.
-	JobTemplateID string `pathParam:"style=simple,explode=false,name=jobTemplateId"`
-}
-
-type DeleteJobTemplateHeaders struct {
+type DeleteJobTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteJobTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteJobTemplateRequest struct {
-	PathParams DeleteJobTemplatePathParams
-	Headers    DeleteJobTemplateHeaders
+	// The unique identifier of the job template to delete.
+	JobTemplateID string `pathParam:"style=simple,explode=false,name=jobTemplateId"`
 }
 
 type DeleteJobTemplateResponse struct {

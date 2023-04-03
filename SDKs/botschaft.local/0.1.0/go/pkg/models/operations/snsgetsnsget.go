@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SnsGetSnsGetQueryParams struct {
+type SnsGetSnsGetRequest struct {
+	Authorization *string `header:"style=simple,explode=false,name=authorization"`
 	Base64Message *string `queryParam:"style=form,explode=true,name=base64_message"`
 	Message       *string `queryParam:"style=form,explode=true,name=message"`
-}
-
-type SnsGetSnsGetHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
-type SnsGetSnsGetRequest struct {
-	QueryParams SnsGetSnsGetQueryParams
-	Headers     SnsGetSnsGetHeaders
 }
 
 type SnsGetSnsGetResponse struct {

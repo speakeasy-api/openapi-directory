@@ -8,12 +8,7 @@ import (
 	"time"
 )
 
-type GetAuditLogEventsPathParams struct {
-	// Globally unique identifier for the workspace or organization.
-	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
-}
-
-type GetAuditLogEventsQueryParams struct {
+type GetAuditLogEventsRequest struct {
 	// Filter to events triggered by the actor with this ID.
 	ActorGid *string `queryParam:"style=form,explode=true,name=actor_gid"`
 	// Filter to events with an actor of this type.
@@ -35,11 +30,8 @@ type GetAuditLogEventsQueryParams struct {
 	ResourceGid *string `queryParam:"style=form,explode=true,name=resource_gid"`
 	// Filter to events created after this time (inclusive).
 	StartAt *time.Time `queryParam:"style=form,explode=true,name=start_at"`
-}
-
-type GetAuditLogEventsRequest struct {
-	PathParams  GetAuditLogEventsPathParams
-	QueryParams GetAuditLogEventsQueryParams
+	// Globally unique identifier for the workspace or organization.
+	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
 }
 
 // GetAuditLogEvents200ApplicationJSON - AuditLogEvents were successfully retrieved.

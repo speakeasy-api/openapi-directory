@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMailZonePathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type GetMailZoneQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type GetMailZoneRequest struct {
-	PathParams  GetMailZonePathParams
-	QueryParams GetMailZoneQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type GetMailZoneResponse struct {

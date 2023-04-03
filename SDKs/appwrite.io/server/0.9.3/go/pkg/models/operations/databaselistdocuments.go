@@ -8,17 +8,14 @@ import (
 )
 
 type DatabaseListDocumentsSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type DatabaseListDocumentsPathParams struct {
+type DatabaseListDocumentsRequest struct {
 	// Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
 	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
-}
-
-type DatabaseListDocumentsQueryParams struct {
 	// Array of filter strings. Each filter is constructed from a key name, comparison operator (=, !=, >, <, <=, >=) and a value. You can also use a dot (.) separator in attribute names to filter by child document attributes. Examples: 'name=John Doe' or 'category.$id>=5bed2d152c362'.
 	Filters []string `queryParam:"style=form,explode=true,name=filters"`
 	// Maximum number of documents to return in response.  Use this value to manage pagination. By default will return maximum 25 results. Maximum of 100 results allowed per request.
@@ -33,12 +30,6 @@ type DatabaseListDocumentsQueryParams struct {
 	OrderType *string `queryParam:"style=form,explode=true,name=orderType"`
 	// Search query. Enter any free text search. The database will try to find a match against all document attributes and children. Max length: 256 chars.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type DatabaseListDocumentsRequest struct {
-	PathParams  DatabaseListDocumentsPathParams
-	QueryParams DatabaseListDocumentsQueryParams
-	Security    DatabaseListDocumentsSecurity
 }
 
 type DatabaseListDocumentsResponse struct {

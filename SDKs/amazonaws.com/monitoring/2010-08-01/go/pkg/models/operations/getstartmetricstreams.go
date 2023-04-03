@@ -50,26 +50,18 @@ func (e *GETStartMetricStreamsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStartMetricStreamsQueryParams struct {
+type GETStartMetricStreamsRequest struct {
 	Action GETStartMetricStreamsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The array of the names of metric streams to start streaming.</p> <p>This is an "all or nothing" operation. If you do not have permission to access all of the metric streams that you list here, then none of the streams that you list in the operation will start streaming.</p>
-	Names   []string                         `queryParam:"style=form,explode=true,name=Names"`
-	Version GETStartMetricStreamsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStartMetricStreamsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStartMetricStreamsRequest struct {
-	QueryParams GETStartMetricStreamsQueryParams
-	Headers     GETStartMetricStreamsHeaders
+	Names             []string                         `queryParam:"style=form,explode=true,name=Names"`
+	Version           GETStartMetricStreamsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStartMetricStreamsResponse struct {

@@ -144,9 +144,8 @@ pkg/models/operations/resetpassword.go
 pkg/models/operations/verifyemail.go
 pkg/models/shared/serviceerror.go
 pkg/models/shared/paymentmethod.go
-pkg/models/shared/addpaymentmethodrequest.go
 pkg/models/shared/featureflagsenum.go
-pkg/models/shared/security.go
+pkg/models/shared/addpaymentmethodrequest.go
 pkg/models/shared/deviceauthorizationcode.go
 pkg/models/shared/changepasswordrequest.go
 pkg/models/shared/changepinrequest.go

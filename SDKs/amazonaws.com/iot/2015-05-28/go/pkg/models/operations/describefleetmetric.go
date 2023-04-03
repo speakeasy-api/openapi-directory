@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFleetMetricPathParams struct {
-	// The name of the fleet metric to describe.
-	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
-}
-
-type DescribeFleetMetricHeaders struct {
+type DescribeFleetMetricRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeFleetMetricHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeFleetMetricRequest struct {
-	PathParams DescribeFleetMetricPathParams
-	Headers    DescribeFleetMetricHeaders
+	// The name of the fleet metric to describe.
+	MetricName string `pathParam:"style=simple,explode=false,name=metricName"`
 }
 
 type DescribeFleetMetricResponse struct {

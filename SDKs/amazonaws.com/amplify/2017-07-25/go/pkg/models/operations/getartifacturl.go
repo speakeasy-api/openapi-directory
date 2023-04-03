@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArtifactURLPathParams struct {
-	//  The unique ID for an artifact.
-	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
-type GetArtifactURLHeaders struct {
+type GetArtifactURLRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetArtifactURLHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetArtifactURLRequest struct {
-	PathParams GetArtifactURLPathParams
-	Headers    GetArtifactURLHeaders
+	//  The unique ID for an artifact.
+	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 }
 
 type GetArtifactURLResponse struct {

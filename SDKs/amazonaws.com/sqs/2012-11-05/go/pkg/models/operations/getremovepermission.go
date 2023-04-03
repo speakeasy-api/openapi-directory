@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETRemovePermissionPathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETRemovePermissionActionEnum
 type GETRemovePermissionActionEnum string
 
@@ -57,27 +50,22 @@ func (e *GETRemovePermissionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRemovePermissionQueryParams struct {
-	Action GETRemovePermissionActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// The identification of the permission to remove. This is the label added using the <code> <a>AddPermission</a> </code> action.
-	Label   string                         `queryParam:"style=form,explode=true,name=Label"`
-	Version GETRemovePermissionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemovePermissionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETRemovePermissionRequest struct {
-	PathParams  GETRemovePermissionPathParams
-	QueryParams GETRemovePermissionQueryParams
-	Headers     GETRemovePermissionHeaders
+	// The AWS account number
+	AccountNumber int64                         `pathParam:"style=simple,explode=false,name=AccountNumber"`
+	Action        GETRemovePermissionActionEnum `queryParam:"style=form,explode=true,name=Action"`
+	// The identification of the permission to remove. This is the label added using the <code> <a>AddPermission</a> </code> action.
+	Label string `queryParam:"style=form,explode=true,name=Label"`
+	// The name of the queue
+	QueueName         string                         `pathParam:"style=simple,explode=false,name=QueueName"`
+	Version           GETRemovePermissionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemovePermissionResponse struct {

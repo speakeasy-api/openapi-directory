@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendbatchPostHeaders struct {
-	Accept      string `header:"style=simple,explode=false,name=Accept"`
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type SendbatchPostRequest struct {
-	Headers SendbatchPostHeaders
+	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Message Body
-	Request shared.BulkSMSRequest `request:"mediaType=application/json"`
+	BulkSMSRequest shared.BulkSMSRequest `request:"mediaType=application/json"`
+	ContentType    string                `header:"style=simple,explode=false,name=Content-Type"`
 }
 
 type SendbatchPostResponse struct {

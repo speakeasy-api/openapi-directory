@@ -9,11 +9,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAttachedIndicesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
+// ListAttachedIndicesRequestBodyTargetReference - The reference that identifies an object.
+type ListAttachedIndicesRequestBodyTargetReference struct {
+	Selector *string `json:"Selector,omitempty"`
+}
+
+type ListAttachedIndicesRequestBody struct {
+	// The maximum number of results to retrieve.
+	MaxResults *int64 `json:"MaxResults,omitempty"`
+	// The pagination token.
+	NextToken *string `json:"NextToken,omitempty"`
+	// The reference that identifies an object.
+	TargetReference ListAttachedIndicesRequestBodyTargetReference `json:"TargetReference"`
 }
 
 // ListAttachedIndicesXAmzConsistencyLevelEnum - The consistency level to use for this operation.
@@ -40,38 +47,23 @@ func (e *ListAttachedIndicesXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListAttachedIndicesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+type ListAttachedIndicesRequest struct {
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                        `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListAttachedIndicesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The consistency level to use for this operation.
 	XAmzConsistencyLevel *ListAttachedIndicesXAmzConsistencyLevelEnum `header:"style=simple,explode=false,name=x-amz-consistency-level"`
 	// The ARN of the directory.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-// ListAttachedIndicesRequestBodyTargetReference - The reference that identifies an object.
-type ListAttachedIndicesRequestBodyTargetReference struct {
-	Selector *string `json:"Selector,omitempty"`
-}
-
-type ListAttachedIndicesRequestBody struct {
-	// The maximum number of results to retrieve.
-	MaxResults *int64 `json:"MaxResults,omitempty"`
-	// The pagination token.
-	NextToken *string `json:"NextToken,omitempty"`
-	// The reference that identifies an object.
-	TargetReference ListAttachedIndicesRequestBodyTargetReference `json:"TargetReference"`
-}
-
-type ListAttachedIndicesRequest struct {
-	QueryParams ListAttachedIndicesQueryParams
-	Headers     ListAttachedIndicesHeaders
-	Request     ListAttachedIndicesRequestBody `request:"mediaType=application/json"`
 }
 
 type ListAttachedIndicesResponse struct {

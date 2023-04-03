@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDataIntegrationPathParams struct {
+type DeleteDataIntegrationRequest struct {
 	// A unique identifier for the DataIntegration.
-	Identifier string `pathParam:"style=simple,explode=false,name=Identifier"`
-}
-
-type DeleteDataIntegrationHeaders struct {
+	Identifier        string  `pathParam:"style=simple,explode=false,name=Identifier"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteDataIntegrationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDataIntegrationRequest struct {
-	PathParams DeleteDataIntegrationPathParams
-	Headers    DeleteDataIntegrationHeaders
 }
 
 type DeleteDataIntegrationResponse struct {

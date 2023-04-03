@@ -35,7 +35,7 @@ func newSling(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 func (s *sling) DeleteAgent(ctx context.Context, request operations.DeleteAgentRequest) (*operations.DeleteAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -68,7 +68,7 @@ func (s *sling) DeleteAgent(ctx context.Context, request operations.DeleteAgentR
 }
 func (s *sling) DeleteNode(ctx context.Context, request operations.DeleteNodeRequest) (*operations.DeleteNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *sling) DeleteNode(ctx context.Context, request operations.DeleteNodeReq
 }
 func (s *sling) GetAgent(ctx context.Context, request operations.GetAgentRequest) (*operations.GetAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,7 +134,7 @@ func (s *sling) GetAgent(ctx context.Context, request operations.GetAgentRequest
 }
 func (s *sling) GetAgents(ctx context.Context, request operations.GetAgentsRequest) (*operations.GetAgentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}.-1.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}.-1.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +177,7 @@ func (s *sling) GetAgents(ctx context.Context, request operations.GetAgentsReque
 }
 func (s *sling) GetAuthorizableKeystore(ctx context.Context, request operations.GetAuthorizableKeystoreRequest) (*operations.GetAuthorizableKeystoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +231,7 @@ func (s *sling) GetAuthorizableKeystore(ctx context.Context, request operations.
 }
 func (s *sling) GetKeystore(ctx context.Context, request operations.GetKeystoreRequest) (*operations.GetKeystoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}/keystore/store.p12", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}/keystore/store.p12", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -273,7 +273,7 @@ func (s *sling) GetKeystore(ctx context.Context, request operations.GetKeystoreR
 }
 func (s *sling) GetNode(ctx context.Context, request operations.GetNodeRequest) (*operations.GetNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +306,7 @@ func (s *sling) GetNode(ctx context.Context, request operations.GetNodeRequest) 
 }
 func (s *sling) GetPackage(ctx context.Context, request operations.GetPackageRequest) (*operations.GetPackageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -348,7 +348,7 @@ func (s *sling) GetPackage(ctx context.Context, request operations.GetPackageReq
 }
 func (s *sling) GetPackageFilter(ctx context.Context, request operations.GetPackageFilterRequest) (*operations.GetPackageFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +398,7 @@ func (s *sling) GetQuery(ctx context.Context, request operations.GetQueryRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -533,14 +533,14 @@ func (s *sling) GetTruststoreInfo(ctx context.Context) (*operations.GetTruststor
 }
 func (s *sling) PostAgent(ctx context.Context, request operations.PostAgentRequest) (*operations.PostAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -570,9 +570,9 @@ func (s *sling) PostAgent(ctx context.Context, request operations.PostAgentReque
 }
 func (s *sling) PostAuthorizableKeystore(ctx context.Context, request operations.PostAuthorizableKeystoreRequest) (*operations.PostAuthorizableKeystoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.html", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.html", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -584,7 +584,7 @@ func (s *sling) PostAuthorizableKeystore(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -642,7 +642,7 @@ func (s *sling) PostAuthorizables(ctx context.Context, request operations.PostAu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -689,7 +689,7 @@ func (s *sling) PostConfigAdobeGraniteSamlAuthenticationHandler(ctx context.Cont
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -726,7 +726,7 @@ func (s *sling) PostConfigApacheFelixJettyBasedHTTPService(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -763,7 +763,7 @@ func (s *sling) PostConfigApacheHTTPComponentsProxyConfiguration(ctx context.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -800,7 +800,7 @@ func (s *sling) PostConfigApacheSlingDavExServlet(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -837,7 +837,7 @@ func (s *sling) PostConfigApacheSlingGetServlet(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -874,7 +874,7 @@ func (s *sling) PostConfigApacheSlingReferrerFilter(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -904,7 +904,7 @@ func (s *sling) PostConfigApacheSlingReferrerFilter(ctx context.Context, request
 }
 func (s *sling) PostConfigProperty(ctx context.Context, request operations.PostConfigPropertyRequest) (*operations.PostConfigPropertyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/system/config/{configNodeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/apps/system/config/{configNodeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -937,9 +937,9 @@ func (s *sling) PostConfigProperty(ctx context.Context, request operations.PostC
 }
 func (s *sling) PostNode(ctx context.Context, request operations.PostNodeRequest) (*operations.PostNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -951,7 +951,7 @@ func (s *sling) PostNode(ctx context.Context, request operations.PostNodeRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -981,14 +981,14 @@ func (s *sling) PostNode(ctx context.Context, request operations.PostNodeRequest
 }
 func (s *sling) PostNodeRw(ctx context.Context, request operations.PostNodeRwRequest) (*operations.PostNodeRwResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}.rw.html", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}.rw.html", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1018,14 +1018,14 @@ func (s *sling) PostNodeRw(ctx context.Context, request operations.PostNodeRwReq
 }
 func (s *sling) PostPath(ctx context.Context, request operations.PostPathRequest) (*operations.PostPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{path}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1062,7 +1062,7 @@ func (s *sling) PostQuery(ctx context.Context, request operations.PostQueryReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1109,7 +1109,7 @@ func (s *sling) PostTreeActivation(ctx context.Context, request operations.PostT
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1141,7 +1141,7 @@ func (s *sling) PostTruststore(ctx context.Context, request operations.PostTrust
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libs/granite/security/post/truststore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1153,7 +1153,7 @@ func (s *sling) PostTruststore(ctx context.Context, request operations.PostTrust
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1191,7 +1191,7 @@ func (s *sling) PostTruststore(ctx context.Context, request operations.PostTrust
 
 	return res, nil
 }
-func (s *sling) PostTruststorePkcs12(ctx context.Context, request operations.PostTruststorePkcs12Request) (*operations.PostTruststorePkcs12Response, error) {
+func (s *sling) PostTruststorePkcs12(ctx context.Context, request operations.PostTruststorePkcs12RequestBody) (*operations.PostTruststorePkcs12Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/etc/truststore"
 

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeExecutionPathParams struct {
-	// The ID of the managed device.
-	ManagedDeviceID string `pathParam:"style=simple,explode=false,name=managedDeviceId"`
-	// The ID of the task that the action is describing.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type DescribeExecutionHeaders struct {
+type DescribeExecutionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeExecutionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeExecutionRequest struct {
-	PathParams DescribeExecutionPathParams
-	Headers    DescribeExecutionHeaders
+	// The ID of the managed device.
+	ManagedDeviceID string `pathParam:"style=simple,explode=false,name=managedDeviceId"`
+	// The ID of the task that the action is describing.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type DescribeExecutionResponse struct {

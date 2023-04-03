@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRadiusConfigHeaders struct {
+type UpdateRadiusConfigRequest struct {
+	RadiusConfigUpdateRequest shared.RadiusConfigUpdateRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateRadiusConfigRequest struct {
-	Headers UpdateRadiusConfigHeaders
-	Request shared.RadiusConfigUpdateRequest `request:"mediaType=application/json"`
 }
 
 type UpdateRadiusConfigResponse struct {

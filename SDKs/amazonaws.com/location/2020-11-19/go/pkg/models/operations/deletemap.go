@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteMapPathParams struct {
+type DeleteMapRequest struct {
 	// The name of the map resource to be deleted.
-	MapName string `pathParam:"style=simple,explode=false,name=MapName"`
-}
-
-type DeleteMapHeaders struct {
+	MapName           string  `pathParam:"style=simple,explode=false,name=MapName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteMapHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMapRequest struct {
-	PathParams DeleteMapPathParams
-	Headers    DeleteMapHeaders
 }
 
 type DeleteMapResponse struct {

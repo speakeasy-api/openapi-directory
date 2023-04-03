@@ -50,7 +50,7 @@ func (e *GETSwapEnvironmentCNAMEsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSwapEnvironmentCNAMEsQueryParams struct {
+type GETSwapEnvironmentCNAMEsRequest struct {
 	Action GETSwapEnvironmentCNAMEsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ID of the destination environment.</p> <p> Condition: You must specify at least the <code>DestinationEnvironmentID</code> or the <code>DestinationEnvironmentName</code>. You may also specify both. You must specify the <code>SourceEnvironmentId</code> with the <code>DestinationEnvironmentId</code>. </p>
 	DestinationEnvironmentID *string `queryParam:"style=form,explode=true,name=DestinationEnvironmentId"`
@@ -61,21 +61,13 @@ type GETSwapEnvironmentCNAMEsQueryParams struct {
 	// <p>The name of the source environment.</p> <p> Condition: You must specify at least the <code>SourceEnvironmentID</code> or the <code>SourceEnvironmentName</code>. You may also specify both. If you specify the <code>SourceEnvironmentName</code>, you must specify the <code>DestinationEnvironmentName</code>. </p>
 	SourceEnvironmentName *string                             `queryParam:"style=form,explode=true,name=SourceEnvironmentName"`
 	Version               GETSwapEnvironmentCNAMEsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSwapEnvironmentCNAMEsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSwapEnvironmentCNAMEsRequest struct {
-	QueryParams GETSwapEnvironmentCNAMEsQueryParams
-	Headers     GETSwapEnvironmentCNAMEsHeaders
+	XAmzAlgorithm         *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSwapEnvironmentCNAMEsResponse struct {

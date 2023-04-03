@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CashPaymentsPutPathParams struct {
+type CashPaymentsPutRequest struct {
+	// Information of Cash Receipt to update.
+	CashPaymentDto shared.CashPaymentDto `request:"mediaType=application/json"`
 	// Id of Cash Receipt to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CashPaymentsPutRequest struct {
-	PathParams CashPaymentsPutPathParams
-	// Information of Cash Receipt to update.
-	Request shared.CashPaymentDto `request:"mediaType=application/json"`
 }
 
 type CashPaymentsPutResponse struct {

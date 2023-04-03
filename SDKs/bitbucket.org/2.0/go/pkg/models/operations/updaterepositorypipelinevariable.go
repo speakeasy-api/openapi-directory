@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type UpdateRepositoryPipelineVariablePathParams struct {
+type UpdateRepositoryPipelineVariableRequest struct {
+	// The updated variable
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The UUID of the variable to update.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type UpdateRepositoryPipelineVariableRequest struct {
-	PathParams UpdateRepositoryPipelineVariablePathParams
-	// The updated variable
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateRepositoryPipelineVariableResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTGetDefaultCreditSpecificationVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTGetDefaultCreditSpecificationQueryParams struct {
-	Action  POSTGetDefaultCreditSpecificationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetDefaultCreditSpecificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetDefaultCreditSpecificationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetDefaultCreditSpecificationRequest struct {
-	QueryParams POSTGetDefaultCreditSpecificationQueryParams
-	Headers     POSTGetDefaultCreditSpecificationHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetDefaultCreditSpecificationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTGetDefaultCreditSpecificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetDefaultCreditSpecificationResponse struct {

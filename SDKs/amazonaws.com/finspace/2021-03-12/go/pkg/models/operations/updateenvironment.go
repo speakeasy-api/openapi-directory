@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEnvironmentPathParams struct {
-	// The identifier of the FinSpace environment.
-	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
-}
-
-type UpdateEnvironmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateEnvironmentRequestBodyFederationModeEnum - <p>Authentication mode for the environment.</p> <ul> <li> <p> <code>FEDERATED</code> - Users access FinSpace through Single Sign On (SSO) via your Identity provider.</p> </li> <li> <p> <code>LOCAL</code> - Users access FinSpace via email and password managed within the FinSpace environment.</p> </li> </ul>
 type UpdateEnvironmentRequestBodyFederationModeEnum string
 
@@ -70,9 +55,16 @@ type UpdateEnvironmentRequestBody struct {
 }
 
 type UpdateEnvironmentRequest struct {
-	PathParams UpdateEnvironmentPathParams
-	Headers    UpdateEnvironmentHeaders
-	Request    UpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateEnvironmentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the FinSpace environment.
+	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
 }
 
 type UpdateEnvironmentResponse struct {

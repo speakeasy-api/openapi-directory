@@ -50,27 +50,19 @@ func (e *POSTListImportsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListImportsQueryParams struct {
+type POSTListImportsRequest struct {
 	Action POSTListImportsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination token
-	NextToken *string                    `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTListImportsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListImportsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTListImportsRequest struct {
-	QueryParams POSTListImportsQueryParams
-	Headers     POSTListImportsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                    `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                     `request:"mediaType=text/xml"`
+	Version           POSTListImportsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListImportsResponse struct {

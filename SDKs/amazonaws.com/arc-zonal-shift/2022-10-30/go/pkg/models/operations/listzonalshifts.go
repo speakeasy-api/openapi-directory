@@ -36,16 +36,7 @@ func (e *ListZonalShiftsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListZonalShiftsQueryParams struct {
-	// The number of objects that you want to return with this call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// <p>A status for a zonal shift.</p> <p>The <code>Status</code> for a zonal shift can have one of the following values:</p> <ul> <li> <p> <b>ACTIVE</b>: The zonal shift is started and active.</p> </li> <li> <p> <b>EXPIRED</b>: The zonal shift has expired (the expiry time was exceeded).</p> </li> <li> <p> <b>CANCELED</b>: The zonal shift was canceled.</p> </li> </ul>
-	Status *ListZonalShiftsStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListZonalShiftsHeaders struct {
+type ListZonalShiftsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -53,11 +44,12 @@ type ListZonalShiftsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListZonalShiftsRequest struct {
-	QueryParams ListZonalShiftsQueryParams
-	Headers     ListZonalShiftsHeaders
+	// The number of objects that you want to return with this call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// <p>A status for a zonal shift.</p> <p>The <code>Status</code> for a zonal shift can have one of the following values:</p> <ul> <li> <p> <b>ACTIVE</b>: The zonal shift is started and active.</p> </li> <li> <p> <b>EXPIRED</b>: The zonal shift has expired (the expiry time was exceeded).</p> </li> <li> <p> <b>CANCELED</b>: The zonal shift was canceled.</p> </li> </ul>
+	Status *ListZonalShiftsStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListZonalShiftsResponse struct {

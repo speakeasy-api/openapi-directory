@@ -160,7 +160,6 @@ pkg/models/operations/dotgetusersystemoverrides.go
 pkg/models/shared/applicationsapiusage.go
 pkg/models/shared/applicationsseries.go
 pkg/models/shared/applicationsdatapoint.go
-pkg/models/shared/security.go
 pkg/models/shared/applicationsapplication.go
 pkg/models/shared/applicationsapplicationdeveloper.go
 pkg/models/shared/useruserinfocard.go

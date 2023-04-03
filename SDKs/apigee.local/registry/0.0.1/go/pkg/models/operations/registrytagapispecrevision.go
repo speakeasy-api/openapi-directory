@@ -7,7 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryTagAPISpecRevisionPathParams struct {
+type RegistryTagAPISpecRevisionRequest struct {
+	TagAPISpecRevisionRequest shared.TagAPISpecRevisionRequest `request:"mediaType=application/json"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The location id.
@@ -18,11 +19,6 @@ type RegistryTagAPISpecRevisionPathParams struct {
 	Spec string `pathParam:"style=simple,explode=false,name=spec"`
 	// The version id.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryTagAPISpecRevisionRequest struct {
-	PathParams RegistryTagAPISpecRevisionPathParams
-	Request    shared.TagAPISpecRevisionRequest `request:"mediaType=application/json"`
 }
 
 type RegistryTagAPISpecRevisionResponse struct {

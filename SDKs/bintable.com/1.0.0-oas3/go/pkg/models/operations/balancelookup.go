@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type BalanceLookupQueryParams struct {
+type BalanceLookupRequest struct {
 	// The API key, which you can get from bintable.com website.
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type BalanceLookupRequest struct {
-	QueryParams BalanceLookupQueryParams
 }
 
 type BalanceLookupResponse struct {

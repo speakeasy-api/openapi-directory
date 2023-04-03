@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSslCertificateRequestsQueryParams struct {
+type GetSslCertificateRequestsRequest struct {
 	// The number of items to skip in the resultset.
 	Skip *int `queryParam:"style=form,explode=true,name=skip"`
 	// The number of items to return in the resultset. The returned count can be equal or less than this number.
 	Take *int `queryParam:"style=form,explode=true,name=take"`
-}
-
-type GetSslCertificateRequestsRequest struct {
-	QueryParams GetSslCertificateRequestsQueryParams
 }
 
 type GetSslCertificateRequestsResponse struct {

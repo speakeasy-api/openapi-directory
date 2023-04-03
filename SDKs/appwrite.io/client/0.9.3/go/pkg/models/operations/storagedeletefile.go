@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type StorageDeleteFileSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type StorageDeleteFilePathParams struct {
-	// File unique ID.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type StorageDeleteFileRequest struct {
-	PathParams StorageDeleteFilePathParams
-	Security   StorageDeleteFileSecurity
+	// File unique ID.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 type StorageDeleteFileResponse struct {

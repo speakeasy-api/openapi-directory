@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyRegisterRequest struct {
-	// Authentiq ID to register
-	Request []byte `request:"mediaType=application/jwt"`
-}
-
 // KeyRegister201ApplicationJSON - Successfully registered
 type KeyRegister201ApplicationJSON struct {
 	// revoke key

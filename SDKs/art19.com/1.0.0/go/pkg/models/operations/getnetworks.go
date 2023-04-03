@@ -10,7 +10,7 @@ import (
 )
 
 type GetNetworksSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetNetworksAdDealStatusEnum string
@@ -68,7 +68,7 @@ func (e *GetNetworksSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNetworksQueryParams struct {
+type GetNetworksRequest struct {
 	// Limit the result to networks containing at least one series with an ad deal matching one of the
 	// values in this parameter.
 	//
@@ -95,11 +95,6 @@ type GetNetworksQueryParams struct {
 	// [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
 	//
 	Sort []GetNetworksSortEnum `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetNetworksRequest struct {
-	QueryParams GetNetworksQueryParams
-	Security    GetNetworksSecurity
 }
 
 // GetNetworks400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

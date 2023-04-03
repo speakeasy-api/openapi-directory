@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDUserCategoriesFullIDFullPathParams struct {
-	IDFull int64 `pathParam:"style=simple,explode=false,name=id_full"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PutUsersIDUserCategoriesFullIDFullQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutUsersIDUserCategoriesFullIDFullRequestBody struct {
 	// Accountant account number.
 	AccountantAccount *string `multipartForm:"name=accountant_account"`
@@ -25,9 +15,11 @@ type PutUsersIDUserCategoriesFullIDFullRequestBody struct {
 }
 
 type PutUsersIDUserCategoriesFullIDFullRequest struct {
-	PathParams  PutUsersIDUserCategoriesFullIDFullPathParams
-	QueryParams PutUsersIDUserCategoriesFullIDFullQueryParams
-	Request     *PutUsersIDUserCategoriesFullIDFullRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutUsersIDUserCategoriesFullIDFullRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                                        `queryParam:"style=form,explode=true,name=expand"`
+	IDFull      int64                                          `pathParam:"style=simple,explode=false,name=id_full"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PutUsersIDUserCategoriesFullIDFullResponse struct {

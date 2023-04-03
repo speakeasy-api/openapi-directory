@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // CloneBackend - This operation clones an existing backend.
 func (s *SDK) CloneBackend(ctx context.Context, request operations.CloneBackendRequest) (*operations.CloneBackendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/clone", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/clone", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CloneBackend(ctx context.Context, request operations.CloneBackendR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -212,7 +212,7 @@ func (s *SDK) CreateBackend(ctx context.Context, request operations.CreateBacken
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/backend"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) CreateBackend(ctx context.Context, request operations.CreateBacken
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -306,9 +306,9 @@ func (s *SDK) CreateBackend(ctx context.Context, request operations.CreateBacken
 // CreateBackendAPI - Creates a new backend API resource.
 func (s *SDK) CreateBackendAPI(ctx context.Context, request operations.CreateBackendAPIRequest) (*operations.CreateBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *SDK) CreateBackendAPI(ctx context.Context, request operations.CreateBac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -402,9 +402,9 @@ func (s *SDK) CreateBackendAPI(ctx context.Context, request operations.CreateBac
 // CreateBackendAuth - Creates a new backend authentication resource.
 func (s *SDK) CreateBackendAuth(ctx context.Context, request operations.CreateBackendAuthRequest) (*operations.CreateBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,7 +419,7 @@ func (s *SDK) CreateBackendAuth(ctx context.Context, request operations.CreateBa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -498,9 +498,9 @@ func (s *SDK) CreateBackendAuth(ctx context.Context, request operations.CreateBa
 // CreateBackendConfig - Creates a config object for a backend.
 func (s *SDK) CreateBackendConfig(ctx context.Context, request operations.CreateBackendConfigRequest) (*operations.CreateBackendConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,7 +515,7 @@ func (s *SDK) CreateBackendConfig(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -594,9 +594,9 @@ func (s *SDK) CreateBackendConfig(ctx context.Context, request operations.Create
 // CreateBackendStorage - Creates a backend storage resource.
 func (s *SDK) CreateBackendStorage(ctx context.Context, request operations.CreateBackendStorageRequest) (*operations.CreateBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,7 +611,7 @@ func (s *SDK) CreateBackendStorage(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -690,14 +690,14 @@ func (s *SDK) CreateBackendStorage(ctx context.Context, request operations.Creat
 // CreateToken - Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
 func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenRequest) (*operations.CreateTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -776,14 +776,14 @@ func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenReq
 // DeleteBackend - Removes an existing environment from your Amplify project.
 func (s *SDK) DeleteBackend(ctx context.Context, request operations.DeleteBackendRequest) (*operations.DeleteBackendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/remove", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -862,9 +862,9 @@ func (s *SDK) DeleteBackend(ctx context.Context, request operations.DeleteBacken
 // DeleteBackendAPI - Deletes an existing backend API resource.
 func (s *SDK) DeleteBackendAPI(ctx context.Context, request operations.DeleteBackendAPIRequest) (*operations.DeleteBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,7 +879,7 @@ func (s *SDK) DeleteBackendAPI(ctx context.Context, request operations.DeleteBac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -958,9 +958,9 @@ func (s *SDK) DeleteBackendAPI(ctx context.Context, request operations.DeleteBac
 // DeleteBackendAuth - Deletes an existing backend authentication resource.
 func (s *SDK) DeleteBackendAuth(ctx context.Context, request operations.DeleteBackendAuthRequest) (*operations.DeleteBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -975,7 +975,7 @@ func (s *SDK) DeleteBackendAuth(ctx context.Context, request operations.DeleteBa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1054,9 +1054,9 @@ func (s *SDK) DeleteBackendAuth(ctx context.Context, request operations.DeleteBa
 // DeleteBackendStorage - Removes the specified backend storage resource.
 func (s *SDK) DeleteBackendStorage(ctx context.Context, request operations.DeleteBackendStorageRequest) (*operations.DeleteBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1071,7 +1071,7 @@ func (s *SDK) DeleteBackendStorage(ctx context.Context, request operations.Delet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1150,14 +1150,14 @@ func (s *SDK) DeleteBackendStorage(ctx context.Context, request operations.Delet
 // DeleteToken - Deletes the challenge token based on the given appId and sessionId.
 func (s *SDK) DeleteToken(ctx context.Context, request operations.DeleteTokenRequest) (*operations.DeleteTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}/remove", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1236,9 +1236,9 @@ func (s *SDK) DeleteToken(ctx context.Context, request operations.DeleteTokenReq
 // GenerateBackendAPIModels - Generates a model schema for an existing backend API resource.
 func (s *SDK) GenerateBackendAPIModels(ctx context.Context, request operations.GenerateBackendAPIModelsRequest) (*operations.GenerateBackendAPIModelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/generateModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/generateModels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1253,7 +1253,7 @@ func (s *SDK) GenerateBackendAPIModels(ctx context.Context, request operations.G
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1332,9 +1332,9 @@ func (s *SDK) GenerateBackendAPIModels(ctx context.Context, request operations.G
 // GetBackend - Provides project-level details for your Amplify UI project.
 func (s *SDK) GetBackend(ctx context.Context, request operations.GetBackendRequest) (*operations.GetBackendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/details", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1349,7 +1349,7 @@ func (s *SDK) GetBackend(ctx context.Context, request operations.GetBackendReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1428,9 +1428,9 @@ func (s *SDK) GetBackend(ctx context.Context, request operations.GetBackendReque
 // GetBackendAPI - Gets the details for a backend API.
 func (s *SDK) GetBackendAPI(ctx context.Context, request operations.GetBackendAPIRequest) (*operations.GetBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/details", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1445,7 +1445,7 @@ func (s *SDK) GetBackendAPI(ctx context.Context, request operations.GetBackendAP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1524,9 +1524,9 @@ func (s *SDK) GetBackendAPI(ctx context.Context, request operations.GetBackendAP
 // GetBackendAPIModels - Gets a model introspection schema for an existing backend API resource.
 func (s *SDK) GetBackendAPIModels(ctx context.Context, request operations.GetBackendAPIModelsRequest) (*operations.GetBackendAPIModelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/getModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/getModels", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1541,7 +1541,7 @@ func (s *SDK) GetBackendAPIModels(ctx context.Context, request operations.GetBac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1620,9 +1620,9 @@ func (s *SDK) GetBackendAPIModels(ctx context.Context, request operations.GetBac
 // GetBackendAuth - Gets a backend auth details.
 func (s *SDK) GetBackendAuth(ctx context.Context, request operations.GetBackendAuthRequest) (*operations.GetBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/details", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1637,7 +1637,7 @@ func (s *SDK) GetBackendAuth(ctx context.Context, request operations.GetBackendA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1716,14 +1716,14 @@ func (s *SDK) GetBackendAuth(ctx context.Context, request operations.GetBackendA
 // GetBackendJob - Returns information about a specific job.
 func (s *SDK) GetBackendJob(ctx context.Context, request operations.GetBackendJobRequest) (*operations.GetBackendJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1802,9 +1802,9 @@ func (s *SDK) GetBackendJob(ctx context.Context, request operations.GetBackendJo
 // GetBackendStorage - Gets details for a backend storage resource.
 func (s *SDK) GetBackendStorage(ctx context.Context, request operations.GetBackendStorageRequest) (*operations.GetBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/details", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/details", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1819,7 +1819,7 @@ func (s *SDK) GetBackendStorage(ctx context.Context, request operations.GetBacke
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1898,14 +1898,14 @@ func (s *SDK) GetBackendStorage(ctx context.Context, request operations.GetBacke
 // GetToken - Gets the challenge token based on the given appId and sessionId.
 func (s *SDK) GetToken(ctx context.Context, request operations.GetTokenRequest) (*operations.GetTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1984,9 +1984,9 @@ func (s *SDK) GetToken(ctx context.Context, request operations.GetTokenRequest) 
 // ImportBackendAuth - Imports an existing backend authentication resource.
 func (s *SDK) ImportBackendAuth(ctx context.Context, request operations.ImportBackendAuthRequest) (*operations.ImportBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2001,7 +2001,7 @@ func (s *SDK) ImportBackendAuth(ctx context.Context, request operations.ImportBa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2080,9 +2080,9 @@ func (s *SDK) ImportBackendAuth(ctx context.Context, request operations.ImportBa
 // ImportBackendStorage - Imports an existing backend storage resource.
 func (s *SDK) ImportBackendStorage(ctx context.Context, request operations.ImportBackendStorageRequest) (*operations.ImportBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/import", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/import", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2097,7 +2097,7 @@ func (s *SDK) ImportBackendStorage(ctx context.Context, request operations.Impor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2176,9 +2176,9 @@ func (s *SDK) ImportBackendStorage(ctx context.Context, request operations.Impor
 // ListBackendJobs - Lists the jobs for the backend of an Amplify app.
 func (s *SDK) ListBackendJobs(ctx context.Context, request operations.ListBackendJobsRequest) (*operations.ListBackendJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2193,9 +2193,9 @@ func (s *SDK) ListBackendJobs(ctx context.Context, request operations.ListBacken
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2278,7 +2278,7 @@ func (s *SDK) ListS3Buckets(ctx context.Context, request operations.ListS3Bucket
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/s3Buckets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2293,7 +2293,7 @@ func (s *SDK) ListS3Buckets(ctx context.Context, request operations.ListS3Bucket
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2372,9 +2372,9 @@ func (s *SDK) ListS3Buckets(ctx context.Context, request operations.ListS3Bucket
 // RemoveAllBackends - Removes all backend environments from your Amplify project.
 func (s *SDK) RemoveAllBackends(ctx context.Context, request operations.RemoveAllBackendsRequest) (*operations.RemoveAllBackendsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/remove", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2389,7 +2389,7 @@ func (s *SDK) RemoveAllBackends(ctx context.Context, request operations.RemoveAl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2468,14 +2468,14 @@ func (s *SDK) RemoveAllBackends(ctx context.Context, request operations.RemoveAl
 // RemoveBackendConfig - Removes the AWS resources required to access the Amplify Admin UI.
 func (s *SDK) RemoveBackendConfig(ctx context.Context, request operations.RemoveBackendConfigRequest) (*operations.RemoveBackendConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/remove", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/remove", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2554,9 +2554,9 @@ func (s *SDK) RemoveBackendConfig(ctx context.Context, request operations.Remove
 // UpdateBackendAPI - Updates an existing backend API resource.
 func (s *SDK) UpdateBackendAPI(ctx context.Context, request operations.UpdateBackendAPIRequest) (*operations.UpdateBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2571,7 +2571,7 @@ func (s *SDK) UpdateBackendAPI(ctx context.Context, request operations.UpdateBac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2650,9 +2650,9 @@ func (s *SDK) UpdateBackendAPI(ctx context.Context, request operations.UpdateBac
 // UpdateBackendAuth - Updates an existing backend authentication resource.
 func (s *SDK) UpdateBackendAuth(ctx context.Context, request operations.UpdateBackendAuthRequest) (*operations.UpdateBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2667,7 +2667,7 @@ func (s *SDK) UpdateBackendAuth(ctx context.Context, request operations.UpdateBa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2746,9 +2746,9 @@ func (s *SDK) UpdateBackendAuth(ctx context.Context, request operations.UpdateBa
 // UpdateBackendConfig - Updates the AWS resources required to access the Amplify Admin UI.
 func (s *SDK) UpdateBackendConfig(ctx context.Context, request operations.UpdateBackendConfigRequest) (*operations.UpdateBackendConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/update", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/update", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2763,7 +2763,7 @@ func (s *SDK) UpdateBackendConfig(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2842,9 +2842,9 @@ func (s *SDK) UpdateBackendConfig(ctx context.Context, request operations.Update
 // UpdateBackendJob - Updates a specific job.
 func (s *SDK) UpdateBackendJob(ctx context.Context, request operations.UpdateBackendJobRequest) (*operations.UpdateBackendJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2859,7 +2859,7 @@ func (s *SDK) UpdateBackendJob(ctx context.Context, request operations.UpdateBac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2938,9 +2938,9 @@ func (s *SDK) UpdateBackendJob(ctx context.Context, request operations.UpdateBac
 // UpdateBackendStorage - Updates an existing backend storage resource.
 func (s *SDK) UpdateBackendStorage(ctx context.Context, request operations.UpdateBackendStorageRequest) (*operations.UpdateBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2955,7 +2955,7 @@ func (s *SDK) UpdateBackendStorage(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

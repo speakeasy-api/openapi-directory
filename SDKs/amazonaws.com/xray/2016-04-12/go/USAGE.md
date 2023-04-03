@@ -13,33 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchGetTracesRequest{
-        QueryParams: operations.BatchGetTracesQueryParams{
-            NextToken: "corrupti",
-        },
-        Headers: operations.BatchGetTracesHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.BatchGetTracesRequestBody{
-            NextToken: "vel",
+        NextToken: "corrupti",
+        RequestBody: operations.BatchGetTracesRequestBody{
+            NextToken: "provident",
             TraceIds: []string{
-                "deserunt",
-                "suscipit",
-                "iure",
+                "quibusdam",
+                "unde",
+                "nulla",
             },
         },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
     }
 
     ctx := context.Background()

@@ -50,7 +50,7 @@ func (e *GETCopyFpgaImageVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCopyFpgaImageQueryParams struct {
+type GETCopyFpgaImageRequest struct {
 	Action GETCopyFpgaImageActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -63,23 +63,15 @@ type GETCopyFpgaImageQueryParams struct {
 	// The ID of the source AFI.
 	SourceFpgaImageID string `queryParam:"style=form,explode=true,name=SourceFpgaImageId"`
 	// The Region that contains the source AFI.
-	SourceRegion string                      `queryParam:"style=form,explode=true,name=SourceRegion"`
-	Version      GETCopyFpgaImageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCopyFpgaImageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCopyFpgaImageRequest struct {
-	QueryParams GETCopyFpgaImageQueryParams
-	Headers     GETCopyFpgaImageHeaders
+	SourceRegion      string                      `queryParam:"style=form,explode=true,name=SourceRegion"`
+	Version           GETCopyFpgaImageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCopyFpgaImageResponse struct {

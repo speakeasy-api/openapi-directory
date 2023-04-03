@@ -8,14 +8,9 @@ import (
 )
 
 type StorageUpdateFileSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type StorageUpdateFilePathParams struct {
-	// File unique ID.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type StorageUpdateFileRequestBody struct {
@@ -26,9 +21,9 @@ type StorageUpdateFileRequestBody struct {
 }
 
 type StorageUpdateFileRequest struct {
-	PathParams StorageUpdateFilePathParams
-	Request    *StorageUpdateFileRequestBody `request:"mediaType=application/json"`
-	Security   StorageUpdateFileSecurity
+	RequestBody *StorageUpdateFileRequestBody `request:"mediaType=application/json"`
+	// File unique ID.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 type StorageUpdateFileResponse struct {

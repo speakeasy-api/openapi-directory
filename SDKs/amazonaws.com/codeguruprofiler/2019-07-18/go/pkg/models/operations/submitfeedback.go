@@ -8,23 +8,6 @@ import (
 	"net/http"
 )
 
-type SubmitFeedbackPathParams struct {
-	// The universally unique identifier (UUID) of the <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AnomalyInstance.html"> <code>AnomalyInstance</code> </a> object that is included in the analysis data.
-	AnomalyInstanceID string `pathParam:"style=simple,explode=false,name=anomalyInstanceId"`
-	// The name of the profiling group that is associated with the analysis data.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type SubmitFeedbackHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SubmitFeedbackRequestBodyTypeEnum -  The feedback tpye. Thee are two valid values, <code>Positive</code> and <code>Negative</code>.
 type SubmitFeedbackRequestBodyTypeEnum string
 
@@ -57,9 +40,18 @@ type SubmitFeedbackRequestBody struct {
 }
 
 type SubmitFeedbackRequest struct {
-	PathParams SubmitFeedbackPathParams
-	Headers    SubmitFeedbackHeaders
-	Request    SubmitFeedbackRequestBody `request:"mediaType=application/json"`
+	RequestBody       SubmitFeedbackRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The universally unique identifier (UUID) of the <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AnomalyInstance.html"> <code>AnomalyInstance</code> </a> object that is included in the analysis data.
+	AnomalyInstanceID string `pathParam:"style=simple,explode=false,name=anomalyInstanceId"`
+	// The name of the profiling group that is associated with the analysis data.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 }
 
 type SubmitFeedbackResponse struct {

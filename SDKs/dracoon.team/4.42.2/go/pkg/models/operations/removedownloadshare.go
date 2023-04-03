@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveDownloadSharePathParams struct {
-	// Share ID
-	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
-}
-
-type RemoveDownloadShareHeaders struct {
+type RemoveDownloadShareRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveDownloadShareRequest struct {
-	PathParams RemoveDownloadSharePathParams
-	Headers    RemoveDownloadShareHeaders
+	// Share ID
+	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
 }
 
 type RemoveDownloadShareResponse struct {

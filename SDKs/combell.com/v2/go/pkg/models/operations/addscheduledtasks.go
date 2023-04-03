@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddScheduledTasksPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type AddScheduledTasksQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type AddScheduledTasksRequest struct {
-	PathParams  AddScheduledTasksPathParams
-	QueryParams AddScheduledTasksQueryParams
-	Request     *shared.ScheduledTask `request:"mediaType=application/json"`
+	ScheduledTask *shared.ScheduledTask `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type AddScheduledTasksResponse struct {

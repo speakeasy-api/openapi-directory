@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Incer - Income Certificate
 // API to verify Income Certificate.
-func (s *apIs) Incer(ctx context.Context, request operations.IncerRequest) (*operations.IncerResponse, error) {
+func (s *apIs) Incer(ctx context.Context, request operations.IncerRequestBody, security operations.IncerSecurity) (*operations.IncerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/incer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Incer(ctx context.Context, request operations.IncerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Incer(ctx context.Context, request operations.IncerRequest) (*ope
 
 // Rmcer - Marriage Certificate
 // API to verify Marriage Certificate.
-func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequest) (*operations.RmcerResponse, error) {
+func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequestBody, security operations.RmcerSecurity) (*operations.RmcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rmcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Rmcer(ctx context.Context, request operations.RmcerRequest) (*ope
 
 // Rscer - Residence Certificate
 // API to verify Residence Certificate.
-func (s *apIs) Rscer(ctx context.Context, request operations.RscerRequest) (*operations.RscerResponse, error) {
+func (s *apIs) Rscer(ctx context.Context, request operations.RscerRequestBody, security operations.RscerSecurity) (*operations.RscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rscer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Rscer(ctx context.Context, request operations.RscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *apIs) Rscer(ctx context.Context, request operations.RscerRequest) (*ope
 
 // Sicrd - Senior Citizen Identity Card/ Certificate
 // API to verify Senior Citizen Identity Card/ Certificate.
-func (s *apIs) Sicrd(ctx context.Context, request operations.SicrdRequest) (*operations.SicrdResponse, error) {
+func (s *apIs) Sicrd(ctx context.Context, request operations.SicrdRequestBody, security operations.SicrdSecurity) (*operations.SicrdResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sicrd/certificate"
 
@@ -388,7 +388,7 @@ func (s *apIs) Sicrd(ctx context.Context, request operations.SicrdRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

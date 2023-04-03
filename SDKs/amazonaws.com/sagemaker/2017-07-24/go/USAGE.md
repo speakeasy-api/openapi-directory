@@ -13,28 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddAssociationRequest{
-        Headers: operations.AddAssociationHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "SageMaker.AddAssociation",
+        AddAssociationRequest: shared.AddAssociationRequest{
+            AssociationType: "DerivedFrom",
+            DestinationArn: "provident",
+            SourceArn: "distinctio",
         },
-        Request: shared.AddAssociationRequest{
-            AssociationType: "Produced",
-            DestinationArn: "vel",
-            SourceArn: "error",
-        },
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
+        XAmzTarget: "SageMaker.AddAssociation",
     }
 
     ctx := context.Background()

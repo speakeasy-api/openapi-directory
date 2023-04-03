@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeIdentityProviderConfigPathParams struct {
-	// The cluster name that the identity provider configuration is associated to.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DescribeIdentityProviderConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig - An object representing an identity provider configuration.
 type DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig struct {
 	Name *string `json:"name,omitempty"`
@@ -34,9 +19,16 @@ type DescribeIdentityProviderConfigRequestBody struct {
 }
 
 type DescribeIdentityProviderConfigRequest struct {
-	PathParams DescribeIdentityProviderConfigPathParams
-	Headers    DescribeIdentityProviderConfigHeaders
-	Request    DescribeIdentityProviderConfigRequestBody `request:"mediaType=application/json"`
+	RequestBody       DescribeIdentityProviderConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The cluster name that the identity provider configuration is associated to.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DescribeIdentityProviderConfigResponse struct {

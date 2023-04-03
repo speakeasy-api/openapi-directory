@@ -50,28 +50,20 @@ func (e *GETCreateServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETCreateServiceSpecificCredentialQueryParams struct {
+type GETCreateServiceSpecificCredentialRequest struct {
 	Action GETCreateServiceSpecificCredentialActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Amazon Web Services service that is to be associated with the credentials. The service you specify here is the only service that can be accessed using these credentials.
 	ServiceName string `queryParam:"style=form,explode=true,name=ServiceName"`
 	// <p>The name of the IAM user that is to be associated with the credentials. The new service-specific credentials have the same permissions as the associated user except that they can be used only to access the specified service.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                                        `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETCreateServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateServiceSpecificCredentialHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateServiceSpecificCredentialRequest struct {
-	QueryParams GETCreateServiceSpecificCredentialQueryParams
-	Headers     GETCreateServiceSpecificCredentialHeaders
+	UserName          string                                        `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETCreateServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateServiceSpecificCredentialResponse struct {

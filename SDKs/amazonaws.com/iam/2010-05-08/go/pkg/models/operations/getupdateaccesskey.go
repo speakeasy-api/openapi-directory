@@ -74,30 +74,22 @@ func (e *GETUpdateAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateAccessKeyQueryParams struct {
+type GETUpdateAccessKeyRequest struct {
 	// <p>The access key ID of the secret access key you want to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	AccessKeyID string                       `queryParam:"style=form,explode=true,name=AccessKeyId"`
 	Action      GETUpdateAccessKeyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	//  The status you want to assign to the secret access key. <code>Active</code> means that the key can be used for programmatic calls to Amazon Web Services, while <code>Inactive</code> means that the key cannot be used.
 	Status GETUpdateAccessKeyStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// <p>The name of the user whose key you want to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                       `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETUpdateAccessKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateAccessKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateAccessKeyRequest struct {
-	QueryParams GETUpdateAccessKeyQueryParams
-	Headers     GETUpdateAccessKeyHeaders
+	UserName          *string                       `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETUpdateAccessKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateAccessKeyResponse struct {

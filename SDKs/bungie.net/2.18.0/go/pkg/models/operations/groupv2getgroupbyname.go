@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupV2GetGroupByNamePathParams struct {
+type GroupV2GetGroupByNameRequest struct {
 	// Exact name of the group to find.
 	GroupName string `pathParam:"style=simple,explode=false,name=groupName"`
 	// Type of group to find.
 	GroupType int `pathParam:"style=simple,explode=false,name=groupType"`
-}
-
-type GroupV2GetGroupByNameRequest struct {
-	PathParams GroupV2GetGroupByNamePathParams
 }
 
 // GroupV2GetGroupByName200Wildcard - Look at the Response property for more information about the nature of this response

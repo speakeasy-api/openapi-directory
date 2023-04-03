@@ -53,17 +53,13 @@ func (e *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLAspectIDEnum) Unmars
 	}
 }
 
-type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLPathParams struct {
+type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLRequest struct {
 	// The identifier of the 'aspect' (content group) to search
 	AspectID GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLAspectIDEnum `pathParam:"style=simple,explode=false,name=aspectId"`
 	// The document identification code for an index or directory
 	CivixDocumentID string `pathParam:"style=simple,explode=false,name=civixDocumentId"`
 	// Index identification code
 	CivixIndexID string `pathParam:"style=simple,explode=false,name=civixIndexId"`
-}
-
-type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLRequest struct {
-	PathParams GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLPathParams
 }
 
 type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLResponse struct {

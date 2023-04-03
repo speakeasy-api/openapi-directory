@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateShareUploadChannelPathParams struct {
+type CreateShareUploadChannelRequest struct {
+	CreateShareUploadChannelRequest shared.CreateShareUploadChannelRequest `request:"mediaType=application/json"`
 	// Access key
 	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-}
-
-type CreateShareUploadChannelRequest struct {
-	PathParams CreateShareUploadChannelPathParams
-	Request    shared.CreateShareUploadChannelRequest `request:"mediaType=application/json"`
 }
 
 type CreateShareUploadChannelResponse struct {

@@ -33,15 +33,11 @@ func (e *GetArtifactRuleConfigRuleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetArtifactRuleConfigPathParams struct {
+type GetArtifactRuleConfigRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The unique name/type of a rule.
 	Rule GetArtifactRuleConfigRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
-type GetArtifactRuleConfigRequest struct {
-	PathParams GetArtifactRuleConfigPathParams
 }
 
 type GetArtifactRuleConfigResponse struct {

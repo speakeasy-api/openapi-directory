@@ -107,7 +107,7 @@ func (e *GETActivateTypeVersionBumpEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETActivateTypeQueryParams struct {
+type GETActivateTypeRequest struct {
 	Action GETActivateTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Whether to automatically update the extension in this account and region when a new <i>minor</i> version is published by the extension publisher. Major versions released by the publisher must be manually updated.</p> <p>The default is <code>true</code>.</p>
 	AutoUpdate *bool `queryParam:"style=form,explode=true,name=AutoUpdate"`
@@ -129,22 +129,14 @@ type GETActivateTypeQueryParams struct {
 	TypeNameAlias *string                    `queryParam:"style=form,explode=true,name=TypeNameAlias"`
 	Version       GETActivateTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>Manually updates a previously-activated type to a new major or minor version, if available. You can also use this parameter to update the value of <code>AutoUpdate</code>.</p> <ul> <li> <p> <code>MAJOR</code>: CloudFormation updates the extension to the newest major version, if one is available.</p> </li> <li> <p> <code>MINOR</code>: CloudFormation updates the extension to the newest minor version, if one is available.</p> </li> </ul>
-	VersionBump *GETActivateTypeVersionBumpEnum `queryParam:"style=form,explode=true,name=VersionBump"`
-}
-
-type GETActivateTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETActivateTypeRequest struct {
-	QueryParams GETActivateTypeQueryParams
-	Headers     GETActivateTypeHeaders
+	VersionBump       *GETActivateTypeVersionBumpEnum `queryParam:"style=form,explode=true,name=VersionBump"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETActivateTypeResponse struct {

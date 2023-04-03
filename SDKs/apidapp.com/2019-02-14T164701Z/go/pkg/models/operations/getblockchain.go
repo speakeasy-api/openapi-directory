@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetBlockchainSecurity struct {
-	Key2 shared.SchemeKey2 `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBlockchainRequest struct {
-	Security GetBlockchainSecurity
-}
 
 type GetBlockchainResponse struct {
 	ContentType string

@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterDevicePathParams struct {
-	// The unique ID for this identity.
-	IdentityID string `pathParam:"style=simple,explode=false,name=IdentityId"`
-	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. Here, the ID of the pool that the identity belongs to.
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type RegisterDeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterDeviceRequestBodyPlatformEnum - The SNS platform type (e.g. GCM, SDM, APNS, APNS_SANDBOX).
 type RegisterDeviceRequestBodyPlatformEnum string
 
@@ -64,9 +47,18 @@ type RegisterDeviceRequestBody struct {
 }
 
 type RegisterDeviceRequest struct {
-	PathParams RegisterDevicePathParams
-	Headers    RegisterDeviceHeaders
-	Request    RegisterDeviceRequestBody `request:"mediaType=application/json"`
+	// The unique ID for this identity.
+	IdentityID string `pathParam:"style=simple,explode=false,name=IdentityId"`
+	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. Here, the ID of the pool that the identity belongs to.
+	IdentityPoolID    string                    `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
+	RequestBody       RegisterDeviceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type RegisterDeviceResponse struct {

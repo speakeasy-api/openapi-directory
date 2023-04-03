@@ -36,7 +36,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // GetUser - Get current user
 // Returns the currently logged in user.
-func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
+func (s *users) GetUser(ctx context.Context) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
 
@@ -45,7 +45,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 // GetUserEmails - List email addresses for current user
 // Returns all the authenticated user's email addresses. Both
 // confirmed and unconfirmed.
-func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEmailsRequest) (*operations.GetUserEmailsResponse, error) {
+func (s *users) GetUserEmails(ctx context.Context) (*operations.GetUserEmailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/emails"
 
@@ -101,7 +101,7 @@ func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEma
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,16 +141,16 @@ func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEma
 //
 // Details describe whether the address has been confirmed by the user and
 // whether it is the user's primary address or not.
-func (s *users) GetUserEmailsEmail(ctx context.Context, request operations.GetUserEmailsEmailRequest) (*operations.GetUserEmailsEmailResponse, error) {
+func (s *users) GetUserEmailsEmail(ctx context.Context, request operations.GetUserEmailsEmailRequest, security operations.GetUserEmailsEmailSecurity) (*operations.GetUserEmailsEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/emails/{email}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user/emails/{email}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -192,16 +192,16 @@ func (s *users) GetUserEmailsEmail(ctx context.Context, request operations.GetUs
 //
 // Note that the user object returned by this operation is changing significantly, due to privacy changes.
 // See the [announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#changes-to-bitbucket-user-objects) for details.
-func (s *users) GetUsersSelectedUser(ctx context.Context, request operations.GetUsersSelectedUserRequest) (*operations.GetUsersSelectedUserResponse, error) {
+func (s *users) GetUsersSelectedUser(ctx context.Context, request operations.GetUsersSelectedUserRequest, security operations.GetUsersSelectedUserSecurity) (*operations.GetUsersSelectedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

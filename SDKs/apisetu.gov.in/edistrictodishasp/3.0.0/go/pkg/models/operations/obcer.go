@@ -10,8 +10,8 @@ import (
 )
 
 type ObcerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type ObcerRequestBodyCertificateParameters struct {
@@ -54,12 +54,6 @@ type ObcerRequestBody struct {
 	Format ObcerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type ObcerRequest struct {
-	// Request format
-	Request  *ObcerRequestBody `request:"mediaType=application/json"`
-	Security ObcerSecurity
 }
 
 type Obcer504ApplicationJSONErrorEnum string

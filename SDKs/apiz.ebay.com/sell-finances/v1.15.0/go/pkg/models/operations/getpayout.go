@@ -8,23 +8,14 @@ import (
 )
 
 type GetPayoutSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetPayoutPathParams struct {
-	// The unique identfier of the payout is passed in as a path parameter at the end of the call URI. <br><br>The <b>getPayouts</b> method can be used to retrieve the unique identifier of a payout, or the user can check Seller Hub to get the payout ID.
-	PayoutID string `pathParam:"style=simple,explode=false,name=payout_Id"`
-}
-
-type GetPayoutHeaders struct {
-	// This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See <a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank ">HTTP request headers</a> for the marketplace ID values.
-	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetPayoutRequest struct {
-	PathParams GetPayoutPathParams
-	Headers    GetPayoutHeaders
-	Security   GetPayoutSecurity
+	// This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See <a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank ">HTTP request headers</a> for the marketplace ID values.
+	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	// The unique identfier of the payout is passed in as a path parameter at the end of the call URI. <br><br>The <b>getPayouts</b> method can be used to retrieve the unique identifier of a payout, or the user can check Seller Hub to get the payout ID.
+	PayoutID string `pathParam:"style=simple,explode=false,name=payout_Id"`
 }
 
 type GetPayoutResponse struct {

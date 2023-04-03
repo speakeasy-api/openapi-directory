@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDealersCarUkQueryParams struct {
+type GetDealersCarUkRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on City in which they are listed
@@ -44,10 +44,6 @@ type GetDealersCarUkQueryParams struct {
 	SortOrder *shared.SortOrderEnum `queryParam:"style=form,explode=true,name=sort_order"`
 	// Page number to fetch the results for the given criteria. Default is 0. Pagination is allowed only till first 10000 results for the search and sort criteria. The page value can be only between 1 to 10000/rows
 	Start *int `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetDealersCarUkRequest struct {
-	QueryParams GetDealersCarUkQueryParams
 }
 
 type GetDealersCarUkResponse struct {

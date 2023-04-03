@@ -33,17 +33,13 @@ func (e *PostAccountGuestsGuestIDTypePermissionsPatchRawTypeEnum) UnmarshalJSON(
 	}
 }
 
-type PostAccountGuestsGuestIDTypePermissionsPatchRawPathParams struct {
+type PostAccountGuestsGuestIDTypePermissionsPatchRawRequest struct {
+	// The patch permission request
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
 	// Can be "datapoint" or "group"
 	Type PostAccountGuestsGuestIDTypePermissionsPatchRawTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type PostAccountGuestsGuestIDTypePermissionsPatchRawRequest struct {
-	PathParams PostAccountGuestsGuestIDTypePermissionsPatchRawPathParams
-	// The patch permission request
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type PostAccountGuestsGuestIDTypePermissionsPatchRawResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EncryptRoomPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
 // EncryptRoomXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type EncryptRoomXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *EncryptRoomXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type EncryptRoomHeaders struct {
+type EncryptRoomRequest struct {
+	EncryptRoomRequest shared.EncryptRoomRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *EncryptRoomXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type EncryptRoomRequest struct {
-	PathParams EncryptRoomPathParams
-	Headers    EncryptRoomHeaders
-	Request    shared.EncryptRoomRequest `request:"mediaType=application/json"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type EncryptRoomResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AutoConfigureAutoImportIntervalPathParams struct {
+type AutoConfigureAutoImportIntervalRequest struct {
+	ConfigureAutoImportIntervalRequest shared.ConfigureAutoImportIntervalRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type AutoConfigureAutoImportIntervalRequest struct {
-	PathParams AutoConfigureAutoImportIntervalPathParams
-	Request    shared.ConfigureAutoImportIntervalRequest `request:"mediaType=application/json"`
 }
 
 type AutoConfigureAutoImportIntervalResponse struct {

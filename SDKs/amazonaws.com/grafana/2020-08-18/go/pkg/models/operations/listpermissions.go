@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPermissionsPathParams struct {
-	// The ID of the workspace to list permissions for. This parameter is required.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
 // ListPermissionsUserTypeEnum - (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
 type ListPermissionsUserTypeEnum string
 
@@ -38,7 +33,14 @@ func (e *ListPermissionsUserTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPermissionsQueryParams struct {
+type ListPermissionsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// (Optional) Limits the results to only the group that matches this ID.
 	GroupID *string `queryParam:"style=form,explode=true,name=groupId"`
 	// The maximum number of results to include in the response.
@@ -49,22 +51,8 @@ type ListPermissionsQueryParams struct {
 	UserID *string `queryParam:"style=form,explode=true,name=userId"`
 	// (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
 	UserType *ListPermissionsUserTypeEnum `queryParam:"style=form,explode=true,name=userType"`
-}
-
-type ListPermissionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListPermissionsRequest struct {
-	PathParams  ListPermissionsPathParams
-	QueryParams ListPermissionsQueryParams
-	Headers     ListPermissionsHeaders
+	// The ID of the workspace to list permissions for. This parameter is required.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type ListPermissionsResponse struct {

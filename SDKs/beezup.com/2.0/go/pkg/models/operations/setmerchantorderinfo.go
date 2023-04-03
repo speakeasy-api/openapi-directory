@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetMerchantOrderInfoPathParams struct {
+type SetMerchantOrderInfoRequest struct {
 	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
 	// The marketplace technical code
-	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type SetMerchantOrderInfoRequest struct {
-	PathParams SetMerchantOrderInfoPathParams
-	Request    shared.SetMerchantOrderInfoRequest `request:"mediaType=application/json"`
+	MarketplaceTechnicalCode    string                             `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
+	SetMerchantOrderInfoRequest shared.SetMerchantOrderInfoRequest `request:"mediaType=application/json"`
 }
 
 type SetMerchantOrderInfoResponse struct {

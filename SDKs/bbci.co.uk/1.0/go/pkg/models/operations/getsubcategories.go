@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubCategoriesPathParams struct {
+type GetSubCategoriesRequest struct {
 	// The category identifier to return results from.
 	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
-type GetSubCategoriesQueryParams struct {
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetSubCategoriesRequest struct {
-	PathParams  GetSubCategoriesPathParams
-	QueryParams GetSubCategoriesQueryParams
 }
 
 type GetSubCategoriesResponse struct {

@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUrlsExportsPathParams struct {
+type GetUrlsExportsRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetUrlsExportsQueryParams struct {
 	// Page Number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// Page Size
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetUrlsExportsRequest struct {
-	PathParams  GetUrlsExportsPathParams
-	QueryParams GetUrlsExportsQueryParams
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetUrlsExports200ApplicationJSON - Successful operation

@@ -7,34 +7,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchDeleteCustomVocabularyItemPathParams struct {
-	// The identifier of the bot associated with this custom vocabulary.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The identifier of the version of the bot associated with this custom vocabulary.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale where this custom vocabulary is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type BatchDeleteCustomVocabularyItemHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchDeleteCustomVocabularyItemRequestBody struct {
 	// A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom vocabulary entry identifier.
 	CustomVocabularyItemList []shared.CustomVocabularyEntryID `json:"customVocabularyItemList"`
 }
 
 type BatchDeleteCustomVocabularyItemRequest struct {
-	PathParams BatchDeleteCustomVocabularyItemPathParams
-	Headers    BatchDeleteCustomVocabularyItemHeaders
-	Request    BatchDeleteCustomVocabularyItemRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchDeleteCustomVocabularyItemRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot associated with this custom vocabulary.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The identifier of the version of the bot associated with this custom vocabulary.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale where this custom vocabulary is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type BatchDeleteCustomVocabularyItemResponse struct {

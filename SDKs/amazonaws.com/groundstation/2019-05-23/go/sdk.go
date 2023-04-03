@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CancelContact - Cancels a contact with a specified contact ID.
 func (s *SDK) CancelContact(ctx context.Context, request operations.CancelContactRequest) (*operations.CancelContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -192,7 +192,7 @@ func (s *SDK) CreateConfig(ctx context.Context, request operations.CreateConfigR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/config"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *SDK) CreateConfig(ctx context.Context, request operations.CreateConfigR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -288,7 +288,7 @@ func (s *SDK) CreateDataflowEndpointGroup(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dataflowEndpointGroup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *SDK) CreateDataflowEndpointGroup(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -374,7 +374,7 @@ func (s *SDK) CreateEphemeris(ctx context.Context, request operations.CreateEphe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ephemeris"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -389,7 +389,7 @@ func (s *SDK) CreateEphemeris(ctx context.Context, request operations.CreateEphe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -460,7 +460,7 @@ func (s *SDK) CreateMissionProfile(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/missionprofile"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -475,7 +475,7 @@ func (s *SDK) CreateMissionProfile(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -544,14 +544,14 @@ func (s *SDK) CreateMissionProfile(ctx context.Context, request operations.Creat
 // DeleteConfig - Deletes a <code>Config</code>.
 func (s *SDK) DeleteConfig(ctx context.Context, request operations.DeleteConfigRequest) (*operations.DeleteConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -620,14 +620,14 @@ func (s *SDK) DeleteConfig(ctx context.Context, request operations.DeleteConfigR
 // DeleteDataflowEndpointGroup - Deletes a dataflow endpoint group.
 func (s *SDK) DeleteDataflowEndpointGroup(ctx context.Context, request operations.DeleteDataflowEndpointGroupRequest) (*operations.DeleteDataflowEndpointGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -696,14 +696,14 @@ func (s *SDK) DeleteDataflowEndpointGroup(ctx context.Context, request operation
 // DeleteEphemeris - Deletes an ephemeris
 func (s *SDK) DeleteEphemeris(ctx context.Context, request operations.DeleteEphemerisRequest) (*operations.DeleteEphemerisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -772,14 +772,14 @@ func (s *SDK) DeleteEphemeris(ctx context.Context, request operations.DeleteEphe
 // DeleteMissionProfile - Deletes a mission profile.
 func (s *SDK) DeleteMissionProfile(ctx context.Context, request operations.DeleteMissionProfileRequest) (*operations.DeleteMissionProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -848,14 +848,14 @@ func (s *SDK) DeleteMissionProfile(ctx context.Context, request operations.Delet
 // DescribeContact - Describes an existing contact.
 func (s *SDK) DescribeContact(ctx context.Context, request operations.DescribeContactRequest) (*operations.DescribeContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -924,14 +924,14 @@ func (s *SDK) DescribeContact(ctx context.Context, request operations.DescribeCo
 // DescribeEphemeris - Describes an existing ephemeris.
 func (s *SDK) DescribeEphemeris(ctx context.Context, request operations.DescribeEphemerisRequest) (*operations.DescribeEphemerisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1000,14 +1000,14 @@ func (s *SDK) DescribeEphemeris(ctx context.Context, request operations.Describe
 // GetAgentConfiguration - Gets the latest configuration information for a registered agent.
 func (s *SDK) GetAgentConfiguration(ctx context.Context, request operations.GetAgentConfigurationRequest) (*operations.GetAgentConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}/configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1076,14 +1076,14 @@ func (s *SDK) GetAgentConfiguration(ctx context.Context, request operations.GetA
 // GetConfig - <p>Returns <code>Config</code> information.</p> <p>Only one <code>Config</code> response can be returned.</p>
 func (s *SDK) GetConfig(ctx context.Context, request operations.GetConfigRequest) (*operations.GetConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1152,14 +1152,14 @@ func (s *SDK) GetConfig(ctx context.Context, request operations.GetConfigRequest
 // GetDataflowEndpointGroup - Returns the dataflow endpoint group.
 func (s *SDK) GetDataflowEndpointGroup(ctx context.Context, request operations.GetDataflowEndpointGroupRequest) (*operations.GetDataflowEndpointGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1230,7 +1230,7 @@ func (s *SDK) GetMinuteUsage(ctx context.Context, request operations.GetMinuteUs
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/minute-usage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1245,7 +1245,7 @@ func (s *SDK) GetMinuteUsage(ctx context.Context, request operations.GetMinuteUs
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1314,14 +1314,14 @@ func (s *SDK) GetMinuteUsage(ctx context.Context, request operations.GetMinuteUs
 // GetMissionProfile - Returns a mission profile.
 func (s *SDK) GetMissionProfile(ctx context.Context, request operations.GetMissionProfileRequest) (*operations.GetMissionProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1390,14 +1390,14 @@ func (s *SDK) GetMissionProfile(ctx context.Context, request operations.GetMissi
 // GetSatellite - Returns a satellite.
 func (s *SDK) GetSatellite(ctx context.Context, request operations.GetSatelliteRequest) (*operations.GetSatelliteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/satellite/{satelliteId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/satellite/{satelliteId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1473,9 +1473,9 @@ func (s *SDK) ListConfigs(ctx context.Context, request operations.ListConfigsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1548,7 +1548,7 @@ func (s *SDK) ListContacts(ctx context.Context, request operations.ListContactsR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contacts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1563,9 +1563,9 @@ func (s *SDK) ListContacts(ctx context.Context, request operations.ListContactsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1643,9 +1643,9 @@ func (s *SDK) ListDataflowEndpointGroups(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1718,7 +1718,7 @@ func (s *SDK) ListEphemerides(ctx context.Context, request operations.ListEpheme
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ephemerides"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1733,9 +1733,9 @@ func (s *SDK) ListEphemerides(ctx context.Context, request operations.ListEpheme
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1813,9 +1813,9 @@ func (s *SDK) ListGroundStations(ctx context.Context, request operations.ListGro
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1893,9 +1893,9 @@ func (s *SDK) ListMissionProfiles(ctx context.Context, request operations.ListMi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1973,9 +1973,9 @@ func (s *SDK) ListSatellites(ctx context.Context, request operations.ListSatelli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2046,14 +2046,14 @@ func (s *SDK) ListSatellites(ctx context.Context, request operations.ListSatelli
 // ListTagsForResource - Returns a list of tags for a specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2124,7 +2124,7 @@ func (s *SDK) RegisterAgent(ctx context.Context, request operations.RegisterAgen
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/agent"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2139,7 +2139,7 @@ func (s *SDK) RegisterAgent(ctx context.Context, request operations.RegisterAgen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2210,7 +2210,7 @@ func (s *SDK) ReserveContact(ctx context.Context, request operations.ReserveCont
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contact"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2225,7 +2225,7 @@ func (s *SDK) ReserveContact(ctx context.Context, request operations.ReserveCont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2294,9 +2294,9 @@ func (s *SDK) ReserveContact(ctx context.Context, request operations.ReserveCont
 // TagResource - Assigns a tag to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2311,7 +2311,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2380,16 +2380,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deassigns a resource tag.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2460,9 +2460,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAgentStatus - Update the status of the agent.
 func (s *SDK) UpdateAgentStatus(ctx context.Context, request operations.UpdateAgentStatusRequest) (*operations.UpdateAgentStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2477,7 +2477,7 @@ func (s *SDK) UpdateAgentStatus(ctx context.Context, request operations.UpdateAg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2546,9 +2546,9 @@ func (s *SDK) UpdateAgentStatus(ctx context.Context, request operations.UpdateAg
 // UpdateConfig - <p>Updates the <code>Config</code> used when scheduling contacts.</p> <p>Updating a <code>Config</code> will not update the execution parameters for existing future contacts scheduled with this <code>Config</code>.</p>
 func (s *SDK) UpdateConfig(ctx context.Context, request operations.UpdateConfigRequest) (*operations.UpdateConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2563,7 +2563,7 @@ func (s *SDK) UpdateConfig(ctx context.Context, request operations.UpdateConfigR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2632,9 +2632,9 @@ func (s *SDK) UpdateConfig(ctx context.Context, request operations.UpdateConfigR
 // UpdateEphemeris - Updates an existing ephemeris
 func (s *SDK) UpdateEphemeris(ctx context.Context, request operations.UpdateEphemerisRequest) (*operations.UpdateEphemerisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2649,7 +2649,7 @@ func (s *SDK) UpdateEphemeris(ctx context.Context, request operations.UpdateEphe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2718,9 +2718,9 @@ func (s *SDK) UpdateEphemeris(ctx context.Context, request operations.UpdateEphe
 // UpdateMissionProfile - <p>Updates a mission profile.</p> <p>Updating a mission profile will not update the execution parameters for existing future contacts.</p>
 func (s *SDK) UpdateMissionProfile(ctx context.Context, request operations.UpdateMissionProfileRequest) (*operations.UpdateMissionProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2735,7 +2735,7 @@ func (s *SDK) UpdateMissionProfile(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

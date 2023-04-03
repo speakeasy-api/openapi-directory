@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListScheduleGroupsQueryParams struct {
+type ListScheduleGroupsRequest struct {
 	// If specified, limits the number of results returned by this operation. The operation also returns a <code>NextToken</code> which you can use in a subsequent operation to retrieve the next set of results.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The name prefix that you can use to return a filtered list of your schedule groups.
 	NamePrefix *string `queryParam:"style=form,explode=true,name=NamePrefix"`
 	// The token returned by a previous call to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListScheduleGroupsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type ListScheduleGroupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListScheduleGroupsRequest struct {
-	QueryParams ListScheduleGroupsQueryParams
-	Headers     ListScheduleGroupsHeaders
 }
 
 type ListScheduleGroupsResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiscoverSchemaForSourceRequest struct {
-	Request shared.SourceDiscoverSchemaRequestBody `request:"mediaType=application/json"`
-}
-
 type DiscoverSchemaForSourceResponse struct {
 	ContentType string
 	// Input failed validation

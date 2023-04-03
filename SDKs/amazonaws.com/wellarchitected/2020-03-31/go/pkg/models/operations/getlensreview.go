@@ -7,16 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLensReviewPathParams struct {
-	LensAlias  string `pathParam:"style=simple,explode=false,name=LensAlias"`
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
-type GetLensReviewQueryParams struct {
-	MilestoneNumber *int64 `queryParam:"style=form,explode=true,name=MilestoneNumber"`
-}
-
-type GetLensReviewHeaders struct {
+type GetLensReviewRequest struct {
+	LensAlias         string  `pathParam:"style=simple,explode=false,name=LensAlias"`
+	MilestoneNumber   *int64  `queryParam:"style=form,explode=true,name=MilestoneNumber"`
+	WorkloadID        string  `pathParam:"style=simple,explode=false,name=WorkloadId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +18,6 @@ type GetLensReviewHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLensReviewRequest struct {
-	PathParams  GetLensReviewPathParams
-	QueryParams GetLensReviewQueryParams
-	Headers     GetLensReviewHeaders
 }
 
 type GetLensReviewResponse struct {

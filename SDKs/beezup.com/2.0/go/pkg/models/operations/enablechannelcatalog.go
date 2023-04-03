@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnableChannelCatalogPathParams struct {
+type EnableChannelCatalogRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type EnableChannelCatalogRequest struct {
-	PathParams EnableChannelCatalogPathParams
 }
 
 type EnableChannelCatalogResponse struct {

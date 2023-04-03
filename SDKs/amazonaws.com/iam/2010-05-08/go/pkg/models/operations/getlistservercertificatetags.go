@@ -50,7 +50,7 @@ func (e *GETListServerCertificateTagsVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETListServerCertificateTagsQueryParams struct {
+type GETListServerCertificateTagsRequest struct {
 	Action GETListServerCertificateTagsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the <code>Marker</code> element in the response that you received to indicate where the next call should start.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -59,21 +59,13 @@ type GETListServerCertificateTagsQueryParams struct {
 	// <p>The name of the IAM server certificate whose tags you want to see.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	ServerCertificateName string                                  `queryParam:"style=form,explode=true,name=ServerCertificateName"`
 	Version               GETListServerCertificateTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListServerCertificateTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListServerCertificateTagsRequest struct {
-	QueryParams GETListServerCertificateTagsQueryParams
-	Headers     GETListServerCertificateTagsHeaders
+	XAmzAlgorithm         *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListServerCertificateTagsResponse struct {

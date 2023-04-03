@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJobInfoLightRequest struct {
-	Request shared.JobIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetJobInfoLightResponse struct {
 	ContentType string
 	// Input failed validation

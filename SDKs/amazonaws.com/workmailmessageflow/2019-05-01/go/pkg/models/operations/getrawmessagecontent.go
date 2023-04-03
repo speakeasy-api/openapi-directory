@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRawMessageContentPathParams struct {
-	// The identifier of the email message to retrieve.
-	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
-}
-
-type GetRawMessageContentHeaders struct {
+type GetRawMessageContentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetRawMessageContentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRawMessageContentRequest struct {
-	PathParams GetRawMessageContentPathParams
-	Headers    GetRawMessageContentHeaders
+	// The identifier of the email message to retrieve.
+	MessageID string `pathParam:"style=simple,explode=false,name=messageId"`
 }
 
 type GetRawMessageContentResponse struct {

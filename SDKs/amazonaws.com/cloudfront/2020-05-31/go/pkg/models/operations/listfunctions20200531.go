@@ -32,28 +32,20 @@ func (e *ListFunctions20200531StageEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListFunctions20200531QueryParams struct {
+type ListFunctions20200531Request struct {
 	// Use this field when paginating results to indicate where to begin in your list of functions. The response includes functions in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of functions that you want in the response.
 	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	// An optional filter to return only the functions that are in the specified stage, either <code>DEVELOPMENT</code> or <code>LIVE</code>.
-	Stage *ListFunctions20200531StageEnum `queryParam:"style=form,explode=true,name=Stage"`
-}
-
-type ListFunctions20200531Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListFunctions20200531Request struct {
-	QueryParams ListFunctions20200531QueryParams
-	Headers     ListFunctions20200531Headers
+	Stage             *ListFunctions20200531StageEnum `queryParam:"style=form,explode=true,name=Stage"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListFunctions20200531Response struct {

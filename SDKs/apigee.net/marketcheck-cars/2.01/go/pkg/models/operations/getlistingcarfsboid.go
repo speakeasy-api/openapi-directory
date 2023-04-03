@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingCarFsboIDPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingCarFsboIDQueryParams struct {
+type GetListingCarFsboIDRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Flag on whether to include api_key in response API urls (if any)
 	AppendAPIKey *bool `queryParam:"style=form,explode=true,name=append_api_key"`
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// To include_relevant_links. Default is true
 	IncludeRelevantLinks *bool `queryParam:"style=form,explode=true,name=include_relevant_links"`
-}
-
-type GetListingCarFsboIDRequest struct {
-	PathParams  GetListingCarFsboIDPathParams
-	QueryParams GetListingCarFsboIDQueryParams
 }
 
 type GetListingCarFsboIDResponse struct {

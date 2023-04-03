@@ -135,7 +135,7 @@ func (e *ListLayersCompatibleRuntimeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLayersQueryParams struct {
+type ListLayersRequest struct {
 	// The compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html">instruction set architecture</a>.
 	CompatibleArchitecture *ListLayersCompatibleArchitectureEnum `queryParam:"style=form,explode=true,name=CompatibleArchitecture"`
 	// A runtime identifier. For example, <code>go1.x</code>.
@@ -143,10 +143,7 @@ type ListLayersQueryParams struct {
 	// A pagination token returned by a previous call.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of layers to return.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListLayersHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -154,11 +151,6 @@ type ListLayersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLayersRequest struct {
-	QueryParams ListLayersQueryParams
-	Headers     ListLayersHeaders
 }
 
 type ListLayersResponse struct {

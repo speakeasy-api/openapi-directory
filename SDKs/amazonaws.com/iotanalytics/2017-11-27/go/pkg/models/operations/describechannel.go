@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeChannelPathParams struct {
-	// The name of the channel whose information is retrieved.
-	ChannelName string `pathParam:"style=simple,explode=false,name=channelName"`
-}
-
-type DescribeChannelQueryParams struct {
-	// If true, additional statistical information about the channel is included in the response. This feature can't be used with a channel whose S3 storage is customer-managed.
-	IncludeStatistics *bool `queryParam:"style=form,explode=true,name=includeStatistics"`
-}
-
-type DescribeChannelHeaders struct {
+type DescribeChannelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeChannelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeChannelRequest struct {
-	PathParams  DescribeChannelPathParams
-	QueryParams DescribeChannelQueryParams
-	Headers     DescribeChannelHeaders
+	// The name of the channel whose information is retrieved.
+	ChannelName string `pathParam:"style=simple,explode=false,name=channelName"`
+	// If true, additional statistical information about the channel is included in the response. This feature can't be used with a channel whose S3 storage is customer-managed.
+	IncludeStatistics *bool `queryParam:"style=form,explode=true,name=includeStatistics"`
 }
 
 type DescribeChannelResponse struct {

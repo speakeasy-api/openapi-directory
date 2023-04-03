@@ -50,25 +50,17 @@ func (e *POSTRestoreSnapshotTierVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTRestoreSnapshotTierQueryParams struct {
-	Action  POSTRestoreSnapshotTierActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRestoreSnapshotTierVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRestoreSnapshotTierHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRestoreSnapshotTierRequest struct {
-	QueryParams POSTRestoreSnapshotTierQueryParams
-	Headers     POSTRestoreSnapshotTierHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRestoreSnapshotTierActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTRestoreSnapshotTierVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRestoreSnapshotTierResponse struct {

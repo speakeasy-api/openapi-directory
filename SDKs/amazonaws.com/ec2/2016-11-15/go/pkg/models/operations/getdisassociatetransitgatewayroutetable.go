@@ -50,7 +50,7 @@ func (e *GETDisassociateTransitGatewayRouteTableVersionEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETDisassociateTransitGatewayRouteTableQueryParams struct {
+type GETDisassociateTransitGatewayRouteTableRequest struct {
 	Action GETDisassociateTransitGatewayRouteTableActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -59,21 +59,13 @@ type GETDisassociateTransitGatewayRouteTableQueryParams struct {
 	// The ID of the transit gateway route table.
 	TransitGatewayRouteTableID string                                             `queryParam:"style=form,explode=true,name=TransitGatewayRouteTableId"`
 	Version                    GETDisassociateTransitGatewayRouteTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateTransitGatewayRouteTableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateTransitGatewayRouteTableRequest struct {
-	QueryParams GETDisassociateTransitGatewayRouteTableQueryParams
-	Headers     GETDisassociateTransitGatewayRouteTableHeaders
+	XAmzAlgorithm              *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateTransitGatewayRouteTableResponse struct {

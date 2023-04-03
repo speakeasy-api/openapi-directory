@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetPostGameCarnageReportPathParams struct {
+type Destiny2GetPostGameCarnageReportRequest struct {
 	// The ID of the activity whose PGCR is requested.
 	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
-}
-
-type Destiny2GetPostGameCarnageReportRequest struct {
-	PathParams Destiny2GetPostGameCarnageReportPathParams
 }
 
 // Destiny2GetPostGameCarnageReport200Wildcard - Look at the Response property for more information about the nature of this response

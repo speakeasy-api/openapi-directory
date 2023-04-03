@@ -30,7 +30,8 @@ func (e *ListHapgsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListHapgsHeaders struct {
+type ListHapgsRequest struct {
+	ListHapgsRequest  shared.ListHapgsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ListHapgsHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListHapgsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListHapgsRequest struct {
-	Headers ListHapgsHeaders
-	Request shared.ListHapgsRequest `request:"mediaType=application/json"`
 }
 
 type ListHapgsResponse struct {

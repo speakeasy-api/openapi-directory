@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMapPathParams struct {
+type DescribeMapRequest struct {
 	// The name of the map resource.
-	MapName string `pathParam:"style=simple,explode=false,name=MapName"`
-}
-
-type DescribeMapHeaders struct {
+	MapName           string  `pathParam:"style=simple,explode=false,name=MapName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeMapHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeMapRequest struct {
-	PathParams DescribeMapPathParams
-	Headers    DescribeMapHeaders
 }
 
 type DescribeMapResponse struct {

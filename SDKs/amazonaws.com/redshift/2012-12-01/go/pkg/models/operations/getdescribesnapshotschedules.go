@@ -50,7 +50,7 @@ func (e *GETDescribeSnapshotSchedulesVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeSnapshotSchedulesQueryParams struct {
+type GETDescribeSnapshotSchedulesRequest struct {
 	Action GETDescribeSnapshotSchedulesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The unique identifier for the cluster whose snapshot schedules you want to view.
 	ClusterIdentifier *string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -63,23 +63,15 @@ type GETDescribeSnapshotSchedulesQueryParams struct {
 	// The key value for a snapshot schedule tag.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// The value corresponding to the key of the snapshot schedule tag.
-	TagValues []string                                `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeSnapshotSchedulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeSnapshotSchedulesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeSnapshotSchedulesRequest struct {
-	QueryParams GETDescribeSnapshotSchedulesQueryParams
-	Headers     GETDescribeSnapshotSchedulesHeaders
+	TagValues         []string                                `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeSnapshotSchedulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeSnapshotSchedulesResponse struct {

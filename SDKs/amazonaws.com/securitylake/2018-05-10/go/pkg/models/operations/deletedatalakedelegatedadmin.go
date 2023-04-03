@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDatalakeDelegatedAdminPathParams struct {
-	// The account ID the Security Lake delegated administrator.
-	Account string `pathParam:"style=simple,explode=false,name=account"`
-}
-
-type DeleteDatalakeDelegatedAdminHeaders struct {
+type DeleteDatalakeDelegatedAdminRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDatalakeDelegatedAdminHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDatalakeDelegatedAdminRequest struct {
-	PathParams DeleteDatalakeDelegatedAdminPathParams
-	Headers    DeleteDatalakeDelegatedAdminHeaders
+	// The account ID the Security Lake delegated administrator.
+	Account string `pathParam:"style=simple,explode=false,name=account"`
 }
 
 type DeleteDatalakeDelegatedAdminResponse struct {

@@ -24,52 +24,47 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateBudgetRequest{
-        Headers: operations.CreateBudgetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
-        },
-        Request: shared.CreateBudgetRequest{
-            AccountID: "illum",
+        CreateBudgetRequest: shared.CreateBudgetRequest{
+            AccountID: "corrupti",
             Budget: shared.Budget{
                 AutoAdjustData: &shared.AutoAdjustData{
-                    AutoAdjustType: "HISTORICAL",
+                    AutoAdjustType: "FORECAST",
                     HistoricalOptions: &shared.HistoricalOptions{
-                        BudgetAdjustmentPeriod: 623564,
-                        LookBackAvailablePeriods: 645894,
+                        BudgetAdjustmentPeriod: 715190,
+                        LookBackAvailablePeriods: 844266,
                     },
-                    LastAutoAdjustTime: "2022-07-25T06:44:09.184Z",
+                    LastAutoAdjustTime: "2021-04-14T16:47:33.722Z",
                 },
                 BudgetLimit: &shared.Spend{
-                    Amount: "magnam",
-                    Unit: "debitis",
+                    Amount: "corrupti",
+                    Unit: "illum",
                 },
-                BudgetName: "ipsa",
-                BudgetType: "SAVINGS_PLANS_COVERAGE",
+                BudgetName: "vel",
+                BudgetType: "RI_COVERAGE",
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
-                        Amount: "tempora",
+                        Amount: "deserunt",
                         Unit: "suscipit",
                     },
                     ForecastedSpend: &shared.Spend{
-                        Amount: "molestiae",
-                        Unit: "minus",
+                        Amount: "iure",
+                        Unit: "magnam",
                     },
                 },
                 CostFilters: map[string][]string{
-                    "voluptatum": []string{
+                    "ipsa": []string{
+                        "tempora",
+                        "suscipit",
+                        "molestiae",
+                        "minus",
+                    },
+                    "placeat": []string{
+                        "iusto",
                         "excepturi",
                         "nisi",
                     },
@@ -82,9 +77,6 @@ func main() {
                     "perferendis": []string{
                         "repellendus",
                         "sapiente",
-                    },
-                    "quo": []string{
-                        "at",
                     },
                 },
                 CostTypes: &shared.CostTypes{
@@ -100,8 +92,12 @@ func main() {
                     UseAmortized: false,
                     UseBlended: false,
                 },
-                LastUpdatedTime: "2020-01-25T09:54:35.794Z",
+                LastUpdatedTime: "2022-07-31T07:34:52.790Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
+                    "at": shared.Spend{
+                        Amount: "maiores",
+                        Unit: "molestiae",
+                    },
                     "quod": shared.Spend{
                         Amount: "quod",
                         Unit: "esse",
@@ -110,73 +106,105 @@ func main() {
                         Amount: "porro",
                         Unit: "dolorum",
                     },
+                    "dicta": shared.Spend{
+                        Amount: "nam",
+                        Unit: "officia",
+                    },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "2022-04-12T23:15:28.420Z",
-                    Start: "2021-11-02T03:00:47.309Z",
+                    End: "2022-09-18T08:27:00.721Z",
+                    Start: "2021-02-10T09:24:01.909Z",
                 },
-                TimeUnit: "DAILY",
+                TimeUnit: "ANNUALLY",
             },
             NotificationsWithSubscribers: []shared.NotificationWithSubscribers{
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "EQUAL_TO",
-                        NotificationState: "ALARM",
-                        NotificationType: "FORECASTED",
-                        Threshold: 1059.07,
+                        ComparisonOperator: "GREATER_THAN",
+                        NotificationState: "OK",
+                        NotificationType: "ACTUAL",
+                        Threshold: 2645.55,
                         ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "modi",
+                            Address: "cum",
                             SubscriptionType: "SNS",
                         },
                         shared.Subscriber{
-                            Address: "impedit",
+                            Address: "ipsum",
+                            SubscriptionType: "EMAIL",
+                        },
+                        shared.Subscriber{
+                            Address: "aspernatur",
+                            SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "ad",
                             SubscriptionType: "EMAIL",
                         },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "LESS_THAN",
-                        NotificationState: "OK",
-                        NotificationType: "FORECASTED",
-                        Threshold: 1352.18,
+                        ComparisonOperator: "GREATER_THAN",
+                        NotificationState: "ALARM",
+                        NotificationType: "ACTUAL",
+                        Threshold: 6169.34,
                         ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "natus",
+                            Address: "saepe",
+                            SubscriptionType: "EMAIL",
+                        },
+                        shared.Subscriber{
+                            Address: "in",
                             SubscriptionType: "SNS",
                         },
                         shared.Subscriber{
                             Address: "iste",
                             SubscriptionType: "SNS",
                         },
+                        shared.Subscriber{
+                            Address: "saepe",
+                            SubscriptionType: "EMAIL",
+                        },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "LESS_THAN",
+                        ComparisonOperator: "GREATER_THAN",
                         NotificationState: "OK",
                         NotificationType: "FORECASTED",
-                        Threshold: 9025.99,
+                        Threshold: 6667.67,
                         ThresholdType: "ABSOLUTE_VALUE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "corporis",
-                            SubscriptionType: "EMAIL",
+                            Address: "dolores",
+                            SubscriptionType: "SNS",
                         },
                         shared.Subscriber{
-                            Address: "iure",
-                            SubscriptionType: "EMAIL",
+                            Address: "corporis",
+                            SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "nobis",
+                            SubscriptionType: "SNS",
                         },
                     },
                 },
             },
         },
+        XAmzAlgorithm: "omnis",
+        XAmzContentSha256: "nemo",
+        XAmzCredential: "minima",
+        XAmzDate: "excepturi",
+        XAmzSecurityToken: "accusantium",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "culpa",
+        XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
     }
 
     ctx := context.Background()
@@ -193,7 +221,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -222,4 +250,15 @@ func main() {
 * `UpdateSubscriber` - Updates a subscriber.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

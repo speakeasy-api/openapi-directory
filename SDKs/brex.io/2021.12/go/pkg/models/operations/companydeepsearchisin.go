@@ -4,23 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyDeepsearchISINSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // CompanyDeepsearchISINRequestBody - ISIN bulk deepsearch parameters
 type CompanyDeepsearchISINRequestBody struct {
 	// A list of ISIN numbers seperated by comma (maximum) is 100
 	Isin *string `form:"name=isin"`
-}
-
-type CompanyDeepsearchISINRequest struct {
-	// ISIN bulk deepsearch parameters
-	Request  *CompanyDeepsearchISINRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CompanyDeepsearchISINSecurity
 }
 
 // CompanyDeepsearchISINDefaultApplicationJSON - Detailed information about the error

@@ -10,9 +10,9 @@ import (
 )
 
 type GetRepositoriesSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetRepositoriesRoleEnum - Filters the result based on the authenticated user's role on each repository.
@@ -50,7 +50,7 @@ func (e *GetRepositoriesRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRepositoriesQueryParams struct {
+type GetRepositoriesRequest struct {
 	// Filter the results to include only repositories created on or
 	// after this [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)
 	//  timestamp. Example: `YYYY-MM-DDTHH:mm:ss.sssZ`
@@ -70,11 +70,6 @@ type GetRepositoriesQueryParams struct {
 	// Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetRepositoriesRequest struct {
-	QueryParams GetRepositoriesQueryParams
-	Security    GetRepositoriesSecurity
 }
 
 type GetRepositoriesResponse struct {

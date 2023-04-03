@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTopicRulePathParams struct {
-	// The name of the rule.
-	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
-}
-
-type CreateTopicRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// <p>Metadata which can be used to manage the topic rule.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: --tags "key1=value1&amp;key2=value2..."</p> <p>For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."</p> </note>
-	XAmzTagging *string `header:"style=simple,explode=false,name=x-amz-tagging"`
-}
-
 // CreateTopicRuleRequestBodyTopicRulePayload - Describes a rule.
 type CreateTopicRuleRequestBodyTopicRulePayload struct {
 	Actions          []shared.Action `json:"actions,omitempty"`
@@ -40,9 +23,18 @@ type CreateTopicRuleRequestBody struct {
 }
 
 type CreateTopicRuleRequest struct {
-	PathParams CreateTopicRulePathParams
-	Headers    CreateTopicRuleHeaders
-	Request    CreateTopicRuleRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateTopicRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the rule.
+	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
+	// <p>Metadata which can be used to manage the topic rule.</p> <note> <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p> <p>For the CLI command-line parameter use format: --tags "key1=value1&amp;key2=value2..."</p> <p>For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."</p> </note>
+	XAmzTagging *string `header:"style=simple,explode=false,name=x-amz-tagging"`
 }
 
 type CreateTopicRuleResponse struct {

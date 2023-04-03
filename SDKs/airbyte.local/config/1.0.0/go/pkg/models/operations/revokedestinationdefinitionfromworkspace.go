@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RevokeDestinationDefinitionFromWorkspaceRequest struct {
-	Request shared.DestinationDefinitionIDWithWorkspaceID `request:"mediaType=application/json"`
-}
-
 type RevokeDestinationDefinitionFromWorkspaceResponse struct {
 	ContentType string
 	// Input failed validation

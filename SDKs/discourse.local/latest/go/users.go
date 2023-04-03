@@ -34,7 +34,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AdminGetUser - Get a user by id
 func (s *users) AdminGetUser(ctx context.Context, request operations.AdminGetUserRequest) (*operations.AdminGetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -78,14 +78,14 @@ func (s *users) AdminGetUser(ctx context.Context, request operations.AdminGetUse
 // AdminListUsers - Get a list of users
 func (s *users) AdminListUsers(ctx context.Context, request operations.AdminListUsersRequest) (*operations.AdminListUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/list/{flag}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/list/{flag}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,7 +126,7 @@ func (s *users) AdminListUsers(ctx context.Context, request operations.AdminList
 // AnonymizeUser - Anonymize a user
 func (s *users) AnonymizeUser(ctx context.Context, request operations.AnonymizeUserRequest) (*operations.AnonymizeUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/anonymize.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/anonymize.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -170,9 +170,9 @@ func (s *users) AnonymizeUser(ctx context.Context, request operations.AnonymizeU
 // ChangePassword - Change password
 func (s *users) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/password-reset/{token}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/password-reset/{token}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -214,7 +214,7 @@ func (s *users) CreateUser(ctx context.Context, request operations.CreateUserReq
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -226,7 +226,7 @@ func (s *users) CreateUser(ctx context.Context, request operations.CreateUserReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -265,9 +265,9 @@ func (s *users) CreateUser(ctx context.Context, request operations.CreateUserReq
 // DeleteUser - Delete a user
 func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -316,14 +316,14 @@ func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserReq
 // GetUser - Get a single user by username
 func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/{username}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/{username}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -362,7 +362,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 // GetUserEmails - Get email addresses belonging to a user
 func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEmailsRequest) (*operations.GetUserEmailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/emails.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/emails.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -406,14 +406,14 @@ func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEma
 // GetUserExternalID - Get a user by external_id
 func (s *users) GetUserExternalID(ctx context.Context, request operations.GetUserExternalIDRequest) (*operations.GetUserExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/by-external/{external_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/by-external/{external_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -452,14 +452,14 @@ func (s *users) GetUserExternalID(ctx context.Context, request operations.GetUse
 // GetUserIdentiyProviderExternalID - Get a user by identity provider external ID
 func (s *users) GetUserIdentiyProviderExternalID(ctx context.Context, request operations.GetUserIdentiyProviderExternalIDRequest) (*operations.GetUserIdentiyProviderExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/by-external/{provider}/{external_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/by-external/{provider}/{external_id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -505,7 +505,7 @@ func (s *users) ListUserActions(ctx context.Context, request operations.ListUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -546,7 +546,7 @@ func (s *users) ListUserActions(ctx context.Context, request operations.ListUser
 // ListUserBadges - List badges for a user
 func (s *users) ListUserBadges(ctx context.Context, request operations.ListUserBadgesRequest) (*operations.ListUserBadgesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user-badges/{username}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user-badges/{username}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -597,7 +597,7 @@ func (s *users) ListUsersPublic(ctx context.Context, request operations.ListUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -638,7 +638,7 @@ func (s *users) ListUsersPublic(ctx context.Context, request operations.ListUser
 // LogOutUser - Log a user out
 func (s *users) LogOutUser(ctx context.Context, request operations.LogOutUserRequest) (*operations.LogOutUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/log_out.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/log_out.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -682,7 +682,7 @@ func (s *users) LogOutUser(ctx context.Context, request operations.LogOutUserReq
 // RefreshGravatar - Refresh gravatar
 func (s *users) RefreshGravatar(ctx context.Context, request operations.RefreshGravatarRequest) (*operations.RefreshGravatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_avatar/{username}/refresh_gravatar.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user_avatar/{username}/refresh_gravatar.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -724,7 +724,7 @@ func (s *users) RefreshGravatar(ctx context.Context, request operations.RefreshG
 }
 
 // SendPasswordResetEmail - Send password reset email
-func (s *users) SendPasswordResetEmail(ctx context.Context, request operations.SendPasswordResetEmailRequest) (*operations.SendPasswordResetEmailResponse, error) {
+func (s *users) SendPasswordResetEmail(ctx context.Context, request operations.SendPasswordResetEmailRequestBody) (*operations.SendPasswordResetEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/session/forgot_password.json"
 
@@ -777,9 +777,9 @@ func (s *users) SendPasswordResetEmail(ctx context.Context, request operations.S
 // SilenceUser - Silence a user
 func (s *users) SilenceUser(ctx context.Context, request operations.SilenceUserRequest) (*operations.SilenceUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/silence.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/silence.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -828,9 +828,9 @@ func (s *users) SilenceUser(ctx context.Context, request operations.SilenceUserR
 // SuspendUser - Suspend a user
 func (s *users) SuspendUser(ctx context.Context, request operations.SuspendUserRequest) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/suspend.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{id}/suspend.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,9 +879,9 @@ func (s *users) SuspendUser(ctx context.Context, request operations.SuspendUserR
 // UpdateAvatar - Update avatar
 func (s *users) UpdateAvatar(ctx context.Context, request operations.UpdateAvatarRequest) (*operations.UpdateAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/preferences/avatar/pick.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/preferences/avatar/pick.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -930,9 +930,9 @@ func (s *users) UpdateAvatar(ctx context.Context, request operations.UpdateAvata
 // UpdateEmail - Update email
 func (s *users) UpdateEmail(ctx context.Context, request operations.UpdateEmailRequest) (*operations.UpdateEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/preferences/email.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/preferences/email.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -972,9 +972,9 @@ func (s *users) UpdateEmail(ctx context.Context, request operations.UpdateEmailR
 // UpdateUser - Update a user
 func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/{username}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/{username}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -986,7 +986,7 @@ func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -1025,9 +1025,9 @@ func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserReq
 // UpdateUsername - Update username
 func (s *users) UpdateUsername(ctx context.Context, request operations.UpdateUsernameRequest) (*operations.UpdateUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/preferences/username.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/u/{username}/preferences/username.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

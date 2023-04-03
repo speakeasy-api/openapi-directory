@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeManagedJobTemplatePathParams struct {
-	// The unique name of a managed job template, which is required.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type DescribeManagedJobTemplateQueryParams struct {
-	// An optional parameter to specify version of a managed template. If not specified, the pre-defined default version is returned.
-	TemplateVersion *string `queryParam:"style=form,explode=true,name=templateVersion"`
-}
-
-type DescribeManagedJobTemplateHeaders struct {
+type DescribeManagedJobTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeManagedJobTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeManagedJobTemplateRequest struct {
-	PathParams  DescribeManagedJobTemplatePathParams
-	QueryParams DescribeManagedJobTemplateQueryParams
-	Headers     DescribeManagedJobTemplateHeaders
+	// The unique name of a managed job template, which is required.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
+	// An optional parameter to specify version of a managed template. If not specified, the pre-defined default version is returned.
+	TemplateVersion *string `queryParam:"style=form,explode=true,name=templateVersion"`
 }
 
 type DescribeManagedJobTemplateResponse struct {

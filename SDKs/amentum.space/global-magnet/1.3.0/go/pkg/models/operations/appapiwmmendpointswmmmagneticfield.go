@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type AppAPIWMMEndpointsWMMMagneticFieldQueryParams struct {
+type AppAPIWMMEndpointsWMMMagneticFieldRequest struct {
 	// Geodetic Altitude 0 km to 600 km.
 	Altitude float64 `queryParam:"style=form,explode=true,name=altitude"`
 	// Geodetic Latitude. -90 deg (S) to 90 deg (N).
@@ -15,10 +15,6 @@ type AppAPIWMMEndpointsWMMMagneticFieldQueryParams struct {
 	Longitude float64 `queryParam:"style=form,explode=true,name=longitude"`
 	// Year as a decimal in the range 2015-2025 (2017.5 would be half way through 2017).
 	Year float64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type AppAPIWMMEndpointsWMMMagneticFieldRequest struct {
-	QueryParams AppAPIWMMEndpointsWMMMagneticFieldQueryParams
 }
 
 // AppAPIWMMEndpointsWMMMagneticField200ApplicationJSONDeclination - The angle in the horizontal plane between magnetic north and true north. Declination is positive when magnetic north is east of true north.

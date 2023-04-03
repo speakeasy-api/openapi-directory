@@ -74,30 +74,22 @@ func (e *GETUpdateServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETUpdateServiceSpecificCredentialQueryParams struct {
+type GETUpdateServiceSpecificCredentialRequest struct {
 	Action GETUpdateServiceSpecificCredentialActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of the service-specific credential.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	ServiceSpecificCredentialID string `queryParam:"style=form,explode=true,name=ServiceSpecificCredentialId"`
 	// The status to be assigned to the service-specific credential.
 	Status GETUpdateServiceSpecificCredentialStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// <p>The name of the IAM user associated with the service-specific credential. If you do not specify this value, then the operation assumes the user whose credentials are used to call the operation.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                                       `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETUpdateServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateServiceSpecificCredentialHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateServiceSpecificCredentialRequest struct {
-	QueryParams GETUpdateServiceSpecificCredentialQueryParams
-	Headers     GETUpdateServiceSpecificCredentialHeaders
+	UserName          *string                                       `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETUpdateServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateServiceSpecificCredentialResponse struct {

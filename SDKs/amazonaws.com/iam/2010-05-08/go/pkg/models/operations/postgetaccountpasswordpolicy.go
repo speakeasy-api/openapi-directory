@@ -50,24 +50,16 @@ func (e *POSTGetAccountPasswordPolicyVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTGetAccountPasswordPolicyQueryParams struct {
-	Action  POSTGetAccountPasswordPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetAccountPasswordPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetAccountPasswordPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetAccountPasswordPolicyRequest struct {
-	QueryParams POSTGetAccountPasswordPolicyQueryParams
-	Headers     POSTGetAccountPasswordPolicyHeaders
+	Action            POSTGetAccountPasswordPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           POSTGetAccountPasswordPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetAccountPasswordPolicyResponse struct {

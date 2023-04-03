@@ -40,14 +40,14 @@ func newFileShares(defaultClient, securityClient HTTPClient, serverURL, language
 //	**Note:** To delete a file share you must have been granted organization developer rights.
 func (s *fileShares) DeleteVolumesFsName(ctx context.Context, request operations.DeleteVolumesFsNameRequest) (*operations.DeleteVolumesFsNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -93,7 +93,7 @@ func (s *fileShares) GetVolumesFsFlavorsJSON(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,7 +143,7 @@ func (s *fileShares) GetVolumesFsJSON(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -186,14 +186,14 @@ func (s *fileShares) GetVolumesFsJSON(ctx context.Context, request operations.Ge
 // This endpoint returns detailed information about a file share (corresponding IBM Containers command: `cf ic volume fs-inspect FSNAME`).
 func (s *fileShares) GetVolumesFsNameJSON(ctx context.Context, request operations.GetVolumesFsNameJSONRequest) (*operations.GetVolumesFsNameJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}/json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}/json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -246,7 +246,7 @@ func (s *fileShares) PostVolumesFsCreate(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/volumes/fs/create"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileshareParam", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,7 +261,7 @@ func (s *fileShares) PostVolumesFsCreate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -63,7 +63,7 @@ func (e *GetPopularCarsCountryEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPopularCarsQueryParams struct {
+type GetPopularCarsRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Inventory type for which popular count is to be searched
@@ -74,10 +74,6 @@ type GetPopularCarsQueryParams struct {
 	Country *GetPopularCarsCountryEnum `queryParam:"style=form,explode=true,name=country"`
 	// State level sales count
 	State *string `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetPopularCarsRequest struct {
-	QueryParams GetPopularCarsQueryParams
 }
 
 type GetPopularCarsResponse struct {

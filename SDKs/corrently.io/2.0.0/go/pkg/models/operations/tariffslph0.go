@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TariffSlph0QueryParams struct {
+type TariffSlph0Request struct {
 	// Zipcode (Postzleitzahl) of a city in Germany.
 	Zipcode *string `queryParam:"style=form,explode=true,name=zipcode"`
-}
-
-type TariffSlph0Request struct {
-	QueryParams TariffSlph0QueryParams
 }
 
 type TariffSlph0Response struct {

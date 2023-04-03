@@ -50,28 +50,20 @@ func (e *GETUntagPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUntagPolicyQueryParams struct {
+type GETUntagPolicyRequest struct {
 	Action GETUntagPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ARN of the IAM customer managed policy from which you want to remove tags.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	PolicyArn string `queryParam:"style=form,explode=true,name=PolicyArn"`
 	// A list of key names as a simple array of strings. The tags with matching keys are removed from the specified policy.
-	TagKeys []string                  `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETUntagPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUntagPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUntagPolicyRequest struct {
-	QueryParams GETUntagPolicyQueryParams
-	Headers     GETUntagPolicyHeaders
+	TagKeys           []string                  `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETUntagPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUntagPolicyResponse struct {

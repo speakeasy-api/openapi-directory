@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestPatchTestSeriesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestPatchTestSeriesPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The slug of the test series
-	TestSeriesSlug string `pathParam:"style=simple,explode=false,name=test_series_slug"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type TestPatchTestSeriesNameOfTheTestSeries struct {
@@ -26,9 +16,13 @@ type TestPatchTestSeriesNameOfTheTestSeries struct {
 }
 
 type TestPatchTestSeriesRequest struct {
-	PathParams TestPatchTestSeriesPathParams
-	Request    TestPatchTestSeriesNameOfTheTestSeries `request:"mediaType=application/json"`
-	Security   TestPatchTestSeriesSecurity
+	RequestBody TestPatchTestSeriesNameOfTheTestSeries `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The slug of the test series
+	TestSeriesSlug string `pathParam:"style=simple,explode=false,name=test_series_slug"`
 }
 
 // TestPatchTestSeriesTestSeriesTestRunSummary - Most important information about a test run.

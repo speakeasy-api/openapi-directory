@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type EinVerificationLookupSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
-type EinVerificationLookupQueryParams struct {
+type EinVerificationLookupRequest struct {
 	// Business name of the company
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// Optional state parameter to improve results. (Two letter code for example CA or US-CA for California)
@@ -20,11 +19,6 @@ type EinVerificationLookupQueryParams struct {
 	Tight *bool `queryParam:"style=form,explode=true,name=tight"`
 	// Optional zip code parameter to improve results. (Zip is preferred over state)
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type EinVerificationLookupRequest struct {
-	QueryParams EinVerificationLookupQueryParams
-	Security    EinVerificationLookupSecurity
 }
 
 // EinVerificationLookupDefaultApplicationJSON - Detailed information about the error

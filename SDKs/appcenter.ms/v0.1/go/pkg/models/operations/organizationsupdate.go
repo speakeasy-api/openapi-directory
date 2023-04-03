@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrganizationsUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrganizationsUpdatePathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // OrganizationsUpdateRequestBody - The data for the org
@@ -27,10 +21,10 @@ type OrganizationsUpdateRequestBody struct {
 }
 
 type OrganizationsUpdateRequest struct {
-	PathParams OrganizationsUpdatePathParams
 	// The data for the org
-	Request  OrganizationsUpdateRequestBody `request:"mediaType=application/json"`
-	Security OrganizationsUpdateSecurity
+	RequestBody OrganizationsUpdateRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrganizationsUpdateDefaultApplicationJSONErrorCodeEnum string

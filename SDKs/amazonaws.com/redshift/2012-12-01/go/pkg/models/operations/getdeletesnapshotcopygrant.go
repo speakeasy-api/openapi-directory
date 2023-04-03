@@ -50,26 +50,18 @@ func (e *GETDeleteSnapshotCopyGrantVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDeleteSnapshotCopyGrantQueryParams struct {
+type GETDeleteSnapshotCopyGrantRequest struct {
 	Action GETDeleteSnapshotCopyGrantActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the snapshot copy grant to delete.
 	SnapshotCopyGrantName string                                `queryParam:"style=form,explode=true,name=SnapshotCopyGrantName"`
 	Version               GETDeleteSnapshotCopyGrantVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteSnapshotCopyGrantHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteSnapshotCopyGrantRequest struct {
-	QueryParams GETDeleteSnapshotCopyGrantQueryParams
-	Headers     GETDeleteSnapshotCopyGrantHeaders
+	XAmzAlgorithm         *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteSnapshotCopyGrantResponse struct {

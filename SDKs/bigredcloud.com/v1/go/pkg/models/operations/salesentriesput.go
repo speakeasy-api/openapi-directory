@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SalesEntriesPutPathParams struct {
+type SalesEntriesPutRequest struct {
+	// Information of Sales Entry to update.
+	SalesEntryDto shared.SalesEntryDto `request:"mediaType=application/json"`
 	// Id of Sales Entry to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SalesEntriesPutRequest struct {
-	PathParams SalesEntriesPutPathParams
-	// Information of Sales Entry to update.
-	Request shared.SalesEntryDto `request:"mediaType=application/json"`
 }
 
 type SalesEntriesPutResponse struct {

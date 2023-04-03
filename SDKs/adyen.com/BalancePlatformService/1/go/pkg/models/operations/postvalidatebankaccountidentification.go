@@ -8,13 +8,8 @@ import (
 )
 
 type PostValidateBankAccountIdentificationSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostValidateBankAccountIdentificationRequest struct {
-	Request  *shared.BankAccountIdentificationValidationRequest `request:"mediaType=application/json"`
-	Security PostValidateBankAccountIdentificationSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostValidateBankAccountIdentificationResponse struct {

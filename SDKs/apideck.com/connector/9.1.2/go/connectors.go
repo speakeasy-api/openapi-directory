@@ -34,7 +34,7 @@ func newConnectors(defaultClient, securityClient HTTPClient, serverURL, language
 
 // ConnectorsAll - List Connectors
 // List Connectors
-func (s *connectors) ConnectorsAll(ctx context.Context, request operations.ConnectorsAllRequest) (*operations.ConnectorsAllResponse, error) {
+func (s *connectors) ConnectorsAll(ctx context.Context, request operations.ConnectorsAllRequest, security operations.ConnectorsAllSecurity) (*operations.ConnectorsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connector/connectors"
 
@@ -43,13 +43,13 @@ func (s *connectors) ConnectorsAll(ctx context.Context, request operations.Conne
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,18 +125,18 @@ func (s *connectors) ConnectorsAll(ctx context.Context, request operations.Conne
 
 // ConnectorsOne - Get Connector
 // Get Connector
-func (s *connectors) ConnectorsOne(ctx context.Context, request operations.ConnectorsOneRequest) (*operations.ConnectorsOneResponse, error) {
+func (s *connectors) ConnectorsOne(ctx context.Context, request operations.ConnectorsOneRequest, security operations.ConnectorsOneSecurity) (*operations.ConnectorsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connector/connectors/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connector/connectors/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

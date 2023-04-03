@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GsiDispatchRequest{
-        QueryParams: operations.GsiDispatchQueryParams{
-            Key: "corrupti",
-            Zip: "provident",
-        },
+        Key: "corrupti",
+        Zip: "provident",
     }
 
     ctx := context.Background()

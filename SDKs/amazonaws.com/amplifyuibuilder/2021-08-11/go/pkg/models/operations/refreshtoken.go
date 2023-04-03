@@ -9,6 +9,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// RefreshTokenRequestBodyRefreshTokenBody - Describes a refresh token.
+type RefreshTokenRequestBodyRefreshTokenBody struct {
+	Token *string `json:"token,omitempty"`
+}
+
+type RefreshTokenRequestBody struct {
+	// Describes a refresh token.
+	RefreshTokenBody RefreshTokenRequestBodyRefreshTokenBody `json:"refreshTokenBody"`
+}
+
 // RefreshTokenProviderEnum - The third-party provider for the token. The only valid value is <code>figma</code>.
 type RefreshTokenProviderEnum string
 
@@ -30,35 +40,17 @@ func (e *RefreshTokenProviderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RefreshTokenPathParams struct {
+type RefreshTokenRequest struct {
+	RequestBody       RefreshTokenRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The third-party provider for the token. The only valid value is <code>figma</code>.
 	Provider RefreshTokenProviderEnum `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type RefreshTokenHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// RefreshTokenRequestBodyRefreshTokenBody - Describes a refresh token.
-type RefreshTokenRequestBodyRefreshTokenBody struct {
-	Token *string `json:"token,omitempty"`
-}
-
-type RefreshTokenRequestBody struct {
-	// Describes a refresh token.
-	RefreshTokenBody RefreshTokenRequestBodyRefreshTokenBody `json:"refreshTokenBody"`
-}
-
-type RefreshTokenRequest struct {
-	PathParams RefreshTokenPathParams
-	Headers    RefreshTokenHeaders
-	Request    RefreshTokenRequestBody `request:"mediaType=application/json"`
 }
 
 type RefreshTokenResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeVirtualNodePathParams struct {
-	// The name of the service mesh in which the virtual node resides.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual node to describe.
-	VirtualNodeName string `pathParam:"style=simple,explode=false,name=virtualNodeName"`
-}
-
-type DescribeVirtualNodeHeaders struct {
+type DescribeVirtualNodeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeVirtualNodeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeVirtualNodeRequest struct {
-	PathParams DescribeVirtualNodePathParams
-	Headers    DescribeVirtualNodeHeaders
+	// The name of the service mesh in which the virtual node resides.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the virtual node to describe.
+	VirtualNodeName string `pathParam:"style=simple,explode=false,name=virtualNodeName"`
 }
 
 type DescribeVirtualNodeResponse struct {

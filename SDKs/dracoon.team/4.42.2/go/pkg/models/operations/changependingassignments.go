@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangePendingAssignmentsHeaders struct {
+type ChangePendingAssignmentsRequest struct {
+	PendingAssignmentsRequest shared.PendingAssignmentsRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ChangePendingAssignmentsRequest struct {
-	Headers ChangePendingAssignmentsHeaders
-	Request shared.PendingAssignmentsRequest `request:"mediaType=application/json"`
 }
 
 type ChangePendingAssignmentsResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type CreateUserHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type CreateUserRequestBody struct {
 	// This param requires an api key in the request header
 	// or it will be ignored
@@ -25,8 +20,9 @@ type CreateUserRequestBody struct {
 }
 
 type CreateUserRequest struct {
-	Headers CreateUserHeaders
-	Request *CreateUserRequestBody `request:"mediaType=application/json"`
+	APIKey      string                 `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                 `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *CreateUserRequestBody `request:"mediaType=application/json"`
 }
 
 // CreateUser200ApplicationJSON - user created

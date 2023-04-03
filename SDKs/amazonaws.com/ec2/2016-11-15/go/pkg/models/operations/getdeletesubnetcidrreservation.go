@@ -50,28 +50,20 @@ func (e *GETDeleteSubnetCidrReservationVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDeleteSubnetCidrReservationQueryParams struct {
+type GETDeleteSubnetCidrReservationRequest struct {
 	Action GETDeleteSubnetCidrReservationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the subnet CIDR reservation.
 	SubnetCidrReservationID string                                    `queryParam:"style=form,explode=true,name=SubnetCidrReservationId"`
 	Version                 GETDeleteSubnetCidrReservationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteSubnetCidrReservationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteSubnetCidrReservationRequest struct {
-	QueryParams GETDeleteSubnetCidrReservationQueryParams
-	Headers     GETDeleteSubnetCidrReservationHeaders
+	XAmzAlgorithm           *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteSubnetCidrReservationResponse struct {

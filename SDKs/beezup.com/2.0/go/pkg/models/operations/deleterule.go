@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRulePathParams struct {
+type DeleteRuleRequest struct {
 	// Your rule identifier
 	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type DeleteRuleRequest struct {
-	PathParams DeleteRulePathParams
 }
 
 type DeleteRuleResponse struct {

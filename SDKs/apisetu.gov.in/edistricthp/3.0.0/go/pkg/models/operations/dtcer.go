@@ -10,8 +10,8 @@ import (
 )
 
 type DtcerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type DtcerRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type DtcerRequestBody struct {
 	Format DtcerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type DtcerRequest struct {
-	// Request format
-	Request  *DtcerRequestBody `request:"mediaType=application/json"`
-	Security DtcerSecurity
 }
 
 type Dtcer504ApplicationJSONErrorEnum string

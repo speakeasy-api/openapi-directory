@@ -50,7 +50,7 @@ func (e *GETApplyPendingMaintenanceActionVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETApplyPendingMaintenanceActionQueryParams struct {
+type GETApplyPendingMaintenanceActionRequest struct {
 	Action GETApplyPendingMaintenanceActionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The pending maintenance action to apply to this resource.</p> <p>Valid values: <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, <code>ca-certificate-rotation</code> </p>
 	ApplyAction string `queryParam:"style=form,explode=true,name=ApplyAction"`
@@ -59,21 +59,13 @@ type GETApplyPendingMaintenanceActionQueryParams struct {
 	// The RDS Amazon Resource Name (ARN) of the resource that the pending maintenance action applies to. For information about creating an ARN, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.ARN.html#USER_Tagging.ARN.Constructing"> Constructing an RDS Amazon Resource Name (ARN)</a>.
 	ResourceIdentifier string                                      `queryParam:"style=form,explode=true,name=ResourceIdentifier"`
 	Version            GETApplyPendingMaintenanceActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETApplyPendingMaintenanceActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETApplyPendingMaintenanceActionRequest struct {
-	QueryParams GETApplyPendingMaintenanceActionQueryParams
-	Headers     GETApplyPendingMaintenanceActionHeaders
+	XAmzAlgorithm      *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETApplyPendingMaintenanceActionResponse struct {

@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AssociateAssessmentReportEvidenceFolder -  Associates an evidence folder to an assessment report in an Audit Manager assessment.
 func (s *SDK) AssociateAssessmentReportEvidenceFolder(ctx context.Context, request operations.AssociateAssessmentReportEvidenceFolderRequest) (*operations.AssociateAssessmentReportEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/associateToAssessmentReport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/associateToAssessmentReport", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateAssessmentReportEvidenceFolder(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -210,9 +210,9 @@ func (s *SDK) AssociateAssessmentReportEvidenceFolder(ctx context.Context, reque
 // BatchAssociateAssessmentReportEvidence -  Associates a list of evidence to an assessment report in an Audit Manager assessment.
 func (s *SDK) BatchAssociateAssessmentReportEvidence(ctx context.Context, request operations.BatchAssociateAssessmentReportEvidenceRequest) (*operations.BatchAssociateAssessmentReportEvidenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchAssociateToAssessmentReport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchAssociateToAssessmentReport", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) BatchAssociateAssessmentReportEvidence(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -306,9 +306,9 @@ func (s *SDK) BatchAssociateAssessmentReportEvidence(ctx context.Context, reques
 // BatchCreateDelegationByAssessment -  Creates a batch of delegations for an assessment in Audit Manager.
 func (s *SDK) BatchCreateDelegationByAssessment(ctx context.Context, request operations.BatchCreateDelegationByAssessmentRequest) (*operations.BatchCreateDelegationByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *SDK) BatchCreateDelegationByAssessment(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -402,9 +402,9 @@ func (s *SDK) BatchCreateDelegationByAssessment(ctx context.Context, request ope
 // BatchDeleteDelegationByAssessment -  Deletes a batch of delegations for an assessment in Audit Manager.
 func (s *SDK) BatchDeleteDelegationByAssessment(ctx context.Context, request operations.BatchDeleteDelegationByAssessmentRequest) (*operations.BatchDeleteDelegationByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,7 +419,7 @@ func (s *SDK) BatchDeleteDelegationByAssessment(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -498,9 +498,9 @@ func (s *SDK) BatchDeleteDelegationByAssessment(ctx context.Context, request ope
 // BatchDisassociateAssessmentReportEvidence -  Disassociates a list of evidence from an assessment report in Audit Manager.
 func (s *SDK) BatchDisassociateAssessmentReportEvidence(ctx context.Context, request operations.BatchDisassociateAssessmentReportEvidenceRequest) (*operations.BatchDisassociateAssessmentReportEvidenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchDisassociateFromAssessmentReport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchDisassociateFromAssessmentReport", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,7 +515,7 @@ func (s *SDK) BatchDisassociateAssessmentReportEvidence(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -594,9 +594,9 @@ func (s *SDK) BatchDisassociateAssessmentReportEvidence(ctx context.Context, req
 // BatchImportEvidenceToAssessmentControl - <p>Uploads one or more pieces of evidence to a control in an Audit Manager assessment. You can upload manual evidence from any Amazon Simple Storage Service (Amazon S3) bucket by specifying the S3 URI of the evidence. </p> <p>You must upload manual evidence to your S3 bucket before you can upload it to your assessment. For instructions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">CreateBucket</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html">PutObject</a> in the <i>Amazon Simple Storage Service API Reference.</i> </p> <p>The following restrictions apply to this action:</p> <ul> <li> <p>Maximum size of an individual evidence file: 100 MB</p> </li> <li> <p>Number of daily manual evidence uploads per control: 100</p> </li> <li> <p>Supported file formats: See <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/upload-evidence.html#supported-manual-evidence-files">Supported file types for manual evidence</a> in the <i>Audit Manager User Guide</i> </p> </li> </ul> <p>For more information about Audit Manager service restrictions, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and restrictions for Audit Manager</a>.</p>
 func (s *SDK) BatchImportEvidenceToAssessmentControl(ctx context.Context, request operations.BatchImportEvidenceToAssessmentControlRequest) (*operations.BatchImportEvidenceToAssessmentControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}/evidence", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}/evidence", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,7 +611,7 @@ func (s *SDK) BatchImportEvidenceToAssessmentControl(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -692,7 +692,7 @@ func (s *SDK) CreateAssessment(ctx context.Context, request operations.CreateAss
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assessments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -707,7 +707,7 @@ func (s *SDK) CreateAssessment(ctx context.Context, request operations.CreateAss
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -798,7 +798,7 @@ func (s *SDK) CreateAssessmentFramework(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assessmentFrameworks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -813,7 +813,7 @@ func (s *SDK) CreateAssessmentFramework(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -902,9 +902,9 @@ func (s *SDK) CreateAssessmentFramework(ctx context.Context, request operations.
 // CreateAssessmentReport -  Creates an assessment report for the specified assessment.
 func (s *SDK) CreateAssessmentReport(ctx context.Context, request operations.CreateAssessmentReportRequest) (*operations.CreateAssessmentReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -919,7 +919,7 @@ func (s *SDK) CreateAssessmentReport(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1000,7 +1000,7 @@ func (s *SDK) CreateControl(ctx context.Context, request operations.CreateContro
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/controls"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1015,7 +1015,7 @@ func (s *SDK) CreateControl(ctx context.Context, request operations.CreateContro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1104,14 +1104,14 @@ func (s *SDK) CreateControl(ctx context.Context, request operations.CreateContro
 // DeleteAssessment -  Deletes an assessment in Audit Manager.
 func (s *SDK) DeleteAssessment(ctx context.Context, request operations.DeleteAssessmentRequest) (*operations.DeleteAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1190,14 +1190,14 @@ func (s *SDK) DeleteAssessment(ctx context.Context, request operations.DeleteAss
 // DeleteAssessmentFramework -  Deletes a custom framework in Audit Manager.
 func (s *SDK) DeleteAssessmentFramework(ctx context.Context, request operations.DeleteAssessmentFrameworkRequest) (*operations.DeleteAssessmentFrameworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1276,16 +1276,16 @@ func (s *SDK) DeleteAssessmentFramework(ctx context.Context, request operations.
 // DeleteAssessmentFrameworkShare -  Deletes a share request for a custom framework in Audit Manager.
 func (s *SDK) DeleteAssessmentFrameworkShare(ctx context.Context, request operations.DeleteAssessmentFrameworkShareRequest) (*operations.DeleteAssessmentFrameworkShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}#requestType", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}#requestType", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1366,14 +1366,14 @@ func (s *SDK) DeleteAssessmentFrameworkShare(ctx context.Context, request operat
 // DeleteAssessmentReport - <p>Deletes an assessment report in Audit Manager. </p> <p>When you run the <code>DeleteAssessmentReport</code> operation, Audit Manager attempts to delete the following data:</p> <ol> <li> <p>The specified assessment report that’s stored in your S3 bucket</p> </li> <li> <p>The associated metadata that’s stored in Audit Manager</p> </li> </ol> <p>If Audit Manager can’t access the assessment report in your S3 bucket, the report isn’t deleted. In this event, the <code>DeleteAssessmentReport</code> operation doesn’t fail. Instead, it proceeds to delete the associated metadata only. You must then delete the assessment report from the S3 bucket yourself. </p> <p>This scenario happens when Audit Manager receives a <code>403 (Forbidden)</code> or <code>404 (Not Found)</code> error from Amazon S3. To avoid this, make sure that your S3 bucket is available, and that you configured the correct permissions for Audit Manager to delete resources in your S3 bucket. For an example permissions policy that you can use, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/security_iam_id-based-policy-examples.html#full-administrator-access-assessment-report-destination">Assessment report destination permissions</a> in the <i>Audit Manager User Guide</i>. For information about the issues that could cause a <code>403 (Forbidden)</code> or <code>404 (Not Found</code>) error from Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#ErrorCodeList">List of Error Codes</a> in the <i>Amazon Simple Storage Service API Reference</i>. </p>
 func (s *SDK) DeleteAssessmentReport(ctx context.Context, request operations.DeleteAssessmentReportRequest) (*operations.DeleteAssessmentReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1452,14 +1452,14 @@ func (s *SDK) DeleteAssessmentReport(ctx context.Context, request operations.Del
 // DeleteControl -  Deletes a custom control in Audit Manager.
 func (s *SDK) DeleteControl(ctx context.Context, request operations.DeleteControlRequest) (*operations.DeleteControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1545,7 +1545,7 @@ func (s *SDK) DeregisterAccount(ctx context.Context, request operations.Deregist
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1626,7 +1626,7 @@ func (s *SDK) DeregisterOrganizationAdminAccount(ctx context.Context, request op
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/deregisterOrganizationAdminAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1641,7 +1641,7 @@ func (s *SDK) DeregisterOrganizationAdminAccount(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1720,9 +1720,9 @@ func (s *SDK) DeregisterOrganizationAdminAccount(ctx context.Context, request op
 // DisassociateAssessmentReportEvidenceFolder -  Disassociates an evidence folder from the specified assessment report in Audit Manager.
 func (s *SDK) DisassociateAssessmentReportEvidenceFolder(ctx context.Context, request operations.DisassociateAssessmentReportEvidenceFolderRequest) (*operations.DisassociateAssessmentReportEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/disassociateFromAssessmentReport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/disassociateFromAssessmentReport", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1737,7 +1737,7 @@ func (s *SDK) DisassociateAssessmentReportEvidenceFolder(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1823,7 +1823,7 @@ func (s *SDK) GetAccountStatus(ctx context.Context, request operations.GetAccoun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1872,14 +1872,14 @@ func (s *SDK) GetAccountStatus(ctx context.Context, request operations.GetAccoun
 // GetAssessment - Returns an assessment from Audit Manager.
 func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmentRequest) (*operations.GetAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1958,14 +1958,14 @@ func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmen
 // GetAssessmentFramework - Returns a framework from Audit Manager.
 func (s *SDK) GetAssessmentFramework(ctx context.Context, request operations.GetAssessmentFrameworkRequest) (*operations.GetAssessmentFrameworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2044,14 +2044,14 @@ func (s *SDK) GetAssessmentFramework(ctx context.Context, request operations.Get
 // GetAssessmentReportURL -  Returns the URL of an assessment report in Audit Manager.
 func (s *SDK) GetAssessmentReportURL(ctx context.Context, request operations.GetAssessmentReportURLRequest) (*operations.GetAssessmentReportURLResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}/url", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2130,16 +2130,16 @@ func (s *SDK) GetAssessmentReportURL(ctx context.Context, request operations.Get
 // GetChangeLogs -  Returns a list of changelogs from Audit Manager.
 func (s *SDK) GetChangeLogs(ctx context.Context, request operations.GetChangeLogsRequest) (*operations.GetChangeLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/changelogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/changelogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2220,14 +2220,14 @@ func (s *SDK) GetChangeLogs(ctx context.Context, request operations.GetChangeLog
 // GetControl -  Returns a control from Audit Manager.
 func (s *SDK) GetControl(ctx context.Context, request operations.GetControlRequest) (*operations.GetControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2313,9 +2313,9 @@ func (s *SDK) GetDelegations(ctx context.Context, request operations.GetDelegati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2386,14 +2386,14 @@ func (s *SDK) GetDelegations(ctx context.Context, request operations.GetDelegati
 // GetEvidence -  Returns evidence from Audit Manager.
 func (s *SDK) GetEvidence(ctx context.Context, request operations.GetEvidenceRequest) (*operations.GetEvidenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence/{evidenceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence/{evidenceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2472,16 +2472,16 @@ func (s *SDK) GetEvidence(ctx context.Context, request operations.GetEvidenceReq
 // GetEvidenceByEvidenceFolder -  Returns all evidence from a specified evidence folder in Audit Manager.
 func (s *SDK) GetEvidenceByEvidenceFolder(ctx context.Context, request operations.GetEvidenceByEvidenceFolderRequest) (*operations.GetEvidenceByEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2562,14 +2562,14 @@ func (s *SDK) GetEvidenceByEvidenceFolder(ctx context.Context, request operation
 // GetEvidenceFolder -  Returns an evidence folder from the specified assessment in Audit Manager.
 func (s *SDK) GetEvidenceFolder(ctx context.Context, request operations.GetEvidenceFolderRequest) (*operations.GetEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2648,16 +2648,16 @@ func (s *SDK) GetEvidenceFolder(ctx context.Context, request operations.GetEvide
 // GetEvidenceFoldersByAssessment -  Returns the evidence folders from a specified assessment in Audit Manager.
 func (s *SDK) GetEvidenceFoldersByAssessment(ctx context.Context, request operations.GetEvidenceFoldersByAssessmentRequest) (*operations.GetEvidenceFoldersByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2738,16 +2738,16 @@ func (s *SDK) GetEvidenceFoldersByAssessment(ctx context.Context, request operat
 // GetEvidenceFoldersByAssessmentControl -  Returns a list of evidence folders that are associated with a specified control in an Audit Manager assessment.
 func (s *SDK) GetEvidenceFoldersByAssessmentControl(ctx context.Context, request operations.GetEvidenceFoldersByAssessmentControlRequest) (*operations.GetEvidenceFoldersByAssessmentControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders-by-assessment-control/{controlSetId}/{controlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders-by-assessment-control/{controlSetId}/{controlId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2835,7 +2835,7 @@ func (s *SDK) GetInsights(ctx context.Context, request operations.GetInsightsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2894,14 +2894,14 @@ func (s *SDK) GetInsights(ctx context.Context, request operations.GetInsightsReq
 // GetInsightsByAssessment - Gets the latest analytics data for a specific active assessment.
 func (s *SDK) GetInsightsByAssessment(ctx context.Context, request operations.GetInsightsByAssessmentRequest) (*operations.GetInsightsByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/assessments/{assessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/insights/assessments/{assessmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2987,7 +2987,7 @@ func (s *SDK) GetOrganizationAdminAccount(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3073,7 +3073,7 @@ func (s *SDK) GetServicesInScope(ctx context.Context, request operations.GetServ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3142,14 +3142,14 @@ func (s *SDK) GetServicesInScope(ctx context.Context, request operations.GetServ
 // GetSettings -  Returns the settings for the specified Amazon Web Services account.
 func (s *SDK) GetSettings(ctx context.Context, request operations.GetSettingsRequest) (*operations.GetSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/{attribute}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/settings/{attribute}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3215,9 +3215,9 @@ func (s *SDK) ListAssessmentControlInsightsByControlDomain(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3305,9 +3305,9 @@ func (s *SDK) ListAssessmentFrameworkShareRequests(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3385,9 +3385,9 @@ func (s *SDK) ListAssessmentFrameworks(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3465,9 +3465,9 @@ func (s *SDK) ListAssessmentReports(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3545,9 +3545,9 @@ func (s *SDK) ListAssessments(ctx context.Context, request operations.ListAssess
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3625,9 +3625,9 @@ func (s *SDK) ListControlDomainInsights(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3715,9 +3715,9 @@ func (s *SDK) ListControlDomainInsightsByAssessment(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3805,9 +3805,9 @@ func (s *SDK) ListControlInsightsByControlDomain(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3895,9 +3895,9 @@ func (s *SDK) ListControls(ctx context.Context, request operations.ListControlsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3975,9 +3975,9 @@ func (s *SDK) ListKeywordsForDataSource(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4055,9 +4055,9 @@ func (s *SDK) ListNotifications(ctx context.Context, request operations.ListNoti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4128,14 +4128,14 @@ func (s *SDK) ListNotifications(ctx context.Context, request operations.ListNoti
 // ListTagsForResource -  Returns a list of tags for the specified resource in Audit Manager.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4206,7 +4206,7 @@ func (s *SDK) RegisterAccount(ctx context.Context, request operations.RegisterAc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/registerAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4221,7 +4221,7 @@ func (s *SDK) RegisterAccount(ctx context.Context, request operations.RegisterAc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4312,7 +4312,7 @@ func (s *SDK) RegisterOrganizationAdminAccount(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/registerOrganizationAdminAccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4327,7 +4327,7 @@ func (s *SDK) RegisterOrganizationAdminAccount(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4406,9 +4406,9 @@ func (s *SDK) RegisterOrganizationAdminAccount(ctx context.Context, request oper
 // StartAssessmentFrameworkShare - <p> Creates a share request for a custom framework in Audit Manager. </p> <p>The share request specifies a recipient and notifies them that a custom framework is available. Recipients have 120 days to accept or decline the request. If no action is taken, the share request expires.</p> <p>When you create a share request, Audit Manager stores a snapshot of your custom framework in the US East (N. Virginia) Amazon Web Services Region. Audit Manager also stores a backup of the same snapshot in the US West (Oregon) Amazon Web Services Region.</p> <p>Audit Manager deletes the snapshot and the backup snapshot when one of the following events occurs:</p> <ul> <li> <p>The sender revokes the share request.</p> </li> <li> <p>The recipient declines the share request.</p> </li> <li> <p>The recipient encounters an error and doesn't successfully accept the share request.</p> </li> <li> <p>The share request expires before the recipient responds to the request.</p> </li> </ul> <p>When a sender <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/framework-sharing.html#framework-sharing-resend">resends a share request</a>, the snapshot is replaced with an updated version that corresponds with the latest version of the custom framework. </p> <p>When a recipient accepts a share request, the snapshot is replicated into their Amazon Web Services account under the Amazon Web Services Region that was specified in the share request. </p> <important> <p>When you invoke the <code>StartAssessmentFrameworkShare</code> API, you are about to share a custom framework with another Amazon Web Services account. You may not share a custom framework that is derived from a standard framework if the standard framework is designated as not eligible for sharing by Amazon Web Services, unless you have obtained permission to do so from the owner of the standard framework. To learn more about which standard frameworks are eligible for sharing, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility">Framework sharing eligibility</a> in the <i>Audit Manager User Guide</i>.</p> </important>
 func (s *SDK) StartAssessmentFrameworkShare(ctx context.Context, request operations.StartAssessmentFrameworkShareRequest) (*operations.StartAssessmentFrameworkShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}/shareRequests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}/shareRequests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4423,7 +4423,7 @@ func (s *SDK) StartAssessmentFrameworkShare(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4502,9 +4502,9 @@ func (s *SDK) StartAssessmentFrameworkShare(ctx context.Context, request operati
 // TagResource -  Tags the specified resource in Audit Manager.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4519,7 +4519,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4588,16 +4588,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource -  Removes a tag from a resource in Audit Manager.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4668,9 +4668,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAssessment -  Edits an Audit Manager assessment.
 func (s *SDK) UpdateAssessment(ctx context.Context, request operations.UpdateAssessmentRequest) (*operations.UpdateAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4685,7 +4685,7 @@ func (s *SDK) UpdateAssessment(ctx context.Context, request operations.UpdateAss
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4764,9 +4764,9 @@ func (s *SDK) UpdateAssessment(ctx context.Context, request operations.UpdateAss
 // UpdateAssessmentControl -  Updates a control within an assessment in Audit Manager.
 func (s *SDK) UpdateAssessmentControl(ctx context.Context, request operations.UpdateAssessmentControlRequest) (*operations.UpdateAssessmentControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4781,7 +4781,7 @@ func (s *SDK) UpdateAssessmentControl(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4860,9 +4860,9 @@ func (s *SDK) UpdateAssessmentControl(ctx context.Context, request operations.Up
 // UpdateAssessmentControlSetStatus -  Updates the status of a control set in an Audit Manager assessment.
 func (s *SDK) UpdateAssessmentControlSetStatus(ctx context.Context, request operations.UpdateAssessmentControlSetStatusRequest) (*operations.UpdateAssessmentControlSetStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4877,7 +4877,7 @@ func (s *SDK) UpdateAssessmentControlSetStatus(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4956,9 +4956,9 @@ func (s *SDK) UpdateAssessmentControlSetStatus(ctx context.Context, request oper
 // UpdateAssessmentFramework -  Updates a custom framework in Audit Manager.
 func (s *SDK) UpdateAssessmentFramework(ctx context.Context, request operations.UpdateAssessmentFrameworkRequest) (*operations.UpdateAssessmentFrameworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4973,7 +4973,7 @@ func (s *SDK) UpdateAssessmentFramework(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5052,9 +5052,9 @@ func (s *SDK) UpdateAssessmentFramework(ctx context.Context, request operations.
 // UpdateAssessmentFrameworkShare -  Updates a share request for a custom framework in Audit Manager.
 func (s *SDK) UpdateAssessmentFrameworkShare(ctx context.Context, request operations.UpdateAssessmentFrameworkShareRequest) (*operations.UpdateAssessmentFrameworkShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5069,7 +5069,7 @@ func (s *SDK) UpdateAssessmentFrameworkShare(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5158,9 +5158,9 @@ func (s *SDK) UpdateAssessmentFrameworkShare(ctx context.Context, request operat
 // UpdateAssessmentStatus -  Updates the status of an assessment in Audit Manager.
 func (s *SDK) UpdateAssessmentStatus(ctx context.Context, request operations.UpdateAssessmentStatusRequest) (*operations.UpdateAssessmentStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5175,7 +5175,7 @@ func (s *SDK) UpdateAssessmentStatus(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5264,9 +5264,9 @@ func (s *SDK) UpdateAssessmentStatus(ctx context.Context, request operations.Upd
 // UpdateControl -  Updates a custom control in Audit Manager.
 func (s *SDK) UpdateControl(ctx context.Context, request operations.UpdateControlRequest) (*operations.UpdateControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5281,7 +5281,7 @@ func (s *SDK) UpdateControl(ctx context.Context, request operations.UpdateContro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5362,7 +5362,7 @@ func (s *SDK) UpdateSettings(ctx context.Context, request operations.UpdateSetti
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5377,7 +5377,7 @@ func (s *SDK) UpdateSettings(ctx context.Context, request operations.UpdateSetti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5448,7 +5448,7 @@ func (s *SDK) ValidateAssessmentReportIntegrity(ctx context.Context, request ope
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assessmentReports/integrity"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5463,7 +5463,7 @@ func (s *SDK) ValidateAssessmentReportIntegrity(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

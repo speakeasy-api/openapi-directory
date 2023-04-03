@@ -8,25 +8,13 @@ import (
 )
 
 type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergePathParams struct {
-	// The id of the pull request.
-	PullRequestID int64 `pathParam:"style=simple,explode=false,name=pull_request_id"`
-	// This can either be the repository slug or the UUID of the repository,
-	// surrounded by curly-braces, for example: `{repository UUID}`.
-	//
-	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeQueryParams struct {
+type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Default value is false.
 	//
 	//
@@ -41,13 +29,16 @@ type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeQueryParams 
 	// the API returns a 202 with polling link to the
 	// task-status API in the Location header.
 	Async *bool `queryParam:"style=form,explode=true,name=async"`
-}
-
-type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeRequest struct {
-	PathParams  PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergePathParams
-	QueryParams PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
-	Security    PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeSecurity
+	// The id of the pull request.
+	PullRequestID int64 `pathParam:"style=simple,explode=false,name=pull_request_id"`
+	// This can either be the repository slug or the UUID of the repository,
+	// surrounded by curly-braces, for example: `{repository UUID}`.
+	//
+	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeResponse struct {

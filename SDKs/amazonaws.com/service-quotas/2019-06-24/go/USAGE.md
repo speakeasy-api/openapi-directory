@@ -13,29 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateServiceQuotaTemplateRequest{
-        Headers: operations.AssociateServiceQuotaTemplateHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
+        RequestBody: map[string]interface{}{
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
         },
-        Request: map[string]interface{}{
-            "vel": "error",
-            "deserunt": "suscipit",
-            "iure": "magnam",
-            "debitis": "ipsa",
-        },
+        XAmzAlgorithm: "illum",
+        XAmzContentSha256: "vel",
+        XAmzCredential: "error",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "magnam",
+        XAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
     }
 
     ctx := context.Background()

@@ -13,27 +13,22 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostBalanceTransferRequest{
-        Security: operations.PostBalanceTransferSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+    req := shared.BalanceTransferRequest{
+        Amount: shared.Amount{
+            Currency: "corrupti",
+            Value: 592845,
         },
-        Request: &shared.BalanceTransferRequest{
-            Amount: shared.Amount{
-                Currency: "corrupti",
-                Value: 592845,
-            },
-            Description: "distinctio",
-            FromMerchant: "quibusdam",
-            Reference: "unde",
-            ToMerchant: "nulla",
-            Type: "credit",
-        },
+        Description: "distinctio",
+        FromMerchant: "quibusdam",
+        Reference: "unde",
+        ToMerchant: "nulla",
+        Type: "credit",
     }
 
     ctx := context.Background()
-    res, err := s.General.PostBalanceTransfer(ctx, req)
+    res, err := s.General.PostBalanceTransfer(ctx, req, operations.PostBalanceTransferSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

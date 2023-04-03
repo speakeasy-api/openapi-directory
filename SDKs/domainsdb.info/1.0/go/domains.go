@@ -36,14 +36,14 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetDomainsTldZoneIDDownload - Download Whole Dataset for TLD
 func (s *domains) GetDomainsTldZoneIDDownload(ctx context.Context, request operations.GetDomainsTldZoneIDDownloadRequest) (*operations.GetDomainsTldZoneIDDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -77,14 +77,14 @@ func (s *domains) GetDomainsTldZoneIDDownload(ctx context.Context, request opera
 // GetDomainsTldZoneIDSearch - Domains Search for TLD
 func (s *domains) GetDomainsTldZoneIDSearch(ctx context.Context, request operations.GetDomainsTldZoneIDSearchRequest) (*operations.GetDomainsTldZoneIDSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -135,7 +135,7 @@ func (s *domains) GetDomainsUpdatesAdded(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -186,7 +186,7 @@ func (s *domains) GetDomainsUpdatesAddedDownload(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,7 +227,7 @@ func (s *domains) GetDomainsUpdatesDeleted(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -278,7 +278,7 @@ func (s *domains) GetDomainsUpdatesDeletedDownload(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -319,7 +319,7 @@ func (s *domains) GetDomainsUpdatesList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -370,7 +370,7 @@ func (s *domains) GetSearchDomainItem(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -414,14 +414,14 @@ func (s *domains) GetSearchDomainItem(ctx context.Context, request operations.Ge
 // GetTldDomainItem - Get TLD records
 func (s *domains) GetTldDomainItem(ctx context.Context, request operations.GetTldDomainItemRequest) (*operations.GetTldDomainItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

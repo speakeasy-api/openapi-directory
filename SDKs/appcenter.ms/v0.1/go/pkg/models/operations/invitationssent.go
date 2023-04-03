@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type InvitationsSentSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type InvitationsSentRequest struct {
-	Security InvitationsSentSecurity
-}
 
 type InvitationsSentDefaultApplicationJSONErrorCodeEnum string
 

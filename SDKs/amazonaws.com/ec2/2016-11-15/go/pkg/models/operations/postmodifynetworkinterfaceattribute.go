@@ -50,25 +50,17 @@ func (e *POSTModifyNetworkInterfaceAttributeVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTModifyNetworkInterfaceAttributeQueryParams struct {
-	Action  POSTModifyNetworkInterfaceAttributeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyNetworkInterfaceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyNetworkInterfaceAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyNetworkInterfaceAttributeRequest struct {
-	QueryParams POSTModifyNetworkInterfaceAttributeQueryParams
-	Headers     POSTModifyNetworkInterfaceAttributeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyNetworkInterfaceAttributeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTModifyNetworkInterfaceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyNetworkInterfaceAttributeResponse struct {

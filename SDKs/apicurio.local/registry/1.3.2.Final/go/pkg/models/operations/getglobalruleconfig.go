@@ -33,13 +33,9 @@ func (e *GetGlobalRuleConfigRuleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGlobalRuleConfigPathParams struct {
+type GetGlobalRuleConfigRequest struct {
 	// The unique name/type of a rule.
 	Rule GetGlobalRuleConfigRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
-type GetGlobalRuleConfigRequest struct {
-	PathParams GetGlobalRuleConfigPathParams
 }
 
 type GetGlobalRuleConfigResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUploadStatusFilesPathParams struct {
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
 // RequestUploadStatusFilesXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestUploadStatusFilesXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestUploadStatusFilesXSdsDateFormatEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type RequestUploadStatusFilesHeaders struct {
+type RequestUploadStatusFilesRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestUploadStatusFilesXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestUploadStatusFilesRequest struct {
-	PathParams RequestUploadStatusFilesPathParams
-	Headers    RequestUploadStatusFilesHeaders
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type RequestUploadStatusFilesResponse struct {

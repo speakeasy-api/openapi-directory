@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConfigurationSetVdmOptionsPathParams struct {
-	// The name of the configuration set.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type PutConfigurationSetVdmOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutConfigurationSetVdmOptionsRequestBodyVdmOptions - An object that defines the VDM settings that apply to emails that you send using the configuration set.
 type PutConfigurationSetVdmOptionsRequestBodyVdmOptions struct {
 	DashboardOptions *shared.DashboardOptions `json:"DashboardOptions,omitempty"`
@@ -34,9 +19,16 @@ type PutConfigurationSetVdmOptionsRequestBody struct {
 }
 
 type PutConfigurationSetVdmOptionsRequest struct {
-	PathParams PutConfigurationSetVdmOptionsPathParams
-	Headers    PutConfigurationSetVdmOptionsHeaders
-	Request    PutConfigurationSetVdmOptionsRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set.
+	ConfigurationSetName string                                   `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	RequestBody          PutConfigurationSetVdmOptionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutConfigurationSetVdmOptionsResponse struct {

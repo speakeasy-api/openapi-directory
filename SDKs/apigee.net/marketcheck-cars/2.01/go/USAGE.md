@@ -13,21 +13,15 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            AuthorizeEndpoint: shared.SchemeAuthorizeEndpoint{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
+            Password: "YOUR_PASSWORD_HERE",
+            Username: "YOUR_USERNAME_HERE",
         }),
     )
 
     req := operations.CrmCheckRequest{
-        PathParams: operations.CrmCheckPathParams{
-            Vin: "corrupti",
-        },
-        QueryParams: operations.CrmCheckQueryParams{
-            APIKey: "provident",
-            SaleDate: "distinctio",
-        },
+        APIKey: "corrupti",
+        SaleDate: "provident",
+        Vin: "distinctio",
     }
 
     ctx := context.Background()

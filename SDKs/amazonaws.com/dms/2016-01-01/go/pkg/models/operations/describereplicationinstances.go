@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeReplicationInstancesQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeReplicationInstancesXAmzTargetEnum
 type DescribeReplicationInstancesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeReplicationInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DescribeReplicationInstancesHeaders struct {
+type DescribeReplicationInstancesRequest struct {
+	DescribeReplicationInstancesMessage shared.DescribeReplicationInstancesMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                    `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeReplicationInstancesHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeReplicationInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeReplicationInstancesRequest struct {
-	QueryParams DescribeReplicationInstancesQueryParams
-	Headers     DescribeReplicationInstancesHeaders
-	Request     shared.DescribeReplicationInstancesMessage `request:"mediaType=application/json"`
 }
 
 type DescribeReplicationInstancesResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPublicListOfValuesPathParams struct {
-	// The list of value name your want to get
-	ListName string `pathParam:"style=simple,explode=false,name=listName"`
-}
-
-type GetPublicListOfValuesHeaders struct {
+type GetPublicListOfValuesRequest struct {
 	// Indicates that the client accepts the following languages.
 	AcceptLanguage []string `header:"style=simple,explode=false,name=Accept-Language"`
 	// ETag value to identify the last known version of requested resource.\
@@ -21,11 +16,8 @@ type GetPublicListOfValuesHeaders struct {
 	// For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
 	//
 	IfNoneMatch *string `header:"style=simple,explode=false,name=If-None-Match"`
-}
-
-type GetPublicListOfValuesRequest struct {
-	PathParams GetPublicListOfValuesPathParams
-	Headers    GetPublicListOfValuesHeaders
+	// The list of value name your want to get
+	ListName string `pathParam:"style=simple,explode=false,name=listName"`
 }
 
 type GetPublicListOfValuesResponse struct {

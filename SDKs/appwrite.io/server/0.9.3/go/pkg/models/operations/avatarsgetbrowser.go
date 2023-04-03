@@ -4,33 +4,23 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetBrowserSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AvatarsGetBrowserPathParams struct {
+type AvatarsGetBrowserRequest struct {
 	// Browser Code.
 	Code string `pathParam:"style=simple,explode=false,name=code"`
-}
-
-type AvatarsGetBrowserQueryParams struct {
 	// Image height. Pass an integer between 0 to 2000. Defaults to 100.
 	Height *int `queryParam:"style=form,explode=true,name=height"`
 	// Image quality. Pass an integer between 0 to 100. Defaults to 100.
 	Quality *int `queryParam:"style=form,explode=true,name=quality"`
 	// Image width. Pass an integer between 0 to 2000. Defaults to 100.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type AvatarsGetBrowserRequest struct {
-	PathParams  AvatarsGetBrowserPathParams
-	QueryParams AvatarsGetBrowserQueryParams
-	Security    AvatarsGetBrowserSecurity
 }
 
 type AvatarsGetBrowserResponse struct {

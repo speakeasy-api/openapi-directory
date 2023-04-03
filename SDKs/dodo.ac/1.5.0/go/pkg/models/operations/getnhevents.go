@@ -7,7 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNhEventsQueryParams struct {
+type GetNhEventsRequest struct {
+	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
+	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
 	// Specify a specific date (in the current or next year) to retrieve events for. Accepts many date formats, such as `YYYY-MM-DD` or `Month Day, Year`, as well as `today` to retrieve the current day's events (UTC time).
 	Date *string `queryParam:"style=form,explode=true,name=date"`
 	// Specify the day of the month to retrieve events for.
@@ -16,18 +20,6 @@ type GetNhEventsQueryParams struct {
 	Month *string `queryParam:"style=form,explode=true,name=month"`
 	// Specify the year to retrieve events for. Must be the current or next year.
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetNhEventsHeaders struct {
-	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
-	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
-	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
-	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhEventsRequest struct {
-	QueryParams GetNhEventsQueryParams
-	Headers     GetNhEventsHeaders
 }
 
 type GetNhEventsResponse struct {

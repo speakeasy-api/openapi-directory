@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAutomationExecutionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeAutomationExecutionsXAmzTargetEnum
 type DescribeAutomationExecutionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeAutomationExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DescribeAutomationExecutionsHeaders struct {
+type DescribeAutomationExecutionsRequest struct {
+	DescribeAutomationExecutionsRequest shared.DescribeAutomationExecutionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeAutomationExecutionsHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeAutomationExecutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeAutomationExecutionsRequest struct {
-	QueryParams DescribeAutomationExecutionsQueryParams
-	Headers     DescribeAutomationExecutionsHeaders
-	Request     shared.DescribeAutomationExecutionsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeAutomationExecutionsResponse struct {

@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsCreateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BuildsCreatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The branch name
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BuildsCreateRequestBody - Parameters of the build
@@ -29,10 +19,14 @@ type BuildsCreateRequestBody struct {
 }
 
 type BuildsCreateRequest struct {
-	PathParams BuildsCreatePathParams
 	// Parameters of the build
-	Request  *BuildsCreateRequestBody `request:"mediaType=application/json"`
-	Security BuildsCreateSecurity
+	RequestBody *BuildsCreateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The branch name
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // BuildsCreate200ApplicationJSON - Created build(s)

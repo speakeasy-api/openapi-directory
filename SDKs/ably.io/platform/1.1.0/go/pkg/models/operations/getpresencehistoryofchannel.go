@@ -7,29 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPresenceHistoryOfChannelPathParams struct {
+type GetPresenceHistoryOfChannelRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
 	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
-	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
-type GetPresenceHistoryOfChannelQueryParams struct {
+	ChannelID string                      `pathParam:"style=simple,explode=false,name=channel_id"`
 	Direction *shared.FilterDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
 	End       *string                     `queryParam:"style=form,explode=true,name=end"`
 	// The response format you would like
 	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	Limit  *int64                     `queryParam:"style=form,explode=true,name=limit"`
 	Start  *string                    `queryParam:"style=form,explode=true,name=start"`
-}
-
-type GetPresenceHistoryOfChannelHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetPresenceHistoryOfChannelRequest struct {
-	PathParams  GetPresenceHistoryOfChannelPathParams
-	QueryParams GetPresenceHistoryOfChannelQueryParams
-	Headers     GetPresenceHistoryOfChannelHeaders
 }
 
 type GetPresenceHistoryOfChannelResponse struct {

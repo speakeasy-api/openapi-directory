@@ -50,25 +50,17 @@ func (e *POSTModifyIpamVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTModifyIpamQueryParams struct {
-	Action  POSTModifyIpamActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyIpamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyIpamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyIpamRequest struct {
-	QueryParams POSTModifyIpamQueryParams
-	Headers     POSTModifyIpamHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyIpamActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                    `request:"mediaType=text/xml"`
+	Version           POSTModifyIpamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyIpamResponse struct {

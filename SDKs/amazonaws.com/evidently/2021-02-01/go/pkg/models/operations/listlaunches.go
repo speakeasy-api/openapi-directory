@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLaunchesPathParams struct {
-	// The name or ARN of the project to return the launch list from.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
 // ListLaunchesStatusEnum - Use this optional parameter to limit the returned results to only the launches with the status that you specify here.
 type ListLaunchesStatusEnum string
 
@@ -47,16 +42,7 @@ func (e *ListLaunchesStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLaunchesQueryParams struct {
-	// The maximum number of results to include in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use when requesting the next set of results. You received this token from a previous <code>ListLaunches</code> operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// Use this optional parameter to limit the returned results to only the launches with the status that you specify here.
-	Status *ListLaunchesStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListLaunchesHeaders struct {
+type ListLaunchesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -64,12 +50,14 @@ type ListLaunchesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLaunchesRequest struct {
-	PathParams  ListLaunchesPathParams
-	QueryParams ListLaunchesQueryParams
-	Headers     ListLaunchesHeaders
+	// The maximum number of results to include in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use when requesting the next set of results. You received this token from a previous <code>ListLaunches</code> operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name or ARN of the project to return the launch list from.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// Use this optional parameter to limit the returned results to only the launches with the status that you specify here.
+	Status *ListLaunchesStatusEnum `queryParam:"style=form,explode=true,name=status"`
 }
 
 type ListLaunchesResponse struct {

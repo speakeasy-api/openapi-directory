@@ -7,25 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportAPIPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The version of the API specification to use. OAS30, for OpenAPI 3.0, is the only supported value.
-	Specification string `pathParam:"style=simple,explode=false,name=specification"`
-}
-
-type ExportAPIQueryParams struct {
-	// The version of the API Gateway export algorithm. API Gateway uses the latest version by default. Currently, the only supported version is 1.0.
-	ExportVersion *string `queryParam:"style=form,explode=true,name=exportVersion"`
-	// Specifies whether to include <a href="https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API Gateway extensions</a> in the exported API definition. API Gateway extensions are included by default.
-	IncludeExtensions *bool `queryParam:"style=form,explode=true,name=includeExtensions"`
-	// The output type of the exported definition file. Valid values are JSON and YAML.
-	OutputType string `queryParam:"style=form,explode=true,name=outputType"`
-	// The name of the API stage to export. If you don't specify this property, a representation of the latest API configuration is exported.
-	StageName *string `queryParam:"style=form,explode=true,name=stageName"`
-}
-
-type ExportAPIHeaders struct {
+type ExportAPIRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -33,12 +15,18 @@ type ExportAPIHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ExportAPIRequest struct {
-	PathParams  ExportAPIPathParams
-	QueryParams ExportAPIQueryParams
-	Headers     ExportAPIHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The version of the API Gateway export algorithm. API Gateway uses the latest version by default. Currently, the only supported version is 1.0.
+	ExportVersion *string `queryParam:"style=form,explode=true,name=exportVersion"`
+	// Specifies whether to include <a href="https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API Gateway extensions</a> in the exported API definition. API Gateway extensions are included by default.
+	IncludeExtensions *bool `queryParam:"style=form,explode=true,name=includeExtensions"`
+	// The output type of the exported definition file. Valid values are JSON and YAML.
+	OutputType string `queryParam:"style=form,explode=true,name=outputType"`
+	// The version of the API specification to use. OAS30, for OpenAPI 3.0, is the only supported value.
+	Specification string `pathParam:"style=simple,explode=false,name=specification"`
+	// The name of the API stage to export. If you don't specify this property, a representation of the latest API configuration is exported.
+	StageName *string `queryParam:"style=form,explode=true,name=stageName"`
 }
 
 type ExportAPIResponse struct {

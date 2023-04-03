@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsGetDatapointsCountPathParams struct {
+type ConversionsGetDatapointsCountRequest struct {
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsGetDatapointsCountQueryParams struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
@@ -25,11 +22,6 @@ type ConversionsGetDatapointsCountQueryParams struct {
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Type of datapoint ("tl"/"tp")
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ConversionsGetDatapointsCountRequest struct {
-	PathParams  ConversionsGetDatapointsCountPathParams
-	QueryParams ConversionsGetDatapointsCountQueryParams
 }
 
 type ConversionsGetDatapointsCountResponse struct {

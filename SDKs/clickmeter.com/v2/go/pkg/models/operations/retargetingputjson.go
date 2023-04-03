@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingPutJSONRequest struct {
-	// The body of the retargeting script
-	Request shared.APICoreDtoRetargetingRetargetingScript `request:"mediaType=application/json"`
-}
-
 type RetargetingPutJSONResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

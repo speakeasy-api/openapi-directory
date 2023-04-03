@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingRvIDExtraPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingRvIDExtraQueryParams struct {
+type GetListingRvIDExtraRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetListingRvIDExtraRequest struct {
-	PathParams  GetListingRvIDExtraPathParams
-	QueryParams GetListingRvIDExtraQueryParams
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetListingRvIDExtraResponse struct {

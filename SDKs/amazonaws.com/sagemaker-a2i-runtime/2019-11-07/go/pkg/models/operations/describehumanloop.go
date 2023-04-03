@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeHumanLoopPathParams struct {
+type DescribeHumanLoopRequest struct {
 	// The name of the human loop that you want information about.
-	HumanLoopName string `pathParam:"style=simple,explode=false,name=HumanLoopName"`
-}
-
-type DescribeHumanLoopHeaders struct {
+	HumanLoopName     string  `pathParam:"style=simple,explode=false,name=HumanLoopName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeHumanLoopHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeHumanLoopRequest struct {
-	PathParams DescribeHumanLoopPathParams
-	Headers    DescribeHumanLoopHeaders
 }
 
 type DescribeHumanLoopResponse struct {

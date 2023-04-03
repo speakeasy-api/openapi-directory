@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DeletePullRequestHostedPropertyValuePathParams struct {
+type DeletePullRequestHostedPropertyValueRequest struct {
 	// The key of the Connect app.
 	AppKey string `pathParam:"style=simple,explode=false,name=app_key"`
 	// The name of the property.
@@ -17,10 +17,6 @@ type DeletePullRequestHostedPropertyValuePathParams struct {
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The repository container; either the workspace slug or the UUID in curly braces.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeletePullRequestHostedPropertyValueRequest struct {
-	PathParams DeletePullRequestHostedPropertyValuePathParams
 }
 
 type DeletePullRequestHostedPropertyValueResponse struct {

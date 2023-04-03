@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsGetStatisticsSinglePathParams struct {
-	// Id of the datapoint
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // DataPointsGetStatisticsSingleTimeFrameEnum - Timeframe of the request. See list at $timeframeList
 type DataPointsGetStatisticsSingleTimeFrameEnum string
 
@@ -77,20 +72,17 @@ func (e *DataPointsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DataPointsGetStatisticsSingleQueryParams struct {
+type DataPointsGetStatisticsSingleRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// If using "yesterday" or "today" timeframe you can ask for the hourly detail
 	Hourly *bool `queryParam:"style=form,explode=true,name=hourly"`
+	// Id of the datapoint
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Timeframe of the request. See list at $timeframeList
 	TimeFrame DataPointsGetStatisticsSingleTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type DataPointsGetStatisticsSingleRequest struct {
-	PathParams  DataPointsGetStatisticsSinglePathParams
-	QueryParams DataPointsGetStatisticsSingleQueryParams
 }
 
 type DataPointsGetStatisticsSingleResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateS3ConfigHeaders struct {
+type UpdateS3ConfigRequest struct {
+	S3ConfigUpdateRequest shared.S3ConfigUpdateRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateS3ConfigRequest struct {
-	Headers UpdateS3ConfigHeaders
-	Request shared.S3ConfigUpdateRequest `request:"mediaType=application/json"`
 }
 
 type UpdateS3ConfigResponse struct {

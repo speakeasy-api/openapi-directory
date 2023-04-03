@@ -8,18 +8,13 @@ import (
 )
 
 type GetMeAllowedOriginsOriginIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMeAllowedOriginsOriginIDPathParams struct {
-	// Unique identifier of the allowed origin.
-	OriginID string `pathParam:"style=simple,explode=false,name=originId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetMeAllowedOriginsOriginIDRequest struct {
-	PathParams GetMeAllowedOriginsOriginIDPathParams
-	Security   GetMeAllowedOriginsOriginIDSecurity
+	// Unique identifier of the allowed origin.
+	OriginID string `pathParam:"style=simple,explode=false,name=originId"`
 }
 
 type GetMeAllowedOriginsOriginIDResponse struct {

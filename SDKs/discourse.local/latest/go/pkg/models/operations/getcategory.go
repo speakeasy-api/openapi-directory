@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetCategoryPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetCategoryRequest struct {
-	PathParams GetCategoryPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetCategory200ApplicationJSONCategoryGroupPermissions struct {

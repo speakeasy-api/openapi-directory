@@ -50,28 +50,20 @@ func (e *GETModifyEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyEndpointAccessQueryParams struct {
+type GETModifyEndpointAccessRequest struct {
 	Action GETModifyEndpointAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The endpoint to be modified.
 	EndpointName string                             `queryParam:"style=form,explode=true,name=EndpointName"`
 	Version      GETModifyEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The complete list of VPC security groups associated with the endpoint after the endpoint is modified.
 	VpcSecurityGroupIds []string `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
-}
-
-type GETModifyEndpointAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyEndpointAccessRequest struct {
-	QueryParams GETModifyEndpointAccessQueryParams
-	Headers     GETModifyEndpointAccessHeaders
+	XAmzAlgorithm       *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyEndpointAccessResponse struct {

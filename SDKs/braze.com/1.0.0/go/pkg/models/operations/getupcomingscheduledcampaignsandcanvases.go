@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetUpcomingScheduledCampaignsAndCanvasesQueryParams struct {
+type GetUpcomingScheduledCampaignsAndCanvasesRequest struct {
 	// (Required) String in ISO 8601 format
 	//
 	// End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API.
 	EndTime *string `queryParam:"style=form,explode=true,name=end_time"`
-}
-
-type GetUpcomingScheduledCampaignsAndCanvasesRequest struct {
-	QueryParams GetUpcomingScheduledCampaignsAndCanvasesQueryParams
 }
 
 type GetUpcomingScheduledCampaignsAndCanvasesResponse struct {

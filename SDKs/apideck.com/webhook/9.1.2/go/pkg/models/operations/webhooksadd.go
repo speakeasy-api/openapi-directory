@@ -8,18 +8,13 @@ import (
 )
 
 type WebhooksAddSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type WebhooksAddHeaders struct {
-	// The ID of your Unify application
-	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type WebhooksAddRequest struct {
-	Headers  WebhooksAddHeaders
-	Request  shared.CreateWebhookRequest `request:"mediaType=application/json"`
-	Security WebhooksAddSecurity
+	CreateWebhookRequest shared.CreateWebhookRequest `request:"mediaType=application/json"`
+	// The ID of your Unify application
+	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 }
 
 type WebhooksAddResponse struct {

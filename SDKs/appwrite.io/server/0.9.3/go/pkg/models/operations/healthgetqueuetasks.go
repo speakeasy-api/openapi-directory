@@ -4,17 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type HealthGetQueueTasksSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type HealthGetQueueTasksRequest struct {
-	Security HealthGetQueueTasksSecurity
-}
 
 type HealthGetQueueTasksResponse struct {
 	ContentType string

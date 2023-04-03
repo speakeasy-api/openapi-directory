@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ListGroupMembersPathParams struct {
+type ListGroupMembersRequest struct {
 	// Use group name instead of id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ListGroupMembersRequest struct {
-	PathParams ListGroupMembersPathParams
 }
 
 type ListGroupMembers200ApplicationJSONMembers struct {

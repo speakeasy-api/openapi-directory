@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteMountTargetPathParams struct {
+type DeleteMountTargetRequest struct {
 	// The ID of the mount target to delete (String).
-	MountTargetID string `pathParam:"style=simple,explode=false,name=MountTargetId"`
-}
-
-type DeleteMountTargetHeaders struct {
+	MountTargetID     string  `pathParam:"style=simple,explode=false,name=MountTargetId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteMountTargetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMountTargetRequest struct {
-	PathParams DeleteMountTargetPathParams
-	Headers    DeleteMountTargetHeaders
 }
 
 type DeleteMountTargetResponse struct {

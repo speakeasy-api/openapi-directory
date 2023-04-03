@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestPublicUploadShareInfoPathParams struct {
-	// Access key
-	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-}
-
 // RequestPublicUploadShareInfoXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestPublicUploadShareInfoXSdsDateFormatEnum string
 
@@ -47,18 +42,15 @@ func (e *RequestPublicUploadShareInfoXSdsDateFormatEnum) UnmarshalJSON(data []by
 	}
 }
 
-type RequestPublicUploadShareInfoHeaders struct {
+type RequestPublicUploadShareInfoRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestPublicUploadShareInfoXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Upload share password. Should be base64-encoded.
 	//
 	// Plain X-Sds-Share-Passwords are *deprecated* and will be removed in the future
 	XSdsSharePassword *string `header:"style=simple,explode=false,name=X-Sds-Share-Password"`
-}
-
-type RequestPublicUploadShareInfoRequest struct {
-	PathParams RequestPublicUploadShareInfoPathParams
-	Headers    RequestPublicUploadShareInfoHeaders
+	// Access key
+	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
 }
 
 type RequestPublicUploadShareInfoResponse struct {

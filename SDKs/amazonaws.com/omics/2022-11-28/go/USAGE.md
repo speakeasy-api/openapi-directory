@@ -13,31 +13,26 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchDeleteReadSetRequest{
-        PathParams: operations.BatchDeleteReadSetPathParams{
-            SequenceStoreID: "corrupti",
-        },
-        Headers: operations.BatchDeleteReadSetHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.BatchDeleteReadSetRequestBody{
+        RequestBody: operations.BatchDeleteReadSetRequestBody{
             Ids: []string{
-                "error",
-                "deserunt",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        SequenceStoreID: "suscipit",
     }
 
     ctx := context.Background()

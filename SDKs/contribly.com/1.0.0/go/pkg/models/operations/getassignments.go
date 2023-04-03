@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssignmentsQueryParams struct {
+type GetAssignmentsRequest struct {
 	// Select assignments with no closing date.
 	AlwaysOpen *bool `queryParam:"style=form,explode=true,name=alwaysOpen"`
 	// Restrict results to the assignment (or potentially assignments) with this exact name
@@ -26,10 +26,6 @@ type GetAssignmentsQueryParams struct {
 	Tag *string `queryParam:"style=form,explode=true,name=tag"`
 	// Select an assignment by urlWords.
 	URLWords *string `queryParam:"style=form,explode=true,name=urlWords"`
-}
-
-type GetAssignmentsRequest struct {
-	QueryParams GetAssignmentsQueryParams
 }
 
 type GetAssignmentsResponse struct {

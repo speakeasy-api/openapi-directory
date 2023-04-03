@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureAntiSpamPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ConfigureAntiSpamQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ConfigureAntiSpamRequest struct {
-	PathParams  ConfigureAntiSpamPathParams
-	QueryParams ConfigureAntiSpamQueryParams
 	// Contains the anti-spam information.
-	Request *shared.UpdateAntiSpamRequest `request:"mediaType=application/json"`
+	UpdateAntiSpamRequest *shared.UpdateAntiSpamRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ConfigureAntiSpamResponse struct {

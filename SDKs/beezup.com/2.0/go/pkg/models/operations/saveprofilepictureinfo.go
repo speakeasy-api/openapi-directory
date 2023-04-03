@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveProfilePictureInfoRequest struct {
-	Request shared.ProfilePictureInfo `request:"mediaType=application/json"`
-}
-
 type SaveProfilePictureInfoResponse struct {
 	// BadRequest (Url invalid)
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

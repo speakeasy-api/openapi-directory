@@ -9,27 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUsersQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Include custom user attributes.
-	IncludeAttributes *bool `queryParam:"style=form,explode=true,name=include_attributes"`
-	// Include hasManageableRooms (deprecated)
-	IncludeManageableRooms *bool `queryParam:"style=form,explode=true,name=include_manageable_rooms"`
-	// Include roles
-	IncludeRoles *bool `queryParam:"style=form,explode=true,name=include_roles"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestUsersXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestUsersXSdsDateFormatEnum string
 
@@ -63,16 +42,29 @@ func (e *RequestUsersXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestUsersHeaders struct {
+type RequestUsersRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestUsersXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestUsersRequest struct {
-	QueryParams RequestUsersQueryParams
-	Headers     RequestUsersHeaders
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Include custom user attributes.
+	IncludeAttributes *bool `queryParam:"style=form,explode=true,name=include_attributes"`
+	// Include hasManageableRooms (deprecated)
+	IncludeManageableRooms *bool `queryParam:"style=form,explode=true,name=include_manageable_rooms"`
+	// Include roles
+	IncludeRoles *bool `queryParam:"style=form,explode=true,name=include_roles"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestUsersResponse struct {

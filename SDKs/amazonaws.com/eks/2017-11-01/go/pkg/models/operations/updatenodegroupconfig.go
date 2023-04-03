@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateNodegroupConfigPathParams struct {
-	// The name of the Amazon EKS cluster that the managed node group resides in.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The name of the managed node group to update.
-	NodegroupName string `pathParam:"style=simple,explode=false,name=nodegroupName"`
-}
-
-type UpdateNodegroupConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateNodegroupConfigRequestBodyLabels - An object representing a Kubernetes label change for a managed node group.
 type UpdateNodegroupConfigRequestBodyLabels struct {
 	AddOrUpdateLabels map[string]string `json:"addOrUpdateLabels,omitempty"`
@@ -63,9 +46,18 @@ type UpdateNodegroupConfigRequestBody struct {
 }
 
 type UpdateNodegroupConfigRequest struct {
-	PathParams UpdateNodegroupConfigPathParams
-	Headers    UpdateNodegroupConfigHeaders
-	Request    UpdateNodegroupConfigRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateNodegroupConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the Amazon EKS cluster that the managed node group resides in.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The name of the managed node group to update.
+	NodegroupName string `pathParam:"style=simple,explode=false,name=nodegroupName"`
 }
 
 type UpdateNodegroupConfigResponse struct {

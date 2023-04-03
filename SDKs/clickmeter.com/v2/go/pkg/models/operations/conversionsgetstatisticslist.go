@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsGetStatisticsListPathParams struct {
-	// Id of the conversion
-	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
 // ConversionsGetStatisticsListGroupByEnum - The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
 type ConversionsGetStatisticsListGroupByEnum string
 
@@ -101,7 +96,9 @@ func (e *ConversionsGetStatisticsListTimeFrameEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ConversionsGetStatisticsListQueryParams struct {
+type ConversionsGetStatisticsListRequest struct {
+	// Id of the conversion
+	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
@@ -110,11 +107,6 @@ type ConversionsGetStatisticsListQueryParams struct {
 	TimeFrame ConversionsGetStatisticsListTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type ConversionsGetStatisticsListRequest struct {
-	PathParams  ConversionsGetStatisticsListPathParams
-	QueryParams ConversionsGetStatisticsListQueryParams
 }
 
 type ConversionsGetStatisticsListResponse struct {

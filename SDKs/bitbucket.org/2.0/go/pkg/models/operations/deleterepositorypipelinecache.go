@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteRepositoryPipelineCachePathParams struct {
+type DeleteRepositoryPipelineCacheRequest struct {
 	// The UUID of the cache to delete.
 	CacheUUID string `pathParam:"style=simple,explode=false,name=cache_uuid"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The account.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteRepositoryPipelineCacheRequest struct {
-	PathParams DeleteRepositoryPipelineCachePathParams
 }
 
 type DeleteRepositoryPipelineCacheResponse struct {

@@ -141,7 +141,7 @@ func (s *SDK) ConfigConfigGet(ctx context.Context, request operations.ConfigConf
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._defaultClient
 
@@ -190,16 +190,16 @@ func (s *SDK) ConfigConfigGet(ctx context.Context, request operations.ConfigConf
 // TopicTopicTopicNameGet - Topic
 func (s *SDK) TopicTopicTopicNameGet(ctx context.Context, request operations.TopicTopicTopicNameGetRequest) (*operations.TopicTopicTopicNameGetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/topic/{topic_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/topic/{topic_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

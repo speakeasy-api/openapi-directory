@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAdvancedBoxScoreQueryParams struct {
+type GetAdvancedBoxScoreRequest struct {
 	// Game id parameters
 	GameID int64 `queryParam:"style=form,explode=true,name=gameId"`
-}
-
-type GetAdvancedBoxScoreRequest struct {
-	QueryParams GetAdvancedBoxScoreQueryParams
 }
 
 type GetAdvancedBoxScoreResponse struct {

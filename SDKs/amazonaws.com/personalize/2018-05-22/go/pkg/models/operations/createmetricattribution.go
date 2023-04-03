@@ -30,20 +30,16 @@ func (e *CreateMetricAttributionXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type CreateMetricAttributionHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateMetricAttributionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateMetricAttributionRequest struct {
-	Headers CreateMetricAttributionHeaders
-	Request shared.CreateMetricAttributionRequest `request:"mediaType=application/json"`
+	CreateMetricAttributionRequest shared.CreateMetricAttributionRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     CreateMetricAttributionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateMetricAttributionResponse struct {

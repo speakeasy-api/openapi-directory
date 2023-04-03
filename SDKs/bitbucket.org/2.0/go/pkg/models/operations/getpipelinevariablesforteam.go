@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPipelineVariablesForTeamPathParams struct {
+type GetPipelineVariablesForTeamRequest struct {
 	// The account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetPipelineVariablesForTeamRequest struct {
-	PathParams GetPipelineVariablesForTeamPathParams
 }
 
 type GetPipelineVariablesForTeamResponse struct {

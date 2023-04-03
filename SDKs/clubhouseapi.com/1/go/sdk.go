@@ -101,7 +101,7 @@ func (s *SDK) GetCheckForUpdate(ctx context.Context, request operations.GetCheck
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -245,7 +245,7 @@ func (s *SDK) GetGetEvents(ctx context.Context, request operations.GetGetEventsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -284,7 +284,7 @@ func (s *SDK) GetGetNotifications(ctx context.Context, request operations.GetGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -358,7 +358,7 @@ func (s *SDK) GetGetSuggestedFollowsAll(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -397,7 +397,7 @@ func (s *SDK) GetGetUsersForTopic(ctx context.Context, request operations.GetGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -462,7 +462,7 @@ func (s *SDK) GetGetWelcomeChannel(ctx context.Context) (*operations.GetGetWelco
 }
 
 // PostCallPhoneNumberAuth - Call phone number auth.
-func (s *SDK) PostCallPhoneNumberAuth(ctx context.Context, request operations.PostCallPhoneNumberAuthRequest) (*operations.PostCallPhoneNumberAuthResponse, error) {
+func (s *SDK) PostCallPhoneNumberAuth(ctx context.Context, request map[string]interface{}) (*operations.PostCallPhoneNumberAuthResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/call_phone_number_auth"
 
@@ -541,7 +541,7 @@ func (s *SDK) PostCheckWaitlistStatus(ctx context.Context) (*operations.PostChec
 }
 
 // PostCompletePhoneNumberAuth - Call phone number auth.
-func (s *SDK) PostCompletePhoneNumberAuth(ctx context.Context, request operations.PostCompletePhoneNumberAuthRequest) (*operations.PostCompletePhoneNumberAuthResponse, error) {
+func (s *SDK) PostCompletePhoneNumberAuth(ctx context.Context, request map[string]interface{}) (*operations.PostCompletePhoneNumberAuthResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/complete_phone_number_auth"
 
@@ -583,7 +583,7 @@ func (s *SDK) PostCompletePhoneNumberAuth(ctx context.Context, request operation
 }
 
 // PostCreateChannel - creates a channel
-func (s *SDK) PostCreateChannel(ctx context.Context, request operations.PostCreateChannelRequest) (*operations.PostCreateChannelResponse, error) {
+func (s *SDK) PostCreateChannel(ctx context.Context, request map[string]interface{}) (*operations.PostCreateChannelResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/create_channel"
 
@@ -625,7 +625,7 @@ func (s *SDK) PostCreateChannel(ctx context.Context, request operations.PostCrea
 }
 
 // PostFollow - follows a user
-func (s *SDK) PostFollow(ctx context.Context, request operations.PostFollowRequest) (*operations.PostFollowResponse, error) {
+func (s *SDK) PostFollow(ctx context.Context, request map[string]interface{}) (*operations.PostFollowResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/follow"
 
@@ -667,7 +667,7 @@ func (s *SDK) PostFollow(ctx context.Context, request operations.PostFollowReque
 }
 
 // PostGetClub - gets club by id
-func (s *SDK) PostGetClub(ctx context.Context, request operations.PostGetClubRequest) (*operations.PostGetClubResponse, error) {
+func (s *SDK) PostGetClub(ctx context.Context, request map[string]interface{}) (*operations.PostGetClubResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_club"
 
@@ -709,7 +709,7 @@ func (s *SDK) PostGetClub(ctx context.Context, request operations.PostGetClubReq
 }
 
 // PostGetClubsForTopic - looks up clubs by topic.
-func (s *SDK) PostGetClubsForTopic(ctx context.Context, request operations.PostGetClubsForTopicRequest) (*operations.PostGetClubsForTopicResponse, error) {
+func (s *SDK) PostGetClubsForTopic(ctx context.Context, request map[string]interface{}) (*operations.PostGetClubsForTopicResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_clubs_for_topic"
 
@@ -751,7 +751,7 @@ func (s *SDK) PostGetClubsForTopic(ctx context.Context, request operations.PostG
 }
 
 // PostGetCreateChannelTargets - is fetched when you tap Create Room
-func (s *SDK) PostGetCreateChannelTargets(ctx context.Context, request operations.PostGetCreateChannelTargetsRequest) (*operations.PostGetCreateChannelTargetsResponse, error) {
+func (s *SDK) PostGetCreateChannelTargets(ctx context.Context, request map[string]interface{}) (*operations.PostGetCreateChannelTargetsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_create_channel_targets"
 
@@ -793,7 +793,7 @@ func (s *SDK) PostGetCreateChannelTargets(ctx context.Context, request operation
 }
 
 // PostGetFollowing - get a list of the users and clubs that this user is following. Returned users have bios truncated to ~80 characters.
-func (s *SDK) PostGetFollowing(ctx context.Context, request operations.PostGetFollowingRequest) (*operations.PostGetFollowingResponse, error) {
+func (s *SDK) PostGetFollowing(ctx context.Context, request map[string]interface{}) (*operations.PostGetFollowingResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_following"
 
@@ -835,7 +835,7 @@ func (s *SDK) PostGetFollowing(ctx context.Context, request operations.PostGetFo
 }
 
 // PostGetOnlineFriends - gets online friends on the app homepage.
-func (s *SDK) PostGetOnlineFriends(ctx context.Context, request operations.PostGetOnlineFriendsRequest) (*operations.PostGetOnlineFriendsResponse, error) {
+func (s *SDK) PostGetOnlineFriends(ctx context.Context, request map[string]interface{}) (*operations.PostGetOnlineFriendsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_online_friends"
 
@@ -877,7 +877,7 @@ func (s *SDK) PostGetOnlineFriends(ctx context.Context, request operations.PostG
 }
 
 // PostGetProfile - looks up user profile by ID.
-func (s *SDK) PostGetProfile(ctx context.Context, request operations.PostGetProfileRequest) (*operations.PostGetProfileResponse, error) {
+func (s *SDK) PostGetProfile(ctx context.Context, request map[string]interface{}) (*operations.PostGetProfileResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_profile"
 
@@ -954,7 +954,7 @@ func (s *SDK) PostGetReleaseNotes(ctx context.Context) (*operations.PostGetRelea
 }
 
 // PostGetSuggestedClubInvites - find users to invite to clubs based on phone number
-func (s *SDK) PostGetSuggestedClubInvites(ctx context.Context, request operations.PostGetSuggestedClubInvitesRequest) (*operations.PostGetSuggestedClubInvitesResponse, error) {
+func (s *SDK) PostGetSuggestedClubInvites(ctx context.Context, request map[string]interface{}) (*operations.PostGetSuggestedClubInvitesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_suggested_club_invites"
 
@@ -996,7 +996,7 @@ func (s *SDK) PostGetSuggestedClubInvites(ctx context.Context, request operation
 }
 
 // PostGetSuggestedFollowsFriendsOnly - find people to follow by uploading contacts during signup
-func (s *SDK) PostGetSuggestedFollowsFriendsOnly(ctx context.Context, request operations.PostGetSuggestedFollowsFriendsOnlyRequest) (*operations.PostGetSuggestedFollowsFriendsOnlyResponse, error) {
+func (s *SDK) PostGetSuggestedFollowsFriendsOnly(ctx context.Context, request map[string]interface{}) (*operations.PostGetSuggestedFollowsFriendsOnlyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_suggested_follows_friends_only"
 
@@ -1038,7 +1038,7 @@ func (s *SDK) PostGetSuggestedFollowsFriendsOnly(ctx context.Context, request op
 }
 
 // PostGetSuggestedFollowsSimilar - find similar users. (The Sparkles button on Clubhouse's profile page)
-func (s *SDK) PostGetSuggestedFollowsSimilar(ctx context.Context, request operations.PostGetSuggestedFollowsSimilarRequest) (*operations.PostGetSuggestedFollowsSimilarResponse, error) {
+func (s *SDK) PostGetSuggestedFollowsSimilar(ctx context.Context, request map[string]interface{}) (*operations.PostGetSuggestedFollowsSimilarResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_suggested_follows_similar"
 
@@ -1081,7 +1081,7 @@ func (s *SDK) PostGetSuggestedFollowsSimilar(ctx context.Context, request operat
 
 // PostGetSuggestedInvites - find users to invite based on phone number.
 // (also see https://zerforschung.org/posts/clubhouse-telefonnummern-en/ for @zerforschung's analysis of the privacy implications of this API)
-func (s *SDK) PostGetSuggestedInvites(ctx context.Context, request operations.PostGetSuggestedInvitesRequest) (*operations.PostGetSuggestedInvitesResponse, error) {
+func (s *SDK) PostGetSuggestedInvites(ctx context.Context, request map[string]interface{}) (*operations.PostGetSuggestedInvitesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_suggested_invites"
 
@@ -1123,7 +1123,7 @@ func (s *SDK) PostGetSuggestedInvites(ctx context.Context, request operations.Po
 }
 
 // PostGetSuggestedSpeakers - gets suggested users when you start a private room
-func (s *SDK) PostGetSuggestedSpeakers(ctx context.Context, request operations.PostGetSuggestedSpeakersRequest) (*operations.PostGetSuggestedSpeakersResponse, error) {
+func (s *SDK) PostGetSuggestedSpeakers(ctx context.Context, request map[string]interface{}) (*operations.PostGetSuggestedSpeakersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_suggested_speakers"
 
@@ -1165,7 +1165,7 @@ func (s *SDK) PostGetSuggestedSpeakers(ctx context.Context, request operations.P
 }
 
 // PostGetTopic - looks up topic by ID.
-func (s *SDK) PostGetTopic(ctx context.Context, request operations.PostGetTopicRequest) (*operations.PostGetTopicResponse, error) {
+func (s *SDK) PostGetTopic(ctx context.Context, request map[string]interface{}) (*operations.PostGetTopicResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/get_topic"
 
@@ -1207,7 +1207,7 @@ func (s *SDK) PostGetTopic(ctx context.Context, request operations.PostGetTopicR
 }
 
 // PostInviteFromWaitlist - wave to another user on the waitlist to give them access
-func (s *SDK) PostInviteFromWaitlist(ctx context.Context, request operations.PostInviteFromWaitlistRequest) (*operations.PostInviteFromWaitlistResponse, error) {
+func (s *SDK) PostInviteFromWaitlist(ctx context.Context, request map[string]interface{}) (*operations.PostInviteFromWaitlistResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invite_from_waitlist"
 
@@ -1249,7 +1249,7 @@ func (s *SDK) PostInviteFromWaitlist(ctx context.Context, request operations.Pos
 }
 
 // PostInviteToApp - invite a user to the app, using one of your invites
-func (s *SDK) PostInviteToApp(ctx context.Context, request operations.PostInviteToAppRequest) (*operations.PostInviteToAppResponse, error) {
+func (s *SDK) PostInviteToApp(ctx context.Context, request map[string]interface{}) (*operations.PostInviteToAppResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invite_to_app"
 
@@ -1291,7 +1291,7 @@ func (s *SDK) PostInviteToApp(ctx context.Context, request operations.PostInvite
 }
 
 // PostJoinChannel - join a channel.
-func (s *SDK) PostJoinChannel(ctx context.Context, request operations.PostJoinChannelRequest) (*operations.PostJoinChannelResponse, error) {
+func (s *SDK) PostJoinChannel(ctx context.Context, request map[string]interface{}) (*operations.PostJoinChannelResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/join_channel"
 
@@ -1335,7 +1335,7 @@ func (s *SDK) PostJoinChannel(ctx context.Context, request operations.PostJoinCh
 }
 
 // PostLeaveChannel - leave a channel.
-func (s *SDK) PostLeaveChannel(ctx context.Context, request operations.PostLeaveChannelRequest) (*operations.PostLeaveChannelResponse, error) {
+func (s *SDK) PostLeaveChannel(ctx context.Context, request map[string]interface{}) (*operations.PostLeaveChannelResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/leave_channel"
 
@@ -1377,7 +1377,7 @@ func (s *SDK) PostLeaveChannel(ctx context.Context, request operations.PostLeave
 }
 
 // PostMe - gets user
-func (s *SDK) PostMe(ctx context.Context, request operations.PostMeRequest) (*operations.PostMeResponse, error) {
+func (s *SDK) PostMe(ctx context.Context, request map[string]interface{}) (*operations.PostMeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -1421,7 +1421,7 @@ func (s *SDK) PostMe(ctx context.Context, request operations.PostMeRequest) (*op
 }
 
 // PostRecordActionTrails - analytics
-func (s *SDK) PostRecordActionTrails(ctx context.Context, request operations.PostRecordActionTrailsRequest) (*operations.PostRecordActionTrailsResponse, error) {
+func (s *SDK) PostRecordActionTrails(ctx context.Context, request map[string]interface{}) (*operations.PostRecordActionTrailsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/record_action_trails"
 
@@ -1463,7 +1463,7 @@ func (s *SDK) PostRecordActionTrails(ctx context.Context, request operations.Pos
 }
 
 // PostRefreshToken - gets an access_token from a refresh_token.
-func (s *SDK) PostRefreshToken(ctx context.Context, request operations.PostRefreshTokenRequest) (*operations.PostRefreshTokenResponse, error) {
+func (s *SDK) PostRefreshToken(ctx context.Context, request map[string]interface{}) (*operations.PostRefreshTokenResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/refresh_token"
 
@@ -1507,7 +1507,7 @@ func (s *SDK) PostRefreshToken(ctx context.Context, request operations.PostRefre
 }
 
 // PostResendPhoneNumberAuth - Resend phone number auth.
-func (s *SDK) PostResendPhoneNumberAuth(ctx context.Context, request operations.PostResendPhoneNumberAuthRequest) (*operations.PostResendPhoneNumberAuthResponse, error) {
+func (s *SDK) PostResendPhoneNumberAuth(ctx context.Context, request map[string]interface{}) (*operations.PostResendPhoneNumberAuthResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resend_phone_number_auth"
 
@@ -1549,7 +1549,7 @@ func (s *SDK) PostResendPhoneNumberAuth(ctx context.Context, request operations.
 }
 
 // PostSearchClubs - search clubs.
-func (s *SDK) PostSearchClubs(ctx context.Context, request operations.PostSearchClubsRequest) (*operations.PostSearchClubsResponse, error) {
+func (s *SDK) PostSearchClubs(ctx context.Context, request map[string]interface{}) (*operations.PostSearchClubsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search_clubs"
 
@@ -1591,7 +1591,7 @@ func (s *SDK) PostSearchClubs(ctx context.Context, request operations.PostSearch
 }
 
 // PostSearchUsers - search for users
-func (s *SDK) PostSearchUsers(ctx context.Context, request operations.PostSearchUsersRequest) (*operations.PostSearchUsersResponse, error) {
+func (s *SDK) PostSearchUsers(ctx context.Context, request map[string]interface{}) (*operations.PostSearchUsersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search_users"
 
@@ -1633,7 +1633,7 @@ func (s *SDK) PostSearchUsers(ctx context.Context, request operations.PostSearch
 }
 
 // PostStartPhoneNumberAuth - Starts phone number auth.
-func (s *SDK) PostStartPhoneNumberAuth(ctx context.Context, request operations.PostStartPhoneNumberAuthRequest) (*operations.PostStartPhoneNumberAuthResponse, error) {
+func (s *SDK) PostStartPhoneNumberAuth(ctx context.Context, request map[string]interface{}) (*operations.PostStartPhoneNumberAuthResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/start_phone_number_auth"
 
@@ -1675,7 +1675,7 @@ func (s *SDK) PostStartPhoneNumberAuth(ctx context.Context, request operations.P
 }
 
 // PostUpdateNotifications - updates notification during signup.
-func (s *SDK) PostUpdateNotifications(ctx context.Context, request operations.PostUpdateNotificationsRequest) (*operations.PostUpdateNotificationsResponse, error) {
+func (s *SDK) PostUpdateNotifications(ctx context.Context, request map[string]interface{}) (*operations.PostUpdateNotificationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update_notifications"
 
@@ -1717,7 +1717,7 @@ func (s *SDK) PostUpdateNotifications(ctx context.Context, request operations.Po
 }
 
 // PostUpdateUsername - edits username.
-func (s *SDK) PostUpdateUsername(ctx context.Context, request operations.PostUpdateUsernameRequest) (*operations.PostUpdateUsernameResponse, error) {
+func (s *SDK) PostUpdateUsername(ctx context.Context, request map[string]interface{}) (*operations.PostUpdateUsernameResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update_username"
 

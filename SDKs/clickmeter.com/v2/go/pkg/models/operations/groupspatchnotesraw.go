@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPatchNotesRawPathParams struct {
+type GroupsPatchNotesRawRequest struct {
+	// Patch requests
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsPatchNotesRawRequest struct {
-	PathParams GroupsPatchNotesRawPathParams
-	// Patch requests
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type GroupsPatchNotesRawResponse struct {

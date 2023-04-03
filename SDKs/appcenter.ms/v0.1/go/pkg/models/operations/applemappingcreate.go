@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppleMappingCreateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AppleMappingCreatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // AppleMappingCreateRequestBody - Apple Mapping Request Type
@@ -33,10 +25,12 @@ type AppleMappingCreateRequestBody struct {
 }
 
 type AppleMappingCreateRequest struct {
-	PathParams AppleMappingCreatePathParams
 	// The apple app mapping object
-	Request  AppleMappingCreateRequestBody `request:"mediaType=application/json"`
-	Security AppleMappingCreateSecurity
+	RequestBody AppleMappingCreateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type AppleMappingCreateDefaultApplicationJSONCodeEnum string

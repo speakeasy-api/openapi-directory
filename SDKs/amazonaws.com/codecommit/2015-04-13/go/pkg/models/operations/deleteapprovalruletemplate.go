@@ -30,20 +30,16 @@ func (e *DeleteApprovalRuleTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DeleteApprovalRuleTemplateHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteApprovalRuleTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteApprovalRuleTemplateRequest struct {
-	Headers DeleteApprovalRuleTemplateHeaders
-	Request shared.DeleteApprovalRuleTemplateInput `request:"mediaType=application/json"`
+	DeleteApprovalRuleTemplateInput shared.DeleteApprovalRuleTemplateInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      DeleteApprovalRuleTemplateXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteApprovalRuleTemplateResponse struct {

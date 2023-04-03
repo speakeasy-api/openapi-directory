@@ -8,22 +8,13 @@ import (
 )
 
 type ClinicalNoteFieldTypesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ClinicalNoteFieldTypesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ClinicalNoteFieldTypesReadQueryParams struct {
-	ClinicalNoteTemplate *int64 `queryParam:"style=form,explode=true,name=clinical_note_template"`
-	Doctor               *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClinicalNoteFieldTypesReadRequest struct {
-	PathParams  ClinicalNoteFieldTypesReadPathParams
-	QueryParams ClinicalNoteFieldTypesReadQueryParams
-	Security    ClinicalNoteFieldTypesReadSecurity
+	ClinicalNoteTemplate *int64 `queryParam:"style=form,explode=true,name=clinical_note_template"`
+	Doctor               *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID                   string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ClinicalNoteFieldTypesReadResponse struct {

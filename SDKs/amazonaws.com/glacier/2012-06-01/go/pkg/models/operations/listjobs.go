@@ -7,14 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobsPathParams struct {
+type ListJobsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The name of the vault.
-	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
-}
-
-type ListJobsQueryParams struct {
 	// The state of the jobs to return. You can specify <code>true</code> or <code>false</code>.
 	Completed *string `queryParam:"style=form,explode=true,name=completed"`
 	// The maximum number of jobs to be returned. The default limit is 50. The number of jobs returned might be fewer than the specified limit, but the number of returned jobs never exceeds the limit.
@@ -23,22 +25,8 @@ type ListJobsQueryParams struct {
 	Marker *string `queryParam:"style=form,explode=true,name=marker"`
 	// The type of job status to return. You can specify the following values: <code>InProgress</code>, <code>Succeeded</code>, or <code>Failed</code>.
 	Statuscode *string `queryParam:"style=form,explode=true,name=statuscode"`
-}
-
-type ListJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobsRequest struct {
-	PathParams  ListJobsPathParams
-	QueryParams ListJobsQueryParams
-	Headers     ListJobsHeaders
+	// The name of the vault.
+	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
 }
 
 type ListJobsResponse struct {

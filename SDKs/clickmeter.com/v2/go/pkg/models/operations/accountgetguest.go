@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountGetGuestPathParams struct {
+type AccountGetGuestRequest struct {
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
-}
-
-type AccountGetGuestRequest struct {
-	PathParams AccountGetGuestPathParams
 }
 
 type AccountGetGuestResponse struct {

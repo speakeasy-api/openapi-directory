@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWebhookPathParams struct {
-	//  The unique ID for a webhook.
-	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
-}
-
-type UpdateWebhookHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateWebhookRequestBody struct {
 	//  The name for a branch that is part of an Amplify app.
 	BranchName *string `json:"branchName,omitempty"`
@@ -30,9 +15,16 @@ type UpdateWebhookRequestBody struct {
 }
 
 type UpdateWebhookRequest struct {
-	PathParams UpdateWebhookPathParams
-	Headers    UpdateWebhookHeaders
-	Request    UpdateWebhookRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateWebhookRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique ID for a webhook.
+	WebhookID string `pathParam:"style=simple,explode=false,name=webhookId"`
 }
 
 type UpdateWebhookResponse struct {

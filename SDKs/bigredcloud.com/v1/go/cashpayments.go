@@ -35,14 +35,14 @@ func newCashPayments(defaultClient, securityClient HTTPClient, serverURL, langua
 // CashPaymentsDelete - Removes an existing Cash Payment.
 func (s *cashPayments) CashPaymentsDelete(ctx context.Context, request operations.CashPaymentsDeleteRequest) (*operations.CashPaymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *cashPayments) CashPaymentsGet(ctx context.Context) (*operations.CashPay
 }
 
 // CashPaymentsPost - Creates a new Cash Payment.
-func (s *cashPayments) CashPaymentsPost(ctx context.Context, request operations.CashPaymentsPostRequest) (*operations.CashPaymentsPostResponse, error) {
+func (s *cashPayments) CashPaymentsPost(ctx context.Context, request shared.CashPaymentDto) (*operations.CashPaymentsPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/cashPayments"
 
@@ -181,7 +181,7 @@ func (s *cashPayments) CashPaymentsPost(ctx context.Context, request operations.
 }
 
 // CashPaymentsProcessBatch - Processes a batch of Cash Payments.
-func (s *cashPayments) CashPaymentsProcessBatch(ctx context.Context, request operations.CashPaymentsProcessBatchRequest) (*operations.CashPaymentsProcessBatchResponse, error) {
+func (s *cashPayments) CashPaymentsProcessBatch(ctx context.Context, request []shared.BatchItemCashPaymentDto) (*operations.CashPaymentsProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/cashPayments/batch"
 
@@ -237,9 +237,9 @@ func (s *cashPayments) CashPaymentsProcessBatch(ctx context.Context, request ope
 // CashPaymentsPut - Updates an existing Cash Payment.
 func (s *cashPayments) CashPaymentsPut(ctx context.Context, request operations.CashPaymentsPutRequest) (*operations.CashPaymentsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CashPaymentDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *cashPayments) CashPaymentsPut(ctx context.Context, request operations.C
 // GetV1CashPaymentsID - Returns information about a single Cash Payment.
 func (s *cashPayments) GetV1CashPaymentsID(ctx context.Context, request operations.GetV1CashPaymentsIDRequest) (*operations.GetV1CashPaymentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

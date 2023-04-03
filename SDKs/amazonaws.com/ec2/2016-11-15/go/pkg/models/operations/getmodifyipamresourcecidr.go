@@ -50,7 +50,7 @@ func (e *GETModifyIpamResourceCidrVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETModifyIpamResourceCidrQueryParams struct {
+type GETModifyIpamResourceCidrRequest struct {
 	Action GETModifyIpamResourceCidrActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the current scope that the resource CIDR is in.
 	CurrentIpamScopeID string `queryParam:"style=form,explode=true,name=CurrentIpamScopeId"`
@@ -65,23 +65,15 @@ type GETModifyIpamResourceCidrQueryParams struct {
 	// The ID of the resource you want to modify.
 	ResourceID string `queryParam:"style=form,explode=true,name=ResourceId"`
 	// The Amazon Web Services Region of the resource you want to modify.
-	ResourceRegion string                               `queryParam:"style=form,explode=true,name=ResourceRegion"`
-	Version        GETModifyIpamResourceCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyIpamResourceCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyIpamResourceCidrRequest struct {
-	QueryParams GETModifyIpamResourceCidrQueryParams
-	Headers     GETModifyIpamResourceCidrHeaders
+	ResourceRegion    string                               `queryParam:"style=form,explode=true,name=ResourceRegion"`
+	Version           GETModifyIpamResourceCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyIpamResourceCidrResponse struct {

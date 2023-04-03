@@ -10,8 +10,8 @@ import (
 )
 
 type CvcerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type CvcerRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type CvcerRequestBody struct {
 	Format CvcerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type CvcerRequest struct {
-	// Request format
-	Request  *CvcerRequestBody `request:"mediaType=application/json"`
-	Security CvcerSecurity
 }
 
 type Cvcer504ApplicationJSONErrorEnum string

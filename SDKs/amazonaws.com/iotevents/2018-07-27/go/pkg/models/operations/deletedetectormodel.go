@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDetectorModelPathParams struct {
-	// The name of the detector model to be deleted.
-	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
-}
-
-type DeleteDetectorModelHeaders struct {
+type DeleteDetectorModelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDetectorModelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDetectorModelRequest struct {
-	PathParams DeleteDetectorModelPathParams
-	Headers    DeleteDetectorModelHeaders
+	// The name of the detector model to be deleted.
+	DetectorModelName string `pathParam:"style=simple,explode=false,name=detectorModelName"`
 }
 
 type DeleteDetectorModelResponse struct {

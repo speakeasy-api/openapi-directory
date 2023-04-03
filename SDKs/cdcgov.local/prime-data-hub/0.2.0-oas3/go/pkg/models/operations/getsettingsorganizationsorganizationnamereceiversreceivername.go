@@ -8,19 +8,14 @@ import (
 )
 
 type GetSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams struct {
+type GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest struct {
 	// Create receivers under this organization name
 	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
 	// The name of the receiver
 	ReceiverName string `pathParam:"style=simple,explode=false,name=receiverName"`
-}
-
-type GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest struct {
-	PathParams GetSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams
-	Security   GetSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity
 }
 
 type GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse struct {

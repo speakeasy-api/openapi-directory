@@ -13,26 +13,22 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcceptEnvironmentAccountConnectionRequest{
-        Headers: operations.AcceptEnvironmentAccountConnectionHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AwsProton20200720.AcceptEnvironmentAccountConnection",
+        AcceptEnvironmentAccountConnectionInput: shared.AcceptEnvironmentAccountConnectionInput{
+            ID: "corrupti",
         },
-        Request: shared.AcceptEnvironmentAccountConnectionInput{
-            ID: "illum",
-        },
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
+        XAmzTarget: "AwsProton20200720.AcceptEnvironmentAccountConnection",
     }
 
     ctx := context.Background()

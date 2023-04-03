@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AckMessagePathParams struct {
+type AckMessageRequest struct {
 	// ID of Queue Message to be acknowledged
 	QueueMessageID string `pathParam:"style=simple,explode=false,name=queueMessageId"`
 	// Name of Queue
 	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
-}
-
-type AckMessageRequest struct {
-	PathParams AckMessagePathParams
 }
 
 type AckMessageResponse struct {

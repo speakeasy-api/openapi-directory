@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-type CompleteAttachmentUploadHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	// The authentication token associated with the participant's connection.
-	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CompleteAttachmentUploadRequestBody struct {
 	// A list of unique identifiers for the attachments.
 	AttachmentIds []string `json:"AttachmentIds"`
@@ -26,8 +14,16 @@ type CompleteAttachmentUploadRequestBody struct {
 }
 
 type CompleteAttachmentUploadRequest struct {
-	Headers CompleteAttachmentUploadHeaders
-	Request CompleteAttachmentUploadRequestBody `request:"mediaType=application/json"`
+	RequestBody   CompleteAttachmentUploadRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	// The authentication token associated with the participant's connection.
+	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CompleteAttachmentUploadResponse struct {

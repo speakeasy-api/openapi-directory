@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetVolumesFsFlavorsJSONHeaders struct {
+type GetVolumesFsFlavorsJSONRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetVolumesFsFlavorsJSONRequest struct {
-	Headers GetVolumesFsFlavorsJSONHeaders
 }
 
 type GetVolumesFsFlavorsJSONResponse struct {

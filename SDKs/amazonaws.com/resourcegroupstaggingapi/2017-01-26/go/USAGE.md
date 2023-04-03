@@ -13,29 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DescribeReportCreationRequest{
-        Headers: operations.DescribeReportCreationHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation",
+        RequestBody: map[string]interface{}{
+            "provident": "distinctio",
+            "quibusdam": "unde",
+            "nulla": "corrupti",
         },
-        Request: map[string]interface{}{
-            "vel": "error",
-            "deserunt": "suscipit",
-            "iure": "magnam",
-            "debitis": "ipsa",
-        },
+        XAmzAlgorithm: "illum",
+        XAmzContentSha256: "vel",
+        XAmzCredential: "error",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "magnam",
+        XAmzTarget: "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation",
     }
 
     ctx := context.Background()

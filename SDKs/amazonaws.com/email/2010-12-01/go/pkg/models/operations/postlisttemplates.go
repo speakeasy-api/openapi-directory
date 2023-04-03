@@ -50,25 +50,17 @@ func (e *POSTListTemplatesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListTemplatesQueryParams struct {
-	Action  POSTListTemplatesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTListTemplatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListTemplatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTListTemplatesRequest struct {
-	QueryParams POSTListTemplatesQueryParams
-	Headers     POSTListTemplatesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTListTemplatesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                       `request:"mediaType=text/xml"`
+	Version           POSTListTemplatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListTemplatesResponse struct {

@@ -31,11 +31,11 @@ pkg/models/shared/email.go
 pkg/models/shared/currencyenum.go
 pkg/models/shared/bankaccount.go
 pkg/models/shared/address.go
-pkg/models/shared/security.go
 pkg/models/shared/getcustomersupportcustomersresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
 pkg/models/shared/deletecustomersupportcustomerresponse.go
 pkg/models/shared/getcustomersupportcustomerresponse.go
 pkg/models/shared/updatecustomersupportcustomerresponse.go
+pkg/models/shared/security.go
 USAGE.md

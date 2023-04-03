@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ContentGetContentByTagAndTypePathParams struct {
+type ContentGetContentByTagAndTypeRequest struct {
+	// Not used.
+	Head   *bool  `queryParam:"style=form,explode=true,name=head"`
 	Locale string `pathParam:"style=simple,explode=false,name=locale"`
 	Tag    string `pathParam:"style=simple,explode=false,name=tag"`
 	Type   string `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type ContentGetContentByTagAndTypeQueryParams struct {
-	// Not used.
-	Head *bool `queryParam:"style=form,explode=true,name=head"`
-}
-
-type ContentGetContentByTagAndTypeRequest struct {
-	PathParams  ContentGetContentByTagAndTypePathParams
-	QueryParams ContentGetContentByTagAndTypeQueryParams
 }
 
 // ContentGetContentByTagAndType200Wildcard - Look at the Response property for more information about the nature of this response

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMfaStatusForUserHeaders struct {
+type GetMfaStatusForUserRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type GetMfaStatusForUserRequest struct {
-	Headers GetMfaStatusForUserHeaders
 }
 
 type GetMfaStatusForUserResponse struct {

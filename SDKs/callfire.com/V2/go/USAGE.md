@@ -14,72 +14,52 @@ func main() {
     s := sdk.New()
 
     req := operations.AddCallBroadcastBatchRequest{
-        Security: operations.AddCallBroadcastBatchSecurity{
-            BasicAuth: shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        },
-        PathParams: operations.AddCallBroadcastBatchPathParams{
-            ID: 548814,
-        },
-        QueryParams: operations.AddCallBroadcastBatchQueryParams{
-            StrictValidation: false,
-        },
-        Request: &shared.BatchRequest{
-            ContactListID: 592845,
-            Name: "distinctio",
+        BatchRequest: &shared.BatchRequest{
+            ContactListID: 548814,
+            Name: "provident",
             Recipients: []shared.Recipient{
                 shared.Recipient{
                     Attributes: map[string]string{
-                        "nulla": "corrupti",
-                        "illum": "vel",
-                        "error": "deserunt",
+                        "unde": "nulla",
+                        "corrupti": "illum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
                     },
-                    ContactID: 384382,
-                    FromNumber: "iure",
-                    PhoneNumber: "magnam",
+                    ContactID: 437587,
+                    FromNumber: "magnam",
+                    PhoneNumber: "debitis",
                 },
                 shared.Recipient{
                     Attributes: map[string]string{
-                        "ipsa": "delectus",
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
+                        "delectus": "tempora",
                     },
-                    ContactID: 479977,
-                    FromNumber: "excepturi",
-                    PhoneNumber: "nisi",
+                    ContactID: 383441,
+                    FromNumber: "molestiae",
+                    PhoneNumber: "minus",
                 },
                 shared.Recipient{
                     Attributes: map[string]string{
-                        "temporibus": "ab",
-                        "quis": "veritatis",
-                        "deserunt": "perferendis",
-                        "ipsam": "repellendus",
+                        "voluptatum": "iusto",
+                        "excepturi": "nisi",
+                        "recusandae": "temporibus",
+                        "ab": "quis",
                     },
-                    ContactID: 957156,
-                    FromNumber: "quo",
-                    PhoneNumber: "odit",
-                },
-                shared.Recipient{
-                    Attributes: map[string]string{
-                        "at": "maiores",
-                        "molestiae": "quod",
-                        "quod": "esse",
-                        "totam": "porro",
-                    },
-                    ContactID: 678880,
-                    FromNumber: "dicta",
-                    PhoneNumber: "nam",
+                    ContactID: 87129,
+                    FromNumber: "deserunt",
+                    PhoneNumber: "perferendis",
                 },
             },
             ScrubDuplicates: false,
         },
+        ID: 368241,
+        StrictValidation: false,
     }
 
     ctx := context.Background()
-    res, err := s.Calls.AddCallBroadcastBatch(ctx, req)
+    res, err := s.Calls.AddCallBroadcastBatch(ctx, req, operations.AddCallBroadcastBatchSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

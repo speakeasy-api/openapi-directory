@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTargetedSentimentDetectionJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListTargetedSentimentDetectionJobsXAmzTargetEnum
 type ListTargetedSentimentDetectionJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListTargetedSentimentDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type ListTargetedSentimentDetectionJobsHeaders struct {
+type ListTargetedSentimentDetectionJobsRequest struct {
+	ListTargetedSentimentDetectionJobsRequest shared.ListTargetedSentimentDetectionJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListTargetedSentimentDetectionJobsHeaders struct {
 	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTargetedSentimentDetectionJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTargetedSentimentDetectionJobsRequest struct {
-	QueryParams ListTargetedSentimentDetectionJobsQueryParams
-	Headers     ListTargetedSentimentDetectionJobsHeaders
-	Request     shared.ListTargetedSentimentDetectionJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListTargetedSentimentDetectionJobsResponse struct {

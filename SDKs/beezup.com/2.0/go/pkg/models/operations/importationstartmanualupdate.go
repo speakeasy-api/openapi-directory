@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationStartManualUpdatePathParams struct {
+type ImportationStartManualUpdateRequest struct {
+	StartManualImportRequest shared.StartManualImportRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationStartManualUpdateRequest struct {
-	PathParams ImportationStartManualUpdatePathParams
-	Request    shared.StartManualImportRequest `request:"mediaType=application/json"`
 }
 
 type ImportationStartManualUpdateResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEpisodesByGroupPathParams struct {
-	// The programme identifier.
-	Pid string `pathParam:"style=simple,explode=false,name=pid"`
-}
-
-type GetEpisodesByGroupQueryParams struct {
+type GetEpisodesByGroupRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The depth to return child entities.
@@ -23,17 +18,14 @@ type GetEpisodesByGroupQueryParams struct {
 	Page int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results to return.
 	PerPage int64 `queryParam:"style=form,explode=true,name=per_page"`
+	// The programme identifier.
+	Pid string `pathParam:"style=simple,explode=false,name=pid"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
 	// The sort order of the results.
 	Sort string `queryParam:"style=form,explode=true,name=sort"`
 	// Whether to sort ascending or descending
 	SortDirection shared.SortDirectionEnum `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetEpisodesByGroupRequest struct {
-	PathParams  GetEpisodesByGroupPathParams
-	QueryParams GetEpisodesByGroupQueryParams
 }
 
 type GetEpisodesByGroupResponse struct {

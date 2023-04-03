@@ -30,7 +30,8 @@ func (e *DeleteAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteAliasHeaders struct {
+type DeleteAliasRequest struct {
+	DeleteAliasInput  shared.DeleteAliasInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteAliasHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteAliasXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteAliasRequest struct {
-	Headers DeleteAliasHeaders
-	Request shared.DeleteAliasInput `request:"mediaType=application/json"`
 }
 
 type DeleteAliasResponse struct {

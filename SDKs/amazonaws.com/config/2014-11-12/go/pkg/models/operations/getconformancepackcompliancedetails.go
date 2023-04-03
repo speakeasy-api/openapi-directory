@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConformancePackComplianceDetailsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetConformancePackComplianceDetailsXAmzTargetEnum
 type GetConformancePackComplianceDetailsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetConformancePackComplianceDetailsXAmzTargetEnum) UnmarshalJSON(data [
 	}
 }
 
-type GetConformancePackComplianceDetailsHeaders struct {
+type GetConformancePackComplianceDetailsRequest struct {
+	GetConformancePackComplianceDetailsRequest shared.GetConformancePackComplianceDetailsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetConformancePackComplianceDetailsHeaders struct {
 	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetConformancePackComplianceDetailsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetConformancePackComplianceDetailsRequest struct {
-	QueryParams GetConformancePackComplianceDetailsQueryParams
-	Headers     GetConformancePackComplianceDetailsHeaders
-	Request     shared.GetConformancePackComplianceDetailsRequest `request:"mediaType=application/json"`
 }
 
 type GetConformancePackComplianceDetailsResponse struct {

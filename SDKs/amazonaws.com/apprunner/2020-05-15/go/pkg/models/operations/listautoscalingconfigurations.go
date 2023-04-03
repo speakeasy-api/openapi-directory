@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAutoScalingConfigurationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListAutoScalingConfigurationsXAmzTargetEnum
 type ListAutoScalingConfigurationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAutoScalingConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListAutoScalingConfigurationsHeaders struct {
+type ListAutoScalingConfigurationsRequest struct {
+	ListAutoScalingConfigurationsRequest shared.ListAutoScalingConfigurationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAutoScalingConfigurationsHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAutoScalingConfigurationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAutoScalingConfigurationsRequest struct {
-	QueryParams ListAutoScalingConfigurationsQueryParams
-	Headers     ListAutoScalingConfigurationsHeaders
-	Request     shared.ListAutoScalingConfigurationsRequest `request:"mediaType=application/json"`
 }
 
 type ListAutoScalingConfigurationsResponse struct {

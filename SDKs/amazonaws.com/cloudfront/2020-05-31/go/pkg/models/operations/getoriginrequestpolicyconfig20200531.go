@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetOriginRequestPolicyConfig20200531PathParams struct {
+type GetOriginRequestPolicyConfig20200531Request struct {
 	// The unique identifier for the origin request policy. If the origin request policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the origin request policy is not attached to a cache behavior, you can get the identifier using <code>ListOriginRequestPolicies</code>.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetOriginRequestPolicyConfig20200531Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetOriginRequestPolicyConfig20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetOriginRequestPolicyConfig20200531Request struct {
-	PathParams GetOriginRequestPolicyConfig20200531PathParams
-	Headers    GetOriginRequestPolicyConfig20200531Headers
 }
 
 type GetOriginRequestPolicyConfig20200531Response struct {

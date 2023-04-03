@@ -13,33 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DescribeServicesRequest{
-        QueryParams: operations.DescribeServicesQueryParams{
-            MaxResults: "corrupti",
-            NextToken: "provident",
+        DescribeServicesRequest: shared.DescribeServicesRequest{
+            FormatVersion: "corrupti",
+            MaxResults: 592845,
+            NextToken: "distinctio",
+            ServiceCode: "quibusdam",
         },
-        Headers: operations.DescribeServicesHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-            XAmzTarget: "AWSPriceListService.DescribeServices",
-        },
-        Request: shared.DescribeServicesRequest{
-            FormatVersion: "error",
-            MaxResults: 645894,
-            NextToken: "suscipit",
-            ServiceCode: "iure",
-        },
+        MaxResults: "unde",
+        NextToken: "nulla",
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
+        XAmzTarget: "AWSPriceListService.DescribeServices",
     }
 
     ctx := context.Background()

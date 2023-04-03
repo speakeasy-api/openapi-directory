@@ -8,22 +8,6 @@ import (
 	"time"
 )
 
-type PostUsersIDUserConnectionsIDConnectionPathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserConnectionsIDConnectionQueryParams struct {
-	// Do the connection update/synchronization in background
-	Background *bool   `queryParam:"style=form,explode=true,name=background"`
-	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
-	// Whether the connection synchronization is asked by the PSU or not (default is true)
-	PsuRequested *bool `queryParam:"style=form,explode=true,name=psu_requested"`
-	// Refresh the PSU's SCA for openapi source
-	RefreshPsd2Auth *bool `queryParam:"style=form,explode=true,name=refresh_psd2_auth"`
-}
-
 type PostUsersIDUserConnectionsIDConnectionRequestBody struct {
 	// Set if the connection synchronization is active
 	Active *bool `multipartForm:"name=active"`
@@ -38,9 +22,17 @@ type PostUsersIDUserConnectionsIDConnectionRequestBody struct {
 }
 
 type PostUsersIDUserConnectionsIDConnectionRequest struct {
-	PathParams  PostUsersIDUserConnectionsIDConnectionPathParams
-	QueryParams PostUsersIDUserConnectionsIDConnectionQueryParams
-	Request     *PostUsersIDUserConnectionsIDConnectionRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostUsersIDUserConnectionsIDConnectionRequestBody `request:"mediaType=multipart/form-data"`
+	// Do the connection update/synchronization in background
+	Background   *bool   `queryParam:"style=form,explode=true,name=background"`
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
+	// Whether the connection synchronization is asked by the PSU or not (default is true)
+	PsuRequested *bool `queryParam:"style=form,explode=true,name=psu_requested"`
+	// Refresh the PSU's SCA for openapi source
+	RefreshPsd2Auth *bool `queryParam:"style=form,explode=true,name=refresh_psd2_auth"`
 }
 
 type PostUsersIDUserConnectionsIDConnectionResponse struct {

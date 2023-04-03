@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type PostUsersIDUserTokenPathParams struct {
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
 type PostUsersIDUserTokenRequestBody struct {
 	// application name
 	Application string `multipartForm:"name=application"`
 }
 
 type PostUsersIDUserTokenRequest struct {
-	PathParams PostUsersIDUserTokenPathParams
-	Request    PostUsersIDUserTokenRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostUsersIDUserTokenRequestBody `request:"mediaType=multipart/form-data"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PostUsersIDUserTokenResponse struct {

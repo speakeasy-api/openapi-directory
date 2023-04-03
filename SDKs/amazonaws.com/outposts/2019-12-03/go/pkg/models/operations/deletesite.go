@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSitePathParams struct {
+type DeleteSiteRequest struct {
 	//  The ID or the Amazon Resource Name (ARN) of the site.
-	SiteID string `pathParam:"style=simple,explode=false,name=SiteId"`
-}
-
-type DeleteSiteHeaders struct {
+	SiteID            string  `pathParam:"style=simple,explode=false,name=SiteId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteSiteHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSiteRequest struct {
-	PathParams DeleteSitePathParams
-	Headers    DeleteSiteHeaders
 }
 
 type DeleteSiteResponse struct {

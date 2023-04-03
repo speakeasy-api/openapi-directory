@@ -50,28 +50,20 @@ func (e *GETDeleteApplicationVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteApplicationQueryParams struct {
+type GETDeleteApplicationRequest struct {
 	Action GETDeleteApplicationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the application to delete.
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
 	// When set to true, running environments will be terminated before deleting the application.
 	TerminateEnvByForce *bool                           `queryParam:"style=form,explode=true,name=TerminateEnvByForce"`
 	Version             GETDeleteApplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteApplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteApplicationRequest struct {
-	QueryParams GETDeleteApplicationQueryParams
-	Headers     GETDeleteApplicationHeaders
+	XAmzAlgorithm       *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteApplicationResponse struct {

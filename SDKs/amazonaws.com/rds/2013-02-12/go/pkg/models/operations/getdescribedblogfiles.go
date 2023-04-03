@@ -50,7 +50,7 @@ func (e *GETDescribeDBLogFilesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeDBLogFilesQueryParams struct {
+type GETDescribeDBLogFilesRequest struct {
 	Action               GETDescribeDBLogFilesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBInstanceIdentifier string                           `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	FileLastWritten      *int64                           `queryParam:"style=form,explode=true,name=FileLastWritten"`
@@ -59,21 +59,13 @@ type GETDescribeDBLogFilesQueryParams struct {
 	Marker               *string                          `queryParam:"style=form,explode=true,name=Marker"`
 	MaxRecords           *int64                           `queryParam:"style=form,explode=true,name=MaxRecords"`
 	Version              GETDescribeDBLogFilesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDBLogFilesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDBLogFilesRequest struct {
-	QueryParams GETDescribeDBLogFilesQueryParams
-	Headers     GETDescribeDBLogFilesHeaders
+	XAmzAlgorithm        *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDBLogFilesResponse struct {

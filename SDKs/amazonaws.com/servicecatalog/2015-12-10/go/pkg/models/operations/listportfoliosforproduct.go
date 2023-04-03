@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPortfoliosForProductQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // ListPortfoliosForProductXAmzTargetEnum
 type ListPortfoliosForProductXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListPortfoliosForProductXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type ListPortfoliosForProductHeaders struct {
+type ListPortfoliosForProductRequest struct {
+	ListPortfoliosForProductInput shared.ListPortfoliosForProductInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken         *string                                `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListPortfoliosForProductHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListPortfoliosForProductXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListPortfoliosForProductRequest struct {
-	QueryParams ListPortfoliosForProductQueryParams
-	Headers     ListPortfoliosForProductHeaders
-	Request     shared.ListPortfoliosForProductInput `request:"mediaType=application/json"`
 }
 
 type ListPortfoliosForProductResponse struct {

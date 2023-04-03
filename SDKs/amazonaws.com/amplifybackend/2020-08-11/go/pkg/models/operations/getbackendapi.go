@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBackendAPIPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment.
-	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
-}
-
-type GetBackendAPIHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum - The strategy for conflict resolution.
 type GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum string
 
@@ -127,9 +110,18 @@ type GetBackendAPIRequestBody struct {
 }
 
 type GetBackendAPIRequest struct {
-	PathParams GetBackendAPIPathParams
-	Headers    GetBackendAPIHeaders
-	Request    GetBackendAPIRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetBackendAPIRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment.
+	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
 }
 
 type GetBackendAPIResponse struct {

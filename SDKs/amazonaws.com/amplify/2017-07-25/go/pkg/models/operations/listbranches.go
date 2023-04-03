@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBranchesPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type ListBranchesQueryParams struct {
-	//  The maximum number of records to list in a single response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  A pagination token. Set to null to start listing branches from the start. If a non-null pagination token is returned in a result, pass its value in here to list more branches.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListBranchesHeaders struct {
+type ListBranchesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListBranchesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListBranchesRequest struct {
-	PathParams  ListBranchesPathParams
-	QueryParams ListBranchesQueryParams
-	Headers     ListBranchesHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The maximum number of records to list in a single response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  A pagination token. Set to null to start listing branches from the start. If a non-null pagination token is returned in a result, pass its value in here to list more branches.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBranchesResponse struct {

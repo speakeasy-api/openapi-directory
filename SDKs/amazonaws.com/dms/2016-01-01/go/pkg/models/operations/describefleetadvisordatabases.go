@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFleetAdvisorDatabasesQueryParams struct {
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeFleetAdvisorDatabasesXAmzTargetEnum
 type DescribeFleetAdvisorDatabasesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeFleetAdvisorDatabasesXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DescribeFleetAdvisorDatabasesHeaders struct {
+type DescribeFleetAdvisorDatabasesRequest struct {
+	DescribeFleetAdvisorDatabasesRequest shared.DescribeFleetAdvisorDatabasesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeFleetAdvisorDatabasesHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeFleetAdvisorDatabasesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeFleetAdvisorDatabasesRequest struct {
-	QueryParams DescribeFleetAdvisorDatabasesQueryParams
-	Headers     DescribeFleetAdvisorDatabasesHeaders
-	Request     shared.DescribeFleetAdvisorDatabasesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeFleetAdvisorDatabasesResponse struct {

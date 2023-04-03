@@ -29,7 +29,8 @@ func (e *EnableSagemakerServicecatalogPortfolioXAmzTargetEnum) UnmarshalJSON(dat
 	}
 }
 
-type EnableSagemakerServicecatalogPortfolioHeaders struct {
+type EnableSagemakerServicecatalogPortfolioRequest struct {
+	RequestBody       map[string]interface{}                               `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type EnableSagemakerServicecatalogPortfolioHeaders struct {
 	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        EnableSagemakerServicecatalogPortfolioXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type EnableSagemakerServicecatalogPortfolioRequest struct {
-	Headers EnableSagemakerServicecatalogPortfolioHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type EnableSagemakerServicecatalogPortfolioResponse struct {

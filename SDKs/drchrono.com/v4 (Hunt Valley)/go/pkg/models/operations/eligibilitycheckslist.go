@@ -8,10 +8,10 @@ import (
 )
 
 type EligibilityChecksListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type EligibilityChecksListQueryParams struct {
+type EligibilityChecksListRequest struct {
 	Appointment          *int64  `queryParam:"style=form,explode=true,name=appointment"`
 	AppointmentDate      *string `queryParam:"style=form,explode=true,name=appointment_date"`
 	AppointmentDateRange *string `queryParam:"style=form,explode=true,name=appointment_date_range"`
@@ -21,11 +21,6 @@ type EligibilityChecksListQueryParams struct {
 	Patient              *int64  `queryParam:"style=form,explode=true,name=patient"`
 	QueryDate            *string `queryParam:"style=form,explode=true,name=query_date"`
 	QueryDateRange       *string `queryParam:"style=form,explode=true,name=query_date_range"`
-}
-
-type EligibilityChecksListRequest struct {
-	QueryParams EligibilityChecksListQueryParams
-	Security    EligibilityChecksListSecurity
 }
 
 // EligibilityChecksList200ApplicationJSON - Paginated Result

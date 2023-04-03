@@ -8,10 +8,11 @@ import (
 )
 
 type FindWebhooksSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindWebhooksQueryParams struct {
+type FindWebhooksRequest struct {
 	// A callback URL
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Specifies whether webhook is enabled
@@ -28,11 +29,6 @@ type FindWebhooksQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// A name of a resource, available values: 'CccCampaign', 'CallBroadcast', 'TextBroadcast',  'OutboundCall', 'OutboundText', 'InboundCall', 'InboundText', 'ContactList'
 	Resource *string `queryParam:"style=form,explode=true,name=resource"`
-}
-
-type FindWebhooksRequest struct {
-	QueryParams FindWebhooksQueryParams
-	Security    FindWebhooksSecurity
 }
 
 type FindWebhooksResponse struct {

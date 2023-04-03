@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteProfileObjectPathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type DeleteProfileObjectHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteProfileObjectRequestBody struct {
 	// The name of the profile object type.
 	ObjectTypeName string `json:"ObjectTypeName"`
@@ -32,9 +17,16 @@ type DeleteProfileObjectRequestBody struct {
 }
 
 type DeleteProfileObjectRequest struct {
-	PathParams DeleteProfileObjectPathParams
-	Headers    DeleteProfileObjectHeaders
-	Request    DeleteProfileObjectRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName        string                         `pathParam:"style=simple,explode=false,name=DomainName"`
+	RequestBody       DeleteProfileObjectRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteProfileObjectResponse struct {

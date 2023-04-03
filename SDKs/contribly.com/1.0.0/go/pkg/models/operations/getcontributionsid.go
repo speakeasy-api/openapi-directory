@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContributionsIDPathParams struct {
+type GetContributionsIDRequest struct {
 	// Id of the contribution to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetContributionsIDRequest struct {
-	PathParams GetContributionsIDPathParams
 }
 
 type GetContributionsIDResponse struct {

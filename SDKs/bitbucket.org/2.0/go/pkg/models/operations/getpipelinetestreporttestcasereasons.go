@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetPipelineTestReportTestCaseReasonsPathParams struct {
+type GetPipelineTestReportTestCaseReasonsRequest struct {
 	// The UUID of the pipeline.
 	PipelineUUID string `pathParam:"style=simple,explode=false,name=pipeline_uuid"`
 	// The repository.
@@ -17,10 +17,6 @@ type GetPipelineTestReportTestCaseReasonsPathParams struct {
 	TestCaseUUID string `pathParam:"style=simple,explode=false,name=test_case_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetPipelineTestReportTestCaseReasonsRequest struct {
-	PathParams GetPipelineTestReportTestCaseReasonsPathParams
 }
 
 type GetPipelineTestReportTestCaseReasonsResponse struct {

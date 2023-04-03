@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetStatusesForObjectQueryParams struct {
+type GetStatusesForObjectRequest struct {
 	// Only return statuses that have been created since the given time.
 	CreatedSince *time.Time `queryParam:"style=form,explode=true,name=created_since"`
 	// Results per page.
@@ -27,10 +27,6 @@ type GetStatusesForObjectQueryParams struct {
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
 	// Globally unique identifier for object to fetch statuses from. Must be a GID for a project, portfolio, or goal.
 	Parent string `queryParam:"style=form,explode=true,name=parent"`
-}
-
-type GetStatusesForObjectRequest struct {
-	QueryParams GetStatusesForObjectQueryParams
 }
 
 // GetStatusesForObject200ApplicationJSON - Successfully retrieved the specified object's status updates.

@@ -50,26 +50,18 @@ func (e *GETListExportsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListExportsQueryParams struct {
+type GETListExportsRequest struct {
 	Action GETListExportsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A string (provided by the <a>ListExports</a> response output) that identifies the next page of exported output values that you asked to retrieve.
-	NextToken *string                   `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListExportsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListExportsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListExportsRequest struct {
-	QueryParams GETListExportsQueryParams
-	Headers     GETListExportsHeaders
+	NextToken         *string                   `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListExportsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListExportsResponse struct {

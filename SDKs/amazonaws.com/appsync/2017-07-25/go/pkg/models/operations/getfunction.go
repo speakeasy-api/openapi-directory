@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFunctionPathParams struct {
-	// The GraphQL API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The <code>Function</code> ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
-}
-
-type GetFunctionHeaders struct {
+type GetFunctionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetFunctionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetFunctionRequest struct {
-	PathParams GetFunctionPathParams
-	Headers    GetFunctionHeaders
+	// The GraphQL API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The <code>Function</code> ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type GetFunctionResponse struct {

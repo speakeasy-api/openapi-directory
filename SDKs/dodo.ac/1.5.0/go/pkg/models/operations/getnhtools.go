@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNhToolsQueryParams struct {
-	// When set to `true`, only tool names are returned. Instead of an array of objects with all details, the return will be an array of strings.
-	Excludedetails *string `queryParam:"style=form,explode=true,name=excludedetails"`
-}
-
-type GetNhToolsHeaders struct {
+type GetNhToolsRequest struct {
 	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
 	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
 	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
 	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhToolsRequest struct {
-	QueryParams GetNhToolsQueryParams
-	Headers     GetNhToolsHeaders
+	// When set to `true`, only tool names are returned. Instead of an array of objects with all details, the return will be an array of strings.
+	Excludedetails *string `queryParam:"style=form,explode=true,name=excludedetails"`
 }
 
 type GetNhToolsResponse struct {

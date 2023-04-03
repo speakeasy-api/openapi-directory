@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // BulkPublish - <p>Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of the request via the GetBulkPublishDetails operation.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) BulkPublish(ctx context.Context, request operations.BulkPublishRequest) (*operations.BulkPublishResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/bulkpublish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/bulkpublish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -220,14 +220,14 @@ func (s *SDK) BulkPublish(ctx context.Context, request operations.BulkPublishReq
 // DeleteDataset - <p>Deletes the specific dataset. The dataset will be deleted permanently, and the action can't be undone. Datasets that this dataset was merged with will no longer report the merge. Any subsequent operation on this dataset will result in a ResourceNotFoundException.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>
 func (s *SDK) DeleteDataset(ctx context.Context, request operations.DeleteDatasetRequest) (*operations.DeleteDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -326,14 +326,14 @@ func (s *SDK) DeleteDataset(ctx context.Context, request operations.DeleteDatase
 // DescribeDataset - <p>Gets meta data about a dataset by identity and dataset name. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API call.</p>
 func (s *SDK) DescribeDataset(ctx context.Context, request operations.DescribeDatasetRequest) (*operations.DescribeDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -422,14 +422,14 @@ func (s *SDK) DescribeDataset(ctx context.Context, request operations.DescribeDa
 // DescribeIdentityPoolUsage - <p>Gets usage details (for example, data storage) about a particular identity pool.</p> <p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) DescribeIdentityPoolUsage(ctx context.Context, request operations.DescribeIdentityPoolUsageRequest) (*operations.DescribeIdentityPoolUsageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -518,14 +518,14 @@ func (s *SDK) DescribeIdentityPoolUsage(ctx context.Context, request operations.
 // DescribeIdentityUsage - <p>Gets usage information for an identity, including number of datasets and data usage.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>
 func (s *SDK) DescribeIdentityUsage(ctx context.Context, request operations.DescribeIdentityUsageRequest) (*operations.DescribeIdentityUsageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -614,14 +614,14 @@ func (s *SDK) DescribeIdentityUsage(ctx context.Context, request operations.Desc
 // GetBulkPublishDetails - <p>Get the status of the last BulkPublish operation for an identity pool.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) GetBulkPublishDetails(ctx context.Context, request operations.GetBulkPublishDetailsRequest) (*operations.GetBulkPublishDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/getBulkPublishDetails", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/getBulkPublishDetails", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -700,14 +700,14 @@ func (s *SDK) GetBulkPublishDetails(ctx context.Context, request operations.GetB
 // GetCognitoEvents - <p>Gets the events and the corresponding Lambda functions associated with an identity pool.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) GetCognitoEvents(ctx context.Context, request operations.GetCognitoEventsRequest) (*operations.GetCognitoEventsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/events", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -796,14 +796,14 @@ func (s *SDK) GetCognitoEvents(ctx context.Context, request operations.GetCognit
 // GetIdentityPoolConfiguration - <p>Gets the configuration settings of an identity pool.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) GetIdentityPoolConfiguration(ctx context.Context, request operations.GetIdentityPoolConfigurationRequest) (*operations.GetIdentityPoolConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -892,16 +892,16 @@ func (s *SDK) GetIdentityPoolConfiguration(ctx context.Context, request operatio
 // ListDatasets - <p>Lists datasets for an identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use the Cognito Identity credentials to make this API call.</p>
 func (s *SDK) ListDatasets(ctx context.Context, request operations.ListDatasetsRequest) (*operations.ListDatasetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -989,9 +989,9 @@ func (s *SDK) ListIdentityPoolUsage(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1072,16 +1072,16 @@ func (s *SDK) ListIdentityPoolUsage(ctx context.Context, request operations.List
 // ListRecords - <p>Gets paginated records, optionally changed after a particular sync count for a dataset and identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity data.</p> <p>ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API call.</p>
 func (s *SDK) ListRecords(ctx context.Context, request operations.ListRecordsRequest) (*operations.ListRecordsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}/records", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}/records", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1162,9 +1162,9 @@ func (s *SDK) ListRecords(ctx context.Context, request operations.ListRecordsReq
 // RegisterDevice - <p>Registers a device to receive push sync notifications.</p><p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>
 func (s *SDK) RegisterDevice(ctx context.Context, request operations.RegisterDeviceRequest) (*operations.RegisterDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identity/{IdentityId}/device", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identity/{IdentityId}/device", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1179,7 +1179,7 @@ func (s *SDK) RegisterDevice(ctx context.Context, request operations.RegisterDev
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1278,9 +1278,9 @@ func (s *SDK) RegisterDevice(ctx context.Context, request operations.RegisterDev
 // SetCognitoEvents - <p>Sets the AWS Lambda function for a given event type for an identity pool. This request only updates the key/value pair specified. Other key/values pairs are not updated. To remove a key value pair, pass a empty value for the particular key.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) SetCognitoEvents(ctx context.Context, request operations.SetCognitoEventsRequest) (*operations.SetCognitoEventsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/events", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/events", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1295,7 +1295,7 @@ func (s *SDK) SetCognitoEvents(ctx context.Context, request operations.SetCognit
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1375,9 +1375,9 @@ func (s *SDK) SetCognitoEvents(ctx context.Context, request operations.SetCognit
 // SetIdentityPoolConfiguration - <p>Sets the necessary configuration for push sync.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito Identity.</p>
 func (s *SDK) SetIdentityPoolConfiguration(ctx context.Context, request operations.SetIdentityPoolConfigurationRequest) (*operations.SetIdentityPoolConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1392,7 +1392,7 @@ func (s *SDK) SetIdentityPoolConfiguration(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1491,14 +1491,14 @@ func (s *SDK) SetIdentityPoolConfiguration(ctx context.Context, request operatio
 // SubscribeToDataset - <p>Subscribes to receive notifications when a dataset is modified by another device.</p><p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>
 func (s *SDK) SubscribeToDataset(ctx context.Context, request operations.SubscribeToDatasetRequest) (*operations.SubscribeToDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}/subscriptions/{DeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}/subscriptions/{DeviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1597,14 +1597,14 @@ func (s *SDK) SubscribeToDataset(ctx context.Context, request operations.Subscri
 // UnsubscribeFromDataset - <p>Unsubscribes from receiving notifications when a dataset is modified by another device.</p><p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer credentials.</p>
 func (s *SDK) UnsubscribeFromDataset(ctx context.Context, request operations.UnsubscribeFromDatasetRequest) (*operations.UnsubscribeFromDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}/subscriptions/{DeviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}/subscriptions/{DeviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1703,9 +1703,9 @@ func (s *SDK) UnsubscribeFromDataset(ctx context.Context, request operations.Uns
 // UpdateRecords - <p>Posts updates to records and adds and deletes records for a dataset and user.</p> <p>The sync count in the record patch is your last known sync count for that record. The server will reject an UpdateRecords request with a ResourceConflictException if you try to patch a record with a new value but a stale sync count.</p><p>For example, if the sync count on the server is 5 for a key called highScore and you try and submit a new highScore with sync count of 4, the request will be rejected. To obtain the current sync count for a record, call ListRecords. On a successful update of the record, the response returns the new sync count for that record. You should present that sync count the next time you try to update that same record. When the record does not exist, specify the sync count as 0.</p> <p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials.</p>
 func (s *SDK) UpdateRecords(ctx context.Context, request operations.UpdateRecordsRequest) (*operations.UpdateRecordsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/identitypools/{IdentityPoolId}/identities/{IdentityId}/datasets/{DatasetName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1720,7 +1720,7 @@ func (s *SDK) UpdateRecords(ctx context.Context, request operations.UpdateRecord
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

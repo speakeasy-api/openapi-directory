@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConfigurationSetEventDestinationPathParams struct {
-	// The name of the configuration set that contains the event destination that you want to modify.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-	// The name of the event destination that you want to modify.
-	EventDestinationName string `pathParam:"style=simple,explode=false,name=EventDestinationName"`
-}
-
-type UpdateConfigurationSetEventDestinationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateConfigurationSetEventDestinationRequestBodyEventDestination - An object that defines the event destination. Specifically, it defines which services receive events from emails sent using the configuration set that the event destination is associated with. Also defines the types of events that are sent to the event destination.
 type UpdateConfigurationSetEventDestinationRequestBodyEventDestination struct {
 	CloudWatchDestination      *shared.CloudWatchDestination      `json:"CloudWatchDestination,omitempty"`
@@ -40,9 +23,18 @@ type UpdateConfigurationSetEventDestinationRequestBody struct {
 }
 
 type UpdateConfigurationSetEventDestinationRequest struct {
-	PathParams UpdateConfigurationSetEventDestinationPathParams
-	Headers    UpdateConfigurationSetEventDestinationHeaders
-	Request    UpdateConfigurationSetEventDestinationRequestBody `request:"mediaType=application/json"`
+	// The name of the configuration set that contains the event destination that you want to modify.
+	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	// The name of the event destination that you want to modify.
+	EventDestinationName string                                            `pathParam:"style=simple,explode=false,name=EventDestinationName"`
+	RequestBody          UpdateConfigurationSetEventDestinationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateConfigurationSetEventDestinationResponse struct {

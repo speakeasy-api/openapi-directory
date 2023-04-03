@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMostRecentSourceActorCatalogRequest struct {
-	Request shared.SourceIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetMostRecentSourceActorCatalogResponse struct {
 	// Successful operation
 	ActorCatalogWithUpdatedAt *shared.ActorCatalogWithUpdatedAt

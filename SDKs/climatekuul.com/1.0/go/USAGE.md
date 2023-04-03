@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.AirtravelCoordinatesRequest{
-        Headers: operations.AirtravelCoordinatesHeaders{
-            ContentType: "application/x-www-form-urlencoded",
-        },
-        Request: &operations.AirtravelCoordinatesRequestBody{
+        ContentType: "application/x-www-form-urlencoded",
+        RequestBody: &operations.AirtravelCoordinatesRequestBody{
             APIKeyL1: "d95fead6-e8a6-4547-9fb9-7835101a3960",
             APIKeyL2: "c60f8db5-7204-4427-960d-27400c38b166",
             DestinationAirportLatitude: 24.9056,

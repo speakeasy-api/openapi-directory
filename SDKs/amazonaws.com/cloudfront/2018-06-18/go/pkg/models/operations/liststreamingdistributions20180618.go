@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type ListStreamingDistributions20180618QueryParams struct {
+type ListStreamingDistributions20180618Request struct {
 	// The value that you provided for the <code>Marker</code> request parameter.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The value that you provided for the <code>MaxItems</code> request parameter.
-	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListStreamingDistributions20180618Headers struct {
+	MaxItems          *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type ListStreamingDistributions20180618Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStreamingDistributions20180618Request struct {
-	QueryParams ListStreamingDistributions20180618QueryParams
-	Headers     ListStreamingDistributions20180618Headers
 }
 
 type ListStreamingDistributions20180618Response struct {

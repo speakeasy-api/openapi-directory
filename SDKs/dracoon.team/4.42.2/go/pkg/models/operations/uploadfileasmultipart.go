@@ -7,20 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFileAsMultipartPathParams struct {
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type UploadFileAsMultipartHeaders struct {
-	// Content-Range
-	//
-	// e.g. `bytes 0-999/3980`
-	ContentRange *string `header:"style=simple,explode=false,name=Content-Range"`
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
 type UploadFileAsMultipartRequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -32,9 +18,15 @@ type UploadFileAsMultipartRequestBody struct {
 }
 
 type UploadFileAsMultipartRequest struct {
-	PathParams UploadFileAsMultipartPathParams
-	Headers    UploadFileAsMultipartHeaders
-	Request    *UploadFileAsMultipartRequestBody `request:"mediaType=multipart/form-data"`
+	// Content-Range
+	//
+	// e.g. `bytes 0-999/3980`
+	ContentRange *string                           `header:"style=simple,explode=false,name=Content-Range"`
+	RequestBody  *UploadFileAsMultipartRequestBody `request:"mediaType=multipart/form-data"`
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type UploadFileAsMultipartResponse struct {

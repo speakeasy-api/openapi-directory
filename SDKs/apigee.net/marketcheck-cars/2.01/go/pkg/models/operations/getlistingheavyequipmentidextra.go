@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingHeavyEquipmentIDExtraPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingHeavyEquipmentIDExtraQueryParams struct {
+type GetListingHeavyEquipmentIDExtraRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetListingHeavyEquipmentIDExtraRequest struct {
-	PathParams  GetListingHeavyEquipmentIDExtraPathParams
-	QueryParams GetListingHeavyEquipmentIDExtraQueryParams
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetListingHeavyEquipmentIDExtraResponse struct {

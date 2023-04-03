@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetHighlightsByCategoryPathParams struct {
-	// The category identifier to return results from.
-	Category string `pathParam:"style=simple,explode=false,name=category"`
-}
-
-type GetHighlightsByCategoryQueryParams struct {
+type GetHighlightsByCategoryRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
+	// The category identifier to return results from.
+	Category string `pathParam:"style=simple,explode=false,name=category"`
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// Request additional data in the output
 	Mixin *shared.MixinEnum `queryParam:"style=form,explode=true,name=mixin"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetHighlightsByCategoryRequest struct {
-	PathParams  GetHighlightsByCategoryPathParams
-	QueryParams GetHighlightsByCategoryQueryParams
 }
 
 type GetHighlightsByCategoryResponse struct {

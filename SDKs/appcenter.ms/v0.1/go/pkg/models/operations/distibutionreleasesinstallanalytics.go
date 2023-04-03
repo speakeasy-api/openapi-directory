@@ -6,13 +6,6 @@ import (
 	"net/http"
 )
 
-type DistibutionReleasesInstallAnalyticsPathParams struct {
-	// The name of the app
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the app owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
 type DistibutionReleasesInstallAnalyticsRequestBodyReleases struct {
 	// distribution group id
 	DistributionGroupID string `json:"distribution_group_id"`
@@ -28,9 +21,12 @@ type DistibutionReleasesInstallAnalyticsRequestBody struct {
 }
 
 type DistibutionReleasesInstallAnalyticsRequest struct {
-	PathParams DistibutionReleasesInstallAnalyticsPathParams
 	// The install analytics request payload
-	Request DistibutionReleasesInstallAnalyticsRequestBody `request:"mediaType=application/json"`
+	RequestBody DistibutionReleasesInstallAnalyticsRequestBody `request:"mediaType=application/json"`
+	// The name of the app
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the app owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type DistibutionReleasesInstallAnalyticsResponse struct {

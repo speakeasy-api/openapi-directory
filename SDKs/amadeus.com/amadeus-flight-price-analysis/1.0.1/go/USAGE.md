@@ -14,13 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.GetItineraryPriceMetricsRequest{
-        QueryParams: operations.GetItineraryPriceMetricsQueryParams{
-            CurrencyCode: "corrupti",
-            DepartureDate: "provident",
-            DestinationIataCode: "distinctio",
-            OneWay: false,
-            OriginIataCode: "quibusdam",
-        },
+        CurrencyCode: "corrupti",
+        DepartureDate: "provident",
+        DestinationIataCode: "distinctio",
+        OneWay: false,
+        OriginIataCode: "quibusdam",
     }
 
     ctx := context.Background()

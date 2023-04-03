@@ -38,7 +38,7 @@ func newPost(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // v5: `JWT(sub, pk, devtoken, ...)`
 //
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
-func (s *post) KeyRegister(ctx context.Context, request operations.KeyRegisterRequest) (*operations.KeyRegisterResponse, error) {
+func (s *post) KeyRegister(ctx context.Context, request []byte) (*operations.KeyRegisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/key"
 
@@ -120,9 +120,9 @@ func (s *post) KeyRegister(ctx context.Context, request operations.KeyRegisterRe
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *post) KeyUpdate(ctx context.Context, request operations.KeyUpdateRequest) (*operations.KeyUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,7 +197,7 @@ func (s *post) PushLoginRequest(ctx context.Context, request operations.PushLogi
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/login"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -212,7 +212,7 @@ func (s *post) PushLoginRequest(ctx context.Context, request operations.PushLogi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -273,7 +273,7 @@ func (s *post) PushLoginRequest(ctx context.Context, request operations.PushLogi
 // SignConfirm - this is a scope confirmation
 func (s *post) SignConfirm(ctx context.Context, request operations.SignConfirmRequest) (*operations.SignConfirmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -344,7 +344,7 @@ func (s *post) SignRequest(ctx context.Context, request operations.SignRequestRe
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/scope"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -359,7 +359,7 @@ func (s *post) SignRequest(ctx context.Context, request operations.SignRequestRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

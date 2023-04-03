@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteFileUploadByTokenPathParams struct {
-	// Upload token
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
 // CompleteFileUploadByTokenXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type CompleteFileUploadByTokenXSdsDateFormatEnum string
 
@@ -47,15 +42,12 @@ func (e *CompleteFileUploadByTokenXSdsDateFormatEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type CompleteFileUploadByTokenHeaders struct {
+type CompleteFileUploadByTokenRequest struct {
+	CompleteUploadRequest *shared.CompleteUploadRequest `request:"mediaType=application/json"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *CompleteFileUploadByTokenXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type CompleteFileUploadByTokenRequest struct {
-	PathParams CompleteFileUploadByTokenPathParams
-	Headers    CompleteFileUploadByTokenHeaders
-	Request    *shared.CompleteUploadRequest `request:"mediaType=application/json"`
+	// Upload token
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type CompleteFileUploadByTokenResponse struct {

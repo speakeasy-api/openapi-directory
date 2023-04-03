@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchCarActiveQueryParams struct {
+type GetSearchCarActiveRequest struct {
 	// date range to filter listings that were active within given date range. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
 	ActiveInventoryDateRange *string `queryParam:"style=form,explode=true,name=active_inventory_date_range"`
 	// The API Authentication Key. Mandatory with all API calls.
@@ -214,10 +214,6 @@ type GetSearchCarActiveQueryParams struct {
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchCarActiveRequest struct {
-	QueryParams GetSearchCarActiveQueryParams
 }
 
 type GetSearchCarActiveResponse struct {

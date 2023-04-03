@@ -33,16 +33,7 @@ func (e *ListAnalyzersTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAnalyzersQueryParams struct {
-	// The maximum number of results to return in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used for pagination of results returned.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The type of analyzer.
-	Type *ListAnalyzersTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListAnalyzersHeaders struct {
+type ListAnalyzersRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type ListAnalyzersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAnalyzersRequest struct {
-	QueryParams ListAnalyzersQueryParams
-	Headers     ListAnalyzersHeaders
+	// The maximum number of results to return in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used for pagination of results returned.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The type of analyzer.
+	Type *ListAnalyzersTypeEnum `queryParam:"style=form,explode=true,name=type"`
 }
 
 type ListAnalyzersResponse struct {

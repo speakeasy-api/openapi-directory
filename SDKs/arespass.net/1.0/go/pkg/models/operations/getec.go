@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEcQueryParams struct {
+type GetEcRequest struct {
 	// **The format of the returned analysis.**
 	//
 	// Allowed values are *json*, *xml* and *yaml*.
@@ -42,10 +42,6 @@ type GetEcQueryParams struct {
 	// If this parameter is unset, a randomly generated identifier will be automatically assigned to this request.
 	//
 	ReqID *string `queryParam:"style=form,explode=true,name=reqId"`
-}
-
-type GetEcRequest struct {
-	QueryParams GetEcQueryParams
 }
 
 type GetEcResponse struct {

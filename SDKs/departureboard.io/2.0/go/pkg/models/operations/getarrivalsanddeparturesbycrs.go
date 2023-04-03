@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetArrivalsAndDeparturesByCRSPathParams struct {
+type GetArrivalsAndDeparturesByCRSRequest struct {
 	// The CRS (Computer Reservation System) for the Station you wish to get departure and arrival information for, e.g. KGX for London Kings Cross.
 	Crs string `pathParam:"style=simple,explode=false,name=CRS"`
-}
-
-type GetArrivalsAndDeparturesByCRSQueryParams struct {
 	// The National Rail OpenLDBWS API Key to use for looking up service information. You must register with National Rail to obtain this key and whitelist it with us. See https://api.departureboard.io/docs/registration for more information.
 	APIKey string `queryParam:"style=form,explode=true,name=apiKey"`
 	// The CRS (Computer Reservation System) code to filter the results by. When setting this you must also set the filterType parameter. For example, performing a lookup for PAD (London Paddington) and setting filterStation to RED (Reading) and filterType to from, will only show services arriving to London Paddington that stopped at Reading. Setting a filter for getArrivalsAndDeparturesByCRS is similar to performing a getArrivalsByCRS or getDeparturesByCRS lookup, with the appropriate filterStation parameter. However using the getArrivalsAndDeparturesByCRS endpoint shows more details for each of the returned services.
@@ -26,11 +23,6 @@ type GetArrivalsAndDeparturesByCRSQueryParams struct {
 	TimeOffset *int64 `queryParam:"style=form,explode=true,name=timeOffset"`
 	// The time window in minutes to offset the arrival and departure information by. For example, a value of 20 will not show services arriving to or departing from the selected station within the next 20 minutes.
 	TimeWindow *int64 `queryParam:"style=form,explode=true,name=timeWindow"`
-}
-
-type GetArrivalsAndDeparturesByCRSRequest struct {
-	PathParams  GetArrivalsAndDeparturesByCRSPathParams
-	QueryParams GetArrivalsAndDeparturesByCRSQueryParams
 }
 
 type GetArrivalsAndDeparturesByCRSResponse struct {

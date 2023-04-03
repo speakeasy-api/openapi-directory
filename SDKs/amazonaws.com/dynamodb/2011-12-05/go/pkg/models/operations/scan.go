@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ScanQueryParams struct {
-	// Pagination token
-	ExclusiveStartKey *string `queryParam:"style=form,explode=true,name=ExclusiveStartKey"`
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-}
-
 // ScanXAmzTargetEnum
 type ScanXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ScanXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ScanHeaders struct {
+type ScanRequest struct {
+	// Pagination token
+	ExclusiveStartKey *string `queryParam:"style=form,explode=true,name=ExclusiveStartKey"`
+	// Pagination limit
+	Limit             *string            `queryParam:"style=form,explode=true,name=Limit"`
+	ScanInput         shared.ScanInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ScanHeaders struct {
 	XAmzSignature     *string            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ScanXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ScanRequest struct {
-	QueryParams ScanQueryParams
-	Headers     ScanHeaders
-	Request     shared.ScanInput `request:"mediaType=application/json"`
 }
 
 type ScanResponse struct {

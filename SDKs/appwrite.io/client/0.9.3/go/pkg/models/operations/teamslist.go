@@ -8,11 +8,11 @@ import (
 )
 
 type TeamsListSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type TeamsListQueryParams struct {
+type TeamsListRequest struct {
 	// Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Results offset. The default value is 0. Use this param to manage pagination.
@@ -21,11 +21,6 @@ type TeamsListQueryParams struct {
 	OrderType *string `queryParam:"style=form,explode=true,name=orderType"`
 	// Search term to filter your list results. Max length: 256 chars.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type TeamsListRequest struct {
-	QueryParams TeamsListQueryParams
-	Security    TeamsListSecurity
 }
 
 type TeamsListResponse struct {

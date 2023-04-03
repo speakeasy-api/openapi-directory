@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPolicyGenerationsQueryParams struct {
-	// The maximum number of results to return in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used for pagination of results returned.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The ARN of the IAM entity (user or role) for which you are generating a policy. Use this with <code>ListGeneratedPolicies</code> to filter the results to only include results for a specific principal.
-	PrincipalArn *string `queryParam:"style=form,explode=true,name=principalArn"`
-}
-
-type ListPolicyGenerationsHeaders struct {
+type ListPolicyGenerationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListPolicyGenerationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListPolicyGenerationsRequest struct {
-	QueryParams ListPolicyGenerationsQueryParams
-	Headers     ListPolicyGenerationsHeaders
+	// The maximum number of results to return in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used for pagination of results returned.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ARN of the IAM entity (user or role) for which you are generating a policy. Use this with <code>ListGeneratedPolicies</code> to filter the results to only include results for a specific principal.
+	PrincipalArn *string `queryParam:"style=form,explode=true,name=principalArn"`
 }
 
 type ListPolicyGenerationsResponse struct {

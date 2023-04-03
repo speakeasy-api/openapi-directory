@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContentByHashPathParams struct {
+type GetContentByHashRequest struct {
 	// SHA-256 content hash for a single artifact content.
 	ContentHash string `pathParam:"style=simple,explode=false,name=contentHash"`
-}
-
-type GetContentByHashRequest struct {
-	PathParams GetContentByHashPathParams
 }
 
 type GetContentByHashResponse struct {

@@ -7,28 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The client context including the client ID, app title, app version and package name.
-	XAmzClientContext string `header:"style=simple,explode=false,name=x-amz-Client-Context"`
-	// The encoding used for the client context.
-	XAmzClientContextEncoding *string `header:"style=simple,explode=false,name=x-amz-Client-Context-Encoding"`
-}
-
 type PutEventsRequestBody struct {
 	// An array of Event JSON objects
 	Events []shared.Event `json:"events"`
 }
 
 type PutEventsRequest struct {
-	Headers PutEventsHeaders
-	Request PutEventsRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutEventsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The client context including the client ID, app title, app version and package name.
+	XAmzClientContext string `header:"style=simple,explode=false,name=x-amz-Client-Context"`
+	// The encoding used for the client context.
+	XAmzClientContextEncoding *string `header:"style=simple,explode=false,name=x-amz-Client-Context-Encoding"`
 }
 
 type PutEventsResponse struct {

@@ -95,7 +95,7 @@ func New(opts ...SDKOption) *SDK {
 // You may create your own question using this action. It takes a JSON
 // object containing a question and a collection of answers in the
 // form of choices.
-func (s *SDK) CreateANewQuestion(ctx context.Context, request operations.CreateANewQuestionRequest) (*operations.CreateANewQuestionResponse, error) {
+func (s *SDK) CreateANewQuestion(ctx context.Context, request operations.CreateANewQuestionRequestBody) (*operations.CreateANewQuestionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/questions"
 

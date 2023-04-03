@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutDomainWhitelistJSONRequest struct {
-	// The entry to add
-	Request shared.APICoreDtoAccountingDomainWhitelistEntry `request:"mediaType=application/json"`
-}
-
 type AccountPutDomainWhitelistJSONResponse struct {
 	APICoreDtoAccountingDomainWhitelistEntry *shared.APICoreDtoAccountingDomainWhitelistEntry
 	Body                                     []byte

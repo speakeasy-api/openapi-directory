@@ -37,7 +37,7 @@ func newSSLCertificateRequests(defaultClient, securityClient HTTPClient, serverU
 // Executing this method causes the purchase of a paying product.<br />
 // Log on to our website to see your current (renewal) prices or contact our Sales department.<br />
 // Please note that promotional pricing does not apply for purchases made through our API.
-func (s *sslCertificateRequests) AddSslCertificateRequest(ctx context.Context, request operations.AddSslCertificateRequestRequest) (*operations.AddSslCertificateRequestResponse, error) {
+func (s *sslCertificateRequests) AddSslCertificateRequest(ctx context.Context, request shared.CreateSslCertificateRequest) (*operations.AddSslCertificateRequestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sslcertificaterequests"
 
@@ -82,7 +82,7 @@ func (s *sslCertificateRequests) AddSslCertificateRequest(ctx context.Context, r
 // GetSslCertificateRequest - Detail of a SSL certificate request
 func (s *sslCertificateRequests) GetSslCertificateRequest(ctx context.Context, request operations.GetSslCertificateRequestRequest) (*operations.GetSslCertificateRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *sslCertificateRequests) GetSslCertificateRequests(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,7 +180,7 @@ func (s *sslCertificateRequests) GetSslCertificateRequests(ctx context.Context, 
 // VerifySslCertificateRequestDomainValidations - Verify the SSL certificate request domain validations
 func (s *sslCertificateRequests) VerifySslCertificateRequestDomainValidations(ctx context.Context, request operations.VerifySslCertificateRequestDomainValidationsRequest) (*operations.VerifySslCertificateRequestDomainValidationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

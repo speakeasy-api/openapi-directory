@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRecommenderConfigurationPathParams struct {
-	// The unique identifier for the recommender model configuration. This identifier is displayed as the <b>Recommender ID</b> on the Amazon Pinpoint console.
-	RecommenderID string `pathParam:"style=simple,explode=false,name=recommender-id"`
-}
-
-type DeleteRecommenderConfigurationHeaders struct {
+type DeleteRecommenderConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteRecommenderConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRecommenderConfigurationRequest struct {
-	PathParams DeleteRecommenderConfigurationPathParams
-	Headers    DeleteRecommenderConfigurationHeaders
+	// The unique identifier for the recommender model configuration. This identifier is displayed as the <b>Recommender ID</b> on the Amazon Pinpoint console.
+	RecommenderID string `pathParam:"style=simple,explode=false,name=recommender-id"`
 }
 
 type DeleteRecommenderConfigurationResponse struct {

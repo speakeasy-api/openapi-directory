@@ -50,30 +50,22 @@ func (e *GETCreateDefaultSubnetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateDefaultSubnetQueryParams struct {
+type GETCreateDefaultSubnetRequest struct {
 	Action GETCreateDefaultSubnetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Availability Zone in which to create the default subnet.
 	AvailabilityZone string `queryParam:"style=form,explode=true,name=AvailabilityZone"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// Indicates whether to create an IPv6 only subnet. If you already have a default subnet for this Availability Zone, you must delete it before you can create an IPv6 only subnet.
-	Ipv6Native *bool                             `queryParam:"style=form,explode=true,name=Ipv6Native"`
-	Version    GETCreateDefaultSubnetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateDefaultSubnetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateDefaultSubnetRequest struct {
-	QueryParams GETCreateDefaultSubnetQueryParams
-	Headers     GETCreateDefaultSubnetHeaders
+	Ipv6Native        *bool                             `queryParam:"style=form,explode=true,name=Ipv6Native"`
+	Version           GETCreateDefaultSubnetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateDefaultSubnetResponse struct {

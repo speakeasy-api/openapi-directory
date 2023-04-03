@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteNetworkSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteNetworkQueryParams struct {
-	// Network name
-	Nid string `queryParam:"style=form,explode=true,name=nid"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 type DeleteNetworkRequest struct {
-	QueryParams DeleteNetworkQueryParams
-	Security    DeleteNetworkSecurity
+	// Network name
+	Nid string `queryParam:"style=form,explode=true,name=nid"`
 }
 
 type DeleteNetworkResponse struct {

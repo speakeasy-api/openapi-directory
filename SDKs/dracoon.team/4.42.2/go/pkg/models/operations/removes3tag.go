@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveS3TagPathParams struct {
-	// S3 tag ID
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RemoveS3TagHeaders struct {
+type RemoveS3TagRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveS3TagRequest struct {
-	PathParams RemoveS3TagPathParams
-	Headers    RemoveS3TagHeaders
+	// S3 tag ID
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type RemoveS3TagResponse struct {

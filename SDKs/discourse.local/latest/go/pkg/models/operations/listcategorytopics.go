@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ListCategoryTopicsPathParams struct {
+type ListCategoryTopicsRequest struct {
 	ID   int64  `pathParam:"style=simple,explode=false,name=id"`
 	Slug string `pathParam:"style=simple,explode=false,name=slug"`
-}
-
-type ListCategoryTopicsRequest struct {
-	PathParams ListCategoryTopicsPathParams
 }
 
 type ListCategoryTopics200ApplicationJSONTopicListTopicsPosters struct {

@@ -50,28 +50,20 @@ func (e *GETModifyClusterDbRevisionVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETModifyClusterDbRevisionQueryParams struct {
+type GETModifyClusterDbRevisionRequest struct {
 	Action GETModifyClusterDbRevisionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of a cluster whose database revision you want to modify. </p> <p>Example: <code>examplecluster</code> </p>
 	ClusterIdentifier string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	// The identifier of the database revision. You can retrieve this value from the response to the <a>DescribeClusterDbRevisions</a> request.
-	RevisionTarget string                                `queryParam:"style=form,explode=true,name=RevisionTarget"`
-	Version        GETModifyClusterDbRevisionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyClusterDbRevisionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyClusterDbRevisionRequest struct {
-	QueryParams GETModifyClusterDbRevisionQueryParams
-	Headers     GETModifyClusterDbRevisionHeaders
+	RevisionTarget    string                                `queryParam:"style=form,explode=true,name=RevisionTarget"`
+	Version           GETModifyClusterDbRevisionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyClusterDbRevisionResponse struct {

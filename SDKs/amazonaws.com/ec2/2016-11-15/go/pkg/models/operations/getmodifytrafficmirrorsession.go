@@ -51,7 +51,7 @@ func (e *GETModifyTrafficMirrorSessionVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETModifyTrafficMirrorSessionQueryParams struct {
+type GETModifyTrafficMirrorSessionRequest struct {
 	Action GETModifyTrafficMirrorSessionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The description to assign to the Traffic Mirror session.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
@@ -71,10 +71,7 @@ type GETModifyTrafficMirrorSessionQueryParams struct {
 	TrafficMirrorTargetID *string                                  `queryParam:"style=form,explode=true,name=TrafficMirrorTargetId"`
 	Version               GETModifyTrafficMirrorSessionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The virtual network ID of the Traffic Mirror session.
-	VirtualNetworkID *int64 `queryParam:"style=form,explode=true,name=VirtualNetworkId"`
-}
-
-type GETModifyTrafficMirrorSessionHeaders struct {
+	VirtualNetworkID  *int64  `queryParam:"style=form,explode=true,name=VirtualNetworkId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -82,11 +79,6 @@ type GETModifyTrafficMirrorSessionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyTrafficMirrorSessionRequest struct {
-	QueryParams GETModifyTrafficMirrorSessionQueryParams
-	Headers     GETModifyTrafficMirrorSessionHeaders
 }
 
 type GETModifyTrafficMirrorSessionResponse struct {

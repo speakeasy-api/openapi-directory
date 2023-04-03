@@ -50,30 +50,22 @@ func (e *GETDescribeAutoScalingInstancesVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETDescribeAutoScalingInstancesQueryParams struct {
+type GETDescribeAutoScalingInstancesRequest struct {
 	Action GETDescribeAutoScalingInstancesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The IDs of the instances. If you omit this property, all Auto Scaling instances are described. If you specify an ID that does not exist, it is ignored with no error.</p> <p>Array Members: Maximum number of 50 items.</p>
 	InstanceIds []string `queryParam:"style=form,explode=true,name=InstanceIds"`
 	// The maximum number of items to return with this call. The default value is <code>50</code> and the maximum value is <code>50</code>.
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// The token for the next set of items to return. (You received this token from a previous call.)
-	NextToken *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETDescribeAutoScalingInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAutoScalingInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAutoScalingInstancesRequest struct {
-	QueryParams GETDescribeAutoScalingInstancesQueryParams
-	Headers     GETDescribeAutoScalingInstancesHeaders
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETDescribeAutoScalingInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAutoScalingInstancesResponse struct {

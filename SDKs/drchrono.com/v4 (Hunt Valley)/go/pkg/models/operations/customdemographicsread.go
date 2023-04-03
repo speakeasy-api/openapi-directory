@@ -8,21 +8,12 @@ import (
 )
 
 type CustomDemographicsReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type CustomDemographicsReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomDemographicsReadQueryParams struct {
-	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type CustomDemographicsReadRequest struct {
-	PathParams  CustomDemographicsReadPathParams
-	QueryParams CustomDemographicsReadQueryParams
-	Security    CustomDemographicsReadSecurity
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID     string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type CustomDemographicsReadResponse struct {

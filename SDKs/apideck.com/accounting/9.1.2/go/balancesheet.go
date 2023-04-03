@@ -34,7 +34,7 @@ func newBalanceSheet(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // BalanceSheetOne - Get BalanceSheet
 // Get BalanceSheet
-func (s *balanceSheet) BalanceSheetOne(ctx context.Context, request operations.BalanceSheetOneRequest) (*operations.BalanceSheetOneResponse, error) {
+func (s *balanceSheet) BalanceSheetOne(ctx context.Context, request operations.BalanceSheetOneRequest, security operations.BalanceSheetOneSecurity) (*operations.BalanceSheetOneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/balance-sheet"
 
@@ -43,13 +43,13 @@ func (s *balanceSheet) BalanceSheetOne(ctx context.Context, request operations.B
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

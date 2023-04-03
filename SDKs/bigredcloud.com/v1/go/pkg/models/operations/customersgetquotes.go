@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomersGetQuotesPathParams struct {
+type CustomersGetQuotesRequest struct {
 	// Id of Customer to return quotes.
 	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type CustomersGetQuotesRequest struct {
-	PathParams CustomersGetQuotesPathParams
 }
 
 type CustomersGetQuotesResponse struct {

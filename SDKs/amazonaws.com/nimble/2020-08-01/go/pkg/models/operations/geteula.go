@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEulaPathParams struct {
-	// The EULA ID.
-	EulaID string `pathParam:"style=simple,explode=false,name=eulaId"`
-}
-
-type GetEulaHeaders struct {
+type GetEulaRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetEulaHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEulaRequest struct {
-	PathParams GetEulaPathParams
-	Headers    GetEulaHeaders
+	// The EULA ID.
+	EulaID string `pathParam:"style=simple,explode=false,name=eulaId"`
 }
 
 type GetEulaResponse struct {

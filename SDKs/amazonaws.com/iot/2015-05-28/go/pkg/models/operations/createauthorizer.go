@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAuthorizerPathParams struct {
-	// The authorizer name.
-	AuthorizerName string `pathParam:"style=simple,explode=false,name=authorizerName"`
-}
-
-type CreateAuthorizerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateAuthorizerRequestBodyStatusEnum - The status of the create authorizer request.
 type CreateAuthorizerRequestBodyStatusEnum string
 
@@ -66,9 +51,16 @@ type CreateAuthorizerRequestBody struct {
 }
 
 type CreateAuthorizerRequest struct {
-	PathParams CreateAuthorizerPathParams
-	Headers    CreateAuthorizerHeaders
-	Request    CreateAuthorizerRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateAuthorizerRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The authorizer name.
+	AuthorizerName string `pathParam:"style=simple,explode=false,name=authorizerName"`
 }
 
 type CreateAuthorizerResponse struct {

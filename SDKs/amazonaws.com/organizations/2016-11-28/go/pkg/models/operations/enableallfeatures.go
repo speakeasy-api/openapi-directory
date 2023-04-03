@@ -30,7 +30,8 @@ func (e *EnableAllFeaturesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type EnableAllFeaturesHeaders struct {
+type EnableAllFeaturesRequest struct {
+	RequestBody       map[string]interface{}          `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type EnableAllFeaturesHeaders struct {
 	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        EnableAllFeaturesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type EnableAllFeaturesRequest struct {
-	Headers EnableAllFeaturesHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type EnableAllFeaturesResponse struct {

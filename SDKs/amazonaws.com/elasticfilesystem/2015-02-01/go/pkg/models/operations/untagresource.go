@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type UntagResourcePathParams struct {
+type UntagResourceRequest struct {
 	// Specifies the EFS resource that you want to remove tags from.
-	ResourceID string `pathParam:"style=simple,explode=false,name=ResourceId"`
-}
-
-type UntagResourceQueryParams struct {
-	// The keys of the key-value tag pairs that you want to remove from the specified EFS resource.
-	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
-}
-
-type UntagResourceHeaders struct {
+	ResourceID        string  `pathParam:"style=simple,explode=false,name=ResourceId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +16,8 @@ type UntagResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UntagResourceRequest struct {
-	PathParams  UntagResourcePathParams
-	QueryParams UntagResourceQueryParams
-	Headers     UntagResourceHeaders
+	// The keys of the key-value tag pairs that you want to remove from the specified EFS resource.
+	TagKeys []string `queryParam:"style=form,explode=true,name=tagKeys"`
 }
 
 type UntagResourceResponse struct {

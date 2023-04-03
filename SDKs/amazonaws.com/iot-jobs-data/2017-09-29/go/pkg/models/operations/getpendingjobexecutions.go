@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPendingJobExecutionsPathParams struct {
-	// The name of the thing that is executing the job.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type GetPendingJobExecutionsHeaders struct {
+type GetPendingJobExecutionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetPendingJobExecutionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetPendingJobExecutionsRequest struct {
-	PathParams GetPendingJobExecutionsPathParams
-	Headers    GetPendingJobExecutionsHeaders
+	// The name of the thing that is executing the job.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type GetPendingJobExecutionsResponse struct {

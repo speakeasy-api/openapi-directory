@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMySQLDatabasePathParams struct {
-	// Automatically added
-	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-}
-
-type GetMySQLDatabaseQueryParams struct {
-	DatabaseName string `queryParam:"style=form,explode=true,name=database_name"`
-}
-
 type GetMySQLDatabaseRequest struct {
-	PathParams  GetMySQLDatabasePathParams
-	QueryParams GetMySQLDatabaseQueryParams
+	// Automatically added
+	DatabaseNamePathParameter  string `pathParam:"style=simple,explode=false,name=databaseName"`
+	DatabaseNameQueryParameter string `queryParam:"style=form,explode=true,name=database_name"`
 }
 
 type GetMySQLDatabaseResponse struct {

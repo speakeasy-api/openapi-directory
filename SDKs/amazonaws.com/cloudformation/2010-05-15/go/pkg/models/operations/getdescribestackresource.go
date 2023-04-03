@@ -50,28 +50,20 @@ func (e *GETDescribeStackResourceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeStackResourceQueryParams struct {
+type GETDescribeStackResourceRequest struct {
 	Action GETDescribeStackResourceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The logical name of the resource as specified in the template.</p> <p>Default: There is no default value.</p>
 	LogicalResourceID string `queryParam:"style=form,explode=true,name=LogicalResourceId"`
 	// <p>The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:</p> <ul> <li> <p>Running stacks: You can specify either the stack's name or its unique stack ID.</p> </li> <li> <p>Deleted stacks: You must specify the unique stack ID.</p> </li> </ul> <p>Default: There is no default value.</p>
-	StackName string                              `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETDescribeStackResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeStackResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeStackResourceRequest struct {
-	QueryParams GETDescribeStackResourceQueryParams
-	Headers     GETDescribeStackResourceHeaders
+	StackName         string                              `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETDescribeStackResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeStackResourceResponse struct {

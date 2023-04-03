@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TariffcomponentsQueryParams struct {
+type TariffcomponentsRequest struct {
 	// Valid email address to assign request to (pre offer generation). Ensure GDPR (DSGVO) at any time
 	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Total amount of energy in kilo-watt-hours per year. (sample 2100)
@@ -18,10 +18,6 @@ type TariffcomponentsQueryParams struct {
 	Wh *int64 `queryParam:"style=form,explode=true,name=wh"`
 	// Zipcode (Postzleitzahl) of a city in Germany.
 	Zipcode *string `queryParam:"style=form,explode=true,name=zipcode"`
-}
-
-type TariffcomponentsRequest struct {
-	QueryParams TariffcomponentsQueryParams
 }
 
 type TariffcomponentsResponse struct {

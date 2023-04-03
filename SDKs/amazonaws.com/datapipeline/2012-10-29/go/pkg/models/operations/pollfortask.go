@@ -30,7 +30,8 @@ func (e *PollForTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PollForTaskHeaders struct {
+type PollForTaskRequest struct {
+	PollForTaskInput  shared.PollForTaskInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type PollForTaskHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        PollForTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type PollForTaskRequest struct {
-	Headers PollForTaskHeaders
-	Request shared.PollForTaskInput `request:"mediaType=application/json"`
 }
 
 type PollForTaskResponse struct {

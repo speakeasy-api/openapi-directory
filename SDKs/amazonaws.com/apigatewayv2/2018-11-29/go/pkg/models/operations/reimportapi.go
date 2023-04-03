@@ -7,38 +7,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReimportAPIPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
-type ReimportAPIQueryParams struct {
-	// Specifies how to interpret the base path of the API during import. Valid values are ignore, prepend, and split. The default value is ignore. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api-basePath.html">Set the OpenAPI basePath Property</a>. Supported only for HTTP APIs.
-	Basepath *string `queryParam:"style=form,explode=true,name=basepath"`
-	// Specifies whether to rollback the API creation when a warning is encountered. By default, API creation continues if a warning is encountered.
-	FailOnWarnings *bool `queryParam:"style=form,explode=true,name=failOnWarnings"`
-}
-
-type ReimportAPIHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ReimportAPIRequestBody struct {
 	// The OpenAPI definition. Supported only for HTTP APIs.
 	Body string `json:"body"`
 }
 
 type ReimportAPIRequest struct {
-	PathParams  ReimportAPIPathParams
-	QueryParams ReimportAPIQueryParams
-	Headers     ReimportAPIHeaders
-	Request     ReimportAPIRequestBody `request:"mediaType=application/json"`
+	RequestBody       ReimportAPIRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// Specifies how to interpret the base path of the API during import. Valid values are ignore, prepend, and split. The default value is ignore. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api-basePath.html">Set the OpenAPI basePath Property</a>. Supported only for HTTP APIs.
+	Basepath *string `queryParam:"style=form,explode=true,name=basepath"`
+	// Specifies whether to rollback the API creation when a warning is encountered. By default, API creation continues if a warning is encountered.
+	FailOnWarnings *bool `queryParam:"style=form,explode=true,name=failOnWarnings"`
 }
 
 type ReimportAPIResponse struct {

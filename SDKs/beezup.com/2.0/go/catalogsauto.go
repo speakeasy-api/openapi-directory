@@ -34,9 +34,9 @@ func newCatalogsAuto(defaultClient, securityClient HTTPClient, serverURL, langua
 // AutoConfigureAutoImportInterval - Configure Auto Import Interval
 func (s *catalogsAuto) AutoConfigureAutoImportInterval(ctx context.Context, request operations.AutoConfigureAutoImportIntervalRequest) (*operations.AutoConfigureAutoImportIntervalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/scheduling/interval", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/scheduling/interval", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigureAutoImportIntervalRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -93,7 +93,7 @@ func (s *catalogsAuto) AutoConfigureAutoImportInterval(ctx context.Context, requ
 // AutoDeleteAutoImport - Delete Auto Import
 func (s *catalogsAuto) AutoDeleteAutoImport(ctx context.Context, request operations.AutoDeleteAutoImportRequest) (*operations.AutoDeleteAutoImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +142,7 @@ func (s *catalogsAuto) AutoDeleteAutoImport(ctx context.Context, request operati
 // AutoGetAutoImportConfiguration - Get the auto import configuration
 func (s *catalogsAuto) AutoGetAutoImportConfiguration(ctx context.Context, request operations.AutoGetAutoImportConfigurationRequest) (*operations.AutoGetAutoImportConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *catalogsAuto) AutoGetAutoImportConfiguration(ctx context.Context, reque
 // AutoPauseAutoImport - Pause Auto Import
 func (s *catalogsAuto) AutoPauseAutoImport(ctx context.Context, request operations.AutoPauseAutoImportRequest) (*operations.AutoPauseAutoImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/pause", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -247,7 +247,7 @@ func (s *catalogsAuto) AutoPauseAutoImport(ctx context.Context, request operatio
 // AutoResumeAutoImport - Resume Auto Import
 func (s *catalogsAuto) AutoResumeAutoImport(ctx context.Context, request operations.AutoResumeAutoImportRequest) (*operations.AutoResumeAutoImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/resume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -296,9 +296,9 @@ func (s *catalogsAuto) AutoResumeAutoImport(ctx context.Context, request operati
 // AutoScheduleAutoImport - Configure Auto Import Schedules
 func (s *catalogsAuto) AutoScheduleAutoImport(ctx context.Context, request operations.AutoScheduleAutoImportRequest) (*operations.AutoScheduleAutoImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/scheduling/schedules", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/scheduling/schedules", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScheduleAutoImportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -355,7 +355,7 @@ func (s *catalogsAuto) AutoScheduleAutoImport(ctx context.Context, request opera
 // AutoStartAutoImport - Start Auto Import Manually
 func (s *catalogsAuto) AutoStartAutoImport(ctx context.Context, request operations.AutoStartAutoImportRequest) (*operations.AutoStartAutoImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -418,7 +418,7 @@ func (s *catalogsAuto) AutoStartAutoImport(ctx context.Context, request operatio
 // Once you have made your fist manual catalog importation with success, you can call this operation to import it automatically. No parameter required, we know which one it is.
 func (s *catalogsAuto) ImportationActivateAutoImport(ctx context.Context, request operations.ImportationActivateAutoImportRequest) (*operations.ImportationActivateAutoImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/activate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/autoImport/activate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResolverQueryLogConfigsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListResolverQueryLogConfigsXAmzTargetEnum
 type ListResolverQueryLogConfigsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListResolverQueryLogConfigsXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListResolverQueryLogConfigsHeaders struct {
+type ListResolverQueryLogConfigsRequest struct {
+	ListResolverQueryLogConfigsRequest shared.ListResolverQueryLogConfigsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListResolverQueryLogConfigsHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListResolverQueryLogConfigsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListResolverQueryLogConfigsRequest struct {
-	QueryParams ListResolverQueryLogConfigsQueryParams
-	Headers     ListResolverQueryLogConfigsHeaders
-	Request     shared.ListResolverQueryLogConfigsRequest `request:"mediaType=application/json"`
 }
 
 type ListResolverQueryLogConfigsResponse struct {

@@ -74,7 +74,7 @@ func (e *GETDescribeVolumeAttributeVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribeVolumeAttributeQueryParams struct {
+type GETDescribeVolumeAttributeRequest struct {
 	Action GETDescribeVolumeAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The attribute of the volume. This parameter is required.
 	Attribute GETDescribeVolumeAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
@@ -82,10 +82,7 @@ type GETDescribeVolumeAttributeQueryParams struct {
 	DryRun  *bool                                 `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETDescribeVolumeAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the volume.
-	VolumeID string `queryParam:"style=form,explode=true,name=VolumeId"`
-}
-
-type GETDescribeVolumeAttributeHeaders struct {
+	VolumeID          string  `queryParam:"style=form,explode=true,name=VolumeId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -93,11 +90,6 @@ type GETDescribeVolumeAttributeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeVolumeAttributeRequest struct {
-	QueryParams GETDescribeVolumeAttributeQueryParams
-	Headers     GETDescribeVolumeAttributeHeaders
 }
 
 type GETDescribeVolumeAttributeResponse struct {

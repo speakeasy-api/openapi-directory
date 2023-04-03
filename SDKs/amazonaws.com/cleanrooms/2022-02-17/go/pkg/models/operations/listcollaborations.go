@@ -33,16 +33,7 @@ func (e *ListCollaborationsMemberStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCollaborationsQueryParams struct {
-	// The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service may return a nextToken even if the maximum results has not been met.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The caller's status in a collaboration.
-	MemberStatus *ListCollaborationsMemberStatusEnum `queryParam:"style=form,explode=true,name=memberStatus"`
-	// The token value retrieved from a previous call to access the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListCollaborationsHeaders struct {
+type ListCollaborationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type ListCollaborationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCollaborationsRequest struct {
-	QueryParams ListCollaborationsQueryParams
-	Headers     ListCollaborationsHeaders
+	// The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service may return a nextToken even if the maximum results has not been met.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The caller's status in a collaboration.
+	MemberStatus *ListCollaborationsMemberStatusEnum `queryParam:"style=form,explode=true,name=memberStatus"`
+	// The token value retrieved from a previous call to access the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListCollaborationsResponse struct {

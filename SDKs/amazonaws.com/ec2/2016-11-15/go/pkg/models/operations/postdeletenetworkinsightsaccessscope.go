@@ -50,25 +50,17 @@ func (e *POSTDeleteNetworkInsightsAccessScopeVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type POSTDeleteNetworkInsightsAccessScopeQueryParams struct {
-	Action  POSTDeleteNetworkInsightsAccessScopeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteNetworkInsightsAccessScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteNetworkInsightsAccessScopeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteNetworkInsightsAccessScopeRequest struct {
-	QueryParams POSTDeleteNetworkInsightsAccessScopeQueryParams
-	Headers     POSTDeleteNetworkInsightsAccessScopeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteNetworkInsightsAccessScopeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                          `request:"mediaType=text/xml"`
+	Version           POSTDeleteNetworkInsightsAccessScopeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteNetworkInsightsAccessScopeResponse struct {

@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateSignalingChannelHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateSignalingChannelRequestBodySingleMasterConfiguration - A structure that contains the configuration for the <code>SINGLE_MASTER</code> channel type.
 type UpdateSignalingChannelRequestBodySingleMasterConfiguration struct {
 	MessageTTLSeconds *int64 `json:"MessageTtlSeconds,omitempty"`
@@ -31,8 +21,14 @@ type UpdateSignalingChannelRequestBody struct {
 }
 
 type UpdateSignalingChannelRequest struct {
-	Headers UpdateSignalingChannelHeaders
-	Request UpdateSignalingChannelRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateSignalingChannelRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateSignalingChannelResponse struct {

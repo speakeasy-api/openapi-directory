@@ -50,25 +50,17 @@ func (e *POSTDescribeFpgaImageAttributeVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTDescribeFpgaImageAttributeQueryParams struct {
-	Action  POSTDescribeFpgaImageAttributeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeFpgaImageAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeFpgaImageAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeFpgaImageAttributeRequest struct {
-	QueryParams POSTDescribeFpgaImageAttributeQueryParams
-	Headers     POSTDescribeFpgaImageAttributeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeFpgaImageAttributeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                    `request:"mediaType=text/xml"`
+	Version           POSTDescribeFpgaImageAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeFpgaImageAttributeResponse struct {

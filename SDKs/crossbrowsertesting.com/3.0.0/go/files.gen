@@ -19,6 +19,5 @@ pkg/models/shared/target.go
 pkg/models/shared/screenshot.go
 pkg/models/shared/comparison.go
 pkg/models/shared/element.go
-pkg/models/shared/security.go
 pkg/models/shared/fullcomparisontest.go
 USAGE.md

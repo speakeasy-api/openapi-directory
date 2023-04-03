@@ -190,14 +190,14 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Try `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.
 func (s *search) SearchAccount(ctx context.Context, request operations.SearchAccountRequest) (*operations.SearchAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/search/code", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/search/code", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -408,14 +408,14 @@ func (s *search) SearchAccount(ctx context.Context, request operations.SearchAcc
 // Try `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.
 func (s *search) SearchTeam(ctx context.Context, request operations.SearchTeamRequest) (*operations.SearchTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/search/code", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/search/code", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -626,14 +626,14 @@ func (s *search) SearchTeam(ctx context.Context, request operations.SearchTeamRe
 // Try `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.
 func (s *search) SearchWorkspace(ctx context.Context, request operations.SearchWorkspaceRequest) (*operations.SearchWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/search/code", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/search/code", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

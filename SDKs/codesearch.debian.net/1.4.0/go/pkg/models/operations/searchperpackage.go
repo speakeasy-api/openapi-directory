@@ -10,7 +10,7 @@ import (
 )
 
 type SearchperpackageSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=x-dcs-apikey"`
 }
 
 // SearchperpackageMatchModeEnum - Whether the query is to be interpreted as a literal (`literal`) instead of as an RE2 regular expression (`regexp`). Literal searches are faster and do not require escaping special characters, regular expression searches are more powerful.
@@ -37,16 +37,11 @@ func (e *SearchperpackageMatchModeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchperpackageQueryParams struct {
+type SearchperpackageRequest struct {
 	// Whether the query is to be interpreted as a literal (`literal`) instead of as an RE2 regular expression (`regexp`). Literal searches are faster and do not require escaping special characters, regular expression searches are more powerful.
 	MatchMode *SearchperpackageMatchModeEnum `queryParam:"style=form,explode=true,name=match_mode"`
 	// The search query, for example `who knows...` (literal) or `who knows\.\.\.` (regular expression). See https://codesearch.debian.net/faq for more details about which keywords are supported. The regular expression flavor is RE2, see https://github.com/google/re2/blob/master/doc/syntax.txt
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type SearchperpackageRequest struct {
-	QueryParams SearchperpackageQueryParams
-	Security    SearchperpackageSecurity
 }
 
 type SearchperpackageResponse struct {

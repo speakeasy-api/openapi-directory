@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBlueprintRunsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetBlueprintRunsXAmzTargetEnum
 type GetBlueprintRunsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetBlueprintRunsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBlueprintRunsHeaders struct {
+type GetBlueprintRunsRequest struct {
+	GetBlueprintRunsRequest shared.GetBlueprintRunsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetBlueprintRunsHeaders struct {
 	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetBlueprintRunsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetBlueprintRunsRequest struct {
-	QueryParams GetBlueprintRunsQueryParams
-	Headers     GetBlueprintRunsHeaders
-	Request     shared.GetBlueprintRunsRequest `request:"mediaType=application/json"`
 }
 
 type GetBlueprintRunsResponse struct {

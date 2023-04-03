@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTilePathParams struct {
-	// The x coordinate of the tile input.
-	X int64 `pathParam:"style=simple,explode=false,name=x"`
-	// The y coordinate of the tile input.
-	Y int64 `pathParam:"style=simple,explode=false,name=y"`
-	// The z coordinate of the tile input.
-	Z int64 `pathParam:"style=simple,explode=false,name=z"`
-}
-
 // GetTileOutputDataTypeEnum - The output data type of the tile operation.
 type GetTileOutputDataTypeEnum string
 
@@ -75,7 +66,7 @@ func (e *GetTileTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTileQueryParams struct {
+type GetTileRequest struct {
 	// The Amazon Resource Name (ARN) of the tile operation.
 	Arn string `queryParam:"style=form,explode=true,name=Arn"`
 	// The particular assets or bands to tile.
@@ -91,10 +82,7 @@ type GetTileQueryParams struct {
 	// Determines what part of the Earth Observation job to tile. 'INPUT' or 'OUTPUT' are the valid options.
 	Target GetTileTargetEnum `queryParam:"style=form,explode=true,name=Target"`
 	// Time range filter applied to imagery to find the images to tile.
-	TimeRangeFilter *string `queryParam:"style=form,explode=true,name=TimeRangeFilter"`
-}
-
-type GetTileHeaders struct {
+	TimeRangeFilter   *string `queryParam:"style=form,explode=true,name=TimeRangeFilter"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -102,12 +90,12 @@ type GetTileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTileRequest struct {
-	PathParams  GetTilePathParams
-	QueryParams GetTileQueryParams
-	Headers     GetTileHeaders
+	// The x coordinate of the tile input.
+	X int64 `pathParam:"style=simple,explode=false,name=x"`
+	// The y coordinate of the tile input.
+	Y int64 `pathParam:"style=simple,explode=false,name=y"`
+	// The z coordinate of the tile input.
+	Z int64 `pathParam:"style=simple,explode=false,name=z"`
 }
 
 type GetTileResponse struct {

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Rsbyc - Health Card/ Certificate
 // API to verify Health Card/ Certificate.
-func (s *apIs) Rsbyc(ctx context.Context, request operations.RsbycRequest) (*operations.RsbycResponse, error) {
+func (s *apIs) Rsbyc(ctx context.Context, request operations.RsbycRequestBody, security operations.RsbycSecurity) (*operations.RsbycResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rsbyc/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Rsbyc(ctx context.Context, request operations.RsbycRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

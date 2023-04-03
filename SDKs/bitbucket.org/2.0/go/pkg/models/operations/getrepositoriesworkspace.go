@@ -10,16 +10,9 @@ import (
 )
 
 type GetRepositoriesWorkspaceSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetRepositoriesWorkspacePathParams struct {
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetRepositoriesWorkspaceRoleEnum -
@@ -58,7 +51,7 @@ func (e *GetRepositoriesWorkspaceRoleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRepositoriesWorkspaceQueryParams struct {
+type GetRepositoriesWorkspaceRequest struct {
 	// Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
@@ -73,12 +66,10 @@ type GetRepositoriesWorkspaceQueryParams struct {
 	// Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetRepositoriesWorkspaceRequest struct {
-	PathParams  GetRepositoriesWorkspacePathParams
-	QueryParams GetRepositoriesWorkspaceQueryParams
-	Security    GetRepositoriesWorkspaceSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceResponse struct {

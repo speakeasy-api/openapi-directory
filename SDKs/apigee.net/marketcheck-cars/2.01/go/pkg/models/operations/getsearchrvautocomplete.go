@@ -84,7 +84,7 @@ func (e *GetSearchRvAutoCompleteSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSearchRvAutoCompleteQueryParams struct {
+type GetSearchRvAutoCompleteRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on their body type
@@ -133,10 +133,6 @@ type GetSearchRvAutoCompleteQueryParams struct {
 	Year *string `queryParam:"style=form,explode=true,name=year"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchRvAutoCompleteRequest struct {
-	QueryParams GetSearchRvAutoCompleteQueryParams
 }
 
 type GetSearchRvAutoCompleteResponse struct {

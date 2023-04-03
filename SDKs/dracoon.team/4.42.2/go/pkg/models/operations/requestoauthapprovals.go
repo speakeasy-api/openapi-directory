@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestOAuthApprovalsQueryParams struct {
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestOAuthApprovalsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestOAuthApprovalsXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestOAuthApprovalsXSdsDateFormatEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type RequestOAuthApprovalsHeaders struct {
+type RequestOAuthApprovalsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestOAuthApprovalsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestOAuthApprovalsRequest struct {
-	QueryParams RequestOAuthApprovalsQueryParams
-	Headers     RequestOAuthApprovalsHeaders
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestOAuthApprovalsResponse struct {

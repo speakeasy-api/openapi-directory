@@ -8,13 +8,8 @@ import (
 )
 
 type PostCreateNotificationConfigurationSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCreateNotificationConfigurationRequest struct {
-	Request  *shared.CreateNotificationConfigurationRequest `request:"mediaType=application/json"`
-	Security PostCreateNotificationConfigurationSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostCreateNotificationConfigurationResponse struct {

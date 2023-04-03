@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsAddUserSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsAddUserPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-	// The team's name
-	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TeamsAddUserRequestBody - The email of the user to add to the team
@@ -27,10 +19,12 @@ type TeamsAddUserRequestBody struct {
 }
 
 type TeamsAddUserRequest struct {
-	PathParams TeamsAddUserPathParams
 	// The email of the user to add to the team
-	Request  TeamsAddUserRequestBody `request:"mediaType=application/json"`
-	Security TeamsAddUserSecurity
+	RequestBody TeamsAddUserRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	// The team's name
+	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
 }
 
 type TeamsAddUserDefaultApplicationJSONErrorCodeEnum string

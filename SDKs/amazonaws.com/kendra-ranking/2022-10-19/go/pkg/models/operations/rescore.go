@@ -30,7 +30,8 @@ func (e *RescoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RescoreHeaders struct {
+type RescoreRequest struct {
+	RescoreRequest    shared.RescoreRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type RescoreHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        RescoreXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type RescoreRequest struct {
-	Headers RescoreHeaders
-	Request shared.RescoreRequest `request:"mediaType=application/json"`
 }
 
 type RescoreResponse struct {

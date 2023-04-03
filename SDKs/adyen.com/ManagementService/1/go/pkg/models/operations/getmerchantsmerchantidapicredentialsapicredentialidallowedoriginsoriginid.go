@@ -8,22 +8,17 @@ import (
 )
 
 type GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDPathParams struct {
+type GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest struct {
 	// Unique identifier of the API credential.
 	APICredentialID string `pathParam:"style=simple,explode=false,name=apiCredentialId"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// Unique identifier of the allowed origin.
 	OriginID string `pathParam:"style=simple,explode=false,name=originId"`
-}
-
-type GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest struct {
-	PathParams GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDPathParams
-	Security   GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity
 }
 
 type GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse struct {

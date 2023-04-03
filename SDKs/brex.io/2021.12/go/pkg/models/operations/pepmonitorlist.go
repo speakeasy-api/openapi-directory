@@ -4,17 +4,8 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
-
-type PepMonitorListSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PepMonitorListRequest struct {
-	Security PepMonitorListSecurity
-}
 
 // PepMonitorListDefaultApplicationJSON - Detailed information about the error
 type PepMonitorListDefaultApplicationJSON struct {

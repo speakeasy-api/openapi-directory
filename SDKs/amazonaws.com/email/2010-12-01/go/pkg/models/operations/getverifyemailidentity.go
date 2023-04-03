@@ -50,26 +50,18 @@ func (e *GETVerifyEmailIdentityVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETVerifyEmailIdentityQueryParams struct {
+type GETVerifyEmailIdentityRequest struct {
 	Action GETVerifyEmailIdentityActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The email address to be verified.
-	EmailAddress string                            `queryParam:"style=form,explode=true,name=EmailAddress"`
-	Version      GETVerifyEmailIdentityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETVerifyEmailIdentityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETVerifyEmailIdentityRequest struct {
-	QueryParams GETVerifyEmailIdentityQueryParams
-	Headers     GETVerifyEmailIdentityHeaders
+	EmailAddress      string                            `queryParam:"style=form,explode=true,name=EmailAddress"`
+	Version           GETVerifyEmailIdentityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETVerifyEmailIdentityResponse struct {

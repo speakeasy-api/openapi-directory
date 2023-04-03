@@ -30,7 +30,8 @@ func (e *ListCrawlsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCrawlsHeaders struct {
+type ListCrawlsRequest struct {
+	ListCrawlsRequest shared.ListCrawlsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ListCrawlsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListCrawlsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListCrawlsRequest struct {
-	Headers ListCrawlsHeaders
-	Request shared.ListCrawlsRequest `request:"mediaType=application/json"`
 }
 
 type ListCrawlsResponse struct {

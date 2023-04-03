@@ -8,19 +8,14 @@ import (
 )
 
 type PatchTerminalsTerminalIDTerminalLogosSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PatchTerminalsTerminalIDTerminalLogosPathParams struct {
-	// The unique identifier of the payment terminal.
-	TerminalID string `pathParam:"style=simple,explode=false,name=terminalId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PatchTerminalsTerminalIDTerminalLogosRequest struct {
-	PathParams PatchTerminalsTerminalIDTerminalLogosPathParams
-	Request    *shared.Logo `request:"mediaType=application/json"`
-	Security   PatchTerminalsTerminalIDTerminalLogosSecurity
+	Logo *shared.Logo `request:"mediaType=application/json"`
+	// The unique identifier of the payment terminal.
+	TerminalID string `pathParam:"style=simple,explode=false,name=terminalId"`
 }
 
 type PatchTerminalsTerminalIDTerminalLogosResponse struct {

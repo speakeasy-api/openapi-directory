@@ -50,7 +50,7 @@ func (e *GETDetachClassicLinkVpcVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDetachClassicLinkVpcQueryParams struct {
+type GETDetachClassicLinkVpcRequest struct {
 	Action GETDetachClassicLinkVpcActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -58,10 +58,7 @@ type GETDetachClassicLinkVpcQueryParams struct {
 	InstanceID string                             `queryParam:"style=form,explode=true,name=InstanceId"`
 	Version    GETDetachClassicLinkVpcVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC to which the instance is linked.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDetachClassicLinkVpcHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -69,11 +66,6 @@ type GETDetachClassicLinkVpcHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDetachClassicLinkVpcRequest struct {
-	QueryParams GETDetachClassicLinkVpcQueryParams
-	Headers     GETDetachClassicLinkVpcHeaders
 }
 
 type GETDetachClassicLinkVpcResponse struct {

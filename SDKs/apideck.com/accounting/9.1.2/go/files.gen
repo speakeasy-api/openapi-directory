@@ -86,7 +86,6 @@ pkg/models/shared/getbalancesheetresponse.go
 pkg/models/shared/balancesheet.go
 pkg/models/shared/badrequestresponse.go
 pkg/models/shared/balancesheetfilter.go
-pkg/models/shared/security.go
 pkg/models/shared/createbillresponse.go
 pkg/models/shared/unifiedid.go
 pkg/models/shared/bill.go
@@ -179,4 +178,5 @@ pkg/models/shared/gettaxratesresponse.go
 pkg/models/shared/taxratesfilter.go
 pkg/models/shared/gettaxrateresponse.go
 pkg/models/shared/updatetaxrateresponse.go
+pkg/models/shared/security.go
 USAGE.md

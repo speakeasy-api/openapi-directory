@@ -50,25 +50,17 @@ func (e *POSTDisassociateNatGatewayAddressVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTDisassociateNatGatewayAddressQueryParams struct {
-	Action  POSTDisassociateNatGatewayAddressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisassociateNatGatewayAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisassociateNatGatewayAddressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisassociateNatGatewayAddressRequest struct {
-	QueryParams POSTDisassociateNatGatewayAddressQueryParams
-	Headers     POSTDisassociateNatGatewayAddressHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisassociateNatGatewayAddressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTDisassociateNatGatewayAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisassociateNatGatewayAddressResponse struct {

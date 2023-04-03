@@ -30,20 +30,16 @@ func (e *RegisterToWorkMailXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RegisterToWorkMailHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        RegisterToWorkMailXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type RegisterToWorkMailRequest struct {
-	Headers RegisterToWorkMailHeaders
-	Request shared.RegisterToWorkMailRequest `request:"mediaType=application/json"`
+	RegisterToWorkMailRequest shared.RegisterToWorkMailRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                RegisterToWorkMailXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type RegisterToWorkMailResponse struct {

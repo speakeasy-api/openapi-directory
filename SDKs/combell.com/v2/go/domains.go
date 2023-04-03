@@ -38,9 +38,9 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Allowed if the requesting user has the finance role.
 func (s *domains) ConfigureDomain(ctx context.Context, request operations.ConfigureDomainRequest) (*operations.ConfigureDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/renew", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/renew", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditDomainWillRenewRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,7 +52,7 @@ func (s *domains) ConfigureDomain(ctx context.Context, request operations.Config
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,9 +84,9 @@ func (s *domains) ConfigureDomain(ctx context.Context, request operations.Config
 // EditNameServers - Edit domain name servers
 func (s *domains) EditNameServers(ctx context.Context, request operations.EditNameServersRequest) (*operations.EditNameServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/nameservers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/nameservers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditNameServers", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -98,7 +98,7 @@ func (s *domains) EditNameServers(ctx context.Context, request operations.EditNa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,14 +130,14 @@ func (s *domains) EditNameServers(ctx context.Context, request operations.EditNa
 // GetDomain - Details of a domain
 func (s *domains) GetDomain(ctx context.Context, request operations.GetDomainRequest) (*operations.GetDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -185,7 +185,7 @@ func (s *domains) GetDomains(ctx context.Context, request operations.GetDomainsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,7 +227,7 @@ func (s *domains) GetDomains(ctx context.Context, request operations.GetDomainsR
 
 // Register - Register a domain
 // Registers an available domain.<br />Domain names with extension '.ca' are only available for registrants with country code 'CA'.
-func (s *domains) Register(ctx context.Context, request operations.RegisterRequest) (*operations.RegisterResponse, error) {
+func (s *domains) Register(ctx context.Context, request shared.RegisterDomain) (*operations.RegisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domains/registrations"
 
@@ -270,7 +270,7 @@ func (s *domains) Register(ctx context.Context, request operations.RegisterReque
 
 // Transfer - Transfer a domain
 // Transfers a domain with a transfer authorization code.<br />Domain names with extension '.ca' are only available for registrants with country code 'CA'.
-func (s *domains) Transfer(ctx context.Context, request operations.TransferRequest) (*operations.TransferResponse, error) {
+func (s *domains) Transfer(ctx context.Context, request shared.TransferDomain) (*operations.TransferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/domains/transfers"
 

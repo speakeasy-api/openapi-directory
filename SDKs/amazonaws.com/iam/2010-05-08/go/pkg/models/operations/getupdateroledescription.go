@@ -50,28 +50,20 @@ func (e *GETUpdateRoleDescriptionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateRoleDescriptionQueryParams struct {
+type GETUpdateRoleDescriptionRequest struct {
 	Action GETUpdateRoleDescriptionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The new description that you want to apply to the specified role.
 	Description string `queryParam:"style=form,explode=true,name=Description"`
 	// The name of the role that you want to modify.
-	RoleName string                              `queryParam:"style=form,explode=true,name=RoleName"`
-	Version  GETUpdateRoleDescriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateRoleDescriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateRoleDescriptionRequest struct {
-	QueryParams GETUpdateRoleDescriptionQueryParams
-	Headers     GETUpdateRoleDescriptionHeaders
+	RoleName          string                              `queryParam:"style=form,explode=true,name=RoleName"`
+	Version           GETUpdateRoleDescriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateRoleDescriptionResponse struct {

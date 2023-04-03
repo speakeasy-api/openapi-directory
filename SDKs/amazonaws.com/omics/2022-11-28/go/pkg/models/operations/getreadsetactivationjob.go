@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReadSetActivationJobPathParams struct {
-	// The job's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The job's sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
-type GetReadSetActivationJobHeaders struct {
+type GetReadSetActivationJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetReadSetActivationJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReadSetActivationJobRequest struct {
-	PathParams GetReadSetActivationJobPathParams
-	Headers    GetReadSetActivationJobHeaders
+	// The job's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The job's sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type GetReadSetActivationJobResponse struct {

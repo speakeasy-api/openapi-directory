@@ -50,7 +50,7 @@ func (e *GETTerminateClientVpnConnectionsVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETTerminateClientVpnConnectionsQueryParams struct {
+type GETTerminateClientVpnConnectionsRequest struct {
 	Action GETTerminateClientVpnConnectionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Client VPN endpoint to which the client is connected.
 	ClientVpnEndpointID string `queryParam:"style=form,explode=true,name=ClientVpnEndpointId"`
@@ -59,23 +59,15 @@ type GETTerminateClientVpnConnectionsQueryParams struct {
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The name of the user who initiated the connection. Use this option to terminate all active connections for the specified user. This option can only be used if the user has established up to five connections.
-	Username *string                                     `queryParam:"style=form,explode=true,name=Username"`
-	Version  GETTerminateClientVpnConnectionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETTerminateClientVpnConnectionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETTerminateClientVpnConnectionsRequest struct {
-	QueryParams GETTerminateClientVpnConnectionsQueryParams
-	Headers     GETTerminateClientVpnConnectionsHeaders
+	Username          *string                                     `queryParam:"style=form,explode=true,name=Username"`
+	Version           GETTerminateClientVpnConnectionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETTerminateClientVpnConnectionsResponse struct {

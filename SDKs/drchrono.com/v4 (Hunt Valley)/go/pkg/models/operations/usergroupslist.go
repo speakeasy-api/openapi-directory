@@ -8,18 +8,13 @@ import (
 )
 
 type UserGroupsListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UserGroupsListQueryParams struct {
-	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
-	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UserGroupsListRequest struct {
-	QueryParams UserGroupsListQueryParams
-	Security    UserGroupsListSecurity
+	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
+	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 }
 
 // UserGroupsList200ApplicationJSON - Paginated Result

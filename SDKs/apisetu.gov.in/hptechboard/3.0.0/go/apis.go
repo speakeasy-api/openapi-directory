@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Dipcr - Diploma Certificate
 // API to verify Diploma Certificate.
-func (s *apIs) Dipcr(ctx context.Context, request operations.DipcrRequest) (*operations.DipcrResponse, error) {
+func (s *apIs) Dipcr(ctx context.Context, request operations.DipcrRequestBody, security operations.DipcrSecurity) (*operations.DipcrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dipcr/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Dipcr(ctx context.Context, request operations.DipcrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

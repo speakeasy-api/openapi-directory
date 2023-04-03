@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type GetAPIV1DirectUploadsSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetAPIV1DirectUploadsRequest struct {
-	Security GetAPIV1DirectUploadsSecurity
-}
 
 type GetAPIV1DirectUploadsResponse struct {
 	ContentType string

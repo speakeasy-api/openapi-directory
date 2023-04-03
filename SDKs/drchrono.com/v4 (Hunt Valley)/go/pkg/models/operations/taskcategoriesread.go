@@ -8,21 +8,12 @@ import (
 )
 
 type TaskCategoriesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TaskCategoriesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TaskCategoriesReadQueryParams struct {
-	Since *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TaskCategoriesReadRequest struct {
-	PathParams  TaskCategoriesReadPathParams
-	QueryParams TaskCategoriesReadQueryParams
-	Security    TaskCategoriesReadSecurity
+	ID    string  `pathParam:"style=simple,explode=false,name=id"`
+	Since *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 type TaskCategoriesReadResponse struct {

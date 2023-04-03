@@ -35,14 +35,14 @@ func newAnalyticsTracking(defaultClient, securityClient HTTPClient, serverURL, l
 // GetStoreTrackedClicks - Get the latest tracked clicks
 func (s *analyticsTracking) GetStoreTrackedClicks(ctx context.Context, request operations.GetStoreTrackedClicksRequest) (*operations.GetStoreTrackedClicksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/clicks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/clicks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *analyticsTracking) GetStoreTrackedClicks(ctx context.Context, request o
 // GetStoreTrackedExternalOrders - Get the latest tracked external orders
 func (s *analyticsTracking) GetStoreTrackedExternalOrders(ctx context.Context, request operations.GetStoreTrackedExternalOrdersRequest) (*operations.GetStoreTrackedExternalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/externalorders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/externalorders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -157,14 +157,14 @@ func (s *analyticsTracking) GetStoreTrackedExternalOrders(ctx context.Context, r
 // GetStoreTrackedOrders - Get the latest tracked orders
 func (s *analyticsTracking) GetStoreTrackedOrders(ctx context.Context, request operations.GetStoreTrackedOrdersRequest) (*operations.GetStoreTrackedOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/orders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/orders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -221,7 +221,7 @@ func (s *analyticsTracking) GetStoreTrackedOrders(ctx context.Context, request o
 // This operation gets the current state of projections for a store.
 func (s *analyticsTracking) GetStoreTrackingStatus(ctx context.Context, request operations.GetStoreTrackingStatusRequest) (*operations.GetStoreTrackingStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/tracking/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

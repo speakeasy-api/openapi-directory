@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateComponentTypePathParams struct {
-	// The ID of the component type.
-	ComponentTypeID string `pathParam:"style=simple,explode=false,name=componentTypeId"`
-	// The ID of the workspace that contains the component type.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type CreateComponentTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateComponentTypeRequestBody struct {
 	// A friendly name for the component type.
 	ComponentTypeName *string `json:"componentTypeName,omitempty"`
@@ -44,9 +27,18 @@ type CreateComponentTypeRequestBody struct {
 }
 
 type CreateComponentTypeRequest struct {
-	PathParams CreateComponentTypePathParams
-	Headers    CreateComponentTypeHeaders
-	Request    CreateComponentTypeRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateComponentTypeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the component type.
+	ComponentTypeID string `pathParam:"style=simple,explode=false,name=componentTypeId"`
+	// The ID of the workspace that contains the component type.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type CreateComponentTypeResponse struct {

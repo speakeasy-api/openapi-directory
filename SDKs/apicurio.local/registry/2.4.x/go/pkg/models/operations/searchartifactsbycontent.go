@@ -60,7 +60,9 @@ func (e *SearchArtifactsByContentOrderbyEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchArtifactsByContentQueryParams struct {
+type SearchArtifactsByContentRequest struct {
+	// The content to search for.
+	RequestBody []byte `request:"mediaType=*/*"`
 	// Indicates the type of artifact represented by the content being used for the search.  This is only needed when using the `canonical` query parameter, so that the server knows how to canonicalize the content prior to searching for matching artifacts.
 	ArtifactType *string `queryParam:"style=form,explode=true,name=artifactType"`
 	// Parameter that can be set to `true` to indicate that the server should "canonicalize" the content when searching for matching artifacts.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.  Must be used along with the `artifactType` query parameter.
@@ -77,12 +79,6 @@ type SearchArtifactsByContentQueryParams struct {
 	// * `createdOn`
 	//
 	Orderby *SearchArtifactsByContentOrderbyEnum `queryParam:"style=form,explode=true,name=orderby"`
-}
-
-type SearchArtifactsByContentRequest struct {
-	QueryParams SearchArtifactsByContentQueryParams
-	// The content to search for.
-	Request []byte `request:"mediaType=*/*"`
 }
 
 type SearchArtifactsByContentResponse struct {

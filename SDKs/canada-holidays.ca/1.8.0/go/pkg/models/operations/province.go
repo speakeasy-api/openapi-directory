@@ -9,6 +9,36 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// ProvinceOptionalEnum - A boolean parameter (AB and BC only). If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
+type ProvinceOptionalEnum string
+
+const (
+	ProvinceOptionalEnumOne   ProvinceOptionalEnum = "1"
+	ProvinceOptionalEnumZero  ProvinceOptionalEnum = "0"
+	ProvinceOptionalEnumTrue  ProvinceOptionalEnum = "true"
+	ProvinceOptionalEnumFalse ProvinceOptionalEnum = "false"
+)
+
+func (e *ProvinceOptionalEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "1":
+		fallthrough
+	case "0":
+		fallthrough
+	case "true":
+		fallthrough
+	case "false":
+		*e = ProvinceOptionalEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ProvinceOptionalEnum: %s", s)
+	}
+}
+
 // ProvinceProvinceIDEnum - A Canadian province abbreviation
 type ProvinceProvinceIDEnum string
 
@@ -66,51 +96,13 @@ func (e *ProvinceProvinceIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ProvincePathParams struct {
-	// A Canadian province abbreviation
-	ProvinceID ProvinceProvinceIDEnum `pathParam:"style=simple,explode=false,name=provinceId"`
-}
-
-// ProvinceOptionalEnum - A boolean parameter (AB and BC only). If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
-type ProvinceOptionalEnum string
-
-const (
-	ProvinceOptionalEnumOne   ProvinceOptionalEnum = "1"
-	ProvinceOptionalEnumZero  ProvinceOptionalEnum = "0"
-	ProvinceOptionalEnumTrue  ProvinceOptionalEnum = "true"
-	ProvinceOptionalEnumFalse ProvinceOptionalEnum = "false"
-)
-
-func (e *ProvinceOptionalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "1":
-		fallthrough
-	case "0":
-		fallthrough
-	case "true":
-		fallthrough
-	case "false":
-		*e = ProvinceOptionalEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ProvinceOptionalEnum: %s", s)
-	}
-}
-
-type ProvinceQueryParams struct {
+type ProvinceRequest struct {
 	// A boolean parameter (AB and BC only). If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
 	Optional *ProvinceOptionalEnum `queryParam:"style=form,explode=true,name=optional"`
+	// A Canadian province abbreviation
+	ProvinceID ProvinceProvinceIDEnum `pathParam:"style=simple,explode=false,name=provinceId"`
 	// A calendar year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type ProvinceRequest struct {
-	PathParams  ProvincePathParams
-	QueryParams ProvinceQueryParams
 }
 
 // Province400ApplicationJSON - Bad Request

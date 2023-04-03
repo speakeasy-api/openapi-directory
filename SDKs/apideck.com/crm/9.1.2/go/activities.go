@@ -34,11 +34,11 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 
 // ActivitiesAdd - Create activity
 // Create activity
-func (s *activities) ActivitiesAdd(ctx context.Context, request operations.ActivitiesAddRequest) (*operations.ActivitiesAddResponse, error) {
+func (s *activities) ActivitiesAdd(ctx context.Context, request operations.ActivitiesAddRequest, security operations.ActivitiesAddSecurity) (*operations.ActivitiesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/activities"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActivityInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *activities) ActivitiesAdd(ctx context.Context, request operations.Activ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *activities) ActivitiesAdd(ctx context.Context, request operations.Activ
 
 // ActivitiesAll - List activities
 // List activities
-func (s *activities) ActivitiesAll(ctx context.Context, request operations.ActivitiesAllRequest) (*operations.ActivitiesAllResponse, error) {
+func (s *activities) ActivitiesAll(ctx context.Context, request operations.ActivitiesAllRequest, security operations.ActivitiesAllSecurity) (*operations.ActivitiesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/activities"
 
@@ -164,13 +164,13 @@ func (s *activities) ActivitiesAll(ctx context.Context, request operations.Activ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *activities) ActivitiesAll(ctx context.Context, request operations.Activ
 
 // ActivitiesDelete - Delete activity
 // Delete activity
-func (s *activities) ActivitiesDelete(ctx context.Context, request operations.ActivitiesDeleteRequest) (*operations.ActivitiesDeleteResponse, error) {
+func (s *activities) ActivitiesDelete(ctx context.Context, request operations.ActivitiesDeleteRequest, security operations.ActivitiesDeleteSecurity) (*operations.ActivitiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/activities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/activities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *activities) ActivitiesDelete(ctx context.Context, request operations.Ac
 
 // ActivitiesOne - Get activity
 // Get activity
-func (s *activities) ActivitiesOne(ctx context.Context, request operations.ActivitiesOneRequest) (*operations.ActivitiesOneResponse, error) {
+func (s *activities) ActivitiesOne(ctx context.Context, request operations.ActivitiesOneRequest, security operations.ActivitiesOneSecurity) (*operations.ActivitiesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/activities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/activities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *activities) ActivitiesOne(ctx context.Context, request operations.Activ
 
 // ActivitiesUpdate - Update activity
 // Update activity
-func (s *activities) ActivitiesUpdate(ctx context.Context, request operations.ActivitiesUpdateRequest) (*operations.ActivitiesUpdateResponse, error) {
+func (s *activities) ActivitiesUpdate(ctx context.Context, request operations.ActivitiesUpdateRequest, security operations.ActivitiesUpdateSecurity) (*operations.ActivitiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/activities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/activities/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActivityInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *activities) ActivitiesUpdate(ctx context.Context, request operations.Ac
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

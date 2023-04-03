@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateCategoryPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateCategoryRequestBody struct {
 	AllowBadges               *bool                  `json:"allow_badges,omitempty"`
 	Color                     *string                `json:"color,omitempty"`
@@ -24,8 +20,8 @@ type UpdateCategoryRequestBody struct {
 }
 
 type UpdateCategoryRequest struct {
-	PathParams UpdateCategoryPathParams
-	Request    *UpdateCategoryRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateCategoryRequestBody `request:"mediaType=application/json"`
+	ID          int64                      `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateCategory200ApplicationJSONCategoryGroupPermissions struct {

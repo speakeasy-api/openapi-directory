@@ -84,7 +84,7 @@ func (e *ListPipesDesiredStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPipesQueryParams struct {
+type ListPipesRequest struct {
 	// The state the pipe is in.
 	CurrentState *ListPipesCurrentStateEnum `queryParam:"style=form,explode=true,name=CurrentState"`
 	// The state the pipe should be in.
@@ -98,10 +98,7 @@ type ListPipesQueryParams struct {
 	// The prefix matching the pipe source.
 	SourcePrefix *string `queryParam:"style=form,explode=true,name=SourcePrefix"`
 	// The prefix matching the pipe target.
-	TargetPrefix *string `queryParam:"style=form,explode=true,name=TargetPrefix"`
-}
-
-type ListPipesHeaders struct {
+	TargetPrefix      *string `queryParam:"style=form,explode=true,name=TargetPrefix"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -109,11 +106,6 @@ type ListPipesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListPipesRequest struct {
-	QueryParams ListPipesQueryParams
-	Headers     ListPipesHeaders
 }
 
 type ListPipesResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTokenPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The session ID.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type GetTokenHeaders struct {
+type GetTokenRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetTokenHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTokenRequest struct {
-	PathParams GetTokenPathParams
-	Headers    GetTokenHeaders
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The session ID.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 }
 
 type GetTokenResponse struct {

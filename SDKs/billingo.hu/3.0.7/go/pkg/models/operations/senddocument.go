@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendDocumentPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type SendDocumentRequest struct {
-	PathParams SendDocumentPathParams
 	// List of email-s where you want to send the invoice.
-	Request *shared.SendDocument `request:"mediaType=application/json"`
+	SendDocument *shared.SendDocument `request:"mediaType=application/json"`
+	ID           int64                `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SendDocumentResponse struct {

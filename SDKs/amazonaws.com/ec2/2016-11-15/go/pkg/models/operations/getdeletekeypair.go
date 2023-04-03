@@ -50,30 +50,22 @@ func (e *GETDeleteKeyPairVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteKeyPairQueryParams struct {
+type GETDeleteKeyPairRequest struct {
 	Action GETDeleteKeyPairActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The name of the key pair.
 	KeyName *string `queryParam:"style=form,explode=true,name=KeyName"`
 	// The ID of the key pair.
-	KeyPairID *string                     `queryParam:"style=form,explode=true,name=KeyPairId"`
-	Version   GETDeleteKeyPairVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteKeyPairHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteKeyPairRequest struct {
-	QueryParams GETDeleteKeyPairQueryParams
-	Headers     GETDeleteKeyPairHeaders
+	KeyPairID         *string                     `queryParam:"style=form,explode=true,name=KeyPairId"`
+	Version           GETDeleteKeyPairVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteKeyPairResponse struct {

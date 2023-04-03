@@ -8,15 +8,10 @@ import (
 )
 
 type GetItemWatchedStatusSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetItemWatchedStatusPathParams struct {
-	// The id of the item to get the watched status for.
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type GetItemWatchedStatusQueryParams struct {
+type GetItemWatchedStatusRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -39,6 +34,8 @@ type GetItemWatchedStatusQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The id of the item to get the watched status for.
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -51,12 +48,6 @@ type GetItemWatchedStatusQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetItemWatchedStatusRequest struct {
-	PathParams  GetItemWatchedStatusPathParams
-	QueryParams GetItemWatchedStatusQueryParams
-	Security    GetItemWatchedStatusSecurity
 }
 
 type GetItemWatchedStatusResponse struct {

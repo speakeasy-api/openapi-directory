@@ -4,25 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ConsentFormsApplyToAppointmentSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ConsentFormsApplyToAppointmentPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ConsentFormsApplyToAppointmentQueryParams struct {
-	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ConsentFormsApplyToAppointmentRequest struct {
-	PathParams  ConsentFormsApplyToAppointmentPathParams
-	QueryParams ConsentFormsApplyToAppointmentQueryParams
-	Security    ConsentFormsApplyToAppointmentSecurity
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID     string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type ConsentFormsApplyToAppointmentResponse struct {

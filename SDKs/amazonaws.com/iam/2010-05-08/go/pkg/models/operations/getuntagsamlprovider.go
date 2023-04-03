@@ -50,28 +50,20 @@ func (e *GETUntagSAMLProviderVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUntagSAMLProviderQueryParams struct {
+type GETUntagSAMLProviderRequest struct {
 	Action GETUntagSAMLProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ARN of the SAML identity provider in IAM from which you want to remove tags.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	SAMLProviderArn string `queryParam:"style=form,explode=true,name=SAMLProviderArn"`
 	// A list of key names as a simple array of strings. The tags with matching keys are removed from the specified SAML identity provider.
-	TagKeys []string                        `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETUntagSAMLProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUntagSAMLProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUntagSAMLProviderRequest struct {
-	QueryParams GETUntagSAMLProviderQueryParams
-	Headers     GETUntagSAMLProviderHeaders
+	TagKeys           []string                        `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETUntagSAMLProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUntagSAMLProviderResponse struct {

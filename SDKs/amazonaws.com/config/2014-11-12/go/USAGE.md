@@ -13,42 +13,45 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchGetAggregateResourceConfigRequest{
-        Headers: operations.BatchGetAggregateResourceConfigHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
-        },
-        Request: shared.BatchGetAggregateResourceConfigRequest{
-            ConfigurationAggregatorName: "illum",
+        BatchGetAggregateResourceConfigRequest: shared.BatchGetAggregateResourceConfigRequest{
+            ConfigurationAggregatorName: "corrupti",
             ResourceIdentifiers: []shared.AggregateResourceIdentifier{
                 shared.AggregateResourceIdentifier{
-                    ResourceID: "error",
-                    ResourceName: "deserunt",
-                    ResourceType: "AWS::SSM::FileData",
-                    SourceAccountID: "iure",
-                    SourceRegion: "magnam",
+                    ResourceID: "distinctio",
+                    ResourceName: "quibusdam",
+                    ResourceType: "AWS::DataSync::LocationNFS",
+                    SourceAccountID: "nulla",
+                    SourceRegion: "corrupti",
                 },
                 shared.AggregateResourceIdentifier{
-                    ResourceID: "debitis",
-                    ResourceName: "ipsa",
-                    ResourceType: "AWS::IoTSiteWise::Gateway",
-                    SourceAccountID: "tempora",
+                    ResourceID: "illum",
+                    ResourceName: "vel",
+                    ResourceType: "AWS::GuardDuty::IPSet",
+                    SourceAccountID: "deserunt",
                     SourceRegion: "suscipit",
+                },
+                shared.AggregateResourceIdentifier{
+                    ResourceID: "iure",
+                    ResourceName: "magnam",
+                    ResourceType: "AWS::IoTSiteWise::Dashboard",
+                    SourceAccountID: "ipsa",
+                    SourceRegion: "delectus",
                 },
             },
         },
+        XAmzAlgorithm: "tempora",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "molestiae",
+        XAmzDate: "minus",
+        XAmzSecurityToken: "placeat",
+        XAmzSignature: "voluptatum",
+        XAmzSignedHeaders: "iusto",
+        XAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
     }
 
     ctx := context.Background()

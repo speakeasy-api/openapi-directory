@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type WebHookManagementLookupPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type WebHookManagementLookupRequest struct {
-	PathParams WebHookManagementLookupPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type WebHookManagementLookupResponse struct {

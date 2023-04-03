@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferingStatusQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // GetOfferingStatusXAmzTargetEnum
 type GetOfferingStatusXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *GetOfferingStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetOfferingStatusHeaders struct {
-	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetOfferingStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetOfferingStatusRequest struct {
-	QueryParams GetOfferingStatusQueryParams
-	Headers     GetOfferingStatusHeaders
-	Request     shared.GetOfferingStatusRequest `request:"mediaType=application/json"`
+	GetOfferingStatusRequest shared.GetOfferingStatusRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm            *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget               GetOfferingStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetOfferingStatusResponse struct {

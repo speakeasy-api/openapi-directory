@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteContainerRecipeQueryParams struct {
-	// The Amazon Resource Name (ARN) of the container recipe to delete.
-	ContainerRecipeArn string `queryParam:"style=form,explode=true,name=containerRecipeArn"`
-}
-
-type DeleteContainerRecipeHeaders struct {
+type DeleteContainerRecipeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteContainerRecipeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteContainerRecipeRequest struct {
-	QueryParams DeleteContainerRecipeQueryParams
-	Headers     DeleteContainerRecipeHeaders
+	// The Amazon Resource Name (ARN) of the container recipe to delete.
+	ContainerRecipeArn string `queryParam:"style=form,explode=true,name=containerRecipeArn"`
 }
 
 type DeleteContainerRecipeResponse struct {

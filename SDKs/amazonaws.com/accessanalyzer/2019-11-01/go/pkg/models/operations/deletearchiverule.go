@@ -6,19 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteArchiveRulePathParams struct {
-	// The name of the analyzer that associated with the archive rule to delete.
-	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
-	// The name of the rule to delete.
-	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
-}
-
-type DeleteArchiveRuleQueryParams struct {
-	// A client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteArchiveRuleHeaders struct {
+type DeleteArchiveRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +14,12 @@ type DeleteArchiveRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteArchiveRuleRequest struct {
-	PathParams  DeleteArchiveRulePathParams
-	QueryParams DeleteArchiveRuleQueryParams
-	Headers     DeleteArchiveRuleHeaders
+	// The name of the analyzer that associated with the archive rule to delete.
+	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
+	// A client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the rule to delete.
+	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
 }
 
 type DeleteArchiveRuleResponse struct {

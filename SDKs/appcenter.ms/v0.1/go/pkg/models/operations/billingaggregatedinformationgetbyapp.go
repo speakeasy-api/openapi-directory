@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BillingAggregatedInformationGetByAppSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BillingAggregatedInformationGetByAppPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BillingAggregatedInformationGetByAppPeriodEnum - Type of period that should be included in the Billing Information
@@ -71,19 +63,17 @@ func (e *BillingAggregatedInformationGetByAppServiceEnum) UnmarshalJSON(data []b
 	}
 }
 
-type BillingAggregatedInformationGetByAppQueryParams struct {
+type BillingAggregatedInformationGetByAppRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Type of period that should be included in the Billing Information
 	Period *BillingAggregatedInformationGetByAppPeriodEnum `queryParam:"style=form,explode=true,name=period"`
 	// Type of service that should be included in the Billing Information
 	Service *BillingAggregatedInformationGetByAppServiceEnum `queryParam:"style=form,explode=true,name=service"`
 	// Controls whether the API should show the original plan when Azure Subscription is not enabled
 	ShowOriginalPlans *bool `queryParam:"style=form,explode=true,name=showOriginalPlans"`
-}
-
-type BillingAggregatedInformationGetByAppRequest struct {
-	PathParams  BillingAggregatedInformationGetByAppPathParams
-	QueryParams BillingAggregatedInformationGetByAppQueryParams
-	Security    BillingAggregatedInformationGetByAppSecurity
 }
 
 // BillingAggregatedInformationGetByAppDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetDestinyEntityDefinitionPathParams struct {
+type Destiny2GetDestinyEntityDefinitionRequest struct {
 	// The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.
 	EntityType string `pathParam:"style=simple,explode=false,name=entityType"`
 	// The hash identifier for the specific Entity you want returned.
 	HashIdentifier int64 `pathParam:"style=simple,explode=false,name=hashIdentifier"`
-}
-
-type Destiny2GetDestinyEntityDefinitionRequest struct {
-	PathParams Destiny2GetDestinyEntityDefinitionPathParams
 }
 
 // Destiny2GetDestinyEntityDefinition200Wildcard - Provides common properties for destiny definitions.

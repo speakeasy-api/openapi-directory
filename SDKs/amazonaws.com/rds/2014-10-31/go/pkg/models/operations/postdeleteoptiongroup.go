@@ -50,25 +50,17 @@ func (e *POSTDeleteOptionGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteOptionGroupQueryParams struct {
-	Action  POSTDeleteOptionGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteOptionGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteOptionGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteOptionGroupRequest struct {
-	QueryParams POSTDeleteOptionGroupQueryParams
-	Headers     POSTDeleteOptionGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteOptionGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                           `request:"mediaType=text/xml"`
+	Version           POSTDeleteOptionGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteOptionGroupResponse struct {

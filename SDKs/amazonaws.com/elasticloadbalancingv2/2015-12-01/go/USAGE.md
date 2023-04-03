@@ -13,27 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETDeleteListenerRequest{
-        QueryParams: operations.GETDeleteListenerQueryParams{
-            Action: "DeleteListener",
-            ListenerArn: "corrupti",
-            Version: "2015-12-01",
-        },
-        Headers: operations.GETDeleteListenerHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
+        Action: "DeleteListener",
+        ListenerArn: "corrupti",
+        Version: "2015-12-01",
+        XAmzAlgorithm: "provident",
+        XAmzContentSha256: "distinctio",
+        XAmzCredential: "quibusdam",
+        XAmzDate: "unde",
+        XAmzSecurityToken: "nulla",
+        XAmzSignature: "corrupti",
+        XAmzSignedHeaders: "illum",
     }
 
     ctx := context.Background()

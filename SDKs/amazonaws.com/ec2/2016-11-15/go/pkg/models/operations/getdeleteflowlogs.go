@@ -50,28 +50,20 @@ func (e *GETDeleteFlowLogsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteFlowLogsQueryParams struct {
+type GETDeleteFlowLogsRequest struct {
 	Action GETDeleteFlowLogsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// <p>One or more flow log IDs.</p> <p>Constraint: Maximum of 1000 flow log IDs.</p>
-	FlowLogID []string                     `queryParam:"style=form,explode=true,name=FlowLogId"`
-	Version   GETDeleteFlowLogsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteFlowLogsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteFlowLogsRequest struct {
-	QueryParams GETDeleteFlowLogsQueryParams
-	Headers     GETDeleteFlowLogsHeaders
+	FlowLogID         []string                     `queryParam:"style=form,explode=true,name=FlowLogId"`
+	Version           GETDeleteFlowLogsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteFlowLogsResponse struct {

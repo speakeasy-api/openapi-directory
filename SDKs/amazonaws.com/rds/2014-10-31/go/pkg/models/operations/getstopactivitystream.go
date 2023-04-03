@@ -50,28 +50,20 @@ func (e *GETStopActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStopActivityStreamQueryParams struct {
+type GETStopActivityStreamRequest struct {
 	Action GETStopActivityStreamActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Specifies whether or not the database activity stream is to stop as soon as possible, regardless of the maintenance window for the database.
 	ApplyImmediately *bool `queryParam:"style=form,explode=true,name=ApplyImmediately"`
 	// The Amazon Resource Name (ARN) of the DB cluster for the database activity stream. For example, <code>arn:aws:rds:us-east-1:12345667890:cluster:das-cluster</code>.
-	ResourceArn string                           `queryParam:"style=form,explode=true,name=ResourceArn"`
-	Version     GETStopActivityStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStopActivityStreamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStopActivityStreamRequest struct {
-	QueryParams GETStopActivityStreamQueryParams
-	Headers     GETStopActivityStreamHeaders
+	ResourceArn       string                           `queryParam:"style=form,explode=true,name=ResourceArn"`
+	Version           GETStopActivityStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStopActivityStreamResponse struct {

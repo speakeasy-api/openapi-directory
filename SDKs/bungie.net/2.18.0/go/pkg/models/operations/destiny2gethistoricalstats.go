@@ -8,31 +8,23 @@ import (
 	"time"
 )
 
-type Destiny2GetHistoricalStatsPathParams struct {
+type Destiny2GetHistoricalStatsRequest struct {
 	// The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
-	// The Destiny membershipId of the user to retrieve.
-	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
-	// A valid non-BungieNet membership type.
-	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetHistoricalStatsQueryParams struct {
 	// Last day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request.
 	Dayend *time.Time `queryParam:"style=form,explode=true,name=dayend"`
 	// First day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request.
 	Daystart *time.Time `queryParam:"style=form,explode=true,name=daystart"`
+	// The Destiny membershipId of the user to retrieve.
+	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
 	Groups []int `queryParam:"style=form,explode=false,name=groups"`
+	// A valid non-BungieNet membership type.
+	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
 	// Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 	Modes []int `queryParam:"style=form,explode=false,name=modes"`
 	// Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
 	PeriodType *int `queryParam:"style=form,explode=true,name=periodType"`
-}
-
-type Destiny2GetHistoricalStatsRequest struct {
-	PathParams  Destiny2GetHistoricalStatsPathParams
-	QueryParams Destiny2GetHistoricalStatsQueryParams
 }
 
 // Destiny2GetHistoricalStats200Wildcard - Look at the Response property for more information about the nature of this response

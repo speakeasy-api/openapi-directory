@@ -50,28 +50,20 @@ func (e *GETDisableAvailabilityZonesForLoadBalancerVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETDisableAvailabilityZonesForLoadBalancerQueryParams struct {
+type GETDisableAvailabilityZonesForLoadBalancerRequest struct {
 	Action GETDisableAvailabilityZonesForLoadBalancerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Availability Zones.
 	AvailabilityZones []string `queryParam:"style=form,explode=true,name=AvailabilityZones"`
 	// The name of the load balancer.
-	LoadBalancerName string                                                `queryParam:"style=form,explode=true,name=LoadBalancerName"`
-	Version          GETDisableAvailabilityZonesForLoadBalancerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisableAvailabilityZonesForLoadBalancerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableAvailabilityZonesForLoadBalancerRequest struct {
-	QueryParams GETDisableAvailabilityZonesForLoadBalancerQueryParams
-	Headers     GETDisableAvailabilityZonesForLoadBalancerHeaders
+	LoadBalancerName  string                                                `queryParam:"style=form,explode=true,name=LoadBalancerName"`
+	Version           GETDisableAvailabilityZonesForLoadBalancerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisableAvailabilityZonesForLoadBalancerResponse struct {

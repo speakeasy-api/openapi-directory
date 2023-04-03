@@ -13,31 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcceptMatchRequest{
-        Headers: operations.AcceptMatchHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "GameLift.AcceptMatch",
-        },
-        Request: shared.AcceptMatchInput{
+        AcceptMatchInput: shared.AcceptMatchInput{
             AcceptanceType: "REJECT",
             PlayerIds: []string{
-                "error",
-                "deserunt",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            TicketID: "suscipit",
+            TicketID: "nulla",
         },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
+        XAmzTarget: "GameLift.AcceptMatch",
     }
 
     ctx := context.Background()

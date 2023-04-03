@@ -8,27 +8,12 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams struct {
-	// This can either be the repository slug or the UUID of the repository,
-	// surrounded by curly-braces, for example: `{repository UUID}`.
-	//
-	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// A commit SHA (e.g. `3a8b42`) or a commit range using double dot
-	// notation (e.g. `3a8b42..9ff173`).
-	//
-	Spec string `pathParam:"style=simple,explode=false,name=spec"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams struct {
+type GetRepositoriesWorkspaceRepoSlugDiffSpecRequest struct {
 	// Generate diffs that include binary files, true if omitted.
 	Binary *bool `queryParam:"style=form,explode=true,name=binary"`
 	// Generate diffs with <n> lines of context instead of the usual three.
@@ -51,18 +36,24 @@ type GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams struct {
 	Path *string `queryParam:"style=form,explode=true,name=path"`
 	// Whether to perform rename detection, true if omitted.
 	Renames *bool `queryParam:"style=form,explode=true,name=renames"`
+	// This can either be the repository slug or the UUID of the repository,
+	// surrounded by curly-braces, for example: `{repository UUID}`.
+	//
+	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
+	// A commit SHA (e.g. `3a8b42`) or a commit range using double dot
+	// notation (e.g. `3a8b42..9ff173`).
+	//
+	Spec string `pathParam:"style=simple,explode=false,name=spec"`
 	// If true, returns 2-way 'three-dot' diff.
 	// This is a diff between the source commit and the merge base
 	// of the source commit and the destination commit.
 	// If false, a simple 'two dot' diff between the source and
 	// destination is returned.
 	Topic *bool `queryParam:"style=form,explode=true,name=topic"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugDiffSpecRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugDiffSpecResponse struct {

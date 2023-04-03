@@ -30,7 +30,8 @@ func (e *GetRegionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRegionsHeaders struct {
+type GetRegionsRequest struct {
+	GetRegionsRequest shared.GetRegionsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetRegionsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetRegionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetRegionsRequest struct {
-	Headers GetRegionsHeaders
-	Request shared.GetRegionsRequest `request:"mediaType=application/json"`
 }
 
 type GetRegionsResponse struct {

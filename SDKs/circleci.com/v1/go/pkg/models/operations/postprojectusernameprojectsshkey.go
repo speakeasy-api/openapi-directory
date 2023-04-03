@@ -8,15 +8,6 @@ import (
 	"net/http"
 )
 
-type PostProjectUsernameProjectSSHKeyPathParams struct {
-	// XXXXXXXXX
-	//
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// XXXXXXXXX
-	//
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // PostProjectUsernameProjectSSHKeyContentTypeEnum
 type PostProjectUsernameProjectSSHKeyContentTypeEnum string
 
@@ -38,19 +29,20 @@ func (e *PostProjectUsernameProjectSSHKeyContentTypeEnum) UnmarshalJSON(data []b
 	}
 }
 
-type PostProjectUsernameProjectSSHKeyHeaders struct {
-	ContentType PostProjectUsernameProjectSSHKeyContentTypeEnum `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type PostProjectUsernameProjectSSHKeyRequestBody struct {
 	Hostname   *string `json:"hostname,omitempty"`
 	PrivateKey *string `json:"private_key,omitempty"`
 }
 
 type PostProjectUsernameProjectSSHKeyRequest struct {
-	PathParams PostProjectUsernameProjectSSHKeyPathParams
-	Headers    PostProjectUsernameProjectSSHKeyHeaders
-	Request    PostProjectUsernameProjectSSHKeyRequestBody `request:"mediaType=application/json"`
+	ContentType PostProjectUsernameProjectSSHKeyContentTypeEnum `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody PostProjectUsernameProjectSSHKeyRequestBody     `request:"mediaType=application/json"`
+	// XXXXXXXXX
+	//
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// XXXXXXXXX
+	//
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // PostProjectUsernameProjectSSHKeyDefaultApplicationJSON - no response expected

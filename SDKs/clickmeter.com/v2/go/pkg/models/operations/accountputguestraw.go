@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutGuestRawRequest struct {
-	// Guest object to create
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AccountPutGuestRawResponse struct {
 	APICoreDtoAccountingGuest *shared.APICoreDtoAccountingGuest
 	Body                      []byte

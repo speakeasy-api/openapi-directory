@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAlarmPathParams struct {
-	// The name of the alarm model.
-	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
-}
-
-type DescribeAlarmQueryParams struct {
-	// The value of the key used as a filter to select only the alarms associated with the <a href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateAlarmModel.html#iotevents-CreateAlarmModel-request-key">key</a>.
-	KeyValue *string `queryParam:"style=form,explode=true,name=keyValue"`
-}
-
-type DescribeAlarmHeaders struct {
+type DescribeAlarmRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeAlarmHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAlarmRequest struct {
-	PathParams  DescribeAlarmPathParams
-	QueryParams DescribeAlarmQueryParams
-	Headers     DescribeAlarmHeaders
+	// The name of the alarm model.
+	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
+	// The value of the key used as a filter to select only the alarms associated with the <a href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateAlarmModel.html#iotevents-CreateAlarmModel-request-key">key</a>.
+	KeyValue *string `queryParam:"style=form,explode=true,name=keyValue"`
 }
 
 type DescribeAlarmResponse struct {

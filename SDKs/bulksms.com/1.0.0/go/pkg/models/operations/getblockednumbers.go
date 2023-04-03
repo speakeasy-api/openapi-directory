@@ -8,19 +8,15 @@ import (
 )
 
 type GetBlockedNumbersSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetBlockedNumbersQueryParams struct {
+type GetBlockedNumbersRequest struct {
 	// The maximum number of records to return. The default value is `10000`. The value cannot be greater than 10000.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Records with an `id` that is greater or equal to min-id will be returned. The default value is `0`.  You can add 1 to an id that you previously retrieved, to return subsequent records.
 	MinID *int `queryParam:"style=form,explode=true,name=min-id"`
-}
-
-type GetBlockedNumbersRequest struct {
-	QueryParams GetBlockedNumbersQueryParams
-	Security    GetBlockedNumbersSecurity
 }
 
 type GetBlockedNumbersResponse struct {

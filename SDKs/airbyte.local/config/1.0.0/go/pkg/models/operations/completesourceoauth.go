@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteSourceOAuthRequest struct {
-	Request shared.CompleteSourceOauthRequest `request:"mediaType=application/json"`
-}
-
 type CompleteSourceOAuthResponse struct {
 	// Successful operation
 	CompleteOAuthResponse map[string]interface{}

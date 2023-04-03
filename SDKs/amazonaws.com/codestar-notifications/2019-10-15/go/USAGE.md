@@ -13,50 +13,53 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateNotificationRuleRequest{
-        Headers: operations.CreateNotificationRuleHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateNotificationRuleRequestBody{
-            ClientRequestToken: "illum",
-            DetailType: "BASIC",
+        RequestBody: operations.CreateNotificationRuleRequestBody{
+            ClientRequestToken: "corrupti",
+            DetailType: "FULL",
             EventTypeIds: []string{
-                "deserunt",
-                "suscipit",
-                "iure",
+                "quibusdam",
+                "unde",
+                "nulla",
             },
-            Name: "magnam",
-            Resource: "debitis",
+            Name: "corrupti",
+            Resource: "illum",
             Status: "ENABLED",
             Tags: map[string]string{
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
-                "iusto": "excepturi",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
             Targets: []shared.Target{
                 shared.Target{
-                    TargetAddress: "recusandae",
-                    TargetType: "temporibus",
+                    TargetAddress: "tempora",
+                    TargetType: "suscipit",
                 },
                 shared.Target{
-                    TargetAddress: "ab",
-                    TargetType: "quis",
+                    TargetAddress: "molestiae",
+                    TargetType: "minus",
+                },
+                shared.Target{
+                    TargetAddress: "placeat",
+                    TargetType: "voluptatum",
+                },
+                shared.Target{
+                    TargetAddress: "iusto",
+                    TargetType: "excepturi",
                 },
             },
         },
+        XAmzAlgorithm: "nisi",
+        XAmzContentSha256: "recusandae",
+        XAmzCredential: "temporibus",
+        XAmzDate: "ab",
+        XAmzSecurityToken: "quis",
+        XAmzSignature: "veritatis",
+        XAmzSignedHeaders: "deserunt",
     }
 
     ctx := context.Background()

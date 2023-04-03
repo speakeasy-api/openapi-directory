@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestCreateTestSeriesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestCreateTestSeriesPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type TestCreateTestSeriesNameOfTheTestSeries struct {
@@ -24,9 +16,11 @@ type TestCreateTestSeriesNameOfTheTestSeries struct {
 }
 
 type TestCreateTestSeriesRequest struct {
-	PathParams TestCreateTestSeriesPathParams
-	Request    TestCreateTestSeriesNameOfTheTestSeries `request:"mediaType=application/json"`
-	Security   TestCreateTestSeriesSecurity
+	RequestBody TestCreateTestSeriesNameOfTheTestSeries `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // TestCreateTestSeriesTestCloudErrorDetails - Details of a failed operation

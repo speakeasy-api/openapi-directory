@@ -14,30 +14,27 @@ func main() {
     s := sdk.New()
 
     req := operations.RegistryCreateAPIRequest{
-        PathParams: operations.RegistryCreateAPIPathParams{
-            Location: "corrupti",
-            Project: "provident",
-        },
-        QueryParams: operations.RegistryCreateAPIQueryParams{
-            APIID: "distinctio",
-        },
-        Request: shared.APIInput{
+        APIInput: shared.APIInput{
             Annotations: map[string]string{
-                "unde": "nulla",
-                "corrupti": "illum",
-                "vel": "error",
-                "deserunt": "suscipit",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
-            Availability: "iure",
-            Description: "magnam",
-            DisplayName: "debitis",
+            Availability: "illum",
+            Description: "vel",
+            DisplayName: "error",
             Labels: map[string]string{
-                "delectus": "tempora",
+                "suscipit": "iure",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
-            Name: "suscipit",
-            RecommendedDeployment: "molestiae",
-            RecommendedVersion: "minus",
+            Name: "tempora",
+            RecommendedDeployment: "suscipit",
+            RecommendedVersion: "molestiae",
         },
+        APIID: "minus",
+        Location: "placeat",
+        Project: "voluptatum",
     }
 
     ctx := context.Background()

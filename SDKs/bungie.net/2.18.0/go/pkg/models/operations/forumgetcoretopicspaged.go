@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetCoreTopicsPagedPathParams struct {
+type ForumGetCoreTopicsPagedRequest struct {
 	// The category filter.
 	CategoryFilter int `pathParam:"style=simple,explode=false,name=categoryFilter"`
+	// Comma seperated list of locales posts must match to return in the result list. Default 'en'
+	Locales *string `queryParam:"style=form,explode=true,name=locales"`
 	// Zero base page
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// The date filter.
 	QuickDate int `pathParam:"style=simple,explode=false,name=quickDate"`
 	// The sort mode.
 	Sort int64 `pathParam:"style=simple,explode=false,name=sort"`
-}
-
-type ForumGetCoreTopicsPagedQueryParams struct {
-	// Comma seperated list of locales posts must match to return in the result list. Default 'en'
-	Locales *string `queryParam:"style=form,explode=true,name=locales"`
-}
-
-type ForumGetCoreTopicsPagedRequest struct {
-	PathParams  ForumGetCoreTopicsPagedPathParams
-	QueryParams ForumGetCoreTopicsPagedQueryParams
 }
 
 // ForumGetCoreTopicsPaged200Wildcard - Look at the Response property for more information about the nature of this response

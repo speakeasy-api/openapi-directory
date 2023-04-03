@@ -7,11 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetTopicsPagedPathParams struct {
+type ForumGetTopicsPagedRequest struct {
 	// A category filter
 	CategoryFilter int `pathParam:"style=simple,explode=false,name=categoryFilter"`
 	// The group, if any.
 	Group int64 `pathParam:"style=simple,explode=false,name=group"`
+	// Comma seperated list of locales posts must match to return in the result list. Default 'en'
+	Locales *string `queryParam:"style=form,explode=true,name=locales"`
 	// Zero paged page number
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// Unused
@@ -20,18 +22,8 @@ type ForumGetTopicsPagedPathParams struct {
 	QuickDate int `pathParam:"style=simple,explode=false,name=quickDate"`
 	// The sort mode.
 	Sort int64 `pathParam:"style=simple,explode=false,name=sort"`
-}
-
-type ForumGetTopicsPagedQueryParams struct {
-	// Comma seperated list of locales posts must match to return in the result list. Default 'en'
-	Locales *string `queryParam:"style=form,explode=true,name=locales"`
 	// The tags to search, if any.
 	Tagstring *string `queryParam:"style=form,explode=true,name=tagstring"`
-}
-
-type ForumGetTopicsPagedRequest struct {
-	PathParams  ForumGetTopicsPagedPathParams
-	QueryParams ForumGetTopicsPagedQueryParams
 }
 
 // ForumGetTopicsPaged200Wildcard - Look at the Response property for more information about the nature of this response

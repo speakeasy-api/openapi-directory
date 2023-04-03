@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanySearchNameSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanySearchNamePathParams struct {
-	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
-	Country string `pathParam:"style=simple,explode=false,name=country"`
-	// company name
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CompanySearchNameQueryParams struct {
-	// number of search results
-	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type CompanySearchNameRequest struct {
-	PathParams  CompanySearchNamePathParams
-	QueryParams CompanySearchNameQueryParams
-	Security    CompanySearchNameSecurity
+	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
+	Country string `pathParam:"style=simple,explode=false,name=country"`
+	// number of search results
+	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
+	// company name
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 // CompanySearchNameDefaultApplicationJSON - Detailed information about the error

@@ -10,8 +10,8 @@ import (
 )
 
 type BhcerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type BhcerRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type BhcerRequestBody struct {
 	Format BhcerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type BhcerRequest struct {
-	// Request format
-	Request  *BhcerRequestBody `request:"mediaType=application/json"`
-	Security BhcerSecurity
 }
 
 type Bhcer504ApplicationJSONErrorEnum string

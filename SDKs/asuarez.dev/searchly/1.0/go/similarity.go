@@ -41,7 +41,7 @@ func newSimilarity(defaultClient, securityClient HTTPClient, serverURL, language
 // ```
 // https://searchly.asuarez.dev/api/v1/similarity/by_content
 // ```
-func (s *similarity) SrcSearchlyAPIV1ControllersSimilarityByContent(ctx context.Context, request operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequest) (*operations.SrcSearchlyAPIV1ControllersSimilarityByContentResponse, error) {
+func (s *similarity) SrcSearchlyAPIV1ControllersSimilarityByContent(ctx context.Context, request operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody) (*operations.SrcSearchlyAPIV1ControllersSimilarityByContentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/similarity/by_content"
 
@@ -122,7 +122,7 @@ func (s *similarity) SrcSearchlyAPIV1ControllersSimilarityBySong(ctx context.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

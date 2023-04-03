@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetTopicPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTopicHeaders struct {
+type GetTopicRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type GetTopicRequest struct {
-	PathParams GetTopicPathParams
-	Headers    GetTopicHeaders
+	ID          string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetTopic200ApplicationJSONActionsSummary struct {

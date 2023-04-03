@@ -42,13 +42,9 @@ func (e *RequestSystemTimeXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestSystemTimeHeaders struct {
+type RequestSystemTimeRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestSystemTimeXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestSystemTimeRequest struct {
-	Headers RequestSystemTimeHeaders
 }
 
 type RequestSystemTimeResponse struct {

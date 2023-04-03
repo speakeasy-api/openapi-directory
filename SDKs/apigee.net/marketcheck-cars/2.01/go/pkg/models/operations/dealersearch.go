@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DealerSearchQueryParams struct {
+type DealerSearchRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on City in which they are listed
@@ -44,10 +44,6 @@ type DealerSearchQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type DealerSearchRequest struct {
-	QueryParams DealerSearchQueryParams
 }
 
 type DealerSearchResponse struct {

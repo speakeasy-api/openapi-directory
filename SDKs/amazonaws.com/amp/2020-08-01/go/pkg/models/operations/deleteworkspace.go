@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteWorkspacePathParams struct {
-	// The ID of the workspace to delete.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteWorkspaceQueryParams struct {
-	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteWorkspaceHeaders struct {
+type DeleteWorkspaceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteWorkspaceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteWorkspaceRequest struct {
-	PathParams  DeleteWorkspacePathParams
-	QueryParams DeleteWorkspaceQueryParams
-	Headers     DeleteWorkspaceHeaders
+	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The ID of the workspace to delete.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteWorkspaceResponse struct {

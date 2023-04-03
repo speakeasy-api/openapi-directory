@@ -13,28 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateDelegateToResourceRequest{
-        Headers: operations.AssociateDelegateToResourceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "WorkMailService.AssociateDelegateToResource",
+        AssociateDelegateToResourceRequest: shared.AssociateDelegateToResourceRequest{
+            EntityID: "corrupti",
+            OrganizationID: "provident",
+            ResourceID: "distinctio",
         },
-        Request: shared.AssociateDelegateToResourceRequest{
-            EntityID: "illum",
-            OrganizationID: "vel",
-            ResourceID: "error",
-        },
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
+        XAmzTarget: "WorkMailService.AssociateDelegateToResource",
     }
 
     ctx := context.Background()

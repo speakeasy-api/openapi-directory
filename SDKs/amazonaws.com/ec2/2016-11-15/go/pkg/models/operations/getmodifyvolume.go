@@ -89,7 +89,7 @@ func (e *GETModifyVolumeVolumeTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyVolumeQueryParams struct {
+type GETModifyVolumeRequest struct {
 	Action GETModifyVolumeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -105,22 +105,14 @@ type GETModifyVolumeQueryParams struct {
 	// The ID of the volume.
 	VolumeID string `queryParam:"style=form,explode=true,name=VolumeId"`
 	// <p>The target EBS volume type of the volume. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>Default: The existing type is retained.</p>
-	VolumeType *GETModifyVolumeVolumeTypeEnum `queryParam:"style=form,explode=true,name=VolumeType"`
-}
-
-type GETModifyVolumeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVolumeRequest struct {
-	QueryParams GETModifyVolumeQueryParams
-	Headers     GETModifyVolumeHeaders
+	VolumeType        *GETModifyVolumeVolumeTypeEnum `queryParam:"style=form,explode=true,name=VolumeType"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyVolumeResponse struct {

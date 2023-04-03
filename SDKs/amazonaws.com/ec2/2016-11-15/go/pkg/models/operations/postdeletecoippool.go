@@ -50,25 +50,17 @@ func (e *POSTDeleteCoipPoolVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteCoipPoolQueryParams struct {
-	Action  POSTDeleteCoipPoolActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteCoipPoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteCoipPoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteCoipPoolRequest struct {
-	QueryParams POSTDeleteCoipPoolQueryParams
-	Headers     POSTDeleteCoipPoolHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteCoipPoolActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                        `request:"mediaType=text/xml"`
+	Version           POSTDeleteCoipPoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteCoipPoolResponse struct {

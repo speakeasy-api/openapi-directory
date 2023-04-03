@@ -34,7 +34,7 @@ func newHostedOnboardingPage(defaultClient, securityClient HTTPClient, serverURL
 
 // PostGetOnboardingURL - Get a link to a Adyen-hosted onboarding page
 // Returns a link to an Adyen-hosted onboarding page (HOP) that you can send to your account holder. For more information on how to use HOP, refer to [Hosted onboarding](https://docs.adyen.com/marketplaces-and-platforms/classic/collect-verification-details/hosted-onboarding-page).
-func (s *hostedOnboardingPage) PostGetOnboardingURL(ctx context.Context, request operations.PostGetOnboardingURLRequest) (*operations.PostGetOnboardingURLResponse, error) {
+func (s *hostedOnboardingPage) PostGetOnboardingURL(ctx context.Context, request shared.GetOnboardingURLRequest, security operations.PostGetOnboardingURLSecurity) (*operations.PostGetOnboardingURLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getOnboardingUrl"
 
@@ -50,7 +50,7 @@ func (s *hostedOnboardingPage) PostGetOnboardingURL(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

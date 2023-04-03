@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetLookupMd5PathParams struct {
-	Md5 string `pathParam:"style=simple,explode=false,name=md5"`
-}
-
 type GetLookupMd5Request struct {
-	PathParams GetLookupMd5PathParams
+	Md5 string `pathParam:"style=simple,explode=false,name=md5"`
 }
 
 type GetLookupMd5Response struct {

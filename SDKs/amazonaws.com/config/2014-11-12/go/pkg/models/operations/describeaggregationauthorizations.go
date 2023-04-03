@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAggregationAuthorizationsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeAggregationAuthorizationsXAmzTargetEnum
 type DescribeAggregationAuthorizationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeAggregationAuthorizationsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DescribeAggregationAuthorizationsHeaders struct {
+type DescribeAggregationAuthorizationsRequest struct {
+	DescribeAggregationAuthorizationsRequest shared.DescribeAggregationAuthorizationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeAggregationAuthorizationsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeAggregationAuthorizationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeAggregationAuthorizationsRequest struct {
-	QueryParams DescribeAggregationAuthorizationsQueryParams
-	Headers     DescribeAggregationAuthorizationsHeaders
-	Request     shared.DescribeAggregationAuthorizationsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeAggregationAuthorizationsResponse struct {

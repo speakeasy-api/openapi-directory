@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ListSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
-type ListQueryParams struct {
+type ListRequest struct {
 	// East bounding box
 	E *float32 `queryParam:"style=form,explode=true,name=e"`
 	// North bounding box
@@ -20,11 +19,6 @@ type ListQueryParams struct {
 	S *float32 `queryParam:"style=form,explode=true,name=s"`
 	// West bounding box
 	W *float32 `queryParam:"style=form,explode=true,name=w"`
-}
-
-type ListRequest struct {
-	QueryParams ListQueryParams
-	Security    ListSecurity
 }
 
 type ListResponse struct {

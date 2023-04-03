@@ -13,33 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchCheckLayerAvailabilityRequest{
-        Headers: operations.BatchCheckLayerAvailabilityHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "SpencerFrontendService.BatchCheckLayerAvailability",
-        },
-        Request: shared.BatchCheckLayerAvailabilityRequest{
+        BatchCheckLayerAvailabilityRequest: shared.BatchCheckLayerAvailabilityRequest{
             LayerDigests: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            RegistryID: "iure",
-            RepositoryName: "magnam",
+            RegistryID: "unde",
+            RepositoryName: "nulla",
         },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
+        XAmzTarget: "SpencerFrontendService.BatchCheckLayerAvailability",
     }
 
     ctx := context.Background()

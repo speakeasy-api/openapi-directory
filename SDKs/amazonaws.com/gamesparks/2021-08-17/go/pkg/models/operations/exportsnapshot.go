@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportSnapshotPathParams struct {
+type ExportSnapshotRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
 	// The identifier of the snapshot to export.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=SnapshotId"`
-}
-
-type ExportSnapshotHeaders struct {
+	SnapshotID        string  `pathParam:"style=simple,explode=false,name=SnapshotId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ExportSnapshotHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ExportSnapshotRequest struct {
-	PathParams ExportSnapshotPathParams
-	Headers    ExportSnapshotHeaders
 }
 
 type ExportSnapshotResponse struct {

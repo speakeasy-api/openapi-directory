@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLogsRequest struct {
-	Request shared.LogsRequestBody `request:"mediaType=application/json"`
-}
-
 type GetLogsResponse struct {
 	ContentType string
 	// Input failed validation

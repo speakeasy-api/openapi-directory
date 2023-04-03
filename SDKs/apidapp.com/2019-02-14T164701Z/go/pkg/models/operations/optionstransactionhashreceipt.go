@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsTransactionHashReceiptPathParams struct {
+type OptionsTransactionHashReceiptRequest struct {
 	// Automatically added
 	Hash string `pathParam:"style=simple,explode=false,name=hash"`
-}
-
-type OptionsTransactionHashReceiptRequest struct {
-	PathParams OptionsTransactionHashReceiptPathParams
 }
 
 type OptionsTransactionHashReceiptResponse struct {

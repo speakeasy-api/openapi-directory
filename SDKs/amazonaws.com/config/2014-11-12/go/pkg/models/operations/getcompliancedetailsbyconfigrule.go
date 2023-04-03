@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetComplianceDetailsByConfigRuleQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetComplianceDetailsByConfigRuleXAmzTargetEnum
 type GetComplianceDetailsByConfigRuleXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetComplianceDetailsByConfigRuleXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetComplianceDetailsByConfigRuleHeaders struct {
+type GetComplianceDetailsByConfigRuleRequest struct {
+	GetComplianceDetailsByConfigRuleRequest shared.GetComplianceDetailsByConfigRuleRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetComplianceDetailsByConfigRuleHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetComplianceDetailsByConfigRuleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetComplianceDetailsByConfigRuleRequest struct {
-	QueryParams GetComplianceDetailsByConfigRuleQueryParams
-	Headers     GetComplianceDetailsByConfigRuleHeaders
-	Request     shared.GetComplianceDetailsByConfigRuleRequest `request:"mediaType=application/json"`
 }
 
 type GetComplianceDetailsByConfigRuleResponse struct {

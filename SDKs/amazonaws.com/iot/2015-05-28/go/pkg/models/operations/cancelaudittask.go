@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelAuditTaskPathParams struct {
-	// The ID of the audit you want to cancel. You can only cancel an audit that is "IN_PROGRESS".
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type CancelAuditTaskHeaders struct {
+type CancelAuditTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type CancelAuditTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelAuditTaskRequest struct {
-	PathParams CancelAuditTaskPathParams
-	Headers    CancelAuditTaskHeaders
+	// The ID of the audit you want to cancel. You can only cancel an audit that is "IN_PROGRESS".
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type CancelAuditTaskResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateRequest struct {
-	PathParams UpdatePathParams
-	Request    shared.UpdateTemplateRequest `request:"mediaType=application/json"`
+	UpdateTemplateRequest shared.UpdateTemplateRequest `request:"mediaType=application/json"`
+	ID                    string                       `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateResponse struct {

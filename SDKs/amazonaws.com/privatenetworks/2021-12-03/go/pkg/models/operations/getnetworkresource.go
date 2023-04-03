@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNetworkResourcePathParams struct {
-	// The Amazon Resource Name (ARN) of the network resource.
-	NetworkResourceArn string `pathParam:"style=simple,explode=false,name=networkResourceArn"`
-}
-
-type GetNetworkResourceHeaders struct {
+type GetNetworkResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetNetworkResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetNetworkResourceRequest struct {
-	PathParams GetNetworkResourcePathParams
-	Headers    GetNetworkResourceHeaders
+	// The Amazon Resource Name (ARN) of the network resource.
+	NetworkResourceArn string `pathParam:"style=simple,explode=false,name=networkResourceArn"`
 }
 
 type GetNetworkResourceResponse struct {

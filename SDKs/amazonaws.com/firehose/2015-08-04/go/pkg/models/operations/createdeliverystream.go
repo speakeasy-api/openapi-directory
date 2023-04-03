@@ -30,20 +30,16 @@ func (e *CreateDeliveryStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateDeliveryStreamHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateDeliveryStreamXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateDeliveryStreamRequest struct {
-	Headers CreateDeliveryStreamHeaders
-	Request shared.CreateDeliveryStreamInput `request:"mediaType=application/json"`
+	CreateDeliveryStreamInput shared.CreateDeliveryStreamInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                CreateDeliveryStreamXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateDeliveryStreamResponse struct {

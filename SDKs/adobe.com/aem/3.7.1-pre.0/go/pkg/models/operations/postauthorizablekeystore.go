@@ -6,23 +6,6 @@ import (
 	"net/http"
 )
 
-type PostAuthorizableKeystorePathParams struct {
-	AuthorizableID   string `pathParam:"style=simple,explode=false,name=authorizableId"`
-	IntermediatePath string `pathParam:"style=simple,explode=false,name=intermediatePath"`
-}
-
-type PostAuthorizableKeystoreQueryParams struct {
-	Operation       *string `queryParam:"style=form,explode=true,name=:operation"`
-	Alias           *string `queryParam:"style=form,explode=true,name=alias"`
-	CurrentPassword *string `queryParam:"style=form,explode=true,name=currentPassword"`
-	KeyPassword     *string `queryParam:"style=form,explode=true,name=keyPassword"`
-	KeyStorePass    *string `queryParam:"style=form,explode=true,name=keyStorePass"`
-	NewAlias        *string `queryParam:"style=form,explode=true,name=newAlias"`
-	NewPassword     *string `queryParam:"style=form,explode=true,name=newPassword"`
-	RePassword      *string `queryParam:"style=form,explode=true,name=rePassword"`
-	RemoveAlias     *string `queryParam:"style=form,explode=true,name=removeAlias"`
-}
-
 type PostAuthorizableKeystoreRequestBodyCertChain struct {
 	CertChain string `multipartForm:"name=cert-chain"`
 	Content   []byte `multipartForm:"content"`
@@ -45,9 +28,18 @@ type PostAuthorizableKeystoreRequestBody struct {
 }
 
 type PostAuthorizableKeystoreRequest struct {
-	PathParams  PostAuthorizableKeystorePathParams
-	QueryParams PostAuthorizableKeystoreQueryParams
-	Request     *PostAuthorizableKeystoreRequestBody `request:"mediaType=multipart/form-data"`
+	Operation        *string                              `queryParam:"style=form,explode=true,name=:operation"`
+	RequestBody      *PostAuthorizableKeystoreRequestBody `request:"mediaType=multipart/form-data"`
+	Alias            *string                              `queryParam:"style=form,explode=true,name=alias"`
+	AuthorizableID   string                               `pathParam:"style=simple,explode=false,name=authorizableId"`
+	CurrentPassword  *string                              `queryParam:"style=form,explode=true,name=currentPassword"`
+	IntermediatePath string                               `pathParam:"style=simple,explode=false,name=intermediatePath"`
+	KeyPassword      *string                              `queryParam:"style=form,explode=true,name=keyPassword"`
+	KeyStorePass     *string                              `queryParam:"style=form,explode=true,name=keyStorePass"`
+	NewAlias         *string                              `queryParam:"style=form,explode=true,name=newAlias"`
+	NewPassword      *string                              `queryParam:"style=form,explode=true,name=newPassword"`
+	RePassword       *string                              `queryParam:"style=form,explode=true,name=rePassword"`
+	RemoveAlias      *string                              `queryParam:"style=form,explode=true,name=removeAlias"`
 }
 
 type PostAuthorizableKeystoreResponse struct {

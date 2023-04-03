@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteComponentQueryParams struct {
-	// The Amazon Resource Name (ARN) of the component build version to delete.
-	ComponentBuildVersionArn string `queryParam:"style=form,explode=true,name=componentBuildVersionArn"`
-}
-
-type DeleteComponentHeaders struct {
+type DeleteComponentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteComponentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteComponentRequest struct {
-	QueryParams DeleteComponentQueryParams
-	Headers     DeleteComponentHeaders
+	// The Amazon Resource Name (ARN) of the component build version to delete.
+	ComponentBuildVersionArn string `queryParam:"style=form,explode=true,name=componentBuildVersionArn"`
 }
 
 type DeleteComponentResponse struct {

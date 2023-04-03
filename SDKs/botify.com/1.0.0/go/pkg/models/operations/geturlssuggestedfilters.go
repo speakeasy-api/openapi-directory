@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUrlsSuggestedFiltersPathParams struct {
-	// Analysis' identifier
-	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // GetUrlsSuggestedFiltersAreaEnum
 type GetUrlsSuggestedFiltersAreaEnum string
 
@@ -42,14 +33,15 @@ func (e *GetUrlsSuggestedFiltersAreaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUrlsSuggestedFiltersQueryParams struct {
-	Area *GetUrlsSuggestedFiltersAreaEnum `queryParam:"style=form,explode=true,name=area"`
-}
-
 type GetUrlsSuggestedFiltersRequest struct {
-	PathParams  GetUrlsSuggestedFiltersPathParams
-	QueryParams GetUrlsSuggestedFiltersQueryParams
-	Request     *shared.UrlsAggsQuery `request:"mediaType=application/json"`
+	UrlsAggsQuery *shared.UrlsAggsQuery `request:"mediaType=application/json"`
+	// Analysis' identifier
+	AnalysisSlug string                           `pathParam:"style=simple,explode=false,name=analysis_slug"`
+	Area         *GetUrlsSuggestedFiltersAreaEnum `queryParam:"style=form,explode=true,name=area"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetUrlsSuggestedFiltersResponse struct {

@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type UpdateTopicTimestampPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateTopicTimestampHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type UpdateTopicTimestampRequestBody struct {
 	Timestamp string `json:"timestamp"`
 }
 
 type UpdateTopicTimestampRequest struct {
-	PathParams UpdateTopicTimestampPathParams
-	Headers    UpdateTopicTimestampHeaders
-	Request    *UpdateTopicTimestampRequestBody `request:"mediaType=application/json"`
+	APIKey      string                           `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                           `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *UpdateTopicTimestampRequestBody `request:"mediaType=application/json"`
+	ID          string                           `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // UpdateTopicTimestamp200ApplicationJSON - topic updated

@@ -50,25 +50,17 @@ func (e *POSTDeleteDBInstanceAutomatedBackupVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTDeleteDBInstanceAutomatedBackupQueryParams struct {
-	Action  POSTDeleteDBInstanceAutomatedBackupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteDBInstanceAutomatedBackupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteDBInstanceAutomatedBackupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteDBInstanceAutomatedBackupRequest struct {
-	QueryParams POSTDeleteDBInstanceAutomatedBackupQueryParams
-	Headers     POSTDeleteDBInstanceAutomatedBackupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteDBInstanceAutomatedBackupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTDeleteDBInstanceAutomatedBackupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteDBInstanceAutomatedBackupResponse struct {

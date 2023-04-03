@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryCreateAPIDeploymentPathParams struct {
+type RegistryCreateAPIDeploymentRequest struct {
+	APIDeploymentInput shared.APIDeploymentInput `request:"mediaType=application/json"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
+	// Required. The ID to use for the deployment, which will become the final component of the deployment's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+	APIDeploymentID *string `queryParam:"style=form,explode=true,name=apiDeploymentId"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryCreateAPIDeploymentQueryParams struct {
-	// Required. The ID to use for the deployment, which will become the final component of the deployment's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
-	APIDeploymentID *string `queryParam:"style=form,explode=true,name=apiDeploymentId"`
-}
-
-type RegistryCreateAPIDeploymentRequest struct {
-	PathParams  RegistryCreateAPIDeploymentPathParams
-	QueryParams RegistryCreateAPIDeploymentQueryParams
-	Request     shared.APIDeploymentInput `request:"mediaType=application/json"`
 }
 
 type RegistryCreateAPIDeploymentResponse struct {

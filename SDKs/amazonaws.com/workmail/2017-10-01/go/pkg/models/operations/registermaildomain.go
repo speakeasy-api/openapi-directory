@@ -30,20 +30,16 @@ func (e *RegisterMailDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RegisterMailDomainHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        RegisterMailDomainXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type RegisterMailDomainRequest struct {
-	Headers RegisterMailDomainHeaders
-	Request shared.RegisterMailDomainRequest `request:"mediaType=application/json"`
+	RegisterMailDomainRequest shared.RegisterMailDomainRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                RegisterMailDomainXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type RegisterMailDomainResponse struct {

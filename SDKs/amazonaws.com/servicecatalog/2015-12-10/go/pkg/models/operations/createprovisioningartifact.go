@@ -30,20 +30,16 @@ func (e *CreateProvisioningArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type CreateProvisioningArtifactHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateProvisioningArtifactXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateProvisioningArtifactRequest struct {
-	Headers CreateProvisioningArtifactHeaders
-	Request shared.CreateProvisioningArtifactInput `request:"mediaType=application/json"`
+	CreateProvisioningArtifactInput shared.CreateProvisioningArtifactInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      CreateProvisioningArtifactXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateProvisioningArtifactResponse struct {

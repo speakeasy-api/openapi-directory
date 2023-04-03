@@ -50,25 +50,17 @@ func (e *POSTDisassociateSubnetCidrBlockVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type POSTDisassociateSubnetCidrBlockQueryParams struct {
-	Action  POSTDisassociateSubnetCidrBlockActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisassociateSubnetCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisassociateSubnetCidrBlockHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisassociateSubnetCidrBlockRequest struct {
-	QueryParams POSTDisassociateSubnetCidrBlockQueryParams
-	Headers     POSTDisassociateSubnetCidrBlockHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisassociateSubnetCidrBlockActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                     `request:"mediaType=text/xml"`
+	Version           POSTDisassociateSubnetCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisassociateSubnetCidrBlockResponse struct {

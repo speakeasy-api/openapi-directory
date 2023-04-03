@@ -30,20 +30,16 @@ func (e *AcceptGrantXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AcceptGrantHeaders struct {
-	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        AcceptGrantXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type AcceptGrantRequest struct {
-	Headers AcceptGrantHeaders
-	Request shared.AcceptGrantRequest `request:"mediaType=application/json"`
+	AcceptGrantRequest shared.AcceptGrantRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         AcceptGrantXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type AcceptGrantResponse struct {

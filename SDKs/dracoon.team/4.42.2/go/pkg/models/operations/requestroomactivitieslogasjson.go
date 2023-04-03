@@ -9,44 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestRoomActivitiesLogAsJSONPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type RequestRoomActivitiesLogAsJSONQueryParams struct {
-	// Filter events until given date
-	//
-	// e.g. `2015-12-31T23:59:00`
-	DateEnd *string `queryParam:"style=form,explode=true,name=date_end"`
-	// Filter events from given date
-	//
-	// e.g. `2015-12-31T23:59:00`
-	DateStart *string `queryParam:"style=form,explode=true,name=date_start"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Operation status:
-	//
-	// * `0` - Success
-	//
-	// * `2` - Error
-	Status *int `queryParam:"style=form,explode=true,name=status"`
-	// Operation ID
-	//
-	// cf. `GET /eventlog/operations`
-	Type *int `queryParam:"style=form,explode=true,name=type"`
-	// User ID
-	UserID *int64 `queryParam:"style=form,explode=true,name=user_id"`
-}
-
 // RequestRoomActivitiesLogAsJSONXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestRoomActivitiesLogAsJSONXSdsDateFormatEnum string
 
@@ -80,17 +42,43 @@ func (e *RequestRoomActivitiesLogAsJSONXSdsDateFormatEnum) UnmarshalJSON(data []
 	}
 }
 
-type RequestRoomActivitiesLogAsJSONHeaders struct {
+type RequestRoomActivitiesLogAsJSONRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestRoomActivitiesLogAsJSONXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestRoomActivitiesLogAsJSONRequest struct {
-	PathParams  RequestRoomActivitiesLogAsJSONPathParams
-	QueryParams RequestRoomActivitiesLogAsJSONQueryParams
-	Headers     RequestRoomActivitiesLogAsJSONHeaders
+	// Filter events until given date
+	//
+	// e.g. `2015-12-31T23:59:00`
+	DateEnd *string `queryParam:"style=form,explode=true,name=date_end"`
+	// Filter events from given date
+	//
+	// e.g. `2015-12-31T23:59:00`
+	DateStart *string `queryParam:"style=form,explode=true,name=date_start"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// Operation status:
+	//
+	// * `0` - Success
+	//
+	// * `2` - Error
+	Status *int `queryParam:"style=form,explode=true,name=status"`
+	// Operation ID
+	//
+	// cf. `GET /eventlog/operations`
+	Type *int `queryParam:"style=form,explode=true,name=type"`
+	// User ID
+	UserID *int64 `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 type RequestRoomActivitiesLogAsJSONResponse struct {

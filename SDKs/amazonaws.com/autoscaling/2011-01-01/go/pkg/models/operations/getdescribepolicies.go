@@ -50,7 +50,7 @@ func (e *GETDescribePoliciesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribePoliciesQueryParams struct {
+type GETDescribePoliciesRequest struct {
 	Action GETDescribePoliciesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName *string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -61,23 +61,15 @@ type GETDescribePoliciesQueryParams struct {
 	// <p>The names of one or more policies. If you omit this property, all policies are described. If a group name is provided, the results are limited to that group. If you specify an unknown policy name, it is ignored with no error.</p> <p>Array Members: Maximum number of 50 items.</p>
 	PolicyNames []string `queryParam:"style=form,explode=true,name=PolicyNames"`
 	// One or more policy types. The valid values are <code>SimpleScaling</code>, <code>StepScaling</code>, <code>TargetTrackingScaling</code>, and <code>PredictiveScaling</code>.
-	PolicyTypes []string                       `queryParam:"style=form,explode=true,name=PolicyTypes"`
-	Version     GETDescribePoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribePoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribePoliciesRequest struct {
-	QueryParams GETDescribePoliciesQueryParams
-	Headers     GETDescribePoliciesHeaders
+	PolicyTypes       []string                       `queryParam:"style=form,explode=true,name=PolicyTypes"`
+	Version           GETDescribePoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribePoliciesResponse struct {

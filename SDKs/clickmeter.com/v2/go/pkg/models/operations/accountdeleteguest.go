@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountDeleteGuestPathParams struct {
+type AccountDeleteGuestRequest struct {
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
-}
-
-type AccountDeleteGuestRequest struct {
-	PathParams AccountDeleteGuestPathParams
 }
 
 type AccountDeleteGuestResponse struct {

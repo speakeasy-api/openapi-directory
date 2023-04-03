@@ -30,20 +30,16 @@ func (e *DescribeHyperParameterTuningJobXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DescribeHyperParameterTuningJobHeaders struct {
-	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeHyperParameterTuningJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeHyperParameterTuningJobRequest struct {
-	Headers DescribeHyperParameterTuningJobHeaders
-	Request shared.DescribeHyperParameterTuningJobRequest `request:"mediaType=application/json"`
+	DescribeHyperParameterTuningJobRequest shared.DescribeHyperParameterTuningJobRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                         *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                               *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                      *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                             DescribeHyperParameterTuningJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeHyperParameterTuningJobResponse struct {

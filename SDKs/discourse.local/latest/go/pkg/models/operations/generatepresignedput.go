@@ -55,10 +55,6 @@ type GeneratePresignedPutRequestBody struct {
 	Type     GeneratePresignedPutRequestBodyTypeEnum  `json:"type"`
 }
 
-type GeneratePresignedPutRequest struct {
-	Request *GeneratePresignedPutRequestBody `request:"mediaType=application/json"`
-}
-
 // GeneratePresignedPut200ApplicationJSON - external upload initialized
 type GeneratePresignedPut200ApplicationJSON struct {
 	// The path of the temporary file on the external storage

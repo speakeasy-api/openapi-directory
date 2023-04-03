@@ -8,14 +8,11 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetWebhooksIDWebhookLogsPathParams struct {
-	IDWebhook int64 `pathParam:"style=simple,explode=false,name=id_webhook"`
-}
-
-type GetWebhooksIDWebhookLogsQueryParams struct {
+type GetWebhooksIDWebhookLogsRequest struct {
 	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// limit number of results to this user
-	IDUser *int64 `queryParam:"style=form,explode=true,name=id_user"`
+	IDUser    *int64 `queryParam:"style=form,explode=true,name=id_user"`
+	IDWebhook int64  `pathParam:"style=simple,explode=false,name=id_webhook"`
 	// limit number of results
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// maximum (inclusive) date
@@ -24,11 +21,6 @@ type GetWebhooksIDWebhookLogsQueryParams struct {
 	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
 	// offset of first result
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetWebhooksIDWebhookLogsRequest struct {
-	PathParams  GetWebhooksIDWebhookLogsPathParams
-	QueryParams GetWebhooksIDWebhookLogsQueryParams
 }
 
 // GetWebhooksIDWebhookLogs200ApplicationJSON - webhooklogs

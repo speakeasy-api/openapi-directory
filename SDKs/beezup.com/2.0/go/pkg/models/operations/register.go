@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterRequest struct {
-	Request shared.RegisterRequest `request:"mediaType=application/json"`
-}
-
 type RegisterResponse struct {
 	// Occurs when something goes wrong
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

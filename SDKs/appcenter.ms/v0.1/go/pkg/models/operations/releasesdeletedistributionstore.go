@@ -6,14 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesDeleteDistributionStoreSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesDeleteDistributionStorePathParams struct {
+type ReleasesDeleteDistributionStoreRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
@@ -22,11 +21,6 @@ type ReleasesDeleteDistributionStorePathParams struct {
 	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
 	// The id of the distribution store
 	StoreID string `pathParam:"style=simple,explode=false,name=store_id"`
-}
-
-type ReleasesDeleteDistributionStoreRequest struct {
-	PathParams ReleasesDeleteDistributionStorePathParams
-	Security   ReleasesDeleteDistributionStoreSecurity
 }
 
 type ReleasesDeleteDistributionStore404ApplicationJSONCodeEnum string

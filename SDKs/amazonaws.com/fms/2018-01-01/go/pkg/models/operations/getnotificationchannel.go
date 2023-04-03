@@ -30,7 +30,8 @@ func (e *GetNotificationChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GetNotificationChannelHeaders struct {
+type GetNotificationChannelRequest struct {
+	RequestBody       map[string]interface{}               `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetNotificationChannelHeaders struct {
 	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetNotificationChannelXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetNotificationChannelRequest struct {
-	Headers GetNotificationChannelHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetNotificationChannelResponse struct {

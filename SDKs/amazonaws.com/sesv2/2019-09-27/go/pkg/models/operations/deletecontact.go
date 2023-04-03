@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteContactPathParams struct {
+type DeleteContactRequest struct {
 	// The name of the contact list from which the contact should be removed.
 	ContactListName string `pathParam:"style=simple,explode=false,name=ContactListName"`
 	// The contact's email address.
-	EmailAddress string `pathParam:"style=simple,explode=false,name=EmailAddress"`
-}
-
-type DeleteContactHeaders struct {
+	EmailAddress      string  `pathParam:"style=simple,explode=false,name=EmailAddress"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type DeleteContactHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteContactRequest struct {
-	PathParams DeleteContactPathParams
-	Headers    DeleteContactHeaders
 }
 
 type DeleteContactResponse struct {

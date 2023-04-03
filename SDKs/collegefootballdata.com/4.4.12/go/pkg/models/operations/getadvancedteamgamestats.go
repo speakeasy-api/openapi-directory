@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAdvancedTeamGameStatsQueryParams struct {
+type GetAdvancedTeamGameStatsRequest struct {
 	// Filter to remove garbage time plays from calculations
 	ExcludeGarbageTime *bool `queryParam:"style=form,explode=true,name=excludeGarbageTime"`
 	// Opponent filter
@@ -20,10 +20,6 @@ type GetAdvancedTeamGameStatsQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter (required if no team specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetAdvancedTeamGameStatsRequest struct {
-	QueryParams GetAdvancedTeamGameStatsQueryParams
 }
 
 type GetAdvancedTeamGameStatsResponse struct {

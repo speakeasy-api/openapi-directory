@@ -99,7 +99,7 @@ func (e *GETModifyClientVpnEndpointVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETModifyClientVpnEndpointQueryParams struct {
+type GETModifyClientVpnEndpointRequest struct {
 	Action GETModifyClientVpnEndpointActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The options for managing connection authorization for new client connections.
 	ClientConnectOptions *GETModifyClientVpnEndpointClientConnectOptions `queryParam:"style=form,explode=true,name=ClientConnectOptions"`
@@ -129,10 +129,7 @@ type GETModifyClientVpnEndpointQueryParams struct {
 	// The ID of the VPC to associate with the Client VPN endpoint.
 	VpcID *string `queryParam:"style=form,explode=true,name=VpcId"`
 	// <p>The port number to assign to the Client VPN endpoint for TCP and UDP traffic.</p> <p>Valid Values: <code>443</code> | <code>1194</code> </p> <p>Default Value: <code>443</code> </p>
-	VpnPort *int64 `queryParam:"style=form,explode=true,name=VpnPort"`
-}
-
-type GETModifyClientVpnEndpointHeaders struct {
+	VpnPort           *int64  `queryParam:"style=form,explode=true,name=VpnPort"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -140,11 +137,6 @@ type GETModifyClientVpnEndpointHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyClientVpnEndpointRequest struct {
-	QueryParams GETModifyClientVpnEndpointQueryParams
-	Headers     GETModifyClientVpnEndpointHeaders
 }
 
 type GETModifyClientVpnEndpointResponse struct {

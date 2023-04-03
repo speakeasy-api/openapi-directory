@@ -10,7 +10,7 @@ import (
 )
 
 type GetSeriesSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetSeriesSortEnum string
@@ -45,7 +45,7 @@ func (e *GetSeriesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSeriesQueryParams struct {
+type GetSeriesRequest struct {
 	// Limit the result to series with an ad deal of this Ad Ops profile.
 	//
 	AdRepAccountID *string `queryParam:"style=form,explode=true,name=ad_rep_account_id"`
@@ -70,11 +70,6 @@ type GetSeriesQueryParams struct {
 	// [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
 	//
 	Sort []GetSeriesSortEnum `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetSeriesRequest struct {
-	QueryParams GetSeriesQueryParams
-	Security    GetSeriesSecurity
 }
 
 // GetSeries400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

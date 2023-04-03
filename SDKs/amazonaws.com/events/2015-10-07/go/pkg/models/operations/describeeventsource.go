@@ -30,20 +30,16 @@ func (e *DescribeEventSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeEventSourceHeaders struct {
-	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeEventSourceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeEventSourceRequest struct {
-	Headers DescribeEventSourceHeaders
-	Request shared.DescribeEventSourceRequest `request:"mediaType=application/json"`
+	DescribeEventSourceRequest shared.DescribeEventSourceRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 DescribeEventSourceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeEventSourceResponse struct {

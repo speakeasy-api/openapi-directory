@@ -7,12 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestCustomerAttributesPathParams struct {
+type RequestCustomerAttributesRequest struct {
+	// Service Authentication token
+	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
 	// Customer ID
 	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
-}
-
-type RequestCustomerAttributesQueryParams struct {
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Range limit.
@@ -25,17 +24,6 @@ type RequestCustomerAttributesQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// Sort string
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type RequestCustomerAttributesHeaders struct {
-	// Service Authentication token
-	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RequestCustomerAttributesRequest struct {
-	PathParams  RequestCustomerAttributesPathParams
-	QueryParams RequestCustomerAttributesQueryParams
-	Headers     RequestCustomerAttributesHeaders
 }
 
 type RequestCustomerAttributesResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIPatchOrderPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type OrderAPIPatchOrderRequest struct {
-	PathParams OrderAPIPatchOrderPathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	ID          int64                  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type OrderAPIPatchOrderResponse struct {

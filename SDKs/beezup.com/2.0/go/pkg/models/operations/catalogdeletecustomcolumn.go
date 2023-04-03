@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogDeleteCustomColumnPathParams struct {
+type CatalogDeleteCustomColumnRequest struct {
 	// The custom column identifier
 	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogDeleteCustomColumnRequest struct {
-	PathParams CatalogDeleteCustomColumnPathParams
 }
 
 type CatalogDeleteCustomColumnResponse struct {

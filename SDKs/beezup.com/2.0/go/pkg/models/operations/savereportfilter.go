@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SaveReportFilterPathParams struct {
+type SaveReportFilterRequest struct {
 	// Your report filter identifier
-	ReportFilterID string `pathParam:"style=simple,explode=false,name=reportFilterId"`
+	ReportFilterID          string                         `pathParam:"style=simple,explode=false,name=reportFilterId"`
+	SaveReportFilterRequest shared.SaveReportFilterRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type SaveReportFilterRequest struct {
-	PathParams SaveReportFilterPathParams
-	Request    shared.SaveReportFilterRequest `request:"mediaType=application/json"`
 }
 
 type SaveReportFilterResponse struct {

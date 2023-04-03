@@ -13,26 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddNotificationChannelsRequest{
-        PathParams: operations.AddNotificationChannelsPathParams{
-            ProfilingGroupName: "corrupti",
-        },
-        Headers: operations.AddNotificationChannelsHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.AddNotificationChannelsRequestBody{
+        RequestBody: operations.AddNotificationChannelsRequestBody{
             Channels: []shared.Channel{
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
@@ -40,18 +26,37 @@ func main() {
                         "AnomalyDetection",
                         "AnomalyDetection",
                     },
-                    ID: "deserunt",
-                    URI: "http://innocent-effect.org",
+                    ID: "distinctio",
+                    URI: "https://outstanding-strait.name",
                 },
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
                         "AnomalyDetection",
+                        "AnomalyDetection",
+                        "AnomalyDetection",
+                        "AnomalyDetection",
                     },
-                    ID: "delectus",
-                    URI: "http://hideous-jam.net",
+                    ID: "vel",
+                    URI: "https://present-giggle.info",
+                },
+                shared.Channel{
+                    EventPublishers: []shared.EventPublisherEnum{
+                        "AnomalyDetection",
+                        "AnomalyDetection",
+                    },
+                    ID: "debitis",
+                    URI: "http://whirlwind-diver.info",
                 },
             },
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "minus",
+        XAmzCredential: "placeat",
+        XAmzDate: "voluptatum",
+        XAmzSecurityToken: "iusto",
+        XAmzSignature: "excepturi",
+        XAmzSignedHeaders: "nisi",
+        ProfilingGroupName: "recusandae",
     }
 
     ctx := context.Background()

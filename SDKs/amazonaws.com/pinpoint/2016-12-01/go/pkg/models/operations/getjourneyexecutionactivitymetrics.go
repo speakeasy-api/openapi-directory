@@ -7,23 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJourneyExecutionActivityMetricsPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-	// The unique identifier for the journey activity.
-	JourneyActivityID string `pathParam:"style=simple,explode=false,name=journey-activity-id"`
-	// The unique identifier for the journey.
-	JourneyID string `pathParam:"style=simple,explode=false,name=journey-id"`
-}
-
-type GetJourneyExecutionActivityMetricsQueryParams struct {
-	// The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
-	PageSize *string `queryParam:"style=form,explode=true,name=page-size"`
-}
-
-type GetJourneyExecutionActivityMetricsHeaders struct {
+type GetJourneyExecutionActivityMetricsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -31,12 +15,16 @@ type GetJourneyExecutionActivityMetricsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetJourneyExecutionActivityMetricsRequest struct {
-	PathParams  GetJourneyExecutionActivityMetricsPathParams
-	QueryParams GetJourneyExecutionActivityMetricsQueryParams
-	Headers     GetJourneyExecutionActivityMetricsHeaders
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
+	// The unique identifier for the journey activity.
+	JourneyActivityID string `pathParam:"style=simple,explode=false,name=journey-activity-id"`
+	// The unique identifier for the journey.
+	JourneyID string `pathParam:"style=simple,explode=false,name=journey-id"`
+	// The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
+	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+	PageSize *string `queryParam:"style=form,explode=true,name=page-size"`
 }
 
 type GetJourneyExecutionActivityMetricsResponse struct {

@@ -33,11 +33,11 @@ func newEe(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // AssignMsisdn - Assigns a msisdn to a profile on ITV side.
-func (s *ee) AssignMsisdn(ctx context.Context, request operations.AssignMsisdnRequest) (*operations.AssignMsisdnResponse, error) {
+func (s *ee) AssignMsisdn(ctx context.Context, request operations.AssignMsisdnRequest, security operations.AssignMsisdnSecurity) (*operations.AssignMsisdnResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ee/msisdn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvAssignMsisdnRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,11 +52,11 @@ func (s *ee) AssignMsisdn(ctx context.Context, request operations.AssignMsisdnRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *ee) AssignMsisdn(ctx context.Context, request operations.AssignMsisdnRe
 }
 
 // CheckEeBtEligibility - Check whether or not a user is eligible for switching to Bt or EE offers.
-func (s *ee) CheckEeBtEligibility(ctx context.Context, request operations.CheckEeBtEligibilityRequest) (*operations.CheckEeBtEligibilityResponse, error) {
+func (s *ee) CheckEeBtEligibility(ctx context.Context, request operations.CheckEeBtEligibilityRequest, security operations.CheckEeBtEligibilitySecurity) (*operations.CheckEeBtEligibilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ee-bt/eligibility"
 
@@ -103,11 +103,11 @@ func (s *ee) CheckEeBtEligibility(ctx context.Context, request operations.CheckE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *ee) CreatePinRequest(ctx context.Context, request operations.CreatePinR
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ee/pin"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EeCreatePinRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -164,7 +164,7 @@ func (s *ee) CreatePinRequest(ctx context.Context, request operations.CreatePinR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -289,7 +289,7 @@ func (s *ee) GetEligibleOffers(ctx context.Context, request operations.GetEligib
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ee/offers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EeOffersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -304,7 +304,7 @@ func (s *ee) GetEligibleOffers(ctx context.Context, request operations.GetEligib
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -363,14 +363,14 @@ func (s *ee) GetEligibleOffers(ctx context.Context, request operations.GetEligib
 // GetPlan - Returns the plan description for EE flow including additional description data.
 func (s *ee) GetPlan(ctx context.Context, request operations.GetPlanRequest) (*operations.GetPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ee/plans/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ee/plans/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -436,7 +436,7 @@ func (s *ee) GetEePlans(ctx context.Context, request operations.GetEePlansReques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -497,7 +497,7 @@ func (s *ee) ValidatePinRequest(ctx context.Context, request operations.Validate
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ee/pin"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EeValidatePinRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -512,7 +512,7 @@ func (s *ee) ValidatePinRequest(ctx context.Context, request operations.Validate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

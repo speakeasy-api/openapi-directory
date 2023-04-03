@@ -93,7 +93,7 @@ func New(opts ...SDKOption) *SDK {
 
 // GetAPIV1DonationsCarbonCalculate - Calculate shipping carbon offset
 // Calculates the donation amount (to CarbonFund 501\(c\)3) needed to offset a physical shipment. This calculation depends on the weight, primary transportation method, and distance of the shipment. Provide the distance of the shipment using the origin and destination address, or directly with the number of miles. For convenience, this endpoint also returns the id of the nonprofit CarbonFund, for making a subsequent donation to. See the [Carbon offsets guide](/recipes/carbon-offsets/) for more on using this endpoint.
-func (s *SDK) GetAPIV1DonationsCarbonCalculate(ctx context.Context, request operations.GetAPIV1DonationsCarbonCalculateRequest) (*operations.GetAPIV1DonationsCarbonCalculateResponse, error) {
+func (s *SDK) GetAPIV1DonationsCarbonCalculate(ctx context.Context, request operations.GetAPIV1DonationsCarbonCalculateRequest, security operations.GetAPIV1DonationsCarbonCalculateSecurity) (*operations.GetAPIV1DonationsCarbonCalculateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/donations/carbon_calculate"
 
@@ -102,11 +102,11 @@ func (s *SDK) GetAPIV1DonationsCarbonCalculate(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -133,7 +133,7 @@ func (s *SDK) GetAPIV1DonationsCarbonCalculate(ctx context.Context, request oper
 
 // GetAPIV1DonationsCarbonStats - Retrieve carbon offset stats
 // Measures your carbon offset impact in relatable terms. Provide the id of a donation to CarbonFund to see stats about that specific donation. If you omit the donation id, this endpoint returns aggregate stats for all of your CarbonFund donations.
-func (s *SDK) GetAPIV1DonationsCarbonStats(ctx context.Context, request operations.GetAPIV1DonationsCarbonStatsRequest) (*operations.GetAPIV1DonationsCarbonStatsResponse, error) {
+func (s *SDK) GetAPIV1DonationsCarbonStats(ctx context.Context, request operations.GetAPIV1DonationsCarbonStatsRequest, security operations.GetAPIV1DonationsCarbonStatsSecurity) (*operations.GetAPIV1DonationsCarbonStatsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/donations/carbon_stats"
 
@@ -142,11 +142,11 @@ func (s *SDK) GetAPIV1DonationsCarbonStats(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -173,7 +173,7 @@ func (s *SDK) GetAPIV1DonationsCarbonStats(ctx context.Context, request operatio
 
 // GetAPIV1DonationsCryptoCalculate - Calculate crypto carbon offset
 // Calculates the donation amount (to CarbonFund 501\(c\)3) needed to offset a cryptocurrency transaction. For convenience, this endpoint also returns the id of the nonprofit CarbonFund, for making a subsequent donation to. See the [Carbon offsets guide](/recipes/carbon-offsets/) for more on using this endpoint.
-func (s *SDK) GetAPIV1DonationsCryptoCalculate(ctx context.Context, request operations.GetAPIV1DonationsCryptoCalculateRequest) (*operations.GetAPIV1DonationsCryptoCalculateResponse, error) {
+func (s *SDK) GetAPIV1DonationsCryptoCalculate(ctx context.Context, request operations.GetAPIV1DonationsCryptoCalculateRequest, security operations.GetAPIV1DonationsCryptoCalculateSecurity) (*operations.GetAPIV1DonationsCryptoCalculateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/donations/crypto_calculate"
 
@@ -182,11 +182,11 @@ func (s *SDK) GetAPIV1DonationsCryptoCalculate(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -213,7 +213,7 @@ func (s *SDK) GetAPIV1DonationsCryptoCalculate(ctx context.Context, request oper
 
 // GetAPIV1DonationsIndex - List your donations
 // Retrieves a list of donations you've previously made. The donations are returned in order of creation, with the most recent donations appearing first. This endpoint is paginated.
-func (s *SDK) GetAPIV1DonationsIndex(ctx context.Context, request operations.GetAPIV1DonationsIndexRequest) (*operations.GetAPIV1DonationsIndexResponse, error) {
+func (s *SDK) GetAPIV1DonationsIndex(ctx context.Context, request operations.GetAPIV1DonationsIndexRequest, security operations.GetAPIV1DonationsIndexSecurity) (*operations.GetAPIV1DonationsIndexResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/donations/index"
 
@@ -222,11 +222,11 @@ func (s *SDK) GetAPIV1DonationsIndex(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -253,7 +253,7 @@ func (s *SDK) GetAPIV1DonationsIndex(ctx context.Context, request operations.Get
 
 // GetAPIV1DonationsShow - Retrieve a donation
 // Retrieves the details of a donation you've previously made.
-func (s *SDK) GetAPIV1DonationsShow(ctx context.Context, request operations.GetAPIV1DonationsShowRequest) (*operations.GetAPIV1DonationsShowResponse, error) {
+func (s *SDK) GetAPIV1DonationsShow(ctx context.Context, request operations.GetAPIV1DonationsShowRequest, security operations.GetAPIV1DonationsShowSecurity) (*operations.GetAPIV1DonationsShowResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/donations/show"
 
@@ -262,11 +262,11 @@ func (s *SDK) GetAPIV1DonationsShow(ctx context.Context, request operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,7 +293,7 @@ func (s *SDK) GetAPIV1DonationsShow(ctx context.Context, request operations.GetA
 
 // GetAPIV1NonprofitsList - Search a nonprofit
 // Retrieves a list of nonprofits whose names match the provided name. This endpoint is paginated.
-func (s *SDK) GetAPIV1NonprofitsList(ctx context.Context, request operations.GetAPIV1NonprofitsListRequest) (*operations.GetAPIV1NonprofitsListResponse, error) {
+func (s *SDK) GetAPIV1NonprofitsList(ctx context.Context, request operations.GetAPIV1NonprofitsListRequest, security operations.GetAPIV1NonprofitsListSecurity) (*operations.GetAPIV1NonprofitsListResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/nonprofits/list"
 
@@ -302,11 +302,11 @@ func (s *SDK) GetAPIV1NonprofitsList(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -333,7 +333,7 @@ func (s *SDK) GetAPIV1NonprofitsList(ctx context.Context, request operations.Get
 
 // GetAPIV1NonprofitsShow - Show a nonprofit
 // Retrieves information for a nonprofit.
-func (s *SDK) GetAPIV1NonprofitsShow(ctx context.Context, request operations.GetAPIV1NonprofitsShowRequest) (*operations.GetAPIV1NonprofitsShowResponse, error) {
+func (s *SDK) GetAPIV1NonprofitsShow(ctx context.Context, request operations.GetAPIV1NonprofitsShowRequest, security operations.GetAPIV1NonprofitsShowSecurity) (*operations.GetAPIV1NonprofitsShowResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/nonprofits/show"
 
@@ -342,11 +342,11 @@ func (s *SDK) GetAPIV1NonprofitsShow(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -373,7 +373,7 @@ func (s *SDK) GetAPIV1NonprofitsShow(ctx context.Context, request operations.Get
 
 // PostAPIV1DonationsCreate - Create a donation
 // Creates a donation to any nonprofit. CHANGE keeps track of your donations, bills you at the end of the month, and handles the nonprofit payouts for you.
-func (s *SDK) PostAPIV1DonationsCreate(ctx context.Context, request operations.PostAPIV1DonationsCreateRequest) (*operations.PostAPIV1DonationsCreateResponse, error) {
+func (s *SDK) PostAPIV1DonationsCreate(ctx context.Context, request operations.PostAPIV1DonationsCreateRequest, security operations.PostAPIV1DonationsCreateSecurity) (*operations.PostAPIV1DonationsCreateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/donations/create"
 
@@ -382,11 +382,11 @@ func (s *SDK) PostAPIV1DonationsCreate(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

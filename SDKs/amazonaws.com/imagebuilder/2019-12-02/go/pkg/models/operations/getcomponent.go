@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetComponentQueryParams struct {
-	// The Amazon Resource Name (ARN) of the component that you want to retrieve. Regex requires "/\d+$" suffix.
-	ComponentBuildVersionArn string `queryParam:"style=form,explode=true,name=componentBuildVersionArn"`
-}
-
-type GetComponentHeaders struct {
+type GetComponentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetComponentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetComponentRequest struct {
-	QueryParams GetComponentQueryParams
-	Headers     GetComponentHeaders
+	// The Amazon Resource Name (ARN) of the component that you want to retrieve. Regex requires "/\d+$" suffix.
+	ComponentBuildVersionArn string `queryParam:"style=form,explode=true,name=componentBuildVersionArn"`
 }
 
 type GetComponentResponse struct {

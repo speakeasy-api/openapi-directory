@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestBuyRecommendationQueryParams struct {
+type RequestBuyRecommendationRequest struct {
 	// The url of the requested product.
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type RequestBuyRecommendationRequest struct {
-	QueryParams RequestBuyRecommendationQueryParams
 }
 
 type RequestBuyRecommendationResponse struct {

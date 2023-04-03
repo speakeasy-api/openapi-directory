@@ -38,14 +38,14 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // It supports pagination, each page will contain `30` users by default.
 func (s *users) GetOrgUsers(ctx context.Context, request operations.GetOrgUsersRequest) (*operations.GetOrgUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,7 +91,7 @@ func (s *users) GetOrgUsers(ctx context.Context, request operations.GetOrgUsersR
 // For complete documentation, see the v0 API docs: https://developers.forem.com/api/v0#tag/users/operation/getUser
 func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +151,7 @@ func (s *users) GetUserAllArticles(ctx context.Context, request operations.GetUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -207,7 +207,7 @@ func (s *users) GetUserArticles(ctx context.Context, request operations.GetUserA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -309,7 +309,7 @@ func (s *users) GetUserPublishedArticles(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -365,7 +365,7 @@ func (s *users) GetUserUnpublishedArticles(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -408,7 +408,7 @@ func (s *users) GetUserUnpublishedArticles(ctx context.Context, request operatio
 // This endpoint allows the client to trigger an invitation to the provided email address.
 //
 //	It requires a token from a user with `super_admin` privileges.
-func (s *users) PostAdminUsersCreate(ctx context.Context, request operations.PostAdminUsersCreateRequest) (*operations.PostAdminUsersCreateResponse, error) {
+func (s *users) PostAdminUsersCreate(ctx context.Context, request shared.UserInviteParam) (*operations.PostAdminUsersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/admin/users"
 
@@ -464,7 +464,7 @@ func (s *users) PostAdminUsersCreate(ctx context.Context, request operations.Pos
 // in the UI, so if you want them to know about this, you must notify them.
 func (s *users) SuspendUser(ctx context.Context, request operations.SuspendUserRequest) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/suspend", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/suspend", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -516,7 +516,7 @@ func (s *users) SuspendUser(ctx context.Context, request operations.SuspendUserR
 // request is completed on the server.
 func (s *users) UnpublishUser(ctx context.Context, request operations.UnpublishUserRequest) (*operations.UnpublishUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/unpublish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/unpublish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

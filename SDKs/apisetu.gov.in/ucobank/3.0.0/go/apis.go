@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Tdcer - TDS Certificate
 // API to verify TDS Certificate.
-func (s *apIs) Tdcer(ctx context.Context, request operations.TdcerRequest) (*operations.TdcerResponse, error) {
+func (s *apIs) Tdcer(ctx context.Context, request operations.TdcerRequestBody, security operations.TdcerSecurity) (*operations.TdcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tdcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Tdcer(ctx context.Context, request operations.TdcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

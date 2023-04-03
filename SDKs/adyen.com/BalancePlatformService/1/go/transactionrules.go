@@ -34,16 +34,16 @@ func newTransactionRules(defaultClient, securityClient HTTPClient, serverURL, la
 
 // DeleteTransactionRulesTransactionRuleID - Delete a transaction rule
 // Deletes a transaction rule.
-func (s *transactionRules) DeleteTransactionRulesTransactionRuleID(ctx context.Context, request operations.DeleteTransactionRulesTransactionRuleIDRequest) (*operations.DeleteTransactionRulesTransactionRuleIDResponse, error) {
+func (s *transactionRules) DeleteTransactionRulesTransactionRuleID(ctx context.Context, request operations.DeleteTransactionRulesTransactionRuleIDRequest, security operations.DeleteTransactionRulesTransactionRuleIDSecurity) (*operations.DeleteTransactionRulesTransactionRuleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *transactionRules) DeleteTransactionRulesTransactionRuleID(ctx context.C
 
 // GetTransactionRulesTransactionRuleID - Get a transaction rule
 // Returns the details of a transaction rule.
-func (s *transactionRules) GetTransactionRulesTransactionRuleID(ctx context.Context, request operations.GetTransactionRulesTransactionRuleIDRequest) (*operations.GetTransactionRulesTransactionRuleIDResponse, error) {
+func (s *transactionRules) GetTransactionRulesTransactionRuleID(ctx context.Context, request operations.GetTransactionRulesTransactionRuleIDRequest, security operations.GetTransactionRulesTransactionRuleIDSecurity) (*operations.GetTransactionRulesTransactionRuleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -164,11 +164,11 @@ func (s *transactionRules) GetTransactionRulesTransactionRuleID(ctx context.Cont
 // * To update only the status of a transaction rule, send only the `status` parameter. All other parameters not provided in the request are left unchanged.
 //
 // * When updating any other parameter, you need to send all existing resource parameters. If you omit a parameter in the request, that parameter is removed from the resource.
-func (s *transactionRules) PatchTransactionRulesTransactionRuleID(ctx context.Context, request operations.PatchTransactionRulesTransactionRuleIDRequest) (*operations.PatchTransactionRulesTransactionRuleIDResponse, error) {
+func (s *transactionRules) PatchTransactionRulesTransactionRuleID(ctx context.Context, request operations.PatchTransactionRulesTransactionRuleIDRequest, security operations.PatchTransactionRulesTransactionRuleIDSecurity) (*operations.PatchTransactionRulesTransactionRuleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransactionRuleInfo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -180,7 +180,7 @@ func (s *transactionRules) PatchTransactionRulesTransactionRuleID(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -234,7 +234,7 @@ func (s *transactionRules) PatchTransactionRulesTransactionRuleID(ctx context.Co
 
 // PostTransactionRules - Create a transaction rule
 // Creates a [transaction rule](https://docs.adyen.com/issuing/transaction-rules). When your user makes a transaction with their Adyen-issued card, the transaction is allowed or declined based on the conditions and outcome defined in the transaction rule. You can apply the transaction rule to several cards, such as all the cards in your platform, or to a specific card. For use cases, see [examples](https://docs.adyen.com/issuing/transaction-rules/examples).
-func (s *transactionRules) PostTransactionRules(ctx context.Context, request operations.PostTransactionRulesRequest) (*operations.PostTransactionRulesResponse, error) {
+func (s *transactionRules) PostTransactionRules(ctx context.Context, request shared.TransactionRuleInfo, security operations.PostTransactionRulesSecurity) (*operations.PostTransactionRulesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transactionRules"
 
@@ -250,7 +250,7 @@ func (s *transactionRules) PostTransactionRules(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

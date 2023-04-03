@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPatchNotesJSONPathParams struct {
+type GroupsPatchNotesJSONRequest struct {
+	// Patch requests
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 	// Id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsPatchNotesJSONRequest struct {
-	PathParams GroupsPatchNotesJSONPathParams
-	// Patch requests
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 }
 
 type GroupsPatchNotesJSONResponse struct {

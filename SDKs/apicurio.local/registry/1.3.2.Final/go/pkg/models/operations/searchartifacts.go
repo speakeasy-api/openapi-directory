@@ -63,7 +63,7 @@ func (e *SearchArtifactsOverEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SearchArtifactsQueryParams struct {
+type SearchArtifactsRequest struct {
 	// The number of artifacts to return.
 	Limit int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The number of artifacts to skip before starting to collect the result set.
@@ -74,10 +74,6 @@ type SearchArtifactsQueryParams struct {
 	Over *SearchArtifactsOverEnum `queryParam:"style=form,explode=true,name=over"`
 	// The text to search.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type SearchArtifactsRequest struct {
-	QueryParams SearchArtifactsQueryParams
 }
 
 type SearchArtifactsResponse struct {

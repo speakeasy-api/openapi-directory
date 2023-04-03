@@ -50,30 +50,22 @@ func (e *GETDescribeAnalysisSchemesVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribeAnalysisSchemesQueryParams struct {
+type GETDescribeAnalysisSchemesRequest struct {
 	Action GETDescribeAnalysisSchemesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The analysis schemes you want to describe.
 	AnalysisSchemeNames []string `queryParam:"style=form,explode=true,name=AnalysisSchemeNames"`
 	// Whether to display the deployed configuration (<code>true</code>) or include any pending changes (<code>false</code>). Defaults to <code>false</code>.
 	Deployed *bool `queryParam:"style=form,explode=true,name=Deployed"`
 	// The name of the domain you want to describe.
-	DomainName string                                `queryParam:"style=form,explode=true,name=DomainName"`
-	Version    GETDescribeAnalysisSchemesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAnalysisSchemesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAnalysisSchemesRequest struct {
-	QueryParams GETDescribeAnalysisSchemesQueryParams
-	Headers     GETDescribeAnalysisSchemesHeaders
+	DomainName        string                                `queryParam:"style=form,explode=true,name=DomainName"`
+	Version           GETDescribeAnalysisSchemesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAnalysisSchemesResponse struct {

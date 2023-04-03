@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestAuditNodeInfoQueryParams struct {
+type RequestAuditNodeInfoRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Range limit.
@@ -26,16 +28,6 @@ type RequestAuditNodeInfoQueryParams struct {
 	ParentID *int64 `queryParam:"style=form,explode=true,name=parent_id"`
 	// Sort string
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type RequestAuditNodeInfoHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestAuditNodeInfoRequest struct {
-	QueryParams RequestAuditNodeInfoQueryParams
-	Headers     RequestAuditNodeInfoHeaders
 }
 
 type RequestAuditNodeInfoResponse struct {

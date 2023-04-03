@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResiliencyPoliciesQueryParams struct {
-	// The maximum number of results to include in the response. If more results exist than the specified <code>MaxResults</code> value, a token is included in the response so that the remaining results can be retrieved.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Null, or the token from a previous call to get the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The name of the policy
-	PolicyName *string `queryParam:"style=form,explode=true,name=policyName"`
-}
-
-type ListResiliencyPoliciesHeaders struct {
+type ListResiliencyPoliciesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListResiliencyPoliciesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListResiliencyPoliciesRequest struct {
-	QueryParams ListResiliencyPoliciesQueryParams
-	Headers     ListResiliencyPoliciesHeaders
+	// The maximum number of results to include in the response. If more results exist than the specified <code>MaxResults</code> value, a token is included in the response so that the remaining results can be retrieved.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Null, or the token from a previous call to get the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name of the policy
+	PolicyName *string `queryParam:"style=form,explode=true,name=policyName"`
 }
 
 type ListResiliencyPoliciesResponse struct {

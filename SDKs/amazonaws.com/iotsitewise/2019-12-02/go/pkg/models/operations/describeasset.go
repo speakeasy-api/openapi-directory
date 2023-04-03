@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAssetPathParams struct {
-	// The ID of the asset.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-}
-
-type DescribeAssetQueryParams struct {
-	//  Whether or not to exclude asset properties from the response.
-	ExcludeProperties *bool `queryParam:"style=form,explode=true,name=excludeProperties"`
-}
-
-type DescribeAssetHeaders struct {
+type DescribeAssetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DescribeAssetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAssetRequest struct {
-	PathParams  DescribeAssetPathParams
-	QueryParams DescribeAssetQueryParams
-	Headers     DescribeAssetHeaders
+	// The ID of the asset.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
+	//  Whether or not to exclude asset properties from the response.
+	ExcludeProperties *bool `queryParam:"style=form,explode=true,name=excludeProperties"`
 }
 
 type DescribeAssetResponse struct {

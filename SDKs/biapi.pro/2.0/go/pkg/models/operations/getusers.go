@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// searches a user by mail (if it contains no '@', '@biapi.pro' will be added at the end)
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 // GetUsers200ApplicationJSON - users

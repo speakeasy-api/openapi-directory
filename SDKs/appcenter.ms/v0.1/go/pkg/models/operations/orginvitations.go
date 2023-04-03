@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrgInvitationsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type OrgInvitationsPathParams struct {
+type OrgInvitationsRequest struct {
+	// allow empty body for custom http-client lib
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The email address of the user to send the password reset mail to.
 	Email string `pathParam:"style=simple,explode=false,name=email"`
 	// The organization's name
 	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-}
-
-type OrgInvitationsRequest struct {
-	PathParams OrgInvitationsPathParams
-	// allow empty body for custom http-client lib
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security OrgInvitationsSecurity
 }
 
 type OrgInvitationsDefaultApplicationJSONErrorCodeEnum string

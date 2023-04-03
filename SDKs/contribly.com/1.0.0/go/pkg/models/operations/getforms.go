@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFormsQueryParams struct {
+type GetFormsRequest struct {
 	// Restrict results to forms owned by this user.
 	OwnedBy string `queryParam:"style=form,explode=true,name=ownedBy"`
-}
-
-type GetFormsRequest struct {
-	QueryParams GetFormsQueryParams
 }
 
 type GetFormsResponse struct {

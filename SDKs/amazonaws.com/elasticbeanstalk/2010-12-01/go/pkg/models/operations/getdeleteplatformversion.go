@@ -50,26 +50,18 @@ func (e *GETDeletePlatformVersionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeletePlatformVersionQueryParams struct {
+type GETDeletePlatformVersionRequest struct {
 	Action GETDeletePlatformVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ARN of the version of the custom platform.
-	PlatformArn *string                             `queryParam:"style=form,explode=true,name=PlatformArn"`
-	Version     GETDeletePlatformVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeletePlatformVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeletePlatformVersionRequest struct {
-	QueryParams GETDeletePlatformVersionQueryParams
-	Headers     GETDeletePlatformVersionHeaders
+	PlatformArn       *string                             `queryParam:"style=form,explode=true,name=PlatformArn"`
+	Version           GETDeletePlatformVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeletePlatformVersionResponse struct {

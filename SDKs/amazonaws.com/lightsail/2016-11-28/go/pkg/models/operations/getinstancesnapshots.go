@@ -30,20 +30,16 @@ func (e *GetInstanceSnapshotsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetInstanceSnapshotsHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetInstanceSnapshotsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetInstanceSnapshotsRequest struct {
-	Headers GetInstanceSnapshotsHeaders
-	Request shared.GetInstanceSnapshotsRequest `request:"mediaType=application/json"`
+	GetInstanceSnapshotsRequest shared.GetInstanceSnapshotsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  GetInstanceSnapshotsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetInstanceSnapshotsResponse struct {

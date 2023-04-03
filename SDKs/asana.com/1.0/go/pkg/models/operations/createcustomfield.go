@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCustomFieldQueryParams struct {
+// CreateCustomFieldRequestBodyInput - The custom field object to create.
+type CreateCustomFieldRequestBodyInput struct {
+	Data *shared.CustomFieldRequestInput `json:"data,omitempty"`
+}
+
+type CreateCustomFieldRequest struct {
+	// The custom field object to create.
+	RequestBody *CreateCustomFieldRequestBodyInput `request:"mediaType=application/json"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,17 +29,6 @@ type CreateCustomFieldQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// CreateCustomFieldRequestBodyInput - The custom field object to create.
-type CreateCustomFieldRequestBodyInput struct {
-	Data *shared.CustomFieldRequestInput `json:"data,omitempty"`
-}
-
-type CreateCustomFieldRequest struct {
-	QueryParams CreateCustomFieldQueryParams
-	// The custom field object to create.
-	Request *CreateCustomFieldRequestBodyInput `request:"mediaType=application/json"`
 }
 
 // CreateCustomField201ApplicationJSON - Custom field successfully created.

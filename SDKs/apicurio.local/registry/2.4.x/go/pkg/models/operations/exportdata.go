@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportDataQueryParams struct {
+type ExportDataRequest struct {
 	// Indicates if the operation is done for a browser.  If true, the response will be a JSON payload with a property called `href`.  This `href` will be a single-use, naked download link suitable for use by a web browser to download the content.
 	ForBrowser *bool `queryParam:"style=form,explode=true,name=forBrowser"`
-}
-
-type ExportDataRequest struct {
-	QueryParams ExportDataQueryParams
 }
 
 type ExportDataResponse struct {

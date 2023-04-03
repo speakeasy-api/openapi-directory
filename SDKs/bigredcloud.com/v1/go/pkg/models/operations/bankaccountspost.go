@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type BankAccountsPostRequest struct {
-	// Information of Bank Account to create.
-	Request shared.BankAccountDto `request:"mediaType=application/json"`
-}
 
 type BankAccountsPostResponse struct {
 	// OK

@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFeaturePathParams struct {
-	// The name of the feature to be updated.
-	Feature string `pathParam:"style=simple,explode=false,name=feature"`
-	// The name or ARN of the project that contains the feature to be updated.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type UpdateFeatureHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFeatureRequestBodyEvaluationStrategyEnum - Specify <code>ALL_RULES</code> to activate the traffic allocation specified by any ongoing launches or experiments. Specify <code>DEFAULT_VARIATION</code> to serve the default variation to all users instead.
 type UpdateFeatureRequestBodyEvaluationStrategyEnum string
 
@@ -66,9 +49,18 @@ type UpdateFeatureRequestBody struct {
 }
 
 type UpdateFeatureRequest struct {
-	PathParams UpdateFeaturePathParams
-	Headers    UpdateFeatureHeaders
-	Request    UpdateFeatureRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateFeatureRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the feature to be updated.
+	Feature string `pathParam:"style=simple,explode=false,name=feature"`
+	// The name or ARN of the project that contains the feature to be updated.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type UpdateFeatureResponse struct {

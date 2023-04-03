@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeVirtualServicePathParams struct {
-	// The name of the service mesh that the virtual service resides in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual service to describe.
-	VirtualServiceName string `pathParam:"style=simple,explode=false,name=virtualServiceName"`
-}
-
-type DescribeVirtualServiceQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type DescribeVirtualServiceHeaders struct {
+type DescribeVirtualServiceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DescribeVirtualServiceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeVirtualServiceRequest struct {
-	PathParams  DescribeVirtualServicePathParams
-	QueryParams DescribeVirtualServiceQueryParams
-	Headers     DescribeVirtualServiceHeaders
+	// The name of the service mesh that the virtual service resides in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
+	// The name of the virtual service to describe.
+	VirtualServiceName string `pathParam:"style=simple,explode=false,name=virtualServiceName"`
 }
 
 type DescribeVirtualServiceResponse struct {

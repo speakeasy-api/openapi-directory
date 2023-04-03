@@ -50,7 +50,7 @@ func (e *GETStartDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON
 	}
 }
 
-type GETStartDBInstanceAutomatedBackupsReplicationQueryParams struct {
+type GETStartDBInstanceAutomatedBackupsReplicationRequest struct {
 	Action GETStartDBInstanceAutomatedBackupsReplicationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The retention period for the replicated automated backups.
 	BackupRetentionPeriod *int64 `queryParam:"style=form,explode=true,name=BackupRetentionPeriod"`
@@ -61,21 +61,13 @@ type GETStartDBInstanceAutomatedBackupsReplicationQueryParams struct {
 	// The Amazon Resource Name (ARN) of the source DB instance for the replicated automated backups, for example, <code>arn:aws:rds:us-west-2:123456789012:db:mydatabase</code>.
 	SourceDBInstanceArn string                                                   `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
 	Version             GETStartDBInstanceAutomatedBackupsReplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStartDBInstanceAutomatedBackupsReplicationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStartDBInstanceAutomatedBackupsReplicationRequest struct {
-	QueryParams GETStartDBInstanceAutomatedBackupsReplicationQueryParams
-	Headers     GETStartDBInstanceAutomatedBackupsReplicationHeaders
+	XAmzAlgorithm       *string                                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStartDBInstanceAutomatedBackupsReplicationResponse struct {

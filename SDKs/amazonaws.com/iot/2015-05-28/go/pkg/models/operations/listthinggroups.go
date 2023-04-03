@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListThingGroupsQueryParams struct {
+type ListThingGroupsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of results to return at one time.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// A filter that limits the results to those with the specified name prefix.
@@ -18,21 +25,6 @@ type ListThingGroupsQueryParams struct {
 	ParentGroup *string `queryParam:"style=form,explode=true,name=parentGroup"`
 	// If true, return child groups as well.
 	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
-}
-
-type ListThingGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListThingGroupsRequest struct {
-	QueryParams ListThingGroupsQueryParams
-	Headers     ListThingGroupsHeaders
 }
 
 type ListThingGroupsResponse struct {

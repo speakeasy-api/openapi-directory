@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelJobRequest struct {
-	Request shared.JobIDRequestBody `request:"mediaType=application/json"`
-}
-
 type CancelJobResponse struct {
 	ContentType string
 	// Input failed validation

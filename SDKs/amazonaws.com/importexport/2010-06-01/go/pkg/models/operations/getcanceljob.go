@@ -71,7 +71,7 @@ func (e *GETCancelJobVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCancelJobQueryParams struct {
+type GETCancelJobRequest struct {
 	APIVersion       *string                   `queryParam:"style=form,explode=true,name=APIVersion"`
 	AWSAccessKeyID   string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GETCancelJobActionEnum    `queryParam:"style=form,explode=true,name=Action"`
@@ -82,10 +82,6 @@ type GETCancelJobQueryParams struct {
 	SignatureVersion string                    `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                    `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETCancelJobVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelJobRequest struct {
-	QueryParams GETCancelJobQueryParams
 }
 
 type GETCancelJobResponse struct {

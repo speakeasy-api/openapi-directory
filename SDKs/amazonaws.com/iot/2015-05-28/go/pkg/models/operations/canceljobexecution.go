@@ -6,28 +6,6 @@ import (
 	"net/http"
 )
 
-type CancelJobExecutionPathParams struct {
-	// The ID of the job to be canceled.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The name of the thing whose execution of the job will be canceled.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type CancelJobExecutionQueryParams struct {
-	// <p>(Optional) If <code>true</code> the job execution will be canceled if it has status IN_PROGRESS or QUEUED, otherwise the job execution will be canceled only if it has status QUEUED. If you attempt to cancel a job execution that is IN_PROGRESS, and you do not set <code>force</code> to <code>true</code>, then an <code>InvalidStateTransitionException</code> will be thrown. The default is <code>false</code>.</p> <p>Canceling a job execution which is "IN_PROGRESS", will cause the device to be unable to update the job execution status. Use caution and ensure that the device is able to recover to a valid state.</p>
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-}
-
-type CancelJobExecutionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CancelJobExecutionRequestBody struct {
 	// (Optional) The expected current version of the job execution. Each time you update the job execution, its version is incremented. If the version of the job execution stored in Jobs does not match, the update is rejected with a VersionMismatch error, and an ErrorResponse that contains the current job execution status data is returned. (This makes it unnecessary to perform a separate DescribeJobExecution request in order to obtain the job execution status data.)
 	ExpectedVersion *int64 `json:"expectedVersion,omitempty"`
@@ -36,10 +14,20 @@ type CancelJobExecutionRequestBody struct {
 }
 
 type CancelJobExecutionRequest struct {
-	PathParams  CancelJobExecutionPathParams
-	QueryParams CancelJobExecutionQueryParams
-	Headers     CancelJobExecutionHeaders
-	Request     CancelJobExecutionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CancelJobExecutionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>(Optional) If <code>true</code> the job execution will be canceled if it has status IN_PROGRESS or QUEUED, otherwise the job execution will be canceled only if it has status QUEUED. If you attempt to cancel a job execution that is IN_PROGRESS, and you do not set <code>force</code> to <code>true</code>, then an <code>InvalidStateTransitionException</code> will be thrown. The default is <code>false</code>.</p> <p>Canceling a job execution which is "IN_PROGRESS", will cause the device to be unable to update the job execution status. Use caution and ensure that the device is able to recover to a valid state.</p>
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
+	// The ID of the job to be canceled.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// The name of the thing whose execution of the job will be canceled.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type CancelJobExecutionResponse struct {

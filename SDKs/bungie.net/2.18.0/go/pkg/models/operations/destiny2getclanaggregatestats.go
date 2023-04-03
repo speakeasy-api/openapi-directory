@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetClanAggregateStatsPathParams struct {
+type Destiny2GetClanAggregateStatsRequest struct {
 	// Group ID of the clan whose leaderboards you wish to fetch.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type Destiny2GetClanAggregateStatsQueryParams struct {
 	// List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 	Modes *string `queryParam:"style=form,explode=true,name=modes"`
-}
-
-type Destiny2GetClanAggregateStatsRequest struct {
-	PathParams  Destiny2GetClanAggregateStatsPathParams
-	QueryParams Destiny2GetClanAggregateStatsQueryParams
 }
 
 // Destiny2GetClanAggregateStats200Wildcard - Look at the Response property for more information about the nature of this response

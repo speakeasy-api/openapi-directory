@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type LegacyCodePushAcquisitionUpdateCheckSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type LegacyCodePushAcquisitionUpdateCheckQueryParams struct {
+type LegacyCodePushAcquisitionUpdateCheckRequest struct {
 	AppVersion     *string `queryParam:"style=form,explode=true,name=appVersion"`
 	ClientUniqueID *string `queryParam:"style=form,explode=true,name=clientUniqueId"`
 	DeploymentKey  *string `queryParam:"style=form,explode=true,name=deploymentKey"`
 	IsCompanion    *string `queryParam:"style=form,explode=true,name=isCompanion"`
 	Label          *string `queryParam:"style=form,explode=true,name=label"`
 	PackageHash    *string `queryParam:"style=form,explode=true,name=packageHash"`
-}
-
-type LegacyCodePushAcquisitionUpdateCheckRequest struct {
-	QueryParams LegacyCodePushAcquisitionUpdateCheckQueryParams
-	Security    LegacyCodePushAcquisitionUpdateCheckSecurity
 }
 
 // LegacyCodePushAcquisitionUpdateCheckDefaultApplicationJSON - Error

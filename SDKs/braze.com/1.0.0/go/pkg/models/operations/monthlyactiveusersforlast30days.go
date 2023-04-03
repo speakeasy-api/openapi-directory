@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type MonthlyActiveUsersForLast30DaysQueryParams struct {
+type MonthlyActiveUsersForLast30DaysRequest struct {
 	// (Optional) String
 	//
 	// App API identifier; if excluded, results for all apps in app group will be returned
@@ -19,10 +19,6 @@ type MonthlyActiveUsersForLast30DaysQueryParams struct {
 	//
 	// Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive
 	Length *string `queryParam:"style=form,explode=true,name=length"`
-}
-
-type MonthlyActiveUsersForLast30DaysRequest struct {
-	QueryParams MonthlyActiveUsersForLast30DaysQueryParams
 }
 
 type MonthlyActiveUsersForLast30DaysResponse struct {

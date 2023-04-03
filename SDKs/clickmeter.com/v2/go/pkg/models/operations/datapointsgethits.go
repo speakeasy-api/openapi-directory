@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsGetHitsPathParams struct {
-	// Id of the datapoint
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // DataPointsGetHitsFilterEnum - Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 type DataPointsGetHitsFilterEnum string
 
@@ -92,11 +87,13 @@ func (e *DataPointsGetHitsTimeframeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DataPointsGetHitsQueryParams struct {
+type DataPointsGetHitsRequest struct {
 	// Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 	Filter *DataPointsGetHitsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
+	// Id of the datapoint
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Limit results to this number
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Offset where to start from (it's the lastKey field in the response object)
@@ -105,11 +102,6 @@ type DataPointsGetHitsQueryParams struct {
 	Timeframe DataPointsGetHitsTimeframeEnum `queryParam:"style=form,explode=true,name=timeframe"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type DataPointsGetHitsRequest struct {
-	PathParams  DataPointsGetHitsPathParams
-	QueryParams DataPointsGetHitsQueryParams
 }
 
 type DataPointsGetHitsResponse struct {

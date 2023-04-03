@@ -8,19 +8,14 @@ import (
 )
 
 type StorageGetFileSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type StorageGetFilePathParams struct {
-	// File unique ID.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type StorageGetFileRequest struct {
-	PathParams StorageGetFilePathParams
-	Security   StorageGetFileSecurity
+	// File unique ID.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 type StorageGetFileResponse struct {

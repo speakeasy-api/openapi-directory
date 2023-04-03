@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SearchQueryParams struct {
+type SearchRequest struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The query string needs to be url encoded and is made up of the following options:
 	// - Search term. This is just a string. Usually it would be the first item in the query.
@@ -35,10 +35,6 @@ type SearchQueryParams struct {
 	// ```
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-}
-
-type SearchRequest struct {
-	QueryParams SearchQueryParams
 }
 
 type Search200ApplicationJSONGroupedSearchResult struct {

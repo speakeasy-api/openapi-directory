@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteStorePathParams struct {
+type DeleteStoreRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type DeleteStoreRequest struct {
-	PathParams DeleteStorePathParams
 }
 
 type DeleteStoreResponse struct {

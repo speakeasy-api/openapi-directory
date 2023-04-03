@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContainersGroupsNameOrIDUnmaproutePathParams struct {
-	// The name or unique ID (UUID) of the container group that you want to inspect.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PostContainersGroupsNameOrIDUnmaprouteHeaders struct {
+type PostContainersGroupsNameOrIDUnmaprouteRequest struct {
+	// The public route that is unmapped from the container group. A public route consists of the host name and domain.
+	Route shared.Route `request:"mediaType=application/json"`
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersGroupsNameOrIDUnmaprouteRequest struct {
-	PathParams PostContainersGroupsNameOrIDUnmaproutePathParams
-	Headers    PostContainersGroupsNameOrIDUnmaprouteHeaders
-	// The public route that is unmapped from the container group. A public route consists of the host name and domain.
-	Request shared.Route `request:"mediaType=application/json"`
+	// The name or unique ID (UUID) of the container group that you want to inspect.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type PostContainersGroupsNameOrIDUnmaprouteResponse struct {

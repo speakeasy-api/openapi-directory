@@ -62,7 +62,7 @@ func (s *shares) CreateDownloadShare(ctx context.Context, request operations.Cre
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/shares/downloads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateDownloadShareRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -77,7 +77,7 @@ func (s *shares) CreateDownloadShare(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -169,7 +169,7 @@ func (s *shares) CreateUploadShare(ctx context.Context, request operations.Creat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/shares/uploads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUploadShareRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -184,7 +184,7 @@ func (s *shares) CreateUploadShare(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -268,7 +268,7 @@ func (s *shares) DeleteDownloadShares(ctx context.Context, request operations.De
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/shares/downloads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteDownloadSharesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *shares) DeleteDownloadShares(ctx context.Context, request operations.De
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -348,7 +348,7 @@ func (s *shares) DeleteUploadShares(ctx context.Context, request operations.Dele
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/shares/uploads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteUploadSharesRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -363,7 +363,7 @@ func (s *shares) DeleteUploadShares(ctx context.Context, request operations.Dele
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -424,14 +424,14 @@ func (s *shares) DeleteUploadShares(ctx context.Context, request operations.Dele
 // Only the Download Share is removed; the referenced file or container persists.
 func (s *shares) RemoveDownloadShare(ctx context.Context, request operations.RemoveDownloadShareRequest) (*operations.RemoveDownloadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -492,14 +492,14 @@ func (s *shares) RemoveDownloadShare(ctx context.Context, request operations.Rem
 // Only the Upload Share is removed; already uploaded files and the target container persist.
 func (s *shares) RemoveUploadShare(ctx context.Context, request operations.RemoveUploadShareRequest) (*operations.RemoveUploadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -560,14 +560,14 @@ func (s *shares) RemoveUploadShare(ctx context.Context, request operations.Remov
 // None.
 func (s *shares) RequestDownloadShare(ctx context.Context, request operations.RequestDownloadShareRequest) (*operations.RequestDownloadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -637,14 +637,14 @@ func (s *shares) RequestDownloadShare(ctx context.Context, request operations.Re
 // None.
 func (s *shares) RequestDownloadShareQr(ctx context.Context, request operations.RequestDownloadShareQrRequest) (*operations.RequestDownloadShareQrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}/qr", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}/qr", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -790,9 +790,9 @@ func (s *shares) RequestDownloadShares(ctx context.Context, request operations.R
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -860,14 +860,14 @@ func (s *shares) RequestDownloadShares(ctx context.Context, request operations.R
 // None.
 func (s *shares) RequestUploadShare(ctx context.Context, request operations.RequestUploadShareRequest) (*operations.RequestUploadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -937,14 +937,14 @@ func (s *shares) RequestUploadShare(ctx context.Context, request operations.Requ
 // None.
 func (s *shares) RequestUploadShareQr(ctx context.Context, request operations.RequestUploadShareQrRequest) (*operations.RequestUploadShareQrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}/qr", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}/qr", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1089,9 +1089,9 @@ func (s *shares) RequestUploadShares(ctx context.Context, request operations.Req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1162,9 +1162,9 @@ func (s *shares) RequestUploadShares(ctx context.Context, request operations.Req
 // * Forbidden characters in the email body: [`<`, `>`]
 func (s *shares) SendDownloadShareLinkViaEmail(ctx context.Context, request operations.SendDownloadShareLinkViaEmailRequest) (*operations.SendDownloadShareLinkViaEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}/email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DownloadShareLinkEmail", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1179,7 +1179,7 @@ func (s *shares) SendDownloadShareLinkViaEmail(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1243,9 +1243,9 @@ func (s *shares) SendDownloadShareLinkViaEmail(ctx context.Context, request oper
 // * Forbidden characters in the email body: [`<`, `>`]
 func (s *shares) SendUploadShareLinkViaEmail(ctx context.Context, request operations.SendUploadShareLinkViaEmailRequest) (*operations.SendUploadShareLinkViaEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}/email", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}/email", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UploadShareLinkEmail", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1260,7 +1260,7 @@ func (s *shares) SendUploadShareLinkViaEmail(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1330,9 +1330,9 @@ func (s *shares) SendUploadShareLinkViaEmail(ctx context.Context, request operat
 // may not be displayed correctly in short messages (SMS).
 func (s *shares) UpdateDownloadShare(ctx context.Context, request operations.UpdateDownloadShareRequest) (*operations.UpdateDownloadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/downloads/{share_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDownloadShareRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1347,7 +1347,7 @@ func (s *shares) UpdateDownloadShare(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1431,7 +1431,7 @@ func (s *shares) UpdateDownloadShares(ctx context.Context, request operations.Up
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/shares/downloads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateDownloadSharesBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1446,7 +1446,7 @@ func (s *shares) UpdateDownloadShares(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1521,9 +1521,9 @@ func (s *shares) UpdateDownloadShares(ctx context.Context, request operations.Up
 // may not be displayed correctly in short messages (SMS).
 func (s *shares) UpdateUploadShare(ctx context.Context, request operations.UpdateUploadShareRequest) (*operations.UpdateUploadShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/shares/uploads/{share_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateUploadShareRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1538,7 +1538,7 @@ func (s *shares) UpdateUploadShare(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1622,7 +1622,7 @@ func (s *shares) UpdateUploadShares(ctx context.Context, request operations.Upda
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/shares/uploads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateUploadSharesBulkRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1637,7 +1637,7 @@ func (s *shares) UpdateUploadShares(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

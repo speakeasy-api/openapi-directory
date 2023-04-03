@@ -13,45 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateNodeRequest{
-        Headers: operations.AssociateNodeHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "OpsWorksCM_V2016_11_01.AssociateNode",
-        },
-        Request: shared.AssociateNodeRequest{
+        AssociateNodeRequest: shared.AssociateNodeRequest{
             EngineAttributes: []shared.EngineAttribute{
                 shared.EngineAttribute{
-                    Name: "vel",
-                    Value: "error",
+                    Name: "provident",
+                    Value: "distinctio",
                 },
                 shared.EngineAttribute{
-                    Name: "deserunt",
-                    Value: "suscipit",
+                    Name: "quibusdam",
+                    Value: "unde",
                 },
                 shared.EngineAttribute{
-                    Name: "iure",
-                    Value: "magnam",
-                },
-                shared.EngineAttribute{
-                    Name: "debitis",
-                    Value: "ipsa",
+                    Name: "nulla",
+                    Value: "corrupti",
                 },
             },
-            NodeName: "delectus",
-            ServerName: "tempora",
+            NodeName: "illum",
+            ServerName: "vel",
         },
+        XAmzAlgorithm: "error",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "suscipit",
+        XAmzDate: "iure",
+        XAmzSecurityToken: "magnam",
+        XAmzSignature: "debitis",
+        XAmzSignedHeaders: "ipsa",
+        XAmzTarget: "OpsWorksCM_V2016_11_01.AssociateNode",
     }
 
     ctx := context.Background()

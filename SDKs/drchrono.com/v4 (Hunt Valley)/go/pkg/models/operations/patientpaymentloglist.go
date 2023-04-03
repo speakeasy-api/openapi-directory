@@ -8,20 +8,15 @@ import (
 )
 
 type PatientPaymentLogListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PatientPaymentLogListQueryParams struct {
+type PatientPaymentLogListRequest struct {
 	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Office   *int64  `queryParam:"style=form,explode=true,name=office"`
 	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Since    *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type PatientPaymentLogListRequest struct {
-	QueryParams PatientPaymentLogListQueryParams
-	Security    PatientPaymentLogListSecurity
 }
 
 // PatientPaymentLogList200ApplicationJSON - Paginated Result

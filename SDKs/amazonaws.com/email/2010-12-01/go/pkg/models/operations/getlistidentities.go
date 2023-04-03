@@ -74,30 +74,22 @@ func (e *GETListIdentitiesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListIdentitiesQueryParams struct {
+type GETListIdentitiesRequest struct {
 	Action GETListIdentitiesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The type of the identities to list. Possible values are "EmailAddress" and "Domain". If this parameter is omitted, then all identities will be listed.
 	IdentityType *GETListIdentitiesIdentityTypeEnum `queryParam:"style=form,explode=true,name=IdentityType"`
 	// The maximum number of identities per page. Possible values are 1-1000 inclusive.
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
 	// The token to use for pagination.
-	NextToken *string                      `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListIdentitiesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListIdentitiesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListIdentitiesRequest struct {
-	QueryParams GETListIdentitiesQueryParams
-	Headers     GETListIdentitiesHeaders
+	NextToken         *string                      `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListIdentitiesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListIdentitiesResponse struct {

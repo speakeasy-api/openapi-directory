@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveCustomFieldSettingForPortfolioPathParams struct {
-	// Globally unique identifier for the portfolio.
-	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
-}
-
-type RemoveCustomFieldSettingForPortfolioQueryParams struct {
-	// Provides “pretty” output.
-	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
-	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
 // RemoveCustomFieldSettingForPortfolioRequestBody - Information about the custom field setting being removed.
 type RemoveCustomFieldSettingForPortfolioRequestBody struct {
 	Data *shared.RemoveCustomFieldSettingRequest `json:"data,omitempty"`
 }
 
 type RemoveCustomFieldSettingForPortfolioRequest struct {
-	PathParams  RemoveCustomFieldSettingForPortfolioPathParams
-	QueryParams RemoveCustomFieldSettingForPortfolioQueryParams
 	// Information about the custom field setting being removed.
-	Request RemoveCustomFieldSettingForPortfolioRequestBody `request:"mediaType=application/json"`
+	RequestBody RemoveCustomFieldSettingForPortfolioRequestBody `request:"mediaType=application/json"`
+	// Provides “pretty” output.
+	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
+	// Globally unique identifier for the portfolio.
+	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
 }
 
 // RemoveCustomFieldSettingForPortfolio200ApplicationJSON - Successfully removed the custom field from the portfolio.

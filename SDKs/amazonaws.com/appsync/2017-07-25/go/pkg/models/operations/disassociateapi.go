@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DisassociateAPIPathParams struct {
-	// The domain name.
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type DisassociateAPIHeaders struct {
+type DisassociateAPIRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DisassociateAPIHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateAPIRequest struct {
-	PathParams DisassociateAPIPathParams
-	Headers    DisassociateAPIHeaders
+	// The domain name.
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
 }
 
 type DisassociateAPIResponse struct {

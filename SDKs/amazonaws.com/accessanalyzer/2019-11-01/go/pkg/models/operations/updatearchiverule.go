@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateArchiveRulePathParams struct {
-	// The name of the analyzer to update the archive rules for.
-	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
-	// The name of the rule to update.
-	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
-}
-
-type UpdateArchiveRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateArchiveRuleRequestBody struct {
 	// A client token.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -32,9 +15,18 @@ type UpdateArchiveRuleRequestBody struct {
 }
 
 type UpdateArchiveRuleRequest struct {
-	PathParams UpdateArchiveRulePathParams
-	Headers    UpdateArchiveRuleHeaders
-	Request    UpdateArchiveRuleRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateArchiveRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the analyzer to update the archive rules for.
+	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
+	// The name of the rule to update.
+	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
 }
 
 type UpdateArchiveRuleResponse struct {

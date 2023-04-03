@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupV2GetAdminsAndFounderOfGroupPathParams struct {
-	// The ID of the group.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetAdminsAndFounderOfGroupQueryParams struct {
+type GroupV2GetAdminsAndFounderOfGroupRequest struct {
 	// Page number (starting with 1). Each page has a fixed size of 50 items per page.
 	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
-}
-
-type GroupV2GetAdminsAndFounderOfGroupRequest struct {
-	PathParams  GroupV2GetAdminsAndFounderOfGroupPathParams
-	QueryParams GroupV2GetAdminsAndFounderOfGroupQueryParams
+	// The ID of the group.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2GetAdminsAndFounderOfGroup200Wildcard - Look at the Response property for more information about the nature of this response

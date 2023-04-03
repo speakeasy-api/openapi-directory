@@ -13,63 +13,58 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DescribeDimensionKeysRequest{
-        QueryParams: operations.DescribeDimensionKeysQueryParams{
-            MaxResults: "corrupti",
-            NextToken: "provident",
-        },
-        Headers: operations.DescribeDimensionKeysHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-            XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
-        },
-        Request: shared.DescribeDimensionKeysRequest{
+        DescribeDimensionKeysRequest: shared.DescribeDimensionKeysRequest{
             AdditionalMetrics: []string{
-                "deserunt",
-                "suscipit",
-                "iure",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            EndTime: "2022-02-09T12:04:06.508Z",
+            EndTime: "2021-04-14T16:47:33.722Z",
             Filter: map[string]string{
-                "delectus": "tempora",
+                "illum": "vel",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
             GroupBy: shared.DimensionGroup{
                 Dimensions: []string{
-                    "molestiae",
-                    "minus",
+                    "debitis",
+                    "ipsa",
                 },
-                Group: "placeat",
-                Limit: 528895,
+                Group: "delectus",
+                Limit: 272656,
             },
-            Identifier: "iusto",
-            MaxResults: 568045,
-            Metric: "nisi",
-            NextToken: "recusandae",
+            Identifier: "suscipit",
+            MaxResults: 477665,
+            Metric: "minus",
+            NextToken: "placeat",
             PartitionBy: &shared.DimensionGroup{
                 Dimensions: []string{
-                    "ab",
-                    "quis",
-                    "veritatis",
-                    "deserunt",
+                    "iusto",
+                    "excepturi",
+                    "nisi",
                 },
-                Group: "perferendis",
-                Limit: 368241,
+                Group: "recusandae",
+                Limit: 836079,
             },
-            PeriodInSeconds: 832620,
-            ServiceType: "DOCDB",
-            StartTime: "2022-07-31T07:34:52.790Z",
+            PeriodInSeconds: 71036,
+            ServiceType: "RDS",
+            StartTime: "2022-05-09T10:00:51.349Z",
         },
+        MaxResults: "perferendis",
+        NextToken: "ipsam",
+        XAmzAlgorithm: "repellendus",
+        XAmzContentSha256: "sapiente",
+        XAmzCredential: "quo",
+        XAmzDate: "odit",
+        XAmzSecurityToken: "at",
+        XAmzSignature: "at",
+        XAmzSignedHeaders: "maiores",
+        XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
     }
 
     ctx := context.Background()

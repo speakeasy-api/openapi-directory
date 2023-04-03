@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateRoleToGroupPathParams struct {
-	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type AssociateRoleToGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AssociateRoleToGroupRequestBody struct {
 	// The ARN of the role you wish to associate with this group. The existence of the role is not validated.
 	RoleArn string `json:"RoleArn"`
 }
 
 type AssociateRoleToGroupRequest struct {
-	PathParams AssociateRoleToGroupPathParams
-	Headers    AssociateRoleToGroupHeaders
-	Request    AssociateRoleToGroupRequestBody `request:"mediaType=application/json"`
+	// The ID of the Greengrass group.
+	GroupID           string                          `pathParam:"style=simple,explode=false,name=GroupId"`
+	RequestBody       AssociateRoleToGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type AssociateRoleToGroupResponse struct {

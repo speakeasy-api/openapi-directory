@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteLexiconPathParams struct {
+type DeleteLexiconRequest struct {
 	// The name of the lexicon to delete. Must be an existing lexicon in the region.
-	LexiconName string `pathParam:"style=simple,explode=false,name=LexiconName"`
-}
-
-type DeleteLexiconHeaders struct {
+	LexiconName       string  `pathParam:"style=simple,explode=false,name=LexiconName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteLexiconHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteLexiconRequest struct {
-	PathParams DeleteLexiconPathParams
-	Headers    DeleteLexiconHeaders
 }
 
 type DeleteLexiconResponse struct {

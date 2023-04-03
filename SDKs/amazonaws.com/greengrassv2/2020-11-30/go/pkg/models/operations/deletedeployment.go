@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDeploymentPathParams struct {
-	// The ID of the deployment.
-	DeploymentID string `pathParam:"style=simple,explode=false,name=deploymentId"`
-}
-
-type DeleteDeploymentHeaders struct {
+type DeleteDeploymentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDeploymentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDeploymentRequest struct {
-	PathParams DeleteDeploymentPathParams
-	Headers    DeleteDeploymentHeaders
+	// The ID of the deployment.
+	DeploymentID string `pathParam:"style=simple,explode=false,name=deploymentId"`
 }
 
 type DeleteDeploymentResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePartnerRequest struct {
-	// PartnerUpsert object that you would like to store.
-	Request shared.PartnerUpsert `request:"mediaType=application/json"`
-}
-
 type CreatePartnerResponse struct {
 	// The request is malformed.
 	ClientErrorResponse *shared.ClientErrorResponse

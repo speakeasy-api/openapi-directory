@@ -50,7 +50,7 @@ func (e *GETDeleteFleetsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteFleetsQueryParams struct {
+type GETDeleteFleetsRequest struct {
 	Action GETDeleteFleetsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -59,21 +59,13 @@ type GETDeleteFleetsQueryParams struct {
 	// <p>Indicates whether to terminate the associated instances when the EC2 Fleet is deleted. The default is to terminate the instances.</p> <p>To let the instances continue to run after the EC2 Fleet is deleted, specify <code>no-terminate-instances</code>. Supported only for fleets of type <code>maintain</code> and <code>request</code>.</p> <p>For <code>instant</code> fleets, you cannot specify <code>NoTerminateInstances</code>. A deleted <code>instant</code> fleet with running instances is not supported.</p>
 	TerminateInstances bool                       `queryParam:"style=form,explode=true,name=TerminateInstances"`
 	Version            GETDeleteFleetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteFleetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteFleetsRequest struct {
-	QueryParams GETDeleteFleetsQueryParams
-	Headers     GETDeleteFleetsHeaders
+	XAmzAlgorithm      *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteFleetsResponse struct {

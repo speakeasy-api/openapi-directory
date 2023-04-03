@@ -9,18 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateArtifactRawPathParams struct {
-	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type CreateArtifactRawQueryParams struct {
-	// Used only when the `ifExists` query parameter is set to `RETURN_OR_UPDATE`, this parameter can be set to `true` to indicate that the server should "canonicalize" the content when searching for a matching version.  The canonicalization algorithm is unique to each artifact type, but typically involves removing extra whitespace and formatting the content in a consistent manner.
-	Canonical *bool `queryParam:"style=form,explode=true,name=canonical"`
-	// Set this option to instruct the server on what to do if the artifact already exists.
-	IfExists *shared.IfExistsEnum `queryParam:"style=form,explode=true,name=ifExists"`
-}
-
 // CreateArtifactRawXRegistryHashAlgorithmEnum - The algorithm to use when checking the content validity. (available: SHA256, MD5; default: SHA256)
 type CreateArtifactRawXRegistryHashAlgorithmEnum string
 
@@ -45,7 +33,21 @@ func (e *CreateArtifactRawXRegistryHashAlgorithmEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type CreateArtifactRawHeaders struct {
+type CreateArtifactRawRequest struct {
+	// The content of the artifact being created. This is often, but not always, JSON data
+	// representing one of the supported artifact types:
+	//
+	// * Avro (`AVRO`)
+	// * Protobuf (`PROTOBUF`)
+	// * JSON Schema (`JSON`)
+	// * Kafka Connect (`KCONNECT`)
+	// * OpenAPI (`OPENAPI`)
+	// * AsyncAPI (`ASYNCAPI`)
+	// * GraphQL (`GRAPHQL`)
+	// * Web Services Description Language (`WSDL`)
+	// * XML Schema (`XSD`)
+	//
+	RequestBody []byte `request:"mediaType=*/*"`
 	// A client-provided, globally unique identifier for the new artifact.
 	XRegistryArtifactID *string `header:"style=simple,explode=false,name=X-Registry-ArtifactId"`
 	// Specifies the type of the artifact being added. Possible values include:
@@ -76,26 +78,12 @@ type CreateArtifactRawHeaders struct {
 	// be a simple integer or a SemVer value.  If not provided, the server will assign a version number
 	// automatically (starting with version `1`).
 	XRegistryVersion *string `header:"style=simple,explode=false,name=X-Registry-Version"`
-}
-
-type CreateArtifactRawRequest struct {
-	PathParams  CreateArtifactRawPathParams
-	QueryParams CreateArtifactRawQueryParams
-	Headers     CreateArtifactRawHeaders
-	// The content of the artifact being created. This is often, but not always, JSON data
-	// representing one of the supported artifact types:
-	//
-	// * Avro (`AVRO`)
-	// * Protobuf (`PROTOBUF`)
-	// * JSON Schema (`JSON`)
-	// * Kafka Connect (`KCONNECT`)
-	// * OpenAPI (`OPENAPI`)
-	// * AsyncAPI (`ASYNCAPI`)
-	// * GraphQL (`GRAPHQL`)
-	// * Web Services Description Language (`WSDL`)
-	// * XML Schema (`XSD`)
-	//
-	Request []byte `request:"mediaType=*/*"`
+	// Used only when the `ifExists` query parameter is set to `RETURN_OR_UPDATE`, this parameter can be set to `true` to indicate that the server should "canonicalize" the content when searching for a matching version.  The canonicalization algorithm is unique to each artifact type, but typically involves removing extra whitespace and formatting the content in a consistent manner.
+	Canonical *bool `queryParam:"style=form,explode=true,name=canonical"`
+	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
+	// Set this option to instruct the server on what to do if the artifact already exists.
+	IfExists *shared.IfExistsEnum `queryParam:"style=form,explode=true,name=ifExists"`
 }
 
 type CreateArtifactRawResponse struct {

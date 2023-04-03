@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteMissionProfilePathParams struct {
-	// UUID of a mission profile.
-	MissionProfileID string `pathParam:"style=simple,explode=false,name=missionProfileId"`
-}
-
-type DeleteMissionProfileHeaders struct {
+type DeleteMissionProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteMissionProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMissionProfileRequest struct {
-	PathParams DeleteMissionProfilePathParams
-	Headers    DeleteMissionProfileHeaders
+	// UUID of a mission profile.
+	MissionProfileID string `pathParam:"style=simple,explode=false,name=missionProfileId"`
 }
 
 type DeleteMissionProfileResponse struct {

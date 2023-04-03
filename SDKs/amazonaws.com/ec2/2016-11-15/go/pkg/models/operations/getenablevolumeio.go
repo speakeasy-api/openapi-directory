@@ -50,16 +50,13 @@ func (e *GETEnableVolumeIOVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableVolumeIOQueryParams struct {
+type GETEnableVolumeIORequest struct {
 	Action GETEnableVolumeIOActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun  *bool                        `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETEnableVolumeIOVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the volume.
-	VolumeID string `queryParam:"style=form,explode=true,name=VolumeId"`
-}
-
-type GETEnableVolumeIOHeaders struct {
+	VolumeID          string  `queryParam:"style=form,explode=true,name=VolumeId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -67,11 +64,6 @@ type GETEnableVolumeIOHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableVolumeIORequest struct {
-	QueryParams GETEnableVolumeIOQueryParams
-	Headers     GETEnableVolumeIOHeaders
 }
 
 type GETEnableVolumeIOResponse struct {

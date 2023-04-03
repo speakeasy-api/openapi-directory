@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetPublicMilestoneContentPathParams struct {
+type Destiny2GetPublicMilestoneContentRequest struct {
 	// The identifier for the milestone to be returned.
 	MilestoneHash int64 `pathParam:"style=simple,explode=false,name=milestoneHash"`
-}
-
-type Destiny2GetPublicMilestoneContentRequest struct {
-	PathParams Destiny2GetPublicMilestoneContentPathParams
 }
 
 // Destiny2GetPublicMilestoneContent200Wildcard - Represents localized, extended content related to Milestones. This is intentionally returned by a separate endpoint and not with Character-level Milestone data because we do not put localized data into standard Destiny responses, both for brevity of response and for caching purposes. If you really need this data, hit the Milestone Content endpoint.

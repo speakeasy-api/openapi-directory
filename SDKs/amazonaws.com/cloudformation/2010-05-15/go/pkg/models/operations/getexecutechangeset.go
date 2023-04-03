@@ -50,7 +50,7 @@ func (e *GETExecuteChangeSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETExecuteChangeSetQueryParams struct {
+type GETExecuteChangeSetRequest struct {
 	Action GETExecuteChangeSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
 	ChangeSetName string `queryParam:"style=form,explode=true,name=ChangeSetName"`
@@ -59,23 +59,15 @@ type GETExecuteChangeSetQueryParams struct {
 	// <p>Preserves the state of previously provisioned resources when an operation fails.</p> <p>Default: <code>True</code> </p>
 	DisableRollback *bool `queryParam:"style=form,explode=true,name=DisableRollback"`
 	// If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's associated with the change set you want to execute.
-	StackName *string                        `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETExecuteChangeSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETExecuteChangeSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETExecuteChangeSetRequest struct {
-	QueryParams GETExecuteChangeSetQueryParams
-	Headers     GETExecuteChangeSetHeaders
+	StackName         *string                        `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETExecuteChangeSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETExecuteChangeSetResponse struct {

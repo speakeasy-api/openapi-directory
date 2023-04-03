@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobsByStatusPathParams struct {
-	// To get information about all of the jobs associated with the current AWS account that have a given status, specify the following status: <code>Submitted</code>, <code>Progressing</code>, <code>Complete</code>, <code>Canceled</code>, or <code>Error</code>.
-	Status string `pathParam:"style=simple,explode=false,name=Status"`
-}
-
-type ListJobsByStatusQueryParams struct {
+type ListJobsByStatusRequest struct {
 	//  To list jobs in chronological order by the date and time that they were submitted, enter <code>true</code>. To list jobs in reverse chronological order, enter <code>false</code>.
 	Ascending *string `queryParam:"style=form,explode=true,name=Ascending"`
 	//  When Elastic Transcoder returns more than one page of results, use <code>pageToken</code> in subsequent <code>GET</code> requests to get each successive page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListJobsByStatusHeaders struct {
+	// To get information about all of the jobs associated with the current AWS account that have a given status, specify the following status: <code>Submitted</code>, <code>Progressing</code>, <code>Complete</code>, <code>Canceled</code>, or <code>Error</code>.
+	Status            string  `pathParam:"style=simple,explode=false,name=Status"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListJobsByStatusHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobsByStatusRequest struct {
-	PathParams  ListJobsByStatusPathParams
-	QueryParams ListJobsByStatusQueryParams
-	Headers     ListJobsByStatusHeaders
 }
 
 type ListJobsByStatusResponse struct {

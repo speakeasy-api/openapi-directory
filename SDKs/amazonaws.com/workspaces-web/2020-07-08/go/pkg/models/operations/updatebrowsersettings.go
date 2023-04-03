@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateBrowserSettingsPathParams struct {
-	// The ARN of the browser settings.
-	BrowserSettingsArn string `pathParam:"style=simple,explode=false,name=browserSettingsArn"`
-}
-
-type UpdateBrowserSettingsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateBrowserSettingsRequestBody struct {
 	// A JSON string containing Chrome Enterprise policies that will be applied to all streaming sessions.
 	BrowserPolicy *string `json:"browserPolicy,omitempty"`
@@ -30,9 +15,16 @@ type UpdateBrowserSettingsRequestBody struct {
 }
 
 type UpdateBrowserSettingsRequest struct {
-	PathParams UpdateBrowserSettingsPathParams
-	Headers    UpdateBrowserSettingsHeaders
-	Request    UpdateBrowserSettingsRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateBrowserSettingsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ARN of the browser settings.
+	BrowserSettingsArn string `pathParam:"style=simple,explode=false,name=browserSettingsArn"`
 }
 
 type UpdateBrowserSettingsResponse struct {

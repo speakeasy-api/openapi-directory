@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWorkflowStepPathParams struct {
-	// The ID of the step.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateWorkflowStepHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateWorkflowStepRequestBodyStatusEnum - The status of the step.
 type UpdateWorkflowStepRequestBodyStatusEnum string
 
@@ -122,9 +107,16 @@ type UpdateWorkflowStepRequestBody struct {
 }
 
 type UpdateWorkflowStepRequest struct {
-	PathParams UpdateWorkflowStepPathParams
-	Headers    UpdateWorkflowStepHeaders
-	Request    UpdateWorkflowStepRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateWorkflowStepRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the step.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateWorkflowStepResponse struct {

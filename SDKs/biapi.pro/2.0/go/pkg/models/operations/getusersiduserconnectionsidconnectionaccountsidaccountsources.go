@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesPathParams struct {
-	IDAccount    int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
+type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesRequest struct {
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount    int64   `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesRequest struct {
-	PathParams  GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesPathParams
-	QueryParams GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSourcesQueryParams
 }
 
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountSources200ApplicationJSON - sources

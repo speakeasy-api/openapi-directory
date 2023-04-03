@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateOriginAccessControl20200531PathParams struct {
-	// The unique identifier of the origin access control that you are updating.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateOriginAccessControl20200531Headers struct {
-	// The current version (<code>ETag</code> value) of the origin access control that you are updating.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateOriginAccessControl20200531RequestBodyOriginAccessControlConfig - A CloudFront origin access control configuration.
 type UpdateOriginAccessControl20200531RequestBodyOriginAccessControlConfig struct {
 	Description                   *string
@@ -39,9 +22,18 @@ type UpdateOriginAccessControl20200531RequestBody struct {
 }
 
 type UpdateOriginAccessControl20200531Request struct {
-	PathParams UpdateOriginAccessControl20200531PathParams
-	Headers    UpdateOriginAccessControl20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The unique identifier of the origin access control that you are updating.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The current version (<code>ETag</code> value) of the origin access control that you are updating.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateOriginAccessControl20200531Response struct {

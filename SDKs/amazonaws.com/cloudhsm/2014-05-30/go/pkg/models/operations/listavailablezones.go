@@ -30,7 +30,8 @@ func (e *ListAvailableZonesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAvailableZonesHeaders struct {
+type ListAvailableZonesRequest struct {
+	RequestBody       map[string]interface{}           `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ListAvailableZonesHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAvailableZonesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAvailableZonesRequest struct {
-	Headers ListAvailableZonesHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type ListAvailableZonesResponse struct {

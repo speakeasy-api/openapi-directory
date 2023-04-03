@@ -33,7 +33,7 @@ func newCreate(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // Area - Create a point-to-multipoint heatmap
 // An area coverage assumes the same receiver height at all locations out to fixed radius (maximum 300km). Due to it's exhaustive processing it is the slowest of all the API calls. Speed can be improved significantly by adjusting the resolution 'res' parameter. A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
-func (s *create) Area(ctx context.Context, request operations.AreaRequest) (*operations.AreaResponse, error) {
+func (s *create) Area(ctx context.Context, request operations.AreaRequestBody, security operations.AreaSecurity) (*operations.AreaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/area"
 
@@ -52,7 +52,7 @@ func (s *create) Area(ctx context.Context, request operations.AreaRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *create) Area(ctx context.Context, request operations.AreaRequest) (*ope
 
 // Path - Point-to-point path profile analysis (Tx to Rx)
 // A path profile is a single link from A to B. It is much faster than an area calculation and can be used out to 300km. A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
-func (s *create) Path(ctx context.Context, request operations.PathRequest) (*operations.PathResponse, error) {
+func (s *create) Path(ctx context.Context, request operations.PathRequestBody, security operations.PathSecurity) (*operations.PathResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/path"
 
@@ -98,7 +98,7 @@ func (s *create) Path(ctx context.Context, request operations.PathRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *create) Path(ctx context.Context, request operations.PathRequest) (*ope
 
 // Points - Point-to-multipoint path profile analysis (Many Tx, one Rx)
 // The points function tests many transmitters and one receiver and is designed for route analysis. A minimal request needs a transmitters array of (latitude,longitude,altitude) locations, antenna, receiver and output objects defined as a minimum. Model and environment options will enhance accuracy.
-func (s *create) Points(ctx context.Context, request operations.PointsRequest) (*operations.PointsResponse, error) {
+func (s *create) Points(ctx context.Context, request operations.PointsRequestBody, security operations.PointsSecurity) (*operations.PointsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/points"
 
@@ -144,7 +144,7 @@ func (s *create) Points(ctx context.Context, request operations.PointsRequest) (
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PostJmxRepositoryPathParams struct {
-	Action string `pathParam:"style=simple,explode=false,name=action"`
-}
-
 type PostJmxRepositoryRequest struct {
-	PathParams PostJmxRepositoryPathParams
+	Action string `pathParam:"style=simple,explode=false,name=action"`
 }
 
 type PostJmxRepositoryResponse struct {

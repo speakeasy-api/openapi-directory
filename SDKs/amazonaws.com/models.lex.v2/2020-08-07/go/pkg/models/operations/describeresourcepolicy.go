@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeResourcePolicyPathParams struct {
-	// The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type DescribeResourcePolicyHeaders struct {
+type DescribeResourcePolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeResourcePolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeResourcePolicyRequest struct {
-	PathParams DescribeResourcePolicyPathParams
-	Headers    DescribeResourcePolicyHeaders
+	// The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
 }
 
 type DescribeResourcePolicyResponse struct {

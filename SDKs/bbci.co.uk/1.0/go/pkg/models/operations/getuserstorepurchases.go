@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetUserStorePurchasesSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetUserStorePurchasesQueryParams struct {
-	// The BBC-id cookie value
-	IdentityCookie float64 `queryParam:"style=form,explode=true,name=identity_cookie"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetUserStorePurchasesRequest struct {
-	QueryParams GetUserStorePurchasesQueryParams
-	Security    GetUserStorePurchasesSecurity
+	// The BBC-id cookie value
+	IdentityCookie float64 `queryParam:"style=form,explode=true,name=identity_cookie"`
 }
 
 type GetUserStorePurchasesResponse struct {

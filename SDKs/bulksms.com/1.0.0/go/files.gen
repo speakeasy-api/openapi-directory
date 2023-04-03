@@ -34,7 +34,6 @@ pkg/models/operations/postwebhooks.go
 pkg/models/operations/postwebhooksid.go
 pkg/models/shared/presigninfo.go
 pkg/models/shared/presignrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/blockednumber.go
 pkg/models/shared/transferentry.go
 pkg/models/shared/message.go
@@ -43,4 +42,5 @@ pkg/models/shared/submissionentry.go
 pkg/models/shared/profile.go
 pkg/models/shared/webhook.go
 pkg/models/shared/webhookentry.go
+pkg/models/shared/security.go
 USAGE.md

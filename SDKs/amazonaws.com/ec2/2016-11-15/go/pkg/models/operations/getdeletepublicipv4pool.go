@@ -50,28 +50,20 @@ func (e *GETDeletePublicIpv4PoolVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeletePublicIpv4PoolQueryParams struct {
+type GETDeletePublicIpv4PoolRequest struct {
 	Action GETDeletePublicIpv4PoolActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the public IPv4 pool you want to delete.
-	PoolID  string                             `queryParam:"style=form,explode=true,name=PoolId"`
-	Version GETDeletePublicIpv4PoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeletePublicIpv4PoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeletePublicIpv4PoolRequest struct {
-	QueryParams GETDeletePublicIpv4PoolQueryParams
-	Headers     GETDeletePublicIpv4PoolHeaders
+	PoolID            string                             `queryParam:"style=form,explode=true,name=PoolId"`
+	Version           GETDeletePublicIpv4PoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeletePublicIpv4PoolResponse struct {

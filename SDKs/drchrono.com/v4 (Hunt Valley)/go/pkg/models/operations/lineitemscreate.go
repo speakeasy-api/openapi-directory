@@ -8,10 +8,10 @@ import (
 )
 
 type LineItemsCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type LineItemsCreateQueryParams struct {
+type LineItemsCreateRequest struct {
 	Appointment *int64  `queryParam:"style=form,explode=true,name=appointment"`
 	Doctor      *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Office      *int64  `queryParam:"style=form,explode=true,name=office"`
@@ -19,11 +19,6 @@ type LineItemsCreateQueryParams struct {
 	PostedDate  *string `queryParam:"style=form,explode=true,name=posted_date"`
 	ServiceDate *string `queryParam:"style=form,explode=true,name=service_date"`
 	Since       *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type LineItemsCreateRequest struct {
-	QueryParams LineItemsCreateQueryParams
-	Security    LineItemsCreateSecurity
 }
 
 type LineItemsCreateResponse struct {

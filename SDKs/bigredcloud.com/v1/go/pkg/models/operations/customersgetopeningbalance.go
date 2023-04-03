@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomersGetOpeningBalancePathParams struct {
+type CustomersGetOpeningBalanceRequest struct {
 	// Id of Customer to return opening balances.
 	ItemID int64 `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type CustomersGetOpeningBalanceRequest struct {
-	PathParams CustomersGetOpeningBalancePathParams
 }
 
 type CustomersGetOpeningBalanceResponse struct {

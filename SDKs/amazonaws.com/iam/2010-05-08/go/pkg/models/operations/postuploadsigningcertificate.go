@@ -50,25 +50,17 @@ func (e *POSTUploadSigningCertificateVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTUploadSigningCertificateQueryParams struct {
-	Action  POSTUploadSigningCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUploadSigningCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUploadSigningCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUploadSigningCertificateRequest struct {
-	QueryParams POSTUploadSigningCertificateQueryParams
-	Headers     POSTUploadSigningCertificateHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUploadSigningCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTUploadSigningCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUploadSigningCertificateResponse struct {

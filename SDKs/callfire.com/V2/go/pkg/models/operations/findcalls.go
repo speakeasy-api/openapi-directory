@@ -8,10 +8,11 @@ import (
 )
 
 type FindCallsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindCallsQueryParams struct {
+type FindCallsRequest struct {
 	// An id of a contact batch, queries for calls of a particular contact batch
 	BatchID *int64 `queryParam:"style=form,explode=true,name=batchId"`
 	// An id of a campaign, queries for calls included to a particular campaign. Specify null for all campaigns and 0 for default campaign
@@ -40,11 +41,6 @@ type FindCallsQueryParams struct {
 	States *string `queryParam:"style=form,explode=true,name=states"`
 	// Phone number in E.164 format (11-digit) that call was sent to. Example: 12132000384
 	ToNumber *string `queryParam:"style=form,explode=true,name=toNumber"`
-}
-
-type FindCallsRequest struct {
-	QueryParams FindCallsQueryParams
-	Security    FindCallsSecurity
 }
 
 type FindCallsResponse struct {

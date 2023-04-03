@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPostGuestRawPathParams struct {
+type AccountPostGuestRawRequest struct {
+	// Guest object with field updated
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
-}
-
-type AccountPostGuestRawRequest struct {
-	PathParams AccountPostGuestRawPathParams
-	// Guest object with field updated
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type AccountPostGuestRawResponse struct {

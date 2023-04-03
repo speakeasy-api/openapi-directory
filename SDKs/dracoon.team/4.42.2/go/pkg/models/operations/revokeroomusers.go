@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RevokeRoomUsersPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type RevokeRoomUsersHeaders struct {
+type RevokeRoomUsersRequest struct {
+	RoomUsersDeleteBatchRequest shared.RoomUsersDeleteBatchRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RevokeRoomUsersRequest struct {
-	PathParams RevokeRoomUsersPathParams
-	Headers    RevokeRoomUsersHeaders
-	Request    shared.RoomUsersDeleteBatchRequest `request:"mediaType=application/json"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type RevokeRoomUsersResponse struct {

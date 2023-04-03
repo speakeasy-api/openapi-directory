@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPutRawRequest struct {
-	// The body of the conversion
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type ConversionsPutRawResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

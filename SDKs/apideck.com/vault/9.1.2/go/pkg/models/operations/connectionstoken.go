@@ -8,28 +8,19 @@ import (
 )
 
 type ConnectionsTokenSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectionsTokenPathParams struct {
+type ConnectionsTokenRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Service ID of the resource to return
 	ServiceID string `pathParam:"style=simple,explode=false,name=service_id"`
 	// Unified API
 	UnifiedAPI string `pathParam:"style=simple,explode=false,name=unified_api"`
-}
-
-type ConnectionsTokenHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
-}
-
-type ConnectionsTokenRequest struct {
-	PathParams ConnectionsTokenPathParams
-	Headers    ConnectionsTokenHeaders
-	Request    map[string]interface{} `request:"mediaType=application/json"`
-	Security   ConnectionsTokenSecurity
 }
 
 type ConnectionsTokenResponse struct {

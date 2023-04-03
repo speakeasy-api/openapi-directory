@@ -13,10 +13,6 @@ type SpamDetectionRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type SpamDetectionRequest struct {
-	Request *SpamDetectionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type SpamDetectionResponse struct {
 	ContentType string
 	StatusCode  int

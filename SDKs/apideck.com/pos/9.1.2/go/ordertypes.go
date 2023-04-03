@@ -34,11 +34,11 @@ func newOrderTypes(defaultClient, securityClient HTTPClient, serverURL, language
 
 // OrderTypesAdd - Create Order Type
 // Create Order Type
-func (s *orderTypes) OrderTypesAdd(ctx context.Context, request operations.OrderTypesAddRequest) (*operations.OrderTypesAddResponse, error) {
+func (s *orderTypes) OrderTypesAdd(ctx context.Context, request operations.OrderTypesAddRequest, security operations.OrderTypesAddSecurity) (*operations.OrderTypesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/order-types"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *orderTypes) OrderTypesAdd(ctx context.Context, request operations.Order
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *orderTypes) OrderTypesAdd(ctx context.Context, request operations.Order
 
 // OrderTypesAll - List Order Types
 // List Order Types
-func (s *orderTypes) OrderTypesAll(ctx context.Context, request operations.OrderTypesAllRequest) (*operations.OrderTypesAllResponse, error) {
+func (s *orderTypes) OrderTypesAll(ctx context.Context, request operations.OrderTypesAllRequest, security operations.OrderTypesAllSecurity) (*operations.OrderTypesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/order-types"
 
@@ -164,13 +164,13 @@ func (s *orderTypes) OrderTypesAll(ctx context.Context, request operations.Order
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *orderTypes) OrderTypesAll(ctx context.Context, request operations.Order
 
 // OrderTypesDelete - Delete Order Type
 // Delete Order Type
-func (s *orderTypes) OrderTypesDelete(ctx context.Context, request operations.OrderTypesDeleteRequest) (*operations.OrderTypesDeleteResponse, error) {
+func (s *orderTypes) OrderTypesDelete(ctx context.Context, request operations.OrderTypesDeleteRequest, security operations.OrderTypesDeleteSecurity) (*operations.OrderTypesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/order-types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/order-types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *orderTypes) OrderTypesDelete(ctx context.Context, request operations.Or
 
 // OrderTypesOne - Get Order Type
 // Get Order Type
-func (s *orderTypes) OrderTypesOne(ctx context.Context, request operations.OrderTypesOneRequest) (*operations.OrderTypesOneResponse, error) {
+func (s *orderTypes) OrderTypesOne(ctx context.Context, request operations.OrderTypesOneRequest, security operations.OrderTypesOneSecurity) (*operations.OrderTypesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/order-types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/order-types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *orderTypes) OrderTypesOne(ctx context.Context, request operations.Order
 
 // OrderTypesUpdate - Update Order Type
 // Update Order Type
-func (s *orderTypes) OrderTypesUpdate(ctx context.Context, request operations.OrderTypesUpdateRequest) (*operations.OrderTypesUpdateResponse, error) {
+func (s *orderTypes) OrderTypesUpdate(ctx context.Context, request operations.OrderTypesUpdateRequest, security operations.OrderTypesUpdateSecurity) (*operations.OrderTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/order-types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/order-types/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderTypeInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *orderTypes) OrderTypesUpdate(ctx context.Context, request operations.Or
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

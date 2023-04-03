@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteProxySecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type DeleteProxyHeaders struct {
+type DeleteProxyRequest struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
@@ -22,11 +21,6 @@ type DeleteProxyHeaders struct {
 	XApideckDownstreamURL string `header:"style=simple,explode=false,name=x-apideck-downstream-url"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type DeleteProxyRequest struct {
-	Headers  DeleteProxyHeaders
-	Security DeleteProxySecurity
 }
 
 // DeleteProxy401ApplicationJSON - Unauthorized

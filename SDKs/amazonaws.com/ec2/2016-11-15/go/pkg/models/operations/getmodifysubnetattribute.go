@@ -109,7 +109,7 @@ func (e *GETModifySubnetAttributeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifySubnetAttributeQueryParams struct {
+type GETModifySubnetAttributeRequest struct {
 	Action GETModifySubnetAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Specify <code>true</code> to indicate that network interfaces created in the specified subnet should be assigned an IPv6 address. This includes a network interface that's created when launching an instance into the subnet (the instance therefore receives an IPv6 address). </p> <p>If you enable the IPv6 addressing feature for your subnet, your network interface or instance only receives an IPv6 address if it's created using version <code>2016-11-15</code> or later of the Amazon EC2 API.</p>
 	AssignIpv6AddressOnCreation *GETModifySubnetAttributeAssignIpv6AddressOnCreation `queryParam:"style=form,explode=true,name=AssignIpv6AddressOnCreation"`
@@ -132,23 +132,15 @@ type GETModifySubnetAttributeQueryParams struct {
 	// The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4 and IPv6) subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the instance ID (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID (resource-name).
 	PrivateDNSHostnameTypeOnLaunch *GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum `queryParam:"style=form,explode=true,name=PrivateDnsHostnameTypeOnLaunch"`
 	// The ID of the subnet.
-	SubnetID string                              `queryParam:"style=form,explode=true,name=SubnetId"`
-	Version  GETModifySubnetAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifySubnetAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifySubnetAttributeRequest struct {
-	QueryParams GETModifySubnetAttributeQueryParams
-	Headers     GETModifySubnetAttributeHeaders
+	SubnetID          string                              `queryParam:"style=form,explode=true,name=SubnetId"`
+	Version           GETModifySubnetAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifySubnetAttributeResponse struct {

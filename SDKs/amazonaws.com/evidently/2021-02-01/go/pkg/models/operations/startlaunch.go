@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartLaunchPathParams struct {
-	// The name of the launch to start.
-	Launch string `pathParam:"style=simple,explode=false,name=launch"`
-	// The name or ARN of the project that contains the launch to start.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type StartLaunchHeaders struct {
+type StartLaunchRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type StartLaunchHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StartLaunchRequest struct {
-	PathParams StartLaunchPathParams
-	Headers    StartLaunchHeaders
+	// The name of the launch to start.
+	Launch string `pathParam:"style=simple,explode=false,name=launch"`
+	// The name or ARN of the project that contains the launch to start.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type StartLaunchResponse struct {

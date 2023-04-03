@@ -8,18 +8,13 @@ import (
 )
 
 type DatabaseGetCollectionSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DatabaseGetCollectionPathParams struct {
-	// Collection unique ID.
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type DatabaseGetCollectionRequest struct {
-	PathParams DatabaseGetCollectionPathParams
-	Security   DatabaseGetCollectionSecurity
+	// Collection unique ID.
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 }
 
 type DatabaseGetCollectionResponse struct {

@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTemplateStepGroupsPathParams struct {
-	// The ID of the template.
-	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
-}
-
-type ListTemplateStepGroupsQueryParams struct {
-	// The maximum number of results that can be returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The pagination token.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListTemplateStepGroupsHeaders struct {
+type ListTemplateStepGroupsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListTemplateStepGroupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTemplateStepGroupsRequest struct {
-	PathParams  ListTemplateStepGroupsPathParams
-	QueryParams ListTemplateStepGroupsQueryParams
-	Headers     ListTemplateStepGroupsHeaders
+	// The maximum number of results that can be returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The pagination token.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ID of the template.
+	TemplateID string `pathParam:"style=simple,explode=false,name=templateId"`
 }
 
 type ListTemplateStepGroupsResponse struct {

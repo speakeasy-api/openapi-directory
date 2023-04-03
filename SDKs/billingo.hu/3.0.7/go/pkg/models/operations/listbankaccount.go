@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBankAccountQueryParams struct {
+type ListBankAccountRequest struct {
 	Page    *int64 `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ListBankAccountRequest struct {
-	QueryParams ListBankAccountQueryParams
 }
 
 type ListBankAccountResponse struct {

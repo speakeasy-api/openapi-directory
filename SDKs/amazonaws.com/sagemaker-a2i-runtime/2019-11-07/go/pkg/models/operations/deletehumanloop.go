@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteHumanLoopPathParams struct {
+type DeleteHumanLoopRequest struct {
 	// The name of the human loop that you want to delete.
-	HumanLoopName string `pathParam:"style=simple,explode=false,name=HumanLoopName"`
-}
-
-type DeleteHumanLoopHeaders struct {
+	HumanLoopName     string  `pathParam:"style=simple,explode=false,name=HumanLoopName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteHumanLoopHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteHumanLoopRequest struct {
-	PathParams DeleteHumanLoopPathParams
-	Headers    DeleteHumanLoopHeaders
 }
 
 type DeleteHumanLoopResponse struct {

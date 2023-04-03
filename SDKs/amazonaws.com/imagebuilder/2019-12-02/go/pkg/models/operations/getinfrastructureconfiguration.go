@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetInfrastructureConfigurationQueryParams struct {
-	// The Amazon Resource Name (ARN) of the infrastructure configuration that you want to retrieve.
-	InfrastructureConfigurationArn string `queryParam:"style=form,explode=true,name=infrastructureConfigurationArn"`
-}
-
-type GetInfrastructureConfigurationHeaders struct {
+type GetInfrastructureConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetInfrastructureConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetInfrastructureConfigurationRequest struct {
-	QueryParams GetInfrastructureConfigurationQueryParams
-	Headers     GetInfrastructureConfigurationHeaders
+	// The Amazon Resource Name (ARN) of the infrastructure configuration that you want to retrieve.
+	InfrastructureConfigurationArn string `queryParam:"style=form,explode=true,name=infrastructureConfigurationArn"`
 }
 
 type GetInfrastructureConfigurationResponse struct {

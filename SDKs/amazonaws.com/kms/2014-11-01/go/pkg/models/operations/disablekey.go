@@ -30,7 +30,8 @@ func (e *DisableKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DisableKeyHeaders struct {
+type DisableKeyRequest struct {
+	DisableKeyRequest shared.DisableKeyRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DisableKeyHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisableKeyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisableKeyRequest struct {
-	Headers DisableKeyHeaders
-	Request shared.DisableKeyRequest `request:"mediaType=application/json"`
 }
 
 type DisableKeyResponse struct {

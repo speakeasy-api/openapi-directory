@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConnectivityInfoPathParams struct {
-	// The name of the core device. This is also the name of the IoT thing.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type UpdateConnectivityInfoHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateConnectivityInfoRequestBody struct {
 	// The connectivity information for the core device.
 	ConnectivityInfo []shared.ConnectivityInfo `json:"ConnectivityInfo"`
 }
 
 type UpdateConnectivityInfoRequest struct {
-	PathParams UpdateConnectivityInfoPathParams
-	Headers    UpdateConnectivityInfoHeaders
-	Request    UpdateConnectivityInfoRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateConnectivityInfoRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the core device. This is also the name of the IoT thing.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type UpdateConnectivityInfoResponse struct {

@@ -50,7 +50,7 @@ func (e *GETSelectVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSelectQueryParams struct {
+type GETSelectRequest struct {
 	AWSAccessKeyID string              `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETSelectActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
@@ -64,10 +64,6 @@ type GETSelectQueryParams struct {
 	SignatureVersion string               `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string               `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETSelectVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSelectRequest struct {
-	QueryParams GETSelectQueryParams
 }
 
 type GETSelectResponse struct {

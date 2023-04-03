@@ -8,17 +8,12 @@ import (
 )
 
 type PatientInterventionsCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PatientInterventionsCreateQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatientInterventionsCreateRequest struct {
-	QueryParams PatientInterventionsCreateQueryParams
-	Security    PatientInterventionsCreateSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
 }
 
 type PatientInterventionsCreateResponse struct {

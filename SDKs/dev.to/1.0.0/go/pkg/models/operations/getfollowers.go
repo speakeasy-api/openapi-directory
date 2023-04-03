@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetFollowersQueryParams struct {
+type GetFollowersRequest struct {
 	// Pagination page
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
@@ -15,10 +15,6 @@ type GetFollowersQueryParams struct {
 	//                                 relationship. To sort by newest followers first (descending order) specify
 	//                                 ?sort=-created_at.
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetFollowersRequest struct {
-	QueryParams GetFollowersQueryParams
 }
 
 // GetFollowers200ApplicationJSON - A follower

@@ -43,7 +43,7 @@ func (s *dealerAPI) DealerSearch(ctx context.Context, request operations.DealerS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *dealerAPI) DealerSearch(ctx context.Context, request operations.DealerS
 // Get a particular dealer's information by its id
 func (s *dealerAPI) GetDealer(ctx context.Context, request operations.GetDealerRequest) (*operations.GetDealerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dealer/car/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dealer/car/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *dealerAPI) GetDealer(ctx context.Context, request operations.GetDealerR
 // Get a particular dealer's information by its id
 func (s *dealerAPI) GetDealerCarUkID(ctx context.Context, request operations.GetDealerCarUkIDRequest) (*operations.GetDealerCarUkIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dealer/car/uk/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dealer/car/uk/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -213,14 +213,14 @@ func (s *dealerAPI) GetDealerCarUkID(ctx context.Context, request operations.Get
 // Get a particular dealer's information by its id
 func (s *dealerAPI) GetDealerHeavyEquipmentID(ctx context.Context, request operations.GetDealerHeavyEquipmentIDRequest) (*operations.GetDealerHeavyEquipmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dealer/heavy-equipment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dealer/heavy-equipment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -272,14 +272,14 @@ func (s *dealerAPI) GetDealerHeavyEquipmentID(ctx context.Context, request opera
 // Get a particular dealer's information by its id
 func (s *dealerAPI) GetDealerMotorcycleID(ctx context.Context, request operations.GetDealerMotorcycleIDRequest) (*operations.GetDealerMotorcycleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dealer/motorcycle/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dealer/motorcycle/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -331,14 +331,14 @@ func (s *dealerAPI) GetDealerMotorcycleID(ctx context.Context, request operation
 // Get a particular dealer's information by its id
 func (s *dealerAPI) GetDealerRvID(ctx context.Context, request operations.GetDealerRvIDRequest) (*operations.GetDealerRvIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dealer/rv/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dealer/rv/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -397,7 +397,7 @@ func (s *dealerAPI) GetDealersCarUk(ctx context.Context, request operations.GetD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -456,7 +456,7 @@ func (s *dealerAPI) GetDealersHeavyEquipment(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -515,7 +515,7 @@ func (s *dealerAPI) GetDealersMotorcycle(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -574,7 +574,7 @@ func (s *dealerAPI) GetDealersRv(ctx context.Context, request operations.GetDeal
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

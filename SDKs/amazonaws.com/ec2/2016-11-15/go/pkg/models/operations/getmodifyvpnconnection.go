@@ -50,7 +50,7 @@ func (e *GETModifyVpnConnectionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyVpnConnectionQueryParams struct {
+type GETModifyVpnConnectionRequest struct {
 	Action GETModifyVpnConnectionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the customer gateway at your end of the VPN connection.
 	CustomerGatewayID *string `queryParam:"style=form,explode=true,name=CustomerGatewayId"`
@@ -62,10 +62,7 @@ type GETModifyVpnConnectionQueryParams struct {
 	// The ID of the VPN connection.
 	VpnConnectionID string `queryParam:"style=form,explode=true,name=VpnConnectionId"`
 	// The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
-	VpnGatewayID *string `queryParam:"style=form,explode=true,name=VpnGatewayId"`
-}
-
-type GETModifyVpnConnectionHeaders struct {
+	VpnGatewayID      *string `queryParam:"style=form,explode=true,name=VpnGatewayId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -73,11 +70,6 @@ type GETModifyVpnConnectionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpnConnectionRequest struct {
-	QueryParams GETModifyVpnConnectionQueryParams
-	Headers     GETModifyVpnConnectionHeaders
 }
 
 type GETModifyVpnConnectionResponse struct {

@@ -50,28 +50,20 @@ func (e *GETDeleteChangeSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteChangeSetQueryParams struct {
+type GETDeleteChangeSetRequest struct {
 	Action GETDeleteChangeSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name or Amazon Resource Name (ARN) of the change set that you want to delete.
 	ChangeSetName string `queryParam:"style=form,explode=true,name=ChangeSetName"`
 	// If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN) that's associated with it.
-	StackName *string                       `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETDeleteChangeSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteChangeSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteChangeSetRequest struct {
-	QueryParams GETDeleteChangeSetQueryParams
-	Headers     GETDeleteChangeSetHeaders
+	StackName         *string                       `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETDeleteChangeSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteChangeSetResponse struct {

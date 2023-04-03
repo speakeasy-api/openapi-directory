@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProjectsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListProjectsXAmzTargetEnum
 type ListProjectsXAmzTargetEnum string
 
@@ -35,7 +30,8 @@ func (e *ListProjectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListProjectsHeaders struct {
+type ListProjectsRequest struct {
+	ListProjectsInput shared.ListProjectsInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +40,8 @@ type ListProjectsHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListProjectsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListProjectsRequest struct {
-	QueryParams ListProjectsQueryParams
-	Headers     ListProjectsHeaders
-	Request     shared.ListProjectsInput `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListProjectsResponse struct {

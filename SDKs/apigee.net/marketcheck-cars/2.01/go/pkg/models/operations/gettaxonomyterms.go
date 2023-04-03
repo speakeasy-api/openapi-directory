@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTaxonomyTermsQueryParams struct {
+type GetTaxonomyTermsRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Body subtype to filter the listings on. Valid filter values are those that our Search facets API returns for unique body subtypes. You can pass in multiple body subtype values comma separated
@@ -38,10 +38,6 @@ type GetTaxonomyTermsQueryParams struct {
 	VehicleType *string `queryParam:"style=form,explode=true,name=vehicle_type"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTaxonomyTermsRequest struct {
-	QueryParams GetTaxonomyTermsQueryParams
 }
 
 type GetTaxonomyTermsResponse struct {

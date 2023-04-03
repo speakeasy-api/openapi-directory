@@ -36,16 +36,7 @@ func (e *ListTasksStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTasksQueryParams struct {
-	// The maximum number of tasks per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A pagination token to continue to the next page of tasks.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// A structure used to filter the list of tasks.
-	State *ListTasksStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type ListTasksHeaders struct {
+type ListTasksRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -53,11 +44,12 @@ type ListTasksHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTasksRequest struct {
-	QueryParams ListTasksQueryParams
-	Headers     ListTasksHeaders
+	// The maximum number of tasks per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A pagination token to continue to the next page of tasks.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// A structure used to filter the list of tasks.
+	State *ListTasksStateEnum `queryParam:"style=form,explode=true,name=state"`
 }
 
 type ListTasksResponse struct {

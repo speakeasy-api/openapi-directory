@@ -7,34 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSlotsPathParams struct {
-	// The identifier of the bot that contains the slot.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot that contains the slot.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The unique identifier of the intent that contains the slot.
-	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
-	// The identifier of the language and locale of the slots to list. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type ListSlotsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListSlotsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListSlotsRequestBodySortBy - Specifies attributes for sorting a list of bots.
 type ListSlotsRequestBodySortBy struct {
 	Attribute *shared.SlotSortAttributeEnum `json:"attribute,omitempty"`
@@ -53,10 +25,26 @@ type ListSlotsRequestBody struct {
 }
 
 type ListSlotsRequest struct {
-	PathParams  ListSlotsPathParams
-	QueryParams ListSlotsQueryParams
-	Headers     ListSlotsHeaders
-	Request     ListSlotsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListSlotsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot that contains the slot.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot that contains the slot.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The unique identifier of the intent that contains the slot.
+	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
+	// The identifier of the language and locale of the slots to list. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSlotsResponse struct {

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsBatchDeleteRequest struct {
-	// A json containing the datapoints to delete.
-	Request shared.APICoreRequestsDeleteBatch `request:"mediaType=application/json"`
-}
-
 type DataPointsBatchDeleteResponse struct {
 	APICoreResponsesModifyBatchItemResponceAPICoreDtoDatapointsDatapointSystemInt64 *shared.APICoreResponsesModifyBatchItemResponceAPICoreDtoDatapointsDatapointSystemInt64
 	ContentType                                                                     string

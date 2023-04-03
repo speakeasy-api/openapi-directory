@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteFeaturePathParams struct {
-	// The name of the feature to delete.
-	Feature string `pathParam:"style=simple,explode=false,name=feature"`
-	// The name or ARN of the project that contains the feature to delete.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type DeleteFeatureHeaders struct {
+type DeleteFeatureRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteFeatureHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFeatureRequest struct {
-	PathParams DeleteFeaturePathParams
-	Headers    DeleteFeatureHeaders
+	// The name of the feature to delete.
+	Feature string `pathParam:"style=simple,explode=false,name=feature"`
+	// The name or ARN of the project that contains the feature to delete.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type DeleteFeatureResponse struct {

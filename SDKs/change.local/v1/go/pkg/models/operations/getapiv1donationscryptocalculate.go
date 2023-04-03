@@ -6,11 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1DonationsCryptoCalculateSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // GetAPIV1DonationsCryptoCalculateCurrencyEnum - The currency of the transaction.
@@ -37,16 +37,11 @@ func (e *GetAPIV1DonationsCryptoCalculateCurrencyEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GetAPIV1DonationsCryptoCalculateQueryParams struct {
+type GetAPIV1DonationsCryptoCalculateRequest struct {
 	// The number of transactions to offset.
 	Count *float64 `queryParam:"style=form,explode=true,name=count"`
 	// The currency of the transaction.
 	Currency GetAPIV1DonationsCryptoCalculateCurrencyEnum `queryParam:"style=form,explode=true,name=currency"`
-}
-
-type GetAPIV1DonationsCryptoCalculateRequest struct {
-	QueryParams GetAPIV1DonationsCryptoCalculateQueryParams
-	Security    GetAPIV1DonationsCryptoCalculateSecurity
 }
 
 type GetAPIV1DonationsCryptoCalculateResponse struct {

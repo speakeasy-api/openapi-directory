@@ -13,23 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetLinesRequest{
-        QueryParams: operations.GetLinesQueryParams{
-            Away: "corrupti",
-            Conference: "provident",
-            GameID: 715190,
-            Home: "quibusdam",
-            SeasonType: "unde",
-            Team: "nulla",
-            Week: 544883,
-            Year: 847252,
-        },
+        Away: "corrupti",
+        Conference: "provident",
+        GameID: 715190,
+        Home: "quibusdam",
+        SeasonType: "unde",
+        Team: "nulla",
+        Week: 544883,
+        Year: 847252,
     }
 
     ctx := context.Background()

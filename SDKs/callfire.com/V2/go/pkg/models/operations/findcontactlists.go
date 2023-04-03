@@ -8,10 +8,11 @@ import (
 )
 
 type FindContactListsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindContactListsQueryParams struct {
+type FindContactListsRequest struct {
 	// ~
 	ContactCount *int `queryParam:"style=form,explode=true,name=contactCount"`
 	// ~
@@ -26,11 +27,6 @@ type FindContactListsQueryParams struct {
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 	// ~
 	OrderBy *string `queryParam:"style=form,explode=true,name=orderBy"`
-}
-
-type FindContactListsRequest struct {
-	QueryParams FindContactListsQueryParams
-	Security    FindContactListsSecurity
 }
 
 type FindContactListsResponse struct {

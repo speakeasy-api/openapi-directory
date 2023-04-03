@@ -8,13 +8,8 @@ import (
 )
 
 type CreateAPICredentialSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateAPICredentialRequest struct {
-	// To create the API credentials
-	Request  *shared.APICredentialInput `request:"mediaType=application/json"`
-	Security CreateAPICredentialSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateAPICredentialResponse struct {

@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWebhooksIDWebhookAddToDataKeyPathParams struct {
-	IDWebhook int64  `pathParam:"style=simple,explode=false,name=id_webhook"`
-	Key       string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type GetWebhooksIDWebhookAddToDataKeyQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetWebhooksIDWebhookAddToDataKeyRequest struct {
-	PathParams  GetWebhooksIDWebhookAddToDataKeyPathParams
-	QueryParams GetWebhooksIDWebhookAddToDataKeyQueryParams
+	Expand    *string `queryParam:"style=form,explode=true,name=expand"`
+	IDWebhook int64   `pathParam:"style=simple,explode=false,name=id_webhook"`
+	Key       string  `pathParam:"style=simple,explode=false,name=key"`
 }
 
 type GetWebhooksIDWebhookAddToDataKeyResponse struct {

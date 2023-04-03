@@ -50,25 +50,17 @@ func (e *POSTCheckDNSAvailabilityVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCheckDNSAvailabilityQueryParams struct {
-	Action  POSTCheckDNSAvailabilityActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCheckDNSAvailabilityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCheckDNSAvailabilityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCheckDNSAvailabilityRequest struct {
-	QueryParams POSTCheckDNSAvailabilityQueryParams
-	Headers     POSTCheckDNSAvailabilityHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCheckDNSAvailabilityActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTCheckDNSAvailabilityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCheckDNSAvailabilityResponse struct {

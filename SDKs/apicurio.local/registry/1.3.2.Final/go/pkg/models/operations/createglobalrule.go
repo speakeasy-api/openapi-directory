@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateGlobalRuleRequest struct {
-	Request shared.Rule `request:"mediaType=application/json"`
-}
-
 type CreateGlobalRuleResponse struct {
 	ContentType string
 	// Common response for all operations that can return a `400` error.

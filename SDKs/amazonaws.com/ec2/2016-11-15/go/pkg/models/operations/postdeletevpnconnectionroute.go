@@ -50,25 +50,17 @@ func (e *POSTDeleteVpnConnectionRouteVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTDeleteVpnConnectionRouteQueryParams struct {
-	Action  POSTDeleteVpnConnectionRouteActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteVpnConnectionRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteVpnConnectionRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteVpnConnectionRouteRequest struct {
-	QueryParams POSTDeleteVpnConnectionRouteQueryParams
-	Headers     POSTDeleteVpnConnectionRouteHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteVpnConnectionRouteActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTDeleteVpnConnectionRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteVpnConnectionRouteResponse struct {

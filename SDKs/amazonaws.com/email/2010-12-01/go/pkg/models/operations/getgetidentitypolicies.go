@@ -50,28 +50,20 @@ func (e *GETGETIdentityPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETIdentityPoliciesQueryParams struct {
+type GETGETIdentityPoliciesRequest struct {
 	Action GETGETIdentityPoliciesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identity for which the policies will be retrieved. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.</p> <p>To successfully call this API, you must own the identity.</p>
 	Identity string `queryParam:"style=form,explode=true,name=Identity"`
 	// A list of the names of policies to be retrieved. You can retrieve a maximum of 20 policies at a time. If you do not know the names of the policies that are attached to the identity, you can use <code>ListIdentityPolicies</code>.
-	PolicyNames []string                          `queryParam:"style=form,explode=true,name=PolicyNames"`
-	Version     GETGETIdentityPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETIdentityPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETIdentityPoliciesRequest struct {
-	QueryParams GETGETIdentityPoliciesQueryParams
-	Headers     GETGETIdentityPoliciesHeaders
+	PolicyNames       []string                          `queryParam:"style=form,explode=true,name=PolicyNames"`
+	Version           GETGETIdentityPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETIdentityPoliciesResponse struct {

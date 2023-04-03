@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchPlaceIndexForPositionPathParams struct {
-	// The name of the place index resource you want to use for the search.
-	IndexName string `pathParam:"style=simple,explode=false,name=IndexName"`
-}
-
-type SearchPlaceIndexForPositionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type SearchPlaceIndexForPositionRequestBody struct {
 	// <p>The preferred language used to return results. The value must be a valid <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.</p> <p>This setting affects the languages used in the results, but not the results themselves. If no language is specified, or not supported for a particular result, the partner automatically chooses a language for the result.</p> <p>For an example, we'll use the Greek language. You search for a location around Athens, Greece, with the <code>language</code> parameter set to <code>en</code>. The <code>city</code> in the results will most likely be returned as <code>Athens</code>.</p> <p>If you set the <code>language</code> parameter to <code>el</code>, for Greek, then the <code>city</code> in the results will more likely be returned as <code>Αθήνα</code>.</p> <p>If the data provider does not have a value for Greek, the result will be in a language that the provider does support.</p>
 	Language *string `json:"Language,omitempty"`
@@ -32,9 +17,16 @@ type SearchPlaceIndexForPositionRequestBody struct {
 }
 
 type SearchPlaceIndexForPositionRequest struct {
-	PathParams SearchPlaceIndexForPositionPathParams
-	Headers    SearchPlaceIndexForPositionHeaders
-	Request    SearchPlaceIndexForPositionRequestBody `request:"mediaType=application/json"`
+	// The name of the place index resource you want to use for the search.
+	IndexName         string                                 `pathParam:"style=simple,explode=false,name=IndexName"`
+	RequestBody       SearchPlaceIndexForPositionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SearchPlaceIndexForPositionResponse struct {

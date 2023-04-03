@@ -50,25 +50,17 @@ func (e *POSTDescribeInstanceEventNotificationAttributesVersionEnum) UnmarshalJS
 	}
 }
 
-type POSTDescribeInstanceEventNotificationAttributesQueryParams struct {
-	Action  POSTDescribeInstanceEventNotificationAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeInstanceEventNotificationAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeInstanceEventNotificationAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeInstanceEventNotificationAttributesRequest struct {
-	QueryParams POSTDescribeInstanceEventNotificationAttributesQueryParams
-	Headers     POSTDescribeInstanceEventNotificationAttributesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeInstanceEventNotificationAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                                     `request:"mediaType=text/xml"`
+	Version           POSTDescribeInstanceEventNotificationAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeInstanceEventNotificationAttributesResponse struct {

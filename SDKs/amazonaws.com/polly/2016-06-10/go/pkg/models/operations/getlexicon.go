@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLexiconPathParams struct {
+type GetLexiconRequest struct {
 	// Name of the lexicon.
-	LexiconName string `pathParam:"style=simple,explode=false,name=LexiconName"`
-}
-
-type GetLexiconHeaders struct {
+	LexiconName       string  `pathParam:"style=simple,explode=false,name=LexiconName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetLexiconHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLexiconRequest struct {
-	PathParams GetLexiconPathParams
-	Headers    GetLexiconHeaders
 }
 
 type GetLexiconResponse struct {

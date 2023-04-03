@@ -34,11 +34,11 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // UsersAdd - Create user
 // Create user
-func (s *users) UsersAdd(ctx context.Context, request operations.UsersAddRequest) (*operations.UsersAddResponse, error) {
+func (s *users) UsersAdd(ctx context.Context, request operations.UsersAddRequest, security operations.UsersAddSecurity) (*operations.UsersAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *users) UsersAdd(ctx context.Context, request operations.UsersAddRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *users) UsersAdd(ctx context.Context, request operations.UsersAddRequest
 
 // UsersAll - List users
 // List users
-func (s *users) UsersAll(ctx context.Context, request operations.UsersAllRequest) (*operations.UsersAllResponse, error) {
+func (s *users) UsersAll(ctx context.Context, request operations.UsersAllRequest, security operations.UsersAllSecurity) (*operations.UsersAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/users"
 
@@ -164,13 +164,13 @@ func (s *users) UsersAll(ctx context.Context, request operations.UsersAllRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *users) UsersAll(ctx context.Context, request operations.UsersAllRequest
 
 // UsersDelete - Delete user
 // Delete user
-func (s *users) UsersDelete(ctx context.Context, request operations.UsersDeleteRequest) (*operations.UsersDeleteResponse, error) {
+func (s *users) UsersDelete(ctx context.Context, request operations.UsersDeleteRequest, security operations.UsersDeleteSecurity) (*operations.UsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *users) UsersDelete(ctx context.Context, request operations.UsersDeleteR
 
 // UsersOne - Get user
 // Get user
-func (s *users) UsersOne(ctx context.Context, request operations.UsersOneRequest) (*operations.UsersOneResponse, error) {
+func (s *users) UsersOne(ctx context.Context, request operations.UsersOneRequest, security operations.UsersOneSecurity) (*operations.UsersOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *users) UsersOne(ctx context.Context, request operations.UsersOneRequest
 
 // UsersUpdate - Update user
 // Update user
-func (s *users) UsersUpdate(ctx context.Context, request operations.UsersUpdateRequest) (*operations.UsersUpdateResponse, error) {
+func (s *users) UsersUpdate(ctx context.Context, request operations.UsersUpdateRequest, security operations.UsersUpdateSecurity) (*operations.UsersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/users/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *users) UsersUpdate(ctx context.Context, request operations.UsersUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

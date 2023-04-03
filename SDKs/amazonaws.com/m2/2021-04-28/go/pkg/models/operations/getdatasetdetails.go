@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDataSetDetailsPathParams struct {
-	// The unique identifier of the application that this data set is associated with.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-	// The name of the data set.
-	DataSetName string `pathParam:"style=simple,explode=false,name=dataSetName"`
-}
-
-type GetDataSetDetailsHeaders struct {
+type GetDataSetDetailsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetDataSetDetailsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDataSetDetailsRequest struct {
-	PathParams GetDataSetDetailsPathParams
-	Headers    GetDataSetDetailsHeaders
+	// The unique identifier of the application that this data set is associated with.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The name of the data set.
+	DataSetName string `pathParam:"style=simple,explode=false,name=dataSetName"`
 }
 
 type GetDataSetDetailsResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListApplicationRevisionsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListApplicationRevisionsXAmzTargetEnum
 type ListApplicationRevisionsXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *ListApplicationRevisionsXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type ListApplicationRevisionsHeaders struct {
-	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListApplicationRevisionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListApplicationRevisionsRequest struct {
-	QueryParams ListApplicationRevisionsQueryParams
-	Headers     ListApplicationRevisionsHeaders
-	Request     shared.ListApplicationRevisionsInput `request:"mediaType=application/json"`
+	ListApplicationRevisionsInput shared.ListApplicationRevisionsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    ListApplicationRevisionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListApplicationRevisionsResponse struct {

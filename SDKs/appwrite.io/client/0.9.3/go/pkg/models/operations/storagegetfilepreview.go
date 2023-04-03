@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type StorageGetFilePreviewSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type StorageGetFilePreviewPathParams struct {
-	// File unique ID
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
-}
-
-type StorageGetFilePreviewQueryParams struct {
+type StorageGetFilePreviewRequest struct {
 	// Preview image background color. Only works with transparent images (png). Use a valid HEX color, no # is needed for prefix.
 	Background *string `queryParam:"style=form,explode=true,name=background"`
 	// Preview image border color. Use a valid HEX color, no # is needed for prefix.
@@ -26,6 +20,8 @@ type StorageGetFilePreviewQueryParams struct {
 	BorderRadius *int `queryParam:"style=form,explode=true,name=borderRadius"`
 	// Preview image border in pixels. Pass an integer between 0 to 100. Defaults to 0.
 	BorderWidth *int `queryParam:"style=form,explode=true,name=borderWidth"`
+	// File unique ID
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 	// Image crop gravity. Can be one of center,top-left,top,top-right,left,right,bottom-left,bottom,bottom-right
 	Gravity *string `queryParam:"style=form,explode=true,name=gravity"`
 	// Resize preview image height, Pass an integer between 0 to 4000.
@@ -40,12 +36,6 @@ type StorageGetFilePreviewQueryParams struct {
 	Rotation *int `queryParam:"style=form,explode=true,name=rotation"`
 	// Resize preview image width, Pass an integer between 0 to 4000.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type StorageGetFilePreviewRequest struct {
-	PathParams  StorageGetFilePreviewPathParams
-	QueryParams StorageGetFilePreviewQueryParams
-	Security    StorageGetFilePreviewSecurity
 }
 
 type StorageGetFilePreviewResponse struct {

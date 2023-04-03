@@ -48,7 +48,7 @@ func newPublic(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // None.
 func (s *public) CancelFileUploadViaShare(ctx context.Context, request operations.CancelFileUploadViaShareRequest) (*operations.CancelFileUploadViaShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -114,14 +114,14 @@ func (s *public) CancelFileUploadViaShare(ctx context.Context, request operation
 // None.
 func (s *public) CheckPublicDownloadSharePassword(ctx context.Context, request operations.CheckPublicDownloadSharePasswordRequest) (*operations.CheckPublicDownloadSharePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -180,9 +180,9 @@ func (s *public) CheckPublicDownloadSharePassword(ctx context.Context, request o
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *public) CompleteFileUploadViaShare(ctx context.Context, request operations.CompleteFileUploadViaShareRequest) (*operations.CompleteFileUploadViaShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserFileKeyList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -194,7 +194,7 @@ func (s *public) CompleteFileUploadViaShare(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -271,9 +271,9 @@ func (s *public) CompleteFileUploadViaShare(ctx context.Context, request operati
 // None.
 func (s *public) CompleteS3FileUploadViaShare(ctx context.Context, request operations.CompleteS3FileUploadViaShareRequest) (*operations.CompleteS3FileUploadViaShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteS3ShareUploadRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -352,9 +352,9 @@ func (s *public) CompleteS3FileUploadViaShare(ctx context.Context, request opera
 // `'\\', '<','>', ':', '\"', '|', '?', '*', '/', leading '-', trailing '.' `
 func (s *public) CreateShareUploadChannel(ctx context.Context, request operations.CreateShareUploadChannelRequest) (*operations.CreateShareUploadChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateShareUploadChannelRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -443,16 +443,16 @@ func (s *public) CreateShareUploadChannel(ctx context.Context, request operation
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *public) DownloadFileViaTokenPublic(ctx context.Context, request operations.DownloadFileViaTokenPublicRequest) (*operations.DownloadFileViaTokenPublicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -515,16 +515,16 @@ func (s *public) DownloadFileViaTokenPublic(ctx context.Context, request operati
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *public) DownloadFileViaTokenPublic1(ctx context.Context, request operations.DownloadFileViaTokenPublic1Request) (*operations.DownloadFileViaTokenPublic1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -585,9 +585,9 @@ func (s *public) DownloadFileViaTokenPublic1(ctx context.Context, request operat
 // Use `downloadUrl` the download `token` is deprecated.
 func (s *public) GenerateDownloadURLPublic(ctx context.Context, request operations.GenerateDownloadURLPublicRequest) (*operations.GenerateDownloadURLPublicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublicDownloadTokenGenerateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -669,9 +669,9 @@ func (s *public) GenerateDownloadURLPublic(ctx context.Context, request operatio
 // Use HTTP method `PUT` for uploading bytes via presigned URL.
 func (s *public) GeneratePresignedUrlsPublic(ctx context.Context, request operations.GeneratePresignedUrlsPublicRequest) (*operations.GeneratePresignedUrlsPublicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3_urls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3_urls", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GeneratePresignedUrlsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -686,7 +686,7 @@ func (s *public) GeneratePresignedUrlsPublic(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -765,7 +765,7 @@ func (s *public) RequestActiveDirectoryAuthInfo(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -836,7 +836,7 @@ func (s *public) RequestOpenIDAuthInfo(ctx context.Context, request operations.R
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -900,14 +900,14 @@ func (s *public) RequestOpenIDAuthInfo(ctx context.Context, request operations.R
 // None.
 func (s *public) RequestPublicDownloadShareInfo(ctx context.Context, request operations.RequestPublicDownloadShareInfoRequest) (*operations.RequestPublicDownloadShareInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/downloads/{access_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -980,14 +980,14 @@ func (s *public) RequestPublicDownloadShareInfo(ctx context.Context, request ope
 // Only if the password is transmitted as `X-Sds-Share-Password` header, all values are returned.
 func (s *public) RequestPublicUploadShareInfo(ctx context.Context, request operations.RequestPublicUploadShareInfoRequest) (*operations.RequestPublicUploadShareInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1064,7 +1064,7 @@ func (s *public) RequestSoftwareVersion(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1162,7 +1162,7 @@ func (s *public) RequestSystemInfo(ctx context.Context, request operations.Reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1233,7 +1233,7 @@ func (s *public) RequestSystemTime(ctx context.Context, request operations.Reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1391,7 +1391,7 @@ func (s *public) RequestThirdPartyDependencies(ctx context.Context) (*operations
 // </details>
 func (s *public) RequestUploadStatusPublic(ctx context.Context, request operations.RequestUploadStatusPublicRequest) (*operations.RequestUploadStatusPublicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1502,9 +1502,9 @@ func (s *public) RequestUploadStatusPublic(ctx context.Context, request operatio
 // https://tools.ietf.org/html/rfc7233 - Range Requests
 func (s *public) UploadFileAsMultipartPublic1(ctx context.Context, request operations.UploadFileAsMultipartPublic1Request) (*operations.UploadFileAsMultipartPublic1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1516,7 +1516,7 @@ func (s *public) UploadFileAsMultipartPublic1(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

@@ -35,7 +35,7 @@ func newBoundaries(defaultClient, securityClient HTTPClient, serverURL, language
 
 // FetchBoundaries - Retrieve Boundaries in batch
 // Retrieve multiple **Boundaries** (up to 10 per request).
-func (s *boundaries) FetchBoundaries(ctx context.Context, request operations.FetchBoundariesRequest) (*operations.FetchBoundariesResponse, error) {
+func (s *boundaries) FetchBoundaries(ctx context.Context, request shared.BoundariesQuery, security operations.FetchBoundariesSecurity) (*operations.FetchBoundariesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/boundaries/query"
 
@@ -51,7 +51,7 @@ func (s *boundaries) FetchBoundaries(ctx context.Context, request operations.Fet
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,16 +111,16 @@ func (s *boundaries) FetchBoundaries(ctx context.Context, request operations.Fet
 
 // FetchBoundaryByID - Retrieve a Boundary by ID
 // Retrieve a **Boundary** by ID.
-func (s *boundaries) FetchBoundaryByID(ctx context.Context, request operations.FetchBoundaryByIDRequest) (*operations.FetchBoundaryByIDResponse, error) {
+func (s *boundaries) FetchBoundaryByID(ctx context.Context, request operations.FetchBoundaryByIDRequest, security operations.FetchBoundaryByIDSecurity) (*operations.FetchBoundaryByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/boundaries/{boundaryId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/boundaries/{boundaryId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,7 +182,7 @@ func (s *boundaries) FetchBoundaryByID(ctx context.Context, request operations.F
 // Upload a **Boundary** entry by passing the geometry of the boundary. This will store the boundary but will not create field in Climate FieldView and will not link to an existing field in Climate FieldView.
 // This is restricted to callers with **boundaries:write** scope.
 // To upload a field boundary for field creation in Climate FieldView, please use **POST /v4/uploads**.
-func (s *boundaries) UploadBoundary(ctx context.Context, request operations.UploadBoundaryRequest) (*operations.UploadBoundaryResponse, error) {
+func (s *boundaries) UploadBoundary(ctx context.Context, request shared.BoundaryUpload, security operations.UploadBoundarySecurity) (*operations.UploadBoundaryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/boundaries"
 
@@ -198,7 +198,7 @@ func (s *boundaries) UploadBoundary(ctx context.Context, request operations.Uplo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

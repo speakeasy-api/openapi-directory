@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDeploymentsPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
-type GetDeploymentsQueryParams struct {
-	// The maximum number of elements to be returned for this resource.
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// The next page of elements from this collection. Not valid for the last element of the collection.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetDeploymentsHeaders struct {
+type GetDeploymentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type GetDeploymentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDeploymentsRequest struct {
-	PathParams  GetDeploymentsPathParams
-	QueryParams GetDeploymentsQueryParams
-	Headers     GetDeploymentsHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The maximum number of elements to be returned for this resource.
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// The next page of elements from this collection. Not valid for the last element of the collection.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetDeploymentsResponse struct {

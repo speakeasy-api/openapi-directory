@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateBadgePathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateBadgeRequestBody struct {
 	// The ID for the badge type. 1 for Gold, 2 for Silver,
 	// 3 for Bronze.
@@ -19,8 +15,8 @@ type UpdateBadgeRequestBody struct {
 }
 
 type UpdateBadgeRequest struct {
-	PathParams UpdateBadgePathParams
-	Request    *UpdateBadgeRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateBadgeRequestBody `request:"mediaType=application/json"`
+	ID          int64                   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateBadge200ApplicationJSONBadge struct {

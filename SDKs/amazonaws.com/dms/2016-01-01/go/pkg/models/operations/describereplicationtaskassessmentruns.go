@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeReplicationTaskAssessmentRunsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeReplicationTaskAssessmentRunsXAmzTargetEnum
 type DescribeReplicationTaskAssessmentRunsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeReplicationTaskAssessmentRunsXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type DescribeReplicationTaskAssessmentRunsHeaders struct {
+type DescribeReplicationTaskAssessmentRunsRequest struct {
+	DescribeReplicationTaskAssessmentRunsMessage shared.DescribeReplicationTaskAssessmentRunsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                             `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeReplicationTaskAssessmentRunsHeaders struct {
 	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeReplicationTaskAssessmentRunsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeReplicationTaskAssessmentRunsRequest struct {
-	QueryParams DescribeReplicationTaskAssessmentRunsQueryParams
-	Headers     DescribeReplicationTaskAssessmentRunsHeaders
-	Request     shared.DescribeReplicationTaskAssessmentRunsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeReplicationTaskAssessmentRunsResponse struct {

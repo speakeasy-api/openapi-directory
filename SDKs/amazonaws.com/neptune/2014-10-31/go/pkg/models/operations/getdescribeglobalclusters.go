@@ -50,30 +50,22 @@ func (e *GETDescribeGlobalClustersVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeGlobalClustersQueryParams struct {
+type GETDescribeGlobalClustersRequest struct {
 	Action GETDescribeGlobalClustersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The user-supplied DB cluster identifier. If this parameter is specified, only information about the specified DB cluster is returned. This parameter is not case-sensitive.</p> <p>Constraints: If supplied, must match an existing DB cluster identifier.</p>
 	GlobalClusterIdentifier *string `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`
 	// (<i>Optional</i>) A pagination token returned by a previous call to <code>DescribeGlobalClusters</code>. If this parameter is specified, the response will only include records beyond the marker, up to the number specified by <code>MaxRecords</code>.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// <p>The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a pagination marker token is included in the response that you can use to retrieve the remaining results.</p> <p>Default: <code>100</code> </p> <p>Constraints: Minimum 20, maximum 100.</p>
-	MaxRecords *int64                               `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeGlobalClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeGlobalClustersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeGlobalClustersRequest struct {
-	QueryParams GETDescribeGlobalClustersQueryParams
-	Headers     GETDescribeGlobalClustersHeaders
+	MaxRecords        *int64                               `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeGlobalClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeGlobalClustersResponse struct {

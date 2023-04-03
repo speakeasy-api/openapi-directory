@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostVerifySecurity struct {
-	Oauth shared.SchemeOauth `security:"scheme,type=oauth2"`
-}
-
-type PostVerifyRequest struct {
-	Security PostVerifySecurity
-}
-
 type PostVerifyResponse struct {
 	// Token is valid
 	Authority   *shared.Authority

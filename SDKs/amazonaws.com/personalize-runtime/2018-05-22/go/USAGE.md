@@ -13,41 +13,39 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetPersonalizedRankingRequest{
-        Headers: operations.GetPersonalizedRankingHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.GetPersonalizedRankingRequestBody{
-            CampaignArn: "illum",
+        RequestBody: operations.GetPersonalizedRankingRequestBody{
+            CampaignArn: "corrupti",
             Context: map[string]string{
-                "error": "deserunt",
-                "suscipit": "iure",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
-            FilterArn: "magnam",
+            FilterArn: "vel",
             FilterValues: map[string]string{
-                "ipsa": "delectus",
-                "tempora": "suscipit",
-                "molestiae": "minus",
-                "placeat": "voluptatum",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
             InputList: []string{
-                "excepturi",
-                "nisi",
+                "tempora",
+                "suscipit",
+                "molestiae",
+                "minus",
             },
-            UserID: "recusandae",
+            UserID: "placeat",
         },
+        XAmzAlgorithm: "voluptatum",
+        XAmzContentSha256: "iusto",
+        XAmzCredential: "excepturi",
+        XAmzDate: "nisi",
+        XAmzSecurityToken: "recusandae",
+        XAmzSignature: "temporibus",
+        XAmzSignedHeaders: "ab",
     }
 
     ctx := context.Background()

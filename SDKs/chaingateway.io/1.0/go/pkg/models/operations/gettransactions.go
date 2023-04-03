@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTransactionsHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type GetTransactionsRequest struct {
-	Headers GetTransactionsHeaders
-	Request shared.GetTransactionsRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	GetTransactionsRequest shared.GetTransactionsRequest `request:"mediaType=application/json"`
 }
 
 type GetTransactionsResponse struct {

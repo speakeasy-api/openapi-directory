@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Mrcer - Merit Certificate
 // API to verify Merit Certificate.
-func (s *apIs) Mrcer(ctx context.Context, request operations.MrcerRequest) (*operations.MrcerResponse, error) {
+func (s *apIs) Mrcer(ctx context.Context, request operations.MrcerRequestBody, security operations.MrcerSecurity) (*operations.MrcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mrcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Mrcer(ctx context.Context, request operations.MrcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

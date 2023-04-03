@@ -8,21 +8,16 @@ import (
 )
 
 type GroupV2IndividualGroupInviteSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2IndividualGroupInvitePathParams struct {
+type GroupV2IndividualGroupInviteRequest struct {
 	// ID of the group you would like to join.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// Membership id of the account being invited.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// MembershipType of the account being invited.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2IndividualGroupInviteRequest struct {
-	PathParams GroupV2IndividualGroupInvitePathParams
-	Security   GroupV2IndividualGroupInviteSecurity
 }
 
 // GroupV2IndividualGroupInvite200Wildcard - Look at the Response property for more information about the nature of this response

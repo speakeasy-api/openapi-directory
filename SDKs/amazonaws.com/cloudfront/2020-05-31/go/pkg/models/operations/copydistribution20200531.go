@@ -6,14 +6,17 @@ import (
 	"net/http"
 )
 
-type CopyDistribution20200531PathParams struct {
-	// The identifier of the primary distribution whose configuration you are copying. To get a distribution ID, use <code>ListDistributions</code>.
-	PrimaryDistributionID string `pathParam:"style=simple,explode=false,name=PrimaryDistributionId"`
+type CopyDistribution20200531RequestBody struct {
+	// A value that uniquely identifies a request to create a resource. This helps to prevent CloudFront from creating a duplicate resource if you accidentally resubmit an identical request.
+	CallerReference string
 }
 
-type CopyDistribution20200531Headers struct {
+type CopyDistribution20200531Request struct {
 	// The version identifier of the primary distribution whose configuration you are copying. This is the <code>ETag</code> value returned in the response to <code>GetDistribution</code> and <code>GetDistributionConfig</code>.
 	IfMatch *string `header:"style=simple,explode=false,name=If-Match"`
+	// The identifier of the primary distribution whose configuration you are copying. To get a distribution ID, use <code>ListDistributions</code>.
+	PrimaryDistributionID string `pathParam:"style=simple,explode=false,name=PrimaryDistributionId"`
+	RequestBody           []byte `request:"mediaType=text/xml"`
 	// The type of distribution that your primary distribution will be copied to. The only valid value is <code>True</code>, indicating that you are copying to a staging distribution.
 	Staging           *bool   `header:"style=simple,explode=false,name=Staging"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -23,17 +26,6 @@ type CopyDistribution20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CopyDistribution20200531RequestBody struct {
-	// A value that uniquely identifies a request to create a resource. This helps to prevent CloudFront from creating a duplicate resource if you accidentally resubmit an identical request.
-	CallerReference string
-}
-
-type CopyDistribution20200531Request struct {
-	PathParams CopyDistribution20200531PathParams
-	Headers    CopyDistribution20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type CopyDistribution20200531Response struct {

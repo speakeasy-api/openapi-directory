@@ -30,20 +30,16 @@ func (e *InitiateLayerUploadXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type InitiateLayerUploadHeaders struct {
-	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        InitiateLayerUploadXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type InitiateLayerUploadRequest struct {
-	Headers InitiateLayerUploadHeaders
-	Request shared.InitiateLayerUploadRequest `request:"mediaType=application/json"`
+	InitiateLayerUploadRequest shared.InitiateLayerUploadRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 InitiateLayerUploadXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type InitiateLayerUploadResponse struct {

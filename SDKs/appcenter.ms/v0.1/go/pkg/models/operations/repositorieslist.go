@@ -6,11 +6,34 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RepositoriesListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
+// RepositoriesListFormEnum - The selected form of the object
+type RepositoriesListFormEnum string
+
+const (
+	RepositoriesListFormEnumLite RepositoriesListFormEnum = "lite"
+	RepositoriesListFormEnumFull RepositoriesListFormEnum = "full"
+)
+
+func (e *RepositoriesListFormEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "lite":
+		fallthrough
+	case "full":
+		*e = RepositoriesListFormEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for RepositoriesListFormEnum: %s", s)
+	}
 }
 
 // RepositoriesListSourceHostEnum - The source host
@@ -43,54 +66,21 @@ func (e *RepositoriesListSourceHostEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RepositoriesListPathParams struct {
+type RepositoriesListRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The source host
-	SourceHost RepositoriesListSourceHostEnum `pathParam:"style=simple,explode=false,name=source_host"`
-}
-
-// RepositoriesListFormEnum - The selected form of the object
-type RepositoriesListFormEnum string
-
-const (
-	RepositoriesListFormEnumLite RepositoriesListFormEnum = "lite"
-	RepositoriesListFormEnumFull RepositoriesListFormEnum = "full"
-)
-
-func (e *RepositoriesListFormEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "lite":
-		fallthrough
-	case "full":
-		*e = RepositoriesListFormEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RepositoriesListFormEnum: %s", s)
-	}
-}
-
-type RepositoriesListQueryParams struct {
 	// The selected form of the object
 	Form *RepositoriesListFormEnum `queryParam:"style=form,explode=true,name=form"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The id of the service connection (private). Required for GitLab self-hosted repositories
 	ServiceConnectionID *string `queryParam:"style=form,explode=true,name=service_connection_id"`
+	// The source host
+	SourceHost RepositoriesListSourceHostEnum `pathParam:"style=simple,explode=false,name=source_host"`
 	// Filter repositories only for specified account and project, "vstsProjectId" is required
 	VstsAccountName *string `queryParam:"style=form,explode=true,name=vstsAccountName"`
 	// Filter repositories only for specified account and project, "vstsAccountName" is required
 	VstsProjectID *string `queryParam:"style=form,explode=true,name=vstsProjectId"`
-}
-
-type RepositoriesListRequest struct {
-	PathParams  RepositoriesListPathParams
-	QueryParams RepositoriesListQueryParams
-	Security    RepositoriesListSecurity
 }
 
 // RepositoriesListDefaultApplicationJSON - Bad Request

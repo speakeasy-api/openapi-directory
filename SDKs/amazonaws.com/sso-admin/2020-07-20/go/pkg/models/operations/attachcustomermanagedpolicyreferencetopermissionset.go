@@ -30,20 +30,16 @@ func (e *AttachCustomerManagedPolicyReferenceToPermissionSetXAmzTargetEnum) Unma
 	}
 }
 
-type AttachCustomerManagedPolicyReferenceToPermissionSetHeaders struct {
-	XAmzAlgorithm     *string                                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        AttachCustomerManagedPolicyReferenceToPermissionSetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type AttachCustomerManagedPolicyReferenceToPermissionSetRequest struct {
-	Headers AttachCustomerManagedPolicyReferenceToPermissionSetHeaders
-	Request shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest `request:"mediaType=application/json"`
+	AttachCustomerManagedPolicyReferenceToPermissionSetRequest shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                                              *string                                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                                          *string                                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                                             *string                                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                                   *string                                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                                          *string                                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                                              *string                                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                                          *string                                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                                                 AttachCustomerManagedPolicyReferenceToPermissionSetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type AttachCustomerManagedPolicyReferenceToPermissionSetResponse struct {

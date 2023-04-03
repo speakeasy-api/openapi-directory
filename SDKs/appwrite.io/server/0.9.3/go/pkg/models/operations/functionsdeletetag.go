@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type FunctionsDeleteTagSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type FunctionsDeleteTagPathParams struct {
+type FunctionsDeleteTagRequest struct {
 	// Function unique ID.
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 	// Tag unique ID.
 	TagID string `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type FunctionsDeleteTagRequest struct {
-	PathParams FunctionsDeleteTagPathParams
-	Security   FunctionsDeleteTagSecurity
 }
 
 type FunctionsDeleteTagResponse struct {

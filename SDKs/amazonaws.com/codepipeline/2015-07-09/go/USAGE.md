@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcknowledgeJobRequest{
-        Headers: operations.AcknowledgeJobHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "CodePipeline_20150709.AcknowledgeJob",
+        AcknowledgeJobInput: shared.AcknowledgeJobInput{
+            JobID: "corrupti",
+            Nonce: "provident",
         },
-        Request: shared.AcknowledgeJobInput{
-            JobID: "illum",
-            Nonce: "vel",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "CodePipeline_20150709.AcknowledgeJob",
     }
 
     ctx := context.Background()

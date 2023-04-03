@@ -50,30 +50,22 @@ func (e *GETDescribeLoadBalancerTargetGroupsVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GETDescribeLoadBalancerTargetGroupsQueryParams struct {
+type GETDescribeLoadBalancerTargetGroupsRequest struct {
 	Action GETDescribeLoadBalancerTargetGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The maximum number of items to return with this call. The default value is <code>100</code> and the maximum value is <code>100</code>.
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// The token for the next set of items to return. (You received this token from a previous call.)
-	NextToken *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETDescribeLoadBalancerTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeLoadBalancerTargetGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeLoadBalancerTargetGroupsRequest struct {
-	QueryParams GETDescribeLoadBalancerTargetGroupsQueryParams
-	Headers     GETDescribeLoadBalancerTargetGroupsHeaders
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETDescribeLoadBalancerTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeLoadBalancerTargetGroupsResponse struct {

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDedicatedIPPoolPathParams struct {
+type DeleteDedicatedIPPoolRequest struct {
 	// The name of the dedicated IP pool that you want to delete.
-	PoolName string `pathParam:"style=simple,explode=false,name=PoolName"`
-}
-
-type DeleteDedicatedIPPoolHeaders struct {
+	PoolName          string  `pathParam:"style=simple,explode=false,name=PoolName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteDedicatedIPPoolHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDedicatedIPPoolRequest struct {
-	PathParams DeleteDedicatedIPPoolPathParams
-	Headers    DeleteDedicatedIPPoolHeaders
 }
 
 type DeleteDedicatedIPPoolResponse struct {

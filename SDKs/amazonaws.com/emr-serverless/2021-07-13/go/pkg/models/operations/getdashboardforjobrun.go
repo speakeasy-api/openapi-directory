@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDashboardForJobRunPathParams struct {
-	// The ID of the application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-	// The ID of the job run.
-	JobRunID string `pathParam:"style=simple,explode=false,name=jobRunId"`
-}
-
-type GetDashboardForJobRunHeaders struct {
+type GetDashboardForJobRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetDashboardForJobRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDashboardForJobRunRequest struct {
-	PathParams GetDashboardForJobRunPathParams
-	Headers    GetDashboardForJobRunHeaders
+	// The ID of the application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The ID of the job run.
+	JobRunID string `pathParam:"style=simple,explode=false,name=jobRunId"`
 }
 
 type GetDashboardForJobRunResponse struct {

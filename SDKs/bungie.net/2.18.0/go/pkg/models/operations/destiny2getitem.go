@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetItemPathParams struct {
+type Destiny2GetItemRequest struct {
+	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+	Components []int `queryParam:"style=form,explode=false,name=components"`
 	// The membership ID of the destiny profile.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// The Instance ID of the destiny item.
 	ItemInstanceID int64 `pathParam:"style=simple,explode=false,name=itemInstanceId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetItemQueryParams struct {
-	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
-	Components []int `queryParam:"style=form,explode=false,name=components"`
-}
-
-type Destiny2GetItemRequest struct {
-	PathParams  Destiny2GetItemPathParams
-	QueryParams Destiny2GetItemQueryParams
 }
 
 // Destiny2GetItem200Wildcard - The response object for retrieving an individual instanced item. None of these components are relevant for an item that doesn't have an "itemInstanceId": for those, get your information from the DestinyInventoryDefinition.

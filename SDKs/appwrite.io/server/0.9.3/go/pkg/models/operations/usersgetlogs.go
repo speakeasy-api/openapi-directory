@@ -8,18 +8,13 @@ import (
 )
 
 type UsersGetLogsSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersGetLogsPathParams struct {
-	// User unique ID.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type UsersGetLogsRequest struct {
-	PathParams UsersGetLogsPathParams
-	Security   UsersGetLogsSecurity
+	// User unique ID.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UsersGetLogsResponse struct {

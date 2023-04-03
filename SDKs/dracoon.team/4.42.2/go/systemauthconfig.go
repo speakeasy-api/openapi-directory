@@ -49,7 +49,7 @@ func (s *systemAuthConfig) CreateAdConfig(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/auth/ads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateActiveDirectoryConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -64,7 +64,7 @@ func (s *systemAuthConfig) CreateAdConfig(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -162,7 +162,7 @@ func (s *systemAuthConfig) CreateOAuthClient(ctx context.Context, request operat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/oauth/clients"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateOAuthClientRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -177,7 +177,7 @@ func (s *systemAuthConfig) CreateOAuthClient(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -259,7 +259,7 @@ func (s *systemAuthConfig) CreateOpenIDIdpConfig(ctx context.Context, request op
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/auth/openid/idps"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateOpenIDIdpConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -274,7 +274,7 @@ func (s *systemAuthConfig) CreateOpenIDIdpConfig(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -349,7 +349,7 @@ func (s *systemAuthConfig) CreateRadiusConfig(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/auth/radius"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RadiusConfigCreateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,7 +364,7 @@ func (s *systemAuthConfig) CreateRadiusConfig(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -434,14 +434,14 @@ func (s *systemAuthConfig) CreateRadiusConfig(ctx context.Context, request opera
 // None.
 func (s *systemAuthConfig) RemoveAdConfig(ctx context.Context, request operations.RemoveAdConfigRequest) (*operations.RemoveAdConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/ads/{ad_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/ads/{ad_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -505,14 +505,14 @@ func (s *systemAuthConfig) RemoveAdConfig(ctx context.Context, request operation
 // None.
 func (s *systemAuthConfig) RemoveOAuthClient(ctx context.Context, request operations.RemoveOAuthClientRequest) (*operations.RemoveOAuthClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/oauth/clients/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/oauth/clients/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -575,14 +575,14 @@ func (s *systemAuthConfig) RemoveOAuthClient(ctx context.Context, request operat
 // http://openid.net/developers/specs - OpenID Specifications
 func (s *systemAuthConfig) RemoveOpenIDIdpConfig(ctx context.Context, request operations.RemoveOpenIDIdpConfigRequest) (*operations.RemoveOpenIDIdpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/openid/idps/{idp_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/openid/idps/{idp_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -653,7 +653,7 @@ func (s *systemAuthConfig) RemoveRadiusConfig(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -712,14 +712,14 @@ func (s *systemAuthConfig) RemoveRadiusConfig(ctx context.Context, request opera
 // None.
 func (s *systemAuthConfig) RequestAdConfig(ctx context.Context, request operations.RequestAdConfigRequest) (*operations.RequestAdConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/ads/{ad_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/ads/{ad_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -796,7 +796,7 @@ func (s *systemAuthConfig) RequestAdConfigs(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -863,14 +863,14 @@ func (s *systemAuthConfig) RequestAdConfigs(ctx context.Context, request operati
 // None.
 func (s *systemAuthConfig) RequestOAuthClient(ctx context.Context, request operations.RequestOAuthClientRequest) (*operations.RequestOAuthClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/oauth/clients/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/oauth/clients/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1000,9 +1000,9 @@ func (s *systemAuthConfig) RequestOAuthClients(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1072,14 +1072,14 @@ func (s *systemAuthConfig) RequestOAuthClients(ctx context.Context, request oper
 // http://openid.net/developers/specs - OpenID Specifications
 func (s *systemAuthConfig) RequestOpenIDIdpConfig(ctx context.Context, request operations.RequestOpenIDIdpConfigRequest) (*operations.RequestOpenIDIdpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/openid/idps/{idp_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/openid/idps/{idp_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1158,7 +1158,7 @@ func (s *systemAuthConfig) RequestOpenIDIdpConfigs(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1232,7 +1232,7 @@ func (s *systemAuthConfig) RequestRadiusConfig(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1302,7 +1302,7 @@ func (s *systemAuthConfig) TestAdConfig(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/actions/test/ad"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestActiveDirectoryConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1317,7 +1317,7 @@ func (s *systemAuthConfig) TestAdConfig(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1394,7 +1394,7 @@ func (s *systemAuthConfig) TestRadiusConfig(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1455,9 +1455,9 @@ func (s *systemAuthConfig) TestRadiusConfig(ctx context.Context, request operati
 // None.
 func (s *systemAuthConfig) UpdateAdConfig(ctx context.Context, request operations.UpdateAdConfigRequest) (*operations.UpdateAdConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/ads/{ad_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/ads/{ad_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateActiveDirectoryConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1472,7 +1472,7 @@ func (s *systemAuthConfig) UpdateAdConfig(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1562,9 +1562,9 @@ func (s *systemAuthConfig) UpdateAdConfig(ctx context.Context, request operation
 // redirect URI **MUST** be provided!
 func (s *systemAuthConfig) UpdateOAuthClient(ctx context.Context, request operations.UpdateOAuthClientRequest) (*operations.UpdateOAuthClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/oauth/clients/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/oauth/clients/{client_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateOAuthClientRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1579,7 +1579,7 @@ func (s *systemAuthConfig) UpdateOAuthClient(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1659,9 +1659,9 @@ func (s *systemAuthConfig) UpdateOAuthClient(ctx context.Context, request operat
 // http://openid.net/developers/specs - OpenID Specifications
 func (s *systemAuthConfig) UpdateOpenIDIdpConfig(ctx context.Context, request operations.UpdateOpenIDIdpConfigRequest) (*operations.UpdateOpenIDIdpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/openid/idps/{idp_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/auth/openid/idps/{idp_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateOpenIDIdpConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1676,7 +1676,7 @@ func (s *systemAuthConfig) UpdateOpenIDIdpConfig(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1751,7 +1751,7 @@ func (s *systemAuthConfig) UpdateRadiusConfig(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/auth/radius"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RadiusConfigUpdateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1766,7 +1766,7 @@ func (s *systemAuthConfig) UpdateRadiusConfig(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

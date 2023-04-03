@@ -4,17 +4,8 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
-
-type CompanyNotificationListSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyNotificationListRequest struct {
-	Security CompanyNotificationListSecurity
-}
 
 // CompanyNotificationListDefaultApplicationJSON - Detailed information about the error
 type CompanyNotificationListDefaultApplicationJSON struct {

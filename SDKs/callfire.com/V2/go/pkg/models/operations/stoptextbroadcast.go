@@ -8,17 +8,13 @@ import (
 )
 
 type StopTextBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type StopTextBroadcastPathParams struct {
-	// An Id of a text broadcast. To stop the broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type StopTextBroadcastRequest struct {
-	PathParams StopTextBroadcastPathParams
-	Security   StopTextBroadcastSecurity
+	// An Id of a text broadcast. To stop the broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StopTextBroadcastResponse struct {

@@ -30,20 +30,16 @@ func (e *StartExpenseAnalysisXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StartExpenseAnalysisHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartExpenseAnalysisXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartExpenseAnalysisRequest struct {
-	Headers StartExpenseAnalysisHeaders
-	Request shared.StartExpenseAnalysisRequest `request:"mediaType=application/json"`
+	StartExpenseAnalysisRequest shared.StartExpenseAnalysisRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  StartExpenseAnalysisXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartExpenseAnalysisResponse struct {

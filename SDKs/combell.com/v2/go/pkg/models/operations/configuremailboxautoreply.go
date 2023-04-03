@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureMailboxAutoReplyPathParams struct {
-	// Automatically added
-	MailboxName string `pathParam:"style=simple,explode=false,name=mailboxName"`
-}
-
-type ConfigureMailboxAutoReplyQueryParams struct {
-	// Mailbox name.
-	MailboxName string `queryParam:"style=form,explode=true,name=mailbox_name"`
-}
-
 type ConfigureMailboxAutoReplyRequest struct {
-	PathParams  ConfigureMailboxAutoReplyPathParams
-	QueryParams ConfigureMailboxAutoReplyQueryParams
 	// Contains the auto-reply information.
-	Request *shared.AutoReply `request:"mediaType=application/json"`
+	AutoReply *shared.AutoReply `request:"mediaType=application/json"`
+	// Automatically added
+	MailboxNamePathParameter string `pathParam:"style=simple,explode=false,name=mailboxName"`
+	// Mailbox name.
+	MailboxNameQueryParameter string `queryParam:"style=form,explode=true,name=mailbox_name"`
 }
 
 type ConfigureMailboxAutoReplyResponse struct {

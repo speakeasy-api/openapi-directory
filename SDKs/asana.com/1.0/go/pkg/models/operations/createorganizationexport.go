@@ -7,7 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateOrganizationExportQueryParams struct {
+// CreateOrganizationExportRequestBody - The organization to export.
+type CreateOrganizationExportRequestBody struct {
+	// An *organization_export* request starts a job to export the complete data of the given Organization.
+	Data *shared.OrganizationExportRequest `json:"data,omitempty"`
+}
+
+type CreateOrganizationExportRequest struct {
+	// The organization to export.
+	RequestBody CreateOrganizationExportRequestBody `request:"mediaType=application/json"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,18 +30,6 @@ type CreateOrganizationExportQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// CreateOrganizationExportRequestBody - The organization to export.
-type CreateOrganizationExportRequestBody struct {
-	// An *organization_export* request starts a job to export the complete data of the given Organization.
-	Data *shared.OrganizationExportRequest `json:"data,omitempty"`
-}
-
-type CreateOrganizationExportRequest struct {
-	QueryParams CreateOrganizationExportQueryParams
-	// The organization to export.
-	Request CreateOrganizationExportRequestBody `request:"mediaType=application/json"`
 }
 
 // CreateOrganizationExport201ApplicationJSON - Successfully created organization export request.

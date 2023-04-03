@@ -8,19 +8,14 @@ import (
 )
 
 type PatientLabResultsCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PatientLabResultsCreateQueryParams struct {
+type PatientLabResultsCreateRequest struct {
 	Doctor         *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	OrderingDoctor *int64  `queryParam:"style=form,explode=true,name=ordering_doctor"`
 	Patient        *int64  `queryParam:"style=form,explode=true,name=patient"`
 	Since          *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type PatientLabResultsCreateRequest struct {
-	QueryParams PatientLabResultsCreateQueryParams
-	Security    PatientLabResultsCreateSecurity
 }
 
 type PatientLabResultsCreateResponse struct {

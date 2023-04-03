@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddSSHKeyPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type AddSSHKeyQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type AddSSHKeyRequest struct {
-	PathParams  AddSSHKeyPathParams
-	QueryParams AddSSHKeyQueryParams
 	// SSH key public key.
-	Request *shared.AddSSHKeyRequest `request:"mediaType=application/json"`
+	AddSSHKeyRequest *shared.AddSSHKeyRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type AddSSHKeyResponse struct {

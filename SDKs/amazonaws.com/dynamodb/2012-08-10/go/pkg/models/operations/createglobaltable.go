@@ -30,20 +30,16 @@ func (e *CreateGlobalTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateGlobalTableHeaders struct {
-	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateGlobalTableXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateGlobalTableRequest struct {
-	Headers CreateGlobalTableHeaders
-	Request shared.CreateGlobalTableInput `request:"mediaType=application/json"`
+	CreateGlobalTableInput shared.CreateGlobalTableInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm          *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget             CreateGlobalTableXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateGlobalTableResponse struct {

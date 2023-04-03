@@ -32,10 +32,20 @@ func newRoadDistance(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // ConfirmCarbonOffset5 - confirmCarbonOffset
-func (s *roadDistance) ConfirmCarbonOffset5(ctx context.Context, request operations.ConfirmCarbonOffset5Request) (*operations.ConfirmCarbonOffset5Response, error) {
+func (s *roadDistance) ConfirmCarbonOffset5(ctx context.Context, request operations.ConfirmCarbonOffset5RequestBody, opts ...operations.Option) (*operations.ConfirmCarbonOffset5Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmCarbonOffset5ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/roadDistance/confirmCarbonOffset"
@@ -78,10 +88,20 @@ func (s *roadDistance) ConfirmCarbonOffset5(ctx context.Context, request operati
 }
 
 // ConfirmPayment5 - confirmPayment
-func (s *roadDistance) ConfirmPayment5(ctx context.Context, request operations.ConfirmPayment5Request) (*operations.ConfirmPayment5Response, error) {
+func (s *roadDistance) ConfirmPayment5(ctx context.Context, request operations.ConfirmPayment5RequestBody, opts ...operations.Option) (*operations.ConfirmPayment5Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPayment5ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/roadDistance/confirmPayment"
@@ -124,10 +144,20 @@ func (s *roadDistance) ConfirmPayment5(ctx context.Context, request operations.C
 }
 
 // ConfirmPaymentOfTransaction5 - confirmTransaction
-func (s *roadDistance) ConfirmPaymentOfTransaction5(ctx context.Context, request operations.ConfirmPaymentOfTransaction5Request) (*operations.ConfirmPaymentOfTransaction5Response, error) {
+func (s *roadDistance) ConfirmPaymentOfTransaction5(ctx context.Context, request operations.ConfirmPaymentOfTransaction5RequestBody, opts ...operations.Option) (*operations.ConfirmPaymentOfTransaction5Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPaymentOfTransaction5ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/roadDistance/confirmTransaction"
@@ -170,10 +200,20 @@ func (s *roadDistance) ConfirmPaymentOfTransaction5(ctx context.Context, request
 }
 
 // ConfirmsPlanting5 - confirmPlanting
-func (s *roadDistance) ConfirmsPlanting5(ctx context.Context, request operations.ConfirmsPlanting5Request) (*operations.ConfirmsPlanting5Response, error) {
+func (s *roadDistance) ConfirmsPlanting5(ctx context.Context, request operations.ConfirmsPlanting5RequestBody, opts ...operations.Option) (*operations.ConfirmsPlanting5Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmsPlanting5ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/roadDistance/confirmPlanting"
@@ -216,10 +256,20 @@ func (s *roadDistance) ConfirmsPlanting5(ctx context.Context, request operations
 }
 
 // RoadDistance - RoadDistance
-func (s *roadDistance) RoadDistance(ctx context.Context, request operations.RoadDistanceRequest) (*operations.RoadDistanceResponse, error) {
+func (s *roadDistance) RoadDistance(ctx context.Context, request operations.RoadDistanceRequestBody, opts ...operations.Option) (*operations.RoadDistanceResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.RoadDistanceServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/roadDistance"

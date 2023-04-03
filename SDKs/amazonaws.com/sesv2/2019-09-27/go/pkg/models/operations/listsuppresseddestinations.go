@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type ListSuppressedDestinationsQueryParams struct {
+type ListSuppressedDestinationsRequest struct {
 	// Used to filter the list of suppressed email destinations so that it only includes addresses that were added to the list before a specific date.
 	EndDate *time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// A token returned from a previous call to <code>ListSuppressedDestinations</code> to indicate the position in the list of suppressed email addresses.
@@ -18,22 +18,14 @@ type ListSuppressedDestinationsQueryParams struct {
 	// The factors that caused the email address to be added to .
 	Reason []shared.SuppressionListReasonEnum `queryParam:"style=form,explode=true,name=Reason"`
 	// Used to filter the list of suppressed email destinations so that it only includes addresses that were added to the list after a specific date.
-	StartDate *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type ListSuppressedDestinationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSuppressedDestinationsRequest struct {
-	QueryParams ListSuppressedDestinationsQueryParams
-	Headers     ListSuppressedDestinationsHeaders
+	StartDate         *time.Time `queryParam:"style=form,explode=true,name=StartDate"`
+	XAmzAlgorithm     *string    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListSuppressedDestinationsResponse struct {

@@ -35,14 +35,14 @@ func newCRMCleanseAPI(defaultClient, securityClient HTTPClient, serverURL, langu
 // Check whether particular vin has had a listing after stipulated date or not
 func (s *crmCleanseAPI) CrmCheck(ctx context.Context, request operations.CrmCheckRequest) (*operations.CrmCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm_check/car/{vin}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm_check/car/{vin}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

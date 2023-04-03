@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBackupPolicyPathParams struct {
+type DescribeBackupPolicyRequest struct {
 	// Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
-	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type DescribeBackupPolicyHeaders struct {
+	FileSystemID      string  `pathParam:"style=simple,explode=false,name=FileSystemId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeBackupPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBackupPolicyRequest struct {
-	PathParams DescribeBackupPolicyPathParams
-	Headers    DescribeBackupPolicyHeaders
 }
 
 type DescribeBackupPolicyResponse struct {

@@ -37,7 +37,7 @@ func newHeadlessChrome(defaultClient, securityClient HTTPClient, serverURL, lang
 // Convert HTML to a PDF using Headless Chrome on AWS Lambda.
 // ### Authorize via Header of Request
 // **Authorization: YOUR-API-KEY**
-func (s *headlessChrome) ChromeFromHTMLPost(ctx context.Context, request operations.ChromeFromHTMLPostRequest) (*operations.ChromeFromHTMLPostResponse, error) {
+func (s *headlessChrome) ChromeFromHTMLPost(ctx context.Context, request shared.ChromeHTMLToPdfRequest) (*operations.ChromeFromHTMLPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/chrome/html"
 
@@ -103,7 +103,7 @@ func (s *headlessChrome) ChromeFromHTMLPost(ctx context.Context, request operati
 // **apikey=YOUR-API-KEY**
 // ### Example
 // ``` https://v2018.api2pdf.com/chrome/url?url={UrlToConvert}&apikey={YourApiKey} ```
-func (s *headlessChrome) ChromeFromURLGET(ctx context.Context, request operations.ChromeFromURLGETRequest) (*operations.ChromeFromURLGETResponse, error) {
+func (s *headlessChrome) ChromeFromURLGET(ctx context.Context, request operations.ChromeFromURLGETRequest, security operations.ChromeFromURLGETSecurity) (*operations.ChromeFromURLGETResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/chrome/url"
 
@@ -112,11 +112,11 @@ func (s *headlessChrome) ChromeFromURLGET(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,7 +171,7 @@ func (s *headlessChrome) ChromeFromURLGET(ctx context.Context, request operation
 // Convert a URL or Web Page to PDF using Headless Chrome on AWS Lambda..
 // ### Authorize via Header of Request
 // **Authorization: YOUR-API-KEY**
-func (s *headlessChrome) ChromeFromURLPost(ctx context.Context, request operations.ChromeFromURLPostRequest) (*operations.ChromeFromURLPostResponse, error) {
+func (s *headlessChrome) ChromeFromURLPost(ctx context.Context, request shared.ChromeURLToPdfRequest) (*operations.ChromeFromURLPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/chrome/url"
 

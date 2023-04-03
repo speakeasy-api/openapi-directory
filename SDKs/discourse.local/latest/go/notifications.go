@@ -76,7 +76,7 @@ func (s *notifications) GetNotifications(ctx context.Context) (*operations.GetNo
 }
 
 // MarkNotificationsAsRead - Mark notifications as read
-func (s *notifications) MarkNotificationsAsRead(ctx context.Context, request operations.MarkNotificationsAsReadRequest) (*operations.MarkNotificationsAsReadResponse, error) {
+func (s *notifications) MarkNotificationsAsRead(ctx context.Context, request operations.MarkNotificationsAsReadRequestBody) (*operations.MarkNotificationsAsReadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications/mark-read.json"
 

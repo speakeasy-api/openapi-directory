@@ -115,7 +115,7 @@ func (s *SDK) CreateCloudFrontOriginAccessIdentity20171030(ctx context.Context, 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/origin-access-identity/cloudfront"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -130,7 +130,7 @@ func (s *SDK) CreateCloudFrontOriginAccessIdentity20171030(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -181,7 +181,7 @@ func (s *SDK) CreateDistribution20171030(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/distribution"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -196,7 +196,7 @@ func (s *SDK) CreateDistribution20171030(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -323,7 +323,7 @@ func (s *SDK) CreateDistributionWithTags20171030(ctx context.Context, request op
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/distribution#WithTags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,9 +338,9 @@ func (s *SDK) CreateDistributionWithTags20171030(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -471,7 +471,7 @@ func (s *SDK) CreateFieldLevelEncryptionConfig20171030(ctx context.Context, requ
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/field-level-encryption"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -486,7 +486,7 @@ func (s *SDK) CreateFieldLevelEncryptionConfig20171030(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -543,7 +543,7 @@ func (s *SDK) CreateFieldLevelEncryptionProfile20171030(ctx context.Context, req
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/field-level-encryption-profile"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -558,7 +558,7 @@ func (s *SDK) CreateFieldLevelEncryptionProfile20171030(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -613,9 +613,9 @@ func (s *SDK) CreateFieldLevelEncryptionProfile20171030(ctx context.Context, req
 // CreateInvalidation20171030 - Create a new invalidation.
 func (s *SDK) CreateInvalidation20171030(ctx context.Context, request operations.CreateInvalidation20171030Request) (*operations.CreateInvalidation20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{DistributionId}/invalidation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{DistributionId}/invalidation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -630,7 +630,7 @@ func (s *SDK) CreateInvalidation20171030(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -685,7 +685,7 @@ func (s *SDK) CreatePublicKey20171030(ctx context.Context, request operations.Cr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/public-key"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -700,7 +700,7 @@ func (s *SDK) CreatePublicKey20171030(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -747,7 +747,7 @@ func (s *SDK) CreateStreamingDistribution20171030(ctx context.Context, request o
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/streaming-distribution"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -762,7 +762,7 @@ func (s *SDK) CreateStreamingDistribution20171030(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -827,7 +827,7 @@ func (s *SDK) CreateStreamingDistributionWithTags20171030(ctx context.Context, r
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/streaming-distribution#WithTags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -842,9 +842,9 @@ func (s *SDK) CreateStreamingDistributionWithTags20171030(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -911,14 +911,14 @@ func (s *SDK) CreateStreamingDistributionWithTags20171030(ctx context.Context, r
 // DeleteCloudFrontOriginAccessIdentity20171030 - Delete an origin access identity.
 func (s *SDK) DeleteCloudFrontOriginAccessIdentity20171030(ctx context.Context, request operations.DeleteCloudFrontOriginAccessIdentity20171030Request) (*operations.DeleteCloudFrontOriginAccessIdentity20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -966,14 +966,14 @@ func (s *SDK) DeleteCloudFrontOriginAccessIdentity20171030(ctx context.Context, 
 // DeleteDistribution20171030 - Delete a distribution.
 func (s *SDK) DeleteDistribution20171030(ctx context.Context, request operations.DeleteDistribution20171030Request) (*operations.DeleteDistribution20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1021,14 +1021,14 @@ func (s *SDK) DeleteDistribution20171030(ctx context.Context, request operations
 // DeleteFieldLevelEncryptionConfig20171030 - Remove a field-level encryption configuration.
 func (s *SDK) DeleteFieldLevelEncryptionConfig20171030(ctx context.Context, request operations.DeleteFieldLevelEncryptionConfig20171030Request) (*operations.DeleteFieldLevelEncryptionConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1076,14 +1076,14 @@ func (s *SDK) DeleteFieldLevelEncryptionConfig20171030(ctx context.Context, requ
 // DeleteFieldLevelEncryptionProfile20171030 - Remove a field-level encryption profile.
 func (s *SDK) DeleteFieldLevelEncryptionProfile20171030(ctx context.Context, request operations.DeleteFieldLevelEncryptionProfile20171030Request) (*operations.DeleteFieldLevelEncryptionProfile20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1131,14 +1131,14 @@ func (s *SDK) DeleteFieldLevelEncryptionProfile20171030(ctx context.Context, req
 // DeletePublicKey20171030 - Remove a public key you previously added to CloudFront.
 func (s *SDK) DeletePublicKey20171030(ctx context.Context, request operations.DeletePublicKey20171030Request) (*operations.DeletePublicKey20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1186,14 +1186,14 @@ func (s *SDK) DeletePublicKey20171030(ctx context.Context, request operations.De
 // DeleteStreamingDistribution20171030 - <p>Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following steps.</p> <p> <b>To delete an RTMP distribution using the CloudFront API</b>:</p> <ol> <li> <p>Disable the RTMP distribution.</p> </li> <li> <p>Submit a <code>GET Streaming Distribution Config</code> request to get the current configuration and the <code>Etag</code> header for the distribution. </p> </li> <li> <p>Update the XML document that was returned in the response to your <code>GET Streaming Distribution Config</code> request to change the value of <code>Enabled</code> to <code>false</code>.</p> </li> <li> <p>Submit a <code>PUT Streaming Distribution Config</code> request to update the configuration for your distribution. In the request body, include the XML document that you updated in Step 3. Then set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming Distribution Config</code> request in Step 2.</p> </li> <li> <p>Review the response to the <code>PUT Streaming Distribution Config</code> request to confirm that the distribution was successfully disabled.</p> </li> <li> <p>Submit a <code>GET Streaming Distribution Config</code> request to confirm that your changes have propagated. When propagation is complete, the value of <code>Status</code> is <code>Deployed</code>.</p> </li> <li> <p>Submit a <code>DELETE Streaming Distribution</code> request. Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming Distribution Config</code> request in Step 2.</p> </li> <li> <p>Review the response to your <code>DELETE Streaming Distribution</code> request to confirm that the distribution was successfully deleted.</p> </li> </ol> <p>For information about deleting a distribution using the CloudFront console, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a Distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.</p>
 func (s *SDK) DeleteStreamingDistribution20171030(ctx context.Context, request operations.DeleteStreamingDistribution20171030Request) (*operations.DeleteStreamingDistribution20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1241,14 +1241,14 @@ func (s *SDK) DeleteStreamingDistribution20171030(ctx context.Context, request o
 // GetCloudFrontOriginAccessIdentity20171030 - Get the information about an origin access identity.
 func (s *SDK) GetCloudFrontOriginAccessIdentity20171030(ctx context.Context, request operations.GetCloudFrontOriginAccessIdentity20171030Request) (*operations.GetCloudFrontOriginAccessIdentity20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1291,14 +1291,14 @@ func (s *SDK) GetCloudFrontOriginAccessIdentity20171030(ctx context.Context, req
 // GetCloudFrontOriginAccessIdentityConfig20171030 - Get the configuration information about an origin access identity.
 func (s *SDK) GetCloudFrontOriginAccessIdentityConfig20171030(ctx context.Context, request operations.GetCloudFrontOriginAccessIdentityConfig20171030Request) (*operations.GetCloudFrontOriginAccessIdentityConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1341,14 +1341,14 @@ func (s *SDK) GetCloudFrontOriginAccessIdentityConfig20171030(ctx context.Contex
 // GetDistribution20171030 - Get the information about a distribution.
 func (s *SDK) GetDistribution20171030(ctx context.Context, request operations.GetDistribution20171030Request) (*operations.GetDistribution20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1391,14 +1391,14 @@ func (s *SDK) GetDistribution20171030(ctx context.Context, request operations.Ge
 // GetDistributionConfig20171030 - Get the configuration information about a distribution.
 func (s *SDK) GetDistributionConfig20171030(ctx context.Context, request operations.GetDistributionConfig20171030Request) (*operations.GetDistributionConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1441,14 +1441,14 @@ func (s *SDK) GetDistributionConfig20171030(ctx context.Context, request operati
 // GetFieldLevelEncryption20171030 - Get the field-level encryption configuration information.
 func (s *SDK) GetFieldLevelEncryption20171030(ctx context.Context, request operations.GetFieldLevelEncryption20171030Request) (*operations.GetFieldLevelEncryption20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1491,14 +1491,14 @@ func (s *SDK) GetFieldLevelEncryption20171030(ctx context.Context, request opera
 // GetFieldLevelEncryptionConfig20171030 - Get the field-level encryption configuration information.
 func (s *SDK) GetFieldLevelEncryptionConfig20171030(ctx context.Context, request operations.GetFieldLevelEncryptionConfig20171030Request) (*operations.GetFieldLevelEncryptionConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1541,14 +1541,14 @@ func (s *SDK) GetFieldLevelEncryptionConfig20171030(ctx context.Context, request
 // GetFieldLevelEncryptionProfile20171030 - Get the field-level encryption profile information.
 func (s *SDK) GetFieldLevelEncryptionProfile20171030(ctx context.Context, request operations.GetFieldLevelEncryptionProfile20171030Request) (*operations.GetFieldLevelEncryptionProfile20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1591,14 +1591,14 @@ func (s *SDK) GetFieldLevelEncryptionProfile20171030(ctx context.Context, reques
 // GetFieldLevelEncryptionProfileConfig20171030 - Get the field-level encryption profile configuration information.
 func (s *SDK) GetFieldLevelEncryptionProfileConfig20171030(ctx context.Context, request operations.GetFieldLevelEncryptionProfileConfig20171030Request) (*operations.GetFieldLevelEncryptionProfileConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1641,14 +1641,14 @@ func (s *SDK) GetFieldLevelEncryptionProfileConfig20171030(ctx context.Context, 
 // GetInvalidation20171030 - Get the information about an invalidation.
 func (s *SDK) GetInvalidation20171030(ctx context.Context, request operations.GetInvalidation20171030Request) (*operations.GetInvalidation20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{DistributionId}/invalidation/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{DistributionId}/invalidation/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1693,14 +1693,14 @@ func (s *SDK) GetInvalidation20171030(ctx context.Context, request operations.Ge
 // GetPublicKey20171030 - Get the public key information.
 func (s *SDK) GetPublicKey20171030(ctx context.Context, request operations.GetPublicKey20171030Request) (*operations.GetPublicKey20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1743,14 +1743,14 @@ func (s *SDK) GetPublicKey20171030(ctx context.Context, request operations.GetPu
 // GetPublicKeyConfig20171030 - Return public key configuration informaation
 func (s *SDK) GetPublicKeyConfig20171030(ctx context.Context, request operations.GetPublicKeyConfig20171030Request) (*operations.GetPublicKeyConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1793,14 +1793,14 @@ func (s *SDK) GetPublicKeyConfig20171030(ctx context.Context, request operations
 // GetStreamingDistribution20171030 - Gets information about a specified RTMP distribution, including the distribution configuration.
 func (s *SDK) GetStreamingDistribution20171030(ctx context.Context, request operations.GetStreamingDistribution20171030Request) (*operations.GetStreamingDistribution20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1843,14 +1843,14 @@ func (s *SDK) GetStreamingDistribution20171030(ctx context.Context, request oper
 // GetStreamingDistributionConfig20171030 - Get the configuration information about a streaming distribution.
 func (s *SDK) GetStreamingDistributionConfig20171030(ctx context.Context, request operations.GetStreamingDistributionConfig20171030Request) (*operations.GetStreamingDistributionConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1900,9 +1900,9 @@ func (s *SDK) ListCloudFrontOriginAccessIdentities20171030(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1952,9 +1952,9 @@ func (s *SDK) ListDistributions20171030(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1997,16 +1997,16 @@ func (s *SDK) ListDistributions20171030(ctx context.Context, request operations.
 // ListDistributionsByWebACLId20171030 - List the distributions that are associated with a specified AWS WAF web ACL.
 func (s *SDK) ListDistributionsByWebACLId20171030(ctx context.Context, request operations.ListDistributionsByWebACLId20171030Request) (*operations.ListDistributionsByWebACLId20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distributionsByWebACLId/{WebACLId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distributionsByWebACLId/{WebACLId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2058,9 +2058,9 @@ func (s *SDK) ListFieldLevelEncryptionConfigs20171030(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2110,9 +2110,9 @@ func (s *SDK) ListFieldLevelEncryptionProfiles20171030(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2155,16 +2155,16 @@ func (s *SDK) ListFieldLevelEncryptionProfiles20171030(ctx context.Context, requ
 // ListInvalidations20171030 - Lists invalidation batches.
 func (s *SDK) ListInvalidations20171030(ctx context.Context, request operations.ListInvalidations20171030Request) (*operations.ListInvalidations20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{DistributionId}/invalidation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{DistributionId}/invalidation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2218,9 +2218,9 @@ func (s *SDK) ListPublicKeys20171030(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2270,9 +2270,9 @@ func (s *SDK) ListStreamingDistributions20171030(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2322,9 +2322,9 @@ func (s *SDK) ListTagsForResource20171030(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2375,7 +2375,7 @@ func (s *SDK) TagResource20171030(ctx context.Context, request operations.TagRes
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/tagging#Operation=Tag&Resource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2390,9 +2390,9 @@ func (s *SDK) TagResource20171030(ctx context.Context, request operations.TagRes
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2442,7 +2442,7 @@ func (s *SDK) UntagResource20171030(ctx context.Context, request operations.Unta
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2017-10-30/tagging#Operation=Untag&Resource"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2457,9 +2457,9 @@ func (s *SDK) UntagResource20171030(ctx context.Context, request operations.Unta
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2507,9 +2507,9 @@ func (s *SDK) UntagResource20171030(ctx context.Context, request operations.Unta
 // UpdateCloudFrontOriginAccessIdentity20171030 - Update an origin access identity.
 func (s *SDK) UpdateCloudFrontOriginAccessIdentity20171030(ctx context.Context, request operations.UpdateCloudFrontOriginAccessIdentity20171030Request) (*operations.UpdateCloudFrontOriginAccessIdentity20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/origin-access-identity/cloudfront/{Id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2524,7 +2524,7 @@ func (s *SDK) UpdateCloudFrontOriginAccessIdentity20171030(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2579,9 +2579,9 @@ func (s *SDK) UpdateCloudFrontOriginAccessIdentity20171030(ctx context.Context, 
 // UpdateDistribution20171030 - <p>Updates the configuration for a web distribution. Perform the following steps.</p> <p>For information about updating a distribution using the CloudFront console, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html">Creating or Updating a Web Distribution Using the CloudFront Console </a> in the <i>Amazon CloudFront Developer Guide</i>.</p> <p> <b>To update a web distribution using the CloudFront API</b> </p> <ol> <li> <p>Submit a <a>GetDistributionConfig</a> request to get the current configuration and an <code>Etag</code> header for the distribution.</p> <note> <p>If you update the distribution again, you need to get a new <code>Etag</code> header.</p> </note> </li> <li> <p>Update the XML document that was returned in the response to your <code>GetDistributionConfig</code> request to include the desired changes. You can't change the value of <code>CallerReference</code>. If you try to change this value, CloudFront returns an <code>IllegalUpdate</code> error.</p> <important> <p>The new configuration replaces the existing configuration; the values that you specify in an <code>UpdateDistribution</code> request are not merged into the existing configuration. When you add, delete, or replace values in an element that allows multiple values (for example, <code>CNAME</code>), you must specify all of the values that you want to appear in the updated distribution. In addition, you must update the corresponding <code>Quantity</code> element.</p> </important> </li> <li> <p>Submit an <code>UpdateDistribution</code> request to update the configuration for your distribution:</p> <ul> <li> <p>In the request body, include the XML document that you updated in Step 2. The request body must include an XML document with a <code>DistributionConfig</code> element.</p> </li> <li> <p>Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GetDistributionConfig</code> request in Step 1.</p> </li> </ul> </li> <li> <p>Review the response to the <code>UpdateDistribution</code> request to confirm that the configuration was successfully updated.</p> </li> <li> <p>Optional: Submit a <a>GetDistribution</a> request to confirm that your changes have propagated. When propagation is complete, the value of <code>Status</code> is <code>Deployed</code>.</p> <important> <p>Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML document that you include in the request body when you create or update a distribution. With previous versions of the API, we discovered that it was too easy to accidentally delete one or more values for an element that accepts multiple values, for example, CNAMEs and trusted signers. Our changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in the <code>Quantity</code> element and the number of values you're actually specifying.</p> </important> </li> </ol>
 func (s *SDK) UpdateDistribution20171030(ctx context.Context, request operations.UpdateDistribution20171030Request) (*operations.UpdateDistribution20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/distribution/{Id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2596,7 +2596,7 @@ func (s *SDK) UpdateDistribution20171030(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2721,9 +2721,9 @@ func (s *SDK) UpdateDistribution20171030(ctx context.Context, request operations
 // UpdateFieldLevelEncryptionConfig20171030 - Update a field-level encryption configuration.
 func (s *SDK) UpdateFieldLevelEncryptionConfig20171030(ctx context.Context, request operations.UpdateFieldLevelEncryptionConfig20171030Request) (*operations.UpdateFieldLevelEncryptionConfig20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption/{Id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2738,7 +2738,7 @@ func (s *SDK) UpdateFieldLevelEncryptionConfig20171030(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2799,9 +2799,9 @@ func (s *SDK) UpdateFieldLevelEncryptionConfig20171030(ctx context.Context, requ
 // UpdateFieldLevelEncryptionProfile20171030 - Update a field-level encryption profile.
 func (s *SDK) UpdateFieldLevelEncryptionProfile20171030(ctx context.Context, request operations.UpdateFieldLevelEncryptionProfile20171030Request) (*operations.UpdateFieldLevelEncryptionProfile20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/field-level-encryption-profile/{Id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2816,7 +2816,7 @@ func (s *SDK) UpdateFieldLevelEncryptionProfile20171030(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2879,9 +2879,9 @@ func (s *SDK) UpdateFieldLevelEncryptionProfile20171030(ctx context.Context, req
 // UpdatePublicKey20171030 - Update public key information. Note that the only value you can change is the comment.
 func (s *SDK) UpdatePublicKey20171030(ctx context.Context, request operations.UpdatePublicKey20171030Request) (*operations.UpdatePublicKey20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/public-key/{Id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2896,7 +2896,7 @@ func (s *SDK) UpdatePublicKey20171030(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2949,9 +2949,9 @@ func (s *SDK) UpdatePublicKey20171030(ctx context.Context, request operations.Up
 // UpdateStreamingDistribution20171030 - Update a streaming distribution.
 func (s *SDK) UpdateStreamingDistribution20171030(ctx context.Context, request operations.UpdateStreamingDistribution20171030Request) (*operations.UpdateStreamingDistribution20171030Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-30/streaming-distribution/{Id}/config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2966,7 +2966,7 @@ func (s *SDK) UpdateStreamingDistribution20171030(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

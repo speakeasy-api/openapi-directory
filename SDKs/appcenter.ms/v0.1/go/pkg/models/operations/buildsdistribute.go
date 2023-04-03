@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsDistributeSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BuildsDistributePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The build ID
-	BuildID int64 `pathParam:"style=simple,explode=false,name=build_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type BuildsDistributeRequestBodyDestinationsTypeEnum string
@@ -65,10 +55,14 @@ type BuildsDistributeRequestBody struct {
 }
 
 type BuildsDistributeRequest struct {
-	PathParams BuildsDistributePathParams
 	// The distribution details
-	Request  BuildsDistributeRequestBody `request:"mediaType=application/json"`
-	Security BuildsDistributeSecurity
+	RequestBody BuildsDistributeRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The build ID
+	BuildID int64 `pathParam:"style=simple,explode=false,name=build_id"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // BuildsDistribute200ApplicationJSON - Success

@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNhPhotosItemPathParams struct {
-	// The name of the photo or poster you wish to retrieve information about.
-	Item string `pathParam:"style=simple,explode=false,name=item"`
-}
-
-type GetNhPhotosItemQueryParams struct {
-	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
-	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
-}
-
-type GetNhPhotosItemHeaders struct {
+type GetNhPhotosItemRequest struct {
 	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
 	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
 	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
 	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhPhotosItemRequest struct {
-	PathParams  GetNhPhotosItemPathParams
-	QueryParams GetNhPhotosItemQueryParams
-	Headers     GetNhPhotosItemHeaders
+	// The name of the photo or poster you wish to retrieve information about.
+	Item string `pathParam:"style=simple,explode=false,name=item"`
+	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
+	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
 }
 
 type GetNhPhotosItemResponse struct {

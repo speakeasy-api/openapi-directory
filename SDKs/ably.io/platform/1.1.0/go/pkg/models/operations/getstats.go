@@ -39,25 +39,17 @@ func (e *GetStatsUnitEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetStatsQueryParams struct {
-	Direction *shared.FilterDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
-	End       *string                     `queryParam:"style=form,explode=true,name=end"`
+type GetStatsRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string                     `header:"style=simple,explode=false,name=X-Ably-Version"`
+	Direction    *shared.FilterDirectionEnum `queryParam:"style=form,explode=true,name=direction"`
+	End          *string                     `queryParam:"style=form,explode=true,name=end"`
 	// The response format you would like
 	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	Limit  *int64                     `queryParam:"style=form,explode=true,name=limit"`
 	Start  *string                    `queryParam:"style=form,explode=true,name=start"`
 	// Specifies the unit of aggregation in the returned results.
 	Unit *GetStatsUnitEnum `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type GetStatsHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetStatsRequest struct {
-	QueryParams GetStatsQueryParams
-	Headers     GetStatsHeaders
 }
 
 type GetStatsResponse struct {

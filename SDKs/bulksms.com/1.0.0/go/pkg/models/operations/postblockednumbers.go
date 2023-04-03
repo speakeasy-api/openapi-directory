@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostBlockedNumbersSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostBlockedNumbersRequest struct {
-	// Maximum size: `1000` items
-	Request  []string `request:"mediaType=application/json"`
-	Security PostBlockedNumbersSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostBlockedNumbersResponse struct {

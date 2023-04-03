@@ -50,30 +50,22 @@ func (e *GETDescribeStackResourcesVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeStackResourcesQueryParams struct {
+type GETDescribeStackResourcesRequest struct {
 	Action GETDescribeStackResourcesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The logical name of the resource as specified in the template.</p> <p>Default: There is no default value.</p>
 	LogicalResourceID *string `queryParam:"style=form,explode=true,name=LogicalResourceId"`
 	// <p>The name or unique identifier that corresponds to a physical instance ID of a resource supported by CloudFormation.</p> <p>For example, for an Amazon Elastic Compute Cloud (EC2) instance, <code>PhysicalResourceId</code> corresponds to the <code>InstanceId</code>. You can pass the EC2 <code>InstanceId</code> to <code>DescribeStackResources</code> to find which stack the instance belongs to and what other resources are part of the stack.</p> <p>Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify <code>StackName</code>.</p> <p>Default: There is no default value.</p>
 	PhysicalResourceID *string `queryParam:"style=form,explode=true,name=PhysicalResourceId"`
 	// <p>The name or the unique stack ID that is associated with the stack, which aren't always interchangeable:</p> <ul> <li> <p>Running stacks: You can specify either the stack's name or its unique stack ID.</p> </li> <li> <p>Deleted stacks: You must specify the unique stack ID.</p> </li> </ul> <p>Default: There is no default value.</p> <p>Required: Conditional. If you don't specify <code>StackName</code>, you must specify <code>PhysicalResourceId</code>.</p>
-	StackName *string                              `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETDescribeStackResourcesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeStackResourcesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeStackResourcesRequest struct {
-	QueryParams GETDescribeStackResourcesQueryParams
-	Headers     GETDescribeStackResourcesHeaders
+	StackName         *string                              `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETDescribeStackResourcesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeStackResourcesResponse struct {

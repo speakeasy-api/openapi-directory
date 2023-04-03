@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetAgentPathParams struct {
+type GetAgentRequest struct {
 	Name    string `pathParam:"style=simple,explode=false,name=name"`
 	Runmode string `pathParam:"style=simple,explode=false,name=runmode"`
-}
-
-type GetAgentRequest struct {
-	PathParams GetAgentPathParams
 }
 
 type GetAgentResponse struct {

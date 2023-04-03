@@ -50,7 +50,7 @@ func (e *GETRevokeClientVpnIngressVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETRevokeClientVpnIngressQueryParams struct {
+type GETRevokeClientVpnIngressRequest struct {
 	// The ID of the Active Directory group for which to revoke access.
 	AccessGroupID *string                             `queryParam:"style=form,explode=true,name=AccessGroupId"`
 	Action        GETRevokeClientVpnIngressActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -63,21 +63,13 @@ type GETRevokeClientVpnIngressQueryParams struct {
 	// The IPv4 address range, in CIDR notation, of the network for which access is being removed.
 	TargetNetworkCidr string                               `queryParam:"style=form,explode=true,name=TargetNetworkCidr"`
 	Version           GETRevokeClientVpnIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRevokeClientVpnIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRevokeClientVpnIngressRequest struct {
-	QueryParams GETRevokeClientVpnIngressQueryParams
-	Headers     GETRevokeClientVpnIngressHeaders
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRevokeClientVpnIngressResponse struct {

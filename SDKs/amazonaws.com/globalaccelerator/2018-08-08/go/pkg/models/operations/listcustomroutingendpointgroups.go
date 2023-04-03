@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCustomRoutingEndpointGroupsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListCustomRoutingEndpointGroupsXAmzTargetEnum
 type ListCustomRoutingEndpointGroupsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListCustomRoutingEndpointGroupsXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListCustomRoutingEndpointGroupsHeaders struct {
+type ListCustomRoutingEndpointGroupsRequest struct {
+	ListCustomRoutingEndpointGroupsRequest shared.ListCustomRoutingEndpointGroupsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListCustomRoutingEndpointGroupsHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListCustomRoutingEndpointGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListCustomRoutingEndpointGroupsRequest struct {
-	QueryParams ListCustomRoutingEndpointGroupsQueryParams
-	Headers     ListCustomRoutingEndpointGroupsHeaders
-	Request     shared.ListCustomRoutingEndpointGroupsRequest `request:"mediaType=application/json"`
 }
 
 type ListCustomRoutingEndpointGroupsResponse struct {

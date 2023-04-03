@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetUserKeyPairHeaders struct {
+type SetUserKeyPairRequest struct {
+	UserKeyPairContainer shared.UserKeyPairContainer `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type SetUserKeyPairRequest struct {
-	Headers SetUserKeyPairHeaders
-	Request shared.UserKeyPairContainer `request:"mediaType=application/json"`
 }
 
 type SetUserKeyPairResponse struct {

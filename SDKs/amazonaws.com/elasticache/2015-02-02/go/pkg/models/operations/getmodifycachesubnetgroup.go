@@ -50,30 +50,22 @@ func (e *GETModifyCacheSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETModifyCacheSubnetGroupQueryParams struct {
+type GETModifyCacheSubnetGroupRequest struct {
 	Action GETModifyCacheSubnetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A description of the cache subnet group.
 	CacheSubnetGroupDescription *string `queryParam:"style=form,explode=true,name=CacheSubnetGroupDescription"`
 	// <p>The name for the cache subnet group. This value is stored as a lowercase string.</p> <p>Constraints: Must contain no more than 255 alphanumeric characters or hyphens.</p> <p>Example: <code>mysubnetgroup</code> </p>
 	CacheSubnetGroupName string `queryParam:"style=form,explode=true,name=CacheSubnetGroupName"`
 	// The EC2 subnet IDs for the cache subnet group.
-	SubnetIds []string                             `queryParam:"style=form,explode=true,name=SubnetIds"`
-	Version   GETModifyCacheSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyCacheSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyCacheSubnetGroupRequest struct {
-	QueryParams GETModifyCacheSubnetGroupQueryParams
-	Headers     GETModifyCacheSubnetGroupHeaders
+	SubnetIds         []string                             `queryParam:"style=form,explode=true,name=SubnetIds"`
+	Version           GETModifyCacheSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyCacheSubnetGroupResponse struct {

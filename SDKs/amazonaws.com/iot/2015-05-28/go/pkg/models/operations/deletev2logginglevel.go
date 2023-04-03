@@ -41,14 +41,7 @@ func (e *DeleteV2LoggingLevelTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteV2LoggingLevelQueryParams struct {
-	// The name of the resource for which you are configuring logging.
-	TargetName string `queryParam:"style=form,explode=true,name=targetName"`
-	// The type of resource for which you are configuring logging. Must be <code>THING_Group</code>.
-	TargetType DeleteV2LoggingLevelTargetTypeEnum `queryParam:"style=form,explode=true,name=targetType"`
-}
-
-type DeleteV2LoggingLevelHeaders struct {
+type DeleteV2LoggingLevelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -56,11 +49,10 @@ type DeleteV2LoggingLevelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteV2LoggingLevelRequest struct {
-	QueryParams DeleteV2LoggingLevelQueryParams
-	Headers     DeleteV2LoggingLevelHeaders
+	// The name of the resource for which you are configuring logging.
+	TargetName string `queryParam:"style=form,explode=true,name=targetName"`
+	// The type of resource for which you are configuring logging. Must be <code>THING_Group</code>.
+	TargetType DeleteV2LoggingLevelTargetTypeEnum `queryParam:"style=form,explode=true,name=targetType"`
 }
 
 type DeleteV2LoggingLevelResponse struct {

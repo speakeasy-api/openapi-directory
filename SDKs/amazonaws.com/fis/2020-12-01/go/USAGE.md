@@ -13,228 +13,196 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateExperimentTemplateRequest{
-        Headers: operations.CreateExperimentTemplateHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateExperimentTemplateRequestBody{
+        RequestBody: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
-                "vel": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "error",
-                    Description: "deserunt",
+                "provident": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "distinctio",
+                    Description: "quibusdam",
                     Parameters: map[string]string{
-                        "iure": "magnam",
-                        "debitis": "ipsa",
+                        "nulla": "corrupti",
+                        "illum": "vel",
+                        "error": "deserunt",
                     },
                     StartAfter: []string{
-                        "tempora",
-                        "suscipit",
-                        "molestiae",
-                        "minus",
+                        "iure",
+                        "magnam",
                     },
                     Targets: map[string]string{
-                        "voluptatum": "iusto",
-                        "excepturi": "nisi",
-                        "recusandae": "temporibus",
-                        "ab": "quis",
+                        "ipsa": "delectus",
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
                     },
                 },
-                "veritatis": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "deserunt",
-                    Description: "perferendis",
+                "iusto": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "excepturi",
+                    Description: "nisi",
                     Parameters: map[string]string{
-                        "repellendus": "sapiente",
-                        "quo": "odit",
+                        "temporibus": "ab",
+                        "quis": "veritatis",
+                        "deserunt": "perferendis",
+                        "ipsam": "repellendus",
                     },
                     StartAfter: []string{
+                        "quo",
+                        "odit",
                         "at",
-                        "maiores",
+                        "at",
+                    },
+                    Targets: map[string]string{
+                        "molestiae": "quod",
+                        "quod": "esse",
+                        "totam": "porro",
+                        "dolorum": "dicta",
+                    },
+                },
+                "nam": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "officia",
+                    Description: "occaecati",
+                    Parameters: map[string]string{
+                        "deleniti": "hic",
+                    },
+                    StartAfter: []string{
+                        "totam",
+                        "beatae",
+                        "commodi",
                         "molestiae",
-                        "quod",
                     },
                     Targets: map[string]string{
-                        "esse": "totam",
-                        "porro": "dolorum",
-                        "dicta": "nam",
-                        "officia": "occaecati",
-                    },
-                },
-                "fugit": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "deleniti",
-                    Description: "hic",
-                    Parameters: map[string]string{
-                        "totam": "beatae",
-                        "commodi": "molestiae",
-                        "modi": "qui",
-                        "impedit": "cum",
-                    },
-                    StartAfter: []string{
-                        "ipsum",
-                        "excepturi",
-                    },
-                    Targets: map[string]string{
-                        "perferendis": "ad",
-                    },
-                },
-                "natus": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "sed",
-                    Description: "iste",
-                    Parameters: map[string]string{
-                        "natus": "laboriosam",
-                    },
-                    StartAfter: []string{
-                        "saepe",
-                        "fuga",
-                        "in",
-                        "corporis",
-                    },
-                    Targets: map[string]string{
-                        "iure": "saepe",
-                        "quidem": "architecto",
-                        "ipsa": "reiciendis",
+                        "qui": "impedit",
+                        "cum": "esse",
                     },
                 },
             },
-            ClientToken: "est",
-            Description: "mollitia",
+            ClientToken: "ipsum",
+            Description: "excepturi",
             LogConfiguration: &operations.CreateExperimentTemplateRequestBodyLogConfiguration{
                 CloudWatchLogsConfiguration: &shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput{
-                    LogGroupArn: "laborum",
+                    LogGroupArn: "aspernatur",
                 },
-                LogSchemaVersion: 170909,
+                LogSchemaVersion: 18789,
                 S3Configuration: &shared.ExperimentTemplateS3LogConfigurationInput{
-                    BucketName: "dolorem",
-                    Prefix: "corporis",
+                    BucketName: "ad",
+                    Prefix: "natus",
                 },
             },
-            RoleArn: "explicabo",
+            RoleArn: "sed",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "enim",
-                    Value: "omnis",
+                    Source: "dolor",
+                    Value: "natus",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "nemo",
-                    Value: "minima",
+                    Source: "laboriosam",
+                    Value: "hic",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "excepturi",
-                    Value: "accusantium",
-                },
-                shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "iure",
-                    Value: "culpa",
+                    Source: "saepe",
+                    Value: "fuga",
                 },
             },
             Tags: map[string]string{
-                "sapiente": "architecto",
-                "mollitia": "dolorem",
-                "culpa": "consequuntur",
-                "repellat": "mollitia",
+                "corporis": "iste",
+                "iure": "saepe",
             },
             Targets: map[string]shared.CreateExperimentTemplateTargetInput{
-                "numquam": shared.CreateExperimentTemplateTargetInput{
+                "architecto": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "quam",
+                            Path: "reiciendis",
                             Values: []string{
-                                "velit",
-                                "error",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "quia",
-                            Values: []string{
-                                "vitae",
+                                "mollitia",
                                 "laborum",
+                                "dolores",
                             },
                         },
                     },
                     Parameters: map[string]string{
+                        "corporis": "explicabo",
+                    },
+                    ResourceArns: []string{
+                        "enim",
+                        "omnis",
+                        "nemo",
+                        "minima",
+                    },
+                    ResourceTags: map[string]string{
+                        "accusantium": "iure",
+                        "culpa": "doloribus",
+                        "sapiente": "architecto",
+                    },
+                    ResourceType: "mollitia",
+                    SelectionMode: "dolorem",
+                },
+                "culpa": shared.CreateExperimentTemplateTargetInput{
+                    Filters: []shared.ExperimentTemplateTargetInputFilter{
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "repellat",
+                            Values: []string{
+                                "occaecati",
+                                "numquam",
+                                "commodi",
+                            },
+                        },
+                    },
+                    Parameters: map[string]string{
+                        "molestiae": "velit",
+                        "error": "quia",
+                    },
+                    ResourceArns: []string{
+                        "vitae",
+                        "laborum",
+                    },
+                    ResourceTags: map[string]string{
                         "enim": "odit",
                         "quo": "sequi",
                         "tenetur": "ipsam",
                     },
-                    ResourceArns: []string{
-                        "possimus",
-                        "aut",
-                        "quasi",
-                    },
-                    ResourceTags: map[string]string{
-                        "temporibus": "laborum",
-                        "quasi": "reiciendis",
-                        "voluptatibus": "vero",
-                    },
-                    ResourceType: "nihil",
-                    SelectionMode: "praesentium",
+                    ResourceType: "id",
+                    SelectionMode: "possimus",
                 },
-                "voluptatibus": shared.CreateExperimentTemplateTargetInput{
+                "aut": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "omnis",
+                            Path: "error",
                             Values: []string{
-                                "cum",
-                                "perferendis",
+                                "laborum",
+                                "quasi",
+                                "reiciendis",
+                                "voluptatibus",
                             },
                         },
                     },
                     Parameters: map[string]string{
-                        "reprehenderit": "ut",
+                        "nihil": "praesentium",
+                        "voluptatibus": "ipsa",
+                        "omnis": "voluptate",
+                        "cum": "perferendis",
                     },
                     ResourceArns: []string{
-                        "dicta",
-                        "corporis",
-                        "dolore",
-                        "iusto",
+                        "reprehenderit",
                     },
                     ResourceTags: map[string]string{
-                        "harum": "enim",
+                        "maiores": "dicta",
+                        "corporis": "dolore",
                     },
-                    ResourceType: "accusamus",
-                    SelectionMode: "commodi",
-                },
-                "repudiandae": shared.CreateExperimentTemplateTargetInput{
-                    Filters: []shared.ExperimentTemplateTargetInputFilter{
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "ipsum",
-                            Values: []string{
-                                "molestias",
-                                "excepturi",
-                                "pariatur",
-                            },
-                        },
-                    },
-                    Parameters: map[string]string{
-                        "praesentium": "rem",
-                        "voluptates": "quasi",
-                    },
-                    ResourceArns: []string{
-                        "sint",
-                        "veritatis",
-                        "itaque",
-                        "incidunt",
-                    },
-                    ResourceTags: map[string]string{
-                        "consequatur": "est",
-                        "quibusdam": "explicabo",
-                    },
-                    ResourceType: "deserunt",
-                    SelectionMode: "distinctio",
+                    ResourceType: "iusto",
+                    SelectionMode: "dicta",
                 },
             },
         },
+        XAmzAlgorithm: "harum",
+        XAmzContentSha256: "enim",
+        XAmzCredential: "accusamus",
+        XAmzDate: "commodi",
+        XAmzSecurityToken: "repudiandae",
+        XAmzSignature: "quae",
+        XAmzSignedHeaders: "ipsum",
     }
 
     ctx := context.Background()

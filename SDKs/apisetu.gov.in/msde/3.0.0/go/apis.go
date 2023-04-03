@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Iticr - ITI Certificate
 // API to verify ITI Certificate.
-func (s *apIs) Iticr(ctx context.Context, request operations.IticrRequest) (*operations.IticrResponse, error) {
+func (s *apIs) Iticr(ctx context.Context, request operations.IticrRequestBody, security operations.IticrSecurity) (*operations.IticrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/iticr/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Iticr(ctx context.Context, request operations.IticrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

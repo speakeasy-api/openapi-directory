@@ -34,11 +34,11 @@ func newSuppliers(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // SuppliersAdd - Create Supplier
 // Create Supplier
-func (s *suppliers) SuppliersAdd(ctx context.Context, request operations.SuppliersAddRequest) (*operations.SuppliersAddResponse, error) {
+func (s *suppliers) SuppliersAdd(ctx context.Context, request operations.SuppliersAddRequest, security operations.SuppliersAddSecurity) (*operations.SuppliersAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/suppliers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SupplierInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *suppliers) SuppliersAdd(ctx context.Context, request operations.Supplie
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *suppliers) SuppliersAdd(ctx context.Context, request operations.Supplie
 
 // SuppliersAll - List Suppliers
 // List Suppliers
-func (s *suppliers) SuppliersAll(ctx context.Context, request operations.SuppliersAllRequest) (*operations.SuppliersAllResponse, error) {
+func (s *suppliers) SuppliersAll(ctx context.Context, request operations.SuppliersAllRequest, security operations.SuppliersAllSecurity) (*operations.SuppliersAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/suppliers"
 
@@ -164,13 +164,13 @@ func (s *suppliers) SuppliersAll(ctx context.Context, request operations.Supplie
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *suppliers) SuppliersAll(ctx context.Context, request operations.Supplie
 
 // SuppliersDelete - Delete Supplier
 // Delete Supplier
-func (s *suppliers) SuppliersDelete(ctx context.Context, request operations.SuppliersDeleteRequest) (*operations.SuppliersDeleteResponse, error) {
+func (s *suppliers) SuppliersDelete(ctx context.Context, request operations.SuppliersDeleteRequest, security operations.SuppliersDeleteSecurity) (*operations.SuppliersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/suppliers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/suppliers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *suppliers) SuppliersDelete(ctx context.Context, request operations.Supp
 
 // SuppliersOne - Get Supplier
 // Get Supplier
-func (s *suppliers) SuppliersOne(ctx context.Context, request operations.SuppliersOneRequest) (*operations.SuppliersOneResponse, error) {
+func (s *suppliers) SuppliersOne(ctx context.Context, request operations.SuppliersOneRequest, security operations.SuppliersOneSecurity) (*operations.SuppliersOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/suppliers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/suppliers/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *suppliers) SuppliersOne(ctx context.Context, request operations.Supplie
 
 // SuppliersUpdate - Update Supplier
 // Update Supplier
-func (s *suppliers) SuppliersUpdate(ctx context.Context, request operations.SuppliersUpdateRequest) (*operations.SuppliersUpdateResponse, error) {
+func (s *suppliers) SuppliersUpdate(ctx context.Context, request operations.SuppliersUpdateRequest, security operations.SuppliersUpdateSecurity) (*operations.SuppliersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/suppliers/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/suppliers/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SupplierInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *suppliers) SuppliersUpdate(ctx context.Context, request operations.Supp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeWorkerConfigurationPathParams struct {
-	// The Amazon Resource Name (ARN) of the worker configuration that you want to get information about.
-	WorkerConfigurationArn string `pathParam:"style=simple,explode=false,name=workerConfigurationArn"`
-}
-
-type DescribeWorkerConfigurationHeaders struct {
+type DescribeWorkerConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeWorkerConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeWorkerConfigurationRequest struct {
-	PathParams DescribeWorkerConfigurationPathParams
-	Headers    DescribeWorkerConfigurationHeaders
+	// The Amazon Resource Name (ARN) of the worker configuration that you want to get information about.
+	WorkerConfigurationArn string `pathParam:"style=simple,explode=false,name=workerConfigurationArn"`
 }
 
 type DescribeWorkerConfigurationResponse struct {

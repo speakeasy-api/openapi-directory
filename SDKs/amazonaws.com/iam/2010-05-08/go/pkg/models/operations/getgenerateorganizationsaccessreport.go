@@ -50,28 +50,20 @@ func (e *GETGenerateOrganizationsAccessReportVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETGenerateOrganizationsAccessReportQueryParams struct {
+type GETGenerateOrganizationsAccessReportRequest struct {
 	Action GETGenerateOrganizationsAccessReportActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The path of the Organizations entity (root, OU, or account). You can build an entity path using the known structure of your organization. For example, assume that your account ID is <code>123456789012</code> and its parent OU ID is <code>ou-rge0-awsabcde</code>. The organization root ID is <code>r-f6g7h8i9j0example</code> and your organization ID is <code>o-a1b2c3d4e5</code>. Your entity path is <code>o-a1b2c3d4e5/r-f6g7h8i9j0example/ou-rge0-awsabcde/123456789012</code>.
 	EntityPath string `queryParam:"style=form,explode=true,name=EntityPath"`
 	// <p>The identifier of the Organizations service control policy (SCP). This parameter is optional.</p> <p>This ID is used to generate information about when an account principal that is limited by the SCP attempted to access an Amazon Web Services service.</p>
 	OrganizationsPolicyID *string                                         `queryParam:"style=form,explode=true,name=OrganizationsPolicyId"`
 	Version               GETGenerateOrganizationsAccessReportVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGenerateOrganizationsAccessReportHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGenerateOrganizationsAccessReportRequest struct {
-	QueryParams GETGenerateOrganizationsAccessReportQueryParams
-	Headers     GETGenerateOrganizationsAccessReportHeaders
+	XAmzAlgorithm         *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGenerateOrganizationsAccessReportResponse struct {

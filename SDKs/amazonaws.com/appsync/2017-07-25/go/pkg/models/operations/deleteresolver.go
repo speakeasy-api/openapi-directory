@@ -6,16 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteResolverPathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The resolver field name.
-	FieldName string `pathParam:"style=simple,explode=false,name=fieldName"`
-	// The name of the resolver type.
-	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
-}
-
-type DeleteResolverHeaders struct {
+type DeleteResolverRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -23,11 +14,12 @@ type DeleteResolverHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteResolverRequest struct {
-	PathParams DeleteResolverPathParams
-	Headers    DeleteResolverHeaders
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The resolver field name.
+	FieldName string `pathParam:"style=simple,explode=false,name=fieldName"`
+	// The name of the resolver type.
+	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
 }
 
 type DeleteResolverResponse struct {

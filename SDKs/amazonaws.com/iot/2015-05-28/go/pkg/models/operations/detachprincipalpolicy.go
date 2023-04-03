@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DetachPrincipalPolicyPathParams struct {
-	// The name of the policy to detach.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type DetachPrincipalPolicyHeaders struct {
+type DetachPrincipalPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,13 +14,10 @@ type DetachPrincipalPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the policy to detach.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 	// <p>The principal.</p> <p>Valid principals are CertificateArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:cert/<i>certificateId</i>), thingGroupArn (arn:aws:iot:<i>region</i>:<i>accountId</i>:thinggroup/<i>groupName</i>) and CognitoId (<i>region</i>:<i>id</i>).</p>
 	XAmznIotPrincipal string `header:"style=simple,explode=false,name=x-amzn-iot-principal"`
-}
-
-type DetachPrincipalPolicyRequest struct {
-	PathParams DetachPrincipalPolicyPathParams
-	Headers    DetachPrincipalPolicyHeaders
 }
 
 type DetachPrincipalPolicyResponse struct {

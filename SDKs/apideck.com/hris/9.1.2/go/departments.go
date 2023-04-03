@@ -34,11 +34,11 @@ func newDepartments(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // DepartmentsAdd - Create Department
 // Create Department
-func (s *departments) DepartmentsAdd(ctx context.Context, request operations.DepartmentsAddRequest) (*operations.DepartmentsAddResponse, error) {
+func (s *departments) DepartmentsAdd(ctx context.Context, request operations.DepartmentsAddRequest, security operations.DepartmentsAddSecurity) (*operations.DepartmentsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hris/departments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DepartmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *departments) DepartmentsAdd(ctx context.Context, request operations.Dep
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *departments) DepartmentsAdd(ctx context.Context, request operations.Dep
 
 // DepartmentsAll - List Departments
 // List Departments
-func (s *departments) DepartmentsAll(ctx context.Context, request operations.DepartmentsAllRequest) (*operations.DepartmentsAllResponse, error) {
+func (s *departments) DepartmentsAll(ctx context.Context, request operations.DepartmentsAllRequest, security operations.DepartmentsAllSecurity) (*operations.DepartmentsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hris/departments"
 
@@ -164,13 +164,13 @@ func (s *departments) DepartmentsAll(ctx context.Context, request operations.Dep
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *departments) DepartmentsAll(ctx context.Context, request operations.Dep
 
 // DepartmentsDelete - Delete Department
 // Delete Department
-func (s *departments) DepartmentsDelete(ctx context.Context, request operations.DepartmentsDeleteRequest) (*operations.DepartmentsDeleteResponse, error) {
+func (s *departments) DepartmentsDelete(ctx context.Context, request operations.DepartmentsDeleteRequest, security operations.DepartmentsDeleteSecurity) (*operations.DepartmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/departments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/departments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *departments) DepartmentsDelete(ctx context.Context, request operations.
 
 // DepartmentsOne - Get Department
 // Get Department
-func (s *departments) DepartmentsOne(ctx context.Context, request operations.DepartmentsOneRequest) (*operations.DepartmentsOneResponse, error) {
+func (s *departments) DepartmentsOne(ctx context.Context, request operations.DepartmentsOneRequest, security operations.DepartmentsOneSecurity) (*operations.DepartmentsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/departments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/departments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *departments) DepartmentsOne(ctx context.Context, request operations.Dep
 
 // DepartmentsUpdate - Update Department
 // Update Department
-func (s *departments) DepartmentsUpdate(ctx context.Context, request operations.DepartmentsUpdateRequest) (*operations.DepartmentsUpdateResponse, error) {
+func (s *departments) DepartmentsUpdate(ctx context.Context, request operations.DepartmentsUpdateRequest, security operations.DepartmentsUpdateSecurity) (*operations.DepartmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/departments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/departments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DepartmentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *departments) DepartmentsUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

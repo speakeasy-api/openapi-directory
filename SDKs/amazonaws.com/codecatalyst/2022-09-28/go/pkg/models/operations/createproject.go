@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProjectPathParams struct {
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
 type CreateProjectRequestBody struct {
 	// The description of the project. This description will be displayed to all users of the project. We recommend providing a brief description of the project and its intended purpose.
 	Description *string `json:"description,omitempty"`
@@ -20,8 +15,9 @@ type CreateProjectRequestBody struct {
 }
 
 type CreateProjectRequest struct {
-	PathParams CreateProjectPathParams
-	Request    CreateProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateProjectRequestBody `request:"mediaType=application/json"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type CreateProjectResponse struct {

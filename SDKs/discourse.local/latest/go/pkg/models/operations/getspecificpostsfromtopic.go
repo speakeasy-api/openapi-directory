@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type GetSpecificPostsFromTopicPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSpecificPostsFromTopicHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type GetSpecificPostsFromTopicRequestBody struct {
 	PostIds int64 `json:"post_ids[]"`
 }
 
 type GetSpecificPostsFromTopicRequest struct {
-	PathParams GetSpecificPostsFromTopicPathParams
-	Headers    GetSpecificPostsFromTopicHeaders
-	Request    *GetSpecificPostsFromTopicRequestBody `request:"mediaType=application/json"`
+	APIKey      string                                `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                                `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *GetSpecificPostsFromTopicRequestBody `request:"mediaType=application/json"`
+	ID          string                                `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetSpecificPostsFromTopic200ApplicationJSONPostStreamPostsActionsSummary struct {

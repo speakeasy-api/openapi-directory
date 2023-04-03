@@ -30,7 +30,8 @@ func (e *GetPoliciesStatsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPoliciesStatsHeaders struct {
+type GetPoliciesStatsRequest struct {
+	RequestBody       map[string]interface{}         `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetPoliciesStatsHeaders struct {
 	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetPoliciesStatsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetPoliciesStatsRequest struct {
-	Headers GetPoliciesStatsHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetPoliciesStatsResponse struct {

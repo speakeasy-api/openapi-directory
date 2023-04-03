@@ -25,7 +25,6 @@ pkg/models/operations/gettransfer.go
 pkg/models/shared/payout.go
 pkg/models/shared/amount.go
 pkg/models/shared/payoutinstrument.go
-pkg/models/shared/security.go
 pkg/models/shared/payoutsummaryresponse.go
 pkg/models/shared/payouts.go
 pkg/models/shared/sellerfundssummaryresponse.go

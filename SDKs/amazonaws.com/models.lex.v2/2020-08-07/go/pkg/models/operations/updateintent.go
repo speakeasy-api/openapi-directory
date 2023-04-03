@@ -7,27 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIntentPathParams struct {
-	// The identifier of the bot that contains the intent.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot that contains the intent. Must be <code>DRAFT</code>.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The unique identifier of the intent to update.
-	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
-	// The identifier of the language and locale where this intent is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type UpdateIntentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateIntentRequestBodyDialogCodeHook - Settings that determine the Lambda function that Amazon Lex uses for processing user responses.
 type UpdateIntentRequestBodyDialogCodeHook struct {
 	Enabled *bool `json:"enabled,omitempty"`
@@ -117,9 +96,22 @@ type UpdateIntentRequestBody struct {
 }
 
 type UpdateIntentRequest struct {
-	PathParams UpdateIntentPathParams
-	Headers    UpdateIntentHeaders
-	Request    UpdateIntentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateIntentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot that contains the intent.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot that contains the intent. Must be <code>DRAFT</code>.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The unique identifier of the intent to update.
+	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
+	// The identifier of the language and locale where this intent is used. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type UpdateIntentResponse struct {

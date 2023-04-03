@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRoutingControlsPathParams struct {
+type ListRoutingControlsRequest struct {
 	// The Amazon Resource Name (ARN) of the control panel.
 	ControlPanelArn string `pathParam:"style=simple,explode=false,name=ControlPanelArn"`
-}
-
-type ListRoutingControlsQueryParams struct {
 	// The number of objects that you want to return with this call.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token that identifies which batch of results you want to see.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListRoutingControlsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListRoutingControlsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRoutingControlsRequest struct {
-	PathParams  ListRoutingControlsPathParams
-	QueryParams ListRoutingControlsQueryParams
-	Headers     ListRoutingControlsHeaders
 }
 
 type ListRoutingControlsResponse struct {

@@ -50,26 +50,18 @@ func (e *GETSetActiveReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETSetActiveReceiptRuleSetQueryParams struct {
+type GETSetActiveReceiptRuleSetRequest struct {
 	Action GETSetActiveReceiptRuleSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the receipt rule set to make active. Setting this value to null disables all email receiving.
-	RuleSetName *string                               `queryParam:"style=form,explode=true,name=RuleSetName"`
-	Version     GETSetActiveReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetActiveReceiptRuleSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetActiveReceiptRuleSetRequest struct {
-	QueryParams GETSetActiveReceiptRuleSetQueryParams
-	Headers     GETSetActiveReceiptRuleSetHeaders
+	RuleSetName       *string                               `queryParam:"style=form,explode=true,name=RuleSetName"`
+	Version           GETSetActiveReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetActiveReceiptRuleSetResponse struct {

@@ -7,30 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBotLocalesPathParams struct {
-	// The identifier of the bot to list locales for.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot to list locales for.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-}
-
-type ListBotLocalesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListBotLocalesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListBotLocalesRequestBodySortBy - Specifies attributes for sorting a list of bot locales.
 type ListBotLocalesRequestBodySortBy struct {
 	Attribute *shared.BotLocaleSortAttributeEnum `json:"attribute,omitempty"`
@@ -49,10 +25,22 @@ type ListBotLocalesRequestBody struct {
 }
 
 type ListBotLocalesRequest struct {
-	PathParams  ListBotLocalesPathParams
-	QueryParams ListBotLocalesQueryParams
-	Headers     ListBotLocalesHeaders
-	Request     ListBotLocalesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListBotLocalesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot to list locales for.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot to list locales for.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBotLocalesResponse struct {

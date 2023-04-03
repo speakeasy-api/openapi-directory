@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTemplateActiveVersionPathParams struct {
-	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
-	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
-	// The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.
-	TemplateType string `pathParam:"style=simple,explode=false,name=template-type"`
-}
-
-type UpdateTemplateActiveVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest - Specifies which version of a message template to use as the active version of the template.
 type UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest struct {
 	Version *string `json:"Version,omitempty"`
@@ -35,9 +18,18 @@ type UpdateTemplateActiveVersionRequestBody struct {
 }
 
 type UpdateTemplateActiveVersionRequest struct {
-	PathParams UpdateTemplateActiveVersionPathParams
-	Headers    UpdateTemplateActiveVersionHeaders
-	Request    UpdateTemplateActiveVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateTemplateActiveVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
+	// The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.
+	TemplateType string `pathParam:"style=simple,explode=false,name=template-type"`
 }
 
 type UpdateTemplateActiveVersionResponse struct {

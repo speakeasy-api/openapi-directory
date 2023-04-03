@@ -7,23 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelCatalogMarketplacePropertiesPathParams struct {
-	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type GetChannelCatalogMarketplacePropertiesQueryParams struct {
-	RedirectionPageURL string `queryParam:"style=form,explode=true,name=redirectionPageUrl"`
-}
-
-type GetChannelCatalogMarketplacePropertiesHeaders struct {
-	// Indicates that the client accepts the following languages.
-	AcceptLanguage []string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
 type GetChannelCatalogMarketplacePropertiesRequest struct {
-	PathParams  GetChannelCatalogMarketplacePropertiesPathParams
-	QueryParams GetChannelCatalogMarketplacePropertiesQueryParams
-	Headers     GetChannelCatalogMarketplacePropertiesHeaders
+	// Indicates that the client accepts the following languages.
+	AcceptLanguage     []string `header:"style=simple,explode=false,name=Accept-Language"`
+	ChannelCatalogID   string   `pathParam:"style=simple,explode=false,name=channelCatalogId"`
+	RedirectionPageURL string   `queryParam:"style=form,explode=true,name=redirectionPageUrl"`
 }
 
 type GetChannelCatalogMarketplacePropertiesResponse struct {

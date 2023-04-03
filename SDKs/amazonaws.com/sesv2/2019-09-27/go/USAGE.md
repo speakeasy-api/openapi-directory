@@ -13,71 +13,58 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchGetMetricDataRequest{
-        Headers: operations.BatchGetMetricDataHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.BatchGetMetricDataRequestBody{
+        RequestBody: operations.BatchGetMetricDataRequestBody{
             Queries: []shared.BatchGetMetricDataQuery{
                 shared.BatchGetMetricDataQuery{
                     Dimensions: map[string]string{
-                        "error": "deserunt",
-                        "suscipit": "iure",
+                        "distinctio": "quibusdam",
+                        "unde": "nulla",
+                        "corrupti": "illum",
                     },
-                    EndDate: "2022-02-09T12:04:06.508Z",
-                    ID: "ipsa",
+                    EndDate: "2022-05-18T09:34:54.894Z",
+                    ID: "deserunt",
+                    Metric: "TRANSIENT_BOUNCE",
+                    Namespace: "VDM",
+                    StartDate: "2022-09-14T09:35:47.986Z",
+                },
+                shared.BatchGetMetricDataQuery{
+                    Dimensions: map[string]string{
+                        "ipsa": "delectus",
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
+                    },
+                    EndDate: "2022-06-07T15:55:46.205Z",
+                    ID: "nisi",
                     Metric: "DELIVERY_COMPLAINT",
                     Namespace: "VDM",
-                    StartDate: "2022-08-14T01:03:07.567Z",
+                    StartDate: "2022-10-15T05:10:19.629Z",
                 },
                 shared.BatchGetMetricDataQuery{
                     Dimensions: map[string]string{
-                        "minus": "placeat",
-                        "voluptatum": "iusto",
+                        "veritatis": "deserunt",
+                        "perferendis": "ipsam",
                     },
-                    EndDate: "2022-03-20T06:24:36.919Z",
-                    ID: "recusandae",
-                    Metric: "DELIVERY_CLICK",
+                    EndDate: "2020-02-17T21:57:45.117Z",
+                    ID: "quo",
+                    Metric: "COMPLAINT",
                     Namespace: "VDM",
-                    StartDate: "2022-08-30T20:24:33.984Z",
-                },
-                shared.BatchGetMetricDataQuery{
-                    Dimensions: map[string]string{
-                        "deserunt": "perferendis",
-                    },
-                    EndDate: "2022-03-03T02:15:00.468Z",
-                    ID: "sapiente",
-                    Metric: "DELIVERY_OPEN",
-                    Namespace: "VDM",
-                    StartDate: "2022-02-17T10:41:36.857Z",
-                },
-                shared.BatchGetMetricDataQuery{
-                    Dimensions: map[string]string{
-                        "maiores": "molestiae",
-                        "quod": "quod",
-                        "esse": "totam",
-                        "porro": "dolorum",
-                    },
-                    EndDate: "2022-04-12T23:15:28.420Z",
-                    ID: "officia",
-                    Metric: "CLICK",
-                    Namespace: "VDM",
-                    StartDate: "2022-06-18T20:36:37.412Z",
+                    StartDate: "2020-05-23T06:06:25.221Z",
                 },
             },
         },
+        XAmzAlgorithm: "maiores",
+        XAmzContentSha256: "molestiae",
+        XAmzCredential: "quod",
+        XAmzDate: "quod",
+        XAmzSecurityToken: "esse",
+        XAmzSignature: "totam",
+        XAmzSignedHeaders: "porro",
     }
 
     ctx := context.Background()

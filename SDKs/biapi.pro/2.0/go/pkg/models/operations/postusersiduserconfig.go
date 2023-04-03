@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostUsersIDUserConfigPathParams struct {
+type PostUsersIDUserConfigRequest struct {
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserConfigRequest struct {
-	PathParams PostUsersIDUserConfigPathParams
 }
 
 type PostUsersIDUserConfigResponse struct {

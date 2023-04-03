@@ -9,20 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWorkloadSharePathParams struct {
-	WorkloadID string `pathParam:"style=simple,explode=false,name=WorkloadId"`
-}
-
-type CreateWorkloadShareHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateWorkloadShareRequestBodyPermissionTypeEnum - Permission granted on a workload share.
 type CreateWorkloadShareRequestBodyPermissionTypeEnum string
 
@@ -57,9 +43,15 @@ type CreateWorkloadShareRequestBody struct {
 }
 
 type CreateWorkloadShareRequest struct {
-	PathParams CreateWorkloadSharePathParams
-	Headers    CreateWorkloadShareHeaders
-	Request    CreateWorkloadShareRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateWorkloadShareRequestBody `request:"mediaType=application/json"`
+	WorkloadID        string                         `pathParam:"style=simple,explode=false,name=WorkloadId"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateWorkloadShareResponse struct {

@@ -9,25 +9,16 @@ import (
 )
 
 type AppGetApplicationAPIUsageSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AppGetApplicationAPIUsagePathParams struct {
+type AppGetApplicationAPIUsageRequest struct {
 	// ID of the application to get usage statistics.
 	ApplicationID int `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type AppGetApplicationAPIUsageQueryParams struct {
 	// End time for query. Goes to now if not specified.
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// Start time for query. Goes to 24 hours ago if not specified.
 	Start *time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type AppGetApplicationAPIUsageRequest struct {
-	PathParams  AppGetApplicationAPIUsagePathParams
-	QueryParams AppGetApplicationAPIUsageQueryParams
-	Security    AppGetApplicationAPIUsageSecurity
 }
 
 // AppGetApplicationAPIUsage200Wildcard - Look at the Response property for more information about the nature of this response

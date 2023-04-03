@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestSystemInfoQueryParams struct {
+type RequestSystemInfoRequest struct {
 	// Show only enabled authentication methods
 	IsEnabled *bool `queryParam:"style=form,explode=true,name=is_enabled"`
-}
-
-type RequestSystemInfoRequest struct {
-	QueryParams RequestSystemInfoQueryParams
 }
 
 type RequestSystemInfoResponse struct {

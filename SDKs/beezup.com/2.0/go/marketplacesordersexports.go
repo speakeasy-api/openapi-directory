@@ -34,7 +34,7 @@ func newMarketplacesOrdersExports(defaultClient, securityClient HTTPClient, serv
 
 // ExportOrders - Request a new Order report exportation to be generated
 // A new file will be generated containing a summary of all the Orders matching the requested filter settings.
-func (s *marketplacesOrdersExports) ExportOrders(ctx context.Context, request operations.ExportOrdersRequest) (*operations.ExportOrdersResponse, error) {
+func (s *marketplacesOrdersExports) ExportOrders(ctx context.Context, request shared.ExportOrderListRequest) (*operations.ExportOrdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/exportations"
 
@@ -102,9 +102,9 @@ func (s *marketplacesOrdersExports) GetOrderExportations(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

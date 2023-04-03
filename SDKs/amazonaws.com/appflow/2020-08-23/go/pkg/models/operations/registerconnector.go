@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterConnectorHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterConnectorRequestBodyConnectorProvisioningConfig - Contains information about the configuration of the connector being registered.
 type RegisterConnectorRequestBodyConnectorProvisioningConfig struct {
 	Lambda *shared.LambdaConnectorProvisioningConfig `json:"lambda,omitempty"`
@@ -57,8 +47,14 @@ type RegisterConnectorRequestBody struct {
 }
 
 type RegisterConnectorRequest struct {
-	Headers RegisterConnectorHeaders
-	Request RegisterConnectorRequestBody `request:"mediaType=application/json"`
+	RequestBody       RegisterConnectorRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type RegisterConnectorResponse struct {

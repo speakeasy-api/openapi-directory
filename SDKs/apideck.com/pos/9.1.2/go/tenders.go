@@ -34,11 +34,11 @@ func newTenders(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // TendersAdd - Create Tender
 // Create Tender
-func (s *tenders) TendersAdd(ctx context.Context, request operations.TendersAddRequest) (*operations.TendersAddResponse, error) {
+func (s *tenders) TendersAdd(ctx context.Context, request operations.TendersAddRequest, security operations.TendersAddSecurity) (*operations.TendersAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/tenders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TenderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *tenders) TendersAdd(ctx context.Context, request operations.TendersAddR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *tenders) TendersAdd(ctx context.Context, request operations.TendersAddR
 
 // TendersAll - List Tenders
 // List Tenders
-func (s *tenders) TendersAll(ctx context.Context, request operations.TendersAllRequest) (*operations.TendersAllResponse, error) {
+func (s *tenders) TendersAll(ctx context.Context, request operations.TendersAllRequest, security operations.TendersAllSecurity) (*operations.TendersAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/tenders"
 
@@ -164,13 +164,13 @@ func (s *tenders) TendersAll(ctx context.Context, request operations.TendersAllR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *tenders) TendersAll(ctx context.Context, request operations.TendersAllR
 
 // TendersDelete - Delete Tender
 // Delete Tender
-func (s *tenders) TendersDelete(ctx context.Context, request operations.TendersDeleteRequest) (*operations.TendersDeleteResponse, error) {
+func (s *tenders) TendersDelete(ctx context.Context, request operations.TendersDeleteRequest, security operations.TendersDeleteSecurity) (*operations.TendersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/tenders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/tenders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *tenders) TendersDelete(ctx context.Context, request operations.TendersD
 
 // TendersOne - Get Tender
 // Get Tender
-func (s *tenders) TendersOne(ctx context.Context, request operations.TendersOneRequest) (*operations.TendersOneResponse, error) {
+func (s *tenders) TendersOne(ctx context.Context, request operations.TendersOneRequest, security operations.TendersOneSecurity) (*operations.TendersOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/tenders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/tenders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *tenders) TendersOne(ctx context.Context, request operations.TendersOneR
 
 // TendersUpdate - Update Tender
 // Update Tender
-func (s *tenders) TendersUpdate(ctx context.Context, request operations.TendersUpdateRequest) (*operations.TendersUpdateResponse, error) {
+func (s *tenders) TendersUpdate(ctx context.Context, request operations.TendersUpdateRequest, security operations.TendersUpdateSecurity) (*operations.TendersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/tenders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/tenders/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TenderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *tenders) TendersUpdate(ctx context.Context, request operations.TendersU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

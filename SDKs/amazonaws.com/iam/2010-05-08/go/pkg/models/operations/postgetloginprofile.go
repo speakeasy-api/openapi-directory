@@ -50,25 +50,17 @@ func (e *POSTGetLoginProfileVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetLoginProfileQueryParams struct {
-	Action  POSTGetLoginProfileActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetLoginProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetLoginProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetLoginProfileRequest struct {
-	QueryParams POSTGetLoginProfileQueryParams
-	Headers     POSTGetLoginProfileHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetLoginProfileActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                         `request:"mediaType=text/xml"`
+	Version           POSTGetLoginProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetLoginProfileResponse struct {

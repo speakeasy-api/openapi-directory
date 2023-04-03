@@ -8,15 +8,12 @@ import (
 )
 
 type ConfirmPurchaseWithOfferSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ConfirmPurchaseWithOfferPathParams struct {
-	// The identifier of the payment platform (stripe/itunes).
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type ConfirmPurchaseWithOfferQueryParams struct {
+type ConfirmPurchaseWithOfferRequest struct {
+	// Details of a purchase request.
+	ItvPurchaseWithOfferRequest shared.ItvPurchaseWithOfferRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -29,14 +26,8 @@ type ConfirmPurchaseWithOfferQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ConfirmPurchaseWithOfferRequest struct {
-	PathParams  ConfirmPurchaseWithOfferPathParams
-	QueryParams ConfirmPurchaseWithOfferQueryParams
-	// Details of a purchase request.
-	Request  shared.ItvPurchaseWithOfferRequest `request:"mediaType=application/json"`
-	Security ConfirmPurchaseWithOfferSecurity
+	// The identifier of the payment platform (stripe/itunes).
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type ConfirmPurchaseWithOfferResponse struct {

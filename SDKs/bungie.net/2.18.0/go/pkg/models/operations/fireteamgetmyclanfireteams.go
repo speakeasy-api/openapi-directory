@@ -8,31 +8,22 @@ import (
 )
 
 type FireteamGetMyClanFireteamsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FireteamGetMyClanFireteamsPathParams struct {
+type FireteamGetMyClanFireteamsRequest struct {
+	// If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
+	GroupFilter *bool `queryParam:"style=form,explode=true,name=groupFilter"`
 	// The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// If true, return fireteams that have been closed.
 	IncludeClosed bool `pathParam:"style=simple,explode=false,name=includeClosed"`
+	// An optional language filter.
+	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
 	// Deprecated parameter, ignored.
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// The platform filter.
 	Platform int64 `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type FireteamGetMyClanFireteamsQueryParams struct {
-	// If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
-	GroupFilter *bool `queryParam:"style=form,explode=true,name=groupFilter"`
-	// An optional language filter.
-	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
-}
-
-type FireteamGetMyClanFireteamsRequest struct {
-	PathParams  FireteamGetMyClanFireteamsPathParams
-	QueryParams FireteamGetMyClanFireteamsQueryParams
-	Security    FireteamGetMyClanFireteamsSecurity
 }
 
 // FireteamGetMyClanFireteams200Wildcard - Look at the Response property for more information about the nature of this response

@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AssociateLenses - <p>Associate a lens to a workload.</p> <p>Up to 10 lenses can be associated with a workload in a single API operation. A maximum of 20 lenses can be associated with a workload.</p> <note> <p> <b>Disclaimer</b> </p> <p>By accessing and/or applying custom lenses created by another Amazon Web Services user or account, you acknowledge that custom lenses created by other users and shared with you are Third Party Content as defined in the Amazon Web Services Customer Agreement. </p> </note>
 func (s *SDK) AssociateLenses(ctx context.Context, request operations.AssociateLensesRequest) (*operations.AssociateLensesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/associateLenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/associateLenses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateLenses(ctx context.Context, request operations.AssociateL
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -221,9 +221,9 @@ func (s *SDK) AssociateLenses(ctx context.Context, request operations.AssociateL
 // CreateLensShare - <p>Create a lens share.</p> <p>The owner of a lens can share it with other Amazon Web Services accounts, IAM users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Shared access to a lens is not removed until the lens invitation is deleted.</p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
 func (s *SDK) CreateLensShare(ctx context.Context, request operations.CreateLensShareRequest) (*operations.CreateLensShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -238,7 +238,7 @@ func (s *SDK) CreateLensShare(ctx context.Context, request operations.CreateLens
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -347,9 +347,9 @@ func (s *SDK) CreateLensShare(ctx context.Context, request operations.CreateLens
 // CreateLensVersion - <p>Create a new lens version.</p> <p>A lens can have up to 100 versions.</p> <p>After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a lens can delete it. </p>
 func (s *SDK) CreateLensVersion(ctx context.Context, request operations.CreateLensVersionRequest) (*operations.CreateLensVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -364,7 +364,7 @@ func (s *SDK) CreateLensVersion(ctx context.Context, request operations.CreateLe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -473,9 +473,9 @@ func (s *SDK) CreateLensVersion(ctx context.Context, request operations.CreateLe
 // CreateMilestone - Create a milestone for an existing workload.
 func (s *SDK) CreateMilestone(ctx context.Context, request operations.CreateMilestoneRequest) (*operations.CreateMilestoneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -490,7 +490,7 @@ func (s *SDK) CreateMilestone(ctx context.Context, request operations.CreateMile
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -601,7 +601,7 @@ func (s *SDK) CreateWorkload(ctx context.Context, request operations.CreateWorkl
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workloads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -616,7 +616,7 @@ func (s *SDK) CreateWorkload(ctx context.Context, request operations.CreateWorkl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -715,9 +715,9 @@ func (s *SDK) CreateWorkload(ctx context.Context, request operations.CreateWorkl
 // CreateWorkloadShare - <p>Create a workload share.</p> <p>The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Shared access to a workload is not removed until the workload invitation is deleted.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a> in the <i>Well-Architected Tool User Guide</i>.</p>
 func (s *SDK) CreateWorkloadShare(ctx context.Context, request operations.CreateWorkloadShareRequest) (*operations.CreateWorkloadShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -732,7 +732,7 @@ func (s *SDK) CreateWorkloadShare(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -841,16 +841,16 @@ func (s *SDK) CreateWorkloadShare(ctx context.Context, request operations.Create
 // DeleteLens - <p>Delete an existing lens.</p> <p>Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads. </p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
 func (s *SDK) DeleteLens(ctx context.Context, request operations.DeleteLensRequest) (*operations.DeleteLensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}#ClientRequestToken&LensStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}#ClientRequestToken&LensStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -942,16 +942,16 @@ func (s *SDK) DeleteLens(ctx context.Context, request operations.DeleteLensReque
 // DeleteLensShare - <p>Delete a lens share.</p> <p>After the lens share is deleted, Amazon Web Services accounts, IAM users, organizations, and organizational units (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.</p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
 func (s *SDK) DeleteLensShare(ctx context.Context, request operations.DeleteLensShareRequest) (*operations.DeleteLensShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares/{ShareId}#ClientRequestToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares/{ShareId}#ClientRequestToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1043,16 +1043,16 @@ func (s *SDK) DeleteLensShare(ctx context.Context, request operations.DeleteLens
 // DeleteWorkload - Delete an existing workload.
 func (s *SDK) DeleteWorkload(ctx context.Context, request operations.DeleteWorkloadRequest) (*operations.DeleteWorkloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}#ClientRequestToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}#ClientRequestToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1144,16 +1144,16 @@ func (s *SDK) DeleteWorkload(ctx context.Context, request operations.DeleteWorkl
 // DeleteWorkloadShare - Delete a workload share.
 func (s *SDK) DeleteWorkloadShare(ctx context.Context, request operations.DeleteWorkloadShareRequest) (*operations.DeleteWorkloadShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}#ClientRequestToken", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}#ClientRequestToken", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1245,9 +1245,9 @@ func (s *SDK) DeleteWorkloadShare(ctx context.Context, request operations.Delete
 // DisassociateLenses - <p>Disassociate a lens from a workload.</p> <p>Up to 10 lenses can be disassociated from a workload in a single API operation.</p> <note> <p>The Amazon Web Services Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a workload.</p> </note>
 func (s *SDK) DisassociateLenses(ctx context.Context, request operations.DisassociateLensesRequest) (*operations.DisassociateLensesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/disassociateLenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/disassociateLenses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1262,7 +1262,7 @@ func (s *SDK) DisassociateLenses(ctx context.Context, request operations.Disasso
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1352,16 +1352,16 @@ func (s *SDK) DisassociateLenses(ctx context.Context, request operations.Disasso
 // ExportLens - <p>Export an existing lens.</p> <p>Lenses are defined in JSON. For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it. </p> <note> <p> <b>Disclaimer</b> </p> <p>Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.</p> </note>
 func (s *SDK) ExportLens(ctx context.Context, request operations.ExportLensRequest) (*operations.ExportLensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1452,16 +1452,16 @@ func (s *SDK) ExportLens(ctx context.Context, request operations.ExportLensReque
 // GetAnswer - Get the answer to a specific question in a workload review.
 func (s *SDK) GetAnswer(ctx context.Context, request operations.GetAnswerRequest) (*operations.GetAnswerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1552,16 +1552,16 @@ func (s *SDK) GetAnswer(ctx context.Context, request operations.GetAnswerRequest
 // GetLens - Get an existing lens.
 func (s *SDK) GetLens(ctx context.Context, request operations.GetLensRequest) (*operations.GetLensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1652,16 +1652,16 @@ func (s *SDK) GetLens(ctx context.Context, request operations.GetLensRequest) (*
 // GetLensReview - Get lens review.
 func (s *SDK) GetLensReview(ctx context.Context, request operations.GetLensReviewRequest) (*operations.GetLensReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1752,16 +1752,16 @@ func (s *SDK) GetLensReview(ctx context.Context, request operations.GetLensRevie
 // GetLensReviewReport - Get lens review report.
 func (s *SDK) GetLensReviewReport(ctx context.Context, request operations.GetLensReviewReportRequest) (*operations.GetLensReviewReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/report", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1852,16 +1852,16 @@ func (s *SDK) GetLensReviewReport(ctx context.Context, request operations.GetLen
 // GetLensVersionDifference - Get lens version differences.
 func (s *SDK) GetLensVersionDifference(ctx context.Context, request operations.GetLensVersionDifferenceRequest) (*operations.GetLensVersionDifferenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versionDifference", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versionDifference", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1952,14 +1952,14 @@ func (s *SDK) GetLensVersionDifference(ctx context.Context, request operations.G
 // GetMilestone - Get a milestone for an existing workload.
 func (s *SDK) GetMilestone(ctx context.Context, request operations.GetMilestoneRequest) (*operations.GetMilestoneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones/{MilestoneNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones/{MilestoneNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2048,14 +2048,14 @@ func (s *SDK) GetMilestone(ctx context.Context, request operations.GetMilestoneR
 // GetWorkload - Get an existing workload.
 func (s *SDK) GetWorkload(ctx context.Context, request operations.GetWorkloadRequest) (*operations.GetWorkloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2146,7 +2146,7 @@ func (s *SDK) ImportLens(ctx context.Context, request operations.ImportLensReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/importLens"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2161,7 +2161,7 @@ func (s *SDK) ImportLens(ctx context.Context, request operations.ImportLensReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2270,16 +2270,16 @@ func (s *SDK) ImportLens(ctx context.Context, request operations.ImportLensReque
 // ListAnswers - List of answers.
 func (s *SDK) ListAnswers(ctx context.Context, request operations.ListAnswersRequest) (*operations.ListAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2370,9 +2370,9 @@ func (s *SDK) ListAnswers(ctx context.Context, request operations.ListAnswersReq
 // ListCheckDetails - List of Trusted Advisor check details by account related to the workload.
 func (s *SDK) ListCheckDetails(ctx context.Context, request operations.ListCheckDetailsRequest) (*operations.ListCheckDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2387,9 +2387,9 @@ func (s *SDK) ListCheckDetails(ctx context.Context, request operations.ListCheck
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2480,9 +2480,9 @@ func (s *SDK) ListCheckDetails(ctx context.Context, request operations.ListCheck
 // ListCheckSummaries - List of Trusted Advisor checks summarized for all accounts related to the workload.
 func (s *SDK) ListCheckSummaries(ctx context.Context, request operations.ListCheckSummariesRequest) (*operations.ListCheckSummariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checkSummaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checkSummaries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2497,9 +2497,9 @@ func (s *SDK) ListCheckSummaries(ctx context.Context, request operations.ListChe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2590,16 +2590,16 @@ func (s *SDK) ListCheckSummaries(ctx context.Context, request operations.ListChe
 // ListLensReviewImprovements - List lens review improvements.
 func (s *SDK) ListLensReviewImprovements(ctx context.Context, request operations.ListLensReviewImprovementsRequest) (*operations.ListLensReviewImprovementsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/improvements", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/improvements", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2690,16 +2690,16 @@ func (s *SDK) ListLensReviewImprovements(ctx context.Context, request operations
 // ListLensReviews - List lens reviews.
 func (s *SDK) ListLensReviews(ctx context.Context, request operations.ListLensReviewsRequest) (*operations.ListLensReviewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2790,16 +2790,16 @@ func (s *SDK) ListLensReviews(ctx context.Context, request operations.ListLensRe
 // ListLensShares - List the lens shares associated with the lens.
 func (s *SDK) ListLensShares(ctx context.Context, request operations.ListLensSharesRequest) (*operations.ListLensSharesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2897,9 +2897,9 @@ func (s *SDK) ListLenses(ctx context.Context, request operations.ListLensesReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2980,9 +2980,9 @@ func (s *SDK) ListLenses(ctx context.Context, request operations.ListLensesReque
 // ListMilestones - List all milestones for an existing workload.
 func (s *SDK) ListMilestones(ctx context.Context, request operations.ListMilestonesRequest) (*operations.ListMilestonesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestonesSummaries", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestonesSummaries", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2997,9 +2997,9 @@ func (s *SDK) ListMilestones(ctx context.Context, request operations.ListMilesto
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3092,7 +3092,7 @@ func (s *SDK) ListNotifications(ctx context.Context, request operations.ListNoti
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3107,9 +3107,9 @@ func (s *SDK) ListNotifications(ctx context.Context, request operations.ListNoti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3197,9 +3197,9 @@ func (s *SDK) ListShareInvitations(ctx context.Context, request operations.ListS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3280,14 +3280,14 @@ func (s *SDK) ListShareInvitations(ctx context.Context, request operations.ListS
 // ListTagsForResource - <p>List the tags for a resource.</p> <note> <p>The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.</p> </note>
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3346,16 +3346,16 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListWorkloadShares - List the workload shares associated with the workload.
 func (s *SDK) ListWorkloadShares(ctx context.Context, request operations.ListWorkloadSharesRequest) (*operations.ListWorkloadSharesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3448,7 +3448,7 @@ func (s *SDK) ListWorkloads(ctx context.Context, request operations.ListWorkload
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workloadsSummaries"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3463,9 +3463,9 @@ func (s *SDK) ListWorkloads(ctx context.Context, request operations.ListWorkload
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3546,9 +3546,9 @@ func (s *SDK) ListWorkloads(ctx context.Context, request operations.ListWorkload
 // TagResource - <p>Adds one or more tags to the specified resource.</p> <note> <p>The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.</p> </note>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3563,7 +3563,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3622,16 +3622,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - <p>Deletes specified tags from a resource.</p> <note> <p>The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.</p> </note> <p>To specify multiple tags, use separate <b>tagKeys</b> parameters, for example:</p> <p> <code>DELETE /tags/WorkloadArn?tagKeys=key1&amp;tagKeys=key2</code> </p>
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3692,9 +3692,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAnswer - Update the answer to a specific question in a workload review.
 func (s *SDK) UpdateAnswer(ctx context.Context, request operations.UpdateAnswerRequest) (*operations.UpdateAnswerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3709,7 +3709,7 @@ func (s *SDK) UpdateAnswer(ctx context.Context, request operations.UpdateAnswerR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3810,7 +3810,7 @@ func (s *SDK) UpdateGlobalSettings(ctx context.Context, request operations.Updat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/global-settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3825,7 +3825,7 @@ func (s *SDK) UpdateGlobalSettings(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3905,9 +3905,9 @@ func (s *SDK) UpdateGlobalSettings(ctx context.Context, request operations.Updat
 // UpdateLensReview - Update lens review.
 func (s *SDK) UpdateLensReview(ctx context.Context, request operations.UpdateLensReviewRequest) (*operations.UpdateLensReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3922,7 +3922,7 @@ func (s *SDK) UpdateLensReview(ctx context.Context, request operations.UpdateLen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4021,9 +4021,9 @@ func (s *SDK) UpdateLensReview(ctx context.Context, request operations.UpdateLen
 // UpdateShareInvitation - <p>Update a workload or custom lens share invitation.</p> <note> <p>This API operation can be called independently of any resource. Previous documentation implied that a workload ARN must be specified.</p> </note>
 func (s *SDK) UpdateShareInvitation(ctx context.Context, request operations.UpdateShareInvitationRequest) (*operations.UpdateShareInvitationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shareInvitations/{ShareInvitationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/shareInvitations/{ShareInvitationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4038,7 +4038,7 @@ func (s *SDK) UpdateShareInvitation(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4137,9 +4137,9 @@ func (s *SDK) UpdateShareInvitation(ctx context.Context, request operations.Upda
 // UpdateWorkload - Update an existing workload.
 func (s *SDK) UpdateWorkload(ctx context.Context, request operations.UpdateWorkloadRequest) (*operations.UpdateWorkloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4154,7 +4154,7 @@ func (s *SDK) UpdateWorkload(ctx context.Context, request operations.UpdateWorkl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4253,9 +4253,9 @@ func (s *SDK) UpdateWorkload(ctx context.Context, request operations.UpdateWorkl
 // UpdateWorkloadShare - Update a workload share.
 func (s *SDK) UpdateWorkloadShare(ctx context.Context, request operations.UpdateWorkloadShareRequest) (*operations.UpdateWorkloadShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4270,7 +4270,7 @@ func (s *SDK) UpdateWorkloadShare(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4369,9 +4369,9 @@ func (s *SDK) UpdateWorkloadShare(ctx context.Context, request operations.Update
 // UpgradeLensReview - Upgrade lens review.
 func (s *SDK) UpgradeLensReview(ctx context.Context, request operations.UpgradeLensReviewRequest) (*operations.UpgradeLensReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/upgrade", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/upgrade", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4386,7 +4386,7 @@ func (s *SDK) UpgradeLensReview(ctx context.Context, request operations.UpgradeL
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

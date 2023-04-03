@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type SilenceUserPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type SilenceUserRequestBody struct {
 	// Will send an email with this message when present
 	Message      *string `json:"message,omitempty"`
@@ -19,8 +15,8 @@ type SilenceUserRequestBody struct {
 }
 
 type SilenceUserRequest struct {
-	PathParams SilenceUserPathParams
-	Request    *SilenceUserRequestBody `request:"mediaType=application/json"`
+	RequestBody *SilenceUserRequestBody `request:"mediaType=application/json"`
+	ID          int64                   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SilenceUser200ApplicationJSONSilenceSilencedBy struct {

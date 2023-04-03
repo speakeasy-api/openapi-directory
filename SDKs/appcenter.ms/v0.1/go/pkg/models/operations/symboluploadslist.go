@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type SymbolUploadsListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SymbolUploadsListPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // SymbolUploadsListStatusEnum - Filter results by the current status of a symbol upload: * all: all states in the symbol upload process. Includes created, aborted, committed, processing, indexed and failed states * uploaded: all states after package is uploaded. Includes committed, processing, indexed and failed states * processed: symbol upload processing is completed. Includes indexed and failed states.
@@ -81,7 +73,11 @@ func (e *SymbolUploadsListSymbolTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SymbolUploadsListQueryParams struct {
+type SymbolUploadsListRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Filter results by the current status of a symbol upload: * all: all states in the symbol upload process. Includes created, aborted, committed, processing, indexed and failed states * uploaded: all states after package is uploaded. Includes committed, processing, indexed and failed states * processed: symbol upload processing is completed. Includes indexed and failed states.
 	//
 	Status *SymbolUploadsListStatusEnum `queryParam:"style=form,explode=true,name=status"`
@@ -89,12 +85,6 @@ type SymbolUploadsListQueryParams struct {
 	SymbolType *SymbolUploadsListSymbolTypeEnum `queryParam:"style=form,explode=true,name=symbol_type"`
 	// The maximum number of results to return.
 	Top *int64 `queryParam:"style=form,explode=true,name=top"`
-}
-
-type SymbolUploadsListRequest struct {
-	PathParams  SymbolUploadsListPathParams
-	QueryParams SymbolUploadsListQueryParams
-	Security    SymbolUploadsListSecurity
 }
 
 // SymbolUploadsList500ApplicationJSON - Internal error

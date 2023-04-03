@@ -15,10 +15,6 @@ type BatchPresignMultipartPartsRequestBody struct {
 	UniqueIdentifier string `json:"unique_identifier"`
 }
 
-type BatchPresignMultipartPartsRequest struct {
-	Request *BatchPresignMultipartPartsRequestBody `request:"mediaType=application/json"`
-}
-
 // BatchPresignMultipartParts200ApplicationJSON - external upload initialized
 type BatchPresignMultipartParts200ApplicationJSON struct {
 	// The presigned URLs for each part number, which has

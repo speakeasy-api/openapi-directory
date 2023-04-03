@@ -6,21 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type AnalyticsCreateOrUpdateAudienceSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AnalyticsCreateOrUpdateAudiencePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the audience
-	AudienceName string `pathParam:"style=simple,explode=false,name=audience_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AnalyticsCreateOrUpdateAudienceRequestBodyCustomPropertiesEnum string
@@ -64,10 +54,14 @@ type AnalyticsCreateOrUpdateAudienceRequestBody struct {
 }
 
 type AnalyticsCreateOrUpdateAudienceRequest struct {
-	PathParams AnalyticsCreateOrUpdateAudiencePathParams
 	// Audience definition
-	Request  AnalyticsCreateOrUpdateAudienceRequestBody `request:"mediaType=application/json"`
-	Security AnalyticsCreateOrUpdateAudienceSecurity
+	RequestBody AnalyticsCreateOrUpdateAudienceRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the audience
+	AudienceName string `pathParam:"style=simple,explode=false,name=audience_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type AnalyticsCreateOrUpdateAudienceDefaultApplicationJSONErrorCodeEnum string

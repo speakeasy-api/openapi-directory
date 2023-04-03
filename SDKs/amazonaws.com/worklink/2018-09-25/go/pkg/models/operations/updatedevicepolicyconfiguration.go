@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDevicePolicyConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDevicePolicyConfigurationRequestBody struct {
 	// The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 	DeviceCaCertificate *string `json:"DeviceCaCertificate,omitempty"`
@@ -24,8 +14,14 @@ type UpdateDevicePolicyConfigurationRequestBody struct {
 }
 
 type UpdateDevicePolicyConfigurationRequest struct {
-	Headers UpdateDevicePolicyConfigurationHeaders
-	Request UpdateDevicePolicyConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDevicePolicyConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateDevicePolicyConfigurationResponse struct {

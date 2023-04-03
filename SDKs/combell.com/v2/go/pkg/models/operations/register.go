@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type RegisterRequest struct {
-	Request *shared.RegisterDomain `request:"mediaType=application/json"`
-}
 
 type RegisterResponse struct {
 	ContentType string

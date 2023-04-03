@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBrowserSettingsPathParams struct {
-	// The ARN of the browser settings.
-	BrowserSettingsArn string `pathParam:"style=simple,explode=false,name=browserSettingsArn"`
-}
-
-type GetBrowserSettingsHeaders struct {
+type GetBrowserSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetBrowserSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetBrowserSettingsRequest struct {
-	PathParams GetBrowserSettingsPathParams
-	Headers    GetBrowserSettingsHeaders
+	// The ARN of the browser settings.
+	BrowserSettingsArn string `pathParam:"style=simple,explode=false,name=browserSettingsArn"`
 }
 
 type GetBrowserSettingsResponse struct {

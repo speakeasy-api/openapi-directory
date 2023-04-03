@@ -38,20 +38,20 @@ func newTerminalOrdersMerchantLevel(defaultClient, securityClient HTTPClient, se
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDBillingEntities(ctx context.Context, request operations.GetMerchantsMerchantIDBillingEntitiesRequest) (*operations.GetMerchantsMerchantIDBillingEntitiesResponse, error) {
+func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDBillingEntities(ctx context.Context, request operations.GetMerchantsMerchantIDBillingEntitiesRequest, security operations.GetMerchantsMerchantIDBillingEntitiesSecurity) (*operations.GetMerchantsMerchantIDBillingEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/billingEntities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/billingEntities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,20 +111,20 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDBillingEntities(ctx 
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDShippingLocations(ctx context.Context, request operations.GetMerchantsMerchantIDShippingLocationsRequest) (*operations.GetMerchantsMerchantIDShippingLocationsResponse, error) {
+func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDShippingLocations(ctx context.Context, request operations.GetMerchantsMerchantIDShippingLocationsRequest, security operations.GetMerchantsMerchantIDShippingLocationsSecurity) (*operations.GetMerchantsMerchantIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -183,16 +183,16 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDShippingLocations(ct
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalModels(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalModelsRequest) (*operations.GetMerchantsMerchantIDTerminalModelsResponse, error) {
+func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalModels(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalModelsRequest, security operations.GetMerchantsMerchantIDTerminalModelsSecurity) (*operations.GetMerchantsMerchantIDTerminalModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,20 +251,20 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalModels(ctx c
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrders(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalOrdersRequest) (*operations.GetMerchantsMerchantIDTerminalOrdersResponse, error) {
+func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrders(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalOrdersRequest, security operations.GetMerchantsMerchantIDTerminalOrdersSecurity) (*operations.GetMerchantsMerchantIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -323,16 +323,16 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrders(ctx c
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrdersOrderID(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalOrdersOrderIDRequest) (*operations.GetMerchantsMerchantIDTerminalOrdersOrderIDResponse, error) {
+func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrdersOrderID(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalOrdersOrderIDRequest, security operations.GetMerchantsMerchantIDTerminalOrdersOrderIDSecurity) (*operations.GetMerchantsMerchantIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -391,20 +391,20 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrdersOrderI
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalProducts(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalProductsRequest) (*operations.GetMerchantsMerchantIDTerminalProductsResponse, error) {
+func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalProducts(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalProductsRequest, security operations.GetMerchantsMerchantIDTerminalProductsSecurity) (*operations.GetMerchantsMerchantIDTerminalProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalProducts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalProducts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -468,11 +468,11 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalProducts(ctx
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) PatchMerchantsMerchantIDTerminalOrdersOrderID(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDRequest) (*operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDResponse, error) {
+func (s *terminalOrdersMerchantLevel) PatchMerchantsMerchantIDTerminalOrdersOrderID(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDRequest, security operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDSecurity) (*operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -484,7 +484,7 @@ func (s *terminalOrdersMerchantLevel) PatchMerchantsMerchantIDTerminalOrdersOrde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -542,11 +542,11 @@ func (s *terminalOrdersMerchantLevel) PatchMerchantsMerchantIDTerminalOrdersOrde
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDShippingLocations(ctx context.Context, request operations.PostMerchantsMerchantIDShippingLocationsRequest) (*operations.PostMerchantsMerchantIDShippingLocationsResponse, error) {
+func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDShippingLocations(ctx context.Context, request operations.PostMerchantsMerchantIDShippingLocationsRequest, security operations.PostMerchantsMerchantIDShippingLocationsSecurity) (*operations.PostMerchantsMerchantIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingLocation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -558,7 +558,7 @@ func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDShippingLocations(c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -616,11 +616,11 @@ func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDShippingLocations(c
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrders(ctx context.Context, request operations.PostMerchantsMerchantIDTerminalOrdersRequest) (*operations.PostMerchantsMerchantIDTerminalOrdersResponse, error) {
+func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrders(ctx context.Context, request operations.PostMerchantsMerchantIDTerminalOrdersRequest, security operations.PostMerchantsMerchantIDTerminalOrdersSecurity) (*operations.PostMerchantsMerchantIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -632,7 +632,7 @@ func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrders(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -692,16 +692,16 @@ func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrders(ctx 
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrdersOrderIDCancel(ctx context.Context, request operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelRequest) (*operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelResponse, error) {
+func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrdersOrderIDCancel(ctx context.Context, request operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelRequest, security operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelSecurity) (*operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

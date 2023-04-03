@@ -113,14 +113,14 @@ func New(opts ...SDKOption) *SDK {
 // GetRawMessageContent - Retrieves the raw content of an in-transit email message, in MIME format.
 func (s *SDK) GetRawMessageContent(ctx context.Context, request operations.GetRawMessageContentRequest) (*operations.GetRawMessageContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{messageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{messageId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -169,9 +169,9 @@ func (s *SDK) GetRawMessageContent(ctx context.Context, request operations.GetRa
 // PutRawMessageContent - <p>Updates the raw content of an in-transit email message, in MIME format.</p> <p>This example describes how to update in-transit email message. For more information and examples for using this API, see <a href="https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html"> Updating message content with AWS Lambda</a>.</p> <note> <p>Updates to an in-transit message only appear when you call <code>PutRawMessageContent</code> from an AWS Lambda function configured with a synchronous <a href="https://docs.aws.amazon.com/workmail/latest/adminguide/lambda.html#synchronous-rules"> Run Lambda</a> rule. If you call <code>PutRawMessageContent</code> on a delivered or sent message, the message remains unchanged, even though <a href="https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_GetRawMessageContent.html">GetRawMessageContent</a> returns an updated message. </p> </note>
 func (s *SDK) PutRawMessageContent(ctx context.Context, request operations.PutRawMessageContentRequest) (*operations.PutRawMessageContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{messageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/messages/{messageId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -186,7 +186,7 @@ func (s *SDK) PutRawMessageContent(ctx context.Context, request operations.PutRa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

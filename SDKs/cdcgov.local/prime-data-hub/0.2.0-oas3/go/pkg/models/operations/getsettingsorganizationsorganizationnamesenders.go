@@ -8,17 +8,12 @@ import (
 )
 
 type GetSettingsOrganizationsOrganizationNameSendersSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type GetSettingsOrganizationsOrganizationNameSendersPathParams struct {
-	// Fetch senders with this organization name
-	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSettingsOrganizationsOrganizationNameSendersRequest struct {
-	PathParams GetSettingsOrganizationsOrganizationNameSendersPathParams
-	Security   GetSettingsOrganizationsOrganizationNameSendersSecurity
+	// Fetch senders with this organization name
+	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
 }
 
 type GetSettingsOrganizationsOrganizationNameSendersResponse struct {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTemplateVersionsPathParams struct {
-	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
-	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
-	// The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.
-	TemplateType string `pathParam:"style=simple,explode=false,name=template-type"`
-}
-
-type ListTemplateVersionsQueryParams struct {
-	// The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
-	PageSize *string `queryParam:"style=form,explode=true,name=page-size"`
-}
-
-type ListTemplateVersionsHeaders struct {
+type ListTemplateVersionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListTemplateVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTemplateVersionsRequest struct {
-	PathParams  ListTemplateVersionsPathParams
-	QueryParams ListTemplateVersionsQueryParams
-	Headers     ListTemplateVersionsHeaders
+	// The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
+	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+	PageSize *string `queryParam:"style=form,explode=true,name=page-size"`
+	// The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+	TemplateName string `pathParam:"style=simple,explode=false,name=template-name"`
+	// The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.
+	TemplateType string `pathParam:"style=simple,explode=false,name=template-type"`
 }
 
 type ListTemplateVersionsResponse struct {

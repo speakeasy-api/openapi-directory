@@ -8,17 +8,13 @@ import (
 )
 
 type EnableAPICredentialsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type EnableAPICredentialsPathParams struct {
-	// An id of an API credential
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type EnableAPICredentialsRequest struct {
-	PathParams EnableAPICredentialsPathParams
-	Security   EnableAPICredentialsSecurity
+	// An id of an API credential
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type EnableAPICredentialsResponse struct {

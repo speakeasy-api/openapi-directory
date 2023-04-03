@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteInputPathParams struct {
-	// The name of the input to delete.
-	InputName string `pathParam:"style=simple,explode=false,name=inputName"`
-}
-
-type DeleteInputHeaders struct {
+type DeleteInputRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteInputHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteInputRequest struct {
-	PathParams DeleteInputPathParams
-	Headers    DeleteInputHeaders
+	// The name of the input to delete.
+	InputName string `pathParam:"style=simple,explode=false,name=inputName"`
 }
 
 type DeleteInputResponse struct {

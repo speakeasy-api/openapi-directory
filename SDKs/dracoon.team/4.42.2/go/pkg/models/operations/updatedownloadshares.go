@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDownloadSharesHeaders struct {
+type UpdateDownloadSharesRequest struct {
+	UpdateDownloadSharesBulkRequest shared.UpdateDownloadSharesBulkRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateDownloadSharesRequest struct {
-	Headers UpdateDownloadSharesHeaders
-	Request shared.UpdateDownloadSharesBulkRequest `request:"mediaType=application/json"`
 }
 
 type UpdateDownloadShares400WildcardType string

@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePortalPathParams struct {
-	// The ID of the portal to delete.
-	PortalID string `pathParam:"style=simple,explode=false,name=portalId"`
-}
-
-type DeletePortalQueryParams struct {
-	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeletePortalHeaders struct {
+type DeletePortalRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeletePortalHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeletePortalRequest struct {
-	PathParams  DeletePortalPathParams
-	QueryParams DeletePortalQueryParams
-	Headers     DeletePortalHeaders
+	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The ID of the portal to delete.
+	PortalID string `pathParam:"style=simple,explode=false,name=portalId"`
 }
 
 type DeletePortalResponse struct {

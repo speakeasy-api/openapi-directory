@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCustomLineItemHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	//  The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented in a future update.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 // CreateCustomLineItemRequestBodyBillingPeriodRange -  The billing period range in which the custom line item request will be applied.
 type CreateCustomLineItemRequestBodyBillingPeriodRange struct {
 	ExclusiveEndBillingPeriod   *string `json:"ExclusiveEndBillingPeriod,omitempty"`
@@ -48,8 +36,16 @@ type CreateCustomLineItemRequestBody struct {
 }
 
 type CreateCustomLineItemRequest struct {
-	Headers CreateCustomLineItemHeaders
-	Request CreateCustomLineItemRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateCustomLineItemRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented in a future update.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateCustomLineItemResponse struct {

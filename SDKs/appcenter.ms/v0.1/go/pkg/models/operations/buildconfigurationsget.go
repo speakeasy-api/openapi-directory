@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildConfigurationsGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BuildConfigurationsGetPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The branch name
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BuildConfigurationsGetFormatEnum - Configuration format
@@ -46,15 +36,15 @@ func (e *BuildConfigurationsGetFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BuildConfigurationsGetQueryParams struct {
+type BuildConfigurationsGetRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The branch name
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// Configuration format
 	Format *BuildConfigurationsGetFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type BuildConfigurationsGetRequest struct {
-	PathParams  BuildConfigurationsGetPathParams
-	QueryParams BuildConfigurationsGetQueryParams
-	Security    BuildConfigurationsGetSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // BuildConfigurationsGetDefaultApplicationJSON - Bad Request

@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteWorkflowStepGroupPathParams struct {
-	// The ID of the step group you want to delete.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteWorkflowStepGroupQueryParams struct {
-	// The ID of the migration workflow.
-	WorkflowID string `queryParam:"style=form,explode=true,name=workflowId"`
-}
-
-type DeleteWorkflowStepGroupHeaders struct {
+type DeleteWorkflowStepGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteWorkflowStepGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteWorkflowStepGroupRequest struct {
-	PathParams  DeleteWorkflowStepGroupPathParams
-	QueryParams DeleteWorkflowStepGroupQueryParams
-	Headers     DeleteWorkflowStepGroupHeaders
+	// The ID of the step group you want to delete.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The ID of the migration workflow.
+	WorkflowID string `queryParam:"style=form,explode=true,name=workflowId"`
 }
 
 type DeleteWorkflowStepGroupResponse struct {

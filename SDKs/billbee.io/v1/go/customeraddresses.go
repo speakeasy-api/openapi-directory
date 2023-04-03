@@ -34,7 +34,7 @@ func newCustomerAddresses(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // CustomerAddressesCreateForm - Creates a new customer address
-func (s *customerAddresses) CustomerAddressesCreateForm(ctx context.Context, request operations.CustomerAddressesCreateFormRequest) (*operations.CustomerAddressesCreateFormResponse, error) {
+func (s *customerAddresses) CustomerAddressesCreateForm(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) (*operations.CustomerAddressesCreateFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/customer-addresses"
 
@@ -109,7 +109,7 @@ func (s *customerAddresses) CustomerAddressesCreateForm(ctx context.Context, req
 }
 
 // CustomerAddressesCreateJSON - Creates a new customer address
-func (s *customerAddresses) CustomerAddressesCreateJSON(ctx context.Context, request operations.CustomerAddressesCreateJSONRequest) (*operations.CustomerAddressesCreateJSONResponse, error) {
+func (s *customerAddresses) CustomerAddressesCreateJSON(ctx context.Context, request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) (*operations.CustomerAddressesCreateJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/customer-addresses"
 
@@ -184,7 +184,7 @@ func (s *customerAddresses) CustomerAddressesCreateJSON(ctx context.Context, req
 }
 
 // CustomerAddressesCreateRaw - Creates a new customer address
-func (s *customerAddresses) CustomerAddressesCreateRaw(ctx context.Context, request operations.CustomerAddressesCreateRawRequest) (*operations.CustomerAddressesCreateRawResponse, error) {
+func (s *customerAddresses) CustomerAddressesCreateRaw(ctx context.Context, request []byte) (*operations.CustomerAddressesCreateRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/customer-addresses"
 
@@ -268,7 +268,7 @@ func (s *customerAddresses) CustomerAddressesGetAll(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -330,7 +330,7 @@ func (s *customerAddresses) CustomerAddressesGetAll(ctx context.Context, request
 // CustomerAddressesGetOne - Queries a single customer address by id
 func (s *customerAddresses) CustomerAddressesGetOne(ctx context.Context, request operations.CustomerAddressesGetOneRequest) (*operations.CustomerAddressesGetOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -395,9 +395,9 @@ func (s *customerAddresses) CustomerAddressesGetOne(ctx context.Context, request
 // CustomerAddressesUpdateForm - Updates a customer address by id
 func (s *customerAddresses) CustomerAddressesUpdateForm(ctx context.Context, request operations.CustomerAddressesUpdateFormRequest) (*operations.CustomerAddressesUpdateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -470,9 +470,9 @@ func (s *customerAddresses) CustomerAddressesUpdateForm(ctx context.Context, req
 // CustomerAddressesUpdateJSON - Updates a customer address by id
 func (s *customerAddresses) CustomerAddressesUpdateJSON(ctx context.Context, request operations.CustomerAddressesUpdateJSONRequest) (*operations.CustomerAddressesUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -545,9 +545,9 @@ func (s *customerAddresses) CustomerAddressesUpdateJSON(ctx context.Context, req
 // CustomerAddressesUpdateRaw - Updates a customer address by id
 func (s *customerAddresses) CustomerAddressesUpdateRaw(ctx context.Context, request operations.CustomerAddressesUpdateRawRequest) (*operations.CustomerAddressesUpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

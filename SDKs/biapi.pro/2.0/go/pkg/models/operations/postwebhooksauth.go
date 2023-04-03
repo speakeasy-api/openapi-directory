@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostWebhooksAuthQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostWebhooksAuthRequestBody struct {
 	// The authentication process configuration. A dict contains either the certificate
 	Config *string `multipartForm:"name=config"`
@@ -21,8 +17,8 @@ type PostWebhooksAuthRequestBody struct {
 }
 
 type PostWebhooksAuthRequest struct {
-	QueryParams PostWebhooksAuthQueryParams
-	Request     PostWebhooksAuthRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostWebhooksAuthRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                     `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PostWebhooksAuthResponse struct {

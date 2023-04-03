@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAddonVersionsQueryParams struct {
+type DescribeAddonVersionsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
 	AddonName *string `queryParam:"style=form,explode=true,name=addonName"`
 	// The Kubernetes versions that you can use the add-on with.
@@ -22,21 +29,6 @@ type DescribeAddonVersionsQueryParams struct {
 	Publishers []string `queryParam:"style=form,explode=true,name=publishers"`
 	// The type of the add-on. For valid <code>types</code>, don't specify a value for this property.
 	Types []string `queryParam:"style=form,explode=true,name=types"`
-}
-
-type DescribeAddonVersionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAddonVersionsRequest struct {
-	QueryParams DescribeAddonVersionsQueryParams
-	Headers     DescribeAddonVersionsHeaders
 }
 
 type DescribeAddonVersionsResponse struct {

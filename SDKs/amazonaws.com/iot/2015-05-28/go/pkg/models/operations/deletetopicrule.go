@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteTopicRulePathParams struct {
-	// The name of the rule.
-	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
-}
-
-type DeleteTopicRuleHeaders struct {
+type DeleteTopicRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteTopicRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTopicRuleRequest struct {
-	PathParams DeleteTopicRulePathParams
-	Headers    DeleteTopicRuleHeaders
+	// The name of the rule.
+	RuleName string `pathParam:"style=simple,explode=false,name=ruleName"`
 }
 
 type DeleteTopicRuleResponse struct {

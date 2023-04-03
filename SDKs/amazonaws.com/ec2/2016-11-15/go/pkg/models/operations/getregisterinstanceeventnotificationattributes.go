@@ -56,28 +56,20 @@ func (e *GETRegisterInstanceEventNotificationAttributesVersionEnum) UnmarshalJSO
 	}
 }
 
-type GETRegisterInstanceEventNotificationAttributesQueryParams struct {
+type GETRegisterInstanceEventNotificationAttributesRequest struct {
 	Action GETRegisterInstanceEventNotificationAttributesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// Information about the tag keys to register.
 	InstanceTagAttribute *GETRegisterInstanceEventNotificationAttributesInstanceTagAttribute `queryParam:"style=form,explode=true,name=InstanceTagAttribute"`
 	Version              GETRegisterInstanceEventNotificationAttributesVersionEnum           `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRegisterInstanceEventNotificationAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRegisterInstanceEventNotificationAttributesRequest struct {
-	QueryParams GETRegisterInstanceEventNotificationAttributesQueryParams
-	Headers     GETRegisterInstanceEventNotificationAttributesHeaders
+	XAmzAlgorithm        *string                                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRegisterInstanceEventNotificationAttributesResponse struct {

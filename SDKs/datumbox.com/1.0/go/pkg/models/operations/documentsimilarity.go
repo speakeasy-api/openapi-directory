@@ -15,10 +15,6 @@ type DocumentSimilarityRequestBody struct {
 	Original *string `form:"name=original"`
 }
 
-type DocumentSimilarityRequest struct {
-	Request *DocumentSimilarityRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type DocumentSimilarityResponse struct {
 	ContentType string
 	StatusCode  int

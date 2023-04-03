@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeOrganizationConformancePacksQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeOrganizationConformancePacksXAmzTargetEnum
 type DescribeOrganizationConformancePacksXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeOrganizationConformancePacksXAmzTargetEnum) UnmarshalJSON(data 
 	}
 }
 
-type DescribeOrganizationConformancePacksHeaders struct {
+type DescribeOrganizationConformancePacksRequest struct {
+	DescribeOrganizationConformancePacksRequest shared.DescribeOrganizationConformancePacksRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeOrganizationConformancePacksHeaders struct {
 	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeOrganizationConformancePacksXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeOrganizationConformancePacksRequest struct {
-	QueryParams DescribeOrganizationConformancePacksQueryParams
-	Headers     DescribeOrganizationConformancePacksHeaders
-	Request     shared.DescribeOrganizationConformancePacksRequest `request:"mediaType=application/json"`
 }
 
 type DescribeOrganizationConformancePacksResponse struct {

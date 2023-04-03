@@ -13,25 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddFacetToObjectRequest{
-        Headers: operations.AddFacetToObjectHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzDataPartition: "illum",
-        },
-        Request: operations.AddFacetToObjectRequestBody{
+        RequestBody: operations.AddFacetToObjectRequestBody{
             ObjectAttributeList: []shared.AttributeKeyAndValue{
+                shared.AttributeKeyAndValue{
+                    Key: shared.AttributeKey{
+                        FacetName: "provident",
+                        Name: "distinctio",
+                        SchemaArn: "quibusdam",
+                    },
+                    Value: shared.TypedAttributeValue{
+                        BinaryValue: "unde",
+                        BooleanValue: false,
+                        DatetimeValue: "2021-05-14T08:28:11.899Z",
+                        NumberValue: "illum",
+                        StringValue: "vel",
+                    },
+                },
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
                         FacetName: "error",
@@ -69,6 +71,14 @@ func main() {
                 SchemaArn: "temporibus",
             },
         },
+        XAmzAlgorithm: "ab",
+        XAmzContentSha256: "quis",
+        XAmzCredential: "veritatis",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "perferendis",
+        XAmzSignature: "ipsam",
+        XAmzSignedHeaders: "repellendus",
+        XAmzDataPartition: "sapiente",
     }
 
     ctx := context.Background()

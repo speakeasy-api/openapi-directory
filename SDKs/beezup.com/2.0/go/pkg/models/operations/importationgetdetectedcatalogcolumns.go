@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationGetDetectedCatalogColumnsPathParams struct {
+type ImportationGetDetectedCatalogColumnsRequest struct {
 	// The execution identifier of you catalog importation
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationGetDetectedCatalogColumnsRequest struct {
-	PathParams ImportationGetDetectedCatalogColumnsPathParams
 }
 
 type ImportationGetDetectedCatalogColumnsResponse struct {

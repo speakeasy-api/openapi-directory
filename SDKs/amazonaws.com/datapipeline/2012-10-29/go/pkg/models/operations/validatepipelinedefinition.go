@@ -30,20 +30,16 @@ func (e *ValidatePipelineDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ValidatePipelineDefinitionHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ValidatePipelineDefinitionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ValidatePipelineDefinitionRequest struct {
-	Headers ValidatePipelineDefinitionHeaders
-	Request shared.ValidatePipelineDefinitionInput `request:"mediaType=application/json"`
+	ValidatePipelineDefinitionInput shared.ValidatePipelineDefinitionInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      ValidatePipelineDefinitionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ValidatePipelineDefinitionResponse struct {

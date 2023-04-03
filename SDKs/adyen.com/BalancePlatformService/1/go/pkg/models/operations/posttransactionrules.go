@@ -8,13 +8,8 @@ import (
 )
 
 type PostTransactionRulesSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostTransactionRulesRequest struct {
-	Request  *shared.TransactionRuleInfo `request:"mediaType=application/json"`
-	Security PostTransactionRulesSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostTransactionRulesResponse struct {

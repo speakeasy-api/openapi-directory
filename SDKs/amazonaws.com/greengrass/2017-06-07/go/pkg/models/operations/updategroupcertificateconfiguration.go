@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGroupCertificateConfigurationPathParams struct {
-	// The ID of the Greengrass group.
-	GroupID string `pathParam:"style=simple,explode=false,name=GroupId"`
-}
-
-type UpdateGroupCertificateConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateGroupCertificateConfigurationRequestBody struct {
 	// The amount of time remaining before the certificate expires, in milliseconds.
 	CertificateExpiryInMilliseconds *string `json:"CertificateExpiryInMilliseconds,omitempty"`
 }
 
 type UpdateGroupCertificateConfigurationRequest struct {
-	PathParams UpdateGroupCertificateConfigurationPathParams
-	Headers    UpdateGroupCertificateConfigurationHeaders
-	Request    UpdateGroupCertificateConfigurationRequestBody `request:"mediaType=application/json"`
+	// The ID of the Greengrass group.
+	GroupID           string                                         `pathParam:"style=simple,explode=false,name=GroupId"`
+	RequestBody       UpdateGroupCertificateConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateGroupCertificateConfigurationResponse struct {

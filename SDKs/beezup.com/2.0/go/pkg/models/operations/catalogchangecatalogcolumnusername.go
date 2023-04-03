@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogChangeCatalogColumnUserNamePathParams struct {
+type CatalogChangeCatalogColumnUserNameRequest struct {
+	ChangeUserColumnNameRequest shared.ChangeUserColumnNameRequest `request:"mediaType=application/json"`
 	// The catalog column identifier
 	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogChangeCatalogColumnUserNameRequest struct {
-	PathParams CatalogChangeCatalogColumnUserNamePathParams
-	Request    shared.ChangeUserColumnNameRequest `request:"mediaType=application/json"`
 }
 
 type CatalogChangeCatalogColumnUserNameResponse struct {

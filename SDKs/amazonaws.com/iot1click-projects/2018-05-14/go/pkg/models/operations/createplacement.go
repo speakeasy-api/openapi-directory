@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type CreatePlacementPathParams struct {
-	// The name of the project in which to create the placement.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type CreatePlacementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreatePlacementRequestBody struct {
 	// Optional user-defined key/value pairs providing contextual data (such as location or function) for the placement.
 	Attributes map[string]string `json:"attributes,omitempty"`
@@ -29,9 +14,16 @@ type CreatePlacementRequestBody struct {
 }
 
 type CreatePlacementRequest struct {
-	PathParams CreatePlacementPathParams
-	Headers    CreatePlacementHeaders
-	Request    CreatePlacementRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreatePlacementRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the project in which to create the placement.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type CreatePlacementResponse struct {

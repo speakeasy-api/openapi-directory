@@ -36,7 +36,14 @@ func (e *GetLifecyclePoliciesStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetLifecyclePoliciesQueryParams struct {
+type GetLifecyclePoliciesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The identifiers of the data lifecycle policies.
 	PolicyIds []string `queryParam:"style=form,explode=true,name=policyIds"`
 	// The resource type.
@@ -47,21 +54,6 @@ type GetLifecyclePoliciesQueryParams struct {
 	TagsToAdd []string `queryParam:"style=form,explode=true,name=tagsToAdd"`
 	// <p>The target tag for a policy.</p> <p>Tags are strings in the format <code>key=value</code>.</p>
 	TargetTags []string `queryParam:"style=form,explode=true,name=targetTags"`
-}
-
-type GetLifecyclePoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLifecyclePoliciesRequest struct {
-	QueryParams GetLifecyclePoliciesQueryParams
-	Headers     GetLifecyclePoliciesHeaders
 }
 
 type GetLifecyclePoliciesResponse struct {

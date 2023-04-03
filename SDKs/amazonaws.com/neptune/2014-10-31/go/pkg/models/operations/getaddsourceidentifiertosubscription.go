@@ -50,28 +50,20 @@ func (e *GETAddSourceIdentifierToSubscriptionVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETAddSourceIdentifierToSubscriptionQueryParams struct {
+type GETAddSourceIdentifierToSubscriptionRequest struct {
 	Action GETAddSourceIdentifierToSubscriptionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identifier of the event source to be added.</p> <p>Constraints:</p> <ul> <li> <p>If the source type is a DB instance, then a <code>DBInstanceIdentifier</code> must be supplied.</p> </li> <li> <p>If the source type is a DB security group, a <code>DBSecurityGroupName</code> must be supplied.</p> </li> <li> <p>If the source type is a DB parameter group, a <code>DBParameterGroupName</code> must be supplied.</p> </li> <li> <p>If the source type is a DB snapshot, a <code>DBSnapshotIdentifier</code> must be supplied.</p> </li> </ul>
 	SourceIdentifier string `queryParam:"style=form,explode=true,name=SourceIdentifier"`
 	// The name of the event notification subscription you want to add a source identifier to.
-	SubscriptionName string                                          `queryParam:"style=form,explode=true,name=SubscriptionName"`
-	Version          GETAddSourceIdentifierToSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddSourceIdentifierToSubscriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAddSourceIdentifierToSubscriptionRequest struct {
-	QueryParams GETAddSourceIdentifierToSubscriptionQueryParams
-	Headers     GETAddSourceIdentifierToSubscriptionHeaders
+	SubscriptionName  string                                          `queryParam:"style=form,explode=true,name=SubscriptionName"`
+	Version           GETAddSourceIdentifierToSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddSourceIdentifierToSubscriptionResponse struct {

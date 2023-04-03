@@ -50,28 +50,20 @@ func (e *GETSwitchoverBlueGreenDeploymentVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETSwitchoverBlueGreenDeploymentQueryParams struct {
+type GETSwitchoverBlueGreenDeploymentRequest struct {
 	Action GETSwitchoverBlueGreenDeploymentActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The blue/green deployment identifier.</p> <p>Constraints:</p> <ul> <li> <p>Must match an existing blue/green deployment identifier.</p> </li> </ul>
 	BlueGreenDeploymentIdentifier string `queryParam:"style=form,explode=true,name=BlueGreenDeploymentIdentifier"`
 	// <p>The amount of time, in seconds, for the switchover to complete. The default is 300.</p> <p>If the switchover takes longer than the specified duration, then any changes are rolled back, and no changes are made to the environments.</p>
 	SwitchoverTimeout *int64                                      `queryParam:"style=form,explode=true,name=SwitchoverTimeout"`
 	Version           GETSwitchoverBlueGreenDeploymentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSwitchoverBlueGreenDeploymentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSwitchoverBlueGreenDeploymentRequest struct {
-	QueryParams GETSwitchoverBlueGreenDeploymentQueryParams
-	Headers     GETSwitchoverBlueGreenDeploymentHeaders
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSwitchoverBlueGreenDeploymentResponse struct {

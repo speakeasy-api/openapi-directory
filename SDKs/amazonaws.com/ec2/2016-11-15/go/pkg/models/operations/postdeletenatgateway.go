@@ -50,25 +50,17 @@ func (e *POSTDeleteNatGatewayVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteNatGatewayQueryParams struct {
-	Action  POSTDeleteNatGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteNatGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteNatGatewayHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteNatGatewayRequest struct {
-	QueryParams POSTDeleteNatGatewayQueryParams
-	Headers     POSTDeleteNatGatewayHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteNatGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTDeleteNatGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteNatGatewayResponse struct {

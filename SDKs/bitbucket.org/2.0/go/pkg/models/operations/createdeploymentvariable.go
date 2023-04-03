@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type CreateDeploymentVariablePathParams struct {
+type CreateDeploymentVariableRequest struct {
+	// The variable to create
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The environment.
 	EnvironmentUUID string `pathParam:"style=simple,explode=false,name=environment_uuid"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type CreateDeploymentVariableRequest struct {
-	PathParams CreateDeploymentVariablePathParams
-	// The variable to create
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreateDeploymentVariableResponse struct {

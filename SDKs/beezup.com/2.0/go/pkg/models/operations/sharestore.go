@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ShareStorePathParams struct {
+type ShareStoreRequest struct {
+	// Your friend's email
+	RequestBody string `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ShareStoreRequest struct {
-	PathParams ShareStorePathParams
-	// Your friend's email
-	Request string `request:"mediaType=application/json"`
 }
 
 type ShareStoreResponse struct {

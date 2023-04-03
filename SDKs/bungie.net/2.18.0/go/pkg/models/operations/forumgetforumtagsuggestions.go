@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetForumTagSuggestionsQueryParams struct {
+type ForumGetForumTagSuggestionsRequest struct {
 	// The partial tag input to generate suggestions from.
 	Partialtag *string `queryParam:"style=form,explode=true,name=partialtag"`
-}
-
-type ForumGetForumTagSuggestionsRequest struct {
-	QueryParams ForumGetForumTagSuggestionsQueryParams
 }
 
 // ForumGetForumTagSuggestions200Wildcard - Look at the Response property for more information about the nature of this response

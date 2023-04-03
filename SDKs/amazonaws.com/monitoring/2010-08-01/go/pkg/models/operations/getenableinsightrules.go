@@ -50,26 +50,18 @@ func (e *GETEnableInsightRulesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableInsightRulesQueryParams struct {
+type GETEnableInsightRulesRequest struct {
 	Action GETEnableInsightRulesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An array of the rule names to enable. If you need to find out the names of your rules, use <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeInsightRules.html">DescribeInsightRules</a>.
-	RuleNames []string                         `queryParam:"style=form,explode=true,name=RuleNames"`
-	Version   GETEnableInsightRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableInsightRulesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableInsightRulesRequest struct {
-	QueryParams GETEnableInsightRulesQueryParams
-	Headers     GETEnableInsightRulesHeaders
+	RuleNames         []string                         `queryParam:"style=form,explode=true,name=RuleNames"`
+	Version           GETEnableInsightRulesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableInsightRulesResponse struct {

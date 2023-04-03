@@ -8,20 +8,15 @@ import (
 )
 
 type TaskTemplatesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TaskTemplatesCreateQueryParams struct {
+type TaskTemplatesCreateRequest struct {
 	AssigneeGroup *int64  `queryParam:"style=form,explode=true,name=assignee_group"`
 	AssigneeUser  *int64  `queryParam:"style=form,explode=true,name=assignee_user"`
 	Category      *int64  `queryParam:"style=form,explode=true,name=category"`
 	Since         *string `queryParam:"style=form,explode=true,name=since"`
 	Status        *int64  `queryParam:"style=form,explode=true,name=status"`
-}
-
-type TaskTemplatesCreateRequest struct {
-	QueryParams TaskTemplatesCreateQueryParams
-	Security    TaskTemplatesCreateSecurity
 }
 
 type TaskTemplatesCreateResponse struct {

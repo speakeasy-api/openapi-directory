@@ -50,7 +50,7 @@ func (e *GETCompleteLifecycleActionVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETCompleteLifecycleActionQueryParams struct {
+type GETCompleteLifecycleActionRequest struct {
 	Action GETCompleteLifecycleActionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -63,21 +63,13 @@ type GETCompleteLifecycleActionQueryParams struct {
 	// The name of the lifecycle hook.
 	LifecycleHookName string                                `queryParam:"style=form,explode=true,name=LifecycleHookName"`
 	Version           GETCompleteLifecycleActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCompleteLifecycleActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCompleteLifecycleActionRequest struct {
-	QueryParams GETCompleteLifecycleActionQueryParams
-	Headers     GETCompleteLifecycleActionHeaders
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCompleteLifecycleActionResponse struct {

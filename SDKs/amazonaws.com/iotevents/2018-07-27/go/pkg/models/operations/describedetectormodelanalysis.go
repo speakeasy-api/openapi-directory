@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDetectorModelAnalysisPathParams struct {
-	// The ID of the analysis result that you want to retrieve.
-	AnalysisID string `pathParam:"style=simple,explode=false,name=analysisId"`
-}
-
-type DescribeDetectorModelAnalysisHeaders struct {
+type DescribeDetectorModelAnalysisRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeDetectorModelAnalysisHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDetectorModelAnalysisRequest struct {
-	PathParams DescribeDetectorModelAnalysisPathParams
-	Headers    DescribeDetectorModelAnalysisHeaders
+	// The ID of the analysis result that you want to retrieve.
+	AnalysisID string `pathParam:"style=simple,explode=false,name=analysisId"`
 }
 
 type DescribeDetectorModelAnalysisResponse struct {

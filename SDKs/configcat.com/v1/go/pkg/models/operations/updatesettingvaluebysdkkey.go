@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSettingValueBySdkkeyPathParams struct {
-	// The key or id of the Setting.
-	SettingKeyOrID string `pathParam:"style=simple,explode=false,name=settingKeyOrId"`
-}
-
-type UpdateSettingValueBySdkkeyQueryParams struct {
-	// The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
-	Reason *string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type UpdateSettingValueBySdkkeyHeaders struct {
+type UpdateSettingValueBySdkkeyRequest struct {
+	JSONPatchInput shared.JSONPatchInput `request:"mediaType=application/json"`
 	// The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
 	XConfigcatSdkkey *string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
-}
-
-type UpdateSettingValueBySdkkeyRequest struct {
-	PathParams  UpdateSettingValueBySdkkeyPathParams
-	QueryParams UpdateSettingValueBySdkkeyQueryParams
-	Headers     UpdateSettingValueBySdkkeyHeaders
-	Request     shared.JSONPatchInput `request:"mediaType=application/json"`
+	// The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+	Reason *string `queryParam:"style=form,explode=true,name=reason"`
+	// The key or id of the Setting.
+	SettingKeyOrID string `pathParam:"style=simple,explode=false,name=settingKeyOrId"`
 }
 
 type UpdateSettingValueBySdkkeyResponse struct {

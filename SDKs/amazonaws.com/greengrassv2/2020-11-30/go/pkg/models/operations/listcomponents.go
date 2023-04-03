@@ -33,16 +33,7 @@ func (e *ListComponentsScopeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListComponentsQueryParams struct {
-	// The maximum number of results to be returned per paginated request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// <p>The scope of the components to list.</p> <p>Default: <code>PRIVATE</code> </p>
-	Scope *ListComponentsScopeEnum `queryParam:"style=form,explode=true,name=scope"`
-}
-
-type ListComponentsHeaders struct {
+type ListComponentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type ListComponentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListComponentsRequest struct {
-	QueryParams ListComponentsQueryParams
-	Headers     ListComponentsHeaders
+	// The maximum number of results to be returned per paginated request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// <p>The scope of the components to list.</p> <p>Default: <code>PRIVATE</code> </p>
+	Scope *ListComponentsScopeEnum `queryParam:"style=form,explode=true,name=scope"`
 }
 
 type ListComponentsResponse struct {

@@ -7,34 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssetsPathParams struct {
-	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
-	OutpostID string `pathParam:"style=simple,explode=false,name=OutpostId"`
-}
-
-type ListAssetsQueryParams struct {
+type ListAssetsRequest struct {
 	// Filters the results by the host ID of a Dedicated Host.
 	HostIDFilter []string `queryParam:"style=form,explode=true,name=HostIdFilter"`
 	MaxResults   *int64   `queryParam:"style=form,explode=true,name=MaxResults"`
 	NextToken    *string  `queryParam:"style=form,explode=true,name=NextToken"`
+	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
+	OutpostID string `pathParam:"style=simple,explode=false,name=OutpostId"`
 	// Filters the results by state.
-	StatusFilter []shared.AssetStateEnum `queryParam:"style=form,explode=true,name=StatusFilter"`
-}
-
-type ListAssetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssetsRequest struct {
-	PathParams  ListAssetsPathParams
-	QueryParams ListAssetsQueryParams
-	Headers     ListAssetsHeaders
+	StatusFilter      []shared.AssetStateEnum `queryParam:"style=form,explode=true,name=StatusFilter"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListAssetsResponse struct {

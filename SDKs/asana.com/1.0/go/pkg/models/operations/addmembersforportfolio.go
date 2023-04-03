@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddMembersForPortfolioPathParams struct {
-	// Globally unique identifier for the portfolio.
-	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
+// AddMembersForPortfolioRequestBody - Information about the members being added.
+type AddMembersForPortfolioRequestBody struct {
+	Data *shared.AddMembersRequest `json:"data,omitempty"`
 }
 
-type AddMembersForPortfolioQueryParams struct {
+type AddMembersForPortfolioRequest struct {
+	// Information about the members being added.
+	RequestBody AddMembersForPortfolioRequestBody `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type AddMembersForPortfolioQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// AddMembersForPortfolioRequestBody - Information about the members being added.
-type AddMembersForPortfolioRequestBody struct {
-	Data *shared.AddMembersRequest `json:"data,omitempty"`
-}
-
-type AddMembersForPortfolioRequest struct {
-	PathParams  AddMembersForPortfolioPathParams
-	QueryParams AddMembersForPortfolioQueryParams
-	// Information about the members being added.
-	Request AddMembersForPortfolioRequestBody `request:"mediaType=application/json"`
+	// Globally unique identifier for the portfolio.
+	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
 }
 
 // AddMembersForPortfolio200ApplicationJSON - Successfully added members to the portfolio.

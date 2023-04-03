@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // BatchDeleteReadSet - Deletes one or more read sets.
 func (s *SDK) BatchDeleteReadSet(ctx context.Context, request operations.BatchDeleteReadSetRequest) (*operations.BatchDeleteReadSetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readset/batch/delete", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readset/batch/delete", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchDeleteReadSet(ctx context.Context, request operations.BatchDe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -230,14 +230,14 @@ func (s *SDK) BatchDeleteReadSet(ctx context.Context, request operations.BatchDe
 // CancelAnnotationImportJob - Cancels an annotation import job.
 func (s *SDK) CancelAnnotationImportJob(ctx context.Context, request operations.CancelAnnotationImportJobRequest) (*operations.CancelAnnotationImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/import/annotation/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/import/annotation/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -326,14 +326,14 @@ func (s *SDK) CancelAnnotationImportJob(ctx context.Context, request operations.
 // CancelRun - Cancels a run.
 func (s *SDK) CancelRun(ctx context.Context, request operations.CancelRunRequest) (*operations.CancelRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/run/{id}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/run/{id}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -443,14 +443,14 @@ func (s *SDK) CancelRun(ctx context.Context, request operations.CancelRunRequest
 // CancelVariantImportJob - Cancels a variant import job.
 func (s *SDK) CancelVariantImportJob(ctx context.Context, request operations.CancelVariantImportJobRequest) (*operations.CancelVariantImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/import/variant/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/import/variant/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -541,7 +541,7 @@ func (s *SDK) CreateAnnotationStore(ctx context.Context, request operations.Crea
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/annotationStore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,7 +556,7 @@ func (s *SDK) CreateAnnotationStore(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -667,7 +667,7 @@ func (s *SDK) CreateReferenceStore(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/referencestore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -682,7 +682,7 @@ func (s *SDK) CreateReferenceStore(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -783,7 +783,7 @@ func (s *SDK) CreateRunGroup(ctx context.Context, request operations.CreateRunGr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/runGroup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -798,7 +798,7 @@ func (s *SDK) CreateRunGroup(ctx context.Context, request operations.CreateRunGr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -919,7 +919,7 @@ func (s *SDK) CreateSequenceStore(ctx context.Context, request operations.Create
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sequencestore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -934,7 +934,7 @@ func (s *SDK) CreateSequenceStore(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1035,7 +1035,7 @@ func (s *SDK) CreateVariantStore(ctx context.Context, request operations.CreateV
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/variantStore"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1050,7 +1050,7 @@ func (s *SDK) CreateVariantStore(ctx context.Context, request operations.CreateV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1161,7 +1161,7 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workflow"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1176,7 +1176,7 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1295,16 +1295,16 @@ func (s *SDK) CreateWorkflow(ctx context.Context, request operations.CreateWorkf
 // DeleteAnnotationStore - Deletes an annotation store.
 func (s *SDK) DeleteAnnotationStore(ctx context.Context, request operations.DeleteAnnotationStoreRequest) (*operations.DeleteAnnotationStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotationStore/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotationStore/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1405,14 +1405,14 @@ func (s *SDK) DeleteAnnotationStore(ctx context.Context, request operations.Dele
 // DeleteReference - Deletes a genome reference.
 func (s *SDK) DeleteReference(ctx context.Context, request operations.DeleteReferenceRequest) (*operations.DeleteReferenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/reference/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/reference/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1521,14 +1521,14 @@ func (s *SDK) DeleteReference(ctx context.Context, request operations.DeleteRefe
 // DeleteReferenceStore - Deletes a genome reference store.
 func (s *SDK) DeleteReferenceStore(ctx context.Context, request operations.DeleteReferenceStoreRequest) (*operations.DeleteReferenceStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1637,14 +1637,14 @@ func (s *SDK) DeleteReferenceStore(ctx context.Context, request operations.Delet
 // DeleteRun - Deletes a workflow run.
 func (s *SDK) DeleteRun(ctx context.Context, request operations.DeleteRunRequest) (*operations.DeleteRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/run/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/run/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1754,14 +1754,14 @@ func (s *SDK) DeleteRun(ctx context.Context, request operations.DeleteRunRequest
 // DeleteRunGroup - Deletes a workflow run group.
 func (s *SDK) DeleteRunGroup(ctx context.Context, request operations.DeleteRunGroupRequest) (*operations.DeleteRunGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/runGroup/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/runGroup/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1871,14 +1871,14 @@ func (s *SDK) DeleteRunGroup(ctx context.Context, request operations.DeleteRunGr
 // DeleteSequenceStore - Deletes a sequence store.
 func (s *SDK) DeleteSequenceStore(ctx context.Context, request operations.DeleteSequenceStoreRequest) (*operations.DeleteSequenceStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1987,16 +1987,16 @@ func (s *SDK) DeleteSequenceStore(ctx context.Context, request operations.Delete
 // DeleteVariantStore - Deletes a variant store.
 func (s *SDK) DeleteVariantStore(ctx context.Context, request operations.DeleteVariantStoreRequest) (*operations.DeleteVariantStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variantStore/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/variantStore/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2097,14 +2097,14 @@ func (s *SDK) DeleteVariantStore(ctx context.Context, request operations.DeleteV
 // DeleteWorkflow - Deletes a workflow.
 func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkflowRequest) (*operations.DeleteWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflow/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflow/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2214,14 +2214,14 @@ func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkf
 // GetAnnotationImportJob - Gets information about an annotation import job.
 func (s *SDK) GetAnnotationImportJob(ctx context.Context, request operations.GetAnnotationImportJobRequest) (*operations.GetAnnotationImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/import/annotation/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/import/annotation/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2310,14 +2310,14 @@ func (s *SDK) GetAnnotationImportJob(ctx context.Context, request operations.Get
 // GetAnnotationStore - Gets information about an annotation store.
 func (s *SDK) GetAnnotationStore(ctx context.Context, request operations.GetAnnotationStoreRequest) (*operations.GetAnnotationStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotationStore/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotationStore/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2406,16 +2406,16 @@ func (s *SDK) GetAnnotationStore(ctx context.Context, request operations.GetAnno
 // GetReadSet - Gets a file from a read set.
 func (s *SDK) GetReadSet(ctx context.Context, request operations.GetReadSetRequest) (*operations.GetReadSetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readset/{id}#partNumber", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readset/{id}#partNumber", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2536,14 +2536,14 @@ func (s *SDK) GetReadSet(ctx context.Context, request operations.GetReadSetReque
 // GetReadSetActivationJob - Gets information about a read set activation job.
 func (s *SDK) GetReadSetActivationJob(ctx context.Context, request operations.GetReadSetActivationJobRequest) (*operations.GetReadSetActivationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/activationjob/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/activationjob/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2642,14 +2642,14 @@ func (s *SDK) GetReadSetActivationJob(ctx context.Context, request operations.Ge
 // GetReadSetExportJob - Gets information about a read set export job.
 func (s *SDK) GetReadSetExportJob(ctx context.Context, request operations.GetReadSetExportJobRequest) (*operations.GetReadSetExportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/exportjob/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/exportjob/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2748,14 +2748,14 @@ func (s *SDK) GetReadSetExportJob(ctx context.Context, request operations.GetRea
 // GetReadSetImportJob - Gets information about a read set import job.
 func (s *SDK) GetReadSetImportJob(ctx context.Context, request operations.GetReadSetImportJobRequest) (*operations.GetReadSetImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/importjob/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/importjob/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2854,14 +2854,14 @@ func (s *SDK) GetReadSetImportJob(ctx context.Context, request operations.GetRea
 // GetReadSetMetadata - Gets details about a read set.
 func (s *SDK) GetReadSetMetadata(ctx context.Context, request operations.GetReadSetMetadataRequest) (*operations.GetReadSetMetadataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readset/{id}/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readset/{id}/metadata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2960,16 +2960,16 @@ func (s *SDK) GetReadSetMetadata(ctx context.Context, request operations.GetRead
 // GetReference - Gets a reference file.
 func (s *SDK) GetReference(ctx context.Context, request operations.GetReferenceRequest) (*operations.GetReferenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/reference/{id}#partNumber", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/reference/{id}#partNumber", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3080,14 +3080,14 @@ func (s *SDK) GetReference(ctx context.Context, request operations.GetReferenceR
 // GetReferenceImportJob - Gets information about a reference import job.
 func (s *SDK) GetReferenceImportJob(ctx context.Context, request operations.GetReferenceImportJobRequest) (*operations.GetReferenceImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/importjob/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/importjob/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3186,14 +3186,14 @@ func (s *SDK) GetReferenceImportJob(ctx context.Context, request operations.GetR
 // GetReferenceMetadata - Gets information about a genome reference's metadata.
 func (s *SDK) GetReferenceMetadata(ctx context.Context, request operations.GetReferenceMetadataRequest) (*operations.GetReferenceMetadataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/reference/{id}/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/reference/{id}/metadata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3292,14 +3292,14 @@ func (s *SDK) GetReferenceMetadata(ctx context.Context, request operations.GetRe
 // GetReferenceStore - Gets information about a reference store.
 func (s *SDK) GetReferenceStore(ctx context.Context, request operations.GetReferenceStoreRequest) (*operations.GetReferenceStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3398,16 +3398,16 @@ func (s *SDK) GetReferenceStore(ctx context.Context, request operations.GetRefer
 // GetRun - Gets information about a workflow run.
 func (s *SDK) GetRun(ctx context.Context, request operations.GetRunRequest) (*operations.GetRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/run/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/run/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3528,14 +3528,14 @@ func (s *SDK) GetRun(ctx context.Context, request operations.GetRunRequest) (*op
 // GetRunGroup - Gets information about a workflow run group.
 func (s *SDK) GetRunGroup(ctx context.Context, request operations.GetRunGroupRequest) (*operations.GetRunGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/runGroup/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/runGroup/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3654,14 +3654,14 @@ func (s *SDK) GetRunGroup(ctx context.Context, request operations.GetRunGroupReq
 // GetRunTask - Gets information about a workflow run task.
 func (s *SDK) GetRunTask(ctx context.Context, request operations.GetRunTaskRequest) (*operations.GetRunTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/run/{id}/task/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/run/{id}/task/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3780,14 +3780,14 @@ func (s *SDK) GetRunTask(ctx context.Context, request operations.GetRunTaskReque
 // GetSequenceStore - Gets information about a sequence store.
 func (s *SDK) GetSequenceStore(ctx context.Context, request operations.GetSequenceStoreRequest) (*operations.GetSequenceStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3886,14 +3886,14 @@ func (s *SDK) GetSequenceStore(ctx context.Context, request operations.GetSequen
 // GetVariantImportJob - Gets information about a variant import job.
 func (s *SDK) GetVariantImportJob(ctx context.Context, request operations.GetVariantImportJobRequest) (*operations.GetVariantImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/import/variant/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/import/variant/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3982,14 +3982,14 @@ func (s *SDK) GetVariantImportJob(ctx context.Context, request operations.GetVar
 // GetVariantStore - Gets information about a variant store.
 func (s *SDK) GetVariantStore(ctx context.Context, request operations.GetVariantStoreRequest) (*operations.GetVariantStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variantStore/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/variantStore/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4078,16 +4078,16 @@ func (s *SDK) GetVariantStore(ctx context.Context, request operations.GetVariant
 // GetWorkflow - Gets information about a workflow.
 func (s *SDK) GetWorkflow(ctx context.Context, request operations.GetWorkflowRequest) (*operations.GetWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflow/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflow/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4210,7 +4210,7 @@ func (s *SDK) ListAnnotationImportJobs(ctx context.Context, request operations.L
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import/annotations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4225,9 +4225,9 @@ func (s *SDK) ListAnnotationImportJobs(ctx context.Context, request operations.L
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4320,7 +4320,7 @@ func (s *SDK) ListAnnotationStores(ctx context.Context, request operations.ListA
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/annotationStores"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4335,9 +4335,9 @@ func (s *SDK) ListAnnotationStores(ctx context.Context, request operations.ListA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4428,9 +4428,9 @@ func (s *SDK) ListAnnotationStores(ctx context.Context, request operations.ListA
 // ListReadSetActivationJobs - Retrieves a list of read set activation jobs.
 func (s *SDK) ListReadSetActivationJobs(ctx context.Context, request operations.ListReadSetActivationJobsRequest) (*operations.ListReadSetActivationJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/activationjobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/activationjobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4445,9 +4445,9 @@ func (s *SDK) ListReadSetActivationJobs(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4548,9 +4548,9 @@ func (s *SDK) ListReadSetActivationJobs(ctx context.Context, request operations.
 // ListReadSetExportJobs - Retrieves a list of read set export jobs.
 func (s *SDK) ListReadSetExportJobs(ctx context.Context, request operations.ListReadSetExportJobsRequest) (*operations.ListReadSetExportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/exportjobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/exportjobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4565,9 +4565,9 @@ func (s *SDK) ListReadSetExportJobs(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4668,9 +4668,9 @@ func (s *SDK) ListReadSetExportJobs(ctx context.Context, request operations.List
 // ListReadSetImportJobs - Retrieves a list of read set import jobs.
 func (s *SDK) ListReadSetImportJobs(ctx context.Context, request operations.ListReadSetImportJobsRequest) (*operations.ListReadSetImportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/importjobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/importjobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4685,9 +4685,9 @@ func (s *SDK) ListReadSetImportJobs(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4788,9 +4788,9 @@ func (s *SDK) ListReadSetImportJobs(ctx context.Context, request operations.List
 // ListReadSets - Retrieves a list of read sets.
 func (s *SDK) ListReadSets(ctx context.Context, request operations.ListReadSetsRequest) (*operations.ListReadSetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readsets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/readsets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4805,9 +4805,9 @@ func (s *SDK) ListReadSets(ctx context.Context, request operations.ListReadSetsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4908,9 +4908,9 @@ func (s *SDK) ListReadSets(ctx context.Context, request operations.ListReadSetsR
 // ListReferenceImportJobs - Retrieves a list of reference import jobs.
 func (s *SDK) ListReferenceImportJobs(ctx context.Context, request operations.ListReferenceImportJobsRequest) (*operations.ListReferenceImportJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/importjobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/importjobs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4925,9 +4925,9 @@ func (s *SDK) ListReferenceImportJobs(ctx context.Context, request operations.Li
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5030,7 +5030,7 @@ func (s *SDK) ListReferenceStores(ctx context.Context, request operations.ListRe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/referencestores"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5045,9 +5045,9 @@ func (s *SDK) ListReferenceStores(ctx context.Context, request operations.ListRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5138,9 +5138,9 @@ func (s *SDK) ListReferenceStores(ctx context.Context, request operations.ListRe
 // ListReferences - Retrieves a list of references.
 func (s *SDK) ListReferences(ctx context.Context, request operations.ListReferencesRequest) (*operations.ListReferencesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/references", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/references", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5155,9 +5155,9 @@ func (s *SDK) ListReferences(ctx context.Context, request operations.ListReferen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5265,9 +5265,9 @@ func (s *SDK) ListRunGroups(ctx context.Context, request operations.ListRunGroup
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5388,16 +5388,16 @@ func (s *SDK) ListRunGroups(ctx context.Context, request operations.ListRunGroup
 // ListRunTasks - Retrieves a list of tasks for a run.
 func (s *SDK) ListRunTasks(ctx context.Context, request operations.ListRunTasksRequest) (*operations.ListRunTasksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/run/{id}/task", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/run/{id}/task", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5525,9 +5525,9 @@ func (s *SDK) ListRuns(ctx context.Context, request operations.ListRunsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5650,7 +5650,7 @@ func (s *SDK) ListSequenceStores(ctx context.Context, request operations.ListSeq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sequencestores"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5665,9 +5665,9 @@ func (s *SDK) ListSequenceStores(ctx context.Context, request operations.ListSeq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5758,14 +5758,14 @@ func (s *SDK) ListSequenceStores(ctx context.Context, request operations.ListSeq
 // ListTagsForResource - Retrieves a list of tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5886,7 +5886,7 @@ func (s *SDK) ListVariantImportJobs(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import/variants"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5901,9 +5901,9 @@ func (s *SDK) ListVariantImportJobs(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5996,7 +5996,7 @@ func (s *SDK) ListVariantStores(ctx context.Context, request operations.ListVari
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/variantStores"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6011,9 +6011,9 @@ func (s *SDK) ListVariantStores(ctx context.Context, request operations.ListVari
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6111,9 +6111,9 @@ func (s *SDK) ListWorkflows(ctx context.Context, request operations.ListWorkflow
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6236,7 +6236,7 @@ func (s *SDK) StartAnnotationImportJob(ctx context.Context, request operations.S
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import/annotation"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6251,7 +6251,7 @@ func (s *SDK) StartAnnotationImportJob(ctx context.Context, request operations.S
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6350,9 +6350,9 @@ func (s *SDK) StartAnnotationImportJob(ctx context.Context, request operations.S
 // StartReadSetActivationJob - Activates an archived read set. To reduce storage charges, Amazon Omics archives unused read sets after 30 days.
 func (s *SDK) StartReadSetActivationJob(ctx context.Context, request operations.StartReadSetActivationJobRequest) (*operations.StartReadSetActivationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/activationjob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/activationjob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6367,7 +6367,7 @@ func (s *SDK) StartReadSetActivationJob(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6476,9 +6476,9 @@ func (s *SDK) StartReadSetActivationJob(ctx context.Context, request operations.
 // StartReadSetExportJob - Exports a read set to Amazon S3.
 func (s *SDK) StartReadSetExportJob(ctx context.Context, request operations.StartReadSetExportJobRequest) (*operations.StartReadSetExportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/exportjob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/exportjob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6493,7 +6493,7 @@ func (s *SDK) StartReadSetExportJob(ctx context.Context, request operations.Star
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6602,9 +6602,9 @@ func (s *SDK) StartReadSetExportJob(ctx context.Context, request operations.Star
 // StartReadSetImportJob - Starts a read set import job.
 func (s *SDK) StartReadSetImportJob(ctx context.Context, request operations.StartReadSetImportJobRequest) (*operations.StartReadSetImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/importjob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sequencestore/{sequenceStoreId}/importjob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6619,7 +6619,7 @@ func (s *SDK) StartReadSetImportJob(ctx context.Context, request operations.Star
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6728,9 +6728,9 @@ func (s *SDK) StartReadSetImportJob(ctx context.Context, request operations.Star
 // StartReferenceImportJob - Starts a reference import job.
 func (s *SDK) StartReferenceImportJob(ctx context.Context, request operations.StartReferenceImportJobRequest) (*operations.StartReferenceImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/importjob", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/referencestore/{referenceStoreId}/importjob", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6745,7 +6745,7 @@ func (s *SDK) StartReferenceImportJob(ctx context.Context, request operations.St
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6856,7 +6856,7 @@ func (s *SDK) StartRun(ctx context.Context, request operations.StartRunRequest) 
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/run"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6871,7 +6871,7 @@ func (s *SDK) StartRun(ctx context.Context, request operations.StartRunRequest) 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6992,7 +6992,7 @@ func (s *SDK) StartVariantImportJob(ctx context.Context, request operations.Star
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import/variant"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7007,7 +7007,7 @@ func (s *SDK) StartVariantImportJob(ctx context.Context, request operations.Star
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7106,9 +7106,9 @@ func (s *SDK) StartVariantImportJob(ctx context.Context, request operations.Star
 // TagResource - Tags a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7123,7 +7123,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7242,16 +7242,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7372,9 +7372,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAnnotationStore - Updates an annotation store.
 func (s *SDK) UpdateAnnotationStore(ctx context.Context, request operations.UpdateAnnotationStoreRequest) (*operations.UpdateAnnotationStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/annotationStore/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/annotationStore/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7389,7 +7389,7 @@ func (s *SDK) UpdateAnnotationStore(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7478,9 +7478,9 @@ func (s *SDK) UpdateAnnotationStore(ctx context.Context, request operations.Upda
 // UpdateRunGroup - Updates a run group.
 func (s *SDK) UpdateRunGroup(ctx context.Context, request operations.UpdateRunGroupRequest) (*operations.UpdateRunGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/runGroup/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/runGroup/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7495,7 +7495,7 @@ func (s *SDK) UpdateRunGroup(ctx context.Context, request operations.UpdateRunGr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7605,9 +7605,9 @@ func (s *SDK) UpdateRunGroup(ctx context.Context, request operations.UpdateRunGr
 // UpdateVariantStore - Updates a variant store.
 func (s *SDK) UpdateVariantStore(ctx context.Context, request operations.UpdateVariantStoreRequest) (*operations.UpdateVariantStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variantStore/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/variantStore/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7622,7 +7622,7 @@ func (s *SDK) UpdateVariantStore(ctx context.Context, request operations.UpdateV
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7711,9 +7711,9 @@ func (s *SDK) UpdateVariantStore(ctx context.Context, request operations.UpdateV
 // UpdateWorkflow - Updates a workflow.
 func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkflowRequest) (*operations.UpdateWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflow/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workflow/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -7728,7 +7728,7 @@ func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

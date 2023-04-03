@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type ModifyMountTargetSecurityGroupsPathParams struct {
-	// The ID of the mount target whose security groups you want to modify.
-	MountTargetID string `pathParam:"style=simple,explode=false,name=MountTargetId"`
-}
-
-type ModifyMountTargetSecurityGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ModifyMountTargetSecurityGroupsRequestBody struct {
 	// An array of up to five VPC security group IDs.
 	SecurityGroups []string `json:"SecurityGroups,omitempty"`
 }
 
 type ModifyMountTargetSecurityGroupsRequest struct {
-	PathParams ModifyMountTargetSecurityGroupsPathParams
-	Headers    ModifyMountTargetSecurityGroupsHeaders
-	Request    ModifyMountTargetSecurityGroupsRequestBody `request:"mediaType=application/json"`
+	// The ID of the mount target whose security groups you want to modify.
+	MountTargetID     string                                     `pathParam:"style=simple,explode=false,name=MountTargetId"`
+	RequestBody       ModifyMountTargetSecurityGroupsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ModifyMountTargetSecurityGroupsResponse struct {

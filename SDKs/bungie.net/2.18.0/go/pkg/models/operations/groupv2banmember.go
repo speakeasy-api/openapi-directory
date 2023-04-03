@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2BanMemberSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2BanMemberPathParams struct {
+type GroupV2BanMemberRequest struct {
 	// Group ID that has the member to ban.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// Membership ID of the member to ban from the group.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Membership type of the provided membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2BanMemberRequest struct {
-	PathParams GroupV2BanMemberPathParams
-	Security   GroupV2BanMemberSecurity
 }
 
 // GroupV2BanMember200Wildcard - Look at the Response property for more information about the nature of this response

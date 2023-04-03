@@ -34,7 +34,7 @@ func newBilling(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // BillingProfilesList - Retrieve or search billing profiles
-func (s *billing) BillingProfilesList(ctx context.Context, request operations.BillingProfilesListRequest) (*operations.BillingProfilesListResponse, error) {
+func (s *billing) BillingProfilesList(ctx context.Context, request operations.BillingProfilesListRequest, security operations.BillingProfilesListSecurity) (*operations.BillingProfilesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/billing_profiles"
 
@@ -43,11 +43,11 @@ func (s *billing) BillingProfilesList(ctx context.Context, request operations.Bi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,20 +93,20 @@ func (s *billing) BillingProfilesList(ctx context.Context, request operations.Bi
 }
 
 // BillingProfilesRead - Retrieve an existing billing profiles
-func (s *billing) BillingProfilesRead(ctx context.Context, request operations.BillingProfilesReadRequest) (*operations.BillingProfilesReadResponse, error) {
+func (s *billing) BillingProfilesRead(ctx context.Context, request operations.BillingProfilesReadRequest, security operations.BillingProfilesReadSecurity) (*operations.BillingProfilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/billing_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/billing_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *billing) BillingProfilesRead(ctx context.Context, request operations.Bi
 }
 
 // CommLogsCreate - Create communication (phone call) logs
-func (s *billing) CommLogsCreate(ctx context.Context, request operations.CommLogsCreateRequest) (*operations.CommLogsCreateResponse, error) {
+func (s *billing) CommLogsCreate(ctx context.Context, request operations.CommLogsCreateRequest, security operations.CommLogsCreateSecurity) (*operations.CommLogsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/comm_logs"
 
@@ -161,11 +161,11 @@ func (s *billing) CommLogsCreate(ctx context.Context, request operations.CommLog
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,7 +211,7 @@ func (s *billing) CommLogsCreate(ctx context.Context, request operations.CommLog
 }
 
 // CommLogsList - Retrieve or search communicatioin (phone call) logs
-func (s *billing) CommLogsList(ctx context.Context, request operations.CommLogsListRequest) (*operations.CommLogsListResponse, error) {
+func (s *billing) CommLogsList(ctx context.Context, request operations.CommLogsListRequest, security operations.CommLogsListSecurity) (*operations.CommLogsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/comm_logs"
 
@@ -220,11 +220,11 @@ func (s *billing) CommLogsList(ctx context.Context, request operations.CommLogsL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,20 +270,20 @@ func (s *billing) CommLogsList(ctx context.Context, request operations.CommLogsL
 }
 
 // CommLogsPartialUpdate - Update an existing communication (phone call) logs
-func (s *billing) CommLogsPartialUpdate(ctx context.Context, request operations.CommLogsPartialUpdateRequest) (*operations.CommLogsPartialUpdateResponse, error) {
+func (s *billing) CommLogsPartialUpdate(ctx context.Context, request operations.CommLogsPartialUpdateRequest, security operations.CommLogsPartialUpdateSecurity) (*operations.CommLogsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -321,20 +321,20 @@ func (s *billing) CommLogsPartialUpdate(ctx context.Context, request operations.
 }
 
 // CommLogsRead - Retrieve an existing communication (phone call) logs
-func (s *billing) CommLogsRead(ctx context.Context, request operations.CommLogsReadRequest) (*operations.CommLogsReadResponse, error) {
+func (s *billing) CommLogsRead(ctx context.Context, request operations.CommLogsReadRequest, security operations.CommLogsReadSecurity) (*operations.CommLogsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -380,20 +380,20 @@ func (s *billing) CommLogsRead(ctx context.Context, request operations.CommLogsR
 }
 
 // CommLogsUpdate - Update an existing communication (phone call) logs
-func (s *billing) CommLogsUpdate(ctx context.Context, request operations.CommLogsUpdateRequest) (*operations.CommLogsUpdateResponse, error) {
+func (s *billing) CommLogsUpdate(ctx context.Context, request operations.CommLogsUpdateRequest, security operations.CommLogsUpdateSecurity) (*operations.CommLogsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -431,7 +431,7 @@ func (s *billing) CommLogsUpdate(ctx context.Context, request operations.CommLog
 }
 
 // CustomInsurancePlanNamesList - Retrieve or search custom insurance plan names
-func (s *billing) CustomInsurancePlanNamesList(ctx context.Context, request operations.CustomInsurancePlanNamesListRequest) (*operations.CustomInsurancePlanNamesListResponse, error) {
+func (s *billing) CustomInsurancePlanNamesList(ctx context.Context, request operations.CustomInsurancePlanNamesListRequest, security operations.CustomInsurancePlanNamesListSecurity) (*operations.CustomInsurancePlanNamesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/custom_insurance_plan_names"
 
@@ -440,11 +440,11 @@ func (s *billing) CustomInsurancePlanNamesList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -490,20 +490,20 @@ func (s *billing) CustomInsurancePlanNamesList(ctx context.Context, request oper
 }
 
 // CustomInsurancePlanNamesRead - Retrieve an existing custom insurance plan name
-func (s *billing) CustomInsurancePlanNamesRead(ctx context.Context, request operations.CustomInsurancePlanNamesReadRequest) (*operations.CustomInsurancePlanNamesReadResponse, error) {
+func (s *billing) CustomInsurancePlanNamesRead(ctx context.Context, request operations.CustomInsurancePlanNamesReadRequest, security operations.CustomInsurancePlanNamesReadSecurity) (*operations.CustomInsurancePlanNamesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_insurance_plan_names/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_insurance_plan_names/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -549,7 +549,7 @@ func (s *billing) CustomInsurancePlanNamesRead(ctx context.Context, request oper
 }
 
 // EligibilityChecksList - Retrieve or search past eligibility checks for patient
-func (s *billing) EligibilityChecksList(ctx context.Context, request operations.EligibilityChecksListRequest) (*operations.EligibilityChecksListResponse, error) {
+func (s *billing) EligibilityChecksList(ctx context.Context, request operations.EligibilityChecksListRequest, security operations.EligibilityChecksListSecurity) (*operations.EligibilityChecksListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/eligibility_checks"
 
@@ -558,11 +558,11 @@ func (s *billing) EligibilityChecksList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,20 +608,20 @@ func (s *billing) EligibilityChecksList(ctx context.Context, request operations.
 }
 
 // EligibilityChecksRead - Retrieve an existing past eligibility check
-func (s *billing) EligibilityChecksRead(ctx context.Context, request operations.EligibilityChecksReadRequest) (*operations.EligibilityChecksReadResponse, error) {
+func (s *billing) EligibilityChecksRead(ctx context.Context, request operations.EligibilityChecksReadRequest, security operations.EligibilityChecksReadSecurity) (*operations.EligibilityChecksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/eligibility_checks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/eligibility_checks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -667,7 +667,7 @@ func (s *billing) EligibilityChecksRead(ctx context.Context, request operations.
 }
 
 // LineItemsCreate - Create billing line item for appointments
-func (s *billing) LineItemsCreate(ctx context.Context, request operations.LineItemsCreateRequest) (*operations.LineItemsCreateResponse, error) {
+func (s *billing) LineItemsCreate(ctx context.Context, request operations.LineItemsCreateRequest, security operations.LineItemsCreateSecurity) (*operations.LineItemsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/line_items"
 
@@ -676,11 +676,11 @@ func (s *billing) LineItemsCreate(ctx context.Context, request operations.LineIt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -724,20 +724,20 @@ func (s *billing) LineItemsCreate(ctx context.Context, request operations.LineIt
 
 	return res, nil
 }
-func (s *billing) LineItemsDelete(ctx context.Context, request operations.LineItemsDeleteRequest) (*operations.LineItemsDeleteResponse, error) {
+func (s *billing) LineItemsDelete(ctx context.Context, request operations.LineItemsDeleteRequest, security operations.LineItemsDeleteSecurity) (*operations.LineItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -775,7 +775,7 @@ func (s *billing) LineItemsDelete(ctx context.Context, request operations.LineIt
 }
 
 // LineItemsList - Retrieve or search billing line items
-func (s *billing) LineItemsList(ctx context.Context, request operations.LineItemsListRequest) (*operations.LineItemsListResponse, error) {
+func (s *billing) LineItemsList(ctx context.Context, request operations.LineItemsListRequest, security operations.LineItemsListSecurity) (*operations.LineItemsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/line_items"
 
@@ -784,11 +784,11 @@ func (s *billing) LineItemsList(ctx context.Context, request operations.LineItem
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -832,20 +832,20 @@ func (s *billing) LineItemsList(ctx context.Context, request operations.LineItem
 
 	return res, nil
 }
-func (s *billing) LineItemsPartialUpdate(ctx context.Context, request operations.LineItemsPartialUpdateRequest) (*operations.LineItemsPartialUpdateResponse, error) {
+func (s *billing) LineItemsPartialUpdate(ctx context.Context, request operations.LineItemsPartialUpdateRequest, security operations.LineItemsPartialUpdateSecurity) (*operations.LineItemsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -883,20 +883,20 @@ func (s *billing) LineItemsPartialUpdate(ctx context.Context, request operations
 }
 
 // LineItemsRead - Retrieve an existing billing line item
-func (s *billing) LineItemsRead(ctx context.Context, request operations.LineItemsReadRequest) (*operations.LineItemsReadResponse, error) {
+func (s *billing) LineItemsRead(ctx context.Context, request operations.LineItemsReadRequest, security operations.LineItemsReadSecurity) (*operations.LineItemsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -940,20 +940,20 @@ func (s *billing) LineItemsRead(ctx context.Context, request operations.LineItem
 
 	return res, nil
 }
-func (s *billing) LineItemsUpdate(ctx context.Context, request operations.LineItemsUpdateRequest) (*operations.LineItemsUpdateResponse, error) {
+func (s *billing) LineItemsUpdate(ctx context.Context, request operations.LineItemsUpdateRequest, security operations.LineItemsUpdateSecurity) (*operations.LineItemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -991,7 +991,7 @@ func (s *billing) LineItemsUpdate(ctx context.Context, request operations.LineIt
 }
 
 // PatientPaymentLogList - Retrieve or search patient payment logs
-func (s *billing) PatientPaymentLogList(ctx context.Context, request operations.PatientPaymentLogListRequest) (*operations.PatientPaymentLogListResponse, error) {
+func (s *billing) PatientPaymentLogList(ctx context.Context, request operations.PatientPaymentLogListRequest, security operations.PatientPaymentLogListSecurity) (*operations.PatientPaymentLogListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_payment_log"
 
@@ -1000,11 +1000,11 @@ func (s *billing) PatientPaymentLogList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1050,20 +1050,20 @@ func (s *billing) PatientPaymentLogList(ctx context.Context, request operations.
 }
 
 // PatientPaymentLogRead - Retrieve an existing patient payment log
-func (s *billing) PatientPaymentLogRead(ctx context.Context, request operations.PatientPaymentLogReadRequest) (*operations.PatientPaymentLogReadResponse, error) {
+func (s *billing) PatientPaymentLogRead(ctx context.Context, request operations.PatientPaymentLogReadRequest, security operations.PatientPaymentLogReadSecurity) (*operations.PatientPaymentLogReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_payment_log/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_payment_log/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1109,7 +1109,7 @@ func (s *billing) PatientPaymentLogRead(ctx context.Context, request operations.
 }
 
 // PatientPaymentsCreate - Create patient payment
-func (s *billing) PatientPaymentsCreate(ctx context.Context, request operations.PatientPaymentsCreateRequest) (*operations.PatientPaymentsCreateResponse, error) {
+func (s *billing) PatientPaymentsCreate(ctx context.Context, request operations.PatientPaymentsCreateRequest, security operations.PatientPaymentsCreateSecurity) (*operations.PatientPaymentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_payments"
 
@@ -1118,11 +1118,11 @@ func (s *billing) PatientPaymentsCreate(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1168,7 +1168,7 @@ func (s *billing) PatientPaymentsCreate(ctx context.Context, request operations.
 }
 
 // PatientPaymentsList - Retrieve or search patient payments
-func (s *billing) PatientPaymentsList(ctx context.Context, request operations.PatientPaymentsListRequest) (*operations.PatientPaymentsListResponse, error) {
+func (s *billing) PatientPaymentsList(ctx context.Context, request operations.PatientPaymentsListRequest, security operations.PatientPaymentsListSecurity) (*operations.PatientPaymentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_payments"
 
@@ -1177,11 +1177,11 @@ func (s *billing) PatientPaymentsList(ctx context.Context, request operations.Pa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1227,20 +1227,20 @@ func (s *billing) PatientPaymentsList(ctx context.Context, request operations.Pa
 }
 
 // PatientPaymentsRead - Retrieve an existing patient payment
-func (s *billing) PatientPaymentsRead(ctx context.Context, request operations.PatientPaymentsReadRequest) (*operations.PatientPaymentsReadResponse, error) {
+func (s *billing) PatientPaymentsRead(ctx context.Context, request operations.PatientPaymentsReadRequest, security operations.PatientPaymentsReadSecurity) (*operations.PatientPaymentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_payments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1284,7 +1284,7 @@ func (s *billing) PatientPaymentsRead(ctx context.Context, request operations.Pa
 
 	return res, nil
 }
-func (s *billing) ProceduresList(ctx context.Context, request operations.ProceduresListRequest) (*operations.ProceduresListResponse, error) {
+func (s *billing) ProceduresList(ctx context.Context, request operations.ProceduresListRequest, security operations.ProceduresListSecurity) (*operations.ProceduresListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/procedures"
 
@@ -1293,11 +1293,11 @@ func (s *billing) ProceduresList(ctx context.Context, request operations.Procedu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1341,20 +1341,20 @@ func (s *billing) ProceduresList(ctx context.Context, request operations.Procedu
 
 	return res, nil
 }
-func (s *billing) ProceduresRead(ctx context.Context, request operations.ProceduresReadRequest) (*operations.ProceduresReadResponse, error) {
+func (s *billing) ProceduresRead(ctx context.Context, request operations.ProceduresReadRequest, security operations.ProceduresReadSecurity) (*operations.ProceduresReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/procedures/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/procedures/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1400,7 +1400,7 @@ func (s *billing) ProceduresRead(ctx context.Context, request operations.Procedu
 }
 
 // TransactionsList - Retrieve or search insurance transactions associated with billing line items
-func (s *billing) TransactionsList(ctx context.Context, request operations.TransactionsListRequest) (*operations.TransactionsListResponse, error) {
+func (s *billing) TransactionsList(ctx context.Context, request operations.TransactionsListRequest, security operations.TransactionsListSecurity) (*operations.TransactionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/transactions"
 
@@ -1409,11 +1409,11 @@ func (s *billing) TransactionsList(ctx context.Context, request operations.Trans
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1459,20 +1459,20 @@ func (s *billing) TransactionsList(ctx context.Context, request operations.Trans
 }
 
 // TransactionsRead - Retrieve an existing insurance transaction
-func (s *billing) TransactionsRead(ctx context.Context, request operations.TransactionsReadRequest) (*operations.TransactionsReadResponse, error) {
+func (s *billing) TransactionsRead(ctx context.Context, request operations.TransactionsReadRequest, security operations.TransactionsReadSecurity) (*operations.TransactionsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/transactions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/transactions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -34,9 +34,9 @@ func newMarketplacesOrdersOrder(defaultClient, securityClient HTTPClient, server
 // ChangeOrder - [DEPRECATED] Change your marketplace Order Information (accept, ship, etc.)
 func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request operations.ChangeOrderRequest) (*operations.ChangeOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,9 +48,9 @@ func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -74,20 +74,6 @@ func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request opera
 	}
 	switch {
 	case httpRes.StatusCode == 202:
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.BeezUPCommonErrorResponseMessage
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.BeezUPCommonErrorResponseMessage = out
-		}
 	case httpRes.StatusCode == 409:
 		res.Headers = httpRes.Header
 
@@ -102,6 +88,21 @@ func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request opera
 		}
 	case httpRes.StatusCode == 412:
 		res.Headers = httpRes.Header
+
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BeezUPCommonErrorResponseMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BeezUPCommonErrorResponseMessage = out
+		}
 	}
 
 	return res, nil
@@ -110,7 +111,7 @@ func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request opera
 // ClearMerchantOrderInfo - [DEPRECATED] Clear an Order's merchant information
 func (s *marketplacesOrdersOrder) ClearMerchantOrderInfo(ctx context.Context, request operations.ClearMerchantOrderInfoRequest) (*operations.ClearMerchantOrderInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -160,14 +161,14 @@ func (s *marketplacesOrdersOrder) ClearMerchantOrderInfo(ctx context.Context, re
 // DEPRECATED - Use /orders/v3 instead
 func (s *marketplacesOrdersOrder) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -223,14 +224,14 @@ func (s *marketplacesOrdersOrder) GetOrder(ctx context.Context, request operatio
 // GetOrderHistory - [DEPRECATED] Get an Order's harvest and change history
 func (s *marketplacesOrdersOrder) GetOrderHistory(ctx context.Context, request operations.GetOrderHistoryRequest) (*operations.GetOrderHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -284,7 +285,7 @@ func (s *marketplacesOrdersOrder) GetOrderHistory(ctx context.Context, request o
 // HarvestOrder - [DEPRECATED] Send harvest request for a single Order
 func (s *marketplacesOrdersOrder) HarvestOrder(ctx context.Context, request operations.HarvestOrderRequest) (*operations.HarvestOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -313,9 +314,9 @@ func (s *marketplacesOrdersOrder) HarvestOrder(ctx context.Context, request oper
 	case httpRes.StatusCode == 202:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode == 404:
-		fallthrough
-	default:
+	case httpRes.StatusCode == 409:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.BeezUPCommonErrorResponseMessage
@@ -325,9 +326,9 @@ func (s *marketplacesOrdersOrder) HarvestOrder(ctx context.Context, request oper
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		res.Headers = httpRes.Header
-
+	case httpRes.StatusCode == 404:
+		fallthrough
+	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.BeezUPCommonErrorResponseMessage
@@ -348,14 +349,14 @@ func (s *marketplacesOrdersOrder) HarvestOrder(ctx context.Context, request oper
 // This could be useful
 func (s *marketplacesOrdersOrder) HeadOrder(ctx context.Context, request operations.HeadOrderRequest) (*operations.HeadOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -401,9 +402,9 @@ func (s *marketplacesOrdersOrder) HeadOrder(ctx context.Context, request operati
 // SetMerchantOrderInfo - [DEPRECATED] Set an Order's merchant information
 func (s *marketplacesOrdersOrder) SetMerchantOrderInfo(ctx context.Context, request operations.SetMerchantOrderInfoRequest) (*operations.SetMerchantOrderInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMerchantOrderInfoRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

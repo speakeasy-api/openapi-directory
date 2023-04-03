@@ -74,28 +74,20 @@ func (e *GETSetIPAddressTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetIPAddressTypeQueryParams struct {
+type GETSetIPAddressTypeRequest struct {
 	Action GETSetIPAddressTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IP address type. The possible values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
 	IPAddressType GETSetIPAddressTypeIPAddressTypeEnum `queryParam:"style=form,explode=true,name=IpAddressType"`
 	// The Amazon Resource Name (ARN) of the load balancer.
-	LoadBalancerArn string                         `queryParam:"style=form,explode=true,name=LoadBalancerArn"`
-	Version         GETSetIPAddressTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetIPAddressTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetIPAddressTypeRequest struct {
-	QueryParams GETSetIPAddressTypeQueryParams
-	Headers     GETSetIPAddressTypeHeaders
+	LoadBalancerArn   string                         `queryParam:"style=form,explode=true,name=LoadBalancerArn"`
+	Version           GETSetIPAddressTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetIPAddressTypeResponse struct {

@@ -30,7 +30,8 @@ func (e *DeleteHostXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteHostHeaders struct {
+type DeleteHostRequest struct {
+	DeleteHostInput   shared.DeleteHostInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteHostHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteHostXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteHostRequest struct {
-	Headers DeleteHostHeaders
-	Request shared.DeleteHostInput `request:"mediaType=application/json"`
 }
 
 type DeleteHostResponse struct {

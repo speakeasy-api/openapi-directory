@@ -50,7 +50,7 @@ func (e *GETEnableSnapshotCopyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableSnapshotCopyQueryParams struct {
+type GETEnableSnapshotCopyRequest struct {
 	Action GETEnableSnapshotCopyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of the source cluster to copy snapshots from.</p> <p>Constraints: Must be the valid name of an existing cluster that does not already have cross-region snapshot copy enabled.</p>
 	ClusterIdentifier string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -63,21 +63,13 @@ type GETEnableSnapshotCopyQueryParams struct {
 	// The name of the snapshot copy grant to use when snapshots of an Amazon Web Services KMS-encrypted cluster are copied to the destination region.
 	SnapshotCopyGrantName *string                          `queryParam:"style=form,explode=true,name=SnapshotCopyGrantName"`
 	Version               GETEnableSnapshotCopyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableSnapshotCopyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableSnapshotCopyRequest struct {
-	QueryParams GETEnableSnapshotCopyQueryParams
-	Headers     GETEnableSnapshotCopyHeaders
+	XAmzAlgorithm         *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableSnapshotCopyResponse struct {

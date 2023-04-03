@@ -50,25 +50,17 @@ func (e *POSTDescribeAggregateIDFormatVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTDescribeAggregateIDFormatQueryParams struct {
-	Action  POSTDescribeAggregateIDFormatActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeAggregateIDFormatVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeAggregateIDFormatHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeAggregateIDFormatRequest struct {
-	QueryParams POSTDescribeAggregateIDFormatQueryParams
-	Headers     POSTDescribeAggregateIDFormatHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeAggregateIDFormatActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTDescribeAggregateIDFormatVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeAggregateIDFormatResponse struct {

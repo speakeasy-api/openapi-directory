@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ExportSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 // ExportFmtEnum - Raster/Vector file format: KML, KMZ, SHP, GeoTIFF
@@ -43,16 +42,11 @@ func (e *ExportFmtEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ExportQueryParams struct {
+type ExportRequest struct {
 	// Calculation file name
 	File string `queryParam:"style=form,explode=true,name=file"`
 	// Raster/Vector file format: KML, KMZ, SHP, GeoTIFF
 	Fmt ExportFmtEnum `queryParam:"style=form,explode=true,name=fmt"`
-}
-
-type ExportRequest struct {
-	QueryParams ExportQueryParams
-	Security    ExportSecurity
 }
 
 type ExportResponse struct {

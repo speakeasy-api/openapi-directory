@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPITagsUpdateFormPathParams struct {
+type OrderAPITagsUpdateFormRequest struct {
+	// Tags to attach
+	RechnungsdruckWebAppControllersAPIOrderTagCreate shared.RechnungsdruckWebAppControllersAPIOrderTagCreate `request:"mediaType=application/x-www-form-urlencoded"`
 	// The internal id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPITagsUpdateFormRequest struct {
-	PathParams OrderAPITagsUpdateFormPathParams
-	// Tags to attach
-	Request shared.RechnungsdruckWebAppControllersAPIOrderTagCreate `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type OrderAPITagsUpdateFormResponse struct {

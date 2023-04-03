@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostCategoriesKeywordsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostCategoriesKeywordsRequest struct {
-	QueryParams PostCategoriesKeywordsQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PostCategoriesKeywordsResponse struct {

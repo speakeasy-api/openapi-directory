@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type CashReceiptsDeletePathParams struct {
+type CashReceiptsDeleteRequest struct {
 	// Id of Cash Receipt to remove.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CashReceiptsDeleteQueryParams struct {
 	// Timestamp of Cash Receipt to remove. Should be encoded in Base64.
 	Timestamp string `queryParam:"style=form,explode=true,name=timestamp"`
-}
-
-type CashReceiptsDeleteRequest struct {
-	PathParams  CashReceiptsDeletePathParams
-	QueryParams CashReceiptsDeleteQueryParams
 }
 
 type CashReceiptsDeleteResponse struct {

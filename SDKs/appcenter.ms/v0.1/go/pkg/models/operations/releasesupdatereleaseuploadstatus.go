@@ -6,25 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesUpdateReleaseUploadStatusSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReleasesUpdateReleaseUploadStatusPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the release upload
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type ReleasesUpdateReleaseUploadStatusQueryParams struct {
-	// A flag that indicates to extract release or not, true by default
-	Extract *bool `queryParam:"style=form,explode=true,name=extract"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ReleasesUpdateReleaseUploadStatusRequestBodyUploadStatusEnum - The new status of the release upload
@@ -58,11 +43,16 @@ type ReleasesUpdateReleaseUploadStatusRequestBody struct {
 }
 
 type ReleasesUpdateReleaseUploadStatusRequest struct {
-	PathParams  ReleasesUpdateReleaseUploadStatusPathParams
-	QueryParams ReleasesUpdateReleaseUploadStatusQueryParams
 	// The release upload status information.
-	Request  ReleasesUpdateReleaseUploadStatusRequestBody `request:"mediaType=application/json"`
-	Security ReleasesUpdateReleaseUploadStatusSecurity
+	RequestBody ReleasesUpdateReleaseUploadStatusRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// A flag that indicates to extract release or not, true by default
+	Extract *bool `queryParam:"style=form,explode=true,name=extract"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the release upload
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type ReleasesUpdateReleaseUploadStatus404ApplicationJSONCodeEnum string

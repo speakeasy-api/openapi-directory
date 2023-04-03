@@ -50,7 +50,7 @@ func (e *GETRegisterDBProxyTargetsVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETRegisterDBProxyTargetsQueryParams struct {
+type GETRegisterDBProxyTargetsRequest struct {
 	Action GETRegisterDBProxyTargetsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// One or more DB cluster identifiers.
 	DBClusterIdentifiers []string `queryParam:"style=form,explode=true,name=DBClusterIdentifiers"`
@@ -59,23 +59,15 @@ type GETRegisterDBProxyTargetsQueryParams struct {
 	// The identifier of the <code>DBProxy</code> that is associated with the <code>DBProxyTargetGroup</code>.
 	DBProxyName string `queryParam:"style=form,explode=true,name=DBProxyName"`
 	// The identifier of the <code>DBProxyTargetGroup</code>.
-	TargetGroupName *string                              `queryParam:"style=form,explode=true,name=TargetGroupName"`
-	Version         GETRegisterDBProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRegisterDBProxyTargetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRegisterDBProxyTargetsRequest struct {
-	QueryParams GETRegisterDBProxyTargetsQueryParams
-	Headers     GETRegisterDBProxyTargetsHeaders
+	TargetGroupName   *string                              `queryParam:"style=form,explode=true,name=TargetGroupName"`
+	Version           GETRegisterDBProxyTargetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRegisterDBProxyTargetsResponse struct {

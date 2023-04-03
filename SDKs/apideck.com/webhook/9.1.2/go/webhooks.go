@@ -34,11 +34,11 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // WebhooksAdd - Create webhook subscription
 // Create a webhook subscription to receive events
-func (s *webhooks) WebhooksAdd(ctx context.Context, request operations.WebhooksAddRequest) (*operations.WebhooksAddResponse, error) {
+func (s *webhooks) WebhooksAdd(ctx context.Context, request operations.WebhooksAddRequest, security operations.WebhooksAddSecurity) (*operations.WebhooksAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhook/webhooks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,9 +53,9 @@ func (s *webhooks) WebhooksAdd(ctx context.Context, request operations.WebhooksA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -151,7 +151,7 @@ func (s *webhooks) WebhooksAdd(ctx context.Context, request operations.WebhooksA
 
 // WebhooksAll - List webhook subscriptions
 // List all webhook subscriptions
-func (s *webhooks) WebhooksAll(ctx context.Context, request operations.WebhooksAllRequest) (*operations.WebhooksAllResponse, error) {
+func (s *webhooks) WebhooksAll(ctx context.Context, request operations.WebhooksAllRequest, security operations.WebhooksAllSecurity) (*operations.WebhooksAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhook/webhooks"
 
@@ -160,13 +160,13 @@ func (s *webhooks) WebhooksAll(ctx context.Context, request operations.WebhooksA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,18 +262,18 @@ func (s *webhooks) WebhooksAll(ctx context.Context, request operations.WebhooksA
 
 // WebhooksDelete - Delete webhook subscription
 // Delete a webhook subscription
-func (s *webhooks) WebhooksDelete(ctx context.Context, request operations.WebhooksDeleteRequest) (*operations.WebhooksDeleteResponse, error) {
+func (s *webhooks) WebhooksDelete(ctx context.Context, request operations.WebhooksDeleteRequest, security operations.WebhooksDeleteSecurity) (*operations.WebhooksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,11 +369,11 @@ func (s *webhooks) WebhooksDelete(ctx context.Context, request operations.Webhoo
 
 // WebhooksExecute - Execute a webhook
 // Execute a webhook
-func (s *webhooks) WebhooksExecute(ctx context.Context, request operations.WebhooksExecuteRequest) (*operations.WebhooksExecuteResponse, error) {
+func (s *webhooks) WebhooksExecute(ctx context.Context, request operations.WebhooksExecuteRequest, security operations.WebhooksExecuteSecurity) (*operations.WebhooksExecuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}/execute/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}/execute/{serviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,7 +388,7 @@ func (s *webhooks) WebhooksExecute(ctx context.Context, request operations.Webho
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -484,18 +484,18 @@ func (s *webhooks) WebhooksExecute(ctx context.Context, request operations.Webho
 
 // WebhooksOne - Get webhook subscription
 // Get the webhook subscription details
-func (s *webhooks) WebhooksOne(ctx context.Context, request operations.WebhooksOneRequest) (*operations.WebhooksOneResponse, error) {
+func (s *webhooks) WebhooksOne(ctx context.Context, request operations.WebhooksOneRequest, security operations.WebhooksOneSecurity) (*operations.WebhooksOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -591,11 +591,11 @@ func (s *webhooks) WebhooksOne(ctx context.Context, request operations.WebhooksO
 
 // WebhooksResolve - Resolve and Execute a connection webhook
 // Resolve a webhook based on lookup_id and then execute it
-func (s *webhooks) WebhooksResolve(ctx context.Context, request operations.WebhooksResolveRequest) (*operations.WebhooksResolveResponse, error) {
+func (s *webhooks) WebhooksResolve(ctx context.Context, request operations.WebhooksResolveRequest, security operations.WebhooksResolveSecurity) (*operations.WebhooksResolveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhook/w/{id}/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhook/w/{id}/{serviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -610,11 +610,11 @@ func (s *webhooks) WebhooksResolve(ctx context.Context, request operations.Webho
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -710,11 +710,11 @@ func (s *webhooks) WebhooksResolve(ctx context.Context, request operations.Webho
 
 // WebhooksShortExecute - Execute a webhook
 // Execute a webhook
-func (s *webhooks) WebhooksShortExecute(ctx context.Context, request operations.WebhooksShortExecuteRequest) (*operations.WebhooksShortExecuteResponse, error) {
+func (s *webhooks) WebhooksShortExecute(ctx context.Context, request operations.WebhooksShortExecuteRequest, security operations.WebhooksShortExecuteSecurity) (*operations.WebhooksShortExecuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}/x/{serviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}/x/{serviceId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -729,11 +729,11 @@ func (s *webhooks) WebhooksShortExecute(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -829,11 +829,11 @@ func (s *webhooks) WebhooksShortExecute(ctx context.Context, request operations.
 
 // WebhooksUpdate - Update webhook subscription
 // Update a webhook subscription
-func (s *webhooks) WebhooksUpdate(ctx context.Context, request operations.WebhooksUpdateRequest) (*operations.WebhooksUpdateResponse, error) {
+func (s *webhooks) WebhooksUpdate(ctx context.Context, request operations.WebhooksUpdateRequest, security operations.WebhooksUpdateSecurity) (*operations.WebhooksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhook/webhooks/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -848,9 +848,9 @@ func (s *webhooks) WebhooksUpdate(ctx context.Context, request operations.Webhoo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

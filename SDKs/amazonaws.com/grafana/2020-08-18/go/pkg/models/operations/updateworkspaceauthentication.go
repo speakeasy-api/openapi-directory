@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWorkspaceAuthenticationPathParams struct {
-	// The ID of the workspace to update the authentication for.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type UpdateWorkspaceAuthenticationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateWorkspaceAuthenticationRequestBodySamlConfiguration - A structure containing information about how this workspace works with SAML.
 type UpdateWorkspaceAuthenticationRequestBodySamlConfiguration struct {
 	AllowedOrganizations  []string                    `json:"allowedOrganizations,omitempty"`
@@ -39,9 +24,16 @@ type UpdateWorkspaceAuthenticationRequestBody struct {
 }
 
 type UpdateWorkspaceAuthenticationRequest struct {
-	PathParams UpdateWorkspaceAuthenticationPathParams
-	Headers    UpdateWorkspaceAuthenticationHeaders
-	Request    UpdateWorkspaceAuthenticationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateWorkspaceAuthenticationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the workspace to update the authentication for.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type UpdateWorkspaceAuthenticationResponse struct {

@@ -29,7 +29,8 @@ func (e *DeleteNotificationChannelXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type DeleteNotificationChannelHeaders struct {
+type DeleteNotificationChannelRequest struct {
+	RequestBody       map[string]interface{}                  `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DeleteNotificationChannelHeaders struct {
 	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteNotificationChannelXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteNotificationChannelRequest struct {
-	Headers DeleteNotificationChannelHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DeleteNotificationChannelResponse struct {

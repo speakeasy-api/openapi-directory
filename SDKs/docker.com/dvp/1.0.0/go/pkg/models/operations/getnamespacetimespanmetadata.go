@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamespaceTimespanMetadataPathParams struct {
+type GetNamespaceTimespanMetadataRequest struct {
 	// Namespace to fetch data for
 	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
 	// Timespan to fetch data for
@@ -16,10 +16,6 @@ type GetNamespaceTimespanMetadataPathParams struct {
 	Timespantype shared.TimespanTypeEnum `pathParam:"style=simple,explode=false,name=timespantype"`
 	// Year to fetch data for
 	Year int64 `pathParam:"style=simple,explode=false,name=year"`
-}
-
-type GetNamespaceTimespanMetadataRequest struct {
-	PathParams GetNamespaceTimespanMetadataPathParams
 }
 
 type GetNamespaceTimespanMetadataResponse struct {

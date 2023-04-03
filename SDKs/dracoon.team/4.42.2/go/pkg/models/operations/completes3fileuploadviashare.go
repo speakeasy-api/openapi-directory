@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteS3FileUploadViaSharePathParams struct {
+type CompleteS3FileUploadViaShareRequest struct {
+	CompleteS3ShareUploadRequest shared.CompleteS3ShareUploadRequest `request:"mediaType=application/json"`
 	// Access key
 	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
 	// Upload channel ID
 	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type CompleteS3FileUploadViaShareRequest struct {
-	PathParams CompleteS3FileUploadViaSharePathParams
-	Request    shared.CompleteS3ShareUploadRequest `request:"mediaType=application/json"`
 }
 
 type CompleteS3FileUploadViaShareResponse struct {

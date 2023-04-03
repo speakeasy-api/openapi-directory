@@ -9,25 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAssessmentControlPathParams struct {
-	//  The unique identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-	//  The unique identifier for the control.
-	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
-	//  The unique identifier for the control set.
-	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
-}
-
-type UpdateAssessmentControlHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAssessmentControlRequestBodyControlStatusEnum -  The status of the control.
 type UpdateAssessmentControlRequestBodyControlStatusEnum string
 
@@ -63,9 +44,20 @@ type UpdateAssessmentControlRequestBody struct {
 }
 
 type UpdateAssessmentControlRequest struct {
-	PathParams UpdateAssessmentControlPathParams
-	Headers    UpdateAssessmentControlHeaders
-	Request    UpdateAssessmentControlRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAssessmentControlRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
+	//  The unique identifier for the control.
+	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
+	//  The unique identifier for the control set.
+	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
 }
 
 type UpdateAssessmentControlResponse struct {

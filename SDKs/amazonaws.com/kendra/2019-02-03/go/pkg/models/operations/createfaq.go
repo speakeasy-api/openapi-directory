@@ -30,7 +30,8 @@ func (e *CreateFaqXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateFaqHeaders struct {
+type CreateFaqRequest struct {
+	CreateFaqRequest  shared.CreateFaqRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateFaqHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateFaqXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateFaqRequest struct {
-	Headers CreateFaqHeaders
-	Request shared.CreateFaqRequest `request:"mediaType=application/json"`
 }
 
 type CreateFaqResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ContentGetContentByIDPathParams struct {
+type ContentGetContentByIDRequest struct {
+	// false
+	Head   *bool  `queryParam:"style=form,explode=true,name=head"`
 	ID     int64  `pathParam:"style=simple,explode=false,name=id"`
 	Locale string `pathParam:"style=simple,explode=false,name=locale"`
-}
-
-type ContentGetContentByIDQueryParams struct {
-	// false
-	Head *bool `queryParam:"style=form,explode=true,name=head"`
-}
-
-type ContentGetContentByIDRequest struct {
-	PathParams  ContentGetContentByIDPathParams
-	QueryParams ContentGetContentByIDQueryParams
 }
 
 // ContentGetContentByID200Wildcard - Look at the Response property for more information about the nature of this response

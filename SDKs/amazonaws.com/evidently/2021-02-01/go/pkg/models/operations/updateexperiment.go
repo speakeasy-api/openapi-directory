@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateExperimentPathParams struct {
-	// The name of the experiment to update.
-	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
-	// The name or ARN of the project that contains the experiment that you want to update.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type UpdateExperimentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateExperimentRequestBodyOnlineAbConfig - A structure that contains the configuration of which variation to use as the "control" version. The "control" version is used for comparison with other variations. This structure also specifies how much experiment traffic is allocated to each variation.
 type UpdateExperimentRequestBodyOnlineAbConfig struct {
 	ControlTreatmentName *string          `json:"controlTreatmentName,omitempty"`
@@ -50,9 +33,18 @@ type UpdateExperimentRequestBody struct {
 }
 
 type UpdateExperimentRequest struct {
-	PathParams UpdateExperimentPathParams
-	Headers    UpdateExperimentHeaders
-	Request    UpdateExperimentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateExperimentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the experiment to update.
+	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
+	// The name or ARN of the project that contains the experiment that you want to update.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type UpdateExperimentResponse struct {

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ClearMerchantOrderInfoPathParams struct {
+type ClearMerchantOrderInfoRequest struct {
 	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order identifier
 	BeezUPOrderID string `pathParam:"style=simple,explode=false,name=beezUPOrderId"`
 	// The marketplace technical code
 	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type ClearMerchantOrderInfoRequest struct {
-	PathParams ClearMerchantOrderInfoPathParams
 }
 
 type ClearMerchantOrderInfoResponse struct {

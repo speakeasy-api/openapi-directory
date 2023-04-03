@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPolicyVersionsPathParams struct {
-	// The policy name.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type ListPolicyVersionsHeaders struct {
+type ListPolicyVersionsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type ListPolicyVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListPolicyVersionsRequest struct {
-	PathParams ListPolicyVersionsPathParams
-	Headers    ListPolicyVersionsHeaders
+	// The policy name.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 }
 
 type ListPolicyVersionsResponse struct {

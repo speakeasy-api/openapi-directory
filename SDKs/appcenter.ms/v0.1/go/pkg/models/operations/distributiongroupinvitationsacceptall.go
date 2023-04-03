@@ -6,17 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupInvitationsAcceptAllSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupInvitationsAcceptAllRequest struct {
-	// allow empty body for custom http-client lib
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security DistributionGroupInvitationsAcceptAllSecurity
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum string

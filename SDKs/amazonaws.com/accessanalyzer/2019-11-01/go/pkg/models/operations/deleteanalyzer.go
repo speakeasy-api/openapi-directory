@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAnalyzerPathParams struct {
-	// The name of the analyzer to delete.
-	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
-}
-
-type DeleteAnalyzerQueryParams struct {
-	// A client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteAnalyzerHeaders struct {
+type DeleteAnalyzerRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteAnalyzerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAnalyzerRequest struct {
-	PathParams  DeleteAnalyzerPathParams
-	QueryParams DeleteAnalyzerQueryParams
-	Headers     DeleteAnalyzerHeaders
+	// The name of the analyzer to delete.
+	AnalyzerName string `pathParam:"style=simple,explode=false,name=analyzerName"`
+	// A client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
 }
 
 type DeleteAnalyzerResponse struct {

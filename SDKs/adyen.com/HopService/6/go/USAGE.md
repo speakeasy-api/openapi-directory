@@ -13,43 +13,38 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostGetOnboardingURLRequest{
-        Security: operations.PostGetOnboardingURLSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+    req := shared.GetOnboardingURLRequest{
+        AccountHolderCode: "corrupti",
+        CollectInformation: &shared.CollectInformation{
+            BankDetails: false,
+            BusinessDetails: false,
+            IndividualDetails: false,
+            LegalArrangementDetails: false,
+            PciQuestionnaire: false,
+            ShareholderDetails: false,
         },
-        Request: &shared.GetOnboardingURLRequest{
-            AccountHolderCode: "corrupti",
-            CollectInformation: &shared.CollectInformation{
-                BankDetails: false,
-                BusinessDetails: false,
-                IndividualDetails: false,
-                LegalArrangementDetails: false,
-                PciQuestionnaire: false,
-                ShareholderDetails: false,
-            },
-            EditMode: false,
-            MobileOAuthCallbackURL: "provident",
-            PlatformName: "distinctio",
-            ReturnURL: "quibusdam",
-            ShopperLocale: "unde",
-            ShowPages: &shared.ShowPages{
-                BankDetailsSummaryPage: false,
-                BankVerificationPage: false,
-                BusinessDetailsSummaryPage: false,
-                ChecksOverviewPage: false,
-                IndividualDetailsSummaryPage: false,
-                LegalArrangementsDetailsSummaryPage: false,
-                ManualBankAccountPage: false,
-                ShareholderDetailsSummaryPage: false,
-                WelcomePage: false,
-            },
+        EditMode: false,
+        MobileOAuthCallbackURL: "provident",
+        PlatformName: "distinctio",
+        ReturnURL: "quibusdam",
+        ShopperLocale: "unde",
+        ShowPages: &shared.ShowPages{
+            BankDetailsSummaryPage: false,
+            BankVerificationPage: false,
+            BusinessDetailsSummaryPage: false,
+            ChecksOverviewPage: false,
+            IndividualDetailsSummaryPage: false,
+            LegalArrangementsDetailsSummaryPage: false,
+            ManualBankAccountPage: false,
+            ShareholderDetailsSummaryPage: false,
+            WelcomePage: false,
         },
     }
 
     ctx := context.Background()
-    res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, req)
+    res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, req, operations.PostGetOnboardingURLSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

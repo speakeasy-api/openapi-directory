@@ -77,7 +77,7 @@ func (e *GETTestTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETTestTypeQueryParams struct {
+type GETTestTypeRequest struct {
 	Action GETTestTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the extension.</p> <p>Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
 	Arn *string `queryParam:"style=form,explode=true,name=Arn"`
@@ -89,10 +89,7 @@ type GETTestTypeQueryParams struct {
 	TypeName *string                `queryParam:"style=form,explode=true,name=TypeName"`
 	Version  GETTestTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>The version of the extension to test.</p> <p>You can specify the version id with either <code>Arn</code>, or with <code>TypeName</code> and <code>Type</code>.</p> <p>If you don't specify a version, CloudFormation uses the default version of the extension in this account and region for testing.</p>
-	VersionID *string `queryParam:"style=form,explode=true,name=VersionId"`
-}
-
-type GETTestTypeHeaders struct {
+	VersionID         *string `queryParam:"style=form,explode=true,name=VersionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -100,11 +97,6 @@ type GETTestTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETTestTypeRequest struct {
-	QueryParams GETTestTypeQueryParams
-	Headers     GETTestTypeHeaders
 }
 
 type GETTestTypeResponse struct {

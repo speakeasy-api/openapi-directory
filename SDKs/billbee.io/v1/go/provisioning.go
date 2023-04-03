@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -32,7 +33,7 @@ func newProvisioning(defaultClient, securityClient HTTPClient, serverURL, langua
 }
 
 // AutomaticProvisioningCreateAccountForm - Creates a new Billbee user account with the data passed
-func (s *provisioning) AutomaticProvisioningCreateAccountForm(ctx context.Context, request operations.AutomaticProvisioningCreateAccountFormRequest) (*operations.AutomaticProvisioningCreateAccountFormResponse, error) {
+func (s *provisioning) AutomaticProvisioningCreateAccountForm(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPIAutomaticProvisioningControllerCreateAccountContainer) (*operations.AutomaticProvisioningCreateAccountFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/automaticprovision/createaccount"
 
@@ -93,7 +94,7 @@ func (s *provisioning) AutomaticProvisioningCreateAccountForm(ctx context.Contex
 }
 
 // AutomaticProvisioningCreateAccountJSON - Creates a new Billbee user account with the data passed
-func (s *provisioning) AutomaticProvisioningCreateAccountJSON(ctx context.Context, request operations.AutomaticProvisioningCreateAccountJSONRequest) (*operations.AutomaticProvisioningCreateAccountJSONResponse, error) {
+func (s *provisioning) AutomaticProvisioningCreateAccountJSON(ctx context.Context, request shared.RechnungsdruckWebAppControllersAPIAutomaticProvisioningControllerCreateAccountContainer) (*operations.AutomaticProvisioningCreateAccountJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/automaticprovision/createaccount"
 
@@ -154,7 +155,7 @@ func (s *provisioning) AutomaticProvisioningCreateAccountJSON(ctx context.Contex
 }
 
 // AutomaticProvisioningCreateAccountRaw - Creates a new Billbee user account with the data passed
-func (s *provisioning) AutomaticProvisioningCreateAccountRaw(ctx context.Context, request operations.AutomaticProvisioningCreateAccountRawRequest) (*operations.AutomaticProvisioningCreateAccountRawResponse, error) {
+func (s *provisioning) AutomaticProvisioningCreateAccountRaw(ctx context.Context, request []byte) (*operations.AutomaticProvisioningCreateAccountRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/automaticprovision/createaccount"
 

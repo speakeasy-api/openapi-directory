@@ -8,28 +8,25 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetUsersIDUserConnectionsIDConnectionLogsPathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionLogsQueryParams struct {
+type GetUsersIDUserConnectionsIDConnectionLogsRequest struct {
 	// UUID of a connector
 	ConnectorUUID *string `queryParam:"style=form,explode=true,name=connector_uuid"`
 	// connections log error filter
-	Error  *string `queryParam:"style=form,explode=true,name=error"`
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+	Error                     *string `queryParam:"style=form,explode=true,name=error"`
+	Expand                    *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnectionPathParameter int64   `pathParam:"style=simple,explode=false,name=id_connection"`
 	// ID of a connection
-	IDConnection *int64 `queryParam:"style=form,explode=true,name=id_connection"`
+	IDConnectionQueryParameter *int64 `queryParam:"style=form,explode=true,name=id_connection"`
 	// ID of a connector
 	IDConnector *int64 `queryParam:"style=form,explode=true,name=id_connector"`
 	// filter "id" of logs, maximum id to return
 	IDMax *int64 `queryParam:"style=form,explode=true,name=id_max"`
 	// ID of a source
 	IDSource *int64 `queryParam:"style=form,explode=true,name=id_source"`
+	// Hint: you can use 'me' or 'all'
+	IDUserPathParameter string `pathParam:"style=simple,explode=false,name=id_user"`
 	// ID of a user
-	IDUser *int64 `queryParam:"style=form,explode=true,name=id_user"`
+	IDUserQueryParameter *int64 `queryParam:"style=form,explode=true,name=id_user"`
 	// limit number of results
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// maximum date
@@ -40,11 +37,6 @@ type GetUsersIDUserConnectionsIDConnectionLogsQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// period to group logs
 	Period *string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionLogsRequest struct {
-	PathParams  GetUsersIDUserConnectionsIDConnectionLogsPathParams
-	QueryParams GetUsersIDUserConnectionsIDConnectionLogsQueryParams
 }
 
 // GetUsersIDUserConnectionsIDConnectionLogs200ApplicationJSON - connectionlogs

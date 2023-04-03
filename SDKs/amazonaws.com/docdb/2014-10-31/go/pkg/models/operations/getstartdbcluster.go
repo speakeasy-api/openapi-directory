@@ -50,26 +50,18 @@ func (e *GETStartDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStartDBClusterQueryParams struct {
+type GETStartDBClusterRequest struct {
 	Action GETStartDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the cluster to restart. Example: <code>docdb-2019-05-28-15-24-52</code>
 	DBClusterIdentifier string                       `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	Version             GETStartDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStartDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStartDBClusterRequest struct {
-	QueryParams GETStartDBClusterQueryParams
-	Headers     GETStartDBClusterHeaders
+	XAmzAlgorithm       *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStartDBClusterResponse struct {

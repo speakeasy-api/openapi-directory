@@ -42,16 +42,7 @@ func (e *ListV2LoggingLevelsTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListV2LoggingLevelsQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The type of resource for which you are configuring logging. Must be <code>THING_Group</code>.
-	TargetType *ListV2LoggingLevelsTargetTypeEnum `queryParam:"style=form,explode=true,name=targetType"`
-}
-
-type ListV2LoggingLevelsHeaders struct {
+type ListV2LoggingLevelsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -59,11 +50,12 @@ type ListV2LoggingLevelsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListV2LoggingLevelsRequest struct {
-	QueryParams ListV2LoggingLevelsQueryParams
-	Headers     ListV2LoggingLevelsHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The type of resource for which you are configuring logging. Must be <code>THING_Group</code>.
+	TargetType *ListV2LoggingLevelsTargetTypeEnum `queryParam:"style=form,explode=true,name=targetType"`
 }
 
 type ListV2LoggingLevelsResponse struct {

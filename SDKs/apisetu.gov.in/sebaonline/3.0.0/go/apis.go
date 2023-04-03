@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Sscer - Class X Marksheet
 // API to verify Class X Marksheet.
-func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*operations.SscerResponse, error) {
+func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequestBody, security operations.SscerSecurity) (*operations.SscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sscer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteTypePathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The type name.
-	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
-}
-
-type DeleteTypeHeaders struct {
+type DeleteTypeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTypeRequest struct {
-	PathParams DeleteTypePathParams
-	Headers    DeleteTypeHeaders
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The type name.
+	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
 }
 
 type DeleteTypeResponse struct {

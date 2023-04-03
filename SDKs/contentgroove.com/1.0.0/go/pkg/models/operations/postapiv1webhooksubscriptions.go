@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostAPIV1WebhookSubscriptionsSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type PostAPIV1WebhookSubscriptionsRequestBodyDataAttributes struct {
@@ -22,11 +21,6 @@ type PostAPIV1WebhookSubscriptionsRequestBodyData struct {
 
 type PostAPIV1WebhookSubscriptionsRequestBody struct {
 	Data PostAPIV1WebhookSubscriptionsRequestBodyData `json:"data"`
-}
-
-type PostAPIV1WebhookSubscriptionsRequest struct {
-	Request  PostAPIV1WebhookSubscriptionsRequestBody `request:"mediaType=application/json"`
-	Security PostAPIV1WebhookSubscriptionsSecurity
 }
 
 type PostAPIV1WebhookSubscriptionsResponse struct {

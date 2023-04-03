@@ -33,16 +33,7 @@ func (e *ListAssessmentFrameworksFrameworkTypeEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListAssessmentFrameworksQueryParams struct {
-	//  The type of framework, such as a standard framework or a custom framework.
-	FrameworkType ListAssessmentFrameworksFrameworkTypeEnum `queryParam:"style=form,explode=true,name=frameworkType"`
-	//  Represents the maximum number of results on a page or for an API request call.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  The pagination token that's used to fetch the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListAssessmentFrameworksHeaders struct {
+type ListAssessmentFrameworksRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type ListAssessmentFrameworksHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssessmentFrameworksRequest struct {
-	QueryParams ListAssessmentFrameworksQueryParams
-	Headers     ListAssessmentFrameworksHeaders
+	//  The type of framework, such as a standard framework or a custom framework.
+	FrameworkType ListAssessmentFrameworksFrameworkTypeEnum `queryParam:"style=form,explode=true,name=frameworkType"`
+	//  Represents the maximum number of results on a page or for an API request call.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  The pagination token that's used to fetch the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListAssessmentFrameworksResponse struct {

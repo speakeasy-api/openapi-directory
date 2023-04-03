@@ -50,30 +50,22 @@ func (e *GETModifyDBSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyDBSnapshotQueryParams struct {
+type GETModifyDBSnapshotRequest struct {
 	Action GETModifyDBSnapshotActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the DB snapshot to modify.
 	DBSnapshotIdentifier string `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	// <p>The engine version to upgrade the DB snapshot to.</p> <p>The following are the database engines and engine versions that are available when you upgrade a DB snapshot.</p> <p> <b>MySQL</b> </p> <ul> <li> <p> <code>5.5.46</code> (supported for 5.1 DB snapshots)</p> </li> </ul> <p> <b>Oracle</b> </p> <ul> <li> <p> <code>12.1.0.2.v8</code> (supported for 12.1.0.1 DB snapshots)</p> </li> <li> <p> <code>11.2.0.4.v12</code> (supported for 11.2.0.2 DB snapshots)</p> </li> <li> <p> <code>11.2.0.4.v11</code> (supported for 11.2.0.3 DB snapshots)</p> </li> </ul> <p> <b>PostgreSQL</b> </p> <p>For the list of engine versions that are available for upgrading a DB snapshot, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.PostgreSQL.html#USER_UpgradeDBInstance.PostgreSQL.MajorVersion"> Upgrading the PostgreSQL DB Engine for Amazon RDS</a>.</p>
 	EngineVersion *string `queryParam:"style=form,explode=true,name=EngineVersion"`
 	// <p>The option group to identify with the upgraded DB snapshot.</p> <p>You can specify this parameter when you upgrade an Oracle DB snapshot. The same option group considerations apply when upgrading a DB snapshot as when upgrading a DB instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Oracle.html#USER_UpgradeDBInstance.Oracle.OGPG.OG">Option group considerations</a> in the <i>Amazon RDS User Guide.</i> </p>
-	OptionGroupName *string                        `queryParam:"style=form,explode=true,name=OptionGroupName"`
-	Version         GETModifyDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyDBSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyDBSnapshotRequest struct {
-	QueryParams GETModifyDBSnapshotQueryParams
-	Headers     GETModifyDBSnapshotHeaders
+	OptionGroupName   *string                        `queryParam:"style=form,explode=true,name=OptionGroupName"`
+	Version           GETModifyDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyDBSnapshotResponse struct {

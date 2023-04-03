@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCatchAllPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type CreateCatchAllQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type CreateCatchAllRequest struct {
-	PathParams  CreateCatchAllPathParams
-	QueryParams CreateCatchAllQueryParams
 	// Contains the catch-all information.
-	Request *shared.CreateCatchAllRequest `request:"mediaType=application/json"`
+	CreateCatchAllRequest *shared.CreateCatchAllRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type CreateCatchAllResponse struct {

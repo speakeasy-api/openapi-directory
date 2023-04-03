@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteSubscriberQueryParams struct {
-	// A value created by Security Lake that uniquely identifies your <code>DeleteSubscriber</code> API request.
-	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type DeleteSubscriberHeaders struct {
+type DeleteSubscriberRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteSubscriberHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSubscriberRequest struct {
-	QueryParams DeleteSubscriberQueryParams
-	Headers     DeleteSubscriberHeaders
+	// A value created by Security Lake that uniquely identifies your <code>DeleteSubscriber</code> API request.
+	ID string `queryParam:"style=form,explode=true,name=id"`
 }
 
 type DeleteSubscriberResponse struct {

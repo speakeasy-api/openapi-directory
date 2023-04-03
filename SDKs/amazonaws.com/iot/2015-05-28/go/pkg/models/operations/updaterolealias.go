@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRoleAliasPathParams struct {
-	// The role alias to update.
-	RoleAlias string `pathParam:"style=simple,explode=false,name=roleAlias"`
-}
-
-type UpdateRoleAliasHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateRoleAliasRequestBody struct {
 	// <p>The number of seconds the credential will be valid.</p> <p>This value must be less than or equal to the maximum session duration of the IAM role that the role alias references.</p>
 	CredentialDurationSeconds *int64 `json:"credentialDurationSeconds,omitempty"`
@@ -30,9 +15,16 @@ type UpdateRoleAliasRequestBody struct {
 }
 
 type UpdateRoleAliasRequest struct {
-	PathParams UpdateRoleAliasPathParams
-	Headers    UpdateRoleAliasHeaders
-	Request    UpdateRoleAliasRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateRoleAliasRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The role alias to update.
+	RoleAlias string `pathParam:"style=simple,explode=false,name=roleAlias"`
 }
 
 type UpdateRoleAliasResponse struct {

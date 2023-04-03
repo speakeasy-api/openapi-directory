@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDUserCategoriesFullPathParams struct {
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserCategoriesFullQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostUsersIDUserCategoriesFullRequestBody struct {
 	// Accountant account number.
 	AccountantAccount *string `multipartForm:"name=accountant_account"`
@@ -34,9 +25,10 @@ type PostUsersIDUserCategoriesFullRequestBody struct {
 }
 
 type PostUsersIDUserCategoriesFullRequest struct {
-	PathParams  PostUsersIDUserCategoriesFullPathParams
-	QueryParams PostUsersIDUserCategoriesFullQueryParams
-	Request     *PostUsersIDUserCategoriesFullRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PostUsersIDUserCategoriesFullRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                                   `queryParam:"style=form,explode=true,name=expand"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PostUsersIDUserCategoriesFullResponse struct {

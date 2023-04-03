@@ -8,17 +8,12 @@ import (
 )
 
 type ClaimBillingNotesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ClaimBillingNotesCreateQueryParams struct {
-	Appointment *int64 `queryParam:"style=form,explode=true,name=appointment"`
-	Doctor      *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ClaimBillingNotesCreateRequest struct {
-	QueryParams ClaimBillingNotesCreateQueryParams
-	Security    ClaimBillingNotesCreateSecurity
+	Appointment *int64 `queryParam:"style=form,explode=true,name=appointment"`
+	Doctor      *int64 `queryParam:"style=form,explode=true,name=doctor"`
 }
 
 type ClaimBillingNotesCreateResponse struct {

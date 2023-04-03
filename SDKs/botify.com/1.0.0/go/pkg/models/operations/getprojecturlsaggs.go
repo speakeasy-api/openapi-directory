@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectUrlsAggsPathParams struct {
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // GetProjectUrlsAggsAreaEnum - Analysis context to execute the queries
 type GetProjectUrlsAggsAreaEnum string
 
@@ -43,19 +36,18 @@ func (e *GetProjectUrlsAggsAreaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectUrlsAggsQueryParams struct {
+type GetProjectUrlsAggsRequest struct {
+	RequestBody []shared.UrlsAggsQuery `request:"mediaType=application/json"`
 	// Analysis context to execute the queries
 	Area *GetProjectUrlsAggsAreaEnum `queryParam:"style=form,explode=true,name=area"`
 	// Last analysis on the trend
 	LastAnalysisSlug *string `queryParam:"style=form,explode=true,name=last_analysis_slug"`
 	// Max number of analysis to return
 	NbAnalyses *int `queryParam:"style=form,explode=true,name=nb_analyses"`
-}
-
-type GetProjectUrlsAggsRequest struct {
-	PathParams  GetProjectUrlsAggsPathParams
-	QueryParams GetProjectUrlsAggsQueryParams
-	Request     []shared.UrlsAggsQuery `request:"mediaType=application/json"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetProjectUrlsAggsResponse struct {

@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type UpdateFunctionDefinitionPathParams struct {
-	// The ID of the Lambda function definition.
-	FunctionDefinitionID string `pathParam:"style=simple,explode=false,name=FunctionDefinitionId"`
-}
-
-type UpdateFunctionDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateFunctionDefinitionRequestBody struct {
 	// The name of the definition.
 	Name *string `json:"Name,omitempty"`
 }
 
 type UpdateFunctionDefinitionRequest struct {
-	PathParams UpdateFunctionDefinitionPathParams
-	Headers    UpdateFunctionDefinitionHeaders
-	Request    UpdateFunctionDefinitionRequestBody `request:"mediaType=application/json"`
+	// The ID of the Lambda function definition.
+	FunctionDefinitionID string                              `pathParam:"style=simple,explode=false,name=FunctionDefinitionId"`
+	RequestBody          UpdateFunctionDefinitionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateFunctionDefinitionResponse struct {

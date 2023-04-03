@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStoreReportByDayPerStoreRequest struct {
-	Request shared.ReportByDayRequest `request:"mediaType=application/json"`
-}
-
 type GetStoreReportByDayPerStoreResponse struct {
 	// Invalid request
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

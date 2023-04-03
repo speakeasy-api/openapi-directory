@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFileByTokenAsMultipart1PathParams struct {
-	// Upload token
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type UploadFileByTokenAsMultipart1Headers struct {
-	// Content-Range
-	//
-	// e.g. `bytes 0-999/3980`
-	ContentRange *string `header:"style=simple,explode=false,name=Content-Range"`
-}
-
 type UploadFileByTokenAsMultipart1RequestBodyFile struct {
 	Content []byte `multipartForm:"content"`
 	File    string `multipartForm:"name=file"`
@@ -30,9 +18,13 @@ type UploadFileByTokenAsMultipart1RequestBody struct {
 }
 
 type UploadFileByTokenAsMultipart1Request struct {
-	PathParams UploadFileByTokenAsMultipart1PathParams
-	Headers    UploadFileByTokenAsMultipart1Headers
-	Request    *UploadFileByTokenAsMultipart1RequestBody `request:"mediaType=multipart/form-data"`
+	// Content-Range
+	//
+	// e.g. `bytes 0-999/3980`
+	ContentRange *string                                   `header:"style=simple,explode=false,name=Content-Range"`
+	RequestBody  *UploadFileByTokenAsMultipart1RequestBody `request:"mediaType=multipart/form-data"`
+	// Upload token
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type UploadFileByTokenAsMultipart1Response struct {

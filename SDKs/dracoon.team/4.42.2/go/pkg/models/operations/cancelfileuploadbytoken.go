@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelFileUploadByTokenPathParams struct {
+type CancelFileUploadByTokenRequest struct {
 	// Upload token
 	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type CancelFileUploadByTokenRequest struct {
-	PathParams CancelFileUploadByTokenPathParams
 }
 
 type CancelFileUploadByTokenResponse struct {

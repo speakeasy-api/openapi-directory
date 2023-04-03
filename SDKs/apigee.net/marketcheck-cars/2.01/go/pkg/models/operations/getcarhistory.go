@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCarHistoryPathParams struct {
-	// The VIN to identify the car. Must be a valid 17 char VIN
-	Vin string `pathParam:"style=simple,explode=false,name=vin"`
-}
-
-type GetCarHistoryQueryParams struct {
+type GetCarHistoryRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// List of fields to fetch, in case the default fields list in the response is to be trimmed down
@@ -23,11 +18,8 @@ type GetCarHistoryQueryParams struct {
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// Sort order - asc or desc. Default sort order is asc
 	SortOrder *shared.SortOrderEnum `queryParam:"style=form,explode=true,name=sort_order"`
-}
-
-type GetCarHistoryRequest struct {
-	PathParams  GetCarHistoryPathParams
-	QueryParams GetCarHistoryQueryParams
+	// The VIN to identify the car. Must be a valid 17 char VIN
+	Vin string `pathParam:"style=simple,explode=false,name=vin"`
 }
 
 type GetCarHistoryResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssetRelationshipsPathParams struct {
-	// The ID of the asset.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-}
-
 // ListAssetRelationshipsTraversalTypeEnum - <p>The type of traversal to use to identify asset relationships. Choose the following option:</p> <ul> <li> <p> <code>PATH_TO_ROOT</code> – Identify the asset's parent assets up to the root asset. The asset that you specify in <code>assetId</code> is the first result in the list of <code>assetRelationshipSummaries</code>, and the root asset is the last result.</p> </li> </ul>
 type ListAssetRelationshipsTraversalTypeEnum string
 
@@ -35,16 +30,7 @@ func (e *ListAssetRelationshipsTraversalTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ListAssetRelationshipsQueryParams struct {
-	// The maximum number of results to return for each paginated request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// <p>The type of traversal to use to identify asset relationships. Choose the following option:</p> <ul> <li> <p> <code>PATH_TO_ROOT</code> – Identify the asset's parent assets up to the root asset. The asset that you specify in <code>assetId</code> is the first result in the list of <code>assetRelationshipSummaries</code>, and the root asset is the last result.</p> </li> </ul>
-	TraversalType ListAssetRelationshipsTraversalTypeEnum `queryParam:"style=form,explode=true,name=traversalType"`
-}
-
-type ListAssetRelationshipsHeaders struct {
+type ListAssetRelationshipsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -52,12 +38,14 @@ type ListAssetRelationshipsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssetRelationshipsRequest struct {
-	PathParams  ListAssetRelationshipsPathParams
-	QueryParams ListAssetRelationshipsQueryParams
-	Headers     ListAssetRelationshipsHeaders
+	// The ID of the asset.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
+	// The maximum number of results to return for each paginated request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// <p>The type of traversal to use to identify asset relationships. Choose the following option:</p> <ul> <li> <p> <code>PATH_TO_ROOT</code> – Identify the asset's parent assets up to the root asset. The asset that you specify in <code>assetId</code> is the first result in the list of <code>assetRelationshipSummaries</code>, and the root asset is the last result.</p> </li> </ul>
+	TraversalType ListAssetRelationshipsTraversalTypeEnum `queryParam:"style=form,explode=true,name=traversalType"`
 }
 
 type ListAssetRelationshipsResponse struct {

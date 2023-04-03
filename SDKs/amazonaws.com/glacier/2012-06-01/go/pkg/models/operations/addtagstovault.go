@@ -8,11 +8,9 @@ import (
 	"net/http"
 )
 
-type AddTagsToVaultPathParams struct {
-	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The name of the vault.
-	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
+type AddTagsToVaultRequestBody struct {
+	// The tags to add to the vault. Each tag is composed of a key and a value. The value can be an empty string.
+	Tags map[string]string `json:"Tags,omitempty"`
 }
 
 // AddTagsToVaultOperationEnum
@@ -36,30 +34,20 @@ func (e *AddTagsToVaultOperationEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AddTagsToVaultQueryParams struct {
-	Operation AddTagsToVaultOperationEnum `queryParam:"style=form,explode=true,name=operation"`
-}
-
-type AddTagsToVaultHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AddTagsToVaultRequestBody struct {
-	// The tags to add to the vault. Each tag is composed of a key and a value. The value can be an empty string.
-	Tags map[string]string `json:"Tags,omitempty"`
-}
-
 type AddTagsToVaultRequest struct {
-	PathParams  AddTagsToVaultPathParams
-	QueryParams AddTagsToVaultQueryParams
-	Headers     AddTagsToVaultHeaders
-	Request     AddTagsToVaultRequestBody `request:"mediaType=application/json"`
+	RequestBody       AddTagsToVaultRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+	AccountID string                      `pathParam:"style=simple,explode=false,name=accountId"`
+	Operation AddTagsToVaultOperationEnum `queryParam:"style=form,explode=true,name=operation"`
+	// The name of the vault.
+	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
 }
 
 type AddTagsToVaultResponse struct {

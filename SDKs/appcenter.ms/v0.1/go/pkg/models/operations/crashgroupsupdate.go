@@ -6,21 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CrashGroupsUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CrashGroupsUpdatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// id of a specific group
-	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type CrashGroupsUpdateRequestBodyStatusEnum string
@@ -56,10 +46,14 @@ type CrashGroupsUpdateRequestBody struct {
 }
 
 type CrashGroupsUpdateRequest struct {
-	PathParams CrashGroupsUpdatePathParams
 	// Group change object. All fields are optional and only provided fields will get updated.
-	Request  CrashGroupsUpdateRequestBody `request:"mediaType=application/json"`
-	Security CrashGroupsUpdateSecurity
+	RequestBody CrashGroupsUpdateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// id of a specific group
+	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CrashGroupsUpdateDefaultApplicationJSON - Error

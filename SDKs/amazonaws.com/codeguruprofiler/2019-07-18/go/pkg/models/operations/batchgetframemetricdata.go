@@ -10,9 +10,9 @@ import (
 	"time"
 )
 
-type BatchGetFrameMetricDataPathParams struct {
-	//  The name of the profiling group associated with the the frame metrics used to return the time series values.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
+type BatchGetFrameMetricDataRequestBody struct {
+	//  The details of the metrics that are used to request a time series of values. The metric includes the name of the frame, the aggregation type to calculate the metric value for the frame, and the thread states to use to get the count for the metric value of the frame.
+	FrameMetrics []shared.FrameMetric `json:"frameMetrics,omitempty"`
 }
 
 // BatchGetFrameMetricDataTargetResolutionEnum - <p>The requested resolution of time steps for the returned time series of values. If the requested target resolution is not available due to data not being retained we provide a best effort result by falling back to the most granular available resolution after the target resolution. There are 3 valid values. </p> <ul> <li> <p> <code>P1D</code> — 1 day </p> </li> <li> <p> <code>PT1H</code> — 1 hour </p> </li> <li> <p> <code>PT5M</code> — 5 minutes </p> </li> </ul>
@@ -42,37 +42,25 @@ func (e *BatchGetFrameMetricDataTargetResolutionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type BatchGetFrameMetricDataQueryParams struct {
+type BatchGetFrameMetricDataRequest struct {
+	RequestBody       BatchGetFrameMetricDataRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  The end time of the time period for the returned time series values. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC.
 	EndTime *time.Time `queryParam:"style=form,explode=true,name=endTime"`
 	//  The duration of the frame metrics used to return the time series values. Specify using the ISO 8601 format. The maximum period duration is one day (<code>PT24H</code> or <code>P1D</code>).
 	Period *string `queryParam:"style=form,explode=true,name=period"`
+	//  The name of the profiling group associated with the the frame metrics used to return the time series values.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 	//  The start time of the time period for the frame metrics used to return the time series values. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC.
 	StartTime *time.Time `queryParam:"style=form,explode=true,name=startTime"`
 	// <p>The requested resolution of time steps for the returned time series of values. If the requested target resolution is not available due to data not being retained we provide a best effort result by falling back to the most granular available resolution after the target resolution. There are 3 valid values. </p> <ul> <li> <p> <code>P1D</code> — 1 day </p> </li> <li> <p> <code>PT1H</code> — 1 hour </p> </li> <li> <p> <code>PT5M</code> — 5 minutes </p> </li> </ul>
 	TargetResolution *BatchGetFrameMetricDataTargetResolutionEnum `queryParam:"style=form,explode=true,name=targetResolution"`
-}
-
-type BatchGetFrameMetricDataHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type BatchGetFrameMetricDataRequestBody struct {
-	//  The details of the metrics that are used to request a time series of values. The metric includes the name of the frame, the aggregation type to calculate the metric value for the frame, and the thread states to use to get the count for the metric value of the frame.
-	FrameMetrics []shared.FrameMetric `json:"frameMetrics,omitempty"`
-}
-
-type BatchGetFrameMetricDataRequest struct {
-	PathParams  BatchGetFrameMetricDataPathParams
-	QueryParams BatchGetFrameMetricDataQueryParams
-	Headers     BatchGetFrameMetricDataHeaders
-	Request     BatchGetFrameMetricDataRequestBody `request:"mediaType=application/json"`
 }
 
 type BatchGetFrameMetricDataResponse struct {

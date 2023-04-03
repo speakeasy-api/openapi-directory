@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Drvlc - Driving License
 // API to verify Driving License.
-func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequest) (*operations.DrvlcResponse, error) {
+func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequestBody, security operations.DrvlcSecurity) (*operations.DrvlcResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/drvlc/certificate"
 
@@ -50,7 +50,7 @@ func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *apIs) Drvlc(ctx context.Context, request operations.DrvlcRequest) (*ope
 
 // Rvcer - Registration of Vehicles
 // API to verify Registration of Vehicles.
-func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequest) (*operations.RvcerResponse, error) {
+func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequestBody, security operations.RvcerSecurity) (*operations.RvcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rvcer/certificate"
 
@@ -172,7 +172,7 @@ func (s *apIs) Rvcer(ctx context.Context, request operations.RvcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

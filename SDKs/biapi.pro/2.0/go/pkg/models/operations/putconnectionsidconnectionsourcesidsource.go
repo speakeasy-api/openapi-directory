@@ -7,17 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConnectionsIDConnectionSourcesIDSourcePathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDSource     int64 `pathParam:"style=simple,explode=false,name=id_source"`
-}
-
-type PutConnectionsIDConnectionSourcesIDSourceQueryParams struct {
-	// do the synchronization in background (to use with the synchronize parameter)
-	Background *bool   `queryParam:"style=form,explode=true,name=background"`
-	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 	// to enable or disable connector source
 	Disabled *bool `multipartForm:"name=disabled"`
@@ -28,9 +17,12 @@ type PutConnectionsIDConnectionSourcesIDSourceRequestBody struct {
 }
 
 type PutConnectionsIDConnectionSourcesIDSourceRequest struct {
-	PathParams  PutConnectionsIDConnectionSourcesIDSourcePathParams
-	QueryParams PutConnectionsIDConnectionSourcesIDSourceQueryParams
-	Request     *PutConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutConnectionsIDConnectionSourcesIDSourceRequestBody `request:"mediaType=multipart/form-data"`
+	// do the synchronization in background (to use with the synchronize parameter)
+	Background   *bool   `queryParam:"style=form,explode=true,name=background"`
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDSource     int64   `pathParam:"style=simple,explode=false,name=id_source"`
 }
 
 type PutConnectionsIDConnectionSourcesIDSourceResponse struct {

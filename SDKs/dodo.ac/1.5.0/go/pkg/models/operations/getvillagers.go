@@ -224,7 +224,11 @@ func (e *GetVillagersSpeciesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetVillagersQueryParams struct {
+type GetVillagersRequest struct {
+	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
+	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
 	// Use with `birthmonth` to get villager(s) born on a specific day. Value should be an int, 1 through 31.
 	Birthday *string `queryParam:"style=form,explode=true,name=birthday"`
 	// Retrieve villagers born in a specific month. Value may be the month's name (`jan`, `january`) or the integer representing the month (`01`, `1`).
@@ -243,18 +247,6 @@ type GetVillagersQueryParams struct {
 	Species *GetVillagersSpeciesEnum `queryParam:"style=form,explode=true,name=species"`
 	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL. Note that requesting specific image sizes for long lists may result in a very long response time.
 	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
-}
-
-type GetVillagersHeaders struct {
-	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
-	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
-	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
-	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetVillagersRequest struct {
-	QueryParams GetVillagersQueryParams
-	Headers     GetVillagersHeaders
 }
 
 type GetVillagersResponse struct {

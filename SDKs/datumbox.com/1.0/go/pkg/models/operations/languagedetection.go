@@ -13,10 +13,6 @@ type LanguageDetectionRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type LanguageDetectionRequest struct {
-	Request *LanguageDetectionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type LanguageDetectionResponse struct {
 	ContentType string
 	StatusCode  int

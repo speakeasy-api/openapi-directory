@@ -35,7 +35,7 @@ func newCatalogsImportationProcess(defaultClient, securityClient HTTPClient, ser
 // ImportationCancel - Cancel importation
 func (s *catalogsImportationProcess) ImportationCancel(ctx context.Context, request operations.ImportationCancelRequest) (*operations.ImportationCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *catalogsImportationProcess) ImportationCancel(ctx context.Context, requ
 // ImportationCommit - Commit Importation
 func (s *catalogsImportationProcess) ImportationCommit(ctx context.Context, request operations.ImportationCommitRequest) (*operations.ImportationCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/commit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/commit", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *catalogsImportationProcess) ImportationCommit(ctx context.Context, requ
 // ImportationCommitColumns - Commit columns
 func (s *catalogsImportationProcess) ImportationCommitColumns(ctx context.Context, request operations.ImportationCommitColumnsRequest) (*operations.ImportationCommitColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/commitColumns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/commitColumns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *catalogsImportationProcess) ImportationCommitColumns(ctx context.Contex
 // This operation should be used after you have mapped the required BeezUP Columns
 func (s *catalogsImportationProcess) ImportationConfigureRemainingCatalogColumns(ctx context.Context, request operations.ImportationConfigureRemainingCatalogColumnsRequest) (*operations.ImportationConfigureRemainingCatalogColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/configureRemainingCatalogColumns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/configureRemainingCatalogColumns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *catalogsImportationProcess) ImportationConfigureRemainingCatalogColumns
 // ImportationGetImportationMonitoring - Get the importation status
 func (s *catalogsImportationProcess) ImportationGetImportationMonitoring(ctx context.Context, request operations.ImportationGetImportationMonitoringRequest) (*operations.ImportationGetImportationMonitoringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -292,9 +292,9 @@ func (s *catalogsImportationProcess) ImportationGetImportationMonitoring(ctx con
 // ImportationGetProductsReport - Importation Get Products Report
 func (s *catalogsImportationProcess) ImportationGetProductsReport(ctx context.Context, request operations.ImportationGetProductsReportRequest) (*operations.ImportationGetProductsReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/products/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/products/list", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetImportationProductsReportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -349,7 +349,7 @@ func (s *catalogsImportationProcess) ImportationGetProductsReport(ctx context.Co
 // ImportationGetReport - Importation Get Report
 func (s *catalogsImportationProcess) ImportationGetReport(ctx context.Context, request operations.ImportationGetReportRequest) (*operations.ImportationGetReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/report", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -396,7 +396,7 @@ func (s *catalogsImportationProcess) ImportationGetReport(ctx context.Context, r
 // ImportationGetReportings - Get the latest catalog importation reporting
 func (s *catalogsImportationProcess) ImportationGetReportings(ctx context.Context, request operations.ImportationGetReportingsRequest) (*operations.ImportationGetReportingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -508,9 +508,9 @@ func (s *catalogsImportationProcess) ImportationGetReportingsAllStores(ctx conte
 // ImportationStartManualUpdate - Start Manual Import
 func (s *catalogsImportationProcess) ImportationStartManualUpdate(ctx context.Context, request operations.ImportationStartManualUpdateRequest) (*operations.ImportationStartManualUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartManualImportRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -556,6 +556,16 @@ func (s *catalogsImportationProcess) ImportationStartManualUpdate(ctx context.Co
 
 			res.LinksImportationGetImportationMonitoringLink = out
 		}
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ImportAlreadyInProgressResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ImportAlreadyInProgressResponse = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -570,16 +580,6 @@ func (s *catalogsImportationProcess) ImportationStartManualUpdate(ctx context.Co
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ImportAlreadyInProgressResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ImportAlreadyInProgressResponse = out
-		}
 	}
 
 	return res, nil
@@ -588,7 +588,7 @@ func (s *catalogsImportationProcess) ImportationStartManualUpdate(ctx context.Co
 // ImportationTechnicalProgression - Get technical progression
 func (s *catalogsImportationProcess) ImportationTechnicalProgression(ctx context.Context, request operations.ImportationTechnicalProgressionRequest) (*operations.ImportationTechnicalProgressionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/technicalProgression", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/technicalProgression", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -8,19 +8,14 @@ import (
 )
 
 type GroupV2GetRecommendedGroupsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2GetRecommendedGroupsPathParams struct {
+type GroupV2GetRecommendedGroupsRequest struct {
 	// Requested range in which to pull recommended groups
 	CreateDateRange int `pathParam:"style=simple,explode=false,name=createDateRange"`
 	// Type of groups requested
 	GroupType int `pathParam:"style=simple,explode=false,name=groupType"`
-}
-
-type GroupV2GetRecommendedGroupsRequest struct {
-	PathParams GroupV2GetRecommendedGroupsPathParams
-	Security   GroupV2GetRecommendedGroupsSecurity
 }
 
 // GroupV2GetRecommendedGroups200Wildcard - Look at the Response property for more information about the nature of this response

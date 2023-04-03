@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchCarFsboActiveQueryParams struct {
+type GetSearchCarFsboActiveRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Flag on whether to include api_key in response API urls (if any)
@@ -206,10 +206,6 @@ type GetSearchCarFsboActiveQueryParams struct {
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchCarFsboActiveRequest struct {
-	QueryParams GetSearchCarFsboActiveQueryParams
 }
 
 type GetSearchCarFsboActiveResponse struct {

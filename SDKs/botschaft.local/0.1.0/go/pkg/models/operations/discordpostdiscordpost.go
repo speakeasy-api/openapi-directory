@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiscordPostDiscordPostHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
 type DiscordPostDiscordPostRequest struct {
-	Headers DiscordPostDiscordPostHeaders
-	Request shared.DiscordMessageRequest `request:"mediaType=application/json"`
+	DiscordMessageRequest shared.DiscordMessageRequest `request:"mediaType=application/json"`
+	Authorization         *string                      `header:"style=simple,explode=false,name=authorization"`
 }
 
 type DiscordPostDiscordPostResponse struct {

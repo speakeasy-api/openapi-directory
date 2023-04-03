@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SyncConnectionRequest struct {
-	Request shared.ConnectionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type SyncConnectionResponse struct {
 	ContentType string
 	// Input failed validation

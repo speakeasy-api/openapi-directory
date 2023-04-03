@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCandidatesForAutoMLJobQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListCandidatesForAutoMLJobXAmzTargetEnum
 type ListCandidatesForAutoMLJobXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListCandidatesForAutoMLJobXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListCandidatesForAutoMLJobHeaders struct {
+type ListCandidatesForAutoMLJobRequest struct {
+	ListCandidatesForAutoMLJobRequest shared.ListCandidatesForAutoMLJobRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListCandidatesForAutoMLJobHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListCandidatesForAutoMLJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListCandidatesForAutoMLJobRequest struct {
-	QueryParams ListCandidatesForAutoMLJobQueryParams
-	Headers     ListCandidatesForAutoMLJobHeaders
-	Request     shared.ListCandidatesForAutoMLJobRequest `request:"mediaType=application/json"`
 }
 
 type ListCandidatesForAutoMLJobResponse struct {

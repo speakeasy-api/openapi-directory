@@ -25,11 +25,6 @@ type RequestAPIKeyRequestBody struct {
 	UserLastName string `form:"name=userLastName"`
 }
 
-type RequestAPIKeyRequest struct {
-	Request   *RequestAPIKeyRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type RequestAPIKeyResponse struct {
 	ContentType string
 	StatusCode  int

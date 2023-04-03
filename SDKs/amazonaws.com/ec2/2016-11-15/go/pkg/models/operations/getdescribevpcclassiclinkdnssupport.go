@@ -50,7 +50,7 @@ func (e *GETDescribeVpcClassicLinkDNSSupportVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GETDescribeVpcClassicLinkDNSSupportQueryParams struct {
+type GETDescribeVpcClassicLinkDNSSupportRequest struct {
 	Action GETDescribeVpcClassicLinkDNSSupportActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The maximum number of items to return for this request. To get the next page of items, make another request with the token returned in the output. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
@@ -58,22 +58,14 @@ type GETDescribeVpcClassicLinkDNSSupportQueryParams struct {
 	NextToken *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	Version   GETDescribeVpcClassicLinkDNSSupportVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// One or more VPC IDs.
-	VpcIds []string `queryParam:"style=form,explode=true,name=VpcIds"`
-}
-
-type GETDescribeVpcClassicLinkDNSSupportHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeVpcClassicLinkDNSSupportRequest struct {
-	QueryParams GETDescribeVpcClassicLinkDNSSupportQueryParams
-	Headers     GETDescribeVpcClassicLinkDNSSupportHeaders
+	VpcIds            []string `queryParam:"style=form,explode=true,name=VpcIds"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeVpcClassicLinkDNSSupportResponse struct {

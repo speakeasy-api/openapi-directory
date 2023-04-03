@@ -16,6 +16,5 @@ pkg/models/operations/getfoodbrandednamephp.go
 pkg/models/operations/getfoodbrandedsearchphp.go
 pkg/models/operations/getfoodingredientsearchphp.go
 pkg/models/shared/brandedfoodobject.go
-pkg/models/shared/security.go
 pkg/models/shared/ingredientobject.go
 USAGE.md

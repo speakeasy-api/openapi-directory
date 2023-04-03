@@ -13,10 +13,6 @@ type TwitterSentimentAnalysisRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type TwitterSentimentAnalysisRequest struct {
-	Request *TwitterSentimentAnalysisRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type TwitterSentimentAnalysisResponse struct {
 	ContentType string
 	StatusCode  int

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPostPathParams struct {
+type GroupsPostRequest struct {
+	// The body of the group
+	APICoreDtoGroupsGroup shared.APICoreDtoGroupsGroup `request:"mediaType=application/json"`
 	// The id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsPostRequest struct {
-	PathParams GroupsPostPathParams
-	// The body of the group
-	Request shared.APICoreDtoGroupsGroup `request:"mediaType=application/json"`
 }
 
 type GroupsPostResponse struct {

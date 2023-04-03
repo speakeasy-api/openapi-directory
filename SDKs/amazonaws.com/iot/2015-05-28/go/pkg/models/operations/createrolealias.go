@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRoleAliasPathParams struct {
-	// The role alias that points to a role ARN. This allows you to change the role without having to update the device.
-	RoleAlias string `pathParam:"style=simple,explode=false,name=roleAlias"`
-}
-
-type CreateRoleAliasHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateRoleAliasRequestBody struct {
 	// <p>How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.</p> <p>This value must be less than or equal to the maximum session duration of the IAM role that the role alias references.</p>
 	CredentialDurationSeconds *int64 `json:"credentialDurationSeconds,omitempty"`
@@ -32,9 +17,16 @@ type CreateRoleAliasRequestBody struct {
 }
 
 type CreateRoleAliasRequest struct {
-	PathParams CreateRoleAliasPathParams
-	Headers    CreateRoleAliasHeaders
-	Request    CreateRoleAliasRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateRoleAliasRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The role alias that points to a role ARN. This allows you to change the role without having to update the device.
+	RoleAlias string `pathParam:"style=simple,explode=false,name=roleAlias"`
 }
 
 type CreateRoleAliasResponse struct {

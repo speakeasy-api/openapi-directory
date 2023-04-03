@@ -13,53 +13,45 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateEnvironmentEc2Request{
-        Headers: operations.CreateEnvironmentEc2Headers{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
-        },
-        Request: shared.CreateEnvironmentEc2Request{
-            AutomaticStopTimeMinutes: 847252,
-            ClientRequestToken: "vel",
+        CreateEnvironmentEc2Request: shared.CreateEnvironmentEc2Request{
+            AutomaticStopTimeMinutes: 548814,
+            ClientRequestToken: "provident",
             ConnectionType: "CONNECT_SSM",
-            Description: "deserunt",
+            Description: "quibusdam",
             DryRun: false,
-            ImageID: "suscipit",
-            InstanceType: "iure",
-            Name: "magnam",
-            OwnerArn: "debitis",
-            SubnetID: "ipsa",
+            ImageID: "unde",
+            InstanceType: "nulla",
+            Name: "corrupti",
+            OwnerArn: "illum",
+            SubnetID: "vel",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "tempora",
+                    Key: "deserunt",
                     Value: "suscipit",
                 },
                 shared.Tag{
-                    Key: "molestiae",
-                    Value: "minus",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "placeat",
-                    Value: "voluptatum",
-                },
-                shared.Tag{
-                    Key: "iusto",
-                    Value: "excepturi",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },
+        XAmzAlgorithm: "delectus",
+        XAmzContentSha256: "tempora",
+        XAmzCredential: "suscipit",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "minus",
+        XAmzSignature: "placeat",
+        XAmzSignedHeaders: "voluptatum",
+        XAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
     }
 
     ctx := context.Background()

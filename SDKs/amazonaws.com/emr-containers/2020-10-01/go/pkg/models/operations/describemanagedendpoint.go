@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeManagedEndpointPathParams struct {
-	// This output displays ID of the managed endpoint.
-	EndpointID string `pathParam:"style=simple,explode=false,name=endpointId"`
-	// The ID of the endpoint's virtual cluster.
-	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
-}
-
-type DescribeManagedEndpointHeaders struct {
+type DescribeManagedEndpointRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeManagedEndpointHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeManagedEndpointRequest struct {
-	PathParams DescribeManagedEndpointPathParams
-	Headers    DescribeManagedEndpointHeaders
+	// This output displays ID of the managed endpoint.
+	EndpointID string `pathParam:"style=simple,explode=false,name=endpointId"`
+	// The ID of the endpoint's virtual cluster.
+	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
 }
 
 type DescribeManagedEndpointResponse struct {

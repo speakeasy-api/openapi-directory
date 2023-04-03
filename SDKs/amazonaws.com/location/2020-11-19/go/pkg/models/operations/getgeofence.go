@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGeofencePathParams struct {
+type GetGeofenceRequest struct {
 	// The geofence collection storing the target geofence.
 	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
 	// The geofence you're retrieving details for.
-	GeofenceID string `pathParam:"style=simple,explode=false,name=GeofenceId"`
-}
-
-type GetGeofenceHeaders struct {
+	GeofenceID        string  `pathParam:"style=simple,explode=false,name=GeofenceId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetGeofenceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGeofenceRequest struct {
-	PathParams GetGeofencePathParams
-	Headers    GetGeofenceHeaders
 }
 
 type GetGeofenceResponse struct {

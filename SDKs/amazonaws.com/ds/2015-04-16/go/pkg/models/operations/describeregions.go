@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeRegionsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeRegionsXAmzTargetEnum
 type DescribeRegionsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *DescribeRegionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DescribeRegionsHeaders struct {
+type DescribeRegionsRequest struct {
+	DescribeRegionsRequest shared.DescribeRegionsRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type DescribeRegionsHeaders struct {
 	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeRegionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeRegionsRequest struct {
-	QueryParams DescribeRegionsQueryParams
-	Headers     DescribeRegionsHeaders
-	Request     shared.DescribeRegionsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeRegionsResponse struct {

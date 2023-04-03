@@ -53,13 +53,9 @@ func (e *GetContentAspectIDAspectIDEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetContentAspectIDPathParams struct {
+type GetContentAspectIDRequest struct {
 	// The identifier of the 'aspect' (content group) to search
 	AspectID GetContentAspectIDAspectIDEnum `pathParam:"style=simple,explode=false,name=aspectId"`
-}
-
-type GetContentAspectIDRequest struct {
-	PathParams GetContentAspectIDPathParams
 }
 
 type GetContentAspectIDResponse struct {

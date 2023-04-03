@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchDeleteDelegationByAssessmentPathParams struct {
-	//  The identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-}
-
-type BatchDeleteDelegationByAssessmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchDeleteDelegationByAssessmentRequestBody struct {
 	//  The identifiers for the delegations.
 	DelegationIds []string `json:"delegationIds"`
 }
 
 type BatchDeleteDelegationByAssessmentRequest struct {
-	PathParams BatchDeleteDelegationByAssessmentPathParams
-	Headers    BatchDeleteDelegationByAssessmentHeaders
-	Request    BatchDeleteDelegationByAssessmentRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchDeleteDelegationByAssessmentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
 }
 
 type BatchDeleteDelegationByAssessmentResponse struct {

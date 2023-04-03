@@ -8,20 +8,15 @@ import (
 )
 
 type PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeySecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeyPathParams struct {
+type PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeyRequest struct {
 	// Unique identifier of the API credential.
 	APICredentialID string `pathParam:"style=simple,explode=false,name=apiCredentialId"`
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeyRequest struct {
-	PathParams PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeyPathParams
-	Security   PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeySecurity
 }
 
 type PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateAPIKeyResponse struct {

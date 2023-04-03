@@ -30,20 +30,16 @@ func (e *StartTargetedSentimentDetectionJobXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type StartTargetedSentimentDetectionJobHeaders struct {
-	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartTargetedSentimentDetectionJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartTargetedSentimentDetectionJobRequest struct {
-	Headers StartTargetedSentimentDetectionJobHeaders
-	Request shared.StartTargetedSentimentDetectionJobRequest `request:"mediaType=application/json"`
+	StartTargetedSentimentDetectionJobRequest shared.StartTargetedSentimentDetectionJobRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                             *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                         *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                            *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                  *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                         *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                             *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                         *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                                StartTargetedSentimentDetectionJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartTargetedSentimentDetectionJobResponse struct {

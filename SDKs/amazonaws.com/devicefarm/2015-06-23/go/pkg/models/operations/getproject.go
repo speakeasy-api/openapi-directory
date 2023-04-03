@@ -30,7 +30,8 @@ func (e *GetProjectXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetProjectHeaders struct {
+type GetProjectRequest struct {
+	GetProjectRequest shared.GetProjectRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetProjectHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetProjectXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetProjectRequest struct {
-	Headers GetProjectHeaders
-	Request shared.GetProjectRequest `request:"mediaType=application/json"`
 }
 
 type GetProjectResponse struct {

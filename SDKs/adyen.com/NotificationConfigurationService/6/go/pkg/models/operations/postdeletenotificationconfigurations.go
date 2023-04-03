@@ -8,13 +8,8 @@ import (
 )
 
 type PostDeleteNotificationConfigurationsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostDeleteNotificationConfigurationsRequest struct {
-	Request  *shared.DeleteNotificationConfigurationRequest `request:"mediaType=application/json"`
-	Security PostDeleteNotificationConfigurationsSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostDeleteNotificationConfigurationsResponse struct {

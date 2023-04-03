@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteConnectionsIDConnectionSourcesIDSourcePathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDSource     int64 `pathParam:"style=simple,explode=false,name=id_source"`
-}
-
-type DeleteConnectionsIDConnectionSourcesIDSourceQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type DeleteConnectionsIDConnectionSourcesIDSourceRequest struct {
-	PathParams  DeleteConnectionsIDConnectionSourcesIDSourcePathParams
-	QueryParams DeleteConnectionsIDConnectionSourcesIDSourceQueryParams
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDSource     int64   `pathParam:"style=simple,explode=false,name=id_source"`
 }
 
 type DeleteConnectionsIDConnectionSourcesIDSourceResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetPipelineContainerLogPathParams struct {
+type GetPipelineContainerLogRequest struct {
 	// For the main build container specify the step UUID; for a service container specify the service container UUID
 	LogUUID string `pathParam:"style=simple,explode=false,name=log_uuid"`
 	// The UUID of the pipeline.
@@ -17,10 +17,6 @@ type GetPipelineContainerLogPathParams struct {
 	StepUUID string `pathParam:"style=simple,explode=false,name=step_uuid"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetPipelineContainerLogRequest struct {
-	PathParams GetPipelineContainerLogPathParams
 }
 
 type GetPipelineContainerLogResponse struct {

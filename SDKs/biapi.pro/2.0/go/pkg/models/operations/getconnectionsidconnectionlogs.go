@@ -8,18 +8,15 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetConnectionsIDConnectionLogsPathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-}
-
-type GetConnectionsIDConnectionLogsQueryParams struct {
+type GetConnectionsIDConnectionLogsRequest struct {
 	// UUID of a connector
 	ConnectorUUID *string `queryParam:"style=form,explode=true,name=connector_uuid"`
 	// connections log error filter
-	Error  *string `queryParam:"style=form,explode=true,name=error"`
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+	Error                     *string `queryParam:"style=form,explode=true,name=error"`
+	Expand                    *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnectionPathParameter int64   `pathParam:"style=simple,explode=false,name=id_connection"`
 	// ID of a connection
-	IDConnection *int64 `queryParam:"style=form,explode=true,name=id_connection"`
+	IDConnectionQueryParameter *int64 `queryParam:"style=form,explode=true,name=id_connection"`
 	// ID of a connector
 	IDConnector *int64 `queryParam:"style=form,explode=true,name=id_connector"`
 	// filter "id" of logs, maximum id to return
@@ -38,11 +35,6 @@ type GetConnectionsIDConnectionLogsQueryParams struct {
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// period to group logs
 	Period *string `queryParam:"style=form,explode=true,name=period"`
-}
-
-type GetConnectionsIDConnectionLogsRequest struct {
-	PathParams  GetConnectionsIDConnectionLogsPathParams
-	QueryParams GetConnectionsIDConnectionLogsQueryParams
 }
 
 // GetConnectionsIDConnectionLogs200ApplicationJSON - connectionlogs

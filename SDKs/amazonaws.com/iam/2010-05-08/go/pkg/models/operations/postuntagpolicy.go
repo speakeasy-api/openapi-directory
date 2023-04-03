@@ -50,25 +50,17 @@ func (e *POSTUntagPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTUntagPolicyQueryParams struct {
-	Action  POSTUntagPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUntagPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUntagPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUntagPolicyRequest struct {
-	QueryParams POSTUntagPolicyQueryParams
-	Headers     POSTUntagPolicyHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUntagPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                     `request:"mediaType=text/xml"`
+	Version           POSTUntagPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUntagPolicyResponse struct {

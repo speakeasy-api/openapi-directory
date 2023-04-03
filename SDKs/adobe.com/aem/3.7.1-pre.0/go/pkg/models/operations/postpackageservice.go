@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PostPackageServiceQueryParams struct {
-	Cmd string `queryParam:"style=form,explode=true,name=cmd"`
-}
-
 type PostPackageServiceRequest struct {
-	QueryParams PostPackageServiceQueryParams
+	Cmd string `queryParam:"style=form,explode=true,name=cmd"`
 }
 
 type PostPackageServiceResponse struct {

@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteProvisioningTemplateVersionPathParams struct {
-	// The name of the provisioning template version to delete.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-	// The provisioning template version ID to delete.
-	VersionID int64 `pathParam:"style=simple,explode=false,name=versionId"`
-}
-
-type DeleteProvisioningTemplateVersionHeaders struct {
+type DeleteProvisioningTemplateVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteProvisioningTemplateVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteProvisioningTemplateVersionRequest struct {
-	PathParams DeleteProvisioningTemplateVersionPathParams
-	Headers    DeleteProvisioningTemplateVersionHeaders
+	// The name of the provisioning template version to delete.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
+	// The provisioning template version ID to delete.
+	VersionID int64 `pathParam:"style=simple,explode=false,name=versionId"`
 }
 
 type DeleteProvisioningTemplateVersionResponse struct {

@@ -30,20 +30,16 @@ func (e *UpdateAccessControlConfigurationXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type UpdateAccessControlConfigurationHeaders struct {
-	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateAccessControlConfigurationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateAccessControlConfigurationRequest struct {
-	Headers UpdateAccessControlConfigurationHeaders
-	Request shared.UpdateAccessControlConfigurationRequest `request:"mediaType=application/json"`
+	UpdateAccessControlConfigurationRequest shared.UpdateAccessControlConfigurationRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                          *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                       *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                           *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                       *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                              UpdateAccessControlConfigurationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateAccessControlConfigurationResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSigninSigninIDPathParams struct {
+type GetSigninSigninIDRequest struct {
 	// The ID of the signin record to be retrieved.
 	SigninID int64 `pathParam:"style=simple,explode=false,name=signinId"`
-}
-
-type GetSigninSigninIDRequest struct {
-	PathParams GetSigninSigninIDPathParams
 }
 
 type GetSigninSigninIDResponse struct {

@@ -8,12 +8,16 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams struct {
+type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest struct {
+	// Branch restrictions of this type
+	Kind *string `queryParam:"style=form,explode=true,name=kind"`
+	// Branch restrictions applied to branches of this pattern
+	Pattern *string `queryParam:"style=form,explode=true,name=pattern"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
@@ -22,19 +26,6 @@ type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsQueryParams struct {
-	// Branch restrictions of this type
-	Kind *string `queryParam:"style=form,explode=true,name=kind"`
-	// Branch restrictions applied to branches of this pattern
-	Pattern *string `queryParam:"style=form,explode=true,name=pattern"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugBranchRestrictionsQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity
 }
 
 type GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse struct {

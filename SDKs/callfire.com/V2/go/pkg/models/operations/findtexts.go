@@ -8,10 +8,11 @@ import (
 )
 
 type FindTextsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindTextsQueryParams struct {
+type FindTextsRequest struct {
 	// An Id of a contact batch, queries for texts which are used in the particular contact batch
 	BatchID *int64 `queryParam:"style=form,explode=true,name=batchId"`
 	// An id of a campaign, queries for texts inside a particular campaign. Specify null to list texts of all campaigns or 0 for a default campaign
@@ -40,11 +41,6 @@ type FindTextsQueryParams struct {
 	States *string `queryParam:"style=form,explode=true,name=states"`
 	// A phone number in E.164 format (11-digit). Example: 12132000384, 67076
 	ToNumber *string `queryParam:"style=form,explode=true,name=toNumber"`
-}
-
-type FindTextsRequest struct {
-	QueryParams FindTextsQueryParams
-	Security    FindTextsSecurity
 }
 
 type FindTextsResponse struct {

@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsGetForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type DistributionGroupsGetForOrgPathParams struct {
+type DistributionGroupsGetForOrgRequest struct {
 	// The name of the distribution group
 	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
 	// The organization's name
 	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-}
-
-type DistributionGroupsGetForOrgRequest struct {
-	PathParams DistributionGroupsGetForOrgPathParams
-	Security   DistributionGroupsGetForOrgSecurity
 }
 
 type DistributionGroupsGetForOrgDefaultApplicationJSONErrorCodeEnum string

@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type PostContainersNameOrIDFloatingIpsIPUnbindPathParams struct {
+type PostContainersNameOrIDFloatingIpsIPUnbindRequest struct {
+	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
+	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
+	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
 	// The public IP address that you want to unbind from your container.
 	//
 	//  Note: After unbinding a public IP address, this IP address will still be allocated to the space and can be used to be bound to other containers.
 	IP string `pathParam:"style=simple,explode=false,name=ip"`
 	// The name or ID of the container that you want to bind to the public IP address. Run the `cf ic ps` command or call the `GET /containers/json` endpoint to retrieve a list of containers in your space.
 	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PostContainersNameOrIDFloatingIpsIPUnbindHeaders struct {
-	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
-	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
-	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
-	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersNameOrIDFloatingIpsIPUnbindRequest struct {
-	PathParams PostContainersNameOrIDFloatingIpsIPUnbindPathParams
-	Headers    PostContainersNameOrIDFloatingIpsIPUnbindHeaders
 }
 
 type PostContainersNameOrIDFloatingIpsIPUnbindResponse struct {

@@ -8,15 +8,12 @@ import (
 )
 
 type GetCardDetailsSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetCardDetailsPathParams struct {
-	// The identifier of the payment platform (stripe/itunes).
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type GetCardDetailsQueryParams struct {
+type GetCardDetailsRequest struct {
+	// ITV profile token in body.
+	ItvGetCardDetailsRequest shared.ItvGetCardDetailsRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -29,14 +26,8 @@ type GetCardDetailsQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetCardDetailsRequest struct {
-	PathParams  GetCardDetailsPathParams
-	QueryParams GetCardDetailsQueryParams
-	// ITV profile token in body.
-	Request  shared.ItvGetCardDetailsRequest `request:"mediaType=application/json"`
-	Security GetCardDetailsSecurity
+	// The identifier of the payment platform (stripe/itunes).
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type GetCardDetailsResponse struct {

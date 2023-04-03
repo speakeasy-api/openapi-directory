@@ -33,14 +33,14 @@ func newDeliveryNote(defaultClient, securityClient HTTPClient, serverURL, langua
 // OrderAPICreateDeliveryNote - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
 func (s *deliveryNote) OrderAPICreateDeliveryNote(ctx context.Context, request operations.OrderAPICreateDeliveryNoteRequest) (*operations.OrderAPICreateDeliveryNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateDeliveryNote/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateDeliveryNote/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

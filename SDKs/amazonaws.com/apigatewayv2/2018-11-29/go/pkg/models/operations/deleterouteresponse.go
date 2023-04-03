@@ -6,16 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteRouteResponsePathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The route ID.
-	RouteID string `pathParam:"style=simple,explode=false,name=routeId"`
-	// The route response ID.
-	RouteResponseID string `pathParam:"style=simple,explode=false,name=routeResponseId"`
-}
-
-type DeleteRouteResponseHeaders struct {
+type DeleteRouteResponseRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -23,11 +14,12 @@ type DeleteRouteResponseHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRouteResponseRequest struct {
-	PathParams DeleteRouteResponsePathParams
-	Headers    DeleteRouteResponseHeaders
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The route ID.
+	RouteID string `pathParam:"style=simple,explode=false,name=routeId"`
+	// The route response ID.
+	RouteResponseID string `pathParam:"style=simple,explode=false,name=routeResponseId"`
 }
 
 type DeleteRouteResponseResponse struct {

@@ -4,17 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UsersUpdatePrefsSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersUpdatePrefsPathParams struct {
-	// User unique ID.
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type UsersUpdatePrefsRequestBody struct {
@@ -23,9 +17,9 @@ type UsersUpdatePrefsRequestBody struct {
 }
 
 type UsersUpdatePrefsRequest struct {
-	PathParams UsersUpdatePrefsPathParams
-	Request    *UsersUpdatePrefsRequestBody `request:"mediaType=application/json"`
-	Security   UsersUpdatePrefsSecurity
+	RequestBody *UsersUpdatePrefsRequestBody `request:"mediaType=application/json"`
+	// User unique ID.
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type UsersUpdatePrefsResponse struct {

@@ -35,14 +35,14 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ProductsDelete - Removes an existing Product.
 func (s *products) ProductsDelete(ctx context.Context, request operations.ProductsDeleteRequest) (*operations.ProductsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *products) ProductsGet(ctx context.Context) (*operations.ProductsGetResp
 }
 
 // ProductsPost - Creates a new Product.
-func (s *products) ProductsPost(ctx context.Context, request operations.ProductsPostRequest) (*operations.ProductsPostResponse, error) {
+func (s *products) ProductsPost(ctx context.Context, request shared.ProductDto) (*operations.ProductsPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/products"
 
@@ -181,7 +181,7 @@ func (s *products) ProductsPost(ctx context.Context, request operations.Products
 }
 
 // ProductsProcessBatch - Processes a batch of Products.
-func (s *products) ProductsProcessBatch(ctx context.Context, request operations.ProductsProcessBatchRequest) (*operations.ProductsProcessBatchResponse, error) {
+func (s *products) ProductsProcessBatch(ctx context.Context, request []shared.BatchItemProductDto) (*operations.ProductsProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/products/batch"
 
@@ -237,9 +237,9 @@ func (s *products) ProductsProcessBatch(ctx context.Context, request operations.
 // ProductsPut - Updates an existing Product.
 func (s *products) ProductsPut(ctx context.Context, request operations.ProductsPutRequest) (*operations.ProductsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *products) ProductsPut(ctx context.Context, request operations.ProductsP
 // GetV1ProductsID - Returns information about a single Product.
 func (s *products) GetV1ProductsID(ctx context.Context, request operations.GetV1ProductsIDRequest) (*operations.GetV1ProductsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

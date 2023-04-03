@@ -8,17 +8,12 @@ import (
 )
 
 type GetNetworksIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetNetworksIDPathParams struct {
-	// The ID of the network resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetNetworksIDRequest struct {
-	PathParams GetNetworksIDPathParams
-	Security   GetNetworksIDSecurity
+	// The ID of the network resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetNetworksID200ApplicationVndAPIPlusJSON - Success

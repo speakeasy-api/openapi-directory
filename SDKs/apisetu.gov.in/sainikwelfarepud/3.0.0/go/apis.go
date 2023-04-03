@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Dpcer - Dependency Certificate
 // API to verify Dependency Certificate.
-func (s *apIs) Dpcer(ctx context.Context, request operations.DpcerRequest) (*operations.DpcerResponse, error) {
+func (s *apIs) Dpcer(ctx context.Context, request operations.DpcerRequestBody, security operations.DpcerSecurity) (*operations.DpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dpcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Dpcer(ctx context.Context, request operations.DpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsPathParams struct {
-	IDAccount     int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection  int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDTransaction int64 `pathParam:"style=simple,explode=false,name=id_transaction"`
+type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest struct {
+	Expand        *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount     int64   `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection  int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDTransaction int64   `pathParam:"style=simple,explode=false,name=id_transaction"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest struct {
-	PathParams  PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsPathParams
-	QueryParams PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsQueryParams
 }
 
 type PutUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsResponse struct {

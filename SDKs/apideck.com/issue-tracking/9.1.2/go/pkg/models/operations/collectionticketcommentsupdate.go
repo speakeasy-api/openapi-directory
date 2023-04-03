@@ -8,38 +8,25 @@ import (
 )
 
 type CollectionTicketCommentsUpdateSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type CollectionTicketCommentsUpdatePathParams struct {
+type CollectionTicketCommentsUpdateRequest struct {
+	CollectionTicketCommentInput shared.CollectionTicketCommentInput `request:"mediaType=application/json"`
 	// The collection ID
 	CollectionID string `pathParam:"style=simple,explode=false,name=collection_id"`
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// ID of the ticket you are acting upon.
-	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
-}
-
-type CollectionTicketCommentsUpdateQueryParams struct {
 	// Include raw response. Mostly used for debugging purposes
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
-}
-
-type CollectionTicketCommentsUpdateHeaders struct {
+	// ID of the ticket you are acting upon.
+	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type CollectionTicketCommentsUpdateRequest struct {
-	PathParams  CollectionTicketCommentsUpdatePathParams
-	QueryParams CollectionTicketCommentsUpdateQueryParams
-	Headers     CollectionTicketCommentsUpdateHeaders
-	Request     shared.CollectionTicketCommentInput `request:"mediaType=application/json"`
-	Security    CollectionTicketCommentsUpdateSecurity
 }
 
 type CollectionTicketCommentsUpdateResponse struct {

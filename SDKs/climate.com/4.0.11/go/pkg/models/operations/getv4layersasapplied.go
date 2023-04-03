@@ -9,11 +9,17 @@ import (
 )
 
 type GetV4LayersAsAppliedSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV4LayersAsAppliedQueryParams struct {
+type GetV4LayersAsAppliedRequest struct {
+	// Must be either \*/* or application/octet-stream,application/json
+	Accept string `header:"style=simple,explode=false,name=Accept"`
+	// Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+	XLimit *int `header:"style=simple,explode=false,name=X-Limit"`
+	// Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+	XNextToken *string `header:"style=simple,explode=false,name=X-Next-Token"`
 	// Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
 	OccurredAfter *time.Time `queryParam:"style=form,explode=true,name=occurredAfter"`
 	// Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be <= occurredBefore.
@@ -22,21 +28,6 @@ type GetV4LayersAsAppliedQueryParams struct {
 	ResourceOwnerID *string `queryParam:"style=form,explode=true,name=resourceOwnerId"`
 	// Optional updated time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a modification time at or after (inclusive) the specified time.
 	UpdatedAfter *time.Time `queryParam:"style=form,explode=true,name=updatedAfter"`
-}
-
-type GetV4LayersAsAppliedHeaders struct {
-	// Must be either \*/* or application/octet-stream,application/json
-	Accept string `header:"style=simple,explode=false,name=Accept"`
-	// Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
-	XLimit *int `header:"style=simple,explode=false,name=X-Limit"`
-	// Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
-	XNextToken *string `header:"style=simple,explode=false,name=X-Next-Token"`
-}
-
-type GetV4LayersAsAppliedRequest struct {
-	QueryParams GetV4LayersAsAppliedQueryParams
-	Headers     GetV4LayersAsAppliedHeaders
-	Security    GetV4LayersAsAppliedSecurity
 }
 
 type GetV4LayersAsAppliedResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGameWeatherQueryParams struct {
+type GetGameWeatherRequest struct {
 	// Division classification filter (fbs/fcs/ii/iii)
 	Classification *string `queryParam:"style=form,explode=true,name=classification"`
 	// Conference filter
@@ -22,10 +22,6 @@ type GetGameWeatherQueryParams struct {
 	Week *int64 `queryParam:"style=form,explode=true,name=week"`
 	// Year filter (required if no game id)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetGameWeatherRequest struct {
-	QueryParams GetGameWeatherQueryParams
 }
 
 type GetGameWeatherResponse struct {

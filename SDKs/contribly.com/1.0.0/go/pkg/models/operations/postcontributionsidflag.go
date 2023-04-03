@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContributionsIDFlagPathParams struct {
+type PostContributionsIDFlagRequest struct {
+	// Flag to be created
+	Flag shared.Flag `request:"mediaType=application/json"`
 	// Id of the contribution to flag
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PostContributionsIDFlagRequest struct {
-	PathParams PostContributionsIDFlagPathParams
-	// Flag to be created
-	Request shared.Flag `request:"mediaType=application/json"`
 }
 
 type PostContributionsIDFlagResponse struct {

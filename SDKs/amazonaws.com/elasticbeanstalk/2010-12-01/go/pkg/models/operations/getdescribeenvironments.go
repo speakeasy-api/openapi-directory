@@ -51,7 +51,7 @@ func (e *GETDescribeEnvironmentsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeEnvironmentsQueryParams struct {
+type GETDescribeEnvironmentsRequest struct {
 	Action GETDescribeEnvironmentsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that are associated with this application.
 	ApplicationName *string `queryParam:"style=form,explode=true,name=ApplicationName"`
@@ -69,10 +69,7 @@ type GETDescribeEnvironmentsQueryParams struct {
 	NextToken *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	Version   GETDescribeEnvironmentsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that are associated with this application version.
-	VersionLabel *string `queryParam:"style=form,explode=true,name=VersionLabel"`
-}
-
-type GETDescribeEnvironmentsHeaders struct {
+	VersionLabel      *string `queryParam:"style=form,explode=true,name=VersionLabel"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -80,11 +77,6 @@ type GETDescribeEnvironmentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEnvironmentsRequest struct {
-	QueryParams GETDescribeEnvironmentsQueryParams
-	Headers     GETDescribeEnvironmentsHeaders
 }
 
 type GETDescribeEnvironmentsResponse struct {

@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchPutGeofencePathParams struct {
-	// The geofence collection storing the geofences.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-}
-
-type BatchPutGeofenceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchPutGeofenceRequestBody struct {
 	// The batch of geofences to be stored in a geofence collection.
 	Entries []shared.BatchPutGeofenceRequestEntry `json:"Entries"`
 }
 
 type BatchPutGeofenceRequest struct {
-	PathParams BatchPutGeofencePathParams
-	Headers    BatchPutGeofenceHeaders
-	Request    BatchPutGeofenceRequestBody `request:"mediaType=application/json"`
+	// The geofence collection storing the geofences.
+	CollectionName    string                      `pathParam:"style=simple,explode=false,name=CollectionName"`
+	RequestBody       BatchPutGeofenceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type BatchPutGeofenceResponse struct {

@@ -33,7 +33,6 @@ pkg/models/shared/email.go
 pkg/models/shared/customfield.go
 pkg/models/shared/currencyenum.go
 pkg/models/shared/address.go
-pkg/models/shared/security.go
 pkg/models/shared/getleadsresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
@@ -43,4 +42,5 @@ pkg/models/shared/leadsfilter.go
 pkg/models/shared/deleteleadresponse.go
 pkg/models/shared/getleadresponse.go
 pkg/models/shared/updateleadresponse.go
+pkg/models/shared/security.go
 USAGE.md

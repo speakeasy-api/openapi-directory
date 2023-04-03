@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSitePathParams struct {
+type GetSiteRequest struct {
 	//  The ID or the Amazon Resource Name (ARN) of the site.
-	SiteID string `pathParam:"style=simple,explode=false,name=SiteId"`
-}
-
-type GetSiteHeaders struct {
+	SiteID            string  `pathParam:"style=simple,explode=false,name=SiteId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetSiteHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSiteRequest struct {
-	PathParams GetSitePathParams
-	Headers    GetSiteHeaders
 }
 
 type GetSiteResponse struct {

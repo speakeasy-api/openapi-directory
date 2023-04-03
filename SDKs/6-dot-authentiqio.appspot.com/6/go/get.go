@@ -35,7 +35,7 @@ func newGet(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // KeyRetrieve - Get public details of an Authentiq ID.
 func (s *get) KeyRetrieve(ctx context.Context, request operations.KeyRetrieveRequest) (*operations.KeyRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +101,7 @@ func (s *get) KeyRetrieve(ctx context.Context, request operations.KeyRetrieveReq
 // SignRetrieve - get the status / current content of a verification job
 func (s *get) SignRetrieve(ctx context.Context, request operations.SignRetrieveRequest) (*operations.SignRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

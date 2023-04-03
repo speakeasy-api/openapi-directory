@@ -50,26 +50,18 @@ func (e *GETAddSourceIdentifierToSubscriptionVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETAddSourceIdentifierToSubscriptionQueryParams struct {
-	Action           GETAddSourceIdentifierToSubscriptionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	SourceIdentifier string                                          `queryParam:"style=form,explode=true,name=SourceIdentifier"`
-	SubscriptionName string                                          `queryParam:"style=form,explode=true,name=SubscriptionName"`
-	Version          GETAddSourceIdentifierToSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAddSourceIdentifierToSubscriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETAddSourceIdentifierToSubscriptionRequest struct {
-	QueryParams GETAddSourceIdentifierToSubscriptionQueryParams
-	Headers     GETAddSourceIdentifierToSubscriptionHeaders
+	Action            GETAddSourceIdentifierToSubscriptionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	SourceIdentifier  string                                          `queryParam:"style=form,explode=true,name=SourceIdentifier"`
+	SubscriptionName  string                                          `queryParam:"style=form,explode=true,name=SubscriptionName"`
+	Version           GETAddSourceIdentifierToSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAddSourceIdentifierToSubscriptionResponse struct {

@@ -50,26 +50,18 @@ func (e *GETDisassociateIamInstanceProfileVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETDisassociateIamInstanceProfileQueryParams struct {
+type GETDisassociateIamInstanceProfileRequest struct {
 	Action GETDisassociateIamInstanceProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the IAM instance profile association.
-	AssociationID string                                       `queryParam:"style=form,explode=true,name=AssociationId"`
-	Version       GETDisassociateIamInstanceProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateIamInstanceProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateIamInstanceProfileRequest struct {
-	QueryParams GETDisassociateIamInstanceProfileQueryParams
-	Headers     GETDisassociateIamInstanceProfileHeaders
+	AssociationID     string                                       `queryParam:"style=form,explode=true,name=AssociationId"`
+	Version           GETDisassociateIamInstanceProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateIamInstanceProfileResponse struct {

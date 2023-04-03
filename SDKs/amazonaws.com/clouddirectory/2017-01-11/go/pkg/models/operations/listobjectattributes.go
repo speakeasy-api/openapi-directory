@@ -9,11 +9,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListObjectAttributesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
+// ListObjectAttributesRequestBodyFacetFilter - A facet.
+type ListObjectAttributesRequestBodyFacetFilter struct {
+	FacetName *string `json:"FacetName,omitempty"`
+	SchemaArn *string `json:"SchemaArn,omitempty"`
+}
+
+// ListObjectAttributesRequestBodyObjectReference - The reference that identifies an object.
+type ListObjectAttributesRequestBodyObjectReference struct {
+	Selector *string `json:"Selector,omitempty"`
+}
+
+type ListObjectAttributesRequestBody struct {
+	// A facet.
+	FacetFilter *ListObjectAttributesRequestBodyFacetFilter `json:"FacetFilter,omitempty"`
+	// The maximum number of items to be retrieved in a single call. This is an approximate number.
+	MaxResults *int64 `json:"MaxResults,omitempty"`
+	// The pagination token.
+	NextToken *string `json:"NextToken,omitempty"`
+	// The reference that identifies an object.
+	ObjectReference ListObjectAttributesRequestBodyObjectReference `json:"ObjectReference"`
 }
 
 // ListObjectAttributesXAmzConsistencyLevelEnum - Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
@@ -40,46 +55,23 @@ func (e *ListObjectAttributesXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ListObjectAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+type ListObjectAttributesRequest struct {
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                         `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListObjectAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
 	XAmzConsistencyLevel *ListObjectAttributesXAmzConsistencyLevelEnum `header:"style=simple,explode=false,name=x-amz-consistency-level"`
 	// The Amazon Resource Name (ARN) that is associated with the <a>Directory</a> where the object resides. For more information, see <a>arns</a>.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-// ListObjectAttributesRequestBodyFacetFilter - A facet.
-type ListObjectAttributesRequestBodyFacetFilter struct {
-	FacetName *string `json:"FacetName,omitempty"`
-	SchemaArn *string `json:"SchemaArn,omitempty"`
-}
-
-// ListObjectAttributesRequestBodyObjectReference - The reference that identifies an object.
-type ListObjectAttributesRequestBodyObjectReference struct {
-	Selector *string `json:"Selector,omitempty"`
-}
-
-type ListObjectAttributesRequestBody struct {
-	// A facet.
-	FacetFilter *ListObjectAttributesRequestBodyFacetFilter `json:"FacetFilter,omitempty"`
-	// The maximum number of items to be retrieved in a single call. This is an approximate number.
-	MaxResults *int64 `json:"MaxResults,omitempty"`
-	// The pagination token.
-	NextToken *string `json:"NextToken,omitempty"`
-	// The reference that identifies an object.
-	ObjectReference ListObjectAttributesRequestBodyObjectReference `json:"ObjectReference"`
-}
-
-type ListObjectAttributesRequest struct {
-	QueryParams ListObjectAttributesQueryParams
-	Headers     ListObjectAttributesHeaders
-	Request     ListObjectAttributesRequestBody `request:"mediaType=application/json"`
 }
 
 type ListObjectAttributesResponse struct {

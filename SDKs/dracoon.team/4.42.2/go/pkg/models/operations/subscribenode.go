@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SubscribeNodePathParams struct {
-	// Node ID
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type SubscribeNodeHeaders struct {
+type SubscribeNodeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type SubscribeNodeRequest struct {
-	PathParams SubscribeNodePathParams
-	Headers    SubscribeNodeHeaders
+	// Node ID
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type SubscribeNodeResponse struct {

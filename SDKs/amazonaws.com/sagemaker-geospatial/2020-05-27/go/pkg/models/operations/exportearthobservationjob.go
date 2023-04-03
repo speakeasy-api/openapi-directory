@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportEarthObservationJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ExportEarthObservationJobRequestBodyOutputConfig - The response structure for an OutputConfig returned by an ExportEarthObservationJob.
 type ExportEarthObservationJobRequestBodyOutputConfig struct {
 	S3Data *shared.ExportS3DataInput `json:"S3Data,omitempty"`
@@ -34,8 +24,14 @@ type ExportEarthObservationJobRequestBody struct {
 }
 
 type ExportEarthObservationJobRequest struct {
-	Headers ExportEarthObservationJobHeaders
-	Request ExportEarthObservationJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       ExportEarthObservationJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ExportEarthObservationJobResponse struct {

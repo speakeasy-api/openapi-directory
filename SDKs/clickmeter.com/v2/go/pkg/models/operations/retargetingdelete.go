@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingDeletePathParams struct {
+type RetargetingDeleteRequest struct {
 	// The id of the retargeting script
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetargetingDeleteRequest struct {
-	PathParams RetargetingDeletePathParams
 }
 
 type RetargetingDeleteResponse struct {

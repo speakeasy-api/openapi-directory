@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBehaviorModelTrainingSummariesQueryParams struct {
-	//  The maximum number of results to return at one time. The default is 10.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  The token for the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	//  The name of the security profile.
-	SecurityProfileName *string `queryParam:"style=form,explode=true,name=securityProfileName"`
-}
-
-type GetBehaviorModelTrainingSummariesHeaders struct {
+type GetBehaviorModelTrainingSummariesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetBehaviorModelTrainingSummariesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetBehaviorModelTrainingSummariesRequest struct {
-	QueryParams GetBehaviorModelTrainingSummariesQueryParams
-	Headers     GetBehaviorModelTrainingSummariesHeaders
+	//  The maximum number of results to return at one time. The default is 10.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  The token for the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	//  The name of the security profile.
+	SecurityProfileName *string `queryParam:"style=form,explode=true,name=securityProfileName"`
 }
 
 type GetBehaviorModelTrainingSummariesResponse struct {

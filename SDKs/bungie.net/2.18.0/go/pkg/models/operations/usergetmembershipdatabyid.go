@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserGetMembershipDataByIDPathParams struct {
+type UserGetMembershipDataByIDRequest struct {
 	// The membership ID of the target user.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Type of the supplied membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type UserGetMembershipDataByIDRequest struct {
-	PathParams UserGetMembershipDataByIDPathParams
 }
 
 // UserGetMembershipDataByID200Wildcard - Look at the Response property for more information about the nature of this response

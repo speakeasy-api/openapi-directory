@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SlackPostSlackPostHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
 type SlackPostSlackPostRequest struct {
-	Headers SlackPostSlackPostHeaders
-	Request shared.SlackMessageRequest `request:"mediaType=application/json"`
+	SlackMessageRequest shared.SlackMessageRequest `request:"mediaType=application/json"`
+	Authorization       *string                    `header:"style=simple,explode=false,name=authorization"`
 }
 
 type SlackPostSlackPostResponse struct {

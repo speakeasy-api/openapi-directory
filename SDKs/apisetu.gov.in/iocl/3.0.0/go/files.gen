@@ -15,5 +15,4 @@ pkg/utils/utils.go
 pkg/models/operations/lpgsv.go
 pkg/models/operations/lpgtv.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

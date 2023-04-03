@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PurchasesPostRequest struct {
-	// Information of Purchase to create.
-	Request shared.PurchaseDto `request:"mediaType=application/json"`
-}
 
 type PurchasesPostResponse struct {
 	ContentType string

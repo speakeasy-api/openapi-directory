@@ -8,18 +8,13 @@ import (
 )
 
 type PutSettingsOrganizationsOrganizationNameSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type PutSettingsOrganizationsOrganizationNamePathParams struct {
-	// The name of the organization
-	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PutSettingsOrganizationsOrganizationNameRequest struct {
-	PathParams PutSettingsOrganizationsOrganizationNamePathParams
-	Request    *shared.OrganizationInput `request:"mediaType=application/json"`
-	Security   PutSettingsOrganizationsOrganizationNameSecurity
+	OrganizationInput *shared.OrganizationInput `request:"mediaType=application/json"`
+	// The name of the organization
+	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
 }
 
 type PutSettingsOrganizationsOrganizationNameResponse struct {

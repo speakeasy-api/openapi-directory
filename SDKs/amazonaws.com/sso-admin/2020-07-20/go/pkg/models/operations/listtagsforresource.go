@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTagsForResourceQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListTagsForResourceXAmzTargetEnum
 type ListTagsForResourceXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListTagsForResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTagsForResourceHeaders struct {
+type ListTagsForResourceRequest struct {
+	ListTagsForResourceRequest shared.ListTagsForResourceRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListTagsForResourceHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTagsForResourceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTagsForResourceRequest struct {
-	QueryParams ListTagsForResourceQueryParams
-	Headers     ListTagsForResourceHeaders
-	Request     shared.ListTagsForResourceRequest `request:"mediaType=application/json"`
 }
 
 type ListTagsForResourceResponse struct {

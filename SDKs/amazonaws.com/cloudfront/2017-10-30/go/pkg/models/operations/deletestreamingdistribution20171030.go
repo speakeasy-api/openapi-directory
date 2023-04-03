@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteStreamingDistribution20171030PathParams struct {
+type DeleteStreamingDistribution20171030Request struct {
 	// The distribution ID.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteStreamingDistribution20171030Headers struct {
 	// The value of the <code>ETag</code> header that you received when you disabled the streaming distribution. For example: <code>E2QWRUHAPOMQZL</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteStreamingDistribution20171030Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteStreamingDistribution20171030Request struct {
-	PathParams DeleteStreamingDistribution20171030PathParams
-	Headers    DeleteStreamingDistribution20171030Headers
 }
 
 type DeleteStreamingDistribution20171030Response struct {

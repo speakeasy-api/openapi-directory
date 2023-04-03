@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMountTargetsQueryParams struct {
+type DescribeMountTargetsRequest struct {
 	// (Optional) The ID of the access point whose mount targets that you want to list. It must be included in your request if a <code>FileSystemId</code> or <code>MountTargetId</code> is not included in your request. Accepts either an access point ID or ARN as input.
 	AccessPointID *string `queryParam:"style=form,explode=true,name=AccessPointId"`
 	// (Optional) ID of the file system whose mount targets you want to list (String). It must be included in your request if an <code>AccessPointId</code> or <code>MountTargetId</code> is not included. Accepts either a file system ID or ARN as input.
@@ -17,10 +17,7 @@ type DescribeMountTargetsQueryParams struct {
 	// (Optional) Maximum number of mount targets to return in the response. Currently, this number is automatically set to 10, and other values are ignored. The response is paginated at 100 per page if you have more than 100 mount targets.
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
 	// (Optional) ID of the mount target that you want to have described (String). It must be included in your request if <code>FileSystemId</code> is not included. Accepts either a mount target ID or ARN as input.
-	MountTargetID *string `queryParam:"style=form,explode=true,name=MountTargetId"`
-}
-
-type DescribeMountTargetsHeaders struct {
+	MountTargetID     *string `queryParam:"style=form,explode=true,name=MountTargetId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -28,11 +25,6 @@ type DescribeMountTargetsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeMountTargetsRequest struct {
-	QueryParams DescribeMountTargetsQueryParams
-	Headers     DescribeMountTargetsHeaders
 }
 
 type DescribeMountTargetsResponse struct {

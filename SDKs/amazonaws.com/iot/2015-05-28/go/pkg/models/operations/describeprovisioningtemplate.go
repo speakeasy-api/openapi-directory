@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeProvisioningTemplatePathParams struct {
-	// The name of the provisioning template.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type DescribeProvisioningTemplateHeaders struct {
+type DescribeProvisioningTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeProvisioningTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeProvisioningTemplateRequest struct {
-	PathParams DescribeProvisioningTemplatePathParams
-	Headers    DescribeProvisioningTemplateHeaders
+	// The name of the provisioning template.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
 }
 
 type DescribeProvisioningTemplateResponse struct {

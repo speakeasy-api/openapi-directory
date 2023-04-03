@@ -33,11 +33,11 @@ func newBt(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 }
 
 // AssignToken - Assigns an UserToken to a profile on the ITV side. Currently throws an exception.
-func (s *bt) AssignToken(ctx context.Context, request operations.AssignTokenRequest) (*operations.AssignTokenResponse, error) {
+func (s *bt) AssignToken(ctx context.Context, request operations.AssignTokenRequest, security operations.AssignTokenSecurity) (*operations.AssignTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bt/token/assign"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvAssignBtTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,11 +52,11 @@ func (s *bt) AssignToken(ctx context.Context, request operations.AssignTokenRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *bt) AssignToken(ctx context.Context, request operations.AssignTokenRequ
 }
 
 // CheckEeBtEligibility - Check whether or not a user is eligible for switching to Bt or EE offers.
-func (s *bt) CheckEeBtEligibility(ctx context.Context, request operations.CheckEeBtEligibilityRequest) (*operations.CheckEeBtEligibilityResponse, error) {
+func (s *bt) CheckEeBtEligibility(ctx context.Context, request operations.CheckEeBtEligibilityRequest, security operations.CheckEeBtEligibilitySecurity) (*operations.CheckEeBtEligibilityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ee-bt/eligibility"
 
@@ -103,11 +103,11 @@ func (s *bt) CheckEeBtEligibility(ctx context.Context, request operations.CheckE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *bt) CheckUserToken(ctx context.Context, request operations.CheckUserTok
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -202,14 +202,14 @@ func (s *bt) CheckUserToken(ctx context.Context, request operations.CheckUserTok
 // GetPlanByToken - Returns all the plans available for BT flow including additional description data.
 func (s *bt) GetPlanByToken(ctx context.Context, request operations.GetPlanByTokenRequest) (*operations.GetPlanByTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bt/plan/{token}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bt/plan/{token}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -275,7 +275,7 @@ func (s *bt) GetPlans(ctx context.Context, request operations.GetPlansRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,10 +8,11 @@ import (
 )
 
 type FindNumberRegionsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindNumberRegionsQueryParams struct {
+type FindNumberRegionsRequest struct {
 	// A city name
 	City *string `queryParam:"style=form,explode=true,name=city"`
 	// ~
@@ -30,11 +31,6 @@ type FindNumberRegionsQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// A five-digit Zipcode
 	Zipcode *string `queryParam:"style=form,explode=true,name=zipcode"`
-}
-
-type FindNumberRegionsRequest struct {
-	QueryParams FindNumberRegionsQueryParams
-	Security    FindNumberRegionsSecurity
 }
 
 type FindNumberRegionsResponse struct {

@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateJobExecutionPathParams struct {
-	// The unique identifier assigned to this job when it was created.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-	// The name of the thing associated with the device.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type UpdateJobExecutionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateJobExecutionRequestBodyStatusEnum - The new status for the job execution (IN_PROGRESS, FAILED, SUCCESS, or REJECTED). This must be specified on every update.
 type UpdateJobExecutionRequestBodyStatusEnum string
 
@@ -86,9 +69,18 @@ type UpdateJobExecutionRequestBody struct {
 }
 
 type UpdateJobExecutionRequest struct {
-	PathParams UpdateJobExecutionPathParams
-	Headers    UpdateJobExecutionHeaders
-	Request    UpdateJobExecutionRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateJobExecutionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier assigned to this job when it was created.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	// The name of the thing associated with the device.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type UpdateJobExecutionResponse struct {

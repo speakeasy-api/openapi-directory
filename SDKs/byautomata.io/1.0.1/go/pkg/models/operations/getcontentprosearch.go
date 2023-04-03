@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContentproSearchQueryParams struct {
+type GetContentproSearchRequest struct {
 	// We provide information about related companies and articles based on the search terms you provide. Separate search terms with commas. Ex. https://api.byautomata.io/contentpro-search?terms=cloud+computing,enterprise,security
 	Terms string `queryParam:"style=form,explode=true,name=terms"`
-}
-
-type GetContentproSearchRequest struct {
-	QueryParams GetContentproSearchQueryParams
 }
 
 type GetContentproSearch200ApplicationJSONData struct {

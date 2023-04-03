@@ -56,27 +56,19 @@ func (e *GETDefineRankExpressionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDefineRankExpressionQueryParams struct {
+type GETDefineRankExpressionRequest struct {
 	Action     GETDefineRankExpressionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                            `queryParam:"style=form,explode=true,name=DomainName"`
 	// A named expression that can be evaluated at search time and used for ranking or thresholding in a search query.
-	RankExpression GETDefineRankExpressionRankExpression `queryParam:"style=form,explode=true,name=RankExpression"`
-	Version        GETDefineRankExpressionVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDefineRankExpressionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDefineRankExpressionRequest struct {
-	QueryParams GETDefineRankExpressionQueryParams
-	Headers     GETDefineRankExpressionHeaders
+	RankExpression    GETDefineRankExpressionRankExpression `queryParam:"style=form,explode=true,name=RankExpression"`
+	Version           GETDefineRankExpressionVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDefineRankExpressionResponse struct {

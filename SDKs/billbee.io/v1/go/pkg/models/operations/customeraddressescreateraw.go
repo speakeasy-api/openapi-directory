@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddressesCreateRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type CustomerAddressesCreateRawResponse struct {
 	Body        []byte
 	ContentType string

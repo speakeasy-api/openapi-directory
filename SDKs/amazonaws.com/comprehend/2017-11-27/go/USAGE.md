@@ -13,31 +13,26 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchDetectDominantLanguageRequest{
-        Headers: operations.BatchDetectDominantLanguageHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Comprehend_20171127.BatchDetectDominantLanguage",
-        },
-        Request: shared.BatchDetectDominantLanguageRequest{
+        BatchDetectDominantLanguageRequest: shared.BatchDetectDominantLanguageRequest{
             TextList: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "Comprehend_20171127.BatchDetectDominantLanguage",
     }
 
     ctx := context.Background()

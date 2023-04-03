@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SalesCreditNotesPutPathParams struct {
+type SalesCreditNotesPutRequest struct {
+	// Information of Sales Credit Note to update.
+	SalesInvoiceCreditNoteDto shared.SalesInvoiceCreditNoteDto `request:"mediaType=application/json"`
 	// Id of Sales Credit Note to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SalesCreditNotesPutRequest struct {
-	PathParams SalesCreditNotesPutPathParams
-	// Information of Sales Credit Note to update.
-	Request shared.SalesInvoiceCreditNoteDto `request:"mediaType=application/json"`
 }
 
 type SalesCreditNotesPutResponse struct {

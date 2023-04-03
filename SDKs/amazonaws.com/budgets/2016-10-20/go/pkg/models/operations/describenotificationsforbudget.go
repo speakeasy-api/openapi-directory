@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeNotificationsForBudgetQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeNotificationsForBudgetXAmzTargetEnum
 type DescribeNotificationsForBudgetXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeNotificationsForBudgetXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DescribeNotificationsForBudgetHeaders struct {
+type DescribeNotificationsForBudgetRequest struct {
+	DescribeNotificationsForBudgetRequest shared.DescribeNotificationsForBudgetRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeNotificationsForBudgetHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeNotificationsForBudgetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeNotificationsForBudgetRequest struct {
-	QueryParams DescribeNotificationsForBudgetQueryParams
-	Headers     DescribeNotificationsForBudgetHeaders
-	Request     shared.DescribeNotificationsForBudgetRequest `request:"mediaType=application/json"`
 }
 
 type DescribeNotificationsForBudgetResponse struct {

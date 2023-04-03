@@ -53,7 +53,7 @@ func (s *systemPoliciesConfig) ChangeClassificationPoliciesConfig(ctx context.Co
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/policies/classifications"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateClassificationPoliciesConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -68,7 +68,7 @@ func (s *systemPoliciesConfig) ChangeClassificationPoliciesConfig(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -141,7 +141,7 @@ func (s *systemPoliciesConfig) ChangeGuestUsersPoliciesConfig(ctx context.Contex
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/policies/guest_users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateGuestUsersPoliciesConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -156,7 +156,7 @@ func (s *systemPoliciesConfig) ChangeGuestUsersPoliciesConfig(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -229,7 +229,7 @@ func (s *systemPoliciesConfig) ChangeMfaPoliciesConfig(ctx context.Context, requ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/policies/mfa"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMfaPoliciesConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -244,7 +244,7 @@ func (s *systemPoliciesConfig) ChangeMfaPoliciesConfig(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -369,7 +369,7 @@ func (s *systemPoliciesConfig) ChangePasswordPoliciesConfig(ctx context.Context,
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/system/config/policies/passwords"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePasswordPoliciesConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -384,7 +384,7 @@ func (s *systemPoliciesConfig) ChangePasswordPoliciesConfig(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -463,7 +463,7 @@ func (s *systemPoliciesConfig) EnforceLoginPasswordChange(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -533,7 +533,7 @@ func (s *systemPoliciesConfig) RequestClassificationPoliciesConfig(ctx context.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -608,7 +608,7 @@ func (s *systemPoliciesConfig) RequestGuestUsersPoliciesConfig(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -683,7 +683,7 @@ func (s *systemPoliciesConfig) RequestMfaPoliciesConfig(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -785,7 +785,7 @@ func (s *systemPoliciesConfig) RequestPasswordPoliciesConfig(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -878,14 +878,14 @@ func (s *systemPoliciesConfig) RequestPasswordPoliciesConfig(ctx context.Context
 // </details>
 func (s *systemPoliciesConfig) RequestPasswordPoliciesForPasswordType(ctx context.Context, request operations.RequestPasswordPoliciesForPasswordTypeRequest) (*operations.RequestPasswordPoliciesForPasswordTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/policies/passwords/{password_type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/system/config/policies/passwords/{password_type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

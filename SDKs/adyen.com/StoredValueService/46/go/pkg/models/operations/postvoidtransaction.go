@@ -8,13 +8,8 @@ import (
 )
 
 type PostVoidTransactionSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostVoidTransactionRequest struct {
-	Request  *shared.StoredValueVoidRequest `request:"mediaType=application/json"`
-	Security PostVoidTransactionSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostVoidTransactionResponse struct {

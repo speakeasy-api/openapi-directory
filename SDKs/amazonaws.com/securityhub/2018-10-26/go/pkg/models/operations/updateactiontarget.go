@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateActionTargetPathParams struct {
-	// The ARN of the custom action target to update.
-	ActionTargetArn string `pathParam:"style=simple,explode=false,name=ActionTargetArn"`
-}
-
-type UpdateActionTargetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateActionTargetRequestBody struct {
 	// The updated description for the custom action target.
 	Description *string `json:"Description,omitempty"`
@@ -29,9 +14,16 @@ type UpdateActionTargetRequestBody struct {
 }
 
 type UpdateActionTargetRequest struct {
-	PathParams UpdateActionTargetPathParams
-	Headers    UpdateActionTargetHeaders
-	Request    UpdateActionTargetRequestBody `request:"mediaType=application/json"`
+	// The ARN of the custom action target to update.
+	ActionTargetArn   string                        `pathParam:"style=simple,explode=false,name=ActionTargetArn"`
+	RequestBody       UpdateActionTargetRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateActionTargetResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchRvActiveQueryParams struct {
+type GetSearchRvActiveRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
@@ -114,10 +114,6 @@ type GetSearchRvActiveQueryParams struct {
 	YearRange *string `queryParam:"style=form,explode=true,name=year_range"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchRvActiveRequest struct {
-	QueryParams GetSearchRvActiveQueryParams
 }
 
 type GetSearchRvActiveResponse struct {

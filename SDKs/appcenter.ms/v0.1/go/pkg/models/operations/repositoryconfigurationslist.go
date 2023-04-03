@@ -6,29 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type RepositoryConfigurationsListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type RepositoryConfigurationsListPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type RepositoryConfigurationsListQueryParams struct {
-	// Include inactive configurations if none are active
-	IncludeInactive *bool `queryParam:"style=form,explode=true,name=includeInactive"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type RepositoryConfigurationsListRequest struct {
-	PathParams  RepositoryConfigurationsListPathParams
-	QueryParams RepositoryConfigurationsListQueryParams
-	Security    RepositoryConfigurationsListSecurity
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Include inactive configurations if none are active
+	IncludeInactive *bool `queryParam:"style=form,explode=true,name=includeInactive"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // RepositoryConfigurationsListDefaultApplicationJSON - Bad Request

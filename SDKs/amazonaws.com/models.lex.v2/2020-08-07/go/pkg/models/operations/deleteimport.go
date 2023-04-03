@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteImportPathParams struct {
-	// The unique identifier of the import to delete.
-	ImportID string `pathParam:"style=simple,explode=false,name=importId"`
-}
-
-type DeleteImportHeaders struct {
+type DeleteImportRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteImportHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteImportRequest struct {
-	PathParams DeleteImportPathParams
-	Headers    DeleteImportHeaders
+	// The unique identifier of the import to delete.
+	ImportID string `pathParam:"style=simple,explode=false,name=importId"`
 }
 
 type DeleteImportResponse struct {

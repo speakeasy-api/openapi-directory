@@ -50,28 +50,20 @@ func (e *GETDeleteClientVpnEndpointVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDeleteClientVpnEndpointQueryParams struct {
+type GETDeleteClientVpnEndpointRequest struct {
 	Action GETDeleteClientVpnEndpointActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Client VPN to be deleted.
 	ClientVpnEndpointID string `queryParam:"style=form,explode=true,name=ClientVpnEndpointId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                 `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETDeleteClientVpnEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteClientVpnEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteClientVpnEndpointRequest struct {
-	QueryParams GETDeleteClientVpnEndpointQueryParams
-	Headers     GETDeleteClientVpnEndpointHeaders
+	DryRun            *bool                                 `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETDeleteClientVpnEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteClientVpnEndpointResponse struct {

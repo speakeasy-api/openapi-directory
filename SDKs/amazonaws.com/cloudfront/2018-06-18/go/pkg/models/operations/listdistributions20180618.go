@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type ListDistributions20180618QueryParams struct {
+type ListDistributions20180618Request struct {
 	// Use this when paginating results to indicate where to begin in your list of distributions. The results include distributions in the list that occur after the marker. To get the next page of results, set the <code>Marker</code> to the value of the <code>NextMarker</code> from the current page's response (which is also the ID of the last distribution on that page).
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of distributions you want in the response body.
-	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListDistributions20180618Headers struct {
+	MaxItems          *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type ListDistributions20180618Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDistributions20180618Request struct {
-	QueryParams ListDistributions20180618QueryParams
-	Headers     ListDistributions20180618Headers
 }
 
 type ListDistributions20180618Response struct {

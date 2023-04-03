@@ -24,183 +24,232 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchPutPropertyValuesRequest{
-        PathParams: operations.BatchPutPropertyValuesPathParams{
-            WorkspaceID: "corrupti",
-        },
-        Headers: operations.BatchPutPropertyValuesHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.BatchPutPropertyValuesRequestBody{
+        RequestBody: operations.BatchPutPropertyValuesRequestBody{
             Entries: []shared.PropertyValueEntry{
                 shared.PropertyValueEntry{
                     EntityPropertyReference: shared.EntityPropertyReference{
-                        ComponentName: "error",
-                        EntityID: "deserunt",
+                        ComponentName: "provident",
+                        EntityID: "distinctio",
                         ExternalIDProperty: map[string]string{
-                            "iure": "magnam",
-                            "debitis": "ipsa",
+                            "unde": "nulla",
+                            "corrupti": "illum",
+                            "vel": "error",
+                            "deserunt": "suscipit",
                         },
-                        PropertyName: "delectus",
+                        PropertyName: "iure",
                     },
                     PropertyValues: []shared.PropertyValue{
                         shared.PropertyValue{
-                            Time: "suscipit",
-                            Timestamp: "2022-03-18T00:29:19.137Z",
+                            Time: "debitis",
+                            Timestamp: "2022-01-14T06:18:51.036Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
-                                DoubleValue: 8121.69,
-                                Expression: "voluptatum",
-                                IntegerValue: 479977,
+                                DoubleValue: 2726.56,
+                                Expression: "suscipit",
+                                IntegerValue: 477665,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
                                     shared.DataValue{},
                                     shared.DataValue{},
+                                    shared.DataValue{},
                                 },
-                                LongValue: 392785,
+                                LongValue: 812169,
                                 MapValue: map[string]shared.DataValue{
-                                    "temporibus": shared.DataValue{},
-                                    "ab": shared.DataValue{},
-                                    "quis": shared.DataValue{},
-                                    "veritatis": shared.DataValue{},
+                                    "iusto": shared.DataValue{},
+                                    "excepturi": shared.DataValue{},
+                                    "nisi": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "deserunt",
-                                    TargetEntityID: "perferendis",
+                                    TargetComponentName: "recusandae",
+                                    TargetEntityID: "temporibus",
                                 },
-                                StringValue: "ipsam",
+                                StringValue: "ab",
                             },
                         },
                         shared.PropertyValue{
-                            Time: "repellendus",
-                            Timestamp: "2020-08-31T22:02:25.322Z",
+                            Time: "quis",
+                            Timestamp: "2022-05-09T10:00:51.349Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
-                                DoubleValue: 1403.5,
-                                Expression: "at",
-                                IntegerValue: 870088,
+                                DoubleValue: 202.18,
+                                Expression: "ipsam",
+                                IntegerValue: 832620,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
                                     shared.DataValue{},
                                     shared.DataValue{},
                                     shared.DataValue{},
                                 },
-                                LongValue: 473608,
+                                LongValue: 778157,
                                 MapValue: map[string]shared.DataValue{
-                                    "quod": shared.DataValue{},
-                                    "esse": shared.DataValue{},
-                                    "totam": shared.DataValue{},
-                                    "porro": shared.DataValue{},
+                                    "at": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "dolorum",
-                                    TargetEntityID: "dicta",
+                                    TargetComponentName: "at",
+                                    TargetEntityID: "maiores",
                                 },
-                                StringValue: "nam",
+                                StringValue: "molestiae",
                             },
                         },
                     },
                 },
                 shared.PropertyValueEntry{
                     EntityPropertyReference: shared.EntityPropertyReference{
-                        ComponentName: "officia",
-                        EntityID: "occaecati",
+                        ComponentName: "quod",
+                        EntityID: "quod",
                         ExternalIDProperty: map[string]string{
-                            "deleniti": "hic",
+                            "totam": "porro",
+                            "dolorum": "dicta",
                         },
-                        PropertyName: "optio",
+                        PropertyName: "nam",
                     },
                     PropertyValues: []shared.PropertyValue{
                         shared.PropertyValue{
-                            Time: "beatae",
-                            Timestamp: "2022-07-12T03:15:36.542Z",
+                            Time: "occaecati",
+                            Timestamp: "2022-06-18T20:36:37.412Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
-                                DoubleValue: 2645.55,
-                                Expression: "qui",
-                                IntegerValue: 774234,
+                                DoubleValue: 9446.69,
+                                Expression: "optio",
+                                IntegerValue: 521848,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
-                                    shared.DataValue{},
-                                    shared.DataValue{},
                                 },
-                                LongValue: 456150,
+                                LongValue: 414662,
                                 MapValue: map[string]shared.DataValue{
-                                    "excepturi": shared.DataValue{},
+                                    "modi": shared.DataValue{},
+                                    "qui": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "aspernatur",
-                                    TargetEntityID: "perferendis",
+                                    TargetComponentName: "impedit",
+                                    TargetEntityID: "cum",
                                 },
-                                StringValue: "ad",
+                                StringValue: "esse",
                             },
                         },
                         shared.PropertyValue{
-                            Time: "natus",
-                            Timestamp: "2022-05-22T14:02:28.908Z",
+                            Time: "ipsum",
+                            Timestamp: "2022-09-24T06:58:38.511Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
-                                DoubleValue: 2223.21,
-                                Expression: "natus",
-                                IntegerValue: 386489,
+                                DoubleValue: 187.89,
+                                Expression: "ad",
+                                IntegerValue: 617636,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
-                                    shared.DataValue{},
-                                    shared.DataValue{},
-                                    shared.DataValue{},
                                 },
-                                LongValue: 902599,
+                                LongValue: 612096,
                                 MapValue: map[string]shared.DataValue{
-                                    "in": shared.DataValue{},
-                                    "corporis": shared.DataValue{},
-                                    "iste": shared.DataValue{},
+                                    "natus": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "iure",
-                                    TargetEntityID: "saepe",
+                                    TargetComponentName: "laboriosam",
+                                    TargetEntityID: "hic",
                                 },
-                                StringValue: "quidem",
+                                StringValue: "saepe",
                             },
                         },
                         shared.PropertyValue{
-                            Time: "architecto",
-                            Timestamp: "2022-01-12T00:28:21.182Z",
+                            Time: "fuga",
+                            Timestamp: "2022-08-22T18:42:38.160Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
-                                DoubleValue: 6667.67,
-                                Expression: "mollitia",
-                                IntegerValue: 670638,
+                                DoubleValue: 6130.64,
+                                Expression: "iure",
+                                IntegerValue: 902349,
+                                ListValue: []shared.DataValue{
+                                    shared.DataValue{},
+                                    shared.DataValue{},
+                                    shared.DataValue{},
+                                },
+                                LongValue: 99280,
+                                MapValue: map[string]shared.DataValue{
+                                    "reiciendis": shared.DataValue{},
+                                },
+                                RelationshipValue: &shared.RelationshipValue{
+                                    TargetComponentName: "est",
+                                    TargetEntityID: "mollitia",
+                                },
+                                StringValue: "laborum",
+                            },
+                        },
+                    },
+                },
+                shared.PropertyValueEntry{
+                    EntityPropertyReference: shared.EntityPropertyReference{
+                        ComponentName: "dolores",
+                        EntityID: "dolorem",
+                        ExternalIDProperty: map[string]string{
+                            "explicabo": "nobis",
+                            "enim": "omnis",
+                        },
+                        PropertyName: "nemo",
+                    },
+                    PropertyValues: []shared.PropertyValue{
+                        shared.PropertyValue{
+                            Time: "excepturi",
+                            Timestamp: "2022-07-24T21:51:02.112Z",
+                            Value: shared.DataValue{
+                                BooleanValue: false,
+                                DoubleValue: 6342.74,
+                                Expression: "doloribus",
+                                IntegerValue: 958950,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
                                 },
-                                LongValue: 210382,
+                                LongValue: 652790,
                                 MapValue: map[string]shared.DataValue{
-                                    "explicabo": shared.DataValue{},
-                                    "nobis": shared.DataValue{},
+                                    "culpa": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "enim",
-                                    TargetEntityID: "omnis",
+                                    TargetComponentName: "consequuntur",
+                                    TargetEntityID: "repellat",
                                 },
-                                StringValue: "nemo",
+                                StringValue: "mollitia",
+                            },
+                        },
+                        shared.PropertyValue{
+                            Time: "occaecati",
+                            Timestamp: "2022-08-02T18:07:51.623Z",
+                            Value: shared.DataValue{
+                                BooleanValue: false,
+                                DoubleValue: 4663.11,
+                                Expression: "molestiae",
+                                IntegerValue: 244425,
+                                ListValue: []shared.DataValue{
+                                    shared.DataValue{},
+                                    shared.DataValue{},
+                                    shared.DataValue{},
+                                },
+                                LongValue: 158969,
+                                MapValue: map[string]shared.DataValue{
+                                    "vitae": shared.DataValue{},
+                                    "laborum": shared.DataValue{},
+                                },
+                                RelationshipValue: &shared.RelationshipValue{
+                                    TargetComponentName: "animi",
+                                    TargetEntityID: "enim",
+                                },
+                                StringValue: "odit",
                             },
                         },
                     },
                 },
             },
         },
+        XAmzAlgorithm: "quo",
+        XAmzContentSha256: "sequi",
+        XAmzCredential: "tenetur",
+        XAmzDate: "ipsam",
+        XAmzSecurityToken: "id",
+        XAmzSignature: "possimus",
+        XAmzSignedHeaders: "aut",
+        WorkspaceID: "quasi",
     }
 
     ctx := context.Background()
@@ -217,7 +266,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -257,4 +306,15 @@ func main() {
 * `UpdateWorkspace` - Updates a workspace.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

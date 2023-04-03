@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetJobPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The branch name for the job.
-	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
-	//  The unique ID for the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetJobHeaders struct {
+type GetJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetJobRequest struct {
-	PathParams GetJobPathParams
-	Headers    GetJobHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The branch name for the job.
+	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
+	//  The unique ID for the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type GetJobResponse struct {

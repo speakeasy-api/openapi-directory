@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProfileObjectTypeTemplatesQueryParams struct {
-	// The maximum number of objects returned per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
-	// The pagination token from the previous ListObjectTypeTemplates API call.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-}
-
-type ListProfileObjectTypeTemplatesHeaders struct {
+type ListProfileObjectTypeTemplatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListProfileObjectTypeTemplatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProfileObjectTypeTemplatesRequest struct {
-	QueryParams ListProfileObjectTypeTemplatesQueryParams
-	Headers     ListProfileObjectTypeTemplatesHeaders
+	// The maximum number of objects returned per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
+	// The pagination token from the previous ListObjectTypeTemplates API call.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
 }
 
 type ListProfileObjectTypeTemplatesResponse struct {

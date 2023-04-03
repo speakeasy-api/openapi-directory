@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeClassificationJobPathParams struct {
-	// The unique identifier for the classification job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type DescribeClassificationJobHeaders struct {
+type DescribeClassificationJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeClassificationJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeClassificationJobRequest struct {
-	PathParams DescribeClassificationJobPathParams
-	Headers    DescribeClassificationJobHeaders
+	// The unique identifier for the classification job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type DescribeClassificationJobResponse struct {

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Skmst - Skill Marksheet/ Score Card
 // API to verify Skill Marksheet/ Score Card.
-func (s *apIs) Skmst(ctx context.Context, request operations.SkmstRequest) (*operations.SkmstResponse, error) {
+func (s *apIs) Skmst(ctx context.Context, request operations.SkmstRequestBody, security operations.SkmstSecurity) (*operations.SkmstResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/skmst/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Skmst(ctx context.Context, request operations.SkmstRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

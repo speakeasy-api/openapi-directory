@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsPatchNotesFormPathParams struct {
+type GroupsPatchNotesFormRequest struct {
+	// Patch requests
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of the group
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GroupsPatchNotesFormRequest struct {
-	PathParams GroupsPatchNotesFormPathParams
-	// Patch requests
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type GroupsPatchNotesFormResponse struct {

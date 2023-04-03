@@ -50,27 +50,19 @@ func (e *GETDeleteRankExpressionVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteRankExpressionQueryParams struct {
+type GETDeleteRankExpressionRequest struct {
 	Action     GETDeleteRankExpressionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	DomainName string                            `queryParam:"style=form,explode=true,name=DomainName"`
 	// The name of the <code>RankExpression</code> to delete.
-	RankName string                             `queryParam:"style=form,explode=true,name=RankName"`
-	Version  GETDeleteRankExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteRankExpressionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteRankExpressionRequest struct {
-	QueryParams GETDeleteRankExpressionQueryParams
-	Headers     GETDeleteRankExpressionHeaders
+	RankName          string                             `queryParam:"style=form,explode=true,name=RankName"`
+	Version           GETDeleteRankExpressionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteRankExpressionResponse struct {

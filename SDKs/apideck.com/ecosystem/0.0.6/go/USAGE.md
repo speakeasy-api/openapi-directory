@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.CategoriesAllRequest{
-        PathParams: operations.CategoriesAllPathParams{
-            EcosystemID: "corrupti",
-        },
-        QueryParams: operations.CategoriesAllQueryParams{
-            Cursor: "provident",
-            Limit: 715190,
-        },
+        Cursor: "corrupti",
+        EcosystemID: "provident",
+        Limit: 715190,
     }
 
     ctx := context.Background()

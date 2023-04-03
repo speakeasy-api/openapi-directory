@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type VerifySslCertificateRequestDomainValidationsPathParams struct {
+type VerifySslCertificateRequestDomainValidationsRequest struct {
 	// The id of the certificate request.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type VerifySslCertificateRequestDomainValidationsRequest struct {
-	PathParams VerifySslCertificateRequestDomainValidationsPathParams
 }
 
 type VerifySslCertificateRequestDomainValidationsResponse struct {

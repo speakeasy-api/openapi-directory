@@ -8,18 +8,13 @@ import (
 )
 
 type FetchBoundaryByIDSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type FetchBoundaryByIDPathParams struct {
-	// Unique identifier of the Boundary
-	BoundaryID string `pathParam:"style=simple,explode=false,name=boundaryId"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchBoundaryByIDRequest struct {
-	PathParams FetchBoundaryByIDPathParams
-	Security   FetchBoundaryByIDSecurity
+	// Unique identifier of the Boundary
+	BoundaryID string `pathParam:"style=simple,explode=false,name=boundaryId"`
 }
 
 type FetchBoundaryByIDResponse struct {

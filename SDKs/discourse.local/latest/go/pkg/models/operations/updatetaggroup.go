@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdateTagGroupPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateTagGroupRequestBody struct {
 	Name *string `json:"name,omitempty"`
 }
 
 type UpdateTagGroupRequest struct {
-	PathParams UpdateTagGroupPathParams
-	Request    *UpdateTagGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateTagGroupRequestBody `request:"mediaType=application/json"`
+	ID          string                     `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateTagGroup200ApplicationJSONTagGroupPermissions struct {

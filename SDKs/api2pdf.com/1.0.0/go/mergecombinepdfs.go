@@ -36,7 +36,7 @@ func newMergeCombinePdfs(defaultClient, securityClient HTTPClient, serverURL, la
 // Merge two or more PDFs together on AWS Lambda.
 // ### Authorize via Header of Request
 // **Authorization: YOUR-API-KEY**
-func (s *mergeCombinePdfs) MergePost(ctx context.Context, request operations.MergePostRequest) (*operations.MergePostResponse, error) {
+func (s *mergeCombinePdfs) MergePost(ctx context.Context, request shared.MergeRequest) (*operations.MergePostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/merge"
 

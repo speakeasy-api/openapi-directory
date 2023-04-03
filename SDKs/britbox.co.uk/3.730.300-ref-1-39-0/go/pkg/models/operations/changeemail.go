@@ -8,10 +8,12 @@ import (
 )
 
 type ChangeEmailSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type ChangeEmailQueryParams struct {
+type ChangeEmailRequest struct {
+	// New email address & ITV profile token.
+	ItvChangeEmailRequest shared.ItvChangeEmailRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -46,13 +48,6 @@ type ChangeEmailQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ChangeEmailRequest struct {
-	QueryParams ChangeEmailQueryParams
-	// New email address & ITV profile token.
-	Request  shared.ItvChangeEmailRequest `request:"mediaType=application/json"`
-	Security ChangeEmailSecurity
 }
 
 type ChangeEmailResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetSessionMatchesPathParams struct {
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 type GetSessionMatchesRequest struct {
-	PathParams GetSessionMatchesPathParams
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetSessionMatchesResponse struct {

@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateDeviceAuthorizationCodeQueryParams struct {
+type GenerateDeviceAuthorizationCodeRequest struct {
+	// Details of the device being authorized.
+	DeviceRegistrationRequest shared.DeviceRegistrationRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type GenerateDeviceAuthorizationCodeQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GenerateDeviceAuthorizationCodeRequest struct {
-	QueryParams GenerateDeviceAuthorizationCodeQueryParams
-	// Details of the device being authorized.
-	Request shared.DeviceRegistrationRequest `request:"mediaType=application/json"`
 }
 
 type GenerateDeviceAuthorizationCodeResponse struct {

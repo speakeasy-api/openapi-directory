@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BinLookupPathParams struct {
-	// pass the required BIN code
-	Bin string `pathParam:"style=simple,explode=false,name=bin"`
-}
-
-type BinLookupQueryParams struct {
+type BinLookupRequest struct {
 	// The API key, which you can get from bintable.com website.
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type BinLookupRequest struct {
-	PathParams  BinLookupPathParams
-	QueryParams BinLookupQueryParams
+	// pass the required BIN code
+	Bin string `pathParam:"style=simple,explode=false,name=bin"`
 }
 
 type BinLookupResponse struct {

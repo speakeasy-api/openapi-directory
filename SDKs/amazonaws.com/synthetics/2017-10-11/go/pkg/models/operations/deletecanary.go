@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCanaryPathParams struct {
-	// The name of the canary that you want to delete. To find the names of your canaries, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteCanaryQueryParams struct {
-	// <p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>
-	DeleteLambda *bool `queryParam:"style=form,explode=true,name=deleteLambda"`
-}
-
-type DeleteCanaryHeaders struct {
+type DeleteCanaryRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteCanaryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCanaryRequest struct {
-	PathParams  DeleteCanaryPathParams
-	QueryParams DeleteCanaryQueryParams
-	Headers     DeleteCanaryHeaders
+	// <p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>
+	DeleteLambda *bool `queryParam:"style=form,explode=true,name=deleteLambda"`
+	// The name of the canary that you want to delete. To find the names of your canaries, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DeleteCanaryResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPatchNotesJSONPathParams struct {
+type ConversionsPatchNotesJSONRequest struct {
+	// Patch requests
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsPatchNotesJSONRequest struct {
-	PathParams ConversionsPatchNotesJSONPathParams
-	// Patch requests
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 }
 
 type ConversionsPatchNotesJSONResponse struct {

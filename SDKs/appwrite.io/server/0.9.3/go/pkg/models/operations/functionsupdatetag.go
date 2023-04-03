@@ -8,13 +8,8 @@ import (
 )
 
 type FunctionsUpdateTagSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type FunctionsUpdateTagPathParams struct {
-	// Function unique ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type FunctionsUpdateTagRequestBody struct {
@@ -23,9 +18,9 @@ type FunctionsUpdateTagRequestBody struct {
 }
 
 type FunctionsUpdateTagRequest struct {
-	PathParams FunctionsUpdateTagPathParams
-	Request    *FunctionsUpdateTagRequestBody `request:"mediaType=application/json"`
-	Security   FunctionsUpdateTagSecurity
+	RequestBody *FunctionsUpdateTagRequestBody `request:"mediaType=application/json"`
+	// Function unique ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type FunctionsUpdateTagResponse struct {

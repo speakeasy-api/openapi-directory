@@ -13,10 +13,6 @@ type EducationalDetectionRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type EducationalDetectionRequest struct {
-	Request *EducationalDetectionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type EducationalDetectionResponse struct {
 	ContentType string
 	StatusCode  int

@@ -8,27 +8,18 @@ import (
 )
 
 type GetDetailsOfFileByIDSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetDetailsOfFileByIDPathParams struct {
+type GetDetailsOfFileByIDRequest struct {
 	// The UUID of the File to fetch
 	FileUUID string `pathParam:"style=simple,explode=false,name=fileUuid"`
+	// Tells server to return the base64-encoded file contents in the response.
+	InlineFiles *bool `queryParam:"style=form,explode=true,name=inline_files"`
 	// The UUID of the Item to fetch File from
 	ItemUUID string `pathParam:"style=simple,explode=false,name=itemUuid"`
 	// The UUID of the Vault to fetch Item from
 	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type GetDetailsOfFileByIDQueryParams struct {
-	// Tells server to return the base64-encoded file contents in the response.
-	InlineFiles *bool `queryParam:"style=form,explode=true,name=inline_files"`
-}
-
-type GetDetailsOfFileByIDRequest struct {
-	PathParams  GetDetailsOfFileByIDPathParams
-	QueryParams GetDetailsOfFileByIDQueryParams
-	Security    GetDetailsOfFileByIDSecurity
 }
 
 type GetDetailsOfFileByIDResponse struct {

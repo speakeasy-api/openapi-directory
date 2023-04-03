@@ -8,13 +8,8 @@ import (
 )
 
 type PostDeleteLegalArrangementsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostDeleteLegalArrangementsRequest struct {
-	Request  *shared.DeleteLegalArrangementRequest `request:"mediaType=application/json"`
-	Security PostDeleteLegalArrangementsSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostDeleteLegalArrangementsResponse struct {

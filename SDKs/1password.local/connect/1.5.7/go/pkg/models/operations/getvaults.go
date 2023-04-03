@@ -8,17 +8,12 @@ import (
 )
 
 type GetVaultsSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetVaultsQueryParams struct {
-	// Filter the Vault collection based on Vault name using SCIM eq filter
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetVaultsRequest struct {
-	QueryParams GetVaultsQueryParams
-	Security    GetVaultsSecurity
+	// Filter the Vault collection based on Vault name using SCIM eq filter
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 }
 
 type GetVaultsResponse struct {

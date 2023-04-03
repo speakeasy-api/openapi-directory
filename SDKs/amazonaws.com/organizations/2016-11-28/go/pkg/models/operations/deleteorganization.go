@@ -29,7 +29,7 @@ func (e *DeleteOrganizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteOrganizationHeaders struct {
+type DeleteOrganizationRequest struct {
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,10 +38,6 @@ type DeleteOrganizationHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteOrganizationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteOrganizationRequest struct {
-	Headers DeleteOrganizationHeaders
 }
 
 type DeleteOrganizationResponse struct {

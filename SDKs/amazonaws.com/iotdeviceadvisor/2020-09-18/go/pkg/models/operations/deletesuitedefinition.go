@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteSuiteDefinitionPathParams struct {
-	// Suite definition ID of the test suite to be deleted.
-	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
-}
-
-type DeleteSuiteDefinitionHeaders struct {
+type DeleteSuiteDefinitionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteSuiteDefinitionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSuiteDefinitionRequest struct {
-	PathParams DeleteSuiteDefinitionPathParams
-	Headers    DeleteSuiteDefinitionHeaders
+	// Suite definition ID of the test suite to be deleted.
+	SuiteDefinitionID string `pathParam:"style=simple,explode=false,name=suiteDefinitionId"`
 }
 
 type DeleteSuiteDefinitionResponse struct {

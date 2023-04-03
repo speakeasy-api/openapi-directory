@@ -50,25 +50,17 @@ func (e *POSTDisableVgwRoutePropagationVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTDisableVgwRoutePropagationQueryParams struct {
-	Action  POSTDisableVgwRoutePropagationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisableVgwRoutePropagationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisableVgwRoutePropagationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisableVgwRoutePropagationRequest struct {
-	QueryParams POSTDisableVgwRoutePropagationQueryParams
-	Headers     POSTDisableVgwRoutePropagationHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisableVgwRoutePropagationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                    `request:"mediaType=text/xml"`
+	Version           POSTDisableVgwRoutePropagationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisableVgwRoutePropagationResponse struct {

@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetLeaderboardsForCharacterPathParams struct {
+type Destiny2GetLeaderboardsForCharacterRequest struct {
 	// The specific character to build the leaderboard around for the provided Destiny Membership.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
 	// The Destiny membershipId of the user to retrieve.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
-	// A valid non-BungieNet membership type.
-	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetLeaderboardsForCharacterQueryParams struct {
 	// Maximum number of top players to return. Use a large number to get entire leaderboard.
 	Maxtop *int `queryParam:"style=form,explode=true,name=maxtop"`
+	// A valid non-BungieNet membership type.
+	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
 	// List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 	Modes *string `queryParam:"style=form,explode=true,name=modes"`
 	// ID of stat to return rather than returning all Leaderboard stats.
 	Statid *string `queryParam:"style=form,explode=true,name=statid"`
-}
-
-type Destiny2GetLeaderboardsForCharacterRequest struct {
-	PathParams  Destiny2GetLeaderboardsForCharacterPathParams
-	QueryParams Destiny2GetLeaderboardsForCharacterQueryParams
 }
 
 // Destiny2GetLeaderboardsForCharacter200Wildcard - Look at the Response property for more information about the nature of this response

@@ -30,22 +30,6 @@ func (e *TagResource20200531OperationEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TagResource20200531QueryParams struct {
-	Operation TagResource20200531OperationEnum `queryParam:"style=form,explode=true,name=Operation"`
-	// An ARN of a CloudFront resource.
-	Resource string `queryParam:"style=form,explode=true,name=Resource"`
-}
-
-type TagResource20200531Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // TagResource20200531RequestBodyTags - A complex type that contains zero or more <code>Tag</code> elements.
 type TagResource20200531RequestBodyTags struct {
 	Items []shared.TagList
@@ -57,9 +41,17 @@ type TagResource20200531RequestBody struct {
 }
 
 type TagResource20200531Request struct {
-	QueryParams TagResource20200531QueryParams
-	Headers     TagResource20200531Headers
-	Request     []byte `request:"mediaType=text/xml"`
+	Operation   TagResource20200531OperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody []byte                           `request:"mediaType=text/xml"`
+	// An ARN of a CloudFront resource.
+	Resource          string  `queryParam:"style=form,explode=true,name=Resource"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type TagResource20200531Response struct {

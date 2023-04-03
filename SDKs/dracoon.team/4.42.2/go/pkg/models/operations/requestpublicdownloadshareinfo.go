@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestPublicDownloadShareInfoPathParams struct {
-	// Access key
-	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-}
-
 // RequestPublicDownloadShareInfoXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestPublicDownloadShareInfoXSdsDateFormatEnum string
 
@@ -47,14 +42,11 @@ func (e *RequestPublicDownloadShareInfoXSdsDateFormatEnum) UnmarshalJSON(data []
 	}
 }
 
-type RequestPublicDownloadShareInfoHeaders struct {
+type RequestPublicDownloadShareInfoRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestPublicDownloadShareInfoXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestPublicDownloadShareInfoRequest struct {
-	PathParams RequestPublicDownloadShareInfoPathParams
-	Headers    RequestPublicDownloadShareInfoHeaders
+	// Access key
+	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
 }
 
 type RequestPublicDownloadShareInfoResponse struct {

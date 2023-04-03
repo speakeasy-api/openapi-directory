@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAPIMappingPathParams struct {
-	// The API mapping identifier.
-	APIMappingID string `pathParam:"style=simple,explode=false,name=apiMappingId"`
-	// The domain name.
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type DeleteAPIMappingHeaders struct {
+type DeleteAPIMappingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteAPIMappingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAPIMappingRequest struct {
-	PathParams DeleteAPIMappingPathParams
-	Headers    DeleteAPIMappingHeaders
+	// The API mapping identifier.
+	APIMappingID string `pathParam:"style=simple,explode=false,name=apiMappingId"`
+	// The domain name.
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
 }
 
 type DeleteAPIMappingResponse struct {

@@ -11,11 +11,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDownloadSharePathParams struct {
-	// Share ID
-	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
-}
-
 // UpdateDownloadShareXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type UpdateDownloadShareXSdsDateFormatEnum string
 
@@ -49,17 +44,14 @@ func (e *UpdateDownloadShareXSdsDateFormatEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type UpdateDownloadShareHeaders struct {
+type UpdateDownloadShareRequest struct {
+	UpdateDownloadShareRequest shared.UpdateDownloadShareRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *UpdateDownloadShareXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type UpdateDownloadShareRequest struct {
-	PathParams UpdateDownloadSharePathParams
-	Headers    UpdateDownloadShareHeaders
-	Request    shared.UpdateDownloadShareRequest `request:"mediaType=application/json"`
+	// Share ID
+	ShareID int64 `pathParam:"style=simple,explode=false,name=share_id"`
 }
 
 type UpdateDownloadShare400ApplicationJSONType string

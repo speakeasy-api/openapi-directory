@@ -36,20 +36,20 @@ func newProfile(defaultClient, securityClient HTTPClient, serverURL, language, s
 // BookmarkItem - Bookmark an item under the active profile.
 //
 // Creates one if it doesn't exist, overwrites one if it does.
-func (s *profile) BookmarkItem(ctx context.Context, request operations.BookmarkItemRequest) (*operations.BookmarkItemResponse, error) {
+func (s *profile) BookmarkItem(ctx context.Context, request operations.BookmarkItemRequest, security operations.BookmarkItemSecurity) (*operations.BookmarkItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,20 +106,20 @@ func (s *profile) BookmarkItem(ctx context.Context, request operations.BookmarkI
 }
 
 // DeleteItemBookmark - Unbookmark an item under the active profile.
-func (s *profile) DeleteItemBookmark(ctx context.Context, request operations.DeleteItemBookmarkRequest) (*operations.DeleteItemBookmarkResponse, error) {
+func (s *profile) DeleteItemBookmark(ctx context.Context, request operations.DeleteItemBookmarkRequest, security operations.DeleteItemBookmarkSecurity) (*operations.DeleteItemBookmarkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *profile) DeleteItemBookmark(ctx context.Context, request operations.Del
 // specific `itemId`s to the `item_ids` query parameter will cause only these
 // items to be removed. **If this list is missing all watched items will be
 // removed**
-func (s *profile) DeleteWatched(ctx context.Context, request operations.DeleteWatchedRequest) (*operations.DeleteWatchedResponse, error) {
+func (s *profile) DeleteWatched(ctx context.Context, request operations.DeleteWatchedRequest, security operations.DeleteWatchedSecurity) (*operations.DeleteWatchedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/watched"
 
@@ -179,11 +179,11 @@ func (s *profile) DeleteWatched(ctx context.Context, request operations.DeleteWa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,7 +231,7 @@ func (s *profile) DeleteWatched(ctx context.Context, request operations.DeleteWa
 }
 
 // GetBookmarkList - Returns the list of bookmarked items under the active profile.
-func (s *profile) GetBookmarkList(ctx context.Context, request operations.GetBookmarkListRequest) (*operations.GetBookmarkListResponse, error) {
+func (s *profile) GetBookmarkList(ctx context.Context, request operations.GetBookmarkListRequest, security operations.GetBookmarkListSecurity) (*operations.GetBookmarkListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/bookmarks/list"
 
@@ -240,11 +240,11 @@ func (s *profile) GetBookmarkList(ctx context.Context, request operations.GetBoo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,7 +301,7 @@ func (s *profile) GetBookmarkList(ctx context.Context, request operations.GetBoo
 }
 
 // GetBookmarks - Get the map of bookmarked item ids (itemId => creationDate) under the active profile.
-func (s *profile) GetBookmarks(ctx context.Context, request operations.GetBookmarksRequest) (*operations.GetBookmarksResponse, error) {
+func (s *profile) GetBookmarks(ctx context.Context, request operations.GetBookmarksRequest, security operations.GetBookmarksSecurity) (*operations.GetBookmarksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/bookmarks"
 
@@ -310,11 +310,11 @@ func (s *profile) GetBookmarks(ctx context.Context, request operations.GetBookma
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -380,7 +380,7 @@ func (s *profile) GetBookmarks(ctx context.Context, request operations.GetBookma
 // incompletely watched episode, or the next episode following the most recently
 // completely watched episode. Based on the specified `show_item_type` type, either the next
 // episode, the season of the next episode, or the show will be included in the list.
-func (s *profile) GetContinueWatchingList(ctx context.Context, request operations.GetContinueWatchingListRequest) (*operations.GetContinueWatchingListResponse, error) {
+func (s *profile) GetContinueWatchingList(ctx context.Context, request operations.GetContinueWatchingListRequest, security operations.GetContinueWatchingListSecurity) (*operations.GetContinueWatchingListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/continue-watching/list"
 
@@ -389,11 +389,11 @@ func (s *profile) GetContinueWatchingList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -450,20 +450,20 @@ func (s *profile) GetContinueWatchingList(ctx context.Context, request operation
 }
 
 // GetItemBookmark - Get the bookmark for an item under the active profile.
-func (s *profile) GetItemBookmark(ctx context.Context, request operations.GetItemBookmarkRequest) (*operations.GetItemBookmarkResponse, error) {
+func (s *profile) GetItemBookmark(ctx context.Context, request operations.GetItemBookmarkRequest, security operations.GetItemBookmarkSecurity) (*operations.GetItemBookmarkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -520,20 +520,20 @@ func (s *profile) GetItemBookmark(ctx context.Context, request operations.GetIte
 }
 
 // GetItemRating - Get the rating info for an item under the active profile.
-func (s *profile) GetItemRating(ctx context.Context, request operations.GetItemRatingRequest) (*operations.GetItemRatingResponse, error) {
+func (s *profile) GetItemRating(ctx context.Context, request operations.GetItemRatingRequest, security operations.GetItemRatingSecurity) (*operations.GetItemRatingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -590,20 +590,20 @@ func (s *profile) GetItemRating(ctx context.Context, request operations.GetItemR
 }
 
 // GetItemWatchedStatus - Get the watched status info for an item under the active profile.
-func (s *profile) GetItemWatchedStatus(ctx context.Context, request operations.GetItemWatchedStatusRequest) (*operations.GetItemWatchedStatusResponse, error) {
+func (s *profile) GetItemWatchedStatus(ctx context.Context, request operations.GetItemWatchedStatusRequest, security operations.GetItemWatchedStatusSecurity) (*operations.GetItemWatchedStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -671,20 +671,20 @@ func (s *profile) GetItemWatchedStatus(ctx context.Context, request operations.G
 // the account, or nothing.
 //
 // If the response does not contain a `next` property then no item was found.
-func (s *profile) GetNextPlaybackItem(ctx context.Context, request operations.GetNextPlaybackItemRequest) (*operations.GetNextPlaybackItemResponse, error) {
+func (s *profile) GetNextPlaybackItem(ctx context.Context, request operations.GetNextPlaybackItemRequest, security operations.GetNextPlaybackItemSecurity) (*operations.GetNextPlaybackItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/items/{itemId}/next", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/items/{itemId}/next", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -741,7 +741,7 @@ func (s *profile) GetNextPlaybackItem(ctx context.Context, request operations.Ge
 }
 
 // GetProfile - Get the details of the active profile, including watched, bookmarked and rated items.
-func (s *profile) GetProfile(ctx context.Context, request operations.GetProfileRequest) (*operations.GetProfileResponse, error) {
+func (s *profile) GetProfile(ctx context.Context, request operations.GetProfileRequest, security operations.GetProfileSecurity) (*operations.GetProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile"
 
@@ -750,11 +750,11 @@ func (s *profile) GetProfile(ctx context.Context, request operations.GetProfileR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -811,7 +811,7 @@ func (s *profile) GetProfile(ctx context.Context, request operations.GetProfileR
 }
 
 // GetRatings - Get the map of rated item ids (itemId => rating out of 10) under the active profile.
-func (s *profile) GetRatings(ctx context.Context, request operations.GetRatingsRequest) (*operations.GetRatingsResponse, error) {
+func (s *profile) GetRatings(ctx context.Context, request operations.GetRatingsRequest, security operations.GetRatingsSecurity) (*operations.GetRatingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/ratings"
 
@@ -820,11 +820,11 @@ func (s *profile) GetRatings(ctx context.Context, request operations.GetRatingsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -881,7 +881,7 @@ func (s *profile) GetRatings(ctx context.Context, request operations.GetRatingsR
 }
 
 // GetRatingsList - Returns the list of rated items under the active profile.
-func (s *profile) GetRatingsList(ctx context.Context, request operations.GetRatingsListRequest) (*operations.GetRatingsListResponse, error) {
+func (s *profile) GetRatingsList(ctx context.Context, request operations.GetRatingsListRequest, security operations.GetRatingsListSecurity) (*operations.GetRatingsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/ratings/list"
 
@@ -890,11 +890,11 @@ func (s *profile) GetRatingsList(ctx context.Context, request operations.GetRati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -951,7 +951,7 @@ func (s *profile) GetRatingsList(ctx context.Context, request operations.GetRati
 }
 
 // GetWatched - Get the map of watched item ids (itemId => last playhead position) under the active profile.
-func (s *profile) GetWatched(ctx context.Context, request operations.GetWatchedRequest) (*operations.GetWatchedResponse, error) {
+func (s *profile) GetWatched(ctx context.Context, request operations.GetWatchedRequest, security operations.GetWatchedSecurity) (*operations.GetWatchedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/watched"
 
@@ -960,11 +960,11 @@ func (s *profile) GetWatched(ctx context.Context, request operations.GetWatchedR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1021,7 +1021,7 @@ func (s *profile) GetWatched(ctx context.Context, request operations.GetWatchedR
 }
 
 // GetWatchedList - Returns the list of watched items under the active profile.
-func (s *profile) GetWatchedList(ctx context.Context, request operations.GetWatchedListRequest) (*operations.GetWatchedListResponse, error) {
+func (s *profile) GetWatchedList(ctx context.Context, request operations.GetWatchedListRequest, security operations.GetWatchedListSecurity) (*operations.GetWatchedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/watched/list"
 
@@ -1030,11 +1030,11 @@ func (s *profile) GetWatchedList(ctx context.Context, request operations.GetWatc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1093,20 +1093,20 @@ func (s *profile) GetWatchedList(ctx context.Context, request operations.GetWatc
 // RateItem - Rate an item under the active profile.
 //
 // Creates one if it doesn't exist, overwrites one if it does.
-func (s *profile) RateItem(ctx context.Context, request operations.RateItemRequest) (*operations.RateItemResponse, error) {
+func (s *profile) RateItem(ctx context.Context, request operations.RateItemRequest, security operations.RateItemSecurity) (*operations.RateItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1167,20 +1167,20 @@ func (s *profile) RateItem(ctx context.Context, request operations.RateItemReque
 // Can be used later to resume a video from where it was last watched.
 //
 // Creates one if it doesn't exist, overwrites one if it does.
-func (s *profile) SetItemWatchedStatus(ctx context.Context, request operations.SetItemWatchedStatusRequest) (*operations.SetItemWatchedStatusResponse, error) {
+func (s *profile) SetItemWatchedStatus(ctx context.Context, request operations.SetItemWatchedStatusRequest, security operations.SetItemWatchedStatusSecurity) (*operations.SetItemWatchedStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

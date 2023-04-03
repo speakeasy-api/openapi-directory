@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostContractIDSecurity struct {
-	Key2 shared.SchemeKey2 `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostContractIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Key2 string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
 }
 
 type PostContractIDRequest struct {
-	PathParams PostContractIDPathParams
-	Security   PostContractIDSecurity
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostContractIDResponse struct {

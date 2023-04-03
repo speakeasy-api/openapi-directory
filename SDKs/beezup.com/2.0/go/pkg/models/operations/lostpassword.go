@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LostPasswordRequest struct {
-	// Your email
-	Request string `request:"mediaType=application/json"`
-}
-
 type LostPasswordResponse struct {
 	// Bad Request
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

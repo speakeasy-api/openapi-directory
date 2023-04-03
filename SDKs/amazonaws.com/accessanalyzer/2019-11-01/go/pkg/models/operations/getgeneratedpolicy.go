@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGeneratedPolicyPathParams struct {
-	// The <code>JobId</code> that is returned by the <code>StartPolicyGeneration</code> operation. The <code>JobId</code> can be used with <code>GetGeneratedPolicy</code> to retrieve the generated policies or used with <code>CancelPolicyGeneration</code> to cancel the policy generation request.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetGeneratedPolicyQueryParams struct {
-	// <p>The level of detail that you want to generate. You can specify whether to generate policies with placeholders for resource ARNs for actions that support resource level granularity in policies.</p> <p>For example, in the resource section of a policy, you can receive a placeholder such as <code>"Resource":"arn:aws:s3:::${BucketName}"</code> instead of <code>"*"</code>.</p>
-	IncludeResourcePlaceholders *bool `queryParam:"style=form,explode=true,name=includeResourcePlaceholders"`
-	// <p>The level of detail that you want to generate. You can specify whether to generate service-level policies. </p> <p>IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to create this service-level template.</p>
-	IncludeServiceLevelTemplate *bool `queryParam:"style=form,explode=true,name=includeServiceLevelTemplate"`
-}
-
-type GetGeneratedPolicyHeaders struct {
+type GetGeneratedPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type GetGeneratedPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGeneratedPolicyRequest struct {
-	PathParams  GetGeneratedPolicyPathParams
-	QueryParams GetGeneratedPolicyQueryParams
-	Headers     GetGeneratedPolicyHeaders
+	// <p>The level of detail that you want to generate. You can specify whether to generate policies with placeholders for resource ARNs for actions that support resource level granularity in policies.</p> <p>For example, in the resource section of a policy, you can receive a placeholder such as <code>"Resource":"arn:aws:s3:::${BucketName}"</code> instead of <code>"*"</code>.</p>
+	IncludeResourcePlaceholders *bool `queryParam:"style=form,explode=true,name=includeResourcePlaceholders"`
+	// <p>The level of detail that you want to generate. You can specify whether to generate service-level policies. </p> <p>IAM Access Analyzer uses <code>iam:servicelastaccessed</code> to identify services that have been used recently to create this service-level template.</p>
+	IncludeServiceLevelTemplate *bool `queryParam:"style=form,explode=true,name=includeServiceLevelTemplate"`
+	// The <code>JobId</code> that is returned by the <code>StartPolicyGeneration</code> operation. The <code>JobId</code> can be used with <code>GetGeneratedPolicy</code> to retrieve the generated policies or used with <code>CancelPolicyGeneration</code> to cancel the policy generation request.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type GetGeneratedPolicyResponse struct {

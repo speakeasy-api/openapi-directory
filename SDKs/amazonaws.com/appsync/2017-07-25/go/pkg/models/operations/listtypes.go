@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTypesPathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-}
-
 // ListTypesFormatEnum - The type format: SDL or JSON.
 type ListTypesFormatEnum string
 
@@ -38,16 +33,7 @@ func (e *ListTypesFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTypesQueryParams struct {
-	// The type format: SDL or JSON.
-	Format ListTypesFormatEnum `queryParam:"style=form,explode=true,name=format"`
-	// The maximum number of results that you want the request to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// An identifier that was returned from the previous call to this operation, which you can use to return the next set of items in the list.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListTypesHeaders struct {
+type ListTypesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -55,12 +41,14 @@ type ListTypesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTypesRequest struct {
-	PathParams  ListTypesPathParams
-	QueryParams ListTypesQueryParams
-	Headers     ListTypesHeaders
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The type format: SDL or JSON.
+	Format ListTypesFormatEnum `queryParam:"style=form,explode=true,name=format"`
+	// The maximum number of results that you want the request to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// An identifier that was returned from the previous call to this operation, which you can use to return the next set of items in the list.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListTypesResponse struct {

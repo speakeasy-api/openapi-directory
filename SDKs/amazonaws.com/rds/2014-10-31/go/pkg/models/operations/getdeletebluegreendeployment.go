@@ -50,28 +50,20 @@ func (e *GETDeleteBlueGreenDeploymentVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDeleteBlueGreenDeploymentQueryParams struct {
+type GETDeleteBlueGreenDeploymentRequest struct {
 	Action GETDeleteBlueGreenDeploymentActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The blue/green deployment identifier of the deployment to be deleted. This parameter isn't case-sensitive.</p> <p>Constraints: </p> <ul> <li> <p>Must match an existing blue/green deployment identifier.</p> </li> </ul>
 	BlueGreenDeploymentIdentifier string `queryParam:"style=form,explode=true,name=BlueGreenDeploymentIdentifier"`
 	// A value that indicates whether to delete the resources in the green environment. You can't specify this option if the blue/green deployment <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a> is <code>SWITCHOVER_COMPLETED</code>.
-	DeleteTarget *bool                                   `queryParam:"style=form,explode=true,name=DeleteTarget"`
-	Version      GETDeleteBlueGreenDeploymentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteBlueGreenDeploymentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteBlueGreenDeploymentRequest struct {
-	QueryParams GETDeleteBlueGreenDeploymentQueryParams
-	Headers     GETDeleteBlueGreenDeploymentHeaders
+	DeleteTarget      *bool                                   `queryParam:"style=form,explode=true,name=DeleteTarget"`
+	Version           GETDeleteBlueGreenDeploymentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteBlueGreenDeploymentResponse struct {

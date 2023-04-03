@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFieldSettingsForPortfolioPathParams struct {
-	// Globally unique identifier for the portfolio.
-	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
-}
-
-type GetCustomFieldSettingsForPortfolioQueryParams struct {
+type GetCustomFieldSettingsForPortfolioRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,11 +22,8 @@ type GetCustomFieldSettingsForPortfolioQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetCustomFieldSettingsForPortfolioRequest struct {
-	PathParams  GetCustomFieldSettingsForPortfolioPathParams
-	QueryParams GetCustomFieldSettingsForPortfolioQueryParams
+	// Globally unique identifier for the portfolio.
+	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
 }
 
 // GetCustomFieldSettingsForPortfolio200ApplicationJSON - Successfully retrieved custom field settings objects for a portfolio.

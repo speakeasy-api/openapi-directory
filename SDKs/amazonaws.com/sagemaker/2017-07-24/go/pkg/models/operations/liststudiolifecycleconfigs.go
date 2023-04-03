@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStudioLifecycleConfigsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListStudioLifecycleConfigsXAmzTargetEnum
 type ListStudioLifecycleConfigsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListStudioLifecycleConfigsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListStudioLifecycleConfigsHeaders struct {
+type ListStudioLifecycleConfigsRequest struct {
+	ListStudioLifecycleConfigsRequest shared.ListStudioLifecycleConfigsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListStudioLifecycleConfigsHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListStudioLifecycleConfigsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListStudioLifecycleConfigsRequest struct {
-	QueryParams ListStudioLifecycleConfigsQueryParams
-	Headers     ListStudioLifecycleConfigsHeaders
-	Request     shared.ListStudioLifecycleConfigsRequest `request:"mediaType=application/json"`
 }
 
 type ListStudioLifecycleConfigsResponse struct {

@@ -38,16 +38,16 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 
 // DeleteWorkspacesWorkspaceHooksUID - Delete a webhook for a workspace
 // Deletes the specified webhook subscription from the given workspace.
-func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceHooksUIDRequest) (*operations.DeleteWorkspacesWorkspaceHooksUIDResponse, error) {
+func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceHooksUIDRequest, security operations.DeleteWorkspacesWorkspaceHooksUIDSecurity) (*operations.DeleteWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, requ
 //
 // Note that the query parameter values need to be URL escaped so that `=`
 // would become `%3D`.
-func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request operations.GetUserPermissionsWorkspacesRequest) (*operations.GetUserPermissionsWorkspacesResponse, error) {
+func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request operations.GetUserPermissionsWorkspacesRequest, security operations.GetUserPermissionsWorkspacesSecurity) (*operations.GetUserPermissionsWorkspacesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/permissions/workspaces"
 
@@ -149,11 +149,11 @@ func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -260,7 +260,7 @@ func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request o
 //
 // **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
 // see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
-func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWorkspacesRequest) (*operations.GetWorkspacesResponse, error) {
+func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWorkspacesRequest, security operations.GetWorkspacesSecurity) (*operations.GetWorkspacesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workspaces"
 
@@ -269,11 +269,11 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -319,16 +319,16 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 
 // GetWorkspacesWorkspace - Get a workspace
 // Returns the requested workspace.
-func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operations.GetWorkspacesWorkspaceRequest) (*operations.GetWorkspacesWorkspaceResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operations.GetWorkspacesWorkspaceRequest, security operations.GetWorkspacesWorkspaceSecurity) (*operations.GetWorkspacesWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -374,16 +374,16 @@ func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operati
 
 // GetWorkspacesWorkspaceHooks - List webhooks for a workspace
 // Returns a paginated list of webhooks installed on this workspace.
-func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksRequest) (*operations.GetWorkspacesWorkspaceHooksResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksRequest, security operations.GetWorkspacesWorkspaceHooksSecurity) (*operations.GetWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -432,16 +432,16 @@ func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request op
 // GetWorkspacesWorkspaceHooksUID - Get a webhook for a workspace
 // Returns the webhook with the specified id installed on the given
 // workspace.
-func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksUIDRequest) (*operations.GetWorkspacesWorkspaceHooksUIDResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksUIDRequest, security operations.GetWorkspacesWorkspaceHooksUIDSecurity) (*operations.GetWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -487,16 +487,16 @@ func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request
 
 // GetWorkspacesWorkspaceMembers - List users in a workspace
 // Returns all members of the requested workspace.
-func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersRequest) (*operations.GetWorkspacesWorkspaceMembersResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersRequest, security operations.GetWorkspacesWorkspaceMembersSecurity) (*operations.GetWorkspacesWorkspaceMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -544,16 +544,16 @@ func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request 
 // Returns the workspace membership, which includes
 // a `User` object for the member and a `Workspace` object
 // for the requested workspace.
-func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersMemberRequest) (*operations.GetWorkspacesWorkspaceMembersMemberResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersMemberRequest, security operations.GetWorkspacesWorkspaceMembersMemberSecurity) (*operations.GetWorkspacesWorkspaceMembersMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members/{member}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members/{member}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -660,20 +660,20 @@ func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, re
 // permission by adding the following query string parameters:
 //
 // * `q=permission="owner"`
-func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRequest) (*operations.GetWorkspacesWorkspacePermissionsResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRequest, security operations.GetWorkspacesWorkspacePermissionsSecurity) (*operations.GetWorkspacesWorkspacePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -802,20 +802,20 @@ func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, requ
 //
 // Note that the query parameter values need to be URL escaped so that `=`
 // would become `%3D`.
-func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest, security operations.GetWorkspacesWorkspacePermissionsRepositoriesSecurity) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -928,20 +928,20 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.C
 //
 // Note that the query parameter values need to be URL escaped so that `=`
 // would become `%3D`.
-func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest, security operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugSecurity) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -987,16 +987,16 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx c
 
 // GetWorkspacesWorkspaceProjects - List projects in a workspace
 // Returns the list of projects in this workspace.
-func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsRequest) (*operations.GetWorkspacesWorkspaceProjectsResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsRequest, security operations.GetWorkspacesWorkspaceProjectsSecurity) (*operations.GetWorkspacesWorkspaceProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,16 +1042,16 @@ func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request
 
 // GetWorkspacesWorkspaceProjectsProjectKey - Get a project for a workspace
 // Returns the requested project.
-func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
+func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeySecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1132,16 +1132,16 @@ func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Contex
 // The `url` must properly resolve and cannot be an internal, non-routed address.
 //
 // Only workspace owners can install webhooks on workspaces.
-func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request operations.PostWorkspacesWorkspaceHooksRequest) (*operations.PostWorkspacesWorkspaceHooksResponse, error) {
+func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request operations.PostWorkspacesWorkspaceHooksRequest, security operations.PostWorkspacesWorkspaceHooksSecurity) (*operations.PostWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1198,16 +1198,16 @@ func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request o
 // * `url`
 // * `active`
 // * `events`
-func (s *workspaces) PutWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.PutWorkspacesWorkspaceHooksUIDRequest) (*operations.PutWorkspacesWorkspaceHooksUIDResponse, error) {
+func (s *workspaces) PutWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.PutWorkspacesWorkspaceHooksUIDRequest, security operations.PutWorkspacesWorkspaceHooksUIDSecurity) (*operations.PutWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

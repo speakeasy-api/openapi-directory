@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetApplicationVersionPathParams struct {
-	// The unique identifier of the application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-	// The specific version of the application.
-	ApplicationVersion int64 `pathParam:"style=simple,explode=false,name=applicationVersion"`
-}
-
-type GetApplicationVersionHeaders struct {
+type GetApplicationVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetApplicationVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetApplicationVersionRequest struct {
-	PathParams GetApplicationVersionPathParams
-	Headers    GetApplicationVersionHeaders
+	// The unique identifier of the application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// The specific version of the application.
+	ApplicationVersion int64 `pathParam:"style=simple,explode=false,name=applicationVersion"`
 }
 
 type GetApplicationVersionResponse struct {

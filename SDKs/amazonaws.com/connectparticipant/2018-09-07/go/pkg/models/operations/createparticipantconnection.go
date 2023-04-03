@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateParticipantConnectionHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	// <p>This is a header parameter.</p> <p>The ParticipantToken as obtained from <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html">StartChatContact</a> API response.</p>
-	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateParticipantConnectionRequestBody struct {
 	// Amazon Connect Participant is used to mark the participant as connected for customer participant in message streaming, as well as for agent or manager participant in non-streaming chats.
 	ConnectParticipant *bool `json:"ConnectParticipant,omitempty"`
@@ -27,8 +15,16 @@ type CreateParticipantConnectionRequestBody struct {
 }
 
 type CreateParticipantConnectionRequest struct {
-	Headers CreateParticipantConnectionHeaders
-	Request CreateParticipantConnectionRequestBody `request:"mediaType=application/json"`
+	RequestBody   CreateParticipantConnectionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	// <p>This is a header parameter.</p> <p>The ParticipantToken as obtained from <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html">StartChatContact</a> API response.</p>
+	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateParticipantConnectionResponse struct {

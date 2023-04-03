@@ -42,16 +42,12 @@ func (e *CreateTenantWebhookXSdsDateFormatEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type CreateTenantWebhookHeaders struct {
+type CreateTenantWebhookRequest struct {
+	CreateWebhookRequest shared.CreateWebhookRequest `request:"mediaType=application/json"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *CreateTenantWebhookXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type CreateTenantWebhookRequest struct {
-	Headers CreateTenantWebhookHeaders
-	Request shared.CreateWebhookRequest `request:"mediaType=application/json"`
 }
 
 type CreateTenantWebhookResponse struct {

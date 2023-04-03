@@ -50,25 +50,17 @@ func (e *POSTStartMetricStreamsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTStartMetricStreamsQueryParams struct {
-	Action  POSTStartMetricStreamsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTStartMetricStreamsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTStartMetricStreamsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTStartMetricStreamsRequest struct {
-	QueryParams POSTStartMetricStreamsQueryParams
-	Headers     POSTStartMetricStreamsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTStartMetricStreamsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                            `request:"mediaType=text/xml"`
+	Version           POSTStartMetricStreamsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTStartMetricStreamsResponse struct {

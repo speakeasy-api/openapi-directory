@@ -103,7 +103,7 @@ func (s *omInvoiceAPISettings) GetOrderInvoiceDesignSettingsPreview(ctx context.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/invoices/settings/design/preview"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderInvoiceDesignSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -118,7 +118,7 @@ func (s *omInvoiceAPISettings) GetOrderInvoiceDesignSettingsPreview(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -241,7 +241,7 @@ func (s *omInvoiceAPISettings) GetOrderInvoiceGeneralSettings(ctx context.Contex
 }
 
 // SaveOrderInvoiceDesignSettings - Save Order Invoice design settings
-func (s *omInvoiceAPISettings) SaveOrderInvoiceDesignSettings(ctx context.Context, request operations.SaveOrderInvoiceDesignSettingsRequest) (*operations.SaveOrderInvoiceDesignSettingsResponse, error) {
+func (s *omInvoiceAPISettings) SaveOrderInvoiceDesignSettings(ctx context.Context, request shared.OrderInvoiceDesignSettings) (*operations.SaveOrderInvoiceDesignSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/invoices/settings/design"
 
@@ -308,7 +308,7 @@ func (s *omInvoiceAPISettings) SaveOrderInvoiceDesignSettings(ctx context.Contex
 }
 
 // SaveOrderInvoiceGeneralSettings - Save Order Invoice general settings
-func (s *omInvoiceAPISettings) SaveOrderInvoiceGeneralSettings(ctx context.Context, request operations.SaveOrderInvoiceGeneralSettingsRequest) (*operations.SaveOrderInvoiceGeneralSettingsResponse, error) {
+func (s *omInvoiceAPISettings) SaveOrderInvoiceGeneralSettings(ctx context.Context, request shared.OrderInvoiceGeneralSettings) (*operations.SaveOrderInvoiceGeneralSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/invoices/settings/general"
 

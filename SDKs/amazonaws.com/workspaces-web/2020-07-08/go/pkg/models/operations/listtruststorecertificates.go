@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTrustStoreCertificatesPathParams struct {
-	// The ARN of the trust store
-	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
-}
-
-type ListTrustStoreCertificatesQueryParams struct {
-	// The maximum number of results to be included in the next page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The pagination token used to retrieve the next page of results for this operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListTrustStoreCertificatesHeaders struct {
+type ListTrustStoreCertificatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListTrustStoreCertificatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTrustStoreCertificatesRequest struct {
-	PathParams  ListTrustStoreCertificatesPathParams
-	QueryParams ListTrustStoreCertificatesQueryParams
-	Headers     ListTrustStoreCertificatesHeaders
+	// The maximum number of results to be included in the next page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The pagination token used to retrieve the next page of results for this operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ARN of the trust store
+	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
 }
 
 type ListTrustStoreCertificatesResponse struct {

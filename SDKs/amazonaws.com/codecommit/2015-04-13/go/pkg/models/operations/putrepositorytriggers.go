@@ -30,20 +30,16 @@ func (e *PutRepositoryTriggersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutRepositoryTriggersHeaders struct {
-	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        PutRepositoryTriggersXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type PutRepositoryTriggersRequest struct {
-	Headers PutRepositoryTriggersHeaders
-	Request shared.PutRepositoryTriggersInput `request:"mediaType=application/json"`
+	PutRepositoryTriggersInput shared.PutRepositoryTriggersInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm              *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                 PutRepositoryTriggersXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type PutRepositoryTriggersResponse struct {

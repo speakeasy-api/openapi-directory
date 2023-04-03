@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdateEmailPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type UpdateEmailRequestBody struct {
 	Email string `json:"email"`
 }
 
 type UpdateEmailRequest struct {
-	PathParams UpdateEmailPathParams
-	Request    *UpdateEmailRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateEmailRequestBody `request:"mediaType=application/json"`
+	Username    string                  `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UpdateEmailResponse struct {

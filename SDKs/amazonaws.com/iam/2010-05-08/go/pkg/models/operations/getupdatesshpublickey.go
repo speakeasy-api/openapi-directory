@@ -74,30 +74,22 @@ func (e *GETUpdateSSHPublicKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateSSHPublicKeyQueryParams struct {
+type GETUpdateSSHPublicKeyRequest struct {
 	Action GETUpdateSSHPublicKeyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier for the SSH public key.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	SSHPublicKeyID string `queryParam:"style=form,explode=true,name=SSHPublicKeyId"`
 	// The status to assign to the SSH public key. <code>Active</code> means that the key can be used for authentication with an CodeCommit repository. <code>Inactive</code> means that the key cannot be used.
 	Status GETUpdateSSHPublicKeyStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// <p>The name of the IAM user associated with the SSH public key.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                           `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETUpdateSSHPublicKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateSSHPublicKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateSSHPublicKeyRequest struct {
-	QueryParams GETUpdateSSHPublicKeyQueryParams
-	Headers     GETUpdateSSHPublicKeyHeaders
+	UserName          string                           `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETUpdateSSHPublicKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateSSHPublicKeyResponse struct {

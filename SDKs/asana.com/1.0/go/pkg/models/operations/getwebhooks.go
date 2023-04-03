@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWebhooksQueryParams struct {
+type GetWebhooksRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -26,10 +26,6 @@ type GetWebhooksQueryParams struct {
 	Resource *string `queryParam:"style=form,explode=true,name=resource"`
 	// The workspace to query for webhooks in.
 	Workspace string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetWebhooksRequest struct {
-	QueryParams GetWebhooksQueryParams
 }
 
 // GetWebhooks200ApplicationJSON - Successfully retrieved the requested webhooks.

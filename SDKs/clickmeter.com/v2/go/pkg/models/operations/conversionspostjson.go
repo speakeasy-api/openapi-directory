@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPostJSONPathParams struct {
+type ConversionsPostJSONRequest struct {
+	// Updated body of the conversion
+	APICoreDtoConversionsConversion shared.APICoreDtoConversionsConversion `request:"mediaType=application/json"`
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsPostJSONRequest struct {
-	PathParams ConversionsPostJSONPathParams
-	// Updated body of the conversion
-	Request shared.APICoreDtoConversionsConversion `request:"mediaType=application/json"`
 }
 
 type ConversionsPostJSONResponse struct {

@@ -34,11 +34,11 @@ func newOpportunities(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // OpportunitiesAdd - Create opportunity
 // Create opportunity
-func (s *opportunities) OpportunitiesAdd(ctx context.Context, request operations.OpportunitiesAddRequest) (*operations.OpportunitiesAddResponse, error) {
+func (s *opportunities) OpportunitiesAdd(ctx context.Context, request operations.OpportunitiesAddRequest, security operations.OpportunitiesAddSecurity) (*operations.OpportunitiesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/opportunities"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OpportunityInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *opportunities) OpportunitiesAdd(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *opportunities) OpportunitiesAdd(ctx context.Context, request operations
 
 // OpportunitiesAll - List opportunities
 // List opportunities
-func (s *opportunities) OpportunitiesAll(ctx context.Context, request operations.OpportunitiesAllRequest) (*operations.OpportunitiesAllResponse, error) {
+func (s *opportunities) OpportunitiesAll(ctx context.Context, request operations.OpportunitiesAllRequest, security operations.OpportunitiesAllSecurity) (*operations.OpportunitiesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/opportunities"
 
@@ -164,13 +164,13 @@ func (s *opportunities) OpportunitiesAll(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *opportunities) OpportunitiesAll(ctx context.Context, request operations
 
 // OpportunitiesDelete - Delete opportunity
 // Delete opportunity
-func (s *opportunities) OpportunitiesDelete(ctx context.Context, request operations.OpportunitiesDeleteRequest) (*operations.OpportunitiesDeleteResponse, error) {
+func (s *opportunities) OpportunitiesDelete(ctx context.Context, request operations.OpportunitiesDeleteRequest, security operations.OpportunitiesDeleteSecurity) (*operations.OpportunitiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/opportunities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/opportunities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *opportunities) OpportunitiesDelete(ctx context.Context, request operati
 
 // OpportunitiesOne - Get opportunity
 // Get opportunity
-func (s *opportunities) OpportunitiesOne(ctx context.Context, request operations.OpportunitiesOneRequest) (*operations.OpportunitiesOneResponse, error) {
+func (s *opportunities) OpportunitiesOne(ctx context.Context, request operations.OpportunitiesOneRequest, security operations.OpportunitiesOneSecurity) (*operations.OpportunitiesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/opportunities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/opportunities/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *opportunities) OpportunitiesOne(ctx context.Context, request operations
 
 // OpportunitiesUpdate - Update opportunity
 // Update opportunity
-func (s *opportunities) OpportunitiesUpdate(ctx context.Context, request operations.OpportunitiesUpdateRequest) (*operations.OpportunitiesUpdateResponse, error) {
+func (s *opportunities) OpportunitiesUpdate(ctx context.Context, request operations.OpportunitiesUpdateRequest, security operations.OpportunitiesUpdateSecurity) (*operations.OpportunitiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/opportunities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/opportunities/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OpportunityInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *opportunities) OpportunitiesUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

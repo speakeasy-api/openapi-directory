@@ -51,7 +51,7 @@ func (s *organizationExports) CreateOrganizationExport(ctx context.Context, requ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organization_exports"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -66,7 +66,7 @@ func (s *organizationExports) CreateOrganizationExport(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,14 +126,14 @@ func (s *organizationExports) CreateOrganizationExport(ctx context.Context, requ
 // Returns details of a previously-requested Organization export.
 func (s *organizationExports) GetOrganizationExport(ctx context.Context, request operations.GetOrganizationExportRequest) (*operations.GetOrganizationExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organization_exports/{organization_export_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organization_exports/{organization_export_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartTableDataImportJobPathParams struct {
-	// <p>The ID of the table where the rows are being imported.</p> <p> If a table with the specified id could not be found, this API throws ResourceNotFoundException. </p>
-	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
-	// <p>The ID of the workbook where the rows are being imported.</p> <p> If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. </p>
-	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
-}
-
-type StartTableDataImportJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartTableDataImportJobRequestBodyDataFormatEnum -  The format of the data that is being imported. Currently the only option supported is "DELIMITED_TEXT".
 type StartTableDataImportJobRequestBodyDataFormatEnum string
 
@@ -70,9 +53,18 @@ type StartTableDataImportJobRequestBody struct {
 }
 
 type StartTableDataImportJobRequest struct {
-	PathParams StartTableDataImportJobPathParams
-	Headers    StartTableDataImportJobHeaders
-	Request    StartTableDataImportJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartTableDataImportJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>The ID of the table where the rows are being imported.</p> <p> If a table with the specified id could not be found, this API throws ResourceNotFoundException. </p>
+	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
+	// <p>The ID of the workbook where the rows are being imported.</p> <p> If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. </p>
+	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
 }
 
 type StartTableDataImportJobResponse struct {

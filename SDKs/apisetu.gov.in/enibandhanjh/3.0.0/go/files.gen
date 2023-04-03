@@ -16,5 +16,4 @@ pkg/models/operations/rdcer.go
 pkg/models/operations/regrii.go
 pkg/models/operations/rmcer.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

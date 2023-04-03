@@ -8,20 +8,15 @@ import (
 )
 
 type FetchFarmOrganizationByTypeAndIDSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FetchFarmOrganizationByTypeAndIDPathParams struct {
+type FetchFarmOrganizationByTypeAndIDRequest struct {
 	// Unique identifier of the farm organization.
 	FarmOrganizationID string `pathParam:"style=simple,explode=false,name=farmOrganizationId"`
 	// Type of the farm organization.
 	FarmOrganizationType shared.FarmOrganizationTypeEnum `pathParam:"style=simple,explode=false,name=farmOrganizationType"`
-}
-
-type FetchFarmOrganizationByTypeAndIDRequest struct {
-	PathParams FetchFarmOrganizationByTypeAndIDPathParams
-	Security   FetchFarmOrganizationByTypeAndIDSecurity
 }
 
 type FetchFarmOrganizationByTypeAndIDResponse struct {

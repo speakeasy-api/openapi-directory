@@ -30,20 +30,16 @@ func (e *GetDeploymentGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDeploymentGroupHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetDeploymentGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetDeploymentGroupRequest struct {
-	Headers GetDeploymentGroupHeaders
-	Request shared.GetDeploymentGroupInput `request:"mediaType=application/json"`
+	GetDeploymentGroupInput shared.GetDeploymentGroupInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm           *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget              GetDeploymentGroupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetDeploymentGroupResponse struct {

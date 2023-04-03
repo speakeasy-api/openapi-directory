@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsAddUsersForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsAddUsersForOrgPathParams struct {
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DistributionGroupsAddUsersForOrgRequestBody - list of user email addresses that should get added as members to the specified group
@@ -27,10 +19,12 @@ type DistributionGroupsAddUsersForOrgRequestBody struct {
 }
 
 type DistributionGroupsAddUsersForOrgRequest struct {
-	PathParams DistributionGroupsAddUsersForOrgPathParams
 	// list of user email addresses that should get added as members to the specified group
-	Request  DistributionGroupsAddUsersForOrgRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsAddUsersForOrgSecurity
+	RequestBody DistributionGroupsAddUsersForOrgRequestBody `request:"mediaType=application/json"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsAddUsersForOrgDefaultApplicationJSONErrorCodeEnum string

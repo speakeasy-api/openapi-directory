@@ -32,10 +32,20 @@ func newUrbanDelivery(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // ConfirmCarbonOffset - confirmCarbonOffset
-func (s *urbanDelivery) ConfirmCarbonOffset(ctx context.Context, request operations.ConfirmCarbonOffsetRequest) (*operations.ConfirmCarbonOffsetResponse, error) {
+func (s *urbanDelivery) ConfirmCarbonOffset(ctx context.Context, request operations.ConfirmCarbonOffsetRequestBody, opts ...operations.Option) (*operations.ConfirmCarbonOffsetResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmCarbonOffsetServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/urbanDelivery/confirmCarbonOffset"
@@ -78,10 +88,20 @@ func (s *urbanDelivery) ConfirmCarbonOffset(ctx context.Context, request operati
 }
 
 // ConfirmPayment - confirmPayment
-func (s *urbanDelivery) ConfirmPayment(ctx context.Context, request operations.ConfirmPaymentRequest) (*operations.ConfirmPaymentResponse, error) {
+func (s *urbanDelivery) ConfirmPayment(ctx context.Context, request operations.ConfirmPaymentRequestBody, opts ...operations.Option) (*operations.ConfirmPaymentResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPaymentServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/urbanDelivery/confirmPayment"
@@ -124,10 +144,20 @@ func (s *urbanDelivery) ConfirmPayment(ctx context.Context, request operations.C
 }
 
 // ConfirmPaymentOfTransaction - confirmTransaction
-func (s *urbanDelivery) ConfirmPaymentOfTransaction(ctx context.Context, request operations.ConfirmPaymentOfTransactionRequest) (*operations.ConfirmPaymentOfTransactionResponse, error) {
+func (s *urbanDelivery) ConfirmPaymentOfTransaction(ctx context.Context, request operations.ConfirmPaymentOfTransactionRequestBody, opts ...operations.Option) (*operations.ConfirmPaymentOfTransactionResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPaymentOfTransactionServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/urbanDelivery/confirmTransaction"
@@ -170,10 +200,20 @@ func (s *urbanDelivery) ConfirmPaymentOfTransaction(ctx context.Context, request
 }
 
 // ConfirmsPlanting - confirmPlanting
-func (s *urbanDelivery) ConfirmsPlanting(ctx context.Context, request operations.ConfirmsPlantingRequest) (*operations.ConfirmsPlantingResponse, error) {
+func (s *urbanDelivery) ConfirmsPlanting(ctx context.Context, request operations.ConfirmsPlantingRequestBody, opts ...operations.Option) (*operations.ConfirmsPlantingResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmsPlantingServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/urbanDelivery/confirmPlanting"
@@ -216,10 +256,20 @@ func (s *urbanDelivery) ConfirmsPlanting(ctx context.Context, request operations
 }
 
 // UrbanDelivery - urbanDelivery
-func (s *urbanDelivery) UrbanDelivery(ctx context.Context, request operations.UrbanDeliveryRequest) (*operations.UrbanDeliveryResponse, error) {
+func (s *urbanDelivery) UrbanDelivery(ctx context.Context, request operations.UrbanDeliveryRequestBody, opts ...operations.Option) (*operations.UrbanDeliveryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.UrbanDeliveryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/urbanDelivery"

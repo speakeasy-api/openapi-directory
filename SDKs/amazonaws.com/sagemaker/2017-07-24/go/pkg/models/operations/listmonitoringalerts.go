@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMonitoringAlertsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListMonitoringAlertsXAmzTargetEnum
 type ListMonitoringAlertsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListMonitoringAlertsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListMonitoringAlertsHeaders struct {
+type ListMonitoringAlertsRequest struct {
+	ListMonitoringAlertsRequest shared.ListMonitoringAlertsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListMonitoringAlertsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListMonitoringAlertsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListMonitoringAlertsRequest struct {
-	QueryParams ListMonitoringAlertsQueryParams
-	Headers     ListMonitoringAlertsHeaders
-	Request     shared.ListMonitoringAlertsRequest `request:"mediaType=application/json"`
 }
 
 type ListMonitoringAlertsResponse struct {

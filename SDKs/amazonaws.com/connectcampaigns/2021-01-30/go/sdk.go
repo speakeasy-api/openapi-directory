@@ -116,7 +116,7 @@ func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampa
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -240,14 +240,14 @@ func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampa
 // DeleteCampaign - Deletes a campaign from the specified Amazon Connect account.
 func (s *SDK) DeleteCampaign(ctx context.Context, request operations.DeleteCampaignRequest) (*operations.DeleteCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -317,14 +317,14 @@ func (s *SDK) DeleteCampaign(ctx context.Context, request operations.DeleteCampa
 // DeleteConnectInstanceConfig - Deletes a connect instance config from the specified AWS account.
 func (s *SDK) DeleteConnectInstanceConfig(ctx context.Context, request operations.DeleteConnectInstanceConfigRequest) (*operations.DeleteConnectInstanceConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -414,14 +414,14 @@ func (s *SDK) DeleteConnectInstanceConfig(ctx context.Context, request operation
 // DeleteInstanceOnboardingJob - Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.
 func (s *SDK) DeleteInstanceOnboardingJob(ctx context.Context, request operations.DeleteInstanceOnboardingJobRequest) (*operations.DeleteInstanceOnboardingJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -501,14 +501,14 @@ func (s *SDK) DeleteInstanceOnboardingJob(ctx context.Context, request operation
 // DescribeCampaign - Describes the specific campaign.
 func (s *SDK) DescribeCampaign(ctx context.Context, request operations.DescribeCampaignRequest) (*operations.DescribeCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -587,14 +587,14 @@ func (s *SDK) DescribeCampaign(ctx context.Context, request operations.DescribeC
 // GetCampaignState - Get state of a campaign for the specified Amazon Connect account.
 func (s *SDK) GetCampaignState(ctx context.Context, request operations.GetCampaignStateRequest) (*operations.GetCampaignStateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/state", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -685,7 +685,7 @@ func (s *SDK) GetCampaignStateBatch(ctx context.Context, request operations.GetC
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns-state"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -700,7 +700,7 @@ func (s *SDK) GetCampaignStateBatch(ctx context.Context, request operations.GetC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -779,14 +779,14 @@ func (s *SDK) GetCampaignStateBatch(ctx context.Context, request operations.GetC
 // GetConnectInstanceConfig - Get the specific Connect instance config.
 func (s *SDK) GetConnectInstanceConfig(ctx context.Context, request operations.GetConnectInstanceConfigRequest) (*operations.GetConnectInstanceConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -865,14 +865,14 @@ func (s *SDK) GetConnectInstanceConfig(ctx context.Context, request operations.G
 // GetInstanceOnboardingJobStatus - Get the specific instance onboarding job status.
 func (s *SDK) GetInstanceOnboardingJobStatus(ctx context.Context, request operations.GetInstanceOnboardingJobStatusRequest) (*operations.GetInstanceOnboardingJobStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -953,7 +953,7 @@ func (s *SDK) ListCampaigns(ctx context.Context, request operations.ListCampaign
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/campaigns-summary"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -968,9 +968,9 @@ func (s *SDK) ListCampaigns(ctx context.Context, request operations.ListCampaign
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1041,14 +1041,14 @@ func (s *SDK) ListCampaigns(ctx context.Context, request operations.ListCampaign
 // ListTagsForResource - List tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1137,14 +1137,14 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // PauseCampaign - Pauses a campaign for the specified Amazon Connect account.
 func (s *SDK) PauseCampaign(ctx context.Context, request operations.PauseCampaignRequest) (*operations.PauseCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/pause", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1244,9 +1244,9 @@ func (s *SDK) PauseCampaign(ctx context.Context, request operations.PauseCampaig
 // PutDialRequestBatch - Creates dials requests for the specified campaign Amazon Connect account. This API is idempotent.
 func (s *SDK) PutDialRequestBatch(ctx context.Context, request operations.PutDialRequestBatchRequest) (*operations.PutDialRequestBatchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dial-requests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dial-requests", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1261,7 +1261,7 @@ func (s *SDK) PutDialRequestBatch(ctx context.Context, request operations.PutDia
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1370,14 +1370,14 @@ func (s *SDK) PutDialRequestBatch(ctx context.Context, request operations.PutDia
 // ResumeCampaign - Stops a campaign for the specified Amazon Connect account.
 func (s *SDK) ResumeCampaign(ctx context.Context, request operations.ResumeCampaignRequest) (*operations.ResumeCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/resume", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/resume", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1477,14 +1477,14 @@ func (s *SDK) ResumeCampaign(ctx context.Context, request operations.ResumeCampa
 // StartCampaign - Starts a campaign for the specified Amazon Connect account.
 func (s *SDK) StartCampaign(ctx context.Context, request operations.StartCampaignRequest) (*operations.StartCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1584,9 +1584,9 @@ func (s *SDK) StartCampaign(ctx context.Context, request operations.StartCampaig
 // StartInstanceOnboardingJob - Onboard the specific Amazon Connect instance to Connect Campaigns.
 func (s *SDK) StartInstanceOnboardingJob(ctx context.Context, request operations.StartInstanceOnboardingJobRequest) (*operations.StartInstanceOnboardingJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1601,7 +1601,7 @@ func (s *SDK) StartInstanceOnboardingJob(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1700,14 +1700,14 @@ func (s *SDK) StartInstanceOnboardingJob(ctx context.Context, request operations
 // StopCampaign - Stops a campaign for the specified Amazon Connect account.
 func (s *SDK) StopCampaign(ctx context.Context, request operations.StopCampaignRequest) (*operations.StopCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1807,9 +1807,9 @@ func (s *SDK) StopCampaign(ctx context.Context, request operations.StopCampaignR
 // TagResource - Tag a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1824,7 +1824,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1904,16 +1904,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Untag a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1995,9 +1995,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCampaignDialerConfig - Updates the dialer config of a campaign. This API is idempotent.
 func (s *SDK) UpdateCampaignDialerConfig(ctx context.Context, request operations.UpdateCampaignDialerConfigRequest) (*operations.UpdateCampaignDialerConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dialer-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dialer-config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2012,7 +2012,7 @@ func (s *SDK) UpdateCampaignDialerConfig(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2092,9 +2092,9 @@ func (s *SDK) UpdateCampaignDialerConfig(ctx context.Context, request operations
 // UpdateCampaignName - Updates the name of a campaign. This API is idempotent.
 func (s *SDK) UpdateCampaignName(ctx context.Context, request operations.UpdateCampaignNameRequest) (*operations.UpdateCampaignNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/name", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/name", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2109,7 +2109,7 @@ func (s *SDK) UpdateCampaignName(ctx context.Context, request operations.UpdateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2189,9 +2189,9 @@ func (s *SDK) UpdateCampaignName(ctx context.Context, request operations.UpdateC
 // UpdateCampaignOutboundCallConfig - Updates the outbound call config of a campaign. This API is idempotent.
 func (s *SDK) UpdateCampaignOutboundCallConfig(ctx context.Context, request operations.UpdateCampaignOutboundCallConfigRequest) (*operations.UpdateCampaignOutboundCallConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/outbound-call-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/outbound-call-config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2206,7 +2206,7 @@ func (s *SDK) UpdateCampaignOutboundCallConfig(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

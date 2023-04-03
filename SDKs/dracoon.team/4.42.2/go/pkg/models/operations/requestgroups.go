@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestGroupsQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestGroupsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestGroupsXSdsDateFormatEnum string
 
@@ -57,16 +42,23 @@ func (e *RequestGroupsXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestGroupsHeaders struct {
+type RequestGroupsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestGroupsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestGroupsRequest struct {
-	QueryParams RequestGroupsQueryParams
-	Headers     RequestGroupsHeaders
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestGroupsResponse struct {

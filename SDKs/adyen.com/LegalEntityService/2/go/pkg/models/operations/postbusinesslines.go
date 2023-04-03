@@ -8,13 +8,8 @@ import (
 )
 
 type PostBusinessLinesSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostBusinessLinesRequest struct {
-	Request  *shared.BusinessLineInfoInput `request:"mediaType=application/json"`
-	Security PostBusinessLinesSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostBusinessLinesResponse struct {

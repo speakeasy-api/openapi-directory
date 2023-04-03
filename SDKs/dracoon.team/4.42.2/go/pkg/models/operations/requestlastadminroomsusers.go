@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestLastAdminRoomsUsersPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RequestLastAdminRoomsUsersHeaders struct {
+type RequestLastAdminRoomsUsersRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestLastAdminRoomsUsersRequest struct {
-	PathParams RequestLastAdminRoomsUsersPathParams
-	Headers    RequestLastAdminRoomsUsersHeaders
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type RequestLastAdminRoomsUsersResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReisezentrenQueryParams struct {
+type GetReisezentrenRequest struct {
 	// A station name or part of it
 	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type GetReisezentrenRequest struct {
-	QueryParams GetReisezentrenQueryParams
 }
 
 type GetReisezentrenResponse struct {

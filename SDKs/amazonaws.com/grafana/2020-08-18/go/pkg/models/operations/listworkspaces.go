@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkspacesQueryParams struct {
-	// The maximum number of workspaces to include in the results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of workspaces to return. (You receive this token from a previous <code>ListWorkspaces</code> operation.)
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListWorkspacesHeaders struct {
+type ListWorkspacesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListWorkspacesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWorkspacesRequest struct {
-	QueryParams ListWorkspacesQueryParams
-	Headers     ListWorkspacesHeaders
+	// The maximum number of workspaces to include in the results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of workspaces to return. (You receive this token from a previous <code>ListWorkspaces</code> operation.)
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListWorkspacesResponse struct {

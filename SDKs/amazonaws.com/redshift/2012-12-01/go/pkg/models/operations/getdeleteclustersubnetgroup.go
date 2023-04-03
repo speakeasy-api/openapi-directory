@@ -50,26 +50,18 @@ func (e *GETDeleteClusterSubnetGroupVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDeleteClusterSubnetGroupQueryParams struct {
+type GETDeleteClusterSubnetGroupRequest struct {
 	Action GETDeleteClusterSubnetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the cluster subnet group name to be deleted.
 	ClusterSubnetGroupName string                                 `queryParam:"style=form,explode=true,name=ClusterSubnetGroupName"`
 	Version                GETDeleteClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteClusterSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteClusterSubnetGroupRequest struct {
-	QueryParams GETDeleteClusterSubnetGroupQueryParams
-	Headers     GETDeleteClusterSubnetGroupHeaders
+	XAmzAlgorithm          *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteClusterSubnetGroupResponse struct {

@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddMemberToGroupPathParams struct {
+type AddMemberToGroupRequest struct {
+	AddUserToGroupRequest shared.AddUserToGroupRequest `request:"mediaType=application/json"`
 	// The identifier of the Organization.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organizationId"`
 	// The identifier of the Member.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type AddMemberToGroupRequest struct {
-	PathParams AddMemberToGroupPathParams
-	Request    shared.AddUserToGroupRequest `request:"mediaType=application/json"`
 }
 
 type AddMemberToGroupResponse struct {

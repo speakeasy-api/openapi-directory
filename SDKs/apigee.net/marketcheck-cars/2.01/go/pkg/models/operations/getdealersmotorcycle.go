@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDealersMotorcycleQueryParams struct {
+type GetDealersMotorcycleRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on City in which they are listed
@@ -44,10 +44,6 @@ type GetDealersMotorcycleQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetDealersMotorcycleRequest struct {
-	QueryParams GetDealersMotorcycleQueryParams
 }
 
 type GetDealersMotorcycleResponse struct {

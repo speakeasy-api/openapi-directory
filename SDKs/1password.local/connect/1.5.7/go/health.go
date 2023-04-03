@@ -33,10 +33,20 @@ func newHealth(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetHeartbeat - Ping the server for liveness
-func (s *health) GetHeartbeat(ctx context.Context, request operations.GetHeartbeatRequest) (*operations.GetHeartbeatResponse, error) {
+func (s *health) GetHeartbeat(ctx context.Context, opts ...operations.Option) (*operations.GetHeartbeatResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetHeartbeatServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/heartbeat"
@@ -82,10 +92,20 @@ func (s *health) GetHeartbeat(ctx context.Context, request operations.GetHeartbe
 }
 
 // GetServerHealth - Get state of the server and its dependencies.
-func (s *health) GetServerHealth(ctx context.Context, request operations.GetServerHealthRequest) (*operations.GetServerHealthResponse, error) {
+func (s *health) GetServerHealth(ctx context.Context, opts ...operations.Option) (*operations.GetServerHealthResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetServerHealthServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/health"

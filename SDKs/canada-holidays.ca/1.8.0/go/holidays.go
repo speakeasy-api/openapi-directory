@@ -36,14 +36,14 @@ func newHolidays(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Returns one Canadian statutory holiday by integer id. Returns a 404 response for invalid ids.
 func (s *holidays) Holiday(ctx context.Context, request operations.HolidayRequest) (*operations.HolidayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/holidays/{holidayId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/holidays/{holidayId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *holidays) Holidays(ctx context.Context, request operations.HolidaysRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

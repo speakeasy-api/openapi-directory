@@ -13,17 +13,13 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            HubAuth: shared.SchemeHubAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
+            HubAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
         }),
     )
 
-    req := operations.PostUsers2FALoginRequest{
-        Request: shared.Users2FALoginRequest{
-            Code: "123456",
-            Login2faToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
-        },
+    req := shared.Users2FALoginRequest{
+        Code: "123456",
+        Login2faToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
     }
 
     ctx := context.Background()

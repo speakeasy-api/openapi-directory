@@ -14,19 +14,17 @@ func main() {
     s := sdk.New()
 
     req := operations.AuthorizeRequest{
-        QueryParams: operations.AuthorizeQueryParams{
-            ClientID: "corrupti",
-            Display: "provident",
-            MaxAge: 715190,
-            Nonce: "quibusdam",
-            Prompt: "unde",
-            RedirectURI: "nulla",
-            ResponseMode: "corrupti",
-            ResponseType: "illum",
-            Scope: "vel",
-            State: "error",
-            UILocales: "deserunt",
-        },
+        ClientID: "corrupti",
+        Display: "provident",
+        MaxAge: 715190,
+        Nonce: "quibusdam",
+        Prompt: "unde",
+        RedirectURI: "nulla",
+        ResponseMode: "corrupti",
+        ResponseType: "illum",
+        Scope: "vel",
+        State: "error",
+        UILocales: "deserunt",
     }
 
     ctx := context.Background()

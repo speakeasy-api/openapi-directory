@@ -24,84 +24,110 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchCreateTableRowsRequest{
-        PathParams: operations.BatchCreateTableRowsPathParams{
-            TableID: "corrupti",
-            WorkbookID: "provident",
-        },
-        Headers: operations.BatchCreateTableRowsHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
-        Request: operations.BatchCreateTableRowsRequestBody{
-            ClientRequestToken: "error",
+        RequestBody: operations.BatchCreateTableRowsRequestBody{
+            ClientRequestToken: "corrupti",
             RowsToCreate: []shared.CreateRowData{
                 shared.CreateRowData{
-                    BatchItemID: "suscipit",
+                    BatchItemID: "distinctio",
                     CellsToCreate: map[string]shared.CellInput{
-                        "magnam": shared.CellInput{
-                            Fact: "debitis",
+                        "unde": shared.CellInput{
+                            Fact: "nulla",
                             Facts: []string{
-                                "delectus",
-                            },
-                        },
-                        "tempora": shared.CellInput{
-                            Fact: "suscipit",
-                            Facts: []string{
-                                "minus",
-                                "placeat",
-                            },
-                        },
-                    },
-                },
-                shared.CreateRowData{
-                    BatchItemID: "voluptatum",
-                    CellsToCreate: map[string]shared.CellInput{
-                        "excepturi": shared.CellInput{
-                            Fact: "nisi",
-                            Facts: []string{
-                                "temporibus",
-                                "ab",
-                                "quis",
-                                "veritatis",
+                                "illum",
+                                "vel",
+                                "error",
                             },
                         },
                         "deserunt": shared.CellInput{
-                            Fact: "perferendis",
+                            Fact: "suscipit",
                             Facts: []string{
-                                "repellendus",
-                                "sapiente",
+                                "magnam",
+                                "debitis",
+                            },
+                        },
+                        "ipsa": shared.CellInput{
+                            Fact: "delectus",
+                            Facts: []string{
+                                "suscipit",
+                                "molestiae",
+                            },
+                        },
+                        "minus": shared.CellInput{
+                            Fact: "placeat",
+                            Facts: []string{
+                                "iusto",
+                                "excepturi",
+                                "nisi",
                             },
                         },
                     },
                 },
                 shared.CreateRowData{
-                    BatchItemID: "quo",
+                    BatchItemID: "recusandae",
                     CellsToCreate: map[string]shared.CellInput{
-                        "at": shared.CellInput{
-                            Fact: "at",
+                        "ab": shared.CellInput{
+                            Fact: "quis",
                             Facts: []string{
+                                "deserunt",
+                            },
+                        },
+                        "perferendis": shared.CellInput{
+                            Fact: "ipsam",
+                            Facts: []string{
+                                "sapiente",
+                                "quo",
+                                "odit",
+                                "at",
+                            },
+                        },
+                        "at": shared.CellInput{
+                            Fact: "maiores",
+                            Facts: []string{
+                                "quod",
+                                "quod",
+                            },
+                        },
+                        "esse": shared.CellInput{
+                            Fact: "totam",
+                            Facts: []string{
+                                "dolorum",
+                                "dicta",
+                                "nam",
+                                "officia",
+                            },
+                        },
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "occaecati",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "deleniti": shared.CellInput{
+                            Fact: "hic",
+                            Facts: []string{
+                                "totam",
+                                "beatae",
+                                "commodi",
                                 "molestiae",
-                                "quod",
-                                "quod",
-                                "esse",
                             },
                         },
                     },
                 },
             },
         },
+        XAmzAlgorithm: "modi",
+        XAmzContentSha256: "qui",
+        XAmzCredential: "impedit",
+        XAmzDate: "cum",
+        XAmzSecurityToken: "esse",
+        XAmzSignature: "ipsum",
+        XAmzSignedHeaders: "excepturi",
+        TableID: "aspernatur",
+        WorkbookID: "perferendis",
     }
 
     ctx := context.Background()
@@ -118,7 +144,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -139,4 +165,15 @@ func main() {
 * `UntagResource` -  The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

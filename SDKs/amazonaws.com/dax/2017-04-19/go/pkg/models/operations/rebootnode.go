@@ -30,7 +30,8 @@ func (e *RebootNodeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RebootNodeHeaders struct {
+type RebootNodeRequest struct {
+	RebootNodeRequest shared.RebootNodeRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type RebootNodeHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        RebootNodeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type RebootNodeRequest struct {
-	Headers RebootNodeHeaders
-	Request shared.RebootNodeRequest `request:"mediaType=application/json"`
 }
 
 type RebootNodeResponse struct {

@@ -30,20 +30,16 @@ func (e *DeleteAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteAliasHeaders struct {
-	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteAliasXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteAliasRequest struct {
-	Headers DeleteAliasHeaders
-	Request shared.DeleteAliasRequest `request:"mediaType=application/json"`
+	DeleteAliasRequest shared.DeleteAliasRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         DeleteAliasXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteAliasResponse struct {

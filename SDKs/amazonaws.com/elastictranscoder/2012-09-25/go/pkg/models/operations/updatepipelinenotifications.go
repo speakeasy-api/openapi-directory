@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePipelineNotificationsPathParams struct {
-	// The identifier of the pipeline for which you want to change notification settings.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdatePipelineNotificationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdatePipelineNotificationsRequestBodyNotifications - <p>The Amazon Simple Notification Service (Amazon SNS) topic or topics to notify in order to report job status.</p> <important> <p>To receive notifications, you must also subscribe to the new topic in the Amazon SNS console.</p> </important>
 type UpdatePipelineNotificationsRequestBodyNotifications struct {
 	Completed   *string `json:"Completed,omitempty"`
@@ -36,9 +21,16 @@ type UpdatePipelineNotificationsRequestBody struct {
 }
 
 type UpdatePipelineNotificationsRequest struct {
-	PathParams UpdatePipelineNotificationsPathParams
-	Headers    UpdatePipelineNotificationsHeaders
-	Request    UpdatePipelineNotificationsRequestBody `request:"mediaType=application/json"`
+	// The identifier of the pipeline for which you want to change notification settings.
+	ID                string                                 `pathParam:"style=simple,explode=false,name=Id"`
+	RequestBody       UpdatePipelineNotificationsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdatePipelineNotificationsResponse struct {

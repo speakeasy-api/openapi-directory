@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryGetArtifactContentsPathParams struct {
+type RegistryGetArtifactContentsRequest struct {
 	// The artifact id.
 	Artifact string `pathParam:"style=simple,explode=false,name=artifact"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryGetArtifactContentsRequest struct {
-	PathParams RegistryGetArtifactContentsPathParams
 }
 
 type RegistryGetArtifactContentsResponse struct {

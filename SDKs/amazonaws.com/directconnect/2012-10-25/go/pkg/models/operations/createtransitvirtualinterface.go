@@ -30,20 +30,16 @@ func (e *CreateTransitVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type CreateTransitVirtualInterfaceHeaders struct {
-	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateTransitVirtualInterfaceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateTransitVirtualInterfaceRequest struct {
-	Headers CreateTransitVirtualInterfaceHeaders
-	Request shared.CreateTransitVirtualInterfaceRequest `request:"mediaType=application/json"`
+	CreateTransitVirtualInterfaceRequest shared.CreateTransitVirtualInterfaceRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                       *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                             *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                    *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                        *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                    *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                           CreateTransitVirtualInterfaceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateTransitVirtualInterfaceResponse struct {

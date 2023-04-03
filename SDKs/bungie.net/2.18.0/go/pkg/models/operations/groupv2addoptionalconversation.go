@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2AddOptionalConversationSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2AddOptionalConversationPathParams struct {
-	// Group ID of the group to edit.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2AddOptionalConversationRequest struct {
-	PathParams GroupV2AddOptionalConversationPathParams
-	Security   GroupV2AddOptionalConversationSecurity
+	// Group ID of the group to edit.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2AddOptionalConversation200Wildcard - Look at the Response property for more information about the nature of this response

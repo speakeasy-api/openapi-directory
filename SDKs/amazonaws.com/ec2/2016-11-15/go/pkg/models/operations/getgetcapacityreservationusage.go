@@ -50,7 +50,7 @@ func (e *GETGETCapacityReservationUsageVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETGETCapacityReservationUsageQueryParams struct {
+type GETGETCapacityReservationUsageRequest struct {
 	Action GETGETCapacityReservationUsageActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Capacity Reservation.
 	CapacityReservationID string `queryParam:"style=form,explode=true,name=CapacityReservationId"`
@@ -59,23 +59,15 @@ type GETGETCapacityReservationUsageQueryParams struct {
 	// <p>The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned <code>nextToken</code> value. This value can be between 5 and 500. If <code>maxResults</code> is given a larger value than 500, you receive an error.</p> <p>Valid range: Minimum value of 1. Maximum value of 1000.</p>
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token to use to retrieve the next page of results.
-	NextToken *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETGETCapacityReservationUsageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETCapacityReservationUsageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETCapacityReservationUsageRequest struct {
-	QueryParams GETGETCapacityReservationUsageQueryParams
-	Headers     GETGETCapacityReservationUsageHeaders
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETGETCapacityReservationUsageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETCapacityReservationUsageResponse struct {

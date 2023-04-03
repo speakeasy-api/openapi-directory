@@ -50,25 +50,17 @@ func (e *POSTDisassociateClientVpnTargetNetworkVersionEnum) UnmarshalJSON(data [
 	}
 }
 
-type POSTDisassociateClientVpnTargetNetworkQueryParams struct {
-	Action  POSTDisassociateClientVpnTargetNetworkActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisassociateClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisassociateClientVpnTargetNetworkHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisassociateClientVpnTargetNetworkRequest struct {
-	QueryParams POSTDisassociateClientVpnTargetNetworkQueryParams
-	Headers     POSTDisassociateClientVpnTargetNetworkHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisassociateClientVpnTargetNetworkActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                            `request:"mediaType=text/xml"`
+	Version           POSTDisassociateClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisassociateClientVpnTargetNetworkResponse struct {

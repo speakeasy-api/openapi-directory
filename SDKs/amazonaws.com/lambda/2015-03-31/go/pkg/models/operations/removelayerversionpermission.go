@@ -6,21 +6,15 @@ import (
 	"net/http"
 )
 
-type RemoveLayerVersionPermissionPathParams struct {
+type RemoveLayerVersionPermissionRequest struct {
 	// The name or Amazon Resource Name (ARN) of the layer.
 	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
+	// Only update the policy if the revision ID matches the ID specified. Use this option to avoid modifying a policy that has changed since you last read it.
+	RevisionID *string `queryParam:"style=form,explode=true,name=RevisionId"`
 	// The identifier that was specified when the statement was added.
 	StatementID string `pathParam:"style=simple,explode=false,name=StatementId"`
 	// The version number.
-	VersionNumber int64 `pathParam:"style=simple,explode=false,name=VersionNumber"`
-}
-
-type RemoveLayerVersionPermissionQueryParams struct {
-	// Only update the policy if the revision ID matches the ID specified. Use this option to avoid modifying a policy that has changed since you last read it.
-	RevisionID *string `queryParam:"style=form,explode=true,name=RevisionId"`
-}
-
-type RemoveLayerVersionPermissionHeaders struct {
+	VersionNumber     int64   `pathParam:"style=simple,explode=false,name=VersionNumber"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -28,12 +22,6 @@ type RemoveLayerVersionPermissionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type RemoveLayerVersionPermissionRequest struct {
-	PathParams  RemoveLayerVersionPermissionPathParams
-	QueryParams RemoveLayerVersionPermissionQueryParams
-	Headers     RemoveLayerVersionPermissionHeaders
 }
 
 type RemoveLayerVersionPermissionResponse struct {

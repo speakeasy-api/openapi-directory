@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWebhooksPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-}
-
-type ListWebhooksQueryParams struct {
-	//  The maximum number of records to list in a single response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  A pagination token. Set to null to start listing webhooks from the start. If non-null,the pagination token is returned in a result. Pass its value in here to list more webhooks.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListWebhooksHeaders struct {
+type ListWebhooksRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListWebhooksHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWebhooksRequest struct {
-	PathParams  ListWebhooksPathParams
-	QueryParams ListWebhooksQueryParams
-	Headers     ListWebhooksHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The maximum number of records to list in a single response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  A pagination token. Set to null to start listing webhooks from the start. If non-null,the pagination token is returned in a result. Pass its value in here to list more webhooks.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListWebhooksResponse struct {

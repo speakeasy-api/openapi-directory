@@ -6,34 +6,24 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsGroupErrorFreeDevicePercentagesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ErrorsGroupErrorFreeDevicePercentagesPathParams struct {
+type ErrorsGroupErrorFreeDevicePercentagesRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Last date time in data in ISO 8601 date time format
+	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// The id of the error group
 	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsGroupErrorFreeDevicePercentagesQueryParams struct {
-	// Last date time in data in ISO 8601 date time format
-	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// Start date time in data in ISO 8601 date time format
 	Start time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type ErrorsGroupErrorFreeDevicePercentagesRequest struct {
-	PathParams  ErrorsGroupErrorFreeDevicePercentagesPathParams
-	QueryParams ErrorsGroupErrorFreeDevicePercentagesQueryParams
-	Security    ErrorsGroupErrorFreeDevicePercentagesSecurity
 }
 
 type ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum string

@@ -11,21 +11,7 @@ import (
 )
 
 type WebhooksShortExecuteSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type WebhooksShortExecutePathParams struct {
-	// JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Service provider ID.
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
-}
-
-type WebhooksShortExecuteQueryParams struct {
-	// The name of downstream event when connector does not supply in body or header
-	E *string `queryParam:"style=form,explode=true,name=e"`
-	// Unique identifier to used to look up consumer/connection when receiving connector events from downstream.
-	LID *string `queryParam:"style=form,explode=true,name=l_id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type WebhooksShortExecuteRequestBodyType string
@@ -97,10 +83,15 @@ func (u WebhooksShortExecuteRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type WebhooksShortExecuteRequest struct {
-	PathParams  WebhooksShortExecutePathParams
-	QueryParams WebhooksShortExecuteQueryParams
-	Request     WebhooksShortExecuteRequestBody `request:"mediaType=application/json"`
-	Security    WebhooksShortExecuteSecurity
+	RequestBody WebhooksShortExecuteRequestBody `request:"mediaType=application/json"`
+	// The name of downstream event when connector does not supply in body or header
+	E *string `queryParam:"style=form,explode=true,name=e"`
+	// JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Unique identifier to used to look up consumer/connection when receiving connector events from downstream.
+	LID *string `queryParam:"style=form,explode=true,name=l_id"`
+	// Service provider ID.
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type WebhooksShortExecuteResponse struct {

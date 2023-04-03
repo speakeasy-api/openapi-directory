@@ -7,21 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDatasetsPathParams struct {
+type ListDatasetsRequest struct {
 	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
 	IdentityID string `pathParam:"style=simple,explode=false,name=IdentityId"`
 	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type ListDatasetsQueryParams struct {
-	// The maximum number of results to be returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A pagination token for obtaining the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListDatasetsHeaders struct {
+	IdentityPoolID    string  `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +19,10 @@ type ListDatasetsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDatasetsRequest struct {
-	PathParams  ListDatasetsPathParams
-	QueryParams ListDatasetsQueryParams
-	Headers     ListDatasetsHeaders
+	// The maximum number of results to be returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A pagination token for obtaining the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListDatasetsResponse struct {

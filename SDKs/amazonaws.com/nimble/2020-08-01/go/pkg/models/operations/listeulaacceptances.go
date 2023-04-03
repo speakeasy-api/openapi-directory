@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEulaAcceptancesPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListEulaAcceptancesQueryParams struct {
-	// The list of EULA IDs that have been previously accepted.
-	EulaIds []string `queryParam:"style=form,explode=true,name=eulaIds"`
-	// The token for the next set of results, or null if there are no more results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListEulaAcceptancesHeaders struct {
+type ListEulaAcceptancesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListEulaAcceptancesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEulaAcceptancesRequest struct {
-	PathParams  ListEulaAcceptancesPathParams
-	QueryParams ListEulaAcceptancesQueryParams
-	Headers     ListEulaAcceptancesHeaders
+	// The list of EULA IDs that have been previously accepted.
+	EulaIds []string `queryParam:"style=form,explode=true,name=eulaIds"`
+	// The token for the next set of results, or null if there are no more results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type ListEulaAcceptancesResponse struct {

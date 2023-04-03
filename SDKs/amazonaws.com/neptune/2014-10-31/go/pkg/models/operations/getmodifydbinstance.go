@@ -56,7 +56,7 @@ func (e *GETModifyDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyDBInstanceQueryParams struct {
+type GETModifyDBInstanceRequest struct {
 	Action GETModifyDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Not supported by Neptune.
 	AllocatedStorage *int64 `queryParam:"style=form,explode=true,name=AllocatedStorage"`
@@ -133,21 +133,13 @@ type GETModifyDBInstanceQueryParams struct {
 	Version               GETModifyDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>A list of EC2 VPC security groups to authorize on this DB instance. This change is asynchronously applied as soon as possible.</p> <p>Not applicable. The associated list of EC2 VPC security groups is managed by the DB cluster. For more information, see <a>ModifyDBCluster</a>.</p> <p>Constraints:</p> <ul> <li> <p>If supplied, must match existing VpcSecurityGroupIds.</p> </li> </ul>
 	VpcSecurityGroupIds []string `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
-}
-
-type GETModifyDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyDBInstanceRequest struct {
-	QueryParams GETModifyDBInstanceQueryParams
-	Headers     GETModifyDBInstanceHeaders
+	XAmzAlgorithm       *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyDBInstanceResponse struct {

@@ -6,19 +6,13 @@ import (
 	"net/http"
 )
 
-type ListInvalidations20161125PathParams struct {
+type ListInvalidations20161125Request struct {
 	// The distribution's ID.
 	DistributionID string `pathParam:"style=simple,explode=false,name=DistributionId"`
-}
-
-type ListInvalidations20161125QueryParams struct {
 	// Use this parameter when paginating results to indicate where to begin in your list of invalidation batches. Because the results are returned in decreasing order from most recent to oldest, the most recent results are on the first page, the second page will contain earlier results, and so on. To get the next page of results, set <code>Marker</code> to the value of the <code>NextMarker</code> from the current page's response. This value is the same as the ID of the last invalidation batch on that page.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of invalidation batches that you want in the response body.
-	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListInvalidations20161125Headers struct {
+	MaxItems          *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +20,6 @@ type ListInvalidations20161125Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListInvalidations20161125Request struct {
-	PathParams  ListInvalidations20161125PathParams
-	QueryParams ListInvalidations20161125QueryParams
-	Headers     ListInvalidations20161125Headers
 }
 
 type ListInvalidations20161125Response struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListNotebookExecutionsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListNotebookExecutionsXAmzTargetEnum
 type ListNotebookExecutionsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListNotebookExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ListNotebookExecutionsHeaders struct {
+type ListNotebookExecutionsRequest struct {
+	ListNotebookExecutionsInput shared.ListNotebookExecutionsInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                              `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListNotebookExecutionsHeaders struct {
 	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListNotebookExecutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListNotebookExecutionsRequest struct {
-	QueryParams ListNotebookExecutionsQueryParams
-	Headers     ListNotebookExecutionsHeaders
-	Request     shared.ListNotebookExecutionsInput `request:"mediaType=application/json"`
 }
 
 type ListNotebookExecutionsResponse struct {

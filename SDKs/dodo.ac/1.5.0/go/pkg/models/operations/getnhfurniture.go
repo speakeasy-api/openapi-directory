@@ -95,25 +95,17 @@ func (e *GetNhFurnitureColorEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNhFurnitureQueryParams struct {
+type GetNhFurnitureRequest struct {
+	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
+	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
 	// Specify the category of furniture to return (houswares, miscellaneous, or wall-mounted).
 	Category *GetNhFurnitureCategoryEnum `queryParam:"style=form,explode=true,name=category"`
 	// Return furniture that matches the provided colors (may specify one or two colors).
 	Color []GetNhFurnitureColorEnum `queryParam:"style=form,explode=true,name=color"`
 	// When set to `true`, only furniture names are returned. Instead of an array of objects with all details, the return will be an array of strings.
 	Excludedetails *string `queryParam:"style=form,explode=true,name=excludedetails"`
-}
-
-type GetNhFurnitureHeaders struct {
-	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
-	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
-	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
-	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhFurnitureRequest struct {
-	QueryParams GetNhFurnitureQueryParams
-	Headers     GetNhFurnitureHeaders
 }
 
 type GetNhFurnitureResponse struct {

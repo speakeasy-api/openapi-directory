@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DevicesDeviceDetailsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DevicesDeviceDetailsPathParams struct {
-	// The UDID of the device
-	DeviceUdid string `pathParam:"style=simple,explode=false,name=device_udid"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DevicesDeviceDetailsRequest struct {
-	PathParams DevicesDeviceDetailsPathParams
-	Security   DevicesDeviceDetailsSecurity
+	// The UDID of the device
+	DeviceUdid string `pathParam:"style=simple,explode=false,name=device_udid"`
 }
 
 type DevicesDeviceDetails404ApplicationJSONCodeEnum string

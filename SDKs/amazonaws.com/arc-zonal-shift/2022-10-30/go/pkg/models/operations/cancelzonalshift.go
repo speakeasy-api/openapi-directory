@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelZonalShiftPathParams struct {
-	// The internally-generated identifier of a zonal shift.
-	ZonalShiftID string `pathParam:"style=simple,explode=false,name=zonalShiftId"`
-}
-
-type CancelZonalShiftHeaders struct {
+type CancelZonalShiftRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CancelZonalShiftHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelZonalShiftRequest struct {
-	PathParams CancelZonalShiftPathParams
-	Headers    CancelZonalShiftHeaders
+	// The internally-generated identifier of a zonal shift.
+	ZonalShiftID string `pathParam:"style=simple,explode=false,name=zonalShiftId"`
 }
 
 type CancelZonalShiftResponse struct {

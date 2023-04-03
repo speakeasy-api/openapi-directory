@@ -13,30 +13,26 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateTeamMemberRequest{
-        Headers: operations.AssociateTeamMemberHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "CodeStar_20170419.AssociateTeamMember",
-        },
-        Request: shared.AssociateTeamMemberRequest{
-            ClientRequestToken: "illum",
-            ProjectID: "vel",
-            ProjectRole: "error",
+        AssociateTeamMemberRequest: shared.AssociateTeamMemberRequest{
+            ClientRequestToken: "corrupti",
+            ProjectID: "provident",
+            ProjectRole: "distinctio",
             RemoteAccessAllowed: false,
-            UserArn: "deserunt",
+            UserArn: "quibusdam",
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "CodeStar_20170419.AssociateTeamMember",
     }
 
     ctx := context.Background()

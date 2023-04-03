@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsCountsPerDaySecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsCountsPerDayPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ErrorsCountsPerDayErrorTypeEnum - Type of error (handled vs unhandled), excluding All
@@ -45,22 +37,20 @@ func (e *ErrorsCountsPerDayErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ErrorsCountsPerDayQueryParams struct {
+type ErrorsCountsPerDayRequest struct {
 	// app build
 	AppBuild *string `queryParam:"style=form,explode=true,name=app_build"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// Last date time in data in ISO 8601 date time format
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// Type of error (handled vs unhandled), excluding All
 	ErrorType *ErrorsCountsPerDayErrorTypeEnum `queryParam:"style=form,explode=true,name=errorType"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Start date time in data in ISO 8601 date time format
 	Start   time.Time `queryParam:"style=form,explode=true,name=start"`
 	Version *string   `queryParam:"style=form,explode=true,name=version"`
-}
-
-type ErrorsCountsPerDayRequest struct {
-	PathParams  ErrorsCountsPerDayPathParams
-	QueryParams ErrorsCountsPerDayQueryParams
-	Security    ErrorsCountsPerDaySecurity
 }
 
 type ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum string

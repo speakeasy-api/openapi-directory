@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRelatedItemPathParams struct {
-	// A unique identifier of the case.
-	CaseID string `pathParam:"style=simple,explode=false,name=caseId"`
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-}
-
-type CreateRelatedItemHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateRelatedItemRequestBodyContent - Represents the content of a related item to be created.
 type CreateRelatedItemRequestBodyContent struct {
 	Comment *shared.CommentContent `json:"comment,omitempty"`
@@ -64,9 +47,18 @@ type CreateRelatedItemRequestBody struct {
 }
 
 type CreateRelatedItemRequest struct {
-	PathParams CreateRelatedItemPathParams
-	Headers    CreateRelatedItemHeaders
-	Request    CreateRelatedItemRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateRelatedItemRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier of the case.
+	CaseID string `pathParam:"style=simple,explode=false,name=caseId"`
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
 }
 
 type CreateRelatedItemResponse struct {

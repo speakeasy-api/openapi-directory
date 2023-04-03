@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeEntityQueryParams struct {
-	// Required. The catalog related to the request. Fixed value: <code>AWSMarketplace</code>
-	Catalog string `queryParam:"style=form,explode=true,name=catalog"`
-	// Required. The unique ID of the entity to describe.
-	EntityID string `queryParam:"style=form,explode=true,name=entityId"`
-}
-
-type DescribeEntityHeaders struct {
+type DescribeEntityRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeEntityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeEntityRequest struct {
-	QueryParams DescribeEntityQueryParams
-	Headers     DescribeEntityHeaders
+	// Required. The catalog related to the request. Fixed value: <code>AWSMarketplace</code>
+	Catalog string `queryParam:"style=form,explode=true,name=catalog"`
+	// Required. The unique ID of the entity to describe.
+	EntityID string `queryParam:"style=form,explode=true,name=entityId"`
 }
 
 type DescribeEntityResponse struct {

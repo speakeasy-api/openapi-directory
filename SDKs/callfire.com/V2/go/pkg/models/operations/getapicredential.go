@@ -8,23 +8,15 @@ import (
 )
 
 type GetAPICredentialSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAPICredentialPathParams struct {
-	// An id of an API credential
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetAPICredentialQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetAPICredentialRequest struct {
-	PathParams  GetAPICredentialPathParams
-	QueryParams GetAPICredentialQueryParams
-	Security    GetAPICredentialSecurity
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// An id of an API credential
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetAPICredentialResponse struct {

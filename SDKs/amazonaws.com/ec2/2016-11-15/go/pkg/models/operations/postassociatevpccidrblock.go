@@ -50,25 +50,17 @@ func (e *POSTAssociateVpcCidrBlockVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type POSTAssociateVpcCidrBlockQueryParams struct {
-	Action  POSTAssociateVpcCidrBlockActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAssociateVpcCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAssociateVpcCidrBlockHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAssociateVpcCidrBlockRequest struct {
-	QueryParams POSTAssociateVpcCidrBlockQueryParams
-	Headers     POSTAssociateVpcCidrBlockHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAssociateVpcCidrBlockActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                               `request:"mediaType=text/xml"`
+	Version           POSTAssociateVpcCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAssociateVpcCidrBlockResponse struct {

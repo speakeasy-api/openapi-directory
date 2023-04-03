@@ -4,20 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestUpdateDeviceSetOfOwnerSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestUpdateDeviceSetOfOwnerPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The UUID of the device set
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TestUpdateDeviceSetOfOwnerDeviceSetUpdateInformation - The name of the device set and the list of device IDs
@@ -29,9 +19,13 @@ type TestUpdateDeviceSetOfOwnerDeviceSetUpdateInformation struct {
 }
 
 type TestUpdateDeviceSetOfOwnerRequest struct {
-	PathParams TestUpdateDeviceSetOfOwnerPathParams
-	Request    TestUpdateDeviceSetOfOwnerDeviceSetUpdateInformation `request:"mediaType=application/json"`
-	Security   TestUpdateDeviceSetOfOwnerSecurity
+	RequestBody TestUpdateDeviceSetOfOwnerDeviceSetUpdateInformation `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The UUID of the device set
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // TestUpdateDeviceSetOfOwnerTestCloudErrorDetails - Details of a failed operation

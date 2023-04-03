@@ -50,26 +50,18 @@ func (e *GETCreateDBSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateDBSnapshotQueryParams struct {
+type GETCreateDBSnapshotRequest struct {
 	Action               GETCreateDBSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBInstanceIdentifier string                         `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	DBSnapshotIdentifier string                         `queryParam:"style=form,explode=true,name=DBSnapshotIdentifier"`
 	Version              GETCreateDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateDBSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateDBSnapshotRequest struct {
-	QueryParams GETCreateDBSnapshotQueryParams
-	Headers     GETCreateDBSnapshotHeaders
+	XAmzAlgorithm        *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateDBSnapshotResponse struct {

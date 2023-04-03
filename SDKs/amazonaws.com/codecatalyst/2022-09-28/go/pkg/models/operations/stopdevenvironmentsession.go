@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopDevEnvironmentSessionPathParams struct {
+type StopDevEnvironmentSessionRequest struct {
 	// The system-generated unique ID of the Dev Environment. To obtain this ID, use <a>ListDevEnvironments</a>.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The name of the project in the space.
@@ -16,10 +16,6 @@ type StopDevEnvironmentSessionPathParams struct {
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 	// The name of the space.
 	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type StopDevEnvironmentSessionRequest struct {
-	PathParams StopDevEnvironmentSessionPathParams
 }
 
 type StopDevEnvironmentSessionResponse struct {

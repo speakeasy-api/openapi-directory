@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeConformancePackStatusQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeConformancePackStatusXAmzTargetEnum
 type DescribeConformancePackStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeConformancePackStatusXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DescribeConformancePackStatusHeaders struct {
+type DescribeConformancePackStatusRequest struct {
+	DescribeConformancePackStatusRequest shared.DescribeConformancePackStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeConformancePackStatusHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeConformancePackStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeConformancePackStatusRequest struct {
-	QueryParams DescribeConformancePackStatusQueryParams
-	Headers     DescribeConformancePackStatusHeaders
-	Request     shared.DescribeConformancePackStatusRequest `request:"mediaType=application/json"`
 }
 
 type DescribeConformancePackStatusResponse struct {

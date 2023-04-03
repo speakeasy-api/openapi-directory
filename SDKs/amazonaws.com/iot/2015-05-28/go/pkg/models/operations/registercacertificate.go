@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegisterCACertificateQueryParams struct {
-	// Allows this CA certificate to be used for auto registration of device certificates.
-	AllowAutoRegistration *bool `queryParam:"style=form,explode=true,name=allowAutoRegistration"`
-	// <p>A boolean value that specifies if the CA certificate is set to active.</p> <p>Valid values: <code>ACTIVE | INACTIVE</code> </p>
-	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
-}
-
-type RegisterCACertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // RegisterCACertificateRequestBodyCertificateModeEnum - Describes the certificate mode in which the Certificate Authority (CA) will be registered. If the <code>verificationCertificate</code> field is not provided, set <code>certificateMode</code> to be <code>SNI_ONLY</code>. If the <code>verificationCertificate</code> field is provided, set <code>certificateMode</code> to be <code>DEFAULT</code>. When <code>certificateMode</code> is not provided, it defaults to <code>DEFAULT</code>. All the device certificates that are registered using this CA will be registered in the same certificate mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode"> certificate mode</a>.
 type RegisterCACertificateRequestBodyCertificateModeEnum string
 
@@ -71,9 +54,18 @@ type RegisterCACertificateRequestBody struct {
 }
 
 type RegisterCACertificateRequest struct {
-	QueryParams RegisterCACertificateQueryParams
-	Headers     RegisterCACertificateHeaders
-	Request     RegisterCACertificateRequestBody `request:"mediaType=application/json"`
+	RequestBody       RegisterCACertificateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Allows this CA certificate to be used for auto registration of device certificates.
+	AllowAutoRegistration *bool `queryParam:"style=form,explode=true,name=allowAutoRegistration"`
+	// <p>A boolean value that specifies if the CA certificate is set to active.</p> <p>Valid values: <code>ACTIVE | INACTIVE</code> </p>
+	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
 }
 
 type RegisterCACertificateResponse struct {

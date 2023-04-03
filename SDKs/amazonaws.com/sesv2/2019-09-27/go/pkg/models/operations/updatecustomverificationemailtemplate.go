@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateCustomVerificationEmailTemplatePathParams struct {
-	// The name of the custom verification email template that you want to update.
-	TemplateName string `pathParam:"style=simple,explode=false,name=TemplateName"`
-}
-
-type UpdateCustomVerificationEmailTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateCustomVerificationEmailTemplateRequestBody struct {
 	// The URL that the recipient of the verification email is sent to if his or her address is not successfully verified.
 	FailureRedirectionURL string `json:"FailureRedirectionURL"`
@@ -35,9 +20,16 @@ type UpdateCustomVerificationEmailTemplateRequestBody struct {
 }
 
 type UpdateCustomVerificationEmailTemplateRequest struct {
-	PathParams UpdateCustomVerificationEmailTemplatePathParams
-	Headers    UpdateCustomVerificationEmailTemplateHeaders
-	Request    UpdateCustomVerificationEmailTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateCustomVerificationEmailTemplateRequestBody `request:"mediaType=application/json"`
+	// The name of the custom verification email template that you want to update.
+	TemplateName      string  `pathParam:"style=simple,explode=false,name=TemplateName"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateCustomVerificationEmailTemplateResponse struct {

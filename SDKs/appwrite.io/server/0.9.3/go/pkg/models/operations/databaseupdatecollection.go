@@ -8,13 +8,8 @@ import (
 )
 
 type DatabaseUpdateCollectionSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DatabaseUpdateCollectionPathParams struct {
-	// Collection unique ID.
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type DatabaseUpdateCollectionRequestBody struct {
@@ -29,9 +24,9 @@ type DatabaseUpdateCollectionRequestBody struct {
 }
 
 type DatabaseUpdateCollectionRequest struct {
-	PathParams DatabaseUpdateCollectionPathParams
-	Request    *DatabaseUpdateCollectionRequestBody `request:"mediaType=application/json"`
-	Security   DatabaseUpdateCollectionSecurity
+	RequestBody *DatabaseUpdateCollectionRequestBody `request:"mediaType=application/json"`
+	// Collection unique ID.
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 }
 
 type DatabaseUpdateCollectionResponse struct {

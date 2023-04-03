@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTemplateDesignerTemplatesIDPutPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateTemplateDesignerTemplatesIDPutRequest struct {
-	PathParams UpdateTemplateDesignerTemplatesIDPutPathParams
-	Request    shared.CreateOrUpdateTemplateRequest `request:"mediaType=application/json"`
+	CreateOrUpdateTemplateRequest shared.CreateOrUpdateTemplateRequest `request:"mediaType=application/json"`
+	ID                            string                               `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateTemplateDesignerTemplatesIDPutResponse struct {

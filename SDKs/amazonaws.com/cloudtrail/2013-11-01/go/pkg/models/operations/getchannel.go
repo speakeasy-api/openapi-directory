@@ -30,7 +30,8 @@ func (e *GetChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetChannelHeaders struct {
+type GetChannelRequest struct {
+	GetChannelRequest shared.GetChannelRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetChannelHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetChannelXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetChannelRequest struct {
-	Headers GetChannelHeaders
-	Request shared.GetChannelRequest `request:"mediaType=application/json"`
 }
 
 type GetChannelResponse struct {

@@ -13,41 +13,40 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddTagsToOnPremisesInstancesRequest{
-        Headers: operations.AddTagsToOnPremisesInstancesHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
-        },
-        Request: shared.AddTagsToOnPremisesInstancesInput{
+        AddTagsToOnPremisesInstancesInput: shared.AddTagsToOnPremisesInstancesInput{
             InstanceNames: []string{
-                "vel",
-                "error",
-                "deserunt",
-                "suscipit",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "magnam",
-                    Value: "debitis",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
                 shared.Tag{
-                    Key: "ipsa",
-                    Value: "delectus",
+                    Key: "illum",
+                    Value: "vel",
+                },
+                shared.Tag{
+                    Key: "error",
+                    Value: "deserunt",
                 },
             },
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "iure",
+        XAmzCredential: "magnam",
+        XAmzDate: "debitis",
+        XAmzSecurityToken: "ipsa",
+        XAmzSignature: "delectus",
+        XAmzSignedHeaders: "tempora",
+        XAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
     }
 
     ctx := context.Background()

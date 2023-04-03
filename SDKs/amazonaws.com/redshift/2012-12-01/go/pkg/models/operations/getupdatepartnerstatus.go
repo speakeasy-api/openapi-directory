@@ -80,7 +80,7 @@ func (e *GETUpdatePartnerStatusVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdatePartnerStatusQueryParams struct {
+type GETUpdatePartnerStatusRequest struct {
 	// The Amazon Web Services account ID that owns the cluster.
 	AccountID string                           `queryParam:"style=form,explode=true,name=AccountId"`
 	Action    GETUpdatePartnerStatusActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -93,23 +93,15 @@ type GETUpdatePartnerStatusQueryParams struct {
 	// The value of the updated status.
 	Status GETUpdatePartnerStatusStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// The status message provided by the partner.
-	StatusMessage *string                           `queryParam:"style=form,explode=true,name=StatusMessage"`
-	Version       GETUpdatePartnerStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdatePartnerStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdatePartnerStatusRequest struct {
-	QueryParams GETUpdatePartnerStatusQueryParams
-	Headers     GETUpdatePartnerStatusHeaders
+	StatusMessage     *string                           `queryParam:"style=form,explode=true,name=StatusMessage"`
+	Version           GETUpdatePartnerStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdatePartnerStatusResponse struct {

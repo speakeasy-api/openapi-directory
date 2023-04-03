@@ -7,12 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChangeLogsPathParams struct {
+type GetChangeLogsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The unique identifier for the assessment.
 	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-}
-
-type GetChangeLogsQueryParams struct {
 	//  The unique identifier for the control.
 	ControlID *string `queryParam:"style=form,explode=true,name=controlId"`
 	//  The unique identifier for the control set.
@@ -21,22 +25,6 @@ type GetChangeLogsQueryParams struct {
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	//  The pagination token that's used to fetch the next set of results.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetChangeLogsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetChangeLogsRequest struct {
-	PathParams  GetChangeLogsPathParams
-	QueryParams GetChangeLogsQueryParams
-	Headers     GetChangeLogsHeaders
 }
 
 type GetChangeLogsResponse struct {

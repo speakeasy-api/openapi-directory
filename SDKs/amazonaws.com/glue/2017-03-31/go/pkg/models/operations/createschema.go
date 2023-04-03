@@ -30,7 +30,8 @@ func (e *CreateSchemaXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateSchemaHeaders struct {
+type CreateSchemaRequest struct {
+	CreateSchemaInput shared.CreateSchemaInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateSchemaHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateSchemaXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateSchemaRequest struct {
-	Headers CreateSchemaHeaders
-	Request shared.CreateSchemaInput `request:"mediaType=application/json"`
 }
 
 type CreateSchemaResponse struct {

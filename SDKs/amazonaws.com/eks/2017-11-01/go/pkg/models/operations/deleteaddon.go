@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAddonPathParams struct {
-	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
-	AddonName string `pathParam:"style=simple,explode=false,name=addonName"`
-	// The name of the cluster to delete the add-on from.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DeleteAddonQueryParams struct {
-	// Specifying this option preserves the add-on software on your cluster but Amazon EKS stops managing any settings for the add-on. If an IAM account is associated with the add-on, it isn't removed.
-	Preserve *bool `queryParam:"style=form,explode=true,name=preserve"`
-}
-
-type DeleteAddonHeaders struct {
+type DeleteAddonRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteAddonHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAddonRequest struct {
-	PathParams  DeleteAddonPathParams
-	QueryParams DeleteAddonQueryParams
-	Headers     DeleteAddonHeaders
+	// The name of the add-on. The name must match one of the names returned by <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"> <code>ListAddons</code> </a>.
+	AddonName string `pathParam:"style=simple,explode=false,name=addonName"`
+	// The name of the cluster to delete the add-on from.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// Specifying this option preserves the add-on software on your cluster but Amazon EKS stops managing any settings for the add-on. If an IAM account is associated with the add-on, it isn't removed.
+	Preserve *bool `queryParam:"style=form,explode=true,name=preserve"`
 }
 
 type DeleteAddonResponse struct {

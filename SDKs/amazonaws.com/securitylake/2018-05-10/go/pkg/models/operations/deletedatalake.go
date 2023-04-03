@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDatalakeHeaders struct {
+type DeleteDatalakeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -14,10 +14,6 @@ type DeleteDatalakeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDatalakeRequest struct {
-	Headers DeleteDatalakeHeaders
 }
 
 type DeleteDatalakeResponse struct {

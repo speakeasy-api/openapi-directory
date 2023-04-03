@@ -69,7 +69,7 @@ func newImage(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //
 // For the main series image used in feeds, it is ideal to use the `square-3000` version.
 // If that is not available, the `itunes` version should be used instead.
-func (s *image) GetImages(ctx context.Context, request operations.GetImagesRequest) (*operations.GetImagesResponse, error) {
+func (s *image) GetImages(ctx context.Context, request operations.GetImagesRequest, security operations.GetImagesSecurity) (*operations.GetImagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/images"
 
@@ -78,11 +78,11 @@ func (s *image) GetImages(ctx context.Context, request operations.GetImagesReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -171,16 +171,16 @@ func (s *image) GetImages(ctx context.Context, request operations.GetImagesReque
 //
 // For the main series image used in feeds, it is ideal to use the `square-3000` version.
 // If that is not available, the `itunes` version should be used instead.
-func (s *image) GetImagesID(ctx context.Context, request operations.GetImagesIDRequest) (*operations.GetImagesIDResponse, error) {
+func (s *image) GetImagesID(ctx context.Context, request operations.GetImagesIDRequest, security operations.GetImagesIDSecurity) (*operations.GetImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

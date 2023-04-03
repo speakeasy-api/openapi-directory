@@ -50,28 +50,20 @@ func (e *GETListAllowedNodeTypeModificationsVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GETListAllowedNodeTypeModificationsQueryParams struct {
+type GETListAllowedNodeTypeModificationsRequest struct {
 	Action GETListAllowedNodeTypeModificationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the cluster you want to scale up to a larger node instanced type. ElastiCache uses the cluster id to identify the current node type of this cluster and from that to create a list of node types you can scale up to.</p> <important> <p>You must provide a value for either the <code>CacheClusterId</code> or the <code>ReplicationGroupId</code>.</p> </important>
 	CacheClusterID *string `queryParam:"style=form,explode=true,name=CacheClusterId"`
 	// <p>The name of the replication group want to scale up to a larger node type. ElastiCache uses the replication group id to identify the current node type being used by this replication group, and from that to create a list of node types you can scale up to.</p> <important> <p>You must provide a value for either the <code>CacheClusterId</code> or the <code>ReplicationGroupId</code>.</p> </important>
 	ReplicationGroupID *string                                        `queryParam:"style=form,explode=true,name=ReplicationGroupId"`
 	Version            GETListAllowedNodeTypeModificationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListAllowedNodeTypeModificationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListAllowedNodeTypeModificationsRequest struct {
-	QueryParams GETListAllowedNodeTypeModificationsQueryParams
-	Headers     GETListAllowedNodeTypeModificationsHeaders
+	XAmzAlgorithm      *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListAllowedNodeTypeModificationsResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderManagementReadyMarketplaceBusinessCodeQueryParams struct {
-	// StoredIds to filter
-	StoreIds []string `queryParam:"style=form,explode=false,name=storeIds"`
-}
-
-type GetOrderManagementReadyMarketplaceBusinessCodeHeaders struct {
+type GetOrderManagementReadyMarketplaceBusinessCodeRequest struct {
 	// Indicates that the client accepts the following languages.
 	AcceptLanguage []string `header:"style=simple,explode=false,name=Accept-Language"`
-}
-
-type GetOrderManagementReadyMarketplaceBusinessCodeRequest struct {
-	QueryParams GetOrderManagementReadyMarketplaceBusinessCodeQueryParams
-	Headers     GetOrderManagementReadyMarketplaceBusinessCodeHeaders
+	// StoredIds to filter
+	StoreIds []string `queryParam:"style=form,explode=false,name=storeIds"`
 }
 
 type GetOrderManagementReadyMarketplaceBusinessCodeResponse struct {

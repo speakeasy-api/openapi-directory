@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammesPopularQueryParams struct {
+type GetProgrammesPopularRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The depth to return child entities.
@@ -24,10 +24,6 @@ type GetProgrammesPopularQueryParams struct {
 	Sort string `queryParam:"style=form,explode=true,name=sort"`
 	// Whether to sort ascending or descending
 	SortDirection shared.SortDirectionEnum `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type GetProgrammesPopularRequest struct {
-	QueryParams GetProgrammesPopularQueryParams
 }
 
 type GetProgrammesPopularResponse struct {

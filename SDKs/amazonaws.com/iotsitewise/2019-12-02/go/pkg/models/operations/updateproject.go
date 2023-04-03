@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateProjectPathParams struct {
-	// The ID of the project to update.
-	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
-}
-
-type UpdateProjectHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateProjectRequestBody struct {
 	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -31,9 +16,16 @@ type UpdateProjectRequestBody struct {
 }
 
 type UpdateProjectRequest struct {
-	PathParams UpdateProjectPathParams
-	Headers    UpdateProjectHeaders
-	Request    UpdateProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateProjectRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the project to update.
+	ProjectID string `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
 type UpdateProjectResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveLogConfigurationPathParams struct {
+type RemoveLogConfigurationRequest struct {
 	// The name of a single logger.
 	Logger string `pathParam:"style=simple,explode=false,name=logger"`
-}
-
-type RemoveLogConfigurationRequest struct {
-	PathParams RemoveLogConfigurationPathParams
 }
 
 type RemoveLogConfigurationResponse struct {

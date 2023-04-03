@@ -8,18 +8,13 @@ import (
 )
 
 type GetBalancePlatformsIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetBalancePlatformsIDPathParams struct {
-	// The unique identifier of the balance platform.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetBalancePlatformsIDRequest struct {
-	PathParams GetBalancePlatformsIDPathParams
-	Security   GetBalancePlatformsIDSecurity
+	// The unique identifier of the balance platform.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBalancePlatformsIDResponse struct {

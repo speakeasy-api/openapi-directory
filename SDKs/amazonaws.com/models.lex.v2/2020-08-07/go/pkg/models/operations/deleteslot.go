@@ -6,7 +6,14 @@ import (
 	"net/http"
 )
 
-type DeleteSlotPathParams struct {
+type DeleteSlotRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The identifier of the bot associated with the slot to delete.
 	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 	// The version of the bot associated with the slot to delete.
@@ -17,21 +24,6 @@ type DeleteSlotPathParams struct {
 	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 	// The identifier of the slot to delete.
 	SlotID string `pathParam:"style=simple,explode=false,name=slotId"`
-}
-
-type DeleteSlotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSlotRequest struct {
-	PathParams DeleteSlotPathParams
-	Headers    DeleteSlotHeaders
 }
 
 type DeleteSlotResponse struct {

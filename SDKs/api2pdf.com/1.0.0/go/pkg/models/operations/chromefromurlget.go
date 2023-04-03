@@ -8,19 +8,14 @@ import (
 )
 
 type ChromeFromURLGETSecurity struct {
-	QueryAPIKey shared.SchemeQueryAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	QueryAPIKey string `security:"scheme,type=apiKey,subtype=query,name=apikey"`
 }
 
-type ChromeFromURLGETQueryParams struct {
+type ChromeFromURLGETRequest struct {
 	// Specify output=json to receive a JSON output. Defaults to PDF file.
 	Output *string `queryParam:"style=form,explode=true,name=output"`
 	// Url of the page to convert to PDF. Must start with http:// or https://.
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type ChromeFromURLGETRequest struct {
-	QueryParams ChromeFromURLGETQueryParams
-	Security    ChromeFromURLGETSecurity
 }
 
 type ChromeFromURLGETResponse struct {

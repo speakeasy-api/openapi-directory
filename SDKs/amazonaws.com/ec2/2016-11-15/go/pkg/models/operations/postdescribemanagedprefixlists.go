@@ -50,29 +50,21 @@ func (e *POSTDescribeManagedPrefixListsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type POSTDescribeManagedPrefixListsQueryParams struct {
+type POSTDescribeManagedPrefixListsRequest struct {
 	Action POSTDescribeManagedPrefixListsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination limit
 	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token
-	NextToken *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTDescribeManagedPrefixListsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeManagedPrefixListsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeManagedPrefixListsRequest struct {
-	QueryParams POSTDescribeManagedPrefixListsQueryParams
-	Headers     POSTDescribeManagedPrefixListsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                                    `request:"mediaType=text/xml"`
+	Version           POSTDescribeManagedPrefixListsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeManagedPrefixListsResponse struct {

@@ -50,28 +50,20 @@ func (e *GETRegisterPublisherVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRegisterPublisherQueryParams struct {
+type GETRegisterPublisherRequest struct {
 	// <p>Whether you accept the <a href="https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf">Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.</p> <p>The default is <code>false</code>.</p>
 	AcceptTermsAndConditions *bool                          `queryParam:"style=form,explode=true,name=AcceptTermsAndConditions"`
 	Action                   GETRegisterPublisherActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs">Registering your account to publish CloudFormation extensions</a> in the <i>CloudFormation CLI User Guide</i>.</p>
-	ConnectionArn *string                         `queryParam:"style=form,explode=true,name=ConnectionArn"`
-	Version       GETRegisterPublisherVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRegisterPublisherHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRegisterPublisherRequest struct {
-	QueryParams GETRegisterPublisherQueryParams
-	Headers     GETRegisterPublisherHeaders
+	ConnectionArn     *string                         `queryParam:"style=form,explode=true,name=ConnectionArn"`
+	Version           GETRegisterPublisherVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRegisterPublisherResponse struct {

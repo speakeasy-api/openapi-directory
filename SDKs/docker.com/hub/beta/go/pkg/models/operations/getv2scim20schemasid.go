@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2Scim20SchemasIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetV2Scim20SchemasIDRequest struct {
-	PathParams GetV2Scim20SchemasIDPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetV2Scim20SchemasID500ApplicationScimPlusJSON - Internal Error

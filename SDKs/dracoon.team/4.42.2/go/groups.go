@@ -48,9 +48,9 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // The newly provided members will be added to the existing ones.
 func (s *groups) AddGroupMembers(ctx context.Context, request operations.AddGroupMembersRequest) (*operations.AddGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeGroupMembersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -65,7 +65,7 @@ func (s *groups) AddGroupMembers(ctx context.Context, request operations.AddGrou
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -139,7 +139,7 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -154,7 +154,7 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -224,14 +224,14 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 // None.
 func (s *groups) RemoveGroup(ctx context.Context, request operations.RemoveGroupRequest) (*operations.RemoveGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -293,9 +293,9 @@ func (s *groups) RemoveGroup(ctx context.Context, request operations.RemoveGroup
 // The provided users are removed from the user group. Maximum number of users to remove in one request is 200.
 func (s *groups) RemoveGroupMembers(ctx context.Context, request operations.RemoveGroupMembersRequest) (*operations.RemoveGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeGroupMembersRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,7 +310,7 @@ func (s *groups) RemoveGroupMembers(ctx context.Context, request operations.Remo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -380,14 +380,14 @@ func (s *groups) RemoveGroupMembers(ctx context.Context, request operations.Remo
 // None.
 func (s *groups) RequestGroup(ctx context.Context, request operations.RequestGroupRequest) (*operations.RequestGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -489,16 +489,16 @@ func (s *groups) RequestGroup(ctx context.Context, request operations.RequestGro
 // </details>
 func (s *groups) RequestGroupMembers(ctx context.Context, request operations.RequestGroupMembersRequest) (*operations.RequestGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -570,14 +570,14 @@ func (s *groups) RequestGroupMembers(ctx context.Context, request operations.Req
 // None.
 func (s *groups) RequestGroupRoles(ctx context.Context, request operations.RequestGroupRolesRequest) (*operations.RequestGroupRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/roles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -672,16 +672,16 @@ func (s *groups) RequestGroupRoles(ctx context.Context, request operations.Reque
 // </details>
 func (s *groups) RequestGroupRooms(ctx context.Context, request operations.RequestGroupRoomsRequest) (*operations.RequestGroupRoomsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/rooms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/rooms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -810,9 +810,9 @@ func (s *groups) RequestGroups(ctx context.Context, request operations.RequestGr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -884,14 +884,14 @@ func (s *groups) RequestGroups(ctx context.Context, request operations.RequestGr
 // An empty list is returned if no rooms were found where the group is defined as last admin group.
 func (s *groups) RequestLastAdminRoomsGroups(ctx context.Context, request operations.RequestLastAdminRoomsGroupsRequest) (*operations.RequestLastAdminRoomsGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/last_admin_rooms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}/last_admin_rooms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -963,9 +963,9 @@ func (s *groups) RequestLastAdminRoomsGroups(ctx context.Context, request operat
 // * **All** characters are allowed.
 func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroupRequest) (*operations.UpdateGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/groups/{group_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateGroupRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -980,7 +980,7 @@ func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroup
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

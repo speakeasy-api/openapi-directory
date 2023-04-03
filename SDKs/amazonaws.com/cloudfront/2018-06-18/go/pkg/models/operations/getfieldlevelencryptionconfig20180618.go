@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetFieldLevelEncryptionConfig20180618PathParams struct {
+type GetFieldLevelEncryptionConfig20180618Request struct {
 	// Request the ID for the field-level encryption configuration information.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetFieldLevelEncryptionConfig20180618Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetFieldLevelEncryptionConfig20180618Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetFieldLevelEncryptionConfig20180618Request struct {
-	PathParams GetFieldLevelEncryptionConfig20180618PathParams
-	Headers    GetFieldLevelEncryptionConfig20180618Headers
 }
 
 type GetFieldLevelEncryptionConfig20180618Response struct {

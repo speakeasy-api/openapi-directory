@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingGetDatapointsCountPathParams struct {
-	// Id of the group
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // RetargetingGetDatapointsCountStatusEnum - Status of the datapoint
 type RetargetingGetDatapointsCountStatusEnum string
 
@@ -44,11 +39,13 @@ func (e *RetargetingGetDatapointsCountStatusEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type RetargetingGetDatapointsCountQueryParams struct {
+type RetargetingGetDatapointsCountRequest struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
 	CreatedBefore *string `queryParam:"style=form,explode=true,name=createdBefore"`
+	// Id of the group
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Filter fields by favourite status
 	OnlyFavorites *bool `queryParam:"style=form,explode=true,name=onlyFavorites"`
 	// Status of the datapoint
@@ -57,11 +54,6 @@ type RetargetingGetDatapointsCountQueryParams struct {
 	Tags *string `queryParam:"style=form,explode=true,name=tags"`
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
-}
-
-type RetargetingGetDatapointsCountRequest struct {
-	PathParams  RetargetingGetDatapointsCountPathParams
-	QueryParams RetargetingGetDatapointsCountQueryParams
 }
 
 type RetargetingGetDatapointsCountResponse struct {

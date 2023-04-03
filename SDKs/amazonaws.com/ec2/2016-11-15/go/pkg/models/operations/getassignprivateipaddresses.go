@@ -50,7 +50,7 @@ func (e *GETAssignPrivateIPAddressesVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETAssignPrivateIPAddressesQueryParams struct {
+type GETAssignPrivateIPAddressesRequest struct {
 	Action GETAssignPrivateIPAddressesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface.
 	AllowReassignment *bool `queryParam:"style=form,explode=true,name=AllowReassignment"`
@@ -65,21 +65,13 @@ type GETAssignPrivateIPAddressesQueryParams struct {
 	// The number of secondary IP addresses to assign to the network interface. You can't specify this parameter when also specifying private IP addresses.
 	SecondaryPrivateIPAddressCount *int64                                 `queryParam:"style=form,explode=true,name=SecondaryPrivateIpAddressCount"`
 	Version                        GETAssignPrivateIPAddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssignPrivateIPAddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssignPrivateIPAddressesRequest struct {
-	QueryParams GETAssignPrivateIPAddressesQueryParams
-	Headers     GETAssignPrivateIPAddressesHeaders
+	XAmzAlgorithm                  *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssignPrivateIPAddressesResponse struct {

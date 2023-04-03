@@ -50,7 +50,7 @@ func (e *GETRevokeEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRevokeEndpointAccessQueryParams struct {
+type GETRevokeEndpointAccessRequest struct {
 	// The Amazon Web Services account ID whose access is to be revoked.
 	Account *string                           `queryParam:"style=form,explode=true,name=Account"`
 	Action  GETRevokeEndpointAccessActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -60,22 +60,14 @@ type GETRevokeEndpointAccessQueryParams struct {
 	Force   *bool                              `queryParam:"style=form,explode=true,name=Force"`
 	Version GETRevokeEndpointAccessVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The virtual private cloud (VPC) identifiers for which access is to be revoked.
-	VpcIds []string `queryParam:"style=form,explode=true,name=VpcIds"`
-}
-
-type GETRevokeEndpointAccessHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRevokeEndpointAccessRequest struct {
-	QueryParams GETRevokeEndpointAccessQueryParams
-	Headers     GETRevokeEndpointAccessHeaders
+	VpcIds            []string `queryParam:"style=form,explode=true,name=VpcIds"`
+	XAmzAlgorithm     *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRevokeEndpointAccessResponse struct {

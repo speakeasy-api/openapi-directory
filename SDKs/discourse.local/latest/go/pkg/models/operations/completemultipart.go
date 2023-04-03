@@ -15,10 +15,6 @@ type CompleteMultipartRequestBody struct {
 	UniqueIdentifier string `json:"unique_identifier"`
 }
 
-type CompleteMultipartRequest struct {
-	Request *CompleteMultipartRequestBody `request:"mediaType=application/json"`
-}
-
 // CompleteMultipart200ApplicationJSON - external upload initialized
 type CompleteMultipart200ApplicationJSON struct {
 	DominantColor    *string `json:"dominant_color,omitempty"`

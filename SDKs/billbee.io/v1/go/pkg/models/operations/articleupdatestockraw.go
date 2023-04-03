@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleUpdateStockRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type ArticleUpdateStockRawResponse struct {
 	Body        []byte
 	ContentType string

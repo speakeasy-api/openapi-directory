@@ -34,7 +34,7 @@ func newPublicSecuritySecurity(defaultClient, securityClient HTTPClient, serverU
 
 // Login - Login
 // User Login - The login will give your tokens
-func (s *publicSecuritySecurity) Login(ctx context.Context, request operations.LoginRequest) (*operations.LoginResponse, error) {
+func (s *publicSecuritySecurity) Login(ctx context.Context, request shared.LoginRequest) (*operations.LoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/public/security/login"
 
@@ -102,7 +102,7 @@ func (s *publicSecuritySecurity) Login(ctx context.Context, request operations.L
 
 // LostPassword - Lost password
 // Lost password - Your password will be regenerated and sent to your email
-func (s *publicSecuritySecurity) LostPassword(ctx context.Context, request operations.LostPasswordRequest) (*operations.LostPasswordResponse, error) {
+func (s *publicSecuritySecurity) LostPassword(ctx context.Context, request string) (*operations.LostPasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/public/security/lostpassword"
 
@@ -164,7 +164,7 @@ func (s *publicSecuritySecurity) LostPassword(ctx context.Context, request opera
 
 // Register - User Registration
 // User Registration - Create a new user on BeezUP
-func (s *publicSecuritySecurity) Register(ctx context.Context, request operations.RegisterRequest) (*operations.RegisterResponse, error) {
+func (s *publicSecuritySecurity) Register(ctx context.Context, request shared.RegisterRequest) (*operations.RegisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/public/security/register"
 

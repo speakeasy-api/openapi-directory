@@ -50,7 +50,7 @@ func (e *GETRestoreDBInstanceFromDBSnapshotVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETRestoreDBInstanceFromDBSnapshotQueryParams struct {
+type GETRestoreDBInstanceFromDBSnapshotRequest struct {
 	Action                  GETRestoreDBInstanceFromDBSnapshotActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoMinorVersionUpgrade *bool                                         `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
 	AvailabilityZone        *string                                       `queryParam:"style=form,explode=true,name=AvailabilityZone"`
@@ -67,21 +67,13 @@ type GETRestoreDBInstanceFromDBSnapshotQueryParams struct {
 	Port                    *int64                                        `queryParam:"style=form,explode=true,name=Port"`
 	PubliclyAccessible      *bool                                         `queryParam:"style=form,explode=true,name=PubliclyAccessible"`
 	Version                 GETRestoreDBInstanceFromDBSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRestoreDBInstanceFromDBSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRestoreDBInstanceFromDBSnapshotRequest struct {
-	QueryParams GETRestoreDBInstanceFromDBSnapshotQueryParams
-	Headers     GETRestoreDBInstanceFromDBSnapshotHeaders
+	XAmzAlgorithm           *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRestoreDBInstanceFromDBSnapshotResponse struct {

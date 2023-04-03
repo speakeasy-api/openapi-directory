@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConversionsConversionIDDatapointsBatchPatchPathParams struct {
+type PutConversionsConversionIDDatapointsBatchPatchRequest struct {
+	// Patch requests
+	APICoreRequestsPatchBodyBatch shared.APICoreRequestsPatchBodyBatch `request:"mediaType=application/json"`
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type PutConversionsConversionIDDatapointsBatchPatchRequest struct {
-	PathParams PutConversionsConversionIDDatapointsBatchPatchPathParams
-	// Patch requests
-	Request shared.APICoreRequestsPatchBodyBatch `request:"mediaType=application/json"`
 }
 
 type PutConversionsConversionIDDatapointsBatchPatchResponse struct {

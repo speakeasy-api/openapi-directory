@@ -8,16 +8,11 @@ import (
 )
 
 type TaskStatusesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TaskStatusesCreateQueryParams struct {
-	Since *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TaskStatusesCreateRequest struct {
-	QueryParams TaskStatusesCreateQueryParams
-	Security    TaskStatusesCreateSecurity
+	Since *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 type TaskStatusesCreateResponse struct {

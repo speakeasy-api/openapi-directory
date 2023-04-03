@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeReplicationSubnetGroupsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeReplicationSubnetGroupsXAmzTargetEnum
 type DescribeReplicationSubnetGroupsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeReplicationSubnetGroupsXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DescribeReplicationSubnetGroupsHeaders struct {
+type DescribeReplicationSubnetGroupsRequest struct {
+	DescribeReplicationSubnetGroupsMessage shared.DescribeReplicationSubnetGroupsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                       `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeReplicationSubnetGroupsHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeReplicationSubnetGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeReplicationSubnetGroupsRequest struct {
-	QueryParams DescribeReplicationSubnetGroupsQueryParams
-	Headers     DescribeReplicationSubnetGroupsHeaders
-	Request     shared.DescribeReplicationSubnetGroupsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeReplicationSubnetGroupsResponse struct {

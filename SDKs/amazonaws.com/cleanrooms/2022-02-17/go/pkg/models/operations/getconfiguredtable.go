@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConfiguredTablePathParams struct {
-	// The unique ID for the configured table to retrieve.
-	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
-}
-
-type GetConfiguredTableHeaders struct {
+type GetConfiguredTableRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetConfiguredTableHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetConfiguredTableRequest struct {
-	PathParams GetConfiguredTablePathParams
-	Headers    GetConfiguredTableHeaders
+	// The unique ID for the configured table to retrieve.
+	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
 }
 
 type GetConfiguredTableResponse struct {

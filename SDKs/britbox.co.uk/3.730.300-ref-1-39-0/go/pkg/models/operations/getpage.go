@@ -117,7 +117,7 @@ func (e *GetPageTextEntryFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPageQueryParams struct {
+type GetPageRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -214,10 +214,6 @@ type GetPageQueryParams struct {
 	// Converts the value of a text page entry to the specified format.
 	//
 	TextEntryFormat *GetPageTextEntryFormatEnum `queryParam:"style=form,explode=true,name=text_entry_format"`
-}
-
-type GetPageRequest struct {
-	QueryParams GetPageQueryParams
 }
 
 type GetPageResponse struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ListUserSSubscriptionGroupSmsQueryParams struct {
+type ListUserSSubscriptionGroupSmsRequest struct {
 	// (Required*) String
 	//
 	// The external_id of the user. Must include at least one and at most 50 `external_ids`.
@@ -24,10 +24,6 @@ type ListUserSSubscriptionGroupSmsQueryParams struct {
 	// The phone number of the user (must include at least one phone number and at most 50 phone numbers). The recommendation is to provide this in the E.164 format.
 	//
 	Phone *string `queryParam:"style=form,explode=true,name=phone"`
-}
-
-type ListUserSSubscriptionGroupSmsRequest struct {
-	QueryParams ListUserSSubscriptionGroupSmsQueryParams
 }
 
 type ListUserSSubscriptionGroupSmsResponse struct {

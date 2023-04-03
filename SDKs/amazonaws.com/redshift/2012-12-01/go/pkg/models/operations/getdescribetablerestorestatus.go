@@ -50,7 +50,7 @@ func (e *GETDescribeTableRestoreStatusVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDescribeTableRestoreStatusQueryParams struct {
+type GETDescribeTableRestoreStatusRequest struct {
 	Action GETDescribeTableRestoreStatusActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Redshift cluster that the table is being restored to.
 	ClusterIdentifier *string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -61,21 +61,13 @@ type GETDescribeTableRestoreStatusQueryParams struct {
 	// The identifier of the table restore request to return status for. If you don't specify a <code>TableRestoreRequestId</code> value, then <code>DescribeTableRestoreStatus</code> returns the status of all in-progress table restore requests.
 	TableRestoreRequestID *string                                  `queryParam:"style=form,explode=true,name=TableRestoreRequestId"`
 	Version               GETDescribeTableRestoreStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeTableRestoreStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeTableRestoreStatusRequest struct {
-	QueryParams GETDescribeTableRestoreStatusQueryParams
-	Headers     GETDescribeTableRestoreStatusHeaders
+	XAmzAlgorithm         *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeTableRestoreStatusResponse struct {

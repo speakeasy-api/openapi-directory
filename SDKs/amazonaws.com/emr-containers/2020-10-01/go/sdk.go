@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // CancelJobRun - Cancels a job run. A job run is a unit of work, such as a Spark jar, PySpark script, or SparkSQL query, that you submit to Amazon EMR on EKS.
 func (s *SDK) CancelJobRun(ctx context.Context, request operations.CancelJobRunRequest) (*operations.CancelJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns/{jobRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns/{jobRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -182,7 +182,7 @@ func (s *SDK) CreateJobTemplate(ctx context.Context, request operations.CreateJo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/jobtemplates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,7 +197,7 @@ func (s *SDK) CreateJobTemplate(ctx context.Context, request operations.CreateJo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -266,9 +266,9 @@ func (s *SDK) CreateJobTemplate(ctx context.Context, request operations.CreateJo
 // CreateManagedEndpoint - Creates a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
 func (s *SDK) CreateManagedEndpoint(ctx context.Context, request operations.CreateManagedEndpointRequest) (*operations.CreateManagedEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -283,7 +283,7 @@ func (s *SDK) CreateManagedEndpoint(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -354,7 +354,7 @@ func (s *SDK) CreateVirtualCluster(ctx context.Context, request operations.Creat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/virtualclusters"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -369,7 +369,7 @@ func (s *SDK) CreateVirtualCluster(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -438,14 +438,14 @@ func (s *SDK) CreateVirtualCluster(ctx context.Context, request operations.Creat
 // DeleteJobTemplate - Deletes a job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
 func (s *SDK) DeleteJobTemplate(ctx context.Context, request operations.DeleteJobTemplateRequest) (*operations.DeleteJobTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobtemplates/{templateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobtemplates/{templateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -504,14 +504,14 @@ func (s *SDK) DeleteJobTemplate(ctx context.Context, request operations.DeleteJo
 // DeleteManagedEndpoint - Deletes a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
 func (s *SDK) DeleteManagedEndpoint(ctx context.Context, request operations.DeleteManagedEndpointRequest) (*operations.DeleteManagedEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints/{endpointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints/{endpointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -570,14 +570,14 @@ func (s *SDK) DeleteManagedEndpoint(ctx context.Context, request operations.Dele
 // DeleteVirtualCluster - Deletes a virtual cluster. Virtual cluster is a managed entity on Amazon EMR on EKS. You can create, describe, list and delete virtual clusters. They do not consume any additional resource in your system. A single virtual cluster maps to a single Kubernetes namespace. Given this relationship, you can model virtual clusters the same way you model Kubernetes namespaces to meet your requirements.
 func (s *SDK) DeleteVirtualCluster(ctx context.Context, request operations.DeleteVirtualClusterRequest) (*operations.DeleteVirtualClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -636,14 +636,14 @@ func (s *SDK) DeleteVirtualCluster(ctx context.Context, request operations.Delet
 // DescribeJobRun - Displays detailed information about a job run. A job run is a unit of work, such as a Spark jar, PySpark script, or SparkSQL query, that you submit to Amazon EMR on EKS.
 func (s *SDK) DescribeJobRun(ctx context.Context, request operations.DescribeJobRunRequest) (*operations.DescribeJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns/{jobRunId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns/{jobRunId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -712,14 +712,14 @@ func (s *SDK) DescribeJobRun(ctx context.Context, request operations.DescribeJob
 // DescribeJobTemplate - Displays detailed information about a specified job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
 func (s *SDK) DescribeJobTemplate(ctx context.Context, request operations.DescribeJobTemplateRequest) (*operations.DescribeJobTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobtemplates/{templateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobtemplates/{templateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -788,14 +788,14 @@ func (s *SDK) DescribeJobTemplate(ctx context.Context, request operations.Descri
 // DescribeManagedEndpoint - Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
 func (s *SDK) DescribeManagedEndpoint(ctx context.Context, request operations.DescribeManagedEndpointRequest) (*operations.DescribeManagedEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints/{endpointId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints/{endpointId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -864,14 +864,14 @@ func (s *SDK) DescribeManagedEndpoint(ctx context.Context, request operations.De
 // DescribeVirtualCluster - Displays detailed information about a specified virtual cluster. Virtual cluster is a managed entity on Amazon EMR on EKS. You can create, describe, list and delete virtual clusters. They do not consume any additional resource in your system. A single virtual cluster maps to a single Kubernetes namespace. Given this relationship, you can model virtual clusters the same way you model Kubernetes namespaces to meet your requirements.
 func (s *SDK) DescribeVirtualCluster(ctx context.Context, request operations.DescribeVirtualClusterRequest) (*operations.DescribeVirtualClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -940,16 +940,16 @@ func (s *SDK) DescribeVirtualCluster(ctx context.Context, request operations.Des
 // ListJobRuns - Lists job runs based on a set of parameters. A job run is a unit of work, such as a Spark jar, PySpark script, or SparkSQL query, that you submit to Amazon EMR on EKS.
 func (s *SDK) ListJobRuns(ctx context.Context, request operations.ListJobRunsRequest) (*operations.ListJobRunsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1017,9 +1017,9 @@ func (s *SDK) ListJobTemplates(ctx context.Context, request operations.ListJobTe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1080,16 +1080,16 @@ func (s *SDK) ListJobTemplates(ctx context.Context, request operations.ListJobTe
 // ListManagedEndpoints - Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
 func (s *SDK) ListManagedEndpoints(ctx context.Context, request operations.ListManagedEndpointsRequest) (*operations.ListManagedEndpointsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/endpoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1150,14 +1150,14 @@ func (s *SDK) ListManagedEndpoints(ctx context.Context, request operations.ListM
 // ListTagsForResource - Lists the tags assigned to the resources.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1233,9 +1233,9 @@ func (s *SDK) ListVirtualClusters(ctx context.Context, request operations.ListVi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1296,9 +1296,9 @@ func (s *SDK) ListVirtualClusters(ctx context.Context, request operations.ListVi
 // StartJobRun - Starts a job run. A job run is a unit of work, such as a Spark jar, PySpark script, or SparkSQL query, that you submit to Amazon EMR on EKS.
 func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunRequest) (*operations.StartJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/virtualclusters/{virtualClusterId}/jobruns", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1313,7 +1313,7 @@ func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1382,9 +1382,9 @@ func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunReq
 // TagResource - Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. For example, you can define a set of tags for your Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We recommend that you devise a consistent set of tag keys for each resource type. You can then search and filter the resources based on the tags that you add.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1399,7 +1399,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1468,16 +1468,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from resources.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

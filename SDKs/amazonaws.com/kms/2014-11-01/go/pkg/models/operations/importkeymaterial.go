@@ -30,20 +30,16 @@ func (e *ImportKeyMaterialXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ImportKeyMaterialHeaders struct {
-	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ImportKeyMaterialXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ImportKeyMaterialRequest struct {
-	Headers ImportKeyMaterialHeaders
-	Request shared.ImportKeyMaterialRequest `request:"mediaType=application/json"`
+	ImportKeyMaterialRequest shared.ImportKeyMaterialRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm            *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget               ImportKeyMaterialXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ImportKeyMaterialResponse struct {

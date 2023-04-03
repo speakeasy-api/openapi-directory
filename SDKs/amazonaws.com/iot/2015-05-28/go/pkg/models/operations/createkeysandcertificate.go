@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateKeysAndCertificateQueryParams struct {
-	// Specifies whether the certificate is active.
-	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
-}
-
-type CreateKeysAndCertificateHeaders struct {
+type CreateKeysAndCertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CreateKeysAndCertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CreateKeysAndCertificateRequest struct {
-	QueryParams CreateKeysAndCertificateQueryParams
-	Headers     CreateKeysAndCertificateHeaders
+	// Specifies whether the certificate is active.
+	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
 }
 
 type CreateKeysAndCertificateResponse struct {

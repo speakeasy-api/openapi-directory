@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDomainsTldZoneIDSearchPathParams struct {
-	ZoneID string `pathParam:"style=simple,explode=false,name=zone_id"`
-}
-
-type GetDomainsTldZoneIDSearchQueryParams struct {
+type GetDomainsTldZoneIDSearchRequest struct {
 	// A record includes
 	A *string `queryParam:"style=form,explode=true,name=A"`
 	// CNAME record includes
@@ -35,12 +31,8 @@ type GetDomainsTldZoneIDSearchQueryParams struct {
 	// Results per page
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Search page to request
-	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type GetDomainsTldZoneIDSearchRequest struct {
-	PathParams  GetDomainsTldZoneIDSearchPathParams
-	QueryParams GetDomainsTldZoneIDSearchQueryParams
+	Page   *string `queryParam:"style=form,explode=true,name=page"`
+	ZoneID string  `pathParam:"style=simple,explode=false,name=zone_id"`
 }
 
 type GetDomainsTldZoneIDSearchResponse struct {

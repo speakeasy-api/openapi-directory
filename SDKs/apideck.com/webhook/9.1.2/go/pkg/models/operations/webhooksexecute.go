@@ -11,14 +11,7 @@ import (
 )
 
 type WebhooksExecuteSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type WebhooksExecutePathParams struct {
-	// JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// Service provider ID.
-	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type WebhooksExecuteRequestBodyType string
@@ -90,9 +83,11 @@ func (u WebhooksExecuteRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type WebhooksExecuteRequest struct {
-	PathParams WebhooksExecutePathParams
-	Request    WebhooksExecuteRequestBody `request:"mediaType=application/json"`
-	Security   WebhooksExecuteSecurity
+	RequestBody WebhooksExecuteRequestBody `request:"mediaType=application/json"`
+	// JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Service provider ID.
+	ServiceID string `pathParam:"style=simple,explode=false,name=serviceId"`
 }
 
 type WebhooksExecuteResponse struct {

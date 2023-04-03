@@ -30,7 +30,8 @@ func (e *DeleteTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteTaskHeaders struct {
+type DeleteTaskRequest struct {
+	DeleteTaskRequest shared.DeleteTaskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteTaskHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteTaskRequest struct {
-	Headers DeleteTaskHeaders
-	Request shared.DeleteTaskRequest `request:"mediaType=application/json"`
 }
 
 type DeleteTaskResponse struct {

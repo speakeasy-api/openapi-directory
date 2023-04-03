@@ -36,7 +36,7 @@ func newGroupV2(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GroupV2AbdicateFoundership - An administrative method to allow the founder of a group or clan to give up their position to another admin permanently.
 func (s *groupV2) GroupV2AbdicateFoundership(ctx context.Context, request operations.GroupV2AbdicateFoundershipRequest) (*operations.GroupV2AbdicateFoundershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -78,16 +78,16 @@ func (s *groupV2) GroupV2AbdicateFoundership(ctx context.Context, request operat
 }
 
 // GroupV2AddOptionalConversation - Add a new optional conversation/chat channel. Requires admin permissions to the group.
-func (s *groupV2) GroupV2AddOptionalConversation(ctx context.Context, request operations.GroupV2AddOptionalConversationRequest) (*operations.GroupV2AddOptionalConversationResponse, error) {
+func (s *groupV2) GroupV2AddOptionalConversation(ctx context.Context, request operations.GroupV2AddOptionalConversationRequest, security operations.GroupV2AddOptionalConversationSecurity) (*operations.GroupV2AddOptionalConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/OptionalConversations/Add/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/OptionalConversations/Add/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,16 +122,16 @@ func (s *groupV2) GroupV2AddOptionalConversation(ctx context.Context, request op
 }
 
 // GroupV2ApproveAllPending - Approve all of the pending users for the given group.
-func (s *groupV2) GroupV2ApproveAllPending(ctx context.Context, request operations.GroupV2ApproveAllPendingRequest) (*operations.GroupV2ApproveAllPendingResponse, error) {
+func (s *groupV2) GroupV2ApproveAllPending(ctx context.Context, request operations.GroupV2ApproveAllPendingRequest, security operations.GroupV2ApproveAllPendingSecurity) (*operations.GroupV2ApproveAllPendingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/ApproveAll/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/ApproveAll/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,16 +166,16 @@ func (s *groupV2) GroupV2ApproveAllPending(ctx context.Context, request operatio
 }
 
 // GroupV2ApprovePending - Approve the given membershipId to join the group/clan as long as they have applied.
-func (s *groupV2) GroupV2ApprovePending(ctx context.Context, request operations.GroupV2ApprovePendingRequest) (*operations.GroupV2ApprovePendingResponse, error) {
+func (s *groupV2) GroupV2ApprovePending(ctx context.Context, request operations.GroupV2ApprovePendingRequest, security operations.GroupV2ApprovePendingSecurity) (*operations.GroupV2ApprovePendingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -210,16 +210,16 @@ func (s *groupV2) GroupV2ApprovePending(ctx context.Context, request operations.
 }
 
 // GroupV2ApprovePendingForList - Approve all of the pending users for the given group.
-func (s *groupV2) GroupV2ApprovePendingForList(ctx context.Context, request operations.GroupV2ApprovePendingForListRequest) (*operations.GroupV2ApprovePendingForListResponse, error) {
+func (s *groupV2) GroupV2ApprovePendingForList(ctx context.Context, request operations.GroupV2ApprovePendingForListRequest, security operations.GroupV2ApprovePendingForListSecurity) (*operations.GroupV2ApprovePendingForListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/ApproveList/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/ApproveList/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -254,16 +254,16 @@ func (s *groupV2) GroupV2ApprovePendingForList(ctx context.Context, request oper
 }
 
 // GroupV2BanMember - Bans the requested member from the requested group for the specified period of time.
-func (s *groupV2) GroupV2BanMember(ctx context.Context, request operations.GroupV2BanMemberRequest) (*operations.GroupV2BanMemberResponse, error) {
+func (s *groupV2) GroupV2BanMember(ctx context.Context, request operations.GroupV2BanMemberRequest, security operations.GroupV2BanMemberSecurity) (*operations.GroupV2BanMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -298,16 +298,16 @@ func (s *groupV2) GroupV2BanMember(ctx context.Context, request operations.Group
 }
 
 // GroupV2DenyAllPending - Deny all of the pending users for the given group.
-func (s *groupV2) GroupV2DenyAllPending(ctx context.Context, request operations.GroupV2DenyAllPendingRequest) (*operations.GroupV2DenyAllPendingResponse, error) {
+func (s *groupV2) GroupV2DenyAllPending(ctx context.Context, request operations.GroupV2DenyAllPendingRequest, security operations.GroupV2DenyAllPendingSecurity) (*operations.GroupV2DenyAllPendingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/DenyAll/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/DenyAll/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -342,16 +342,16 @@ func (s *groupV2) GroupV2DenyAllPending(ctx context.Context, request operations.
 }
 
 // GroupV2DenyPendingForList - Deny all of the pending users for the given group that match the passed-in .
-func (s *groupV2) GroupV2DenyPendingForList(ctx context.Context, request operations.GroupV2DenyPendingForListRequest) (*operations.GroupV2DenyPendingForListResponse, error) {
+func (s *groupV2) GroupV2DenyPendingForList(ctx context.Context, request operations.GroupV2DenyPendingForListRequest, security operations.GroupV2DenyPendingForListSecurity) (*operations.GroupV2DenyPendingForListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/DenyList/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/DenyList/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -386,16 +386,16 @@ func (s *groupV2) GroupV2DenyPendingForList(ctx context.Context, request operati
 }
 
 // GroupV2EditClanBanner - Edit an existing group's clan banner. You must have suitable permissions in the group to perform this operation. All fields are required.
-func (s *groupV2) GroupV2EditClanBanner(ctx context.Context, request operations.GroupV2EditClanBannerRequest) (*operations.GroupV2EditClanBannerResponse, error) {
+func (s *groupV2) GroupV2EditClanBanner(ctx context.Context, request operations.GroupV2EditClanBannerRequest, security operations.GroupV2EditClanBannerSecurity) (*operations.GroupV2EditClanBannerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/EditClanBanner/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/EditClanBanner/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -430,16 +430,16 @@ func (s *groupV2) GroupV2EditClanBanner(ctx context.Context, request operations.
 }
 
 // GroupV2EditFounderOptions - Edit group options only available to a founder. You must have suitable permissions in the group to perform this operation.
-func (s *groupV2) GroupV2EditFounderOptions(ctx context.Context, request operations.GroupV2EditFounderOptionsRequest) (*operations.GroupV2EditFounderOptionsResponse, error) {
+func (s *groupV2) GroupV2EditFounderOptions(ctx context.Context, request operations.GroupV2EditFounderOptionsRequest, security operations.GroupV2EditFounderOptionsSecurity) (*operations.GroupV2EditFounderOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/EditFounderOptions/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/EditFounderOptions/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -474,16 +474,16 @@ func (s *groupV2) GroupV2EditFounderOptions(ctx context.Context, request operati
 }
 
 // GroupV2EditGroup - Edit an existing group. You must have suitable permissions in the group to perform this operation. This latest revision will only edit the fields you pass in - pass null for properties you want to leave unaltered.
-func (s *groupV2) GroupV2EditGroup(ctx context.Context, request operations.GroupV2EditGroupRequest) (*operations.GroupV2EditGroupResponse, error) {
+func (s *groupV2) GroupV2EditGroup(ctx context.Context, request operations.GroupV2EditGroupRequest, security operations.GroupV2EditGroupSecurity) (*operations.GroupV2EditGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Edit/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Edit/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -518,16 +518,16 @@ func (s *groupV2) GroupV2EditGroup(ctx context.Context, request operations.Group
 }
 
 // GroupV2EditGroupMembership - Edit the membership type of a given member. You must have suitable permissions in the group to perform this operation.
-func (s *groupV2) GroupV2EditGroupMembership(ctx context.Context, request operations.GroupV2EditGroupMembershipRequest) (*operations.GroupV2EditGroupMembershipResponse, error) {
+func (s *groupV2) GroupV2EditGroupMembership(ctx context.Context, request operations.GroupV2EditGroupMembershipRequest, security operations.GroupV2EditGroupMembershipSecurity) (*operations.GroupV2EditGroupMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/SetMembershipType/{memberType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/SetMembershipType/{memberType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -562,16 +562,16 @@ func (s *groupV2) GroupV2EditGroupMembership(ctx context.Context, request operat
 }
 
 // GroupV2EditOptionalConversation - Edit the settings of an optional conversation/chat channel. Requires admin permissions to the group.
-func (s *groupV2) GroupV2EditOptionalConversation(ctx context.Context, request operations.GroupV2EditOptionalConversationRequest) (*operations.GroupV2EditOptionalConversationResponse, error) {
+func (s *groupV2) GroupV2EditOptionalConversation(ctx context.Context, request operations.GroupV2EditOptionalConversationRequest, security operations.GroupV2EditOptionalConversationSecurity) (*operations.GroupV2EditOptionalConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/OptionalConversations/Edit/{conversationId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/OptionalConversations/Edit/{conversationId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,14 +608,14 @@ func (s *groupV2) GroupV2EditOptionalConversation(ctx context.Context, request o
 // GroupV2GetAdminsAndFounderOfGroup - Get the list of members in a given group who are of admin level or higher.
 func (s *groupV2) GroupV2GetAdminsAndFounderOfGroup(ctx context.Context, request operations.GroupV2GetAdminsAndFounderOfGroupRequest) (*operations.GroupV2GetAdminsAndFounderOfGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/AdminsAndFounder/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/AdminsAndFounder/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -742,20 +742,20 @@ func (s *groupV2) GroupV2GetAvailableThemes(ctx context.Context) (*operations.Gr
 }
 
 // GroupV2GetBannedMembersOfGroup - Get the list of banned members in a given group. Only accessible to group Admins and above. Not applicable to all groups. Check group features.
-func (s *groupV2) GroupV2GetBannedMembersOfGroup(ctx context.Context, request operations.GroupV2GetBannedMembersOfGroupRequest) (*operations.GroupV2GetBannedMembersOfGroupResponse, error) {
+func (s *groupV2) GroupV2GetBannedMembersOfGroup(ctx context.Context, request operations.GroupV2GetBannedMembersOfGroupRequest, security operations.GroupV2GetBannedMembersOfGroupSecurity) (*operations.GroupV2GetBannedMembersOfGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Banned/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Banned/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -792,7 +792,7 @@ func (s *groupV2) GroupV2GetBannedMembersOfGroup(ctx context.Context, request op
 // GroupV2GetGroup - Get information about a specific group of the given ID.
 func (s *groupV2) GroupV2GetGroup(ctx context.Context, request operations.GroupV2GetGroupRequest) (*operations.GroupV2GetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -836,7 +836,7 @@ func (s *groupV2) GroupV2GetGroup(ctx context.Context, request operations.GroupV
 // GroupV2GetGroupByName - Get information about a specific group with the given name and type.
 func (s *groupV2) GroupV2GetGroupByName(ctx context.Context, request operations.GroupV2GetGroupByNameRequest) (*operations.GroupV2GetGroupByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/Name/{groupName}/{groupType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/Name/{groupName}/{groupType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -924,7 +924,7 @@ func (s *groupV2) GroupV2GetGroupByNameV2(ctx context.Context) (*operations.Grou
 // GroupV2GetGroupOptionalConversations - Gets a list of available optional conversation channels and their settings.
 func (s *groupV2) GroupV2GetGroupOptionalConversations(ctx context.Context, request operations.GroupV2GetGroupOptionalConversationsRequest) (*operations.GroupV2GetGroupOptionalConversationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/OptionalConversations/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/OptionalConversations/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +968,7 @@ func (s *groupV2) GroupV2GetGroupOptionalConversations(ctx context.Context, requ
 // GroupV2GetGroupsForMember - Get information about the groups that a given member has joined.
 func (s *groupV2) GroupV2GetGroupsForMember(ctx context.Context, request operations.GroupV2GetGroupsForMemberRequest) (*operations.GroupV2GetGroupsForMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/User/{membershipType}/{membershipId}/{filter}/{groupType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/User/{membershipType}/{membershipId}/{filter}/{groupType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1010,20 +1010,20 @@ func (s *groupV2) GroupV2GetGroupsForMember(ctx context.Context, request operati
 }
 
 // GroupV2GetInvitedIndividuals - Get the list of users who have been invited into the group.
-func (s *groupV2) GroupV2GetInvitedIndividuals(ctx context.Context, request operations.GroupV2GetInvitedIndividualsRequest) (*operations.GroupV2GetInvitedIndividualsResponse, error) {
+func (s *groupV2) GroupV2GetInvitedIndividuals(ctx context.Context, request operations.GroupV2GetInvitedIndividualsRequest, security operations.GroupV2GetInvitedIndividualsSecurity) (*operations.GroupV2GetInvitedIndividualsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/InvitedIndividuals/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/InvitedIndividuals/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1060,14 +1060,14 @@ func (s *groupV2) GroupV2GetInvitedIndividuals(ctx context.Context, request oper
 // GroupV2GetMembersOfGroup - Get the list of members in a given group.
 func (s *groupV2) GroupV2GetMembersOfGroup(ctx context.Context, request operations.GroupV2GetMembersOfGroupRequest) (*operations.GroupV2GetMembersOfGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1106,20 +1106,20 @@ func (s *groupV2) GroupV2GetMembersOfGroup(ctx context.Context, request operatio
 }
 
 // GroupV2GetPendingMemberships - Get the list of users who are awaiting a decision on their application to join a given group. Modified to include application info.
-func (s *groupV2) GroupV2GetPendingMemberships(ctx context.Context, request operations.GroupV2GetPendingMembershipsRequest) (*operations.GroupV2GetPendingMembershipsResponse, error) {
+func (s *groupV2) GroupV2GetPendingMemberships(ctx context.Context, request operations.GroupV2GetPendingMembershipsRequest, security operations.GroupV2GetPendingMembershipsSecurity) (*operations.GroupV2GetPendingMembershipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/Pending/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/Pending/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1156,7 +1156,7 @@ func (s *groupV2) GroupV2GetPendingMemberships(ctx context.Context, request oper
 // GroupV2GetPotentialGroupsForMember - Get information about the groups that a given member has applied to or been invited to.
 func (s *groupV2) GroupV2GetPotentialGroupsForMember(ctx context.Context, request operations.GroupV2GetPotentialGroupsForMemberRequest) (*operations.GroupV2GetPotentialGroupsForMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1198,16 +1198,16 @@ func (s *groupV2) GroupV2GetPotentialGroupsForMember(ctx context.Context, reques
 }
 
 // GroupV2GetRecommendedGroups - Gets groups recommended for you based on the groups to whom those you follow belong.
-func (s *groupV2) GroupV2GetRecommendedGroups(ctx context.Context, request operations.GroupV2GetRecommendedGroupsRequest) (*operations.GroupV2GetRecommendedGroupsResponse, error) {
+func (s *groupV2) GroupV2GetRecommendedGroups(ctx context.Context, request operations.GroupV2GetRecommendedGroupsRequest, security operations.GroupV2GetRecommendedGroupsSecurity) (*operations.GroupV2GetRecommendedGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/Recommended/{groupType}/{createDateRange}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/Recommended/{groupType}/{createDateRange}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1242,16 +1242,16 @@ func (s *groupV2) GroupV2GetRecommendedGroups(ctx context.Context, request opera
 }
 
 // GroupV2GetUserClanInviteSetting - Gets the state of the user's clan invite preferences for a particular membership type - true if they wish to be invited to clans, false otherwise.
-func (s *groupV2) GroupV2GetUserClanInviteSetting(ctx context.Context, request operations.GroupV2GetUserClanInviteSettingRequest) (*operations.GroupV2GetUserClanInviteSettingResponse, error) {
+func (s *groupV2) GroupV2GetUserClanInviteSetting(ctx context.Context, request operations.GroupV2GetUserClanInviteSettingRequest, security operations.GroupV2GetUserClanInviteSettingSecurity) (*operations.GroupV2GetUserClanInviteSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/GetUserClanInviteSetting/{mType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/GetUserClanInviteSetting/{mType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1330,16 +1330,16 @@ func (s *groupV2) GroupV2GroupSearch(ctx context.Context) (*operations.GroupV2Gr
 }
 
 // GroupV2IndividualGroupInvite - Invite a user to join this group.
-func (s *groupV2) GroupV2IndividualGroupInvite(ctx context.Context, request operations.GroupV2IndividualGroupInviteRequest) (*operations.GroupV2IndividualGroupInviteResponse, error) {
+func (s *groupV2) GroupV2IndividualGroupInvite(ctx context.Context, request operations.GroupV2IndividualGroupInviteRequest, security operations.GroupV2IndividualGroupInviteSecurity) (*operations.GroupV2IndividualGroupInviteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1374,16 +1374,16 @@ func (s *groupV2) GroupV2IndividualGroupInvite(ctx context.Context, request oper
 }
 
 // GroupV2IndividualGroupInviteCancel - Cancels a pending invitation to join a group.
-func (s *groupV2) GroupV2IndividualGroupInviteCancel(ctx context.Context, request operations.GroupV2IndividualGroupInviteCancelRequest) (*operations.GroupV2IndividualGroupInviteCancelResponse, error) {
+func (s *groupV2) GroupV2IndividualGroupInviteCancel(ctx context.Context, request operations.GroupV2IndividualGroupInviteCancelRequest, security operations.GroupV2IndividualGroupInviteCancelSecurity) (*operations.GroupV2IndividualGroupInviteCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1418,16 +1418,16 @@ func (s *groupV2) GroupV2IndividualGroupInviteCancel(ctx context.Context, reques
 }
 
 // GroupV2KickMember - Kick a member from the given group, forcing them to reapply if they wish to re-join the group. You must have suitable permissions in the group to perform this operation.
-func (s *groupV2) GroupV2KickMember(ctx context.Context, request operations.GroupV2KickMemberRequest) (*operations.GroupV2KickMemberResponse, error) {
+func (s *groupV2) GroupV2KickMember(ctx context.Context, request operations.GroupV2KickMemberRequest, security operations.GroupV2KickMemberSecurity) (*operations.GroupV2KickMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1464,7 +1464,7 @@ func (s *groupV2) GroupV2KickMember(ctx context.Context, request operations.Grou
 // GroupV2RecoverGroupForFounder - Allows a founder to manually recover a group they can see in game but not on bungie.net
 func (s *groupV2) GroupV2RecoverGroupForFounder(ctx context.Context, request operations.GroupV2RecoverGroupForFounderRequest) (*operations.GroupV2RecoverGroupForFounderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/Recover/{membershipType}/{membershipId}/{groupType}/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/Recover/{membershipType}/{membershipId}/{groupType}/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1506,16 +1506,16 @@ func (s *groupV2) GroupV2RecoverGroupForFounder(ctx context.Context, request ope
 }
 
 // GroupV2UnbanMember - Unbans the requested member, allowing them to re-apply for membership.
-func (s *groupV2) GroupV2UnbanMember(ctx context.Context, request operations.GroupV2UnbanMemberRequest) (*operations.GroupV2UnbanMemberResponse, error) {
+func (s *groupV2) GroupV2UnbanMember(ctx context.Context, request operations.GroupV2UnbanMemberRequest, security operations.GroupV2UnbanMemberSecurity) (*operations.GroupV2UnbanMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

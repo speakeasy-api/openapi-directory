@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type QuotePostRequest struct {
-	// Information of Quote to create.
-	Request shared.QuoteDto `request:"mediaType=application/json"`
-}
 
 type QuotePostResponse struct {
 	ContentType string

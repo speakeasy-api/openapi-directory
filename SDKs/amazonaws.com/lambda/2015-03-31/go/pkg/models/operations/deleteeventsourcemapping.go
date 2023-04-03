@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteEventSourceMappingPathParams struct {
+type DeleteEventSourceMappingRequest struct {
 	// The identifier of the event source mapping.
-	UUID string `pathParam:"style=simple,explode=false,name=UUID"`
-}
-
-type DeleteEventSourceMappingHeaders struct {
+	UUID              string  `pathParam:"style=simple,explode=false,name=UUID"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DeleteEventSourceMappingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEventSourceMappingRequest struct {
-	PathParams DeleteEventSourceMappingPathParams
-	Headers    DeleteEventSourceMappingHeaders
 }
 
 type DeleteEventSourceMappingResponse struct {

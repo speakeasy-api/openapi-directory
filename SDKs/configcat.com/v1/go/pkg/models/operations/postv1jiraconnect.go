@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostV1JiraConnectRequest struct {
-	Request *shared.ConnectRequest `request:"mediaType=application/json"`
-}
 
 type PostV1JiraConnectResponse struct {
 	ContentType string

@@ -7,30 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateComponentPathParams struct {
-	// The unique ID for the Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-	// The unique ID for the component.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateComponentQueryParams struct {
-	// The unique client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type UpdateComponentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateComponentRequestBodyUpdatedComponent - Updates and saves all of the information about a component, based on component ID.
 type UpdateComponentRequestBodyUpdatedComponent struct {
 	BindingProperties    map[string]shared.ComponentBindingPropertiesValue `json:"bindingProperties,omitempty"`
@@ -54,10 +30,22 @@ type UpdateComponentRequestBody struct {
 }
 
 type UpdateComponentRequest struct {
-	PathParams  UpdateComponentPathParams
-	QueryParams UpdateComponentQueryParams
-	Headers     UpdateComponentHeaders
-	Request     UpdateComponentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateComponentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID for the Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The unique client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the backend environment that is part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The unique ID for the component.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateComponentResponse struct {

@@ -30,20 +30,16 @@ func (e *ModifyWorkspacePropertiesXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ModifyWorkspacePropertiesHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ModifyWorkspacePropertiesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ModifyWorkspacePropertiesRequest struct {
-	Headers ModifyWorkspacePropertiesHeaders
-	Request shared.ModifyWorkspacePropertiesRequest `request:"mediaType=application/json"`
+	ModifyWorkspacePropertiesRequest shared.ModifyWorkspacePropertiesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                         *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                       ModifyWorkspacePropertiesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ModifyWorkspacePropertiesResponse struct {

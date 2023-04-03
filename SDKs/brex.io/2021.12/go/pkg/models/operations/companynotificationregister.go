@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyNotificationRegisterSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyNotificationRegisterPathParams struct {
-	// Company Hex ID
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // CompanyNotificationRegisterRequestBody - Callback URL where the notifications will be sent to
@@ -23,10 +17,10 @@ type CompanyNotificationRegisterRequestBody struct {
 }
 
 type CompanyNotificationRegisterRequest struct {
-	PathParams CompanyNotificationRegisterPathParams
 	// Callback URL where the notifications will be sent to
-	Request  *CompanyNotificationRegisterRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CompanyNotificationRegisterSecurity
+	RequestBody *CompanyNotificationRegisterRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Company Hex ID
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // CompanyNotificationRegisterDefaultApplicationJSON - Detailed information about the error

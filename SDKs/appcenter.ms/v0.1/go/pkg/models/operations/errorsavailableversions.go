@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsAvailableVersionsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsAvailableVersionsPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ErrorsAvailableVersionsDollarInlinecountEnum - Controls whether or not to include a count of all the items across all pages.
@@ -72,7 +64,7 @@ func (e *ErrorsAvailableVersionsErrorTypeEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ErrorsAvailableVersionsQueryParams struct {
+type ErrorsAvailableVersionsRequest struct {
 	// A filter as specified in https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#97-filtering.
 	DollarFilter *string `queryParam:"style=form,explode=true,name=$filter"`
 	// Controls whether or not to include a count of all the items across all pages.
@@ -81,18 +73,16 @@ type ErrorsAvailableVersionsQueryParams struct {
 	DollarSkip *int64 `queryParam:"style=form,explode=true,name=$skip"`
 	// The maximum number of results to return. (0 will fetch all results till the max number.)
 	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// Last date time in data in ISO 8601 date time format
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// Type of error (handled vs unhandled), including All
 	ErrorType *ErrorsAvailableVersionsErrorTypeEnum `queryParam:"style=form,explode=true,name=errorType"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Start date time in data in ISO 8601 date time format
 	Start time.Time `queryParam:"style=form,explode=true,name=start"`
-}
-
-type ErrorsAvailableVersionsRequest struct {
-	PathParams  ErrorsAvailableVersionsPathParams
-	QueryParams ErrorsAvailableVersionsQueryParams
-	Security    ErrorsAvailableVersionsSecurity
 }
 
 type ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum string

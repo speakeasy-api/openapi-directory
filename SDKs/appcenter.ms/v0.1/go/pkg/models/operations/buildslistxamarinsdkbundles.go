@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BuildsListXamarinSDKBundlesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type BuildsListXamarinSDKBundlesPathParams struct {
+type BuildsListXamarinSDKBundlesRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type BuildsListXamarinSDKBundlesRequest struct {
-	PathParams BuildsListXamarinSDKBundlesPathParams
-	Security   BuildsListXamarinSDKBundlesSecurity
 }
 
 // BuildsListXamarinSDKBundlesDefaultApplicationJSON - Bad Request

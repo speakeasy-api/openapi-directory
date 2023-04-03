@@ -50,7 +50,7 @@ func (e *GETDescribeTagsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeTagsQueryParams struct {
+type GETDescribeTagsRequest struct {
 	Action GETDescribeTagsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned marker value in the <code>marker</code> parameter and retrying the command. If the <code>marker</code> field is empty, all response records have been retrieved for the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -63,23 +63,15 @@ type GETDescribeTagsQueryParams struct {
 	// A tag key or keys for which you want to return all matching resources that are associated with the specified key or keys. For example, suppose that you have resources tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with all resources that have either or both of these tag keys associated with them.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// A tag value or values for which you want to return all matching resources that are associated with the specified value or values. For example, suppose that you have resources tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with all resources that have either or both of these tag values associated with them.
-	TagValues []string                   `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeTagsRequest struct {
-	QueryParams GETDescribeTagsQueryParams
-	Headers     GETDescribeTagsHeaders
+	TagValues         []string                   `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeTagsResponse struct {

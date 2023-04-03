@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListNamedShadowsForThingPathParams struct {
-	// The name of the thing.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type ListNamedShadowsForThingQueryParams struct {
-	// The token to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The result page size.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListNamedShadowsForThingHeaders struct {
+type ListNamedShadowsForThingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListNamedShadowsForThingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListNamedShadowsForThingRequest struct {
-	PathParams  ListNamedShadowsForThingPathParams
-	QueryParams ListNamedShadowsForThingQueryParams
-	Headers     ListNamedShadowsForThingHeaders
+	// The token to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The result page size.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
+	// The name of the thing.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type ListNamedShadowsForThingResponse struct {

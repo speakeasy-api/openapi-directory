@@ -38,7 +38,7 @@ func newAccountCompanyLevel(defaultClient, securityClient HTTPClient, serverURL,
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 //
 // * Management API—Account read
-func (s *accountCompanyLevel) GetCompanies(ctx context.Context, request operations.GetCompaniesRequest) (*operations.GetCompaniesResponse, error) {
+func (s *accountCompanyLevel) GetCompanies(ctx context.Context, request operations.GetCompaniesRequest, security operations.GetCompaniesSecurity) (*operations.GetCompaniesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/companies"
 
@@ -47,11 +47,11 @@ func (s *accountCompanyLevel) GetCompanies(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,16 +108,16 @@ func (s *accountCompanyLevel) GetCompanies(ctx context.Context, request operatio
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Account read
-func (s *accountCompanyLevel) GetCompaniesCompanyID(ctx context.Context, request operations.GetCompaniesCompanyIDRequest) (*operations.GetCompaniesCompanyIDResponse, error) {
+func (s *accountCompanyLevel) GetCompaniesCompanyID(ctx context.Context, request operations.GetCompaniesCompanyIDRequest, security operations.GetCompaniesCompanyIDSecurity) (*operations.GetCompaniesCompanyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,20 +174,20 @@ func (s *accountCompanyLevel) GetCompaniesCompanyID(ctx context.Context, request
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Account read
-func (s *accountCompanyLevel) GetCompaniesCompanyIDMerchants(ctx context.Context, request operations.GetCompaniesCompanyIDMerchantsRequest) (*operations.GetCompaniesCompanyIDMerchantsResponse, error) {
+func (s *accountCompanyLevel) GetCompaniesCompanyIDMerchants(ctx context.Context, request operations.GetCompaniesCompanyIDMerchantsRequest, security operations.GetCompaniesCompanyIDMerchantsSecurity) (*operations.GetCompaniesCompanyIDMerchantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/merchants", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/merchants", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

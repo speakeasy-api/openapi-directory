@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyRevokePathParams struct {
+type KeyRevokeRequest struct {
 	// Public Signing Key - Authentiq ID (43 chars)
 	Pk string `pathParam:"style=simple,explode=false,name=PK"`
-}
-
-type KeyRevokeQueryParams struct {
 	// revokation secret
 	Secret string `queryParam:"style=form,explode=true,name=secret"`
-}
-
-type KeyRevokeRequest struct {
-	PathParams  KeyRevokePathParams
-	QueryParams KeyRevokeQueryParams
 }
 
 // KeyRevoke200ApplicationJSON - Successful response

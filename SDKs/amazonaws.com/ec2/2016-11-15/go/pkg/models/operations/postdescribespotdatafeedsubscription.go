@@ -50,25 +50,17 @@ func (e *POSTDescribeSpotDatafeedSubscriptionVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type POSTDescribeSpotDatafeedSubscriptionQueryParams struct {
-	Action  POSTDescribeSpotDatafeedSubscriptionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeSpotDatafeedSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeSpotDatafeedSubscriptionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeSpotDatafeedSubscriptionRequest struct {
-	QueryParams POSTDescribeSpotDatafeedSubscriptionQueryParams
-	Headers     POSTDescribeSpotDatafeedSubscriptionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeSpotDatafeedSubscriptionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                          `request:"mediaType=text/xml"`
+	Version           POSTDescribeSpotDatafeedSubscriptionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeSpotDatafeedSubscriptionResponse struct {

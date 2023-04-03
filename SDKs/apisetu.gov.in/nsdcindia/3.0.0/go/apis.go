@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Escer - Executive Skill Enhancement Certificate
 // API to verify Executive Skill Enhancement Certificate.
-func (s *apIs) Escer(ctx context.Context, request operations.EscerRequest) (*operations.EscerResponse, error) {
+func (s *apIs) Escer(ctx context.Context, request operations.EscerRequestBody, security operations.EscerSecurity) (*operations.EscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/escer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Escer(ctx context.Context, request operations.EscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Escer(ctx context.Context, request operations.EscerRequest) (*ope
 
 // Skcer - Skill Certificate
 // API to verify Skill Certificate.
-func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequest) (*operations.SkcerResponse, error) {
+func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequestBody, security operations.SkcerSecurity) (*operations.SkcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/skcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

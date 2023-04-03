@@ -50,26 +50,18 @@ func (e *GETDeleteVerifiedEmailAddressVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDeleteVerifiedEmailAddressQueryParams struct {
+type GETDeleteVerifiedEmailAddressRequest struct {
 	Action GETDeleteVerifiedEmailAddressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An email address to be removed from the list of verified addresses.
-	EmailAddress string                                   `queryParam:"style=form,explode=true,name=EmailAddress"`
-	Version      GETDeleteVerifiedEmailAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteVerifiedEmailAddressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteVerifiedEmailAddressRequest struct {
-	QueryParams GETDeleteVerifiedEmailAddressQueryParams
-	Headers     GETDeleteVerifiedEmailAddressHeaders
+	EmailAddress      string                                   `queryParam:"style=form,explode=true,name=EmailAddress"`
+	Version           GETDeleteVerifiedEmailAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteVerifiedEmailAddressResponse struct {

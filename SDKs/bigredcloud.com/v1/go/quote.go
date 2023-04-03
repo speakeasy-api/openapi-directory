@@ -35,7 +35,7 @@ func newQuote(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // QuoteClose - Close a Quote.
 func (s *quote) QuoteClose(ctx context.Context, request operations.QuoteCloseRequest) (*operations.QuoteCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/close/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/close/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -79,14 +79,14 @@ func (s *quote) QuoteClose(ctx context.Context, request operations.QuoteCloseReq
 // QuoteDelete - Removes an existing Quote.
 func (s *quote) QuoteDelete(ctx context.Context, request operations.QuoteDeleteRequest) (*operations.QuoteDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,7 +171,7 @@ func (s *quote) QuoteGet(ctx context.Context) (*operations.QuoteGetResponse, err
 }
 
 // QuotePost - Creates a new Quote.
-func (s *quote) QuotePost(ctx context.Context, request operations.QuotePostRequest) (*operations.QuotePostResponse, error) {
+func (s *quote) QuotePost(ctx context.Context, request shared.QuoteDto) (*operations.QuotePostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/quotes"
 
@@ -225,7 +225,7 @@ func (s *quote) QuotePost(ctx context.Context, request operations.QuotePostReque
 }
 
 // QuotePostCreateQuoteWithGeneratingReference - Creates a new Quote with auto generating reference.
-func (s *quote) QuotePostCreateQuoteWithGeneratingReference(ctx context.Context, request operations.QuotePostCreateQuoteWithGeneratingReferenceRequest) (*operations.QuotePostCreateQuoteWithGeneratingReferenceResponse, error) {
+func (s *quote) QuotePostCreateQuoteWithGeneratingReference(ctx context.Context, request shared.QuoteDto) (*operations.QuotePostCreateQuoteWithGeneratingReferenceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/quotes/createQuoteWithGeneratingReference"
 
@@ -280,7 +280,7 @@ func (s *quote) QuotePostCreateQuoteWithGeneratingReference(ctx context.Context,
 
 // QuotePostGenerateSaleInvoice - Generate a sale invoice from a Quote.
 // When sale invoice is empty, new sale invoice will be generated from Quote.
-func (s *quote) QuotePostGenerateSaleInvoice(ctx context.Context, request operations.QuotePostGenerateSaleInvoiceRequest) (*operations.QuotePostGenerateSaleInvoiceResponse, error) {
+func (s *quote) QuotePostGenerateSaleInvoice(ctx context.Context, request shared.QuoteGeneratingInvoiceDto) (*operations.QuotePostGenerateSaleInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/quotes/generateSaleInvoice"
 
@@ -334,7 +334,7 @@ func (s *quote) QuotePostGenerateSaleInvoice(ctx context.Context, request operat
 }
 
 // QuoteProcessBatch - Processes a batch of Quote.
-func (s *quote) QuoteProcessBatch(ctx context.Context, request operations.QuoteProcessBatchRequest) (*operations.QuoteProcessBatchResponse, error) {
+func (s *quote) QuoteProcessBatch(ctx context.Context, request []shared.BatchItemQuoteDto) (*operations.QuoteProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/quotes/batch"
 
@@ -390,9 +390,9 @@ func (s *quote) QuoteProcessBatch(ctx context.Context, request operations.QuoteP
 // QuotePut - Updates an existing Quote.
 func (s *quote) QuotePut(ctx context.Context, request operations.QuotePutRequest) (*operations.QuotePutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuoteDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -444,7 +444,7 @@ func (s *quote) QuotePut(ctx context.Context, request operations.QuotePutRequest
 // QuoteReopen - Reopen a Quote.
 func (s *quote) QuoteReopen(ctx context.Context, request operations.QuoteReopenRequest) (*operations.QuoteReopenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/reopen/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/reopen/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -488,7 +488,7 @@ func (s *quote) QuoteReopen(ctx context.Context, request operations.QuoteReopenR
 // GetV1QuotesID - Returns information about a single Quote.
 func (s *quote) GetV1QuotesID(ctx context.Context, request operations.GetV1QuotesIDRequest) (*operations.GetV1QuotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

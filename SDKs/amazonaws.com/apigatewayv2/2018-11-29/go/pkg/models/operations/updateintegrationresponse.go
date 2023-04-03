@@ -9,25 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateIntegrationResponsePathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The integration ID.
-	IntegrationID string `pathParam:"style=simple,explode=false,name=integrationId"`
-	// The integration response ID.
-	IntegrationResponseID string `pathParam:"style=simple,explode=false,name=integrationResponseId"`
-}
-
-type UpdateIntegrationResponseHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateIntegrationResponseRequestBodyContentHandlingStrategyEnum - Specifies how to handle response payload content type conversions. Supported only for WebSocket APIs.
 type UpdateIntegrationResponseRequestBodyContentHandlingStrategyEnum string
 
@@ -71,9 +52,20 @@ type UpdateIntegrationResponseRequestBody struct {
 }
 
 type UpdateIntegrationResponseRequest struct {
-	PathParams UpdateIntegrationResponsePathParams
-	Headers    UpdateIntegrationResponseHeaders
-	Request    UpdateIntegrationResponseRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateIntegrationResponseRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The integration ID.
+	IntegrationID string `pathParam:"style=simple,explode=false,name=integrationId"`
+	// The integration response ID.
+	IntegrationResponseID string `pathParam:"style=simple,explode=false,name=integrationResponseId"`
 }
 
 type UpdateIntegrationResponseResponse struct {

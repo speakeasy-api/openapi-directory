@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReadSetPathParams struct {
-	// The read set's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The read set's sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
 // GetReadSetFileEnum - The file to retrieve.
 type GetReadSetFileEnum string
 
@@ -43,14 +36,7 @@ func (e *GetReadSetFileEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetReadSetQueryParams struct {
-	// The file to retrieve.
-	File *GetReadSetFileEnum `queryParam:"style=form,explode=true,name=file"`
-	// The part number to retrieve.
-	PartNumber int64 `queryParam:"style=form,explode=true,name=partNumber"`
-}
-
-type GetReadSetHeaders struct {
+type GetReadSetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -58,12 +44,14 @@ type GetReadSetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReadSetRequest struct {
-	PathParams  GetReadSetPathParams
-	QueryParams GetReadSetQueryParams
-	Headers     GetReadSetHeaders
+	// The file to retrieve.
+	File *GetReadSetFileEnum `queryParam:"style=form,explode=true,name=file"`
+	// The read set's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The part number to retrieve.
+	PartNumber int64 `queryParam:"style=form,explode=true,name=partNumber"`
+	// The read set's sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type GetReadSetResponse struct {

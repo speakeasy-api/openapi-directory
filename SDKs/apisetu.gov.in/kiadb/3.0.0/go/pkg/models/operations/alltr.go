@@ -10,8 +10,8 @@ import (
 )
 
 type AlltrSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type AlltrRequestBodyCertificateParameters struct {
@@ -54,12 +54,6 @@ type AlltrRequestBody struct {
 	Format AlltrRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type AlltrRequest struct {
-	// Request format
-	Request  *AlltrRequestBody `request:"mediaType=application/json"`
-	Security AlltrSecurity
 }
 
 type Alltr504ApplicationJSONErrorEnum string

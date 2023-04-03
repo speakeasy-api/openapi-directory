@@ -50,26 +50,18 @@ func (e *GETDeleteGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteGlobalClusterQueryParams struct {
+type GETDeleteGlobalClusterRequest struct {
 	Action GETDeleteGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cluster identifier of the global database cluster being deleted.
 	GlobalClusterIdentifier string                            `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`
 	Version                 GETDeleteGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteGlobalClusterRequest struct {
-	QueryParams GETDeleteGlobalClusterQueryParams
-	Headers     GETDeleteGlobalClusterHeaders
+	XAmzAlgorithm           *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteGlobalClusterResponse struct {

@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type DisassociateResourcePathParams struct {
-	// Specifies the group. You can specify the group name, the ARN, or the group ID as the <code>GroupIdentifier</code>.
-	GroupIdentifier string `pathParam:"style=simple,explode=false,name=groupIdentifier"`
-}
-
-type DisassociateResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DisassociateResourceRequestBody struct {
 	// The ARN of the canary that you want to remove from the specified group.
 	ResourceArn string `json:"ResourceArn"`
 }
 
 type DisassociateResourceRequest struct {
-	PathParams DisassociateResourcePathParams
-	Headers    DisassociateResourceHeaders
-	Request    DisassociateResourceRequestBody `request:"mediaType=application/json"`
+	RequestBody       DisassociateResourceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Specifies the group. You can specify the group name, the ARN, or the group ID as the <code>GroupIdentifier</code>.
+	GroupIdentifier string `pathParam:"style=simple,explode=false,name=groupIdentifier"`
 }
 
 type DisassociateResourceResponse struct {

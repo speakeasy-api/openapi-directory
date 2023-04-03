@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetParentsPathParams struct {
+type GetParentsRequest struct {
 	Count  int64  `pathParam:"style=simple,explode=false,name=count"`
 	Cursor string `pathParam:"style=simple,explode=false,name=cursor"`
 	Sha1   string `pathParam:"style=simple,explode=false,name=sha1"`
-}
-
-type GetParentsRequest struct {
-	PathParams GetParentsPathParams
 }
 
 type GetParentsResponse struct {

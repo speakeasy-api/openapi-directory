@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Adcrd - Admit Card
 // API to verify Admit Card.
-func (s *apIs) Adcrd(ctx context.Context, request operations.AdcrdRequest) (*operations.AdcrdResponse, error) {
+func (s *apIs) Adcrd(ctx context.Context, request operations.AdcrdRequestBody, security operations.AdcrdSecurity) (*operations.AdcrdResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/adcrd/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Adcrd(ctx context.Context, request operations.AdcrdRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

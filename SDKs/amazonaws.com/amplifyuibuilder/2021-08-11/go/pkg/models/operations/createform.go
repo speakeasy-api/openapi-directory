@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateFormPathParams struct {
-	// The unique ID of the Amplify app to associate with the form.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type CreateFormQueryParams struct {
-	// The unique client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type CreateFormHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateFormRequestBodyFormToCreate - Represents all of the information that is required to create a form.
 type CreateFormRequestBodyFormToCreate struct {
 	Cta               *shared.FormCTA                    `json:"cta,omitempty"`
@@ -48,10 +26,20 @@ type CreateFormRequestBody struct {
 }
 
 type CreateFormRequest struct {
-	PathParams  CreateFormPathParams
-	QueryParams CreateFormQueryParams
-	Headers     CreateFormHeaders
-	Request     CreateFormRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateFormRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID of the Amplify app to associate with the form.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The unique client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
 }
 
 type CreateFormResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSuitesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListSuitesXAmzTargetEnum
 type ListSuitesXAmzTargetEnum string
 
@@ -35,7 +30,8 @@ func (e *ListSuitesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSuitesHeaders struct {
+type ListSuitesRequest struct {
+	ListSuitesRequest shared.ListSuitesRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +40,8 @@ type ListSuitesHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListSuitesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListSuitesRequest struct {
-	QueryParams ListSuitesQueryParams
-	Headers     ListSuitesHeaders
-	Request     shared.ListSuitesRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListSuitesResponse struct {

@@ -6,16 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateAuditStreamConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateAuditStreamConfigurationRequestBody struct {
 	// The ARN of the Amazon Kinesis data stream that receives the audit events.
 	AuditStreamArn *string `json:"AuditStreamArn,omitempty"`
@@ -24,8 +14,14 @@ type UpdateAuditStreamConfigurationRequestBody struct {
 }
 
 type UpdateAuditStreamConfigurationRequest struct {
-	Headers UpdateAuditStreamConfigurationHeaders
-	Request UpdateAuditStreamConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAuditStreamConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateAuditStreamConfigurationResponse struct {

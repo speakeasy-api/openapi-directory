@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourceProfileQueryParams struct {
-	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
-	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
-}
-
-type GetResourceProfileHeaders struct {
+type GetResourceProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetResourceProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetResourceProfileRequest struct {
-	QueryParams GetResourceProfileQueryParams
-	Headers     GetResourceProfileHeaders
+	// The Amazon Resource Name (ARN) of the S3 bucket that the request applies to.
+	ResourceArn string `queryParam:"style=form,explode=true,name=resourceArn"`
 }
 
 type GetResourceProfileResponse struct {

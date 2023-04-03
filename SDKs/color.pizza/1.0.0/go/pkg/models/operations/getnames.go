@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamesQueryParams struct {
+type GetNamesRequest struct {
 	// The name of the color name list to use
 	List *shared.PossibleListsEnum `queryParam:"style=form,explode=false,name=list"`
 	// The name of the color to retrieve (min 3 characters)
 	Name string `queryParam:"style=form,explode=false,name=name"`
-}
-
-type GetNamesRequest struct {
-	QueryParams GetNamesQueryParams
 }
 
 // GetNames200ApplicationJSON - OK

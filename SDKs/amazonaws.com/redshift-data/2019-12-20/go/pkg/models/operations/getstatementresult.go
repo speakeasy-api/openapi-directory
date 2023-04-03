@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStatementResultQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetStatementResultXAmzTargetEnum
 type GetStatementResultXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *GetStatementResultXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetStatementResultHeaders struct {
+type GetStatementResultRequest struct {
+	GetStatementResultRequest shared.GetStatementResultRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type GetStatementResultHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetStatementResultXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetStatementResultRequest struct {
-	QueryParams GetStatementResultQueryParams
-	Headers     GetStatementResultHeaders
-	Request     shared.GetStatementResultRequest `request:"mediaType=application/json"`
 }
 
 type GetStatementResultResponse struct {

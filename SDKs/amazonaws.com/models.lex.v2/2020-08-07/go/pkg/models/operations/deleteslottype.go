@@ -6,23 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteSlotTypePathParams struct {
-	// The identifier of the bot associated with the slot type.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot associated with the slot type.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale that the slot type will be deleted from. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-	// The identifier of the slot type to delete.
-	SlotTypeID string `pathParam:"style=simple,explode=false,name=slotTypeId"`
-}
-
-type DeleteSlotTypeQueryParams struct {
-	// By default, the <code>DeleteSlotType</code> operations throws a <code>ResourceInUseException</code> exception if you try to delete a slot type used by a slot. Set the <code>skipResourceInUseCheck</code> parameter to <code>true</code> to skip this check and remove the slot type even if a slot uses it.
-	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
-}
-
-type DeleteSlotTypeHeaders struct {
+type DeleteSlotTypeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -30,12 +14,16 @@ type DeleteSlotTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSlotTypeRequest struct {
-	PathParams  DeleteSlotTypePathParams
-	QueryParams DeleteSlotTypeQueryParams
-	Headers     DeleteSlotTypeHeaders
+	// The identifier of the bot associated with the slot type.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot associated with the slot type.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale that the slot type will be deleted from. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// By default, the <code>DeleteSlotType</code> operations throws a <code>ResourceInUseException</code> exception if you try to delete a slot type used by a slot. Set the <code>skipResourceInUseCheck</code> parameter to <code>true</code> to skip this check and remove the slot type even if a slot uses it.
+	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
+	// The identifier of the slot type to delete.
+	SlotTypeID string `pathParam:"style=simple,explode=false,name=slotTypeId"`
 }
 
 type DeleteSlotTypeResponse struct {

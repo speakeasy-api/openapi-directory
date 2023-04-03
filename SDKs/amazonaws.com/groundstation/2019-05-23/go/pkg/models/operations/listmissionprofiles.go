@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMissionProfilesQueryParams struct {
-	// Maximum number of mission profiles returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Next token returned in the request of a previous <code>ListMissionProfiles</code> call. Used to get the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListMissionProfilesHeaders struct {
+type ListMissionProfilesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListMissionProfilesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListMissionProfilesRequest struct {
-	QueryParams ListMissionProfilesQueryParams
-	Headers     ListMissionProfilesHeaders
+	// Maximum number of mission profiles returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Next token returned in the request of a previous <code>ListMissionProfiles</code> call. Used to get the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListMissionProfilesResponse struct {

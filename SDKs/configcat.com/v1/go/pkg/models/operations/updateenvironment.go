@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEnvironmentPathParams struct {
+type UpdateEnvironmentRequest struct {
+	UpdateEnvironmentModel shared.UpdateEnvironmentModel `request:"mediaType=application/json"`
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
-}
-
-type UpdateEnvironmentRequest struct {
-	PathParams UpdateEnvironmentPathParams
-	Request    shared.UpdateEnvironmentModel `request:"mediaType=application/json"`
 }
 
 type UpdateEnvironmentResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PostConfigPropertyPathParams struct {
-	ConfigNodeName string `pathParam:"style=simple,explode=false,name=configNodeName"`
-}
-
 type PostConfigPropertyRequest struct {
-	PathParams PostConfigPropertyPathParams
+	ConfigNodeName string `pathParam:"style=simple,explode=false,name=configNodeName"`
 }
 
 type PostConfigPropertyResponse struct {

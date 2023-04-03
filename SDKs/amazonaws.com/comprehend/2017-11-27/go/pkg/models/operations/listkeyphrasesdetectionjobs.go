@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListKeyPhrasesDetectionJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListKeyPhrasesDetectionJobsXAmzTargetEnum
 type ListKeyPhrasesDetectionJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListKeyPhrasesDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListKeyPhrasesDetectionJobsHeaders struct {
+type ListKeyPhrasesDetectionJobsRequest struct {
+	ListKeyPhrasesDetectionJobsRequest shared.ListKeyPhrasesDetectionJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListKeyPhrasesDetectionJobsHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListKeyPhrasesDetectionJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListKeyPhrasesDetectionJobsRequest struct {
-	QueryParams ListKeyPhrasesDetectionJobsQueryParams
-	Headers     ListKeyPhrasesDetectionJobsHeaders
-	Request     shared.ListKeyPhrasesDetectionJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListKeyPhrasesDetectionJobsResponse struct {

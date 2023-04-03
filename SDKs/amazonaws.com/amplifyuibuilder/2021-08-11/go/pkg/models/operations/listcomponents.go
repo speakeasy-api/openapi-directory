@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListComponentsPathParams struct {
-	// The unique ID for the Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type ListComponentsQueryParams struct {
-	// The maximum number of components to retrieve.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to request the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListComponentsHeaders struct {
+type ListComponentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListComponentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListComponentsRequest struct {
-	PathParams  ListComponentsPathParams
-	QueryParams ListComponentsQueryParams
-	Headers     ListComponentsHeaders
+	// The unique ID for the Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The maximum number of components to retrieve.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to request the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListComponentsResponse struct {

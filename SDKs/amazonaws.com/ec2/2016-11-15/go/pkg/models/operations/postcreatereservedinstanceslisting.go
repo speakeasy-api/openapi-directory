@@ -50,25 +50,17 @@ func (e *POSTCreateReservedInstancesListingVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type POSTCreateReservedInstancesListingQueryParams struct {
-	Action  POSTCreateReservedInstancesListingActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateReservedInstancesListingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateReservedInstancesListingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateReservedInstancesListingRequest struct {
-	QueryParams POSTCreateReservedInstancesListingQueryParams
-	Headers     POSTCreateReservedInstancesListingHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateReservedInstancesListingActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                        `request:"mediaType=text/xml"`
+	Version           POSTCreateReservedInstancesListingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateReservedInstancesListingResponse struct {

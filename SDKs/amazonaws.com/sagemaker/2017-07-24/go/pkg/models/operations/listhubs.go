@@ -30,7 +30,8 @@ func (e *ListHubsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListHubsHeaders struct {
+type ListHubsRequest struct {
+	ListHubsRequest   shared.ListHubsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ListHubsHeaders struct {
 	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListHubsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListHubsRequest struct {
-	Headers ListHubsHeaders
-	Request shared.ListHubsRequest `request:"mediaType=application/json"`
 }
 
 type ListHubsResponse struct {

@@ -116,7 +116,7 @@ func (s *SDK) CreateConfigurationSet(ctx context.Context, request operations.Cre
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/configuration-sets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateConfigurationSet(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -230,9 +230,9 @@ func (s *SDK) CreateConfigurationSet(ctx context.Context, request operations.Cre
 // CreateConfigurationSetEventDestination - <p>Create an event destination. In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p> <p>A single configuration set can include more than one event destination.</p>
 func (s *SDK) CreateConfigurationSetEventDestination(ctx context.Context, request operations.CreateConfigurationSetEventDestinationRequest) (*operations.CreateConfigurationSetEventDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *SDK) CreateConfigurationSetEventDestination(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -338,7 +338,7 @@ func (s *SDK) CreateDedicatedIPPool(ctx context.Context, request operations.Crea
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/dedicated-ip-pools"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -353,7 +353,7 @@ func (s *SDK) CreateDedicatedIPPool(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -444,7 +444,7 @@ func (s *SDK) CreateDeliverabilityTestReport(ctx context.Context, request operat
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/deliverability-dashboard/test"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -459,7 +459,7 @@ func (s *SDK) CreateDeliverabilityTestReport(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -590,7 +590,7 @@ func (s *SDK) CreateEmailIdentity(ctx context.Context, request operations.Create
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/identities"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -605,7 +605,7 @@ func (s *SDK) CreateEmailIdentity(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -684,14 +684,14 @@ func (s *SDK) CreateEmailIdentity(ctx context.Context, request operations.Create
 // DeleteConfigurationSet - <p>Delete an existing configuration set.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>
 func (s *SDK) DeleteConfigurationSet(ctx context.Context, request operations.DeleteConfigurationSetRequest) (*operations.DeleteConfigurationSetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -770,14 +770,14 @@ func (s *SDK) DeleteConfigurationSet(ctx context.Context, request operations.Del
 // DeleteConfigurationSetEventDestination - <p>Delete an event destination.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
 func (s *SDK) DeleteConfigurationSetEventDestination(ctx context.Context, request operations.DeleteConfigurationSetEventDestinationRequest) (*operations.DeleteConfigurationSetEventDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -846,14 +846,14 @@ func (s *SDK) DeleteConfigurationSetEventDestination(ctx context.Context, reques
 // DeleteDedicatedIPPool - Delete a dedicated IP pool.
 func (s *SDK) DeleteDedicatedIPPool(ctx context.Context, request operations.DeleteDedicatedIPPoolRequest) (*operations.DeleteDedicatedIPPoolResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ip-pools/{PoolName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ip-pools/{PoolName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -932,14 +932,14 @@ func (s *SDK) DeleteDedicatedIPPool(ctx context.Context, request operations.Dele
 // DeleteEmailIdentity - Deletes an email identity that you previously verified for use with Amazon Pinpoint. An identity can be either an email address or a domain name.
 func (s *SDK) DeleteEmailIdentity(ctx context.Context, request operations.DeleteEmailIdentityRequest) (*operations.DeleteEmailIdentityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1025,7 +1025,7 @@ func (s *SDK) GetAccount(ctx context.Context, request operations.GetAccountReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1091,9 +1091,9 @@ func (s *SDK) GetBlacklistReports(ctx context.Context, request operations.GetBla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1164,14 +1164,14 @@ func (s *SDK) GetBlacklistReports(ctx context.Context, request operations.GetBla
 // GetConfigurationSet - <p>Get information about an existing configuration set, including the dedicated IP pool that it's associated with, whether or not it's enabled for sending email, and more.</p> <p>In Amazon Pinpoint, <i>configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>
 func (s *SDK) GetConfigurationSet(ctx context.Context, request operations.GetConfigurationSetRequest) (*operations.GetConfigurationSetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1240,14 +1240,14 @@ func (s *SDK) GetConfigurationSet(ctx context.Context, request operations.GetCon
 // GetConfigurationSetEventDestinations - <p>Retrieve a list of event destinations that are associated with a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
 func (s *SDK) GetConfigurationSetEventDestinations(ctx context.Context, request operations.GetConfigurationSetEventDestinationsRequest) (*operations.GetConfigurationSetEventDestinationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1316,14 +1316,14 @@ func (s *SDK) GetConfigurationSetEventDestinations(ctx context.Context, request 
 // GetDedicatedIP - Get information about a dedicated IP address, including the name of the dedicated IP pool that it's associated with, as well information about the automatic warm-up process for the address.
 func (s *SDK) GetDedicatedIP(ctx context.Context, request operations.GetDedicatedIPRequest) (*operations.GetDedicatedIPResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ips/{IP}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ips/{IP}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1399,9 +1399,9 @@ func (s *SDK) GetDedicatedIps(ctx context.Context, request operations.GetDedicat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1479,7 +1479,7 @@ func (s *SDK) GetDeliverabilityDashboardOptions(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1548,14 +1548,14 @@ func (s *SDK) GetDeliverabilityDashboardOptions(ctx context.Context, request ope
 // GetDeliverabilityTestReport - Retrieve the results of a predictive inbox placement test.
 func (s *SDK) GetDeliverabilityTestReport(ctx context.Context, request operations.GetDeliverabilityTestReportRequest) (*operations.GetDeliverabilityTestReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/test-reports/{ReportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/test-reports/{ReportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1624,14 +1624,14 @@ func (s *SDK) GetDeliverabilityTestReport(ctx context.Context, request operation
 // GetDomainDeliverabilityCampaign - Retrieve all the deliverability data for a specific campaign. This data is available for a campaign only if the campaign sent email by using a domain that the Deliverability dashboard is enabled for (<code>PutDeliverabilityDashboardOption</code> operation).
 func (s *SDK) GetDomainDeliverabilityCampaign(ctx context.Context, request operations.GetDomainDeliverabilityCampaignRequest) (*operations.GetDomainDeliverabilityCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/campaigns/{CampaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/campaigns/{CampaignId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1700,16 +1700,16 @@ func (s *SDK) GetDomainDeliverabilityCampaign(ctx context.Context, request opera
 // GetDomainStatisticsReport - Retrieve inbox placement and engagement rates for the domains that you use to send email.
 func (s *SDK) GetDomainStatisticsReport(ctx context.Context, request operations.GetDomainStatisticsReportRequest) (*operations.GetDomainStatisticsReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/statistics-report/{Domain}#StartDate&EndDate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/statistics-report/{Domain}#StartDate&EndDate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1780,14 +1780,14 @@ func (s *SDK) GetDomainStatisticsReport(ctx context.Context, request operations.
 // GetEmailIdentity - Provides information about a specific identity associated with your Amazon Pinpoint account, including the identity's verification status, its DKIM authentication status, and its custom Mail-From settings.
 func (s *SDK) GetEmailIdentity(ctx context.Context, request operations.GetEmailIdentityRequest) (*operations.GetEmailIdentityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1863,9 +1863,9 @@ func (s *SDK) ListConfigurationSets(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1933,9 +1933,9 @@ func (s *SDK) ListDedicatedIPPools(ctx context.Context, request operations.ListD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2003,9 +2003,9 @@ func (s *SDK) ListDeliverabilityTestReports(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2076,16 +2076,16 @@ func (s *SDK) ListDeliverabilityTestReports(ctx context.Context, request operati
 // ListDomainDeliverabilityCampaigns - Retrieve deliverability data for all the campaigns that used a specific domain to send email during a specified time range. This data is available for a domain only if you enabled the Deliverability dashboard (<code>PutDeliverabilityDashboardOption</code> operation) for the domain.
 func (s *SDK) ListDomainDeliverabilityCampaigns(ctx context.Context, request operations.ListDomainDeliverabilityCampaignsRequest) (*operations.ListDomainDeliverabilityCampaignsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/domains/{SubscribedDomain}/campaigns#StartDate&EndDate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/deliverability-dashboard/domains/{SubscribedDomain}/campaigns#StartDate&EndDate", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2163,9 +2163,9 @@ func (s *SDK) ListEmailIdentities(ctx context.Context, request operations.ListEm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2233,9 +2233,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2308,7 +2308,7 @@ func (s *SDK) PutAccountDedicatedIPWarmupAttributes(ctx context.Context, request
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/account/dedicated-ips/warmup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2323,7 +2323,7 @@ func (s *SDK) PutAccountDedicatedIPWarmupAttributes(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2384,7 +2384,7 @@ func (s *SDK) PutAccountSendingAttributes(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/account/sending"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2399,7 +2399,7 @@ func (s *SDK) PutAccountSendingAttributes(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2458,9 +2458,9 @@ func (s *SDK) PutAccountSendingAttributes(ctx context.Context, request operation
 // PutConfigurationSetDeliveryOptions - Associate a configuration set with a dedicated IP pool. You can use dedicated IP pools to create groups of dedicated IP addresses for sending specific types of email.
 func (s *SDK) PutConfigurationSetDeliveryOptions(ctx context.Context, request operations.PutConfigurationSetDeliveryOptionsRequest) (*operations.PutConfigurationSetDeliveryOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/delivery-options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/delivery-options", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2475,7 +2475,7 @@ func (s *SDK) PutConfigurationSetDeliveryOptions(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2544,9 +2544,9 @@ func (s *SDK) PutConfigurationSetDeliveryOptions(ctx context.Context, request op
 // PutConfigurationSetReputationOptions - Enable or disable collection of reputation metrics for emails that you send using a particular configuration set in a specific AWS Region.
 func (s *SDK) PutConfigurationSetReputationOptions(ctx context.Context, request operations.PutConfigurationSetReputationOptionsRequest) (*operations.PutConfigurationSetReputationOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/reputation-options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/reputation-options", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2561,7 +2561,7 @@ func (s *SDK) PutConfigurationSetReputationOptions(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2630,9 +2630,9 @@ func (s *SDK) PutConfigurationSetReputationOptions(ctx context.Context, request 
 // PutConfigurationSetSendingOptions - Enable or disable email sending for messages that use a particular configuration set in a specific AWS Region.
 func (s *SDK) PutConfigurationSetSendingOptions(ctx context.Context, request operations.PutConfigurationSetSendingOptionsRequest) (*operations.PutConfigurationSetSendingOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/sending", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/sending", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2647,7 +2647,7 @@ func (s *SDK) PutConfigurationSetSendingOptions(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2716,9 +2716,9 @@ func (s *SDK) PutConfigurationSetSendingOptions(ctx context.Context, request ope
 // PutConfigurationSetTrackingOptions - Specify a custom domain to use for open and click tracking elements in email that you send using Amazon Pinpoint.
 func (s *SDK) PutConfigurationSetTrackingOptions(ctx context.Context, request operations.PutConfigurationSetTrackingOptionsRequest) (*operations.PutConfigurationSetTrackingOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/tracking-options", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/tracking-options", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2733,7 +2733,7 @@ func (s *SDK) PutConfigurationSetTrackingOptions(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2802,9 +2802,9 @@ func (s *SDK) PutConfigurationSetTrackingOptions(ctx context.Context, request op
 // PutDedicatedIPInPool - <p>Move a dedicated IP address to an existing dedicated IP pool.</p> <note> <p>The dedicated IP address that you specify must already exist, and must be associated with your Amazon Pinpoint account. </p> <p>The dedicated IP pool you specify must already exist. You can create a new pool by using the <code>CreateDedicatedIpPool</code> operation.</p> </note>
 func (s *SDK) PutDedicatedIPInPool(ctx context.Context, request operations.PutDedicatedIPInPoolRequest) (*operations.PutDedicatedIPInPoolResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ips/{IP}/pool", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ips/{IP}/pool", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2819,7 +2819,7 @@ func (s *SDK) PutDedicatedIPInPool(ctx context.Context, request operations.PutDe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2888,9 +2888,9 @@ func (s *SDK) PutDedicatedIPInPool(ctx context.Context, request operations.PutDe
 // PutDedicatedIPWarmupAttributes - <p/>
 func (s *SDK) PutDedicatedIPWarmupAttributes(ctx context.Context, request operations.PutDedicatedIPWarmupAttributesRequest) (*operations.PutDedicatedIPWarmupAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ips/{IP}/warmup", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/dedicated-ips/{IP}/warmup", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2905,7 +2905,7 @@ func (s *SDK) PutDedicatedIPWarmupAttributes(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2976,7 +2976,7 @@ func (s *SDK) PutDeliverabilityDashboardOption(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/deliverability-dashboard"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2991,7 +2991,7 @@ func (s *SDK) PutDeliverabilityDashboardOption(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3080,9 +3080,9 @@ func (s *SDK) PutDeliverabilityDashboardOption(ctx context.Context, request oper
 // PutEmailIdentityDkimAttributes - Used to enable or disable DKIM authentication for an email identity.
 func (s *SDK) PutEmailIdentityDkimAttributes(ctx context.Context, request operations.PutEmailIdentityDkimAttributesRequest) (*operations.PutEmailIdentityDkimAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/dkim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/dkim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3097,7 +3097,7 @@ func (s *SDK) PutEmailIdentityDkimAttributes(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3166,9 +3166,9 @@ func (s *SDK) PutEmailIdentityDkimAttributes(ctx context.Context, request operat
 // PutEmailIdentityFeedbackAttributes - <p>Used to enable or disable feedback forwarding for an identity. This setting determines what happens when an identity is used to send an email that results in a bounce or complaint event.</p> <p>When you enable feedback forwarding, Amazon Pinpoint sends you email notifications when bounce or complaint events occur. Amazon Pinpoint sends this notification to the address that you specified in the Return-Path header of the original email.</p> <p>When you disable feedback forwarding, Amazon Pinpoint sends notifications through other mechanisms, such as by notifying an Amazon SNS topic. You're required to have a method of tracking bounces and complaints. If you haven't set up another mechanism for receiving bounce or complaint notifications, Amazon Pinpoint sends an email notification when these events occur (even if this setting is disabled).</p>
 func (s *SDK) PutEmailIdentityFeedbackAttributes(ctx context.Context, request operations.PutEmailIdentityFeedbackAttributesRequest) (*operations.PutEmailIdentityFeedbackAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/feedback", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/feedback", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3183,7 +3183,7 @@ func (s *SDK) PutEmailIdentityFeedbackAttributes(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3252,9 +3252,9 @@ func (s *SDK) PutEmailIdentityFeedbackAttributes(ctx context.Context, request op
 // PutEmailIdentityMailFromAttributes - Used to enable or disable the custom Mail-From domain configuration for an email identity.
 func (s *SDK) PutEmailIdentityMailFromAttributes(ctx context.Context, request operations.PutEmailIdentityMailFromAttributesRequest) (*operations.PutEmailIdentityMailFromAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/mail-from", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/mail-from", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3269,7 +3269,7 @@ func (s *SDK) PutEmailIdentityMailFromAttributes(ctx context.Context, request op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3340,7 +3340,7 @@ func (s *SDK) SendEmail(ctx context.Context, request operations.SendEmailRequest
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/outbound-emails"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3355,7 +3355,7 @@ func (s *SDK) SendEmail(ctx context.Context, request operations.SendEmailRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3476,7 +3476,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/email/tags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3491,7 +3491,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3577,9 +3577,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3660,9 +3660,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateConfigurationSetEventDestination - <p>Update the configuration of an event destination for a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
 func (s *SDK) UpdateConfigurationSetEventDestination(ctx context.Context, request operations.UpdateConfigurationSetEventDestinationRequest) (*operations.UpdateConfigurationSetEventDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3677,7 +3677,7 @@ func (s *SDK) UpdateConfigurationSetEventDestination(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

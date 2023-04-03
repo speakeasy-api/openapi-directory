@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateWebhookSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateWebhookPathParams struct {
-	// An id of a webhook
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateWebhookRequest struct {
-	PathParams UpdateWebhookPathParams
 	// A webhook object
-	Request  *shared.WebhookInput `request:"mediaType=application/json"`
-	Security UpdateWebhookSecurity
+	WebhookInput *shared.WebhookInput `request:"mediaType=application/json"`
+	// An id of a webhook
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateWebhookResponse struct {

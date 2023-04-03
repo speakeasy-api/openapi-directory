@@ -30,20 +30,16 @@ func (e *ModifySelfservicePermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ModifySelfservicePermissionsHeaders struct {
-	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ModifySelfservicePermissionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ModifySelfservicePermissionsRequest struct {
-	Headers ModifySelfservicePermissionsHeaders
-	Request shared.ModifySelfservicePermissionsRequest `request:"mediaType=application/json"`
+	ModifySelfservicePermissionsRequest shared.ModifySelfservicePermissionsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                      *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                            *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                   *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                          ModifySelfservicePermissionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ModifySelfservicePermissionsResponse struct {

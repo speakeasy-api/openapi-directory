@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetDestinyAggregateActivityStatsPathParams struct {
+type Destiny2GetDestinyAggregateActivityStatsRequest struct {
 	// The specific character whose activities should be returned.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
 	// The Destiny membershipId of the user to retrieve.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetDestinyAggregateActivityStatsRequest struct {
-	PathParams Destiny2GetDestinyAggregateActivityStatsPathParams
 }
 
 // Destiny2GetDestinyAggregateActivityStats200Wildcard - Look at the Response property for more information about the nature of this response

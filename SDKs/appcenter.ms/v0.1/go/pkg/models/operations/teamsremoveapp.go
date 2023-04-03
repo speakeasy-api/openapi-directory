@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsRemoveAppSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TeamsRemoveAppPathParams struct {
+type TeamsRemoveAppRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The organization's name
 	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 	// The team's name
 	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
-}
-
-type TeamsRemoveAppRequest struct {
-	PathParams TeamsRemoveAppPathParams
-	Security   TeamsRemoveAppSecurity
 }
 
 type TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum string

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDeploymentGroupsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListDeploymentGroupsXAmzTargetEnum
 type ListDeploymentGroupsXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *ListDeploymentGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListDeploymentGroupsHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListDeploymentGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListDeploymentGroupsRequest struct {
-	QueryParams ListDeploymentGroupsQueryParams
-	Headers     ListDeploymentGroupsHeaders
-	Request     shared.ListDeploymentGroupsInput `request:"mediaType=application/json"`
+	ListDeploymentGroupsInput shared.ListDeploymentGroupsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                ListDeploymentGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListDeploymentGroupsResponse struct {

@@ -74,7 +74,7 @@ func (e *GETStartActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETStartActivityStreamQueryParams struct {
+type GETStartActivityStreamRequest struct {
 	Action GETStartActivityStreamActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Specifies whether or not the database activity stream is to start as soon as possible, regardless of the maintenance window for the database.
 	ApplyImmediately *bool `queryParam:"style=form,explode=true,name=ApplyImmediately"`
@@ -85,23 +85,15 @@ type GETStartActivityStreamQueryParams struct {
 	// Specifies the mode of the database activity stream. Database events such as a change or access generate an activity stream event. The database session can handle these events either synchronously or asynchronously.
 	Mode GETStartActivityStreamModeEnum `queryParam:"style=form,explode=true,name=Mode"`
 	// The Amazon Resource Name (ARN) of the DB cluster, for example, <code>arn:aws:rds:us-east-1:12345667890:cluster:das-cluster</code>.
-	ResourceArn string                            `queryParam:"style=form,explode=true,name=ResourceArn"`
-	Version     GETStartActivityStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStartActivityStreamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStartActivityStreamRequest struct {
-	QueryParams GETStartActivityStreamQueryParams
-	Headers     GETStartActivityStreamHeaders
+	ResourceArn       string                            `queryParam:"style=form,explode=true,name=ResourceArn"`
+	Version           GETStartActivityStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStartActivityStreamResponse struct {

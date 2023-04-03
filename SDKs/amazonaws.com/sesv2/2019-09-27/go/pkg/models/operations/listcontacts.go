@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListContactsPathParams struct {
-	// The name of the contact list.
-	ContactListName string `pathParam:"style=simple,explode=false,name=ContactListName"`
-}
-
-type ListContactsQueryParams struct {
-	// A string token indicating that there might be additional contacts available to be listed. Use the token provided in the Response to use in the subsequent call to ListContacts with the same parameters to retrieve the next page of contacts.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-	// The number of contacts that may be returned at once, which is dependent on if there are more or less contacts than the value of the PageSize. Use this parameter to paginate results. If additional contacts exist beyond the specified limit, the <code>NextToken</code> element is sent in the response. Use the <code>NextToken</code> value in subsequent requests to retrieve additional contacts.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
-}
-
-type ListContactsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListContactsRequestBodyFilter - A filter that can be applied to a list of contacts.
 type ListContactsRequestBodyFilter struct {
 	FilteredStatus *shared.SubscriptionStatusEnum `json:"FilteredStatus,omitempty"`
@@ -41,10 +19,20 @@ type ListContactsRequestBody struct {
 }
 
 type ListContactsRequest struct {
-	PathParams  ListContactsPathParams
-	QueryParams ListContactsQueryParams
-	Headers     ListContactsHeaders
-	Request     ListContactsRequestBody `request:"mediaType=application/json"`
+	// The name of the contact list.
+	ContactListName string `pathParam:"style=simple,explode=false,name=ContactListName"`
+	// A string token indicating that there might be additional contacts available to be listed. Use the token provided in the Response to use in the subsequent call to ListContacts with the same parameters to retrieve the next page of contacts.
+	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
+	// The number of contacts that may be returned at once, which is dependent on if there are more or less contacts than the value of the PageSize. Use this parameter to paginate results. If additional contacts exist beyond the specified limit, the <code>NextToken</code> element is sent in the response. Use the <code>NextToken</code> value in subsequent requests to retrieve additional contacts.
+	PageSize          *int64                  `queryParam:"style=form,explode=true,name=PageSize"`
+	RequestBody       ListContactsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListContactsResponse struct {

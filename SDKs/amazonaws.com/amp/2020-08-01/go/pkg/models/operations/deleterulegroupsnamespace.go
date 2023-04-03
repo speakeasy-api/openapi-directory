@@ -6,19 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteRuleGroupsNamespacePathParams struct {
-	// The rule groups namespace name.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The ID of the workspace to delete rule group definition.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteRuleGroupsNamespaceQueryParams struct {
-	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteRuleGroupsNamespaceHeaders struct {
+type DeleteRuleGroupsNamespaceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +14,12 @@ type DeleteRuleGroupsNamespaceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRuleGroupsNamespaceRequest struct {
-	PathParams  DeleteRuleGroupsNamespacePathParams
-	QueryParams DeleteRuleGroupsNamespaceQueryParams
-	Headers     DeleteRuleGroupsNamespaceHeaders
+	// Optional, unique, case-sensitive, user-provided identifier to ensure the idempotency of the request.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The rule groups namespace name.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The ID of the workspace to delete rule group definition.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteRuleGroupsNamespaceResponse struct {

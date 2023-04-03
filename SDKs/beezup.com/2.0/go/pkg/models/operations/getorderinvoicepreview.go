@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderInvoicePreviewPathParams struct {
+type GetOrderInvoicePreviewRequest struct {
+	// Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+	AcceptEncoding string `header:"style=simple,explode=false,name=Accept-Encoding"`
 	// The Account Identifier
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 	// The BeezUP Order UUID
 	BeezUPOrderUUID string `pathParam:"style=simple,explode=false,name=beezUPOrderUUID"`
 	// The Marketplace Technical Code
-	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type GetOrderInvoicePreviewHeaders struct {
-	// Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
-	AcceptEncoding string `header:"style=simple,explode=false,name=Accept-Encoding"`
-}
-
-type GetOrderInvoicePreviewRequest struct {
-	PathParams GetOrderInvoicePreviewPathParams
-	Headers    GetOrderInvoicePreviewHeaders
-	Request    shared.PreviewOrderInvoiceRequest `request:"mediaType=application/json"`
+	MarketplaceTechnicalCode   string                            `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
+	PreviewOrderInvoiceRequest shared.PreviewOrderInvoiceRequest `request:"mediaType=application/json"`
 }
 
 type GetOrderInvoicePreviewResponse struct {

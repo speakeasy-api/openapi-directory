@@ -36,14 +36,14 @@ func newUserTaskLists(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns the full record for a user task list.
 func (s *userTaskLists) GetUserTaskList(ctx context.Context, request operations.GetUserTaskListRequest) (*operations.GetUserTaskListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_task_lists/{user_task_list_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user_task_lists/{user_task_list_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,14 +103,14 @@ func (s *userTaskLists) GetUserTaskList(ctx context.Context, request operations.
 // Returns the full record for a user's task list.
 func (s *userTaskLists) GetUserTaskListForUser(ctx context.Context, request operations.GetUserTaskListForUserRequest) (*operations.GetUserTaskListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/user_task_list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/user_task_list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

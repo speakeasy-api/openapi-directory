@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSiteQueryParams struct {
-	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetSiteHeaders struct {
+type GetSiteRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +15,7 @@ type GetSiteHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSiteRequest struct {
-	QueryParams GetSiteQueryParams
-	Headers     GetSiteHeaders
+	ID                string  `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetSiteResponse struct {

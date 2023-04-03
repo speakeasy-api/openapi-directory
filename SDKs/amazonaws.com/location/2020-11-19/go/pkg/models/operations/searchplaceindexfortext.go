@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchPlaceIndexForTextPathParams struct {
-	// The name of the place index resource you want to use for the search.
-	IndexName string `pathParam:"style=simple,explode=false,name=IndexName"`
-}
-
-type SearchPlaceIndexForTextHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type SearchPlaceIndexForTextRequestBody struct {
 	// <p>An optional parameter that indicates a preference for places that are closer to a specified position.</p> <p> If provided, this parameter must contain a pair of numbers. The first number represents the X coordinate, or longitude; the second number represents the Y coordinate, or latitude.</p> <p>For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and latitude <code>49.2847</code>.</p> <note> <p> <code>BiasPosition</code> and <code>FilterBBox</code> are mutually exclusive. Specifying both options results in an error. </p> </note>
 	BiasPosition []float64 `json:"BiasPosition,omitempty"`
@@ -38,9 +23,16 @@ type SearchPlaceIndexForTextRequestBody struct {
 }
 
 type SearchPlaceIndexForTextRequest struct {
-	PathParams SearchPlaceIndexForTextPathParams
-	Headers    SearchPlaceIndexForTextHeaders
-	Request    SearchPlaceIndexForTextRequestBody `request:"mediaType=application/json"`
+	// The name of the place index resource you want to use for the search.
+	IndexName         string                             `pathParam:"style=simple,explode=false,name=IndexName"`
+	RequestBody       SearchPlaceIndexForTextRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SearchPlaceIndexForTextResponse struct {

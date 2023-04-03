@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRepositoryPipelineCacheContentURIPathParams struct {
+type GetRepositoryPipelineCacheContentURIRequest struct {
 	// The UUID of the cache.
 	CacheUUID string `pathParam:"style=simple,explode=false,name=cache_uuid"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// The account.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoryPipelineCacheContentURIRequest struct {
-	PathParams GetRepositoryPipelineCacheContentURIPathParams
 }
 
 type GetRepositoryPipelineCacheContentURIResponse struct {

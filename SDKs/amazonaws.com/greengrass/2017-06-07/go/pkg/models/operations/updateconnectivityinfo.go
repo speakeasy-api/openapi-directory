@@ -7,12 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConnectivityInfoPathParams struct {
-	// The thing name.
-	ThingName string `pathParam:"style=simple,explode=false,name=ThingName"`
+type UpdateConnectivityInfoRequestBody struct {
+	// A list of connectivity info.
+	ConnectivityInfo []shared.ConnectivityInfo `json:"ConnectivityInfo,omitempty"`
 }
 
-type UpdateConnectivityInfoHeaders struct {
+type UpdateConnectivityInfoRequest struct {
+	RequestBody UpdateConnectivityInfoRequestBody `request:"mediaType=application/json"`
+	// The thing name.
+	ThingName         string  `pathParam:"style=simple,explode=false,name=ThingName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,17 +23,6 @@ type UpdateConnectivityInfoHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UpdateConnectivityInfoRequestBody struct {
-	// A list of connectivity info.
-	ConnectivityInfo []shared.ConnectivityInfo `json:"ConnectivityInfo,omitempty"`
-}
-
-type UpdateConnectivityInfoRequest struct {
-	PathParams UpdateConnectivityInfoPathParams
-	Headers    UpdateConnectivityInfoHeaders
-	Request    UpdateConnectivityInfoRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateConnectivityInfoResponse struct {

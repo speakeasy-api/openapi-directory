@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetV1Request{
-        QueryParams: operations.GetV1QueryParams{
-            APIKey: "corrupti",
-            Fields: "country,city,timezone",
-            IPAddress: "195.154.25.40",
-        },
+        APIKey: "corrupti",
+        Fields: "country,city,timezone",
+        IPAddress: "195.154.25.40",
     }
 
     ctx := context.Background()

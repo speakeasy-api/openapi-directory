@@ -8,12 +8,12 @@ import (
 )
 
 type GetSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetSnippetsWorkspaceEncodedIDCommentsCommentIDPathParams struct {
+type GetSnippetsWorkspaceEncodedIDCommentsCommentIDRequest struct {
 	// The id of the comment.
 	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// The snippet id.
@@ -22,11 +22,6 @@ type GetSnippetsWorkspaceEncodedIDCommentsCommentIDPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetSnippetsWorkspaceEncodedIDCommentsCommentIDRequest struct {
-	PathParams GetSnippetsWorkspaceEncodedIDCommentsCommentIDPathParams
-	Security   GetSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity
 }
 
 type GetSnippetsWorkspaceEncodedIDCommentsCommentIDResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStreamingSessionPathParams struct {
-	// The streaming session ID.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetStreamingSessionHeaders struct {
+type GetStreamingSessionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetStreamingSessionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStreamingSessionRequest struct {
-	PathParams GetStreamingSessionPathParams
-	Headers    GetStreamingSessionHeaders
+	// The streaming session ID.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetStreamingSessionResponse struct {

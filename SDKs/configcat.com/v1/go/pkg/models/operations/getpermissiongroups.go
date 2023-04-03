@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPermissionGroupsPathParams struct {
+type GetPermissionGroupsRequest struct {
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type GetPermissionGroupsRequest struct {
-	PathParams GetPermissionGroupsPathParams
 }
 
 type GetPermissionGroupsResponse struct {

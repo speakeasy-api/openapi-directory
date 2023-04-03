@@ -9,26 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestDeletedNodesSummaryPathParams struct {
-	// Parent ID (can only be a room ID)
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type RequestDeletedNodesSummaryQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestDeletedNodesSummaryXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestDeletedNodesSummaryXSdsDateFormatEnum string
 
@@ -62,17 +42,25 @@ func (e *RequestDeletedNodesSummaryXSdsDateFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type RequestDeletedNodesSummaryHeaders struct {
+type RequestDeletedNodesSummaryRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestDeletedNodesSummaryXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestDeletedNodesSummaryRequest struct {
-	PathParams  RequestDeletedNodesSummaryPathParams
-	QueryParams RequestDeletedNodesSummaryQueryParams
-	Headers     RequestDeletedNodesSummaryHeaders
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Parent ID (can only be a room ID)
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestDeletedNodesSummaryResponse struct {

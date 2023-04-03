@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeCertificatePathParams struct {
-	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
-type DescribeCertificateHeaders struct {
+type DescribeCertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeCertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeCertificateRequest struct {
-	PathParams DescribeCertificatePathParams
-	Headers    DescribeCertificateHeaders
+	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
 }
 
 type DescribeCertificateResponse struct {

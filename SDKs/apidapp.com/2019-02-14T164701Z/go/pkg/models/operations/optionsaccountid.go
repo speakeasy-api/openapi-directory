@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsAccountIDPathParams struct {
+type OptionsAccountIDRequest struct {
 	// Automatically added
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OptionsAccountIDRequest struct {
-	PathParams OptionsAccountIDPathParams
 }
 
 type OptionsAccountIDResponse struct {

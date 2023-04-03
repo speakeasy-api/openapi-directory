@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InviteMemberPathParams struct {
+type InviteMemberRequest struct {
+	InviteMembersRequest shared.InviteMembersRequest `request:"mediaType=application/json"`
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type InviteMemberRequest struct {
-	PathParams InviteMemberPathParams
-	Request    shared.InviteMembersRequest `request:"mediaType=application/json"`
 }
 
 type InviteMemberResponse struct {

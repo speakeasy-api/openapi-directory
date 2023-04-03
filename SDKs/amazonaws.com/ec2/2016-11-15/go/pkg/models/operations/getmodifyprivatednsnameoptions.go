@@ -74,7 +74,7 @@ func (e *GETModifyPrivateDNSNameOptionsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETModifyPrivateDNSNameOptionsQueryParams struct {
+type GETModifyPrivateDNSNameOptionsRequest struct {
 	Action GETModifyPrivateDNSNameOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -87,21 +87,13 @@ type GETModifyPrivateDNSNameOptionsQueryParams struct {
 	// The type of hostname for EC2 instances. For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
 	PrivateDNSHostnameType *GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum `queryParam:"style=form,explode=true,name=PrivateDnsHostnameType"`
 	Version                GETModifyPrivateDNSNameOptionsVersionEnum                 `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyPrivateDNSNameOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyPrivateDNSNameOptionsRequest struct {
-	QueryParams GETModifyPrivateDNSNameOptionsQueryParams
-	Headers     GETModifyPrivateDNSNameOptionsHeaders
+	XAmzAlgorithm          *string                                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyPrivateDNSNameOptionsResponse struct {

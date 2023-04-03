@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteFunctionPathParams struct {
+type DeleteFunctionRequest struct {
 	// The Lambda function to delete.
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type DeleteFunctionHeaders struct {
+	FunctionName      string  `pathParam:"style=simple,explode=false,name=FunctionName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DeleteFunctionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFunctionRequest struct {
-	PathParams DeleteFunctionPathParams
-	Headers    DeleteFunctionHeaders
 }
 
 type DeleteFunctionResponse struct {

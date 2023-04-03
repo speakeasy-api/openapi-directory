@@ -50,7 +50,7 @@ func (e *GETCreateCustomVerificationEmailTemplateVersionEnum) UnmarshalJSON(data
 	}
 }
 
-type GETCreateCustomVerificationEmailTemplateQueryParams struct {
+type GETCreateCustomVerificationEmailTemplateRequest struct {
 	Action GETCreateCustomVerificationEmailTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The URL that the recipient of the verification email is sent to if his or her address is not successfully verified.
 	FailureRedirectionURL string `queryParam:"style=form,explode=true,name=FailureRedirectionURL"`
@@ -63,23 +63,15 @@ type GETCreateCustomVerificationEmailTemplateQueryParams struct {
 	// The name of the custom verification email template.
 	TemplateName string `queryParam:"style=form,explode=true,name=TemplateName"`
 	// The subject line of the custom verification email.
-	TemplateSubject string                                              `queryParam:"style=form,explode=true,name=TemplateSubject"`
-	Version         GETCreateCustomVerificationEmailTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateCustomVerificationEmailTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateCustomVerificationEmailTemplateRequest struct {
-	QueryParams GETCreateCustomVerificationEmailTemplateQueryParams
-	Headers     GETCreateCustomVerificationEmailTemplateHeaders
+	TemplateSubject   string                                              `queryParam:"style=form,explode=true,name=TemplateSubject"`
+	Version           GETCreateCustomVerificationEmailTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateCustomVerificationEmailTemplateResponse struct {

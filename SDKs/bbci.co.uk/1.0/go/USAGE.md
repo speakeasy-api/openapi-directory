@@ -13,25 +13,19 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetProgrammesAtoZSearchRequest{
-        PathParams: operations.GetProgrammesAtoZSearchPathParams{
-            Letter: "corrupti",
-        },
-        QueryParams: operations.GetProgrammesAtoZSearchQueryParams{
-            Availability: "available",
-            InitialChildCount: 715190,
-            Page: 844266,
-            PerPage: 602763,
-            Rights: "web",
-            Sort: "title",
-            SortDirection: "desc",
-        },
+        Availability: "available",
+        InitialChildCount: 592845,
+        Letter: "distinctio",
+        Page: 844266,
+        PerPage: 602763,
+        Rights: "web",
+        Sort: "title",
+        SortDirection: "desc",
     }
 
     ctx := context.Background()

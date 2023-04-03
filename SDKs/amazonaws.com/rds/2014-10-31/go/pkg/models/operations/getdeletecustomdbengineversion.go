@@ -50,28 +50,20 @@ func (e *GETDeleteCustomDBEngineVersionVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDeleteCustomDBEngineVersionQueryParams struct {
+type GETDeleteCustomDBEngineVersionRequest struct {
 	Action GETDeleteCustomDBEngineVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The database engine. The only supported engine is <code>custom-oracle-ee</code>.
 	Engine string `queryParam:"style=form,explode=true,name=Engine"`
 	// The custom engine version (CEV) for your DB instance. This option is required for RDS Custom, but optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per Amazon Web Services Region.
-	EngineVersion string                                    `queryParam:"style=form,explode=true,name=EngineVersion"`
-	Version       GETDeleteCustomDBEngineVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteCustomDBEngineVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteCustomDBEngineVersionRequest struct {
-	QueryParams GETDeleteCustomDBEngineVersionQueryParams
-	Headers     GETDeleteCustomDBEngineVersionHeaders
+	EngineVersion     string                                    `queryParam:"style=form,explode=true,name=EngineVersion"`
+	Version           GETDeleteCustomDBEngineVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteCustomDBEngineVersionResponse struct {

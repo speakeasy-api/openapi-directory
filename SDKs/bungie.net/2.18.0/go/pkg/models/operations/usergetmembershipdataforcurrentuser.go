@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UserGetMembershipDataForCurrentUserSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type UserGetMembershipDataForCurrentUserRequest struct {
-	Security UserGetMembershipDataForCurrentUserSecurity
-}
-
 // UserGetMembershipDataForCurrentUser200Wildcard - Look at the Response property for more information about the nature of this response
 type UserGetMembershipDataForCurrentUser200Wildcard struct {
 	DetailedErrorTrace *string

@@ -32,10 +32,20 @@ func newEcommerceDelivery(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // ConfirmCarbonOffset1 - confirmCarbonOffset
-func (s *ecommerceDelivery) ConfirmCarbonOffset1(ctx context.Context, request operations.ConfirmCarbonOffset1Request) (*operations.ConfirmCarbonOffset1Response, error) {
+func (s *ecommerceDelivery) ConfirmCarbonOffset1(ctx context.Context, request operations.ConfirmCarbonOffset1RequestBody, opts ...operations.Option) (*operations.ConfirmCarbonOffset1Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmCarbonOffset1ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerceDelivery/confirmCarbonOffset"
@@ -78,10 +88,20 @@ func (s *ecommerceDelivery) ConfirmCarbonOffset1(ctx context.Context, request op
 }
 
 // ConfirmPayment1 - confirmPayment
-func (s *ecommerceDelivery) ConfirmPayment1(ctx context.Context, request operations.ConfirmPayment1Request) (*operations.ConfirmPayment1Response, error) {
+func (s *ecommerceDelivery) ConfirmPayment1(ctx context.Context, request operations.ConfirmPayment1RequestBody, opts ...operations.Option) (*operations.ConfirmPayment1Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPayment1ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerceDelivery/confirmPayment"
@@ -124,10 +144,20 @@ func (s *ecommerceDelivery) ConfirmPayment1(ctx context.Context, request operati
 }
 
 // ConfirmPaymentOfTransaction1 - confirmTransaction
-func (s *ecommerceDelivery) ConfirmPaymentOfTransaction1(ctx context.Context, request operations.ConfirmPaymentOfTransaction1Request) (*operations.ConfirmPaymentOfTransaction1Response, error) {
+func (s *ecommerceDelivery) ConfirmPaymentOfTransaction1(ctx context.Context, request operations.ConfirmPaymentOfTransaction1RequestBody, opts ...operations.Option) (*operations.ConfirmPaymentOfTransaction1Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPaymentOfTransaction1ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerceDelivery/confirmTransaction"
@@ -170,10 +200,20 @@ func (s *ecommerceDelivery) ConfirmPaymentOfTransaction1(ctx context.Context, re
 }
 
 // ConfirmsPlanting2 - confirmPlanting
-func (s *ecommerceDelivery) ConfirmsPlanting2(ctx context.Context, request operations.ConfirmsPlanting2Request) (*operations.ConfirmsPlanting2Response, error) {
+func (s *ecommerceDelivery) ConfirmsPlanting2(ctx context.Context, request operations.ConfirmsPlanting2RequestBody, opts ...operations.Option) (*operations.ConfirmsPlanting2Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmsPlanting2ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerceDelivery/confirmPlanting"
@@ -216,15 +256,25 @@ func (s *ecommerceDelivery) ConfirmsPlanting2(ctx context.Context, request opera
 }
 
 // EcommerceDelivery - ecommerceDelivery
-func (s *ecommerceDelivery) EcommerceDelivery(ctx context.Context, request operations.EcommerceDeliveryRequest) (*operations.EcommerceDeliveryResponse, error) {
+func (s *ecommerceDelivery) EcommerceDelivery(ctx context.Context, request operations.EcommerceDeliveryRequest, opts ...operations.Option) (*operations.EcommerceDeliveryResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.EcommerceDeliveryServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerceDelivery"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -236,7 +286,7 @@ func (s *ecommerceDelivery) EcommerceDelivery(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

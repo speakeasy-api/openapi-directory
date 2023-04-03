@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBanksIDConnectorLogosPathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-}
-
-type GetBanksIDConnectorLogosQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetBanksIDConnectorLogosRequest struct {
-	PathParams  GetBanksIDConnectorLogosPathParams
-	QueryParams GetBanksIDConnectorLogosQueryParams
+	Expand      *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64   `pathParam:"style=simple,explode=false,name=id_connector"`
 }
 
 // GetBanksIDConnectorLogos200ApplicationJSON - connectorlogos

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsGetStatisticsListPathParams struct {
-	// Id of the datapoint
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // DataPointsGetStatisticsListGroupByEnum - The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
 type DataPointsGetStatisticsListGroupByEnum string
 
@@ -101,20 +96,17 @@ func (e *DataPointsGetStatisticsListTimeFrameEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DataPointsGetStatisticsListQueryParams struct {
+type DataPointsGetStatisticsListRequest struct {
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
 	// The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
 	GroupBy *DataPointsGetStatisticsListGroupByEnum `queryParam:"style=form,explode=true,name=groupBy"`
+	// Id of the datapoint
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Timeframe of the request. See list at $timeframeList
 	TimeFrame DataPointsGetStatisticsListTimeFrameEnum `queryParam:"style=form,explode=true,name=timeFrame"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type DataPointsGetStatisticsListRequest struct {
-	PathParams  DataPointsGetStatisticsListPathParams
-	QueryParams DataPointsGetStatisticsListQueryParams
 }
 
 type DataPointsGetStatisticsListResponse struct {

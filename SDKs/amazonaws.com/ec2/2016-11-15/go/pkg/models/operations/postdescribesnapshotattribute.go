@@ -50,25 +50,17 @@ func (e *POSTDescribeSnapshotAttributeVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTDescribeSnapshotAttributeQueryParams struct {
-	Action  POSTDescribeSnapshotAttributeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeSnapshotAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeSnapshotAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeSnapshotAttributeRequest struct {
-	QueryParams POSTDescribeSnapshotAttributeQueryParams
-	Headers     POSTDescribeSnapshotAttributeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDescribeSnapshotAttributeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTDescribeSnapshotAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeSnapshotAttributeResponse struct {

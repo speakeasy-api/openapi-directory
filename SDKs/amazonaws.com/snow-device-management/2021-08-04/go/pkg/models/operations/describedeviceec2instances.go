@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDeviceEc2InstancesPathParams struct {
-	// The ID of the managed device.
-	ManagedDeviceID string `pathParam:"style=simple,explode=false,name=managedDeviceId"`
-}
-
-type DescribeDeviceEc2InstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DescribeDeviceEc2InstancesRequestBody struct {
 	// A list of instance IDs associated with the managed device.
 	InstanceIds []string `json:"instanceIds"`
 }
 
 type DescribeDeviceEc2InstancesRequest struct {
-	PathParams DescribeDeviceEc2InstancesPathParams
-	Headers    DescribeDeviceEc2InstancesHeaders
-	Request    DescribeDeviceEc2InstancesRequestBody `request:"mediaType=application/json"`
+	RequestBody       DescribeDeviceEc2InstancesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the managed device.
+	ManagedDeviceID string `pathParam:"style=simple,explode=false,name=managedDeviceId"`
 }
 
 type DescribeDeviceEc2InstancesResponse struct {

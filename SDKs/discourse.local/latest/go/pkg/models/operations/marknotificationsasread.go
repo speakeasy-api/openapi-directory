@@ -12,10 +12,6 @@ type MarkNotificationsAsReadRequestBody struct {
 	ID *int64 `json:"id,omitempty"`
 }
 
-type MarkNotificationsAsReadRequest struct {
-	Request *MarkNotificationsAsReadRequestBody `request:"mediaType=application/json"`
-}
-
 // MarkNotificationsAsRead200ApplicationJSON - notifications marked read
 type MarkNotificationsAsRead200ApplicationJSON struct {
 	Success *string `json:"success,omitempty"`

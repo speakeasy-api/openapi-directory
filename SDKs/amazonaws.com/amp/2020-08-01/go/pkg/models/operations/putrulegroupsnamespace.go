@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRuleGroupsNamespacePathParams struct {
-	// The rule groups namespace name.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-	// The ID of the workspace in which to update the rule group namespace.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type PutRuleGroupsNamespaceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutRuleGroupsNamespaceRequestBody struct {
 	// An identifier used to ensure the idempotency of a write request.
 	ClientToken *string `json:"clientToken,omitempty"`
@@ -32,9 +15,18 @@ type PutRuleGroupsNamespaceRequestBody struct {
 }
 
 type PutRuleGroupsNamespaceRequest struct {
-	PathParams PutRuleGroupsNamespacePathParams
-	Headers    PutRuleGroupsNamespaceHeaders
-	Request    PutRuleGroupsNamespaceRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutRuleGroupsNamespaceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The rule groups namespace name.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The ID of the workspace in which to update the rule group namespace.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type PutRuleGroupsNamespaceResponse struct {

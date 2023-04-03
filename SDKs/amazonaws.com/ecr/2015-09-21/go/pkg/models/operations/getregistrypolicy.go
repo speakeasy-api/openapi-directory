@@ -30,7 +30,8 @@ func (e *GetRegistryPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRegistryPolicyHeaders struct {
+type GetRegistryPolicyRequest struct {
+	RequestBody       map[string]interface{}          `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetRegistryPolicyHeaders struct {
 	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetRegistryPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetRegistryPolicyRequest struct {
-	Headers GetRegistryPolicyHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetRegistryPolicyResponse struct {

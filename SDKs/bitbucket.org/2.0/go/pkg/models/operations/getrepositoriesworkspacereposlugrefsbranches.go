@@ -8,38 +8,29 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams struct {
+type GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest struct {
+	// Query string to narrow down the response as per
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams struct {
-	// Query string to narrow down the response as per
-	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
-	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Field by which the results should be sorted as per
 	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering). The `name`
 	// field is handled specially for branches in that, if specified as the sort field, it
 	// uses a natural sort order instead of the default lexicographical sort order. For example,
 	// it will return ['branch1', 'branch2', 'branch10'] instead of ['branch1', 'branch10', 'branch2'].
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse struct {

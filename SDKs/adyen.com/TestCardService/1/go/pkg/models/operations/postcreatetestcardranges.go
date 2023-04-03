@@ -8,13 +8,8 @@ import (
 )
 
 type PostCreateTestCardRangesSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCreateTestCardRangesRequest struct {
-	Request  *shared.CreateTestCardRangesRequest `request:"mediaType=application/json"`
-	Security PostCreateTestCardRangesSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostCreateTestCardRangesResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type GroupV2KickMemberSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2KickMemberPathParams struct {
+type GroupV2KickMemberRequest struct {
 	// Group ID to kick the user from.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// Membership ID to kick.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Membership type of the provided membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2KickMemberRequest struct {
-	PathParams GroupV2KickMemberPathParams
-	Security   GroupV2KickMemberSecurity
 }
 
 // GroupV2KickMember200Wildcard - Look at the Response property for more information about the nature of this response

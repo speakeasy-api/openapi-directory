@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSnapshotPathParams struct {
+type GetSnapshotRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-	// The identifier of the snapshot.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=SnapshotId"`
-}
-
-type GetSnapshotQueryParams struct {
 	// The list of game configuration sections to be described.
 	Sections []string `queryParam:"style=form,explode=true,name=Sections"`
-}
-
-type GetSnapshotHeaders struct {
+	// The identifier of the snapshot.
+	SnapshotID        string  `pathParam:"style=simple,explode=false,name=SnapshotId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type GetSnapshotHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSnapshotRequest struct {
-	PathParams  GetSnapshotPathParams
-	QueryParams GetSnapshotQueryParams
-	Headers     GetSnapshotHeaders
 }
 
 type GetSnapshotResponse struct {

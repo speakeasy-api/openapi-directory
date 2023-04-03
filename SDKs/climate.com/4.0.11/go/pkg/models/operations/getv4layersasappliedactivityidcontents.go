@@ -8,26 +8,17 @@ import (
 )
 
 type GetV4LayersAsAppliedActivityIDContentsSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetV4LayersAsAppliedActivityIDContentsPathParams struct {
-	// Unique identifier of the Application Activity.
-	ActivityID string `pathParam:"style=simple,explode=false,name=activityId"`
-}
-
-type GetV4LayersAsAppliedActivityIDContentsHeaders struct {
+type GetV4LayersAsAppliedActivityIDContentsRequest struct {
 	// Must be either \*/* or application/octet-stream,application/json
 	Accept string `header:"style=simple,explode=false,name=Accept"`
 	// Byte range `bytes=start-end` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.1). e.g. bytes=0-1048576. Currently only single range value is supported. Both start and end need to be specified, end value should be greater than start and end - start should not be greater than 5MiB.
 	Range string `header:"style=simple,explode=false,name=Range"`
-}
-
-type GetV4LayersAsAppliedActivityIDContentsRequest struct {
-	PathParams GetV4LayersAsAppliedActivityIDContentsPathParams
-	Headers    GetV4LayersAsAppliedActivityIDContentsHeaders
-	Security   GetV4LayersAsAppliedActivityIDContentsSecurity
+	// Unique identifier of the Application Activity.
+	ActivityID string `pathParam:"style=simple,explode=false,name=activityId"`
 }
 
 type GetV4LayersAsAppliedActivityIDContentsResponse struct {

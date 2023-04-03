@@ -8,12 +8,7 @@ import (
 )
 
 type VatLookupSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type VatLookupPathParams struct {
-	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
-	Country string `pathParam:"style=simple,explode=false,name=country"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // VatLookupRequestBody - Company name
@@ -25,10 +20,10 @@ type VatLookupRequestBody struct {
 }
 
 type VatLookupRequest struct {
-	PathParams VatLookupPathParams
 	// Company name
-	Request  VatLookupRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security VatLookupSecurity
+	RequestBody VatLookupRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
+	Country string `pathParam:"style=simple,explode=false,name=country"`
 }
 
 // VatLookupDefaultApplicationJSON - Detailed information about the error

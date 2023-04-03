@@ -6,11 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1DonationsCarbonCalculateSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // GetAPIV1DonationsCarbonCalculateTransportationMethodEnum - The primary transportation method of the shipment.
@@ -43,7 +43,7 @@ func (e *GetAPIV1DonationsCarbonCalculateTransportationMethodEnum) UnmarshalJSON
 	}
 }
 
-type GetAPIV1DonationsCarbonCalculateQueryParams struct {
+type GetAPIV1DonationsCarbonCalculateRequest struct {
 	// The destination zip code (US only) of the shipment. If you send this parameter, also send `origin_address`.
 	DestinationAddress *float64 `queryParam:"style=form,explode=true,name=destination_address"`
 	// The total distance (in miles) of the shipment. You can use this parameter in place of `origin_address` and `destination_address`.
@@ -54,11 +54,6 @@ type GetAPIV1DonationsCarbonCalculateQueryParams struct {
 	TransportationMethod *GetAPIV1DonationsCarbonCalculateTransportationMethodEnum `queryParam:"style=form,explode=true,name=transportation_method"`
 	// The total weight (in pounds) of the shipment.
 	WeightLb float64 `queryParam:"style=form,explode=true,name=weight_lb"`
-}
-
-type GetAPIV1DonationsCarbonCalculateRequest struct {
-	QueryParams GetAPIV1DonationsCarbonCalculateQueryParams
-	Security    GetAPIV1DonationsCarbonCalculateSecurity
 }
 
 type GetAPIV1DonationsCarbonCalculateResponse struct {

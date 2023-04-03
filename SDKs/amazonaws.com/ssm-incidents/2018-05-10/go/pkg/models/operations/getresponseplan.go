@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResponsePlanQueryParams struct {
-	// The Amazon Resource Name (ARN) of the response plan.
-	Arn string `queryParam:"style=form,explode=true,name=arn"`
-}
-
-type GetResponsePlanHeaders struct {
+type GetResponsePlanRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetResponsePlanHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetResponsePlanRequest struct {
-	QueryParams GetResponsePlanQueryParams
-	Headers     GetResponsePlanHeaders
+	// The Amazon Resource Name (ARN) of the response plan.
+	Arn string `queryParam:"style=form,explode=true,name=arn"`
 }
 
 type GetResponsePlanResponse struct {

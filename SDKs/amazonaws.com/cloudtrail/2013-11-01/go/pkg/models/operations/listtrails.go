@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTrailsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListTrailsXAmzTargetEnum
 type ListTrailsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListTrailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTrailsHeaders struct {
+type ListTrailsRequest struct {
+	ListTrailsRequest shared.ListTrailsRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListTrailsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTrailsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTrailsRequest struct {
-	QueryParams ListTrailsQueryParams
-	Headers     ListTrailsHeaders
-	Request     shared.ListTrailsRequest `request:"mediaType=application/json"`
 }
 
 type ListTrailsResponse struct {

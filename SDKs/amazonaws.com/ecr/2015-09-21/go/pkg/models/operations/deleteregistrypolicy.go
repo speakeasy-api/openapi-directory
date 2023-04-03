@@ -30,7 +30,8 @@ func (e *DeleteRegistryPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteRegistryPolicyHeaders struct {
+type DeleteRegistryPolicyRequest struct {
+	RequestBody       map[string]interface{}             `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteRegistryPolicyHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteRegistryPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteRegistryPolicyRequest struct {
-	Headers DeleteRegistryPolicyHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DeleteRegistryPolicyResponse struct {

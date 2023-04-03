@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetArticleByPathPathParams struct {
+type GetArticleByPathRequest struct {
 	Slug     string `pathParam:"style=simple,explode=false,name=slug"`
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetArticleByPathRequest struct {
-	PathParams GetArticleByPathPathParams
 }
 
 type GetArticleByPathResponse struct {

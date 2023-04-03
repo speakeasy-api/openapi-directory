@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2EditFounderOptionsSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2EditFounderOptionsPathParams struct {
-	// Group ID of the group to edit.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2EditFounderOptionsRequest struct {
-	PathParams GroupV2EditFounderOptionsPathParams
-	Security   GroupV2EditFounderOptionsSecurity
+	// Group ID of the group to edit.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2EditFounderOptions200Wildcard - Look at the Response property for more information about the nature of this response

@@ -7,32 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBotRecommendationsPathParams struct {
-	// The unique identifier of the bot that contains the bot recommendation list.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot that contains the bot recommendation list.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale of the bot recommendation list.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type ListBotRecommendationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListBotRecommendationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListBotRecommendationsRequestBody struct {
 	// The maximum number of bot recommendations to return in each page of results. If there are fewer results than the max page size, only the actual number of results are returned.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -41,10 +15,24 @@ type ListBotRecommendationsRequestBody struct {
 }
 
 type ListBotRecommendationsRequest struct {
-	PathParams  ListBotRecommendationsPathParams
-	QueryParams ListBotRecommendationsQueryParams
-	Headers     ListBotRecommendationsHeaders
-	Request     ListBotRecommendationsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListBotRecommendationsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the bot that contains the bot recommendation list.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot that contains the bot recommendation list.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale of the bot recommendation list.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBotRecommendationsResponse struct {

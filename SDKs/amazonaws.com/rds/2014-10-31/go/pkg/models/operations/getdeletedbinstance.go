@@ -50,7 +50,7 @@ func (e *GETDeleteDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDBInstanceQueryParams struct {
+type GETDeleteDBInstanceRequest struct {
 	Action GETDeleteDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB instance identifier for the DB instance to be deleted. This parameter isn't case-sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match the name of an existing DB instance.</p> </li> </ul>
 	DBInstanceIdentifier string `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
@@ -61,21 +61,13 @@ type GETDeleteDBInstanceQueryParams struct {
 	// <p>A value that indicates whether to skip the creation of a final DB snapshot before deleting the instance. If you enable this parameter, RDS doesn't create a DB snapshot. If you don't enable this parameter, RDS creates a DB snapshot before the DB instance is deleted. By default, skip isn't enabled, and the DB snapshot is created.</p> <note> <p>If you don't enable this parameter, you must specify the <code>FinalDBSnapshotIdentifier</code> parameter.</p> </note> <p>When a DB instance is in a failure state and has a status of <code>failed</code>, <code>incompatible-restore</code>, or <code>incompatible-network</code>, RDS can delete the instance only if you enable this parameter.</p> <p>If you delete a read replica or an RDS Custom instance, you must enable this setting.</p> <p>This setting is required for RDS Custom.</p>
 	SkipFinalSnapshot *bool                          `queryParam:"style=form,explode=true,name=SkipFinalSnapshot"`
 	Version           GETDeleteDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBInstanceRequest struct {
-	QueryParams GETDeleteDBInstanceQueryParams
-	Headers     GETDeleteDBInstanceHeaders
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBInstanceResponse struct {

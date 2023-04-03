@@ -50,7 +50,7 @@ func (e *GETDeleteTransitGatewayRouteVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDeleteTransitGatewayRouteQueryParams struct {
+type GETDeleteTransitGatewayRouteRequest struct {
 	Action GETDeleteTransitGatewayRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR range for the route. This must match the CIDR for the route exactly.
 	DestinationCidrBlock string `queryParam:"style=form,explode=true,name=DestinationCidrBlock"`
@@ -59,21 +59,13 @@ type GETDeleteTransitGatewayRouteQueryParams struct {
 	// The ID of the transit gateway route table.
 	TransitGatewayRouteTableID string                                  `queryParam:"style=form,explode=true,name=TransitGatewayRouteTableId"`
 	Version                    GETDeleteTransitGatewayRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteTransitGatewayRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteTransitGatewayRouteRequest struct {
-	QueryParams GETDeleteTransitGatewayRouteQueryParams
-	Headers     GETDeleteTransitGatewayRouteHeaders
+	XAmzAlgorithm              *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteTransitGatewayRouteResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTeamsForWorkspacePathParams struct {
-	// Globally unique identifier for the workspace or organization.
-	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
-}
-
-type GetTeamsForWorkspaceQueryParams struct {
+type GetTeamsForWorkspaceRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,11 +22,8 @@ type GetTeamsForWorkspaceQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetTeamsForWorkspaceRequest struct {
-	PathParams  GetTeamsForWorkspacePathParams
-	QueryParams GetTeamsForWorkspaceQueryParams
+	// Globally unique identifier for the workspace or organization.
+	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
 }
 
 // GetTeamsForWorkspace200ApplicationJSON - Returns the team records for all teams in the organization or workspace accessible to the authenticated user.

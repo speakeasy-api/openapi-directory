@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SignRequestQueryParams struct {
+type SignRequestRequest struct {
+	// Claims of scope
+	RequestBody []byte `request:"mediaType=application/jwt"`
 	// test only mode, using test issuer
 	Test *int64 `queryParam:"style=form,explode=true,name=test"`
-}
-
-type SignRequestRequest struct {
-	QueryParams SignRequestQueryParams
-	// Claims of scope
-	Request []byte `request:"mediaType=application/jwt"`
 }
 
 // SignRequest201ApplicationJSON - Successful response

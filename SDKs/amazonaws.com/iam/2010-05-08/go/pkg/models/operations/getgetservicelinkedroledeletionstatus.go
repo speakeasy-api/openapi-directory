@@ -50,26 +50,18 @@ func (e *GETGETServiceLinkedRoleDeletionStatusVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETGETServiceLinkedRoleDeletionStatusQueryParams struct {
+type GETGETServiceLinkedRoleDeletionStatusRequest struct {
 	Action GETGETServiceLinkedRoleDeletionStatusActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The deletion task identifier. This identifier is returned by the <a>DeleteServiceLinkedRole</a> operation in the format <code>task/aws-service-role/&lt;service-principal-name&gt;/&lt;role-name&gt;/&lt;task-uuid&gt;</code>.
-	DeletionTaskID string                                           `queryParam:"style=form,explode=true,name=DeletionTaskId"`
-	Version        GETGETServiceLinkedRoleDeletionStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETServiceLinkedRoleDeletionStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETServiceLinkedRoleDeletionStatusRequest struct {
-	QueryParams GETGETServiceLinkedRoleDeletionStatusQueryParams
-	Headers     GETGETServiceLinkedRoleDeletionStatusHeaders
+	DeletionTaskID    string                                           `queryParam:"style=form,explode=true,name=DeletionTaskId"`
+	Version           GETGETServiceLinkedRoleDeletionStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETServiceLinkedRoleDeletionStatusResponse struct {

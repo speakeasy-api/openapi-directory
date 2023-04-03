@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsUpdatePermissionsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsUpdatePermissionsPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-	// The team's name
-	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type TeamsUpdatePermissionsRequestBodyPermissionsEnum string
@@ -54,9 +44,13 @@ type TeamsUpdatePermissionsRequestBody struct {
 }
 
 type TeamsUpdatePermissionsRequest struct {
-	PathParams TeamsUpdatePermissionsPathParams
-	Request    TeamsUpdatePermissionsRequestBody `request:"mediaType=application/json"`
-	Security   TeamsUpdatePermissionsSecurity
+	RequestBody TeamsUpdatePermissionsRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	// The team's name
+	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
 }
 
 type TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum string

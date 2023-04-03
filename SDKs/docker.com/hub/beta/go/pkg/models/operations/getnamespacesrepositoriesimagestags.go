@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamespacesRepositoriesImagesTagsPathParams struct {
+type GetNamespacesRepositoriesImagesTagsRequest struct {
 	// Digest of the image.
 	Digest string `pathParam:"style=simple,explode=false,name=digest"`
 	// Namespace of the repository.
 	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-	// Name of the repository.
-	Repository string `pathParam:"style=simple,explode=false,name=repository"`
-}
-
-type GetNamespacesRepositoriesImagesTagsQueryParams struct {
 	// Page number to get. Defaults to 1.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of images to get per page. Defaults to 10. Max of 100.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetNamespacesRepositoriesImagesTagsRequest struct {
-	PathParams  GetNamespacesRepositoriesImagesTagsPathParams
-	QueryParams GetNamespacesRepositoriesImagesTagsQueryParams
+	// Name of the repository.
+	Repository string `pathParam:"style=simple,explode=false,name=repository"`
 }
 
 type GetNamespacesRepositoriesImagesTagsResponse struct {

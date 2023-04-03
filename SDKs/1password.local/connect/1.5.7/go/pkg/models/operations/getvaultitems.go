@@ -8,23 +8,14 @@ import (
 )
 
 type GetVaultItemsSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
-}
-
-type GetVaultItemsPathParams struct {
-	// The UUID of the Vault to fetch Items from
-	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type GetVaultItemsQueryParams struct {
-	// Filter the Item collection based on Item name using SCIM eq filter
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
 type GetVaultItemsRequest struct {
-	PathParams  GetVaultItemsPathParams
-	QueryParams GetVaultItemsQueryParams
-	Security    GetVaultItemsSecurity
+	// Filter the Item collection based on Item name using SCIM eq filter
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// The UUID of the Vault to fetch Items from
+	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
 }
 
 type GetVaultItemsResponse struct {

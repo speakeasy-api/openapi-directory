@@ -30,20 +30,16 @@ func (e *ListOnPremisesInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type ListOnPremisesInstancesHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListOnPremisesInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListOnPremisesInstancesRequest struct {
-	Headers ListOnPremisesInstancesHeaders
-	Request shared.ListOnPremisesInstancesInput `request:"mediaType=application/json"`
+	ListOnPremisesInstancesInput shared.ListOnPremisesInstancesInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256            *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential               *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                     *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken            *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders            *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                   ListOnPremisesInstancesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ListOnPremisesInstancesResponse struct {

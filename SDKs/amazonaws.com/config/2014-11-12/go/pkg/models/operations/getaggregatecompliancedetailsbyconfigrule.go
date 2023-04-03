@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAggregateComplianceDetailsByConfigRuleQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum
 type GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum) UnmarshalJSON(
 	}
 }
 
-type GetAggregateComplianceDetailsByConfigRuleHeaders struct {
+type GetAggregateComplianceDetailsByConfigRuleRequest struct {
+	GetAggregateComplianceDetailsByConfigRuleRequest shared.GetAggregateComplianceDetailsByConfigRuleRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                                 `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetAggregateComplianceDetailsByConfigRuleHeaders struct {
 	XAmzSignature     *string                                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetAggregateComplianceDetailsByConfigRuleRequest struct {
-	QueryParams GetAggregateComplianceDetailsByConfigRuleQueryParams
-	Headers     GetAggregateComplianceDetailsByConfigRuleHeaders
-	Request     shared.GetAggregateComplianceDetailsByConfigRuleRequest `request:"mediaType=application/json"`
 }
 
 type GetAggregateComplianceDetailsByConfigRuleResponse struct {

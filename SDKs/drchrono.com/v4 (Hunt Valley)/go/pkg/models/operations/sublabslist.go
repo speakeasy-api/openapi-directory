@@ -8,17 +8,12 @@ import (
 )
 
 type SublabsListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SublabsListQueryParams struct {
-	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
-	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SublabsListRequest struct {
-	QueryParams SublabsListQueryParams
-	Security    SublabsListSecurity
+	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
+	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 }
 
 // SublabsList200ApplicationJSON - Paginated Result

@@ -30,20 +30,16 @@ func (e *DeleteProvisioningArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DeleteProvisioningArtifactHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteProvisioningArtifactXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteProvisioningArtifactRequest struct {
-	Headers DeleteProvisioningArtifactHeaders
-	Request shared.DeleteProvisioningArtifactInput `request:"mediaType=application/json"`
+	DeleteProvisioningArtifactInput shared.DeleteProvisioningArtifactInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      DeleteProvisioningArtifactXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteProvisioningArtifactResponse struct {

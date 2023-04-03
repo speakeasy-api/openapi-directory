@@ -50,28 +50,20 @@ func (e *GETDeleteCacheClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteCacheClusterQueryParams struct {
+type GETDeleteCacheClusterRequest struct {
 	Action GETDeleteCacheClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The cluster identifier for the cluster to be deleted. This parameter is not case sensitive.
 	CacheClusterID string `queryParam:"style=form,explode=true,name=CacheClusterId"`
 	// The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. ElastiCache creates the snapshot, and then deletes the cluster immediately afterward.
 	FinalSnapshotIdentifier *string                          `queryParam:"style=form,explode=true,name=FinalSnapshotIdentifier"`
 	Version                 GETDeleteCacheClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteCacheClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteCacheClusterRequest struct {
-	QueryParams GETDeleteCacheClusterQueryParams
-	Headers     GETDeleteCacheClusterHeaders
+	XAmzAlgorithm           *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteCacheClusterResponse struct {

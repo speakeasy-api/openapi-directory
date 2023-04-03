@@ -8,10 +8,10 @@ import (
 )
 
 type CheckEeBtEligibilitySecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CheckEeBtEligibilityQueryParams struct {
+type CheckEeBtEligibilityRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -24,11 +24,6 @@ type CheckEeBtEligibilityQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type CheckEeBtEligibilityRequest struct {
-	QueryParams CheckEeBtEligibilityQueryParams
-	Security    CheckEeBtEligibilitySecurity
 }
 
 type CheckEeBtEligibilityResponse struct {

@@ -13,21 +13,17 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            HeaderAPIKey: shared.SchemeHeaderAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            HeaderAPIKey: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.ChromeFromHTMLPostRequest{
-        Request: &shared.ChromeHTMLToPdfRequest{
-            FileName: "test.pdf",
-            HTML: "<p>Hello World</p>",
-            InlinePdf: true,
-            Options: &shared.ChromeAdvancedOptions{
-                Landscape: "true",
-                PrintBackground: false,
-            },
+    req := shared.ChromeHTMLToPdfRequest{
+        FileName: "test.pdf",
+        HTML: "<p>Hello World</p>",
+        InlinePdf: true,
+        Options: &shared.ChromeAdvancedOptions{
+            Landscape: "true",
+            PrintBackground: false,
         },
     }
 

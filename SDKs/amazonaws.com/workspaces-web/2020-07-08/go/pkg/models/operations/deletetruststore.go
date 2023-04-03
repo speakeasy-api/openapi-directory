@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteTrustStorePathParams struct {
-	// The ARN of the trust store.
-	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
-}
-
-type DeleteTrustStoreHeaders struct {
+type DeleteTrustStoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteTrustStoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTrustStoreRequest struct {
-	PathParams DeleteTrustStorePathParams
-	Headers    DeleteTrustStoreHeaders
+	// The ARN of the trust store.
+	TrustStoreArn string `pathParam:"style=simple,explode=false,name=trustStoreArn"`
 }
 
 type DeleteTrustStoreResponse struct {

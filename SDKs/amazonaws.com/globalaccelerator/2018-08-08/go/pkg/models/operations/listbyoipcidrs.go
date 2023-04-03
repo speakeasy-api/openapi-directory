@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListByoipCidrsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListByoipCidrsXAmzTargetEnum
 type ListByoipCidrsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListByoipCidrsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListByoipCidrsHeaders struct {
+type ListByoipCidrsRequest struct {
+	ListByoipCidrsRequest shared.ListByoipCidrsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListByoipCidrsHeaders struct {
 	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListByoipCidrsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListByoipCidrsRequest struct {
-	QueryParams ListByoipCidrsQueryParams
-	Headers     ListByoipCidrsHeaders
-	Request     shared.ListByoipCidrsRequest `request:"mediaType=application/json"`
 }
 
 type ListByoipCidrsResponse struct {

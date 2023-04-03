@@ -8,17 +8,12 @@ import (
 )
 
 type GetSellerFundsSummarySecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
-}
-
-type GetSellerFundsSummaryHeaders struct {
-	// This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See <a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank ">HTTP request headers</a> for the marketplace ID values.
-	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetSellerFundsSummaryRequest struct {
-	Headers  GetSellerFundsSummaryHeaders
-	Security GetSellerFundsSummarySecurity
+	// This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See <a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank ">HTTP request headers</a> for the marketplace ID values.
+	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type GetSellerFundsSummaryResponse struct {

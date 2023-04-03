@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetCustomColumnExpressionPathParams struct {
+type CatalogGetCustomColumnExpressionRequest struct {
 	// The custom column identifier
 	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetCustomColumnExpressionRequest struct {
-	PathParams CatalogGetCustomColumnExpressionPathParams
 }
 
 type CatalogGetCustomColumnExpressionResponse struct {

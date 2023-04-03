@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteLifecyclePolicyPathParams struct {
-	// The identifier of the lifecycle policy.
-	PolicyID string `pathParam:"style=simple,explode=false,name=policyId"`
-}
-
-type DeleteLifecyclePolicyHeaders struct {
+type DeleteLifecyclePolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteLifecyclePolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteLifecyclePolicyRequest struct {
-	PathParams DeleteLifecyclePolicyPathParams
-	Headers    DeleteLifecyclePolicyHeaders
+	// The identifier of the lifecycle policy.
+	PolicyID string `pathParam:"style=simple,explode=false,name=policyId"`
 }
 
 type DeleteLifecyclePolicyResponse struct {

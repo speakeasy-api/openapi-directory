@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SnsPostSnsPostHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
 type SnsPostSnsPostRequest struct {
-	Headers SnsPostSnsPostHeaders
-	Request shared.SnsMessageRequest `request:"mediaType=application/json"`
+	SnsMessageRequest shared.SnsMessageRequest `request:"mediaType=application/json"`
+	Authorization     *string                  `header:"style=simple,explode=false,name=authorization"`
 }
 
 type SnsPostSnsPostResponse struct {

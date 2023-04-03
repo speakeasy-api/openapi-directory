@@ -50,26 +50,18 @@ func (e *GETDeleteConfigurationSetVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDeleteConfigurationSetQueryParams struct {
+type GETDeleteConfigurationSetRequest struct {
 	Action GETDeleteConfigurationSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the configuration set to delete.
 	ConfigurationSetName string                               `queryParam:"style=form,explode=true,name=ConfigurationSetName"`
 	Version              GETDeleteConfigurationSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteConfigurationSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteConfigurationSetRequest struct {
-	QueryParams GETDeleteConfigurationSetQueryParams
-	Headers     GETDeleteConfigurationSetHeaders
+	XAmzAlgorithm        *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteConfigurationSetResponse struct {

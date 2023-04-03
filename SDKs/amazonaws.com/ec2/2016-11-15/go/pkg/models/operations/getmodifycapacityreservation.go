@@ -75,7 +75,7 @@ func (e *GETModifyCapacityReservationVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETModifyCapacityReservationQueryParams struct {
+type GETModifyCapacityReservationRequest struct {
 	// Reserved. Capacity Reservations you have created are accepted by default.
 	Accept *bool                                  `queryParam:"style=form,explode=true,name=Accept"`
 	Action GETModifyCapacityReservationActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -90,23 +90,15 @@ type GETModifyCapacityReservationQueryParams struct {
 	// <p>Indicates the way in which the Capacity Reservation ends. A Capacity Reservation can have one of the following end types:</p> <ul> <li> <p> <code>unlimited</code> - The Capacity Reservation remains active until you explicitly cancel it. Do not provide an <code>EndDate</code> value if <code>EndDateType</code> is <code>unlimited</code>.</p> </li> <li> <p> <code>limited</code> - The Capacity Reservation expires automatically at a specified date and time. You must provide an <code>EndDate</code> value if <code>EndDateType</code> is <code>limited</code>.</p> </li> </ul>
 	EndDateType *GETModifyCapacityReservationEndDateTypeEnum `queryParam:"style=form,explode=true,name=EndDateType"`
 	// The number of instances for which to reserve capacity. The number of instances can't be increased or decreased by more than <code>1000</code> in a single request.
-	InstanceCount *int64                                  `queryParam:"style=form,explode=true,name=InstanceCount"`
-	Version       GETModifyCapacityReservationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyCapacityReservationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyCapacityReservationRequest struct {
-	QueryParams GETModifyCapacityReservationQueryParams
-	Headers     GETModifyCapacityReservationHeaders
+	InstanceCount     *int64                                  `queryParam:"style=form,explode=true,name=InstanceCount"`
+	Version           GETModifyCapacityReservationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyCapacityReservationResponse struct {

@@ -4,25 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TaskStatusesUpdateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TaskStatusesUpdatePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TaskStatusesUpdateQueryParams struct {
-	Since *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TaskStatusesUpdateRequest struct {
-	PathParams  TaskStatusesUpdatePathParams
-	QueryParams TaskStatusesUpdateQueryParams
-	Security    TaskStatusesUpdateSecurity
+	ID    string  `pathParam:"style=simple,explode=false,name=id"`
+	Since *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 type TaskStatusesUpdateResponse struct {

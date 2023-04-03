@@ -30,7 +30,8 @@ func (e *GetDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDomainHeaders struct {
+type GetDomainRequest struct {
+	GetDomainRequest  shared.GetDomainRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetDomainHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetDomainXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetDomainRequest struct {
-	Headers GetDomainHeaders
-	Request shared.GetDomainRequest `request:"mediaType=application/json"`
 }
 
 type GetDomainResponse struct {

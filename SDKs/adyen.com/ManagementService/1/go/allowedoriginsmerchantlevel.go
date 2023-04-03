@@ -36,16 +36,16 @@ func newAllowedOriginsMerchantLevel(defaultClient, securityClient HTTPClient, se
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsMerchantLevel) DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest) (*operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
+func (s *allowedOriginsMerchantLevel) DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,16 +93,16 @@ func (s *allowedOriginsMerchantLevel) DeleteMerchantsMerchantIDAPICredentialsAPI
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
+func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -160,16 +160,16 @@ func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICre
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
+func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -227,11 +227,11 @@ func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICre
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *allowedOriginsMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest) (*operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
+func (s *allowedOriginsMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AllowedOrigin", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,7 +243,7 @@ func (s *allowedOriginsMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

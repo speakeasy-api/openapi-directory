@@ -8,9 +8,9 @@ import (
 )
 
 type StorageCreateFileSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type StorageCreateFileRequestBody struct {
@@ -20,11 +20,6 @@ type StorageCreateFileRequestBody struct {
 	Read []string `multipartForm:"name=read"`
 	// An array of strings with write permissions. By default only the current user is granted with write permissions. [learn more about permissions](/docs/permissions) and get a full list of available permissions.
 	Write []string `multipartForm:"name=write"`
-}
-
-type StorageCreateFileRequest struct {
-	Request  *StorageCreateFileRequestBody `request:"mediaType=multipart/form-data"`
-	Security StorageCreateFileSecurity
 }
 
 type StorageCreateFileResponse struct {

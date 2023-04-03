@@ -8,20 +8,15 @@ import (
 )
 
 type GetCompaniesCompanyIDTerminalActionsActionIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDTerminalActionsActionIDPathParams struct {
+type GetCompaniesCompanyIDTerminalActionsActionIDRequest struct {
 	// The unique identifier of the terminal action.
 	ActionID string `pathParam:"style=simple,explode=false,name=actionId"`
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDTerminalActionsActionIDRequest struct {
-	PathParams GetCompaniesCompanyIDTerminalActionsActionIDPathParams
-	Security   GetCompaniesCompanyIDTerminalActionsActionIDSecurity
 }
 
 type GetCompaniesCompanyIDTerminalActionsActionIDResponse struct {

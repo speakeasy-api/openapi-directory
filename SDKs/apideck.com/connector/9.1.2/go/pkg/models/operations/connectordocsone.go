@@ -8,25 +8,16 @@ import (
 )
 
 type ConnectorDocsOneSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectorDocsOnePathParams struct {
+type ConnectorDocsOneRequest struct {
 	// ID of the Doc
 	DocID string `pathParam:"style=simple,explode=false,name=doc_id"`
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ConnectorDocsOneHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
-}
-
-type ConnectorDocsOneRequest struct {
-	PathParams ConnectorDocsOnePathParams
-	Headers    ConnectorDocsOneHeaders
-	Security   ConnectorDocsOneSecurity
 }
 
 type ConnectorDocsOneResponse struct {

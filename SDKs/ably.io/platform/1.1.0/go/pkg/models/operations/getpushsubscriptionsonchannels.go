@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPushSubscriptionsOnChannelsQueryParams struct {
+type GetPushSubscriptionsOnChannelsRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
 	// Filter to restrict to subscriptions associated with that channel.
 	Channel *string `queryParam:"style=form,explode=true,name=channel"`
 	// Optional filter to restrict to devices associated with that clientId. Cannot be used with deviceId.
@@ -18,16 +20,6 @@ type GetPushSubscriptionsOnChannelsQueryParams struct {
 	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// The maximum number of records to return.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetPushSubscriptionsOnChannelsHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetPushSubscriptionsOnChannelsRequest struct {
-	QueryParams GetPushSubscriptionsOnChannelsQueryParams
-	Headers     GetPushSubscriptionsOnChannelsHeaders
 }
 
 type GetPushSubscriptionsOnChannelsResponse struct {

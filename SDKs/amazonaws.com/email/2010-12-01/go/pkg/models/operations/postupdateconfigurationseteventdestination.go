@@ -50,25 +50,17 @@ func (e *POSTUpdateConfigurationSetEventDestinationVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type POSTUpdateConfigurationSetEventDestinationQueryParams struct {
-	Action  POSTUpdateConfigurationSetEventDestinationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUpdateConfigurationSetEventDestinationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdateConfigurationSetEventDestinationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUpdateConfigurationSetEventDestinationRequest struct {
-	QueryParams POSTUpdateConfigurationSetEventDestinationQueryParams
-	Headers     POSTUpdateConfigurationSetEventDestinationHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUpdateConfigurationSetEventDestinationActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                                `request:"mediaType=text/xml"`
+	Version           POSTUpdateConfigurationSetEventDestinationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUpdateConfigurationSetEventDestinationResponse struct {

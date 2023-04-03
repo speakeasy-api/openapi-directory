@@ -10,10 +10,6 @@ var AirtravelCoordinatesServerList = []string{
 	"http://api.climatekuul.com:8000/footprint",
 }
 
-type AirtravelCoordinatesHeaders struct {
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type AirtravelCoordinatesRequestBody struct {
 	// Client Api Key
 	APIKeyL1 string `form:"name=apiKey_l1"`
@@ -36,9 +32,8 @@ type AirtravelCoordinatesRequestBody struct {
 }
 
 type AirtravelCoordinatesRequest struct {
-	Headers   AirtravelCoordinatesHeaders
-	Request   *AirtravelCoordinatesRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
+	ContentType string                           `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *AirtravelCoordinatesRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type AirtravelCoordinatesResponse struct {

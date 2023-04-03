@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureAgentPathParams struct {
-	//  The name of the profiling group for which the configured agent is collecting profiling data.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type ConfigureAgentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ConfigureAgentRequestBody struct {
 	//  A universally unique identifier (UUID) for a profiling instance. For example, if the profiling instance is an Amazon EC2 instance, it is the instance ID. If it is an AWS Fargate container, it is the container's task ID.
 	FleetInstanceID *string `json:"fleetInstanceId,omitempty"`
@@ -30,9 +15,16 @@ type ConfigureAgentRequestBody struct {
 }
 
 type ConfigureAgentRequest struct {
-	PathParams ConfigureAgentPathParams
-	Headers    ConfigureAgentHeaders
-	Request    ConfigureAgentRequestBody `request:"mediaType=application/json"`
+	RequestBody       ConfigureAgentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The name of the profiling group for which the configured agent is collecting profiling data.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 }
 
 type ConfigureAgentResponse struct {

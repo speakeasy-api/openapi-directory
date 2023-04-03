@@ -10,7 +10,7 @@ import (
 )
 
 type GetCreditsSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 // GetCreditsCreditableTypeEnum - Limit the result to credits linked to this type of entity only.
@@ -68,7 +68,7 @@ func (e *GetCreditsSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetCreditsQueryParams struct {
+type GetCreditsRequest struct {
 	// Limit the result to credits for the entity with this ID only. If the entity is not
 	// published, the credential needs to have the right privilege to list the credits for it.
 	//
@@ -95,11 +95,6 @@ type GetCreditsQueryParams struct {
 	// [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
 	//
 	Sort []GetCreditsSortEnum `queryParam:"style=form,explode=false,name=sort"`
-}
-
-type GetCreditsRequest struct {
-	QueryParams GetCreditsQueryParams
-	Security    GetCreditsSecurity
 }
 
 // GetCredits400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

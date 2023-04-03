@@ -13,28 +13,24 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateGroupRequest{
-        Headers: operations.CreateGroupHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSIdentityStore.CreateGroup",
+        CreateGroupRequest: shared.CreateGroupRequest{
+            Description: "corrupti",
+            DisplayName: "provident",
+            IdentityStoreID: "distinctio",
         },
-        Request: shared.CreateGroupRequest{
-            Description: "illum",
-            DisplayName: "vel",
-            IdentityStoreID: "error",
-        },
+        XAmzAlgorithm: "quibusdam",
+        XAmzContentSha256: "unde",
+        XAmzCredential: "nulla",
+        XAmzDate: "corrupti",
+        XAmzSecurityToken: "illum",
+        XAmzSignature: "vel",
+        XAmzSignedHeaders: "error",
+        XAmzTarget: "AWSIdentityStore.CreateGroup",
     }
 
     ctx := context.Background()

@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type ListDocumentQueryParams struct {
+type ListDocumentRequest struct {
 	// Filter documents by the identifier of your DocumentBlock.
 	BlockID *int64 `queryParam:"style=form,explode=true,name=block_id"`
 	// Filter documents by date.
@@ -31,10 +31,6 @@ type ListDocumentQueryParams struct {
 	StartNumber *int64 `queryParam:"style=form,explode=true,name=start_number"`
 	// Year for `start_number` parameter. Required if `start_number` given.
 	StartYear *int64 `queryParam:"style=form,explode=true,name=start_year"`
-}
-
-type ListDocumentRequest struct {
-	QueryParams ListDocumentQueryParams
 }
 
 type ListDocumentResponse struct {

@@ -6,19 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteOTAUpdatePathParams struct {
-	// The ID of the OTA update to delete.
-	OtaUpdateID string `pathParam:"style=simple,explode=false,name=otaUpdateId"`
-}
-
-type DeleteOTAUpdateQueryParams struct {
-	// When true, the stream created by the OTAUpdate process is deleted when the OTA update is deleted. Ignored if the stream specified in the OTAUpdate is supplied by the user.
-	DeleteStream *bool `queryParam:"style=form,explode=true,name=deleteStream"`
-	// When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
-	ForceDeleteAWSJob *bool `queryParam:"style=form,explode=true,name=forceDeleteAWSJob"`
-}
-
-type DeleteOTAUpdateHeaders struct {
+type DeleteOTAUpdateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +14,12 @@ type DeleteOTAUpdateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteOTAUpdateRequest struct {
-	PathParams  DeleteOTAUpdatePathParams
-	QueryParams DeleteOTAUpdateQueryParams
-	Headers     DeleteOTAUpdateHeaders
+	// When true, the stream created by the OTAUpdate process is deleted when the OTA update is deleted. Ignored if the stream specified in the OTAUpdate is supplied by the user.
+	DeleteStream *bool `queryParam:"style=form,explode=true,name=deleteStream"`
+	// When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
+	ForceDeleteAWSJob *bool `queryParam:"style=form,explode=true,name=forceDeleteAWSJob"`
+	// The ID of the OTA update to delete.
+	OtaUpdateID string `pathParam:"style=simple,explode=false,name=otaUpdateId"`
 }
 
 type DeleteOTAUpdateResponse struct {

@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchGetAssetPropertyAggregatesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type BatchGetAssetPropertyAggregatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchGetAssetPropertyAggregatesRequestBody struct {
 	// The list of asset property aggregate entries for the batch get request. You can specify up to 16 entries per request.
 	Entries []shared.BatchGetAssetPropertyAggregatesEntry `json:"entries"`
@@ -34,9 +17,18 @@ type BatchGetAssetPropertyAggregatesRequestBody struct {
 }
 
 type BatchGetAssetPropertyAggregatesRequest struct {
-	QueryParams BatchGetAssetPropertyAggregatesQueryParams
-	Headers     BatchGetAssetPropertyAggregatesHeaders
-	Request     BatchGetAssetPropertyAggregatesRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchGetAssetPropertyAggregatesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type BatchGetAssetPropertyAggregatesResponse struct {

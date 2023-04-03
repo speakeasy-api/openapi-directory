@@ -32,28 +32,20 @@ func (e *ListResponseHeadersPolicies20200531TypeEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListResponseHeadersPolicies20200531QueryParams struct {
+type ListResponseHeadersPolicies20200531Request struct {
 	// Use this field when paginating results to indicate where to begin in your list of response headers policies. The response includes response headers policies in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of response headers policies that you want to get in the response.
 	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	// <p>A filter to get only the specified kind of response headers policies. Valid values are:</p> <ul> <li> <p> <code>managed</code> – Gets only the managed policies created by Amazon Web Services.</p> </li> <li> <p> <code>custom</code> – Gets only the custom policies created in your Amazon Web Services account.</p> </li> </ul>
-	Type *ListResponseHeadersPolicies20200531TypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type ListResponseHeadersPolicies20200531Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListResponseHeadersPolicies20200531Request struct {
-	QueryParams ListResponseHeadersPolicies20200531QueryParams
-	Headers     ListResponseHeadersPolicies20200531Headers
+	Type              *ListResponseHeadersPolicies20200531TypeEnum `queryParam:"style=form,explode=true,name=Type"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListResponseHeadersPolicies20200531Response struct {

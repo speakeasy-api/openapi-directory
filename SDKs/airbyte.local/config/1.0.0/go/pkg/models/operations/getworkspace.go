@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkspaceRequest struct {
-	Request shared.WorkspaceIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetWorkspaceResponse struct {
 	ContentType string
 	// Input failed validation

@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobsByPipelinePathParams struct {
-	// The ID of the pipeline for which you want to get job information.
-	PipelineID string `pathParam:"style=simple,explode=false,name=PipelineId"`
-}
-
-type ListJobsByPipelineQueryParams struct {
+type ListJobsByPipelineRequest struct {
 	//  To list jobs in chronological order by the date and time that they were submitted, enter <code>true</code>. To list jobs in reverse chronological order, enter <code>false</code>.
 	Ascending *string `queryParam:"style=form,explode=true,name=Ascending"`
 	//  When Elastic Transcoder returns more than one page of results, use <code>pageToken</code> in subsequent <code>GET</code> requests to get each successive page of results.
 	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListJobsByPipelineHeaders struct {
+	// The ID of the pipeline for which you want to get job information.
+	PipelineID        string  `pathParam:"style=simple,explode=false,name=PipelineId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListJobsByPipelineHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobsByPipelineRequest struct {
-	PathParams  ListJobsByPipelinePathParams
-	QueryParams ListJobsByPipelineQueryParams
-	Headers     ListJobsByPipelineHeaders
 }
 
 type ListJobsByPipelineResponse struct {

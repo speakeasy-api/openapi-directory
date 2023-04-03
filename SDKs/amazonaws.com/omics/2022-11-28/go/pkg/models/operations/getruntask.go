@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRunTaskPathParams struct {
-	// The task's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The task's ID.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type GetRunTaskHeaders struct {
+type GetRunTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetRunTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRunTaskRequest struct {
-	PathParams GetRunTaskPathParams
-	Headers    GetRunTaskHeaders
+	// The task's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The task's ID.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type GetRunTaskResponse struct {

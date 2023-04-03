@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAssociatedRoute53HealthChecksPathParams struct {
-	// The Amazon Resource Name (ARN) of the routing control.
-	RoutingControlArn string `pathParam:"style=simple,explode=false,name=RoutingControlArn"`
-}
-
-type ListAssociatedRoute53HealthChecksQueryParams struct {
+type ListAssociatedRoute53HealthChecksRequest struct {
 	// The number of objects that you want to return with this call.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token that identifies which batch of results you want to see.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListAssociatedRoute53HealthChecksHeaders struct {
+	// The Amazon Resource Name (ARN) of the routing control.
+	RoutingControlArn string  `pathParam:"style=simple,explode=false,name=RoutingControlArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListAssociatedRoute53HealthChecksHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAssociatedRoute53HealthChecksRequest struct {
-	PathParams  ListAssociatedRoute53HealthChecksPathParams
-	QueryParams ListAssociatedRoute53HealthChecksQueryParams
-	Headers     ListAssociatedRoute53HealthChecksHeaders
 }
 
 type ListAssociatedRoute53HealthChecksResponse struct {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDUserConnectionsIDConnectionTransactionsclustersPathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
+type GetUsersIDUserConnectionsIDConnectionTransactionsclustersRequest struct {
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionTransactionsclustersQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionTransactionsclustersRequest struct {
-	PathParams  GetUsersIDUserConnectionsIDConnectionTransactionsclustersPathParams
-	QueryParams GetUsersIDUserConnectionsIDConnectionTransactionsclustersQueryParams
 }
 
 // GetUsersIDUserConnectionsIDConnectionTransactionsclusters200ApplicationJSON - transactionsclusters

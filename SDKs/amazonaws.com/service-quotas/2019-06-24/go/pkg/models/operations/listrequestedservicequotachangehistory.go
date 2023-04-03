@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRequestedServiceQuotaChangeHistoryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListRequestedServiceQuotaChangeHistoryXAmzTargetEnum
 type ListRequestedServiceQuotaChangeHistoryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListRequestedServiceQuotaChangeHistoryXAmzTargetEnum) UnmarshalJSON(dat
 	}
 }
 
-type ListRequestedServiceQuotaChangeHistoryHeaders struct {
+type ListRequestedServiceQuotaChangeHistoryRequest struct {
+	ListRequestedServiceQuotaChangeHistoryRequest shared.ListRequestedServiceQuotaChangeHistoryRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                              `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListRequestedServiceQuotaChangeHistoryHeaders struct {
 	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListRequestedServiceQuotaChangeHistoryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListRequestedServiceQuotaChangeHistoryRequest struct {
-	QueryParams ListRequestedServiceQuotaChangeHistoryQueryParams
-	Headers     ListRequestedServiceQuotaChangeHistoryHeaders
-	Request     shared.ListRequestedServiceQuotaChangeHistoryRequest `request:"mediaType=application/json"`
 }
 
 type ListRequestedServiceQuotaChangeHistoryResponse struct {

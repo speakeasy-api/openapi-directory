@@ -7,9 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryDeleteAPISpecPathParams struct {
+type RegistryDeleteAPISpecRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
+	// If set to true, any child resources will also be deleted. (Otherwise, the request will only work if there are no child resources.)
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
@@ -18,16 +20,6 @@ type RegistryDeleteAPISpecPathParams struct {
 	Spec string `pathParam:"style=simple,explode=false,name=spec"`
 	// The version id.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type RegistryDeleteAPISpecQueryParams struct {
-	// If set to true, any child resources will also be deleted. (Otherwise, the request will only work if there are no child resources.)
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-}
-
-type RegistryDeleteAPISpecRequest struct {
-	PathParams  RegistryDeleteAPISpecPathParams
-	QueryParams RegistryDeleteAPISpecQueryParams
 }
 
 type RegistryDeleteAPISpecResponse struct {

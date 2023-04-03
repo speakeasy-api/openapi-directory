@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestUploadHashesBatchSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TestUploadHashesBatchPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the test run
-	TestRunID string `pathParam:"style=simple,explode=false,name=test_run_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TestUploadHashesBatchTestCloudFileHashFileTypeEnum - Type of the file
@@ -60,10 +50,14 @@ type TestUploadHashesBatchTestCloudFileHash struct {
 }
 
 type TestUploadHashesBatchRequest struct {
-	PathParams TestUploadHashesBatchPathParams
 	// File hash information
-	Request  []TestUploadHashesBatchTestCloudFileHash `request:"mediaType=application/json"`
-	Security TestUploadHashesBatchSecurity
+	RequestBody []TestUploadHashesBatchTestCloudFileHash `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the test run
+	TestRunID string `pathParam:"style=simple,explode=false,name=test_run_id"`
 }
 
 // TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum - Type of the file

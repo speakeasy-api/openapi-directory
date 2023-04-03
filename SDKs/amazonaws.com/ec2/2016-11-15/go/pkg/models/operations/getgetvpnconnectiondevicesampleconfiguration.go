@@ -50,7 +50,7 @@ func (e *GETGETVpnConnectionDeviceSampleConfigurationVersionEnum) UnmarshalJSON(
 	}
 }
 
-type GETGETVpnConnectionDeviceSampleConfigurationQueryParams struct {
+type GETGETVpnConnectionDeviceSampleConfigurationRequest struct {
 	Action GETGETVpnConnectionDeviceSampleConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -60,10 +60,7 @@ type GETGETVpnConnectionDeviceSampleConfigurationQueryParams struct {
 	// Device identifier provided by the <code>GetVpnConnectionDeviceTypes</code> API.
 	VpnConnectionDeviceTypeID string `queryParam:"style=form,explode=true,name=VpnConnectionDeviceTypeId"`
 	// The <code>VpnConnectionId</code> specifies the Site-to-Site VPN connection used for the sample configuration.
-	VpnConnectionID string `queryParam:"style=form,explode=true,name=VpnConnectionId"`
-}
-
-type GETGETVpnConnectionDeviceSampleConfigurationHeaders struct {
+	VpnConnectionID   string  `queryParam:"style=form,explode=true,name=VpnConnectionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -71,11 +68,6 @@ type GETGETVpnConnectionDeviceSampleConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETVpnConnectionDeviceSampleConfigurationRequest struct {
-	QueryParams GETGETVpnConnectionDeviceSampleConfigurationQueryParams
-	Headers     GETGETVpnConnectionDeviceSampleConfigurationHeaders
 }
 
 type GETGETVpnConnectionDeviceSampleConfigurationResponse struct {

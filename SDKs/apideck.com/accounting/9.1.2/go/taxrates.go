@@ -34,11 +34,11 @@ func newTaxRates(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // TaxRatesAdd - Create Tax Rate
 // Create Tax Rate
-func (s *taxRates) TaxRatesAdd(ctx context.Context, request operations.TaxRatesAddRequest) (*operations.TaxRatesAddResponse, error) {
+func (s *taxRates) TaxRatesAdd(ctx context.Context, request operations.TaxRatesAddRequest, security operations.TaxRatesAddSecurity) (*operations.TaxRatesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/tax-rates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxRateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *taxRates) TaxRatesAdd(ctx context.Context, request operations.TaxRatesA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *taxRates) TaxRatesAdd(ctx context.Context, request operations.TaxRatesA
 
 // TaxRatesAll - List Tax Rates
 // List Tax Rates. Note: Not all connectors return the actual rate/percentage value. In this case, only the tax code or reference is returned. Connectors Affected: Quickbooks
-func (s *taxRates) TaxRatesAll(ctx context.Context, request operations.TaxRatesAllRequest) (*operations.TaxRatesAllResponse, error) {
+func (s *taxRates) TaxRatesAll(ctx context.Context, request operations.TaxRatesAllRequest, security operations.TaxRatesAllSecurity) (*operations.TaxRatesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/tax-rates"
 
@@ -164,13 +164,13 @@ func (s *taxRates) TaxRatesAll(ctx context.Context, request operations.TaxRatesA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *taxRates) TaxRatesAll(ctx context.Context, request operations.TaxRatesA
 
 // TaxRatesDelete - Delete Tax Rate
 // Delete Tax Rate
-func (s *taxRates) TaxRatesDelete(ctx context.Context, request operations.TaxRatesDeleteRequest) (*operations.TaxRatesDeleteResponse, error) {
+func (s *taxRates) TaxRatesDelete(ctx context.Context, request operations.TaxRatesDeleteRequest, security operations.TaxRatesDeleteSecurity) (*operations.TaxRatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/tax-rates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/tax-rates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *taxRates) TaxRatesDelete(ctx context.Context, request operations.TaxRat
 
 // TaxRatesOne - Get Tax Rate
 // Get Tax Rate. Note: Not all connectors return the actual rate/percentage value. In this case, only the tax code or reference is returned. Support will soon be added to return the actual rate/percentage by doing additional calls in the background to provide the full view of a given tax rate. Connectors Affected: Quickbooks
-func (s *taxRates) TaxRatesOne(ctx context.Context, request operations.TaxRatesOneRequest) (*operations.TaxRatesOneResponse, error) {
+func (s *taxRates) TaxRatesOne(ctx context.Context, request operations.TaxRatesOneRequest, security operations.TaxRatesOneSecurity) (*operations.TaxRatesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/tax-rates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/tax-rates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *taxRates) TaxRatesOne(ctx context.Context, request operations.TaxRatesO
 
 // TaxRatesUpdate - Update Tax Rate
 // Update Tax Rate
-func (s *taxRates) TaxRatesUpdate(ctx context.Context, request operations.TaxRatesUpdateRequest) (*operations.TaxRatesUpdateResponse, error) {
+func (s *taxRates) TaxRatesUpdate(ctx context.Context, request operations.TaxRatesUpdateRequest, security operations.TaxRatesUpdateSecurity) (*operations.TaxRatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/tax-rates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/tax-rates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxRateInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *taxRates) TaxRatesUpdate(ctx context.Context, request operations.TaxRat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

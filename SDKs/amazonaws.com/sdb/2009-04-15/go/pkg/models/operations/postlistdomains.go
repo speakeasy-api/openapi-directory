@@ -50,23 +50,19 @@ func (e *POSTListDomainsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTListDomainsQueryParams struct {
+type POSTListDomainsRequest struct {
 	AWSAccessKeyID string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         POSTListDomainsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination limit
 	MaxNumberOfDomains *string `queryParam:"style=form,explode=true,name=MaxNumberOfDomains"`
 	// Pagination token
 	NextToken        *string                    `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody      []byte                     `request:"mediaType=text/xml"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                     `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                     `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                     `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTListDomainsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListDomainsRequest struct {
-	QueryParams POSTListDomainsQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTListDomainsResponse struct {

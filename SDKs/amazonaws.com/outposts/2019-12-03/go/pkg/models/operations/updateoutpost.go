@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateOutpostPathParams struct {
-	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
-	OutpostID string `pathParam:"style=simple,explode=false,name=OutpostId"`
-}
-
-type UpdateOutpostHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateOutpostRequestBodySupportedHardwareTypeEnum -  The type of hardware for this Outpost.
 type UpdateOutpostRequestBodySupportedHardwareTypeEnum string
 
@@ -58,9 +43,16 @@ type UpdateOutpostRequestBody struct {
 }
 
 type UpdateOutpostRequest struct {
-	PathParams UpdateOutpostPathParams
-	Headers    UpdateOutpostHeaders
-	Request    UpdateOutpostRequestBody `request:"mediaType=application/json"`
+	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
+	OutpostID         string                   `pathParam:"style=simple,explode=false,name=OutpostId"`
+	RequestBody       UpdateOutpostRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateOutpostResponse struct {

@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GETVersionIncidentsIDFormatPathParams struct {
+type GETVersionIncidentsIDFormatRequest struct {
 	// <p>Incident ID</p>
 	//
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GETVersionIncidentsIDFormatRequest struct {
-	PathParams GETVersionIncidentsIDFormatPathParams
 }
 
 type GETVersionIncidentsIDFormatResponse struct {

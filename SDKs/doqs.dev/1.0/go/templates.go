@@ -33,7 +33,7 @@ func newTemplates(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // Create - Create
-func (s *templates) Create(ctx context.Context, request operations.CreateRequest) (*operations.CreateResponse, error) {
+func (s *templates) Create(ctx context.Context, request shared.BodyCreate) (*operations.CreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/templates"
 
@@ -101,7 +101,7 @@ func (s *templates) Create(ctx context.Context, request operations.CreateRequest
 // DeleteTemplatesIDDelete - Delete
 func (s *templates) DeleteTemplatesIDDelete(ctx context.Context, request operations.DeleteTemplatesIDDeleteRequest) (*operations.DeleteTemplatesIDDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -157,9 +157,9 @@ func (s *templates) DeleteTemplatesIDDelete(ctx context.Context, request operati
 // Fill - Fill
 func (s *templates) Fill(ctx context.Context, request operations.FillRequest) (*operations.FillResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}/fill", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}/fill", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FillTemplateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -223,7 +223,7 @@ func (s *templates) Fill(ctx context.Context, request operations.FillRequest) (*
 // Get - Get Template
 func (s *templates) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +279,7 @@ func (s *templates) Get(ctx context.Context, request operations.GetRequest) (*op
 // GetFileTemplatesIDFileGet - Get File
 func (s *templates) GetFileTemplatesIDFileGet(ctx context.Context, request operations.GetFileTemplatesIDFileGetRequest) (*operations.GetFileTemplatesIDFileGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}/file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,7 +342,7 @@ func (s *templates) List(ctx context.Context, request operations.ListRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -395,9 +395,9 @@ func (s *templates) List(ctx context.Context, request operations.ListRequest) (*
 // Update - Update
 func (s *templates) Update(ctx context.Context, request operations.UpdateRequest) (*operations.UpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTemplateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -50,26 +50,18 @@ func (e *GETSwitchoverReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSwitchoverReadReplicaQueryParams struct {
+type GETSwitchoverReadReplicaRequest struct {
 	Action GETSwitchoverReadReplicaActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The DB instance identifier of the current standby database. This value is stored as a lowercase string.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identiﬁer of an existing Oracle read replica DB instance.</p> </li> </ul>
 	DBInstanceIdentifier string                              `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	Version              GETSwitchoverReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSwitchoverReadReplicaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSwitchoverReadReplicaRequest struct {
-	QueryParams GETSwitchoverReadReplicaQueryParams
-	Headers     GETSwitchoverReadReplicaHeaders
+	XAmzAlgorithm        *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSwitchoverReadReplicaResponse struct {

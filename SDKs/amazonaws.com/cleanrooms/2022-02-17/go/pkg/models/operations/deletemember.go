@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteMemberPathParams struct {
-	// The account ID of the member to remove.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The unique identifier for the associated collaboration.
-	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
-}
-
-type DeleteMemberHeaders struct {
+type DeleteMemberRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type DeleteMemberHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMemberRequest struct {
-	PathParams DeleteMemberPathParams
-	Headers    DeleteMemberHeaders
+	// The account ID of the member to remove.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	// The unique identifier for the associated collaboration.
+	CollaborationIdentifier string `pathParam:"style=simple,explode=false,name=collaborationIdentifier"`
 }
 
 type DeleteMemberResponse struct {

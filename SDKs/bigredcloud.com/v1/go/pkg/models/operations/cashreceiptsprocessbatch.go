@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CashReceiptsProcessBatchRequest struct {
-	// Batch of Cash Receipts to process.
-	Request []shared.BatchItemCashReceiptDto `request:"mediaType=application/json"`
-}
 
 type CashReceiptsProcessBatchResponse struct {
 	// OK

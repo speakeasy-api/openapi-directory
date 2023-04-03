@@ -40,20 +40,20 @@ func newRepositories(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes the repository. This is an irreversible operation.
 //
 // This does not affect its forks.
-func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugResponse, error) {
+func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,16 +93,16 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, 
 // DeleteRepositoriesWorkspaceRepoSlugHooksUID - Delete a webhook for a repository
 // Deletes the specified webhook subscription from the given
 // repository.
-func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
+func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,16 +150,16 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.C
 // /geordi/permissions-config/groups/developers
 //
 // HTTP/1.1 204
-func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
+func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,16 +211,16 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroup
 //
 // HTTP/1.1 204
 // ```
-func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
+func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -264,7 +264,7 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsers
 //
 // This endpoint also supports filtering and sorting of the results. See
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
-func (s *repositories) GetRepositories(ctx context.Context, request operations.GetRepositoriesRequest) (*operations.GetRepositoriesResponse, error) {
+func (s *repositories) GetRepositories(ctx context.Context, request operations.GetRepositoriesRequest, security operations.GetRepositoriesSecurity) (*operations.GetRepositoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/repositories"
 
@@ -273,11 +273,11 @@ func (s *repositories) GetRepositories(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -323,20 +323,20 @@ func (s *repositories) GetRepositories(ctx context.Context, request operations.G
 //
 // This endpoint also supports filtering and sorting of the results. See
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
-func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request operations.GetRepositoriesWorkspaceRequest) (*operations.GetRepositoriesWorkspaceResponse, error) {
+func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request operations.GetRepositoriesWorkspaceRequest, security operations.GetRepositoriesWorkspaceSecurity) (*operations.GetRepositoriesWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -384,16 +384,16 @@ func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request ope
 
 // GetRepositoriesWorkspaceRepoSlug - Get a repository
 // Returns the object describing this repository.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRequest) (*operations.GetRepositoriesWorkspaceRepoSlugResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRequest, security operations.GetRepositoriesWorkspaceRepoSlugSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -492,20 +492,20 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 //
 // In the response you can see that the file was renamed to `README.rst`
 // by the commit made on 2011-05-16, and was previously named `README.txt`.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -552,20 +552,20 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx
 // GetRepositoriesWorkspaceRepoSlugForks - List repository forks
 // Returns a paginated list of all the forks of the specified
 // repository.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugForksRequest) (*operations.GetRepositoriesWorkspaceRepoSlugForksResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugForksRequest, security operations.GetRepositoriesWorkspaceRepoSlugForksSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -601,16 +601,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context
 
 // GetRepositoriesWorkspaceRepoSlugHooks - List webhooks for a repository
 // Returns a paginated list of webhooks installed on this repository.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksRequest) (*operations.GetRepositoriesWorkspaceRepoSlugHooksResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, security operations.GetRepositoriesWorkspaceRepoSlugHooksSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -659,16 +659,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context
 // GetRepositoriesWorkspaceRepoSlugHooksUID - Get a webhook for a repository
 // Returns the webhook with the specified id installed on the specified
 // repository.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksUIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -713,16 +713,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Cont
 }
 
 // GetRepositoriesWorkspaceRepoSlugOverrideSettings - Retrieve the inheritance state for repository settings
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest, security operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -817,16 +817,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugOverrideSettings(ctx cont
 //	}
 //
 // ```
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -918,16 +918,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(c
 //	}
 //
 // ```
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1025,16 +1025,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGr
 //	}
 //
 // ```
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1130,16 +1130,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(ct
 //	}
 //
 // ```
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1196,20 +1196,20 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSel
 // without having to know the name or SHA1 of the repo's main branch.
 //
 // To create new commits, [POST to this endpoint](#post)
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcRequest) (*operations.GetRepositoriesWorkspaceRepoSlugSrcResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1462,20 +1462,20 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 //
 // See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
 // details.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1524,16 +1524,16 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context
 // GetRepositoriesWorkspaceRepoSlugWatchers - List repositories watchers
 // Returns a paginated list of all the watchers on the specified
 // repository.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse, error) {
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest, security operations.GetRepositoriesWorkspaceRepoSlugWatchersSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/watchers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/watchers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1620,7 +1620,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Cont
 //
 // Note that the query parameter values need to be URL escaped so that `=`
 // would become `%3D`.
-func (s *repositories) GetUserPermissionsRepositories(ctx context.Context, request operations.GetUserPermissionsRepositoriesRequest) (*operations.GetUserPermissionsRepositoriesResponse, error) {
+func (s *repositories) GetUserPermissionsRepositories(ctx context.Context, request operations.GetUserPermissionsRepositoriesRequest, security operations.GetUserPermissionsRepositoriesSecurity) (*operations.GetUserPermissionsRepositoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user/permissions/repositories"
 
@@ -1629,11 +1629,11 @@ func (s *repositories) GetUserPermissionsRepositories(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1703,11 +1703,11 @@ func (s *repositories) GetUserPermissionsRepositories(ctx context.Context, reque
 //
 // Note: In the examples above, the workspace ID `teamsinspace`,
 // and/or the repository name `hablanding` can be replaced by UUIDs.
-func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRequest) (*operations.PostRepositoriesWorkspaceRepoSlugResponse, error) {
+func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRequest, security operations.PostRepositoriesWorkspaceRepoSlugSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1719,7 +1719,7 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1824,11 +1824,11 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, re
 // * scm
 // * parent
 // * full_name
-func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugForksRequest) (*operations.PostRepositoriesWorkspaceRepoSlugForksResponse, error) {
+func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugForksRequest, security operations.PostRepositoriesWorkspaceRepoSlugForksSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1840,7 +1840,7 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1905,16 +1905,16 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Contex
 //
 // Also note that the `url` must properly resolve and cannot be an
 // internal, non-routed address.
-func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugHooksRequest) (*operations.PostRepositoriesWorkspaceRepoSlugHooksResponse, error) {
+func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, security operations.PostRepositoriesWorkspaceRepoSlugHooksSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2090,20 +2090,20 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Contex
 //
 // Note that this API does not support the creation or manipulation of
 // subrepos / submodules.
-func (s *repositories) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugSrcRequest) (*operations.PostRepositoriesWorkspaceRepoSlugSrcResponse, error) {
+func (s *repositories) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, security operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2158,11 +2158,11 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context,
 // with an existing repository's slug. But if there is no conflict,
 // the new location will be returned in the `Location` header of the
 // response.
-func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugRequest) (*operations.PutRepositoriesWorkspaceRepoSlugResponse, error) {
+func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugRequest, security operations.PutRepositoriesWorkspaceRepoSlugSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2174,7 +2174,7 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2233,16 +2233,16 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 // * `url`
 // * `active`
 // * `events`
-func (s *repositories) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugHooksUIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2289,16 +2289,16 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Cont
 }
 
 // PutRepositoriesWorkspaceRepoSlugOverrideSettings - Set the inheritance state for repository settings
-func (s *repositories) PutRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest) (*operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest, security operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2383,16 +2383,16 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugOverrideSettings(ctx cont
 //	}
 //
 // ```
-func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2495,16 +2495,16 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGr
 //	}
 //
 // ```
-func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

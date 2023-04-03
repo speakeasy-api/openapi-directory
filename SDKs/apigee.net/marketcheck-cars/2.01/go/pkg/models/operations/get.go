@@ -35,15 +35,11 @@ func (e *GetCountryEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on Country in which they are listed
 	Country GetCountryEnum `queryParam:"style=form,explode=true,name=country"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 type GetResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecommendedLocationQueryParams struct {
+type GetRecommendedLocationRequest struct {
 	// City used by the algorythm to recommend new destination. Several cities can be specified using comma.
 	//
 	// City codes follow [IATA standard](http://www.iata.org/publications/Pages/code-search.aspx)
@@ -18,10 +18,6 @@ type GetRecommendedLocationQueryParams struct {
 	DestinationCountryCodes *string `queryParam:"style=form,explode=true,name=destinationCountryCodes"`
 	// Origin country of the traveler following [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code format (e.g. US)
 	TravelerCountryCode *string `queryParam:"style=form,explode=true,name=travelerCountryCode"`
-}
-
-type GetRecommendedLocationRequest struct {
-	QueryParams GetRecommendedLocationQueryParams
 }
 
 // GetRecommendedLocation200ApplicationVndAmadeusPlusJSON - Successful reply

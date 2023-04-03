@@ -30,7 +30,8 @@ func (e *GetUserIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUserIDHeaders struct {
+type GetUserIDRequest struct {
+	GetUserIDRequest  shared.GetUserIDRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetUserIDHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetUserIDXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetUserIDRequest struct {
-	Headers GetUserIDHeaders
-	Request shared.GetUserIDRequest `request:"mediaType=application/json"`
 }
 
 type GetUserIDResponse struct {

@@ -6,27 +6,15 @@ import (
 	"net/http"
 )
 
-type PostContainersNameOrIDRestartPathParams struct {
-	// The unique identifier or name of the container that you want to restart. Run `cf ic ps` or call the `GET /containers/json` endpoint to review all containers in your space.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PostContainersNameOrIDRestartQueryParams struct {
-	// The number of seconds to wait before the container is restarted. For example, if you want a container to restart after 10 seconds, enter `t=10`.
-	T *int64 `queryParam:"style=form,explode=true,name=t"`
-}
-
-type PostContainersNameOrIDRestartHeaders struct {
+type PostContainersNameOrIDRestartRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersNameOrIDRestartRequest struct {
-	PathParams  PostContainersNameOrIDRestartPathParams
-	QueryParams PostContainersNameOrIDRestartQueryParams
-	Headers     PostContainersNameOrIDRestartHeaders
+	// The unique identifier or name of the container that you want to restart. Run `cf ic ps` or call the `GET /containers/json` endpoint to review all containers in your space.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
+	// The number of seconds to wait before the container is restarted. For example, if you want a container to restart after 10 seconds, enter `t=10`.
+	T *int64 `queryParam:"style=form,explode=true,name=t"`
 }
 
 type PostContainersNameOrIDRestartResponse struct {

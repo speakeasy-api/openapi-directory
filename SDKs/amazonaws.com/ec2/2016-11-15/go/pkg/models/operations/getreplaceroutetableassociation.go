@@ -50,30 +50,22 @@ func (e *GETReplaceRouteTableAssociationVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETReplaceRouteTableAssociationQueryParams struct {
+type GETReplaceRouteTableAssociationRequest struct {
 	Action GETReplaceRouteTableAssociationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The association ID.
 	AssociationID string `queryParam:"style=form,explode=true,name=AssociationId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the new route table to associate with the subnet.
-	RouteTableID string                                     `queryParam:"style=form,explode=true,name=RouteTableId"`
-	Version      GETReplaceRouteTableAssociationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReplaceRouteTableAssociationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReplaceRouteTableAssociationRequest struct {
-	QueryParams GETReplaceRouteTableAssociationQueryParams
-	Headers     GETReplaceRouteTableAssociationHeaders
+	RouteTableID      string                                     `queryParam:"style=form,explode=true,name=RouteTableId"`
+	Version           GETReplaceRouteTableAssociationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReplaceRouteTableAssociationResponse struct {

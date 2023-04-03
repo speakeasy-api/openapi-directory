@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListAcceptedPortfolioSharesQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // ListAcceptedPortfolioSharesXAmzTargetEnum
 type ListAcceptedPortfolioSharesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListAcceptedPortfolioSharesXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListAcceptedPortfolioSharesHeaders struct {
+type ListAcceptedPortfolioSharesRequest struct {
+	ListAcceptedPortfolioSharesInput shared.ListAcceptedPortfolioSharesInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken         *string                                   `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListAcceptedPortfolioSharesHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListAcceptedPortfolioSharesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListAcceptedPortfolioSharesRequest struct {
-	QueryParams ListAcceptedPortfolioSharesQueryParams
-	Headers     ListAcceptedPortfolioSharesHeaders
-	Request     shared.ListAcceptedPortfolioSharesInput `request:"mediaType=application/json"`
 }
 
 type ListAcceptedPortfolioSharesResponse struct {

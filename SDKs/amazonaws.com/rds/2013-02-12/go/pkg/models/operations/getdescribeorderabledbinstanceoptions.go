@@ -50,31 +50,23 @@ func (e *GETDescribeOrderableDBInstanceOptionsVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETDescribeOrderableDBInstanceOptionsQueryParams struct {
-	Action          GETDescribeOrderableDBInstanceOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DBInstanceClass *string                                          `queryParam:"style=form,explode=true,name=DBInstanceClass"`
-	Engine          string                                           `queryParam:"style=form,explode=true,name=Engine"`
-	EngineVersion   *string                                          `queryParam:"style=form,explode=true,name=EngineVersion"`
-	LicenseModel    *string                                          `queryParam:"style=form,explode=true,name=LicenseModel"`
-	Marker          *string                                          `queryParam:"style=form,explode=true,name=Marker"`
-	MaxRecords      *int64                                           `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version         GETDescribeOrderableDBInstanceOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-	Vpc             *bool                                            `queryParam:"style=form,explode=true,name=Vpc"`
-}
-
-type GETDescribeOrderableDBInstanceOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETDescribeOrderableDBInstanceOptionsRequest struct {
-	QueryParams GETDescribeOrderableDBInstanceOptionsQueryParams
-	Headers     GETDescribeOrderableDBInstanceOptionsHeaders
+	Action            GETDescribeOrderableDBInstanceOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	DBInstanceClass   *string                                          `queryParam:"style=form,explode=true,name=DBInstanceClass"`
+	Engine            string                                           `queryParam:"style=form,explode=true,name=Engine"`
+	EngineVersion     *string                                          `queryParam:"style=form,explode=true,name=EngineVersion"`
+	LicenseModel      *string                                          `queryParam:"style=form,explode=true,name=LicenseModel"`
+	Marker            *string                                          `queryParam:"style=form,explode=true,name=Marker"`
+	MaxRecords        *int64                                           `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeOrderableDBInstanceOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	Vpc               *bool                                            `queryParam:"style=form,explode=true,name=Vpc"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeOrderableDBInstanceOptionsResponse struct {

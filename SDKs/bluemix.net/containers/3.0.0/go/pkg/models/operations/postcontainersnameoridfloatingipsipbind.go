@@ -6,25 +6,17 @@ import (
 	"net/http"
 )
 
-type PostContainersNameOrIDFloatingIpsIPBindPathParams struct {
+type PostContainersNameOrIDFloatingIpsIPBindRequest struct {
+	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
+	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
+	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
 	// The public IP address that you want to bind to your container.
 	//
 	// Note: The public IP address must be available in the space and not bound to a container. Run `cf ic ip list` or call the `GET /containers/floating-ips` endpoint.
 	IP string `pathParam:"style=simple,explode=false,name=ip"`
 	// The name or ID of the container that you want to bind to the public IP address. Run the `cf ic ps` command or call the `GET /containers/json` endpoint to retrieve a list of containers in your space.
 	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PostContainersNameOrIDFloatingIpsIPBindHeaders struct {
-	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
-	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
-	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
-	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersNameOrIDFloatingIpsIPBindRequest struct {
-	PathParams PostContainersNameOrIDFloatingIpsIPBindPathParams
-	Headers    PostContainersNameOrIDFloatingIpsIPBindHeaders
 }
 
 type PostContainersNameOrIDFloatingIpsIPBindResponse struct {

@@ -50,26 +50,18 @@ func (e *GETDecodeAuthorizationMessageVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDecodeAuthorizationMessageQueryParams struct {
+type GETDecodeAuthorizationMessageRequest struct {
 	Action GETDecodeAuthorizationMessageActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The encoded message that was returned with the response.
-	EncodedMessage string                                   `queryParam:"style=form,explode=true,name=EncodedMessage"`
-	Version        GETDecodeAuthorizationMessageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDecodeAuthorizationMessageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDecodeAuthorizationMessageRequest struct {
-	QueryParams GETDecodeAuthorizationMessageQueryParams
-	Headers     GETDecodeAuthorizationMessageHeaders
+	EncodedMessage    string                                   `queryParam:"style=form,explode=true,name=EncodedMessage"`
+	Version           GETDecodeAuthorizationMessageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDecodeAuthorizationMessageResponse struct {

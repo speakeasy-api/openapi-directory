@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelChangeSetQueryParams struct {
-	// Required. The catalog related to the request. Fixed value: <code>AWSMarketplace</code>.
-	Catalog string `queryParam:"style=form,explode=true,name=catalog"`
-	// Required. The unique identifier of the <code>StartChangeSet</code> request that you want to cancel.
-	ChangeSetID string `queryParam:"style=form,explode=true,name=changeSetId"`
-}
-
-type CancelChangeSetHeaders struct {
+type CancelChangeSetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type CancelChangeSetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelChangeSetRequest struct {
-	QueryParams CancelChangeSetQueryParams
-	Headers     CancelChangeSetHeaders
+	// Required. The catalog related to the request. Fixed value: <code>AWSMarketplace</code>.
+	Catalog string `queryParam:"style=form,explode=true,name=catalog"`
+	// Required. The unique identifier of the <code>StartChangeSet</code> request that you want to cancel.
+	ChangeSetID string `queryParam:"style=form,explode=true,name=changeSetId"`
 }
 
 type CancelChangeSetResponse struct {

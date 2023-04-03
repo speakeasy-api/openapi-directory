@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeJobTemplatePathParams struct {
-	// The unique identifier of the job template.
-	JobTemplateID string `pathParam:"style=simple,explode=false,name=jobTemplateId"`
-}
-
-type DescribeJobTemplateHeaders struct {
+type DescribeJobTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeJobTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeJobTemplateRequest struct {
-	PathParams DescribeJobTemplatePathParams
-	Headers    DescribeJobTemplateHeaders
+	// The unique identifier of the job template.
+	JobTemplateID string `pathParam:"style=simple,explode=false,name=jobTemplateId"`
 }
 
 type DescribeJobTemplateResponse struct {

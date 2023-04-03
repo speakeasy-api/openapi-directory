@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetRandomProductsPathParams struct {
+type CatalogGetRandomProductsRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetRandomProductsRequest struct {
-	PathParams CatalogGetRandomProductsPathParams
 }
 
 type CatalogGetRandomProductsResponse struct {

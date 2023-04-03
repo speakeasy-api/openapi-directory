@@ -69,7 +69,14 @@ func (e *ListWorkflowsStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListWorkflowsQueryParams struct {
+type ListWorkflowsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The name of the application configured in Application Discovery Service.
 	AdsApplicationConfigurationName *string `queryParam:"style=form,explode=true,name=adsApplicationConfigurationName"`
 	// The maximum number of results that can be returned.
@@ -82,21 +89,6 @@ type ListWorkflowsQueryParams struct {
 	Status *ListWorkflowsStatusEnum `queryParam:"style=form,explode=true,name=status"`
 	// The ID of the template.
 	TemplateID *string `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type ListWorkflowsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListWorkflowsRequest struct {
-	QueryParams ListWorkflowsQueryParams
-	Headers     ListWorkflowsHeaders
 }
 
 type ListWorkflowsResponse struct {

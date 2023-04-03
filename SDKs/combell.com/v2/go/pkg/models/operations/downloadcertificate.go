@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DownloadCertificatePathParams struct {
-	// Automatically added
-	Sha1Fingerprint string `pathParam:"style=simple,explode=false,name=sha1Fingerprint"`
-}
-
-type DownloadCertificateQueryParams struct {
+type DownloadCertificateRequest struct {
 	// The file format of the returned file stream:
 	// <ul><li>PFX: Also known as PKCS #12, is a single, password protected certificate archive that contains the entire certificate chain plus the matching private key.</li></ul>
 	FileFormat shared.SslCertificateFileFormatEnum `queryParam:"style=form,explode=true,name=file_format"`
 	// The password used to protect the certificate file.<br />
 	Password string `queryParam:"style=form,explode=true,name=password"`
+	// Automatically added
+	Sha1FingerprintPathParameter string `pathParam:"style=simple,explode=false,name=sha1Fingerprint"`
 	// The SHA-1 fingerprint of the certificate.
-	Sha1Fingerprint string `queryParam:"style=form,explode=true,name=sha1_fingerprint"`
-}
-
-type DownloadCertificateRequest struct {
-	PathParams  DownloadCertificatePathParams
-	QueryParams DownloadCertificateQueryParams
+	Sha1FingerprintQueryParameter string `queryParam:"style=form,explode=true,name=sha1_fingerprint"`
 }
 
 type DownloadCertificateResponse struct {

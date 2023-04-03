@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Hpcer - Class XII Passing Certificate
 // API to verify Class XII Passing Certificate.
-func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequest) (*operations.HpcerResponse, error) {
+func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequestBody, security operations.HpcerSecurity) (*operations.HpcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hpcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Hpcer(ctx context.Context, request operations.HpcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

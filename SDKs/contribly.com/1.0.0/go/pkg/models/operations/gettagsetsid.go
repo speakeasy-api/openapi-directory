@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsetsIDPathParams struct {
+type GetTagsetsIDRequest struct {
 	// Id of the tag set to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTagsetsIDRequest struct {
-	PathParams GetTagsetsIDPathParams
 }
 
 type GetTagsetsIDResponse struct {

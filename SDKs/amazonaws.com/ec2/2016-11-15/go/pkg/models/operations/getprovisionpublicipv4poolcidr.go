@@ -50,7 +50,7 @@ func (e *GETProvisionPublicIpv4PoolCidrVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETProvisionPublicIpv4PoolCidrQueryParams struct {
+type GETProvisionPublicIpv4PoolCidrRequest struct {
 	Action GETProvisionPublicIpv4PoolCidrActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -59,23 +59,15 @@ type GETProvisionPublicIpv4PoolCidrQueryParams struct {
 	// The netmask length of the CIDR you would like to allocate to the public IPv4 pool.
 	NetmaskLength int64 `queryParam:"style=form,explode=true,name=NetmaskLength"`
 	// The ID of the public IPv4 pool you would like to use for this CIDR.
-	PoolID  string                                    `queryParam:"style=form,explode=true,name=PoolId"`
-	Version GETProvisionPublicIpv4PoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETProvisionPublicIpv4PoolCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETProvisionPublicIpv4PoolCidrRequest struct {
-	QueryParams GETProvisionPublicIpv4PoolCidrQueryParams
-	Headers     GETProvisionPublicIpv4PoolCidrHeaders
+	PoolID            string                                    `queryParam:"style=form,explode=true,name=PoolId"`
+	Version           GETProvisionPublicIpv4PoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETProvisionPublicIpv4PoolCidrResponse struct {

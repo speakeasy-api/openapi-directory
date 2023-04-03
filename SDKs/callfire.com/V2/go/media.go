@@ -35,7 +35,7 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CreateMedia - Create media
 // Uploads media file to account, acceptable media formats: bmp, gif, jpg, m4a, mp3, mp4, png, wav
-func (s *media) CreateMedia(ctx context.Context, request operations.CreateMediaRequest) (*operations.CreateMediaResponse, error) {
+func (s *media) CreateMedia(ctx context.Context, request operations.CreateMediaRequestBody, security operations.CreateMediaSecurity) (*operations.CreateMediaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/media"
 
@@ -54,7 +54,7 @@ func (s *media) CreateMedia(ctx context.Context, request operations.CreateMediaR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,7 +108,7 @@ func (s *media) CreateMedia(ctx context.Context, request operations.CreateMediaR
 
 // FindMedia - Find media
 // Find media files created by user
-func (s *media) FindMedia(ctx context.Context, request operations.FindMediaRequest) (*operations.FindMediaResponse, error) {
+func (s *media) FindMedia(ctx context.Context, request operations.FindMediaRequest, security operations.FindMediaSecurity) (*operations.FindMediaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/media"
 
@@ -117,11 +117,11 @@ func (s *media) FindMedia(ctx context.Context, request operations.FindMediaReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -175,20 +175,20 @@ func (s *media) FindMedia(ctx context.Context, request operations.FindMediaReque
 
 // GetMedia - Get a specific media
 // Get media resource by id
-func (s *media) GetMedia(ctx context.Context, request operations.GetMediaRequest) (*operations.GetMediaResponse, error) {
+func (s *media) GetMedia(ctx context.Context, request operations.GetMediaRequest, security operations.GetMediaSecurity) (*operations.GetMediaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/media/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,16 +242,16 @@ func (s *media) GetMedia(ctx context.Context, request operations.GetMediaRequest
 
 // GetMediaData - Download media by extension
 // Download a media file. Available types of files: bmp, gif, jpg, m4a, mp3, mp4, png, wav. Content type in response depends on 'extension' parameter, e.g. image/jpeg, image/png, audio/mp3, etc
-func (s *media) GetMediaData(ctx context.Context, request operations.GetMediaDataRequest) (*operations.GetMediaDataResponse, error) {
+func (s *media) GetMediaData(ctx context.Context, request operations.GetMediaDataRequest, security operations.GetMediaDataSecurity) (*operations.GetMediaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{id}.{extension}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/media/{id}.{extension}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -353,16 +353,16 @@ func (s *media) GetMediaData(ctx context.Context, request operations.GetMediaDat
 
 // GetMediaDataBinary - Download a MP3 media
 // Download a MP3 media, endpoint returns application/binary content-type
-func (s *media) GetMediaDataBinary(ctx context.Context, request operations.GetMediaDataBinaryRequest) (*operations.GetMediaDataBinaryResponse, error) {
+func (s *media) GetMediaDataBinary(ctx context.Context, request operations.GetMediaDataBinaryRequest, security operations.GetMediaDataBinarySecurity) (*operations.GetMediaDataBinaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{id}/file", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/media/{id}/file", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -408,16 +408,16 @@ func (s *media) GetMediaDataBinary(ctx context.Context, request operations.GetMe
 
 // GetMediaDataByKey - Download media by extension
 // Download a media file. Available types of files: bmp, gif, jpg, m4a, mp3, mp4, png, wav. Content type in response depends on 'extension' parameter, e.g. image/jpeg, image/png, audio/mp3, etc
-func (s *media) GetMediaDataByKey(ctx context.Context, request operations.GetMediaDataByKeyRequest) (*operations.GetMediaDataByKeyResponse, error) {
+func (s *media) GetMediaDataByKey(ctx context.Context, request operations.GetMediaDataByKeyRequest, security operations.GetMediaDataByKeySecurity) (*operations.GetMediaDataByKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/public/{key}.{extension}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/media/public/{key}.{extension}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -9,24 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestNodeCommentsPathParams struct {
-	// Node ID
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type RequestNodeCommentsQueryParams struct {
-	// Hide deleted comments (default: false)
-	HideDeleted *bool `queryParam:"style=form,explode=true,name=hide_deleted"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
 // RequestNodeCommentsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestNodeCommentsXSdsDateFormatEnum string
 
@@ -60,17 +42,23 @@ func (e *RequestNodeCommentsXSdsDateFormatEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type RequestNodeCommentsHeaders struct {
+type RequestNodeCommentsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestNodeCommentsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestNodeCommentsRequest struct {
-	PathParams  RequestNodeCommentsPathParams
-	QueryParams RequestNodeCommentsQueryParams
-	Headers     RequestNodeCommentsHeaders
+	// Hide deleted comments (default: false)
+	HideDeleted *bool `queryParam:"style=form,explode=true,name=hide_deleted"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Node ID
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
 }
 
 type RequestNodeCommentsResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetKeyQueryParams struct {
-	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
 type GetKeyRequest struct {
-	QueryParams GetKeyQueryParams
+	Token *string `queryParam:"style=form,explode=true,name=token"`
 }
 
 type GetKeyResponse struct {

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Nbcer - NAC/Birth/Death Certificate
 // API to verify NAC/Birth/Death Certificate.
-func (s *apIs) Nbcer(ctx context.Context, request operations.NbcerRequest) (*operations.NbcerResponse, error) {
+func (s *apIs) Nbcer(ctx context.Context, request operations.NbcerRequestBody, security operations.NbcerSecurity) (*operations.NbcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/nbcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Nbcer(ctx context.Context, request operations.NbcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

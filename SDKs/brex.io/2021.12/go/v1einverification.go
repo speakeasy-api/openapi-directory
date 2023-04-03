@@ -34,7 +34,7 @@ func newV1EinVerification(defaultClient, securityClient HTTPClient, serverURL, l
 
 // EinVerificationBasic - Verifies an EIN number
 // Performs a basic verification check of a given EIN tax number.
-func (s *v1EinVerification) EinVerificationBasic(ctx context.Context, request operations.EinVerificationBasicRequest) (*operations.EinVerificationBasicResponse, error) {
+func (s *v1EinVerification) EinVerificationBasic(ctx context.Context, request operations.EinVerificationBasicRequest, security operations.EinVerificationBasicSecurity) (*operations.EinVerificationBasicResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/ein-verification/basic-check"
 
@@ -43,11 +43,11 @@ func (s *v1EinVerification) EinVerificationBasic(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *v1EinVerification) EinVerificationBasic(ctx context.Context, request op
 
 // EinVerificationComprehensive - Verifies EIN number and retrieves company data
 // Comprehensive verification of a given EIN number. Additionally to the basic verification it will lookup company details
-func (s *v1EinVerification) EinVerificationComprehensive(ctx context.Context, request operations.EinVerificationComprehensiveRequest) (*operations.EinVerificationComprehensiveResponse, error) {
+func (s *v1EinVerification) EinVerificationComprehensive(ctx context.Context, request operations.EinVerificationComprehensiveRequest, security operations.EinVerificationComprehensiveSecurity) (*operations.EinVerificationComprehensiveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/ein-verification/comprehensive-check"
 
@@ -102,11 +102,11 @@ func (s *v1EinVerification) EinVerificationComprehensive(ctx context.Context, re
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *v1EinVerification) EinVerificationComprehensive(ctx context.Context, re
 
 // EinVerificationLookup - Retrieves a list of EIN numbers
 // Lookup EIN number for a company by its company name
-func (s *v1EinVerification) EinVerificationLookup(ctx context.Context, request operations.EinVerificationLookupRequest) (*operations.EinVerificationLookupResponse, error) {
+func (s *v1EinVerification) EinVerificationLookup(ctx context.Context, request operations.EinVerificationLookupRequest, security operations.EinVerificationLookupSecurity) (*operations.EinVerificationLookupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/ein-verification/lookup"
 
@@ -161,11 +161,11 @@ func (s *v1EinVerification) EinVerificationLookup(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

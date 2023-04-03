@@ -37,14 +37,14 @@ func newTeamMemberships(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns the complete team membership record for a single team membership.
 func (s *teamMemberships) GetTeamMembership(ctx context.Context, request operations.GetTeamMembershipRequest) (*operations.GetTeamMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team_memberships/{team_membership_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/team_memberships/{team_membership_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -111,7 +111,7 @@ func (s *teamMemberships) GetTeamMemberships(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,14 +171,14 @@ func (s *teamMemberships) GetTeamMemberships(ctx context.Context, request operat
 // Returns the compact team memberships for the team.
 func (s *teamMemberships) GetTeamMembershipsForTeam(ctx context.Context, request operations.GetTeamMembershipsForTeamRequest) (*operations.GetTeamMembershipsForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/team_memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/team_memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -238,14 +238,14 @@ func (s *teamMemberships) GetTeamMembershipsForTeam(ctx context.Context, request
 // Returns the compact team membership records for the user.
 func (s *teamMemberships) GetTeamMembershipsForUser(ctx context.Context, request operations.GetTeamMembershipsForUserRequest) (*operations.GetTeamMembershipsForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/team_memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/team_memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

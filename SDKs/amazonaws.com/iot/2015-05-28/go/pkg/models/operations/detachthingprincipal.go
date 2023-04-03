@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DetachThingPrincipalPathParams struct {
-	// The name of the thing.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type DetachThingPrincipalHeaders struct {
+type DetachThingPrincipalRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,13 +14,10 @@ type DetachThingPrincipalHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the thing.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 	// If the principal is a certificate, this value must be ARN of the certificate. If the principal is an Amazon Cognito identity, this value must be the ID of the Amazon Cognito identity.
 	XAmznPrincipal string `header:"style=simple,explode=false,name=x-amzn-principal"`
-}
-
-type DetachThingPrincipalRequest struct {
-	PathParams DetachThingPrincipalPathParams
-	Headers    DetachThingPrincipalHeaders
 }
 
 type DetachThingPrincipalResponse struct {

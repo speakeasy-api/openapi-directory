@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteResourcePolicyPathParams struct {
-	// The Amazon Resource Name (ARN) of the bot or bot alias that has the resource policy attached.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type DeleteResourcePolicyQueryParams struct {
-	// <p>The identifier of the revision to edit. If this ID doesn't match the current revision number, Amazon Lex returns an exception</p> <p>If you don't specify a revision ID, Amazon Lex will delete the current policy.</p>
-	ExpectedRevisionID *string `queryParam:"style=form,explode=true,name=expectedRevisionId"`
-}
-
-type DeleteResourcePolicyHeaders struct {
+type DeleteResourcePolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteResourcePolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteResourcePolicyRequest struct {
-	PathParams  DeleteResourcePolicyPathParams
-	QueryParams DeleteResourcePolicyQueryParams
-	Headers     DeleteResourcePolicyHeaders
+	// <p>The identifier of the revision to edit. If this ID doesn't match the current revision number, Amazon Lex returns an exception</p> <p>If you don't specify a revision ID, Amazon Lex will delete the current policy.</p>
+	ExpectedRevisionID *string `queryParam:"style=form,explode=true,name=expectedRevisionId"`
+	// The Amazon Resource Name (ARN) of the bot or bot alias that has the resource policy attached.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
 }
 
 type DeleteResourcePolicyResponse struct {

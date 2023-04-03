@@ -50,26 +50,18 @@ func (e *GETVerifyDomainIdentityVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETVerifyDomainIdentityQueryParams struct {
+type GETVerifyDomainIdentityRequest struct {
 	Action GETVerifyDomainIdentityActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The domain to be verified.
-	Domain  string                             `queryParam:"style=form,explode=true,name=Domain"`
-	Version GETVerifyDomainIdentityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETVerifyDomainIdentityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETVerifyDomainIdentityRequest struct {
-	QueryParams GETVerifyDomainIdentityQueryParams
-	Headers     GETVerifyDomainIdentityHeaders
+	Domain            string                             `queryParam:"style=form,explode=true,name=Domain"`
+	Version           GETVerifyDomainIdentityVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETVerifyDomainIdentityResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTDeleteQueuedReservedInstancesVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTDeleteQueuedReservedInstancesQueryParams struct {
-	Action  POSTDeleteQueuedReservedInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteQueuedReservedInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteQueuedReservedInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteQueuedReservedInstancesRequest struct {
-	QueryParams POSTDeleteQueuedReservedInstancesQueryParams
-	Headers     POSTDeleteQueuedReservedInstancesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteQueuedReservedInstancesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTDeleteQueuedReservedInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteQueuedReservedInstancesResponse struct {

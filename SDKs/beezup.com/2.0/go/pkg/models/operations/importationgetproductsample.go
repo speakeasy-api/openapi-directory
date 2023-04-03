@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationGetProductSamplePathParams struct {
+type ImportationGetProductSampleRequest struct {
 	// The execution identifier of you catalog importation
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Index of the product sample. Starting from 0 to 99.
 	ProductSampleIndex int `pathParam:"style=simple,explode=false,name=productSampleIndex"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationGetProductSampleRequest struct {
-	PathParams ImportationGetProductSamplePathParams
 }
 
 type ImportationGetProductSampleResponse struct {

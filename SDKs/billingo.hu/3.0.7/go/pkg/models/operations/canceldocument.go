@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelDocumentPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type CancelDocumentRequest struct {
-	PathParams CancelDocumentPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type CancelDocumentResponse struct {

@@ -50,7 +50,7 @@ func (e *GETCreateClientVpnRouteVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateClientVpnRouteQueryParams struct {
+type GETCreateClientVpnRouteRequest struct {
 	Action GETCreateClientVpnRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -65,21 +65,13 @@ type GETCreateClientVpnRouteQueryParams struct {
 	// <p>The ID of the subnet through which you want to route traffic. The specified subnet must be an existing target network of the Client VPN endpoint.</p> <p>Alternatively, if you're adding a route for the local network, specify <code>local</code>.</p>
 	TargetVpcSubnetID string                             `queryParam:"style=form,explode=true,name=TargetVpcSubnetId"`
 	Version           GETCreateClientVpnRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateClientVpnRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateClientVpnRouteRequest struct {
-	QueryParams GETCreateClientVpnRouteQueryParams
-	Headers     GETCreateClientVpnRouteHeaders
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateClientVpnRouteResponse struct {

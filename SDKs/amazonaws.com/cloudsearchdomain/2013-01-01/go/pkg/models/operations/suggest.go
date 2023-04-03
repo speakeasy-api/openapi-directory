@@ -51,30 +51,22 @@ func (e *SuggestPrettyEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SuggestQueryParams struct {
-	Format SuggestFormatEnum `queryParam:"style=form,explode=true,name=format"`
-	Pretty SuggestPrettyEnum `queryParam:"style=form,explode=true,name=pretty"`
+type SuggestRequest struct {
+	XAmzAlgorithm     *string           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	Format            SuggestFormatEnum `queryParam:"style=form,explode=true,name=format"`
+	Pretty            SuggestPrettyEnum `queryParam:"style=form,explode=true,name=pretty"`
 	// Specifies the string for which you want to get suggestions.
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// Specifies the maximum number of suggestions to return.
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
 	// Specifies the name of the suggester to use to find suggested matches.
 	Suggester string `queryParam:"style=form,explode=true,name=suggester"`
-}
-
-type SuggestHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type SuggestRequest struct {
-	QueryParams SuggestQueryParams
-	Headers     SuggestHeaders
 }
 
 type SuggestResponse struct {

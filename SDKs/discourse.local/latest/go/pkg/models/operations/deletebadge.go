@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type DeleteBadgePathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeleteBadgeRequest struct {
-	PathParams DeleteBadgePathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteBadgeResponse struct {

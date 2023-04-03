@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAssessmentReportURLPathParams struct {
-	//  The unique identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-	//  The unique identifier for the assessment report.
-	AssessmentReportID string `pathParam:"style=simple,explode=false,name=assessmentReportId"`
-}
-
-type GetAssessmentReportURLHeaders struct {
+type GetAssessmentReportURLRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetAssessmentReportURLHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAssessmentReportURLRequest struct {
-	PathParams GetAssessmentReportURLPathParams
-	Headers    GetAssessmentReportURLHeaders
+	//  The unique identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
+	//  The unique identifier for the assessment report.
+	AssessmentReportID string `pathParam:"style=simple,explode=false,name=assessmentReportId"`
 }
 
 type GetAssessmentReportURLResponse struct {

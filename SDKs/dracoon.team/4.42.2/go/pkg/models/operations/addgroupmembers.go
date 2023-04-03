@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddGroupMembersPathParams struct {
-	// Group ID
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
 // AddGroupMembersXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type AddGroupMembersXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *AddGroupMembersXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AddGroupMembersHeaders struct {
+type AddGroupMembersRequest struct {
+	ChangeGroupMembersRequest shared.ChangeGroupMembersRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *AddGroupMembersXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type AddGroupMembersRequest struct {
-	PathParams AddGroupMembersPathParams
-	Headers    AddGroupMembersHeaders
-	Request    shared.ChangeGroupMembersRequest `request:"mediaType=application/json"`
+	// Group ID
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type AddGroupMembersResponse struct {

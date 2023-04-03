@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetStreamingDistribution20200531PathParams struct {
+type GetStreamingDistribution20200531Request struct {
 	// The streaming distribution's ID.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetStreamingDistribution20200531Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetStreamingDistribution20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStreamingDistribution20200531Request struct {
-	PathParams GetStreamingDistribution20200531PathParams
-	Headers    GetStreamingDistribution20200531Headers
 }
 
 type GetStreamingDistribution20200531Response struct {

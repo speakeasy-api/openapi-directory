@@ -50,7 +50,7 @@ func (e *GETGETAttributesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETAttributesQueryParams struct {
+type GETGETAttributesRequest struct {
 	AWSAccessKeyID string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETGETAttributesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The names of the attributes.
@@ -66,10 +66,6 @@ type GETGETAttributesQueryParams struct {
 	SignatureVersion string                      `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                      `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETGETAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETAttributesRequest struct {
-	QueryParams GETGETAttributesQueryParams
 }
 
 type GETGETAttributesResponse struct {

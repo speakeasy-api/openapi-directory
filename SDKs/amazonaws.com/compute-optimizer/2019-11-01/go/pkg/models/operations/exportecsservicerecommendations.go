@@ -30,20 +30,16 @@ func (e *ExportECSServiceRecommendationsXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ExportECSServiceRecommendationsHeaders struct {
-	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ExportECSServiceRecommendationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ExportECSServiceRecommendationsRequest struct {
-	Headers ExportECSServiceRecommendationsHeaders
-	Request shared.ExportECSServiceRecommendationsRequest `request:"mediaType=application/json"`
+	ExportECSServiceRecommendationsRequest shared.ExportECSServiceRecommendationsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                         *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                               *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                      *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                             ExportECSServiceRecommendationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ExportECSServiceRecommendationsResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDocumentClassifiersQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDocumentClassifiersXAmzTargetEnum
 type ListDocumentClassifiersXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDocumentClassifiersXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type ListDocumentClassifiersHeaders struct {
+type ListDocumentClassifiersRequest struct {
+	ListDocumentClassifiersRequest shared.ListDocumentClassifiersRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                               `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDocumentClassifiersHeaders struct {
 	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDocumentClassifiersXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDocumentClassifiersRequest struct {
-	QueryParams ListDocumentClassifiersQueryParams
-	Headers     ListDocumentClassifiersHeaders
-	Request     shared.ListDocumentClassifiersRequest `request:"mediaType=application/json"`
 }
 
 type ListDocumentClassifiersResponse struct {

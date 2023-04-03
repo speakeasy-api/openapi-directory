@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPageRankLostPathParams struct {
+type GetPageRankLostRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Project's identifier
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetPageRankLostRequest struct {
-	PathParams GetPageRankLostPathParams
 }
 
 type GetPageRankLostResponse struct {

@@ -13,10 +13,6 @@ type SentimentAnalysisRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type SentimentAnalysisRequest struct {
-	Request *SentimentAnalysisRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type SentimentAnalysisResponse struct {
 	ContentType string
 	StatusCode  int

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetTopicByExternalIDPathParams struct {
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
-}
-
 type GetTopicByExternalIDRequest struct {
-	PathParams GetTopicByExternalIDPathParams
+	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
 }
 
 type GetTopicByExternalIDResponse struct {

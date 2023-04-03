@@ -35,11 +35,11 @@ func newFolders(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // FoldersAdd - Create Folder
 // Create Folder
-func (s *folders) FoldersAdd(ctx context.Context, request operations.FoldersAddRequest) (*operations.FoldersAddResponse, error) {
+func (s *folders) FoldersAdd(ctx context.Context, request operations.FoldersAddRequest, security operations.FoldersAddSecurity) (*operations.FoldersAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/folders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateFolderRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,13 +54,13 @@ func (s *folders) FoldersAdd(ctx context.Context, request operations.FoldersAddR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,11 +156,11 @@ func (s *folders) FoldersAdd(ctx context.Context, request operations.FoldersAddR
 
 // FoldersCopy - Copy Folder
 // Copy Folder
-func (s *folders) FoldersCopy(ctx context.Context, request operations.FoldersCopyRequest) (*operations.FoldersCopyResponse, error) {
+func (s *folders) FoldersCopy(ctx context.Context, request operations.FoldersCopyRequest, security operations.FoldersCopySecurity) (*operations.FoldersCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}/copy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}/copy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopyFolderRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,13 +175,13 @@ func (s *folders) FoldersCopy(ctx context.Context, request operations.FoldersCop
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -277,22 +277,22 @@ func (s *folders) FoldersCopy(ctx context.Context, request operations.FoldersCop
 
 // FoldersDelete - Delete Folder
 // Delete Folder
-func (s *folders) FoldersDelete(ctx context.Context, request operations.FoldersDeleteRequest) (*operations.FoldersDeleteResponse, error) {
+func (s *folders) FoldersDelete(ctx context.Context, request operations.FoldersDeleteRequest, security operations.FoldersDeleteSecurity) (*operations.FoldersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,22 +388,22 @@ func (s *folders) FoldersDelete(ctx context.Context, request operations.FoldersD
 
 // FoldersOne - Get Folder
 // Get Folder
-func (s *folders) FoldersOne(ctx context.Context, request operations.FoldersOneRequest) (*operations.FoldersOneResponse, error) {
+func (s *folders) FoldersOne(ctx context.Context, request operations.FoldersOneRequest, security operations.FoldersOneSecurity) (*operations.FoldersOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,11 +499,11 @@ func (s *folders) FoldersOne(ctx context.Context, request operations.FoldersOneR
 
 // FoldersUpdate - Rename or move Folder
 // Rename or move Folder
-func (s *folders) FoldersUpdate(ctx context.Context, request operations.FoldersUpdateRequest) (*operations.FoldersUpdateResponse, error) {
+func (s *folders) FoldersUpdate(ctx context.Context, request operations.FoldersUpdateRequest, security operations.FoldersUpdateSecurity) (*operations.FoldersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/folders/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateFolderRequestInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -518,13 +518,13 @@ func (s *folders) FoldersUpdate(ctx context.Context, request operations.FoldersU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -16,5 +16,4 @@ pkg/models/operations/epfsc.go
 pkg/models/operations/pecer.go
 pkg/models/operations/uncrd.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

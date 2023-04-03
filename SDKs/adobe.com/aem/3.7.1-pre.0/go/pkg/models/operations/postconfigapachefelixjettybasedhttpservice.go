@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostConfigApacheFelixJettyBasedHTTPServiceQueryParams struct {
+type PostConfigApacheFelixJettyBasedHTTPServiceRequest struct {
 	OrgApacheFelixHTTPSClientcertificate             *string `queryParam:"style=form,explode=true,name=org.apache.felix.https.clientcertificate"`
 	OrgApacheFelixHTTPSClientcertificateAtTypeHint   *string `queryParam:"style=form,explode=true,name=org.apache.felix.https.clientcertificate@TypeHint"`
 	OrgApacheFelixHTTPSEnable                        *bool   `queryParam:"style=form,explode=true,name=org.apache.felix.https.enable"`
@@ -27,10 +27,6 @@ type PostConfigApacheFelixJettyBasedHTTPServiceQueryParams struct {
 	OrgApacheFelixHTTPSTruststoreAtTypeHint          *string `queryParam:"style=form,explode=true,name=org.apache.felix.https.truststore@TypeHint"`
 	OrgOsgiServiceHTTPPortSecure                     *string `queryParam:"style=form,explode=true,name=org.osgi.service.http.port.secure"`
 	OrgOsgiServiceHTTPPortSecureAtTypeHint           *string `queryParam:"style=form,explode=true,name=org.osgi.service.http.port.secure@TypeHint"`
-}
-
-type PostConfigApacheFelixJettyBasedHTTPServiceRequest struct {
-	QueryParams PostConfigApacheFelixJettyBasedHTTPServiceQueryParams
 }
 
 type PostConfigApacheFelixJettyBasedHTTPServiceResponse struct {

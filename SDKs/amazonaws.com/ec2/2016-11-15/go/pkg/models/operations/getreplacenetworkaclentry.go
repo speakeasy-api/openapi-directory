@@ -86,7 +86,7 @@ func (e *GETReplaceNetworkACLEntryVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETReplaceNetworkACLEntryQueryParams struct {
+type GETReplaceNetworkACLEntryRequest struct {
 	Action GETReplaceNetworkACLEntryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IPv4 network range to allow or deny, in CIDR notation (for example <code>172.16.0.0/24</code>).
 	CidrBlock *string `queryParam:"style=form,explode=true,name=CidrBlock"`
@@ -107,23 +107,15 @@ type GETReplaceNetworkACLEntryQueryParams struct {
 	// Indicates whether to allow or deny the traffic that matches the rule.
 	RuleAction GETReplaceNetworkACLEntryRuleActionEnum `queryParam:"style=form,explode=true,name=RuleAction"`
 	// The rule number of the entry to replace.
-	RuleNumber int64                                `queryParam:"style=form,explode=true,name=RuleNumber"`
-	Version    GETReplaceNetworkACLEntryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReplaceNetworkACLEntryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReplaceNetworkACLEntryRequest struct {
-	QueryParams GETReplaceNetworkACLEntryQueryParams
-	Headers     GETReplaceNetworkACLEntryHeaders
+	RuleNumber        int64                                `queryParam:"style=form,explode=true,name=RuleNumber"`
+	Version           GETReplaceNetworkACLEntryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReplaceNetworkACLEntryResponse struct {

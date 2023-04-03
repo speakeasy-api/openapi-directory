@@ -35,14 +35,14 @@ func newSalesInvoices(defaultClient, securityClient HTTPClient, serverURL, langu
 // SalesInvoicesDelete - Removes an existing Sales Invoice.
 func (s *salesInvoices) SalesInvoicesDelete(ctx context.Context, request operations.SalesInvoicesDeleteRequest) (*operations.SalesInvoicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *salesInvoices) SalesInvoicesGet(ctx context.Context) (*operations.Sales
 }
 
 // SalesInvoicesPost - Creates a new Sales Invoice.
-func (s *salesInvoices) SalesInvoicesPost(ctx context.Context, request operations.SalesInvoicesPostRequest) (*operations.SalesInvoicesPostResponse, error) {
+func (s *salesInvoices) SalesInvoicesPost(ctx context.Context, request shared.SalesInvoiceCreditNoteDto) (*operations.SalesInvoicesPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesInvoices"
 
@@ -181,7 +181,7 @@ func (s *salesInvoices) SalesInvoicesPost(ctx context.Context, request operation
 }
 
 // SalesInvoicesPostCreateSaleInvoiceWithGeneratingReference - Creates a new Sale Invoice with auto generating reference.
-func (s *salesInvoices) SalesInvoicesPostCreateSaleInvoiceWithGeneratingReference(ctx context.Context, request operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceRequest) (*operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse, error) {
+func (s *salesInvoices) SalesInvoicesPostCreateSaleInvoiceWithGeneratingReference(ctx context.Context, request shared.SalesInvoiceCreditNoteDto) (*operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesInvoices/createSaleInvoiceWithGeneratingReference"
 
@@ -235,7 +235,7 @@ func (s *salesInvoices) SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenc
 }
 
 // SalesInvoicesProcessBatch - Processes a batch of Sales Invoices.
-func (s *salesInvoices) SalesInvoicesProcessBatch(ctx context.Context, request operations.SalesInvoicesProcessBatchRequest) (*operations.SalesInvoicesProcessBatchResponse, error) {
+func (s *salesInvoices) SalesInvoicesProcessBatch(ctx context.Context, request []shared.BatchItemSalesInvoiceCreditNoteDto) (*operations.SalesInvoicesProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesInvoices/batch"
 
@@ -291,9 +291,9 @@ func (s *salesInvoices) SalesInvoicesProcessBatch(ctx context.Context, request o
 // SalesInvoicesPut - Updates an existing Sales Invoice.
 func (s *salesInvoices) SalesInvoicesPut(ctx context.Context, request operations.SalesInvoicesPutRequest) (*operations.SalesInvoicesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesInvoiceCreditNoteDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -345,7 +345,7 @@ func (s *salesInvoices) SalesInvoicesPut(ctx context.Context, request operations
 // GetV1SalesInvoicesID - Returns information about a single Sales Invoice.
 func (s *salesInvoices) GetV1SalesInvoicesID(ctx context.Context, request operations.GetV1SalesInvoicesIDRequest) (*operations.GetV1SalesInvoicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DevicesRegisterUserForDeviceSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DevicesRegisterUserForDevicePathParams struct {
-	// The ID of the user
-	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DevicesRegisterUserForDeviceRequestBody - The information for a single iOS device
@@ -37,10 +31,10 @@ type DevicesRegisterUserForDeviceRequestBody struct {
 }
 
 type DevicesRegisterUserForDeviceRequest struct {
-	PathParams DevicesRegisterUserForDevicePathParams
 	// The device info.
-	Request  DevicesRegisterUserForDeviceRequestBody `request:"mediaType=application/json"`
-	Security DevicesRegisterUserForDeviceSecurity
+	RequestBody DevicesRegisterUserForDeviceRequestBody `request:"mediaType=application/json"`
+	// The ID of the user
+	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type DevicesRegisterUserForDevice404ApplicationJSONCodeEnum string

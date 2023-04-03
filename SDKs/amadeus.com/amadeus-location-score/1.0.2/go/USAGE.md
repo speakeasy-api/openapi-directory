@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.GetCategoryRatedAreasRequest{
-        QueryParams: operations.GetCategoryRatedAreasQueryParams{
-            Latitude: 5488.14,
-            Longitude: 5928.45,
-        },
+        Latitude: 5488.14,
+        Longitude: 5928.45,
     }
 
     ctx := context.Background()

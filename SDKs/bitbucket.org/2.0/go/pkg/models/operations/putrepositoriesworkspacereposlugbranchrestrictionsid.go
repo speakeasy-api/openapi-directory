@@ -8,12 +8,14 @@ import (
 )
 
 type PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDPathParams struct {
+type PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest struct {
+	// The new version of the existing rule
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The restriction rule's id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// This can either be the repository slug or the UUID of the repository,
@@ -24,13 +26,6 @@ type PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest struct {
-	PathParams PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDPathParams
-	// The new version of the existing rule
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity
 }
 
 type PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse struct {

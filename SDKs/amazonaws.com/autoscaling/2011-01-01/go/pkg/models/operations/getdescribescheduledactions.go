@@ -51,7 +51,7 @@ func (e *GETDescribeScheduledActionsVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDescribeScheduledActionsQueryParams struct {
+type GETDescribeScheduledActionsRequest struct {
 	Action GETDescribeScheduledActionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName *string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -64,23 +64,15 @@ type GETDescribeScheduledActionsQueryParams struct {
 	// <p>The names of one or more scheduled actions. If you omit this property, all scheduled actions are described. If you specify an unknown scheduled action, it is ignored with no error.</p> <p>Array Members: Maximum number of 50 actions.</p>
 	ScheduledActionNames []string `queryParam:"style=form,explode=true,name=ScheduledActionNames"`
 	// The earliest scheduled start time to return. If scheduled action names are provided, this property is ignored.
-	StartTime *time.Time                             `queryParam:"style=form,explode=true,name=StartTime"`
-	Version   GETDescribeScheduledActionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeScheduledActionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeScheduledActionsRequest struct {
-	QueryParams GETDescribeScheduledActionsQueryParams
-	Headers     GETDescribeScheduledActionsHeaders
+	StartTime         *time.Time                             `queryParam:"style=form,explode=true,name=StartTime"`
+	Version           GETDescribeScheduledActionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeScheduledActionsResponse struct {

@@ -8,26 +8,17 @@ import (
 )
 
 type GetMerchantsMerchantIDAPICredentialsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetMerchantsMerchantIDAPICredentialsPathParams struct {
+type GetMerchantsMerchantIDAPICredentialsRequest struct {
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type GetMerchantsMerchantIDAPICredentialsQueryParams struct {
 	// The number of the page to fetch.
 	PageNumber *int `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The number of items to have on a page, maximum 100. The default is 10 items on a page.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetMerchantsMerchantIDAPICredentialsRequest struct {
-	PathParams  GetMerchantsMerchantIDAPICredentialsPathParams
-	QueryParams GetMerchantsMerchantIDAPICredentialsQueryParams
-	Security    GetMerchantsMerchantIDAPICredentialsSecurity
 }
 
 type GetMerchantsMerchantIDAPICredentialsResponse struct {

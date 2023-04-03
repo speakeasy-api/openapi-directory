@@ -36,7 +36,7 @@ func (s *invites) CreateInvite(ctx context.Context, request operations.CreateInv
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invites.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -48,7 +48,7 @@ func (s *invites) CreateInvite(ctx context.Context, request operations.CreateInv
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -87,9 +87,9 @@ func (s *invites) CreateInvite(ctx context.Context, request operations.CreateInv
 // InviteToTopic - Invite to topic
 func (s *invites) InviteToTopic(ctx context.Context, request operations.InviteToTopicRequest) (*operations.InviteToTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/invite.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/invite.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -101,7 +101,7 @@ func (s *invites) InviteToTopic(ctx context.Context, request operations.InviteTo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

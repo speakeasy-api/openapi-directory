@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeOrganizationConfigRuleStatusesQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeOrganizationConfigRuleStatusesXAmzTargetEnum
 type DescribeOrganizationConfigRuleStatusesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeOrganizationConfigRuleStatusesXAmzTargetEnum) UnmarshalJSON(dat
 	}
 }
 
-type DescribeOrganizationConfigRuleStatusesHeaders struct {
+type DescribeOrganizationConfigRuleStatusesRequest struct {
+	DescribeOrganizationConfigRuleStatusesRequest shared.DescribeOrganizationConfigRuleStatusesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                              `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeOrganizationConfigRuleStatusesHeaders struct {
 	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeOrganizationConfigRuleStatusesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeOrganizationConfigRuleStatusesRequest struct {
-	QueryParams DescribeOrganizationConfigRuleStatusesQueryParams
-	Headers     DescribeOrganizationConfigRuleStatusesHeaders
-	Request     shared.DescribeOrganizationConfigRuleStatusesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeOrganizationConfigRuleStatusesResponse struct {

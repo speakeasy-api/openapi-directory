@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPageResolutionsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListPageResolutionsXAmzTargetEnum
 type ListPageResolutionsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListPageResolutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListPageResolutionsHeaders struct {
+type ListPageResolutionsRequest struct {
+	ListPageResolutionsRequest shared.ListPageResolutionsRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListPageResolutionsHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListPageResolutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListPageResolutionsRequest struct {
-	QueryParams ListPageResolutionsQueryParams
-	Headers     ListPageResolutionsHeaders
-	Request     shared.ListPageResolutionsRequest `request:"mediaType=application/json"`
 }
 
 type ListPageResolutionsResponse struct {

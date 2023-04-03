@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRecommendationsPathParams struct {
+type ListRecommendationsRequest struct {
 	// The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html">CodeReview</a> object.
 	CodeReviewArn string `pathParam:"style=simple,explode=false,name=CodeReviewArn"`
-}
-
-type ListRecommendationsQueryParams struct {
 	// The maximum number of results that are returned per call. The default is 100.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListRecommendationsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type ListRecommendationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRecommendationsRequest struct {
-	PathParams  ListRecommendationsPathParams
-	QueryParams ListRecommendationsQueryParams
-	Headers     ListRecommendationsHeaders
 }
 
 type ListRecommendationsResponse struct {

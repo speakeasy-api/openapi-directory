@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelCatalogsQueryParams struct {
+type GetChannelCatalogsRequest struct {
 	// The store identifier
 	StoreID *string `queryParam:"style=form,explode=true,name=storeId"`
-}
-
-type GetChannelCatalogsRequest struct {
-	QueryParams GetChannelCatalogsQueryParams
 }
 
 type GetChannelCatalogsResponse struct {

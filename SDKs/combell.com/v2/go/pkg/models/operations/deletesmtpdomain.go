@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type DeleteSMTPDomainPathParams struct {
+type DeleteSMTPDomainRequest struct {
 	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 	// Smtp domain name.
 	Hostname string `pathParam:"style=simple,explode=false,name=hostname"`
-}
-
-type DeleteSMTPDomainQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
-type DeleteSMTPDomainRequest struct {
-	PathParams  DeleteSMTPDomainPathParams
-	QueryParams DeleteSMTPDomainQueryParams
 }
 
 type DeleteSMTPDomainResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2OrgsNameSettingsPathParams struct {
+type GetV2OrgsNameSettingsRequest struct {
 	// Name of the organization.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetV2OrgsNameSettingsRequest struct {
-	PathParams GetV2OrgsNameSettingsPathParams
 }
 
 type GetV2OrgsNameSettingsResponse struct {

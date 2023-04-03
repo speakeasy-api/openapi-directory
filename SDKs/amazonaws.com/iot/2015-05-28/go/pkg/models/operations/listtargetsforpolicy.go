@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTargetsForPolicyPathParams struct {
-	// The policy name.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type ListTargetsForPolicyQueryParams struct {
-	// A marker used to get the next set of results.
-	Marker *string `queryParam:"style=form,explode=true,name=marker"`
-	// The maximum number of results to return at one time.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListTargetsForPolicyHeaders struct {
+type ListTargetsForPolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListTargetsForPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTargetsForPolicyRequest struct {
-	PathParams  ListTargetsForPolicyPathParams
-	QueryParams ListTargetsForPolicyQueryParams
-	Headers     ListTargetsForPolicyHeaders
+	// A marker used to get the next set of results.
+	Marker *string `queryParam:"style=form,explode=true,name=marker"`
+	// The maximum number of results to return at one time.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
+	// The policy name.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 }
 
 type ListTargetsForPolicyResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionDataPathParams struct {
+type GetSubscriptionDataRequest struct {
 	// The identifier of the user to load.
 	//
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSubscriptionDataRequest struct {
-	PathParams GetSubscriptionDataPathParams
 }
 
 type GetSubscriptionDataResponse struct {

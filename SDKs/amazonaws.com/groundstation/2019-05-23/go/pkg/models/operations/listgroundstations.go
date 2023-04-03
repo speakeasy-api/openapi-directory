@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGroundStationsQueryParams struct {
-	// Maximum number of ground stations returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Next token that can be supplied in the next call to get the next page of ground stations.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// Satellite ID to retrieve on-boarded ground stations.
-	SatelliteID *string `queryParam:"style=form,explode=true,name=satelliteId"`
-}
-
-type ListGroundStationsHeaders struct {
+type ListGroundStationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListGroundStationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListGroundStationsRequest struct {
-	QueryParams ListGroundStationsQueryParams
-	Headers     ListGroundStationsHeaders
+	// Maximum number of ground stations returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Next token that can be supplied in the next call to get the next page of ground stations.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// Satellite ID to retrieve on-boarded ground stations.
+	SatelliteID *string `queryParam:"style=form,explode=true,name=satelliteId"`
 }
 
 type ListGroundStationsResponse struct {

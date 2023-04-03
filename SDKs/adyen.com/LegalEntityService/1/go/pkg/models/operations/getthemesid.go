@@ -8,18 +8,13 @@ import (
 )
 
 type GetThemesIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetThemesIDPathParams struct {
-	// The unique identifier of the theme
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetThemesIDRequest struct {
-	PathParams GetThemesIDPathParams
-	Security   GetThemesIDSecurity
+	// The unique identifier of the theme
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetThemesIDResponse struct {

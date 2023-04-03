@@ -20,11 +20,6 @@ type PostUserSample struct {
 	ReadOnly *bool `json:"read_only,omitempty"`
 }
 
-type PostUserRequest struct {
-	// Create User Payload
-	Request PostUserSample `request:"mediaType=application/json"`
-}
-
 type PostUserResponse struct {
 	ContentType string
 	StatusCode  int

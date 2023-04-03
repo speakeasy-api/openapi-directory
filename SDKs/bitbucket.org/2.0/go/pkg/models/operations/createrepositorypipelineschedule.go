@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type CreateRepositoryPipelineSchedulePathParams struct {
+type CreateRepositoryPipelineScheduleRequest struct {
+	// The schedule to create.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type CreateRepositoryPipelineScheduleRequest struct {
-	PathParams CreateRepositoryPipelineSchedulePathParams
-	// The schedule to create.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreateRepositoryPipelineScheduleResponse struct {

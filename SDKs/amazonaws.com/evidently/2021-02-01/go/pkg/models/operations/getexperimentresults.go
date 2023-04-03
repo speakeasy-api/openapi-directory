@@ -10,23 +10,6 @@ import (
 	"time"
 )
 
-type GetExperimentResultsPathParams struct {
-	// The name of the experiment to retrieve the results of.
-	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
-	// The name or ARN of the project that contains the experiment that you want to see the results of.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type GetExperimentResultsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // GetExperimentResultsRequestBodyBaseStatEnum - The statistic used to calculate experiment results. Currently the only valid value is <code>mean</code>, which uses the mean of the collected values as the statistic.
 type GetExperimentResultsRequestBodyBaseStatEnum string
 
@@ -68,9 +51,18 @@ type GetExperimentResultsRequestBody struct {
 }
 
 type GetExperimentResultsRequest struct {
-	PathParams GetExperimentResultsPathParams
-	Headers    GetExperimentResultsHeaders
-	Request    GetExperimentResultsRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetExperimentResultsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the experiment to retrieve the results of.
+	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
+	// The name or ARN of the project that contains the experiment that you want to see the results of.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type GetExperimentResultsResponse struct {

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteRunPathParams struct {
-	// The run's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteRunHeaders struct {
+type DeleteRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRunRequest struct {
-	PathParams DeleteRunPathParams
-	Headers    DeleteRunHeaders
+	// The run's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteRunResponse struct {

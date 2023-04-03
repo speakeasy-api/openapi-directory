@@ -7,26 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateVirtualNodePathParams struct {
-	// The name of the service mesh to create the virtual node in.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-}
-
-type CreateVirtualNodeQueryParams struct {
-	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
-	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
-}
-
-type CreateVirtualNodeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateVirtualNodeRequestBodySpec - An object that represents the specification of a virtual node.
 type CreateVirtualNodeRequestBodySpec struct {
 	BackendDefaults  *shared.BackendDefaults  `json:"backendDefaults,omitempty"`
@@ -48,10 +28,18 @@ type CreateVirtualNodeRequestBody struct {
 }
 
 type CreateVirtualNodeRequest struct {
-	PathParams  CreateVirtualNodePathParams
-	QueryParams CreateVirtualNodeQueryParams
-	Headers     CreateVirtualNodeHeaders
-	Request     CreateVirtualNodeRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateVirtualNodeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh to create the virtual node in.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh. For more information about mesh sharing, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html">Working with shared meshes</a>.
+	MeshOwner *string `queryParam:"style=form,explode=true,name=meshOwner"`
 }
 
 type CreateVirtualNodeResponse struct {

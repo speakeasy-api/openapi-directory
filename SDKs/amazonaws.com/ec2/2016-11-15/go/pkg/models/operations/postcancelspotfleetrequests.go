@@ -50,25 +50,17 @@ func (e *POSTCancelSpotFleetRequestsVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTCancelSpotFleetRequestsQueryParams struct {
-	Action  POSTCancelSpotFleetRequestsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCancelSpotFleetRequestsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCancelSpotFleetRequestsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCancelSpotFleetRequestsRequest struct {
-	QueryParams POSTCancelSpotFleetRequestsQueryParams
-	Headers     POSTCancelSpotFleetRequestsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCancelSpotFleetRequestsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTCancelSpotFleetRequestsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCancelSpotFleetRequestsResponse struct {

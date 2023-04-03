@@ -50,7 +50,7 @@ func (e *GETSetInstanceHealthVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSetInstanceHealthQueryParams struct {
+type GETSetInstanceHealthRequest struct {
 	Action GETSetInstanceHealthActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The health status of the instance. Set to <code>Healthy</code> to have the instance remain in service. Set to <code>Unhealthy</code> to have the instance be out of service. Amazon EC2 Auto Scaling terminates and replaces the unhealthy instance.
 	HealthStatus string `queryParam:"style=form,explode=true,name=HealthStatus"`
@@ -59,21 +59,13 @@ type GETSetInstanceHealthQueryParams struct {
 	// <p>If the Auto Scaling group of the specified instance has a <code>HealthCheckGracePeriod</code> specified for the group, by default, this call respects the grace period. Set this to <code>False</code>, to have the call not respect the grace period associated with the group.</p> <p>For more information about the health check grace period, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateAutoScalingGroup.html">CreateAutoScalingGroup</a> in the <i>Amazon EC2 Auto Scaling API Reference</i>.</p>
 	ShouldRespectGracePeriod *bool                           `queryParam:"style=form,explode=true,name=ShouldRespectGracePeriod"`
 	Version                  GETSetInstanceHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetInstanceHealthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetInstanceHealthRequest struct {
-	QueryParams GETSetInstanceHealthQueryParams
-	Headers     GETSetInstanceHealthHeaders
+	XAmzAlgorithm            *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetInstanceHealthResponse struct {

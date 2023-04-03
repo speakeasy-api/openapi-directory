@@ -50,25 +50,17 @@ func (e *POSTCreateInternetGatewayVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type POSTCreateInternetGatewayQueryParams struct {
-	Action  POSTCreateInternetGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateInternetGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateInternetGatewayHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateInternetGatewayRequest struct {
-	QueryParams POSTCreateInternetGatewayQueryParams
-	Headers     POSTCreateInternetGatewayHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateInternetGatewayActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                               `request:"mediaType=text/xml"`
+	Version           POSTCreateInternetGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateInternetGatewayResponse struct {

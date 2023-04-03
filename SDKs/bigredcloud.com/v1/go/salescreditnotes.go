@@ -35,14 +35,14 @@ func newSalesCreditNotes(defaultClient, securityClient HTTPClient, serverURL, la
 // SalesCreditNotesDelete - Removes an existing Sales Credit Note.
 func (s *salesCreditNotes) SalesCreditNotesDelete(ctx context.Context, request operations.SalesCreditNotesDeleteRequest) (*operations.SalesCreditNotesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *salesCreditNotes) SalesCreditNotesGet(ctx context.Context) (*operations
 }
 
 // SalesCreditNotesPost - Creates a new Sales Credit Note.
-func (s *salesCreditNotes) SalesCreditNotesPost(ctx context.Context, request operations.SalesCreditNotesPostRequest) (*operations.SalesCreditNotesPostResponse, error) {
+func (s *salesCreditNotes) SalesCreditNotesPost(ctx context.Context, request shared.SalesInvoiceCreditNoteDto) (*operations.SalesCreditNotesPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesCreditNotes"
 
@@ -181,7 +181,7 @@ func (s *salesCreditNotes) SalesCreditNotesPost(ctx context.Context, request ope
 }
 
 // SalesCreditNotesProcessBatch - Processes a batch of Sales Credit Notes.
-func (s *salesCreditNotes) SalesCreditNotesProcessBatch(ctx context.Context, request operations.SalesCreditNotesProcessBatchRequest) (*operations.SalesCreditNotesProcessBatchResponse, error) {
+func (s *salesCreditNotes) SalesCreditNotesProcessBatch(ctx context.Context, request []shared.BatchItemSalesInvoiceCreditNoteDto) (*operations.SalesCreditNotesProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesCreditNotes/batch"
 
@@ -237,9 +237,9 @@ func (s *salesCreditNotes) SalesCreditNotesProcessBatch(ctx context.Context, req
 // SalesCreditNotesPut - Updates an existing Sales Credit Note.
 func (s *salesCreditNotes) SalesCreditNotesPut(ctx context.Context, request operations.SalesCreditNotesPutRequest) (*operations.SalesCreditNotesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesInvoiceCreditNoteDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *salesCreditNotes) SalesCreditNotesPut(ctx context.Context, request oper
 // GetV1SalesCreditNotesID - Returns information about a single Sales Credit Note.
 func (s *salesCreditNotes) GetV1SalesCreditNotesID(ctx context.Context, request operations.GetV1SalesCreditNotesIDRequest) (*operations.GetV1SalesCreditNotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

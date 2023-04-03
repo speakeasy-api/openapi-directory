@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteDistribution20181105PathParams struct {
+type DeleteDistribution20181105Request struct {
 	// The distribution ID.
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteDistribution20181105Headers struct {
 	// The value of the <code>ETag</code> header that you received when you disabled the distribution. For example: <code>E2QWRUHAPOMQZL</code>.
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteDistribution20181105Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDistribution20181105Request struct {
-	PathParams DeleteDistribution20181105PathParams
-	Headers    DeleteDistribution20181105Headers
 }
 
 type DeleteDistribution20181105Response struct {

@@ -10,21 +10,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestAccessTokenPathParams struct {
-	// The [key name](https://www.ably.io/documentation/rest-api/token-request-spec#api-key-format) comprises of the app ID and key ID of an API key.
-	KeyName string `pathParam:"style=simple,explode=false,name=keyName"`
-}
-
-type RequestAccessTokenQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type RequestAccessTokenHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
 type RequestAccessTokenRequestBodyType string
 
 const (
@@ -94,10 +79,13 @@ func (u RequestAccessTokenRequestBody) MarshalJSON() ([]byte, error) {
 }
 
 type RequestAccessTokenRequest struct {
-	PathParams  RequestAccessTokenPathParams
-	QueryParams RequestAccessTokenQueryParams
-	Headers     RequestAccessTokenHeaders
-	Request     *RequestAccessTokenRequestBody `request:"mediaType=application/json"`
+	RequestBody *RequestAccessTokenRequestBody `request:"mediaType=application/json"`
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
+	// The [key name](https://www.ably.io/documentation/rest-api/token-request-spec#api-key-format) comprises of the app ID and key ID of an API key.
+	KeyName string `pathParam:"style=simple,explode=false,name=keyName"`
 }
 
 type RequestAccessTokenResponse struct {

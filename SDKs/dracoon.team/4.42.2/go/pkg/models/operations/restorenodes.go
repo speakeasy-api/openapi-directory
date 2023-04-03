@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RestoreNodesHeaders struct {
+type RestoreNodesRequest struct {
+	RestoreDeletedNodesRequest shared.RestoreDeletedNodesRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RestoreNodesRequest struct {
-	Headers RestoreNodesHeaders
-	Request shared.RestoreDeletedNodesRequest `request:"mediaType=application/json"`
 }
 
 type RestoreNodesResponse struct {

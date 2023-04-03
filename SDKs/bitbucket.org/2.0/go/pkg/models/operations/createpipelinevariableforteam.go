@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CreatePipelineVariableForTeamPathParams struct {
+type CreatePipelineVariableForTeamRequest struct {
+	// The variable to create.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type CreatePipelineVariableForTeamRequest struct {
-	PathParams CreatePipelineVariableForTeamPathParams
-	// The variable to create.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreatePipelineVariableForTeamResponse struct {

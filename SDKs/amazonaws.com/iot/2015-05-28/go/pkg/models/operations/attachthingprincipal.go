@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type AttachThingPrincipalPathParams struct {
-	// The name of the thing.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type AttachThingPrincipalHeaders struct {
+type AttachThingPrincipalRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,13 +14,10 @@ type AttachThingPrincipalHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the thing.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 	// The principal, which can be a certificate ARN (as returned from the CreateCertificate operation) or an Amazon Cognito ID.
 	XAmznPrincipal string `header:"style=simple,explode=false,name=x-amzn-principal"`
-}
-
-type AttachThingPrincipalRequest struct {
-	PathParams AttachThingPrincipalPathParams
-	Headers    AttachThingPrincipalHeaders
 }
 
 type AttachThingPrincipalResponse struct {

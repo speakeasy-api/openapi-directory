@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishMetricsPathParams struct {
-	//  <b>Internal only</b>. The name of the environment.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=EnvironmentName"`
-}
-
-type PublishMetricsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PublishMetricsRequestBody struct {
 	//  <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to Amazon CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA performance metrics in Amazon CloudWatch</a>.
 	MetricData []shared.MetricDatum `json:"MetricData"`
 }
 
 type PublishMetricsRequest struct {
-	PathParams PublishMetricsPathParams
-	Headers    PublishMetricsHeaders
-	Request    PublishMetricsRequestBody `request:"mediaType=application/json"`
+	//  <b>Internal only</b>. The name of the environment.
+	EnvironmentName   string                    `pathParam:"style=simple,explode=false,name=EnvironmentName"`
+	RequestBody       PublishMetricsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PublishMetricsResponse struct {

@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEffectiveDeploymentsPathParams struct {
-	// The name of the core device. This is also the name of the IoT thing.
-	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
-}
-
-type ListEffectiveDeploymentsQueryParams struct {
-	// The maximum number of results to be returned per paginated request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListEffectiveDeploymentsHeaders struct {
+type ListEffectiveDeploymentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListEffectiveDeploymentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEffectiveDeploymentsRequest struct {
-	PathParams  ListEffectiveDeploymentsPathParams
-	QueryParams ListEffectiveDeploymentsQueryParams
-	Headers     ListEffectiveDeploymentsHeaders
+	// The name of the core device. This is also the name of the IoT thing.
+	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
+	// The maximum number of results to be returned per paginated request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListEffectiveDeploymentsResponse struct {

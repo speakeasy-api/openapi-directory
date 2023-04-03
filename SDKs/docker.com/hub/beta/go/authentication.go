@@ -48,7 +48,7 @@ func newAuthentication(defaultClient, securityClient HTTPClient, serverURL, lang
 // The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
 //
 // Most Docker Hub APIs require this token either to consume or to get detailed information. For example, to list images in a private repository.
-func (s *authentication) PostUsers2FALogin(ctx context.Context, request operations.PostUsers2FALoginRequest) (*operations.PostUsers2FALoginResponse, error) {
+func (s *authentication) PostUsers2FALogin(ctx context.Context, request shared.Users2FALoginRequest) (*operations.PostUsers2FALoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/2fa-login"
 
@@ -118,7 +118,7 @@ func (s *authentication) PostUsers2FALogin(ctx context.Context, request operatio
 // The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
 //
 // Most Docker Hub APIs require this token either to consume or to get detailed information. For example, to list images in a private repository.
-func (s *authentication) PostUsersLogin(ctx context.Context, request operations.PostUsersLoginRequest) (*operations.PostUsersLoginResponse, error) {
+func (s *authentication) PostUsersLogin(ctx context.Context, request shared.UsersLoginRequest) (*operations.PostUsersLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users/login"
 

@@ -50,26 +50,18 @@ func (e *GETDisassociateEnvironmentOperationsRoleVersionEnum) UnmarshalJSON(data
 	}
 }
 
-type GETDisassociateEnvironmentOperationsRoleQueryParams struct {
+type GETDisassociateEnvironmentOperationsRoleRequest struct {
 	Action GETDisassociateEnvironmentOperationsRoleActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the environment from which to disassociate the operations role.
-	EnvironmentName string                                              `queryParam:"style=form,explode=true,name=EnvironmentName"`
-	Version         GETDisassociateEnvironmentOperationsRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateEnvironmentOperationsRoleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateEnvironmentOperationsRoleRequest struct {
-	QueryParams GETDisassociateEnvironmentOperationsRoleQueryParams
-	Headers     GETDisassociateEnvironmentOperationsRoleHeaders
+	EnvironmentName   string                                              `queryParam:"style=form,explode=true,name=EnvironmentName"`
+	Version           GETDisassociateEnvironmentOperationsRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateEnvironmentOperationsRoleResponse struct {

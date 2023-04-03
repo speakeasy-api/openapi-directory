@@ -50,28 +50,20 @@ func (e *GETAttachLoadBalancerTargetGroupsVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETAttachLoadBalancerTargetGroupsQueryParams struct {
+type GETAttachLoadBalancerTargetGroupsRequest struct {
 	Action GETAttachLoadBalancerTargetGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The Amazon Resource Names (ARNs) of the target groups. You can specify up to 10 target groups. To get the ARN of a target group, use the Elastic Load Balancing <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html">DescribeTargetGroups</a> API operation.
-	TargetGroupARNs []string                                     `queryParam:"style=form,explode=true,name=TargetGroupARNs"`
-	Version         GETAttachLoadBalancerTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAttachLoadBalancerTargetGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAttachLoadBalancerTargetGroupsRequest struct {
-	QueryParams GETAttachLoadBalancerTargetGroupsQueryParams
-	Headers     GETAttachLoadBalancerTargetGroupsHeaders
+	TargetGroupARNs   []string                                     `queryParam:"style=form,explode=true,name=TargetGroupARNs"`
+	Version           GETAttachLoadBalancerTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAttachLoadBalancerTargetGroupsResponse struct {

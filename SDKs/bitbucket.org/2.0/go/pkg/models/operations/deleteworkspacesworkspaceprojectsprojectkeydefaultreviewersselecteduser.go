@@ -8,12 +8,12 @@ import (
 )
 
 type DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserPathParams struct {
+type DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest struct {
 	// The project in question. This can either be the actual `key` assigned
 	// to the project or the `UUID` (surrounded by curly-braces (`{}`)).
 	//
@@ -26,11 +26,6 @@ type DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserPath
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest struct {
-	PathParams DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserPathParams
-	Security   DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity
 }
 
 type DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse struct {

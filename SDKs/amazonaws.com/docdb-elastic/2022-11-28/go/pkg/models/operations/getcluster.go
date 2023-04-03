@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetClusterPathParams struct {
-	// The arn of the Elastic DocumentDB cluster.
-	ClusterArn string `pathParam:"style=simple,explode=false,name=clusterArn"`
-}
-
-type GetClusterHeaders struct {
+type GetClusterRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetClusterHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetClusterRequest struct {
-	PathParams GetClusterPathParams
-	Headers    GetClusterHeaders
+	// The arn of the Elastic DocumentDB cluster.
+	ClusterArn string `pathParam:"style=simple,explode=false,name=clusterArn"`
 }
 
 type GetClusterResponse struct {

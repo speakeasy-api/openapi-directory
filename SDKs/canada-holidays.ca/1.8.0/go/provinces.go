@@ -36,14 +36,14 @@ func newProvinces(defaultClient, securityClient HTTPClient, serverURL, language,
 // Returns a Canadian province or territory with its associated holidays. Returns a 404 response for invalid abbreviations.
 func (s *provinces) Province(ctx context.Context, request operations.ProvinceRequest) (*operations.ProvinceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/provinces/{provinceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/provinces/{provinceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -102,7 +102,7 @@ func (s *provinces) Provinces(ctx context.Context, request operations.ProvincesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

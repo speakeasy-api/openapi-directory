@@ -7,23 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStudioComponentsPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListStudioComponentsQueryParams struct {
-	// The max number of results to return in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results, or null if there are no more results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// Filters the request to studio components that are in one of the given states.
-	States []shared.StudioComponentStateEnum `queryParam:"style=form,explode=true,name=states"`
-	// Filters the request to studio components that are of one of the given types.
-	Types []shared.StudioComponentTypeEnum `queryParam:"style=form,explode=true,name=types"`
-}
-
-type ListStudioComponentsHeaders struct {
+type ListStudioComponentsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -31,12 +15,16 @@ type ListStudioComponentsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStudioComponentsRequest struct {
-	PathParams  ListStudioComponentsPathParams
-	QueryParams ListStudioComponentsQueryParams
-	Headers     ListStudioComponentsHeaders
+	// The max number of results to return in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results, or null if there are no more results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// Filters the request to studio components that are in one of the given states.
+	States []shared.StudioComponentStateEnum `queryParam:"style=form,explode=true,name=states"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
+	// Filters the request to studio components that are of one of the given types.
+	Types []shared.StudioComponentTypeEnum `queryParam:"style=form,explode=true,name=types"`
 }
 
 type ListStudioComponentsResponse struct {

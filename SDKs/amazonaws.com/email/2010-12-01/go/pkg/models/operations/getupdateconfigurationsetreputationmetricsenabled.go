@@ -50,28 +50,20 @@ func (e *GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum) Unmarshal
 	}
 }
 
-type GETUpdateConfigurationSetReputationMetricsEnabledQueryParams struct {
+type GETUpdateConfigurationSetReputationMetricsEnabledRequest struct {
 	Action GETUpdateConfigurationSetReputationMetricsEnabledActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the configuration set that you want to update.
 	ConfigurationSetName string `queryParam:"style=form,explode=true,name=ConfigurationSetName"`
 	// Describes whether or not Amazon SES will publish reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-	Enabled bool                                                         `queryParam:"style=form,explode=true,name=Enabled"`
-	Version GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateConfigurationSetReputationMetricsEnabledHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateConfigurationSetReputationMetricsEnabledRequest struct {
-	QueryParams GETUpdateConfigurationSetReputationMetricsEnabledQueryParams
-	Headers     GETUpdateConfigurationSetReputationMetricsEnabledHeaders
+	Enabled           bool                                                         `queryParam:"style=form,explode=true,name=Enabled"`
+	Version           GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateConfigurationSetReputationMetricsEnabledResponse struct {

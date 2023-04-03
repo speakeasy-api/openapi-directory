@@ -10,10 +10,6 @@ type QuittungPrepareRequestBody struct {
 	Account *string `json:"account,omitempty"`
 }
 
-type QuittungPrepareRequest struct {
-	Request *QuittungPrepareRequestBody `request:"mediaType=application/json"`
-}
-
 type QuittungPrepareResponse struct {
 	ContentType string
 	StatusCode  int

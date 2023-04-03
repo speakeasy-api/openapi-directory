@@ -50,26 +50,18 @@ func (e *GETCreateDBSecurityGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateDBSecurityGroupQueryParams struct {
+type GETCreateDBSecurityGroupRequest struct {
 	Action                     GETCreateDBSecurityGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBSecurityGroupDescription string                              `queryParam:"style=form,explode=true,name=DBSecurityGroupDescription"`
 	DBSecurityGroupName        string                              `queryParam:"style=form,explode=true,name=DBSecurityGroupName"`
 	Version                    GETCreateDBSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateDBSecurityGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateDBSecurityGroupRequest struct {
-	QueryParams GETCreateDBSecurityGroupQueryParams
-	Headers     GETCreateDBSecurityGroupHeaders
+	XAmzAlgorithm              *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateDBSecurityGroupResponse struct {

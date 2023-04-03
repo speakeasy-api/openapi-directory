@@ -71,20 +71,16 @@ func (e *POSTGetStatusVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetStatusQueryParams struct {
+type POSTGetStatusRequest struct {
 	AWSAccessKeyID   string                     `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTGetStatusActionEnum    `queryParam:"style=form,explode=true,name=Action"`
 	Operation        POSTGetStatusOperationEnum `queryParam:"style=form,explode=true,name=Operation"`
+	RequestBody      []byte                     `request:"mediaType=text/xml"`
 	Signature        string                     `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                     `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                     `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                     `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTGetStatusVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetStatusRequest struct {
-	QueryParams POSTGetStatusQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTGetStatusResponse struct {

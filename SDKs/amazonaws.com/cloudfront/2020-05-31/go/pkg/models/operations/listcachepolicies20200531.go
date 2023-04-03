@@ -32,28 +32,20 @@ func (e *ListCachePolicies20200531TypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListCachePolicies20200531QueryParams struct {
+type ListCachePolicies20200531Request struct {
 	// Use this field when paginating results to indicate where to begin in your list of cache policies. The response includes cache policies in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of cache policies that you want in the response.
 	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	// <p>A filter to return only the specified kinds of cache policies. Valid values are:</p> <ul> <li> <p> <code>managed</code> – Returns only the managed policies created by Amazon Web Services.</p> </li> <li> <p> <code>custom</code> – Returns only the custom policies created in your Amazon Web Services account.</p> </li> </ul>
-	Type *ListCachePolicies20200531TypeEnum `queryParam:"style=form,explode=true,name=Type"`
-}
-
-type ListCachePolicies20200531Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListCachePolicies20200531Request struct {
-	QueryParams ListCachePolicies20200531QueryParams
-	Headers     ListCachePolicies20200531Headers
+	Type              *ListCachePolicies20200531TypeEnum `queryParam:"style=form,explode=true,name=Type"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListCachePolicies20200531Response struct {

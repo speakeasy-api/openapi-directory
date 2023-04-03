@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeOrganizationConfigRulesQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeOrganizationConfigRulesXAmzTargetEnum
 type DescribeOrganizationConfigRulesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeOrganizationConfigRulesXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DescribeOrganizationConfigRulesHeaders struct {
+type DescribeOrganizationConfigRulesRequest struct {
+	DescribeOrganizationConfigRulesRequest shared.DescribeOrganizationConfigRulesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeOrganizationConfigRulesHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeOrganizationConfigRulesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeOrganizationConfigRulesRequest struct {
-	QueryParams DescribeOrganizationConfigRulesQueryParams
-	Headers     DescribeOrganizationConfigRulesHeaders
-	Request     shared.DescribeOrganizationConfigRulesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeOrganizationConfigRulesResponse struct {

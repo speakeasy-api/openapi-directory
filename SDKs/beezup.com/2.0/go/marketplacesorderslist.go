@@ -41,7 +41,7 @@ func (s *marketplacesOrdersList) GetOrderListFull(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/list/full"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *marketplacesOrdersList) GetOrderListFull(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -106,7 +106,7 @@ func (s *marketplacesOrdersList) GetOrderListFull(ctx context.Context, request o
 
 // GetOrderListLight - [DEPRECATED] Get a paginated list of all Orders without details
 // Use /orders/v3 instead
-func (s *marketplacesOrdersList) GetOrderListLight(ctx context.Context, request operations.GetOrderListLightRequest) (*operations.GetOrderListLightResponse, error) {
+func (s *marketplacesOrdersList) GetOrderListLight(ctx context.Context, request shared.OrderListRequest) (*operations.GetOrderListLightResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/list/light"
 

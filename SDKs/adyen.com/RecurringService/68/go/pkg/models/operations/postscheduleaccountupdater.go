@@ -8,13 +8,8 @@ import (
 )
 
 type PostScheduleAccountUpdaterSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostScheduleAccountUpdaterRequest struct {
-	Request  *shared.ScheduleAccountUpdaterRequest `request:"mediaType=application/json"`
-	Security PostScheduleAccountUpdaterSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostScheduleAccountUpdaterResponse struct {

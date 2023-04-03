@@ -10,8 +10,8 @@ import (
 )
 
 type SocerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type SocerRequestBodyCertificateParameters struct {
@@ -54,12 +54,6 @@ type SocerRequestBody struct {
 	Format SocerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type SocerRequest struct {
-	// Request format
-	Request  *SocerRequestBody `request:"mediaType=application/json"`
-	Security SocerSecurity
 }
 
 type Socer504ApplicationJSONErrorEnum string

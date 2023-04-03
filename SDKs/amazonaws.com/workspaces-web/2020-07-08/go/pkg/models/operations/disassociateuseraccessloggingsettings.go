@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DisassociateUserAccessLoggingSettingsPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type DisassociateUserAccessLoggingSettingsHeaders struct {
+type DisassociateUserAccessLoggingSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DisassociateUserAccessLoggingSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateUserAccessLoggingSettingsRequest struct {
-	PathParams DisassociateUserAccessLoggingSettingsPathParams
-	Headers    DisassociateUserAccessLoggingSettingsHeaders
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
 }
 
 type DisassociateUserAccessLoggingSettingsResponse struct {

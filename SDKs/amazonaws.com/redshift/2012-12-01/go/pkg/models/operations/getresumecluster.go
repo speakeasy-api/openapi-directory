@@ -50,26 +50,18 @@ func (e *GETResumeClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETResumeClusterQueryParams struct {
+type GETResumeClusterRequest struct {
 	Action GETResumeClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of the cluster to be resumed.
 	ClusterIdentifier string                      `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETResumeClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETResumeClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETResumeClusterRequest struct {
-	QueryParams GETResumeClusterQueryParams
-	Headers     GETResumeClusterHeaders
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETResumeClusterResponse struct {

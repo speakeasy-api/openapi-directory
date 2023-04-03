@@ -50,25 +50,17 @@ func (e *POSTDeleteClusterSubnetGroupVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type POSTDeleteClusterSubnetGroupQueryParams struct {
-	Action  POSTDeleteClusterSubnetGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteClusterSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteClusterSubnetGroupRequest struct {
-	QueryParams POSTDeleteClusterSubnetGroupQueryParams
-	Headers     POSTDeleteClusterSubnetGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteClusterSubnetGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                  `request:"mediaType=text/xml"`
+	Version           POSTDeleteClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteClusterSubnetGroupResponse struct {

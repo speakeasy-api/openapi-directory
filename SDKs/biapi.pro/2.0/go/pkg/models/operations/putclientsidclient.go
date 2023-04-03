@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutClientsIDClientPathParams struct {
-	IDClient int64 `pathParam:"style=simple,explode=false,name=id_client"`
-}
-
-type PutClientsIDClientQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutClientsIDClientRequestBody struct {
 	// custom config about the client
 	Config *string `multipartForm:"name=config"`
@@ -43,9 +35,9 @@ type PutClientsIDClientRequestBody struct {
 }
 
 type PutClientsIDClientRequest struct {
-	PathParams  PutClientsIDClientPathParams
-	QueryParams PutClientsIDClientQueryParams
-	Request     *PutClientsIDClientRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutClientsIDClientRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                        `queryParam:"style=form,explode=true,name=expand"`
+	IDClient    int64                          `pathParam:"style=simple,explode=false,name=id_client"`
 }
 
 type PutClientsIDClientResponse struct {

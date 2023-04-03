@@ -9,16 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutAccountPreferencesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutAccountPreferencesRequestBodyResourceIDTypeEnum - A preference indicating a choice to use 63bit/32bit IDs for all applicable resources.
 type PutAccountPreferencesRequestBodyResourceIDTypeEnum string
 
@@ -49,8 +39,14 @@ type PutAccountPreferencesRequestBody struct {
 }
 
 type PutAccountPreferencesRequest struct {
-	Headers PutAccountPreferencesHeaders
-	Request PutAccountPreferencesRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutAccountPreferencesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutAccountPreferencesResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDomainMetadataVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDomainMetadataQueryParams struct {
+type GETDomainMetadataRequest struct {
 	AWSAccessKeyID string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETDomainMetadataActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the domain for which to display the metadata of.
@@ -60,10 +60,6 @@ type GETDomainMetadataQueryParams struct {
 	SignatureVersion string                       `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                       `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETDomainMetadataVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDomainMetadataRequest struct {
-	QueryParams GETDomainMetadataQueryParams
 }
 
 type GETDomainMetadataResponse struct {

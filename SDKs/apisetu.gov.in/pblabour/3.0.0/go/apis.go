@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Alsfc - Application/ License for Factory
 // API to verify Application/ License for Factory.
-func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequest) (*operations.AlsfcResponse, error) {
+func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequestBody, security operations.AlsfcSecurity) (*operations.AlsfcResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alsfc/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Alsfc(ctx context.Context, request operations.AlsfcRequest) (*ope
 
 // Clcer - Registration Certificate for Contract Labour License
 // API to verify Registration Certificate for Contract Labour License.
-func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequest) (*operations.ClcerResponse, error) {
+func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequestBody, security operations.ClcerSecurity) (*operations.ClcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Clcer(ctx context.Context, request operations.ClcerRequest) (*ope
 
 // Srcer - Registration Certificate of Shops And Commercial Establishment
 // API to verify Registration Certificate of Shops And Commercial Establishment.
-func (s *apIs) Srcer(ctx context.Context, request operations.SrcerRequest) (*operations.SrcerResponse, error) {
+func (s *apIs) Srcer(ctx context.Context, request operations.SrcerRequestBody, security operations.SrcerSecurity) (*operations.SrcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/srcer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Srcer(ctx context.Context, request operations.SrcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

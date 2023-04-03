@@ -78,7 +78,7 @@ func newMediaAsset(defaultClient, securityClient HTTPClient, serverURL, language
 //   - `original`: This is the original file provided. May not be available, depending on permissions
 //     and file type.
 //   - `waveform_data`: The generated BBC Audiowaveform data in JSON or binary format.
-func (s *mediaAsset) GetMediaAssets(ctx context.Context, request operations.GetMediaAssetsRequest) (*operations.GetMediaAssetsResponse, error) {
+func (s *mediaAsset) GetMediaAssets(ctx context.Context, request operations.GetMediaAssetsRequest, security operations.GetMediaAssetsSecurity) (*operations.GetMediaAssetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/media_assets"
 
@@ -87,11 +87,11 @@ func (s *mediaAsset) GetMediaAssets(ctx context.Context, request operations.GetM
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -189,16 +189,16 @@ func (s *mediaAsset) GetMediaAssets(ctx context.Context, request operations.GetM
 //   - `original`: This is the original file provided. May not be available, depending on permissions
 //     and file type.
 //   - `waveform_data`: The generated BBC Audiowaveform data in JSON or binary format.
-func (s *mediaAsset) GetMediaAssetsID(ctx context.Context, request operations.GetMediaAssetsIDRequest) (*operations.GetMediaAssetsIDResponse, error) {
+func (s *mediaAsset) GetMediaAssetsID(ctx context.Context, request operations.GetMediaAssetsIDRequest, security operations.GetMediaAssetsIDSecurity) (*operations.GetMediaAssetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media_assets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/media_assets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

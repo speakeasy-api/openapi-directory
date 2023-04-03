@@ -55,7 +55,7 @@ func (e *GETModifyVolumeAttributeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyVolumeAttributeQueryParams struct {
+type GETModifyVolumeAttributeRequest struct {
 	Action GETModifyVolumeAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates whether the volume should be auto-enabled for I/O operations.
 	AutoEnableIO *GETModifyVolumeAttributeAutoEnableIo `queryParam:"style=form,explode=true,name=AutoEnableIO"`
@@ -63,10 +63,7 @@ type GETModifyVolumeAttributeQueryParams struct {
 	DryRun  *bool                               `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETModifyVolumeAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the volume.
-	VolumeID string `queryParam:"style=form,explode=true,name=VolumeId"`
-}
-
-type GETModifyVolumeAttributeHeaders struct {
+	VolumeID          string  `queryParam:"style=form,explode=true,name=VolumeId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -74,11 +71,6 @@ type GETModifyVolumeAttributeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVolumeAttributeRequest struct {
-	QueryParams GETModifyVolumeAttributeQueryParams
-	Headers     GETModifyVolumeAttributeHeaders
 }
 
 type GETModifyVolumeAttributeResponse struct {

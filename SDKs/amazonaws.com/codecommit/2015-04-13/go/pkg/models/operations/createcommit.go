@@ -30,7 +30,8 @@ func (e *CreateCommitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateCommitHeaders struct {
+type CreateCommitRequest struct {
+	CreateCommitInput shared.CreateCommitInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateCommitHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateCommitXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateCommitRequest struct {
-	Headers CreateCommitHeaders
-	Request shared.CreateCommitInput `request:"mediaType=application/json"`
 }
 
 type CreateCommitResponse struct {

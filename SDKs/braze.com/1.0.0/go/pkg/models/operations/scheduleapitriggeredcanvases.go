@@ -42,10 +42,6 @@ type ScheduleAPITriggeredCanvasesRequestBody struct {
 	Schedule              *ScheduleAPITriggeredCanvasesRequestBodySchedule    `json:"schedule,omitempty"`
 }
 
-type ScheduleAPITriggeredCanvasesRequest struct {
-	Request *ScheduleAPITriggeredCanvasesRequestBody `request:"mediaType=application/json"`
-}
-
 type ScheduleAPITriggeredCanvasesResponse struct {
 	ContentType string
 	StatusCode  int

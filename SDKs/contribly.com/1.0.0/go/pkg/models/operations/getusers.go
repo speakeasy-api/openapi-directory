@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// Restrict results to the users who have contributed to this assignment.
 	Assignment *string `queryParam:"style=form,explode=true,name=assignment"`
 	// Restrict results to the users who have submitted a contribution with a public location located within this country.
@@ -25,10 +25,6 @@ type GetUsersQueryParams struct {
 	SubmittedBefore *time.Time `queryParam:"style=form,explode=true,name=submittedBefore"`
 	// Restrict results to the user with this username.
 	Username *string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 type GetUsersResponse struct {

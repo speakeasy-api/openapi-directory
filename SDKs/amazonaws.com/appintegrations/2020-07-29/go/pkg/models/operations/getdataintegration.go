@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDataIntegrationPathParams struct {
+type GetDataIntegrationRequest struct {
 	// A unique identifier.
-	Identifier string `pathParam:"style=simple,explode=false,name=Identifier"`
-}
-
-type GetDataIntegrationHeaders struct {
+	Identifier        string  `pathParam:"style=simple,explode=false,name=Identifier"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetDataIntegrationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDataIntegrationRequest struct {
-	PathParams GetDataIntegrationPathParams
-	Headers    GetDataIntegrationHeaders
 }
 
 type GetDataIntegrationResponse struct {

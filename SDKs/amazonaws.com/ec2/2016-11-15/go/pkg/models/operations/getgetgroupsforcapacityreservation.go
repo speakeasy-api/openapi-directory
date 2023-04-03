@@ -50,7 +50,7 @@ func (e *GETGETGroupsForCapacityReservationVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETGETGroupsForCapacityReservationQueryParams struct {
+type GETGETGroupsForCapacityReservationRequest struct {
 	Action GETGETGroupsForCapacityReservationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Capacity Reservation.
 	CapacityReservationID string `queryParam:"style=form,explode=true,name=CapacityReservationId"`
@@ -59,23 +59,15 @@ type GETGETGroupsForCapacityReservationQueryParams struct {
 	// The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned <code>nextToken</code> value. This value can be between 5 and 500. If <code>maxResults</code> is given a larger value than 500, you receive an error.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token to use to retrieve the next page of results.
-	NextToken *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETGETGroupsForCapacityReservationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETGroupsForCapacityReservationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETGroupsForCapacityReservationRequest struct {
-	QueryParams GETGETGroupsForCapacityReservationQueryParams
-	Headers     GETGETGroupsForCapacityReservationHeaders
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETGETGroupsForCapacityReservationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETGroupsForCapacityReservationResponse struct {

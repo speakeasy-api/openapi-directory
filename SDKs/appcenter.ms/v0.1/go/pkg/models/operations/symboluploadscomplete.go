@@ -6,21 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type SymbolUploadsCompleteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SymbolUploadsCompletePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the symbol upload
-	SymbolUploadID string `pathParam:"style=simple,explode=false,name=symbol_upload_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // SymbolUploadsCompleteRequestBodyStatusEnum - The desired operation for the symbol upload
@@ -54,10 +44,14 @@ type SymbolUploadsCompleteRequestBody struct {
 }
 
 type SymbolUploadsCompleteRequest struct {
-	PathParams SymbolUploadsCompletePathParams
 	// The symbol information
-	Request  SymbolUploadsCompleteRequestBody `request:"mediaType=application/json"`
-	Security SymbolUploadsCompleteSecurity
+	RequestBody SymbolUploadsCompleteRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the symbol upload
+	SymbolUploadID string `pathParam:"style=simple,explode=false,name=symbol_upload_id"`
 }
 
 // SymbolUploadsComplete500ApplicationJSON - Internal error

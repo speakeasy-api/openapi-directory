@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type MoveDownRulePathParams struct {
+type MoveDownRuleRequest struct {
 	// Your rule identifier
 	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type MoveDownRuleRequest struct {
-	PathParams MoveDownRulePathParams
 }
 
 type MoveDownRuleResponse struct {

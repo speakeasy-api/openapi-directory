@@ -30,7 +30,8 @@ func (e *CreateBackupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateBackupHeaders struct {
+type CreateBackupRequest struct {
+	CreateBackupInput shared.CreateBackupInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateBackupHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateBackupXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateBackupRequest struct {
-	Headers CreateBackupHeaders
-	Request shared.CreateBackupInput `request:"mediaType=application/json"`
 }
 
 type CreateBackupResponse struct {

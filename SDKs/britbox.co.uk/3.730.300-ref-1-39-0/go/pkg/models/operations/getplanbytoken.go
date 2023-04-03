@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlanByTokenPathParams struct {
-	// The identifier of the user provided by BT in an initial URL.
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type GetPlanByTokenQueryParams struct {
+type GetPlanByTokenRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -25,11 +20,8 @@ type GetPlanByTokenQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetPlanByTokenRequest struct {
-	PathParams  GetPlanByTokenPathParams
-	QueryParams GetPlanByTokenQueryParams
+	// The identifier of the user provided by BT in an initial URL.
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type GetPlanByTokenResponse struct {

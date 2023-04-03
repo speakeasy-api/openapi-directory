@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateGroupPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateGroupRequestBodyGroup struct {
 	// pipe|separated
 	AutomaticMembershipEmailDomains *string `json:"automatic_membership_email_domains,omitempty"`
@@ -41,8 +37,8 @@ type UpdateGroupRequestBody struct {
 }
 
 type UpdateGroupRequest struct {
-	PathParams UpdateGroupPathParams
-	Request    *UpdateGroupRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateGroupRequestBody `request:"mediaType=application/json"`
+	ID          int64                   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // UpdateGroup200ApplicationJSON - success response

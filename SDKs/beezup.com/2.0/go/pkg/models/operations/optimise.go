@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OptimisePathParams struct {
-	ActionName shared.OptimisationActionNameGeneralParametersEnum `pathParam:"style=simple,explode=false,name=actionName"`
+type OptimiseRequest struct {
+	ActionName      shared.OptimisationActionNameGeneralParametersEnum `pathParam:"style=simple,explode=false,name=actionName"`
+	OptimiseRequest shared.OptimiseRequest                             `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type OptimiseRequest struct {
-	PathParams OptimisePathParams
-	Request    shared.OptimiseRequest `request:"mediaType=application/json"`
 }
 
 type OptimiseResponse struct {

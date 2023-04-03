@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeDatabaseUserStatusPathParams struct {
-	// Automatically added
-	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-	// Automatically added
-	UserName string `pathParam:"style=simple,explode=false,name=userName"`
-}
-
-type ChangeDatabaseUserStatusQueryParams struct {
-	// Name of the database.
-	DatabaseName string `queryParam:"style=form,explode=true,name=database_name"`
-	// Name of the user.
-	UserName string `queryParam:"style=form,explode=true,name=user_name"`
-}
-
 type ChangeDatabaseUserStatusRequest struct {
-	PathParams  ChangeDatabaseUserStatusPathParams
-	QueryParams ChangeDatabaseUserStatusQueryParams
 	// Whether the user is enabled or not.
-	Request *shared.UpdateUserStatusRequest `request:"mediaType=application/json"`
+	UpdateUserStatusRequest *shared.UpdateUserStatusRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DatabaseNamePathParameter string `pathParam:"style=simple,explode=false,name=databaseName"`
+	// Name of the database.
+	DatabaseNameQueryParameter string `queryParam:"style=form,explode=true,name=database_name"`
+	// Automatically added
+	UserNamePathParameter string `pathParam:"style=simple,explode=false,name=userName"`
+	// Name of the user.
+	UserNameQueryParameter string `queryParam:"style=form,explode=true,name=user_name"`
 }
 
 type ChangeDatabaseUserStatusResponse struct {

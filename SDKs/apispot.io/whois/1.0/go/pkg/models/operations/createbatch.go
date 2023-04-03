@@ -68,10 +68,6 @@ type CreateBatchRequestBody struct {
 	Options   *CreateBatchRequestBodyOptions      `json:"options,omitempty"`
 }
 
-type CreateBatchRequest struct {
-	Request CreateBatchRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateBatchResponse struct {
 	// OK
 	Batch       *shared.Batch

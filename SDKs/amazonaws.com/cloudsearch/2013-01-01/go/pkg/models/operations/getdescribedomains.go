@@ -50,26 +50,18 @@ func (e *GETDescribeDomainsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeDomainsQueryParams struct {
+type GETDescribeDomainsRequest struct {
 	Action GETDescribeDomainsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The names of the domains you want to include in the response.
-	DomainNames []string                      `queryParam:"style=form,explode=true,name=DomainNames"`
-	Version     GETDescribeDomainsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDomainsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDomainsRequest struct {
-	QueryParams GETDescribeDomainsQueryParams
-	Headers     GETDescribeDomainsHeaders
+	DomainNames       []string                      `queryParam:"style=form,explode=true,name=DomainNames"`
+	Version           GETDescribeDomainsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDomainsResponse struct {

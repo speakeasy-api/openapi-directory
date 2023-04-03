@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type CustomersPostRequest struct {
-	// Information of Customer to create.
-	Request shared.CustomerDto `request:"mediaType=application/json"`
-}
 
 type CustomersPostResponse struct {
 	ContentType string

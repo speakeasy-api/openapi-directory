@@ -30,7 +30,8 @@ func (e *DisableSsoXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DisableSsoHeaders struct {
+type DisableSsoRequest struct {
+	DisableSsoRequest shared.DisableSsoRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DisableSsoHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisableSsoXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisableSsoRequest struct {
-	Headers DisableSsoHeaders
-	Request shared.DisableSsoRequest `request:"mediaType=application/json"`
 }
 
 type DisableSsoResponse struct {

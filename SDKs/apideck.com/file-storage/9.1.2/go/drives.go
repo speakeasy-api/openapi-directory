@@ -35,11 +35,11 @@ func newDrives(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // DrivesAdd - Create Drive
 // Create Drive
-func (s *drives) DrivesAdd(ctx context.Context, request operations.DrivesAddRequest) (*operations.DrivesAddResponse, error) {
+func (s *drives) DrivesAdd(ctx context.Context, request operations.DrivesAddRequest, security operations.DrivesAddSecurity) (*operations.DrivesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/drives"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DriveInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,13 +54,13 @@ func (s *drives) DrivesAdd(ctx context.Context, request operations.DrivesAddRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *drives) DrivesAdd(ctx context.Context, request operations.DrivesAddRequ
 
 // DrivesAll - List Drives
 // List Drives
-func (s *drives) DrivesAll(ctx context.Context, request operations.DrivesAllRequest) (*operations.DrivesAllResponse, error) {
+func (s *drives) DrivesAll(ctx context.Context, request operations.DrivesAllRequest, security operations.DrivesAllSecurity) (*operations.DrivesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/drives"
 
@@ -165,13 +165,13 @@ func (s *drives) DrivesAll(ctx context.Context, request operations.DrivesAllRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,22 +267,22 @@ func (s *drives) DrivesAll(ctx context.Context, request operations.DrivesAllRequ
 
 // DrivesDelete - Delete Drive
 // Delete Drive
-func (s *drives) DrivesDelete(ctx context.Context, request operations.DrivesDeleteRequest) (*operations.DrivesDeleteResponse, error) {
+func (s *drives) DrivesDelete(ctx context.Context, request operations.DrivesDeleteRequest, security operations.DrivesDeleteSecurity) (*operations.DrivesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drives/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drives/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -378,22 +378,22 @@ func (s *drives) DrivesDelete(ctx context.Context, request operations.DrivesDele
 
 // DrivesOne - Get Drive
 // Get Drive
-func (s *drives) DrivesOne(ctx context.Context, request operations.DrivesOneRequest) (*operations.DrivesOneResponse, error) {
+func (s *drives) DrivesOne(ctx context.Context, request operations.DrivesOneRequest, security operations.DrivesOneSecurity) (*operations.DrivesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drives/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drives/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -489,11 +489,11 @@ func (s *drives) DrivesOne(ctx context.Context, request operations.DrivesOneRequ
 
 // DrivesUpdate - Update Drive
 // Update Drive
-func (s *drives) DrivesUpdate(ctx context.Context, request operations.DrivesUpdateRequest) (*operations.DrivesUpdateResponse, error) {
+func (s *drives) DrivesUpdate(ctx context.Context, request operations.DrivesUpdateRequest, security operations.DrivesUpdateSecurity) (*operations.DrivesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drives/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drives/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DriveInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,13 +508,13 @@ func (s *drives) DrivesUpdate(ctx context.Context, request operations.DrivesUpda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

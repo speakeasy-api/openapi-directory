@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingPostRawPathParams struct {
+type RetargetingPostRawRequest struct {
+	// The body of the retargeting script
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The id of the retargeting script
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetargetingPostRawRequest struct {
-	PathParams RetargetingPostRawPathParams
-	// The body of the retargeting script
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type RetargetingPostRawResponse struct {

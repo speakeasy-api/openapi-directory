@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetScheduleGroupPathParams struct {
+type GetScheduleGroupRequest struct {
 	// The name of the schedule group to retrieve.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type GetScheduleGroupHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetScheduleGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetScheduleGroupRequest struct {
-	PathParams GetScheduleGroupPathParams
-	Headers    GetScheduleGroupHeaders
 }
 
 type GetScheduleGroupResponse struct {

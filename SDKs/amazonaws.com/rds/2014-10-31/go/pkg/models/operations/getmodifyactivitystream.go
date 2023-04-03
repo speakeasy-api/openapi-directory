@@ -74,28 +74,20 @@ func (e *GETModifyActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyActivityStreamQueryParams struct {
+type GETModifyActivityStreamRequest struct {
 	Action GETModifyActivityStreamActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The audit policy state. When a policy is unlocked, it is read/write. When it is locked, it is read-only. You can edit your audit policy only when the activity stream is unlocked or stopped.
 	AuditPolicyState *GETModifyActivityStreamAuditPolicyStateEnum `queryParam:"style=form,explode=true,name=AuditPolicyState"`
 	// The Amazon Resource Name (ARN) of the RDS for Oracle or Microsoft SQL Server DB instance. For example, <code>arn:aws:rds:us-east-1:12345667890:instance:my-orcl-db</code>.
-	ResourceArn *string                            `queryParam:"style=form,explode=true,name=ResourceArn"`
-	Version     GETModifyActivityStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyActivityStreamHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyActivityStreamRequest struct {
-	QueryParams GETModifyActivityStreamQueryParams
-	Headers     GETModifyActivityStreamHeaders
+	ResourceArn       *string                            `queryParam:"style=form,explode=true,name=ResourceArn"`
+	Version           GETModifyActivityStreamVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyActivityStreamResponse struct {

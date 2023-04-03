@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.AdminGetUserRequest{
-        PathParams: operations.AdminGetUserPathParams{
-            ID: 548814,
-        },
+        ID: 548814,
     }
 
     ctx := context.Background()

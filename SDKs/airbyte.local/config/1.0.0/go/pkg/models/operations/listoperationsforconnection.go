@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOperationsForConnectionRequest struct {
-	Request shared.ConnectionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type ListOperationsForConnectionResponse struct {
 	ContentType string
 	// Input failed validation

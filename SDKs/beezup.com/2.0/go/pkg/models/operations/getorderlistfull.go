@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderListFullHeaders struct {
-	// Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
-	AcceptEncoding []string `header:"style=simple,explode=false,name=Accept-Encoding"`
-}
-
 type GetOrderListFullRequest struct {
-	Headers GetOrderListFullHeaders
-	Request shared.OrderListRequest `request:"mediaType=application/json"`
+	// Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+	AcceptEncoding   []string                `header:"style=simple,explode=false,name=Accept-Encoding"`
+	OrderListRequest shared.OrderListRequest `request:"mediaType=application/json"`
 }
 
 type GetOrderListFullResponse struct {

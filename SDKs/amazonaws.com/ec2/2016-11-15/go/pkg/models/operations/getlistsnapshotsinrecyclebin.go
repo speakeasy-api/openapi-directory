@@ -50,7 +50,7 @@ func (e *GETListSnapshotsInRecycleBinVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETListSnapshotsInRecycleBinQueryParams struct {
+type GETListSnapshotsInRecycleBinRequest struct {
 	Action GETListSnapshotsInRecycleBinActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -59,23 +59,15 @@ type GETListSnapshotsInRecycleBinQueryParams struct {
 	// The token returned from a previous paginated request. Pagination continues from the end of the items returned by the previous request.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The IDs of the snapshots to list. Omit this parameter to list all of the snapshots that are in the Recycle Bin.
-	SnapshotID []string                                `queryParam:"style=form,explode=true,name=SnapshotId"`
-	Version    GETListSnapshotsInRecycleBinVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListSnapshotsInRecycleBinHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListSnapshotsInRecycleBinRequest struct {
-	QueryParams GETListSnapshotsInRecycleBinQueryParams
-	Headers     GETListSnapshotsInRecycleBinHeaders
+	SnapshotID        []string                                `queryParam:"style=form,explode=true,name=SnapshotId"`
+	Version           GETListSnapshotsInRecycleBinVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListSnapshotsInRecycleBinResponse struct {

@@ -35,7 +35,9 @@ func (e *GetMetadataOfAllChannelsByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMetadataOfAllChannelsQueryParams struct {
+type GetMetadataOfAllChannelsRequest struct {
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
 	// optionally specifies whether to return just channel names (by=id) or ChannelDetails (by=value)
 	By *GetMetadataOfAllChannelsByEnum `queryParam:"style=form,explode=true,name=by"`
 	// The response format you would like
@@ -43,16 +45,6 @@ type GetMetadataOfAllChannelsQueryParams struct {
 	Limit  *int64                     `queryParam:"style=form,explode=true,name=limit"`
 	// Optionally limits the query to only those channels whose name starts with the given prefix
 	Prefix *string `queryParam:"style=form,explode=true,name=prefix"`
-}
-
-type GetMetadataOfAllChannelsHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type GetMetadataOfAllChannelsRequest struct {
-	QueryParams GetMetadataOfAllChannelsQueryParams
-	Headers     GetMetadataOfAllChannelsHeaders
 }
 
 type GetMetadataOfAllChannels2XXApplicationXMsgpackType string

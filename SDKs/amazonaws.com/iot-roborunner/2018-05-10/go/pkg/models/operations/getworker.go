@@ -7,11 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkerQueryParams struct {
-	ID string `queryParam:"style=form,explode=true,name=id"`
-}
-
-type GetWorkerHeaders struct {
+type GetWorkerRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +15,7 @@ type GetWorkerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetWorkerRequest struct {
-	QueryParams GetWorkerQueryParams
-	Headers     GetWorkerHeaders
+	ID                string  `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetWorkerResponse struct {

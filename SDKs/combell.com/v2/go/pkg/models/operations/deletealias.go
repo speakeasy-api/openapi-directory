@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteAliasPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	EmailAddress string `pathParam:"style=simple,explode=false,name=emailAddress"`
-}
-
-type DeleteAliasQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// Alias e-mail address.
-	EmailAddress string `queryParam:"style=form,explode=true,name=email_address"`
-}
-
 type DeleteAliasRequest struct {
-	PathParams  DeleteAliasPathParams
-	QueryParams DeleteAliasQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	EmailAddressPathParameter string `pathParam:"style=simple,explode=false,name=emailAddress"`
+	// Alias e-mail address.
+	EmailAddressQueryParameter string `queryParam:"style=form,explode=true,name=email_address"`
 }
 
 type DeleteAliasResponse struct {

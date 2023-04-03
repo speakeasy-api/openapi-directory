@@ -9,26 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateResourcePolicyStatementPathParams struct {
-	// The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
-	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
-}
-
-type CreateResourcePolicyStatementQueryParams struct {
-	// <p>The identifier of the revision of the policy to edit. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.</p> <p>If you don't specify a revision, Amazon Lex overwrites the contents of the policy with the new values.</p>
-	ExpectedRevisionID *string `queryParam:"style=form,explode=true,name=expectedRevisionId"`
-}
-
-type CreateResourcePolicyStatementHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateResourcePolicyStatementRequestBodyEffectEnum - Determines whether the statement allows or denies access to the resource.
 type CreateResourcePolicyStatementRequestBodyEffectEnum string
 
@@ -67,10 +47,18 @@ type CreateResourcePolicyStatementRequestBody struct {
 }
 
 type CreateResourcePolicyStatementRequest struct {
-	PathParams  CreateResourcePolicyStatementPathParams
-	QueryParams CreateResourcePolicyStatementQueryParams
-	Headers     CreateResourcePolicyStatementHeaders
-	Request     CreateResourcePolicyStatementRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateResourcePolicyStatementRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// <p>The identifier of the revision of the policy to edit. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.</p> <p>If you don't specify a revision, Amazon Lex overwrites the contents of the policy with the new values.</p>
+	ExpectedRevisionID *string `queryParam:"style=form,explode=true,name=expectedRevisionId"`
+	// The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
 }
 
 type CreateResourcePolicyStatementResponse struct {

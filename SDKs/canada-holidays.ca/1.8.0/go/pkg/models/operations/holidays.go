@@ -69,17 +69,13 @@ func (e *HolidaysOptionalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HolidaysQueryParams struct {
+type HolidaysRequest struct {
 	// A boolean parameter. If true or 1, will return only federal holidays. If false or 0, will return no federal holidays.
 	Federal *HolidaysFederalEnum `queryParam:"style=form,explode=true,name=federal"`
 	// A boolean parameter. If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
 	Optional *HolidaysOptionalEnum `queryParam:"style=form,explode=true,name=optional"`
 	// A calendar year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type HolidaysRequest struct {
-	QueryParams HolidaysQueryParams
 }
 
 // Holidays200ApplicationJSON - OK

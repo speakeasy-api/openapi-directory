@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDevicePositionsPathParams struct {
-	// The tracker resource containing the requested devices.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
-}
-
-type ListDevicePositionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListDevicePositionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListDevicePositionsRequestBody struct {
 	// <p>An optional limit for the number of entries returned in a single call.</p> <p>Default value: <code>100</code> </p>
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -37,10 +15,20 @@ type ListDevicePositionsRequestBody struct {
 }
 
 type ListDevicePositionsRequest struct {
-	PathParams  ListDevicePositionsPathParams
-	QueryParams ListDevicePositionsQueryParams
-	Headers     ListDevicePositionsHeaders
-	Request     ListDevicePositionsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken   *string                        `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody ListDevicePositionsRequestBody `request:"mediaType=application/json"`
+	// The tracker resource containing the requested devices.
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListDevicePositionsResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type SignUpdatePathParams struct {
+type SignUpdateRequest struct {
 	// Job ID (20 chars)
 	Job string `pathParam:"style=simple,explode=false,name=job"`
-}
-
-type SignUpdateRequest struct {
-	PathParams SignUpdatePathParams
 }
 
 // SignUpdate200ApplicationJwt - Successfully updated

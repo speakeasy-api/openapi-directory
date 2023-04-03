@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateSyslogConfigHeaders struct {
+type UpdateSyslogConfigRequest struct {
+	UpdateSyslogConfig shared.UpdateSyslogConfig `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateSyslogConfigRequest struct {
-	Headers UpdateSyslogConfigHeaders
-	Request shared.UpdateSyslogConfig `request:"mediaType=application/json"`
 }
 
 type UpdateSyslogConfigResponse struct {

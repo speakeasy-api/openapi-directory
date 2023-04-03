@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelContactPathParams struct {
-	// UUID of a contact.
-	ContactID string `pathParam:"style=simple,explode=false,name=contactId"`
-}
-
-type CancelContactHeaders struct {
+type CancelContactRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CancelContactHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelContactRequest struct {
-	PathParams CancelContactPathParams
-	Headers    CancelContactHeaders
+	// UUID of a contact.
+	ContactID string `pathParam:"style=simple,explode=false,name=contactId"`
 }
 
 type CancelContactResponse struct {

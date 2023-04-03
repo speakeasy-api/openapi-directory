@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListResolverRuleAssociationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListResolverRuleAssociationsXAmzTargetEnum
 type ListResolverRuleAssociationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListResolverRuleAssociationsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListResolverRuleAssociationsHeaders struct {
+type ListResolverRuleAssociationsRequest struct {
+	ListResolverRuleAssociationsRequest shared.ListResolverRuleAssociationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListResolverRuleAssociationsHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListResolverRuleAssociationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListResolverRuleAssociationsRequest struct {
-	QueryParams ListResolverRuleAssociationsQueryParams
-	Headers     ListResolverRuleAssociationsHeaders
-	Request     shared.ListResolverRuleAssociationsRequest `request:"mediaType=application/json"`
 }
 
 type ListResolverRuleAssociationsResponse struct {

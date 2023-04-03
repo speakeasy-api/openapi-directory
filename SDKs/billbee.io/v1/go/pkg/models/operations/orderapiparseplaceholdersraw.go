@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type OrderAPIParsePlaceholdersRawPathParams struct {
+type OrderAPIParsePlaceholdersRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIParsePlaceholdersRawRequest struct {
-	PathParams OrderAPIParsePlaceholdersRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPIParsePlaceholdersRawResponse struct {

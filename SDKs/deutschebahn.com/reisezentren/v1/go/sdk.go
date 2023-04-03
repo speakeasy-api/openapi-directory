@@ -105,7 +105,7 @@ func (s *SDK) GetReisezentren(ctx context.Context, request operations.GetReiseze
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -159,7 +159,7 @@ func (s *SDK) GetReisezentren(ctx context.Context, request operations.GetReiseze
 // Get information about a station near a location
 func (s *SDK) GetReisezentrenLocLatLon(ctx context.Context, request operations.GetReisezentrenLocLatLonRequest) (*operations.GetReisezentrenLocLatLonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +204,7 @@ func (s *SDK) GetReisezentrenLocLatLon(ctx context.Context, request operations.G
 // Get stations in a given radius
 func (s *SDK) GetReisezentrenLocLatLonDist(ctx context.Context, request operations.GetReisezentrenLocLatLonDistRequest) (*operations.GetReisezentrenLocLatLonDistResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}/{dist}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}/{dist}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +249,7 @@ func (s *SDK) GetReisezentrenLocLatLonDist(ctx context.Context, request operatio
 // Get information about a specific station
 func (s *SDK) GetReisezentrenID(ctx context.Context, request operations.GetReisezentrenIDRequest) (*operations.GetReisezentrenIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

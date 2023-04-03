@@ -58,26 +58,18 @@ func (e *GETCreateTemplateVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateTemplateQueryParams struct {
+type GETCreateTemplateRequest struct {
 	Action GETCreateTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The content of the email, composed of a subject line, an HTML part, and a text-only part.
-	Template GETCreateTemplateTemplate    `queryParam:"style=form,explode=true,name=Template"`
-	Version  GETCreateTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateTemplateRequest struct {
-	QueryParams GETCreateTemplateQueryParams
-	Headers     GETCreateTemplateHeaders
+	Template          GETCreateTemplateTemplate    `queryParam:"style=form,explode=true,name=Template"`
+	Version           GETCreateTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateTemplateResponse struct {

@@ -50,7 +50,7 @@ func (e *GETAssociateClientVpnTargetNetworkVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETAssociateClientVpnTargetNetworkQueryParams struct {
+type GETAssociateClientVpnTargetNetworkRequest struct {
 	Action GETAssociateClientVpnTargetNetworkActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -59,23 +59,15 @@ type GETAssociateClientVpnTargetNetworkQueryParams struct {
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the subnet to associate with the Client VPN endpoint.
-	SubnetID string                                        `queryParam:"style=form,explode=true,name=SubnetId"`
-	Version  GETAssociateClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssociateClientVpnTargetNetworkHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateClientVpnTargetNetworkRequest struct {
-	QueryParams GETAssociateClientVpnTargetNetworkQueryParams
-	Headers     GETAssociateClientVpnTargetNetworkHeaders
+	SubnetID          string                                        `queryParam:"style=form,explode=true,name=SubnetId"`
+	Version           GETAssociateClientVpnTargetNetworkVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssociateClientVpnTargetNetworkResponse struct {

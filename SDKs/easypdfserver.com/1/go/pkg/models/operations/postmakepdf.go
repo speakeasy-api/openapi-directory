@@ -13,11 +13,6 @@ type PostMakePdfRequestBody struct {
 	URL  *string `json:"url,omitempty"`
 }
 
-type PostMakePdfRequest struct {
-	// Pass the API key from easypdfserver.com and either HTML or URL to generate your PDF.
-	Request PostMakePdfRequestBody `request:"mediaType=application/json"`
-}
-
 type PostMakePdfResponse struct {
 	ContentType string
 	StatusCode  int

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReadSetMetadataPathParams struct {
-	// The read set's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The read set's sequence store ID.
-	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
-}
-
-type GetReadSetMetadataHeaders struct {
+type GetReadSetMetadataRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetReadSetMetadataHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReadSetMetadataRequest struct {
-	PathParams GetReadSetMetadataPathParams
-	Headers    GetReadSetMetadataHeaders
+	// The read set's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The read set's sequence store ID.
+	SequenceStoreID string `pathParam:"style=simple,explode=false,name=sequenceStoreId"`
 }
 
 type GetReadSetMetadataResponse struct {

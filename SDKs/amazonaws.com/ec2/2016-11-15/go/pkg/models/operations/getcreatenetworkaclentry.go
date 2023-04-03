@@ -86,7 +86,7 @@ func (e *GETCreateNetworkACLEntryVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateNetworkACLEntryQueryParams struct {
+type GETCreateNetworkACLEntryRequest struct {
 	Action GETCreateNetworkACLEntryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IPv4 network range to allow or deny, in CIDR notation (for example <code>172.16.0.0/24</code>). We modify the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it to <code>100.68.0.0/18</code>.
 	CidrBlock *string `queryParam:"style=form,explode=true,name=CidrBlock"`
@@ -107,23 +107,15 @@ type GETCreateNetworkACLEntryQueryParams struct {
 	// Indicates whether to allow or deny the traffic that matches the rule.
 	RuleAction GETCreateNetworkACLEntryRuleActionEnum `queryParam:"style=form,explode=true,name=RuleAction"`
 	// <p>The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.</p> <p>Constraints: Positive integer from 1 to 32766. The range 32767 to 65535 is reserved for internal use.</p>
-	RuleNumber int64                               `queryParam:"style=form,explode=true,name=RuleNumber"`
-	Version    GETCreateNetworkACLEntryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateNetworkACLEntryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateNetworkACLEntryRequest struct {
-	QueryParams GETCreateNetworkACLEntryQueryParams
-	Headers     GETCreateNetworkACLEntryHeaders
+	RuleNumber        int64                               `queryParam:"style=form,explode=true,name=RuleNumber"`
+	Version           GETCreateNetworkACLEntryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateNetworkACLEntryResponse struct {

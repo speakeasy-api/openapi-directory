@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateGatewayCapabilityConfigurationPathParams struct {
-	// The ID of the gateway to be updated.
-	GatewayID string `pathParam:"style=simple,explode=false,name=gatewayId"`
-}
-
-type UpdateGatewayCapabilityConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateGatewayCapabilityConfigurationRequestBody struct {
 	// The JSON document that defines the configuration for the gateway capability. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/configure-sources.html#configure-source-cli">Configuring data sources (CLI)</a> in the <i>IoT SiteWise User Guide</i>.
 	CapabilityConfiguration string `json:"capabilityConfiguration"`
@@ -30,9 +15,16 @@ type UpdateGatewayCapabilityConfigurationRequestBody struct {
 }
 
 type UpdateGatewayCapabilityConfigurationRequest struct {
-	PathParams UpdateGatewayCapabilityConfigurationPathParams
-	Headers    UpdateGatewayCapabilityConfigurationHeaders
-	Request    UpdateGatewayCapabilityConfigurationRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateGatewayCapabilityConfigurationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the gateway to be updated.
+	GatewayID string `pathParam:"style=simple,explode=false,name=gatewayId"`
 }
 
 type UpdateGatewayCapabilityConfigurationResponse struct {

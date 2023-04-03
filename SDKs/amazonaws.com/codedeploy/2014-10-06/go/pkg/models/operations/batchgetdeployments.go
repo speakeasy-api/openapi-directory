@@ -30,20 +30,16 @@ func (e *BatchGetDeploymentsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BatchGetDeploymentsHeaders struct {
-	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        BatchGetDeploymentsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type BatchGetDeploymentsRequest struct {
-	Headers BatchGetDeploymentsHeaders
-	Request shared.BatchGetDeploymentsInput `request:"mediaType=application/json"`
+	BatchGetDeploymentsInput shared.BatchGetDeploymentsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm            *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget               BatchGetDeploymentsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type BatchGetDeploymentsResponse struct {

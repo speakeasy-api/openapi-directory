@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingPutRawRequest struct {
-	// The body of the retargeting script
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type RetargetingPutRawResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

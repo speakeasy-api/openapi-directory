@@ -10,20 +10,9 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugSrcSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugSrcPathParams struct {
-	// This can either be the repository slug or the UUID of the repository,
-	// surrounded by curly-braces, for example: `{repository UUID}`.
-	//
-	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetRepositoriesWorkspaceRepoSlugSrcFormatEnum - Instead of returning the file's contents, return the (json) meta data for it.
@@ -47,15 +36,17 @@ func (e *GetRepositoriesWorkspaceRepoSlugSrcFormatEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetRepositoriesWorkspaceRepoSlugSrcQueryParams struct {
+type GetRepositoriesWorkspaceRepoSlugSrcRequest struct {
 	// Instead of returning the file's contents, return the (json) meta data for it.
 	Format *GetRepositoriesWorkspaceRepoSlugSrcFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugSrcRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugSrcPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugSrcQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugSrcSecurity
+	// This can either be the repository slug or the UUID of the repository,
+	// surrounded by curly-braces, for example: `{repository UUID}`.
+	//
+	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugSrcResponse struct {

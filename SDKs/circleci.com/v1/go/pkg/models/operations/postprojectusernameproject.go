@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProjectUsernameProjectPathParams struct {
-	// XXXXXXXXX
-	//
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// XXXXXXXXX
-	//
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type PostProjectUsernameProjectRequestBody struct {
 	// Additional environment variables to inject into the build environment. A map of names to values.
 	//
@@ -33,8 +24,13 @@ type PostProjectUsernameProjectRequestBody struct {
 }
 
 type PostProjectUsernameProjectRequest struct {
-	PathParams PostProjectUsernameProjectPathParams
-	Request    *PostProjectUsernameProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostProjectUsernameProjectRequestBody `request:"mediaType=application/json"`
+	// XXXXXXXXX
+	//
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// XXXXXXXXX
+	//
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type PostProjectUsernameProjectResponse struct {

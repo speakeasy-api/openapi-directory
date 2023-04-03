@@ -30,20 +30,16 @@ func (e *CreateExplainabilityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateExplainabilityHeaders struct {
-	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateExplainabilityXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateExplainabilityRequest struct {
-	Headers CreateExplainabilityHeaders
-	Request shared.CreateExplainabilityRequest `request:"mediaType=application/json"`
+	CreateExplainabilityRequest shared.CreateExplainabilityRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  CreateExplainabilityXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateExplainabilityResponse struct {

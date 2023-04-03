@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Trcer - Transfer Certificate
 // API to verify Transfer Certificate.
-func (s *apIs) Trcer(ctx context.Context, request operations.TrcerRequest) (*operations.TrcerResponse, error) {
+func (s *apIs) Trcer(ctx context.Context, request operations.TrcerRequestBody, security operations.TrcerSecurity) (*operations.TrcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/trcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Trcer(ctx context.Context, request operations.TrcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

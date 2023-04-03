@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRunPathParams struct {
-	// The run's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetRunQueryParams struct {
-	// The run's export format.
-	Export []shared.RunExportEnum `queryParam:"style=form,explode=true,name=export"`
-}
-
-type GetRunHeaders struct {
+type GetRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type GetRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRunRequest struct {
-	PathParams  GetRunPathParams
-	QueryParams GetRunQueryParams
-	Headers     GetRunHeaders
+	// The run's export format.
+	Export []shared.RunExportEnum `queryParam:"style=form,explode=true,name=export"`
+	// The run's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetRunResponse struct {

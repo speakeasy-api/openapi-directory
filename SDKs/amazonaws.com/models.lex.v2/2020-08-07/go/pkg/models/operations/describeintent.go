@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeIntentPathParams struct {
+type DescribeIntentRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The identifier of the bot associated with the intent.
 	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 	// The version of the bot associated with the intent.
@@ -16,21 +23,6 @@ type DescribeIntentPathParams struct {
 	IntentID string `pathParam:"style=simple,explode=false,name=intentId"`
 	// The identifier of the language and locale of the intent to describe. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
 	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type DescribeIntentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeIntentRequest struct {
-	PathParams DescribeIntentPathParams
-	Headers    DescribeIntentHeaders
 }
 
 type DescribeIntentResponse struct {

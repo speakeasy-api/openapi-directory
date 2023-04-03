@@ -35,7 +35,7 @@ func newDefault(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetChildren - Return children from a given SHA1.  A number of element to return and an offset must be given. If not set it will be the 100 first elements. A cursor must be given to paginate over. The starting cursor is 0.
 func (s *defaultT) GetChildren(ctx context.Context, request operations.GetChildrenRequest) (*operations.GetChildrenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/children/{sha1}/{count}/{cursor}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/children/{sha1}/{count}/{cursor}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -109,7 +109,7 @@ func (s *defaultT) GetInfo(ctx context.Context) (*operations.GetInfoResponse, er
 // GetLookupMd5 - Lookup MD5.
 func (s *defaultT) GetLookupMd5(ctx context.Context, request operations.GetLookupMd5Request) (*operations.GetLookupMd5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/md5/{md5}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lookup/md5/{md5}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +148,7 @@ func (s *defaultT) GetLookupMd5(ctx context.Context, request operations.GetLooku
 // GetLookupSha1 - Lookup SHA-1.
 func (s *defaultT) GetLookupSha1(ctx context.Context, request operations.GetLookupSha1Request) (*operations.GetLookupSha1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/sha1/{sha1}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lookup/sha1/{sha1}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +187,7 @@ func (s *defaultT) GetLookupSha1(ctx context.Context, request operations.GetLook
 // GetLookupSha256 - Lookup SHA-256.
 func (s *defaultT) GetLookupSha256(ctx context.Context, request operations.GetLookupSha256Request) (*operations.GetLookupSha256Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/sha256/{sha256}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/lookup/sha256/{sha256}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *defaultT) GetLookupSha256(ctx context.Context, request operations.GetLo
 // GetParents - Return parents from a given SHA1. A number of element to return and an offset must be given. If not set it will be the 100 first elements. A cursor must be given to paginate over. The starting cursor is 0.
 func (s *defaultT) GetParents(ctx context.Context, request operations.GetParentsRequest) (*operations.GetParentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/parents/{sha1}/{count}/{cursor}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/parents/{sha1}/{count}/{cursor}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +265,7 @@ func (s *defaultT) GetParents(ctx context.Context, request operations.GetParents
 // GetSessionCreate - Create a session key to keep search context. The session is attached to a name. After the session is created, the header `hashlookup_session` can be set to the session name.
 func (s *defaultT) GetSessionCreate(ctx context.Context, request operations.GetSessionCreateRequest) (*operations.GetSessionCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/session/create/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/session/create/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,7 +304,7 @@ func (s *defaultT) GetSessionCreate(ctx context.Context, request operations.GetS
 // GetSessionMatches - Return set of matching and non-matching hashes from a session.
 func (s *defaultT) GetSessionMatches(ctx context.Context, request operations.GetSessionMatchesRequest) (*operations.GetSessionMatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/session/get/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/session/get/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

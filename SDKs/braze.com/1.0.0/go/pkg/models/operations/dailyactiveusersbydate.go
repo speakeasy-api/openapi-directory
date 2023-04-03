@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DailyActiveUsersByDateQueryParams struct {
+type DailyActiveUsersByDateRequest struct {
 	// (Optional) String
 	//
 	// App API identifier; if excluded, results for all apps in app group will be returned
@@ -19,10 +19,6 @@ type DailyActiveUsersByDateQueryParams struct {
 	//
 	// Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive
 	Length *string `queryParam:"style=form,explode=true,name=length"`
-}
-
-type DailyActiveUsersByDateRequest struct {
-	QueryParams DailyActiveUsersByDateQueryParams
 }
 
 type DailyActiveUsersByDateResponse struct {

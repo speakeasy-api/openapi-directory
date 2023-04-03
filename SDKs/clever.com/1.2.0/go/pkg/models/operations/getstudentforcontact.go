@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStudentForContactPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetStudentForContactRequest struct {
-	PathParams GetStudentForContactPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetStudentForContactResponse struct {

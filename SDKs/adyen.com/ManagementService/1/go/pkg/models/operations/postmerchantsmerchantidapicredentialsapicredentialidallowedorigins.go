@@ -8,21 +8,16 @@ import (
 )
 
 type PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsPathParams struct {
+type PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest struct {
+	AllowedOrigin *shared.AllowedOrigin `request:"mediaType=application/json"`
 	// Unique identifier of the API credential.
 	APICredentialID string `pathParam:"style=simple,explode=false,name=apiCredentialId"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest struct {
-	PathParams PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsPathParams
-	Request    *shared.AllowedOrigin `request:"mediaType=application/json"`
-	Security   PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsSecurity
 }
 
 type PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse struct {

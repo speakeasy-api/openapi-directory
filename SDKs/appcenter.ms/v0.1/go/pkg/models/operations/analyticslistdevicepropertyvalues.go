@@ -6,31 +6,21 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AnalyticsListDevicePropertyValuesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AnalyticsListDevicePropertyValuesPathParams struct {
+type AnalyticsListDevicePropertyValuesRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Contains string
+	Contains *string `queryParam:"style=form,explode=true,name=contains"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Device property
 	PropertyName string `pathParam:"style=simple,explode=false,name=property_name"`
-}
-
-type AnalyticsListDevicePropertyValuesQueryParams struct {
-	// Contains string
-	Contains *string `queryParam:"style=form,explode=true,name=contains"`
-}
-
-type AnalyticsListDevicePropertyValuesRequest struct {
-	PathParams  AnalyticsListDevicePropertyValuesPathParams
-	QueryParams AnalyticsListDevicePropertyValuesQueryParams
-	Security    AnalyticsListDevicePropertyValuesSecurity
 }
 
 type AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum string

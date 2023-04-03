@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteFunction20200531PathParams struct {
-	// The name of the function that you are deleting.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type DeleteFunction20200531Headers struct {
+type DeleteFunction20200531Request struct {
 	// The current version (<code>ETag</code> value) of the function that you are deleting, which you can get using <code>DescribeFunction</code>.
-	IfMatch           string  `header:"style=simple,explode=false,name=If-Match"`
+	IfMatch string `header:"style=simple,explode=false,name=If-Match"`
+	// The name of the function that you are deleting.
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type DeleteFunction20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFunction20200531Request struct {
-	PathParams DeleteFunction20200531PathParams
-	Headers    DeleteFunction20200531Headers
 }
 
 type DeleteFunction20200531Response struct {

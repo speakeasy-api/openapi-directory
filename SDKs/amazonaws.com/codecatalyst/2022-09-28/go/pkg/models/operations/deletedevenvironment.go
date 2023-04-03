@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteDevEnvironmentPathParams struct {
+type DeleteDevEnvironmentRequest struct {
 	// The system-generated unique ID of the Dev Environment you want to delete. To retrieve a list of Dev Environment IDs, use <a>ListDevEnvironments</a>.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The name of the project in the space.
 	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// The name of the space.
 	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type DeleteDevEnvironmentRequest struct {
-	PathParams DeleteDevEnvironmentPathParams
 }
 
 type DeleteDevEnvironmentResponse struct {

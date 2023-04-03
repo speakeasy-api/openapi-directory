@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGeofencesPathParams struct {
-	// The name of the geofence collection storing the list of geofences.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-}
-
-type ListGeofencesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListGeofencesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListGeofencesRequestBody struct {
 	// <p>An optional limit for the number of geofences returned in a single call. </p> <p>Default value: <code>100</code> </p>
 	MaxResults *int64 `json:"MaxResults,omitempty"`
@@ -37,10 +15,20 @@ type ListGeofencesRequestBody struct {
 }
 
 type ListGeofencesRequest struct {
-	PathParams  ListGeofencesPathParams
-	QueryParams ListGeofencesQueryParams
-	Headers     ListGeofencesHeaders
-	Request     ListGeofencesRequestBody `request:"mediaType=application/json"`
+	// The name of the geofence collection storing the list of geofences.
+	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                  `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListGeofencesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListGeofencesResponse struct {

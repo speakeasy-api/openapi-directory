@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetProfileImagePathParams struct {
+type GetProfileImageRequest struct {
 	// The parameter is the username of the user or the username of the organization.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetProfileImageRequest struct {
-	PathParams GetProfileImagePathParams
 }
 
 type GetProfileImageResponse struct {

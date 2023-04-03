@@ -30,7 +30,8 @@ func (e *CreateAppXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateAppHeaders struct {
+type CreateAppRequest struct {
+	CreateAppRequest  shared.CreateAppRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateAppHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateAppXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateAppRequest struct {
-	Headers CreateAppHeaders
-	Request shared.CreateAppRequest `request:"mediaType=application/json"`
 }
 
 type CreateAppResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIInfoItemQueryParams struct {
+type GetAPIInfoItemRequest struct {
 	// API key
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-}
-
-type GetAPIInfoItemRequest struct {
-	QueryParams GetAPIInfoItemQueryParams
 }
 
 type GetAPIInfoItemResponse struct {

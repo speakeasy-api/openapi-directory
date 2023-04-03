@@ -50,28 +50,20 @@ func (e *GETResetServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETResetServiceSpecificCredentialQueryParams struct {
+type GETResetServiceSpecificCredentialRequest struct {
 	Action GETResetServiceSpecificCredentialActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of the service-specific credential.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters that can consist of any upper or lowercased letter or digit.</p>
 	ServiceSpecificCredentialID string `queryParam:"style=form,explode=true,name=ServiceSpecificCredentialId"`
 	// <p>The name of the IAM user associated with the service-specific credential. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                                      `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETResetServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETResetServiceSpecificCredentialHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETResetServiceSpecificCredentialRequest struct {
-	QueryParams GETResetServiceSpecificCredentialQueryParams
-	Headers     GETResetServiceSpecificCredentialHeaders
+	UserName          *string                                      `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETResetServiceSpecificCredentialVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETResetServiceSpecificCredentialResponse struct {

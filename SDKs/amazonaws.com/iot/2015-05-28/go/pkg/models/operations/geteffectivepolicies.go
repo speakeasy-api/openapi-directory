@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEffectivePoliciesQueryParams struct {
-	// The thing name.
-	ThingName *string `queryParam:"style=form,explode=true,name=thingName"`
-}
-
-type GetEffectivePoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetEffectivePoliciesRequestBody struct {
 	// The Cognito identity pool ID.
 	CognitoIdentityPoolID *string `json:"cognitoIdentityPoolId,omitempty"`
@@ -30,9 +15,16 @@ type GetEffectivePoliciesRequestBody struct {
 }
 
 type GetEffectivePoliciesRequest struct {
-	QueryParams GetEffectivePoliciesQueryParams
-	Headers     GetEffectivePoliciesHeaders
-	Request     GetEffectivePoliciesRequestBody `request:"mediaType=application/json"`
+	RequestBody       GetEffectivePoliciesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The thing name.
+	ThingName *string `queryParam:"style=form,explode=true,name=thingName"`
 }
 
 type GetEffectivePoliciesResponse struct {

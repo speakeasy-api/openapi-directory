@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type Destiny2ReportOffensivePostGameCarnageReportPlayerSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type Destiny2ReportOffensivePostGameCarnageReportPlayerPathParams struct {
-	// The ID of the activity where you ran into the brigand that you're reporting.
-	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type Destiny2ReportOffensivePostGameCarnageReportPlayerRequest struct {
-	PathParams Destiny2ReportOffensivePostGameCarnageReportPlayerPathParams
-	Security   Destiny2ReportOffensivePostGameCarnageReportPlayerSecurity
+	// The ID of the activity where you ran into the brigand that you're reporting.
+	ActivityID int64 `pathParam:"style=simple,explode=false,name=activityId"`
 }
 
 // Destiny2ReportOffensivePostGameCarnageReportPlayer200Wildcard - Look at the Response property for more information about the nature of this response

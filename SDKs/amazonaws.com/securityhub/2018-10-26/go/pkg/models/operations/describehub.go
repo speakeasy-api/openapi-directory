@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeHubQueryParams struct {
+type DescribeHubRequest struct {
 	// The ARN of the Hub resource to retrieve.
-	HubArn *string `queryParam:"style=form,explode=true,name=HubArn"`
-}
-
-type DescribeHubHeaders struct {
+	HubArn            *string `queryParam:"style=form,explode=true,name=HubArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribeHubHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeHubRequest struct {
-	QueryParams DescribeHubQueryParams
-	Headers     DescribeHubHeaders
 }
 
 type DescribeHubResponse struct {

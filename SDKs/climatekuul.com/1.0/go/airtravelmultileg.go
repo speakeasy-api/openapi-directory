@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -32,10 +33,20 @@ func newAirtravelMultileg(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // AirtravelMultileg - airtravelMultileg
-func (s *airtravelMultileg) AirtravelMultileg(ctx context.Context, request operations.AirtravelMultilegRequest) (*operations.AirtravelMultilegResponse, error) {
+func (s *airtravelMultileg) AirtravelMultileg(ctx context.Context, request shared.AirtravelMultilegRequest, opts ...operations.Option) (*operations.AirtravelMultilegResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.AirtravelMultilegServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelMultileg"
@@ -81,10 +92,20 @@ func (s *airtravelMultileg) AirtravelMultileg(ctx context.Context, request opera
 }
 
 // ConfirmCarbonOffset3 - confirmCarbonOffset
-func (s *airtravelMultileg) ConfirmCarbonOffset3(ctx context.Context, request operations.ConfirmCarbonOffset3Request) (*operations.ConfirmCarbonOffset3Response, error) {
+func (s *airtravelMultileg) ConfirmCarbonOffset3(ctx context.Context, request operations.ConfirmCarbonOffset3RequestBody, opts ...operations.Option) (*operations.ConfirmCarbonOffset3Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmCarbonOffset3ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelMultileg/confirmCarbonOffset"
@@ -127,10 +148,20 @@ func (s *airtravelMultileg) ConfirmCarbonOffset3(ctx context.Context, request op
 }
 
 // ConfirmPayment3 - confirmPayment
-func (s *airtravelMultileg) ConfirmPayment3(ctx context.Context, request operations.ConfirmPayment3Request) (*operations.ConfirmPayment3Response, error) {
+func (s *airtravelMultileg) ConfirmPayment3(ctx context.Context, request operations.ConfirmPayment3RequestBody, opts ...operations.Option) (*operations.ConfirmPayment3Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPayment3ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelMultileg/confirmPayment"
@@ -173,10 +204,20 @@ func (s *airtravelMultileg) ConfirmPayment3(ctx context.Context, request operati
 }
 
 // ConfirmPaymentOfTransaction3 - confirmTransaction
-func (s *airtravelMultileg) ConfirmPaymentOfTransaction3(ctx context.Context, request operations.ConfirmPaymentOfTransaction3Request) (*operations.ConfirmPaymentOfTransaction3Response, error) {
+func (s *airtravelMultileg) ConfirmPaymentOfTransaction3(ctx context.Context, request operations.ConfirmPaymentOfTransaction3RequestBody, opts ...operations.Option) (*operations.ConfirmPaymentOfTransaction3Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmPaymentOfTransaction3ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelMultileg/confirmTransaction"
@@ -219,10 +260,20 @@ func (s *airtravelMultileg) ConfirmPaymentOfTransaction3(ctx context.Context, re
 }
 
 // ConfirmsPlanting3 - confirmPlanting
-func (s *airtravelMultileg) ConfirmsPlanting3(ctx context.Context, request operations.ConfirmsPlanting3Request) (*operations.ConfirmsPlanting3Response, error) {
+func (s *airtravelMultileg) ConfirmsPlanting3(ctx context.Context, request operations.ConfirmsPlanting3RequestBody, opts ...operations.Option) (*operations.ConfirmsPlanting3Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.ConfirmsPlanting3ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/airtravelMultileg/confirmPlanting"

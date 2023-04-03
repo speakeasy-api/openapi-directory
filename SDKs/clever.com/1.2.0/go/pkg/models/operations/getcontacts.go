@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContactsQueryParams struct {
+type GetContactsRequest struct {
 	EndingBefore  *string `queryParam:"style=form,explode=true,name=ending_before"`
 	Limit         *int64  `queryParam:"style=form,explode=true,name=limit"`
 	StartingAfter *string `queryParam:"style=form,explode=true,name=starting_after"`
-}
-
-type GetContactsRequest struct {
-	QueryParams GetContactsQueryParams
 }
 
 type GetContactsResponse struct {

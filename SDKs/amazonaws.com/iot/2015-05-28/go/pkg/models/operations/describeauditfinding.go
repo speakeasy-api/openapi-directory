@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAuditFindingPathParams struct {
-	// A unique identifier for a single audit finding. You can use this identifier to apply mitigation actions to the finding.
-	FindingID string `pathParam:"style=simple,explode=false,name=findingId"`
-}
-
-type DescribeAuditFindingHeaders struct {
+type DescribeAuditFindingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeAuditFindingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAuditFindingRequest struct {
-	PathParams DescribeAuditFindingPathParams
-	Headers    DescribeAuditFindingHeaders
+	// A unique identifier for a single audit finding. You can use this identifier to apply mitigation actions to the finding.
+	FindingID string `pathParam:"style=simple,explode=false,name=findingId"`
 }
 
 type DescribeAuditFindingResponse struct {

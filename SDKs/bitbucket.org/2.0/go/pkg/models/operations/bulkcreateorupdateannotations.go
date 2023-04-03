@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type BulkCreateOrUpdateAnnotationsPathParams struct {
+type BulkCreateOrUpdateAnnotationsRequest struct {
+	// The annotations to create or update
+	RequestBody []map[string]interface{} `request:"mediaType=application/json"`
 	// The commit for which to retrieve reports.
 	Commit string `pathParam:"style=simple,explode=false,name=commit"`
 	// The repository.
@@ -15,12 +17,6 @@ type BulkCreateOrUpdateAnnotationsPathParams struct {
 	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type BulkCreateOrUpdateAnnotationsRequest struct {
-	PathParams BulkCreateOrUpdateAnnotationsPathParams
-	// The annotations to create or update
-	Request []map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type BulkCreateOrUpdateAnnotationsResponse struct {

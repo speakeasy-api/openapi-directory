@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateRoutePathParams struct {
-	// The name of the service mesh in which to create the route.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual router in which to create the route.
-	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
-}
-
-type CreateRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateRouteRequestBodySpec - An object representing the specification of a route.
 type CreateRouteRequestBodySpec struct {
 	HTTPRoute *shared.HTTPRoute `json:"httpRoute,omitempty"`
@@ -40,9 +23,18 @@ type CreateRouteRequestBody struct {
 }
 
 type CreateRouteRequest struct {
-	PathParams CreateRoutePathParams
-	Headers    CreateRouteHeaders
-	Request    CreateRouteRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateRouteRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh in which to create the route.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the virtual router in which to create the route.
+	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
 }
 
 type CreateRouteResponse struct {

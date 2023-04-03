@@ -24,85 +24,63 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AnalyzeDocumentRequest{
-        Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Textract.AnalyzeDocument",
-        },
-        Request: shared.AnalyzeDocumentRequest{
+        AnalyzeDocumentRequest: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "illum",
+                Bytes: "corrupti",
                 S3Object: &shared.S3Object{
-                    Bucket: "vel",
-                    Name: "error",
-                    Version: "deserunt",
+                    Bucket: "provident",
+                    Name: "distinctio",
+                    Version: "quibusdam",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
-                "FORMS",
-                "FORMS",
+                "SIGNATURES",
+                "QUERIES",
+                "SIGNATURES",
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
-                        "FreeOfPersonallyIdentifiableInformation",
                         "FreeOfAdultContent",
-                        "FreeOfPersonallyIdentifiableInformation",
-                        "FreeOfPersonallyIdentifiableInformation",
+                        "FreeOfAdultContent",
                     },
                 },
-                FlowDefinitionArn: "molestiae",
-                HumanLoopName: "minus",
+                FlowDefinitionArn: "suscipit",
+                HumanLoopName: "iure",
             },
             QueriesConfig: &shared.QueriesConfig{
                 Queries: []shared.Query{
                     shared.Query{
-                        Alias: "voluptatum",
+                        Alias: "debitis",
                         Pages: []string{
-                            "excepturi",
-                            "nisi",
+                            "delectus",
                         },
-                        Text: "recusandae",
+                        Text: "tempora",
                     },
                     shared.Query{
-                        Alias: "temporibus",
+                        Alias: "suscipit",
                         Pages: []string{
-                            "quis",
+                            "minus",
+                            "placeat",
                         },
-                        Text: "veritatis",
-                    },
-                    shared.Query{
-                        Alias: "deserunt",
-                        Pages: []string{
-                            "ipsam",
-                        },
-                        Text: "repellendus",
-                    },
-                    shared.Query{
-                        Alias: "sapiente",
-                        Pages: []string{
-                            "odit",
-                            "at",
-                            "at",
-                            "maiores",
-                        },
-                        Text: "molestiae",
+                        Text: "voluptatum",
                     },
                 },
             },
         },
+        XAmzAlgorithm: "iusto",
+        XAmzContentSha256: "excepturi",
+        XAmzCredential: "nisi",
+        XAmzDate: "recusandae",
+        XAmzSecurityToken: "temporibus",
+        XAmzSignature: "ab",
+        XAmzSignedHeaders: "quis",
+        XAmzTarget: "Textract.AnalyzeDocument",
     }
 
     ctx := context.Background()
@@ -119,7 +97,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -138,4 +116,15 @@ func main() {
 * `StartLendingAnalysis` - <p>Starts the classification and analysis of an input document. <code>StartLendingAnalysis</code> initiates the classification and analysis of a packet of lending documents. <code>StartLendingAnalysis</code> operates on a document file located in an Amazon S3 bucket.</p> <p> <code>StartLendingAnalysis</code> can analyze text in documents that are in one of the following formats: JPEG, PNG, TIFF, PDF. Use <code>DocumentLocation</code> to specify the bucket name and the file name of the document. </p> <p> <code>StartLendingAnalysis</code> returns a job identifier (<code>JobId</code>) that you use to get the results of the operation. When the text analysis is finished, Amazon Textract publishes a completion status to the Amazon Simple Notification Service (Amazon SNS) topic that you specify in <code>NotificationChannel</code>. To get the results of the text analysis operation, first check that the status value published to the Amazon SNS topic is SUCCEEDED. If the status is SUCCEEDED you can call either <code>GetLendingAnalysis</code> or <code>GetLendingAnalysisSummary</code> and provide the <code>JobId</code> to obtain the results of the analysis.</p> <p>If using <code>OutputConfig</code> to specify an Amazon S3 bucket, the output will be contained within the specified prefix in a directory labeled with the job-id. In the directory there are 3 sub-directories: </p> <ul> <li> <p>detailedResponse (contains the GetLendingAnalysis response)</p> </li> <li> <p>summaryResponse (for the GetLendingAnalysisSummary response)</p> </li> <li> <p>splitDocuments (documents split across logical boundaries)</p> </li> </ul>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

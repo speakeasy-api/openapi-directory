@@ -50,24 +50,16 @@ func (e *POSTDescribeAutoScalingNotificationTypesVersionEnum) UnmarshalJSON(data
 	}
 }
 
-type POSTDescribeAutoScalingNotificationTypesQueryParams struct {
-	Action  POSTDescribeAutoScalingNotificationTypesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDescribeAutoScalingNotificationTypesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeAutoScalingNotificationTypesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDescribeAutoScalingNotificationTypesRequest struct {
-	QueryParams POSTDescribeAutoScalingNotificationTypesQueryParams
-	Headers     POSTDescribeAutoScalingNotificationTypesHeaders
+	Action            POSTDescribeAutoScalingNotificationTypesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           POSTDescribeAutoScalingNotificationTypesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeAutoScalingNotificationTypesResponse struct {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEventIntegrationPathParams struct {
+type GetEventIntegrationRequest struct {
 	// The name of the event integration.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type GetEventIntegrationHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetEventIntegrationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEventIntegrationRequest struct {
-	PathParams GetEventIntegrationPathParams
-	Headers    GetEventIntegrationHeaders
 }
 
 type GetEventIntegrationResponse struct {

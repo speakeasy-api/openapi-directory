@@ -52,10 +52,6 @@ type PrepareTransactionRequestBody struct {
 	Variation *PrepareTransactionRequestBodyVariationEnum `json:"variation,omitempty"`
 }
 
-type PrepareTransactionRequest struct {
-	Request PrepareTransactionRequestBody `request:"mediaType=application/json"`
-}
-
 type PrepareTransactionResponse struct {
 	ContentType string
 	StatusCode  int

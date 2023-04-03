@@ -50,28 +50,20 @@ func (e *GETDownloadDBLogFilePortionVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDownloadDBLogFilePortionQueryParams struct {
+type GETDownloadDBLogFilePortionRequest struct {
 	Action               GETDownloadDBLogFilePortionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	DBInstanceIdentifier string                                 `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	LogFileName          string                                 `queryParam:"style=form,explode=true,name=LogFileName"`
 	Marker               *string                                `queryParam:"style=form,explode=true,name=Marker"`
 	NumberOfLines        *int64                                 `queryParam:"style=form,explode=true,name=NumberOfLines"`
 	Version              GETDownloadDBLogFilePortionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDownloadDBLogFilePortionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDownloadDBLogFilePortionRequest struct {
-	QueryParams GETDownloadDBLogFilePortionQueryParams
-	Headers     GETDownloadDBLogFilePortionHeaders
+	XAmzAlgorithm        *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDownloadDBLogFilePortionResponse struct {

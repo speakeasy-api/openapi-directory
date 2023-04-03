@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFieldLevelEncryptionProfile20171030PathParams struct {
-	// The ID of the field-level encryption profile request.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateFieldLevelEncryptionProfile20171030Headers struct {
-	// The value of the <code>ETag</code> header that you received when retrieving the profile identity to update. For example: <code>E2QWRUHAPOMQZL</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFieldLevelEncryptionProfile20171030RequestBodyFieldLevelEncryptionProfileConfig - A complex data type of profiles for the field-level encryption.
 type UpdateFieldLevelEncryptionProfile20171030RequestBodyFieldLevelEncryptionProfileConfig struct {
 	CallerReference    *string
@@ -38,9 +21,18 @@ type UpdateFieldLevelEncryptionProfile20171030RequestBody struct {
 }
 
 type UpdateFieldLevelEncryptionProfile20171030Request struct {
-	PathParams UpdateFieldLevelEncryptionProfile20171030PathParams
-	Headers    UpdateFieldLevelEncryptionProfile20171030Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The ID of the field-level encryption profile request.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The value of the <code>ETag</code> header that you received when retrieving the profile identity to update. For example: <code>E2QWRUHAPOMQZL</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateFieldLevelEncryptionProfile20171030Response struct {

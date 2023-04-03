@@ -38,7 +38,7 @@ func newZXINGZebraCrossingBarCodes(defaultClient, securityClient HTTPClient, ser
 // **apikey=YOUR-API-KEY**
 // ### Example
 // ``` https://v2018.api2pdf.com/zebra?format={format}&apikey={YourApiKey}&value={YourText} ```
-func (s *zxingZebraCrossingBarCodes) ZebraGET(ctx context.Context, request operations.ZebraGETRequest) (*operations.ZebraGETResponse, error) {
+func (s *zxingZebraCrossingBarCodes) ZebraGET(ctx context.Context, request operations.ZebraGETRequest, security operations.ZebraGETSecurity) (*operations.ZebraGETResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/zebra"
 
@@ -47,11 +47,11 @@ func (s *zxingZebraCrossingBarCodes) ZebraGET(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

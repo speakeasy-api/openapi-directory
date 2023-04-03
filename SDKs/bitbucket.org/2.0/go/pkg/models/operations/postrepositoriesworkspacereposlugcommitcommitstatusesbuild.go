@@ -8,12 +8,14 @@ import (
 )
 
 type PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildPathParams struct {
+type PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest struct {
+	// The new commit status object.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The commit's SHA1.
 	Commit string `pathParam:"style=simple,explode=false,name=commit"`
 	// This can either be the repository slug or the UUID of the repository,
@@ -24,13 +26,6 @@ type PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildPathParams struct
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest struct {
-	PathParams PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildPathParams
-	// The new commit status object.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildSecurity
 }
 
 type PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse struct {

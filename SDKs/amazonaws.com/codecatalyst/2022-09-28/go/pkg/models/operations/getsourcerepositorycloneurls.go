@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSourceRepositoryCloneUrlsPathParams struct {
+type GetSourceRepositoryCloneUrlsRequest struct {
 	// The name of the project in the space.
 	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 	// The name of the source repository.
 	SourceRepositoryName string `pathParam:"style=simple,explode=false,name=sourceRepositoryName"`
 	// The name of the space.
 	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type GetSourceRepositoryCloneUrlsRequest struct {
-	PathParams GetSourceRepositoryCloneUrlsPathParams
 }
 
 type GetSourceRepositoryCloneUrlsResponse struct {

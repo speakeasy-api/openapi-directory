@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppsCreateForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AppsCreateForOrgPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // AppsCreateForOrgRequestBodyOsEnum - The OS the app will be running on
@@ -128,10 +122,10 @@ type AppsCreateForOrgRequestBody struct {
 }
 
 type AppsCreateForOrgRequest struct {
-	PathParams AppsCreateForOrgPathParams
 	// The data for the app
-	Request  AppsCreateForOrgRequestBody `request:"mediaType=application/json"`
-	Security AppsCreateForOrgSecurity
+	RequestBody AppsCreateForOrgRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type AppsCreateForOrgDefaultApplicationJSONErrorCodeEnum string

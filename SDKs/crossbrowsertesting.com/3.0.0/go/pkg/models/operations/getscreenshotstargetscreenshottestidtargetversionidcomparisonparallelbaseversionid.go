@@ -8,31 +8,23 @@ import (
 )
 
 type GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDPathParams struct {
+type GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDRequest struct {
 	// version id of the base Screenshot Test
 	BaseVersionID int64 `pathParam:"style=simple,explode=false,name=base_version_id"`
-	// test id of the target Screenshot Test
-	TargetScreenshotTestID int64 `pathParam:"style=simple,explode=false,name=target_screenshot_test_id"`
-	// version id of the target Screenshot Test
-	TargetVersionID int64 `pathParam:"style=simple,explode=false,name=target_version_id"`
-}
-
-type GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDQueryParams struct {
 	// Name of callback method for JSONP requests.
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// The format of the returned data. Possible values are "json" or "jsonp".
 	Format *string `queryParam:"style=form,explode=true,name=format"`
+	// test id of the target Screenshot Test
+	TargetScreenshotTestID int64 `pathParam:"style=simple,explode=false,name=target_screenshot_test_id"`
+	// version id of the target Screenshot Test
+	TargetVersionID int64 `pathParam:"style=simple,explode=false,name=target_version_id"`
 	// Used as the basis for detecting box model differences in element positioning and dimensions that should be flagged and reported back to the comparison results. The default is 30px which is a good basis for finding notable layout differences.
 	Tolerance *float64 `queryParam:"style=form,explode=true,name=tolerance"`
-}
-
-type GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDRequest struct {
-	PathParams  GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDPathParams
-	QueryParams GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDQueryParams
-	Security    GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDSecurity
 }
 
 type GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDResponse struct {

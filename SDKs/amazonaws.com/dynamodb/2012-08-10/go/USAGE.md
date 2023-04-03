@@ -13,95 +13,88 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchExecuteStatementRequest{
-        Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "DynamoDB_20120810.BatchExecuteStatement",
-        },
-        Request: shared.BatchExecuteStatementInput{
-            ReturnConsumedCapacity: "NONE",
+        BatchExecuteStatementInput: shared.BatchExecuteStatementInput{
+            ReturnConsumedCapacity: "TOTAL",
             Statements: []shared.BatchStatementRequest{
                 shared.BatchStatementRequest{
                     ConsistentRead: false,
                     Parameters: []shared.AttributeValue{
                         shared.AttributeValue{
-                            B: "deserunt",
+                            B: "quibusdam",
                             Bool: false,
                             Bs: []string{
-                                "iure",
-                                "magnam",
+                                "nulla",
+                                "corrupti",
+                                "illum",
                             },
                             L: []shared.AttributeValue{
                                 shared.AttributeValue{},
                                 shared.AttributeValue{},
-                                shared.AttributeValue{},
-                                shared.AttributeValue{},
                             },
                             M: map[string]shared.AttributeValue{
-                                "delectus": shared.AttributeValue{},
+                                "deserunt": shared.AttributeValue{},
+                                "suscipit": shared.AttributeValue{},
+                                "iure": shared.AttributeValue{},
                             },
-                            N: "tempora",
+                            N: "magnam",
                             Ns: []string{
-                                "molestiae",
-                                "minus",
+                                "ipsa",
+                                "delectus",
+                                "tempora",
+                                "suscipit",
                             },
                             Null: false,
-                            S: "placeat",
+                            S: "molestiae",
                             Ss: []string{
+                                "placeat",
+                                "voluptatum",
                                 "iusto",
                                 "excepturi",
-                                "nisi",
                             },
                         },
                         shared.AttributeValue{
-                            B: "recusandae",
+                            B: "nisi",
                             Bool: false,
                             Bs: []string{
+                                "temporibus",
                                 "ab",
                                 "quis",
                                 "veritatis",
-                                "deserunt",
                             },
                             L: []shared.AttributeValue{
                                 shared.AttributeValue{},
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
                             },
                             M: map[string]shared.AttributeValue{
-                                "repellendus": shared.AttributeValue{},
-                                "sapiente": shared.AttributeValue{},
+                                "ipsam": shared.AttributeValue{},
                             },
-                            N: "quo",
+                            N: "repellendus",
                             Ns: []string{
+                                "quo",
+                                "odit",
+                                "at",
                                 "at",
                             },
                             Null: false,
-                            S: "at",
+                            S: "maiores",
                             Ss: []string{
-                                "molestiae",
                                 "quod",
                                 "quod",
-                                "esse",
                             },
                         },
                         shared.AttributeValue{
-                            B: "totam",
+                            B: "esse",
                             Bool: false,
                             Bs: []string{
+                                "porro",
                                 "dolorum",
                                 "dicta",
-                                "nam",
-                                "officia",
                             },
                             L: []shared.AttributeValue{
                                 shared.AttributeValue{},
@@ -109,6 +102,8 @@ func main() {
                                 shared.AttributeValue{},
                             },
                             M: map[string]shared.AttributeValue{
+                                "occaecati": shared.AttributeValue{},
+                                "fugit": shared.AttributeValue{},
                                 "deleniti": shared.AttributeValue{},
                             },
                             N: "hic",
@@ -193,8 +188,82 @@ func main() {
                     },
                     Statement: "accusantium",
                 },
+                shared.BatchStatementRequest{
+                    ConsistentRead: false,
+                    Parameters: []shared.AttributeValue{
+                        shared.AttributeValue{
+                            B: "culpa",
+                            Bool: false,
+                            Bs: []string{
+                                "sapiente",
+                                "architecto",
+                                "mollitia",
+                                "dolorem",
+                            },
+                            L: []shared.AttributeValue{
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                            },
+                            M: map[string]shared.AttributeValue{
+                                "repellat": shared.AttributeValue{},
+                            },
+                            N: "mollitia",
+                            Ns: []string{
+                                "numquam",
+                                "commodi",
+                                "quam",
+                            },
+                            Null: false,
+                            S: "molestiae",
+                            Ss: []string{
+                                "error",
+                            },
+                        },
+                        shared.AttributeValue{
+                            B: "quia",
+                            Bool: false,
+                            Bs: []string{
+                                "vitae",
+                                "laborum",
+                            },
+                            L: []shared.AttributeValue{
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                            },
+                            M: map[string]shared.AttributeValue{
+                                "odit": shared.AttributeValue{},
+                                "quo": shared.AttributeValue{},
+                            },
+                            N: "sequi",
+                            Ns: []string{
+                                "ipsam",
+                                "id",
+                                "possimus",
+                                "aut",
+                            },
+                            Null: false,
+                            S: "quasi",
+                            Ss: []string{
+                                "temporibus",
+                                "laborum",
+                                "quasi",
+                            },
+                        },
+                    },
+                    Statement: "reiciendis",
+                },
             },
         },
+        XAmzAlgorithm: "voluptatibus",
+        XAmzContentSha256: "vero",
+        XAmzCredential: "nihil",
+        XAmzDate: "praesentium",
+        XAmzSecurityToken: "voluptatibus",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "omnis",
+        XAmzTarget: "DynamoDB_20120810.BatchExecuteStatement",
     }
 
     ctx := context.Background()

@@ -359,7 +359,6 @@ pkg/models/operations/testupdatedevicesetofowner.go
 pkg/models/operations/testupdatedevicesetofuser.go
 pkg/models/operations/testuploadhash.go
 pkg/models/operations/testuploadhashesbatch.go
-pkg/models/shared/security.go
 pkg/models/shared/stacktrace.go
 pkg/models/shared/thread.go
 pkg/models/shared/exception.go

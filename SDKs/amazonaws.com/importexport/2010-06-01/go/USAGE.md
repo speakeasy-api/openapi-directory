@@ -13,25 +13,21 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETCancelJobRequest{
-        QueryParams: operations.GETCancelJobQueryParams{
-            APIVersion: "corrupti",
-            AWSAccessKeyID: "provident",
-            Action: "CancelJob",
-            JobID: "distinctio",
-            Operation: "CancelJob",
-            Signature: "quibusdam",
-            SignatureMethod: "unde",
-            SignatureVersion: "nulla",
-            Timestamp: "corrupti",
-            Version: "2010-06-01",
-        },
+        APIVersion: "corrupti",
+        AWSAccessKeyID: "provident",
+        Action: "CancelJob",
+        JobID: "distinctio",
+        Operation: "CancelJob",
+        Signature: "quibusdam",
+        SignatureMethod: "unde",
+        SignatureVersion: "nulla",
+        Timestamp: "corrupti",
+        Version: "2010-06-01",
     }
 
     ctx := context.Background()

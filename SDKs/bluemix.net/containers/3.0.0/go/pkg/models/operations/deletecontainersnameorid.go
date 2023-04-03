@@ -6,27 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteContainersNameOrIDPathParams struct {
-	// The unique identifier or name of the container that you want to delete. Run `cf ic ps -a` or call the `GET /containers/json?all=true` endpoint to review all containers in your space.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type DeleteContainersNameOrIDQueryParams struct {
-	// Use the `force` query parameter if you want to delete the container independent of their current state. The container does not need to be stopped first. To force the deletion of a container, enter `force=true`, `force=True`, or `force=1`. If you want to delete containers that are in a non-running state only, do either not set this query parameter, or enter `force=false`, `force=False`, or `force=0`.
-	Force *bool `queryParam:"style=form,explode=true,name=force"`
-}
-
-type DeleteContainersNameOrIDHeaders struct {
+type DeleteContainersNameOrIDRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type DeleteContainersNameOrIDRequest struct {
-	PathParams  DeleteContainersNameOrIDPathParams
-	QueryParams DeleteContainersNameOrIDQueryParams
-	Headers     DeleteContainersNameOrIDHeaders
+	// Use the `force` query parameter if you want to delete the container independent of their current state. The container does not need to be stopped first. To force the deletion of a container, enter `force=true`, `force=True`, or `force=1`. If you want to delete containers that are in a non-running state only, do either not set this query parameter, or enter `force=false`, `force=False`, or `force=0`.
+	Force *bool `queryParam:"style=form,explode=true,name=force"`
+	// The unique identifier or name of the container that you want to delete. Run `cf ic ps -a` or call the `GET /containers/json?all=true` endpoint to review all containers in your space.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type DeleteContainersNameOrIDResponse struct {

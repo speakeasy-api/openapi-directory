@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UnlockRulePathParams struct {
-	// The unique ID of the retention rule.
-	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
-}
-
-type UnlockRuleHeaders struct {
+type UnlockRuleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type UnlockRuleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UnlockRuleRequest struct {
-	PathParams UnlockRulePathParams
-	Headers    UnlockRuleHeaders
+	// The unique ID of the retention rule.
+	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 }
 
 type UnlockRuleResponse struct {

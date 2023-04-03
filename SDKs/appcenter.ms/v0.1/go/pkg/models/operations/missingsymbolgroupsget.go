@@ -6,26 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type MissingSymbolGroupsGetSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type MissingSymbolGroupsGetPathParams struct {
+type MissingSymbolGroupsGetRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// missing symbol crash group id
 	SymbolGroupID string `pathParam:"style=simple,explode=false,name=symbol_group_id"`
-}
-
-type MissingSymbolGroupsGetRequest struct {
-	PathParams MissingSymbolGroupsGetPathParams
-	Security   MissingSymbolGroupsGetSecurity
 }
 
 // MissingSymbolGroupsGetDefaultApplicationJSON - failure response object

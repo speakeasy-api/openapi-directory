@@ -32,7 +32,7 @@ func newPosts(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CreateTopicPostPM - Creates a new topic, a new post, or a private message
-func (s *posts) CreateTopicPostPM(ctx context.Context, request operations.CreateTopicPostPMRequest) (*operations.CreateTopicPostPMResponse, error) {
+func (s *posts) CreateTopicPostPM(ctx context.Context, request operations.CreateTopicPostPMRequestBody) (*operations.CreateTopicPostPMResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts.json"
 
@@ -85,9 +85,9 @@ func (s *posts) CreateTopicPostPM(ctx context.Context, request operations.Create
 // DeletePost - delete a single post
 func (s *posts) DeletePost(ctx context.Context, request operations.DeletePostRequest) (*operations.DeletePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,14 +127,14 @@ func (s *posts) DeletePost(ctx context.Context, request operations.DeletePostReq
 // GetPost - Retrieve a single post
 func (s *posts) GetPost(ctx context.Context, request operations.GetPostRequest) (*operations.GetPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -180,9 +180,9 @@ func (s *posts) ListPosts(ctx context.Context, request operations.ListPostsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -223,9 +223,9 @@ func (s *posts) ListPosts(ctx context.Context, request operations.ListPostsReque
 // LockPost - Lock a post from being edited
 func (s *posts) LockPost(ctx context.Context, request operations.LockPostRequest) (*operations.LockPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/locked.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/locked.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -237,7 +237,7 @@ func (s *posts) LockPost(ctx context.Context, request operations.LockPostRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,7 +278,7 @@ func (s *posts) PerformPostAction(ctx context.Context, request operations.Perfor
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/post_actions.json"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -290,7 +290,7 @@ func (s *posts) PerformPostAction(ctx context.Context, request operations.Perfor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -329,7 +329,7 @@ func (s *posts) PerformPostAction(ctx context.Context, request operations.Perfor
 // PostReplies - List replies to a post
 func (s *posts) PostReplies(ctx context.Context, request operations.PostRepliesRequest) (*operations.PostRepliesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/replies.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/replies.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,9 +373,9 @@ func (s *posts) PostReplies(ctx context.Context, request operations.PostRepliesR
 // UpdatePost - Update a single post
 func (s *posts) UpdatePost(ctx context.Context, request operations.UpdatePostRequest) (*operations.UpdatePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -387,7 +387,7 @@ func (s *posts) UpdatePost(ctx context.Context, request operations.UpdatePostReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

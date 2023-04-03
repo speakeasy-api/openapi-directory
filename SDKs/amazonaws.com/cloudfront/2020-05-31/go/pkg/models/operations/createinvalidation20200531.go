@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateInvalidation20200531PathParams struct {
-	// The distribution's id.
-	DistributionID string `pathParam:"style=simple,explode=false,name=DistributionId"`
-}
-
-type CreateInvalidation20200531Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateInvalidation20200531RequestBodyInvalidationBatch - An invalidation batch.
 type CreateInvalidation20200531RequestBodyInvalidationBatch struct {
 	CallerReference *string
@@ -34,9 +19,16 @@ type CreateInvalidation20200531RequestBody struct {
 }
 
 type CreateInvalidation20200531Request struct {
-	PathParams CreateInvalidation20200531PathParams
-	Headers    CreateInvalidation20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The distribution's id.
+	DistributionID    string  `pathParam:"style=simple,explode=false,name=DistributionId"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateInvalidation20200531Response struct {

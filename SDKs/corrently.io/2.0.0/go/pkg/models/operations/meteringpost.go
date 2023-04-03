@@ -21,10 +21,6 @@ type MeteringPostRequestBody struct {
 	Zip *string `json:"zip,omitempty"`
 }
 
-type MeteringPostRequest struct {
-	Request MeteringPostRequestBody `request:"mediaType=application/json"`
-}
-
 // MeteringPost200ApplicationJSON - Success
 type MeteringPost200ApplicationJSON struct {
 	// Reading as provided as input in Wh

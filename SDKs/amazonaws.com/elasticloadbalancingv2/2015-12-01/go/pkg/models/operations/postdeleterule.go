@@ -50,25 +50,17 @@ func (e *POSTDeleteRuleVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteRuleQueryParams struct {
-	Action  POSTDeleteRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteRuleRequest struct {
-	QueryParams POSTDeleteRuleQueryParams
-	Headers     POSTDeleteRuleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                    `request:"mediaType=text/xml"`
+	Version           POSTDeleteRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteRuleResponse struct {

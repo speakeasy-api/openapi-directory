@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FareValueQueryParams struct {
+type FareValueRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Car's make
@@ -26,10 +26,6 @@ type FareValueQueryParams struct {
 	Vrm *string `queryParam:"style=form,explode=true,name=vrm"`
 	// Car manufacturing year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type FareValueRequest struct {
-	QueryParams FareValueQueryParams
 }
 
 type FareValueResponse struct {

@@ -36,9 +36,9 @@ func newLinuxHostings(defaultClient, securityClient HTTPClient, serverURL, langu
 // AddScheduledTasks - Add a scheduled task
 func (s *linuxHostings) AddScheduledTasks(ctx context.Context, request operations.AddScheduledTasksRequest) (*operations.AddScheduledTasksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScheduledTask", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *linuxHostings) AddScheduledTasks(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,9 +83,9 @@ func (s *linuxHostings) AddScheduledTasks(ctx context.Context, request operation
 // AddSSHKey - Add a SSH key
 func (s *linuxHostings) AddSSHKey(ctx context.Context, request operations.AddSSHKeyRequest) (*operations.AddSSHKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/keys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddSSHKeyRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -97,7 +97,7 @@ func (s *linuxHostings) AddSSHKey(ctx context.Context, request operations.AddSSH
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -130,9 +130,9 @@ func (s *linuxHostings) AddSSHKey(ctx context.Context, request operations.AddSSH
 // ChangeApcu - Configure PHP APCu setting
 func (s *linuxHostings) ChangeApcu(ctx context.Context, request operations.ChangeApcuRequest) (*operations.ChangeApcuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/apcu", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/apcu", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePhpAPcuRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +144,7 @@ func (s *linuxHostings) ChangeApcu(ctx context.Context, request operations.Chang
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -176,9 +176,9 @@ func (s *linuxHostings) ChangeApcu(ctx context.Context, request operations.Chang
 // ChangeAutoRedirect - Configure auto redirect
 func (s *linuxHostings) ChangeAutoRedirect(ctx context.Context, request operations.ChangeAutoRedirectRequest) (*operations.ChangeAutoRedirectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sslsettings/{hostname}/autoredirect", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sslsettings/{hostname}/autoredirect", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AutoRedirectConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *linuxHostings) ChangeAutoRedirect(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -222,9 +222,9 @@ func (s *linuxHostings) ChangeAutoRedirect(ctx context.Context, request operatio
 // ChangeGzipCompression - Enable/disable GZIP compression
 func (s *linuxHostings) ChangeGzipCompression(ctx context.Context, request operations.ChangeGzipCompressionRequest) (*operations.ChangeGzipCompressionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/settings/gzipcompression", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/settings/gzipcompression", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GzipConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -236,7 +236,7 @@ func (s *linuxHostings) ChangeGzipCompression(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -268,9 +268,9 @@ func (s *linuxHostings) ChangeGzipCompression(ctx context.Context, request opera
 // ChangeLetsEncrypt - Configure let's encrypt
 func (s *linuxHostings) ChangeLetsEncrypt(ctx context.Context, request operations.ChangeLetsEncryptRequest) (*operations.ChangeLetsEncryptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sslsettings/{hostname}/letsencrypt", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sslsettings/{hostname}/letsencrypt", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LetsEncryptConfig", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -282,7 +282,7 @@ func (s *linuxHostings) ChangeLetsEncrypt(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -314,9 +314,9 @@ func (s *linuxHostings) ChangeLetsEncrypt(ctx context.Context, request operation
 // ChangePhpMemoryLimit - Configure PHP memory limit
 func (s *linuxHostings) ChangePhpMemoryLimit(ctx context.Context, request operations.ChangePhpMemoryLimitRequest) (*operations.ChangePhpMemoryLimitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/memorylimit", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/memorylimit", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePhpMemoryLimitRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -328,7 +328,7 @@ func (s *linuxHostings) ChangePhpMemoryLimit(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -360,9 +360,9 @@ func (s *linuxHostings) ChangePhpMemoryLimit(ctx context.Context, request operat
 // ChangePhpVersion - Change the Linux hosting PHP version.
 func (s *linuxHostings) ChangePhpVersion(ctx context.Context, request operations.ChangePhpVersionRequest) (*operations.ChangePhpVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/version", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/version", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PhpVersion", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -374,7 +374,7 @@ func (s *linuxHostings) ChangePhpVersion(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -406,9 +406,9 @@ func (s *linuxHostings) ChangePhpVersion(ctx context.Context, request operations
 // ConfigureFtp - Configure FTP
 func (s *linuxHostings) ConfigureFtp(ctx context.Context, request operations.ConfigureFtpRequest) (*operations.ConfigureFtpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ftp/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ftp/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FtpConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -420,7 +420,7 @@ func (s *linuxHostings) ConfigureFtp(ctx context.Context, request operations.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -454,9 +454,9 @@ func (s *linuxHostings) ConfigureFtp(ctx context.Context, request operations.Con
 // ConfigureHttp2 - Configure HTTP/2
 func (s *linuxHostings) ConfigureHttp2(ctx context.Context, request operations.ConfigureHttp2Request) (*operations.ConfigureHttp2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sites/{siteName}/http2/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sites/{siteName}/http2/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Http2Configuration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -468,7 +468,7 @@ func (s *linuxHostings) ConfigureHttp2(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -502,9 +502,9 @@ func (s *linuxHostings) ConfigureHttp2(ctx context.Context, request operations.C
 // ConfigureScheduledTask - Configure a scheduled task
 func (s *linuxHostings) ConfigureScheduledTask(ctx context.Context, request operations.ConfigureScheduledTaskRequest) (*operations.ConfigureScheduledTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks/{scheduledTaskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks/{scheduledTaskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScheduledTask", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -516,7 +516,7 @@ func (s *linuxHostings) ConfigureScheduledTask(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -550,9 +550,9 @@ func (s *linuxHostings) ConfigureScheduledTask(ctx context.Context, request oper
 // ConfigureSSH - Configure SSH
 func (s *linuxHostings) ConfigureSSH(ctx context.Context, request operations.ConfigureSSHRequest) (*operations.ConfigureSSHResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHConfiguration", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -564,7 +564,7 @@ func (s *linuxHostings) ConfigureSSH(ctx context.Context, request operations.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -598,9 +598,9 @@ func (s *linuxHostings) ConfigureSSH(ctx context.Context, request operations.Con
 // CreateHostHeader - Create a host header
 func (s *linuxHostings) CreateHostHeader(ctx context.Context, request operations.CreateHostHeaderRequest) (*operations.CreateHostHeaderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sites/{siteName}/hostheaders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/sites/{siteName}/hostheaders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddHostHeaderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -612,7 +612,7 @@ func (s *linuxHostings) CreateHostHeader(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -645,9 +645,9 @@ func (s *linuxHostings) CreateHostHeader(ctx context.Context, request operations
 // CreateSubsite - Create a subsite
 func (s *linuxHostings) CreateSubsite(ctx context.Context, request operations.CreateSubsiteRequest) (*operations.CreateSubsiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/subsites", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/subsites", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddSubsiteRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -659,7 +659,7 @@ func (s *linuxHostings) CreateSubsite(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -692,14 +692,14 @@ func (s *linuxHostings) CreateSubsite(ctx context.Context, request operations.Cr
 // DeleteScheduledTask - Delete a scheduled task
 func (s *linuxHostings) DeleteScheduledTask(ctx context.Context, request operations.DeleteScheduledTaskRequest) (*operations.DeleteScheduledTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks/{scheduledTaskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks/{scheduledTaskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -733,14 +733,14 @@ func (s *linuxHostings) DeleteScheduledTask(ctx context.Context, request operati
 // DeleteSSHKey - Delete a SSH key
 func (s *linuxHostings) DeleteSSHKey(ctx context.Context, request operations.DeleteSSHKeyRequest) (*operations.DeleteSSHKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/keys/{fingerprint}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/keys/{fingerprint}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -774,14 +774,14 @@ func (s *linuxHostings) DeleteSSHKey(ctx context.Context, request operations.Del
 // DeleteSubsite - Delete a subsite
 func (s *linuxHostings) DeleteSubsite(ctx context.Context, request operations.DeleteSubsiteRequest) (*operations.DeleteSubsiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/subsites/{siteName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/subsites/{siteName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -815,14 +815,14 @@ func (s *linuxHostings) DeleteSubsite(ctx context.Context, request operations.De
 // GetAvailablePhpVersions - Get the available PHP versions.
 func (s *linuxHostings) GetAvailablePhpVersions(ctx context.Context, request operations.GetAvailablePhpVersionsRequest) (*operations.GetAvailablePhpVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/availableversions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/phpsettings/availableversions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -863,14 +863,14 @@ func (s *linuxHostings) GetAvailablePhpVersions(ctx context.Context, request ope
 // GetLinuxHosting - Linux hosting detail
 func (s *linuxHostings) GetLinuxHosting(ctx context.Context, request operations.GetLinuxHostingRequest) (*operations.GetLinuxHostingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -918,7 +918,7 @@ func (s *linuxHostings) GetLinuxHostings(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -961,14 +961,14 @@ func (s *linuxHostings) GetLinuxHostings(ctx context.Context, request operations
 // GetScheduledTask - Get scheduled task detail
 func (s *linuxHostings) GetScheduledTask(ctx context.Context, request operations.GetScheduledTaskRequest) (*operations.GetScheduledTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks/{scheduledTaskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks/{scheduledTaskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1010,14 +1010,14 @@ func (s *linuxHostings) GetScheduledTask(ctx context.Context, request operations
 // Manage scheduled tasks which are also manageable via the control panel.
 func (s *linuxHostings) GetScheduledTasks(ctx context.Context, request operations.GetScheduledTasksRequest) (*operations.GetScheduledTasksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/scheduledtasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1058,14 +1058,14 @@ func (s *linuxHostings) GetScheduledTasks(ctx context.Context, request operation
 // GetSSHKeys - Overview of SSH keys
 func (s *linuxHostings) GetSSHKeys(ctx context.Context, request operations.GetSSHKeysRequest) (*operations.GetSSHKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/keys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/linuxhostings/{domainName}/ssh/keys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -13,31 +13,26 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateLensesRequest{
-        PathParams: operations.AssociateLensesPathParams{
-            WorkloadID: "corrupti",
-        },
-        Headers: operations.AssociateLensesHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.AssociateLensesRequestBody{
+        RequestBody: operations.AssociateLensesRequestBody{
             LensAliases: []string{
-                "error",
-                "deserunt",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
+        WorkloadID: "unde",
+        XAmzAlgorithm: "nulla",
+        XAmzContentSha256: "corrupti",
+        XAmzCredential: "illum",
+        XAmzDate: "vel",
+        XAmzSecurityToken: "error",
+        XAmzSignature: "deserunt",
+        XAmzSignedHeaders: "suscipit",
     }
 
     ctx := context.Background()

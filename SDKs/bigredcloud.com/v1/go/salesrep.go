@@ -35,14 +35,14 @@ func newSalesRep(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SalesRepDelete - Removes an existing Sale Rep.
 func (s *salesRep) SalesRepDelete(ctx context.Context, request operations.SalesRepDeleteRequest) (*operations.SalesRepDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *salesRep) SalesRepGet(ctx context.Context) (*operations.SalesRepGetResp
 }
 
 // SalesRepPost - Creates a new SaleRep.
-func (s *salesRep) SalesRepPost(ctx context.Context, request operations.SalesRepPostRequest) (*operations.SalesRepPostResponse, error) {
+func (s *salesRep) SalesRepPost(ctx context.Context, request shared.SaleRepsDto) (*operations.SalesRepPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesReps"
 
@@ -181,7 +181,7 @@ func (s *salesRep) SalesRepPost(ctx context.Context, request operations.SalesRep
 }
 
 // SalesRepProcessBatch - Processes a batch of Sale Rep.
-func (s *salesRep) SalesRepProcessBatch(ctx context.Context, request operations.SalesRepProcessBatchRequest) (*operations.SalesRepProcessBatchResponse, error) {
+func (s *salesRep) SalesRepProcessBatch(ctx context.Context, request []shared.BatchItemSaleRepsDto) (*operations.SalesRepProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesReps/batch"
 
@@ -237,9 +237,9 @@ func (s *salesRep) SalesRepProcessBatch(ctx context.Context, request operations.
 // SalesRepPut - Updates an existing Sale Rep.
 func (s *salesRep) SalesRepPut(ctx context.Context, request operations.SalesRepPutRequest) (*operations.SalesRepPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaleRepsDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *salesRep) SalesRepPut(ctx context.Context, request operations.SalesRepP
 // GetV1SalesRepsID - Returns information about a single SaleRep.
 func (s *salesRep) GetV1SalesRepsID(ctx context.Context, request operations.GetV1SalesRepsIDRequest) (*operations.GetV1SalesRepsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

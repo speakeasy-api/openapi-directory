@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubscriptionPushReportingPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetSubscriptionPushReportingQueryParams struct {
+type GetSubscriptionPushReportingRequest struct {
+	ID         string `pathParam:"style=simple,explode=false,name=id"`
 	PageNumber *int64 `queryParam:"style=form,explode=true,name=pageNumber"`
 	PageSize   *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetSubscriptionPushReportingRequest struct {
-	PathParams  GetSubscriptionPushReportingPathParams
-	QueryParams GetSubscriptionPushReportingQueryParams
 }
 
 type GetSubscriptionPushReportingResponse struct {

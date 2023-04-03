@@ -6,18 +6,14 @@ import (
 	"net/http"
 )
 
-type RemoveGroupMembersPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type RemoveGroupMembersRequestBody struct {
 	// comma separated list
 	Usernames *string `json:"usernames,omitempty"`
 }
 
 type RemoveGroupMembersRequest struct {
-	PathParams RemoveGroupMembersPathParams
-	Request    *RemoveGroupMembersRequestBody `request:"mediaType=application/json"`
+	RequestBody *RemoveGroupMembersRequestBody `request:"mediaType=application/json"`
+	ID          int64                          `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // RemoveGroupMembers200ApplicationJSON - success response

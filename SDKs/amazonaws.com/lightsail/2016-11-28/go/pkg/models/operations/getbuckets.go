@@ -30,7 +30,8 @@ func (e *GetBucketsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBucketsHeaders struct {
+type GetBucketsRequest struct {
+	GetBucketsRequest shared.GetBucketsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetBucketsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetBucketsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetBucketsRequest struct {
-	Headers GetBucketsHeaders
-	Request shared.GetBucketsRequest `request:"mediaType=application/json"`
 }
 
 type GetBucketsResponse struct {

@@ -50,7 +50,7 @@ func (e *GETAssociateVpcCidrBlockVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAssociateVpcCidrBlockQueryParams struct {
+type GETAssociateVpcCidrBlockRequest struct {
 	Action GETAssociateVpcCidrBlockActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of IPv6 addresses, or the size of the CIDR block.
 	AmazonProvidedIpv6CidrBlock *bool `queryParam:"style=form,explode=true,name=AmazonProvidedIpv6CidrBlock"`
@@ -72,10 +72,7 @@ type GETAssociateVpcCidrBlockQueryParams struct {
 	Ipv6Pool *string                             `queryParam:"style=form,explode=true,name=Ipv6Pool"`
 	Version  GETAssociateVpcCidrBlockVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETAssociateVpcCidrBlockHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -83,11 +80,6 @@ type GETAssociateVpcCidrBlockHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateVpcCidrBlockRequest struct {
-	QueryParams GETAssociateVpcCidrBlockQueryParams
-	Headers     GETAssociateVpcCidrBlockHeaders
 }
 
 type GETAssociateVpcCidrBlockResponse struct {

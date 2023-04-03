@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAliasPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type CreateAliasQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type CreateAliasRequest struct {
-	PathParams  CreateAliasPathParams
-	QueryParams CreateAliasQueryParams
 	// Contains the alias information.
-	Request *shared.CreateAliasRequest `request:"mediaType=application/json"`
+	CreateAliasRequest *shared.CreateAliasRequest `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type CreateAliasResponse struct {

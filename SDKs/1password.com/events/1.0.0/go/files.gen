@@ -22,7 +22,6 @@ pkg/models/shared/client.go
 pkg/models/shared/error.go
 pkg/models/shared/cursor.go
 pkg/models/shared/resetcursor.go
-pkg/models/shared/security.go
 pkg/models/shared/signinattempt.go
 pkg/models/shared/details.go
 pkg/models/shared/introspection.go

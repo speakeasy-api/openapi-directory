@@ -7,14 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCallerIdsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCallerIdsRequest struct {
-	Security GetCallerIdsSecurity
-}
-
 type GetCallerIdsResponse struct {
 	// successful operation
 	CallerIDList *shared.CallerIDList

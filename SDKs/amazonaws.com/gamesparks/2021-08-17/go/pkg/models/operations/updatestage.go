@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateStagePathParams struct {
-	// The name of the game.
-	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-	// The name of the stage.
-	StageName string `pathParam:"style=simple,explode=false,name=StageName"`
-}
-
-type UpdateStageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateStageRequestBody struct {
 	// The description of the stage.
 	Description *string `json:"Description,omitempty"`
@@ -32,9 +15,18 @@ type UpdateStageRequestBody struct {
 }
 
 type UpdateStageRequest struct {
-	PathParams UpdateStagePathParams
-	Headers    UpdateStageHeaders
-	Request    UpdateStageRequestBody `request:"mediaType=application/json"`
+	// The name of the game.
+	GameName    string                 `pathParam:"style=simple,explode=false,name=GameName"`
+	RequestBody UpdateStageRequestBody `request:"mediaType=application/json"`
+	// The name of the stage.
+	StageName         string  `pathParam:"style=simple,explode=false,name=StageName"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateStageResponse struct {

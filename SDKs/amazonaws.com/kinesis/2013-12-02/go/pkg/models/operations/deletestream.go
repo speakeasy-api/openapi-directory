@@ -30,7 +30,8 @@ func (e *DeleteStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteStreamHeaders struct {
+type DeleteStreamRequest struct {
+	DeleteStreamInput shared.DeleteStreamInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteStreamHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteStreamXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteStreamRequest struct {
-	Headers DeleteStreamHeaders
-	Request shared.DeleteStreamInput `request:"mediaType=application/json"`
 }
 
 type DeleteStreamResponse struct {

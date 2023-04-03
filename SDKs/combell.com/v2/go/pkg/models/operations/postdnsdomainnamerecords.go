@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostDNSDomainNameRecordsPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type PostDNSDomainNameRecordsQueryParams struct {
-	// The domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type PostDNSDomainNameRecordsRequest struct {
-	PathParams  PostDNSDomainNameRecordsPathParams
-	QueryParams PostDNSDomainNameRecordsQueryParams
 	// The record to create
-	Request *shared.DNSRecord `request:"mediaType=application/json"`
+	DNSRecord *shared.DNSRecord `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type PostDNSDomainNameRecordsResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteMeshPathParams struct {
-	// The name of the service mesh to delete.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-}
-
-type DeleteMeshHeaders struct {
+type DeleteMeshRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteMeshHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteMeshRequest struct {
-	PathParams DeleteMeshPathParams
-	Headers    DeleteMeshHeaders
+	// The name of the service mesh to delete.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
 }
 
 type DeleteMeshResponse struct {

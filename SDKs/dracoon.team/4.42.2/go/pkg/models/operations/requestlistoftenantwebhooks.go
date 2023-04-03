@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestListOfTenantWebhooksQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestListOfTenantWebhooksXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestListOfTenantWebhooksXSdsDateFormatEnum string
 
@@ -57,16 +42,23 @@ func (e *RequestListOfTenantWebhooksXSdsDateFormatEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type RequestListOfTenantWebhooksHeaders struct {
+type RequestListOfTenantWebhooksRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestListOfTenantWebhooksXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RequestListOfTenantWebhooksRequest struct {
-	QueryParams RequestListOfTenantWebhooksQueryParams
-	Headers     RequestListOfTenantWebhooksHeaders
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestListOfTenantWebhooksResponse struct {

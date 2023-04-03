@@ -32,7 +32,7 @@ func newPrivateMessages(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // CreateTopicPostPM - Creates a new topic, a new post, or a private message
-func (s *privateMessages) CreateTopicPostPM(ctx context.Context, request operations.CreateTopicPostPMRequest) (*operations.CreateTopicPostPMResponse, error) {
+func (s *privateMessages) CreateTopicPostPM(ctx context.Context, request operations.CreateTopicPostPMRequestBody) (*operations.CreateTopicPostPMResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/posts.json"
 
@@ -85,7 +85,7 @@ func (s *privateMessages) CreateTopicPostPM(ctx context.Context, request operati
 // GetUserSentPrivateMessages - Get a list of private messages sent for a user
 func (s *privateMessages) GetUserSentPrivateMessages(ctx context.Context, request operations.GetUserSentPrivateMessagesRequest) (*operations.GetUserSentPrivateMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/topics/private-messages-sent/{username}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/topics/private-messages-sent/{username}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *privateMessages) GetUserSentPrivateMessages(ctx context.Context, reques
 // ListUserPrivateMessages - Get a list of private messages for a user
 func (s *privateMessages) ListUserPrivateMessages(ctx context.Context, request operations.ListUserPrivateMessagesRequest) (*operations.ListUserPrivateMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/topics/private-messages/{username}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/topics/private-messages/{username}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

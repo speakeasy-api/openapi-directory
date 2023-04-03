@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeCustomVocabularyMetadataPathParams struct {
-	// The unique identifier of the bot that contains the custom vocabulary.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The bot version of the bot to return metadata for.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The locale to return the custom vocabulary information for. The locale must be <code>en_GB</code>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type DescribeCustomVocabularyMetadataHeaders struct {
+type DescribeCustomVocabularyMetadataRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DescribeCustomVocabularyMetadataHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeCustomVocabularyMetadataRequest struct {
-	PathParams DescribeCustomVocabularyMetadataPathParams
-	Headers    DescribeCustomVocabularyMetadataHeaders
+	// The unique identifier of the bot that contains the custom vocabulary.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The bot version of the bot to return metadata for.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The locale to return the custom vocabulary information for. The locale must be <code>en_GB</code>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type DescribeCustomVocabularyMetadataResponse struct {

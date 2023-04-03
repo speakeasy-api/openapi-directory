@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DisassociateFromAdministratorAccountHeaders struct {
+type DisassociateFromAdministratorAccountRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -14,10 +14,6 @@ type DisassociateFromAdministratorAccountHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateFromAdministratorAccountRequest struct {
-	Headers DisassociateFromAdministratorAccountHeaders
 }
 
 type DisassociateFromAdministratorAccountResponse struct {

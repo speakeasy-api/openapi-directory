@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type StartCampaignPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type StartCampaignHeaders struct {
+type StartCampaignRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -18,11 +14,7 @@ type StartCampaignHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StartCampaignRequest struct {
-	PathParams StartCampaignPathParams
-	Headers    StartCampaignHeaders
+	ID                string  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StartCampaignResponse struct {

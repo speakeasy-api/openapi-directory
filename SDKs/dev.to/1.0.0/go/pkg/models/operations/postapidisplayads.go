@@ -125,10 +125,6 @@ type PostAPIDisplayAdsRequestBody struct {
 	TypeOf *PostAPIDisplayAdsRequestBodyTypeOfEnum `json:"type_of,omitempty"`
 }
 
-type PostAPIDisplayAdsRequest struct {
-	Request *PostAPIDisplayAdsRequestBody `request:"mediaType=application/json"`
-}
-
 type PostAPIDisplayAdsResponse struct {
 	ContentType string
 	StatusCode  int

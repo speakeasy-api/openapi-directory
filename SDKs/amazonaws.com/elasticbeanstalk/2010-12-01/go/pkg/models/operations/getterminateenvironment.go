@@ -50,7 +50,7 @@ func (e *GETTerminateEnvironmentVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETTerminateEnvironmentQueryParams struct {
+type GETTerminateEnvironmentRequest struct {
 	Action GETTerminateEnvironmentActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ID of the environment to terminate.</p> <p> Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=EnvironmentId"`
@@ -61,21 +61,13 @@ type GETTerminateEnvironmentQueryParams struct {
 	// <p>Indicates whether the associated AWS resources should shut down when the environment is terminated:</p> <ul> <li> <p> <code>true</code>: The specified environment as well as the associated AWS resources, such as Auto Scaling group and LoadBalancer, are terminated.</p> </li> <li> <p> <code>false</code>: AWS Elastic Beanstalk resource management is removed from the environment, but the AWS resources continue to operate.</p> </li> </ul> <p> For more information, see the <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/ug/"> AWS Elastic Beanstalk User Guide. </a> </p> <p> Default: <code>true</code> </p> <p> Valid Values: <code>true</code> | <code>false</code> </p>
 	TerminateResources *bool                              `queryParam:"style=form,explode=true,name=TerminateResources"`
 	Version            GETTerminateEnvironmentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETTerminateEnvironmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETTerminateEnvironmentRequest struct {
-	QueryParams GETTerminateEnvironmentQueryParams
-	Headers     GETTerminateEnvironmentHeaders
+	XAmzAlgorithm      *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETTerminateEnvironmentResponse struct {

@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProvidersIDProviderPathParams struct {
-	IDProvider int64 `pathParam:"style=simple,explode=false,name=id_provider"`
-}
-
-type GetProvidersIDProviderQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetProvidersIDProviderRequest struct {
-	PathParams  GetProvidersIDProviderPathParams
-	QueryParams GetProvidersIDProviderQueryParams
+	Expand     *string `queryParam:"style=form,explode=true,name=expand"`
+	IDProvider int64   `pathParam:"style=simple,explode=false,name=id_provider"`
 }
 
 type GetProvidersIDProviderResponse struct {

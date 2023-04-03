@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestGroupRolesPathParams struct {
-	// Group ID
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type RequestGroupRolesHeaders struct {
+type RequestGroupRolesRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestGroupRolesRequest struct {
-	PathParams RequestGroupRolesPathParams
-	Headers    RequestGroupRolesHeaders
+	// Group ID
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
 type RequestGroupRolesResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEePlansQueryParams struct {
+type GetEePlansRequest struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -20,10 +20,6 @@ type GetEePlansQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetEePlansRequest struct {
-	QueryParams GetEePlansQueryParams
 }
 
 type GetEePlansResponse struct {

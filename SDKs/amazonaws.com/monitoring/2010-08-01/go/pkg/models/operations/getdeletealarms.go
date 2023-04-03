@@ -50,26 +50,18 @@ func (e *GETDeleteAlarmsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteAlarmsQueryParams struct {
+type GETDeleteAlarmsRequest struct {
 	Action GETDeleteAlarmsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The alarms to be deleted. Do not enclose the alarm names in quote marks.
-	AlarmNames []string                   `queryParam:"style=form,explode=true,name=AlarmNames"`
-	Version    GETDeleteAlarmsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteAlarmsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteAlarmsRequest struct {
-	QueryParams GETDeleteAlarmsQueryParams
-	Headers     GETDeleteAlarmsHeaders
+	AlarmNames        []string                   `queryParam:"style=form,explode=true,name=AlarmNames"`
+	Version           GETDeleteAlarmsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteAlarmsResponse struct {

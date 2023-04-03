@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsBulkDeleteUsersSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsBulkDeleteUsersPathParams struct {
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DistributionGroupsBulkDeleteUsersRequestBody - The list of members to add
@@ -25,10 +17,12 @@ type DistributionGroupsBulkDeleteUsersRequestBody struct {
 }
 
 type DistributionGroupsBulkDeleteUsersRequest struct {
-	PathParams DistributionGroupsBulkDeleteUsersPathParams
 	// The list of members to add
-	Request  DistributionGroupsBulkDeleteUsersRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsBulkDeleteUsersSecurity
+	RequestBody DistributionGroupsBulkDeleteUsersRequestBody `request:"mediaType=application/json"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsBulkDeleteUsersResponse struct {

@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type HealthCheckSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type HealthCheckRequest struct {
-	Security HealthCheckSecurity
-}
 
 // HealthCheckDefaultApplicationJSON - Detailed information about the error
 type HealthCheckDefaultApplicationJSON struct {

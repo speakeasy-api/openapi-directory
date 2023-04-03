@@ -44,7 +44,7 @@ func (s *tag) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -87,7 +87,7 @@ func (s *tag) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 // GetTagsID - Retrieve a single tag by id
 func (s *tag) GetTagsID(ctx context.Context, request operations.GetTagsIDRequest) (*operations.GetTagsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -140,7 +140,7 @@ func (s *tag) GetTagsets(ctx context.Context, request operations.GetTagsetsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -183,7 +183,7 @@ func (s *tag) GetTagsets(ctx context.Context, request operations.GetTagsetsReque
 // GetTagsetsID - Retrieve a single tag set by id
 func (s *tag) GetTagsetsID(ctx context.Context, request operations.GetTagsetsIDRequest) (*operations.GetTagsetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagsets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tagsets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *tag) GetTagsetsID(ctx context.Context, request operations.GetTagsetsIDR
 }
 
 // PostTags - Create a new tag
-func (s *tag) PostTags(ctx context.Context, request operations.PostTagsRequest) (*operations.PostTagsResponse, error) {
+func (s *tag) PostTags(ctx context.Context, request shared.TagSubmission) (*operations.PostTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tags"
 
@@ -292,7 +292,7 @@ func (s *tag) PostTags(ctx context.Context, request operations.PostTagsRequest) 
 }
 
 // PostTagsets - Create a new tag set
-func (s *tag) PostTagsets(ctx context.Context, request operations.PostTagsetsRequest) (*operations.PostTagsetsResponse, error) {
+func (s *tag) PostTagsets(ctx context.Context, request shared.TagSetSubmission) (*operations.PostTagsetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tagsets"
 

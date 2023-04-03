@@ -50,25 +50,17 @@ func (e *POSTPutConfigurationSetDeliveryOptionsVersionEnum) UnmarshalJSON(data [
 	}
 }
 
-type POSTPutConfigurationSetDeliveryOptionsQueryParams struct {
-	Action  POSTPutConfigurationSetDeliveryOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTPutConfigurationSetDeliveryOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTPutConfigurationSetDeliveryOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTPutConfigurationSetDeliveryOptionsRequest struct {
-	QueryParams POSTPutConfigurationSetDeliveryOptionsQueryParams
-	Headers     POSTPutConfigurationSetDeliveryOptionsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTPutConfigurationSetDeliveryOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                            `request:"mediaType=text/xml"`
+	Version           POSTPutConfigurationSetDeliveryOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTPutConfigurationSetDeliveryOptionsResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPITriggerEventJSONPathParams struct {
+type OrderAPITriggerEventJSONRequest struct {
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerTriggerEventContainer shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerTriggerEventContainer `request:"mediaType=application/json"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPITriggerEventJSONRequest struct {
-	PathParams OrderAPITriggerEventJSONPathParams
-	Request    shared.RechnungsdruckWebAppControllersAPIOrderAPIControllerTriggerEventContainer `request:"mediaType=application/json"`
 }
 
 type OrderAPITriggerEventJSONResponse struct {

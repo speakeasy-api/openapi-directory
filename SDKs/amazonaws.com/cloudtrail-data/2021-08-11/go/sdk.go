@@ -116,7 +116,7 @@ func (s *SDK) PutAuditEvents(ctx context.Context, request operations.PutAuditEve
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PutAuditEvents#channelArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,9 +131,9 @@ func (s *SDK) PutAuditEvents(ctx context.Context, request operations.PutAuditEve
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

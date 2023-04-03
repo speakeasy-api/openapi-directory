@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddCustomerAddressFormPathParams struct {
+type CustomerAddCustomerAddressFormRequest struct {
+	// Model containing the address, that should be attached.
+	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
 	// CustomerId to attach the new address to.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerAddCustomerAddressFormRequest struct {
-	PathParams CustomerAddCustomerAddressFormPathParams
-	// Model containing the address, that should be attached.
-	Request shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type CustomerAddCustomerAddressFormResponse struct {

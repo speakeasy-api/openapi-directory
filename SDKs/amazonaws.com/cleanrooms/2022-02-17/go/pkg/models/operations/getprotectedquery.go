@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProtectedQueryPathParams struct {
-	// The identifier for a membership in a protected query instance.
-	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
-	// The identifier for a protected query instance.
-	ProtectedQueryIdentifier string `pathParam:"style=simple,explode=false,name=protectedQueryIdentifier"`
-}
-
-type GetProtectedQueryHeaders struct {
+type GetProtectedQueryRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetProtectedQueryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetProtectedQueryRequest struct {
-	PathParams GetProtectedQueryPathParams
-	Headers    GetProtectedQueryHeaders
+	// The identifier for a membership in a protected query instance.
+	MembershipIdentifier string `pathParam:"style=simple,explode=false,name=membershipIdentifier"`
+	// The identifier for a protected query instance.
+	ProtectedQueryIdentifier string `pathParam:"style=simple,explode=false,name=protectedQueryIdentifier"`
 }
 
 type GetProtectedQueryResponse struct {

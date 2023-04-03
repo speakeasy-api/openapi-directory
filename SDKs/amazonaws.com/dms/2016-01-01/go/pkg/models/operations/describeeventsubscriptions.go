@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeEventSubscriptionsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeEventSubscriptionsXAmzTargetEnum
 type DescribeEventSubscriptionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeEventSubscriptionsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DescribeEventSubscriptionsHeaders struct {
+type DescribeEventSubscriptionsRequest struct {
+	DescribeEventSubscriptionsMessage shared.DescribeEventSubscriptionsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                  `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeEventSubscriptionsHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeEventSubscriptionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeEventSubscriptionsRequest struct {
-	QueryParams DescribeEventSubscriptionsQueryParams
-	Headers     DescribeEventSubscriptionsHeaders
-	Request     shared.DescribeEventSubscriptionsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeEventSubscriptionsResponse struct {

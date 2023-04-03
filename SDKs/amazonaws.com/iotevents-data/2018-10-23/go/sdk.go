@@ -116,7 +116,7 @@ func (s *SDK) BatchAcknowledgeAlarm(ctx context.Context, request operations.Batc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alarms/acknowledge"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchAcknowledgeAlarm(ctx context.Context, request operations.Batc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -212,7 +212,7 @@ func (s *SDK) BatchDeleteDetector(ctx context.Context, request operations.BatchD
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/detectors/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) BatchDeleteDetector(ctx context.Context, request operations.BatchD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -308,7 +308,7 @@ func (s *SDK) BatchDisableAlarm(ctx context.Context, request operations.BatchDis
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alarms/disable"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -323,7 +323,7 @@ func (s *SDK) BatchDisableAlarm(ctx context.Context, request operations.BatchDis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -404,7 +404,7 @@ func (s *SDK) BatchEnableAlarm(ctx context.Context, request operations.BatchEnab
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alarms/enable"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -419,7 +419,7 @@ func (s *SDK) BatchEnableAlarm(ctx context.Context, request operations.BatchEnab
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -500,7 +500,7 @@ func (s *SDK) BatchPutMessage(ctx context.Context, request operations.BatchPutMe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/inputs/messages"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -515,7 +515,7 @@ func (s *SDK) BatchPutMessage(ctx context.Context, request operations.BatchPutMe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -596,7 +596,7 @@ func (s *SDK) BatchResetAlarm(ctx context.Context, request operations.BatchReset
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alarms/reset"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -611,7 +611,7 @@ func (s *SDK) BatchResetAlarm(ctx context.Context, request operations.BatchReset
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -692,7 +692,7 @@ func (s *SDK) BatchSnoozeAlarm(ctx context.Context, request operations.BatchSnoo
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/alarms/snooze"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -707,7 +707,7 @@ func (s *SDK) BatchSnoozeAlarm(ctx context.Context, request operations.BatchSnoo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -788,7 +788,7 @@ func (s *SDK) BatchUpdateDetector(ctx context.Context, request operations.BatchU
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/detectors"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -803,7 +803,7 @@ func (s *SDK) BatchUpdateDetector(ctx context.Context, request operations.BatchU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -882,16 +882,16 @@ func (s *SDK) BatchUpdateDetector(ctx context.Context, request operations.BatchU
 // DescribeAlarm - Retrieves information about an alarm.
 func (s *SDK) DescribeAlarm(ctx context.Context, request operations.DescribeAlarmRequest) (*operations.DescribeAlarmResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}/keyValues/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}/keyValues/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -982,16 +982,16 @@ func (s *SDK) DescribeAlarm(ctx context.Context, request operations.DescribeAlar
 // DescribeDetector - Returns information about the specified detector (instance).
 func (s *SDK) DescribeDetector(ctx context.Context, request operations.DescribeDetectorRequest) (*operations.DescribeDetectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}/keyValues/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}/keyValues/", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1082,16 +1082,16 @@ func (s *SDK) DescribeDetector(ctx context.Context, request operations.DescribeD
 // ListAlarms - Lists one or more alarms. The operation returns only the metadata associated with each alarm.
 func (s *SDK) ListAlarms(ctx context.Context, request operations.ListAlarmsRequest) (*operations.ListAlarmsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1182,16 +1182,16 @@ func (s *SDK) ListAlarms(ctx context.Context, request operations.ListAlarmsReque
 // ListDetectors - Lists detectors (the instances of a detector model).
 func (s *SDK) ListDetectors(ctx context.Context, request operations.ListDetectorsRequest) (*operations.ListDetectorsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyAlternativeSearchSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyAlternativeSearchPathParams struct {
-	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
-	Country string `pathParam:"style=simple,explode=false,name=country"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // CompanyAlternativeSearchRequestBody - VAT number and the company details
@@ -33,10 +27,10 @@ type CompanyAlternativeSearchRequestBody struct {
 }
 
 type CompanyAlternativeSearchRequest struct {
-	PathParams CompanyAlternativeSearchPathParams
 	// VAT number and the company details
-	Request  *CompanyAlternativeSearchRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security CompanyAlternativeSearchSecurity
+	RequestBody *CompanyAlternativeSearchRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
+	Country string `pathParam:"style=simple,explode=false,name=country"`
 }
 
 // CompanyAlternativeSearchDefaultApplicationJSON - Detailed information about the error

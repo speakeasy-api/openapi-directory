@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAttachmentsForObjectQueryParams struct {
+type GetAttachmentsForObjectRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -24,10 +24,6 @@ type GetAttachmentsForObjectQueryParams struct {
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
 	// Globally unique identifier for object to fetch statuses from. Must be a GID for a `project`, `project_brief`, or `task`.
 	Parent string `queryParam:"style=form,explode=true,name=parent"`
-}
-
-type GetAttachmentsForObjectRequest struct {
-	QueryParams GetAttachmentsForObjectQueryParams
 }
 
 // GetAttachmentsForObject200ApplicationJSON - Successfully retrieved the specified object's attachments.

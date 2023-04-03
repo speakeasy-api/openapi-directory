@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrderAPISendMessageRawPathParams struct {
+type OrderAPISendMessageRawRequest struct {
+	// The message model
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPISendMessageRawRequest struct {
-	PathParams OrderAPISendMessageRawPathParams
-	// The message model
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPISendMessageRawResponse struct {

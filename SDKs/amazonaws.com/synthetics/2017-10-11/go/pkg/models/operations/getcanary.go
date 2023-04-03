@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCanaryPathParams struct {
-	// The name of the canary that you want details for.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetCanaryHeaders struct {
+type GetCanaryRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetCanaryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCanaryRequest struct {
-	PathParams GetCanaryPathParams
-	Headers    GetCanaryHeaders
+	// The name of the canary that you want details for.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetCanaryResponse struct {

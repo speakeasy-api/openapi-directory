@@ -13,115 +13,111 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchCreatePartitionRequest{
-        Headers: operations.BatchCreatePartitionHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSGlue.BatchCreatePartition",
-        },
-        Request: shared.BatchCreatePartitionRequest{
-            CatalogID: "illum",
-            DatabaseName: "vel",
+        BatchCreatePartitionRequest: shared.BatchCreatePartitionRequest{
+            CatalogID: "corrupti",
+            DatabaseName: "provident",
             PartitionInputList: []shared.PartitionInput{
                 shared.PartitionInput{
-                    LastAccessTime: "2022-03-26T09:37:56.283Z",
-                    LastAnalyzedTime: "2022-09-14T09:35:47.986Z",
+                    LastAccessTime: "2021-03-11T23:22:42.658Z",
+                    LastAnalyzedTime: "2021-05-14T08:28:11.899Z",
                     Parameters: map[string]string{
-                        "ipsa": "delectus",
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
+                        "iure": "magnam",
+                        "debitis": "ipsa",
                     },
                     StorageDescriptor: &shared.StorageDescriptor{
                         AdditionalLocations: []string{
+                            "tempora",
+                            "suscipit",
+                            "molestiae",
+                            "minus",
+                        },
+                        BucketColumns: []string{
+                            "voluptatum",
+                            "iusto",
                             "excepturi",
                             "nisi",
                         },
-                        BucketColumns: []string{
-                            "temporibus",
-                            "ab",
-                            "quis",
-                            "veritatis",
-                        },
                         Columns: []shared.Column{
                             shared.Column{
-                                Comment: "perferendis",
-                                Name: "ipsam",
+                                Comment: "temporibus",
+                                Name: "ab",
                                 Parameters: map[string]string{
-                                    "sapiente": "quo",
-                                    "odit": "at",
-                                    "at": "maiores",
-                                    "molestiae": "quod",
+                                    "veritatis": "deserunt",
+                                    "perferendis": "ipsam",
                                 },
-                                Type: "quod",
+                                Type: "repellendus",
                             },
                             shared.Column{
-                                Comment: "esse",
-                                Name: "totam",
+                                Comment: "sapiente",
+                                Name: "quo",
                                 Parameters: map[string]string{
-                                    "dolorum": "dicta",
-                                    "nam": "officia",
-                                    "occaecati": "fugit",
-                                    "deleniti": "hic",
+                                    "at": "at",
                                 },
-                                Type: "optio",
+                                Type: "maiores",
                             },
                             shared.Column{
-                                Comment: "totam",
-                                Name: "beatae",
+                                Comment: "molestiae",
+                                Name: "quod",
                                 Parameters: map[string]string{
-                                    "molestiae": "modi",
-                                    "qui": "impedit",
+                                    "esse": "totam",
+                                    "porro": "dolorum",
+                                    "dicta": "nam",
+                                    "officia": "occaecati",
                                 },
-                                Type: "cum",
+                                Type: "fugit",
+                            },
+                            shared.Column{
+                                Comment: "deleniti",
+                                Name: "hic",
+                                Parameters: map[string]string{
+                                    "totam": "beatae",
+                                    "commodi": "molestiae",
+                                    "modi": "qui",
+                                    "impedit": "cum",
+                                },
+                                Type: "esse",
                             },
                         },
                         Compressed: false,
-                        InputFormat: "esse",
-                        Location: "ipsum",
-                        NumberOfBuckets: 568434,
-                        OutputFormat: "aspernatur",
+                        InputFormat: "ipsum",
+                        Location: "excepturi",
+                        NumberOfBuckets: 135218,
+                        OutputFormat: "perferendis",
                         Parameters: map[string]string{
-                            "ad": "natus",
+                            "natus": "sed",
+                            "iste": "dolor",
                         },
                         SchemaReference: &shared.SchemaReference{
                             SchemaID: &shared.SchemaID{
-                                RegistryName: "sed",
-                                SchemaArn: "iste",
-                                SchemaName: "dolor",
+                                RegistryName: "natus",
+                                SchemaArn: "laboriosam",
+                                SchemaName: "hic",
                             },
-                            SchemaVersionID: "natus",
-                            SchemaVersionNumber: 386489,
+                            SchemaVersionID: "saepe",
+                            SchemaVersionNumber: 681820,
                         },
                         SerdeInfo: &shared.SerDeInfo{
-                            Name: "hic",
+                            Name: "in",
                             Parameters: map[string]string{
-                                "fuga": "in",
-                                "corporis": "iste",
-                                "iure": "saepe",
-                                "quidem": "architecto",
+                                "iste": "iure",
+                                "saepe": "quidem",
                             },
-                            SerializationLibrary: "ipsa",
+                            SerializationLibrary: "architecto",
                         },
                         SkewedInfo: &shared.SkewedInfo{
                             SkewedColumnNames: []string{
-                                "est",
-                                "mollitia",
-                                "laborum",
-                                "dolores",
+                                "reiciendis",
                             },
                             SkewedColumnValueLocationMaps: map[string]string{
+                                "mollitia": "laborum",
+                                "dolores": "dolorem",
                                 "corporis": "explicabo",
                             },
                             SkewedColumnValues: []string{
@@ -393,6 +389,14 @@ func main() {
             },
             TableName: "accusantium",
         },
+        XAmzAlgorithm: "ab",
+        XAmzContentSha256: "maiores",
+        XAmzCredential: "quidem",
+        XAmzDate: "ipsam",
+        XAmzSecurityToken: "voluptate",
+        XAmzSignature: "autem",
+        XAmzSignedHeaders: "nam",
+        XAmzTarget: "AWSGlue.BatchCreatePartition",
     }
 
     ctx := context.Background()

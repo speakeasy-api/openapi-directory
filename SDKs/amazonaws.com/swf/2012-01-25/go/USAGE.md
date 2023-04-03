@@ -13,47 +13,43 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CountClosedWorkflowExecutionsRequest{
-        Headers: operations.CountClosedWorkflowExecutionsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
-        },
-        Request: shared.CountClosedWorkflowExecutionsInput{
+        CountClosedWorkflowExecutionsInput: shared.CountClosedWorkflowExecutionsInput{
             CloseStatusFilter: &shared.CloseStatusFilter{
-                Status: "TIMED_OUT",
+                Status: "TERMINATED",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-05-18T09:34:54.894Z",
-                OldestDate: "2022-03-26T09:37:56.283Z",
+                LatestDate: "2021-07-27T21:52:56.087Z",
+                OldestDate: "2021-03-11T23:22:42.658Z",
             },
-            Domain: "iure",
+            Domain: "nulla",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "magnam",
+                WorkflowID: "corrupti",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-10-30T21:34:57.850Z",
-                OldestDate: "2022-03-08T10:35:32.561Z",
+                LatestDate: "2021-09-24T02:21:06.409Z",
+                OldestDate: "2021-09-16T11:56:06.019Z",
             },
             TagFilter: &shared.TagFilter{
                 Tag: "suscipit",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "molestiae",
-                Version: "minus",
+                Name: "iure",
+                Version: "magnam",
             },
         },
+        XAmzAlgorithm: "debitis",
+        XAmzContentSha256: "ipsa",
+        XAmzCredential: "delectus",
+        XAmzDate: "tempora",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "molestiae",
+        XAmzSignedHeaders: "minus",
+        XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
     }
 
     ctx := context.Background()

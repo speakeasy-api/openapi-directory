@@ -50,26 +50,18 @@ func (e *GETDeleteReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteReceiptRuleSetQueryParams struct {
+type GETDeleteReceiptRuleSetRequest struct {
 	Action GETDeleteReceiptRuleSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the receipt rule set to delete.
-	RuleSetName string                             `queryParam:"style=form,explode=true,name=RuleSetName"`
-	Version     GETDeleteReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteReceiptRuleSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteReceiptRuleSetRequest struct {
-	QueryParams GETDeleteReceiptRuleSetQueryParams
-	Headers     GETDeleteReceiptRuleSetHeaders
+	RuleSetName       string                             `queryParam:"style=form,explode=true,name=RuleSetName"`
+	Version           GETDeleteReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteReceiptRuleSetResponse struct {

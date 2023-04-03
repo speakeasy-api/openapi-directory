@@ -50,30 +50,22 @@ func (e *GETSetLoadBalancerPoliciesOfListenerVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETSetLoadBalancerPoliciesOfListenerQueryParams struct {
+type GETSetLoadBalancerPoliciesOfListenerRequest struct {
 	Action GETSetLoadBalancerPoliciesOfListenerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the load balancer.
 	LoadBalancerName string `queryParam:"style=form,explode=true,name=LoadBalancerName"`
 	// The external port of the load balancer.
 	LoadBalancerPort int64 `queryParam:"style=form,explode=true,name=LoadBalancerPort"`
 	// The names of the policies. This list must include all policies to be enabled. If you omit a policy that is currently enabled, it is disabled. If the list is empty, all current policies are disabled.
-	PolicyNames []string                                        `queryParam:"style=form,explode=true,name=PolicyNames"`
-	Version     GETSetLoadBalancerPoliciesOfListenerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetLoadBalancerPoliciesOfListenerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetLoadBalancerPoliciesOfListenerRequest struct {
-	QueryParams GETSetLoadBalancerPoliciesOfListenerQueryParams
-	Headers     GETSetLoadBalancerPoliciesOfListenerHeaders
+	PolicyNames       []string                                        `queryParam:"style=form,explode=true,name=PolicyNames"`
+	Version           GETSetLoadBalancerPoliciesOfListenerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetLoadBalancerPoliciesOfListenerResponse struct {

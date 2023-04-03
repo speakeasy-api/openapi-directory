@@ -34,11 +34,11 @@ func newLeads(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // LeadsAdd - Create lead
 // Create lead
-func (s *leads) LeadsAdd(ctx context.Context, request operations.LeadsAddRequest) (*operations.LeadsAddResponse, error) {
+func (s *leads) LeadsAdd(ctx context.Context, request operations.LeadsAddRequest, security operations.LeadsAddSecurity) (*operations.LeadsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/leads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeadInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *leads) LeadsAdd(ctx context.Context, request operations.LeadsAddRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *leads) LeadsAdd(ctx context.Context, request operations.LeadsAddRequest
 
 // LeadsAll - List leads
 // List leads
-func (s *leads) LeadsAll(ctx context.Context, request operations.LeadsAllRequest) (*operations.LeadsAllResponse, error) {
+func (s *leads) LeadsAll(ctx context.Context, request operations.LeadsAllRequest, security operations.LeadsAllSecurity) (*operations.LeadsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/leads"
 
@@ -164,13 +164,13 @@ func (s *leads) LeadsAll(ctx context.Context, request operations.LeadsAllRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *leads) LeadsAll(ctx context.Context, request operations.LeadsAllRequest
 
 // LeadsDelete - Delete lead
 // Delete lead
-func (s *leads) LeadsDelete(ctx context.Context, request operations.LeadsDeleteRequest) (*operations.LeadsDeleteResponse, error) {
+func (s *leads) LeadsDelete(ctx context.Context, request operations.LeadsDeleteRequest, security operations.LeadsDeleteSecurity) (*operations.LeadsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/leads/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/leads/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *leads) LeadsDelete(ctx context.Context, request operations.LeadsDeleteR
 
 // LeadsOne - Get lead
 // Get lead
-func (s *leads) LeadsOne(ctx context.Context, request operations.LeadsOneRequest) (*operations.LeadsOneResponse, error) {
+func (s *leads) LeadsOne(ctx context.Context, request operations.LeadsOneRequest, security operations.LeadsOneSecurity) (*operations.LeadsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/leads/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/leads/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *leads) LeadsOne(ctx context.Context, request operations.LeadsOneRequest
 
 // LeadsUpdate - Update lead
 // Update lead
-func (s *leads) LeadsUpdate(ctx context.Context, request operations.LeadsUpdateRequest) (*operations.LeadsUpdateResponse, error) {
+func (s *leads) LeadsUpdate(ctx context.Context, request operations.LeadsUpdateRequest, security operations.LeadsUpdateSecurity) (*operations.LeadsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/leads/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/leads/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeadInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *leads) LeadsUpdate(ctx context.Context, request operations.LeadsUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

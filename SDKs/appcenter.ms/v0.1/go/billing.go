@@ -32,7 +32,7 @@ func newBilling(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // BillingAggregatedInformationGetAll - Aggregated Billing Information for the requesting user and the organizations in which the user is an admin.
-func (s *billing) BillingAggregatedInformationGetAll(ctx context.Context, request operations.BillingAggregatedInformationGetAllRequest) (*operations.BillingAggregatedInformationGetAllResponse, error) {
+func (s *billing) BillingAggregatedInformationGetAll(ctx context.Context, request operations.BillingAggregatedInformationGetAllRequest, security operations.BillingAggregatedInformationGetAllSecurity) (*operations.BillingAggregatedInformationGetAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/billing/allAccountsAggregated"
 
@@ -41,11 +41,11 @@ func (s *billing) BillingAggregatedInformationGetAll(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,20 +90,20 @@ func (s *billing) BillingAggregatedInformationGetAll(ctx context.Context, reques
 }
 
 // BillingAggregatedInformationGetByApp - Aggregated Billing Information for owner of a given app.
-func (s *billing) BillingAggregatedInformationGetByApp(ctx context.Context, request operations.BillingAggregatedInformationGetByAppRequest) (*operations.BillingAggregatedInformationGetByAppResponse, error) {
+func (s *billing) BillingAggregatedInformationGetByApp(ctx context.Context, request operations.BillingAggregatedInformationGetByAppRequest, security operations.BillingAggregatedInformationGetByAppSecurity) (*operations.BillingAggregatedInformationGetByAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,20 +148,20 @@ func (s *billing) BillingAggregatedInformationGetByApp(ctx context.Context, requ
 }
 
 // BillingAggregatedInformationGetForOrg - Aggregated Billing Information for a given Organization.
-func (s *billing) BillingAggregatedInformationGetForOrg(ctx context.Context, request operations.BillingAggregatedInformationGetForOrgRequest) (*operations.BillingAggregatedInformationGetForOrgResponse, error) {
+func (s *billing) BillingAggregatedInformationGetForOrg(ctx context.Context, request operations.BillingAggregatedInformationGetForOrgRequest, security operations.BillingAggregatedInformationGetForOrgSecurity) (*operations.BillingAggregatedInformationGetForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{orgName}/billing/aggregated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{orgName}/billing/aggregated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

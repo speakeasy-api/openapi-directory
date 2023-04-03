@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteCustomLogSourceQueryParams struct {
-	// The custom source name for the custom log source.
-	CustomSourceName string `queryParam:"style=form,explode=true,name=customSourceName"`
-}
-
-type DeleteCustomLogSourceHeaders struct {
+type DeleteCustomLogSourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteCustomLogSourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCustomLogSourceRequest struct {
-	QueryParams DeleteCustomLogSourceQueryParams
-	Headers     DeleteCustomLogSourceHeaders
+	// The custom source name for the custom log source.
+	CustomSourceName string `queryParam:"style=form,explode=true,name=customSourceName"`
 }
 
 type DeleteCustomLogSourceResponse struct {

@@ -9,11 +9,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListIndexQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
+// ListIndexRequestBodyIndexReference - The reference that identifies an object.
+type ListIndexRequestBodyIndexReference struct {
+	Selector *string `json:"Selector,omitempty"`
+}
+
+type ListIndexRequestBody struct {
+	// The reference that identifies an object.
+	IndexReference ListIndexRequestBodyIndexReference `json:"IndexReference"`
+	// The maximum number of objects in a single page to retrieve from the index during a request. For more information, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/limits.html#limits_cd">AWS Directory Service Limits</a>.
+	MaxResults *int64 `json:"MaxResults,omitempty"`
+	// The pagination token.
+	NextToken *string `json:"NextToken,omitempty"`
+	// Specifies the ranges of indexed values that you want to query.
+	RangesOnIndexedValues []shared.ObjectAttributeRange `json:"RangesOnIndexedValues,omitempty"`
 }
 
 // ListIndexXAmzConsistencyLevelEnum - The consistency level to execute the request at.
@@ -40,40 +49,23 @@ func (e *ListIndexXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListIndexHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+type ListIndexRequest struct {
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string              `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       ListIndexRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The consistency level to execute the request at.
 	XAmzConsistencyLevel *ListIndexXAmzConsistencyLevelEnum `header:"style=simple,explode=false,name=x-amz-consistency-level"`
 	// The ARN of the directory that the index exists in.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-// ListIndexRequestBodyIndexReference - The reference that identifies an object.
-type ListIndexRequestBodyIndexReference struct {
-	Selector *string `json:"Selector,omitempty"`
-}
-
-type ListIndexRequestBody struct {
-	// The reference that identifies an object.
-	IndexReference ListIndexRequestBodyIndexReference `json:"IndexReference"`
-	// The maximum number of objects in a single page to retrieve from the index during a request. For more information, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/limits.html#limits_cd">AWS Directory Service Limits</a>.
-	MaxResults *int64 `json:"MaxResults,omitempty"`
-	// The pagination token.
-	NextToken *string `json:"NextToken,omitempty"`
-	// Specifies the ranges of indexed values that you want to query.
-	RangesOnIndexedValues []shared.ObjectAttributeRange `json:"RangesOnIndexedValues,omitempty"`
-}
-
-type ListIndexRequest struct {
-	QueryParams ListIndexQueryParams
-	Headers     ListIndexHeaders
-	Request     ListIndexRequestBody `request:"mediaType=application/json"`
 }
 
 type ListIndexResponse struct {

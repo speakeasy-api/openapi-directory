@@ -50,27 +50,19 @@ func (e *GETUpdateDefaultSearchFieldVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETUpdateDefaultSearchFieldQueryParams struct {
+type GETUpdateDefaultSearchFieldRequest struct {
 	Action GETUpdateDefaultSearchFieldActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The text field to search if the search request does not specify which field to search. The default search field is used when search terms are specified with the <code>q</code> parameter, or if a match expression specified with the <code>bq</code> parameter does not constrain the search to a particular field. The default is an empty string, which automatically searches all text fields.
 	DefaultSearchField string                                 `queryParam:"style=form,explode=true,name=DefaultSearchField"`
 	DomainName         string                                 `queryParam:"style=form,explode=true,name=DomainName"`
 	Version            GETUpdateDefaultSearchFieldVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateDefaultSearchFieldHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateDefaultSearchFieldRequest struct {
-	QueryParams GETUpdateDefaultSearchFieldQueryParams
-	Headers     GETUpdateDefaultSearchFieldHeaders
+	XAmzAlgorithm      *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateDefaultSearchFieldResponse struct {

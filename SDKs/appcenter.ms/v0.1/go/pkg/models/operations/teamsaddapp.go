@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsAddAppSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type TeamsAddAppPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-	// The team's name
-	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // TeamsAddAppRequestBody - The name of the app to be added to the team. The app has to be owned by the organization.
@@ -27,10 +19,12 @@ type TeamsAddAppRequestBody struct {
 }
 
 type TeamsAddAppRequest struct {
-	PathParams TeamsAddAppPathParams
 	// The name of the app to be added to the team. The app has to be owned by the organization.
-	Request  TeamsAddAppRequestBody `request:"mediaType=application/json"`
-	Security TeamsAddAppSecurity
+	RequestBody TeamsAddAppRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	// The team's name
+	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
 }
 
 type TeamsAddAppDefaultApplicationJSONErrorCodeEnum string

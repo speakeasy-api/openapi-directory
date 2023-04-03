@@ -41,14 +41,14 @@ func newOrganisations(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete an organisation with the specified identifier
 func (s *organisations) DeleteOrganisationsPartyID(ctx context.Context, request operations.DeleteOrganisationsPartyIDRequest) (*operations.DeleteOrganisationsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -116,9 +116,9 @@ func (s *organisations) GetOrganisations(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,14 +182,14 @@ func (s *organisations) GetOrganisations(ctx context.Context, request operations
 // Retrieve an organisation with the specified identifier
 func (s *organisations) GetOrganisationsPartyID(ctx context.Context, request operations.GetOrganisationsPartyIDRequest) (*operations.GetOrganisationsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -251,7 +251,7 @@ func (s *organisations) PostOrganisations(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organisations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrganisationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -266,7 +266,7 @@ func (s *organisations) PostOrganisations(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -328,9 +328,9 @@ func (s *organisations) PostOrganisations(ctx context.Context, request operation
 // Update an organisation
 func (s *organisations) PutOrganisationsPartyID(ctx context.Context, request operations.PutOrganisationsPartyIDRequest) (*operations.PutOrganisationsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrganisationInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -345,7 +345,7 @@ func (s *organisations) PutOrganisationsPartyID(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

@@ -30,7 +30,8 @@ func (e *GetUploadXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUploadHeaders struct {
+type GetUploadRequest struct {
+	GetUploadRequest  shared.GetUploadRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetUploadHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetUploadXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetUploadRequest struct {
-	Headers GetUploadHeaders
-	Request shared.GetUploadRequest `request:"mediaType=application/json"`
 }
 
 type GetUploadResponse struct {

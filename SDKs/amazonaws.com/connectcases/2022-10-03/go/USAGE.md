@@ -13,35 +13,32 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchGetFieldRequest{
-        PathParams: operations.BatchGetFieldPathParams{
-            DomainID: "corrupti",
-        },
-        Headers: operations.BatchGetFieldHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.BatchGetFieldRequestBody{
+        RequestBody: operations.BatchGetFieldRequestBody{
             Fields: []shared.FieldIdentifier{
                 shared.FieldIdentifier{
-                    ID: "error",
+                    ID: "provident",
                 },
                 shared.FieldIdentifier{
-                    ID: "deserunt",
+                    ID: "distinctio",
+                },
+                shared.FieldIdentifier{
+                    ID: "quibusdam",
                 },
             },
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        DomainID: "suscipit",
     }
 
     ctx := context.Background()

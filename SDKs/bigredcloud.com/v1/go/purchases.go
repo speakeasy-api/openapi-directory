@@ -35,14 +35,14 @@ func newPurchases(defaultClient, securityClient HTTPClient, serverURL, language,
 // PurchasesDelete - Removes an existing Purchase.
 func (s *purchases) PurchasesDelete(ctx context.Context, request operations.PurchasesDeleteRequest) (*operations.PurchasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *purchases) PurchasesGet(ctx context.Context) (*operations.PurchasesGetR
 }
 
 // PurchasesPost - Creates a new Purchase.
-func (s *purchases) PurchasesPost(ctx context.Context, request operations.PurchasesPostRequest) (*operations.PurchasesPostResponse, error) {
+func (s *purchases) PurchasesPost(ctx context.Context, request shared.PurchaseDto) (*operations.PurchasesPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/purchases"
 
@@ -181,7 +181,7 @@ func (s *purchases) PurchasesPost(ctx context.Context, request operations.Purcha
 }
 
 // PurchasesProcessBatch - Processes a batch of Purchases.
-func (s *purchases) PurchasesProcessBatch(ctx context.Context, request operations.PurchasesProcessBatchRequest) (*operations.PurchasesProcessBatchResponse, error) {
+func (s *purchases) PurchasesProcessBatch(ctx context.Context, request []shared.BatchItemPurchaseDto) (*operations.PurchasesProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/purchases/batch"
 
@@ -237,9 +237,9 @@ func (s *purchases) PurchasesProcessBatch(ctx context.Context, request operation
 // PurchasesPut - Updates an existing Purchase.
 func (s *purchases) PurchasesPut(ctx context.Context, request operations.PurchasesPutRequest) (*operations.PurchasesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PurchaseDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *purchases) PurchasesPut(ctx context.Context, request operations.Purchas
 // GetV1PurchasesID - Returns information about a single Purchases.
 func (s *purchases) GetV1PurchasesID(ctx context.Context, request operations.GetV1PurchasesIDRequest) (*operations.GetV1PurchasesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

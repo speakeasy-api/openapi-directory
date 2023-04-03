@@ -34,7 +34,7 @@ func newWorkspace(defaultClient, securityClient HTTPClient, serverURL, language,
 }
 
 // CreateWorkspace - Creates a workspace
-func (s *workspace) CreateWorkspace(ctx context.Context, request operations.CreateWorkspaceRequest) (*operations.CreateWorkspaceResponse, error) {
+func (s *workspace) CreateWorkspace(ctx context.Context, request shared.WorkspaceCreate) (*operations.CreateWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/create"
 
@@ -98,7 +98,7 @@ func (s *workspace) CreateWorkspace(ctx context.Context, request operations.Crea
 }
 
 // DeleteWorkspace - Deletes a workspace
-func (s *workspace) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest) (*operations.DeleteWorkspaceResponse, error) {
+func (s *workspace) DeleteWorkspace(ctx context.Context, request shared.WorkspaceIDRequestBody) (*operations.DeleteWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/delete"
 
@@ -163,7 +163,7 @@ func (s *workspace) DeleteWorkspace(ctx context.Context, request operations.Dele
 }
 
 // GetWorkspace - Find workspace by ID
-func (s *workspace) GetWorkspace(ctx context.Context, request operations.GetWorkspaceRequest) (*operations.GetWorkspaceResponse, error) {
+func (s *workspace) GetWorkspace(ctx context.Context, request shared.WorkspaceIDRequestBody) (*operations.GetWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/get"
 
@@ -237,7 +237,7 @@ func (s *workspace) GetWorkspace(ctx context.Context, request operations.GetWork
 }
 
 // GetWorkspaceByConnectionID - Find workspace by connection id
-func (s *workspace) GetWorkspaceByConnectionID(ctx context.Context, request operations.GetWorkspaceByConnectionIDRequest) (*operations.GetWorkspaceByConnectionIDResponse, error) {
+func (s *workspace) GetWorkspaceByConnectionID(ctx context.Context, request shared.ConnectionIDRequestBody) (*operations.GetWorkspaceByConnectionIDResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/get_by_connection_id"
 
@@ -311,7 +311,7 @@ func (s *workspace) GetWorkspaceByConnectionID(ctx context.Context, request oper
 }
 
 // GetWorkspaceBySlug - Find workspace by slug
-func (s *workspace) GetWorkspaceBySlug(ctx context.Context, request operations.GetWorkspaceBySlugRequest) (*operations.GetWorkspaceBySlugResponse, error) {
+func (s *workspace) GetWorkspaceBySlug(ctx context.Context, request shared.SlugRequestBody) (*operations.GetWorkspaceBySlugResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/get_by_slug"
 
@@ -429,7 +429,7 @@ func (s *workspace) ListWorkspaces(ctx context.Context) (*operations.ListWorkspa
 }
 
 // UpdateWorkspace - Update workspace state
-func (s *workspace) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest) (*operations.UpdateWorkspaceResponse, error) {
+func (s *workspace) UpdateWorkspace(ctx context.Context, request shared.WorkspaceUpdate) (*operations.UpdateWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/update"
 
@@ -503,7 +503,7 @@ func (s *workspace) UpdateWorkspace(ctx context.Context, request operations.Upda
 }
 
 // UpdateWorkspaceFeedback - Update workspace feedback state
-func (s *workspace) UpdateWorkspaceFeedback(ctx context.Context, request operations.UpdateWorkspaceFeedbackRequest) (*operations.UpdateWorkspaceFeedbackResponse, error) {
+func (s *workspace) UpdateWorkspaceFeedback(ctx context.Context, request shared.WorkspaceGiveFeedback) (*operations.UpdateWorkspaceFeedbackResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/tag_feedback_status_as_done"
 
@@ -558,7 +558,7 @@ func (s *workspace) UpdateWorkspaceFeedback(ctx context.Context, request operati
 }
 
 // UpdateWorkspaceName - Update workspace name
-func (s *workspace) UpdateWorkspaceName(ctx context.Context, request operations.UpdateWorkspaceNameRequest) (*operations.UpdateWorkspaceNameResponse, error) {
+func (s *workspace) UpdateWorkspaceName(ctx context.Context, request shared.WorkspaceUpdateName) (*operations.UpdateWorkspaceNameResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/workspaces/update_name"
 

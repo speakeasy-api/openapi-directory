@@ -13,41 +13,41 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateDatasetRequest{
-        Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSLookoutEquipmentFrontendService.CreateDataset",
-        },
-        Request: shared.CreateDatasetRequest{
-            ClientToken: "illum",
-            DatasetName: "vel",
+        CreateDatasetRequest: shared.CreateDatasetRequest{
+            ClientToken: "corrupti",
+            DatasetName: "provident",
             DatasetSchema: &shared.DatasetSchema{
-                InlineDataSchema: "error",
+                InlineDataSchema: "distinctio",
             },
-            ServerSideKmsKeyID: "deserunt",
+            ServerSideKmsKeyID: "quibusdam",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "illum",
+                    Value: "vel",
+                },
+                shared.Tag{
+                    Key: "error",
+                    Value: "deserunt",
                 },
             },
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "iure",
+        XAmzCredential: "magnam",
+        XAmzDate: "debitis",
+        XAmzSecurityToken: "ipsa",
+        XAmzSignature: "delectus",
+        XAmzSignedHeaders: "tempora",
+        XAmzTarget: "AWSLookoutEquipmentFrontendService.CreateDataset",
     }
 
     ctx := context.Background()

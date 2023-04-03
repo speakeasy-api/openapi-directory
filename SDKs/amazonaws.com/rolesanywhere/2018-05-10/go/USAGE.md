@@ -13,55 +13,45 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateProfileRequest{
-        Headers: operations.CreateProfileHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateProfileRequestBody{
-            DurationSeconds: 847252,
+        RequestBody: operations.CreateProfileRequestBody{
+            DurationSeconds: 548814,
             Enabled: false,
             ManagedPolicyArns: []string{
-                "error",
-                "deserunt",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
-            Name: "suscipit",
+            Name: "nulla",
             RequireInstanceProperties: false,
             RoleArns: []string{
-                "magnam",
-                "debitis",
+                "illum",
+                "vel",
+                "error",
             },
-            SessionPolicy: "ipsa",
+            SessionPolicy: "deserunt",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "tempora",
-                    Value: "suscipit",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "molestiae",
-                    Value: "minus",
-                },
-                shared.Tag{
-                    Key: "placeat",
-                    Value: "voluptatum",
-                },
-                shared.Tag{
-                    Key: "iusto",
-                    Value: "excepturi",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },
+        XAmzAlgorithm: "delectus",
+        XAmzContentSha256: "tempora",
+        XAmzCredential: "suscipit",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "minus",
+        XAmzSignature: "placeat",
+        XAmzSignedHeaders: "voluptatum",
     }
 
     ctx := context.Background()

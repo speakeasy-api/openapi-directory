@@ -33,7 +33,14 @@ func (e *ListTimeSeriesTimeSeriesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTimeSeriesQueryParams struct {
+type ListTimeSeriesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The alias prefix of the time series.
 	AliasPrefix *string `queryParam:"style=form,explode=true,name=aliasPrefix"`
 	// The ID of the asset in which the asset property was created.
@@ -44,21 +51,6 @@ type ListTimeSeriesQueryParams struct {
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 	// <p>The type of the time series. The time series type can be one of the following values:</p> <ul> <li> <p> <code>ASSOCIATED</code> – The time series is associated with an asset property.</p> </li> <li> <p> <code>DISASSOCIATED</code> – The time series isn't associated with any asset property.</p> </li> </ul>
 	TimeSeriesType *ListTimeSeriesTimeSeriesTypeEnum `queryParam:"style=form,explode=true,name=timeSeriesType"`
-}
-
-type ListTimeSeriesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTimeSeriesRequest struct {
-	QueryParams ListTimeSeriesQueryParams
-	Headers     ListTimeSeriesHeaders
 }
 
 type ListTimeSeriesResponse struct {

@@ -32,7 +32,7 @@ func newClassification(defaultClient, securityClient HTTPClient, serverURL, lang
 }
 
 // GetClassifications - Get a list of classifications
-func (s *classification) GetClassifications(ctx context.Context, request operations.GetClassificationsRequest) (*operations.GetClassificationsResponse, error) {
+func (s *classification) GetClassifications(ctx context.Context, request operations.GetClassificationsRequest, security operations.GetClassificationsSecurity) (*operations.GetClassificationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/classifications"
 
@@ -41,11 +41,11 @@ func (s *classification) GetClassifications(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -97,16 +97,16 @@ func (s *classification) GetClassifications(ctx context.Context, request operati
 }
 
 // GetClassificationsID - Get a specific classification
-func (s *classification) GetClassificationsID(ctx context.Context, request operations.GetClassificationsIDRequest) (*operations.GetClassificationsIDResponse, error) {
+func (s *classification) GetClassificationsID(ctx context.Context, request operations.GetClassificationsIDRequest, security operations.GetClassificationsIDSecurity) (*operations.GetClassificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classifications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/classifications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

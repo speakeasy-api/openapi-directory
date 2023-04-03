@@ -8,13 +8,6 @@ import (
 	"net/http"
 )
 
-type GETListDeadLetterSourceQueuesPathParams struct {
-	// The AWS account number
-	AccountNumber int64 `pathParam:"style=simple,explode=false,name=AccountNumber"`
-	// The name of the queue
-	QueueName string `pathParam:"style=simple,explode=false,name=QueueName"`
-}
-
 // GETListDeadLetterSourceQueuesActionEnum
 type GETListDeadLetterSourceQueuesActionEnum string
 
@@ -57,29 +50,24 @@ func (e *GETListDeadLetterSourceQueuesVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETListDeadLetterSourceQueuesQueryParams struct {
-	Action GETListDeadLetterSourceQueuesActionEnum `queryParam:"style=form,explode=true,name=Action"`
+type GETListDeadLetterSourceQueuesRequest struct {
+	// The AWS account number
+	AccountNumber int64                                   `pathParam:"style=simple,explode=false,name=AccountNumber"`
+	Action        GETListDeadLetterSourceQueuesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Maximum number of results to include in the response. Value range is 1 to 1000. You must set <code>MaxResults</code> to receive a value for <code>NextToken</code> in the response.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token to request the next set of results.
-	NextToken *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListDeadLetterSourceQueuesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListDeadLetterSourceQueuesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListDeadLetterSourceQueuesRequest struct {
-	PathParams  GETListDeadLetterSourceQueuesPathParams
-	QueryParams GETListDeadLetterSourceQueuesQueryParams
-	Headers     GETListDeadLetterSourceQueuesHeaders
+	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
+	// The name of the queue
+	QueueName         string                                   `pathParam:"style=simple,explode=false,name=QueueName"`
+	Version           GETListDeadLetterSourceQueuesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListDeadLetterSourceQueuesResponse struct {

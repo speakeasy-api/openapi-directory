@@ -8,25 +8,17 @@ import (
 )
 
 type UpdateTextBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateTextBroadcastPathParams struct {
-	// An id of a text broadcast
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdateTextBroadcastQueryParams struct {
-	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
-	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateTextBroadcastRequest struct {
-	PathParams  UpdateTextBroadcastPathParams
-	QueryParams UpdateTextBroadcastQueryParams
 	// A TextBroadcast object
-	Request  *shared.TextBroadcastInput `request:"mediaType=application/json"`
-	Security UpdateTextBroadcastSecurity
+	TextBroadcastInput *shared.TextBroadcastInput `request:"mediaType=application/json"`
+	// An id of a text broadcast
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	// Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+	StrictValidation *bool `queryParam:"style=form,explode=true,name=strictValidation"`
 }
 
 type UpdateTextBroadcastResponse struct {

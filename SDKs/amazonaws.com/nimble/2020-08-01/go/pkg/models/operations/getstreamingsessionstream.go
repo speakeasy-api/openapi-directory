@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStreamingSessionStreamPathParams struct {
-	// The streaming session ID.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-	// The streaming session stream ID.
-	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetStreamingSessionStreamHeaders struct {
+type GetStreamingSessionStreamRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetStreamingSessionStreamHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStreamingSessionStreamRequest struct {
-	PathParams GetStreamingSessionStreamPathParams
-	Headers    GetStreamingSessionStreamHeaders
+	// The streaming session ID.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	// The streaming session stream ID.
+	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetStreamingSessionStreamResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteDestinationOAuthRequest struct {
-	Request shared.CompleteDestinationOAuthRequest `request:"mediaType=application/json"`
-}
-
 type CompleteDestinationOAuthResponse struct {
 	// Successful operation
 	CompleteOAuthResponse map[string]interface{}

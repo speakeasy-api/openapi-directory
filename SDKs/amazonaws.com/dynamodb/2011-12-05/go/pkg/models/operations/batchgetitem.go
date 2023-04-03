@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchGetItemQueryParams struct {
-	// Pagination token
-	RequestItems *string `queryParam:"style=form,explode=true,name=RequestItems"`
-}
-
 // BatchGetItemXAmzTargetEnum
 type BatchGetItemXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *BatchGetItemXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BatchGetItemHeaders struct {
+type BatchGetItemRequest struct {
+	BatchGetItemInput shared.BatchGetItemInput `request:"mediaType=application/json"`
+	// Pagination token
+	RequestItems      *string                    `queryParam:"style=form,explode=true,name=RequestItems"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type BatchGetItemHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        BatchGetItemXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type BatchGetItemRequest struct {
-	QueryParams BatchGetItemQueryParams
-	Headers     BatchGetItemHeaders
-	Request     shared.BatchGetItemInput `request:"mediaType=application/json"`
 }
 
 type BatchGetItemResponse struct {

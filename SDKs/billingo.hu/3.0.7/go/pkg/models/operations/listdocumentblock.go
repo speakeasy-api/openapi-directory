@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDocumentBlockQueryParams struct {
+type ListDocumentBlockRequest struct {
 	Page    *int64 `queryParam:"style=form,explode=true,name=page"`
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
-}
-
-type ListDocumentBlockRequest struct {
-	QueryParams ListDocumentBlockQueryParams
 }
 
 type ListDocumentBlockResponse struct {

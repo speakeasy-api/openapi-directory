@@ -8,21 +8,16 @@ import (
 )
 
 type GetFoodBrandedBarcodePhpSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=query"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
-type GetFoodBrandedBarcodePhpQueryParams struct {
+type GetFoodBrandedBarcodePhpRequest struct {
 	// #### UPC/EAN barcode
 	//
 	// **Example**
 	// > ```&code=0842234000988```
 	//
 	Code string `queryParam:"style=form,explode=true,name=code"`
-}
-
-type GetFoodBrandedBarcodePhpRequest struct {
-	QueryParams GetFoodBrandedBarcodePhpQueryParams
-	Security    GetFoodBrandedBarcodePhpSecurity
 }
 
 type GetFoodBrandedBarcodePhpResponse struct {

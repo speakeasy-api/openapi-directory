@@ -8,17 +8,12 @@ import (
 )
 
 type DeleteSettingsOrganizationsOrganizationNameSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
-}
-
-type DeleteSettingsOrganizationsOrganizationNamePathParams struct {
-	// The name of the organization
-	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type DeleteSettingsOrganizationsOrganizationNameRequest struct {
-	PathParams DeleteSettingsOrganizationsOrganizationNamePathParams
-	Security   DeleteSettingsOrganizationsOrganizationNameSecurity
+	// The name of the organization
+	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
 }
 
 type DeleteSettingsOrganizationsOrganizationNameResponse struct {

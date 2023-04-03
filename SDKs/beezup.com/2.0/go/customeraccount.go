@@ -33,7 +33,7 @@ func newCustomerAccount(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // ActivateUserAccount - Activate the user account
-func (s *customerAccount) ActivateUserAccount(ctx context.Context, request operations.ActivateUserAccountRequest) (*operations.ActivateUserAccountResponse, error) {
+func (s *customerAccount) ActivateUserAccount(ctx context.Context, request string) (*operations.ActivateUserAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/activate"
 
@@ -92,7 +92,7 @@ func (s *customerAccount) ActivateUserAccount(ctx context.Context, request opera
 }
 
 // ChangeEmail - Change user email
-func (s *customerAccount) ChangeEmail(ctx context.Context, request operations.ChangeEmailRequest) (*operations.ChangeEmailResponse, error) {
+func (s *customerAccount) ChangeEmail(ctx context.Context, request shared.ChangeEmailRequest) (*operations.ChangeEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/changeEmail"
 
@@ -149,7 +149,7 @@ func (s *customerAccount) ChangeEmail(ctx context.Context, request operations.Ch
 }
 
 // ChangePassword - Change user password
-func (s *customerAccount) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
+func (s *customerAccount) ChangePassword(ctx context.Context, request shared.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/changePassword"
 
@@ -215,7 +215,7 @@ func (s *customerAccount) GetCreditCardInfo(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -278,7 +278,7 @@ func (s *customerAccount) GetProfilePictureInfo(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -337,7 +337,7 @@ func (s *customerAccount) GetUserAccountInfo(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -416,6 +416,18 @@ func (s *customerAccount) ResendEmailActivation(ctx context.Context) (*operation
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 429:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BeezUPCommonErrorResponseMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BeezUPCommonErrorResponseMessage = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 409:
@@ -432,25 +444,13 @@ func (s *customerAccount) ResendEmailActivation(ctx context.Context) (*operation
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 429:
-		res.Headers = httpRes.Header
-
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.BeezUPCommonErrorResponseMessage
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.BeezUPCommonErrorResponseMessage = out
-		}
 	}
 
 	return res, nil
 }
 
 // SaveCompanyInfo - Change company information
-func (s *customerAccount) SaveCompanyInfo(ctx context.Context, request operations.SaveCompanyInfoRequest) (*operations.SaveCompanyInfoResponse, error) {
+func (s *customerAccount) SaveCompanyInfo(ctx context.Context, request shared.CompanyInfo) (*operations.SaveCompanyInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/companyInfo"
 
@@ -509,7 +509,7 @@ func (s *customerAccount) SaveCompanyInfo(ctx context.Context, request operation
 }
 
 // SaveCreditCardInfo - Save user credit card info
-func (s *customerAccount) SaveCreditCardInfo(ctx context.Context, request operations.SaveCreditCardInfoRequest) (*operations.SaveCreditCardInfoResponse, error) {
+func (s *customerAccount) SaveCreditCardInfo(ctx context.Context, request shared.CreditCardInfo) (*operations.SaveCreditCardInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/creditCardInfo"
 
@@ -568,7 +568,7 @@ func (s *customerAccount) SaveCreditCardInfo(ctx context.Context, request operat
 }
 
 // SavePersonalInfo - Save user personal information
-func (s *customerAccount) SavePersonalInfo(ctx context.Context, request operations.SavePersonalInfoRequest) (*operations.SavePersonalInfoResponse, error) {
+func (s *customerAccount) SavePersonalInfo(ctx context.Context, request shared.PersonalInfo) (*operations.SavePersonalInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/personalInfo"
 
@@ -625,7 +625,7 @@ func (s *customerAccount) SavePersonalInfo(ctx context.Context, request operatio
 }
 
 // SaveProfilePictureInfo - Change user picture information
-func (s *customerAccount) SaveProfilePictureInfo(ctx context.Context, request operations.SaveProfilePictureInfoRequest) (*operations.SaveProfilePictureInfoResponse, error) {
+func (s *customerAccount) SaveProfilePictureInfo(ctx context.Context, request shared.ProfilePictureInfo) (*operations.SaveProfilePictureInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/customer/account/profilePictureInfo"
 

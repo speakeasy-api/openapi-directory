@@ -11,7 +11,7 @@ import (
 )
 
 type GetEpisodesSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetEpisodesSortEnum string
@@ -52,7 +52,7 @@ func (e *GetEpisodesSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetEpisodesQueryParams struct {
+type GetEpisodesRequest struct {
 	// The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
 	// The brackets *MUST* be percent-encoded, per the requirements in
 	// [RFC 3986 § 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
@@ -94,11 +94,6 @@ type GetEpisodesQueryParams struct {
 	Sort []GetEpisodesSortEnum `queryParam:"style=form,explode=false,name=sort"`
 	// Limit the result to episodes released in this year.
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetEpisodesRequest struct {
-	QueryParams GetEpisodesQueryParams
-	Security    GetEpisodesSecurity
 }
 
 // GetEpisodes400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

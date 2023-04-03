@@ -9,11 +9,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFileAsMultipartPublic1PathParams struct {
-	// Access key
-	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
+type UploadFileAsMultipartPublic1RequestBodyFile struct {
+	Content []byte `multipartForm:"content"`
+	File    string `multipartForm:"name=file"`
+}
+
+type UploadFileAsMultipartPublic1RequestBody struct {
+	// File
+	File UploadFileAsMultipartPublic1RequestBodyFile `multipartForm:"file"`
 }
 
 // UploadFileAsMultipartPublic1XSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
@@ -49,29 +52,18 @@ func (e *UploadFileAsMultipartPublic1XSdsDateFormatEnum) UnmarshalJSON(data []by
 	}
 }
 
-type UploadFileAsMultipartPublic1Headers struct {
+type UploadFileAsMultipartPublic1Request struct {
 	// Content-Range
 	//
 	// e.g. `bytes 0-999/3980`
-	ContentRange *string `header:"style=simple,explode=false,name=Content-Range"`
+	ContentRange *string                                  `header:"style=simple,explode=false,name=Content-Range"`
+	RequestBody  *UploadFileAsMultipartPublic1RequestBody `request:"mediaType=multipart/form-data"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *UploadFileAsMultipartPublic1XSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type UploadFileAsMultipartPublic1RequestBodyFile struct {
-	Content []byte `multipartForm:"content"`
-	File    string `multipartForm:"name=file"`
-}
-
-type UploadFileAsMultipartPublic1RequestBody struct {
-	// File
-	File UploadFileAsMultipartPublic1RequestBodyFile `multipartForm:"file"`
-}
-
-type UploadFileAsMultipartPublic1Request struct {
-	PathParams UploadFileAsMultipartPublic1PathParams
-	Headers    UploadFileAsMultipartPublic1Headers
-	Request    *UploadFileAsMultipartPublic1RequestBody `request:"mediaType=multipart/form-data"`
+	// Access key
+	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type UploadFileAsMultipartPublic1Response struct {

@@ -50,26 +50,18 @@ func (e *GETDeleteVirtualMFADeviceVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDeleteVirtualMFADeviceQueryParams struct {
+type GETDeleteVirtualMFADeviceRequest struct {
 	Action GETDeleteVirtualMFADeviceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the same as the ARN.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@:/-</p>
-	SerialNumber string                               `queryParam:"style=form,explode=true,name=SerialNumber"`
-	Version      GETDeleteVirtualMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteVirtualMFADeviceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteVirtualMFADeviceRequest struct {
-	QueryParams GETDeleteVirtualMFADeviceQueryParams
-	Headers     GETDeleteVirtualMFADeviceHeaders
+	SerialNumber      string                               `queryParam:"style=form,explode=true,name=SerialNumber"`
+	Version           GETDeleteVirtualMFADeviceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteVirtualMFADeviceResponse struct {

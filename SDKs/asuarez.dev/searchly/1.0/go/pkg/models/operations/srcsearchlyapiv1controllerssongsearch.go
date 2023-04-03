@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SrcSearchlyAPIV1ControllersSongSearchQueryParams struct {
+type SrcSearchlyAPIV1ControllersSongSearchRequest struct {
 	// Query.
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type SrcSearchlyAPIV1ControllersSongSearchRequest struct {
-	QueryParams SrcSearchlyAPIV1ControllersSongSearchQueryParams
 }
 
 type SrcSearchlyAPIV1ControllersSongSearchResponse struct {

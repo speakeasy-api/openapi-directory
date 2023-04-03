@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReferencesByGlobalIDPathParams struct {
+type ReferencesByGlobalIDRequest struct {
 	// Global identifier for an artifact version.
 	GlobalID int64 `pathParam:"style=simple,explode=false,name=globalId"`
-}
-
-type ReferencesByGlobalIDRequest struct {
-	PathParams ReferencesByGlobalIDPathParams
 }
 
 type ReferencesByGlobalIDResponse struct {

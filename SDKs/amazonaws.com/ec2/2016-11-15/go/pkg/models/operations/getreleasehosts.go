@@ -50,26 +50,18 @@ func (e *GETReleaseHostsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETReleaseHostsQueryParams struct {
+type GETReleaseHostsRequest struct {
 	Action GETReleaseHostsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IDs of the Dedicated Hosts to release.
-	HostID  []string                   `queryParam:"style=form,explode=true,name=HostId"`
-	Version GETReleaseHostsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReleaseHostsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReleaseHostsRequest struct {
-	QueryParams GETReleaseHostsQueryParams
-	Headers     GETReleaseHostsHeaders
+	HostID            []string                   `queryParam:"style=form,explode=true,name=HostId"`
+	Version           GETReleaseHostsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReleaseHostsResponse struct {

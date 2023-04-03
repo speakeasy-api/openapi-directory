@@ -33,7 +33,7 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GetAuthIntrospect - Performs introspection of the provided Bearer JWT token
-func (s *auth) GetAuthIntrospect(ctx context.Context, request operations.GetAuthIntrospectRequest) (*operations.GetAuthIntrospectResponse, error) {
+func (s *auth) GetAuthIntrospect(ctx context.Context) (*operations.GetAuthIntrospectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/auth/introspect"
 
@@ -42,7 +42,7 @@ func (s *auth) GetAuthIntrospect(ctx context.Context, request operations.GetAuth
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

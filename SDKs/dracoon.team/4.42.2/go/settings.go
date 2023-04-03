@@ -54,7 +54,7 @@ func (s *settings) CreateAndPreserveKeyPair(ctx context.Context, request operati
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/settings/keypairs"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateKeyPairRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -69,7 +69,7 @@ func (s *settings) CreateAndPreserveKeyPair(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -160,7 +160,7 @@ func (s *settings) CreateWebhook(ctx context.Context, request operations.CreateW
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/settings/webhooks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,7 +175,7 @@ func (s *settings) CreateWebhook(ctx context.Context, request operations.CreateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -255,9 +255,9 @@ func (s *settings) RemoveSystemRescueKeyPair(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -320,14 +320,14 @@ func (s *settings) RemoveSystemRescueKeyPair(ctx context.Context, request operat
 // None.
 func (s *settings) RemoveWebhook(ctx context.Context, request operations.RemoveWebhookRequest) (*operations.RemoveWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -401,7 +401,7 @@ func (s *settings) RequestAllSystemRescueKeyPairs(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -476,7 +476,7 @@ func (s *settings) RequestListOfEventTypesForConfigManager(ctx context.Context, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -609,9 +609,9 @@ func (s *settings) RequestListOfWebhooks(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -690,7 +690,7 @@ func (s *settings) RequestNotificationChannels(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -775,7 +775,7 @@ func (s *settings) RequestSettings(ctx context.Context, request operations.Reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -850,9 +850,9 @@ func (s *settings) RequestSystemRescueKeyPair(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -922,14 +922,14 @@ func (s *settings) RequestSystemRescueKeyPair(ctx context.Context, request opera
 // None.
 func (s *settings) RequestWebhook(ctx context.Context, request operations.RequestWebhookRequest) (*operations.RequestWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1001,14 +1001,14 @@ func (s *settings) RequestWebhook(ctx context.Context, request operations.Reques
 // None.
 func (s *settings) ResetWebhookLifetime(ctx context.Context, request operations.ResetWebhookLifetimeRequest) (*operations.ResetWebhookLifetimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}/reset_lifetime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}/reset_lifetime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1100,7 +1100,7 @@ func (s *settings) SetSettings(ctx context.Context, request operations.SetSettin
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/settings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerSettingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1115,7 +1115,7 @@ func (s *settings) SetSettings(ctx context.Context, request operations.SetSettin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1192,7 +1192,7 @@ func (s *settings) SetSystemRescueKeyPair(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/settings/keypair"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserKeyPairContainer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1207,7 +1207,7 @@ func (s *settings) SetSystemRescueKeyPair(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1270,7 +1270,7 @@ func (s *settings) ToggleNotificationChannels(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/settings/notifications/channels"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationChannelActivationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1285,7 +1285,7 @@ func (s *settings) ToggleNotificationChannels(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1384,9 +1384,9 @@ func (s *settings) ToggleNotificationChannels(ctx context.Context, request opera
 // </details>
 func (s *settings) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/settings/webhooks/{webhook_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1401,7 +1401,7 @@ func (s *settings) UpdateWebhook(ctx context.Context, request operations.UpdateW
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

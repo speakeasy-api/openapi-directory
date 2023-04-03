@@ -36,16 +36,16 @@ func newWebhooksCompanyLevel(defaultClient, securityClient HTTPClient, serverURL
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) DeleteCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.DeleteCompaniesCompanyIDWebhooksWebhookIDRequest) (*operations.DeleteCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
+func (s *webhooksCompanyLevel) DeleteCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.DeleteCompaniesCompanyIDWebhooksWebhookIDRequest, security operations.DeleteCompaniesCompanyIDWebhooksWebhookIDSecurity) (*operations.DeleteCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,20 +94,20 @@ func (s *webhooksCompanyLevel) DeleteCompaniesCompanyIDWebhooksWebhookID(ctx con
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooks(ctx context.Context, request operations.GetCompaniesCompanyIDWebhooksRequest) (*operations.GetCompaniesCompanyIDWebhooksResponse, error) {
+func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooks(ctx context.Context, request operations.GetCompaniesCompanyIDWebhooksRequest, security operations.GetCompaniesCompanyIDWebhooksSecurity) (*operations.GetCompaniesCompanyIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,16 +165,16 @@ func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooks(ctx context.Context
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.GetCompaniesCompanyIDWebhooksWebhookIDRequest) (*operations.GetCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
+func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.GetCompaniesCompanyIDWebhooksWebhookIDRequest, security operations.GetCompaniesCompanyIDWebhooksWebhookIDSecurity) (*operations.GetCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,11 +231,11 @@ func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooksWebhookID(ctx contex
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) PatchCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.PatchCompaniesCompanyIDWebhooksWebhookIDRequest) (*operations.PatchCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
+func (s *webhooksCompanyLevel) PatchCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.PatchCompaniesCompanyIDWebhooksWebhookIDRequest, security operations.PatchCompaniesCompanyIDWebhooksWebhookIDSecurity) (*operations.PatchCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCompanyWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *webhooksCompanyLevel) PatchCompaniesCompanyIDWebhooksWebhookID(ctx cont
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -304,11 +304,11 @@ func (s *webhooksCompanyLevel) PatchCompaniesCompanyIDWebhooksWebhookID(ctx cont
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooks(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksRequest) (*operations.PostCompaniesCompanyIDWebhooksResponse, error) {
+func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooks(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksRequest, security operations.PostCompaniesCompanyIDWebhooksSecurity) (*operations.PostCompaniesCompanyIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCompanyWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -320,7 +320,7 @@ func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooks(ctx context.Contex
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,16 +377,16 @@ func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooks(ctx context.Contex
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmac(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacRequest) (*operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacResponse, error) {
+func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmac(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacRequest, security operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacSecurity) (*operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/generateHmac", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/generateHmac", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -449,11 +449,11 @@ func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDGenerateHm
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Webhooks read and write
-func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDTest(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksWebhookIDTestRequest) (*operations.PostCompaniesCompanyIDWebhooksWebhookIDTestResponse, error) {
+func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDTest(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksWebhookIDTestRequest, security operations.PostCompaniesCompanyIDWebhooksWebhookIDTestSecurity) (*operations.PostCompaniesCompanyIDWebhooksWebhookIDTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/test", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/test", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestCompanyWebhookRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -465,7 +465,7 @@ func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDTest(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

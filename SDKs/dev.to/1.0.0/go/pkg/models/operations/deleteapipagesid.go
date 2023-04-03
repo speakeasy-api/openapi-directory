@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAPIPagesIDPathParams struct {
+type DeleteAPIPagesIDRequest struct {
 	// The ID of the page.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAPIPagesIDRequest struct {
-	PathParams DeleteAPIPagesIDPathParams
 }
 
 type DeleteAPIPagesIDResponse struct {

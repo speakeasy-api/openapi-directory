@@ -50,25 +50,17 @@ func (e *POSTRestoreDBClusterFromS3VersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTRestoreDBClusterFromS3QueryParams struct {
-	Action  POSTRestoreDBClusterFromS3ActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRestoreDBClusterFromS3VersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRestoreDBClusterFromS3Headers struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRestoreDBClusterFromS3Request struct {
-	QueryParams POSTRestoreDBClusterFromS3QueryParams
-	Headers     POSTRestoreDBClusterFromS3Headers
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRestoreDBClusterFromS3ActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTRestoreDBClusterFromS3VersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRestoreDBClusterFromS3Response struct {

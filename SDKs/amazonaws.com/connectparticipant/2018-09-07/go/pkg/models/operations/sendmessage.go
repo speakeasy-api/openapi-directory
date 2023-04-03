@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SendMessageHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	// The authentication token associated with the connection.
-	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type SendMessageRequestBody struct {
 	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.
 	ClientToken *string `json:"ClientToken,omitempty"`
@@ -29,8 +17,16 @@ type SendMessageRequestBody struct {
 }
 
 type SendMessageRequest struct {
-	Headers SendMessageHeaders
-	Request SendMessageRequestBody `request:"mediaType=application/json"`
+	RequestBody   SendMessageRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	// The authentication token associated with the connection.
+	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SendMessageResponse struct {

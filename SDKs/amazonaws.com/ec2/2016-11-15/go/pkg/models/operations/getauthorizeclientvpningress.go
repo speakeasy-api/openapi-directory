@@ -50,7 +50,7 @@ func (e *GETAuthorizeClientVpnIngressVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETAuthorizeClientVpnIngressQueryParams struct {
+type GETAuthorizeClientVpnIngressRequest struct {
 	// The ID of the group to grant access to, for example, the Active Directory group or identity provider (IdP) group. Required if <code>AuthorizeAllGroups</code> is <code>false</code> or not specified.
 	AccessGroupID *string                                `queryParam:"style=form,explode=true,name=AccessGroupId"`
 	Action        GETAuthorizeClientVpnIngressActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -67,21 +67,13 @@ type GETAuthorizeClientVpnIngressQueryParams struct {
 	// The IPv4 address range, in CIDR notation, of the network for which access is being authorized.
 	TargetNetworkCidr string                                  `queryParam:"style=form,explode=true,name=TargetNetworkCidr"`
 	Version           GETAuthorizeClientVpnIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAuthorizeClientVpnIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAuthorizeClientVpnIngressRequest struct {
-	QueryParams GETAuthorizeClientVpnIngressQueryParams
-	Headers     GETAuthorizeClientVpnIngressHeaders
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAuthorizeClientVpnIngressResponse struct {

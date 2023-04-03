@@ -8,21 +8,16 @@ import (
 )
 
 type PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDPathParams struct {
+type PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest struct {
+	UpdatePayoutSettingsRequest *shared.UpdatePayoutSettingsRequest `request:"mediaType=application/json"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// The unique identifier of the payout setting.
 	PayoutSettingsID string `pathParam:"style=simple,explode=false,name=payoutSettingsId"`
-}
-
-type PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest struct {
-	PathParams PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDPathParams
-	Request    *shared.UpdatePayoutSettingsRequest `request:"mediaType=application/json"`
-	Security   PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity
 }
 
 type PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse struct {

@@ -50,26 +50,18 @@ func (e *GETDeleteOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDeleteOpenIDConnectProviderQueryParams struct {
+type GETDeleteOpenIDConnectProviderRequest struct {
 	Action GETDeleteOpenIDConnectProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the IAM OpenID Connect provider resource object to delete. You can get a list of OpenID Connect provider resource ARNs by using the <a>ListOpenIDConnectProviders</a> operation.
 	OpenIDConnectProviderArn string                                    `queryParam:"style=form,explode=true,name=OpenIDConnectProviderArn"`
 	Version                  GETDeleteOpenIDConnectProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteOpenIDConnectProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteOpenIDConnectProviderRequest struct {
-	QueryParams GETDeleteOpenIDConnectProviderQueryParams
-	Headers     GETDeleteOpenIDConnectProviderHeaders
+	XAmzAlgorithm            *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteOpenIDConnectProviderResponse struct {

@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetSchedulesQueryParams struct {
+type GetSchedulesRequest struct {
 	// The list of channel ids to get schedules for.
 	Channels []string `queryParam:"style=form,explode=false,name=channels"`
 	// The date to target in ISO format, e.g. `2017-05-23` (converted to UTC - see main description).
@@ -79,10 +79,6 @@ type GetSchedulesQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetSchedulesRequest struct {
-	QueryParams GetSchedulesQueryParams
 }
 
 type GetSchedulesResponse struct {

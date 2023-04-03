@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFraudsterRegistrationJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListFraudsterRegistrationJobsXAmzTargetEnum
 type ListFraudsterRegistrationJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListFraudsterRegistrationJobsXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListFraudsterRegistrationJobsHeaders struct {
+type ListFraudsterRegistrationJobsRequest struct {
+	ListFraudsterRegistrationJobsRequest shared.ListFraudsterRegistrationJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListFraudsterRegistrationJobsHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListFraudsterRegistrationJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListFraudsterRegistrationJobsRequest struct {
-	QueryParams ListFraudsterRegistrationJobsQueryParams
-	Headers     ListFraudsterRegistrationJobsHeaders
-	Request     shared.ListFraudsterRegistrationJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListFraudsterRegistrationJobsResponse struct {

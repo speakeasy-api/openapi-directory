@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryCreateAPIVersionPathParams struct {
+type RegistryCreateAPIVersionRequest struct {
+	APIVersionInput shared.APIVersionInput `request:"mediaType=application/json"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
+	// Required. The ID to use for the version, which will become the final component of the version's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+	APIVersionID *string `queryParam:"style=form,explode=true,name=apiVersionId"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryCreateAPIVersionQueryParams struct {
-	// Required. The ID to use for the version, which will become the final component of the version's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
-	APIVersionID *string `queryParam:"style=form,explode=true,name=apiVersionId"`
-}
-
-type RegistryCreateAPIVersionRequest struct {
-	PathParams  RegistryCreateAPIVersionPathParams
-	QueryParams RegistryCreateAPIVersionQueryParams
-	Request     shared.APIVersionInput `request:"mediaType=application/json"`
 }
 
 type RegistryCreateAPIVersionResponse struct {

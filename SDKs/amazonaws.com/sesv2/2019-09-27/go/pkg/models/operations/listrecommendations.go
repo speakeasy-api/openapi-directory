@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRecommendationsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-}
-
-type ListRecommendationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListRecommendationsRequestBody struct {
 	// An object that contains mapping between <code>ListRecommendationsFilterKey</code> and <code>ListRecommendationFilterValue</code> to filter by.
 	Filter map[string]string `json:"Filter,omitempty"`
@@ -34,9 +17,18 @@ type ListRecommendationsRequestBody struct {
 }
 
 type ListRecommendationsRequest struct {
-	QueryParams ListRecommendationsQueryParams
-	Headers     ListRecommendationsHeaders
-	Request     ListRecommendationsRequestBody `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
+	// Pagination limit
+	PageSize          *string                        `queryParam:"style=form,explode=true,name=PageSize"`
+	RequestBody       ListRecommendationsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListRecommendationsResponse struct {

@@ -50,7 +50,7 @@ func (e *GETModifyTransitGatewayPrefixListReferenceVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETModifyTransitGatewayPrefixListReferenceQueryParams struct {
+type GETModifyTransitGatewayPrefixListReferenceRequest struct {
 	Action GETModifyTransitGatewayPrefixListReferenceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates whether to drop traffic that matches this route.
 	Blackhole *bool `queryParam:"style=form,explode=true,name=Blackhole"`
@@ -63,21 +63,13 @@ type GETModifyTransitGatewayPrefixListReferenceQueryParams struct {
 	// The ID of the transit gateway route table.
 	TransitGatewayRouteTableID string                                                `queryParam:"style=form,explode=true,name=TransitGatewayRouteTableId"`
 	Version                    GETModifyTransitGatewayPrefixListReferenceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyTransitGatewayPrefixListReferenceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyTransitGatewayPrefixListReferenceRequest struct {
-	QueryParams GETModifyTransitGatewayPrefixListReferenceQueryParams
-	Headers     GETModifyTransitGatewayPrefixListReferenceHeaders
+	XAmzAlgorithm              *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyTransitGatewayPrefixListReferenceResponse struct {

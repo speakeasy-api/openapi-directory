@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AutomaticProvisioningCreateAccountFormRequest struct {
-	Request shared.RechnungsdruckWebAppControllersAPIAutomaticProvisioningControllerCreateAccountContainer `request:"mediaType=application/x-www-form-urlencoded"`
-}
 
 type AutomaticProvisioningCreateAccountFormResponse struct {
 	// OK

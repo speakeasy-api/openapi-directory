@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AddLayerVersionPermission - <p>Adds permissions to the resource-based policy of a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. Use this action to grant layer usage permission to other accounts. You can grant permission to a single account, all accounts in an organization, or all Amazon Web Services accounts. </p> <p>To revoke permission, call <a>RemoveLayerVersionPermission</a> with the statement ID that you specified when you added it.</p>
 func (s *SDK) AddLayerVersionPermission(ctx context.Context, request operations.AddLayerVersionPermissionRequest) (*operations.AddLayerVersionPermissionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}/policy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,9 +131,9 @@ func (s *SDK) AddLayerVersionPermission(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -244,9 +244,9 @@ func (s *SDK) AddLayerVersionPermission(ctx context.Context, request operations.
 // AddPermission - <p>Grants an Amazon Web Service, Amazon Web Services account, or Amazon Web Services organization permission to use a function. You can apply the policy at the function level, or specify a qualifier to restrict access to a single version or alias. If you use a qualifier, the invoker must use the full Amazon Resource Name (ARN) of that version or alias to invoke the function. Note: Lambda does not support adding policies to version $LATEST.</p> <p>To grant permission to another account, specify the account ID as the <code>Principal</code>. To grant permission to an organization defined in Organizations, specify the organization ID as the <code>PrincipalOrgID</code>. For Amazon Web Services, the principal is a domain-style identifier that the service defines, such as <code>s3.amazonaws.com</code> or <code>sns.amazonaws.com</code>. For Amazon Web Services, you can also specify the ARN of the associated resource as the <code>SourceArn</code>. If you grant permission to a service principal without specifying the source, other accounts could potentially configure resources in their account to invoke your Lambda function.</p> <p>This operation adds a statement to a resource-based permissions policy for the function. For more information about function policies, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html">Using resource-based policies for Lambda</a>.</p>
 func (s *SDK) AddPermission(ctx context.Context, request operations.AddPermissionRequest) (*operations.AddPermissionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/policy", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -261,9 +261,9 @@ func (s *SDK) AddPermission(ctx context.Context, request operations.AddPermissio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -374,9 +374,9 @@ func (s *SDK) AddPermission(ctx context.Context, request operations.AddPermissio
 // CreateAlias - <p>Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a> for a Lambda function version. Use aliases to provide clients with a function identifier that you can update to invoke a different version.</p> <p>You can also map an alias to split invocation requests between two versions. Use the <code>RoutingConfig</code> parameter to specify a second version and the percentage of invocation requests that it receives.</p>
 func (s *SDK) CreateAlias(ctx context.Context, request operations.CreateAliasRequest) (*operations.CreateAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -391,7 +391,7 @@ func (s *SDK) CreateAlias(ctx context.Context, request operations.CreateAliasReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -482,7 +482,7 @@ func (s *SDK) CreateCodeSigningConfig(ctx context.Context, request operations.Cr
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2020-04-22/code-signing-configs/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -497,7 +497,7 @@ func (s *SDK) CreateCodeSigningConfig(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -558,7 +558,7 @@ func (s *SDK) CreateEventSourceMapping(ctx context.Context, request operations.C
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2015-03-31/event-source-mappings/"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -573,7 +573,7 @@ func (s *SDK) CreateEventSourceMapping(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -664,7 +664,7 @@ func (s *SDK) CreateFunction(ctx context.Context, request operations.CreateFunct
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2015-03-31/functions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -679,7 +679,7 @@ func (s *SDK) CreateFunction(ctx context.Context, request operations.CreateFunct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -808,9 +808,9 @@ func (s *SDK) CreateFunction(ctx context.Context, request operations.CreateFunct
 // CreateFunctionURLConfig - Creates a Lambda function URL with the specified configuration parameters. A function URL is a dedicated HTTP(S) endpoint that you can use to invoke your function.
 func (s *SDK) CreateFunctionURLConfig(ctx context.Context, request operations.CreateFunctionURLConfigRequest) (*operations.CreateFunctionURLConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -825,9 +825,9 @@ func (s *SDK) CreateFunctionURLConfig(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -918,14 +918,14 @@ func (s *SDK) CreateFunctionURLConfig(ctx context.Context, request operations.Cr
 // DeleteAlias - Deletes a Lambda function <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
 func (s *SDK) DeleteAlias(ctx context.Context, request operations.DeleteAliasRequest) (*operations.DeleteAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -995,14 +995,14 @@ func (s *SDK) DeleteAlias(ctx context.Context, request operations.DeleteAliasReq
 // DeleteCodeSigningConfig - Deletes the code signing configuration. You can delete the code signing configuration only if no function is using it.
 func (s *SDK) DeleteCodeSigningConfig(ctx context.Context, request operations.DeleteCodeSigningConfigRequest) (*operations.DeleteCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1081,14 +1081,14 @@ func (s *SDK) DeleteCodeSigningConfig(ctx context.Context, request operations.De
 // DeleteEventSourceMapping - <p>Deletes an <a href="https://docs.aws.amazon.com/lambda/latest/dg/intro-invocation-modes.html">event source mapping</a>. You can get the identifier of a mapping from the output of <a>ListEventSourceMappings</a>.</p> <p>When you delete an event source mapping, it enters a <code>Deleting</code> state and might not be completely deleted for several seconds.</p>
 func (s *SDK) DeleteEventSourceMapping(ctx context.Context, request operations.DeleteEventSourceMappingRequest) (*operations.DeleteEventSourceMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/event-source-mappings/{UUID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/event-source-mappings/{UUID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1177,16 +1177,16 @@ func (s *SDK) DeleteEventSourceMapping(ctx context.Context, request operations.D
 // DeleteFunction - <p>Deletes a Lambda function. To delete a specific function version, use the <code>Qualifier</code> parameter. Otherwise, all versions and aliases are deleted.</p> <p>To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For Amazon Web Services and resources that invoke your function directly, delete the trigger in the service where you originally configured it.</p>
 func (s *SDK) DeleteFunction(ctx context.Context, request operations.DeleteFunctionRequest) (*operations.DeleteFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1268,14 +1268,14 @@ func (s *SDK) DeleteFunction(ctx context.Context, request operations.DeleteFunct
 // DeleteFunctionCodeSigningConfig - Removes the code signing configuration from the function.
 func (s *SDK) DeleteFunctionCodeSigningConfig(ctx context.Context, request operations.DeleteFunctionCodeSigningConfigRequest) (*operations.DeleteFunctionCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-06-30/functions/{FunctionName}/code-signing-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-06-30/functions/{FunctionName}/code-signing-config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1365,14 +1365,14 @@ func (s *SDK) DeleteFunctionCodeSigningConfig(ctx context.Context, request opera
 // DeleteFunctionConcurrency - Removes a concurrent execution limit from a function.
 func (s *SDK) DeleteFunctionConcurrency(ctx context.Context, request operations.DeleteFunctionConcurrencyRequest) (*operations.DeleteFunctionConcurrencyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-31/functions/{FunctionName}/concurrency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-31/functions/{FunctionName}/concurrency", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1452,16 +1452,16 @@ func (s *SDK) DeleteFunctionConcurrency(ctx context.Context, request operations.
 // DeleteFunctionEventInvokeConfig - <p>Deletes the configuration for asynchronous invocation for a function, version, or alias.</p> <p>To configure options for asynchronous invocation, use <a>PutFunctionEventInvokeConfig</a>.</p>
 func (s *SDK) DeleteFunctionEventInvokeConfig(ctx context.Context, request operations.DeleteFunctionEventInvokeConfigRequest) (*operations.DeleteFunctionEventInvokeConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1543,16 +1543,16 @@ func (s *SDK) DeleteFunctionEventInvokeConfig(ctx context.Context, request opera
 // DeleteFunctionURLConfig - Deletes a Lambda function URL. When you delete a function URL, you can't recover it. Creating a new function URL results in a different URL address.
 func (s *SDK) DeleteFunctionURLConfig(ctx context.Context, request operations.DeleteFunctionURLConfigRequest) (*operations.DeleteFunctionURLConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1624,14 +1624,14 @@ func (s *SDK) DeleteFunctionURLConfig(ctx context.Context, request operations.De
 // DeleteLayerVersion - Deletes a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. Deleted versions can no longer be viewed or added to functions. To avoid breaking functions, a copy of the version remains in Lambda until no functions refer to it.
 func (s *SDK) DeleteLayerVersion(ctx context.Context, request operations.DeleteLayerVersionRequest) (*operations.DeleteLayerVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1681,16 +1681,16 @@ func (s *SDK) DeleteLayerVersion(ctx context.Context, request operations.DeleteL
 // DeleteProvisionedConcurrencyConfig - Deletes the provisioned concurrency configuration for a function.
 func (s *SDK) DeleteProvisionedConcurrencyConfig(ctx context.Context, request operations.DeleteProvisionedConcurrencyConfigRequest) (*operations.DeleteProvisionedConcurrencyConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#Qualifier", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#Qualifier", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1779,7 +1779,7 @@ func (s *SDK) GetAccountSettings(ctx context.Context, request operations.GetAcco
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1838,14 +1838,14 @@ func (s *SDK) GetAccountSettings(ctx context.Context, request operations.GetAcco
 // GetAlias - Returns details about a Lambda function <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
 func (s *SDK) GetAlias(ctx context.Context, request operations.GetAliasRequest) (*operations.GetAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1924,14 +1924,14 @@ func (s *SDK) GetAlias(ctx context.Context, request operations.GetAliasRequest) 
 // GetCodeSigningConfig - Returns information about the specified code signing configuration.
 func (s *SDK) GetCodeSigningConfig(ctx context.Context, request operations.GetCodeSigningConfigRequest) (*operations.GetCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2000,14 +2000,14 @@ func (s *SDK) GetCodeSigningConfig(ctx context.Context, request operations.GetCo
 // GetEventSourceMapping - Returns details about an event source mapping. You can get the identifier of a mapping from the output of <a>ListEventSourceMappings</a>.
 func (s *SDK) GetEventSourceMapping(ctx context.Context, request operations.GetEventSourceMappingRequest) (*operations.GetEventSourceMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/event-source-mappings/{UUID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/event-source-mappings/{UUID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2086,16 +2086,16 @@ func (s *SDK) GetEventSourceMapping(ctx context.Context, request operations.GetE
 // GetFunction - Returns information about the function or function version, with a link to download the deployment package that's valid for 10 minutes. If you specify a function version, only details that are specific to that version are returned.
 func (s *SDK) GetFunction(ctx context.Context, request operations.GetFunctionRequest) (*operations.GetFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2176,14 +2176,14 @@ func (s *SDK) GetFunction(ctx context.Context, request operations.GetFunctionReq
 // GetFunctionCodeSigningConfig - Returns the code signing configuration for the specified function.
 func (s *SDK) GetFunctionCodeSigningConfig(ctx context.Context, request operations.GetFunctionCodeSigningConfigRequest) (*operations.GetFunctionCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-06-30/functions/{FunctionName}/code-signing-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-06-30/functions/{FunctionName}/code-signing-config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2262,14 +2262,14 @@ func (s *SDK) GetFunctionCodeSigningConfig(ctx context.Context, request operatio
 // GetFunctionConcurrency - Returns details about the reserved concurrency configuration for a function. To set a concurrency limit for a function, use <a>PutFunctionConcurrency</a>.
 func (s *SDK) GetFunctionConcurrency(ctx context.Context, request operations.GetFunctionConcurrencyRequest) (*operations.GetFunctionConcurrencyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/concurrency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/concurrency", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2348,16 +2348,16 @@ func (s *SDK) GetFunctionConcurrency(ctx context.Context, request operations.Get
 // GetFunctionConfiguration - <p>Returns the version-specific settings of a Lambda function or version. The output includes only options that can vary between versions of a function. To modify these settings, use <a>UpdateFunctionConfiguration</a>.</p> <p>To get all of a function's details, including function-level settings, use <a>GetFunction</a>.</p>
 func (s *SDK) GetFunctionConfiguration(ctx context.Context, request operations.GetFunctionConfigurationRequest) (*operations.GetFunctionConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2438,16 +2438,16 @@ func (s *SDK) GetFunctionConfiguration(ctx context.Context, request operations.G
 // GetFunctionEventInvokeConfig - <p>Retrieves the configuration for asynchronous invocation for a function, version, or alias.</p> <p>To configure options for asynchronous invocation, use <a>PutFunctionEventInvokeConfig</a>.</p>
 func (s *SDK) GetFunctionEventInvokeConfig(ctx context.Context, request operations.GetFunctionEventInvokeConfigRequest) (*operations.GetFunctionEventInvokeConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2528,16 +2528,16 @@ func (s *SDK) GetFunctionEventInvokeConfig(ctx context.Context, request operatio
 // GetFunctionURLConfig - Returns details about a Lambda function URL.
 func (s *SDK) GetFunctionURLConfig(ctx context.Context, request operations.GetFunctionURLConfigRequest) (*operations.GetFunctionURLConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2618,14 +2618,14 @@ func (s *SDK) GetFunctionURLConfig(ctx context.Context, request operations.GetFu
 // GetLayerVersion - Returns information about a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>, with a link to download the layer archive that's valid for 10 minutes.
 func (s *SDK) GetLayerVersion(ctx context.Context, request operations.GetLayerVersionRequest) (*operations.GetLayerVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2711,9 +2711,9 @@ func (s *SDK) GetLayerVersionByArn(ctx context.Context, request operations.GetLa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2794,14 +2794,14 @@ func (s *SDK) GetLayerVersionByArn(ctx context.Context, request operations.GetLa
 // GetLayerVersionPolicy - Returns the permission policy for a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. For more information, see <a>AddLayerVersionPermission</a>.
 func (s *SDK) GetLayerVersionPolicy(ctx context.Context, request operations.GetLayerVersionPolicyRequest) (*operations.GetLayerVersionPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}/policy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2880,16 +2880,16 @@ func (s *SDK) GetLayerVersionPolicy(ctx context.Context, request operations.GetL
 // GetPolicy - Returns the <a href="https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html">resource-based IAM policy</a> for a function, version, or alias.
 func (s *SDK) GetPolicy(ctx context.Context, request operations.GetPolicyRequest) (*operations.GetPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/policy", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/policy", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2970,16 +2970,16 @@ func (s *SDK) GetPolicy(ctx context.Context, request operations.GetPolicyRequest
 // GetProvisionedConcurrencyConfig - Retrieves the provisioned concurrency configuration for a function's alias or version.
 func (s *SDK) GetProvisionedConcurrencyConfig(ctx context.Context, request operations.GetProvisionedConcurrencyConfigRequest) (*operations.GetProvisionedConcurrencyConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#Qualifier", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#Qualifier", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3070,16 +3070,16 @@ func (s *SDK) GetProvisionedConcurrencyConfig(ctx context.Context, request opera
 // GetRuntimeManagementConfig - Retrieves the runtime management configuration for a function's version. If the runtime update mode is <b>Manual</b>, this includes the ARN of the runtime version and the runtime update mode. If the runtime update mode is <b>Auto</b> or <b>Function update</b>, this includes the runtime update mode and <code>null</code> is returned for the ARN. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html">Runtime updates</a>.
 func (s *SDK) GetRuntimeManagementConfig(ctx context.Context, request operations.GetRuntimeManagementConfigRequest) (*operations.GetRuntimeManagementConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-07-20/functions/{FunctionName}/runtime-management-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-07-20/functions/{FunctionName}/runtime-management-config", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3160,9 +3160,9 @@ func (s *SDK) GetRuntimeManagementConfig(ctx context.Context, request operations
 // Invoke - <p>Invokes a Lambda function. You can invoke a function synchronously (and wait for the response), or asynchronously. To invoke a function asynchronously, set <code>InvocationType</code> to <code>Event</code>.</p> <p>For <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-sync.html">synchronous invocation</a>, details about the function response, including errors, are included in the response body and headers. For either invocation type, you can find more information in the <a href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions.html">execution log</a> and <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html">trace</a>.</p> <p>When an error occurs, your function may be invoked multiple times. Retry behavior varies by error type, client, event source, and invocation type. For example, if you invoke a function asynchronously and it returns an error, Lambda executes the function up to two more times. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-retries.html">Error handling and automatic retries in Lambda</a>.</p> <p>For <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">asynchronous invocation</a>, Lambda adds events to a queue before sending them to your function. If your function does not have enough capacity to keep up with the queue, events may be lost. Occasionally, your function may receive the same event multiple times, even if no error occurs. To retain events that were not processed, configure your function with a <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq">dead-letter queue</a>.</p> <p>The status code in the API response doesn't reflect function errors. Error codes are reserved for errors that prevent your function from executing, such as permissions errors, <a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html">quota</a> errors, or issues with your function's code and configuration. For example, Lambda returns <code>TooManyRequestsException</code> if running the function would cause you to exceed a concurrency limit at either the account level (<code>ConcurrentInvocationLimitExceeded</code>) or function level (<code>ReservedFunctionConcurrentInvocationLimitExceeded</code>).</p> <p>For functions with a long timeout, your client might disconnect during synchronous invocation while it waits for a response. Configure your HTTP client, SDK, firewall, proxy, or operating system to allow for long connections with timeout or keep-alive settings.</p> <p>This operation requires permission for the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awslambda.html">lambda:InvokeFunction</a> action. For details on how to set up permissions for cross-account invocations, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#permissions-resource-xaccountinvoke">Granting function access to other accounts</a>.</p>
 func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*operations.InvokeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/invocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/invocations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3177,9 +3177,9 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3510,9 +3510,9 @@ func (s *SDK) Invoke(ctx context.Context, request operations.InvokeRequest) (*op
 // InvokeAsync - <important> <p>For asynchronous function invocation, use <a>Invoke</a>.</p> </important> <p>Invokes a function asynchronously.</p>
 func (s *SDK) InvokeAsync(ctx context.Context, request operations.InvokeAsyncRequest) (*operations.InvokeAsyncResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/invoke-async/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/invoke-async/", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3527,7 +3527,7 @@ func (s *SDK) InvokeAsync(ctx context.Context, request operations.InvokeAsyncReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3616,16 +3616,16 @@ func (s *SDK) InvokeAsync(ctx context.Context, request operations.InvokeAsyncReq
 // ListAliases - Returns a list of <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">aliases</a> for a Lambda function.
 func (s *SDK) ListAliases(ctx context.Context, request operations.ListAliasesRequest) (*operations.ListAliasesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3713,9 +3713,9 @@ func (s *SDK) ListCodeSigningConfigs(ctx context.Context, request operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3783,9 +3783,9 @@ func (s *SDK) ListEventSourceMappings(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3866,16 +3866,16 @@ func (s *SDK) ListEventSourceMappings(ctx context.Context, request operations.Li
 // ListFunctionEventInvokeConfigs - <p>Retrieves a list of configurations for asynchronous invocation for a function.</p> <p>To configure options for asynchronous invocation, use <a>PutFunctionEventInvokeConfig</a>.</p>
 func (s *SDK) ListFunctionEventInvokeConfigs(ctx context.Context, request operations.ListFunctionEventInvokeConfigsRequest) (*operations.ListFunctionEventInvokeConfigsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3956,16 +3956,16 @@ func (s *SDK) ListFunctionEventInvokeConfigs(ctx context.Context, request operat
 // ListFunctionURLConfigs - Returns a list of Lambda function URLs for the specified function.
 func (s *SDK) ListFunctionURLConfigs(ctx context.Context, request operations.ListFunctionURLConfigsRequest) (*operations.ListFunctionURLConfigsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/urls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/urls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4053,9 +4053,9 @@ func (s *SDK) ListFunctions(ctx context.Context, request operations.ListFunction
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4126,16 +4126,16 @@ func (s *SDK) ListFunctions(ctx context.Context, request operations.ListFunction
 // ListFunctionsByCodeSigningConfig - List the functions that use the specified code signing configuration. You can use this method prior to deleting a code signing configuration, to verify that no functions are using it.
 func (s *SDK) ListFunctionsByCodeSigningConfig(ctx context.Context, request operations.ListFunctionsByCodeSigningConfigRequest) (*operations.ListFunctionsByCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}/functions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}/functions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4206,16 +4206,16 @@ func (s *SDK) ListFunctionsByCodeSigningConfig(ctx context.Context, request oper
 // ListLayerVersions - Lists the versions of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. Versions that have been deleted aren't listed. Specify a <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime identifier</a> to list only versions that indicate that they're compatible with that runtime. Specify a compatible architecture to include only layer versions that are compatible with that architecture.
 func (s *SDK) ListLayerVersions(ctx context.Context, request operations.ListLayerVersionsRequest) (*operations.ListLayerVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4303,9 +4303,9 @@ func (s *SDK) ListLayers(ctx context.Context, request operations.ListLayersReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4376,16 +4376,16 @@ func (s *SDK) ListLayers(ctx context.Context, request operations.ListLayersReque
 // ListProvisionedConcurrencyConfigs - Retrieves a list of provisioned concurrency configurations for a function.
 func (s *SDK) ListProvisionedConcurrencyConfigs(ctx context.Context, request operations.ListProvisionedConcurrencyConfigsRequest) (*operations.ListProvisionedConcurrencyConfigsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#List=ALL", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#List=ALL", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4466,14 +4466,14 @@ func (s *SDK) ListProvisionedConcurrencyConfigs(ctx context.Context, request ope
 // ListTags - Returns a function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/tagging.html">tags</a>. You can also view tags with <a>GetFunction</a>.
 func (s *SDK) ListTags(ctx context.Context, request operations.ListTagsRequest) (*operations.ListTagsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-03-31/tags/{ARN}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-03-31/tags/{ARN}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4552,16 +4552,16 @@ func (s *SDK) ListTags(ctx context.Context, request operations.ListTagsRequest) 
 // ListVersionsByFunction - Returns a list of <a href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">versions</a>, with the version-specific configuration of each. Lambda returns up to 50 versions per call.
 func (s *SDK) ListVersionsByFunction(ctx context.Context, request operations.ListVersionsByFunctionRequest) (*operations.ListVersionsByFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4642,9 +4642,9 @@ func (s *SDK) ListVersionsByFunction(ctx context.Context, request operations.Lis
 // PublishLayerVersion - <p>Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a> from a ZIP archive. Each time you call <code>PublishLayerVersion</code> with the same layer name, a new version is created.</p> <p>Add layers to your function with <a>CreateFunction</a> or <a>UpdateFunctionConfiguration</a>.</p>
 func (s *SDK) PublishLayerVersion(ctx context.Context, request operations.PublishLayerVersionRequest) (*operations.PublishLayerVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4659,7 +4659,7 @@ func (s *SDK) PublishLayerVersion(ctx context.Context, request operations.Publis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4748,9 +4748,9 @@ func (s *SDK) PublishLayerVersion(ctx context.Context, request operations.Publis
 // PublishVersion - <p>Creates a <a href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">version</a> from the current code and configuration of a function. Use versions to create a snapshot of your function code and configuration that doesn't change.</p> <p>Lambda doesn't publish a version if the function's configuration and code haven't changed since the last version. Use <a>UpdateFunctionCode</a> or <a>UpdateFunctionConfiguration</a> to update the function before publishing a version.</p> <p>Clients can invoke versions directly or with an alias. To create an alias, use <a>CreateAlias</a>.</p>
 func (s *SDK) PublishVersion(ctx context.Context, request operations.PublishVersionRequest) (*operations.PublishVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4765,7 +4765,7 @@ func (s *SDK) PublishVersion(ctx context.Context, request operations.PublishVers
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4874,9 +4874,9 @@ func (s *SDK) PublishVersion(ctx context.Context, request operations.PublishVers
 // PutFunctionCodeSigningConfig - Update the code signing configuration for the function. Changes to the code signing configuration take effect the next time a user tries to deploy a code package to the function.
 func (s *SDK) PutFunctionCodeSigningConfig(ctx context.Context, request operations.PutFunctionCodeSigningConfigRequest) (*operations.PutFunctionCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-06-30/functions/{FunctionName}/code-signing-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-06-30/functions/{FunctionName}/code-signing-config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4891,7 +4891,7 @@ func (s *SDK) PutFunctionCodeSigningConfig(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4990,9 +4990,9 @@ func (s *SDK) PutFunctionCodeSigningConfig(ctx context.Context, request operatio
 // PutFunctionConcurrency - <p>Sets the maximum number of simultaneous executions for a function, and reserves capacity for that concurrency level.</p> <p>Concurrency settings apply to the function as a whole, including all published versions and the unpublished version. Reserving concurrency both ensures that your function has capacity to process the specified number of events simultaneously, and prevents it from scaling beyond that level. Use <a>GetFunction</a> to see the current setting for a function.</p> <p>Use <a>GetAccountSettings</a> to see your Regional concurrency limit. You can reserve concurrency for as many functions as you like, as long as you leave at least 100 simultaneous executions unreserved for functions that aren't configured with a per-function limit. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-scaling.html">Lambda function scaling</a>.</p>
 func (s *SDK) PutFunctionConcurrency(ctx context.Context, request operations.PutFunctionConcurrencyRequest) (*operations.PutFunctionConcurrencyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-10-31/functions/{FunctionName}/concurrency", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-10-31/functions/{FunctionName}/concurrency", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5007,7 +5007,7 @@ func (s *SDK) PutFunctionConcurrency(ctx context.Context, request operations.Put
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5096,9 +5096,9 @@ func (s *SDK) PutFunctionConcurrency(ctx context.Context, request operations.Put
 // PutFunctionEventInvokeConfig - <p>Configures options for <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">asynchronous invocation</a> on a function, version, or alias. If a configuration already exists for a function, version, or alias, this operation overwrites it. If you exclude any settings, they are removed. To set one option without affecting existing settings for other options, use <a>UpdateFunctionEventInvokeConfig</a>.</p> <p>By default, Lambda retries an asynchronous invocation twice if the function returns an error. It retains events in a queue for up to six hours. When an event fails all processing attempts or stays in the asynchronous invocation queue for too long, Lambda discards it. To retain discarded events, configure a dead-letter queue with <a>UpdateFunctionConfiguration</a>.</p> <p>To send an invocation record to a queue, topic, function, or event bus, specify a <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">destination</a>. You can configure separate destinations for successful invocations (on-success) and events that fail all processing attempts (on-failure). You can configure destinations in addition to or instead of a dead-letter queue.</p>
 func (s *SDK) PutFunctionEventInvokeConfig(ctx context.Context, request operations.PutFunctionEventInvokeConfigRequest) (*operations.PutFunctionEventInvokeConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5113,9 +5113,9 @@ func (s *SDK) PutFunctionEventInvokeConfig(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5206,9 +5206,9 @@ func (s *SDK) PutFunctionEventInvokeConfig(ctx context.Context, request operatio
 // PutProvisionedConcurrencyConfig - Adds a provisioned concurrency configuration to a function's alias or version.
 func (s *SDK) PutProvisionedConcurrencyConfig(ctx context.Context, request operations.PutProvisionedConcurrencyConfigRequest) (*operations.PutProvisionedConcurrencyConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#Qualifier", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-30/functions/{FunctionName}/provisioned-concurrency#Qualifier", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5223,9 +5223,9 @@ func (s *SDK) PutProvisionedConcurrencyConfig(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5316,9 +5316,9 @@ func (s *SDK) PutProvisionedConcurrencyConfig(ctx context.Context, request opera
 // PutRuntimeManagementConfig - Sets the runtime management configuration for a function's version. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html">Runtime updates</a>.
 func (s *SDK) PutRuntimeManagementConfig(ctx context.Context, request operations.PutRuntimeManagementConfigRequest) (*operations.PutRuntimeManagementConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-07-20/functions/{FunctionName}/runtime-management-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-07-20/functions/{FunctionName}/runtime-management-config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5333,9 +5333,9 @@ func (s *SDK) PutRuntimeManagementConfig(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5426,16 +5426,16 @@ func (s *SDK) PutRuntimeManagementConfig(ctx context.Context, request operations
 // RemoveLayerVersionPermission - Removes a statement from the permissions policy for a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. For more information, see <a>AddLayerVersionPermission</a>.
 func (s *SDK) RemoveLayerVersionPermission(ctx context.Context, request operations.RemoveLayerVersionPermissionRequest) (*operations.RemoveLayerVersionPermissionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}/policy/{StatementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2018-10-31/layers/{LayerName}/versions/{VersionNumber}/policy/{StatementId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5517,16 +5517,16 @@ func (s *SDK) RemoveLayerVersionPermission(ctx context.Context, request operatio
 // RemovePermission - Revokes function-use permission from an Amazon Web Service or another Amazon Web Services account. You can get the ID of the statement from the output of <a>GetPolicy</a>.
 func (s *SDK) RemovePermission(ctx context.Context, request operations.RemovePermissionRequest) (*operations.RemovePermissionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/policy/{StatementId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/policy/{StatementId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5608,9 +5608,9 @@ func (s *SDK) RemovePermission(ctx context.Context, request operations.RemovePer
 // TagResource - Adds <a href="https://docs.aws.amazon.com/lambda/latest/dg/tagging.html">tags</a> to a function.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-03-31/tags/{ARN}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-03-31/tags/{ARN}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5625,7 +5625,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5705,16 +5705,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes <a href="https://docs.aws.amazon.com/lambda/latest/dg/tagging.html">tags</a> from a function.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2017-03-31/tags/{ARN}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2017-03-31/tags/{ARN}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5796,9 +5796,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAlias - Updates the configuration of a Lambda function <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
 func (s *SDK) UpdateAlias(ctx context.Context, request operations.UpdateAliasRequest) (*operations.UpdateAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/aliases/{Name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5813,7 +5813,7 @@ func (s *SDK) UpdateAlias(ctx context.Context, request operations.UpdateAliasReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5912,9 +5912,9 @@ func (s *SDK) UpdateAlias(ctx context.Context, request operations.UpdateAliasReq
 // UpdateCodeSigningConfig - Update the code signing configuration. Changes to the code signing configuration take effect the next time a user tries to deploy a code package to the function.
 func (s *SDK) UpdateCodeSigningConfig(ctx context.Context, request operations.UpdateCodeSigningConfigRequest) (*operations.UpdateCodeSigningConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2020-04-22/code-signing-configs/{CodeSigningConfigArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5929,7 +5929,7 @@ func (s *SDK) UpdateCodeSigningConfig(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5998,9 +5998,9 @@ func (s *SDK) UpdateCodeSigningConfig(ctx context.Context, request operations.Up
 // UpdateEventSourceMapping - <p>Updates an event source mapping. You can change the function that Lambda invokes, or pause invocation and resume later from the same location.</p> <p>For details about how to configure different event sources, see the following topics. </p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping"> Amazon DynamoDB Streams</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-eventsourcemapping"> Amazon Kinesis</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-eventsource"> Amazon SQS</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-eventsourcemapping"> Amazon MQ and RabbitMQ</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html"> Amazon MSK</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html"> Apache Kafka</a> </p> </li> </ul> <p>The following error handling options are available only for stream sources (DynamoDB and Kinesis):</p> <ul> <li> <p> <code>BisectBatchOnFunctionError</code> – If the function returns an error, split the batch in two and retry.</p> </li> <li> <p> <code>DestinationConfig</code> – Send discarded records to an Amazon SQS queue or Amazon SNS topic.</p> </li> <li> <p> <code>MaximumRecordAgeInSeconds</code> – Discard records older than the specified age. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires</p> </li> <li> <p> <code>MaximumRetryAttempts</code> – Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.</p> </li> <li> <p> <code>ParallelizationFactor</code> – Process multiple batches from each shard concurrently.</p> </li> </ul> <p>For information about which configuration parameters apply to each event source, see the following topics.</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-params"> Amazon DynamoDB Streams</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-params"> Amazon Kinesis</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#services-sqs-params"> Amazon SQS</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-params"> Amazon MQ and RabbitMQ</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-parms"> Amazon MSK</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-kafka-parms"> Apache Kafka</a> </p> </li> </ul>
 func (s *SDK) UpdateEventSourceMapping(ctx context.Context, request operations.UpdateEventSourceMappingRequest) (*operations.UpdateEventSourceMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/event-source-mappings/{UUID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/event-source-mappings/{UUID}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6015,7 +6015,7 @@ func (s *SDK) UpdateEventSourceMapping(ctx context.Context, request operations.U
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6114,9 +6114,9 @@ func (s *SDK) UpdateEventSourceMapping(ctx context.Context, request operations.U
 // UpdateFunctionCode - <p>Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a trusted publisher. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html">Configuring code signing for Lambda</a>.</p> <p>If the function's package type is <code>Image</code>, then you must specify the code package in <code>ImageUri</code> as the URI of a <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html">container image</a> in the Amazon ECR registry.</p> <p>If the function's package type is <code>Zip</code>, then you must specify the deployment package as a <a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip">.zip file archive</a>. Enter the Amazon S3 bucket and key of the code .zip file location. You can also provide the function code inline using the <code>ZipFile</code> field.</p> <p>The code in the deployment package must be compatible with the target instruction set architecture of the function (<code>x86-64</code> or <code>arm64</code>).</p> <p>The function's code is locked when you publish a version. You can't modify the code of a published version, only the unpublished version.</p> <note> <p>For a function defined as a container image, Lambda resolves the image tag to an image digest. In Amazon ECR, if you update the image tag to a new image, Lambda does not automatically update the function.</p> </note>
 func (s *SDK) UpdateFunctionCode(ctx context.Context, request operations.UpdateFunctionCodeRequest) (*operations.UpdateFunctionCodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/code", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/code", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6131,7 +6131,7 @@ func (s *SDK) UpdateFunctionCode(ctx context.Context, request operations.UpdateF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6270,9 +6270,9 @@ func (s *SDK) UpdateFunctionCode(ctx context.Context, request operations.UpdateF
 // UpdateFunctionConfiguration - <p>Modify the version-specific settings of a Lambda function.</p> <p>When you update a function, Lambda provisions an instance of the function and its supporting resources. If your function connects to a VPC, this process can take a minute. During this time, you can't modify the function, but you can still invoke it. The <code>LastUpdateStatus</code>, <code>LastUpdateStatusReason</code>, and <code>LastUpdateStatusReasonCode</code> fields in the response from <a>GetFunctionConfiguration</a> indicate when the update is complete and the function is processing events with the new configuration. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html">Lambda function states</a>.</p> <p>These settings can vary between versions of a function and are locked when you publish a version. You can't modify the configuration of a published version, only the unpublished version.</p> <p>To configure function concurrency, use <a>PutFunctionConcurrency</a>. To grant invoke permissions to an Amazon Web Services account or Amazon Web Service, use <a>AddPermission</a>.</p>
 func (s *SDK) UpdateFunctionConfiguration(ctx context.Context, request operations.UpdateFunctionConfigurationRequest) (*operations.UpdateFunctionConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2015-03-31/functions/{FunctionName}/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6287,7 +6287,7 @@ func (s *SDK) UpdateFunctionConfiguration(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6416,9 +6416,9 @@ func (s *SDK) UpdateFunctionConfiguration(ctx context.Context, request operation
 // UpdateFunctionEventInvokeConfig - <p>Updates the configuration for asynchronous invocation for a function, version, or alias.</p> <p>To configure options for asynchronous invocation, use <a>PutFunctionEventInvokeConfig</a>.</p>
 func (s *SDK) UpdateFunctionEventInvokeConfig(ctx context.Context, request operations.UpdateFunctionEventInvokeConfigRequest) (*operations.UpdateFunctionEventInvokeConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2019-09-25/functions/{FunctionName}/event-invoke-config", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6433,9 +6433,9 @@ func (s *SDK) UpdateFunctionEventInvokeConfig(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6526,9 +6526,9 @@ func (s *SDK) UpdateFunctionEventInvokeConfig(ctx context.Context, request opera
 // UpdateFunctionURLConfig - Updates the configuration for a Lambda function URL.
 func (s *SDK) UpdateFunctionURLConfig(ctx context.Context, request operations.UpdateFunctionURLConfigRequest) (*operations.UpdateFunctionURLConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/2021-10-31/functions/{FunctionName}/url", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -6543,9 +6543,9 @@ func (s *SDK) UpdateFunctionURLConfig(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

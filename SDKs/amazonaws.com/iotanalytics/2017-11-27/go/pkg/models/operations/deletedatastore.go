@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDatastorePathParams struct {
-	// The name of the data store to delete.
-	DatastoreName string `pathParam:"style=simple,explode=false,name=datastoreName"`
-}
-
-type DeleteDatastoreHeaders struct {
+type DeleteDatastoreRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteDatastoreHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDatastoreRequest struct {
-	PathParams DeleteDatastorePathParams
-	Headers    DeleteDatastoreHeaders
+	// The name of the data store to delete.
+	DatastoreName string `pathParam:"style=simple,explode=false,name=datastoreName"`
 }
 
 type DeleteDatastoreResponse struct {

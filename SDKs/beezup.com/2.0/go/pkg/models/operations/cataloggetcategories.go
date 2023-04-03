@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogGetCategoriesPathParams struct {
-	// Your store identifier
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogGetCategoriesHeaders struct {
+type CatalogGetCategoriesRequest struct {
 	// Indicates that the client accepts that the response will be compressed to reduce traffic size.
 	AcceptEncoding []string `header:"style=simple,explode=false,name=Accept-Encoding"`
-}
-
-type CatalogGetCategoriesRequest struct {
-	PathParams CatalogGetCategoriesPathParams
-	Headers    CatalogGetCategoriesHeaders
+	// Your store identifier
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type CatalogGetCategoriesResponse struct {

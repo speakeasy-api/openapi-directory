@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListNodegroupsPathParams struct {
-	// The name of the Amazon EKS cluster that you would like to list node groups in.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type ListNodegroupsQueryParams struct {
-	// The maximum number of node group results returned by <code>ListNodegroups</code> in paginated output. When you use this parameter, <code>ListNodegroups</code> returns only <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. You can see the remaining results of the initial request by sending another <code>ListNodegroups</code> request with the returned <code>nextToken</code> value. This value can be between 1 and 100. If you don't use this parameter, <code>ListNodegroups</code> returns up to 100 results and a <code>nextToken</code> value if applicable.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The <code>nextToken</code> value returned from a previous paginated <code>ListNodegroups</code> request where <code>maxResults</code> was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the <code>nextToken</code> value.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListNodegroupsHeaders struct {
+type ListNodegroupsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListNodegroupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListNodegroupsRequest struct {
-	PathParams  ListNodegroupsPathParams
-	QueryParams ListNodegroupsQueryParams
-	Headers     ListNodegroupsHeaders
+	// The maximum number of node group results returned by <code>ListNodegroups</code> in paginated output. When you use this parameter, <code>ListNodegroups</code> returns only <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. You can see the remaining results of the initial request by sending another <code>ListNodegroups</code> request with the returned <code>nextToken</code> value. This value can be between 1 and 100. If you don't use this parameter, <code>ListNodegroups</code> returns up to 100 results and a <code>nextToken</code> value if applicable.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The name of the Amazon EKS cluster that you would like to list node groups in.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
+	// The <code>nextToken</code> value returned from a previous paginated <code>ListNodegroups</code> request where <code>maxResults</code> was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the <code>nextToken</code> value.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListNodegroupsResponse struct {

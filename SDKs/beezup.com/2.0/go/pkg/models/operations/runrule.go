@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RunRulePathParams struct {
+type RunRuleRequest struct {
 	// Your rule identifier
 	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type RunRuleRequest struct {
-	PathParams RunRulePathParams
 }
 
 type RunRuleResponse struct {

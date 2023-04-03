@@ -13,37 +13,32 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GenerateDataSetRequest{
-        Headers: operations.GenerateDataSetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
-        },
-        Request: shared.GenerateDataSetRequest{
+        GenerateDataSetRequest: shared.GenerateDataSetRequest{
             CustomerDefinedValues: map[string]string{
-                "vel": "error",
-                "deserunt": "suscipit",
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
-            DataSetPublicationDate: "2022-03-08T10:35:32.561Z",
-            DataSetType: "monthly_revenue_annual_subscriptions",
-            DestinationS3BucketName: "molestiae",
-            DestinationS3Prefix: "minus",
-            RoleNameArn: "placeat",
-            SnsTopicArn: "voluptatum",
+            DataSetPublicationDate: "2021-09-24T02:21:06.409Z",
+            DataSetType: "disbursed_amount_by_customer_geo",
+            DestinationS3BucketName: "deserunt",
+            DestinationS3Prefix: "suscipit",
+            RoleNameArn: "iure",
+            SnsTopicArn: "magnam",
         },
+        XAmzAlgorithm: "debitis",
+        XAmzContentSha256: "ipsa",
+        XAmzCredential: "delectus",
+        XAmzDate: "tempora",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "molestiae",
+        XAmzSignedHeaders: "minus",
+        XAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
     }
 
     ctx := context.Background()

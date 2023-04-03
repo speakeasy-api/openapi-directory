@@ -50,7 +50,7 @@ func (e *GETGETConsoleScreenshotVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETConsoleScreenshotQueryParams struct {
+type GETGETConsoleScreenshotRequest struct {
 	Action GETGETConsoleScreenshotActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -58,10 +58,7 @@ type GETGETConsoleScreenshotQueryParams struct {
 	InstanceID string                             `queryParam:"style=form,explode=true,name=InstanceId"`
 	Version    GETGETConsoleScreenshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// When set to <code>true</code>, acts as keystroke input and wakes up an instance that's in standby or "sleep" mode.
-	WakeUp *bool `queryParam:"style=form,explode=true,name=WakeUp"`
-}
-
-type GETGETConsoleScreenshotHeaders struct {
+	WakeUp            *bool   `queryParam:"style=form,explode=true,name=WakeUp"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -69,11 +66,6 @@ type GETGETConsoleScreenshotHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETConsoleScreenshotRequest struct {
-	QueryParams GETGETConsoleScreenshotQueryParams
-	Headers     GETGETConsoleScreenshotHeaders
 }
 
 type GETGETConsoleScreenshotResponse struct {

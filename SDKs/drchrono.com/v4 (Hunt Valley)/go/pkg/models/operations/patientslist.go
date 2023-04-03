@@ -8,10 +8,10 @@ import (
 )
 
 type PatientsListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PatientsListQueryParams struct {
+type PatientsListRequest struct {
 	ChartID           *string `queryParam:"style=form,explode=true,name=chart_id"`
 	Cursor            *string `queryParam:"style=form,explode=true,name=cursor"`
 	DateOfBirth       *string `queryParam:"style=form,explode=true,name=date_of_birth"`
@@ -25,11 +25,6 @@ type PatientsListQueryParams struct {
 	PreferredLanguage *string `queryParam:"style=form,explode=true,name=preferred_language"`
 	Race              *string `queryParam:"style=form,explode=true,name=race"`
 	Since             *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type PatientsListRequest struct {
-	QueryParams PatientsListQueryParams
-	Security    PatientsListSecurity
 }
 
 // PatientsList200ApplicationJSON - Paginated Result

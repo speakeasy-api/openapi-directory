@@ -6,21 +6,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AzureSubscriptionListForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AzureSubscriptionListForOrgPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AzureSubscriptionListForOrgRequest struct {
-	PathParams AzureSubscriptionListForOrgPathParams
-	Security   AzureSubscriptionListForOrgSecurity
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type AzureSubscriptionListForOrgDefaultApplicationJSONErrorCodeEnum string

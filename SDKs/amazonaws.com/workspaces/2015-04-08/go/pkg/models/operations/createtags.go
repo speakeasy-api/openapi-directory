@@ -30,7 +30,8 @@ func (e *CreateTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateTagsHeaders struct {
+type CreateTagsRequest struct {
+	CreateTagsRequest shared.CreateTagsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateTagsHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateTagsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateTagsRequest struct {
-	Headers CreateTagsHeaders
-	Request shared.CreateTagsRequest `request:"mediaType=application/json"`
 }
 
 type CreateTagsResponse struct {

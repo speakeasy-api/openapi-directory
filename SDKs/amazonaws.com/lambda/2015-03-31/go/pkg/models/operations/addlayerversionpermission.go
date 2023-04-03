@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddLayerVersionPermissionPathParams struct {
-	// The name or Amazon Resource Name (ARN) of the layer.
-	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
-	// The version number.
-	VersionNumber int64 `pathParam:"style=simple,explode=false,name=VersionNumber"`
-}
-
-type AddLayerVersionPermissionQueryParams struct {
-	// Only update the policy if the revision ID matches the ID specified. Use this option to avoid modifying a policy that has changed since you last read it.
-	RevisionID *string `queryParam:"style=form,explode=true,name=RevisionId"`
-}
-
-type AddLayerVersionPermissionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type AddLayerVersionPermissionRequestBody struct {
 	// The API action that grants access to the layer. For example, <code>lambda:GetLayerVersion</code>.
 	Action string `json:"Action"`
@@ -41,10 +19,20 @@ type AddLayerVersionPermissionRequestBody struct {
 }
 
 type AddLayerVersionPermissionRequest struct {
-	PathParams  AddLayerVersionPermissionPathParams
-	QueryParams AddLayerVersionPermissionQueryParams
-	Headers     AddLayerVersionPermissionHeaders
-	Request     AddLayerVersionPermissionRequestBody `request:"mediaType=application/json"`
+	// The name or Amazon Resource Name (ARN) of the layer.
+	LayerName   string                               `pathParam:"style=simple,explode=false,name=LayerName"`
+	RequestBody AddLayerVersionPermissionRequestBody `request:"mediaType=application/json"`
+	// Only update the policy if the revision ID matches the ID specified. Use this option to avoid modifying a policy that has changed since you last read it.
+	RevisionID *string `queryParam:"style=form,explode=true,name=RevisionId"`
+	// The version number.
+	VersionNumber     int64   `pathParam:"style=simple,explode=false,name=VersionNumber"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type AddLayerVersionPermissionResponse struct {

@@ -76,7 +76,6 @@ pkg/models/shared/unifiedid.go
 pkg/models/shared/badrequestresponse.go
 pkg/models/shared/item.go
 pkg/models/shared/currencyenum.go
-pkg/models/shared/security.go
 pkg/models/shared/getitemsresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
@@ -138,4 +137,5 @@ pkg/models/shared/gettendersresponse.go
 pkg/models/shared/deletetenderresponse.go
 pkg/models/shared/gettenderresponse.go
 pkg/models/shared/updatetenderresponse.go
+pkg/models/shared/security.go
 USAGE.md

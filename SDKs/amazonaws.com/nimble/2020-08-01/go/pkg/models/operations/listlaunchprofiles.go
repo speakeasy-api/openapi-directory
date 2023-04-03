@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLaunchProfilesPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListLaunchProfilesQueryParams struct {
+type ListLaunchProfilesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The max number of results to return in the response.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// The token for the next set of results, or null if there are no more results.
@@ -21,22 +23,8 @@ type ListLaunchProfilesQueryParams struct {
 	PrincipalID *string `queryParam:"style=form,explode=true,name=principalId"`
 	// Filter this request to launch profiles in any of the given states.
 	States []shared.LaunchProfileStateEnum `queryParam:"style=form,explode=true,name=states"`
-}
-
-type ListLaunchProfilesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLaunchProfilesRequest struct {
-	PathParams  ListLaunchProfilesPathParams
-	QueryParams ListLaunchProfilesQueryParams
-	Headers     ListLaunchProfilesHeaders
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type ListLaunchProfilesResponse struct {

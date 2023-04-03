@@ -50,7 +50,7 @@ func (e *GETAssociateTransitGatewayMulticastDomainVersionEnum) UnmarshalJSON(dat
 	}
 }
 
-type GETAssociateTransitGatewayMulticastDomainQueryParams struct {
+type GETAssociateTransitGatewayMulticastDomainRequest struct {
 	Action GETAssociateTransitGatewayMulticastDomainActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -61,21 +61,13 @@ type GETAssociateTransitGatewayMulticastDomainQueryParams struct {
 	// The ID of the transit gateway multicast domain.
 	TransitGatewayMulticastDomainID string                                               `queryParam:"style=form,explode=true,name=TransitGatewayMulticastDomainId"`
 	Version                         GETAssociateTransitGatewayMulticastDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssociateTransitGatewayMulticastDomainHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateTransitGatewayMulticastDomainRequest struct {
-	QueryParams GETAssociateTransitGatewayMulticastDomainQueryParams
-	Headers     GETAssociateTransitGatewayMulticastDomainHeaders
+	XAmzAlgorithm                   *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssociateTransitGatewayMulticastDomainResponse struct {

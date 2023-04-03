@@ -35,14 +35,14 @@ func newCarsHistoryAPI(defaultClient, securityClient HTTPClient, serverURL, lang
 // The history API returns online listing history for a car identified by its VIN. History listings are sorted in the descending order of the listing date / last seen date
 func (s *carsHistoryAPI) GetCarHistory(ctx context.Context, request operations.GetCarHistoryRequest) (*operations.GetCarHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/car/{vin}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/history/car/{vin}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -94,14 +94,14 @@ func (s *carsHistoryAPI) GetCarHistory(ctx context.Context, request operations.G
 // The history API returns online listing history for a car identified by its VRM. History listings are sorted in the descending order of the listing date / last seen date
 func (s *carsHistoryAPI) GetHistoryCarUkVrm(ctx context.Context, request operations.GetHistoryCarUkVrmRequest) (*operations.GetHistoryCarUkVrmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/car/uk/{vrm}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/history/car/uk/{vrm}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

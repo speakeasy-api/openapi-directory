@@ -36,7 +36,7 @@ func newPCIComplianceQuestionnairePage(defaultClient, securityClient HTTPClient,
 // Returns a link to a PCI compliance questionnaire that you can send to your account holder.
 //
 //	> You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/marketplaces-and-platforms/classic/platforms-for-partners).
-func (s *pciComplianceQuestionnairePage) PostGetPciQuestionnaireURL(ctx context.Context, request operations.PostGetPciQuestionnaireURLRequest) (*operations.PostGetPciQuestionnaireURLResponse, error) {
+func (s *pciComplianceQuestionnairePage) PostGetPciQuestionnaireURL(ctx context.Context, request shared.GetPciURLRequest, security operations.PostGetPciQuestionnaireURLSecurity) (*operations.PostGetPciQuestionnaireURLResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getPciQuestionnaireUrl"
 
@@ -52,7 +52,7 @@ func (s *pciComplianceQuestionnairePage) PostGetPciQuestionnaireURL(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

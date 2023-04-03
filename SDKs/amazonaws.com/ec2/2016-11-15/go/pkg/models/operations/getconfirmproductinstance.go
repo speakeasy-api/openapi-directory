@@ -50,30 +50,22 @@ func (e *GETConfirmProductInstanceVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETConfirmProductInstanceQueryParams struct {
+type GETConfirmProductInstanceRequest struct {
 	Action GETConfirmProductInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the instance.
 	InstanceID string `queryParam:"style=form,explode=true,name=InstanceId"`
 	// The product code. This must be a product code that you own.
-	ProductCode string                               `queryParam:"style=form,explode=true,name=ProductCode"`
-	Version     GETConfirmProductInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETConfirmProductInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETConfirmProductInstanceRequest struct {
-	QueryParams GETConfirmProductInstanceQueryParams
-	Headers     GETConfirmProductInstanceHeaders
+	ProductCode       string                               `queryParam:"style=form,explode=true,name=ProductCode"`
+	Version           GETConfirmProductInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETConfirmProductInstanceResponse struct {

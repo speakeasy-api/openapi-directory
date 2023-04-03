@@ -50,28 +50,20 @@ func (e *GETFailoverGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETFailoverGlobalClusterQueryParams struct {
+type GETFailoverGlobalClusterRequest struct {
 	Action GETFailoverGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Identifier of the Neptune global database that should be failed over. The identifier is the unique key assigned by the user when the Neptune global database was created. In other words, it's the name of the global database that you want to fail over.</p> <p>Constraints: Must match the identifier of an existing Neptune global database.</p>
 	GlobalClusterIdentifier string `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`
 	// The Amazon Resource Name (ARN) of the secondary Neptune DB cluster that you want to promote to primary for the global database.
 	TargetDbClusterIdentifier string                              `queryParam:"style=form,explode=true,name=TargetDbClusterIdentifier"`
 	Version                   GETFailoverGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETFailoverGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETFailoverGlobalClusterRequest struct {
-	QueryParams GETFailoverGlobalClusterQueryParams
-	Headers     GETFailoverGlobalClusterHeaders
+	XAmzAlgorithm             *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETFailoverGlobalClusterResponse struct {

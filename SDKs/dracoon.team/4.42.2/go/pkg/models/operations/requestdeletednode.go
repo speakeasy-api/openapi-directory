@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestDeletedNodePathParams struct {
-	// Deleted node ID
-	DeletedNodeID int64 `pathParam:"style=simple,explode=false,name=deleted_node_id"`
-}
-
 // RequestDeletedNodeXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestDeletedNodeXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *RequestDeletedNodeXSdsDateFormatEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type RequestDeletedNodeHeaders struct {
+type RequestDeletedNodeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestDeletedNodeXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestDeletedNodeRequest struct {
-	PathParams RequestDeletedNodePathParams
-	Headers    RequestDeletedNodeHeaders
+	// Deleted node ID
+	DeletedNodeID int64 `pathParam:"style=simple,explode=false,name=deleted_node_id"`
 }
 
 type RequestDeletedNodeResponse struct {

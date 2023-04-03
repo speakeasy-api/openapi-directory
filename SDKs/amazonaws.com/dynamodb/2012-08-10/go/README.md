@@ -24,95 +24,88 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchExecuteStatementRequest{
-        Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "DynamoDB_20120810.BatchExecuteStatement",
-        },
-        Request: shared.BatchExecuteStatementInput{
-            ReturnConsumedCapacity: "NONE",
+        BatchExecuteStatementInput: shared.BatchExecuteStatementInput{
+            ReturnConsumedCapacity: "TOTAL",
             Statements: []shared.BatchStatementRequest{
                 shared.BatchStatementRequest{
                     ConsistentRead: false,
                     Parameters: []shared.AttributeValue{
                         shared.AttributeValue{
-                            B: "deserunt",
+                            B: "quibusdam",
                             Bool: false,
                             Bs: []string{
-                                "iure",
-                                "magnam",
+                                "nulla",
+                                "corrupti",
+                                "illum",
                             },
                             L: []shared.AttributeValue{
                                 shared.AttributeValue{},
                                 shared.AttributeValue{},
-                                shared.AttributeValue{},
-                                shared.AttributeValue{},
                             },
                             M: map[string]shared.AttributeValue{
-                                "delectus": shared.AttributeValue{},
+                                "deserunt": shared.AttributeValue{},
+                                "suscipit": shared.AttributeValue{},
+                                "iure": shared.AttributeValue{},
                             },
-                            N: "tempora",
+                            N: "magnam",
                             Ns: []string{
-                                "molestiae",
-                                "minus",
+                                "ipsa",
+                                "delectus",
+                                "tempora",
+                                "suscipit",
                             },
                             Null: false,
-                            S: "placeat",
+                            S: "molestiae",
                             Ss: []string{
+                                "placeat",
+                                "voluptatum",
                                 "iusto",
                                 "excepturi",
-                                "nisi",
                             },
                         },
                         shared.AttributeValue{
-                            B: "recusandae",
+                            B: "nisi",
                             Bool: false,
                             Bs: []string{
+                                "temporibus",
                                 "ab",
                                 "quis",
                                 "veritatis",
-                                "deserunt",
                             },
                             L: []shared.AttributeValue{
                                 shared.AttributeValue{},
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
                             },
                             M: map[string]shared.AttributeValue{
-                                "repellendus": shared.AttributeValue{},
-                                "sapiente": shared.AttributeValue{},
+                                "ipsam": shared.AttributeValue{},
                             },
-                            N: "quo",
+                            N: "repellendus",
                             Ns: []string{
+                                "quo",
+                                "odit",
+                                "at",
                                 "at",
                             },
                             Null: false,
-                            S: "at",
+                            S: "maiores",
                             Ss: []string{
-                                "molestiae",
                                 "quod",
                                 "quod",
-                                "esse",
                             },
                         },
                         shared.AttributeValue{
-                            B: "totam",
+                            B: "esse",
                             Bool: false,
                             Bs: []string{
+                                "porro",
                                 "dolorum",
                                 "dicta",
-                                "nam",
-                                "officia",
                             },
                             L: []shared.AttributeValue{
                                 shared.AttributeValue{},
@@ -120,6 +113,8 @@ func main() {
                                 shared.AttributeValue{},
                             },
                             M: map[string]shared.AttributeValue{
+                                "occaecati": shared.AttributeValue{},
+                                "fugit": shared.AttributeValue{},
                                 "deleniti": shared.AttributeValue{},
                             },
                             N: "hic",
@@ -204,8 +199,82 @@ func main() {
                     },
                     Statement: "accusantium",
                 },
+                shared.BatchStatementRequest{
+                    ConsistentRead: false,
+                    Parameters: []shared.AttributeValue{
+                        shared.AttributeValue{
+                            B: "culpa",
+                            Bool: false,
+                            Bs: []string{
+                                "sapiente",
+                                "architecto",
+                                "mollitia",
+                                "dolorem",
+                            },
+                            L: []shared.AttributeValue{
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                            },
+                            M: map[string]shared.AttributeValue{
+                                "repellat": shared.AttributeValue{},
+                            },
+                            N: "mollitia",
+                            Ns: []string{
+                                "numquam",
+                                "commodi",
+                                "quam",
+                            },
+                            Null: false,
+                            S: "molestiae",
+                            Ss: []string{
+                                "error",
+                            },
+                        },
+                        shared.AttributeValue{
+                            B: "quia",
+                            Bool: false,
+                            Bs: []string{
+                                "vitae",
+                                "laborum",
+                            },
+                            L: []shared.AttributeValue{
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                                shared.AttributeValue{},
+                            },
+                            M: map[string]shared.AttributeValue{
+                                "odit": shared.AttributeValue{},
+                                "quo": shared.AttributeValue{},
+                            },
+                            N: "sequi",
+                            Ns: []string{
+                                "ipsam",
+                                "id",
+                                "possimus",
+                                "aut",
+                            },
+                            Null: false,
+                            S: "quasi",
+                            Ss: []string{
+                                "temporibus",
+                                "laborum",
+                                "quasi",
+                            },
+                        },
+                    },
+                    Statement: "reiciendis",
+                },
             },
         },
+        XAmzAlgorithm: "voluptatibus",
+        XAmzContentSha256: "vero",
+        XAmzCredential: "nihil",
+        XAmzDate: "praesentium",
+        XAmzSecurityToken: "voluptatibus",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "omnis",
+        XAmzTarget: "DynamoDB_20120810.BatchExecuteStatement",
     }
 
     ctx := context.Background()
@@ -222,7 +291,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -281,4 +350,15 @@ func main() {
 * `UpdateTimeToLive` - <p>The <code>UpdateTimeToLive</code> method enables or disables Time to Live (TTL) for the specified table. A successful <code>UpdateTimeToLive</code> call returns the current <code>TimeToLiveSpecification</code>. It can take up to one hour for the change to fully process. Any additional <code>UpdateTimeToLive</code> calls for the same table during this one hour duration result in a <code>ValidationException</code>. </p> <p>TTL compares the current time in epoch time format to the time stored in the TTL attribute of an item. If the epoch time value stored in the attribute is less than the current time, the item is marked as expired and subsequently deleted.</p> <note> <p> The epoch time format is the number of seconds elapsed since 12:00:00 AM January 1, 1970 UTC. </p> </note> <p>DynamoDB deletes expired items on a best-effort basis to ensure availability of throughput for other data operations. </p> <important> <p>DynamoDB typically deletes expired items within two days of expiration. The exact duration within which an item gets deleted after expiration is specific to the nature of the workload. Items that have expired and not been deleted will still show up in reads, queries, and scans.</p> </important> <p>As items are deleted, they are removed from any local secondary index and global secondary index immediately in the same eventually consistent way as a standard delete operation.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time To Live</a> in the Amazon DynamoDB Developer Guide. </p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

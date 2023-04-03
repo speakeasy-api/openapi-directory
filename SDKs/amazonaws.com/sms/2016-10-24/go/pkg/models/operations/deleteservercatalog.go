@@ -29,7 +29,8 @@ func (e *DeleteServerCatalogXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteServerCatalogHeaders struct {
+type DeleteServerCatalogRequest struct {
+	RequestBody       map[string]interface{}            `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DeleteServerCatalogHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteServerCatalogXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteServerCatalogRequest struct {
-	Headers DeleteServerCatalogHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DeleteServerCatalogResponse struct {

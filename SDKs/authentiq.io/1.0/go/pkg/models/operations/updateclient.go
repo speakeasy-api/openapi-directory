@@ -8,21 +8,16 @@ import (
 )
 
 type UpdateClientSecurity struct {
-	ClientRegistrationToken *shared.SchemeClientRegistrationToken `security:"scheme,type=apiKey,subtype=header"`
-	OauthCode               *shared.SchemeOauthCode               `security:"scheme,type=oauth2"`
-	OauthImplicit           *shared.SchemeOauthImplicit           `security:"scheme,type=oauth2"`
-}
-
-type UpdateClientPathParams struct {
-	// Client identifier
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
+	ClientRegistrationToken *string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	OauthCode               *string `security:"scheme,type=oauth2,name=Authorization"`
+	OauthImplicit           *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type UpdateClientRequest struct {
-	PathParams UpdateClientPathParams
 	// Client Object
-	Request  shared.Client `request:"mediaType=application/json"`
-	Security UpdateClientSecurity
+	Client shared.Client `request:"mediaType=application/json"`
+	// Client identifier
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type UpdateClientResponse struct {

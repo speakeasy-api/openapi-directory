@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBackendJobPathParams struct {
-	// The app ID.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment.
-	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
-	// The ID for the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetBackendJobHeaders struct {
+type GetBackendJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetBackendJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetBackendJobRequest struct {
-	PathParams GetBackendJobPathParams
-	Headers    GetBackendJobHeaders
+	// The app ID.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment.
+	BackendEnvironmentName string `pathParam:"style=simple,explode=false,name=backendEnvironmentName"`
+	// The ID for the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type GetBackendJobResponse struct {

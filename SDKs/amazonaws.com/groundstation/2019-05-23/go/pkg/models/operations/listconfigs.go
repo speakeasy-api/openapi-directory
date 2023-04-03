@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConfigsQueryParams struct {
-	// Maximum number of <code>Configs</code> returned.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Next token returned in the request of a previous <code>ListConfigs</code> call. Used to get the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListConfigsHeaders struct {
+type ListConfigsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListConfigsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConfigsRequest struct {
-	QueryParams ListConfigsQueryParams
-	Headers     ListConfigsHeaders
+	// Maximum number of <code>Configs</code> returned.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Next token returned in the request of a previous <code>ListConfigs</code> call. Used to get the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListConfigsResponse struct {

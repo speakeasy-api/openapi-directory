@@ -38,9 +38,9 @@ func newSegments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // identified by the `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *segments) CreateSegment(ctx context.Context, request operations.CreateSegmentRequest) (*operations.CreateSegmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/segments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/segments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSegmentModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,7 +107,7 @@ func (s *segments) CreateSegment(ctx context.Context, request operations.CreateS
 // This endpoint removes a Segment identified by the `segmentId` parameter.
 func (s *segments) DeleteSegment(ctx context.Context, request operations.DeleteSegmentRequest) (*operations.DeleteSegmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/segments/{segmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/segments/{segmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *segments) DeleteSegment(ctx context.Context, request operations.DeleteS
 // identified by the `segmentId`.
 func (s *segments) GetSegment(ctx context.Context, request operations.GetSegmentRequest) (*operations.GetSegmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/segments/{segmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/segments/{segmentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +212,7 @@ func (s *segments) GetSegment(ctx context.Context, request operations.GetSegment
 // `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *segments) GetSegments(ctx context.Context, request operations.GetSegmentsRequest) (*operations.GetSegmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/segments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/segments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,9 +271,9 @@ func (s *segments) GetSegments(ctx context.Context, request operations.GetSegmen
 // This endpoint updates a Segment identified by the `segmentId` parameter.
 func (s *segments) UpdateSegment(ctx context.Context, request operations.UpdateSegmentRequest) (*operations.UpdateSegmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/segments/{segmentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/segments/{segmentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSegmentModel", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

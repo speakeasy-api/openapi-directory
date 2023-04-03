@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLaunchProfileMembersPathParams struct {
-	// The ID of the launch profile used to control access from the streaming session.
-	LaunchProfileID string `pathParam:"style=simple,explode=false,name=launchProfileId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListLaunchProfileMembersQueryParams struct {
-	// The max number of results to return in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results, or null if there are no more results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListLaunchProfileMembersHeaders struct {
+type ListLaunchProfileMembersRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListLaunchProfileMembersHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLaunchProfileMembersRequest struct {
-	PathParams  ListLaunchProfileMembersPathParams
-	QueryParams ListLaunchProfileMembersQueryParams
-	Headers     ListLaunchProfileMembersHeaders
+	// The ID of the launch profile used to control access from the streaming session.
+	LaunchProfileID string `pathParam:"style=simple,explode=false,name=launchProfileId"`
+	// The max number of results to return in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results, or null if there are no more results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type ListLaunchProfileMembersResponse struct {

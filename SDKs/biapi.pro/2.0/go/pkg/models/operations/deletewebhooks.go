@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteWebhooksQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type DeleteWebhooksRequest struct {
-	QueryParams DeleteWebhooksQueryParams
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type DeleteWebhooksResponse struct {

@@ -8,13 +8,8 @@ import (
 )
 
 type CreateWebhookSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type CreateWebhookRequest struct {
-	// A webhook object
-	Request  *shared.WebhookInput `request:"mediaType=application/json"`
-	Security CreateWebhookSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateWebhookResponse struct {

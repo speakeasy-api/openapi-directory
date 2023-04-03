@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStageDeploymentPathParams struct {
+type GetStageDeploymentRequest struct {
+	//  The identifier of the stage deployment. <code>StartStageDeployment</code> returns the identifier that you use here.
+	DeploymentID *string `queryParam:"style=form,explode=true,name=DeploymentId"`
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
 	// The name of the stage.
-	StageName string `pathParam:"style=simple,explode=false,name=StageName"`
-}
-
-type GetStageDeploymentQueryParams struct {
-	//  The identifier of the stage deployment. <code>StartStageDeployment</code> returns the identifier that you use here.
-	DeploymentID *string `queryParam:"style=form,explode=true,name=DeploymentId"`
-}
-
-type GetStageDeploymentHeaders struct {
+	StageName         string  `pathParam:"style=simple,explode=false,name=StageName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type GetStageDeploymentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStageDeploymentRequest struct {
-	PathParams  GetStageDeploymentPathParams
-	QueryParams GetStageDeploymentQueryParams
-	Headers     GetStageDeploymentHeaders
 }
 
 type GetStageDeploymentResponse struct {

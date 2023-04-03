@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetControlPathParams struct {
-	//  The identifier for the control.
-	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
-}
-
-type GetControlHeaders struct {
+type GetControlRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetControlHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetControlRequest struct {
-	PathParams GetControlPathParams
-	Headers    GetControlHeaders
+	//  The identifier for the control.
+	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
 }
 
 type GetControlResponse struct {

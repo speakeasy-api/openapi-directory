@@ -34,7 +34,7 @@ func newSourceDefinitionSpecification(defaultClient, securityClient HTTPClient, 
 }
 
 // GetSourceDefinitionSpecification - Get specification for a SourceDefinition.
-func (s *sourceDefinitionSpecification) GetSourceDefinitionSpecification(ctx context.Context, request operations.GetSourceDefinitionSpecificationRequest) (*operations.GetSourceDefinitionSpecificationResponse, error) {
+func (s *sourceDefinitionSpecification) GetSourceDefinitionSpecification(ctx context.Context, request shared.SourceDefinitionIDWithWorkspaceID) (*operations.GetSourceDefinitionSpecificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/source_definition_specifications/get"
 

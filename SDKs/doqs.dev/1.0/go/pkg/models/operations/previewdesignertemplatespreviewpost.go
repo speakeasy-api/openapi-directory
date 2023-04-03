@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PreviewDesignerTemplatesPreviewPostRequest struct {
-	Request shared.PreviewModel `request:"mediaType=application/json"`
-}
-
 type PreviewDesignerTemplatesPreviewPostResponse struct {
 	ContentType string
 	// Client Error

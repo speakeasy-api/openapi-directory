@@ -6,25 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesListByDistributionGroupSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesListByDistributionGroupPathParams struct {
+type ReleasesListByDistributionGroupRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the distribution group.
 	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ReleasesListByDistributionGroupRequest struct {
-	PathParams ReleasesListByDistributionGroupPathParams
-	Security   ReleasesListByDistributionGroupSecurity
 }
 
 type ReleasesListByDistributionGroup404ApplicationJSONCodeEnum string

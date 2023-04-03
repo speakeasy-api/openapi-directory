@@ -10,7 +10,7 @@ import (
 )
 
 type GetContinueWatchingListSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GetContinueWatchingListIncludeEnum string
@@ -86,7 +86,7 @@ func (e *GetContinueWatchingListShowItemTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetContinueWatchingListQueryParams struct {
+type GetContinueWatchingListRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -171,11 +171,6 @@ type GetContinueWatchingListQueryParams struct {
 	ShowItemType *GetContinueWatchingListShowItemTypeEnum `queryParam:"style=form,explode=true,name=show_item_type"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetContinueWatchingListRequest struct {
-	QueryParams GetContinueWatchingListQueryParams
-	Security    GetContinueWatchingListSecurity
 }
 
 type GetContinueWatchingListResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAuthorizerPathParams struct {
-	// The name of the authorizer to describe.
-	AuthorizerName string `pathParam:"style=simple,explode=false,name=authorizerName"`
-}
-
-type DescribeAuthorizerHeaders struct {
+type DescribeAuthorizerRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeAuthorizerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAuthorizerRequest struct {
-	PathParams DescribeAuthorizerPathParams
-	Headers    DescribeAuthorizerHeaders
+	// The name of the authorizer to describe.
+	AuthorizerName string `pathParam:"style=simple,explode=false,name=authorizerName"`
 }
 
 type DescribeAuthorizerResponse struct {

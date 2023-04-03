@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetURLDetailPathParams struct {
+type GetURLDetailRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
+	// comma separated list of fields to return (c.f. URLs Datamodel)
+	Fields []string `queryParam:"style=form,explode=false,name=fields"`
 	// Project's identifier
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// (Urlencoded) Searched URL
 	URL string `pathParam:"style=simple,explode=false,name=url"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetURLDetailQueryParams struct {
-	// comma separated list of fields to return (c.f. URLs Datamodel)
-	Fields []string `queryParam:"style=form,explode=false,name=fields"`
-}
-
-type GetURLDetailRequest struct {
-	PathParams  GetURLDetailPathParams
-	QueryParams GetURLDetailQueryParams
 }
 
 type GetURLDetailResponse struct {

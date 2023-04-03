@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetIndividualsQueryParams struct {
+type GetIndividualsRequest struct {
+	// The API key.
+	APIKey string `header:"style=simple,explode=false,name=apiKey"`
 	// The individual's date of birth, for example, `1979-01-13` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format).
 	DateOfBirth *string `queryParam:"style=form,explode=true,name=dateOfBirth"`
 	// The individual's place of birth, for example, `Tamworth`.
 	PlaceOfBirth *string `queryParam:"style=form,explode=true,name=placeOfBirth"`
-}
-
-type GetIndividualsHeaders struct {
-	// The API key.
-	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type GetIndividualsRequest struct {
-	QueryParams GetIndividualsQueryParams
-	Headers     GetIndividualsHeaders
 }
 
 type GetIndividualsResponse struct {

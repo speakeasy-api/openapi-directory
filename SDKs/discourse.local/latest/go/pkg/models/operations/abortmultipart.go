@@ -12,10 +12,6 @@ type AbortMultipartRequestBody struct {
 	ExternalUploadIdentifier string `json:"external_upload_identifier"`
 }
 
-type AbortMultipartRequest struct {
-	Request *AbortMultipartRequestBody `request:"mediaType=application/json"`
-}
-
 // AbortMultipart200ApplicationJSON - external upload initialized
 type AbortMultipart200ApplicationJSON struct {
 	Success string `json:"success"`

@@ -30,7 +30,8 @@ func (e *GetRegistryScanningConfigurationXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetRegistryScanningConfigurationHeaders struct {
+type GetRegistryScanningConfigurationRequest struct {
+	RequestBody       map[string]interface{}                         `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetRegistryScanningConfigurationHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetRegistryScanningConfigurationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetRegistryScanningConfigurationRequest struct {
-	Headers GetRegistryScanningConfigurationHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetRegistryScanningConfigurationResponse struct {

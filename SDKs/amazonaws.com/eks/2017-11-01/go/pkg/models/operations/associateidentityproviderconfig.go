@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateIdentityProviderConfigPathParams struct {
-	// The name of the cluster to associate the configuration to.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type AssociateIdentityProviderConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // AssociateIdentityProviderConfigRequestBodyOidc - An object representing an OpenID Connect (OIDC) configuration. Before associating an OIDC identity provider to your cluster, review the considerations in <a href="https://docs.aws.amazon.com/eks/latest/userguide/authenticate-oidc-identity-provider.html">Authenticating users for your cluster from an OpenID Connect identity provider</a> in the <i>Amazon EKS User Guide</i>.
 type AssociateIdentityProviderConfigRequestBodyOidc struct {
 	ClientID                   *string           `json:"clientId,omitempty"`
@@ -44,9 +29,16 @@ type AssociateIdentityProviderConfigRequestBody struct {
 }
 
 type AssociateIdentityProviderConfigRequest struct {
-	PathParams AssociateIdentityProviderConfigPathParams
-	Headers    AssociateIdentityProviderConfigHeaders
-	Request    AssociateIdentityProviderConfigRequestBody `request:"mediaType=application/json"`
+	RequestBody       AssociateIdentityProviderConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the cluster to associate the configuration to.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type AssociateIdentityProviderConfigResponse struct {

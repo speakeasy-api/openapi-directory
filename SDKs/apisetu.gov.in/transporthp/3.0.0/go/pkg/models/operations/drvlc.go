@@ -10,8 +10,8 @@ import (
 )
 
 type DrvlcSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type DrvlcRequestBodyCertificateParameters struct {
@@ -57,12 +57,6 @@ type DrvlcRequestBody struct {
 	Format DrvlcRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type DrvlcRequest struct {
-	// Request format
-	Request  *DrvlcRequestBody `request:"mediaType=application/json"`
-	Security DrvlcSecurity
 }
 
 type Drvlc504ApplicationJSONErrorEnum string

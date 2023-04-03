@@ -37,7 +37,7 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Performs a search through the full Debian Code Search corpus, blocking until all results are available (might take a few seconds depending on the search query).
 //
 // Search results are ordered by their ranking (best results come first).
-func (s *search) Search(ctx context.Context, request operations.SearchRequest) (*operations.SearchResponse, error) {
+func (s *search) Search(ctx context.Context, request operations.SearchRequest, security operations.SearchSecurity) (*operations.SearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search"
 
@@ -46,11 +46,11 @@ func (s *search) Search(ctx context.Context, request operations.SearchRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *search) Search(ctx context.Context, request operations.SearchRequest) (
 
 // Searchperpackage - Like /search, but aggregates per package
 // The search results are currently sorted arbitrarily, but we intend to sort them by ranking eventually: https://github.com/Debian/dcs/blob/51338e934eb7ee18d00c5c18531c0790a83cb698/cmd/dcs-web/querymanager.go#L719
-func (s *search) Searchperpackage(ctx context.Context, request operations.SearchperpackageRequest) (*operations.SearchperpackageResponse, error) {
+func (s *search) Searchperpackage(ctx context.Context, request operations.SearchperpackageRequest, security operations.SearchperpackageSecurity) (*operations.SearchperpackageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/searchperpackage"
 
@@ -96,11 +96,11 @@ func (s *search) Searchperpackage(ctx context.Context, request operations.Search
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

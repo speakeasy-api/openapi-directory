@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserAccessLoggingSettingsPathParams struct {
-	// The ARN of the user access logging settings.
-	UserAccessLoggingSettingsArn string `pathParam:"style=simple,explode=false,name=userAccessLoggingSettingsArn"`
-}
-
-type GetUserAccessLoggingSettingsHeaders struct {
+type GetUserAccessLoggingSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetUserAccessLoggingSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetUserAccessLoggingSettingsRequest struct {
-	PathParams GetUserAccessLoggingSettingsPathParams
-	Headers    GetUserAccessLoggingSettingsHeaders
+	// The ARN of the user access logging settings.
+	UserAccessLoggingSettingsArn string `pathParam:"style=simple,explode=false,name=userAccessLoggingSettingsArn"`
 }
 
 type GetUserAccessLoggingSettingsResponse struct {

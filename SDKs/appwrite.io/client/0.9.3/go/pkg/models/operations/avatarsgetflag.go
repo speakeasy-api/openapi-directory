@@ -4,32 +4,22 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetFlagSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AvatarsGetFlagPathParams struct {
+type AvatarsGetFlagRequest struct {
 	// Country Code. ISO Alpha-2 country code format.
 	Code string `pathParam:"style=simple,explode=false,name=code"`
-}
-
-type AvatarsGetFlagQueryParams struct {
 	// Image height. Pass an integer between 0 to 2000. Defaults to 100.
 	Height *int `queryParam:"style=form,explode=true,name=height"`
 	// Image quality. Pass an integer between 0 to 100. Defaults to 100.
 	Quality *int `queryParam:"style=form,explode=true,name=quality"`
 	// Image width. Pass an integer between 0 to 2000. Defaults to 100.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type AvatarsGetFlagRequest struct {
-	PathParams  AvatarsGetFlagPathParams
-	QueryParams AvatarsGetFlagQueryParams
-	Security    AvatarsGetFlagSecurity
 }
 
 type AvatarsGetFlagResponse struct {

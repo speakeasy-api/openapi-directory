@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDataRepositoryAssociationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeDataRepositoryAssociationsXAmzTargetEnum
 type DescribeDataRepositoryAssociationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeDataRepositoryAssociationsXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type DescribeDataRepositoryAssociationsHeaders struct {
+type DescribeDataRepositoryAssociationsRequest struct {
+	DescribeDataRepositoryAssociationsRequest shared.DescribeDataRepositoryAssociationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeDataRepositoryAssociationsHeaders struct {
 	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeDataRepositoryAssociationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeDataRepositoryAssociationsRequest struct {
-	QueryParams DescribeDataRepositoryAssociationsQueryParams
-	Headers     DescribeDataRepositoryAssociationsHeaders
-	Request     shared.DescribeDataRepositoryAssociationsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeDataRepositoryAssociationsResponse struct {

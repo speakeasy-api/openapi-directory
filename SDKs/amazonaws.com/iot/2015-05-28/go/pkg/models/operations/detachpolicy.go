@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type DetachPolicyPathParams struct {
-	// The policy to detach.
-	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
-}
-
-type DetachPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DetachPolicyRequestBody struct {
 	// The target from which the policy will be detached.
 	Target string `json:"target"`
 }
 
 type DetachPolicyRequest struct {
-	PathParams DetachPolicyPathParams
-	Headers    DetachPolicyHeaders
-	Request    DetachPolicyRequestBody `request:"mediaType=application/json"`
+	RequestBody       DetachPolicyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The policy to detach.
+	PolicyName string `pathParam:"style=simple,explode=false,name=policyName"`
 }
 
 type DetachPolicyResponse struct {

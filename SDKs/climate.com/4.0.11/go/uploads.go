@@ -36,18 +36,18 @@ func newUploads(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // ChunkedUpload - Chunked upload of data
 // Send chunked data for an **Upload**.
-func (s *uploads) ChunkedUpload(ctx context.Context, request operations.ChunkedUploadRequest) (*operations.ChunkedUploadResponse, error) {
+func (s *uploads) ChunkedUpload(ctx context.Context, request operations.ChunkedUploadRequest, security operations.ChunkedUploadSecurity) (*operations.ChunkedUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -100,16 +100,16 @@ func (s *uploads) ChunkedUpload(ctx context.Context, request operations.ChunkedU
 
 // FetchUploadStatusByID - Retrieve Upload status
 // Check the status of an **Upload** by ID.
-func (s *uploads) FetchUploadStatusByID(ctx context.Context, request operations.FetchUploadStatusByIDRequest) (*operations.FetchUploadStatusByIDResponse, error) {
+func (s *uploads) FetchUploadStatusByID(ctx context.Context, request operations.FetchUploadStatusByIDRequest, security operations.FetchUploadStatusByIDSecurity) (*operations.FetchUploadStatusByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -169,7 +169,7 @@ func (s *uploads) FetchUploadStatusByID(ctx context.Context, request operations.
 
 // FetchUploadStatuses - Retrieve Upload statuses in batch
 // Check the status of multiple **Uploads** (up to 100 per request).
-func (s *uploads) FetchUploadStatuses(ctx context.Context, request operations.FetchUploadStatusesRequest) (*operations.FetchUploadStatusesResponse, error) {
+func (s *uploads) FetchUploadStatuses(ctx context.Context, request shared.UploadStatusQuery, security operations.FetchUploadStatusesSecurity) (*operations.FetchUploadStatusesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/uploads/status/query"
 
@@ -185,7 +185,7 @@ func (s *uploads) FetchUploadStatuses(ctx context.Context, request operations.Fe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -442,11 +442,11 @@ func (s *uploads) FetchUploadStatuses(ctx context.Context, request operations.Fe
 //
 //	  Requires `asHarvested:write` scope.
 //	 </details>
-func (s *uploads) PostUpload(ctx context.Context, request operations.PostUploadRequest) (*operations.PostUploadResponse, error) {
+func (s *uploads) PostUpload(ctx context.Context, request operations.PostUploadRequest, security operations.PostUploadSecurity) (*operations.PostUploadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/uploads"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Upload", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -458,9 +458,9 @@ func (s *uploads) PostUpload(ctx context.Context, request operations.PostUploadR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

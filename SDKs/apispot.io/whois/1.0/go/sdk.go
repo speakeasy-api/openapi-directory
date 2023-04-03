@@ -107,7 +107,7 @@ func New(opts ...SDKOption) *SDK {
 // CheckDomain - Check domain availability
 func (s *SDK) CheckDomain(ctx context.Context, request operations.CheckDomainRequest) (*operations.CheckDomainResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domain}/check", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domain}/check", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +149,7 @@ func (s *SDK) CheckDomain(ctx context.Context, request operations.CheckDomainReq
 }
 
 // CreateBatch - Create batch. Batch is then being processed until all provided items have been completed. At any time it can be `get` to provide current status with results optionally.
-func (s *SDK) CreateBatch(ctx context.Context, request operations.CreateBatchRequest) (*operations.CreateBatchResponse, error) {
+func (s *SDK) CreateBatch(ctx context.Context, request operations.CreateBatchRequestBody) (*operations.CreateBatchResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/batch"
 
@@ -205,7 +205,7 @@ func (s *SDK) CreateBatch(ctx context.Context, request operations.CreateBatchReq
 // DeleteBatch - Delete batch
 func (s *SDK) DeleteBatch(ctx context.Context, request operations.DeleteBatchRequest) (*operations.DeleteBatchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/batch/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/batch/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +240,7 @@ func (s *SDK) DeleteBatch(ctx context.Context, request operations.DeleteBatchReq
 // DomainRank - Check domain rank (authority).
 func (s *SDK) DomainRank(ctx context.Context, request operations.DomainRankRequest) (*operations.DomainRankResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domain}/rank", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domain}/rank", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -284,7 +284,7 @@ func (s *SDK) DomainRank(ctx context.Context, request operations.DomainRankReque
 // GetBatch - Get batch
 func (s *SDK) GetBatch(ctx context.Context, request operations.GetBatchRequest) (*operations.GetBatchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/batch/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/batch/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -379,7 +379,7 @@ func (s *SDK) QueryDb(ctx context.Context, request operations.QueryDbRequest) (*
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -420,14 +420,14 @@ func (s *SDK) QueryDb(ctx context.Context, request operations.QueryDbRequest) (*
 // Whois - WHOIS query for a domain
 func (s *SDK) Whois(ctx context.Context, request operations.WhoisRequest) (*operations.WhoisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domain}/whois", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domains/{domain}/whois", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

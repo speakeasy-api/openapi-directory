@@ -33,7 +33,7 @@ func (e *GroupsGetStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroupsGetQueryParams struct {
+type GroupsGetRequest struct {
 	// Exclude groups created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude groups created after this date (YYYYMMDD)
@@ -50,10 +50,6 @@ type GroupsGetQueryParams struct {
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Write permission
 	Write *bool `queryParam:"style=form,explode=true,name=write"`
-}
-
-type GroupsGetRequest struct {
-	QueryParams GroupsGetQueryParams
 }
 
 type GroupsGetResponse struct {

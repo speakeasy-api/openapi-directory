@@ -13,33 +13,30 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.QueryForecastRequest{
-        Headers: operations.QueryForecastHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AmazonForecastRuntime.QueryForecast",
-        },
-        Request: shared.QueryForecastRequest{
-            EndDate: "illum",
+        QueryForecastRequest: shared.QueryForecastRequest{
+            EndDate: "corrupti",
             Filters: map[string]string{
-                "error": "deserunt",
-                "suscipit": "iure",
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
-            ForecastArn: "magnam",
-            NextToken: "debitis",
-            StartDate: "ipsa",
+            ForecastArn: "vel",
+            NextToken: "error",
+            StartDate: "deserunt",
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "iure",
+        XAmzCredential: "magnam",
+        XAmzDate: "debitis",
+        XAmzSecurityToken: "ipsa",
+        XAmzSignature: "delectus",
+        XAmzSignedHeaders: "tempora",
+        XAmzTarget: "AmazonForecastRuntime.QueryForecast",
     }
 
     ctx := context.Background()

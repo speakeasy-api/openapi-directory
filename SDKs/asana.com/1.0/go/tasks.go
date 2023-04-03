@@ -41,9 +41,9 @@ func newTasks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Marks a set of tasks as dependencies of this task, if they are not already dependencies. *A task can have at most 30 dependents and dependencies combined*.
 func (s *tasks) AddDependenciesForTask(ctx context.Context, request operations.AddDependenciesForTaskRequest) (*operations.AddDependenciesForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addDependencies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addDependencies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *tasks) AddDependenciesForTask(ctx context.Context, request operations.A
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -120,9 +120,9 @@ func (s *tasks) AddDependenciesForTask(ctx context.Context, request operations.A
 // Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.
 func (s *tasks) AddDependentsForTask(ctx context.Context, request operations.AddDependentsForTaskRequest) (*operations.AddDependentsForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addDependents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addDependents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +137,7 @@ func (s *tasks) AddDependentsForTask(ctx context.Context, request operations.Add
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -201,9 +201,9 @@ func (s *tasks) AddDependentsForTask(ctx context.Context, request operations.Add
 // Requests to add/remove followers, if successful, will return the complete updated task record, described above.
 func (s *tasks) AddFollowersForTask(ctx context.Context, request operations.AddFollowersForTaskRequest) (*operations.AddFollowersForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addFollowers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addFollowers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -218,7 +218,7 @@ func (s *tasks) AddFollowersForTask(ctx context.Context, request operations.AddF
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -291,9 +291,9 @@ func (s *tasks) AddFollowersForTask(ctx context.Context, request operations.AddF
 // Returns an empty data block.
 func (s *tasks) AddProjectForTask(ctx context.Context, request operations.AddProjectForTaskRequest) (*operations.AddProjectForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addProject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addProject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -308,7 +308,7 @@ func (s *tasks) AddProjectForTask(ctx context.Context, request operations.AddPro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -368,9 +368,9 @@ func (s *tasks) AddProjectForTask(ctx context.Context, request operations.AddPro
 // Adds a tag to a task. Returns an empty data block.
 func (s *tasks) AddTagForTask(ctx context.Context, request operations.AddTagForTaskRequest) (*operations.AddTagForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addTag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addTag", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -385,7 +385,7 @@ func (s *tasks) AddTagForTask(ctx context.Context, request operations.AddTagForT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -445,9 +445,9 @@ func (s *tasks) AddTagForTask(ctx context.Context, request operations.AddTagForT
 // Creates a new subtask and adds it to the parent task. Returns the full record for the newly created subtask.
 func (s *tasks) CreateSubtaskForTask(ctx context.Context, request operations.CreateSubtaskForTaskRequest) (*operations.CreateSubtaskForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/subtasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/subtasks", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -462,7 +462,7 @@ func (s *tasks) CreateSubtaskForTask(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -530,7 +530,7 @@ func (s *tasks) CreateTask(ctx context.Context, request operations.CreateTaskReq
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tasks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -545,7 +545,7 @@ func (s *tasks) CreateTask(ctx context.Context, request operations.CreateTaskReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -610,14 +610,14 @@ func (s *tasks) CreateTask(ctx context.Context, request operations.CreateTaskReq
 // Returns an empty data record.
 func (s *tasks) DeleteTask(ctx context.Context, request operations.DeleteTaskRequest) (*operations.DeleteTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -677,9 +677,9 @@ func (s *tasks) DeleteTask(ctx context.Context, request operations.DeleteTaskReq
 // Creates and returns a job that will asynchronously handle the duplication.
 func (s *tasks) DuplicateTask(ctx context.Context, request operations.DuplicateTaskRequest) (*operations.DuplicateTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/duplicate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/duplicate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -694,7 +694,7 @@ func (s *tasks) DuplicateTask(ctx context.Context, request operations.DuplicateT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -754,14 +754,14 @@ func (s *tasks) DuplicateTask(ctx context.Context, request operations.DuplicateT
 // Returns the compact representations of all of the dependencies of a task.
 func (s *tasks) GetDependenciesForTask(ctx context.Context, request operations.GetDependenciesForTaskRequest) (*operations.GetDependenciesForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/dependencies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/dependencies", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -823,14 +823,14 @@ func (s *tasks) GetDependenciesForTask(ctx context.Context, request operations.G
 // Returns the compact representations of all of the dependents of a task.
 func (s *tasks) GetDependentsForTask(ctx context.Context, request operations.GetDependentsForTaskRequest) (*operations.GetDependentsForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/dependents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/dependents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -892,14 +892,14 @@ func (s *tasks) GetDependentsForTask(ctx context.Context, request operations.Get
 // Returns a compact representation of all of the subtasks of a task.
 func (s *tasks) GetSubtasksForTask(ctx context.Context, request operations.GetSubtasksForTaskRequest) (*operations.GetSubtasksForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/subtasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/subtasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -959,14 +959,14 @@ func (s *tasks) GetSubtasksForTask(ctx context.Context, request operations.GetSu
 // Returns the complete task record for a single task.
 func (s *tasks) GetTask(ctx context.Context, request operations.GetTaskRequest) (*operations.GetTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1035,7 +1035,7 @@ func (s *tasks) GetTasks(ctx context.Context, request operations.GetTasksRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1095,14 +1095,14 @@ func (s *tasks) GetTasks(ctx context.Context, request operations.GetTasksRequest
 // Returns the compact task records for all tasks within the given project, ordered by their priority within the project. Tasks can exist in more than one project at a time.
 func (s *tasks) GetTasksForProject(ctx context.Context, request operations.GetTasksForProjectRequest) (*operations.GetTasksForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1162,14 +1162,14 @@ func (s *tasks) GetTasksForProject(ctx context.Context, request operations.GetTa
 // *Board view only*: Returns the compact section records for all tasks within the given section.
 func (s *tasks) GetTasksForSection(ctx context.Context, request operations.GetTasksForSectionRequest) (*operations.GetTasksForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1229,14 +1229,14 @@ func (s *tasks) GetTasksForSection(ctx context.Context, request operations.GetTa
 // Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.
 func (s *tasks) GetTasksForTag(ctx context.Context, request operations.GetTasksForTagRequest) (*operations.GetTasksForTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{tag_gid}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1298,14 +1298,14 @@ func (s *tasks) GetTasksForTag(ctx context.Context, request operations.GetTasksF
 // *Note: Both complete and incomplete tasks are returned by default unless they are filtered out (for example, setting `completed_since=now` will return only incomplete tasks, which is the default view for “My Tasks” in Asana.)*
 func (s *tasks) GetTasksForUserTaskList(ctx context.Context, request operations.GetTasksForUserTaskListRequest) (*operations.GetTasksForUserTaskListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_task_lists/{user_task_list_gid}/tasks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/user_task_lists/{user_task_list_gid}/tasks", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1365,9 +1365,9 @@ func (s *tasks) GetTasksForUserTaskList(ctx context.Context, request operations.
 // Unlinks a set of dependencies from this task.
 func (s *tasks) RemoveDependenciesForTask(ctx context.Context, request operations.RemoveDependenciesForTaskRequest) (*operations.RemoveDependenciesForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeDependencies", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeDependencies", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1382,7 +1382,7 @@ func (s *tasks) RemoveDependenciesForTask(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1444,9 +1444,9 @@ func (s *tasks) RemoveDependenciesForTask(ctx context.Context, request operation
 // Unlinks a set of dependents from this task.
 func (s *tasks) RemoveDependentsForTask(ctx context.Context, request operations.RemoveDependentsForTaskRequest) (*operations.RemoveDependentsForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeDependents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeDependents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1461,7 +1461,7 @@ func (s *tasks) RemoveDependentsForTask(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1523,9 +1523,9 @@ func (s *tasks) RemoveDependentsForTask(ctx context.Context, request operations.
 // Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.
 func (s *tasks) RemoveFollowerForTask(ctx context.Context, request operations.RemoveFollowerForTaskRequest) (*operations.RemoveFollowerForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeFollowers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeFollowers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1540,7 +1540,7 @@ func (s *tasks) RemoveFollowerForTask(ctx context.Context, request operations.Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1603,9 +1603,9 @@ func (s *tasks) RemoveFollowerForTask(ctx context.Context, request operations.Re
 // Returns an empty data block.
 func (s *tasks) RemoveProjectForTask(ctx context.Context, request operations.RemoveProjectForTaskRequest) (*operations.RemoveProjectForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeProject", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeProject", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1620,7 +1620,7 @@ func (s *tasks) RemoveProjectForTask(ctx context.Context, request operations.Rem
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1680,9 +1680,9 @@ func (s *tasks) RemoveProjectForTask(ctx context.Context, request operations.Rem
 // Removes a tag from a task. Returns an empty data block.
 func (s *tasks) RemoveTagForTask(ctx context.Context, request operations.RemoveTagForTaskRequest) (*operations.RemoveTagForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeTag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/removeTag", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1697,7 +1697,7 @@ func (s *tasks) RemoveTagForTask(ctx context.Context, request operations.RemoveT
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1787,14 +1787,14 @@ func (s *tasks) RemoveTagForTask(ctx context.Context, request operations.RemoveT
 // *Note: If you specify `projects.any` and `sections.any`, you will receive tasks for the project **and** tasks for the section. If you're looking for only tasks in a section, omit the `projects.any` from the request.*
 func (s *tasks) SearchTasksForWorkspace(ctx context.Context, request operations.SearchTasksForWorkspaceRequest) (*operations.SearchTasksForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/tasks/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/tasks/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1854,9 +1854,9 @@ func (s *tasks) SearchTasksForWorkspace(ctx context.Context, request operations.
 // parent, or no parent task at all. Returns an empty data block. When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.
 func (s *tasks) SetParentForTask(ctx context.Context, request operations.SetParentForTaskRequest) (*operations.SetParentForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/setParent", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/setParent", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1871,7 +1871,7 @@ func (s *tasks) SetParentForTask(ctx context.Context, request operations.SetPare
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1939,9 +1939,9 @@ func (s *tasks) SetParentForTask(ctx context.Context, request operations.SetPare
 // Returns the complete updated task record.
 func (s *tasks) UpdateTask(ctx context.Context, request operations.UpdateTaskRequest) (*operations.UpdateTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1956,7 +1956,7 @@ func (s *tasks) UpdateTask(ctx context.Context, request operations.UpdateTaskReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

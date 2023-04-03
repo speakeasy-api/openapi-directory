@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteStudioMemberPathParams struct {
-	// The principal ID. This currently supports a IAM Identity Center UserId.
-	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type DeleteStudioMemberHeaders struct {
+type DeleteStudioMemberRequest struct {
 	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
 	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
@@ -23,11 +16,10 @@ type DeleteStudioMemberHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteStudioMemberRequest struct {
-	PathParams DeleteStudioMemberPathParams
-	Headers    DeleteStudioMemberHeaders
+	// The principal ID. This currently supports a IAM Identity Center UserId.
+	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type DeleteStudioMemberResponse struct {

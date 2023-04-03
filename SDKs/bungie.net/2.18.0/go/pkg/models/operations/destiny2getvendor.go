@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetVendorPathParams struct {
+type Destiny2GetVendorRequest struct {
 	// The Destiny Character ID of the character for whom we're getting vendor info.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
+	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+	Components []int `queryParam:"style=form,explode=false,name=components"`
 	// Destiny membership ID of another user. You may be denied.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
 	// The Hash identifier of the Vendor to be returned.
 	VendorHash int64 `pathParam:"style=simple,explode=false,name=vendorHash"`
-}
-
-type Destiny2GetVendorQueryParams struct {
-	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
-	Components []int `queryParam:"style=form,explode=false,name=components"`
-}
-
-type Destiny2GetVendorRequest struct {
-	PathParams  Destiny2GetVendorPathParams
-	QueryParams Destiny2GetVendorQueryParams
 }
 
 // Destiny2GetVendor200Wildcard - A response containing all of the components for a vendor.

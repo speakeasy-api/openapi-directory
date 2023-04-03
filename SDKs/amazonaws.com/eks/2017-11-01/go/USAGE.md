@@ -13,56 +13,56 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateEncryptionConfigRequest{
-        PathParams: operations.AssociateEncryptionConfigPathParams{
-            Name: "corrupti",
-        },
-        Headers: operations.AssociateEncryptionConfigHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.AssociateEncryptionConfigRequestBody{
-            ClientRequestToken: "vel",
+        RequestBody: operations.AssociateEncryptionConfigRequestBody{
+            ClientRequestToken: "corrupti",
             EncryptionConfig: []shared.EncryptionConfig{
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "deserunt",
+                        KeyArn: "distinctio",
                     },
                     Resources: []string{
+                        "unde",
+                        "nulla",
+                        "corrupti",
+                        "illum",
+                    },
+                },
+                shared.EncryptionConfig{
+                    Provider: &shared.Provider{
+                        KeyArn: "vel",
+                    },
+                    Resources: []string{
+                        "deserunt",
+                        "suscipit",
                         "iure",
-                        "magnam",
                     },
                 },
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "debitis",
+                        KeyArn: "magnam",
                     },
                     Resources: []string{
+                        "ipsa",
                         "delectus",
-                    },
-                },
-                shared.EncryptionConfig{
-                    Provider: &shared.Provider{
-                        KeyArn: "tempora",
-                    },
-                    Resources: []string{
-                        "molestiae",
-                        "minus",
+                        "tempora",
+                        "suscipit",
                     },
                 },
             },
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "minus",
+        XAmzCredential: "placeat",
+        XAmzDate: "voluptatum",
+        XAmzSecurityToken: "iusto",
+        XAmzSignature: "excepturi",
+        XAmzSignedHeaders: "nisi",
+        Name: "recusandae",
     }
 
     ctx := context.Background()

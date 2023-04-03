@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCatalogItemPathParams struct {
+type GetCatalogItemRequest struct {
 	// The ID of the catalog item.
-	CatalogItemID string `pathParam:"style=simple,explode=false,name=CatalogItemId"`
-}
-
-type GetCatalogItemHeaders struct {
+	CatalogItemID     string  `pathParam:"style=simple,explode=false,name=CatalogItemId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetCatalogItemHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCatalogItemRequest struct {
-	PathParams GetCatalogItemPathParams
-	Headers    GetCatalogItemHeaders
 }
 
 type GetCatalogItemResponse struct {

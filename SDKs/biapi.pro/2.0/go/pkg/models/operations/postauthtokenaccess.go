@@ -19,10 +19,6 @@ type PostAuthTokenAccessRequestBody struct {
 	RedirectURI *string `multipartForm:"name=redirect_uri"`
 }
 
-type PostAuthTokenAccessRequest struct {
-	Request *PostAuthTokenAccessRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAuthTokenAccess200ApplicationJSON struct {
 	// the access token transformed from the temporary one
 	AccessToken string `json:"access_token"`

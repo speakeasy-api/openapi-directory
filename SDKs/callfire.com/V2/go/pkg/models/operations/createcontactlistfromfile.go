@@ -8,7 +8,8 @@ import (
 )
 
 type CreateContactListFromFileSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type CreateContactListFromFileRequestBodyFile struct {
@@ -23,11 +24,6 @@ type CreateContactListFromFileRequestBody struct {
 	Name *string `multipartForm:"name=name"`
 	// A flag to indicate how to define property names for contacts. If true, uses the field and property names exactly as defined. If false will assign custom properties and fields to A, B, C, etc
 	UseCustomFields *bool `multipartForm:"name=useCustomFields"`
-}
-
-type CreateContactListFromFileRequest struct {
-	Request  CreateContactListFromFileRequestBody `request:"mediaType=multipart/form-data"`
-	Security CreateContactListFromFileSecurity
 }
 
 type CreateContactListFromFileResponse struct {

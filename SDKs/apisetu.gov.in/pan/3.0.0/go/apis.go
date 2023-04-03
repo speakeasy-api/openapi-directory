@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Pancr - PAN Verification Record
 // API to verify PAN Verification Record.
-func (s *apIs) Pancr(ctx context.Context, request operations.PancrRequest) (*operations.PancrResponse, error) {
+func (s *apIs) Pancr(ctx context.Context, request operations.PancrRequestBody, security operations.PancrSecurity) (*operations.PancrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pancr/certificate"
 
@@ -50,7 +50,7 @@ func (s *apIs) Pancr(ctx context.Context, request operations.PancrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

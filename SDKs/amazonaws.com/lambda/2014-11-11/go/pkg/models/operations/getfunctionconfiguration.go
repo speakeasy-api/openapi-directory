@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFunctionConfigurationPathParams struct {
+type GetFunctionConfigurationRequest struct {
 	// The name of the Lambda function for which you want to retrieve the configuration information.
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type GetFunctionConfigurationHeaders struct {
+	FunctionName      string  `pathParam:"style=simple,explode=false,name=FunctionName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetFunctionConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetFunctionConfigurationRequest struct {
-	PathParams GetFunctionConfigurationPathParams
-	Headers    GetFunctionConfigurationHeaders
 }
 
 type GetFunctionConfigurationResponse struct {

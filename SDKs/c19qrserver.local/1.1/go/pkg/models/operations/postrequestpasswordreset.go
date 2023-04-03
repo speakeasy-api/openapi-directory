@@ -13,11 +13,6 @@ type PostRequestPasswordResetSample struct {
 	Email *string `json:"email,omitempty"`
 }
 
-type PostRequestPasswordResetRequest struct {
-	// Request Password Reset Payload
-	Request PostRequestPasswordResetSample `request:"mediaType=application/json"`
-}
-
 type PostRequestPasswordResetResponse struct {
 	ContentType string
 	StatusCode  int

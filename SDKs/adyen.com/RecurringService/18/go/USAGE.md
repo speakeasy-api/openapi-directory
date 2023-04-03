@@ -13,13 +13,11 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostDisableRequest{
-        Request: &shared.DisableRequest{
-            Contract: "corrupti",
-            MerchantAccount: "provident",
-            RecurringDetailReference: "distinctio",
-            ShopperReference: "quibusdam",
-        },
+    req := shared.DisableRequest{
+        Contract: "corrupti",
+        MerchantAccount: "provident",
+        RecurringDetailReference: "distinctio",
+        ShopperReference: "quibusdam",
     }
 
     ctx := context.Background()

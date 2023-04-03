@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateCodeSigningConfigPathParams struct {
-	// The The Amazon Resource Name (ARN) of the code signing configuration.
-	CodeSigningConfigArn string `pathParam:"style=simple,explode=false,name=CodeSigningConfigArn"`
-}
-
-type UpdateCodeSigningConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateCodeSigningConfigRequestBodyAllowedPublishers - List of signing profiles that can sign a code package.
 type UpdateCodeSigningConfigRequestBodyAllowedPublishers struct {
 	SigningProfileVersionArns []string `json:"SigningProfileVersionArns,omitempty"`
@@ -42,9 +27,16 @@ type UpdateCodeSigningConfigRequestBody struct {
 }
 
 type UpdateCodeSigningConfigRequest struct {
-	PathParams UpdateCodeSigningConfigPathParams
-	Headers    UpdateCodeSigningConfigHeaders
-	Request    UpdateCodeSigningConfigRequestBody `request:"mediaType=application/json"`
+	// The The Amazon Resource Name (ARN) of the code signing configuration.
+	CodeSigningConfigArn string                             `pathParam:"style=simple,explode=false,name=CodeSigningConfigArn"`
+	RequestBody          UpdateCodeSigningConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateCodeSigningConfigResponse struct {

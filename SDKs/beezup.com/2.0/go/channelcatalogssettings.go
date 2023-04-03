@@ -34,9 +34,9 @@ func newChannelCatalogsSettings(defaultClient, securityClient HTTPClient, server
 // ConfigureChannelCatalogCostSettings - Configure channel catalog cost settings
 func (s *channelCatalogsSettings) ConfigureChannelCatalogCostSettings(ctx context.Context, request operations.ConfigureChannelCatalogCostSettingsRequest) (*operations.ConfigureChannelCatalogCostSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/settings/cost", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/settings/cost", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CostSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -91,9 +91,9 @@ func (s *channelCatalogsSettings) ConfigureChannelCatalogCostSettings(ctx contex
 // ConfigureChannelCatalogGeneralSettings - Configure channel catalog general settings
 func (s *channelCatalogsSettings) ConfigureChannelCatalogGeneralSettings(ctx context.Context, request operations.ConfigureChannelCatalogGeneralSettingsRequest) (*operations.ConfigureChannelCatalogGeneralSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/settings/general", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/settings/general", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GeneralSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -148,7 +148,7 @@ func (s *channelCatalogsSettings) ConfigureChannelCatalogGeneralSettings(ctx con
 // DisableChannelCatalog - Disable a channel catalog
 func (s *channelCatalogsSettings) DisableChannelCatalog(ctx context.Context, request operations.DisableChannelCatalogRequest) (*operations.DisableChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -195,7 +195,7 @@ func (s *channelCatalogsSettings) DisableChannelCatalog(ctx context.Context, req
 // EnableChannelCatalog - Enable a channel catalog
 func (s *channelCatalogsSettings) EnableChannelCatalog(ctx context.Context, request operations.EnableChannelCatalogRequest) (*operations.EnableChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/enable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

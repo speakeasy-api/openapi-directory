@@ -9,32 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestCustomerUsersPathParams struct {
-	// Customer ID
-	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
-}
-
-type RequestCustomerUsersQueryParams struct {
-	// Filter string
-	Filter *string `queryParam:"style=form,explode=true,name=filter"`
-	// Include custom user attributes.
-	IncludeAttributes *bool `queryParam:"style=form,explode=true,name=include_attributes"`
-	// Include hasManageableRooms (deprecated)
-	IncludeManageableRooms *bool `queryParam:"style=form,explode=true,name=include_manageable_rooms"`
-	// Include roles
-	IncludeRoles *bool `queryParam:"style=form,explode=true,name=include_roles"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
 // RequestCustomerUsersXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestCustomerUsersXSdsDateFormatEnum string
 
@@ -68,17 +42,31 @@ func (e *RequestCustomerUsersXSdsDateFormatEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type RequestCustomerUsersHeaders struct {
+type RequestCustomerUsersRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestCustomerUsersXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type RequestCustomerUsersRequest struct {
-	PathParams  RequestCustomerUsersPathParams
-	QueryParams RequestCustomerUsersQueryParams
-	Headers     RequestCustomerUsersHeaders
+	// Customer ID
+	CustomerID int64 `pathParam:"style=simple,explode=false,name=customer_id"`
+	// Filter string
+	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Include custom user attributes.
+	IncludeAttributes *bool `queryParam:"style=form,explode=true,name=include_attributes"`
+	// Include hasManageableRooms (deprecated)
+	IncludeManageableRooms *bool `queryParam:"style=form,explode=true,name=include_manageable_rooms"`
+	// Include roles
+	IncludeRoles *bool `queryParam:"style=form,explode=true,name=include_roles"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type RequestCustomerUsersResponse struct {

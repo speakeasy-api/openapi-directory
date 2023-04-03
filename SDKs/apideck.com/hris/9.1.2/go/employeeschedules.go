@@ -33,22 +33,22 @@ func newEmployeeSchedules(defaultClient, securityClient HTTPClient, serverURL, l
 
 // EmployeeSchedulesAll - List Employee Schedules
 // List schedules for employee, a schedule is a work pattern, not the actual worked hours, for an employee.
-func (s *employeeSchedules) EmployeeSchedulesAll(ctx context.Context, request operations.EmployeeSchedulesAllRequest) (*operations.EmployeeSchedulesAllResponse, error) {
+func (s *employeeSchedules) EmployeeSchedulesAll(ctx context.Context, request operations.EmployeeSchedulesAllRequest, security operations.EmployeeSchedulesAllSecurity) (*operations.EmployeeSchedulesAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/schedules/employees/{employee_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/schedules/employees/{employee_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

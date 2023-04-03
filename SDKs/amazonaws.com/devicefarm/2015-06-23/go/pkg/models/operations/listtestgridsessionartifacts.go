@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTestGridSessionArtifactsQueryParams struct {
-	// Pagination limit
-	MaxResult *string `queryParam:"style=form,explode=true,name=maxResult"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListTestGridSessionArtifactsXAmzTargetEnum
 type ListTestGridSessionArtifactsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListTestGridSessionArtifactsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListTestGridSessionArtifactsHeaders struct {
-	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListTestGridSessionArtifactsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListTestGridSessionArtifactsRequest struct {
-	QueryParams ListTestGridSessionArtifactsQueryParams
-	Headers     ListTestGridSessionArtifactsHeaders
-	Request     shared.ListTestGridSessionArtifactsRequest `request:"mediaType=application/json"`
+	ListTestGridSessionArtifactsRequest shared.ListTestGridSessionArtifactsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                      *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                            *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                   *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                          ListTestGridSessionArtifactsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaxResult *string `queryParam:"style=form,explode=true,name=maxResult"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListTestGridSessionArtifactsResponse struct {

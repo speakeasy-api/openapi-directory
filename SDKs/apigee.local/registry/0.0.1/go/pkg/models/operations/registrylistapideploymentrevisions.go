@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryListAPIDeploymentRevisionsPathParams struct {
+type RegistryListAPIDeploymentRevisionsRequest struct {
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The deployment id.
 	Deployment string `pathParam:"style=simple,explode=false,name=deployment"`
 	// The location id.
 	Location string `pathParam:"style=simple,explode=false,name=location"`
-	// The project id.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryListAPIDeploymentRevisionsQueryParams struct {
 	// The maximum number of revisions to return per page.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// The page token, received from a previous ListApiDeploymentRevisions call. Provide this to retrieve the subsequent page.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
-}
-
-type RegistryListAPIDeploymentRevisionsRequest struct {
-	PathParams  RegistryListAPIDeploymentRevisionsPathParams
-	QueryParams RegistryListAPIDeploymentRevisionsQueryParams
+	// The project id.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type RegistryListAPIDeploymentRevisionsResponse struct {

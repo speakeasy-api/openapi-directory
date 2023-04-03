@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreatePipePathParams struct {
-	// The name of the pipe.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type CreatePipeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreatePipeRequestBodyDesiredStateEnum - The state the pipe should be in.
 type CreatePipeRequestBodyDesiredStateEnum string
 
@@ -106,9 +91,16 @@ type CreatePipeRequestBody struct {
 }
 
 type CreatePipeRequest struct {
-	PathParams CreatePipePathParams
-	Headers    CreatePipeHeaders
-	Request    CreatePipeRequestBody `request:"mediaType=application/json"`
+	// The name of the pipe.
+	Name              string                `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       CreatePipeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreatePipeResponse struct {

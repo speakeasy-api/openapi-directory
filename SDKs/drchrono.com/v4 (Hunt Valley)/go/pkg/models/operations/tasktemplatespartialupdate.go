@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TaskTemplatesPartialUpdateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TaskTemplatesPartialUpdatePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type TaskTemplatesPartialUpdateQueryParams struct {
-	AssigneeGroup *int64  `queryParam:"style=form,explode=true,name=assignee_group"`
-	AssigneeUser  *int64  `queryParam:"style=form,explode=true,name=assignee_user"`
-	Category      *int64  `queryParam:"style=form,explode=true,name=category"`
-	Since         *string `queryParam:"style=form,explode=true,name=since"`
-	Status        *int64  `queryParam:"style=form,explode=true,name=status"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TaskTemplatesPartialUpdateRequest struct {
-	PathParams  TaskTemplatesPartialUpdatePathParams
-	QueryParams TaskTemplatesPartialUpdateQueryParams
-	Security    TaskTemplatesPartialUpdateSecurity
+	AssigneeGroup *int64  `queryParam:"style=form,explode=true,name=assignee_group"`
+	AssigneeUser  *int64  `queryParam:"style=form,explode=true,name=assignee_user"`
+	Category      *int64  `queryParam:"style=form,explode=true,name=category"`
+	ID            string  `pathParam:"style=simple,explode=false,name=id"`
+	Since         *string `queryParam:"style=form,explode=true,name=since"`
+	Status        *int64  `queryParam:"style=form,explode=true,name=status"`
 }
 
 type TaskTemplatesPartialUpdateResponse struct {

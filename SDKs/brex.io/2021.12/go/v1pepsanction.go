@@ -34,7 +34,7 @@ func newV1Pepsanction(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // PepMonitorList - Retrieves a list of monitor entries
 // Retrieve a list of all active Pep Sanction Report monitors for this account
-func (s *v1Pepsanction) PepMonitorList(ctx context.Context, request operations.PepMonitorListRequest) (*operations.PepMonitorListResponse, error) {
+func (s *v1Pepsanction) PepMonitorList(ctx context.Context) (*operations.PepMonitorListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/pepsanction/monitor/list"
 
@@ -43,7 +43,7 @@ func (s *v1Pepsanction) PepMonitorList(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -89,16 +89,16 @@ func (s *v1Pepsanction) PepMonitorList(ctx context.Context, request operations.P
 
 // PepMonitorUnregister - Deactive a pep sanction monitor
 // Unregister a previously created Pep Sanction Report Monitor
-func (s *v1Pepsanction) PepMonitorUnregister(ctx context.Context, request operations.PepMonitorUnregisterRequest) (*operations.PepMonitorUnregisterResponse, error) {
+func (s *v1Pepsanction) PepMonitorUnregister(ctx context.Context, request operations.PepMonitorUnregisterRequest, security operations.PepMonitorUnregisterSecurity) (*operations.PepMonitorUnregisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/unregister/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/unregister/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,11 +144,11 @@ func (s *v1Pepsanction) PepMonitorUnregister(ctx context.Context, request operat
 
 // PepMonitorUpdate - Update details of active Pep Sanction monitor
 // Update the webhook URL of an active Pep Sanction Report Monitor
-func (s *v1Pepsanction) PepMonitorUpdate(ctx context.Context, request operations.PepMonitorUpdateRequest) (*operations.PepMonitorUpdateResponse, error) {
+func (s *v1Pepsanction) PepMonitorUpdate(ctx context.Context, request operations.PepMonitorUpdateRequest, security operations.PepMonitorUpdateSecurity) (*operations.PepMonitorUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/update/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/update/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -160,7 +160,7 @@ func (s *v1Pepsanction) PepMonitorUpdate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -206,11 +206,11 @@ func (s *v1Pepsanction) PepMonitorUpdate(ctx context.Context, request operations
 
 // PepOrder - Orders a new Pep Sanction Check Report
 // Order a new Pep Sanction Check by providing either a business or person name with some additional optional parameters.
-func (s *v1Pepsanction) PepOrder(ctx context.Context, request operations.PepOrderRequest) (*operations.PepOrderResponse, error) {
+func (s *v1Pepsanction) PepOrder(ctx context.Context, request operations.PepOrderRequest, security operations.PepOrderSecurity) (*operations.PepOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/order/{type}/{search}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/order/{type}/{search}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -222,7 +222,7 @@ func (s *v1Pepsanction) PepOrder(ctx context.Context, request operations.PepOrde
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -268,18 +268,18 @@ func (s *v1Pepsanction) PepOrder(ctx context.Context, request operations.PepOrde
 
 // PepRetrieve - Returns a json or pdf report
 // Retrieve a completed Pep Sanction check structured or in pdf depending on given accept header
-func (s *v1Pepsanction) PepRetrieve(ctx context.Context, request operations.PepRetrieveRequest) (*operations.PepRetrieveResponse, error) {
+func (s *v1Pepsanction) PepRetrieve(ctx context.Context, request operations.PepRetrieveRequest, security operations.PepRetrieveSecurity) (*operations.PepRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/retrieve/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/retrieve/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

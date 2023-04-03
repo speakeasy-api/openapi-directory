@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelPolicyGenerationPathParams struct {
-	// The <code>JobId</code> that is returned by the <code>StartPolicyGeneration</code> operation. The <code>JobId</code> can be used with <code>GetGeneratedPolicy</code> to retrieve the generated policies or used with <code>CancelPolicyGeneration</code> to cancel the policy generation request.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type CancelPolicyGenerationHeaders struct {
+type CancelPolicyGenerationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type CancelPolicyGenerationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelPolicyGenerationRequest struct {
-	PathParams CancelPolicyGenerationPathParams
-	Headers    CancelPolicyGenerationHeaders
+	// The <code>JobId</code> that is returned by the <code>StartPolicyGeneration</code> operation. The <code>JobId</code> can be used with <code>GetGeneratedPolicy</code> to retrieve the generated policies or used with <code>CancelPolicyGeneration</code> to cancel the policy generation request.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type CancelPolicyGenerationResponse struct {

@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EcosystemsOnePathParams struct {
-	EcosystemID string `pathParam:"style=simple,explode=false,name=ecosystem_id"`
-}
-
 type EcosystemsOneRequest struct {
-	PathParams EcosystemsOnePathParams
+	EcosystemID string `pathParam:"style=simple,explode=false,name=ecosystem_id"`
 }
 
 type EcosystemsOneResponse struct {

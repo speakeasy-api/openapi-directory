@@ -160,7 +160,7 @@ func (e *GETListTypesVisibilityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListTypesQueryParams struct {
+type GETListTypesRequest struct {
 	Action GETListTypesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The deprecation status of the extension that you want to get summary information about.</p> <p>Valid values include:</p> <ul> <li> <p> <code>LIVE</code>: The extension is registered for use in CloudFormation operations.</p> </li> <li> <p> <code>DEPRECATED</code>: The extension has been deregistered and can no longer be used in CloudFormation operations.</p> </li> </ul>
 	DeprecatedStatus *GETListTypesDeprecatedStatusEnum `queryParam:"style=form,explode=true,name=DeprecatedStatus"`
@@ -176,22 +176,14 @@ type GETListTypesQueryParams struct {
 	Type    *GETListTypesTypeEnum   `queryParam:"style=form,explode=true,name=Type"`
 	Version GETListTypesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>The scope at which the extensions are visible and usable in CloudFormation operations.</p> <p>Valid values include:</p> <ul> <li> <p> <code>PRIVATE</code>: Extensions that are visible and usable within this account and region. This includes:</p> <ul> <li> <p>Private extensions you have registered in this account and region.</p> </li> <li> <p>Public extensions that you have activated in this account and region.</p> </li> </ul> </li> <li> <p> <code>PUBLIC</code>: Extensions that are publicly visible and available to be activated within any Amazon Web Services account. This includes extensions from Amazon Web Services, in addition to third-party publishers.</p> </li> </ul> <p>The default is <code>PRIVATE</code>.</p>
-	Visibility *GETListTypesVisibilityEnum `queryParam:"style=form,explode=true,name=Visibility"`
-}
-
-type GETListTypesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListTypesRequest struct {
-	QueryParams GETListTypesQueryParams
-	Headers     GETListTypesHeaders
+	Visibility        *GETListTypesVisibilityEnum `queryParam:"style=form,explode=true,name=Visibility"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListTypesResponse struct {

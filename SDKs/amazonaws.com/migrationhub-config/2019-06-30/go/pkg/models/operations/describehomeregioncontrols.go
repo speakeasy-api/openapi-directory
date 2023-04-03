@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeHomeRegionControlsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeHomeRegionControlsXAmzTargetEnum
 type DescribeHomeRegionControlsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeHomeRegionControlsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DescribeHomeRegionControlsHeaders struct {
+type DescribeHomeRegionControlsRequest struct {
+	DescribeHomeRegionControlsRequest shared.DescribeHomeRegionControlsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeHomeRegionControlsHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeHomeRegionControlsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeHomeRegionControlsRequest struct {
-	QueryParams DescribeHomeRegionControlsQueryParams
-	Headers     DescribeHomeRegionControlsHeaders
-	Request     shared.DescribeHomeRegionControlsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeHomeRegionControlsResponse struct {

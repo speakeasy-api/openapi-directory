@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SocialDeclineFriendRequestSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SocialDeclineFriendRequestPathParams struct {
-	// The membership id of the user you wish to decline.
-	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SocialDeclineFriendRequestRequest struct {
-	PathParams SocialDeclineFriendRequestPathParams
-	Security   SocialDeclineFriendRequestSecurity
+	// The membership id of the user you wish to decline.
+	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
 }
 
 // SocialDeclineFriendRequest200Wildcard - Look at the Response property for more information about the nature of this response

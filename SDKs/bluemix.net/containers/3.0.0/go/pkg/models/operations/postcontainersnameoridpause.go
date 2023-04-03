@@ -6,21 +6,13 @@ import (
 	"net/http"
 )
 
-type PostContainersNameOrIDPausePathParams struct {
-	// The unique identifier or name of the container that you want to pause. Run `cf ic ps` or call the `GET /containers/json` endpoint to review all containers in your space that are currently in a running state.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PostContainersNameOrIDPauseHeaders struct {
+type PostContainersNameOrIDPauseRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersNameOrIDPauseRequest struct {
-	PathParams PostContainersNameOrIDPausePathParams
-	Headers    PostContainersNameOrIDPauseHeaders
+	// The unique identifier or name of the container that you want to pause. Run `cf ic ps` or call the `GET /containers/json` endpoint to review all containers in your space that are currently in a running state.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type PostContainersNameOrIDPauseResponse struct {

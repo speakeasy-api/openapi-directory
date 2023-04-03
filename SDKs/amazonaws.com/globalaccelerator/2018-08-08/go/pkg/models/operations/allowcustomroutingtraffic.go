@@ -30,20 +30,16 @@ func (e *AllowCustomRoutingTrafficXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type AllowCustomRoutingTrafficHeaders struct {
-	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        AllowCustomRoutingTrafficXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type AllowCustomRoutingTrafficRequest struct {
-	Headers AllowCustomRoutingTrafficHeaders
-	Request shared.AllowCustomRoutingTrafficRequest `request:"mediaType=application/json"`
+	AllowCustomRoutingTrafficRequest shared.AllowCustomRoutingTrafficRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                   *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                         *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                    *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                       AllowCustomRoutingTrafficXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type AllowCustomRoutingTrafficResponse struct {

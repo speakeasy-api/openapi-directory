@@ -34,7 +34,7 @@ func newState(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CreateOrUpdateState - Create or update the state for a connection.
-func (s *state) CreateOrUpdateState(ctx context.Context, request operations.CreateOrUpdateStateRequest) (*operations.CreateOrUpdateStateResponse, error) {
+func (s *state) CreateOrUpdateState(ctx context.Context, request shared.ConnectionStateCreateOrUpdate) (*operations.CreateOrUpdateStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/state/create_or_update"
 
@@ -108,7 +108,7 @@ func (s *state) CreateOrUpdateState(ctx context.Context, request operations.Crea
 }
 
 // GetState - Fetch the current state for a connection.
-func (s *state) GetState(ctx context.Context, request operations.GetStateRequest) (*operations.GetStateResponse, error) {
+func (s *state) GetState(ctx context.Context, request shared.ConnectionIDRequestBody) (*operations.GetStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/state/get"
 

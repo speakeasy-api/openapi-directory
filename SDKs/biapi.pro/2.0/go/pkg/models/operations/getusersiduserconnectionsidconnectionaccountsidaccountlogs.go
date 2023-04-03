@@ -8,15 +8,12 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsPathParams struct {
-	IDAccount    int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
+type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsRequest struct {
+	Expand       *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount    int64   `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection int64   `pathParam:"style=simple,explode=false,name=id_connection"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// limit number of results
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// maximum (inclusive) date
@@ -25,11 +22,6 @@ type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsQueryParams struc
 	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
 	// offset of first result
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsRequest struct {
-	PathParams  GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsPathParams
-	QueryParams GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogsQueryParams
 }
 
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountLogs200ApplicationJSON - accountlogs

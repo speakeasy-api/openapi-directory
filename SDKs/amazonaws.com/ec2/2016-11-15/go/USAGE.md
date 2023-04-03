@@ -13,34 +13,28 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETAcceptTransitGatewayMulticastDomainAssociationsRequest{
-        QueryParams: operations.GETAcceptTransitGatewayMulticastDomainAssociationsQueryParams{
-            Action: "AcceptTransitGatewayMulticastDomainAssociations",
-            DryRun: false,
-            SubnetIds: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-            TransitGatewayAttachmentID: "unde",
-            TransitGatewayMulticastDomainID: "nulla",
-            Version: "2016-11-15",
+        Action: "AcceptTransitGatewayMulticastDomainAssociations",
+        DryRun: false,
+        SubnetIds: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
-        Headers: operations.GETAcceptTransitGatewayMulticastDomainAssociationsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "illum",
-            XAmzCredential: "vel",
-            XAmzDate: "error",
-            XAmzSecurityToken: "deserunt",
-            XAmzSignature: "suscipit",
-            XAmzSignedHeaders: "iure",
-        },
+        TransitGatewayAttachmentID: "unde",
+        TransitGatewayMulticastDomainID: "nulla",
+        Version: "2016-11-15",
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
     }
 
     ctx := context.Background()

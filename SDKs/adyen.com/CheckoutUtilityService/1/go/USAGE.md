@@ -13,13 +13,11 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostOriginKeysRequest{
-        Request: &shared.CheckoutUtilityRequest{
-            OriginDomains: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
+    req := shared.CheckoutUtilityRequest{
+        OriginDomains: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
     }
 

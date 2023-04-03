@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBanksIDConnectorSourcesIDSourcePathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-	IDSource    int64 `pathParam:"style=simple,explode=false,name=id_source"`
-}
-
-type GetBanksIDConnectorSourcesIDSourceQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetBanksIDConnectorSourcesIDSourceRequest struct {
-	PathParams  GetBanksIDConnectorSourcesIDSourcePathParams
-	QueryParams GetBanksIDConnectorSourcesIDSourceQueryParams
+	Expand      *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64   `pathParam:"style=simple,explode=false,name=id_connector"`
+	IDSource    int64   `pathParam:"style=simple,explode=false,name=id_source"`
 }
 
 type GetBanksIDConnectorSourcesIDSourceResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDisassociateDataShareConsumerVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDisassociateDataShareConsumerQueryParams struct {
+type GETDisassociateDataShareConsumerRequest struct {
 	Action GETDisassociateDataShareConsumerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the consumer that association for the datashare is removed from.
 	ConsumerArn *string `queryParam:"style=form,explode=true,name=ConsumerArn"`
@@ -61,21 +61,13 @@ type GETDisassociateDataShareConsumerQueryParams struct {
 	// A value that specifies whether association for the datashare is removed from the entire account.
 	DisassociateEntireAccount *bool                                       `queryParam:"style=form,explode=true,name=DisassociateEntireAccount"`
 	Version                   GETDisassociateDataShareConsumerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisassociateDataShareConsumerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisassociateDataShareConsumerRequest struct {
-	QueryParams GETDisassociateDataShareConsumerQueryParams
-	Headers     GETDisassociateDataShareConsumerHeaders
+	XAmzAlgorithm             *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisassociateDataShareConsumerResponse struct {

@@ -8,18 +8,13 @@ import (
 )
 
 type GetCompaniesCompanyIDTerminalSettingsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetCompaniesCompanyIDTerminalSettingsPathParams struct {
-	// The unique identifier of the company account.
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetCompaniesCompanyIDTerminalSettingsRequest struct {
-	PathParams GetCompaniesCompanyIDTerminalSettingsPathParams
-	Security   GetCompaniesCompanyIDTerminalSettingsSecurity
+	// The unique identifier of the company account.
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 }
 
 type GetCompaniesCompanyIDTerminalSettingsResponse struct {

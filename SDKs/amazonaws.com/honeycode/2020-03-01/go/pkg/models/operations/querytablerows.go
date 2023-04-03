@@ -7,30 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type QueryTableRowsPathParams struct {
-	// <p>The ID of the table whose rows are being queried.</p> <p> If a table with the specified id could not be found, this API throws ResourceNotFoundException. </p>
-	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
-	// <p>The ID of the workbook whose table rows are being queried.</p> <p> If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. </p>
-	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
-}
-
-type QueryTableRowsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type QueryTableRowsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // QueryTableRowsRequestBodyFilterFormula -  An object that represents a filter formula along with the id of the context row under which the filter function needs to evaluate.
 type QueryTableRowsRequestBodyFilterFormula struct {
 	ContextRowID *string `json:"contextRowId,omitempty"`
@@ -47,10 +23,22 @@ type QueryTableRowsRequestBody struct {
 }
 
 type QueryTableRowsRequest struct {
-	PathParams  QueryTableRowsPathParams
-	QueryParams QueryTableRowsQueryParams
-	Headers     QueryTableRowsHeaders
-	Request     QueryTableRowsRequestBody `request:"mediaType=application/json"`
+	RequestBody       QueryTableRowsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// <p>The ID of the table whose rows are being queried.</p> <p> If a table with the specified id could not be found, this API throws ResourceNotFoundException. </p>
+	TableID string `pathParam:"style=simple,explode=false,name=tableId"`
+	// <p>The ID of the workbook whose table rows are being queried.</p> <p> If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. </p>
+	WorkbookID string `pathParam:"style=simple,explode=false,name=workbookId"`
 }
 
 type QueryTableRowsResponse struct {

@@ -2,10 +2,6 @@
 
 package shared
 
-type SchemeHubAuth struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	HubAuth SchemeHubAuth `security:"scheme,type=http,subtype=bearer"`
+	HubAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }

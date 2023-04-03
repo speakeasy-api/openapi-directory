@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchV1OrganicQueryParams struct {
+type GetSearchV1OrganicRequest struct {
 	// Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Metadata field
@@ -18,10 +18,6 @@ type GetSearchV1OrganicQueryParams struct {
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
 	// Request total only; do not return hits
 	TotalOnly *bool `queryParam:"style=form,explode=true,name=total_only"`
-}
-
-type GetSearchV1OrganicRequest struct {
-	QueryParams GetSearchV1OrganicQueryParams
 }
 
 type GetSearchV1OrganicResponse struct {

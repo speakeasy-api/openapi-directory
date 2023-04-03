@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCoreDefinitionPathParams struct {
+type GetCoreDefinitionRequest struct {
 	// The ID of the core definition.
-	CoreDefinitionID string `pathParam:"style=simple,explode=false,name=CoreDefinitionId"`
-}
-
-type GetCoreDefinitionHeaders struct {
+	CoreDefinitionID  string  `pathParam:"style=simple,explode=false,name=CoreDefinitionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetCoreDefinitionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCoreDefinitionRequest struct {
-	PathParams GetCoreDefinitionPathParams
-	Headers    GetCoreDefinitionHeaders
 }
 
 type GetCoreDefinitionResponse struct {

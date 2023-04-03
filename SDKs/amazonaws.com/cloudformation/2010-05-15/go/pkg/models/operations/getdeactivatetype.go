@@ -77,30 +77,22 @@ func (e *GETDeactivateTypeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeactivateTypeQueryParams struct {
+type GETDeactivateTypeRequest struct {
 	Action GETDeactivateTypeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) for the extension, in this account and region.</p> <p>Conditional: You must specify either <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
 	Arn *string `queryParam:"style=form,explode=true,name=Arn"`
 	// <p>The extension type.</p> <p>Conditional: You must specify either <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
 	Type *GETDeactivateTypeTypeEnum `queryParam:"style=form,explode=true,name=Type"`
 	// <p>The type name of the extension, in this account and region. If you specified a type name alias when enabling the extension, use the type name alias.</p> <p>Conditional: You must specify either <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.</p>
-	TypeName *string                      `queryParam:"style=form,explode=true,name=TypeName"`
-	Version  GETDeactivateTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeactivateTypeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeactivateTypeRequest struct {
-	QueryParams GETDeactivateTypeQueryParams
-	Headers     GETDeactivateTypeHeaders
+	TypeName          *string                      `queryParam:"style=form,explode=true,name=TypeName"`
+	Version           GETDeactivateTypeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeactivateTypeResponse struct {

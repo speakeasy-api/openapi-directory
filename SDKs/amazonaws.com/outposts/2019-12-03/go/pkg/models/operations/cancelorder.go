@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type CancelOrderPathParams struct {
+type CancelOrderRequest struct {
 	//  The ID of the order.
-	OrderID string `pathParam:"style=simple,explode=false,name=OrderId"`
-}
-
-type CancelOrderHeaders struct {
+	OrderID           string  `pathParam:"style=simple,explode=false,name=OrderId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type CancelOrderHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelOrderRequest struct {
-	PathParams CancelOrderPathParams
-	Headers    CancelOrderHeaders
 }
 
 type CancelOrderResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsUpdateFormPathParams struct {
+type DomainsUpdateFormRequest struct {
+	// The domain to update
+	APICoreDtoDomainsDomain shared.APICoreDtoDomainsDomain `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of domain
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DomainsUpdateFormRequest struct {
-	PathParams DomainsUpdateFormPathParams
-	// The domain to update
-	Request shared.APICoreDtoDomainsDomain `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type DomainsUpdateFormResponse struct {

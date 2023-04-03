@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSslCertificatePathParams struct {
-	// Automatically added
-	Sha1Fingerprint string `pathParam:"style=simple,explode=false,name=sha1Fingerprint"`
-}
-
-type GetSslCertificateQueryParams struct {
-	// The SHA-1 fingerprint of the certificate.
-	Sha1Fingerprint string `queryParam:"style=form,explode=true,name=sha1_fingerprint"`
-}
-
 type GetSslCertificateRequest struct {
-	PathParams  GetSslCertificatePathParams
-	QueryParams GetSslCertificateQueryParams
+	// Automatically added
+	Sha1FingerprintPathParameter string `pathParam:"style=simple,explode=false,name=sha1Fingerprint"`
+	// The SHA-1 fingerprint of the certificate.
+	Sha1FingerprintQueryParameter string `queryParam:"style=form,explode=true,name=sha1_fingerprint"`
 }
 
 type GetSslCertificateResponse struct {

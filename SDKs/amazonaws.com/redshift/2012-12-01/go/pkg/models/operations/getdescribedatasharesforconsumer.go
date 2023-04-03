@@ -74,7 +74,7 @@ func (e *GETDescribeDataSharesForConsumerVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDescribeDataSharesForConsumerQueryParams struct {
+type GETDescribeDataSharesForConsumerRequest struct {
 	Action GETDescribeDataSharesForConsumerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
 	ConsumerArn *string `queryParam:"style=form,explode=true,name=ConsumerArn"`
@@ -83,23 +83,15 @@ type GETDescribeDataSharesForConsumerQueryParams struct {
 	// The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned marker value.
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// An identifier giving the status of a datashare in the consumer cluster. If this field is specified, Amazon Redshift returns the list of datashares that have the specified status.
-	Status  *GETDescribeDataSharesForConsumerStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-	Version GETDescribeDataSharesForConsumerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeDataSharesForConsumerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeDataSharesForConsumerRequest struct {
-	QueryParams GETDescribeDataSharesForConsumerQueryParams
-	Headers     GETDescribeDataSharesForConsumerHeaders
+	Status            *GETDescribeDataSharesForConsumerStatusEnum `queryParam:"style=form,explode=true,name=Status"`
+	Version           GETDescribeDataSharesForConsumerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeDataSharesForConsumerResponse struct {

@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // AssociateAPI - Maps an endpoint to your custom domain.
 func (s *SDK) AssociateAPI(ctx context.Context, request operations.AssociateAPIRequest) (*operations.AssociateAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}/apiassociation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}/apiassociation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) AssociateAPI(ctx context.Context, request operations.AssociateAPIR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -210,9 +210,9 @@ func (s *SDK) AssociateAPI(ctx context.Context, request operations.AssociateAPIR
 // CreateAPICache - Creates a cache for the GraphQL API.
 func (s *SDK) CreateAPICache(ctx context.Context, request operations.CreateAPICacheRequest) (*operations.CreateAPICacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) CreateAPICache(ctx context.Context, request operations.CreateAPICa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -316,9 +316,9 @@ func (s *SDK) CreateAPICache(ctx context.Context, request operations.CreateAPICa
 // CreateAPIKey - Creates a unique key that you can distribute to clients who invoke your API.
 func (s *SDK) CreateAPIKey(ctx context.Context, request operations.CreateAPIKeyRequest) (*operations.CreateAPIKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +333,7 @@ func (s *SDK) CreateAPIKey(ctx context.Context, request operations.CreateAPIKeyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -444,9 +444,9 @@ func (s *SDK) CreateAPIKey(ctx context.Context, request operations.CreateAPIKeyR
 // CreateDataSource - Creates a <code>DataSource</code> object.
 func (s *SDK) CreateDataSource(ctx context.Context, request operations.CreateDataSourceRequest) (*operations.CreateDataSourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -461,7 +461,7 @@ func (s *SDK) CreateDataSource(ctx context.Context, request operations.CreateDat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -552,7 +552,7 @@ func (s *SDK) CreateDomainName(ctx context.Context, request operations.CreateDom
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/domainnames"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -567,7 +567,7 @@ func (s *SDK) CreateDomainName(ctx context.Context, request operations.CreateDom
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -636,9 +636,9 @@ func (s *SDK) CreateDomainName(ctx context.Context, request operations.CreateDom
 // CreateFunction - <p>Creates a <code>Function</code> object.</p> <p>A function is a reusable entity. You can use multiple functions to compose the resolver logic.</p>
 func (s *SDK) CreateFunction(ctx context.Context, request operations.CreateFunctionRequest) (*operations.CreateFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -653,7 +653,7 @@ func (s *SDK) CreateFunction(ctx context.Context, request operations.CreateFunct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -734,7 +734,7 @@ func (s *SDK) CreateGraphqlAPI(ctx context.Context, request operations.CreateGra
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/apis"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -749,7 +749,7 @@ func (s *SDK) CreateGraphqlAPI(ctx context.Context, request operations.CreateGra
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -848,9 +848,9 @@ func (s *SDK) CreateGraphqlAPI(ctx context.Context, request operations.CreateGra
 // CreateResolver - <p>Creates a <code>Resolver</code> object.</p> <p>A resolver converts incoming requests into a format that a data source can understand, and converts the data source's responses into GraphQL.</p>
 func (s *SDK) CreateResolver(ctx context.Context, request operations.CreateResolverRequest) (*operations.CreateResolverResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -865,7 +865,7 @@ func (s *SDK) CreateResolver(ctx context.Context, request operations.CreateResol
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -954,9 +954,9 @@ func (s *SDK) CreateResolver(ctx context.Context, request operations.CreateResol
 // CreateType - Creates a <code>Type</code> object.
 func (s *SDK) CreateType(ctx context.Context, request operations.CreateTypeRequest) (*operations.CreateTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -971,7 +971,7 @@ func (s *SDK) CreateType(ctx context.Context, request operations.CreateTypeReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1060,14 +1060,14 @@ func (s *SDK) CreateType(ctx context.Context, request operations.CreateTypeReque
 // DeleteAPICache - Deletes an <code>ApiCache</code> object.
 func (s *SDK) DeleteAPICache(ctx context.Context, request operations.DeleteAPICacheRequest) (*operations.DeleteAPICacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1156,14 +1156,14 @@ func (s *SDK) DeleteAPICache(ctx context.Context, request operations.DeleteAPICa
 // DeleteAPIKey - Deletes an API key.
 func (s *SDK) DeleteAPIKey(ctx context.Context, request operations.DeleteAPIKeyRequest) (*operations.DeleteAPIKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1242,14 +1242,14 @@ func (s *SDK) DeleteAPIKey(ctx context.Context, request operations.DeleteAPIKeyR
 // DeleteDataSource - Deletes a <code>DataSource</code> object.
 func (s *SDK) DeleteDataSource(ctx context.Context, request operations.DeleteDataSourceRequest) (*operations.DeleteDataSourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1338,14 +1338,14 @@ func (s *SDK) DeleteDataSource(ctx context.Context, request operations.DeleteDat
 // DeleteDomainName - Deletes a custom <code>DomainName</code> object.
 func (s *SDK) DeleteDomainName(ctx context.Context, request operations.DeleteDomainNameRequest) (*operations.DeleteDomainNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1434,14 +1434,14 @@ func (s *SDK) DeleteDomainName(ctx context.Context, request operations.DeleteDom
 // DeleteFunction - Deletes a <code>Function</code>.
 func (s *SDK) DeleteFunction(ctx context.Context, request operations.DeleteFunctionRequest) (*operations.DeleteFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1520,14 +1520,14 @@ func (s *SDK) DeleteFunction(ctx context.Context, request operations.DeleteFunct
 // DeleteGraphqlAPI - Deletes a <code>GraphqlApi</code> object.
 func (s *SDK) DeleteGraphqlAPI(ctx context.Context, request operations.DeleteGraphqlAPIRequest) (*operations.DeleteGraphqlAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1626,14 +1626,14 @@ func (s *SDK) DeleteGraphqlAPI(ctx context.Context, request operations.DeleteGra
 // DeleteResolver - Deletes a <code>Resolver</code> object.
 func (s *SDK) DeleteResolver(ctx context.Context, request operations.DeleteResolverRequest) (*operations.DeleteResolverResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers/{fieldName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers/{fieldName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1722,14 +1722,14 @@ func (s *SDK) DeleteResolver(ctx context.Context, request operations.DeleteResol
 // DeleteType - Deletes a <code>Type</code> object.
 func (s *SDK) DeleteType(ctx context.Context, request operations.DeleteTypeRequest) (*operations.DeleteTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1818,14 +1818,14 @@ func (s *SDK) DeleteType(ctx context.Context, request operations.DeleteTypeReque
 // DisassociateAPI - Removes an <code>ApiAssociation</code> object from a custom domain.
 func (s *SDK) DisassociateAPI(ctx context.Context, request operations.DisassociateAPIRequest) (*operations.DisassociateAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}/apiassociation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}/apiassociation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1916,7 +1916,7 @@ func (s *SDK) EvaluateCode(ctx context.Context, request operations.EvaluateCodeR
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/dataplane-evaluatecode"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1931,7 +1931,7 @@ func (s *SDK) EvaluateCode(ctx context.Context, request operations.EvaluateCodeR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2002,7 +2002,7 @@ func (s *SDK) EvaluateMappingTemplate(ctx context.Context, request operations.Ev
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/dataplane-evaluatetemplate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2017,7 +2017,7 @@ func (s *SDK) EvaluateMappingTemplate(ctx context.Context, request operations.Ev
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2086,14 +2086,14 @@ func (s *SDK) EvaluateMappingTemplate(ctx context.Context, request operations.Ev
 // FlushAPICache - Flushes an <code>ApiCache</code> object.
 func (s *SDK) FlushAPICache(ctx context.Context, request operations.FlushAPICacheRequest) (*operations.FlushAPICacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/FlushCache", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/FlushCache", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2182,14 +2182,14 @@ func (s *SDK) FlushAPICache(ctx context.Context, request operations.FlushAPICach
 // GetAPIAssociation - Retrieves an <code>ApiAssociation</code> object.
 func (s *SDK) GetAPIAssociation(ctx context.Context, request operations.GetAPIAssociationRequest) (*operations.GetAPIAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}/apiassociation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}/apiassociation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2268,14 +2268,14 @@ func (s *SDK) GetAPIAssociation(ctx context.Context, request operations.GetAPIAs
 // GetAPICache - Retrieves an <code>ApiCache</code> object.
 func (s *SDK) GetAPICache(ctx context.Context, request operations.GetAPICacheRequest) (*operations.GetAPICacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2364,14 +2364,14 @@ func (s *SDK) GetAPICache(ctx context.Context, request operations.GetAPICacheReq
 // GetDataSource - Retrieves a <code>DataSource</code> object.
 func (s *SDK) GetDataSource(ctx context.Context, request operations.GetDataSourceRequest) (*operations.GetDataSourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2460,14 +2460,14 @@ func (s *SDK) GetDataSource(ctx context.Context, request operations.GetDataSourc
 // GetDomainName - Retrieves a custom <code>DomainName</code> object.
 func (s *SDK) GetDomainName(ctx context.Context, request operations.GetDomainNameRequest) (*operations.GetDomainNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2546,14 +2546,14 @@ func (s *SDK) GetDomainName(ctx context.Context, request operations.GetDomainNam
 // GetFunction - Get a <code>Function</code>.
 func (s *SDK) GetFunction(ctx context.Context, request operations.GetFunctionRequest) (*operations.GetFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2622,14 +2622,14 @@ func (s *SDK) GetFunction(ctx context.Context, request operations.GetFunctionReq
 // GetGraphqlAPI - Retrieves a <code>GraphqlApi</code> object.
 func (s *SDK) GetGraphqlAPI(ctx context.Context, request operations.GetGraphqlAPIRequest) (*operations.GetGraphqlAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2718,16 +2718,16 @@ func (s *SDK) GetGraphqlAPI(ctx context.Context, request operations.GetGraphqlAP
 // GetIntrospectionSchema - Retrieves the introspection schema for a GraphQL API.
 func (s *SDK) GetIntrospectionSchema(ctx context.Context, request operations.GetIntrospectionSchemaRequest) (*operations.GetIntrospectionSchemaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/schema#format", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/schema#format", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2808,14 +2808,14 @@ func (s *SDK) GetIntrospectionSchema(ctx context.Context, request operations.Get
 // GetResolver - Retrieves a <code>Resolver</code> object.
 func (s *SDK) GetResolver(ctx context.Context, request operations.GetResolverRequest) (*operations.GetResolverResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers/{fieldName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers/{fieldName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2884,14 +2884,14 @@ func (s *SDK) GetResolver(ctx context.Context, request operations.GetResolverReq
 // GetSchemaCreationStatus - Retrieves the current status of a schema creation operation.
 func (s *SDK) GetSchemaCreationStatus(ctx context.Context, request operations.GetSchemaCreationStatusRequest) (*operations.GetSchemaCreationStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/schemacreation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/schemacreation", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2970,16 +2970,16 @@ func (s *SDK) GetSchemaCreationStatus(ctx context.Context, request operations.Ge
 // GetType - Retrieves a <code>Type</code> object.
 func (s *SDK) GetType(ctx context.Context, request operations.GetTypeRequest) (*operations.GetTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}#format", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}#format", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3070,16 +3070,16 @@ func (s *SDK) GetType(ctx context.Context, request operations.GetTypeRequest) (*
 // ListAPIKeys - <p>Lists the API keys for a given API.</p> <note> <p>API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call <code>DeleteApiKey</code> to manually delete a key before it's automatically deleted.</p> </note>
 func (s *SDK) ListAPIKeys(ctx context.Context, request operations.ListAPIKeysRequest) (*operations.ListAPIKeysResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3160,16 +3160,16 @@ func (s *SDK) ListAPIKeys(ctx context.Context, request operations.ListAPIKeysReq
 // ListDataSources - Lists the data sources for a given API.
 func (s *SDK) ListDataSources(ctx context.Context, request operations.ListDataSourcesRequest) (*operations.ListDataSourcesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3257,9 +3257,9 @@ func (s *SDK) ListDomainNames(ctx context.Context, request operations.ListDomain
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3330,16 +3330,16 @@ func (s *SDK) ListDomainNames(ctx context.Context, request operations.ListDomain
 // ListFunctions - List multiple functions.
 func (s *SDK) ListFunctions(ctx context.Context, request operations.ListFunctionsRequest) (*operations.ListFunctionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3427,9 +3427,9 @@ func (s *SDK) ListGraphqlApis(ctx context.Context, request operations.ListGraphq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3500,16 +3500,16 @@ func (s *SDK) ListGraphqlApis(ctx context.Context, request operations.ListGraphq
 // ListResolvers - Lists the resolvers for a given API and type.
 func (s *SDK) ListResolvers(ctx context.Context, request operations.ListResolversRequest) (*operations.ListResolversResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3590,16 +3590,16 @@ func (s *SDK) ListResolvers(ctx context.Context, request operations.ListResolver
 // ListResolversByFunction - List the resolvers that are associated with a specific function.
 func (s *SDK) ListResolversByFunction(ctx context.Context, request operations.ListResolversByFunctionRequest) (*operations.ListResolversByFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}/resolvers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}/resolvers", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3680,14 +3680,14 @@ func (s *SDK) ListResolversByFunction(ctx context.Context, request operations.Li
 // ListTagsForResource - Lists the tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3786,16 +3786,16 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTypes - Lists the types for a given API.
 func (s *SDK) ListTypes(ctx context.Context, request operations.ListTypesRequest) (*operations.ListTypesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types#format", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types#format", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3886,9 +3886,9 @@ func (s *SDK) ListTypes(ctx context.Context, request operations.ListTypesRequest
 // StartSchemaCreation - <p>Adds a new schema to your GraphQL API.</p> <p>This operation is asynchronous. Use to determine when it has completed.</p>
 func (s *SDK) StartSchemaCreation(ctx context.Context, request operations.StartSchemaCreationRequest) (*operations.StartSchemaCreationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/schemacreation", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/schemacreation", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3903,7 +3903,7 @@ func (s *SDK) StartSchemaCreation(ctx context.Context, request operations.StartS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3992,9 +3992,9 @@ func (s *SDK) StartSchemaCreation(ctx context.Context, request operations.StartS
 // TagResource - Tags a resource with user-supplied tags.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4009,7 +4009,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4108,16 +4108,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Untags a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4218,9 +4218,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAPICache - Updates the cache for the GraphQL API.
 func (s *SDK) UpdateAPICache(ctx context.Context, request operations.UpdateAPICacheRequest) (*operations.UpdateAPICacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches/update", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/ApiCaches/update", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4235,7 +4235,7 @@ func (s *SDK) UpdateAPICache(ctx context.Context, request operations.UpdateAPICa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4324,9 +4324,9 @@ func (s *SDK) UpdateAPICache(ctx context.Context, request operations.UpdateAPICa
 // UpdateAPIKey - Updates an API key. You can update the key as long as it's not deleted.
 func (s *SDK) UpdateAPIKey(ctx context.Context, request operations.UpdateAPIKeyRequest) (*operations.UpdateAPIKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/apikeys/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4341,7 +4341,7 @@ func (s *SDK) UpdateAPIKey(ctx context.Context, request operations.UpdateAPIKeyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4440,9 +4440,9 @@ func (s *SDK) UpdateAPIKey(ctx context.Context, request operations.UpdateAPIKeyR
 // UpdateDataSource - Updates a <code>DataSource</code> object.
 func (s *SDK) UpdateDataSource(ctx context.Context, request operations.UpdateDataSourceRequest) (*operations.UpdateDataSourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/datasources/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4457,7 +4457,7 @@ func (s *SDK) UpdateDataSource(ctx context.Context, request operations.UpdateDat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4546,9 +4546,9 @@ func (s *SDK) UpdateDataSource(ctx context.Context, request operations.UpdateDat
 // UpdateDomainName - Updates a custom <code>DomainName</code> object.
 func (s *SDK) UpdateDomainName(ctx context.Context, request operations.UpdateDomainNameRequest) (*operations.UpdateDomainNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/domainnames/{domainName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4563,7 +4563,7 @@ func (s *SDK) UpdateDomainName(ctx context.Context, request operations.UpdateDom
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4652,9 +4652,9 @@ func (s *SDK) UpdateDomainName(ctx context.Context, request operations.UpdateDom
 // UpdateFunction - Updates a <code>Function</code> object.
 func (s *SDK) UpdateFunction(ctx context.Context, request operations.UpdateFunctionRequest) (*operations.UpdateFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/functions/{functionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4669,7 +4669,7 @@ func (s *SDK) UpdateFunction(ctx context.Context, request operations.UpdateFunct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4748,9 +4748,9 @@ func (s *SDK) UpdateFunction(ctx context.Context, request operations.UpdateFunct
 // UpdateGraphqlAPI - Updates a <code>GraphqlApi</code> object.
 func (s *SDK) UpdateGraphqlAPI(ctx context.Context, request operations.UpdateGraphqlAPIRequest) (*operations.UpdateGraphqlAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4765,7 +4765,7 @@ func (s *SDK) UpdateGraphqlAPI(ctx context.Context, request operations.UpdateGra
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4864,9 +4864,9 @@ func (s *SDK) UpdateGraphqlAPI(ctx context.Context, request operations.UpdateGra
 // UpdateResolver - Updates a <code>Resolver</code> object.
 func (s *SDK) UpdateResolver(ctx context.Context, request operations.UpdateResolverRequest) (*operations.UpdateResolverResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers/{fieldName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}/resolvers/{fieldName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4881,7 +4881,7 @@ func (s *SDK) UpdateResolver(ctx context.Context, request operations.UpdateResol
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4970,9 +4970,9 @@ func (s *SDK) UpdateResolver(ctx context.Context, request operations.UpdateResol
 // UpdateType - Updates a <code>Type</code> object.
 func (s *SDK) UpdateType(ctx context.Context, request operations.UpdateTypeRequest) (*operations.UpdateTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/apis/{apiId}/types/{typeName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4987,7 +4987,7 @@ func (s *SDK) UpdateType(ctx context.Context, request operations.UpdateTypeReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

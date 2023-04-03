@@ -50,25 +50,17 @@ func (e *POSTDisassociateTransitGatewayPolicyTableVersionEnum) UnmarshalJSON(dat
 	}
 }
 
-type POSTDisassociateTransitGatewayPolicyTableQueryParams struct {
-	Action  POSTDisassociateTransitGatewayPolicyTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisassociateTransitGatewayPolicyTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisassociateTransitGatewayPolicyTableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisassociateTransitGatewayPolicyTableRequest struct {
-	QueryParams POSTDisassociateTransitGatewayPolicyTableQueryParams
-	Headers     POSTDisassociateTransitGatewayPolicyTableHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisassociateTransitGatewayPolicyTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                               `request:"mediaType=text/xml"`
+	Version           POSTDisassociateTransitGatewayPolicyTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisassociateTransitGatewayPolicyTableResponse struct {

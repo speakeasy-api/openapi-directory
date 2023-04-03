@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSitemapsSamplesSitemapsOnlyPathParams struct {
+type GetSitemapsSamplesSitemapsOnlyRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetSitemapsSamplesSitemapsOnlyQueryParams struct {
 	// Page Number
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// Page Size
 	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetSitemapsSamplesSitemapsOnlyRequest struct {
-	PathParams  GetSitemapsSamplesSitemapsOnlyPathParams
-	QueryParams GetSitemapsSamplesSitemapsOnlyQueryParams
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // GetSitemapsSamplesSitemapsOnly200ApplicationJSON - Successful operation

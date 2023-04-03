@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetMerchantOrderInfoListRequest struct {
-	Request shared.SetMerchantOrderInfoListRequest `request:"mediaType=application/json"`
-}
-
 type SetMerchantOrderInfoListResponse struct {
 	// Requested too many batch operations
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

@@ -8,18 +8,13 @@ import (
 )
 
 type GetTransactionRulesTransactionRuleIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetTransactionRulesTransactionRuleIDPathParams struct {
-	// The unique identifier of the transaction rule.
-	TransactionRuleID string `pathParam:"style=simple,explode=false,name=transactionRuleId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetTransactionRulesTransactionRuleIDRequest struct {
-	PathParams GetTransactionRulesTransactionRuleIDPathParams
-	Security   GetTransactionRulesTransactionRuleIDSecurity
+	// The unique identifier of the transaction rule.
+	TransactionRuleID string `pathParam:"style=simple,explode=false,name=transactionRuleId"`
 }
 
 type GetTransactionRulesTransactionRuleIDResponse struct {

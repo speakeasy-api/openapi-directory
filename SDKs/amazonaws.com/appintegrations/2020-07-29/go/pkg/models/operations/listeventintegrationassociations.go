@@ -7,19 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEventIntegrationAssociationsPathParams struct {
+type ListEventIntegrationAssociationsRequest struct {
 	// The name of the event integration.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type ListEventIntegrationAssociationsQueryParams struct {
-	// The maximum number of results to return per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListEventIntegrationAssociationsHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +17,10 @@ type ListEventIntegrationAssociationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEventIntegrationAssociationsRequest struct {
-	PathParams  ListEventIntegrationAssociationsPathParams
-	QueryParams ListEventIntegrationAssociationsQueryParams
-	Headers     ListEventIntegrationAssociationsHeaders
+	// The maximum number of results to return per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListEventIntegrationAssociationsResponse struct {

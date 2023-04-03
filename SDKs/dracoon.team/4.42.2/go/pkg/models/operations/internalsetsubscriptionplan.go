@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InternalSetSubscriptionPlanHeaders struct {
+type InternalSetSubscriptionPlanRequest struct {
+	SubscriptionPlanRequest shared.SubscriptionPlanRequest `request:"mediaType=application/json"`
 	// Service Authentication token
 	XSdsServiceToken string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type InternalSetSubscriptionPlanRequest struct {
-	Headers InternalSetSubscriptionPlanHeaders
-	Request shared.SubscriptionPlanRequest `request:"mediaType=application/json"`
 }
 
 type InternalSetSubscriptionPlanResponse struct {

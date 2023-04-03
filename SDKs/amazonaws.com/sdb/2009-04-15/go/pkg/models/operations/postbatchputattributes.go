@@ -50,19 +50,15 @@ func (e *POSTBatchPutAttributesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTBatchPutAttributesQueryParams struct {
+type POSTBatchPutAttributesRequest struct {
 	AWSAccessKeyID   string                            `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTBatchPutAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody      []byte                            `request:"mediaType=text/xml"`
 	Signature        string                            `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                            `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                            `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                            `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTBatchPutAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTBatchPutAttributesRequest struct {
-	QueryParams POSTBatchPutAttributesQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTBatchPutAttributesResponse struct {

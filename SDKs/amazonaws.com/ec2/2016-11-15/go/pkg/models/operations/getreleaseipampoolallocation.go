@@ -50,7 +50,7 @@ func (e *GETReleaseIpamPoolAllocationVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETReleaseIpamPoolAllocationQueryParams struct {
+type GETReleaseIpamPoolAllocationRequest struct {
 	Action GETReleaseIpamPoolAllocationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR of the allocation you want to release.
 	Cidr string `queryParam:"style=form,explode=true,name=Cidr"`
@@ -59,23 +59,15 @@ type GETReleaseIpamPoolAllocationQueryParams struct {
 	// The ID of the allocation.
 	IpamPoolAllocationID string `queryParam:"style=form,explode=true,name=IpamPoolAllocationId"`
 	// The ID of the IPAM pool which contains the allocation you want to release.
-	IpamPoolID string                                  `queryParam:"style=form,explode=true,name=IpamPoolId"`
-	Version    GETReleaseIpamPoolAllocationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReleaseIpamPoolAllocationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReleaseIpamPoolAllocationRequest struct {
-	QueryParams GETReleaseIpamPoolAllocationQueryParams
-	Headers     GETReleaseIpamPoolAllocationHeaders
+	IpamPoolID        string                                  `queryParam:"style=form,explode=true,name=IpamPoolId"`
+	Version           GETReleaseIpamPoolAllocationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReleaseIpamPoolAllocationResponse struct {

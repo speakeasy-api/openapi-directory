@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePartnerPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdatePartnerRequest struct {
-	PathParams UpdatePartnerPathParams
 	// Partner object that you would like to update.
-	Request shared.PartnerUpsert `request:"mediaType=application/json"`
+	PartnerUpsert shared.PartnerUpsert `request:"mediaType=application/json"`
+	ID            int64                `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdatePartnerResponse struct {

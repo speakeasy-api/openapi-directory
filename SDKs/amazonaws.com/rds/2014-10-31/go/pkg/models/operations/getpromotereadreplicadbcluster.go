@@ -50,26 +50,18 @@ func (e *GETPromoteReadReplicaDBClusterVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETPromoteReadReplicaDBClusterQueryParams struct {
+type GETPromoteReadReplicaDBClusterRequest struct {
 	Action GETPromoteReadReplicaDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identifier of the DB cluster read replica to promote. This parameter isn't case-sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identifier of an existing DB cluster read replica.</p> </li> </ul> <p>Example: <code>my-cluster-replica1</code> </p>
 	DBClusterIdentifier string                                    `queryParam:"style=form,explode=true,name=DBClusterIdentifier"`
 	Version             GETPromoteReadReplicaDBClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPromoteReadReplicaDBClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPromoteReadReplicaDBClusterRequest struct {
-	QueryParams GETPromoteReadReplicaDBClusterQueryParams
-	Headers     GETPromoteReadReplicaDBClusterHeaders
+	XAmzAlgorithm       *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPromoteReadReplicaDBClusterResponse struct {

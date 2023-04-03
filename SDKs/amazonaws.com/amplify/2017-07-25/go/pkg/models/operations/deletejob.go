@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteJobPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The name for the branch, for the job.
-	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
-	//  The unique ID for the job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type DeleteJobHeaders struct {
+type DeleteJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DeleteJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteJobRequest struct {
-	PathParams DeleteJobPathParams
-	Headers    DeleteJobHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name for the branch, for the job.
+	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
+	//  The unique ID for the job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type DeleteJobResponse struct {

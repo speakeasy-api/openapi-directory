@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type UnpublishArticlePathParams struct {
+type UnpublishArticleRequest struct {
 	// The ID of the article to unpublish.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UnpublishArticleQueryParams struct {
 	// Content for the note that's created along with unpublishing
 	Note *string `queryParam:"style=form,explode=true,name=note"`
-}
-
-type UnpublishArticleRequest struct {
-	PathParams  UnpublishArticlePathParams
-	QueryParams UnpublishArticleQueryParams
 }
 
 type UnpublishArticleResponse struct {

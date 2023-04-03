@@ -9,7 +9,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItineraryPriceMetricsQueryParams struct {
+type GetItineraryPriceMetricsRequest struct {
 	// the preferred currency for display. Currency is specified in the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format, e.g. EUR for Euro
 	CurrencyCode *string `queryParam:"style=form,explode=true,name=currencyCode"`
 	// The date on which the traveler will depart from the origin to go to the destination.
@@ -24,10 +24,6 @@ type GetItineraryPriceMetricsQueryParams struct {
 	// airport code, following [IATA standard](http://www.iata.org/publications/Pages/code-search.aspx), from which the traveler will depart
 	//
 	OriginIataCode string `queryParam:"style=form,explode=true,name=originIataCode"`
-}
-
-type GetItineraryPriceMetricsRequest struct {
-	QueryParams GetItineraryPriceMetricsQueryParams
 }
 
 type GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum string

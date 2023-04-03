@@ -35,14 +35,14 @@ func newCarCachedImage(defaultClient, securityClient HTTPClient, serverURL, lang
 // Fetch the cached car image
 func (s *carCachedImage) GetCachedImage(ctx context.Context, request operations.GetCachedImageRequest) (*operations.GetCachedImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/image/cache/car/{listingID}/{imageID}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/image/cache/car/{listingID}/{imageID}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -37,14 +37,14 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // It supports pagination, each page will contain `30` users by default.
 func (s *organizations) GetOrgArticles(ctx context.Context, request operations.GetOrgArticlesRequest) (*operations.GetOrgArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -89,14 +89,14 @@ func (s *organizations) GetOrgArticles(ctx context.Context, request operations.G
 // It supports pagination, each page will contain `30` users by default.
 func (s *organizations) GetOrgUsers(ctx context.Context, request operations.GetOrgUsersRequest) (*operations.GetOrgUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -139,7 +139,7 @@ func (s *organizations) GetOrgUsers(ctx context.Context, request operations.GetO
 // This endpoint allows the client to retrieve a single organization by their username
 func (s *organizations) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

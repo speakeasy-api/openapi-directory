@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsersIDUserConnectionsIDConnectionAccountsPathParams struct {
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type PostUsersIDUserConnectionsIDConnectionAccountsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostUsersIDUserConnectionsIDConnectionAccountsRequestBody struct {
 	// balance of account
 	Balance *float32 `multipartForm:"name=balance"`
@@ -33,9 +23,11 @@ type PostUsersIDUserConnectionsIDConnectionAccountsRequestBody struct {
 }
 
 type PostUsersIDUserConnectionsIDConnectionAccountsRequest struct {
-	PathParams  PostUsersIDUserConnectionsIDConnectionAccountsPathParams
-	QueryParams PostUsersIDUserConnectionsIDConnectionAccountsQueryParams
-	Request     PostUsersIDUserConnectionsIDConnectionAccountsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody  PostUsersIDUserConnectionsIDConnectionAccountsRequestBody `request:"mediaType=multipart/form-data"`
+	Expand       *string                                                   `queryParam:"style=form,explode=true,name=expand"`
+	IDConnection int64                                                     `pathParam:"style=simple,explode=false,name=id_connection"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 }
 
 type PostUsersIDUserConnectionsIDConnectionAccountsResponse struct {

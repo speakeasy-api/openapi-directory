@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteEmailIdentityPolicyPathParams struct {
+type DeleteEmailIdentityPolicyRequest struct {
 	// The email identity.
 	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
 	// <p>The name of the policy.</p> <p>The policy name cannot exceed 64 characters and can only include alphanumeric characters, dashes, and underscores.</p>
-	PolicyName string `pathParam:"style=simple,explode=false,name=PolicyName"`
-}
-
-type DeleteEmailIdentityPolicyHeaders struct {
+	PolicyName        string  `pathParam:"style=simple,explode=false,name=PolicyName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type DeleteEmailIdentityPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEmailIdentityPolicyRequest struct {
-	PathParams DeleteEmailIdentityPolicyPathParams
-	Headers    DeleteEmailIdentityPolicyHeaders
 }
 
 type DeleteEmailIdentityPolicyResponse struct {

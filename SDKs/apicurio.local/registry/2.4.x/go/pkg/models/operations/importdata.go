@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportDataHeaders struct {
+type ImportDataRequest struct {
+	// The ZIP file representing the previously exported registry data.
+	RequestBody []byte `request:"mediaType=application/zip"`
 	// If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
 	XRegistryPreserveContentID *bool `header:"style=simple,explode=false,name=X-Registry-Preserve-ContentId"`
 	// If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
 	XRegistryPreserveGlobalID *bool `header:"style=simple,explode=false,name=X-Registry-Preserve-GlobalId"`
-}
-
-type ImportDataRequest struct {
-	Headers ImportDataHeaders
-	// The ZIP file representing the previously exported registry data.
-	Request []byte `request:"mediaType=application/zip"`
 }
 
 type ImportDataResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetArtifactMetaDataByContentPathParams struct {
+type GetArtifactMetaDataByContentRequest struct {
+	// The content of an artifact version.
+	RequestBody []byte `request:"mediaType=application/json"`
 	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
-type GetArtifactMetaDataByContentRequest struct {
-	PathParams GetArtifactMetaDataByContentPathParams
-	// The content of an artifact version.
-	Request []byte `request:"mediaType=application/json"`
 }
 
 type GetArtifactMetaDataByContentResponse struct {

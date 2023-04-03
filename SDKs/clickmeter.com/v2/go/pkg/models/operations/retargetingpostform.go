@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingPostFormPathParams struct {
+type RetargetingPostFormRequest struct {
+	// The body of the retargeting script
+	APICoreDtoRetargetingRetargetingScript shared.APICoreDtoRetargetingRetargetingScript `request:"mediaType=application/x-www-form-urlencoded"`
 	// The id of the retargeting script
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetargetingPostFormRequest struct {
-	PathParams RetargetingPostFormPathParams
-	// The body of the retargeting script
-	Request shared.APICoreDtoRetargetingRetargetingScript `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type RetargetingPostFormResponse struct {

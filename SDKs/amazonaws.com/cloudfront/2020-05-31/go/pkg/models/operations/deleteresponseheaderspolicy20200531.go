@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteResponseHeadersPolicy20200531PathParams struct {
+type DeleteResponseHeadersPolicy20200531Request struct {
 	// <p>The identifier for the response headers policy that you are deleting.</p> <p>To get the identifier, you can use <code>ListResponseHeadersPolicies</code>.</p>
 	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type DeleteResponseHeadersPolicy20200531Headers struct {
 	// <p>The version of the response headers policy that you are deleting.</p> <p>The version is the response headers policy's <code>ETag</code> value, which you can get using <code>ListResponseHeadersPolicies</code>, <code>GetResponseHeadersPolicy</code>, or <code>GetResponseHeadersPolicyConfig</code>.</p>
 	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -21,11 +18,6 @@ type DeleteResponseHeadersPolicy20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteResponseHeadersPolicy20200531Request struct {
-	PathParams DeleteResponseHeadersPolicy20200531PathParams
-	Headers    DeleteResponseHeadersPolicy20200531Headers
 }
 
 type DeleteResponseHeadersPolicy20200531Response struct {

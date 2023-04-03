@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPrincipalsForPortfolioQueryParams struct {
-	// Pagination limit
-	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
-	// Pagination token
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
 // ListPrincipalsForPortfolioXAmzTargetEnum
 type ListPrincipalsForPortfolioXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListPrincipalsForPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListPrincipalsForPortfolioHeaders struct {
+type ListPrincipalsForPortfolioRequest struct {
+	ListPrincipalsForPortfolioInput shared.ListPrincipalsForPortfolioInput `request:"mediaType=application/json"`
+	// Pagination limit
+	PageSize *string `queryParam:"style=form,explode=true,name=PageSize"`
+	// Pagination token
+	PageToken         *string                                  `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListPrincipalsForPortfolioHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListPrincipalsForPortfolioXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListPrincipalsForPortfolioRequest struct {
-	QueryParams ListPrincipalsForPortfolioQueryParams
-	Headers     ListPrincipalsForPortfolioHeaders
-	Request     shared.ListPrincipalsForPortfolioInput `request:"mediaType=application/json"`
 }
 
 type ListPrincipalsForPortfolioResponse struct {

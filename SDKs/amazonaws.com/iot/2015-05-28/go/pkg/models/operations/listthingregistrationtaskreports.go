@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListThingRegistrationTaskReportsPathParams struct {
-	// The id of the task.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
 // ListThingRegistrationTaskReportsReportTypeEnum - The type of task report.
 type ListThingRegistrationTaskReportsReportTypeEnum string
 
@@ -38,16 +33,7 @@ func (e *ListThingRegistrationTaskReportsReportTypeEnum) UnmarshalJSON(data []by
 	}
 }
 
-type ListThingRegistrationTaskReportsQueryParams struct {
-	// The maximum number of results to return per request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The type of task report.
-	ReportType ListThingRegistrationTaskReportsReportTypeEnum `queryParam:"style=form,explode=true,name=reportType"`
-}
-
-type ListThingRegistrationTaskReportsHeaders struct {
+type ListThingRegistrationTaskReportsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -55,12 +41,14 @@ type ListThingRegistrationTaskReportsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListThingRegistrationTaskReportsRequest struct {
-	PathParams  ListThingRegistrationTaskReportsPathParams
-	QueryParams ListThingRegistrationTaskReportsQueryParams
-	Headers     ListThingRegistrationTaskReportsHeaders
+	// The maximum number of results to return per request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The type of task report.
+	ReportType ListThingRegistrationTaskReportsReportTypeEnum `queryParam:"style=form,explode=true,name=reportType"`
+	// The id of the task.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type ListThingRegistrationTaskReportsResponse struct {

@@ -57,7 +57,7 @@ func (e *GetDailyStatsCountryEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDailyStatsQueryParams struct {
+type GetDailyStatsRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Inventory type for which stats are to be searched, default is used
@@ -76,10 +76,6 @@ type GetDailyStatsQueryParams struct {
 	Ymm *string `queryParam:"style=form,explode=true,name=ymm"`
 	// Year, Make, Model, Trim of the car, Separated by pipe e.g. ymmt=2015|ford|f-150|platinum
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
-}
-
-type GetDailyStatsRequest struct {
-	QueryParams GetDailyStatsQueryParams
 }
 
 type GetDailyStatsResponse struct {

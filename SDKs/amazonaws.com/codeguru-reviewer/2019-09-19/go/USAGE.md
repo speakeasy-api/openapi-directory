@@ -13,52 +13,48 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateRepositoryRequest{
-        Headers: operations.AssociateRepositoryHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "illum",
+        RequestBody: operations.AssociateRepositoryRequestBody{
+            ClientRequestToken: "corrupti",
             KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKMSKeyDetails{
-                EncryptionOption: "AWS_OWNED_CMK",
-                KMSKeyID: "error",
+                EncryptionOption: "CUSTOMER_MANAGED_CMK",
+                KMSKeyID: "distinctio",
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "deserunt",
-                    Name: "suscipit",
-                    Owner: "iure",
+                    ConnectionArn: "quibusdam",
+                    Name: "unde",
+                    Owner: "nulla",
                 },
                 CodeCommit: &shared.CodeCommitRepository{
-                    Name: "magnam",
+                    Name: "corrupti",
                 },
                 GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "debitis",
-                    Name: "ipsa",
-                    Owner: "delectus",
+                    ConnectionArn: "illum",
+                    Name: "vel",
+                    Owner: "error",
                 },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "tempora",
+                    BucketName: "deserunt",
                     Name: "suscipit",
                 },
             },
             Tags: map[string]string{
-                "minus": "placeat",
-                "voluptatum": "iusto",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
         },
+        XAmzAlgorithm: "tempora",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "molestiae",
+        XAmzDate: "minus",
+        XAmzSecurityToken: "placeat",
+        XAmzSignature: "voluptatum",
+        XAmzSignedHeaders: "iusto",
     }
 
     ctx := context.Background()

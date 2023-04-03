@@ -8,17 +8,12 @@ import (
 )
 
 type GroupV2DenyPendingForListSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2DenyPendingForListPathParams struct {
-	// ID of the group.
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2DenyPendingForListRequest struct {
-	PathParams GroupV2DenyPendingForListPathParams
-	Security   GroupV2DenyPendingForListSecurity
+	// ID of the group.
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2DenyPendingForList200Wildcard - Look at the Response property for more information about the nature of this response

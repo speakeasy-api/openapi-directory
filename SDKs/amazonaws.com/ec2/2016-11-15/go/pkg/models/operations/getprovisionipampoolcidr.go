@@ -56,7 +56,7 @@ func (e *GETProvisionIpamPoolCidrVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETProvisionIpamPoolCidrQueryParams struct {
+type GETProvisionIpamPoolCidrRequest struct {
 	Action GETProvisionIpamPoolCidrActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR you want to assign to the IPAM pool. Either "NetmaskLength" or "Cidr" is required. This value will be null if you specify "NetmaskLength" and will be filled in during the provisioning process.
 	Cidr *string `queryParam:"style=form,explode=true,name=Cidr"`
@@ -69,23 +69,15 @@ type GETProvisionIpamPoolCidrQueryParams struct {
 	// The ID of the IPAM pool to which you want to assign a CIDR.
 	IpamPoolID string `queryParam:"style=form,explode=true,name=IpamPoolId"`
 	// The netmask length of the CIDR you'd like to provision to a pool. Can be used for provisioning Amazon-provided IPv6 CIDRs to top-level pools and for provisioning CIDRs to pools with source pools. Cannot be used to provision BYOIP CIDRs to top-level pools. Either "NetmaskLength" or "Cidr" is required.
-	NetmaskLength *int64                              `queryParam:"style=form,explode=true,name=NetmaskLength"`
-	Version       GETProvisionIpamPoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETProvisionIpamPoolCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETProvisionIpamPoolCidrRequest struct {
-	QueryParams GETProvisionIpamPoolCidrQueryParams
-	Headers     GETProvisionIpamPoolCidrHeaders
+	NetmaskLength     *int64                              `queryParam:"style=form,explode=true,name=NetmaskLength"`
+	Version           GETProvisionIpamPoolCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETProvisionIpamPoolCidrResponse struct {

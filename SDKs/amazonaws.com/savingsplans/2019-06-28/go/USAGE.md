@@ -13,33 +13,31 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateSavingsPlanRequest{
-        Headers: operations.CreateSavingsPlanHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateSavingsPlanRequestBody{
-            ClientToken: "illum",
-            Commitment: "vel",
-            PurchaseTime: "2021-09-16T11:56:06.019Z",
-            SavingsPlanOfferingID: "suscipit",
+        RequestBody: operations.CreateSavingsPlanRequestBody{
+            ClientToken: "corrupti",
+            Commitment: "provident",
+            PurchaseTime: "2021-04-24T16:27:50.833Z",
+            SavingsPlanOfferingID: "unde",
             Tags: map[string]string{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
             },
-            UpfrontPaymentAmount: "tempora",
+            UpfrontPaymentAmount: "debitis",
         },
+        XAmzAlgorithm: "ipsa",
+        XAmzContentSha256: "delectus",
+        XAmzCredential: "tempora",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "molestiae",
+        XAmzSignature: "minus",
+        XAmzSignedHeaders: "placeat",
     }
 
     ctx := context.Background()

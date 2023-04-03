@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppInvitationsRejectSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AppInvitationsRejectPathParams struct {
-	// The app invitation token that was sent to the user
-	InvitationToken string `pathParam:"style=simple,explode=false,name=invitation_token"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AppInvitationsRejectRequest struct {
-	PathParams AppInvitationsRejectPathParams
 	// allow empty body for custom http-client lib
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security AppInvitationsRejectSecurity
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	// The app invitation token that was sent to the user
+	InvitationToken string `pathParam:"style=simple,explode=false,name=invitation_token"`
 }
 
 type AppInvitationsRejectDefaultApplicationJSONErrorCodeEnum string

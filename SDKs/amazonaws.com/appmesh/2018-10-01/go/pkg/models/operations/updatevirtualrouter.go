@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateVirtualRouterPathParams struct {
-	// The name of the service mesh in which the virtual router resides.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the virtual router to update.
-	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
-}
-
-type UpdateVirtualRouterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateVirtualRouterRequestBodySpec - An object representing the specification of a virtual router.
 type UpdateVirtualRouterRequestBodySpec struct {
 	ServiceNames []string `json:"serviceNames,omitempty"`
@@ -38,9 +21,18 @@ type UpdateVirtualRouterRequestBody struct {
 }
 
 type UpdateVirtualRouterRequest struct {
-	PathParams UpdateVirtualRouterPathParams
-	Headers    UpdateVirtualRouterHeaders
-	Request    UpdateVirtualRouterRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateVirtualRouterRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh in which the virtual router resides.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the virtual router to update.
+	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
 }
 
 type UpdateVirtualRouterResponse struct {

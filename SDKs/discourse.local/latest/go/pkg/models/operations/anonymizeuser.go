@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type AnonymizeUserPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type AnonymizeUserRequest struct {
-	PathParams AnonymizeUserPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // AnonymizeUser200ApplicationJSON - response

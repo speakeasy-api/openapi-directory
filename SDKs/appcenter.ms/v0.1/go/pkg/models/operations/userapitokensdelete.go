@@ -6,21 +6,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UserAPITokensDeleteSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
-}
-
-type UserAPITokensDeletePathParams struct {
-	// The unique ID (UUID) of the api token
-	APITokenID string `pathParam:"style=simple,explode=false,name=api_token_id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UserAPITokensDeleteRequest struct {
-	PathParams UserAPITokensDeletePathParams
-	Security   UserAPITokensDeleteSecurity
+	// The unique ID (UUID) of the api token
+	APITokenID string `pathParam:"style=simple,explode=false,name=api_token_id"`
 }
 
 type UserAPITokensDelete404ApplicationJSONErrorCodeEnum string

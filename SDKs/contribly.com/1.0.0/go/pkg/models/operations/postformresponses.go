@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostFormResponsesRequest struct {
-	// Form response
-	Request shared.FormResponseSubmission `request:"mediaType=application/json"`
-}
-
 type PostFormResponsesResponse struct {
 	ContentType string
 	// Form response saved

@@ -9,25 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateResolverPathParams struct {
-	// The API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The new field name.
-	FieldName string `pathParam:"style=simple,explode=false,name=fieldName"`
-	// The new type name.
-	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
-}
-
-type UpdateResolverHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateResolverRequestBodyCachingConfig - The caching configuration for a resolver that has caching activated.
 type UpdateResolverRequestBodyCachingConfig struct {
 	CachingKeys []string `json:"cachingKeys,omitempty"`
@@ -100,9 +81,20 @@ type UpdateResolverRequestBody struct {
 }
 
 type UpdateResolverRequest struct {
-	PathParams UpdateResolverPathParams
-	Headers    UpdateResolverHeaders
-	Request    UpdateResolverRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateResolverRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The new field name.
+	FieldName string `pathParam:"style=simple,explode=false,name=fieldName"`
+	// The new type name.
+	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
 }
 
 type UpdateResolverResponse struct {

@@ -42,7 +42,7 @@ func (s *shopping) GetFlightOffers(ctx context.Context, request operations.GetFl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -105,7 +105,7 @@ func (s *shopping) SearchFlightOffers(ctx context.Context, request operations.Se
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/shopping/flight-offers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetFlightOffersQuery", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -120,7 +120,7 @@ func (s *shopping) SearchFlightOffers(ctx context.Context, request operations.Se
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

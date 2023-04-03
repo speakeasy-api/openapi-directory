@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationConfigureCatalogColumnPathParams struct {
+type ImportationConfigureCatalogColumnRequest struct {
 	// The custom column identifier
-	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
+	ColumnID                             string                                      `pathParam:"style=simple,explode=false,name=columnId"`
+	ConfigureCatalogColumnCatalogRequest shared.ConfigureCatalogColumnCatalogRequest `request:"mediaType=application/json"`
 	// The execution identifier of you catalog importation
 	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationConfigureCatalogColumnRequest struct {
-	PathParams ImportationConfigureCatalogColumnPathParams
-	Request    shared.ConfigureCatalogColumnCatalogRequest `request:"mediaType=application/json"`
 }
 
 type ImportationConfigureCatalogColumnResponse struct {

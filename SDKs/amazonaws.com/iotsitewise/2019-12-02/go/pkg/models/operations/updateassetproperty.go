@@ -8,23 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateAssetPropertyPathParams struct {
-	// The ID of the asset to be updated.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-	// The ID of the asset property to be updated.
-	PropertyID string `pathParam:"style=simple,explode=false,name=propertyId"`
-}
-
-type UpdateAssetPropertyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAssetPropertyRequestBodyPropertyNotificationStateEnum - <p>The MQTT notification state (enabled or disabled) for this asset property. When the notification state is enabled, IoT SiteWise publishes property value updates to a unique MQTT topic. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html">Interacting with other services</a> in the <i>IoT SiteWise User Guide</i>.</p> <p>If you omit this parameter, the notification state is set to <code>DISABLED</code>.</p>
 type UpdateAssetPropertyRequestBodyPropertyNotificationStateEnum string
 
@@ -61,9 +44,18 @@ type UpdateAssetPropertyRequestBody struct {
 }
 
 type UpdateAssetPropertyRequest struct {
-	PathParams UpdateAssetPropertyPathParams
-	Headers    UpdateAssetPropertyHeaders
-	Request    UpdateAssetPropertyRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAssetPropertyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the asset to be updated.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
+	// The ID of the asset property to be updated.
+	PropertyID string `pathParam:"style=simple,explode=false,name=propertyId"`
 }
 
 type UpdateAssetPropertyResponse struct {

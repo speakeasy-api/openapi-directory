@@ -50,26 +50,18 @@ func (e *GETDeleteSnapshotScheduleVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDeleteSnapshotScheduleQueryParams struct {
+type GETDeleteSnapshotScheduleRequest struct {
 	Action GETDeleteSnapshotScheduleActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier of the snapshot schedule to delete.
 	ScheduleIdentifier string                               `queryParam:"style=form,explode=true,name=ScheduleIdentifier"`
 	Version            GETDeleteSnapshotScheduleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteSnapshotScheduleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteSnapshotScheduleRequest struct {
-	QueryParams GETDeleteSnapshotScheduleQueryParams
-	Headers     GETDeleteSnapshotScheduleHeaders
+	XAmzAlgorithm      *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteSnapshotScheduleResponse struct {

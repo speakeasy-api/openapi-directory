@@ -7,24 +7,16 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConfigurationSetPathParams struct {
-	// The name of the configuration set.
-	ConfigurationSetName string `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
-}
-
-type GetConfigurationSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GetConfigurationSetRequest struct {
-	PathParams GetConfigurationSetPathParams
-	Headers    GetConfigurationSetHeaders
+	// The name of the configuration set.
+	ConfigurationSetName string  `pathParam:"style=simple,explode=false,name=ConfigurationSetName"`
+	XAmzAlgorithm        *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetConfigurationSetResponse struct {

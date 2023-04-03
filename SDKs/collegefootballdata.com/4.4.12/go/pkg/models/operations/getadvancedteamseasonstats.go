@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAdvancedTeamSeasonStatsQueryParams struct {
+type GetAdvancedTeamSeasonStatsRequest struct {
 	// Starting week filter
 	EndWeek *int64 `queryParam:"style=form,explode=true,name=endWeek"`
 	// Filter to remove garbage time plays from calculations
@@ -18,10 +18,6 @@ type GetAdvancedTeamSeasonStatsQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter (required if no team specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetAdvancedTeamSeasonStatsRequest struct {
-	QueryParams GetAdvancedTeamSeasonStatsQueryParams
 }
 
 type GetAdvancedTeamSeasonStatsResponse struct {

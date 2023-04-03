@@ -34,7 +34,7 @@ func newReceipts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // ReceiptsPhotoToCSV - Convert a photo of a receipt into a CSV file containing structured information from the receipt
 // Leverage Deep Learning to automatically turn a photo of a receipt into a CSV file containing the structured information from the receipt.
-func (s *receipts) ReceiptsPhotoToCSV(ctx context.Context, request operations.ReceiptsPhotoToCSVRequest) (*operations.ReceiptsPhotoToCSVResponse, error) {
+func (s *receipts) ReceiptsPhotoToCSV(ctx context.Context, request operations.ReceiptsPhotoToCSVRequestBody, security operations.ReceiptsPhotoToCSVSecurity) (*operations.ReceiptsPhotoToCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ocr/receipts/photo/to/csv"
 
@@ -53,7 +53,7 @@ func (s *receipts) ReceiptsPhotoToCSV(ctx context.Context, request operations.Re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

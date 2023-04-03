@@ -38,16 +38,16 @@ func newTerminalSettingsTerminalLevel(defaultClient, securityClient HTTPClient, 
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsTerminalLevel) GetTerminalsTerminalIDTerminalLogos(ctx context.Context, request operations.GetTerminalsTerminalIDTerminalLogosRequest) (*operations.GetTerminalsTerminalIDTerminalLogosResponse, error) {
+func (s *terminalSettingsTerminalLevel) GetTerminalsTerminalIDTerminalLogos(ctx context.Context, request operations.GetTerminalsTerminalIDTerminalLogosRequest, security operations.GetTerminalsTerminalIDTerminalLogosSecurity) (*operations.GetTerminalsTerminalIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalLogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalLogos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,16 +105,16 @@ func (s *terminalSettingsTerminalLevel) GetTerminalsTerminalIDTerminalLogos(ctx 
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsTerminalLevel) GetTerminalsTerminalIDTerminalSettings(ctx context.Context, request operations.GetTerminalsTerminalIDTerminalSettingsRequest) (*operations.GetTerminalsTerminalIDTerminalSettingsResponse, error) {
+func (s *terminalSettingsTerminalLevel) GetTerminalsTerminalIDTerminalSettings(ctx context.Context, request operations.GetTerminalsTerminalIDTerminalSettingsRequest, security operations.GetTerminalsTerminalIDTerminalSettingsSecurity) (*operations.GetTerminalsTerminalIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *terminalSettingsTerminalLevel) GetTerminalsTerminalIDTerminalSettings(c
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalLogos(ctx context.Context, request operations.PatchTerminalsTerminalIDTerminalLogosRequest) (*operations.PatchTerminalsTerminalIDTerminalLogosResponse, error) {
+func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalLogos(ctx context.Context, request operations.PatchTerminalsTerminalIDTerminalLogosRequest, security operations.PatchTerminalsTerminalIDTerminalLogosSecurity) (*operations.PatchTerminalsTerminalIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalLogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalLogos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalLogos(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,11 +251,11 @@ func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalLogos(ct
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalSettings(ctx context.Context, request operations.PatchTerminalsTerminalIDTerminalSettingsRequest) (*operations.PatchTerminalsTerminalIDTerminalSettingsResponse, error) {
+func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalSettings(ctx context.Context, request operations.PatchTerminalsTerminalIDTerminalSettingsRequest, security operations.PatchTerminalsTerminalIDTerminalSettingsSecurity) (*operations.PatchTerminalsTerminalIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/terminals/{terminalId}/terminalSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -267,7 +267,7 @@ func (s *terminalSettingsTerminalLevel) PatchTerminalsTerminalIDTerminalSettings
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

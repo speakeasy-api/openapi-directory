@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type HandleRoomWebhookAssignmentsPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
 // HandleRoomWebhookAssignmentsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type HandleRoomWebhookAssignmentsXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *HandleRoomWebhookAssignmentsXSdsDateFormatEnum) UnmarshalJSON(data []by
 	}
 }
 
-type HandleRoomWebhookAssignmentsHeaders struct {
+type HandleRoomWebhookAssignmentsRequest struct {
+	UpdateRoomWebhookRequest shared.UpdateRoomWebhookRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *HandleRoomWebhookAssignmentsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type HandleRoomWebhookAssignmentsRequest struct {
-	PathParams HandleRoomWebhookAssignmentsPathParams
-	Headers    HandleRoomWebhookAssignmentsHeaders
-	Request    shared.UpdateRoomWebhookRequest `request:"mediaType=application/json"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type HandleRoomWebhookAssignmentsResponse struct {

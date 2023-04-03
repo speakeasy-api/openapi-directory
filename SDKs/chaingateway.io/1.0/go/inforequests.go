@@ -39,7 +39,7 @@ func (s *infoRequests) GetBlock(ctx context.Context, request operations.GetBlock
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getBlock"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetBlockRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *infoRequests) GetBlock(ctx context.Context, request operations.GetBlock
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -96,7 +96,7 @@ func (s *infoRequests) GetEthereumBalance(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getEthereumBalance"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetEthereumBalanceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -111,7 +111,7 @@ func (s *infoRequests) GetEthereumBalance(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -153,7 +153,7 @@ func (s *infoRequests) GetExchangeRate(ctx context.Context, request operations.G
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getExchangeRate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetExchangeRateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -168,7 +168,7 @@ func (s *infoRequests) GetExchangeRate(ctx context.Context, request operations.G
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -215,7 +215,7 @@ func (s *infoRequests) GetGasPrice(ctx context.Context, request operations.GetGa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -262,7 +262,7 @@ func (s *infoRequests) GetLastBlockNumber(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -304,7 +304,7 @@ func (s *infoRequests) GetToken(ctx context.Context, request operations.GetToken
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getToken"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -319,7 +319,7 @@ func (s *infoRequests) GetToken(ctx context.Context, request operations.GetToken
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -361,7 +361,7 @@ func (s *infoRequests) GetTokenBalance(ctx context.Context, request operations.G
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getTokenBalance"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetTokenBalanceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -376,7 +376,7 @@ func (s *infoRequests) GetTokenBalance(ctx context.Context, request operations.G
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -418,7 +418,7 @@ func (s *infoRequests) GetTransactions(ctx context.Context, request operations.G
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getTransactions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetTransactionsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -433,7 +433,7 @@ func (s *infoRequests) GetTransactions(ctx context.Context, request operations.G
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

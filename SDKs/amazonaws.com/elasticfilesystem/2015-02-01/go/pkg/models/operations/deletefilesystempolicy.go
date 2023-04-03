@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteFileSystemPolicyPathParams struct {
+type DeleteFileSystemPolicyRequest struct {
 	// Specifies the EFS file system for which to delete the <code>FileSystemPolicy</code>.
-	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type DeleteFileSystemPolicyHeaders struct {
+	FileSystemID      string  `pathParam:"style=simple,explode=false,name=FileSystemId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteFileSystemPolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteFileSystemPolicyRequest struct {
-	PathParams DeleteFileSystemPolicyPathParams
-	Headers    DeleteFileSystemPolicyHeaders
 }
 
 type DeleteFileSystemPolicyResponse struct {

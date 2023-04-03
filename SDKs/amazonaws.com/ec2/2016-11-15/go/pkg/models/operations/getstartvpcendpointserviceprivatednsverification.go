@@ -50,28 +50,20 @@ func (e *GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum) UnmarshalJ
 	}
 }
 
-type GETStartVpcEndpointServicePrivateDNSVerificationQueryParams struct {
+type GETStartVpcEndpointServicePrivateDNSVerificationRequest struct {
 	Action GETStartVpcEndpointServicePrivateDNSVerificationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the endpoint service.
-	ServiceID string                                                      `queryParam:"style=form,explode=true,name=ServiceId"`
-	Version   GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETStartVpcEndpointServicePrivateDNSVerificationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETStartVpcEndpointServicePrivateDNSVerificationRequest struct {
-	QueryParams GETStartVpcEndpointServicePrivateDNSVerificationQueryParams
-	Headers     GETStartVpcEndpointServicePrivateDNSVerificationHeaders
+	ServiceID         string                                                      `queryParam:"style=form,explode=true,name=ServiceId"`
+	Version           GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETStartVpcEndpointServicePrivateDNSVerificationResponse struct {

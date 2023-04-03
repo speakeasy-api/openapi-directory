@@ -13,43 +13,43 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateSignalingChannelRequest{
-        Headers: operations.CreateSignalingChannelHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateSignalingChannelRequestBody{
-            ChannelName: "illum",
-            ChannelType: "SINGLE_MASTER",
+        RequestBody: operations.CreateSignalingChannelRequestBody{
+            ChannelName: "corrupti",
+            ChannelType: "FULL_MESH",
             SingleMasterConfiguration: &operations.CreateSignalingChannelRequestBodySingleMasterConfiguration{
-                MessageTTLSeconds: 623564,
+                MessageTTLSeconds: 715190,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "iure",
+                    Key: "unde",
+                    Value: "nulla",
                 },
                 shared.Tag{
-                    Key: "magnam",
-                    Value: "debitis",
+                    Key: "corrupti",
+                    Value: "illum",
                 },
                 shared.Tag{
-                    Key: "ipsa",
-                    Value: "delectus",
+                    Key: "vel",
+                    Value: "error",
+                },
+                shared.Tag{
+                    Key: "deserunt",
+                    Value: "suscipit",
                 },
             },
         },
+        XAmzAlgorithm: "iure",
+        XAmzContentSha256: "magnam",
+        XAmzCredential: "debitis",
+        XAmzDate: "ipsa",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "tempora",
+        XAmzSignedHeaders: "suscipit",
     }
 
     ctx := context.Background()

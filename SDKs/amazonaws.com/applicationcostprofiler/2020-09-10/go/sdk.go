@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // DeleteReportDefinition - Deletes the specified report definition in AWS Application Cost Profiler. This stops the report from being generated.
 func (s *SDK) DeleteReportDefinition(ctx context.Context, request operations.DeleteReportDefinitionRequest) (*operations.DeleteReportDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -200,14 +200,14 @@ func (s *SDK) DeleteReportDefinition(ctx context.Context, request operations.Del
 // GetReportDefinition - Retrieves the definition of a report already configured in AWS Application Cost Profiler.
 func (s *SDK) GetReportDefinition(ctx context.Context, request operations.GetReportDefinitionRequest) (*operations.GetReportDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -288,7 +288,7 @@ func (s *SDK) ImportApplicationUsage(ctx context.Context, request operations.Imp
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/importApplicationUsage"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -303,7 +303,7 @@ func (s *SDK) ImportApplicationUsage(ctx context.Context, request operations.Imp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -389,9 +389,9 @@ func (s *SDK) ListReportDefinitions(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -474,7 +474,7 @@ func (s *SDK) PutReportDefinition(ctx context.Context, request operations.PutRep
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reportDefinition"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -489,7 +489,7 @@ func (s *SDK) PutReportDefinition(ctx context.Context, request operations.PutRep
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -578,9 +578,9 @@ func (s *SDK) PutReportDefinition(ctx context.Context, request operations.PutRep
 // UpdateReportDefinition - Updates existing report in AWS Application Cost Profiler.
 func (s *SDK) UpdateReportDefinition(ctx context.Context, request operations.UpdateReportDefinitionRequest) (*operations.UpdateReportDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -595,7 +595,7 @@ func (s *SDK) UpdateReportDefinition(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

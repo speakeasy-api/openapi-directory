@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsPutFormRequest struct {
-	// The domain to create
-	Request shared.APICoreDtoDomainsDomain `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type DomainsPutFormResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

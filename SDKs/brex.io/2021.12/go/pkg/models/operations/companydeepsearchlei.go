@@ -4,27 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyDeepsearchLEISecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CompanyDeepsearchLEIPathParams struct {
-	// lei number
-	Number string `pathParam:"style=simple,explode=false,name=number"`
-}
-
-type CompanyDeepsearchLEIQueryParams struct {
-	// Pagination for the ISIN number results (1000 numbers per page)
-	Page *int `queryParam:"style=form,explode=true,name=page"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type CompanyDeepsearchLEIRequest struct {
-	PathParams  CompanyDeepsearchLEIPathParams
-	QueryParams CompanyDeepsearchLEIQueryParams
-	Security    CompanyDeepsearchLEISecurity
+	// lei number
+	Number string `pathParam:"style=simple,explode=false,name=number"`
+	// Pagination for the ISIN number results (1000 numbers per page)
+	Page *int `queryParam:"style=form,explode=true,name=page"`
 }
 
 // CompanyDeepsearchLEIDefaultApplicationJSON - Detailed information about the error

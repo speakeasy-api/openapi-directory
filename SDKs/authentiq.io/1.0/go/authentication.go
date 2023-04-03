@@ -52,7 +52,7 @@ func (s *authentication) Authorize(ctx context.Context, request operations.Autho
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -93,7 +93,7 @@ func (s *authentication) Token(ctx context.Context, request operations.TokenRequ
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -108,7 +108,7 @@ func (s *authentication) Token(ctx context.Context, request operations.TokenRequ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -202,7 +202,7 @@ func (s *authentication) Token(ctx context.Context, request operations.TokenRequ
 // Use this endpoint to retrieve a user's profile in case you are unable to parse an ID Token or you've not already obtained enough details from the ID Token via the Token Endpoint.
 //
 // http://openid.net/specs/openid-connect-core-1_0.html#UserInfo - OIDC UserInfo Endpoint
-func (s *authentication) UserInfo(ctx context.Context, request operations.UserInfoRequest) (*operations.UserInfoResponse, error) {
+func (s *authentication) UserInfo(ctx context.Context) (*operations.UserInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/userinfo"
 
@@ -211,7 +211,7 @@ func (s *authentication) UserInfo(ctx context.Context, request operations.UserIn
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

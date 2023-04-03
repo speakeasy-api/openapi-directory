@@ -53,12 +53,9 @@ func (e *GetSearchAspectIDFullsearchAspectIDEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GetSearchAspectIDFullsearchPathParams struct {
+type GetSearchAspectIDFullsearchRequest struct {
 	// The identifier of the 'aspect' (content group) to search
 	AspectID GetSearchAspectIDFullsearchAspectIDEnum `pathParam:"style=simple,explode=false,name=aspectId"`
-}
-
-type GetSearchAspectIDFullsearchQueryParams struct {
 	// last hit (end index)
 	E int64 `queryParam:"style=form,explode=true,name=e"`
 	// length of fragment snippets (< 200)
@@ -69,11 +66,6 @@ type GetSearchAspectIDFullsearchQueryParams struct {
 	Q string `queryParam:"style=form,explode=true,name=q"`
 	// first hit (start index)
 	S string `queryParam:"style=form,explode=true,name=s"`
-}
-
-type GetSearchAspectIDFullsearchRequest struct {
-	PathParams  GetSearchAspectIDFullsearchPathParams
-	QueryParams GetSearchAspectIDFullsearchQueryParams
 }
 
 type GetSearchAspectIDFullsearchResponse struct {

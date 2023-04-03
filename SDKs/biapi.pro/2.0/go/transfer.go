@@ -33,7 +33,7 @@ func newTransfer(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetWebauth - First step to establish an oAuth2 connection.
 // The route encapsulate 2 functionalities: 1. Create or update a connection through oAuth2 session.<br><br>2. Execute a transfer through OAuth2 session.
-func (s *transfer) GetWebauth(ctx context.Context, request operations.GetWebauthRequest) (*operations.GetWebauthResponse, error) {
+func (s *transfer) GetWebauth(ctx context.Context, request operations.GetWebauthRequestBody) (*operations.GetWebauthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webauth"
 

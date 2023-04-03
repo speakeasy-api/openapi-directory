@@ -8,15 +8,9 @@ import (
 )
 
 type PostSnippetsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PostSnippetsRequest struct {
-	// The new snippet object.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostSnippetsSecurity
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostSnippetsResponse struct {

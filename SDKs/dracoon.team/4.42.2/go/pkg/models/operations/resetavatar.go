@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetAvatarHeaders struct {
+type ResetAvatarRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ResetAvatarRequest struct {
-	Headers ResetAvatarHeaders
 }
 
 type ResetAvatarResponse struct {

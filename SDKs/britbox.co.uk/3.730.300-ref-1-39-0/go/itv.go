@@ -33,11 +33,11 @@ func newItv(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // ActivateSaveOffer - Activates the discount for a user. Only Stripe platform is currently supported.
-func (s *itv) ActivateSaveOffer(ctx context.Context, request operations.ActivateSaveOfferRequest) (*operations.ActivateSaveOfferResponse, error) {
+func (s *itv) ActivateSaveOffer(ctx context.Context, request operations.ActivateSaveOfferRequest, security operations.ActivateSaveOfferSecurity) (*operations.ActivateSaveOfferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/save-offer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,11 +52,11 @@ func (s *itv) ActivateSaveOffer(ctx context.Context, request operations.Activate
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,11 +88,11 @@ func (s *itv) ActivateSaveOffer(ctx context.Context, request operations.Activate
 }
 
 // ChangeCardDetails - Change payment card details.
-func (s *itv) ChangeCardDetails(ctx context.Context, request operations.ChangeCardDetailsRequest) (*operations.ChangeCardDetailsResponse, error) {
+func (s *itv) ChangeCardDetails(ctx context.Context, request operations.ChangeCardDetailsRequest, security operations.ChangeCardDetailsSecurity) (*operations.ChangeCardDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvChangeCardDetailsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,11 +107,11 @@ func (s *itv) ChangeCardDetails(ctx context.Context, request operations.ChangeCa
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,11 +157,11 @@ func (s *itv) ChangeCardDetails(ctx context.Context, request operations.ChangeCa
 // ChangeEmail - Change email address related to account/profile.
 //
 // The expected token scope is Settings.
-func (s *itv) ChangeEmail(ctx context.Context, request operations.ChangeEmailRequest) (*operations.ChangeEmailResponse, error) {
+func (s *itv) ChangeEmail(ctx context.Context, request operations.ChangeEmailRequest, security operations.ChangeEmailSecurity) (*operations.ChangeEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/changeemail"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvChangeEmailRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -176,11 +176,11 @@ func (s *itv) ChangeEmail(ctx context.Context, request operations.ChangeEmailReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -226,11 +226,11 @@ func (s *itv) ChangeEmail(ctx context.Context, request operations.ChangeEmailReq
 // ChangeMarketing - Change marketing preferences related to account/profile.
 //
 // The expected token scope is Settings.
-func (s *itv) ChangeMarketing(ctx context.Context, request operations.ChangeMarketingRequest) (*operations.ChangeMarketingResponse, error) {
+func (s *itv) ChangeMarketing(ctx context.Context, request operations.ChangeMarketingRequest, security operations.ChangeMarketingSecurity) (*operations.ChangeMarketingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/changemarketing"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvChangeMarketingRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -245,11 +245,11 @@ func (s *itv) ChangeMarketing(ctx context.Context, request operations.ChangeMark
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -293,7 +293,7 @@ func (s *itv) ChangeMarketing(ctx context.Context, request operations.ChangeMark
 }
 
 // CheckPreviousEntitlements - Check whether the user has been previously entitled.
-func (s *itv) CheckPreviousEntitlements(ctx context.Context, request operations.CheckPreviousEntitlementsRequest) (*operations.CheckPreviousEntitlementsResponse, error) {
+func (s *itv) CheckPreviousEntitlements(ctx context.Context, request operations.CheckPreviousEntitlementsRequest, security operations.CheckPreviousEntitlementsSecurity) (*operations.CheckPreviousEntitlementsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/had/entitlements"
 
@@ -302,11 +302,11 @@ func (s *itv) CheckPreviousEntitlements(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -359,11 +359,11 @@ func (s *itv) CheckPreviousEntitlements(ctx context.Context, request operations.
 }
 
 // CheckVoucher - Validates the coupon/voucher for specified payment platform.
-func (s *itv) CheckVoucher(ctx context.Context, request operations.CheckVoucherRequest) (*operations.CheckVoucherResponse, error) {
+func (s *itv) CheckVoucher(ctx context.Context, request operations.CheckVoucherRequest, security operations.CheckVoucherSecurity) (*operations.CheckVoucherResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvVoucherRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -378,11 +378,11 @@ func (s *itv) CheckVoucher(ctx context.Context, request operations.CheckVoucherR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -435,11 +435,11 @@ func (s *itv) CheckVoucher(ctx context.Context, request operations.CheckVoucherR
 }
 
 // ConfirmPurchase - Confirms purchase and returns the details of purchased subscription for specified payment platform.
-func (s *itv) ConfirmPurchase(ctx context.Context, request operations.ConfirmPurchaseRequest) (*operations.ConfirmPurchaseResponse, error) {
+func (s *itv) ConfirmPurchase(ctx context.Context, request operations.ConfirmPurchaseRequest, security operations.ConfirmPurchaseSecurity) (*operations.ConfirmPurchaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPurchaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -454,11 +454,11 @@ func (s *itv) ConfirmPurchase(ctx context.Context, request operations.ConfirmPur
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -511,11 +511,11 @@ func (s *itv) ConfirmPurchase(ctx context.Context, request operations.ConfirmPur
 }
 
 // ConfirmPurchaseStrong - Confirms purchase and returns the details of purchased subscription for specified payment platform.
-func (s *itv) ConfirmPurchaseStrong(ctx context.Context, request operations.ConfirmPurchaseStrongRequest) (*operations.ConfirmPurchaseStrongResponse, error) {
+func (s *itv) ConfirmPurchaseStrong(ctx context.Context, request operations.ConfirmPurchaseStrongRequest, security operations.ConfirmPurchaseStrongSecurity) (*operations.ConfirmPurchaseStrongResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/strong", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/strong", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPurchaseStrongRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -530,11 +530,11 @@ func (s *itv) ConfirmPurchaseStrong(ctx context.Context, request operations.Conf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -587,11 +587,11 @@ func (s *itv) ConfirmPurchaseStrong(ctx context.Context, request operations.Conf
 }
 
 // ConfirmPurchaseWithOffer - Confirms purchase and returns the details of purchased subscription for specified payment platform.
-func (s *itv) ConfirmPurchaseWithOffer(ctx context.Context, request operations.ConfirmPurchaseWithOfferRequest) (*operations.ConfirmPurchaseWithOfferResponse, error) {
+func (s *itv) ConfirmPurchaseWithOffer(ctx context.Context, request operations.ConfirmPurchaseWithOfferRequest, security operations.ConfirmPurchaseWithOfferSecurity) (*operations.ConfirmPurchaseWithOfferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/withoffer", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/withoffer", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPurchaseWithOfferRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -606,11 +606,11 @@ func (s *itv) ConfirmPurchaseWithOffer(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -665,11 +665,11 @@ func (s *itv) ConfirmPurchaseWithOffer(ctx context.Context, request operations.C
 // DeleteAccount - Delete account in compliance with GDPR.
 //
 // The expected token scope is Settings.
-func (s *itv) DeleteAccount(ctx context.Context, request operations.DeleteAccountRequest) (*operations.DeleteAccountResponse, error) {
+func (s *itv) DeleteAccount(ctx context.Context, request operations.DeleteAccountRequest, security operations.DeleteAccountSecurity) (*operations.DeleteAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/deleteaccount"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvDeleteAccountRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -684,11 +684,11 @@ func (s *itv) DeleteAccount(ctx context.Context, request operations.DeleteAccoun
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -735,11 +735,11 @@ func (s *itv) DeleteAccount(ctx context.Context, request operations.DeleteAccoun
 //
 // A cancelled subscription will continue to be valid until the subscription
 // expiry date or next renewal date.
-func (s *itv) DeleteItvPurchasePlatform(ctx context.Context, request operations.DeleteItvPurchasePlatformRequest) (*operations.DeleteItvPurchasePlatformResponse, error) {
+func (s *itv) DeleteItvPurchasePlatform(ctx context.Context, request operations.DeleteItvPurchasePlatformRequest, security operations.DeleteItvPurchasePlatformSecurity) (*operations.DeleteItvPurchasePlatformResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvCancelSubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -754,11 +754,11 @@ func (s *itv) DeleteItvPurchasePlatform(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -804,9 +804,9 @@ func (s *itv) DeleteItvPurchasePlatform(ctx context.Context, request operations.
 // ExecuteTransaction - Sends request to execute specified transaction.
 func (s *itv) ExecuteTransaction(ctx context.Context, request operations.ExecuteTransactionRequest) (*operations.ExecuteTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/roku/transaction/{transactionid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/roku/transaction/{transactionid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvRokuTransactionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -821,7 +821,7 @@ func (s *itv) ExecuteTransaction(ctx context.Context, request operations.Execute
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -875,11 +875,11 @@ func (s *itv) ExecuteTransaction(ctx context.Context, request operations.Execute
 // Requires access token with Catalog scope.
 //
 // Pin must be a 4-digit string
-func (s *itv) GetAccountTokenWithPin(ctx context.Context, request operations.GetAccountTokenWithPinRequest) (*operations.GetAccountTokenWithPinResponse, error) {
+func (s *itv) GetAccountTokenWithPin(ctx context.Context, request operations.GetAccountTokenWithPinRequest, security operations.GetAccountTokenWithPinSecurity) (*operations.GetAccountTokenWithPinResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/pinauthorization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPinAuthRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -894,11 +894,11 @@ func (s *itv) GetAccountTokenWithPin(ctx context.Context, request operations.Get
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -951,11 +951,11 @@ func (s *itv) GetAccountTokenWithPin(ctx context.Context, request operations.Get
 }
 
 // GetBillingHistory - Returns the list of billing records for specified payment platform.
-func (s *itv) GetBillingHistory(ctx context.Context, request operations.GetBillingHistoryRequest) (*operations.GetBillingHistoryResponse, error) {
+func (s *itv) GetBillingHistory(ctx context.Context, request operations.GetBillingHistoryRequest, security operations.GetBillingHistorySecurity) (*operations.GetBillingHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/billinghistory/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/billinghistory/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvBillingHistoryRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -970,11 +970,11 @@ func (s *itv) GetBillingHistory(ctx context.Context, request operations.GetBilli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1027,11 +1027,11 @@ func (s *itv) GetBillingHistory(ctx context.Context, request operations.GetBilli
 }
 
 // GetCardDetails - Get payment card details.
-func (s *itv) GetCardDetails(ctx context.Context, request operations.GetCardDetailsRequest) (*operations.GetCardDetailsResponse, error) {
+func (s *itv) GetCardDetails(ctx context.Context, request operations.GetCardDetailsRequest, security operations.GetCardDetailsSecurity) (*operations.GetCardDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvGetCardDetailsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1046,11 +1046,11 @@ func (s *itv) GetCardDetails(ctx context.Context, request operations.GetCardDeta
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1103,7 +1103,7 @@ func (s *itv) GetCardDetails(ctx context.Context, request operations.GetCardDeta
 }
 
 // GetCurrentEntitlement - Returns current entitlement.
-func (s *itv) GetCurrentEntitlement(ctx context.Context, request operations.GetCurrentEntitlementRequest) (*operations.GetCurrentEntitlementResponse, error) {
+func (s *itv) GetCurrentEntitlement(ctx context.Context, request operations.GetCurrentEntitlementRequest, security operations.GetCurrentEntitlementSecurity) (*operations.GetCurrentEntitlementResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/entitlements/current"
 
@@ -1112,11 +1112,11 @@ func (s *itv) GetCurrentEntitlement(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1169,20 +1169,20 @@ func (s *itv) GetCurrentEntitlement(ctx context.Context, request operations.GetC
 }
 
 // GetCurrentSubscription - Returns the details of current subscription for specified payment platform.
-func (s *itv) GetCurrentSubscription(ctx context.Context, request operations.GetCurrentSubscriptionRequest) (*operations.GetCurrentSubscriptionResponse, error) {
+func (s *itv) GetCurrentSubscription(ctx context.Context, request operations.GetCurrentSubscriptionRequest, security operations.GetCurrentSubscriptionSecurity) (*operations.GetCurrentSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1235,7 +1235,7 @@ func (s *itv) GetCurrentSubscription(ctx context.Context, request operations.Get
 }
 
 // GetEntitlementsHistory - Returns the state of subscription for any payment platform.
-func (s *itv) GetEntitlementsHistory(ctx context.Context, request operations.GetEntitlementsHistoryRequest) (*operations.GetEntitlementsHistoryResponse, error) {
+func (s *itv) GetEntitlementsHistory(ctx context.Context, request operations.GetEntitlementsHistoryRequest, security operations.GetEntitlementsHistorySecurity) (*operations.GetEntitlementsHistoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/entitlements/history"
 
@@ -1244,11 +1244,11 @@ func (s *itv) GetEntitlementsHistory(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1303,14 +1303,14 @@ func (s *itv) GetEntitlementsHistory(ctx context.Context, request operations.Get
 // GetFeatureFlag - Gets info whether or not a feature is enabled or disabled using a feature flag. Feature flags are set as a custom field within PM. It also supports custom feature flag data if needed. Such data can be return as well.
 func (s *itv) GetFeatureFlag(ctx context.Context, request operations.GetFeatureFlagRequest) (*operations.GetFeatureFlagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/featureFlag/{feature}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/featureFlag/{feature}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1367,7 +1367,7 @@ func (s *itv) GetFeatureFlag(ctx context.Context, request operations.GetFeatureF
 }
 
 // GetFullPriceRenewal - Returns full price renewal state and reason for specific user.
-func (s *itv) GetFullPriceRenewal(ctx context.Context, request operations.GetFullPriceRenewalRequest) (*operations.GetFullPriceRenewalResponse, error) {
+func (s *itv) GetFullPriceRenewal(ctx context.Context, request operations.GetFullPriceRenewalRequest, security operations.GetFullPriceRenewalSecurity) (*operations.GetFullPriceRenewalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/subscription/fullpricerenewal"
 
@@ -1376,11 +1376,11 @@ func (s *itv) GetFullPriceRenewal(ctx context.Context, request operations.GetFul
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1415,11 +1415,11 @@ func (s *itv) GetFullPriceRenewal(ctx context.Context, request operations.GetFul
 }
 
 // GetItvProfileToken - Returns the ITV profile token.
-func (s *itv) GetItvProfileToken(ctx context.Context, request operations.GetItvProfileTokenRequest) (*operations.GetItvProfileTokenResponse, error) {
+func (s *itv) GetItvProfileToken(ctx context.Context, request operations.GetItvProfileTokenRequest, security operations.GetItvProfileTokenSecurity) (*operations.GetItvProfileTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/profiletoken"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvProfileTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1434,11 +1434,11 @@ func (s *itv) GetItvProfileToken(ctx context.Context, request operations.GetItvP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1554,7 +1554,7 @@ func (s *itv) GetPublicPreview(ctx context.Context) (*operations.GetPublicPrevie
 }
 
 // GetRecommendedList - Get the list of recommended items under the active profile.
-func (s *itv) GetRecommendedList(ctx context.Context, request operations.GetRecommendedListRequest) (*operations.GetRecommendedListResponse, error) {
+func (s *itv) GetRecommendedList(ctx context.Context, request operations.GetRecommendedListRequest, security operations.GetRecommendedListSecurity) (*operations.GetRecommendedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/profile/recommendation/list"
 
@@ -1563,11 +1563,11 @@ func (s *itv) GetRecommendedList(ctx context.Context, request operations.GetReco
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1624,7 +1624,7 @@ func (s *itv) GetRecommendedList(ctx context.Context, request operations.GetReco
 }
 
 // GetSaveOffer - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
-func (s *itv) GetSaveOffer(ctx context.Context, request operations.GetSaveOfferRequest) (*operations.GetSaveOfferResponse, error) {
+func (s *itv) GetSaveOffer(ctx context.Context, request operations.GetSaveOfferRequest, security operations.GetSaveOfferSecurity) (*operations.GetSaveOfferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/save-offer"
 
@@ -1633,11 +1633,11 @@ func (s *itv) GetSaveOffer(ctx context.Context, request operations.GetSaveOfferR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1690,7 +1690,7 @@ func (s *itv) GetSaveOffer(ctx context.Context, request operations.GetSaveOfferR
 }
 
 // GetSubscriptionState - Returns the state of subscription for any payment platform.
-func (s *itv) GetSubscriptionState(ctx context.Context, request operations.GetSubscriptionStateRequest) (*operations.GetSubscriptionStateResponse, error) {
+func (s *itv) GetSubscriptionState(ctx context.Context, request operations.GetSubscriptionStateRequest, security operations.GetSubscriptionStateSecurity) (*operations.GetSubscriptionStateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/subscriptionstate"
 
@@ -1699,11 +1699,11 @@ func (s *itv) GetSubscriptionState(ctx context.Context, request operations.GetSu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1756,20 +1756,20 @@ func (s *itv) GetSubscriptionState(ctx context.Context, request operations.GetSu
 }
 
 // GetSubscriptionStatus - Returns status of latest payment intent.
-func (s *itv) GetSubscriptionStatus(ctx context.Context, request operations.GetSubscriptionStatusRequest) (*operations.GetSubscriptionStatusResponse, error) {
+func (s *itv) GetSubscriptionStatus(ctx context.Context, request operations.GetSubscriptionStatusRequest, security operations.GetSubscriptionStatusSecurity) (*operations.GetSubscriptionStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/subscription/status/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/subscription/status/{platform}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1804,7 +1804,7 @@ func (s *itv) GetSubscriptionStatus(ctx context.Context, request operations.GetS
 }
 
 // GetUpcomingInvoice - Returns an upcoming invoice
-func (s *itv) GetUpcomingInvoice(ctx context.Context, request operations.GetUpcomingInvoiceRequest) (*operations.GetUpcomingInvoiceResponse, error) {
+func (s *itv) GetUpcomingInvoice(ctx context.Context, request operations.GetUpcomingInvoiceRequest, security operations.GetUpcomingInvoiceSecurity) (*operations.GetUpcomingInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/upcominginvoice"
 
@@ -1813,11 +1813,11 @@ func (s *itv) GetUpcomingInvoice(ctx context.Context, request operations.GetUpco
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1870,20 +1870,20 @@ func (s *itv) GetUpcomingInvoice(ctx context.Context, request operations.GetUpco
 }
 
 // GetVoucherByID - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
-func (s *itv) GetVoucherByID(ctx context.Context, request operations.GetVoucherByIDRequest) (*operations.GetVoucherByIDResponse, error) {
+func (s *itv) GetVoucherByID(ctx context.Context, request operations.GetVoucherByIDRequest, security operations.GetVoucherByIDSecurity) (*operations.GetVoucherByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{planId}/{voucherId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{planId}/{voucherId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1938,7 +1938,7 @@ func (s *itv) GetVoucherByID(ctx context.Context, request operations.GetVoucherB
 // GetItvItemsummaryExternalID - Redirects to corresponding Axis Item details page.
 func (s *itv) GetItvItemsummaryExternalID(ctx context.Context, request operations.GetItvItemsummaryExternalIDRequest) (*operations.GetItvItemsummaryExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/itemsummary/{externalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/itemsummary/{externalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1998,20 +1998,20 @@ func (s *itv) GetItvItemsummaryExternalID(ctx context.Context, request operation
 }
 
 // GetItvPlansPlatform - Returns the plans available for specified payment platform.
-func (s *itv) GetItvPlansPlatform(ctx context.Context, request operations.GetItvPlansPlatformRequest) (*operations.GetItvPlansPlatformResponse, error) {
+func (s *itv) GetItvPlansPlatform(ctx context.Context, request operations.GetItvPlansPlatformRequest, security operations.GetItvPlansPlatformSecurity) (*operations.GetItvPlansPlatformResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/plans/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/plans/{platform}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2064,7 +2064,7 @@ func (s *itv) GetItvPlansPlatform(ctx context.Context, request operations.GetItv
 }
 
 // GetItvProfile - Returns the ITV profile object.
-func (s *itv) GetItvProfile(ctx context.Context, request operations.GetItvProfileRequest) (*operations.GetItvProfileResponse, error) {
+func (s *itv) GetItvProfile(ctx context.Context, request operations.GetItvProfileRequest, security operations.GetItvProfileSecurity) (*operations.GetItvProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/profile"
 
@@ -2073,11 +2073,11 @@ func (s *itv) GetItvProfile(ctx context.Context, request operations.GetItvProfil
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2139,7 +2139,7 @@ func (s *itv) GetItvRokuPlans(ctx context.Context, request operations.GetItvRoku
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2196,11 +2196,11 @@ func (s *itv) GetItvRokuPlans(ctx context.Context, request operations.GetItvRoku
 }
 
 // GooglePaySubscription - Get the list of recommended items under the active profile.
-func (s *itv) GooglePaySubscription(ctx context.Context, request operations.GooglePaySubscriptionRequest) (*operations.GooglePaySubscriptionResponse, error) {
+func (s *itv) GooglePaySubscription(ctx context.Context, request operations.GooglePaySubscriptionRequest, security operations.GooglePaySubscriptionSecurity) (*operations.GooglePaySubscriptionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/googlepay/subscription"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvGooglePaySubscriptionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2215,11 +2215,11 @@ func (s *itv) GooglePaySubscription(ctx context.Context, request operations.Goog
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2255,20 +2255,20 @@ func (s *itv) GooglePaySubscription(ctx context.Context, request operations.Goog
 }
 
 // Resubscribe - Resubscription for a user.
-func (s *itv) Resubscribe(ctx context.Context, request operations.ResubscribeRequest) (*operations.ResubscribeResponse, error) {
+func (s *itv) Resubscribe(ctx context.Context, request operations.ResubscribeRequest, security operations.ResubscribeSecurity) (*operations.ResubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/resubscribe/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/resubscribe/{platform}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2312,11 +2312,11 @@ func (s *itv) Resubscribe(ctx context.Context, request operations.ResubscribeReq
 }
 
 // UpdatePaymentIntentStrong - Change payment method details.
-func (s *itv) UpdatePaymentIntentStrong(ctx context.Context, request operations.UpdatePaymentIntentStrongRequest) (*operations.UpdatePaymentIntentStrongResponse, error) {
+func (s *itv) UpdatePaymentIntentStrong(ctx context.Context, request operations.UpdatePaymentIntentStrongRequest, security operations.UpdatePaymentIntentStrongSecurity) (*operations.UpdatePaymentIntentStrongResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/updateIntent/strong/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/updateIntent/strong/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpdateIntentStrongRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2331,11 +2331,11 @@ func (s *itv) UpdatePaymentIntentStrong(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2388,11 +2388,11 @@ func (s *itv) UpdatePaymentIntentStrong(ctx context.Context, request operations.
 }
 
 // UpdatePaymentMethodStrong - Change payment method details.
-func (s *itv) UpdatePaymentMethodStrong(ctx context.Context, request operations.UpdatePaymentMethodStrongRequest) (*operations.UpdatePaymentMethodStrongResponse, error) {
+func (s *itv) UpdatePaymentMethodStrong(ctx context.Context, request operations.UpdatePaymentMethodStrongRequest, security operations.UpdatePaymentMethodStrongSecurity) (*operations.UpdatePaymentMethodStrongResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/updatePayment/strong/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/updatePayment/strong/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpdatePaymentStrongRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2407,11 +2407,11 @@ func (s *itv) UpdatePaymentMethodStrong(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2457,11 +2457,11 @@ func (s *itv) UpdatePaymentMethodStrong(ctx context.Context, request operations.
 // UpdateProfile - Update ITV profile.
 //
 // The expected token scope is Settings.
-func (s *itv) UpdateProfile(ctx context.Context, request operations.UpdateProfileRequest) (*operations.UpdateProfileResponse, error) {
+func (s *itv) UpdateProfile(ctx context.Context, request operations.UpdateProfileRequest, security operations.UpdateProfileSecurity) (*operations.UpdateProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/itv/profile"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpdateProfileRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2476,11 +2476,11 @@ func (s *itv) UpdateProfile(ctx context.Context, request operations.UpdateProfil
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2524,11 +2524,11 @@ func (s *itv) UpdateProfile(ctx context.Context, request operations.UpdateProfil
 }
 
 // UpgradePlan - Upgrades the plan for the current user.
-func (s *itv) UpgradePlan(ctx context.Context, request operations.UpgradePlanRequest) (*operations.UpgradePlanResponse, error) {
+func (s *itv) UpgradePlan(ctx context.Context, request operations.UpgradePlanRequest, security operations.UpgradePlanSecurity) (*operations.UpgradePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/plan/{platform}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/itv/plan/{platform}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpgradePlanRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2543,11 +2543,11 @@ func (s *itv) UpgradePlan(ctx context.Context, request operations.UpgradePlanReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

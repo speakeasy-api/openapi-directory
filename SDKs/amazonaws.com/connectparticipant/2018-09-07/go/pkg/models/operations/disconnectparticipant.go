@@ -6,8 +6,14 @@ import (
 	"net/http"
 )
 
-type DisconnectParticipantHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+type DisconnectParticipantRequestBody struct {
+	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.
+	ClientToken *string `json:"ClientToken,omitempty"`
+}
+
+type DisconnectParticipantRequest struct {
+	RequestBody   DisconnectParticipantRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	// The authentication token associated with the participant's connection.
 	XAmzBearer        string  `header:"style=simple,explode=false,name=X-Amz-Bearer"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
@@ -16,16 +22,6 @@ type DisconnectParticipantHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisconnectParticipantRequestBody struct {
-	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.
-	ClientToken *string `json:"ClientToken,omitempty"`
-}
-
-type DisconnectParticipantRequest struct {
-	Headers DisconnectParticipantHeaders
-	Request DisconnectParticipantRequestBody `request:"mediaType=application/json"`
 }
 
 type DisconnectParticipantResponse struct {

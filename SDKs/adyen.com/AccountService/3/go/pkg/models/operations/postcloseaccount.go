@@ -8,13 +8,8 @@ import (
 )
 
 type PostCloseAccountSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCloseAccountRequest struct {
-	Request  *shared.CloseAccountRequest `request:"mediaType=application/json"`
-	Security PostCloseAccountSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostCloseAccountResponse struct {

@@ -114,14 +114,14 @@ func New(opts ...SDKOption) *SDK {
 // DeleteObject - Deletes an object at the specified path.
 func (s *SDK) DeleteObject(ctx context.Context, request operations.DeleteObjectRequest) (*operations.DeleteObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -190,14 +190,14 @@ func (s *SDK) DeleteObject(ctx context.Context, request operations.DeleteObjectR
 // DescribeObject - Gets the headers for an object at the specified path.
 func (s *SDK) DescribeObject(ctx context.Context, request operations.DescribeObjectRequest) (*operations.DescribeObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -266,14 +266,14 @@ func (s *SDK) DescribeObject(ctx context.Context, request operations.DescribeObj
 // GetObject - Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS Elemental MediaStore downloads the object even if it’s still uploading the object.
 func (s *SDK) GetObject(ctx context.Context, request operations.GetObjectRequest) (*operations.GetObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -359,9 +359,9 @@ func (s *SDK) ListItems(ctx context.Context, request operations.ListItemsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -422,9 +422,9 @@ func (s *SDK) ListItems(ctx context.Context, request operations.ListItemsRequest
 // PutObject - Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB for streaming upload availability.
 func (s *SDK) PutObject(ctx context.Context, request operations.PutObjectRequest) (*operations.PutObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,7 +439,7 @@ func (s *SDK) PutObject(ctx context.Context, request operations.PutObjectRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

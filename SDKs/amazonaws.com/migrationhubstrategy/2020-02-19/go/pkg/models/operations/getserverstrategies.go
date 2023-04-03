@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetServerStrategiesPathParams struct {
-	//  The ID of the server.
-	ServerID string `pathParam:"style=simple,explode=false,name=serverId"`
-}
-
-type GetServerStrategiesHeaders struct {
+type GetServerStrategiesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetServerStrategiesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetServerStrategiesRequest struct {
-	PathParams GetServerStrategiesPathParams
-	Headers    GetServerStrategiesHeaders
+	//  The ID of the server.
+	ServerID string `pathParam:"style=simple,explode=false,name=serverId"`
 }
 
 type GetServerStrategiesResponse struct {

@@ -34,11 +34,11 @@ func newMerchants(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // MerchantsAdd - Create Merchant
 // Create Merchant
-func (s *merchants) MerchantsAdd(ctx context.Context, request operations.MerchantsAddRequest) (*operations.MerchantsAddResponse, error) {
+func (s *merchants) MerchantsAdd(ctx context.Context, request operations.MerchantsAddRequest, security operations.MerchantsAddSecurity) (*operations.MerchantsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/merchants"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MerchantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *merchants) MerchantsAdd(ctx context.Context, request operations.Merchan
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *merchants) MerchantsAdd(ctx context.Context, request operations.Merchan
 
 // MerchantsAll - List Merchants
 // List Merchants
-func (s *merchants) MerchantsAll(ctx context.Context, request operations.MerchantsAllRequest) (*operations.MerchantsAllResponse, error) {
+func (s *merchants) MerchantsAll(ctx context.Context, request operations.MerchantsAllRequest, security operations.MerchantsAllSecurity) (*operations.MerchantsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pos/merchants"
 
@@ -164,13 +164,13 @@ func (s *merchants) MerchantsAll(ctx context.Context, request operations.Merchan
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *merchants) MerchantsAll(ctx context.Context, request operations.Merchan
 
 // MerchantsDelete - Delete Merchant
 // Delete Merchant
-func (s *merchants) MerchantsDelete(ctx context.Context, request operations.MerchantsDeleteRequest) (*operations.MerchantsDeleteResponse, error) {
+func (s *merchants) MerchantsDelete(ctx context.Context, request operations.MerchantsDeleteRequest, security operations.MerchantsDeleteSecurity) (*operations.MerchantsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/merchants/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/merchants/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *merchants) MerchantsDelete(ctx context.Context, request operations.Merc
 
 // MerchantsOne - Get Merchant
 // Get Merchant
-func (s *merchants) MerchantsOne(ctx context.Context, request operations.MerchantsOneRequest) (*operations.MerchantsOneResponse, error) {
+func (s *merchants) MerchantsOne(ctx context.Context, request operations.MerchantsOneRequest, security operations.MerchantsOneSecurity) (*operations.MerchantsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/merchants/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/merchants/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *merchants) MerchantsOne(ctx context.Context, request operations.Merchan
 
 // MerchantsUpdate - Update Merchant
 // Update Merchant
-func (s *merchants) MerchantsUpdate(ctx context.Context, request operations.MerchantsUpdateRequest) (*operations.MerchantsUpdateResponse, error) {
+func (s *merchants) MerchantsUpdate(ctx context.Context, request operations.MerchantsUpdateRequest, security operations.MerchantsUpdateSecurity) (*operations.MerchantsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pos/merchants/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pos/merchants/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MerchantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *merchants) MerchantsUpdate(ctx context.Context, request operations.Merc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

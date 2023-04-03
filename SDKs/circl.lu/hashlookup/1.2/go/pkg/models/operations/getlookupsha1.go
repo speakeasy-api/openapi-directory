@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetLookupSha1PathParams struct {
-	Sha1 string `pathParam:"style=simple,explode=false,name=sha1"`
-}
-
 type GetLookupSha1Request struct {
-	PathParams GetLookupSha1PathParams
+	Sha1 string `pathParam:"style=simple,explode=false,name=sha1"`
 }
 
 type GetLookupSha1Response struct {

@@ -59,28 +59,20 @@ func (e *GETConfigureHealthCheckVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETConfigureHealthCheckQueryParams struct {
+type GETConfigureHealthCheckRequest struct {
 	Action GETConfigureHealthCheckActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The configuration information.
 	HealthCheck GETConfigureHealthCheckHealthCheck `queryParam:"style=form,explode=true,name=HealthCheck"`
 	// The name of the load balancer.
-	LoadBalancerName string                             `queryParam:"style=form,explode=true,name=LoadBalancerName"`
-	Version          GETConfigureHealthCheckVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETConfigureHealthCheckHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETConfigureHealthCheckRequest struct {
-	QueryParams GETConfigureHealthCheckQueryParams
-	Headers     GETConfigureHealthCheckHeaders
+	LoadBalancerName  string                             `queryParam:"style=form,explode=true,name=LoadBalancerName"`
+	Version           GETConfigureHealthCheckVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETConfigureHealthCheckResponse struct {

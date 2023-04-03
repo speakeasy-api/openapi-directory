@@ -13,67 +13,70 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.SendCommandRequest{
-        Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "QLDBSession.SendCommand",
-        },
-        Request: shared.SendCommandRequest{
+        SendCommandRequest: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "vel": "error",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+            },
+            CommitTransaction: &shared.CommitTransactionRequest{
+                CommitDigest: "illum",
+                TransactionID: "vel",
+            },
+            EndSession: map[string]interface{}{
                 "deserunt": "suscipit",
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "delectus",
-                TransactionID: "tempora",
-            },
-            EndSession: map[string]interface{}{
-                "molestiae": "minus",
-                "placeat": "voluptatum",
-            },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "excepturi",
-                        IonText: "nisi",
+                        IonBinary: "tempora",
+                        IonText: "suscipit",
                     },
                     shared.ValueHolder{
-                        IonBinary: "recusandae",
-                        IonText: "temporibus",
+                        IonBinary: "molestiae",
+                        IonText: "minus",
+                    },
+                    shared.ValueHolder{
+                        IonBinary: "placeat",
+                        IonText: "voluptatum",
+                    },
+                    shared.ValueHolder{
+                        IonBinary: "iusto",
+                        IonText: "excepturi",
                     },
                 },
-                Statement: "ab",
-                TransactionID: "quis",
+                Statement: "nisi",
+                TransactionID: "recusandae",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "veritatis",
-                TransactionID: "deserunt",
+                NextPageToken: "temporibus",
+                TransactionID: "ab",
             },
-            SessionToken: "perferendis",
+            SessionToken: "quis",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "ipsam",
+                LedgerName: "veritatis",
             },
             StartTransaction: map[string]interface{}{
-                "sapiente": "quo",
-                "odit": "at",
-                "at": "maiores",
-                "molestiae": "quod",
+                "perferendis": "ipsam",
+                "repellendus": "sapiente",
+                "quo": "odit",
             },
         },
+        XAmzAlgorithm: "at",
+        XAmzContentSha256: "at",
+        XAmzCredential: "maiores",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "quod",
+        XAmzSignature: "quod",
+        XAmzSignedHeaders: "esse",
+        XAmzTarget: "QLDBSession.SendCommand",
     }
 
     ctx := context.Background()

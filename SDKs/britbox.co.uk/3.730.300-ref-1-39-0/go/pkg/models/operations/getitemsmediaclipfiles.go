@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItemsMediaClipFilesQueryParams struct {
+type GetItemsMediaClipFilesRequest struct {
+	// The item Axis ids joined string with comma.
+	ItemDownloadableRequest shared.ItemDownloadableRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type GetItemsMediaClipFilesQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetItemsMediaClipFilesRequest struct {
-	QueryParams GetItemsMediaClipFilesQueryParams
-	// The item Axis ids joined string with comma.
-	Request shared.ItemDownloadableRequest `request:"mediaType=application/json"`
 }
 
 type GetItemsMediaClipFilesResponse struct {

@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type RefreshGravatarPathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type RefreshGravatarRequest struct {
-	PathParams RefreshGravatarPathParams
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 // RefreshGravatar200ApplicationJSON - response

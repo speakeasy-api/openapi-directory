@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAdConfigHeaders struct {
+type CreateAdConfigRequest struct {
+	CreateActiveDirectoryConfigRequest shared.CreateActiveDirectoryConfigRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CreateAdConfigRequest struct {
-	Headers CreateAdConfigHeaders
-	Request shared.CreateActiveDirectoryConfigRequest `request:"mediaType=application/json"`
 }
 
 type CreateAdConfigResponse struct {

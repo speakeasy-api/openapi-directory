@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CompanyDeepsearchNameSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
-type CompanyDeepsearchNamePathParams struct {
+type CompanyDeepsearchNameRequest struct {
 	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
 	Country string `pathParam:"style=simple,explode=false,name=country"`
 	// company name
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CompanyDeepsearchNameRequest struct {
-	PathParams CompanyDeepsearchNamePathParams
-	Security   CompanyDeepsearchNameSecurity
 }
 
 // CompanyDeepsearchNameDefaultApplicationJSON - Detailed information about the error

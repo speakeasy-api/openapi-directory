@@ -50,7 +50,7 @@ func (e *GETUpdateAccountPasswordPolicyVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETUpdateAccountPasswordPolicyQueryParams struct {
+type GETUpdateAccountPasswordPolicyRequest struct {
 	Action GETUpdateAccountPasswordPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p> Allows all IAM users in your account to use the Amazon Web Services Management Console to change their own passwords. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_enable-user-change.html">Permitting IAM users to change their own passwords</a> in the <i>IAM User Guide</i>.</p> <p>If you do not specify a value for this parameter, then the operation uses the default value of <code>false</code>. The result is that IAM users in the account do not automatically have permissions to change their own password.</p>
 	AllowUsersToChangePassword *bool `queryParam:"style=form,explode=true,name=AllowUsersToChangePassword"`
@@ -71,21 +71,13 @@ type GETUpdateAccountPasswordPolicyQueryParams struct {
 	// <p>Specifies whether IAM user passwords must contain at least one uppercase character from the ISO basic Latin alphabet (A to Z).</p> <p>If you do not specify a value for this parameter, then the operation uses the default value of <code>false</code>. The result is that passwords do not require at least one uppercase character.</p>
 	RequireUppercaseCharacters *bool                                     `queryParam:"style=form,explode=true,name=RequireUppercaseCharacters"`
 	Version                    GETUpdateAccountPasswordPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateAccountPasswordPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateAccountPasswordPolicyRequest struct {
-	QueryParams GETUpdateAccountPasswordPolicyQueryParams
-	Headers     GETUpdateAccountPasswordPolicyHeaders
+	XAmzAlgorithm              *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateAccountPasswordPolicyResponse struct {

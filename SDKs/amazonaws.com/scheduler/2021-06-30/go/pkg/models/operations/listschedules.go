@@ -33,7 +33,7 @@ func (e *ListSchedulesStateEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSchedulesQueryParams struct {
+type ListSchedulesRequest struct {
 	// If specified, limits the number of results returned by this operation. The operation also returns a <code>NextToken</code> which you can use in a subsequent operation to retrieve the next set of results.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Schedule name prefix to return the filtered list of resources.
@@ -43,22 +43,14 @@ type ListSchedulesQueryParams struct {
 	// If specified, only lists the schedules whose associated schedule group matches the given filter.
 	ScheduleGroup *string `queryParam:"style=form,explode=true,name=ScheduleGroup"`
 	// If specified, only lists the schedules whose current state matches the given filter.
-	State *ListSchedulesStateEnum `queryParam:"style=form,explode=true,name=State"`
-}
-
-type ListSchedulesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSchedulesRequest struct {
-	QueryParams ListSchedulesQueryParams
-	Headers     ListSchedulesHeaders
+	State             *ListSchedulesStateEnum `queryParam:"style=form,explode=true,name=State"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListSchedulesResponse struct {

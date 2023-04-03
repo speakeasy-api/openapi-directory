@@ -30,20 +30,16 @@ func (e *DeregisterScalableTargetXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DeregisterScalableTargetHeaders struct {
-	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeregisterScalableTargetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeregisterScalableTargetRequest struct {
-	Headers DeregisterScalableTargetHeaders
-	Request shared.DeregisterScalableTargetRequest `request:"mediaType=application/json"`
+	DeregisterScalableTargetRequest shared.DeregisterScalableTargetRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      DeregisterScalableTargetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeregisterScalableTargetResponse struct {

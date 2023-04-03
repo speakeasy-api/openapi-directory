@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetAnnotationPathParams struct {
+type GetAnnotationRequest struct {
 	// Either the uuid or external-id of the annotation.
 	AnnotationID string `pathParam:"style=simple,explode=false,name=annotationId"`
 	// The commit the report belongs to.
@@ -17,10 +17,6 @@ type GetAnnotationPathParams struct {
 	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetAnnotationRequest struct {
-	PathParams GetAnnotationPathParams
 }
 
 type GetAnnotationResponse struct {

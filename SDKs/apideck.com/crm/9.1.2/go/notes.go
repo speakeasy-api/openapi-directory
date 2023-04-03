@@ -34,11 +34,11 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // NotesAdd - Create note
 // Create note
-func (s *notes) NotesAdd(ctx context.Context, request operations.NotesAddRequest) (*operations.NotesAddResponse, error) {
+func (s *notes) NotesAdd(ctx context.Context, request operations.NotesAddRequest, security operations.NotesAddSecurity) (*operations.NotesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/notes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NoteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *notes) NotesAdd(ctx context.Context, request operations.NotesAddRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *notes) NotesAdd(ctx context.Context, request operations.NotesAddRequest
 
 // NotesAll - List notes
 // List notes
-func (s *notes) NotesAll(ctx context.Context, request operations.NotesAllRequest) (*operations.NotesAllResponse, error) {
+func (s *notes) NotesAll(ctx context.Context, request operations.NotesAllRequest, security operations.NotesAllSecurity) (*operations.NotesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/notes"
 
@@ -164,13 +164,13 @@ func (s *notes) NotesAll(ctx context.Context, request operations.NotesAllRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *notes) NotesAll(ctx context.Context, request operations.NotesAllRequest
 
 // NotesDelete - Delete note
 // Delete note
-func (s *notes) NotesDelete(ctx context.Context, request operations.NotesDeleteRequest) (*operations.NotesDeleteResponse, error) {
+func (s *notes) NotesDelete(ctx context.Context, request operations.NotesDeleteRequest, security operations.NotesDeleteSecurity) (*operations.NotesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *notes) NotesDelete(ctx context.Context, request operations.NotesDeleteR
 
 // NotesOne - Get note
 // Get note
-func (s *notes) NotesOne(ctx context.Context, request operations.NotesOneRequest) (*operations.NotesOneResponse, error) {
+func (s *notes) NotesOne(ctx context.Context, request operations.NotesOneRequest, security operations.NotesOneSecurity) (*operations.NotesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *notes) NotesOne(ctx context.Context, request operations.NotesOneRequest
 
 // NotesUpdate - Update note
 // Update note
-func (s *notes) NotesUpdate(ctx context.Context, request operations.NotesUpdateRequest) (*operations.NotesUpdateResponse, error) {
+func (s *notes) NotesUpdate(ctx context.Context, request operations.NotesUpdateRequest, security operations.NotesUpdateSecurity) (*operations.NotesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/notes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NoteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *notes) NotesUpdate(ctx context.Context, request operations.NotesUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BillingAggregatedInformationGetForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type BillingAggregatedInformationGetForOrgPathParams struct {
-	// The name of the Organization
-	OrgName string `pathParam:"style=simple,explode=false,name=orgName"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BillingAggregatedInformationGetForOrgPeriodEnum - Type of period that should be included in the Billing Information
@@ -69,19 +63,15 @@ func (e *BillingAggregatedInformationGetForOrgServiceEnum) UnmarshalJSON(data []
 	}
 }
 
-type BillingAggregatedInformationGetForOrgQueryParams struct {
+type BillingAggregatedInformationGetForOrgRequest struct {
+	// The name of the Organization
+	OrgName string `pathParam:"style=simple,explode=false,name=orgName"`
 	// Type of period that should be included in the Billing Information
 	Period *BillingAggregatedInformationGetForOrgPeriodEnum `queryParam:"style=form,explode=true,name=period"`
 	// Type of service that should be included in the Billing Information
 	Service *BillingAggregatedInformationGetForOrgServiceEnum `queryParam:"style=form,explode=true,name=service"`
 	// Controls whether the API should show the original plan when Azure Subscription is not enabled
 	ShowOriginalPlans *bool `queryParam:"style=form,explode=true,name=showOriginalPlans"`
-}
-
-type BillingAggregatedInformationGetForOrgRequest struct {
-	PathParams  BillingAggregatedInformationGetForOrgPathParams
-	QueryParams BillingAggregatedInformationGetForOrgQueryParams
-	Security    BillingAggregatedInformationGetForOrgSecurity
 }
 
 // BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

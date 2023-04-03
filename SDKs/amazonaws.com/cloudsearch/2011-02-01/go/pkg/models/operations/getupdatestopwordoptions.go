@@ -50,26 +50,18 @@ func (e *GETUpdateStopwordOptionsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateStopwordOptionsQueryParams struct {
-	Action     GETUpdateStopwordOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DomainName string                              `queryParam:"style=form,explode=true,name=DomainName"`
-	Stopwords  string                              `queryParam:"style=form,explode=true,name=Stopwords"`
-	Version    GETUpdateStopwordOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateStopwordOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETUpdateStopwordOptionsRequest struct {
-	QueryParams GETUpdateStopwordOptionsQueryParams
-	Headers     GETUpdateStopwordOptionsHeaders
+	Action            GETUpdateStopwordOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	DomainName        string                              `queryParam:"style=form,explode=true,name=DomainName"`
+	Stopwords         string                              `queryParam:"style=form,explode=true,name=Stopwords"`
+	Version           GETUpdateStopwordOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateStopwordOptionsResponse struct {

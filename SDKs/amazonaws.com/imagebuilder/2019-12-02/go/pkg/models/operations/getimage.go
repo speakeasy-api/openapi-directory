@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImageQueryParams struct {
-	// The Amazon Resource Name (ARN) of the image that you want to retrieve.
-	ImageBuildVersionArn string `queryParam:"style=form,explode=true,name=imageBuildVersionArn"`
-}
-
-type GetImageHeaders struct {
+type GetImageRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetImageHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetImageRequest struct {
-	QueryParams GetImageQueryParams
-	Headers     GetImageHeaders
+	// The Amazon Resource Name (ARN) of the image that you want to retrieve.
+	ImageBuildVersionArn string `queryParam:"style=form,explode=true,name=imageBuildVersionArn"`
 }
 
 type GetImageResponse struct {

@@ -47,7 +47,7 @@ func (s *licenses) GetLicenses(ctx context.Context, request operations.GetLicens
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

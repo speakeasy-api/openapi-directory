@@ -32,7 +32,7 @@ func newTags(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // CreateTagGroup - Creates a tag group
-func (s *tags) CreateTagGroup(ctx context.Context, request operations.CreateTagGroupRequest) (*operations.CreateTagGroupResponse, error) {
+func (s *tags) CreateTagGroup(ctx context.Context, request operations.CreateTagGroupRequestBody) (*operations.CreateTagGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tag_groups.json"
 
@@ -85,7 +85,7 @@ func (s *tags) CreateTagGroup(ctx context.Context, request operations.CreateTagG
 // GetTag - Get a specific tag
 func (s *tags) GetTag(ctx context.Context, request operations.GetTagRequest) (*operations.GetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tag/{name}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tag/{name}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +129,7 @@ func (s *tags) GetTag(ctx context.Context, request operations.GetTagRequest) (*o
 // GetTagGroup - Get a single tag group
 func (s *tags) GetTagGroup(ctx context.Context, request operations.GetTagGroupRequest) (*operations.GetTagGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tag_groups/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tag_groups/{id}.json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,9 +261,9 @@ func (s *tags) ListTags(ctx context.Context) (*operations.ListTagsResponse, erro
 // UpdateTagGroup - Update tag group
 func (s *tags) UpdateTagGroup(ctx context.Context, request operations.UpdateTagGroupRequest) (*operations.UpdateTagGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tag_groups/{id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tag_groups/{id}.json", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

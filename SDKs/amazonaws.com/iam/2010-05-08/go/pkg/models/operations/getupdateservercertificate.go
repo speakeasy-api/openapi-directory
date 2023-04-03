@@ -50,7 +50,7 @@ func (e *GETUpdateServerCertificateVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETUpdateServerCertificateQueryParams struct {
+type GETUpdateServerCertificateRequest struct {
 	Action GETUpdateServerCertificateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The new path for the server certificate. Include this only if you are updating the server certificate's path.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of either a forward slash (/) by itself or a string that must begin and end with forward slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.</p>
 	NewPath *string `queryParam:"style=form,explode=true,name=NewPath"`
@@ -59,21 +59,13 @@ type GETUpdateServerCertificateQueryParams struct {
 	// <p>The name of the server certificate that you want to update.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	ServerCertificateName string                                `queryParam:"style=form,explode=true,name=ServerCertificateName"`
 	Version               GETUpdateServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateServerCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateServerCertificateRequest struct {
-	QueryParams GETUpdateServerCertificateQueryParams
-	Headers     GETUpdateServerCertificateHeaders
+	XAmzAlgorithm         *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateServerCertificateResponse struct {

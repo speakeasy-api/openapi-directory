@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RevokeRoleUsersPathParams struct {
-	// Role ID
-	RoleID int `pathParam:"style=simple,explode=false,name=role_id"`
-}
-
-type RevokeRoleUsersHeaders struct {
+type RevokeRoleUsersRequest struct {
+	UserIds shared.UserIds `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RevokeRoleUsersRequest struct {
-	PathParams RevokeRoleUsersPathParams
-	Headers    RevokeRoleUsersHeaders
-	Request    shared.UserIds `request:"mediaType=application/json"`
+	// Role ID
+	RoleID int `pathParam:"style=simple,explode=false,name=role_id"`
 }
 
 type RevokeRoleUsersResponse struct {

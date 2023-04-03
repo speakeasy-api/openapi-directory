@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestOAuthClientsQueryParams struct {
+type RequestOAuthClientsRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Sort string
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type RequestOAuthClientsHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestOAuthClientsRequest struct {
-	QueryParams RequestOAuthClientsQueryParams
-	Headers     RequestOAuthClientsHeaders
 }
 
 type RequestOAuthClientsResponse struct {

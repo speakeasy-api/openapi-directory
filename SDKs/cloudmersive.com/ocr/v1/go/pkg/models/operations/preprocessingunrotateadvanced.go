@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PreprocessingUnrotateAdvancedSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=Apikey"`
 }
 
 type PreprocessingUnrotateAdvancedRequestBodyImageFile struct {
@@ -19,11 +18,6 @@ type PreprocessingUnrotateAdvancedRequestBodyImageFile struct {
 type PreprocessingUnrotateAdvancedRequestBody struct {
 	// Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
 	ImageFile PreprocessingUnrotateAdvancedRequestBodyImageFile `multipartForm:"file"`
-}
-
-type PreprocessingUnrotateAdvancedRequest struct {
-	Request  PreprocessingUnrotateAdvancedRequestBody `request:"mediaType=multipart/form-data"`
-	Security PreprocessingUnrotateAdvancedSecurity
 }
 
 type PreprocessingUnrotateAdvancedResponse struct {

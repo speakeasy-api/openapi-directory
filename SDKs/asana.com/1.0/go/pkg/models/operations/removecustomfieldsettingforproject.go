@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveCustomFieldSettingForProjectPathParams struct {
-	// Globally unique identifier for the project.
-	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
-}
-
-type RemoveCustomFieldSettingForProjectQueryParams struct {
-	// Provides “pretty” output.
-	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
-	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
 // RemoveCustomFieldSettingForProjectRequestBody - Information about the custom field setting being removed.
 type RemoveCustomFieldSettingForProjectRequestBody struct {
 	Data *shared.RemoveCustomFieldSettingRequest `json:"data,omitempty"`
 }
 
 type RemoveCustomFieldSettingForProjectRequest struct {
-	PathParams  RemoveCustomFieldSettingForProjectPathParams
-	QueryParams RemoveCustomFieldSettingForProjectQueryParams
 	// Information about the custom field setting being removed.
-	Request RemoveCustomFieldSettingForProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody RemoveCustomFieldSettingForProjectRequestBody `request:"mediaType=application/json"`
+	// Provides “pretty” output.
+	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
+	// Globally unique identifier for the project.
+	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
 }
 
 // RemoveCustomFieldSettingForProject200ApplicationJSON - Successfully removed the custom field from the project.

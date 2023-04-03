@@ -30,20 +30,16 @@ func (e *ListLicenseManagerReportGeneratorsXAmzTargetEnum) UnmarshalJSON(data []
 	}
 }
 
-type ListLicenseManagerReportGeneratorsHeaders struct {
-	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListLicenseManagerReportGeneratorsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListLicenseManagerReportGeneratorsRequest struct {
-	Headers ListLicenseManagerReportGeneratorsHeaders
-	Request shared.ListLicenseManagerReportGeneratorsRequest `request:"mediaType=application/json"`
+	ListLicenseManagerReportGeneratorsRequest shared.ListLicenseManagerReportGeneratorsRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                             *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                         *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                            *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                                  *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                         *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                             *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                         *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                                ListLicenseManagerReportGeneratorsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ListLicenseManagerReportGeneratorsResponse struct {

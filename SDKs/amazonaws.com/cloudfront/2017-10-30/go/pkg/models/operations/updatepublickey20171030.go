@@ -6,23 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdatePublicKey20171030PathParams struct {
-	// ID of the public key to be updated.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdatePublicKey20171030Headers struct {
-	// The value of the <code>ETag</code> header that you received when retrieving the public key to update. For example: <code>E2QWRUHAPOMQZL</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdatePublicKey20171030RequestBodyPublicKeyConfig - Information about a public key you add to CloudFront to use with features like field-level encryption.
 type UpdatePublicKey20171030RequestBodyPublicKeyConfig struct {
 	CallerReference *string
@@ -37,9 +20,18 @@ type UpdatePublicKey20171030RequestBody struct {
 }
 
 type UpdatePublicKey20171030Request struct {
-	PathParams UpdatePublicKey20171030PathParams
-	Headers    UpdatePublicKey20171030Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// ID of the public key to be updated.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The value of the <code>ETag</code> header that you received when retrieving the public key to update. For example: <code>E2QWRUHAPOMQZL</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdatePublicKey20171030Response struct {

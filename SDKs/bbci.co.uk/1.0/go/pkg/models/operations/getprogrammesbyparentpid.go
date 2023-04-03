@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProgrammesByParentPIDPathParams struct {
-	// The programme identifier.
-	Pid string `pathParam:"style=simple,explode=false,name=pid"`
-}
-
-type GetProgrammesByParentPIDQueryParams struct {
+type GetProgrammesByParentPIDRequest struct {
 	// Whether to return all, or available programmes
 	Availability shared.AvailabilityEnum `queryParam:"style=form,explode=true,name=availability"`
 	// The depth to return child entities.
 	InitialChildCount int64 `queryParam:"style=form,explode=true,name=initial_child_count"`
+	// The programme identifier.
+	Pid string `pathParam:"style=simple,explode=false,name=pid"`
 	// The rights group to limit results to.
 	Rights shared.RightsEnum `queryParam:"style=form,explode=true,name=rights"`
-}
-
-type GetProgrammesByParentPIDRequest struct {
-	PathParams  GetProgrammesByParentPIDPathParams
-	QueryParams GetProgrammesByParentPIDQueryParams
 }
 
 type GetProgrammesByParentPIDResponse struct {

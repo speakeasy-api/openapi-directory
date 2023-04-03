@@ -33,22 +33,22 @@ func newEmployeePayrolls(defaultClient, securityClient HTTPClient, serverURL, la
 
 // EmployeePayrollsAll - List Employee Payrolls
 // List payrolls for employee
-func (s *employeePayrolls) EmployeePayrollsAll(ctx context.Context, request operations.EmployeePayrollsAllRequest) (*operations.EmployeePayrollsAllResponse, error) {
+func (s *employeePayrolls) EmployeePayrollsAll(ctx context.Context, request operations.EmployeePayrollsAllRequest, security operations.EmployeePayrollsAllSecurity) (*operations.EmployeePayrollsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/payrolls/employees/{employee_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/payrolls/employees/{employee_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,22 +144,22 @@ func (s *employeePayrolls) EmployeePayrollsAll(ctx context.Context, request oper
 
 // EmployeePayrollsOne - Get Employee Payroll
 // Get payroll for employee
-func (s *employeePayrolls) EmployeePayrollsOne(ctx context.Context, request operations.EmployeePayrollsOneRequest) (*operations.EmployeePayrollsOneResponse, error) {
+func (s *employeePayrolls) EmployeePayrollsOne(ctx context.Context, request operations.EmployeePayrollsOneRequest, security operations.EmployeePayrollsOneSecurity) (*operations.EmployeePayrollsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hris/payrolls/employees/{employee_id}/payrolls/{payroll_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/hris/payrolls/employees/{employee_id}/payrolls/{payroll_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

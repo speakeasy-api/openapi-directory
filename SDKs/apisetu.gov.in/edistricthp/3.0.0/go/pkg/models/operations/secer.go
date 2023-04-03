@@ -10,8 +10,8 @@ import (
 )
 
 type SecerSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type SecerRequestBodyCertificateParameters struct {
@@ -48,12 +48,6 @@ type SecerRequestBody struct {
 	Format SecerRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type SecerRequest struct {
-	// Request format
-	Request  *SecerRequestBody `request:"mediaType=application/json"`
-	Security SecerSecurity
 }
 
 type Secer504ApplicationJSONErrorEnum string

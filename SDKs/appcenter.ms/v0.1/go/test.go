@@ -32,16 +32,16 @@ func newTest(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // TestArchiveTestRun - Logically deletes a test run
-func (s *test) TestArchiveTestRun(ctx context.Context, request operations.TestArchiveTestRunRequest) (*operations.TestArchiveTestRunResponse, error) {
+func (s *test) TestArchiveTestRun(ctx context.Context, request operations.TestArchiveTestRunRequest, security operations.TestArchiveTestRunSecurity) (*operations.TestArchiveTestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -77,11 +77,11 @@ func (s *test) TestArchiveTestRun(ctx context.Context, request operations.TestAr
 }
 
 // TestCreateDeviceSelection - Creates a short ID for a list of devices
-func (s *test) TestCreateDeviceSelection(ctx context.Context, request operations.TestCreateDeviceSelectionRequest) (*operations.TestCreateDeviceSelectionResponse, error) {
+func (s *test) TestCreateDeviceSelection(ctx context.Context, request operations.TestCreateDeviceSelectionRequest, security operations.TestCreateDeviceSelectionSecurity) (*operations.TestCreateDeviceSelectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/device_selection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/device_selection", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *test) TestCreateDeviceSelection(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,11 +141,11 @@ func (s *test) TestCreateDeviceSelection(ctx context.Context, request operations
 }
 
 // TestCreateDeviceSetOfOwner - Creates a device set belonging to the owner
-func (s *test) TestCreateDeviceSetOfOwner(ctx context.Context, request operations.TestCreateDeviceSetOfOwnerRequest) (*operations.TestCreateDeviceSetOfOwnerResponse, error) {
+func (s *test) TestCreateDeviceSetOfOwner(ctx context.Context, request operations.TestCreateDeviceSetOfOwnerRequest, security operations.TestCreateDeviceSetOfOwnerSecurity) (*operations.TestCreateDeviceSetOfOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -160,7 +160,7 @@ func (s *test) TestCreateDeviceSetOfOwner(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -205,11 +205,11 @@ func (s *test) TestCreateDeviceSetOfOwner(ctx context.Context, request operation
 }
 
 // TestCreateDeviceSetOfUser - Creates a device set belonging to the user
-func (s *test) TestCreateDeviceSetOfUser(ctx context.Context, request operations.TestCreateDeviceSetOfUserRequest) (*operations.TestCreateDeviceSetOfUserResponse, error) {
+func (s *test) TestCreateDeviceSetOfUser(ctx context.Context, request operations.TestCreateDeviceSetOfUserRequest, security operations.TestCreateDeviceSetOfUserSecurity) (*operations.TestCreateDeviceSetOfUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -224,7 +224,7 @@ func (s *test) TestCreateDeviceSetOfUser(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -269,16 +269,16 @@ func (s *test) TestCreateDeviceSetOfUser(ctx context.Context, request operations
 }
 
 // TestCreateSubscription - Accept a free trial subscription
-func (s *test) TestCreateSubscription(ctx context.Context, request operations.TestCreateSubscriptionRequest) (*operations.TestCreateSubscriptionResponse, error) {
+func (s *test) TestCreateSubscription(ctx context.Context, request operations.TestCreateSubscriptionRequest, security operations.TestCreateSubscriptionSecurity) (*operations.TestCreateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -313,16 +313,16 @@ func (s *test) TestCreateSubscription(ctx context.Context, request operations.Te
 }
 
 // TestCreateTestRun - Creates a new test run
-func (s *test) TestCreateTestRun(ctx context.Context, request operations.TestCreateTestRunRequest) (*operations.TestCreateTestRunResponse, error) {
+func (s *test) TestCreateTestRun(ctx context.Context, request operations.TestCreateTestRunRequest, security operations.TestCreateTestRunSecurity) (*operations.TestCreateTestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,11 +349,11 @@ func (s *test) TestCreateTestRun(ctx context.Context, request operations.TestCre
 }
 
 // TestCreateTestSeries - Creates new test series for an application
-func (s *test) TestCreateTestSeries(ctx context.Context, request operations.TestCreateTestSeriesRequest) (*operations.TestCreateTestSeriesResponse, error) {
+func (s *test) TestCreateTestSeries(ctx context.Context, request operations.TestCreateTestSeriesRequest, security operations.TestCreateTestSeriesSecurity) (*operations.TestCreateTestSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -368,7 +368,7 @@ func (s *test) TestCreateTestSeries(ctx context.Context, request operations.Test
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -413,16 +413,16 @@ func (s *test) TestCreateTestSeries(ctx context.Context, request operations.Test
 }
 
 // TestDeleteDeviceSetOfOwner - Deletes a device set belonging to the owner
-func (s *test) TestDeleteDeviceSetOfOwner(ctx context.Context, request operations.TestDeleteDeviceSetOfOwnerRequest) (*operations.TestDeleteDeviceSetOfOwnerResponse, error) {
+func (s *test) TestDeleteDeviceSetOfOwner(ctx context.Context, request operations.TestDeleteDeviceSetOfOwnerRequest, security operations.TestDeleteDeviceSetOfOwnerSecurity) (*operations.TestDeleteDeviceSetOfOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -450,16 +450,16 @@ func (s *test) TestDeleteDeviceSetOfOwner(ctx context.Context, request operation
 }
 
 // TestDeleteDeviceSetOfUser - Deletes a device set belonging to the user
-func (s *test) TestDeleteDeviceSetOfUser(ctx context.Context, request operations.TestDeleteDeviceSetOfUserRequest) (*operations.TestDeleteDeviceSetOfUserResponse, error) {
+func (s *test) TestDeleteDeviceSetOfUser(ctx context.Context, request operations.TestDeleteDeviceSetOfUserRequest, security operations.TestDeleteDeviceSetOfUserSecurity) (*operations.TestDeleteDeviceSetOfUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -487,16 +487,16 @@ func (s *test) TestDeleteDeviceSetOfUser(ctx context.Context, request operations
 }
 
 // TestDeleteTestSeries - Deletes a single test series
-func (s *test) TestDeleteTestSeries(ctx context.Context, request operations.TestDeleteTestSeriesRequest) (*operations.TestDeleteTestSeriesResponse, error) {
+func (s *test) TestDeleteTestSeries(ctx context.Context, request operations.TestDeleteTestSeriesRequest, security operations.TestDeleteTestSeriesSecurity) (*operations.TestDeleteTestSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -524,7 +524,7 @@ func (s *test) TestDeleteTestSeries(ctx context.Context, request operations.Test
 }
 
 // TestGdprExportAccount - Lists account data
-func (s *test) TestGdprExportAccount(ctx context.Context, request operations.TestGdprExportAccountRequest) (*operations.TestGdprExportAccountResponse, error) {
+func (s *test) TestGdprExportAccount(ctx context.Context) (*operations.TestGdprExportAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/account/test/export/accounts"
 
@@ -533,7 +533,7 @@ func (s *test) TestGdprExportAccount(ctx context.Context, request operations.Tes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -568,7 +568,7 @@ func (s *test) TestGdprExportAccount(ctx context.Context, request operations.Tes
 }
 
 // TestGdprExportAccounts - Lists all the endpoints available for Test accounts data
-func (s *test) TestGdprExportAccounts(ctx context.Context, request operations.TestGdprExportAccountsRequest) (*operations.TestGdprExportAccountsResponse, error) {
+func (s *test) TestGdprExportAccounts(ctx context.Context) (*operations.TestGdprExportAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/account/test/export"
 
@@ -577,7 +577,7 @@ func (s *test) TestGdprExportAccounts(ctx context.Context, request operations.Te
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -612,16 +612,16 @@ func (s *test) TestGdprExportAccounts(ctx context.Context, request operations.Te
 }
 
 // TestGdprExportApp - Lists app data
-func (s *test) TestGdprExportApp(ctx context.Context, request operations.TestGdprExportAppRequest) (*operations.TestGdprExportAppResponse, error) {
+func (s *test) TestGdprExportApp(ctx context.Context, request operations.TestGdprExportAppRequest, security operations.TestGdprExportAppSecurity) (*operations.TestGdprExportAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/apps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/apps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -656,16 +656,16 @@ func (s *test) TestGdprExportApp(ctx context.Context, request operations.TestGdp
 }
 
 // TestGdprExportApps - Lists all the endpoints available for Test apps data
-func (s *test) TestGdprExportApps(ctx context.Context, request operations.TestGdprExportAppsRequest) (*operations.TestGdprExportAppsResponse, error) {
+func (s *test) TestGdprExportApps(ctx context.Context, request operations.TestGdprExportAppsRequest, security operations.TestGdprExportAppsSecurity) (*operations.TestGdprExportAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -700,7 +700,7 @@ func (s *test) TestGdprExportApps(ctx context.Context, request operations.TestGd
 }
 
 // TestGdprExportFeatureFlag - Lists feature flag data
-func (s *test) TestGdprExportFeatureFlag(ctx context.Context, request operations.TestGdprExportFeatureFlagRequest) (*operations.TestGdprExportFeatureFlagResponse, error) {
+func (s *test) TestGdprExportFeatureFlag(ctx context.Context) (*operations.TestGdprExportFeatureFlagResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/account/test/export/featureFlags"
 
@@ -709,7 +709,7 @@ func (s *test) TestGdprExportFeatureFlag(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -744,16 +744,16 @@ func (s *test) TestGdprExportFeatureFlag(ctx context.Context, request operations
 }
 
 // TestGdprExportFileSetFile - Lists file set file data
-func (s *test) TestGdprExportFileSetFile(ctx context.Context, request operations.TestGdprExportFileSetFileRequest) (*operations.TestGdprExportFileSetFileResponse, error) {
+func (s *test) TestGdprExportFileSetFile(ctx context.Context, request operations.TestGdprExportFileSetFileRequest, security operations.TestGdprExportFileSetFileSecurity) (*operations.TestGdprExportFileSetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/fileSetFiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/fileSetFiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -788,16 +788,16 @@ func (s *test) TestGdprExportFileSetFile(ctx context.Context, request operations
 }
 
 // TestGdprExportHashFile - Lists hash file data
-func (s *test) TestGdprExportHashFile(ctx context.Context, request operations.TestGdprExportHashFileRequest) (*operations.TestGdprExportHashFileResponse, error) {
+func (s *test) TestGdprExportHashFile(ctx context.Context, request operations.TestGdprExportHashFileRequest, security operations.TestGdprExportHashFileSecurity) (*operations.TestGdprExportHashFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/hashFiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/hashFiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -832,16 +832,16 @@ func (s *test) TestGdprExportHashFile(ctx context.Context, request operations.Te
 }
 
 // TestGdprExportPipelineTest - Lists pipeline test data
-func (s *test) TestGdprExportPipelineTest(ctx context.Context, request operations.TestGdprExportPipelineTestRequest) (*operations.TestGdprExportPipelineTestResponse, error) {
+func (s *test) TestGdprExportPipelineTest(ctx context.Context, request operations.TestGdprExportPipelineTestRequest, security operations.TestGdprExportPipelineTestSecurity) (*operations.TestGdprExportPipelineTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/pipelineTests", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/pipelineTests", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -876,16 +876,16 @@ func (s *test) TestGdprExportPipelineTest(ctx context.Context, request operation
 }
 
 // TestGdprExportTestRun - Lists test run data
-func (s *test) TestGdprExportTestRun(ctx context.Context, request operations.TestGdprExportTestRunRequest) (*operations.TestGdprExportTestRunResponse, error) {
+func (s *test) TestGdprExportTestRun(ctx context.Context, request operations.TestGdprExportTestRunRequest, security operations.TestGdprExportTestRunSecurity) (*operations.TestGdprExportTestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/testRuns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test/export/testRuns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -920,16 +920,16 @@ func (s *test) TestGdprExportTestRun(ctx context.Context, request operations.Tes
 }
 
 // TestGetAllTestRunsForSeries - Returns list of all test runs for a given test series
-func (s *test) TestGetAllTestRunsForSeries(ctx context.Context, request operations.TestGetAllTestRunsForSeriesRequest) (*operations.TestGetAllTestRunsForSeriesResponse, error) {
+func (s *test) TestGetAllTestRunsForSeries(ctx context.Context, request operations.TestGetAllTestRunsForSeriesRequest, security operations.TestGetAllTestRunsForSeriesSecurity) (*operations.TestGetAllTestRunsForSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}/test_runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}/test_runs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -964,20 +964,20 @@ func (s *test) TestGetAllTestRunsForSeries(ctx context.Context, request operatio
 }
 
 // TestGetAllTestSeries - Returns list of all test series for an application
-func (s *test) TestGetAllTestSeries(ctx context.Context, request operations.TestGetAllTestSeriesRequest) (*operations.TestGetAllTestSeriesResponse, error) {
+func (s *test) TestGetAllTestSeries(ctx context.Context, request operations.TestGetAllTestSeriesRequest, security operations.TestGetAllTestSeriesSecurity) (*operations.TestGetAllTestSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1012,20 +1012,20 @@ func (s *test) TestGetAllTestSeries(ctx context.Context, request operations.Test
 }
 
 // TestGetDeviceConfigurations - Returns a list of available devices
-func (s *test) TestGetDeviceConfigurations(ctx context.Context, request operations.TestGetDeviceConfigurationsRequest) (*operations.TestGetDeviceConfigurationsResponse, error) {
+func (s *test) TestGetDeviceConfigurations(ctx context.Context, request operations.TestGetDeviceConfigurationsRequest, security operations.TestGetDeviceConfigurationsSecurity) (*operations.TestGetDeviceConfigurationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/device_configurations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/device_configurations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1060,16 +1060,16 @@ func (s *test) TestGetDeviceConfigurations(ctx context.Context, request operatio
 }
 
 // TestGetDeviceSetOfOwner - Gets a device set belonging to the owner
-func (s *test) TestGetDeviceSetOfOwner(ctx context.Context, request operations.TestGetDeviceSetOfOwnerRequest) (*operations.TestGetDeviceSetOfOwnerResponse, error) {
+func (s *test) TestGetDeviceSetOfOwner(ctx context.Context, request operations.TestGetDeviceSetOfOwnerRequest, security operations.TestGetDeviceSetOfOwnerSecurity) (*operations.TestGetDeviceSetOfOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1105,16 +1105,16 @@ func (s *test) TestGetDeviceSetOfOwner(ctx context.Context, request operations.T
 }
 
 // TestGetDeviceSetOfUser - Gets a device set belonging to the user
-func (s *test) TestGetDeviceSetOfUser(ctx context.Context, request operations.TestGetDeviceSetOfUserRequest) (*operations.TestGetDeviceSetOfUserResponse, error) {
+func (s *test) TestGetDeviceSetOfUser(ctx context.Context, request operations.TestGetDeviceSetOfUserRequest, security operations.TestGetDeviceSetOfUserSecurity) (*operations.TestGetDeviceSetOfUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1150,16 +1150,16 @@ func (s *test) TestGetDeviceSetOfUser(ctx context.Context, request operations.Te
 }
 
 // TestGetSubscriptions - Get information about the currently active subscriptions, if any
-func (s *test) TestGetSubscriptions(ctx context.Context, request operations.TestGetSubscriptionsRequest) (*operations.TestGetSubscriptionsResponse, error) {
+func (s *test) TestGetSubscriptions(ctx context.Context, request operations.TestGetSubscriptionsRequest, security operations.TestGetSubscriptionsSecurity) (*operations.TestGetSubscriptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1194,16 +1194,16 @@ func (s *test) TestGetSubscriptions(ctx context.Context, request operations.Test
 }
 
 // TestGetTestReport - Returns a single test report
-func (s *test) TestGetTestReport(ctx context.Context, request operations.TestGetTestReportRequest) (*operations.TestGetTestReportResponse, error) {
+func (s *test) TestGetTestReport(ctx context.Context, request operations.TestGetTestReportRequest, security operations.TestGetTestReportSecurity) (*operations.TestGetTestReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/report", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/report", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1238,16 +1238,16 @@ func (s *test) TestGetTestReport(ctx context.Context, request operations.TestGet
 }
 
 // TestGetTestRun - Returns a single test runs
-func (s *test) TestGetTestRun(ctx context.Context, request operations.TestGetTestRunRequest) (*operations.TestGetTestRunResponse, error) {
+func (s *test) TestGetTestRun(ctx context.Context, request operations.TestGetTestRunRequest, security operations.TestGetTestRunSecurity) (*operations.TestGetTestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1282,16 +1282,16 @@ func (s *test) TestGetTestRun(ctx context.Context, request operations.TestGetTes
 }
 
 // TestGetTestRunState - Gets state of the test run
-func (s *test) TestGetTestRunState(ctx context.Context, request operations.TestGetTestRunStateRequest) (*operations.TestGetTestRunStateResponse, error) {
+func (s *test) TestGetTestRunState(ctx context.Context, request operations.TestGetTestRunStateRequest, security operations.TestGetTestRunStateSecurity) (*operations.TestGetTestRunStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/state", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1326,16 +1326,16 @@ func (s *test) TestGetTestRunState(ctx context.Context, request operations.TestG
 }
 
 // TestGetTestRuns - Returns a list of test runs
-func (s *test) TestGetTestRuns(ctx context.Context, request operations.TestGetTestRunsRequest) (*operations.TestGetTestRunsResponse, error) {
+func (s *test) TestGetTestRuns(ctx context.Context, request operations.TestGetTestRunsRequest, security operations.TestGetTestRunsSecurity) (*operations.TestGetTestRunsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1370,16 +1370,16 @@ func (s *test) TestGetTestRuns(ctx context.Context, request operations.TestGetTe
 }
 
 // TestListDeviceSetsOfOwner - Lists device sets belonging to the owner
-func (s *test) TestListDeviceSetsOfOwner(ctx context.Context, request operations.TestListDeviceSetsOfOwnerRequest) (*operations.TestListDeviceSetsOfOwnerResponse, error) {
+func (s *test) TestListDeviceSetsOfOwner(ctx context.Context, request operations.TestListDeviceSetsOfOwnerRequest, security operations.TestListDeviceSetsOfOwnerSecurity) (*operations.TestListDeviceSetsOfOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1414,16 +1414,16 @@ func (s *test) TestListDeviceSetsOfOwner(ctx context.Context, request operations
 }
 
 // TestListDeviceSetsOfUser - Lists device sets belonging to the user
-func (s *test) TestListDeviceSetsOfUser(ctx context.Context, request operations.TestListDeviceSetsOfUserRequest) (*operations.TestListDeviceSetsOfUserResponse, error) {
+func (s *test) TestListDeviceSetsOfUser(ctx context.Context, request operations.TestListDeviceSetsOfUserRequest, security operations.TestListDeviceSetsOfUserSecurity) (*operations.TestListDeviceSetsOfUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1458,11 +1458,11 @@ func (s *test) TestListDeviceSetsOfUser(ctx context.Context, request operations.
 }
 
 // TestPatchTestSeries - Updates name and slug of a test series
-func (s *test) TestPatchTestSeries(ctx context.Context, request operations.TestPatchTestSeriesRequest) (*operations.TestPatchTestSeriesResponse, error) {
+func (s *test) TestPatchTestSeries(ctx context.Context, request operations.TestPatchTestSeriesRequest, security operations.TestPatchTestSeriesSecurity) (*operations.TestPatchTestSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1477,7 +1477,7 @@ func (s *test) TestPatchTestSeries(ctx context.Context, request operations.TestP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1515,11 +1515,11 @@ func (s *test) TestPatchTestSeries(ctx context.Context, request operations.TestP
 }
 
 // TestStartTestRun - Starts test run
-func (s *test) TestStartTestRun(ctx context.Context, request operations.TestStartTestRunRequest) (*operations.TestStartTestRunResponse, error) {
+func (s *test) TestStartTestRun(ctx context.Context, request operations.TestStartTestRunRequest, security operations.TestStartTestRunSecurity) (*operations.TestStartTestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1534,7 +1534,7 @@ func (s *test) TestStartTestRun(ctx context.Context, request operations.TestStar
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1569,16 +1569,16 @@ func (s *test) TestStartTestRun(ctx context.Context, request operations.TestStar
 }
 
 // TestStartUploadingFile - Uploads file for a test run
-func (s *test) TestStartUploadingFile(ctx context.Context, request operations.TestStartUploadingFileRequest) (*operations.TestStartUploadingFileResponse, error) {
+func (s *test) TestStartUploadingFile(ctx context.Context, request operations.TestStartUploadingFileRequest, security operations.TestStartUploadingFileSecurity) (*operations.TestStartUploadingFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/files", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/files", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1607,16 +1607,16 @@ func (s *test) TestStartUploadingFile(ctx context.Context, request operations.Te
 }
 
 // TestStopTestRun - Stop a test run execution
-func (s *test) TestStopTestRun(ctx context.Context, request operations.TestStopTestRunRequest) (*operations.TestStopTestRunResponse, error) {
+func (s *test) TestStopTestRun(ctx context.Context, request operations.TestStopTestRunRequest, security operations.TestStopTestRunSecurity) (*operations.TestStopTestRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1652,11 +1652,11 @@ func (s *test) TestStopTestRun(ctx context.Context, request operations.TestStopT
 }
 
 // TestUpdateDeviceSetOfOwner - Updates a device set belonging to the owner
-func (s *test) TestUpdateDeviceSetOfOwner(ctx context.Context, request operations.TestUpdateDeviceSetOfOwnerRequest) (*operations.TestUpdateDeviceSetOfOwnerResponse, error) {
+func (s *test) TestUpdateDeviceSetOfOwner(ctx context.Context, request operations.TestUpdateDeviceSetOfOwnerRequest, security operations.TestUpdateDeviceSetOfOwnerSecurity) (*operations.TestUpdateDeviceSetOfOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1671,7 +1671,7 @@ func (s *test) TestUpdateDeviceSetOfOwner(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1717,11 +1717,11 @@ func (s *test) TestUpdateDeviceSetOfOwner(ctx context.Context, request operation
 }
 
 // TestUpdateDeviceSetOfUser - Updates a device set belonging to the user
-func (s *test) TestUpdateDeviceSetOfUser(ctx context.Context, request operations.TestUpdateDeviceSetOfUserRequest) (*operations.TestUpdateDeviceSetOfUserResponse, error) {
+func (s *test) TestUpdateDeviceSetOfUser(ctx context.Context, request operations.TestUpdateDeviceSetOfUserRequest, security operations.TestUpdateDeviceSetOfUserSecurity) (*operations.TestUpdateDeviceSetOfUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1736,7 +1736,7 @@ func (s *test) TestUpdateDeviceSetOfUser(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1782,11 +1782,11 @@ func (s *test) TestUpdateDeviceSetOfUser(ctx context.Context, request operations
 }
 
 // TestUploadHash - Adds file with the given hash to a test run
-func (s *test) TestUploadHash(ctx context.Context, request operations.TestUploadHashRequest) (*operations.TestUploadHashResponse, error) {
+func (s *test) TestUploadHash(ctx context.Context, request operations.TestUploadHashRequest, security operations.TestUploadHashSecurity) (*operations.TestUploadHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1801,7 +1801,7 @@ func (s *test) TestUploadHash(ctx context.Context, request operations.TestUpload
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1831,11 +1831,11 @@ func (s *test) TestUploadHash(ctx context.Context, request operations.TestUpload
 }
 
 // TestUploadHashesBatch - Adds file with the given hash to a test run
-func (s *test) TestUploadHashesBatch(ctx context.Context, request operations.TestUploadHashesBatchRequest) (*operations.TestUploadHashesBatchResponse, error) {
+func (s *test) TestUploadHashesBatch(ctx context.Context, request operations.TestUploadHashesBatchRequest, security operations.TestUploadHashesBatchSecurity) (*operations.TestUploadHashesBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes/batch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes/batch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1850,7 +1850,7 @@ func (s *test) TestUploadHashesBatch(ctx context.Context, request operations.Tes
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -71,30 +71,22 @@ func (e *GETResetImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETResetImageAttributeQueryParams struct {
+type GETResetImageAttributeRequest struct {
 	Action GETResetImageAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The attribute to reset (currently you can only reset the launch permission attribute).
 	Attribute GETResetImageAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the AMI.
-	ImageID string                            `queryParam:"style=form,explode=true,name=ImageId"`
-	Version GETResetImageAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETResetImageAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETResetImageAttributeRequest struct {
-	QueryParams GETResetImageAttributeQueryParams
-	Headers     GETResetImageAttributeHeaders
+	ImageID           string                            `queryParam:"style=form,explode=true,name=ImageId"`
+	Version           GETResetImageAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETResetImageAttributeResponse struct {

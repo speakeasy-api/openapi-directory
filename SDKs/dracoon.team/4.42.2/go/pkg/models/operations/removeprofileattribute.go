@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveProfileAttributePathParams struct {
-	// Key
-	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type RemoveProfileAttributeHeaders struct {
+type RemoveProfileAttributeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveProfileAttributeRequest struct {
-	PathParams RemoveProfileAttributePathParams
-	Headers    RemoveProfileAttributeHeaders
+	// Key
+	Key string `pathParam:"style=simple,explode=false,name=key"`
 }
 
 type RemoveProfileAttributeResponse struct {

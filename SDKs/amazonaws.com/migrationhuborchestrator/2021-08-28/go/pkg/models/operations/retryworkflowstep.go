@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetryWorkflowStepPathParams struct {
-	// The ID of the step.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetryWorkflowStepQueryParams struct {
-	// The ID of the step group.
-	StepGroupID string `queryParam:"style=form,explode=true,name=stepGroupId"`
-	// The ID of the migration workflow.
-	WorkflowID string `queryParam:"style=form,explode=true,name=workflowId"`
-}
-
-type RetryWorkflowStepHeaders struct {
+type RetryWorkflowStepRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type RetryWorkflowStepHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type RetryWorkflowStepRequest struct {
-	PathParams  RetryWorkflowStepPathParams
-	QueryParams RetryWorkflowStepQueryParams
-	Headers     RetryWorkflowStepHeaders
+	// The ID of the step.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The ID of the step group.
+	StepGroupID string `queryParam:"style=form,explode=true,name=stepGroupId"`
+	// The ID of the migration workflow.
+	WorkflowID string `queryParam:"style=form,explode=true,name=workflowId"`
 }
 
 type RetryWorkflowStepResponse struct {

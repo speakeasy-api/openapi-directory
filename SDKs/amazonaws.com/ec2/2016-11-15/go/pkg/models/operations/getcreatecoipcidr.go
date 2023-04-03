@@ -50,30 +50,22 @@ func (e *GETCreateCoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateCoipCidrQueryParams struct {
+type GETCreateCoipCidrRequest struct {
 	Action GETCreateCoipCidrActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	//  A customer-owned IP address range to create.
 	Cidr string `queryParam:"style=form,explode=true,name=Cidr"`
 	//  The ID of the address pool.
 	CoipPoolID string `queryParam:"style=form,explode=true,name=CoipPoolId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                        `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETCreateCoipCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateCoipCidrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateCoipCidrRequest struct {
-	QueryParams GETCreateCoipCidrQueryParams
-	Headers     GETCreateCoipCidrHeaders
+	DryRun            *bool                        `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETCreateCoipCidrVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateCoipCidrResponse struct {

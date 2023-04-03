@@ -8,10 +8,12 @@ import (
 )
 
 type AssignTokenSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AssignTokenQueryParams struct {
+type AssignTokenRequest struct {
+	// Details of an assign request.
+	ItvAssignBtTokenRequest shared.ItvAssignBtTokenRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -24,13 +26,6 @@ type AssignTokenQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type AssignTokenRequest struct {
-	QueryParams AssignTokenQueryParams
-	// Details of an assign request.
-	Request  shared.ItvAssignBtTokenRequest `request:"mediaType=application/json"`
-	Security AssignTokenSecurity
 }
 
 type AssignTokenResponse struct {

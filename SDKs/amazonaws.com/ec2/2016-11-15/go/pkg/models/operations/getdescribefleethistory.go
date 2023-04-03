@@ -78,7 +78,7 @@ func (e *GETDescribeFleetHistoryVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeFleetHistoryQueryParams struct {
+type GETDescribeFleetHistoryRequest struct {
 	Action GETDescribeFleetHistoryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -91,23 +91,15 @@ type GETDescribeFleetHistoryQueryParams struct {
 	// The token returned from a previous paginated request. Pagination continues from the end of the items returned by the previous request.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The start date and time for the events, in UTC format (for example, <i>YYYY</i>-<i>MM</i>-<i>DD</i>T<i>HH</i>:<i>MM</i>:<i>SS</i>Z).
-	StartTime time.Time                          `queryParam:"style=form,explode=true,name=StartTime"`
-	Version   GETDescribeFleetHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeFleetHistoryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeFleetHistoryRequest struct {
-	QueryParams GETDescribeFleetHistoryQueryParams
-	Headers     GETDescribeFleetHistoryHeaders
+	StartTime         time.Time                          `queryParam:"style=form,explode=true,name=StartTime"`
+	Version           GETDescribeFleetHistoryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeFleetHistoryResponse struct {

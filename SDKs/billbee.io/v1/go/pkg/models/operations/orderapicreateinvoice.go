@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type OrderAPICreateInvoicePathParams struct {
+type OrderAPICreateInvoiceRequest struct {
 	// The internal billbee id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPICreateInvoiceQueryParams struct {
 	// If true, the PDF is included in the response as base64 encoded string
 	IncludeInvoicePdf *bool `queryParam:"style=form,explode=true,name=includeInvoicePdf"`
 	// You can pass the id of a connected cloud printer/storage to send the invoice to it
 	SendToCloudID *int64 `queryParam:"style=form,explode=true,name=sendToCloudId"`
 	// You can pass the id of an invoice template to overwrite the assigned template for invoice creation
 	TemplateID *int64 `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type OrderAPICreateInvoiceRequest struct {
-	PathParams  OrderAPICreateInvoicePathParams
-	QueryParams OrderAPICreateInvoiceQueryParams
 }
 
 type OrderAPICreateInvoiceResponse struct {

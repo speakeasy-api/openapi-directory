@@ -30,7 +30,8 @@ func (e *GetHomeRegionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetHomeRegionHeaders struct {
+type GetHomeRegionRequest struct {
+	RequestBody       map[string]interface{}      `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetHomeRegionHeaders struct {
 	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetHomeRegionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetHomeRegionRequest struct {
-	Headers GetHomeRegionHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetHomeRegionResponse struct {

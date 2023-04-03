@@ -35,7 +35,7 @@ func newTeams(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // TeamsCreate - Create Team
 // Create a new team. The user who creates the team will automatically be assigned as the owner of the team. The team owner can invite new members, who will be able add new owners and update or delete the team from your project.
-func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateRequest) (*operations.TeamsCreateResponse, error) {
+func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateRequestBody, security operations.TeamsCreateSecurity) (*operations.TeamsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/teams"
 
@@ -51,7 +51,7 @@ func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,11 +91,11 @@ func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateR
 // Use the 'URL' parameter to redirect the user from the invitation email back to your app. When the user is redirected, use the [Update Team Membership Status](/docs/client/teams#teamsUpdateMembershipStatus) endpoint to allow the user to accept the invitation to the team.  While calling from side SDKs the redirect url can be empty string.
 //
 // Please note that in order to avoid a [Redirect Attacks](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md) the only valid redirect URL's are the once from domains you have set when added your platforms in the console interface.
-func (s *teams) TeamsCreateMembership(ctx context.Context, request operations.TeamsCreateMembershipRequest) (*operations.TeamsCreateMembershipResponse, error) {
+func (s *teams) TeamsCreateMembership(ctx context.Context, request operations.TeamsCreateMembershipRequest, security operations.TeamsCreateMembershipSecurity) (*operations.TeamsCreateMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -107,7 +107,7 @@ func (s *teams) TeamsCreateMembership(ctx context.Context, request operations.Te
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,16 +143,16 @@ func (s *teams) TeamsCreateMembership(ctx context.Context, request operations.Te
 
 // TeamsDelete - Delete Team
 // Delete a team by its unique ID. Only team owners have write access for this resource.
-func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest) (*operations.TeamsDeleteResponse, error) {
+func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest, security operations.TeamsDeleteSecurity) (*operations.TeamsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -179,16 +179,16 @@ func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteR
 
 // TeamsDeleteMembership - Delete Team Membership
 // This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted.
-func (s *teams) TeamsDeleteMembership(ctx context.Context, request operations.TeamsDeleteMembershipRequest) (*operations.TeamsDeleteMembershipResponse, error) {
+func (s *teams) TeamsDeleteMembership(ctx context.Context, request operations.TeamsDeleteMembershipRequest, security operations.TeamsDeleteMembershipSecurity) (*operations.TeamsDeleteMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -215,16 +215,16 @@ func (s *teams) TeamsDeleteMembership(ctx context.Context, request operations.Te
 
 // TeamsGet - Get Team
 // Get a team by its unique ID. All team members have read access for this resource.
-func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest) (*operations.TeamsGetResponse, error) {
+func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest, security operations.TeamsGetSecurity) (*operations.TeamsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -260,20 +260,20 @@ func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest
 
 // TeamsGetMemberships - Get Team Memberships
 // Get a team members by the team unique ID. All team members have read access for this list of resources.
-func (s *teams) TeamsGetMemberships(ctx context.Context, request operations.TeamsGetMembershipsRequest) (*operations.TeamsGetMembershipsResponse, error) {
+func (s *teams) TeamsGetMemberships(ctx context.Context, request operations.TeamsGetMembershipsRequest, security operations.TeamsGetMembershipsSecurity) (*operations.TeamsGetMembershipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -309,7 +309,7 @@ func (s *teams) TeamsGetMemberships(ctx context.Context, request operations.Team
 
 // TeamsList - List Teams
 // Get a list of all the current user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams. [Learn more about different API modes](/docs/admin).
-func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListRequest) (*operations.TeamsListResponse, error) {
+func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListRequest, security operations.TeamsListSecurity) (*operations.TeamsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/teams"
 
@@ -318,11 +318,11 @@ func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -358,11 +358,11 @@ func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListReque
 
 // TeamsUpdate - Update Team
 // Update a team by its unique ID. Only team owners have write access for this resource.
-func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest) (*operations.TeamsUpdateResponse, error) {
+func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest, security operations.TeamsUpdateSecurity) (*operations.TeamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -374,7 +374,7 @@ func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -409,11 +409,11 @@ func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateR
 }
 
 // TeamsUpdateMembershipRoles - Update Membership Roles
-func (s *teams) TeamsUpdateMembershipRoles(ctx context.Context, request operations.TeamsUpdateMembershipRolesRequest) (*operations.TeamsUpdateMembershipRolesResponse, error) {
+func (s *teams) TeamsUpdateMembershipRoles(ctx context.Context, request operations.TeamsUpdateMembershipRolesRequest, security operations.TeamsUpdateMembershipRolesSecurity) (*operations.TeamsUpdateMembershipRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -425,7 +425,7 @@ func (s *teams) TeamsUpdateMembershipRoles(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -461,11 +461,11 @@ func (s *teams) TeamsUpdateMembershipRoles(ctx context.Context, request operatio
 
 // TeamsUpdateMembershipStatus - Update Team Membership Status
 // Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email recieved by the user.
-func (s *teams) TeamsUpdateMembershipStatus(ctx context.Context, request operations.TeamsUpdateMembershipStatusRequest) (*operations.TeamsUpdateMembershipStatusResponse, error) {
+func (s *teams) TeamsUpdateMembershipStatus(ctx context.Context, request operations.TeamsUpdateMembershipStatusRequest, security operations.TeamsUpdateMembershipStatusSecurity) (*operations.TeamsUpdateMembershipStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -477,7 +477,7 @@ func (s *teams) TeamsUpdateMembershipStatus(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMDSQueryParams struct {
+type GetMDSRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
@@ -124,10 +124,6 @@ type GetMDSQueryParams struct {
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetMDSRequest struct {
-	QueryParams GetMDSQueryParams
 }
 
 type GetMDSResponse struct {

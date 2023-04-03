@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeVcenterClientsQueryParams struct {
-	// Maximum results to be returned in DescribeVcenterClients.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Next pagination token to be provided for DescribeVcenterClients.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type DescribeVcenterClientsHeaders struct {
+type DescribeVcenterClientsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeVcenterClientsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeVcenterClientsRequest struct {
-	QueryParams DescribeVcenterClientsQueryParams
-	Headers     DescribeVcenterClientsHeaders
+	// Maximum results to be returned in DescribeVcenterClients.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Next pagination token to be provided for DescribeVcenterClients.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type DescribeVcenterClientsResponse struct {

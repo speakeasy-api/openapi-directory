@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type QuoteProcessBatchRequest struct {
-	// Batch of Quote to process.
-	Request []shared.BatchItemQuoteDto `request:"mediaType=application/json"`
-}
 
 type QuoteProcessBatchResponse struct {
 	ContentType string

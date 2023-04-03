@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDestinationDefinitionForWorkspaceRequest struct {
-	Request shared.DestinationDefinitionIDWithWorkspaceID `request:"mediaType=application/json"`
-}
-
 type GetDestinationDefinitionForWorkspaceResponse struct {
 	ContentType string
 	// Successful operation

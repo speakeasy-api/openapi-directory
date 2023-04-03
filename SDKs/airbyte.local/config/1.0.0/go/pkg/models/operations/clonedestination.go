@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CloneDestinationRequest struct {
-	Request shared.DestinationCloneRequestBody `request:"mediaType=application/json"`
-}
-
 type CloneDestinationResponse struct {
 	ContentType string
 	// Successful operation

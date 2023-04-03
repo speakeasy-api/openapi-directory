@@ -116,7 +116,7 @@ func (s *SDK) BatchGetRecord(ctx context.Context, request operations.BatchGetRec
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/BatchGetRecord"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchGetRecord(ctx context.Context, request operations.BatchGetRec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -210,16 +210,16 @@ func (s *SDK) BatchGetRecord(ctx context.Context, request operations.BatchGetRec
 // DeleteRecord - Deletes a <code>Record</code> from a <code>FeatureGroup</code>. When the <code>DeleteRecord</code> API is called a new record will be added to the <code>OfflineStore</code> and the <code>Record</code> will be removed from the <code>OnlineStore</code>. This record will have a value of <code>True</code> in the <code>is_deleted</code> column.
 func (s *SDK) DeleteRecord(ctx context.Context, request operations.DeleteRecordRequest) (*operations.DeleteRecordResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/FeatureGroup/{FeatureGroupName}#RecordIdentifierValueAsString&EventTime", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/FeatureGroup/{FeatureGroupName}#RecordIdentifierValueAsString&EventTime", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -291,16 +291,16 @@ func (s *SDK) DeleteRecord(ctx context.Context, request operations.DeleteRecordR
 // GetRecord - Use for <code>OnlineStore</code> serving from a <code>FeatureStore</code>. Only the latest records stored in the <code>OnlineStore</code> can be retrieved. If no Record with <code>RecordIdentifierValue</code> is found, then an empty result is returned.
 func (s *SDK) GetRecord(ctx context.Context, request operations.GetRecordRequest) (*operations.GetRecordResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/FeatureGroup/{FeatureGroupName}#RecordIdentifierValueAsString", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/FeatureGroup/{FeatureGroupName}#RecordIdentifierValueAsString", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -391,9 +391,9 @@ func (s *SDK) GetRecord(ctx context.Context, request operations.GetRecordRequest
 // PutRecord - Used for data ingestion into the <code>FeatureStore</code>. The <code>PutRecord</code> API writes to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is the latest record for the <code>recordIdentifier</code>, the record is written to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is a historic record, it is written only to the <code>OfflineStore</code>.
 func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest) (*operations.PutRecordResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/FeatureGroup/{FeatureGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/FeatureGroup/{FeatureGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -408,7 +408,7 @@ func (s *SDK) PutRecord(ctx context.Context, request operations.PutRecordRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

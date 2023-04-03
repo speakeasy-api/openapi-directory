@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateWebLoginTokenPathParams struct {
+type CreateWebLoginTokenRequest struct {
 	// The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type CreateWebLoginTokenHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type CreateWebLoginTokenHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CreateWebLoginTokenRequest struct {
-	PathParams CreateWebLoginTokenPathParams
-	Headers    CreateWebLoginTokenHeaders
 }
 
 type CreateWebLoginTokenResponse struct {

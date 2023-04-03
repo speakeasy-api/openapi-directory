@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTrustAnchorsQueryParams struct {
-	// A token that indicates where the output should continue from, if a previous operation did not show all results. To get the next results, call the operation again with this value.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The number of resources in the paginated list.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ListTrustAnchorsHeaders struct {
+type ListTrustAnchorsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListTrustAnchorsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListTrustAnchorsRequest struct {
-	QueryParams ListTrustAnchorsQueryParams
-	Headers     ListTrustAnchorsHeaders
+	// A token that indicates where the output should continue from, if a previous operation did not show all results. To get the next results, call the operation again with this value.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The number of resources in the paginated list.
+	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 }
 
 type ListTrustAnchorsResponse struct {

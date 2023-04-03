@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeStorageVirtualMachinesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeStorageVirtualMachinesXAmzTargetEnum
 type DescribeStorageVirtualMachinesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeStorageVirtualMachinesXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DescribeStorageVirtualMachinesHeaders struct {
+type DescribeStorageVirtualMachinesRequest struct {
+	DescribeStorageVirtualMachinesRequest shared.DescribeStorageVirtualMachinesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeStorageVirtualMachinesHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeStorageVirtualMachinesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeStorageVirtualMachinesRequest struct {
-	QueryParams DescribeStorageVirtualMachinesQueryParams
-	Headers     DescribeStorageVirtualMachinesHeaders
-	Request     shared.DescribeStorageVirtualMachinesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeStorageVirtualMachinesResponse struct {

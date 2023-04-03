@@ -8,24 +8,15 @@ import (
 )
 
 type GetMerchantsMerchantIDBillingEntitiesSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMerchantsMerchantIDBillingEntitiesPathParams struct {
-	// The unique identifier of the merchant account.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
-}
-
-type GetMerchantsMerchantIDBillingEntitiesQueryParams struct {
-	// The name of the billing entity.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetMerchantsMerchantIDBillingEntitiesRequest struct {
-	PathParams  GetMerchantsMerchantIDBillingEntitiesPathParams
-	QueryParams GetMerchantsMerchantIDBillingEntitiesQueryParams
-	Security    GetMerchantsMerchantIDBillingEntitiesSecurity
+	// The unique identifier of the merchant account.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
+	// The name of the billing entity.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
 }
 
 type GetMerchantsMerchantIDBillingEntitiesResponse struct {

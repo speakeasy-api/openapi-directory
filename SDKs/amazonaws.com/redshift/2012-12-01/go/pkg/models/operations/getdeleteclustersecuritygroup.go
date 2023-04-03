@@ -50,26 +50,18 @@ func (e *GETDeleteClusterSecurityGroupVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDeleteClusterSecurityGroupQueryParams struct {
+type GETDeleteClusterSecurityGroupRequest struct {
 	Action GETDeleteClusterSecurityGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the cluster security group to be deleted.
 	ClusterSecurityGroupName string                                   `queryParam:"style=form,explode=true,name=ClusterSecurityGroupName"`
 	Version                  GETDeleteClusterSecurityGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteClusterSecurityGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteClusterSecurityGroupRequest struct {
-	QueryParams GETDeleteClusterSecurityGroupQueryParams
-	Headers     GETDeleteClusterSecurityGroupHeaders
+	XAmzAlgorithm            *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteClusterSecurityGroupResponse struct {

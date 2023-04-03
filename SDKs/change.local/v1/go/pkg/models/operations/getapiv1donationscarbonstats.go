@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1DonationsCarbonStatsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetAPIV1DonationsCarbonStatsQueryParams struct {
-	// The id of a donation to the CarbonFund nonprofit. Ids are returned when a donation is created. If an ID is not provided, the total stats for all donations to CarbonFund are returned.
-	ID *float64 `queryParam:"style=form,explode=true,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetAPIV1DonationsCarbonStatsRequest struct {
-	QueryParams GetAPIV1DonationsCarbonStatsQueryParams
-	Security    GetAPIV1DonationsCarbonStatsSecurity
+	// The id of a donation to the CarbonFund nonprofit. Ids are returned when a donation is created. If an ID is not provided, the total stats for all donations to CarbonFund are returned.
+	ID *float64 `queryParam:"style=form,explode=true,name=id"`
 }
 
 type GetAPIV1DonationsCarbonStatsResponse struct {

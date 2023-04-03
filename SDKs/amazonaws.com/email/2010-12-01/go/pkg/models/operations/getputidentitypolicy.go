@@ -50,30 +50,22 @@ func (e *GETPutIdentityPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETPutIdentityPolicyQueryParams struct {
+type GETPutIdentityPolicyRequest struct {
 	Action GETPutIdentityPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identity that the policy will apply to. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.</p> <p>To successfully call this API, you must own the identity.</p>
 	Identity string `queryParam:"style=form,explode=true,name=Identity"`
 	// <p>The text of the policy in JSON format. The policy cannot exceed 4 KB.</p> <p>For information about the syntax of sending authorization policies, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html">Amazon SES Developer Guide</a>. </p>
 	Policy string `queryParam:"style=form,explode=true,name=Policy"`
 	// <p>The name of the policy.</p> <p>The policy name cannot exceed 64 characters and can only include alphanumeric characters, dashes, and underscores.</p>
-	PolicyName string                          `queryParam:"style=form,explode=true,name=PolicyName"`
-	Version    GETPutIdentityPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPutIdentityPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPutIdentityPolicyRequest struct {
-	QueryParams GETPutIdentityPolicyQueryParams
-	Headers     GETPutIdentityPolicyHeaders
+	PolicyName        string                          `queryParam:"style=form,explode=true,name=PolicyName"`
+	Version           GETPutIdentityPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPutIdentityPolicyResponse struct {

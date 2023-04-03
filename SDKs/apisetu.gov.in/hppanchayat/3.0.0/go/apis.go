@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Fmcer - Family Membership Certificate
 // API to verify Family Membership Certificate.
-func (s *apIs) Fmcer(ctx context.Context, request operations.FmcerRequest) (*operations.FmcerResponse, error) {
+func (s *apIs) Fmcer(ctx context.Context, request operations.FmcerRequestBody, security operations.FmcerSecurity) (*operations.FmcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fmcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Fmcer(ctx context.Context, request operations.FmcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

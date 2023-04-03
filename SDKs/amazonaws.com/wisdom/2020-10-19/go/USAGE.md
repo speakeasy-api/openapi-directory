@@ -13,35 +13,32 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAssistantRequest{
-        Headers: operations.CreateAssistantHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateAssistantRequestBody{
-            ClientToken: "illum",
-            Description: "vel",
-            Name: "error",
+        RequestBody: operations.CreateAssistantRequestBody{
+            ClientToken: "corrupti",
+            Description: "provident",
+            Name: "distinctio",
             ServerSideEncryptionConfiguration: &operations.CreateAssistantRequestBodyServerSideEncryptionConfiguration{
-                KmsKeyID: "deserunt",
+                KmsKeyID: "quibusdam",
             },
             Tags: map[string]string{
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "nulla": "corrupti",
+                "illum": "vel",
+                "error": "deserunt",
             },
             Type: "AGENT",
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "iure",
+        XAmzCredential: "magnam",
+        XAmzDate: "debitis",
+        XAmzSecurityToken: "ipsa",
+        XAmzSignature: "delectus",
+        XAmzSignedHeaders: "tempora",
     }
 
     ctx := context.Background()

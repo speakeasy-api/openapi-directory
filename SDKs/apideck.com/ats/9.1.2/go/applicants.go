@@ -34,11 +34,11 @@ func newApplicants(defaultClient, securityClient HTTPClient, serverURL, language
 
 // ApplicantsAdd - Create applicant
 // Create applicant
-func (s *applicants) ApplicantsAdd(ctx context.Context, request operations.ApplicantsAddRequest) (*operations.ApplicantsAddResponse, error) {
+func (s *applicants) ApplicantsAdd(ctx context.Context, request operations.ApplicantsAddRequest, security operations.ApplicantsAddSecurity) (*operations.ApplicantsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ats/applicants"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicantInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *applicants) ApplicantsAdd(ctx context.Context, request operations.Appli
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *applicants) ApplicantsAdd(ctx context.Context, request operations.Appli
 
 // ApplicantsAll - List applicants
 // List applicants
-func (s *applicants) ApplicantsAll(ctx context.Context, request operations.ApplicantsAllRequest) (*operations.ApplicantsAllResponse, error) {
+func (s *applicants) ApplicantsAll(ctx context.Context, request operations.ApplicantsAllRequest, security operations.ApplicantsAllSecurity) (*operations.ApplicantsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ats/applicants"
 
@@ -164,13 +164,13 @@ func (s *applicants) ApplicantsAll(ctx context.Context, request operations.Appli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *applicants) ApplicantsAll(ctx context.Context, request operations.Appli
 
 // ApplicantsOne - Get applicant
 // Get applicant
-func (s *applicants) ApplicantsOne(ctx context.Context, request operations.ApplicantsOneRequest) (*operations.ApplicantsOneResponse, error) {
+func (s *applicants) ApplicantsOne(ctx context.Context, request operations.ApplicantsOneRequest, security operations.ApplicantsOneSecurity) (*operations.ApplicantsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ats/applicants/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ats/applicants/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -50,25 +50,17 @@ func (e *POSTUntagServerCertificateVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTUntagServerCertificateQueryParams struct {
-	Action  POSTUntagServerCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUntagServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUntagServerCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUntagServerCertificateRequest struct {
-	QueryParams POSTUntagServerCertificateQueryParams
-	Headers     POSTUntagServerCertificateHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUntagServerCertificateActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTUntagServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUntagServerCertificateResponse struct {

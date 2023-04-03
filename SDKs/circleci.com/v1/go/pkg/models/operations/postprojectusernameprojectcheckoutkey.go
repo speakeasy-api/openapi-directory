@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProjectUsernameProjectCheckoutKeyPathParams struct {
-	// XXXXXXXXX
-	//
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// XXXXXXXXX
-	//
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // PostProjectUsernameProjectCheckoutKeyRequestBodyEnum - The type of key to create. Can be 'deploy-key' or 'github-user-key'.
 type PostProjectUsernameProjectCheckoutKeyRequestBodyEnum string
 
@@ -43,10 +34,15 @@ func (e *PostProjectUsernameProjectCheckoutKeyRequestBodyEnum) UnmarshalJSON(dat
 }
 
 type PostProjectUsernameProjectCheckoutKeyRequest struct {
-	PathParams PostProjectUsernameProjectCheckoutKeyPathParams
 	// The type of key to create. Can be 'deploy-key' or 'github-user-key'.
 	//
-	Request *PostProjectUsernameProjectCheckoutKeyRequestBodyEnum `request:"mediaType=application/json"`
+	RequestBody *PostProjectUsernameProjectCheckoutKeyRequestBodyEnum `request:"mediaType=application/json"`
+	// XXXXXXXXX
+	//
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// XXXXXXXXX
+	//
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type PostProjectUsernameProjectCheckoutKeyResponse struct {

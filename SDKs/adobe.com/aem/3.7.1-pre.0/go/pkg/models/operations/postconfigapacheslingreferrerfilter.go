@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostConfigApacheSlingReferrerFilterQueryParams struct {
+type PostConfigApacheSlingReferrerFilterRequest struct {
 	AllowEmpty                 *bool   `queryParam:"style=form,explode=true,name=allow.empty"`
 	AllowEmptyAtTypeHint       *string `queryParam:"style=form,explode=true,name=allow.empty@TypeHint"`
 	AllowHosts                 *string `queryParam:"style=form,explode=true,name=allow.hosts"`
@@ -15,10 +15,6 @@ type PostConfigApacheSlingReferrerFilterQueryParams struct {
 	AllowHostsAtTypeHint       *string `queryParam:"style=form,explode=true,name=allow.hosts@TypeHint"`
 	FilterMethods              *string `queryParam:"style=form,explode=true,name=filter.methods"`
 	FilterMethodsAtTypeHint    *string `queryParam:"style=form,explode=true,name=filter.methods@TypeHint"`
-}
-
-type PostConfigApacheSlingReferrerFilterRequest struct {
-	QueryParams PostConfigApacheSlingReferrerFilterQueryParams
 }
 
 type PostConfigApacheSlingReferrerFilterResponse struct {

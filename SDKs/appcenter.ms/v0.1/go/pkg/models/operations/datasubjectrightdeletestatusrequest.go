@@ -6,27 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DataSubjectRightDeleteStatusRequestSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DataSubjectRightDeleteStatusRequestPathParams struct {
-	// Unique request ID (GUID)
-	Token string `pathParam:"style=simple,explode=false,name=token"`
-}
-
-type DataSubjectRightDeleteStatusRequestQueryParams struct {
-	// Email used for delete with x-authz-bypass headers
-	Email string `queryParam:"style=form,explode=true,name=email"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DataSubjectRightDeleteStatusRequestRequest struct {
-	PathParams  DataSubjectRightDeleteStatusRequestPathParams
-	QueryParams DataSubjectRightDeleteStatusRequestQueryParams
-	Security    DataSubjectRightDeleteStatusRequestSecurity
+	// Email used for delete with x-authz-bypass headers
+	Email string `queryParam:"style=form,explode=true,name=email"`
+	// Unique request ID (GUID)
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum string

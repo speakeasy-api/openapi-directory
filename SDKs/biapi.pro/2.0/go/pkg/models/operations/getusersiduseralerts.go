@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersIDUserAlertsPathParams struct {
+type GetUsersIDUserAlertsRequest struct {
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserAlertsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type GetUsersIDUserAlertsRequest struct {
-	PathParams  GetUsersIDUserAlertsPathParams
-	QueryParams GetUsersIDUserAlertsQueryParams
 }
 
 // GetUsersIDUserAlerts200ApplicationJSON - alerts

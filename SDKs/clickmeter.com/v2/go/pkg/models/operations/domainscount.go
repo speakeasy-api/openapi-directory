@@ -39,15 +39,11 @@ func (e *DomainsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DomainsCountQueryParams struct {
+type DomainsCountRequest struct {
 	// Filter domains with this anmen
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Type of domain ("system"/"go"/"personal"/"dedicated"). If not specified default is "system"
 	Type *DomainsCountTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DomainsCountRequest struct {
-	QueryParams DomainsCountQueryParams
 }
 
 type DomainsCountResponse struct {

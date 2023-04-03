@@ -13,17 +13,12 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetItemUsagesRequest{
-        Security: operations.GetItemUsagesSecurity{
-            Jwtsa: shared.SchemeJwtsa{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        Request: &operations.GetItemUsagesRequestBody{},
-    }
+    req := operations.GetItemUsagesRequestBody{}
 
     ctx := context.Background()
-    res, err := s.APIV1.GetItemUsages(ctx, req)
+    res, err := s.APIV1.GetItemUsages(ctx, req, operations.GetItemUsagesSecurity{
+        Jwtsa: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

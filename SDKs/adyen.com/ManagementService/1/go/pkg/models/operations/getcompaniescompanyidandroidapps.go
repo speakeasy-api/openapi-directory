@@ -8,26 +8,17 @@ import (
 )
 
 type GetCompaniesCompanyIDAndroidAppsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDAndroidAppsPathParams struct {
+type GetCompaniesCompanyIDAndroidAppsRequest struct {
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDAndroidAppsQueryParams struct {
 	// The number of the page to fetch.
 	PageNumber *int `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The number of items to have on a page, maximum 100. The default is 20 items on a page.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetCompaniesCompanyIDAndroidAppsRequest struct {
-	PathParams  GetCompaniesCompanyIDAndroidAppsPathParams
-	QueryParams GetCompaniesCompanyIDAndroidAppsQueryParams
-	Security    GetCompaniesCompanyIDAndroidAppsSecurity
 }
 
 type GetCompaniesCompanyIDAndroidAppsResponse struct {

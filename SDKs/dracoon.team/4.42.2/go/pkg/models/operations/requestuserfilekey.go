@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUserFileKeyPathParams struct {
-	// File ID
-	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type RequestUserFileKeyQueryParams struct {
-	// Version (NEW)
-	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type RequestUserFileKeyHeaders struct {
+type RequestUserFileKeyRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestUserFileKeyRequest struct {
-	PathParams  RequestUserFileKeyPathParams
-	QueryParams RequestUserFileKeyQueryParams
-	Headers     RequestUserFileKeyHeaders
+	// File ID
+	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
+	// Version (NEW)
+	Version *string `queryParam:"style=form,explode=true,name=version"`
 }
 
 type RequestUserFileKeyResponse struct {

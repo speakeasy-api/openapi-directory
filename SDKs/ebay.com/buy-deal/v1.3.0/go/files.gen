@@ -24,7 +24,6 @@ pkg/models/shared/amount.go
 pkg/models/shared/shippingoption.go
 pkg/models/shared/marketingprice.go
 pkg/models/shared/image.go
-pkg/models/shared/security.go
 pkg/models/shared/event.go
 pkg/models/shared/terms.go
 pkg/models/shared/coupon.go

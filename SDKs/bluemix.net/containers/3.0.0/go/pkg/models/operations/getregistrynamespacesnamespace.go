@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRegistryNamespacesNamespacePathParams struct {
-	// The name of the namespace that you would like to use for your organization and for which you would like to check availability in Bluemix.
-	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-}
-
-type GetRegistryNamespacesNamespaceHeaders struct {
+type GetRegistryNamespacesNamespaceRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetRegistryNamespacesNamespaceRequest struct {
-	PathParams GetRegistryNamespacesNamespacePathParams
-	Headers    GetRegistryNamespacesNamespaceHeaders
+	// The name of the namespace that you would like to use for your organization and for which you would like to check availability in Bluemix.
+	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
 }
 
 type GetRegistryNamespacesNamespaceResponse struct {

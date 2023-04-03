@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ListUserActionsQueryParams struct {
+type ListUserActionsRequest struct {
 	Filter   string `queryParam:"style=form,explode=true,name=filter"`
 	Offset   int64  `queryParam:"style=form,explode=true,name=offset"`
 	Username string `queryParam:"style=form,explode=true,name=username"`
-}
-
-type ListUserActionsRequest struct {
-	QueryParams ListUserActionsQueryParams
 }
 
 type ListUserActions200ApplicationJSONUserActions struct {

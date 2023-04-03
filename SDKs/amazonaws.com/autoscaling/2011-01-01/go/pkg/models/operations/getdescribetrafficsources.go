@@ -50,7 +50,7 @@ func (e *GETDescribeTrafficSourcesVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeTrafficSourcesQueryParams struct {
+type GETDescribeTrafficSourcesRequest struct {
 	Action GETDescribeTrafficSourcesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -61,21 +61,13 @@ type GETDescribeTrafficSourcesQueryParams struct {
 	// The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
 	TrafficSourceType string                               `queryParam:"style=form,explode=true,name=TrafficSourceType"`
 	Version           GETDescribeTrafficSourcesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeTrafficSourcesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeTrafficSourcesRequest struct {
-	QueryParams GETDescribeTrafficSourcesQueryParams
-	Headers     GETDescribeTrafficSourcesHeaders
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeTrafficSourcesResponse struct {

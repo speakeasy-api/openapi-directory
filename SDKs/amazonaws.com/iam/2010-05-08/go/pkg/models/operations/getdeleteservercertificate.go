@@ -50,26 +50,18 @@ func (e *GETDeleteServerCertificateVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDeleteServerCertificateQueryParams struct {
+type GETDeleteServerCertificateRequest struct {
 	Action GETDeleteServerCertificateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the server certificate you want to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	ServerCertificateName string                                `queryParam:"style=form,explode=true,name=ServerCertificateName"`
 	Version               GETDeleteServerCertificateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteServerCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteServerCertificateRequest struct {
-	QueryParams GETDeleteServerCertificateQueryParams
-	Headers     GETDeleteServerCertificateHeaders
+	XAmzAlgorithm         *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteServerCertificateResponse struct {

@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UsersUpdateOrgRoleSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type UsersUpdateOrgRolePathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-	// The slug name of the user
-	UserName string `pathParam:"style=simple,explode=false,name=user_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // UsersUpdateOrgRoleRequestBodyRoleEnum - The user's role in the organizatiion
@@ -53,9 +45,11 @@ type UsersUpdateOrgRoleRequestBody struct {
 }
 
 type UsersUpdateOrgRoleRequest struct {
-	PathParams UsersUpdateOrgRolePathParams
-	Request    UsersUpdateOrgRoleRequestBody `request:"mediaType=application/json"`
-	Security   UsersUpdateOrgRoleSecurity
+	RequestBody UsersUpdateOrgRoleRequestBody `request:"mediaType=application/json"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	// The slug name of the user
+	UserName string `pathParam:"style=simple,explode=false,name=user_name"`
 }
 
 type UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum string

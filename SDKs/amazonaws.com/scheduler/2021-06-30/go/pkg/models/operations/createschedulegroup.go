@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateScheduleGroupPathParams struct {
-	// The name of the schedule group that you are creating.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type CreateScheduleGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateScheduleGroupRequestBody struct {
 	//  Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a client token, EventBridge Scheduler uses a randomly generated token for the request to ensure idempotency.
 	ClientToken *string `json:"ClientToken,omitempty"`
@@ -30,9 +15,16 @@ type CreateScheduleGroupRequestBody struct {
 }
 
 type CreateScheduleGroupRequest struct {
-	PathParams CreateScheduleGroupPathParams
-	Headers    CreateScheduleGroupHeaders
-	Request    CreateScheduleGroupRequestBody `request:"mediaType=application/json"`
+	// The name of the schedule group that you are creating.
+	Name              string                         `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       CreateScheduleGroupRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateScheduleGroupResponse struct {

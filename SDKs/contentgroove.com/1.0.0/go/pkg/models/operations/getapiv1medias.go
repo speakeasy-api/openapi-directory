@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetAPIV1MediasSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 // GetAPIV1MediasSortEnum - Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
@@ -49,7 +48,7 @@ func (e *GetAPIV1MediasSortEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAPIV1MediasQueryParams struct {
+type GetAPIV1MediasRequest struct {
 	// Filters to be applied to the query.
 	//
 	// Query params in the url must look like this: "filter[attributeName_*matcher*]"
@@ -64,11 +63,6 @@ type GetAPIV1MediasQueryParams struct {
 	Page map[string]interface{} `queryParam:"style=deepObject,explode=true,name=page"`
 	// Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
 	Sort *GetAPIV1MediasSortEnum `queryParam:"style=form,explode=true,name=sort"`
-}
-
-type GetAPIV1MediasRequest struct {
-	QueryParams GetAPIV1MediasQueryParams
-	Security    GetAPIV1MediasSecurity
 }
 
 type GetAPIV1MediasResponse struct {

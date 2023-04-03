@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutIndividualsPartyIDBusinessNamesProductIDPathParams struct {
+type PutIndividualsPartyIDBusinessNamesProductIDRequest struct {
+	// The API key.
+	APIKey string `header:"style=simple,explode=false,name=apiKey"`
+	// Business Name resource
+	BusinessNameInput shared.BusinessNameInput `request:"mediaType=application/json"`
 	// The party identifier.
 	PartyID string `pathParam:"style=simple,explode=false,name=partyId"`
 	// The product identifier.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type PutIndividualsPartyIDBusinessNamesProductIDHeaders struct {
-	// The API key.
-	APIKey string `header:"style=simple,explode=false,name=apiKey"`
-}
-
-type PutIndividualsPartyIDBusinessNamesProductIDRequest struct {
-	PathParams PutIndividualsPartyIDBusinessNamesProductIDPathParams
-	Headers    PutIndividualsPartyIDBusinessNamesProductIDHeaders
-	// Business Name resource
-	Request shared.BusinessNameInput `request:"mediaType=application/json"`
 }
 
 type PutIndividualsPartyIDBusinessNamesProductIDResponse struct {

@@ -50,24 +50,16 @@ func (e *GETGETSendStatisticsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETSendStatisticsQueryParams struct {
-	Action  GETGETSendStatisticsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version GETGETSendStatisticsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETSendStatisticsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETGETSendStatisticsRequest struct {
-	QueryParams GETGETSendStatisticsQueryParams
-	Headers     GETGETSendStatisticsHeaders
+	Action            GETGETSendStatisticsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Version           GETGETSendStatisticsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETSendStatisticsResponse struct {

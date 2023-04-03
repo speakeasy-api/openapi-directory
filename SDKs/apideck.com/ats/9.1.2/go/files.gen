@@ -31,7 +31,6 @@ pkg/models/shared/phonenumber.go
 pkg/models/shared/email.go
 pkg/models/shared/customfield.go
 pkg/models/shared/address.go
-pkg/models/shared/security.go
 pkg/models/shared/getapplicantsresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
@@ -43,4 +42,5 @@ pkg/models/shared/jobstatusenum.go
 pkg/models/shared/currencyenum.go
 pkg/models/shared/department.go
 pkg/models/shared/getjobresponse.go
+pkg/models/shared/security.go
 USAGE.md

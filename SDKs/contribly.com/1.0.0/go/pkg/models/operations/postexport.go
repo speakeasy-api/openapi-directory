@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-type PostExportQueryParams struct {
+type PostExportRequest struct {
 	// Restrict results to contributions submitted to this assignment.
 	Assignment *string `queryParam:"style=form,explode=true,name=assignment"`
 	// Included a combined file with all contribution text.
@@ -45,10 +45,6 @@ type PostExportQueryParams struct {
 	URLWords *string `queryParam:"style=form,explode=true,name=urlWords"`
 	// Restrict results to contributions by this user identified by id.
 	User *string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type PostExportRequest struct {
-	QueryParams PostExportQueryParams
 }
 
 type PostExportResponse struct {

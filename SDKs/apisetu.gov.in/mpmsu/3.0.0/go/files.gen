@@ -15,5 +15,4 @@ pkg/utils/utils.go
 pkg/models/operations/micer.go
 pkg/models/operations/pvcer.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

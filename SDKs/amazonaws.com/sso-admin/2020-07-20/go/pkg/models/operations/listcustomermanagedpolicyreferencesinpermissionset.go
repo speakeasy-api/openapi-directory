@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListCustomerManagedPolicyReferencesInPermissionSetQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum
 type ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum) Unmar
 	}
 }
 
-type ListCustomerManagedPolicyReferencesInPermissionSetHeaders struct {
+type ListCustomerManagedPolicyReferencesInPermissionSetRequest struct {
+	ListCustomerManagedPolicyReferencesInPermissionSetRequest shared.ListCustomerManagedPolicyReferencesInPermissionSetRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                                          `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListCustomerManagedPolicyReferencesInPermissionSetHeaders struct {
 	XAmzSignature     *string                                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListCustomerManagedPolicyReferencesInPermissionSetRequest struct {
-	QueryParams ListCustomerManagedPolicyReferencesInPermissionSetQueryParams
-	Headers     ListCustomerManagedPolicyReferencesInPermissionSetHeaders
-	Request     shared.ListCustomerManagedPolicyReferencesInPermissionSetRequest `request:"mediaType=application/json"`
 }
 
 type ListCustomerManagedPolicyReferencesInPermissionSetResponse struct {

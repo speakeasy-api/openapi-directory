@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateUrlsExportPathParams struct {
-	// Analysis' identifier
-	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // CreateUrlsExportAreaEnum
 type CreateUrlsExportAreaEnum string
 
@@ -48,14 +39,15 @@ func (e *CreateUrlsExportAreaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateUrlsExportQueryParams struct {
-	Area *CreateUrlsExportAreaEnum `queryParam:"style=form,explode=true,name=area"`
-}
-
 type CreateUrlsExportRequest struct {
-	PathParams  CreateUrlsExportPathParams
-	QueryParams CreateUrlsExportQueryParams
-	Request     *shared.UrlsQuery `request:"mediaType=application/json"`
+	UrlsQuery *shared.UrlsQuery `request:"mediaType=application/json"`
+	// Analysis' identifier
+	AnalysisSlug string                    `pathParam:"style=simple,explode=false,name=analysis_slug"`
+	Area         *CreateUrlsExportAreaEnum `queryParam:"style=form,explode=true,name=area"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type CreateUrlsExportResponse struct {

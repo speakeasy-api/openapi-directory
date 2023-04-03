@@ -8,28 +8,19 @@ import (
 )
 
 type GetCompaniesCompanyIDShippingLocationsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDShippingLocationsPathParams struct {
+type GetCompaniesCompanyIDShippingLocationsRequest struct {
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDShippingLocationsQueryParams struct {
 	// The number of locations to return.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// The name of the shipping location.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// The number of locations to skip.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetCompaniesCompanyIDShippingLocationsRequest struct {
-	PathParams  GetCompaniesCompanyIDShippingLocationsPathParams
-	QueryParams GetCompaniesCompanyIDShippingLocationsQueryParams
-	Security    GetCompaniesCompanyIDShippingLocationsSecurity
 }
 
 type GetCompaniesCompanyIDShippingLocationsResponse struct {

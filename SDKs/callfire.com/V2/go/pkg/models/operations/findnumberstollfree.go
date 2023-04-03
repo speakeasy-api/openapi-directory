@@ -8,21 +8,17 @@ import (
 )
 
 type FindNumbersTollfreeSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindNumbersTollfreeQueryParams struct {
+type FindNumbersTollfreeRequest struct {
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// To set the maximum number of records to return in a paged list response. The default is 100
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Filter toll free numbers by prefix, pattern must be 3 char long and should end with '*'. Examples: 8**, 85*, 87* (but 855 will fail because pattern must end with '*').
 	Pattern *string `queryParam:"style=form,explode=true,name=pattern"`
-}
-
-type FindNumbersTollfreeRequest struct {
-	QueryParams FindNumbersTollfreeQueryParams
-	Security    FindNumbersTollfreeSecurity
 }
 
 type FindNumbersTollfreeResponse struct {

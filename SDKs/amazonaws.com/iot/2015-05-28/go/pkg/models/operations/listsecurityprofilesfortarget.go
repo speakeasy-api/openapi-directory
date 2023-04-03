@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSecurityProfilesForTargetQueryParams struct {
+type ListSecurityProfilesForTargetRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The maximum number of results to return at one time.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// The token for the next set of results.
@@ -16,21 +23,6 @@ type ListSecurityProfilesForTargetQueryParams struct {
 	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
 	// The ARN of the target (thing group) whose attached security profiles you want to get.
 	SecurityProfileTargetArn string `queryParam:"style=form,explode=true,name=securityProfileTargetArn"`
-}
-
-type ListSecurityProfilesForTargetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSecurityProfilesForTargetRequest struct {
-	QueryParams ListSecurityProfilesForTargetQueryParams
-	Headers     ListSecurityProfilesForTargetHeaders
 }
 
 type ListSecurityProfilesForTargetResponse struct {

@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutConnectorsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PutConnectorsRequestBody struct {
 	// to enable  or disable connector (bank or provider)
 	Hidden *bool `multipartForm:"name=hidden"`
 }
 
 type PutConnectorsRequest struct {
-	QueryParams PutConnectorsQueryParams
-	Request     *PutConnectorsRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody *PutConnectorsRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                   `queryParam:"style=form,explode=true,name=expand"`
 }
 
 type PutConnectorsResponse struct {

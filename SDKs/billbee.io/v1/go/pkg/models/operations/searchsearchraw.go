@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchSearchRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type SearchSearchRawResponse struct {
 	Body        []byte
 	ContentType string

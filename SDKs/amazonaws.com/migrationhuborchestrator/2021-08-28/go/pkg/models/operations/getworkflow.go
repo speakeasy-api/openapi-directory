@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkflowPathParams struct {
-	// The ID of the migration workflow.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetWorkflowHeaders struct {
+type GetWorkflowRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetWorkflowHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetWorkflowRequest struct {
-	PathParams GetWorkflowPathParams
-	Headers    GetWorkflowHeaders
+	// The ID of the migration workflow.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetWorkflowResponse struct {

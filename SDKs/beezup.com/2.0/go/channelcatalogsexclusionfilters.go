@@ -34,9 +34,9 @@ func newChannelCatalogsExclusionFilters(defaultClient, securityClient HTTPClient
 // ConfigureChannelCatalogExclusionFilters - Configure channel catalog exclusion filters
 func (s *channelCatalogsExclusionFilters) ConfigureChannelCatalogExclusionFilters(ctx context.Context, request operations.ConfigureChannelCatalogExclusionFiltersRequest) (*operations.ConfigureChannelCatalogExclusionFiltersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -93,7 +93,7 @@ func (s *channelCatalogsExclusionFilters) ConfigureChannelCatalogExclusionFilter
 // GetChannelCatalogExclusionFilters - Get channel catalog exclusion filters
 func (s *channelCatalogsExclusionFilters) GetChannelCatalogExclusionFilters(ctx context.Context, request operations.GetChannelCatalogExclusionFiltersRequest) (*operations.GetChannelCatalogExclusionFiltersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveSystemRescueKeyPairQueryParams struct {
-	// Version (NEW)
-	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type RemoveSystemRescueKeyPairHeaders struct {
+type RemoveSystemRescueKeyPairRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveSystemRescueKeyPairRequest struct {
-	QueryParams RemoveSystemRescueKeyPairQueryParams
-	Headers     RemoveSystemRescueKeyPairHeaders
+	// Version (NEW)
+	Version *string `queryParam:"style=form,explode=true,name=version"`
 }
 
 type RemoveSystemRescueKeyPairResponse struct {

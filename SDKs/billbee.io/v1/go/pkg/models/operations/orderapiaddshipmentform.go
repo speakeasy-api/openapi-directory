@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OrderAPIAddShipmentFormPathParams struct {
+type OrderAPIAddShipmentFormRequest struct {
+	// The shipment data to create the shipment
+	RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel shared.RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel `request:"mediaType=application/x-www-form-urlencoded"`
 	// The internal billbee id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPIAddShipmentFormRequest struct {
-	PathParams OrderAPIAddShipmentFormPathParams
-	// The shipment data to create the shipment
-	Request shared.RechnungsdruckWebAppControllersAPIAPIAddShipmentToOrderModel `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type OrderAPIAddShipmentFormResponse struct {

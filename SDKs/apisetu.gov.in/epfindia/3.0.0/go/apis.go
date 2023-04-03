@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Epfsc - Scheme Certificate
 // API to verify Scheme Certificate.
-func (s *apIs) Epfsc(ctx context.Context, request operations.EpfscRequest) (*operations.EpfscResponse, error) {
+func (s *apIs) Epfsc(ctx context.Context, request operations.EpfscRequestBody, security operations.EpfscSecurity) (*operations.EpfscResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/epfsc/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Epfsc(ctx context.Context, request operations.EpfscRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Epfsc(ctx context.Context, request operations.EpfscRequest) (*ope
 
 // Pecer - Pension Certificate
 // API to verify Pension Certificate.
-func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequest) (*operations.PecerResponse, error) {
+func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequestBody, security operations.PecerSecurity) (*operations.PecerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pecer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequest) (*ope
 
 // Uncrd - UAN Card
 // API to verify UAN Card.
-func (s *apIs) Uncrd(ctx context.Context, request operations.UncrdRequest) (*operations.UncrdResponse, error) {
+func (s *apIs) Uncrd(ctx context.Context, request operations.UncrdRequestBody, security operations.UncrdSecurity) (*operations.UncrdResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uncrd/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Uncrd(ctx context.Context, request operations.UncrdRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

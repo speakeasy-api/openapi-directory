@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContainersFloatingIpsQueryParams struct {
-	// If this option is set to `all=1`, `all=True`, or `all=true`, all public IP addresses that are allocated to a space are returned. If this option is set to `all=0`, `all=False`, or `all=false`, only available public IP addresses that are allocated but not bound to a container are returned. By default, only available public IP addresses are returned.
-	All *bool `queryParam:"style=form,explode=true,name=all"`
-}
-
-type GetContainersFloatingIpsHeaders struct {
+type GetContainersFloatingIpsRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type GetContainersFloatingIpsRequest struct {
-	QueryParams GetContainersFloatingIpsQueryParams
-	Headers     GetContainersFloatingIpsHeaders
+	// If this option is set to `all=1`, `all=True`, or `all=true`, all public IP addresses that are allocated to a space are returned. If this option is set to `all=0`, `all=False`, or `all=false`, only available public IP addresses that are allocated but not bound to a container are returned. By default, only available public IP addresses are returned.
+	All *bool `queryParam:"style=form,explode=true,name=all"`
 }
 
 type GetContainersFloatingIpsResponse struct {

@@ -30,7 +30,7 @@ func (e *DescribeCrossAccountAccessRoleXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DescribeCrossAccountAccessRoleHeaders struct {
+type DescribeCrossAccountAccessRoleRequest struct {
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type DescribeCrossAccountAccessRoleHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeCrossAccountAccessRoleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeCrossAccountAccessRoleRequest struct {
-	Headers DescribeCrossAccountAccessRoleHeaders
 }
 
 type DescribeCrossAccountAccessRoleResponse struct {

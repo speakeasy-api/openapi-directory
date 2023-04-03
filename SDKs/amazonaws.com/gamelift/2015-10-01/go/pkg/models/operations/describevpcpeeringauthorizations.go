@@ -30,7 +30,8 @@ func (e *DescribeVpcPeeringAuthorizationsXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type DescribeVpcPeeringAuthorizationsHeaders struct {
+type DescribeVpcPeeringAuthorizationsRequest struct {
+	RequestBody       map[string]interface{}                         `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DescribeVpcPeeringAuthorizationsHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeVpcPeeringAuthorizationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeVpcPeeringAuthorizationsRequest struct {
-	Headers DescribeVpcPeeringAuthorizationsHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DescribeVpcPeeringAuthorizationsResponse struct {

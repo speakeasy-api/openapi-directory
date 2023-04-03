@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CreatePipelineVariableForUserPathParams struct {
+type CreatePipelineVariableForUserRequest struct {
+	// The variable to create.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type CreatePipelineVariableForUserRequest struct {
-	PathParams CreatePipelineVariableForUserPathParams
-	// The variable to create.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreatePipelineVariableForUserResponse struct {

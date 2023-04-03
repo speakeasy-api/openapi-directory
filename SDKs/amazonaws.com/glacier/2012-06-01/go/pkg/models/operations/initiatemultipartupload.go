@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type InitiateMultipartUploadPathParams struct {
-	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-	// The name of the vault.
-	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
-}
-
-type InitiateMultipartUploadHeaders struct {
+type InitiateMultipartUploadRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,15 +14,14 @@ type InitiateMultipartUploadHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The <code>AccountId</code> value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '<code>-</code>' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	// The name of the vault.
+	VaultName string `pathParam:"style=simple,explode=false,name=vaultName"`
 	// <p>The archive description that you are uploading in parts.</p> <p>The part size must be a megabyte (1024 KB) multiplied by a power of 2, for example 1048576 (1 MB), 2097152 (2 MB), 4194304 (4 MB), 8388608 (8 MB), and so on. The minimum allowable part size is 1 MB, and the maximum is 4 GB (4096 MB).</p>
 	XAmzArchiveDescription *string `header:"style=simple,explode=false,name=x-amz-archive-description"`
 	// The size of each part except the last, in bytes. The last part can be smaller than this part size.
 	XAmzPartSize *string `header:"style=simple,explode=false,name=x-amz-part-size"`
-}
-
-type InitiateMultipartUploadRequest struct {
-	PathParams InitiateMultipartUploadPathParams
-	Headers    InitiateMultipartUploadHeaders
 }
 
 type InitiateMultipartUploadResponse struct {

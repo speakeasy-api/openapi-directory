@@ -6,29 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesGetLatestByHashSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesGetLatestByHashPathParams struct {
+type ReleasesGetLatestByHashRequest struct {
 	// The secret of the target application
 	AppSecret string `pathParam:"style=simple,explode=false,name=app_secret"`
 	// The hash of the release or 'latest' to get the latest release from all the distribution groups assigned to the current user.
 	ReleaseHash string `pathParam:"style=simple,explode=false,name=release_hash"`
-}
-
-type ReleasesGetLatestByHashQueryParams struct {
 	// When passing `udid` in the query string, a provisioning check for the given device ID will be done. Will be ignored for non-iOS platforms.
 	Udid *string `queryParam:"style=form,explode=true,name=udid"`
-}
-
-type ReleasesGetLatestByHashRequest struct {
-	PathParams  ReleasesGetLatestByHashPathParams
-	QueryParams ReleasesGetLatestByHashQueryParams
-	Security    ReleasesGetLatestByHashSecurity
 }
 
 type ReleasesGetLatestByHash404ApplicationJSONCodeEnum string

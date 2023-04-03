@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DomainsUpdateJSONPathParams struct {
+type DomainsUpdateJSONRequest struct {
+	// The domain to update
+	APICoreDtoDomainsDomain shared.APICoreDtoDomainsDomain `request:"mediaType=application/json"`
 	// Id of domain
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DomainsUpdateJSONRequest struct {
-	PathParams DomainsUpdateJSONPathParams
-	// The domain to update
-	Request shared.APICoreDtoDomainsDomain `request:"mediaType=application/json"`
 }
 
 type DomainsUpdateJSONResponse struct {

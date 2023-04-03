@@ -34,7 +34,7 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // PostMedia - Submit a new media file
-func (s *media) PostMedia(ctx context.Context, request operations.PostMediaRequest) (*operations.PostMediaResponse, error) {
+func (s *media) PostMedia(ctx context.Context, request string, security operations.PostMediaSecurity) (*operations.PostMediaResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/media"
 
@@ -53,7 +53,7 @@ func (s *media) PostMedia(ctx context.Context, request operations.PostMediaReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSegmentExportJobsPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-	// The unique identifier for the segment.
-	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
-}
-
-type GetSegmentExportJobsQueryParams struct {
-	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
-	PageSize *string `queryParam:"style=form,explode=true,name=page-size"`
-	// The NextToken string that specifies which page of results to return in a paginated response.
-	Token *string `queryParam:"style=form,explode=true,name=token"`
-}
-
-type GetSegmentExportJobsHeaders struct {
+type GetSegmentExportJobsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type GetSegmentExportJobsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSegmentExportJobsRequest struct {
-	PathParams  GetSegmentExportJobsPathParams
-	QueryParams GetSegmentExportJobsQueryParams
-	Headers     GetSegmentExportJobsHeaders
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
+	// The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+	PageSize *string `queryParam:"style=form,explode=true,name=page-size"`
+	// The unique identifier for the segment.
+	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
+	// The NextToken string that specifies which page of results to return in a paginated response.
+	Token *string `queryParam:"style=form,explode=true,name=token"`
 }
 
 type GetSegmentExportJobsResponse struct {

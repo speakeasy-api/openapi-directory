@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUserGroupsPathParams struct {
-	// User ID
-	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RequestUserGroupsQueryParams struct {
+type RequestUserGroupsRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Range limit.
@@ -23,17 +20,8 @@ type RequestUserGroupsQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Range offset
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type RequestUserGroupsHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestUserGroupsRequest struct {
-	PathParams  RequestUserGroupsPathParams
-	QueryParams RequestUserGroupsQueryParams
-	Headers     RequestUserGroupsHeaders
+	// User ID
+	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 }
 
 type RequestUserGroupsResponse struct {

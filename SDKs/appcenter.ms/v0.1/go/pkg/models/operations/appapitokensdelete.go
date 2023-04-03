@@ -6,25 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AppAPITokensDeleteSecurity struct {
-	Basic shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type AppAPITokensDeletePathParams struct {
+type AppAPITokensDeleteRequest struct {
 	// The unique ID (UUID) of the api token
 	APITokenID string `pathParam:"style=simple,explode=false,name=api_token_id"`
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AppAPITokensDeleteRequest struct {
-	PathParams AppAPITokensDeletePathParams
-	Security   AppAPITokensDeleteSecurity
 }
 
 type AppAPITokensDelete404ApplicationJSONErrorCodeEnum string

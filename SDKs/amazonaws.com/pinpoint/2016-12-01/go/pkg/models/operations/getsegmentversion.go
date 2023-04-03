@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSegmentVersionPathParams struct {
-	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
-	// The unique identifier for the segment.
-	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
-	// The unique version number (Version property) for the campaign version.
-	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type GetSegmentVersionHeaders struct {
+type GetSegmentVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetSegmentVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSegmentVersionRequest struct {
-	PathParams GetSegmentVersionPathParams
-	Headers    GetSegmentVersionHeaders
+	// The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=application-id"`
+	// The unique identifier for the segment.
+	SegmentID string `pathParam:"style=simple,explode=false,name=segment-id"`
+	// The unique version number (Version property) for the campaign version.
+	Version string `pathParam:"style=simple,explode=false,name=version"`
 }
 
 type GetSegmentVersionResponse struct {

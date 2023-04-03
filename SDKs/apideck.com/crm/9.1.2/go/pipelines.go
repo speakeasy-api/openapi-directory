@@ -34,11 +34,11 @@ func newPipelines(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // PipelinesAdd - Create pipeline
 // Create pipeline
-func (s *pipelines) PipelinesAdd(ctx context.Context, request operations.PipelinesAddRequest) (*operations.PipelinesAddResponse, error) {
+func (s *pipelines) PipelinesAdd(ctx context.Context, request operations.PipelinesAddRequest, security operations.PipelinesAddSecurity) (*operations.PipelinesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/pipelines"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PipelineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *pipelines) PipelinesAdd(ctx context.Context, request operations.Pipelin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *pipelines) PipelinesAdd(ctx context.Context, request operations.Pipelin
 
 // PipelinesAll - List pipelines
 // List pipelines
-func (s *pipelines) PipelinesAll(ctx context.Context, request operations.PipelinesAllRequest) (*operations.PipelinesAllResponse, error) {
+func (s *pipelines) PipelinesAll(ctx context.Context, request operations.PipelinesAllRequest, security operations.PipelinesAllSecurity) (*operations.PipelinesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crm/pipelines"
 
@@ -164,13 +164,13 @@ func (s *pipelines) PipelinesAll(ctx context.Context, request operations.Pipelin
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *pipelines) PipelinesAll(ctx context.Context, request operations.Pipelin
 
 // PipelinesDelete - Delete pipeline
 // Delete pipeline
-func (s *pipelines) PipelinesDelete(ctx context.Context, request operations.PipelinesDeleteRequest) (*operations.PipelinesDeleteResponse, error) {
+func (s *pipelines) PipelinesDelete(ctx context.Context, request operations.PipelinesDeleteRequest, security operations.PipelinesDeleteSecurity) (*operations.PipelinesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/pipelines/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/pipelines/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *pipelines) PipelinesDelete(ctx context.Context, request operations.Pipe
 
 // PipelinesOne - Get pipeline
 // Get pipeline
-func (s *pipelines) PipelinesOne(ctx context.Context, request operations.PipelinesOneRequest) (*operations.PipelinesOneResponse, error) {
+func (s *pipelines) PipelinesOne(ctx context.Context, request operations.PipelinesOneRequest, security operations.PipelinesOneSecurity) (*operations.PipelinesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/pipelines/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/pipelines/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *pipelines) PipelinesOne(ctx context.Context, request operations.Pipelin
 
 // PipelinesUpdate - Update pipeline
 // Update pipeline
-func (s *pipelines) PipelinesUpdate(ctx context.Context, request operations.PipelinesUpdateRequest) (*operations.PipelinesUpdateResponse, error) {
+func (s *pipelines) PipelinesUpdate(ctx context.Context, request operations.PipelinesUpdateRequest, security operations.PipelinesUpdateSecurity) (*operations.PipelinesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/pipelines/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/crm/pipelines/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PipelineInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *pipelines) PipelinesUpdate(ctx context.Context, request operations.Pipe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

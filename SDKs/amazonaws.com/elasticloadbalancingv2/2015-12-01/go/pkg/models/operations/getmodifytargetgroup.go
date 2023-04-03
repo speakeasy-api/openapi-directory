@@ -95,7 +95,7 @@ func (e *GETModifyTargetGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyTargetGroupQueryParams struct {
+type GETModifyTargetGroupRequest struct {
 	Action GETModifyTargetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Indicates whether health checks are enabled.
 	HealthCheckEnabled *bool `queryParam:"style=form,explode=true,name=HealthCheckEnabled"`
@@ -118,21 +118,13 @@ type GETModifyTargetGroupQueryParams struct {
 	// The number of consecutive health check failures required before considering the target unhealthy.
 	UnhealthyThresholdCount *int64                          `queryParam:"style=form,explode=true,name=UnhealthyThresholdCount"`
 	Version                 GETModifyTargetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyTargetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyTargetGroupRequest struct {
-	QueryParams GETModifyTargetGroupQueryParams
-	Headers     GETModifyTargetGroupHeaders
+	XAmzAlgorithm           *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyTargetGroupResponse struct {

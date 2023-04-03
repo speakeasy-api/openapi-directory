@@ -10,10 +10,6 @@ type CreateBackupRequestBody struct {
 	WithUploads bool `json:"with_uploads"`
 }
 
-type CreateBackupRequest struct {
-	Request *CreateBackupRequestBody `request:"mediaType=application/json"`
-}
-
 // CreateBackup200ApplicationJSON - success response
 type CreateBackup200ApplicationJSON struct {
 	Success string `json:"success"`

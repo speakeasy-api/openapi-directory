@@ -50,7 +50,7 @@ func (e *GETCreateVpcEndpointConnectionNotificationVersionEnum) UnmarshalJSON(da
 	}
 }
 
-type GETCreateVpcEndpointConnectionNotificationQueryParams struct {
+type GETCreateVpcEndpointConnectionNotificationRequest struct {
 	Action GETCreateVpcEndpointConnectionNotificationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -64,10 +64,7 @@ type GETCreateVpcEndpointConnectionNotificationQueryParams struct {
 	ServiceID *string                                               `queryParam:"style=form,explode=true,name=ServiceId"`
 	Version   GETCreateVpcEndpointConnectionNotificationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the endpoint.
-	VpcEndpointID *string `queryParam:"style=form,explode=true,name=VpcEndpointId"`
-}
-
-type GETCreateVpcEndpointConnectionNotificationHeaders struct {
+	VpcEndpointID     *string `queryParam:"style=form,explode=true,name=VpcEndpointId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -75,11 +72,6 @@ type GETCreateVpcEndpointConnectionNotificationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateVpcEndpointConnectionNotificationRequest struct {
-	QueryParams GETCreateVpcEndpointConnectionNotificationQueryParams
-	Headers     GETCreateVpcEndpointConnectionNotificationHeaders
 }
 
 type GETCreateVpcEndpointConnectionNotificationResponse struct {

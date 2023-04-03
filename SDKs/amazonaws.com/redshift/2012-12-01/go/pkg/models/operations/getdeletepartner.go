@@ -50,7 +50,7 @@ func (e *GETDeletePartnerVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeletePartnerQueryParams struct {
+type GETDeletePartnerRequest struct {
 	// The Amazon Web Services account ID that owns the cluster.
 	AccountID string                     `queryParam:"style=form,explode=true,name=AccountId"`
 	Action    GETDeletePartnerActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -59,23 +59,15 @@ type GETDeletePartnerQueryParams struct {
 	// The name of the database that receives data from the partner.
 	DatabaseName string `queryParam:"style=form,explode=true,name=DatabaseName"`
 	// The name of the partner that is authorized to send data.
-	PartnerName string                      `queryParam:"style=form,explode=true,name=PartnerName"`
-	Version     GETDeletePartnerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeletePartnerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeletePartnerRequest struct {
-	QueryParams GETDeletePartnerQueryParams
-	Headers     GETDeletePartnerHeaders
+	PartnerName       string                      `queryParam:"style=form,explode=true,name=PartnerName"`
+	Version           GETDeletePartnerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeletePartnerResponse struct {

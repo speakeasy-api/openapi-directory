@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchArtifactsQueryParams struct {
+type SearchArtifactsRequest struct {
 	// Filter by contentId.
 	ContentID *int64 `queryParam:"style=form,explode=true,name=contentId"`
 	// Filter by description.
@@ -37,10 +37,6 @@ type SearchArtifactsQueryParams struct {
 	// example `properties=foo:bar` will return only artifacts with a custom property named `foo`
 	// and value `bar`.
 	Properties []string `queryParam:"style=form,explode=true,name=properties"`
-}
-
-type SearchArtifactsRequest struct {
-	QueryParams SearchArtifactsQueryParams
 }
 
 type SearchArtifactsResponse struct {

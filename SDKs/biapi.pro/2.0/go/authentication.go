@@ -72,14 +72,14 @@ func (s *authentication) DeleteAuthToken(ctx context.Context) (*operations.Delet
 // This endpoint deletes the user.<br><br>
 func (s *authentication) DeleteUsersIDUser(ctx context.Context, request operations.DeleteUsersIDUserRequest) (*operations.DeleteUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -165,14 +165,14 @@ func (s *authentication) GetAuthTokenCode(ctx context.Context) (*operations.GetA
 // GetCertificateType - Get the latest certificate of a type
 func (s *authentication) GetCertificateType(ctx context.Context, request operations.GetCertificateTypeRequest) (*operations.GetCertificateTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificate/{type}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificate/{type}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -213,14 +213,14 @@ func (s *authentication) GetCertificateType(ctx context.Context, request operati
 // GetUsersIDUser - Get a user
 func (s *authentication) GetUsersIDUser(ctx context.Context, request operations.GetUsersIDUserRequest) (*operations.GetUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -260,7 +260,7 @@ func (s *authentication) GetUsersIDUser(ctx context.Context, request operations.
 
 // GetWebauth - First step to establish an oAuth2 connection.
 // The route encapsulate 2 functionalities: 1. Create or update a connection through oAuth2 session.<br><br>2. Execute a transfer through OAuth2 session.
-func (s *authentication) GetWebauth(ctx context.Context, request operations.GetWebauthRequest) (*operations.GetWebauthResponse, error) {
+func (s *authentication) GetWebauth(ctx context.Context, request operations.GetWebauthRequestBody) (*operations.GetWebauthResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webauth"
 
@@ -303,7 +303,7 @@ func (s *authentication) GetWebauth(ctx context.Context, request operations.GetW
 
 // PostAdminJwt - Generate a jwt manage token
 // This endpoint generates a new jwt manage token. It requires an admin manage token to be used<br><br>
-func (s *authentication) PostAdminJwt(ctx context.Context, request operations.PostAdminJwtRequest) (*operations.PostAdminJwtResponse, error) {
+func (s *authentication) PostAdminJwt(ctx context.Context, request operations.PostAdminJwtRequestBody) (*operations.PostAdminJwtResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/admin/jwt"
 
@@ -355,7 +355,7 @@ func (s *authentication) PostAdminJwt(ctx context.Context, request operations.Po
 
 // PostAuthInit - Create a new anonymous user
 // This endpoint creates a new temporary token related to a new anonymous user.<br><br>It will expire 30 minutes after.<br><br>Note: if you supply client_id and client_secret, or if you call this endpoint with the manage_token, the token will be permanent.<br><br>
-func (s *authentication) PostAuthInit(ctx context.Context, request operations.PostAuthInitRequest) (*operations.PostAuthInitResponse, error) {
+func (s *authentication) PostAuthInit(ctx context.Context, request operations.PostAuthInitRequestBody) (*operations.PostAuthInitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/init"
 
@@ -407,7 +407,7 @@ func (s *authentication) PostAuthInit(ctx context.Context, request operations.Po
 
 // PostAuthJwt - Generate a user jwt token
 // This endpoint generates a new jwt token for the user. This token will last the time in minutes given by the config key auth.default_token_expire (permanent if this the parameter expire=False is given)<br><br>
-func (s *authentication) PostAuthJwt(ctx context.Context, request operations.PostAuthJwtRequest) (*operations.PostAuthJwtResponse, error) {
+func (s *authentication) PostAuthJwt(ctx context.Context, request operations.PostAuthJwtRequestBody) (*operations.PostAuthJwtResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/jwt"
 
@@ -458,7 +458,7 @@ func (s *authentication) PostAuthJwt(ctx context.Context, request operations.Pos
 }
 
 // PostAuthRenew - Get a new access token given an user id and client credentials
-func (s *authentication) PostAuthRenew(ctx context.Context, request operations.PostAuthRenewRequest) (*operations.PostAuthRenewResponse, error) {
+func (s *authentication) PostAuthRenew(ctx context.Context, request operations.PostAuthRenewRequestBody) (*operations.PostAuthRenewResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/renew"
 
@@ -510,7 +510,7 @@ func (s *authentication) PostAuthRenew(ctx context.Context, request operations.P
 
 // PostAuthTokenAccess - Transform a temporary code to a access_token
 // In order to register a new user with the OAuth 2 process, the client has to call this endpoint to request a granted access_token with the received temporary code.<br><br>
-func (s *authentication) PostAuthTokenAccess(ctx context.Context, request operations.PostAuthTokenAccessRequest) (*operations.PostAuthTokenAccessResponse, error) {
+func (s *authentication) PostAuthTokenAccess(ctx context.Context, request operations.PostAuthTokenAccessRequestBody) (*operations.PostAuthTokenAccessResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/token/access"
 
@@ -564,9 +564,9 @@ func (s *authentication) PostAuthTokenAccess(ctx context.Context, request operat
 // Create an access_token for this user and get it.<br><br>
 func (s *authentication) PostUsersIDUserToken(ctx context.Context, request operations.PostUsersIDUserTokenRequest) (*operations.PostUsersIDUserTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/token", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/token", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

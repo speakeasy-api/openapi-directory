@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type OrderAPIFindPathParams struct {
+type OrderAPIFindRequest struct {
 	// The order id from the external system
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Optional the name of the shop/marketplace the order was imported from
 	Partner string `pathParam:"style=simple,explode=false,name=partner"`
-}
-
-type OrderAPIFindRequest struct {
-	PathParams OrderAPIFindPathParams
 }
 
 type OrderAPIFindResponse struct {

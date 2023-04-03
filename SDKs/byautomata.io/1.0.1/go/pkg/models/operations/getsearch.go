@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchQueryParams struct {
+type GetSearchRequest struct {
 	// Page number of search results. Ex. https://api.byautomata.io/search?page=0&link=cloud+computing,enterprise,security
 	Page *string `queryParam:"style=form,explode=true,name=page"`
 	// We provide information about related companies based on the search terms you provide. Separate search terms with commas. Ex. https://api.byautomata.io/search?link=cloud+computing,enterprise,security
 	Terms string `queryParam:"style=form,explode=true,name=terms"`
-}
-
-type GetSearchRequest struct {
-	QueryParams GetSearchQueryParams
 }
 
 // GetSearch200ApplicationJSON - A successful operation

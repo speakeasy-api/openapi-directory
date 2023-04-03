@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateClusterPathParams struct {
-	// The arn of the Elastic DocumentDB cluster.
-	ClusterArn string `pathParam:"style=simple,explode=false,name=clusterArn"`
-}
-
-type UpdateClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateClusterRequestBodyAuthTypeEnum - The authentication type for the Elastic DocumentDB cluster.
 type UpdateClusterRequestBodyAuthTypeEnum string
 
@@ -68,9 +53,16 @@ type UpdateClusterRequestBody struct {
 }
 
 type UpdateClusterRequest struct {
-	PathParams UpdateClusterPathParams
-	Headers    UpdateClusterHeaders
-	Request    UpdateClusterRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateClusterRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The arn of the Elastic DocumentDB cluster.
+	ClusterArn string `pathParam:"style=simple,explode=false,name=clusterArn"`
 }
 
 type UpdateClusterResponse struct {

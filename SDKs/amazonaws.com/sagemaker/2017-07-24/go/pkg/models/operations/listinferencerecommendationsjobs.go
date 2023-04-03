@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListInferenceRecommendationsJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListInferenceRecommendationsJobsXAmzTargetEnum
 type ListInferenceRecommendationsJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListInferenceRecommendationsJobsXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type ListInferenceRecommendationsJobsHeaders struct {
+type ListInferenceRecommendationsJobsRequest struct {
+	ListInferenceRecommendationsJobsRequest shared.ListInferenceRecommendationsJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListInferenceRecommendationsJobsHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListInferenceRecommendationsJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListInferenceRecommendationsJobsRequest struct {
-	QueryParams ListInferenceRecommendationsJobsQueryParams
-	Headers     ListInferenceRecommendationsJobsHeaders
-	Request     shared.ListInferenceRecommendationsJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListInferenceRecommendationsJobsResponse struct {

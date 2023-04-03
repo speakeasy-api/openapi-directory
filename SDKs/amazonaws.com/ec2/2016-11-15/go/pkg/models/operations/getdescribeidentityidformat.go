@@ -50,28 +50,20 @@ func (e *GETDescribeIdentityIDFormatVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDescribeIdentityIDFormatQueryParams struct {
+type GETDescribeIdentityIDFormatRequest struct {
 	Action GETDescribeIdentityIDFormatActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ARN of the principal, which can be an IAM role, IAM user, or the root user.
 	PrincipalArn string `queryParam:"style=form,explode=true,name=PrincipalArn"`
 	// The type of resource: <code>bundle</code> | <code>conversion-task</code> | <code>customer-gateway</code> | <code>dhcp-options</code> | <code>elastic-ip-allocation</code> | <code>elastic-ip-association</code> | <code>export-task</code> | <code>flow-log</code> | <code>image</code> | <code>import-task</code> | <code>instance</code> | <code>internet-gateway</code> | <code>network-acl</code> | <code>network-acl-association</code> | <code>network-interface</code> | <code>network-interface-attachment</code> | <code>prefix-list</code> | <code>reservation</code> | <code>route-table</code> | <code>route-table-association</code> | <code>security-group</code> | <code>snapshot</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> | <code>volume</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> | <code>vpc-peering-connection</code> | <code>vpn-connection</code> | <code>vpn-gateway</code>
-	Resource *string                                `queryParam:"style=form,explode=true,name=Resource"`
-	Version  GETDescribeIdentityIDFormatVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeIdentityIDFormatHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeIdentityIDFormatRequest struct {
-	QueryParams GETDescribeIdentityIDFormatQueryParams
-	Headers     GETDescribeIdentityIDFormatHeaders
+	Resource          *string                                `queryParam:"style=form,explode=true,name=Resource"`
+	Version           GETDescribeIdentityIDFormatVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeIdentityIDFormatResponse struct {

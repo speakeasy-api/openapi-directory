@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DecodeViaNeoVINPathParams struct {
-	// The VIN to identify the car. Must be a valid 17 char VIN
-	Vin string `pathParam:"style=simple,explode=false,name=vin"`
-}
-
-type DecodeViaNeoVINQueryParams struct {
+type DecodeViaNeoVINRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Decode VIN on the fly instead of cached response
 	ForceDecode *bool `queryParam:"style=form,explode=true,name=force_decode"`
 	// Boolean variable to indicate wheather to include generic data as well in response
 	IncludeGeneric *bool `queryParam:"style=form,explode=true,name=include_generic"`
-}
-
-type DecodeViaNeoVINRequest struct {
-	PathParams  DecodeViaNeoVINPathParams
-	QueryParams DecodeViaNeoVINQueryParams
+	// The VIN to identify the car. Must be a valid 17 char VIN
+	Vin string `pathParam:"style=simple,explode=false,name=vin"`
 }
 
 type DecodeViaNeoVINResponse struct {

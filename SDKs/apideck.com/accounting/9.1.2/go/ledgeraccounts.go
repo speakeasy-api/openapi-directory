@@ -34,11 +34,11 @@ func newLedgerAccounts(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // LedgerAccountsAdd - Create Ledger Account
 // Create Ledger Account
-func (s *ledgerAccounts) LedgerAccountsAdd(ctx context.Context, request operations.LedgerAccountsAddRequest) (*operations.LedgerAccountsAddResponse, error) {
+func (s *ledgerAccounts) LedgerAccountsAdd(ctx context.Context, request operations.LedgerAccountsAddRequest, security operations.LedgerAccountsAddSecurity) (*operations.LedgerAccountsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/ledger-accounts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *ledgerAccounts) LedgerAccountsAdd(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *ledgerAccounts) LedgerAccountsAdd(ctx context.Context, request operatio
 
 // LedgerAccountsAll - List Ledger Accounts
 // List Ledger Accounts
-func (s *ledgerAccounts) LedgerAccountsAll(ctx context.Context, request operations.LedgerAccountsAllRequest) (*operations.LedgerAccountsAllResponse, error) {
+func (s *ledgerAccounts) LedgerAccountsAll(ctx context.Context, request operations.LedgerAccountsAllRequest, security operations.LedgerAccountsAllSecurity) (*operations.LedgerAccountsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/ledger-accounts"
 
@@ -164,13 +164,13 @@ func (s *ledgerAccounts) LedgerAccountsAll(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *ledgerAccounts) LedgerAccountsAll(ctx context.Context, request operatio
 
 // LedgerAccountsDelete - Delete Ledger Account
 // Delete Ledger Account
-func (s *ledgerAccounts) LedgerAccountsDelete(ctx context.Context, request operations.LedgerAccountsDeleteRequest) (*operations.LedgerAccountsDeleteResponse, error) {
+func (s *ledgerAccounts) LedgerAccountsDelete(ctx context.Context, request operations.LedgerAccountsDeleteRequest, security operations.LedgerAccountsDeleteSecurity) (*operations.LedgerAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/ledger-accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/ledger-accounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *ledgerAccounts) LedgerAccountsDelete(ctx context.Context, request opera
 
 // LedgerAccountsOne - Get Ledger Account
 // Get Ledger Account
-func (s *ledgerAccounts) LedgerAccountsOne(ctx context.Context, request operations.LedgerAccountsOneRequest) (*operations.LedgerAccountsOneResponse, error) {
+func (s *ledgerAccounts) LedgerAccountsOne(ctx context.Context, request operations.LedgerAccountsOneRequest, security operations.LedgerAccountsOneSecurity) (*operations.LedgerAccountsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/ledger-accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/ledger-accounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *ledgerAccounts) LedgerAccountsOne(ctx context.Context, request operatio
 
 // LedgerAccountsUpdate - Update Ledger Account
 // Update Ledger Account
-func (s *ledgerAccounts) LedgerAccountsUpdate(ctx context.Context, request operations.LedgerAccountsUpdateRequest) (*operations.LedgerAccountsUpdateResponse, error) {
+func (s *ledgerAccounts) LedgerAccountsUpdate(ctx context.Context, request operations.LedgerAccountsUpdateRequest, security operations.LedgerAccountsUpdateSecurity) (*operations.LedgerAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/ledger-accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/ledger-accounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *ledgerAccounts) LedgerAccountsUpdate(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,16 +8,11 @@ import (
 )
 
 type SublabsReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SublabsReadPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SublabsReadRequest struct {
-	PathParams SublabsReadPathParams
-	Security   SublabsReadSecurity
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type SublabsReadResponse struct {

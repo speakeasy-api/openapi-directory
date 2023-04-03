@@ -36,14 +36,14 @@ func newVINDecoderAPI(defaultClient, securityClient HTTPClient, serverURL, langu
 // Get the basic information on specifications for a car identified by a valid VIN
 func (s *vinDecoderAPI) Decode(ctx context.Context, request operations.DecodeRequest) (*operations.DecodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/decode/car/{vin}/specs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/decode/car/{vin}/specs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *vinDecoderAPI) Decode(ctx context.Context, request operations.DecodeReq
 // Get the basic information on specifications for a car identified by a valid VIN from EPI's decoder
 func (s *vinDecoderAPI) DecodeViaEPI(ctx context.Context, request operations.DecodeViaEPIRequest) (*operations.DecodeViaEPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/decode/car/epi/{vin}/specs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/decode/car/epi/{vin}/specs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *vinDecoderAPI) DecodeViaEPI(ctx context.Context, request operations.Dec
 // Get the basic information on specifications for a car identified by a valid VIN from NeoVIN decoder
 func (s *vinDecoderAPI) DecodeViaNeoVIN(ctx context.Context, request operations.DecodeViaNeoVINRequest) (*operations.DecodeViaNeoVINResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/decode/car/neovin/{vin}/specs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/decode/car/neovin/{vin}/specs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -220,7 +220,7 @@ func (s *vinDecoderAPI) GetTaxonomyTerms(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -279,7 +279,7 @@ func (s *vinDecoderAPI) GetSpecsCarAutoComplete(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

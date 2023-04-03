@@ -6,23 +6,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UsersUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // UsersUpdateRequestBody - The data for the created user
 type UsersUpdateRequestBody struct {
 	// The full name of the user. Might for example be first and last name
 	DisplayName *string `json:"display_name,omitempty"`
-}
-
-type UsersUpdateRequest struct {
-	// The data for the created user
-	Request  UsersUpdateRequestBody `request:"mediaType=application/json"`
-	Security UsersUpdateSecurity
 }
 
 type UsersUpdateDefaultApplicationJSONErrorCodeEnum string

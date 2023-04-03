@@ -63,7 +63,7 @@ func (e *GetSalesCountCountryEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetSalesCountQueryParams struct {
+type GetSalesCountRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Inventory type for which sales count is to be searched, default is used
@@ -86,10 +86,6 @@ type GetSalesCountQueryParams struct {
 	Ymm *string `queryParam:"style=form,explode=true,name=ymm"`
 	// Year-Make-Model-Trim for which sales count is to be searched, pipe seperated like ymmt=2015|ford|f-150|platinum
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
-}
-
-type GetSalesCountRequest struct {
-	QueryParams GetSalesCountQueryParams
 }
 
 type GetSalesCountResponse struct {

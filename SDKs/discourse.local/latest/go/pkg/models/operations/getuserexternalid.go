@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetUserExternalIDPathParams struct {
-	ExternalID string `pathParam:"style=simple,explode=false,name=external_id"`
-}
-
-type GetUserExternalIDHeaders struct {
+type GetUserExternalIDRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type GetUserExternalIDRequest struct {
-	PathParams GetUserExternalIDPathParams
-	Headers    GetUserExternalIDHeaders
+	ExternalID  string `pathParam:"style=simple,explode=false,name=external_id"`
 }
 
 type GetUserExternalID200ApplicationJSONUserCustomFields struct {

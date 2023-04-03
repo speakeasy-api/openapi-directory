@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetVehicleDetailsByRegistrationNumberHeaders struct {
+type GetVehicleDetailsByRegistrationNumberRequest struct {
+	// Registration number of the vehicle to find details for
+	VehicleRequest shared.VehicleRequest `request:"mediaType=application/json"`
 	// Consumer Correlation ID
 	XCorrelationID *string `header:"style=simple,explode=false,name=X-Correlation-Id"`
 	// Client Specific API Key
 	XAPIKey string `header:"style=simple,explode=false,name=x-api-key"`
-}
-
-type GetVehicleDetailsByRegistrationNumberRequest struct {
-	Headers GetVehicleDetailsByRegistrationNumberHeaders
-	// Registration number of the vehicle to find details for
-	Request shared.VehicleRequest `request:"mediaType=application/json"`
 }
 
 type GetVehicleDetailsByRegistrationNumberResponse struct {

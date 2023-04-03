@@ -6,16 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrganizationUpdateAvatarSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type OrganizationUpdateAvatarPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type OrganizationUpdateAvatarRequestBodyAvatar struct {
@@ -29,9 +23,9 @@ type OrganizationUpdateAvatarRequestBody struct {
 }
 
 type OrganizationUpdateAvatarRequest struct {
-	PathParams OrganizationUpdateAvatarPathParams
-	Request    *OrganizationUpdateAvatarRequestBody `request:"mediaType=multipart/form-data"`
-	Security   OrganizationUpdateAvatarSecurity
+	RequestBody *OrganizationUpdateAvatarRequestBody `request:"mediaType=multipart/form-data"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum string

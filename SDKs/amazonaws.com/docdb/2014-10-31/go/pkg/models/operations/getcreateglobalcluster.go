@@ -50,7 +50,7 @@ func (e *GETCreateGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateGlobalClusterQueryParams struct {
+type GETCreateGlobalClusterRequest struct {
 	Action GETCreateGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name for your database of up to 64 alpha-numeric characters. If you do not provide a name, Amazon DocumentDB will not create a database in the global cluster you are creating.
 	DatabaseName *string `queryParam:"style=form,explode=true,name=DatabaseName"`
@@ -65,23 +65,15 @@ type GETCreateGlobalClusterQueryParams struct {
 	// The Amazon Resource Name (ARN) to use as the primary cluster of the global cluster. This parameter is optional.
 	SourceDBClusterIdentifier *string `queryParam:"style=form,explode=true,name=SourceDBClusterIdentifier"`
 	// The storage encryption setting for the new global cluster.
-	StorageEncrypted *bool                             `queryParam:"style=form,explode=true,name=StorageEncrypted"`
-	Version          GETCreateGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateGlobalClusterRequest struct {
-	QueryParams GETCreateGlobalClusterQueryParams
-	Headers     GETCreateGlobalClusterHeaders
+	StorageEncrypted  *bool                             `queryParam:"style=form,explode=true,name=StorageEncrypted"`
+	Version           GETCreateGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateGlobalClusterResponse struct {

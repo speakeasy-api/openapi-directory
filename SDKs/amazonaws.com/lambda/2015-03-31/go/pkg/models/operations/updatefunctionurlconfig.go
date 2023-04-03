@@ -9,26 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFunctionURLConfigPathParams struct {
-	// <p>The name of the Lambda function.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code>.</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
-type UpdateFunctionURLConfigQueryParams struct {
-	// The alias name.
-	Qualifier *string `queryParam:"style=form,explode=true,name=Qualifier"`
-}
-
-type UpdateFunctionURLConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFunctionURLConfigRequestBodyAuthTypeEnum - The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict access to authenticated users only. Set to <code>NONE</code> if you want to bypass IAM authentication to create a public endpoint. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function URLs</a>.
 type UpdateFunctionURLConfigRequestBodyAuthTypeEnum string
 
@@ -71,10 +51,18 @@ type UpdateFunctionURLConfigRequestBody struct {
 }
 
 type UpdateFunctionURLConfigRequest struct {
-	PathParams  UpdateFunctionURLConfigPathParams
-	QueryParams UpdateFunctionURLConfigQueryParams
-	Headers     UpdateFunctionURLConfigHeaders
-	Request     UpdateFunctionURLConfigRequestBody `request:"mediaType=application/json"`
+	// <p>The name of the Lambda function.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code>.</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
+	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
+	// The alias name.
+	Qualifier         *string                            `queryParam:"style=form,explode=true,name=Qualifier"`
+	RequestBody       UpdateFunctionURLConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateFunctionURLConfigResponse struct {

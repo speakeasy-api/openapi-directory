@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetInvoicingQueryParams struct {
+type GetInvoicingRequest struct {
 	// the number of accounts synchronized during the period
 	AccountsSynced *string `queryParam:"style=form,explode=true,name=accounts_synced"`
 	// get all the invoicing data at once
@@ -34,10 +34,6 @@ type GetInvoicingQueryParams struct {
 	UsersBill *string `queryParam:"style=form,explode=true,name=users_bill"`
 	// the number of user synchronized during the period
 	UsersSynced *string `queryParam:"style=form,explode=true,name=users_synced"`
-}
-
-type GetInvoicingRequest struct {
-	QueryParams GetInvoicingQueryParams
 }
 
 type GetInvoicingResponse struct {

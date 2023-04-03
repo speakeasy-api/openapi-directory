@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNhInteriorItemPathParams struct {
-	// The name of the interior item you wish to retrieve information about.
-	Item string `pathParam:"style=simple,explode=false,name=item"`
-}
-
 type GetNhInteriorItemColorEnum string
 
 const (
@@ -73,24 +68,17 @@ func (e *GetNhInteriorItemColorEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetNhInteriorItemQueryParams struct {
-	// Return furniture that matches the provided colors (may specify one or two colors).
-	Color []GetNhInteriorItemColorEnum `queryParam:"style=form,explode=true,name=color"`
-	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
-	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
-}
-
-type GetNhInteriorItemHeaders struct {
+type GetNhInteriorItemRequest struct {
 	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
 	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
 	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
 	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhInteriorItemRequest struct {
-	PathParams  GetNhInteriorItemPathParams
-	QueryParams GetNhInteriorItemQueryParams
-	Headers     GetNhInteriorItemHeaders
+	// Return furniture that matches the provided colors (may specify one or two colors).
+	Color []GetNhInteriorItemColorEnum `queryParam:"style=form,explode=true,name=color"`
+	// The name of the interior item you wish to retrieve information about.
+	Item string `pathParam:"style=simple,explode=false,name=item"`
+	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
+	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
 }
 
 type GetNhInteriorItemResponse struct {

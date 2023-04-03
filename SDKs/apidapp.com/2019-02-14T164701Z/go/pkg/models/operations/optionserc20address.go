@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsErc20AddressPathParams struct {
+type OptionsErc20AddressRequest struct {
 	// Automatically added
 	Address string `pathParam:"style=simple,explode=false,name=address"`
-}
-
-type OptionsErc20AddressRequest struct {
-	PathParams OptionsErc20AddressPathParams
 }
 
 type OptionsErc20AddressResponse struct {

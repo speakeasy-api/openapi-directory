@@ -30,7 +30,8 @@ func (e *CopyProductXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CopyProductHeaders struct {
+type CopyProductRequest struct {
+	CopyProductInput  shared.CopyProductInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CopyProductHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CopyProductXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CopyProductRequest struct {
-	Headers CopyProductHeaders
-	Request shared.CopyProductInput `request:"mediaType=application/json"`
 }
 
 type CopyProductResponse struct {

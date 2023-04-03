@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteContactSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteContactPathParams struct {
-	// An Id of a contact
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteContactRequest struct {
-	PathParams DeleteContactPathParams
-	Security   DeleteContactSecurity
+	// An Id of a contact
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteContactResponse struct {

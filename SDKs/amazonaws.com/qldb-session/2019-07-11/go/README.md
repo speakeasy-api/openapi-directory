@@ -24,67 +24,70 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.SendCommandRequest{
-        Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "QLDBSession.SendCommand",
-        },
-        Request: shared.SendCommandRequest{
+        SendCommandRequest: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "vel": "error",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
+            },
+            CommitTransaction: &shared.CommitTransactionRequest{
+                CommitDigest: "illum",
+                TransactionID: "vel",
+            },
+            EndSession: map[string]interface{}{
                 "deserunt": "suscipit",
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "delectus",
-                TransactionID: "tempora",
-            },
-            EndSession: map[string]interface{}{
-                "molestiae": "minus",
-                "placeat": "voluptatum",
-            },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "excepturi",
-                        IonText: "nisi",
+                        IonBinary: "tempora",
+                        IonText: "suscipit",
                     },
                     shared.ValueHolder{
-                        IonBinary: "recusandae",
-                        IonText: "temporibus",
+                        IonBinary: "molestiae",
+                        IonText: "minus",
+                    },
+                    shared.ValueHolder{
+                        IonBinary: "placeat",
+                        IonText: "voluptatum",
+                    },
+                    shared.ValueHolder{
+                        IonBinary: "iusto",
+                        IonText: "excepturi",
                     },
                 },
-                Statement: "ab",
-                TransactionID: "quis",
+                Statement: "nisi",
+                TransactionID: "recusandae",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "veritatis",
-                TransactionID: "deserunt",
+                NextPageToken: "temporibus",
+                TransactionID: "ab",
             },
-            SessionToken: "perferendis",
+            SessionToken: "quis",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "ipsam",
+                LedgerName: "veritatis",
             },
             StartTransaction: map[string]interface{}{
-                "sapiente": "quo",
-                "odit": "at",
-                "at": "maiores",
-                "molestiae": "quod",
+                "perferendis": "ipsam",
+                "repellendus": "sapiente",
+                "quo": "odit",
             },
         },
+        XAmzAlgorithm: "at",
+        XAmzContentSha256: "at",
+        XAmzCredential: "maiores",
+        XAmzDate: "molestiae",
+        XAmzSecurityToken: "quod",
+        XAmzSignature: "quod",
+        XAmzSignedHeaders: "esse",
+        XAmzTarget: "QLDBSession.SendCommand",
     }
 
     ctx := context.Background()
@@ -101,11 +104,22 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
 * `SendCommand` - <p>Sends a command to an Amazon QLDB ledger.</p> <note> <p>Instead of interacting directly with this API, we recommend using the QLDB driver or the QLDB shell to execute data transactions on a ledger.</p> <ul> <li> <p>If you are working with an AWS SDK, use the QLDB driver. The driver provides a high-level abstraction layer above this <i>QLDB Session</i> data plane and manages <code>SendCommand</code> API calls for you. For information and a list of supported programming languages, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">Getting started with the driver</a> in the <i>Amazon QLDB Developer Guide</i>.</p> </li> <li> <p>If you are working with the AWS Command Line Interface (AWS CLI), use the QLDB shell. The shell is a command line interface that uses the QLDB driver to interact with a ledger. For information, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB shell</a>.</p> </li> </ul> </note>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

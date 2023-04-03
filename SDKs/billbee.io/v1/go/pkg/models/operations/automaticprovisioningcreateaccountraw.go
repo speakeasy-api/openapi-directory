@@ -6,10 +6,6 @@ import (
 	"net/http"
 )
 
-type AutomaticProvisioningCreateAccountRawRequest struct {
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type AutomaticProvisioningCreateAccountRawResponse struct {
 	// OK
 	AutomaticProvisioningCreateAccountRaw200ApplicationJSONObject map[string]interface{}

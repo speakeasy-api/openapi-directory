@@ -50,7 +50,7 @@ func (e *GETDeleteClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteClusterQueryParams struct {
+type GETDeleteClusterRequest struct {
 	Action GETDeleteClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identifier of the cluster to be deleted.</p> <p>Constraints:</p> <ul> <li> <p>Must contain lowercase characters.</p> </li> <li> <p>Must contain from 1 to 63 alphanumeric characters or hyphens.</p> </li> <li> <p>First character must be a letter.</p> </li> <li> <p>Cannot end with a hyphen or contain two consecutive hyphens.</p> </li> </ul>
 	ClusterIdentifier string `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
@@ -61,21 +61,13 @@ type GETDeleteClusterQueryParams struct {
 	// <p>Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If <code>true</code>, a final cluster snapshot is not created. If <code>false</code>, a final cluster snapshot is created before the cluster is deleted. </p> <note> <p>The <i>FinalClusterSnapshotIdentifier</i> parameter must be specified if <i>SkipFinalClusterSnapshot</i> is <code>false</code>.</p> </note> <p>Default: <code>false</code> </p>
 	SkipFinalClusterSnapshot *bool                       `queryParam:"style=form,explode=true,name=SkipFinalClusterSnapshot"`
 	Version                  GETDeleteClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteClusterRequest struct {
-	QueryParams GETDeleteClusterQueryParams
-	Headers     GETDeleteClusterHeaders
+	XAmzAlgorithm            *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteClusterResponse struct {

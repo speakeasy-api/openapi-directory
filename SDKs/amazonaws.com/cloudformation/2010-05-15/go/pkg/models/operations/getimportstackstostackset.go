@@ -85,7 +85,7 @@ func (e *GETImportStacksToStackSetVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETImportStacksToStackSetQueryParams struct {
+type GETImportStacksToStackSetRequest struct {
 	Action GETImportStacksToStackSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>By default, <code>SELF</code> is specified. Use <code>SELF</code> for stack sets with self-managed permissions.</p> <ul> <li> <p>If you are signed in to the management account, specify <code>SELF</code>.</p> </li> <li> <p>For service managed stack sets, specify <code>DELEGATED_ADMIN</code>.</p> </li> </ul>
 	CallAs *GETImportStacksToStackSetCallAsEnum `queryParam:"style=form,explode=true,name=CallAs"`
@@ -100,23 +100,15 @@ type GETImportStacksToStackSetQueryParams struct {
 	// <p>The Amazon S3 URL which contains list of stack ids to be inputted.</p> <p>Specify either <code>StackIds</code> or <code>StackIdsUrl</code>.</p>
 	StackIdsURL *string `queryParam:"style=form,explode=true,name=StackIdsUrl"`
 	// The name of the stack set. The name must be unique in the Region where you create your stack set.
-	StackSetName string                               `queryParam:"style=form,explode=true,name=StackSetName"`
-	Version      GETImportStacksToStackSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETImportStacksToStackSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETImportStacksToStackSetRequest struct {
-	QueryParams GETImportStacksToStackSetQueryParams
-	Headers     GETImportStacksToStackSetHeaders
+	StackSetName      string                               `queryParam:"style=form,explode=true,name=StackSetName"`
+	Version           GETImportStacksToStackSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETImportStacksToStackSetResponse struct {

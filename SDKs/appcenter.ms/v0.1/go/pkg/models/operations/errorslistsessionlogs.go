@@ -6,32 +6,22 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsListSessionLogsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ErrorsListSessionLogsPathParams struct {
+type ErrorsListSessionLogsRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Date of data requested
+	Date *time.Time `queryParam:"style=form,explode=true,name=date"`
 	// The id of the error
 	ErrorID string `pathParam:"style=simple,explode=false,name=errorId"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsListSessionLogsQueryParams struct {
-	// Date of data requested
-	Date *time.Time `queryParam:"style=form,explode=true,name=date"`
-}
-
-type ErrorsListSessionLogsRequest struct {
-	PathParams  ErrorsListSessionLogsPathParams
-	QueryParams ErrorsListSessionLogsQueryParams
-	Security    ErrorsListSessionLogsSecurity
 }
 
 type ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum string

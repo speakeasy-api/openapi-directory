@@ -36,14 +36,14 @@ func newHeavyEquipmentSearch(defaultClient, securityClient HTTPClient, serverURL
 // Get a particular Heavy equipment listing by its id
 func (s *heavyEquipmentSearch) GetListingHeavyEquipmentID(ctx context.Context, request operations.GetListingHeavyEquipmentIDRequest) (*operations.GetListingHeavyEquipmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/heavy-equipment/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/heavy-equipment/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -95,14 +95,14 @@ func (s *heavyEquipmentSearch) GetListingHeavyEquipmentID(ctx context.Context, r
 // Get Heavy equipment listing options, features, seller comments
 func (s *heavyEquipmentSearch) GetListingHeavyEquipmentIDExtra(ctx context.Context, request operations.GetListingHeavyEquipmentIDExtraRequest) (*operations.GetListingHeavyEquipmentIDExtraResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/heavy-equipment/{id}/extra", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/heavy-equipment/{id}/extra", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -154,14 +154,14 @@ func (s *heavyEquipmentSearch) GetListingHeavyEquipmentIDExtra(ctx context.Conte
 // Get listing media (photo, photos) by id
 func (s *heavyEquipmentSearch) GetListingHeavyEquipmentIDMedia(ctx context.Context, request operations.GetListingHeavyEquipmentIDMediaRequest) (*operations.GetListingHeavyEquipmentIDMediaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/listing/heavy-equipment/{id}/media", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/listing/heavy-equipment/{id}/media", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -232,7 +232,7 @@ func (s *heavyEquipmentSearch) GetSearchHeavyEquipmentActive(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -291,7 +291,7 @@ func (s *heavyEquipmentSearch) GetSearchHeavyEquipmentAutoComplete(ctx context.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

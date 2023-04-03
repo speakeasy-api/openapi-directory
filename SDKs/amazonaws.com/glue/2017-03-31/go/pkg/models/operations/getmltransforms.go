@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMLTransformsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetMLTransformsXAmzTargetEnum
 type GetMLTransformsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetMLTransformsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMLTransformsHeaders struct {
+type GetMLTransformsRequest struct {
+	GetMLTransformsRequest shared.GetMLTransformsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetMLTransformsHeaders struct {
 	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetMLTransformsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetMLTransformsRequest struct {
-	QueryParams GetMLTransformsQueryParams
-	Headers     GetMLTransformsHeaders
-	Request     shared.GetMLTransformsRequest `request:"mediaType=application/json"`
 }
 
 type GetMLTransformsResponse struct {

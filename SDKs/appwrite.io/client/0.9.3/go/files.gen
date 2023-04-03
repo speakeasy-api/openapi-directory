@@ -80,7 +80,6 @@ pkg/models/operations/teamsupdate.go
 pkg/models/operations/teamsupdatemembershiproles.go
 pkg/models/operations/teamsupdatemembershipstatus.go
 pkg/models/shared/user.go
-pkg/models/shared/security.go
 pkg/models/shared/session.go
 pkg/models/shared/jwt.go
 pkg/models/shared/token.go

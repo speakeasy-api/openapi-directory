@@ -31,10 +31,6 @@ type CreateTopicPostPMRequestBody struct {
 	TopicID *int64 `json:"topic_id,omitempty"`
 }
 
-type CreateTopicPostPMRequest struct {
-	Request *CreateTopicPostPMRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateTopicPostPM200ApplicationJSONActionsSummary struct {
 	CanAct bool  `json:"can_act"`
 	ID     int64 `json:"id"`

@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-type DeleteProjectUsernameProjectEnvvarNamePathParams struct {
+type DeleteProjectUsernameProjectEnvvarNameRequest struct {
 	// XXXXXXXXXX
 	//
 	Name string `pathParam:"style=simple,explode=false,name=name"`
@@ -18,10 +18,6 @@ type DeleteProjectUsernameProjectEnvvarNamePathParams struct {
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type DeleteProjectUsernameProjectEnvvarNameRequest struct {
-	PathParams DeleteProjectUsernameProjectEnvvarNamePathParams
 }
 
 type DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum string

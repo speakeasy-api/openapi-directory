@@ -13,16 +13,12 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            TokenHeader: shared.SchemeTokenHeader{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            TokenHeader: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.DeleteSigninSigninIDRequest{
-        PathParams: operations.DeleteSigninSigninIDPathParams{
-            SigninID: 1,
-        },
+        SigninID: 1,
     }
 
     ctx := context.Background()

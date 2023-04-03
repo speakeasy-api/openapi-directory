@@ -33,7 +33,7 @@ func (e *ListShareInvitationsShareResourceTypeEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type ListShareInvitationsQueryParams struct {
+type ListShareInvitationsRequest struct {
 	// An optional string added to the beginning of each lens name returned in the results.
 	LensNamePrefix *string `queryParam:"style=form,explode=true,name=LensNamePrefix"`
 	// The maximum number of results to return for this request.
@@ -42,21 +42,13 @@ type ListShareInvitationsQueryParams struct {
 	// The type of share invitations to be returned.
 	ShareResourceType  *ListShareInvitationsShareResourceTypeEnum `queryParam:"style=form,explode=true,name=ShareResourceType"`
 	WorkloadNamePrefix *string                                    `queryParam:"style=form,explode=true,name=WorkloadNamePrefix"`
-}
-
-type ListShareInvitationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListShareInvitationsRequest struct {
-	QueryParams ListShareInvitationsQueryParams
-	Headers     ListShareInvitationsHeaders
+	XAmzAlgorithm      *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListShareInvitationsResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteAPIV1MediasIDSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteAPIV1MediasIDPathParams struct {
-	// id
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type DeleteAPIV1MediasIDRequest struct {
-	PathParams DeleteAPIV1MediasIDPathParams
-	Security   DeleteAPIV1MediasIDSecurity
+	// id
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteAPIV1MediasIDResponse struct {

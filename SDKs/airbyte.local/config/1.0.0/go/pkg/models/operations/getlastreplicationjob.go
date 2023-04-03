@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLastReplicationJobRequest struct {
-	Request shared.ConnectionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetLastReplicationJobResponse struct {
 	ContentType string
 	// Input failed validation

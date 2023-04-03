@@ -50,30 +50,22 @@ func (e *GETCreateLoginProfileVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateLoginProfileQueryParams struct {
+type GETCreateLoginProfileRequest struct {
 	Action GETCreateLoginProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The new password for the user.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of characters. That string can include almost any printable ASCII character from the space (<code>\u0020</code>) through the end of the ASCII character range (<code>\u00FF</code>). You can also include the tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>) characters. Any of these characters are valid in a password. However, many tools, such as the Amazon Web Services Management Console, might restrict the ability to type certain characters because they have special meaning within that tool.</p>
 	Password string `queryParam:"style=form,explode=true,name=Password"`
 	// Specifies whether the user is required to set a new password on next sign-in.
 	PasswordResetRequired *bool `queryParam:"style=form,explode=true,name=PasswordResetRequired"`
 	// <p>The name of the IAM user to create a password for. The user must already exist.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName string                           `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETCreateLoginProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateLoginProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateLoginProfileRequest struct {
-	QueryParams GETCreateLoginProfileQueryParams
-	Headers     GETCreateLoginProfileHeaders
+	UserName          string                           `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETCreateLoginProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateLoginProfileResponse struct {

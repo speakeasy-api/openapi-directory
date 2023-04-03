@@ -33,17 +33,13 @@ func (e *DeleteArtifactRuleRuleEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteArtifactRulePathParams struct {
+type DeleteArtifactRuleRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// The unique name/type of a rule.
 	Rule DeleteArtifactRuleRuleEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
-type DeleteArtifactRuleRequest struct {
-	PathParams DeleteArtifactRulePathParams
 }
 
 type DeleteArtifactRuleResponse struct {

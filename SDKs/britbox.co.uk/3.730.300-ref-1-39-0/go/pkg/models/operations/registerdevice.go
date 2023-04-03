@@ -8,10 +8,12 @@ import (
 )
 
 type RegisterDeviceSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RegisterDeviceQueryParams struct {
+type RegisterDeviceRequest struct {
+	// Registration details for a new playback device.
+	DeviceRegistrationRequest shared.DeviceRegistrationRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -46,13 +48,6 @@ type RegisterDeviceQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type RegisterDeviceRequest struct {
-	QueryParams RegisterDeviceQueryParams
-	// Registration details for a new playback device.
-	Request  shared.DeviceRegistrationRequest `request:"mediaType=application/json"`
-	Security RegisterDeviceSecurity
 }
 
 type RegisterDeviceResponse struct {

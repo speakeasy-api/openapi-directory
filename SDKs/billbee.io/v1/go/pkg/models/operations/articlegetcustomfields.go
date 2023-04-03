@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetCustomFieldsQueryParams struct {
+type ArticleGetCustomFieldsRequest struct {
 	Page     *int `queryParam:"style=form,explode=true,name=page"`
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type ArticleGetCustomFieldsRequest struct {
-	QueryParams ArticleGetCustomFieldsQueryParams
 }
 
 type ArticleGetCustomFieldsResponse struct {

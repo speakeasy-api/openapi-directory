@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUrlsAggsPathParams struct {
-	// Analysis' identifier
-	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // GetUrlsAggsAreaEnum
 type GetUrlsAggsAreaEnum string
 
@@ -48,14 +39,15 @@ func (e *GetUrlsAggsAreaEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetUrlsAggsQueryParams struct {
-	Area *GetUrlsAggsAreaEnum `queryParam:"style=form,explode=true,name=area"`
-}
-
 type GetUrlsAggsRequest struct {
-	PathParams  GetUrlsAggsPathParams
-	QueryParams GetUrlsAggsQueryParams
-	Request     []shared.UrlsAggsQuery `request:"mediaType=application/json"`
+	RequestBody []shared.UrlsAggsQuery `request:"mediaType=application/json"`
+	// Analysis' identifier
+	AnalysisSlug string               `pathParam:"style=simple,explode=false,name=analysis_slug"`
+	Area         *GetUrlsAggsAreaEnum `queryParam:"style=form,explode=true,name=area"`
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetUrlsAggsResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateArtifactVersionPathParams struct {
-	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
-	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
 // CreateArtifactVersionXRegistryArtifactTypeEnum - This header parameter can be used to indicate the type of the artifact being added. Possible values include:
 // * Avro (`AVRO`)
 // * Protobuf (`PROTOBUF`)
@@ -75,24 +70,7 @@ func (e *CreateArtifactVersionXRegistryArtifactTypeEnum) UnmarshalJSON(data []by
 	}
 }
 
-type CreateArtifactVersionHeaders struct {
-	// This header parameter can be used to indicate the type of the artifact being added. Possible values include:
-	// * Avro (`AVRO`)
-	// * Protobuf (`PROTOBUF`)
-	// * Protobuf File Descriptor (`PROTOBUF_FD`)
-	// * JSON Schema (`JSON`)
-	// * Kafka Connect (`KCONNECT`)
-	// * OpenAPI (`OPENAPI`)
-	// * AsyncAPI (`ASYNCAPI`)
-	// * GraphQL (`GRAPHQL`)
-	// * Web Services Description Language (`WSDL`)
-	// * XML Schema (`XSD`)
-	XRegistryArtifactType *CreateArtifactVersionXRegistryArtifactTypeEnum `header:"style=simple,explode=false,name=X-Registry-ArtifactType"`
-}
-
 type CreateArtifactVersionRequest struct {
-	PathParams CreateArtifactVersionPathParams
-	Headers    CreateArtifactVersionHeaders
 	// The content of the artifact version being created. This is often, but not always, JSON data
 	// representing one of the supported artifact types:
 	//
@@ -107,7 +85,21 @@ type CreateArtifactVersionRequest struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	//
-	Request []byte `request:"mediaType=*/*"`
+	RequestBody []byte `request:"mediaType=*/*"`
+	// This header parameter can be used to indicate the type of the artifact being added. Possible values include:
+	// * Avro (`AVRO`)
+	// * Protobuf (`PROTOBUF`)
+	// * Protobuf File Descriptor (`PROTOBUF_FD`)
+	// * JSON Schema (`JSON`)
+	// * Kafka Connect (`KCONNECT`)
+	// * OpenAPI (`OPENAPI`)
+	// * AsyncAPI (`ASYNCAPI`)
+	// * GraphQL (`GRAPHQL`)
+	// * Web Services Description Language (`WSDL`)
+	// * XML Schema (`XSD`)
+	XRegistryArtifactType *CreateArtifactVersionXRegistryArtifactTypeEnum `header:"style=simple,explode=false,name=X-Registry-ArtifactType"`
+	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 }
 
 type CreateArtifactVersionResponse struct {

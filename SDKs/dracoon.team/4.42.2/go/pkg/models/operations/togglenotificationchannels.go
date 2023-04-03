@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ToggleNotificationChannelsHeaders struct {
+type ToggleNotificationChannelsRequest struct {
+	NotificationChannelActivationRequest shared.NotificationChannelActivationRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type ToggleNotificationChannelsRequest struct {
-	Headers ToggleNotificationChannelsHeaders
-	Request shared.NotificationChannelActivationRequest `request:"mediaType=application/json"`
 }
 
 type ToggleNotificationChannelsResponse struct {

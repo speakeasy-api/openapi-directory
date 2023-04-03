@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TestGetAllTestSeriesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TestGetAllTestSeriesPathParams struct {
+type TestGetAllTestSeriesRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type TestGetAllTestSeriesQueryParams struct {
 	// A query string to filter test series
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type TestGetAllTestSeriesRequest struct {
-	PathParams  TestGetAllTestSeriesPathParams
-	QueryParams TestGetAllTestSeriesQueryParams
-	Security    TestGetAllTestSeriesSecurity
 }
 
 // TestGetAllTestSeriesTestSeriesTestRunSummary - Most important information about a test run.

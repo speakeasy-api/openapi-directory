@@ -8,10 +8,10 @@ import (
 )
 
 type VerifyEmailSecurity struct {
-	VerifyEmailAuth shared.SchemeVerifyEmailAuth `security:"scheme,type=apiKey,subtype=header"`
+	VerifyEmailAuth string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
 }
 
-type VerifyEmailQueryParams struct {
+type VerifyEmailRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -46,11 +46,6 @@ type VerifyEmailQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type VerifyEmailRequest struct {
-	QueryParams VerifyEmailQueryParams
-	Security    VerifyEmailSecurity
 }
 
 type VerifyEmailResponse struct {

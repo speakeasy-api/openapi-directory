@@ -35,7 +35,7 @@ func newProduct(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // CreateProduct - Create a product
 // Create a new product. Returns a product object if the create is succeded.
-func (s *product) CreateProduct(ctx context.Context, request operations.CreateProductRequest) (*operations.CreateProductResponse, error) {
+func (s *product) CreateProduct(ctx context.Context, request shared.ProductInput) (*operations.CreateProductResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/products"
 
@@ -134,7 +134,7 @@ func (s *product) CreateProduct(ctx context.Context, request operations.CreatePr
 // Delete an existing product.
 func (s *product) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -202,7 +202,7 @@ func (s *product) DeleteProduct(ctx context.Context, request operations.DeletePr
 // Retrieves the details of an existing product.
 func (s *product) GetProduct(ctx context.Context, request operations.GetProductRequest) (*operations.GetProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,7 +296,7 @@ func (s *product) ListProduct(ctx context.Context, request operations.ListProduc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -378,9 +378,9 @@ func (s *product) ListProduct(ctx context.Context, request operations.ListProduc
 // Update an existing product. Returns a product object if the update is succeded.
 func (s *product) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

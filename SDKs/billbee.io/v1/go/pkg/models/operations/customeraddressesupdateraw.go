@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddressesUpdateRawPathParams struct {
+type CustomerAddressesUpdateRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The id of the address
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerAddressesUpdateRawRequest struct {
-	PathParams CustomerAddressesUpdateRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type CustomerAddressesUpdateRawResponse struct {

@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListConnectorDefinitionsQueryParams struct {
+type ListConnectorDefinitionsRequest struct {
 	// The maximum number of results to be returned per request.
 	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token for the next set of results, or ''null'' if there are no additional results.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type ListConnectorDefinitionsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListConnectorDefinitionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListConnectorDefinitionsRequest struct {
-	QueryParams ListConnectorDefinitionsQueryParams
-	Headers     ListConnectorDefinitionsHeaders
 }
 
 type ListConnectorDefinitionsResponse struct {

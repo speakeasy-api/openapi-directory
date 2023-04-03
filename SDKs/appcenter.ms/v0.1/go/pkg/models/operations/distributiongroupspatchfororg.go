@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsPatchForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsPatchForOrgPathParams struct {
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DistributionGroupsPatchForOrgRequestBody - The attributes to update for the distribution group
@@ -29,10 +21,12 @@ type DistributionGroupsPatchForOrgRequestBody struct {
 }
 
 type DistributionGroupsPatchForOrgRequest struct {
-	PathParams DistributionGroupsPatchForOrgPathParams
 	// The attributes to update for the distribution group
-	Request  *DistributionGroupsPatchForOrgRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsPatchForOrgSecurity
+	RequestBody *DistributionGroupsPatchForOrgRequestBody `request:"mediaType=application/json"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum string

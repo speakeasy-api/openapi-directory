@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkspaceMembershipsForWorkspacePathParams struct {
-	// Globally unique identifier for the workspace or organization.
-	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
-}
-
-type GetWorkspaceMembershipsForWorkspaceQueryParams struct {
+type GetWorkspaceMembershipsForWorkspaceRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -29,11 +24,8 @@ type GetWorkspaceMembershipsForWorkspaceQueryParams struct {
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
 	// A string identifying a user. This can either be the string "me", an email, or the gid of a user.
 	User *string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type GetWorkspaceMembershipsForWorkspaceRequest struct {
-	PathParams  GetWorkspaceMembershipsForWorkspacePathParams
-	QueryParams GetWorkspaceMembershipsForWorkspaceQueryParams
+	// Globally unique identifier for the workspace or organization.
+	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
 }
 
 // GetWorkspaceMembershipsForWorkspace200ApplicationJSON - Successfully retrieved the requested workspace's memberships.

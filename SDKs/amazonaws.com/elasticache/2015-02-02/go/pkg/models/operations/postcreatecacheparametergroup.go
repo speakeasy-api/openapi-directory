@@ -50,25 +50,17 @@ func (e *POSTCreateCacheParameterGroupVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTCreateCacheParameterGroupQueryParams struct {
-	Action  POSTCreateCacheParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateCacheParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateCacheParameterGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateCacheParameterGroupRequest struct {
-	QueryParams POSTCreateCacheParameterGroupQueryParams
-	Headers     POSTCreateCacheParameterGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateCacheParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTCreateCacheParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateCacheParameterGroupResponse struct {

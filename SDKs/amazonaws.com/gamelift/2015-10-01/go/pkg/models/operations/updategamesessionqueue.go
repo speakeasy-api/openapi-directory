@@ -30,20 +30,16 @@ func (e *UpdateGameSessionQueueXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type UpdateGameSessionQueueHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateGameSessionQueueXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateGameSessionQueueRequest struct {
-	Headers UpdateGameSessionQueueHeaders
-	Request shared.UpdateGameSessionQueueInput `request:"mediaType=application/json"`
+	UpdateGameSessionQueueInput shared.UpdateGameSessionQueueInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm               *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256           *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential              *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                    *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken           *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature               *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders           *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                  UpdateGameSessionQueueXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateGameSessionQueueResponse struct {

@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DeleteSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DeleteQueryParams struct {
-	// Unique calculation ID number
-	Cid int64 `queryParam:"style=form,explode=true,name=cid"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
 type DeleteRequest struct {
-	QueryParams DeleteQueryParams
-	Security    DeleteSecurity
+	// Unique calculation ID number
+	Cid int64 `queryParam:"style=form,explode=true,name=cid"`
 }
 
 type DeleteResponse struct {

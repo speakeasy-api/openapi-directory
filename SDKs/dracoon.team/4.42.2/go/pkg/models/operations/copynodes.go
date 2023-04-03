@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CopyNodesPathParams struct {
-	// Target parent node ID
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
 // CopyNodesXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type CopyNodesXSdsDateFormatEnum string
 
@@ -47,17 +42,14 @@ func (e *CopyNodesXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CopyNodesHeaders struct {
+type CopyNodesRequest struct {
+	CopyNodesRequest shared.CopyNodesRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *CopyNodesXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type CopyNodesRequest struct {
-	PathParams CopyNodesPathParams
-	Headers    CopyNodesHeaders
-	Request    shared.CopyNodesRequest `request:"mediaType=application/json"`
+	// Target parent node ID
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
 type CopyNodesResponse struct {

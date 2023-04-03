@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostConfigApacheHTTPComponentsProxyConfigurationQueryParams struct {
+type PostConfigApacheHTTPComponentsProxyConfigurationRequest struct {
 	ProxyEnabled              *bool    `queryParam:"style=form,explode=true,name=proxy.enabled"`
 	ProxyEnabledAtTypeHint    *string  `queryParam:"style=form,explode=true,name=proxy.enabled@TypeHint"`
 	ProxyExceptions           []string `queryParam:"style=form,explode=true,name=proxy.exceptions"`
@@ -19,10 +19,6 @@ type PostConfigApacheHTTPComponentsProxyConfigurationQueryParams struct {
 	ProxyPortAtTypeHint       *string  `queryParam:"style=form,explode=true,name=proxy.port@TypeHint"`
 	ProxyUser                 *string  `queryParam:"style=form,explode=true,name=proxy.user"`
 	ProxyUserAtTypeHint       *string  `queryParam:"style=form,explode=true,name=proxy.user@TypeHint"`
-}
-
-type PostConfigApacheHTTPComponentsProxyConfigurationRequest struct {
-	QueryParams PostConfigApacheHTTPComponentsProxyConfigurationQueryParams
 }
 
 type PostConfigApacheHTTPComponentsProxyConfigurationResponse struct {

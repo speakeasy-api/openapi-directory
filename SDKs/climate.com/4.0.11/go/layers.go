@@ -36,7 +36,7 @@ func newLayers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GetV4LayersAsApplied - Retrieve a list of application activities
 // Retrieve a list of application activities. The id in the response is used for  GET /v4/layers/asApplied/{activityId}/contents.
-func (s *layers) GetV4LayersAsApplied(ctx context.Context, request operations.GetV4LayersAsAppliedRequest) (*operations.GetV4LayersAsAppliedResponse, error) {
+func (s *layers) GetV4LayersAsApplied(ctx context.Context, request operations.GetV4LayersAsAppliedRequest, security operations.GetV4LayersAsAppliedSecurity) (*operations.GetV4LayersAsAppliedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/layers/asApplied"
 
@@ -45,13 +45,13 @@ func (s *layers) GetV4LayersAsApplied(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,18 +115,18 @@ func (s *layers) GetV4LayersAsApplied(ctx context.Context, request operations.Ge
 
 // GetV4LayersAsAppliedActivityIDContents - Retrieve the raw application activity
 // Retrieve an individual application activity by id.  Ids are retrieved via the  /layers/asApplied route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`). The data is compressed using .zip format.
-func (s *layers) GetV4LayersAsAppliedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsAppliedActivityIDContentsRequest) (*operations.GetV4LayersAsAppliedActivityIDContentsResponse, error) {
+func (s *layers) GetV4LayersAsAppliedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsAppliedActivityIDContentsRequest, security operations.GetV4LayersAsAppliedActivityIDContentsSecurity) (*operations.GetV4LayersAsAppliedActivityIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asApplied/{activityId}/contents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asApplied/{activityId}/contents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -202,7 +202,7 @@ func (s *layers) GetV4LayersAsAppliedActivityIDContents(ctx context.Context, req
 
 // GetV4LayersAsHarvested - Retrieve a list of harvest activities
 // Retrieve a list of harvest activities. The id in the response is used for  GET /v4/layers/asHarvested/{activityId}/contents.
-func (s *layers) GetV4LayersAsHarvested(ctx context.Context, request operations.GetV4LayersAsHarvestedRequest) (*operations.GetV4LayersAsHarvestedResponse, error) {
+func (s *layers) GetV4LayersAsHarvested(ctx context.Context, request operations.GetV4LayersAsHarvestedRequest, security operations.GetV4LayersAsHarvestedSecurity) (*operations.GetV4LayersAsHarvestedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/layers/asHarvested"
 
@@ -211,13 +211,13 @@ func (s *layers) GetV4LayersAsHarvested(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -281,18 +281,18 @@ func (s *layers) GetV4LayersAsHarvested(ctx context.Context, request operations.
 
 // GetV4LayersAsHarvestedActivityIDContents - Retrieve the raw harvest activity
 // Retrieve an individual harvest activity by id.  Ids are retrieved via the  /layers/asHarvested route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`). The data is compressed using .zip format.
-func (s *layers) GetV4LayersAsHarvestedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsHarvestedActivityIDContentsRequest) (*operations.GetV4LayersAsHarvestedActivityIDContentsResponse, error) {
+func (s *layers) GetV4LayersAsHarvestedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsHarvestedActivityIDContentsRequest, security operations.GetV4LayersAsHarvestedActivityIDContentsSecurity) (*operations.GetV4LayersAsHarvestedActivityIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asHarvested/{activityId}/contents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asHarvested/{activityId}/contents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,7 +368,7 @@ func (s *layers) GetV4LayersAsHarvestedActivityIDContents(ctx context.Context, r
 
 // GetV4LayersAsPlanted - Retrieve a list of planting activities
 // Retrieve a list of planting activities. The id in the response is used for  GET /v4/layers/asPlanted/{activityId}/contents.
-func (s *layers) GetV4LayersAsPlanted(ctx context.Context, request operations.GetV4LayersAsPlantedRequest) (*operations.GetV4LayersAsPlantedResponse, error) {
+func (s *layers) GetV4LayersAsPlanted(ctx context.Context, request operations.GetV4LayersAsPlantedRequest, security operations.GetV4LayersAsPlantedSecurity) (*operations.GetV4LayersAsPlantedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/layers/asPlanted"
 
@@ -377,13 +377,13 @@ func (s *layers) GetV4LayersAsPlanted(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -447,18 +447,18 @@ func (s *layers) GetV4LayersAsPlanted(ctx context.Context, request operations.Ge
 
 // GetV4LayersAsPlantedActivityIDContents - Retrieve the raw planting activity
 // Retrieve an individual planting activity by id.  Ids are retrieved via the  /layers/asPlanted route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).  The data is compressed using .zip format.
-func (s *layers) GetV4LayersAsPlantedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsPlantedActivityIDContentsRequest) (*operations.GetV4LayersAsPlantedActivityIDContentsResponse, error) {
+func (s *layers) GetV4LayersAsPlantedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsPlantedActivityIDContentsRequest, security operations.GetV4LayersAsPlantedActivityIDContentsSecurity) (*operations.GetV4LayersAsPlantedActivityIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asPlanted/{activityId}/contents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asPlanted/{activityId}/contents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,7 +534,7 @@ func (s *layers) GetV4LayersAsPlantedActivityIDContents(ctx context.Context, req
 
 // GetV4LayersScoutingObservations - Retrieve a list of scouting observations
 // Retrieve a list of scouting observations created or updated by the user identified by the Authorization header.
-func (s *layers) GetV4LayersScoutingObservations(ctx context.Context, request operations.GetV4LayersScoutingObservationsRequest) (*operations.GetV4LayersScoutingObservationsResponse, error) {
+func (s *layers) GetV4LayersScoutingObservations(ctx context.Context, request operations.GetV4LayersScoutingObservationsRequest, security operations.GetV4LayersScoutingObservationsSecurity) (*operations.GetV4LayersScoutingObservationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/layers/scoutingObservations"
 
@@ -543,13 +543,13 @@ func (s *layers) GetV4LayersScoutingObservations(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -613,16 +613,16 @@ func (s *layers) GetV4LayersScoutingObservations(ctx context.Context, request op
 
 // GetV4LayersScoutingObservationsScoutingObservationID - Retrieve individual scouting observation
 // Retrieve an individual scouting observation by id.  Ids are retrieved via the /layers/scoutingObservations route.
-func (s *layers) GetV4LayersScoutingObservationsScoutingObservationID(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDRequest) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDResponse, error) {
+func (s *layers) GetV4LayersScoutingObservationsScoutingObservationID(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDRequest, security operations.GetV4LayersScoutingObservationsScoutingObservationIDSecurity) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -676,18 +676,18 @@ func (s *layers) GetV4LayersScoutingObservationsScoutingObservationID(ctx contex
 
 // GetV4LayersScoutingObservationsScoutingObservationIDAttachments - Retrieve attachments associated with a given scouting observation.
 // Retrieve attachments associated with a given scouting observation. Photos added to scouting notes in the FieldView app are capped to 20MB, and we won’t store photos larger than that in a scouting note.
-func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachments(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsRequest) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsResponse, error) {
+func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachments(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsRequest, security operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsSecurity) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -763,18 +763,18 @@ func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachments
 
 // GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents - Retrieve the binary contents of a scouting observation’s attachment.
 // Photos added to scouting notes in the FieldView app are capped to `20MiB` (`20971520 bytes`), and we won’t store photos larger than that in a scouting note. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB` (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).
-func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsRequest) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsResponse, error) {
+func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsRequest, security operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsSecurity) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments/{attachmentId}/contents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments/{attachmentId}/contents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReceiptsPhotoToCSVSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=Apikey"`
 }
 
 type ReceiptsPhotoToCSVRequestBodyImageFile struct {
@@ -19,11 +18,6 @@ type ReceiptsPhotoToCSVRequestBodyImageFile struct {
 type ReceiptsPhotoToCSVRequestBody struct {
 	// Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
 	ImageFile ReceiptsPhotoToCSVRequestBodyImageFile `multipartForm:"file"`
-}
-
-type ReceiptsPhotoToCSVRequest struct {
-	Request  ReceiptsPhotoToCSVRequestBody `request:"mediaType=multipart/form-data"`
-	Security ReceiptsPhotoToCSVSecurity
 }
 
 type ReceiptsPhotoToCSVResponse struct {

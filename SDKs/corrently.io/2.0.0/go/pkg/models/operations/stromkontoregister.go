@@ -13,10 +13,6 @@ type StromkontoRegisterRequestBody struct {
 	Zipcode   *string `json:"zipcode,omitempty"`
 }
 
-type StromkontoRegisterRequest struct {
-	Request StromkontoRegisterRequestBody `request:"mediaType=application/json"`
-}
-
 type StromkontoRegisterResponse struct {
 	ContentType string
 	StatusCode  int

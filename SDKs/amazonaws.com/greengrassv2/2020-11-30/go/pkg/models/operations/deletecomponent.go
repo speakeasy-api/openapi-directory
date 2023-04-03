@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteComponentPathParams struct {
-	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.
-	Arn string `pathParam:"style=simple,explode=false,name=arn"`
-}
-
-type DeleteComponentHeaders struct {
+type DeleteComponentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteComponentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteComponentRequest struct {
-	PathParams DeleteComponentPathParams
-	Headers    DeleteComponentHeaders
+	// The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.
+	Arn string `pathParam:"style=simple,explode=false,name=arn"`
 }
 
 type DeleteComponentResponse struct {

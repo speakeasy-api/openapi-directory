@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDimensionPathParams struct {
-	// A unique identifier for the dimension. Choose something that describes the type and value to make it easy to remember what it does.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type CreateDimensionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateDimensionRequestBodyTypeEnum - Specifies the type of dimension. Supported types: <code>TOPIC_FILTER.</code>
 type CreateDimensionRequestBodyTypeEnum string
 
@@ -57,9 +42,16 @@ type CreateDimensionRequestBody struct {
 }
 
 type CreateDimensionRequest struct {
-	PathParams CreateDimensionPathParams
-	Headers    CreateDimensionHeaders
-	Request    CreateDimensionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateDimensionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A unique identifier for the dimension. Choose something that describes the type and value to make it easy to remember what it does.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type CreateDimensionResponse struct {

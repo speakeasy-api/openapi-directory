@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type FinalizeDeviceClaimPathParams struct {
-	// The unique identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type FinalizeDeviceClaimHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type FinalizeDeviceClaimRequestBody struct {
 	// <p>A collection of key/value pairs defining the resource tags. For example, {
 	//  "tags": {"key1": "value1", "key2": "value2"} }. For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
@@ -32,9 +17,16 @@ type FinalizeDeviceClaimRequestBody struct {
 }
 
 type FinalizeDeviceClaimRequest struct {
-	PathParams FinalizeDeviceClaimPathParams
-	Headers    FinalizeDeviceClaimHeaders
-	Request    FinalizeDeviceClaimRequestBody `request:"mediaType=application/json"`
+	RequestBody       FinalizeDeviceClaimRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type FinalizeDeviceClaimResponse struct {

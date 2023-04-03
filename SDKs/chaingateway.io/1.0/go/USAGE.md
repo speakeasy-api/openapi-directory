@@ -14,10 +14,8 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteAddressRequest{
-        Headers: operations.DeleteAddressHeaders{
-            Authorization: "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",
-        },
-        Request: shared.DeleteAddressRequest{
+        Authorization: "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",
+        DeleteAddressRequest: shared.DeleteAddressRequest{
             Ethereumaddress: "corrupti",
             Password: "provident",
         },

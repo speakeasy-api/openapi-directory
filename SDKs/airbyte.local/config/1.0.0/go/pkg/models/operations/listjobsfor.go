@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobsForRequest struct {
-	Request shared.JobListRequestBody `request:"mediaType=application/json"`
-}
-
 type ListJobsForResponse struct {
 	ContentType string
 	// Input failed validation

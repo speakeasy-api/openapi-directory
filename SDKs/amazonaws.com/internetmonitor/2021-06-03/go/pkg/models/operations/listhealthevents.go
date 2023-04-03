@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type ListHealthEventsPathParams struct {
-	// The name of the monitor.
-	MonitorName string `pathParam:"style=simple,explode=false,name=MonitorName"`
-}
-
 // ListHealthEventsEventStatusEnum - The status of a health event.
 type ListHealthEventsEventStatusEnum string
 
@@ -39,33 +34,26 @@ func (e *ListHealthEventsEventStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListHealthEventsQueryParams struct {
+type ListHealthEventsRequest struct {
 	// The time when a health event ended. If the health event is still ongoing, then the end time is not set.
 	EndTime *time.Time `queryParam:"style=form,explode=true,name=EndTime"`
 	// The status of a health event.
 	EventStatus *ListHealthEventsEventStatusEnum `queryParam:"style=form,explode=true,name=EventStatus"`
 	// The number of health event objects that you want to return with this call.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
+	// The name of the monitor.
+	MonitorName string `pathParam:"style=simple,explode=false,name=MonitorName"`
 	// The token for the next set of results. You receive this token from a previous call.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// The time when a health event started.
-	StartTime *time.Time `queryParam:"style=form,explode=true,name=StartTime"`
-}
-
-type ListHealthEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListHealthEventsRequest struct {
-	PathParams  ListHealthEventsPathParams
-	QueryParams ListHealthEventsQueryParams
-	Headers     ListHealthEventsHeaders
+	StartTime         *time.Time `queryParam:"style=form,explode=true,name=StartTime"`
+	XAmzAlgorithm     *string    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type ListHealthEventsResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveUserAttributePathParams struct {
+type RemoveUserAttributeRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Key
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
-}
-
-type RemoveUserAttributeHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveUserAttributeRequest struct {
-	PathParams RemoveUserAttributePathParams
-	Headers    RemoveUserAttributeHeaders
 }
 
 type RemoveUserAttributeResponse struct {

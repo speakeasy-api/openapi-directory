@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetHitsPathParams struct {
-	// Id of the group
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GroupsGetHitsFilterEnum - Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 type GroupsGetHitsFilterEnum string
 
@@ -92,11 +87,13 @@ func (e *GroupsGetHitsTimeframeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroupsGetHitsQueryParams struct {
+type GroupsGetHitsRequest struct {
 	// Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
 	Filter *GroupsGetHitsFilterEnum `queryParam:"style=form,explode=true,name=filter"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
+	// Id of the group
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Limit results to this number
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Offset where to start from (it's the lastKey field in the response object)
@@ -105,11 +102,6 @@ type GroupsGetHitsQueryParams struct {
 	Timeframe GroupsGetHitsTimeframeEnum `queryParam:"style=form,explode=true,name=timeframe"`
 	// If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
-}
-
-type GroupsGetHitsRequest struct {
-	PathParams  GroupsGetHitsPathParams
-	QueryParams GroupsGetHitsQueryParams
 }
 
 type GroupsGetHitsResponse struct {

@@ -50,28 +50,20 @@ func (e *GETListTemplatesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListTemplatesQueryParams struct {
+type GETListTemplatesRequest struct {
 	Action GETListTemplatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The maximum number of templates to return. This value must be at least 1 and less than or equal to 10. If you do not specify a value, or if you specify a value less than 1 or greater than 10, the operation will return up to 10 results.
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
 	// A token returned from a previous call to <code>ListTemplates</code> to indicate the position in the list of email templates.
-	NextToken *string                     `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListTemplatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListTemplatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListTemplatesRequest struct {
-	QueryParams GETListTemplatesQueryParams
-	Headers     GETListTemplatesHeaders
+	NextToken         *string                     `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListTemplatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListTemplatesResponse struct {

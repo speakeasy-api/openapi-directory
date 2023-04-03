@@ -38,20 +38,20 @@ func newTerminalActionsCompanyLevel(defaultClient, securityClient HTTPClient, se
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal actions read
 // * Management API—Terminal actions read and write
-func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidApps(ctx context.Context, request operations.GetCompaniesCompanyIDAndroidAppsRequest) (*operations.GetCompaniesCompanyIDAndroidAppsResponse, error) {
+func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidApps(ctx context.Context, request operations.GetCompaniesCompanyIDAndroidAppsRequest, security operations.GetCompaniesCompanyIDAndroidAppsSecurity) (*operations.GetCompaniesCompanyIDAndroidAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidApps", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidApps", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,20 +110,20 @@ func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidApps(ctx conte
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal actions read
 // * Management API—Terminal actions read and write
-func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidCertificates(ctx context.Context, request operations.GetCompaniesCompanyIDAndroidCertificatesRequest) (*operations.GetCompaniesCompanyIDAndroidCertificatesResponse, error) {
+func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidCertificates(ctx context.Context, request operations.GetCompaniesCompanyIDAndroidCertificatesRequest, security operations.GetCompaniesCompanyIDAndroidCertificatesSecurity) (*operations.GetCompaniesCompanyIDAndroidCertificatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidCertificates", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidCertificates", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,20 +180,20 @@ func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidCertificates(c
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal actions read
 // * Management API—Terminal actions read and write
-func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActions(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalActionsRequest) (*operations.GetCompaniesCompanyIDTerminalActionsResponse, error) {
+func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActions(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalActionsRequest, security operations.GetCompaniesCompanyIDTerminalActionsSecurity) (*operations.GetCompaniesCompanyIDTerminalActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -250,16 +250,16 @@ func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActions(ctx c
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal actions read
 // * Management API—Terminal actions read and write
-func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActionsActionID(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalActionsActionIDRequest) (*operations.GetCompaniesCompanyIDTerminalActionsActionIDResponse, error) {
+func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActionsActionID(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalActionsActionIDRequest, security operations.GetCompaniesCompanyIDTerminalActionsActionIDSecurity) (*operations.GetCompaniesCompanyIDTerminalActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions/{actionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions/{actionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

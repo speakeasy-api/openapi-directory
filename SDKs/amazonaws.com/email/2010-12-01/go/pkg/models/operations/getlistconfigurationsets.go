@@ -50,28 +50,20 @@ func (e *GETListConfigurationSetsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListConfigurationSetsQueryParams struct {
+type GETListConfigurationSetsRequest struct {
 	Action GETListConfigurationSetsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The number of configuration sets to return.
 	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
 	// A token returned from a previous call to <code>ListConfigurationSets</code> to indicate the position of the configuration set in the configuration set list.
-	NextToken *string                             `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETListConfigurationSetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListConfigurationSetsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListConfigurationSetsRequest struct {
-	QueryParams GETListConfigurationSetsQueryParams
-	Headers     GETListConfigurationSetsHeaders
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETListConfigurationSetsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListConfigurationSetsResponse struct {

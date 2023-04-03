@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePartnerPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeletePartnerRequest struct {
-	PathParams DeletePartnerPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeletePartnerResponse struct {

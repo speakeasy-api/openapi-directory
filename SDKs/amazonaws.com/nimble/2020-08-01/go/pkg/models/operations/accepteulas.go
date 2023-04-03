@@ -7,13 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AcceptEulasPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
+type AcceptEulasRequestBody struct {
+	// The EULA ID.
+	EulaIds []string `json:"eulaIds,omitempty"`
 }
 
-type AcceptEulasHeaders struct {
-	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+type AcceptEulasRequest struct {
+	RequestBody   AcceptEulasRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
 	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
@@ -22,17 +23,8 @@ type AcceptEulasHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AcceptEulasRequestBody struct {
-	// The EULA ID.
-	EulaIds []string `json:"eulaIds,omitempty"`
-}
-
-type AcceptEulasRequest struct {
-	PathParams AcceptEulasPathParams
-	Headers    AcceptEulasHeaders
-	Request    AcceptEulasRequestBody `request:"mediaType=application/json"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type AcceptEulasResponse struct {

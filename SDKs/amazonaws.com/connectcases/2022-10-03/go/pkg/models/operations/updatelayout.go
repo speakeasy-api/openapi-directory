@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateLayoutPathParams struct {
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-	// The unique identifier of the layout.
-	LayoutID string `pathParam:"style=simple,explode=false,name=layoutId"`
-}
-
-type UpdateLayoutHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateLayoutRequestBodyContent - Object to store union of different versions of layout content.
 type UpdateLayoutRequestBodyContent struct {
 	Basic *shared.BasicLayout `json:"basic,omitempty"`
@@ -37,9 +20,18 @@ type UpdateLayoutRequestBody struct {
 }
 
 type UpdateLayoutRequest struct {
-	PathParams UpdateLayoutPathParams
-	Headers    UpdateLayoutHeaders
-	Request    UpdateLayoutRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateLayoutRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// The unique identifier of the layout.
+	LayoutID string `pathParam:"style=simple,explode=false,name=layoutId"`
 }
 
 type UpdateLayoutResponse struct {

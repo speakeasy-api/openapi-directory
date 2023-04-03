@@ -35,7 +35,7 @@ func newStromkontoLedger(defaultClient, securityClient HTTPClient, serverURL, la
 
 // PrepareTransaction - Prepare Transaction
 // Prepares and inques a transaction (transfer) between two accounts (Stromkonten). This might be used to send any balanced entity. Using this endpoint will only prepare the transaction and enques it for signing and countersigning. This is done from within the user UI using validation process. Note: This API method does not validate any transations. In other words authentication, authorization, validation and actual transfer of value is done using a smart contract during processing in the energy blockchain.
-func (s *stromkontoLedger) PrepareTransaction(ctx context.Context, request operations.PrepareTransactionRequest) (*operations.PrepareTransactionResponse, error) {
+func (s *stromkontoLedger) PrepareTransaction(ctx context.Context, request operations.PrepareTransactionRequestBody) (*operations.PrepareTransactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stromkonto/prepareTransaction"
 
@@ -90,7 +90,7 @@ func (s *stromkontoLedger) StromkontoBalances(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -139,7 +139,7 @@ func (s *stromkontoLedger) StromkontoChoices(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -179,7 +179,7 @@ func (s *stromkontoLedger) StromkontoChoices(ctx context.Context, request operat
 
 // StromkontoLogin - Login (via Mail)
 // Sends a mail to a given email address to login this user. This function makes life a bit easier in order to not having to deal with private key protection on the user side as a shared key is used to sign transactions onbehalf of a particular account.  However viewing consensus information (balances) are public and *might move* from account to account without prior notification. Best practice for third party uses is to always start a session with the login RESP call and only create a user in case the response indicates an `unregistered` status.
-func (s *stromkontoLedger) StromkontoLogin(ctx context.Context, request operations.StromkontoLoginRequest) (*operations.StromkontoLoginResponse, error) {
+func (s *stromkontoLedger) StromkontoLogin(ctx context.Context, request operations.StromkontoLoginRequestBody) (*operations.StromkontoLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stromkonto/login"
 
@@ -234,7 +234,7 @@ func (s *stromkontoLedger) StromkontoLogin(ctx context.Context, request operatio
 
 // StromkontoRegister - Register (new Stromkonto)
 // Calling this method with an unregistered (new) email will create a new account (Stromkonto) with all balances having a value of `0` and no transaction history. In addition some basic properties like region and zipcode are set to allow further operation of account.
-func (s *stromkontoLedger) StromkontoRegister(ctx context.Context, request operations.StromkontoRegisterRequest) (*operations.StromkontoRegisterResponse, error) {
+func (s *stromkontoLedger) StromkontoRegister(ctx context.Context, request operations.StromkontoRegisterRequestBody) (*operations.StromkontoRegisterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stromkonto/register"
 

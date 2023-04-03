@@ -14,11 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetRequest{
-        QueryParams: operations.GetQueryParams{
-            List: "nbsIscc",
-            Noduplicates: false,
-            Values: "provident",
-        },
+        List: "nbsIscc",
+        Noduplicates: false,
+        Values: "provident",
     }
 
     ctx := context.Background()

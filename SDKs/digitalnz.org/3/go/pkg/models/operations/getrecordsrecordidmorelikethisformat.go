@@ -7,28 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecordsRecordIDMoreLikeThisFormatPathParams struct {
-	// Note - There is a small difference with some field names in the response between JSON and XML.
-	// When a field name has more than one word, JSON format will separate the words with an underscore, eg. "content_partner", whereas XML uses a hyphenated naming convention, eg. "content-partner".
-	//
-	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
-	// Every record has a unique, persistent *record_id*.
-	RecordID int64 `pathParam:"style=simple,explode=false,name=record_id"`
-}
-
-type GetRecordsRecordIDMoreLikeThisFormatQueryParams struct {
-	// Comma-separated whitelist of fields to be returned. The syntax *"&fields=verbose"* can be used to return the bulk of the fields, or you can customise which fields you are interested in, eg. *"&fields=id,title,subject,collection,landing_url,locations"*.
-	//
-	Fields *string `queryParam:"style=form,explode=false,name=fields"`
-	// More Like This (MLT) queries can be filtered in the same ways as regular searches, using the same syntax outined in the GET /records call above. This enables things like scoping the related records to only return Images eg *&and[category]=Images*, or to only show related records from a specific content partner eg *&and[content_partner]=Puke+Ariki*.
-	//
-	Filtering *string `queryParam:"style=form,explode=false,name=filtering"`
-	// Comma-separated list of fields used to evaluate relatedness. Available fields to compare are *title* and *subject*, eg *&mlt_fields=title,subject* or *&mlt_fields=title*.
-	//
-	MltFields *string `queryParam:"style=form,explode=false,name=mlt_fields"`
-}
-
-type GetRecordsRecordIDMoreLikeThisFormatHeaders struct {
+type GetRecordsRecordIDMoreLikeThisFormatRequest struct {
 	// The DigitalNZ API no longer requires a key to access public content. However, if you plan on using the API regularly, expect to be a high volume consumer or are planning on creating an application, we encourage you to use an API key so that we can:
 	// - provide targeted help and support
 	// - increase your query throughput (by negotiation)
@@ -47,12 +26,21 @@ type GetRecordsRecordIDMoreLikeThisFormatHeaders struct {
 	// `curl -H "Authentication-Token:{YOUR_API_KEY}" http://api.digitalnz.org/v3/records.json?text=kiwi`
 	//
 	AuthenticationToken *string `header:"style=simple,explode=false,name=Authentication-Token"`
-}
-
-type GetRecordsRecordIDMoreLikeThisFormatRequest struct {
-	PathParams  GetRecordsRecordIDMoreLikeThisFormatPathParams
-	QueryParams GetRecordsRecordIDMoreLikeThisFormatQueryParams
-	Headers     GetRecordsRecordIDMoreLikeThisFormatHeaders
+	// Comma-separated whitelist of fields to be returned. The syntax *"&fields=verbose"* can be used to return the bulk of the fields, or you can customise which fields you are interested in, eg. *"&fields=id,title,subject,collection,landing_url,locations"*.
+	//
+	Fields *string `queryParam:"style=form,explode=false,name=fields"`
+	// More Like This (MLT) queries can be filtered in the same ways as regular searches, using the same syntax outined in the GET /records call above. This enables things like scoping the related records to only return Images eg *&and[category]=Images*, or to only show related records from a specific content partner eg *&and[content_partner]=Puke+Ariki*.
+	//
+	Filtering *string `queryParam:"style=form,explode=false,name=filtering"`
+	// Note - There is a small difference with some field names in the response between JSON and XML.
+	// When a field name has more than one word, JSON format will separate the words with an underscore, eg. "content_partner", whereas XML uses a hyphenated naming convention, eg. "content-partner".
+	//
+	Format shared.FormatEnum `pathParam:"style=simple,explode=false,name=format"`
+	// Comma-separated list of fields used to evaluate relatedness. Available fields to compare are *title* and *subject*, eg *&mlt_fields=title,subject* or *&mlt_fields=title*.
+	//
+	MltFields *string `queryParam:"style=form,explode=false,name=mlt_fields"`
+	// Every record has a unique, persistent *record_id*.
+	RecordID int64 `pathParam:"style=simple,explode=false,name=record_id"`
 }
 
 // GetRecordsRecordIDMoreLikeThisFormat200ApplicationJSON - ok

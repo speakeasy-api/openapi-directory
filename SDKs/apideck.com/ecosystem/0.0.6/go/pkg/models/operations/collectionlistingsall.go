@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CollectionListingsAllPathParams struct {
-	EcosystemID string `pathParam:"style=simple,explode=false,name=ecosystem_id"`
+type CollectionListingsAllRequest struct {
+	// Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+	Cursor      *string `queryParam:"style=form,explode=true,name=cursor"`
+	EcosystemID string  `pathParam:"style=simple,explode=false,name=ecosystem_id"`
 	// ID of the record you are acting upon.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CollectionListingsAllQueryParams struct {
-	// Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
-	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Number of records to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type CollectionListingsAllRequest struct {
-	PathParams  CollectionListingsAllPathParams
-	QueryParams CollectionListingsAllQueryParams
 }
 
 type CollectionListingsAllResponse struct {

@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccessPreviewPathParams struct {
-	// The unique ID for the access preview.
-	AccessPreviewID string `pathParam:"style=simple,explode=false,name=accessPreviewId"`
-}
-
-type GetAccessPreviewQueryParams struct {
-	// The <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ARN of the analyzer</a> used to generate the access preview.
-	AnalyzerArn string `queryParam:"style=form,explode=true,name=analyzerArn"`
-}
-
-type GetAccessPreviewHeaders struct {
+type GetAccessPreviewRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type GetAccessPreviewHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAccessPreviewRequest struct {
-	PathParams  GetAccessPreviewPathParams
-	QueryParams GetAccessPreviewQueryParams
-	Headers     GetAccessPreviewHeaders
+	// The unique ID for the access preview.
+	AccessPreviewID string `pathParam:"style=simple,explode=false,name=accessPreviewId"`
+	// The <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources">ARN of the analyzer</a> used to generate the access preview.
+	AnalyzerArn string `queryParam:"style=form,explode=true,name=analyzerArn"`
 }
 
 type GetAccessPreviewResponse struct {

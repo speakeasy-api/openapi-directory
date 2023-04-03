@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGlobalRuleConfigPathParams struct {
+type GetGlobalRuleConfigRequest struct {
 	// The unique name/type of a rule.
 	Rule shared.RuleTypeEnum `pathParam:"style=simple,explode=false,name=rule"`
-}
-
-type GetGlobalRuleConfigRequest struct {
-	PathParams GetGlobalRuleConfigPathParams
 }
 
 type GetGlobalRuleConfigResponse struct {

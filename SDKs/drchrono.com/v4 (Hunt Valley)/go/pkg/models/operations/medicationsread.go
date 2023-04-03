@@ -8,22 +8,13 @@ import (
 )
 
 type MedicationsReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type MedicationsReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type MedicationsReadQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MedicationsReadRequest struct {
-	PathParams  MedicationsReadPathParams
-	QueryParams MedicationsReadQueryParams
-	Security    MedicationsReadSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID      string `pathParam:"style=simple,explode=false,name=id"`
+	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
 }
 
 type MedicationsReadResponse struct {

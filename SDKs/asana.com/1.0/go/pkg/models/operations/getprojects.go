@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectsQueryParams struct {
+type GetProjectsRequest struct {
 	// Only return projects whose `archived` field takes on the value of this parameter.
 	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
 	// Results per page.
@@ -28,10 +28,6 @@ type GetProjectsQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// The workspace or organization to filter projects on.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetProjectsRequest struct {
-	QueryParams GetProjectsQueryParams
 }
 
 // GetProjects200ApplicationJSON - Successfully retrieved projects.

@@ -36,20 +36,20 @@ func newAPICredentialsMerchantLevel(defaultClient, securityClient HTTPClient, se
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentials(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsRequest) (*operations.GetMerchantsMerchantIDAPICredentialsResponse, error) {
+func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentials(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsRequest, security operations.GetMerchantsMerchantIDAPICredentialsSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -107,16 +107,16 @@ func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentials(ctx c
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialID(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDRequest) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDResponse, error) {
+func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialID(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDRequest, security operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,11 +174,11 @@ func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICre
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsMerchantLevel) PatchMerchantsMerchantIDAPICredentialsAPICredentialID(ctx context.Context, request operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDRequest) (*operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDResponse, error) {
+func (s *apiCredentialsMerchantLevel) PatchMerchantsMerchantIDAPICredentialsAPICredentialID(ctx context.Context, request operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDRequest, security operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDSecurity) (*operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMerchantAPICredentialRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -190,7 +190,7 @@ func (s *apiCredentialsMerchantLevel) PatchMerchantsMerchantIDAPICredentialsAPIC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -257,11 +257,11 @@ func (s *apiCredentialsMerchantLevel) PatchMerchantsMerchantIDAPICredentialsAPIC
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—API credentials read and write
-func (s *apiCredentialsMerchantLevel) PostMerchantsMerchantIDAPICredentials(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsRequest) (*operations.PostMerchantsMerchantIDAPICredentialsResponse, error) {
+func (s *apiCredentialsMerchantLevel) PostMerchantsMerchantIDAPICredentials(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsRequest, security operations.PostMerchantsMerchantIDAPICredentialsSecurity) (*operations.PostMerchantsMerchantIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateMerchantAPICredentialRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -273,7 +273,7 @@ func (s *apiCredentialsMerchantLevel) PostMerchantsMerchantIDAPICredentials(ctx 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

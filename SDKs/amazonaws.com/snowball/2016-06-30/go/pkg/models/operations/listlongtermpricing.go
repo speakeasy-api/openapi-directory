@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLongTermPricingQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListLongTermPricingXAmzTargetEnum
 type ListLongTermPricingXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListLongTermPricingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLongTermPricingHeaders struct {
+type ListLongTermPricingRequest struct {
+	ListLongTermPricingRequest shared.ListLongTermPricingRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListLongTermPricingHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListLongTermPricingXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListLongTermPricingRequest struct {
-	QueryParams ListLongTermPricingQueryParams
-	Headers     ListLongTermPricingHeaders
-	Request     shared.ListLongTermPricingRequest `request:"mediaType=application/json"`
 }
 
 type ListLongTermPricingResponse struct {

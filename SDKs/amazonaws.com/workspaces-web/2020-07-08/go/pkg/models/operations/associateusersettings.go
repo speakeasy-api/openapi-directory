@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AssociateUserSettingsPathParams struct {
-	// The ARN of the web portal.
-	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
-}
-
-type AssociateUserSettingsQueryParams struct {
-	// The ARN of the user settings.
-	UserSettingsArn string `queryParam:"style=form,explode=true,name=userSettingsArn"`
-}
-
-type AssociateUserSettingsHeaders struct {
+type AssociateUserSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type AssociateUserSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateUserSettingsRequest struct {
-	PathParams  AssociateUserSettingsPathParams
-	QueryParams AssociateUserSettingsQueryParams
-	Headers     AssociateUserSettingsHeaders
+	// The ARN of the web portal.
+	PortalArn string `pathParam:"style=simple,explode=false,name=portalArn"`
+	// The ARN of the user settings.
+	UserSettingsArn string `queryParam:"style=form,explode=true,name=userSettingsArn"`
 }
 
 type AssociateUserSettingsResponse struct {

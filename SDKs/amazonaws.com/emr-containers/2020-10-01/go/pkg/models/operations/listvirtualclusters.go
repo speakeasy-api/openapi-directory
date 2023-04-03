@@ -31,7 +31,14 @@ func (e *ListVirtualClustersContainerProviderTypeEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ListVirtualClustersQueryParams struct {
+type ListVirtualClustersRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The container provider ID of the virtual cluster.
 	ContainerProviderID *string `queryParam:"style=form,explode=true,name=containerProviderId"`
 	// The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
@@ -46,21 +53,6 @@ type ListVirtualClustersQueryParams struct {
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 	// The states of the requested virtual clusters.
 	States []shared.VirtualClusterStateEnum `queryParam:"style=form,explode=true,name=states"`
-}
-
-type ListVirtualClustersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListVirtualClustersRequest struct {
-	QueryParams ListVirtualClustersQueryParams
-	Headers     ListVirtualClustersHeaders
 }
 
 type ListVirtualClustersResponse struct {

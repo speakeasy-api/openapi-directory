@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ShipmentPostShipmentJSONRequest struct {
-	// Data to specify shipment parameters
-	Request shared.BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput `request:"mediaType=application/json"`
-}
 
 type ShipmentPostShipmentJSONResponse struct {
 	ContentType string

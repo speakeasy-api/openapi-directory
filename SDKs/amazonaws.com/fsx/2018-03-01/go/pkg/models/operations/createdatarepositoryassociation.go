@@ -30,20 +30,16 @@ func (e *CreateDataRepositoryAssociationXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type CreateDataRepositoryAssociationHeaders struct {
-	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateDataRepositoryAssociationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateDataRepositoryAssociationRequest struct {
-	Headers CreateDataRepositoryAssociationHeaders
-	Request shared.CreateDataRepositoryAssociationRequest `request:"mediaType=application/json"`
+	CreateDataRepositoryAssociationRequest shared.CreateDataRepositoryAssociationRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                         *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                               *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                      *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                          *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                      *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                             CreateDataRepositoryAssociationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateDataRepositoryAssociationResponse struct {

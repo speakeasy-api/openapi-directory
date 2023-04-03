@@ -30,20 +30,16 @@ func (e *ResolveCaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ResolveCaseHeaders struct {
-	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ResolveCaseXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ResolveCaseRequest struct {
-	Headers ResolveCaseHeaders
-	Request shared.ResolveCaseRequest `request:"mediaType=application/json"`
+	ResolveCaseRequest shared.ResolveCaseRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         ResolveCaseXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type ResolveCaseResponse struct {

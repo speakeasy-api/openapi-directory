@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetGeneratedCodeJobPathParams struct {
+type GetGeneratedCodeJobRequest struct {
 	// The name of the game.
 	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
 	// The identifier of the code generation job.
 	JobID string `pathParam:"style=simple,explode=false,name=JobId"`
 	// The identifier of the snapshot for the code generation job.
-	SnapshotID string `pathParam:"style=simple,explode=false,name=SnapshotId"`
-}
-
-type GetGeneratedCodeJobHeaders struct {
+	SnapshotID        string  `pathParam:"style=simple,explode=false,name=SnapshotId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type GetGeneratedCodeJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetGeneratedCodeJobRequest struct {
-	PathParams GetGeneratedCodeJobPathParams
-	Headers    GetGeneratedCodeJobHeaders
 }
 
 type GetGeneratedCodeJobResponse struct {

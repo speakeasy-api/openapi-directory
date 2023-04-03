@@ -8,21 +8,16 @@ import (
 )
 
 type PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDPathParams struct {
+type PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest struct {
+	UpdatePaymentMethodInfo *shared.UpdatePaymentMethodInfo `request:"mediaType=application/json"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// The unique identifier of the payment method.
 	PaymentMethodID string `pathParam:"style=simple,explode=false,name=paymentMethodId"`
-}
-
-type PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest struct {
-	PathParams PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDPathParams
-	Request    *shared.UpdatePaymentMethodInfo `request:"mediaType=application/json"`
-	Security   PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDSecurity
 }
 
 type PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse struct {

@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeReplicationConfigurationsQueryParams struct {
+type DescribeReplicationConfigurationsRequest struct {
 	// You can retrieve the replication configuration for a specific file system by providing its file system ID.
 	FileSystemID *string `queryParam:"style=form,explode=true,name=FileSystemId"`
 	// (Optional) To limit the number of objects returned in a response, you can specify the <code>MaxItems</code> parameter. The default value is 100.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	//  <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a subsequent request to fetch the next page of output.
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type DescribeReplicationConfigurationsHeaders struct {
+	NextToken         *string `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type DescribeReplicationConfigurationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeReplicationConfigurationsRequest struct {
-	QueryParams DescribeReplicationConfigurationsQueryParams
-	Headers     DescribeReplicationConfigurationsHeaders
 }
 
 type DescribeReplicationConfigurationsResponse struct {

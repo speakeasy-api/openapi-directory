@@ -73,7 +73,7 @@ func (s *displayAds) GetAPIDisplayAds(ctx context.Context) (*operations.GetAPIDi
 // This endpoint allows the client to retrieve a single display ad, via its id.
 func (s *displayAds) GetAPIDisplayAdsID(ctx context.Context, request operations.GetAPIDisplayAdsIDRequest) (*operations.GetAPIDisplayAdsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -111,7 +111,7 @@ func (s *displayAds) GetAPIDisplayAdsID(ctx context.Context, request operations.
 
 // PostAPIDisplayAds - display ads
 // This endpoint allows the client to create a new display ad.
-func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request operations.PostAPIDisplayAdsRequest) (*operations.PostAPIDisplayAdsResponse, error) {
+func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request operations.PostAPIDisplayAdsRequestBody) (*operations.PostAPIDisplayAdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/display_ads"
 
@@ -160,9 +160,9 @@ func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request operations.P
 // This endpoint allows the client to update the attributes of a single display ad, via its id.
 func (s *displayAds) PutAPIDisplayAdsID(ctx context.Context, request operations.PutAPIDisplayAdsIDRequest) (*operations.PutAPIDisplayAdsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -207,7 +207,7 @@ func (s *displayAds) PutAPIDisplayAdsID(ctx context.Context, request operations.
 // This endpoint allows the client to remove a display ad from rotation by un-publishing it.
 func (s *displayAds) PutAPIDisplayAdsIDUnpublish(ctx context.Context, request operations.PutAPIDisplayAdsIDUnpublishRequest) (*operations.PutAPIDisplayAdsIDUnpublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}/unpublish", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}/unpublish", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

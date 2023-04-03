@@ -7,12 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchGetDevicePositionPathParams struct {
-	// The tracker resource retrieving the device position.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
+type BatchGetDevicePositionRequestBody struct {
+	// <p>Devices whose position you want to retrieve.</p> <ul> <li> <p>For example, for two devices: <code>device-ids=DeviceId1&amp;device-ids=DeviceId2</code> </p> </li> </ul>
+	DeviceIds []string `json:"DeviceIds"`
 }
 
-type BatchGetDevicePositionHeaders struct {
+type BatchGetDevicePositionRequest struct {
+	RequestBody BatchGetDevicePositionRequestBody `request:"mediaType=application/json"`
+	// The tracker resource retrieving the device position.
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,17 +23,6 @@ type BatchGetDevicePositionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type BatchGetDevicePositionRequestBody struct {
-	// <p>Devices whose position you want to retrieve.</p> <ul> <li> <p>For example, for two devices: <code>device-ids=DeviceId1&amp;device-ids=DeviceId2</code> </p> </li> </ul>
-	DeviceIds []string `json:"DeviceIds"`
-}
-
-type BatchGetDevicePositionRequest struct {
-	PathParams BatchGetDevicePositionPathParams
-	Headers    BatchGetDevicePositionHeaders
-	Request    BatchGetDevicePositionRequestBody `request:"mediaType=application/json"`
 }
 
 type BatchGetDevicePositionResponse struct {

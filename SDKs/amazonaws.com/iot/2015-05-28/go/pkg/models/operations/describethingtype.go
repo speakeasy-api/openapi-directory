@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeThingTypePathParams struct {
-	// The name of the thing type.
-	ThingTypeName string `pathParam:"style=simple,explode=false,name=thingTypeName"`
-}
-
-type DescribeThingTypeHeaders struct {
+type DescribeThingTypeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeThingTypeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeThingTypeRequest struct {
-	PathParams DescribeThingTypePathParams
-	Headers    DescribeThingTypeHeaders
+	// The name of the thing type.
+	ThingTypeName string `pathParam:"style=simple,explode=false,name=thingTypeName"`
 }
 
 type DescribeThingTypeResponse struct {

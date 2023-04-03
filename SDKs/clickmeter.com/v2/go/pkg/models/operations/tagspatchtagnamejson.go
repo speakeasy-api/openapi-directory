@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsPatchTagNameJSONPathParams struct {
+type TagsPatchTagNameJSONRequest struct {
+	// The body patch
+	APICoreRequestsGenericTextPatch shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 	// Id of the tag
 	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type TagsPatchTagNameJSONRequest struct {
-	PathParams TagsPatchTagNameJSONPathParams
-	// The body patch
-	Request shared.APICoreRequestsGenericTextPatch `request:"mediaType=application/json"`
 }
 
 type TagsPatchTagNameJSONResponse struct {

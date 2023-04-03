@@ -116,7 +116,7 @@ func (s *SDK) BatchPutMessage(ctx context.Context, request operations.BatchPutMe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/messages/batch"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchPutMessage(ctx context.Context, request operations.BatchPutMe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -220,14 +220,14 @@ func (s *SDK) BatchPutMessage(ctx context.Context, request operations.BatchPutMe
 // CancelPipelineReprocessing - Cancels the reprocessing of data through the pipeline.
 func (s *SDK) CancelPipelineReprocessing(ctx context.Context, request operations.CancelPipelineReprocessingRequest) (*operations.CancelPipelineReprocessingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing/{reprocessingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing/{reprocessingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -318,7 +318,7 @@ func (s *SDK) CreateChannel(ctx context.Context, request operations.CreateChanne
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/channels"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +333,7 @@ func (s *SDK) CreateChannel(ctx context.Context, request operations.CreateChanne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -434,7 +434,7 @@ func (s *SDK) CreateDataset(ctx context.Context, request operations.CreateDatase
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datasets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -449,7 +449,7 @@ func (s *SDK) CreateDataset(ctx context.Context, request operations.CreateDatase
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -548,9 +548,9 @@ func (s *SDK) CreateDataset(ctx context.Context, request operations.CreateDatase
 // CreateDatasetContent - Creates the content of a dataset by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code> (executing a containerized application).
 func (s *SDK) CreateDatasetContent(ctx context.Context, request operations.CreateDatasetContentRequest) (*operations.CreateDatasetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -565,7 +565,7 @@ func (s *SDK) CreateDatasetContent(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -656,7 +656,7 @@ func (s *SDK) CreateDatastore(ctx context.Context, request operations.CreateData
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datastores"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -671,7 +671,7 @@ func (s *SDK) CreateDatastore(ctx context.Context, request operations.CreateData
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -772,7 +772,7 @@ func (s *SDK) CreatePipeline(ctx context.Context, request operations.CreatePipel
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pipelines"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -787,7 +787,7 @@ func (s *SDK) CreatePipeline(ctx context.Context, request operations.CreatePipel
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -886,14 +886,14 @@ func (s *SDK) CreatePipeline(ctx context.Context, request operations.CreatePipel
 // DeleteChannel - Deletes the specified channel.
 func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest) (*operations.DeleteChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -973,14 +973,14 @@ func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChanne
 // DeleteDataset - <p>Deletes the specified dataset.</p> <p>You do not have to delete the content of the dataset before you perform this operation.</p>
 func (s *SDK) DeleteDataset(ctx context.Context, request operations.DeleteDatasetRequest) (*operations.DeleteDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1060,16 +1060,16 @@ func (s *SDK) DeleteDataset(ctx context.Context, request operations.DeleteDatase
 // DeleteDatasetContent - Deletes the content of the specified dataset.
 func (s *SDK) DeleteDatasetContent(ctx context.Context, request operations.DeleteDatasetContentRequest) (*operations.DeleteDatasetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1151,14 +1151,14 @@ func (s *SDK) DeleteDatasetContent(ctx context.Context, request operations.Delet
 // DeleteDatastore - Deletes the specified data store.
 func (s *SDK) DeleteDatastore(ctx context.Context, request operations.DeleteDatastoreRequest) (*operations.DeleteDatastoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1238,14 +1238,14 @@ func (s *SDK) DeleteDatastore(ctx context.Context, request operations.DeleteData
 // DeletePipeline - Deletes the specified pipeline.
 func (s *SDK) DeletePipeline(ctx context.Context, request operations.DeletePipelineRequest) (*operations.DeletePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1325,16 +1325,16 @@ func (s *SDK) DeletePipeline(ctx context.Context, request operations.DeletePipel
 // DescribeChannel - Retrieves information about a channel.
 func (s *SDK) DescribeChannel(ctx context.Context, request operations.DescribeChannelRequest) (*operations.DescribeChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1425,14 +1425,14 @@ func (s *SDK) DescribeChannel(ctx context.Context, request operations.DescribeCh
 // DescribeDataset - Retrieves information about a dataset.
 func (s *SDK) DescribeDataset(ctx context.Context, request operations.DescribeDatasetRequest) (*operations.DescribeDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1521,16 +1521,16 @@ func (s *SDK) DescribeDataset(ctx context.Context, request operations.DescribeDa
 // DescribeDatastore - Retrieves information about a data store.
 func (s *SDK) DescribeDatastore(ctx context.Context, request operations.DescribeDatastoreRequest) (*operations.DescribeDatastoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1628,7 +1628,7 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1717,14 +1717,14 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 // DescribePipeline - Retrieves information about a pipeline.
 func (s *SDK) DescribePipeline(ctx context.Context, request operations.DescribePipelineRequest) (*operations.DescribePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1813,16 +1813,16 @@ func (s *SDK) DescribePipeline(ctx context.Context, request operations.DescribeP
 // GetDatasetContent - Retrieves the contents of a dataset as presigned URIs.
 func (s *SDK) GetDatasetContent(ctx context.Context, request operations.GetDatasetContentRequest) (*operations.GetDatasetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1920,9 +1920,9 @@ func (s *SDK) ListChannels(ctx context.Context, request operations.ListChannelsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2003,16 +2003,16 @@ func (s *SDK) ListChannels(ctx context.Context, request operations.ListChannelsR
 // ListDatasetContents - Lists information about dataset contents that have been created.
 func (s *SDK) ListDatasetContents(ctx context.Context, request operations.ListDatasetContentsRequest) (*operations.ListDatasetContentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/contents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/contents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2110,9 +2110,9 @@ func (s *SDK) ListDatasets(ctx context.Context, request operations.ListDatasetsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2200,9 +2200,9 @@ func (s *SDK) ListDatastores(ctx context.Context, request operations.ListDatasto
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2290,9 +2290,9 @@ func (s *SDK) ListPipelines(ctx context.Context, request operations.ListPipeline
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2380,9 +2380,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2485,7 +2485,7 @@ func (s *SDK) PutLoggingOptions(ctx context.Context, request operations.PutLoggi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/logging"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2500,7 +2500,7 @@ func (s *SDK) PutLoggingOptions(ctx context.Context, request operations.PutLoggi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2572,7 +2572,7 @@ func (s *SDK) RunPipelineActivity(ctx context.Context, request operations.RunPip
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pipelineactivities/run"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2587,7 +2587,7 @@ func (s *SDK) RunPipelineActivity(ctx context.Context, request operations.RunPip
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2666,16 +2666,16 @@ func (s *SDK) RunPipelineActivity(ctx context.Context, request operations.RunPip
 // SampleChannelData - Retrieves a sample of messages from the specified channel ingested during the specified timeframe. Up to 10 messages can be retrieved.
 func (s *SDK) SampleChannelData(ctx context.Context, request operations.SampleChannelDataRequest) (*operations.SampleChannelDataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}/sample", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}/sample", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2766,9 +2766,9 @@ func (s *SDK) SampleChannelData(ctx context.Context, request operations.SampleCh
 // StartPipelineReprocessing - Starts the reprocessing of raw message data through the pipeline.
 func (s *SDK) StartPipelineReprocessing(ctx context.Context, request operations.StartPipelineReprocessingRequest) (*operations.StartPipelineReprocessingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2783,7 +2783,7 @@ func (s *SDK) StartPipelineReprocessing(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2884,7 +2884,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tags#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2899,9 +2899,9 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3009,9 +3009,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3112,9 +3112,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateChannel - Used to update the settings of a channel.
 func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChannelRequest) (*operations.UpdateChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3129,7 +3129,7 @@ func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChanne
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3209,9 +3209,9 @@ func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChanne
 // UpdateDataset - Updates the settings of a dataset.
 func (s *SDK) UpdateDataset(ctx context.Context, request operations.UpdateDatasetRequest) (*operations.UpdateDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3226,7 +3226,7 @@ func (s *SDK) UpdateDataset(ctx context.Context, request operations.UpdateDatase
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3306,9 +3306,9 @@ func (s *SDK) UpdateDataset(ctx context.Context, request operations.UpdateDatase
 // UpdateDatastore - Used to update the settings of a data store.
 func (s *SDK) UpdateDatastore(ctx context.Context, request operations.UpdateDatastoreRequest) (*operations.UpdateDatastoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3323,7 +3323,7 @@ func (s *SDK) UpdateDatastore(ctx context.Context, request operations.UpdateData
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3403,9 +3403,9 @@ func (s *SDK) UpdateDatastore(ctx context.Context, request operations.UpdateData
 // UpdatePipeline - Updates the settings of a pipeline. You must specify both a <code>channel</code> and a <code>datastore</code> activity and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code> array.
 func (s *SDK) UpdatePipeline(ctx context.Context, request operations.UpdatePipelineRequest) (*operations.UpdatePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3420,7 +3420,7 @@ func (s *SDK) UpdatePipeline(ctx context.Context, request operations.UpdatePipel
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

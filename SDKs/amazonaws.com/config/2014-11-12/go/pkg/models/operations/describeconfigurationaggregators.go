@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeConfigurationAggregatorsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeConfigurationAggregatorsXAmzTargetEnum
 type DescribeConfigurationAggregatorsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeConfigurationAggregatorsXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type DescribeConfigurationAggregatorsHeaders struct {
+type DescribeConfigurationAggregatorsRequest struct {
+	DescribeConfigurationAggregatorsRequest shared.DescribeConfigurationAggregatorsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeConfigurationAggregatorsHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeConfigurationAggregatorsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeConfigurationAggregatorsRequest struct {
-	QueryParams DescribeConfigurationAggregatorsQueryParams
-	Headers     DescribeConfigurationAggregatorsHeaders
-	Request     shared.DescribeConfigurationAggregatorsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeConfigurationAggregatorsResponse struct {

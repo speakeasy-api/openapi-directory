@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteSchemaHeaders struct {
+type DeleteSchemaRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -17,10 +17,6 @@ type DeleteSchemaHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The Amazon Resource Name (ARN) of the development schema. For more information, see <a>arns</a>.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-type DeleteSchemaRequest struct {
-	Headers DeleteSchemaHeaders
 }
 
 type DeleteSchemaResponse struct {

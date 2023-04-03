@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveAdConfigPathParams struct {
-	// Active Directory ID
-	AdID int `pathParam:"style=simple,explode=false,name=ad_id"`
-}
-
-type RemoveAdConfigHeaders struct {
+type RemoveAdConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveAdConfigRequest struct {
-	PathParams RemoveAdConfigPathParams
-	Headers    RemoveAdConfigHeaders
+	// Active Directory ID
+	AdID int `pathParam:"style=simple,explode=false,name=ad_id"`
 }
 
 type RemoveAdConfigResponse struct {

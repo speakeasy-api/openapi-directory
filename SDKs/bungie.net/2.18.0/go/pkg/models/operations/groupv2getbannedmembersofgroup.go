@@ -8,23 +8,14 @@ import (
 )
 
 type GroupV2GetBannedMembersOfGroupSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GroupV2GetBannedMembersOfGroupPathParams struct {
-	// Group ID whose banned members you are fetching
-	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetBannedMembersOfGroupQueryParams struct {
-	// Page number (starting with 1). Each page has a fixed size of 50 entries.
-	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type GroupV2GetBannedMembersOfGroupRequest struct {
-	PathParams  GroupV2GetBannedMembersOfGroupPathParams
-	QueryParams GroupV2GetBannedMembersOfGroupQueryParams
-	Security    GroupV2GetBannedMembersOfGroupSecurity
+	// Page number (starting with 1). Each page has a fixed size of 50 entries.
+	Currentpage int `queryParam:"style=form,explode=true,name=currentpage"`
+	// Group ID whose banned members you are fetching
+	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 // GroupV2GetBannedMembersOfGroup200Wildcard - Look at the Response property for more information about the nature of this response

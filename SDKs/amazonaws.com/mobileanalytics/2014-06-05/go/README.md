@@ -24,89 +24,86 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.PutEventsRequest{
-        Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzClientContext: "illum",
-            XAmzClientContextEncoding: "vel",
-        },
-        Request: operations.PutEventsRequestBody{
+        RequestBody: operations.PutEventsRequestBody{
             Events: []shared.Event{
                 shared.Event{
                     Attributes: map[string]string{
-                        "suscipit": "iure",
-                        "magnam": "debitis",
-                        "ipsa": "delectus",
+                        "distinctio": "quibusdam",
+                        "unde": "nulla",
+                        "corrupti": "illum",
                     },
-                    EventType: "tempora",
+                    EventType: "vel",
                     Metrics: map[string]float64{
-                        "molestiae": 7917.25,
-                        "placeat": 5288.95,
+                        "deserunt": 3843.82,
+                        "iure": 2975.34,
+                        "debitis": 567.13,
                     },
                     Session: &shared.Session{
-                        Duration: 479977,
-                        ID: "excepturi",
-                        StartTimestamp: "nisi",
-                        StopTimestamp: "recusandae",
+                        Duration: 963663,
+                        ID: "tempora",
+                        StartTimestamp: "suscipit",
+                        StopTimestamp: "molestiae",
                     },
-                    Timestamp: "temporibus",
-                    Version: "ab",
+                    Timestamp: "minus",
+                    Version: "placeat",
                 },
                 shared.Event{
                     Attributes: map[string]string{
-                        "veritatis": "deserunt",
-                        "perferendis": "ipsam",
+                        "iusto": "excepturi",
+                        "nisi": "recusandae",
+                        "temporibus": "ab",
                     },
-                    EventType: "repellendus",
+                    EventType: "quis",
                     Metrics: map[string]float64{
-                        "quo": 1403.5,
-                        "at": 8700.88,
-                        "maiores": 4736.08,
-                        "quod": 8009.11,
+                        "deserunt": 202.18,
                     },
                     Session: &shared.Session{
-                        Duration: 461479,
-                        ID: "totam",
-                        StartTimestamp: "porro",
-                        StopTimestamp: "dolorum",
+                        Duration: 368241,
+                        ID: "repellendus",
+                        StartTimestamp: "sapiente",
+                        StopTimestamp: "quo",
                     },
-                    Timestamp: "dicta",
-                    Version: "nam",
+                    Timestamp: "odit",
+                    Version: "at",
                 },
                 shared.Event{
                     Attributes: map[string]string{
-                        "occaecati": "fugit",
-                        "deleniti": "hic",
-                        "optio": "totam",
+                        "maiores": "molestiae",
+                        "quod": "quod",
+                        "esse": "totam",
+                        "porro": "dolorum",
                     },
-                    EventType: "beatae",
+                    EventType: "dicta",
                     Metrics: map[string]float64{
-                        "molestiae": 2645.55,
-                        "qui": 7742.34,
+                        "officia": 5820.2,
+                        "fugit": 5373.73,
+                        "hic": 7586.16,
                     },
                     Session: &shared.Session{
-                        Duration: 736918,
-                        ID: "esse",
-                        StartTimestamp: "ipsum",
-                        StopTimestamp: "excepturi",
+                        Duration: 521848,
+                        ID: "beatae",
+                        StartTimestamp: "commodi",
+                        StopTimestamp: "molestiae",
                     },
-                    Timestamp: "aspernatur",
-                    Version: "perferendis",
+                    Timestamp: "modi",
+                    Version: "qui",
                 },
             },
         },
+        XAmzAlgorithm: "impedit",
+        XAmzContentSha256: "cum",
+        XAmzCredential: "esse",
+        XAmzDate: "ipsum",
+        XAmzSecurityToken: "excepturi",
+        XAmzSignature: "aspernatur",
+        XAmzSignedHeaders: "perferendis",
+        XAmzClientContext: "ad",
+        XAmzClientContextEncoding: "natus",
     }
 
     ctx := context.Background()
@@ -123,11 +120,22 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
 * `PutEvents` - The PutEvents operation records one or more events. You can have up to 1,500 unique custom events per app, any combination of up to 40 attributes and metrics per custom event, and any number of attribute or metric values.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

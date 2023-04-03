@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StopLaunchPathParams struct {
-	// The name of the launch to stop.
-	Launch string `pathParam:"style=simple,explode=false,name=launch"`
-	// The name or ARN of the project that contains the launch that you want to stop.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type StopLaunchHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StopLaunchRequestBodyDesiredStateEnum - Specify whether to consider the launch as <code>COMPLETED</code> or <code>CANCELLED</code> after it stops.
 type StopLaunchRequestBodyDesiredStateEnum string
 
@@ -58,9 +41,18 @@ type StopLaunchRequestBody struct {
 }
 
 type StopLaunchRequest struct {
-	PathParams StopLaunchPathParams
-	Headers    StopLaunchHeaders
-	Request    StopLaunchRequestBody `request:"mediaType=application/json"`
+	RequestBody       StopLaunchRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the launch to stop.
+	Launch string `pathParam:"style=simple,explode=false,name=launch"`
+	// The name or ARN of the project that contains the launch that you want to stop.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type StopLaunchResponse struct {

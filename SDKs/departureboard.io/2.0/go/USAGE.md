@@ -14,18 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetArrivalsAndDeparturesByCRSRequest{
-        PathParams: operations.GetArrivalsAndDeparturesByCRSPathParams{
-            Crs: "corrupti",
-        },
-        QueryParams: operations.GetArrivalsAndDeparturesByCRSQueryParams{
-            APIKey: "provident",
-            FilterStation: "distinctio",
-            FilterType: "quibusdam",
-            NumServices: 602763,
-            ServiceDetails: false,
-            TimeOffset: 857946,
-            TimeWindow: 544883,
-        },
+        Crs: "corrupti",
+        APIKey: "provident",
+        FilterStation: "distinctio",
+        FilterType: "quibusdam",
+        NumServices: 602763,
+        ServiceDetails: false,
+        TimeOffset: 857946,
+        TimeWindow: 544883,
     }
 
     ctx := context.Background()

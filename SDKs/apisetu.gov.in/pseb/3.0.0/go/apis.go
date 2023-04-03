@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Cemst - Class VIII Marksheet
 // API to verify Class VIII Marksheet.
-func (s *apIs) Cemst(ctx context.Context, request operations.CemstRequest) (*operations.CemstResponse, error) {
+func (s *apIs) Cemst(ctx context.Context, request operations.CemstRequestBody, security operations.CemstSecurity) (*operations.CemstResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cemst/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Cemst(ctx context.Context, request operations.CemstRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Cemst(ctx context.Context, request operations.CemstRequest) (*ope
 
 // Cfmst - Class V Marksheet
 // API to verify Class V Marksheet.
-func (s *apIs) Cfmst(ctx context.Context, request operations.CfmstRequest) (*operations.CfmstResponse, error) {
+func (s *apIs) Cfmst(ctx context.Context, request operations.CfmstRequestBody, security operations.CfmstSecurity) (*operations.CfmstResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cfmst/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Cfmst(ctx context.Context, request operations.CfmstRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Cfmst(ctx context.Context, request operations.CfmstRequest) (*ope
 
 // Hscer - Class XII Marksheet
 // API to verify Class XII Marksheet.
-func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*operations.HscerResponse, error) {
+func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequestBody, security operations.HscerSecurity) (*operations.HscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hscer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 // Micer - Migration Certificate
 // API to verify Migration Certificate.
-func (s *apIs) Micer(ctx context.Context, request operations.MicerRequest) (*operations.MicerResponse, error) {
+func (s *apIs) Micer(ctx context.Context, request operations.MicerRequestBody, security operations.MicerSecurity) (*operations.MicerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/micer/certificate"
 
@@ -388,7 +388,7 @@ func (s *apIs) Micer(ctx context.Context, request operations.MicerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -485,7 +485,7 @@ func (s *apIs) Micer(ctx context.Context, request operations.MicerRequest) (*ope
 
 // Sscer - Class X Marksheet
 // API to verify Class X Marksheet.
-func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*operations.SscerResponse, error) {
+func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequestBody, security operations.SscerSecurity) (*operations.SscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sscer/certificate"
 
@@ -501,7 +501,7 @@ func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRouteCalculatorPathParams struct {
-	// The name of the route calculator resource to update.
-	CalculatorName string `pathParam:"style=simple,explode=false,name=CalculatorName"`
-}
-
-type UpdateRouteCalculatorHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateRouteCalculatorRequestBodyPricingPlanEnum - No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
 type UpdateRouteCalculatorRequestBodyPricingPlanEnum string
 
@@ -59,9 +44,16 @@ type UpdateRouteCalculatorRequestBody struct {
 }
 
 type UpdateRouteCalculatorRequest struct {
-	PathParams UpdateRouteCalculatorPathParams
-	Headers    UpdateRouteCalculatorHeaders
-	Request    UpdateRouteCalculatorRequestBody `request:"mediaType=application/json"`
+	// The name of the route calculator resource to update.
+	CalculatorName    string                           `pathParam:"style=simple,explode=false,name=CalculatorName"`
+	RequestBody       UpdateRouteCalculatorRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateRouteCalculatorResponse struct {

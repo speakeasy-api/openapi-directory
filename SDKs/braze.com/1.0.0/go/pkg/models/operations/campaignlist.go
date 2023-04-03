@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CampaignListQueryParams struct {
+type CampaignListRequest struct {
 	// (Optional) Boolean
 	//
 	// Whether or not to include archived campaigns, defaults to false
@@ -23,10 +23,6 @@ type CampaignListQueryParams struct {
 	//
 	// Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest.
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type CampaignListRequest struct {
-	QueryParams CampaignListQueryParams
 }
 
 type CampaignListResponse struct {

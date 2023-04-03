@@ -8,21 +8,6 @@ import (
 	"time"
 )
 
-type StartPipelineReprocessingPathParams struct {
-	// The name of the pipeline on which to start reprocessing.
-	PipelineName string `pathParam:"style=simple,explode=false,name=pipelineName"`
-}
-
-type StartPipelineReprocessingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartPipelineReprocessingRequestBodyChannelMessages - Specifies one or more sets of channel messages.
 type StartPipelineReprocessingRequestBodyChannelMessages struct {
 	S3Paths []string `json:"s3Paths,omitempty"`
@@ -38,9 +23,16 @@ type StartPipelineReprocessingRequestBody struct {
 }
 
 type StartPipelineReprocessingRequest struct {
-	PathParams StartPipelineReprocessingPathParams
-	Headers    StartPipelineReprocessingHeaders
-	Request    StartPipelineReprocessingRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartPipelineReprocessingRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the pipeline on which to start reprocessing.
+	PipelineName string `pathParam:"style=simple,explode=false,name=pipelineName"`
 }
 
 type StartPipelineReprocessingResponse struct {

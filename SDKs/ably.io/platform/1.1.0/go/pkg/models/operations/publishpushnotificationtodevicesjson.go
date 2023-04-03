@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishPushNotificationToDevicesJSONQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type PublishPushNotificationToDevicesJSONHeaders struct {
-	// The version of the API you wish to use.
-	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
 type PublishPushNotificationToDevicesApplicationJSON struct {
 	Push *shared.Push `json:"push,omitempty"`
 	// Push recipient details for a device.
@@ -24,9 +14,11 @@ type PublishPushNotificationToDevicesApplicationJSON struct {
 }
 
 type PublishPushNotificationToDevicesJSONRequest struct {
-	QueryParams PublishPushNotificationToDevicesJSONQueryParams
-	Headers     PublishPushNotificationToDevicesJSONHeaders
-	Request     *PublishPushNotificationToDevicesApplicationJSON `request:"mediaType=application/json"`
+	RequestBody *PublishPushNotificationToDevicesApplicationJSON `request:"mediaType=application/json"`
+	// The version of the API you wish to use.
+	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type PublishPushNotificationToDevicesJSONResponse struct {

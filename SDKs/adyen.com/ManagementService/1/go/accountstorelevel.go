@@ -38,20 +38,20 @@ func newAccountStoreLevel(defaultClient, securityClient HTTPClient, serverURL, l
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read
 // * Management API—Stores read and write
-func (s *accountStoreLevel) GetMerchantsMerchantIDStores(ctx context.Context, request operations.GetMerchantsMerchantIDStoresRequest) (*operations.GetMerchantsMerchantIDStoresResponse, error) {
+func (s *accountStoreLevel) GetMerchantsMerchantIDStores(ctx context.Context, request operations.GetMerchantsMerchantIDStoresRequest, security operations.GetMerchantsMerchantIDStoresSecurity) (*operations.GetMerchantsMerchantIDStoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,16 +110,16 @@ func (s *accountStoreLevel) GetMerchantsMerchantIDStores(ctx context.Context, re
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read
 // * Management API—Stores read and write
-func (s *accountStoreLevel) GetMerchantsMerchantIDStoresStoreID(ctx context.Context, request operations.GetMerchantsMerchantIDStoresStoreIDRequest) (*operations.GetMerchantsMerchantIDStoresStoreIDResponse, error) {
+func (s *accountStoreLevel) GetMerchantsMerchantIDStoresStoreID(ctx context.Context, request operations.GetMerchantsMerchantIDStoresStoreIDRequest, security operations.GetMerchantsMerchantIDStoresStoreIDSecurity) (*operations.GetMerchantsMerchantIDStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,7 +178,7 @@ func (s *accountStoreLevel) GetMerchantsMerchantIDStoresStoreID(ctx context.Cont
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read
 // * Management API—Stores read and write
-func (s *accountStoreLevel) GetStores(ctx context.Context, request operations.GetStoresRequest) (*operations.GetStoresResponse, error) {
+func (s *accountStoreLevel) GetStores(ctx context.Context, request operations.GetStoresRequest, security operations.GetStoresSecurity) (*operations.GetStoresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stores"
 
@@ -187,11 +187,11 @@ func (s *accountStoreLevel) GetStores(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,16 +249,16 @@ func (s *accountStoreLevel) GetStores(ctx context.Context, request operations.Ge
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read
 // * Management API—Stores read and write
-func (s *accountStoreLevel) GetStoresStoreID(ctx context.Context, request operations.GetStoresStoreIDRequest) (*operations.GetStoresStoreIDResponse, error) {
+func (s *accountStoreLevel) GetStoresStoreID(ctx context.Context, request operations.GetStoresStoreIDRequest, security operations.GetStoresStoreIDSecurity) (*operations.GetStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -315,11 +315,11 @@ func (s *accountStoreLevel) GetStoresStoreID(ctx context.Context, request operat
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read and write
-func (s *accountStoreLevel) PatchMerchantsMerchantIDStoresStoreID(ctx context.Context, request operations.PatchMerchantsMerchantIDStoresStoreIDRequest) (*operations.PatchMerchantsMerchantIDStoresStoreIDResponse, error) {
+func (s *accountStoreLevel) PatchMerchantsMerchantIDStoresStoreID(ctx context.Context, request operations.PatchMerchantsMerchantIDStoresStoreIDRequest, security operations.PatchMerchantsMerchantIDStoresStoreIDSecurity) (*operations.PatchMerchantsMerchantIDStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateStoreRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -331,7 +331,7 @@ func (s *accountStoreLevel) PatchMerchantsMerchantIDStoresStoreID(ctx context.Co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -390,11 +390,11 @@ func (s *accountStoreLevel) PatchMerchantsMerchantIDStoresStoreID(ctx context.Co
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read and write
-func (s *accountStoreLevel) PatchStoresStoreID(ctx context.Context, request operations.PatchStoresStoreIDRequest) (*operations.PatchStoresStoreIDResponse, error) {
+func (s *accountStoreLevel) PatchStoresStoreID(ctx context.Context, request operations.PatchStoresStoreIDRequest, security operations.PatchStoresStoreIDSecurity) (*operations.PatchStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateStoreRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -406,7 +406,7 @@ func (s *accountStoreLevel) PatchStoresStoreID(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -463,11 +463,11 @@ func (s *accountStoreLevel) PatchStoresStoreID(ctx context.Context, request oper
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read and write
-func (s *accountStoreLevel) PostMerchantsMerchantIDStores(ctx context.Context, request operations.PostMerchantsMerchantIDStoresRequest) (*operations.PostMerchantsMerchantIDStoresResponse, error) {
+func (s *accountStoreLevel) PostMerchantsMerchantIDStores(ctx context.Context, request operations.PostMerchantsMerchantIDStoresRequest, security operations.PostMerchantsMerchantIDStoresSecurity) (*operations.PostMerchantsMerchantIDStoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StoreCreationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -479,7 +479,7 @@ func (s *accountStoreLevel) PostMerchantsMerchantIDStores(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -537,7 +537,7 @@ func (s *accountStoreLevel) PostMerchantsMerchantIDStores(ctx context.Context, r
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Stores read and write
-func (s *accountStoreLevel) PostStores(ctx context.Context, request operations.PostStoresRequest) (*operations.PostStoresResponse, error) {
+func (s *accountStoreLevel) PostStores(ctx context.Context, request shared.StoreCreationWithMerchantCodeRequest, security operations.PostStoresSecurity) (*operations.PostStoresResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stores"
 
@@ -553,7 +553,7 @@ func (s *accountStoreLevel) PostStores(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

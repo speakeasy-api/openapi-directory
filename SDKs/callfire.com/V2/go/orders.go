@@ -34,7 +34,7 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // FindOrders - Find orders
 // Searches for account orders
-func (s *orders) FindOrders(ctx context.Context, request operations.FindOrdersRequest) (*operations.FindOrdersResponse, error) {
+func (s *orders) FindOrders(ctx context.Context, request operations.FindOrdersRequest, security operations.FindOrdersSecurity) (*operations.FindOrdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders"
 
@@ -43,11 +43,11 @@ func (s *orders) FindOrders(ctx context.Context, request operations.FindOrdersRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,20 +101,20 @@ func (s *orders) FindOrders(ctx context.Context, request operations.FindOrdersRe
 
 // GetOrder - Find a specific order
 // Returns a single NumberOrder instance for a given order id. Order contains information about purchased keywords, local, toll-free numbers
-func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
+func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest, security operations.GetOrderSecurity) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,11 +168,11 @@ func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderReques
 
 // OrderKeywords - Purchase keywords
 // Purchase keywords. Send a list of available keywords into this API to purchase them using CallFire credits. Make sure the account has enough credits before trying to purchase the keywords. Keyword should only consist of uppercase and lowercase letters and numbers. Number of characters must be greater than 2, but less than 65.
-func (s *orders) OrderKeywords(ctx context.Context, request operations.OrderKeywordsRequest) (*operations.OrderKeywordsResponse, error) {
+func (s *orders) OrderKeywords(ctx context.Context, request operations.OrderKeywordsRequest, security operations.OrderKeywordsSecurity) (*operations.OrderKeywordsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders/keywords"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeywordPurchaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -184,11 +184,11 @@ func (s *orders) OrderKeywords(ctx context.Context, request operations.OrderKeyw
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -242,11 +242,11 @@ func (s *orders) OrderKeywords(ctx context.Context, request operations.OrderKeyw
 
 // OrderNumbers - Purchase numbers
 // Purchase numbers. There are many ways to purchase a number. Set either 'tollFreeCount' or 'localCount' along with some querying fields to purchase numbers by bulk query. Set the list of numbers to purchase by list. Available numbers will be purchased using CallFire credits owned by the user. Make sure the account has enough credits before trying to purchase
-func (s *orders) OrderNumbers(ctx context.Context, request operations.OrderNumbersRequest) (*operations.OrderNumbersResponse, error) {
+func (s *orders) OrderNumbers(ctx context.Context, request operations.OrderNumbersRequest, security operations.OrderNumbersSecurity) (*operations.OrderNumbersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders/numbers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NumberPurchaseRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -258,11 +258,11 @@ func (s *orders) OrderNumbers(ctx context.Context, request operations.OrderNumbe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

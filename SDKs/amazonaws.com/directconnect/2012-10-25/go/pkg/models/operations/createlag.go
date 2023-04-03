@@ -30,7 +30,8 @@ func (e *CreateLagXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateLagHeaders struct {
+type CreateLagRequest struct {
+	CreateLagRequest  shared.CreateLagRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateLagHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateLagXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateLagRequest struct {
-	Headers CreateLagHeaders
-	Request shared.CreateLagRequest `request:"mediaType=application/json"`
 }
 
 type CreateLagResponse struct {

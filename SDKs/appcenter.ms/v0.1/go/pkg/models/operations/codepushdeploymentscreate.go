@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CodePushDeploymentsCreateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CodePushDeploymentsCreatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type CodePushDeploymentsCreateRequestBodyLatestReleaseDiffPackageMap struct {
@@ -81,10 +73,12 @@ type CodePushDeploymentsCreateRequestBody struct {
 }
 
 type CodePushDeploymentsCreateRequest struct {
-	PathParams CodePushDeploymentsCreatePathParams
 	// Deployment to be created
-	Request  CodePushDeploymentsCreateRequestBody `request:"mediaType=application/json"`
-	Security CodePushDeploymentsCreateSecurity
+	RequestBody CodePushDeploymentsCreateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CodePushDeploymentsCreateDefaultApplicationJSON - Error

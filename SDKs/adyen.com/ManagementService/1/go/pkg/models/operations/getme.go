@@ -7,15 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMeSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMeRequest struct {
-	Security GetMeSecurity
-}
-
 type GetMeResponse struct {
 	ContentType string
 	// OK - the request has succeeded.

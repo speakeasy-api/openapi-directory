@@ -30,20 +30,16 @@ func (e *DeleteModelBiasJobDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DeleteModelBiasJobDefinitionHeaders struct {
-	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteModelBiasJobDefinitionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteModelBiasJobDefinitionRequest struct {
-	Headers DeleteModelBiasJobDefinitionHeaders
-	Request shared.DeleteModelBiasJobDefinitionRequest `request:"mediaType=application/json"`
+	DeleteModelBiasJobDefinitionRequest shared.DeleteModelBiasJobDefinitionRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                      *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                            *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                   *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                          DeleteModelBiasJobDefinitionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteModelBiasJobDefinitionResponse struct {

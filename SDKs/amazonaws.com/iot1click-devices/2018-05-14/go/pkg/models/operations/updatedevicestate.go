@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateDeviceStatePathParams struct {
-	// The unique identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type UpdateDeviceStateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDeviceStateRequestBody struct {
 	// If true, the device is enabled. If false, the device is
 	//  disabled.
@@ -28,9 +13,16 @@ type UpdateDeviceStateRequestBody struct {
 }
 
 type UpdateDeviceStateRequest struct {
-	PathParams UpdateDeviceStatePathParams
-	Headers    UpdateDeviceStateHeaders
-	Request    UpdateDeviceStateRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDeviceStateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type UpdateDeviceStateResponse struct {

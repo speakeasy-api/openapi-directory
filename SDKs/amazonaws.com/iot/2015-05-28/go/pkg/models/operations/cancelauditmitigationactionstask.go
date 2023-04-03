@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelAuditMitigationActionsTaskPathParams struct {
-	// The unique identifier for the task that you want to cancel.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type CancelAuditMitigationActionsTaskHeaders struct {
+type CancelAuditMitigationActionsTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type CancelAuditMitigationActionsTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelAuditMitigationActionsTaskRequest struct {
-	PathParams CancelAuditMitigationActionsTaskPathParams
-	Headers    CancelAuditMitigationActionsTaskHeaders
+	// The unique identifier for the task that you want to cancel.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type CancelAuditMitigationActionsTaskResponse struct {

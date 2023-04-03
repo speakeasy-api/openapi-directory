@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OptionsProxySecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type OptionsProxyHeaders struct {
+type OptionsProxyRequest struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
@@ -22,11 +21,6 @@ type OptionsProxyHeaders struct {
 	XApideckDownstreamURL string `header:"style=simple,explode=false,name=x-apideck-downstream-url"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type OptionsProxyRequest struct {
-	Headers  OptionsProxyHeaders
-	Security OptionsProxySecurity
 }
 
 // OptionsProxy401ApplicationJSON - Unauthorized

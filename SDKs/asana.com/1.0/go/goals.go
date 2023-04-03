@@ -39,9 +39,9 @@ func newGoals(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Requests to add/remove followers, if successful, will return the complete updated goal record, described above.
 func (s *goals) AddFollowers(ctx context.Context, request operations.AddFollowersRequest) (*operations.AddFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/addFollowers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/addFollowers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *goals) AddFollowers(ctx context.Context, request operations.AddFollower
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -122,7 +122,7 @@ func (s *goals) CreateGoal(ctx context.Context, request operations.CreateGoalReq
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/goals"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -137,7 +137,7 @@ func (s *goals) CreateGoal(ctx context.Context, request operations.CreateGoalReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -199,9 +199,9 @@ func (s *goals) CreateGoal(ctx context.Context, request operations.CreateGoalReq
 // Creates and adds a goal metric to a specified goal. Note that this replaces an existing goal metric if one already exists.
 func (s *goals) CreateGoalMetric(ctx context.Context, request operations.CreateGoalMetricRequest) (*operations.CreateGoalMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetric", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetric", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -216,7 +216,7 @@ func (s *goals) CreateGoalMetric(ctx context.Context, request operations.CreateG
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -280,14 +280,14 @@ func (s *goals) CreateGoalMetric(ctx context.Context, request operations.CreateG
 // Returns an empty data record.
 func (s *goals) DeleteGoal(ctx context.Context, request operations.DeleteGoalRequest) (*operations.DeleteGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -349,14 +349,14 @@ func (s *goals) DeleteGoal(ctx context.Context, request operations.DeleteGoalReq
 // Returns the complete goal record for a single goal.
 func (s *goals) GetGoal(ctx context.Context, request operations.GetGoalRequest) (*operations.GetGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -425,7 +425,7 @@ func (s *goals) GetGoals(ctx context.Context, request operations.GetGoalsRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -487,14 +487,14 @@ func (s *goals) GetGoals(ctx context.Context, request operations.GetGoalsRequest
 // Returns a compact representation of all of the parent goals of a goal.
 func (s *goals) GetParentGoalsForGoal(ctx context.Context, request operations.GetParentGoalsForGoalRequest) (*operations.GetParentGoalsForGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/parentGoals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/parentGoals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -558,9 +558,9 @@ func (s *goals) GetParentGoalsForGoal(ctx context.Context, request operations.Ge
 // Requests to add/remove followers, if successful, will return the complete updated goal record, described above.
 func (s *goals) RemoveFollowers(ctx context.Context, request operations.RemoveFollowersRequest) (*operations.RemoveFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/removeFollowers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/removeFollowers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -575,7 +575,7 @@ func (s *goals) RemoveFollowers(ctx context.Context, request operations.RemoveFo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -641,9 +641,9 @@ func (s *goals) RemoveFollowers(ctx context.Context, request operations.RemoveFo
 // Returns the complete updated goal record.
 func (s *goals) UpdateGoal(ctx context.Context, request operations.UpdateGoalRequest) (*operations.UpdateGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -658,7 +658,7 @@ func (s *goals) UpdateGoal(ctx context.Context, request operations.UpdateGoalReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -721,9 +721,9 @@ func (s *goals) UpdateGoal(ctx context.Context, request operations.UpdateGoalReq
 // Returns the complete updated goal metric record.
 func (s *goals) UpdateGoalMetric(ctx context.Context, request operations.UpdateGoalMetricRequest) (*operations.UpdateGoalMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetricCurrentValue", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetricCurrentValue", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -738,7 +738,7 @@ func (s *goals) UpdateGoalMetric(ctx context.Context, request operations.UpdateG
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

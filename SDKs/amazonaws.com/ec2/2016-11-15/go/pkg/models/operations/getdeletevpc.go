@@ -50,16 +50,13 @@ func (e *GETDeleteVpcVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteVpcQueryParams struct {
+type GETDeleteVpcRequest struct {
 	Action GETDeleteVpcActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun  *bool                   `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETDeleteVpcVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDeleteVpcHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -67,11 +64,6 @@ type GETDeleteVpcHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteVpcRequest struct {
-	QueryParams GETDeleteVpcQueryParams
-	Headers     GETDeleteVpcHeaders
 }
 
 type GETDeleteVpcResponse struct {

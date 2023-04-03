@@ -33,16 +33,7 @@ func (e *AssociateResourceResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AssociateResourcePathParams struct {
-	//  The name, ID, or ARN of the application.
-	Application string `pathParam:"style=simple,explode=false,name=application"`
-	// The name or ID of the resource of which the application will be associated.
-	Resource string `pathParam:"style=simple,explode=false,name=resource"`
-	// The type of resource of which the application will be associated.
-	ResourceType AssociateResourceResourceTypeEnum `pathParam:"style=simple,explode=false,name=resourceType"`
-}
-
-type AssociateResourceHeaders struct {
+type AssociateResourceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,11 +41,12 @@ type AssociateResourceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateResourceRequest struct {
-	PathParams AssociateResourcePathParams
-	Headers    AssociateResourceHeaders
+	//  The name, ID, or ARN of the application.
+	Application string `pathParam:"style=simple,explode=false,name=application"`
+	// The name or ID of the resource of which the application will be associated.
+	Resource string `pathParam:"style=simple,explode=false,name=resource"`
+	// The type of resource of which the application will be associated.
+	ResourceType AssociateResourceResourceTypeEnum `pathParam:"style=simple,explode=false,name=resourceType"`
 }
 
 type AssociateResourceResponse struct {

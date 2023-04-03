@@ -7,27 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNhFossilsIndividualsFossilPathParams struct {
-	// The name of the individual fossil you wish to retrieve fossil information about.
-	Fossil string `pathParam:"style=simple,explode=false,name=fossil"`
-}
-
-type GetNhFossilsIndividualsFossilQueryParams struct {
-	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
-	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
-}
-
-type GetNhFossilsIndividualsFossilHeaders struct {
+type GetNhFossilsIndividualsFossilRequest struct {
 	// The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
 	AcceptVersion string `header:"style=simple,explode=false,name=Accept-Version"`
 	// Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
 	XAPIKey string `header:"style=simple,explode=false,name=X-API-KEY"`
-}
-
-type GetNhFossilsIndividualsFossilRequest struct {
-	PathParams  GetNhFossilsIndividualsFossilPathParams
-	QueryParams GetNhFossilsIndividualsFossilQueryParams
-	Headers     GetNhFossilsIndividualsFossilHeaders
+	// The name of the individual fossil you wish to retrieve fossil information about.
+	Fossil string `pathParam:"style=simple,explode=false,name=fossil"`
+	// Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
+	Thumbsize *int64 `queryParam:"style=form,explode=true,name=thumbsize"`
 }
 
 type GetNhFossilsIndividualsFossilResponse struct {

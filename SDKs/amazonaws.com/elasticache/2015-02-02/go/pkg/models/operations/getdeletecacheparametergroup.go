@@ -50,26 +50,18 @@ func (e *GETDeleteCacheParameterGroupVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDeleteCacheParameterGroupQueryParams struct {
+type GETDeleteCacheParameterGroupRequest struct {
 	Action GETDeleteCacheParameterGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the cache parameter group to delete.</p> <note> <p>The specified cache security group must not be associated with any clusters.</p> </note>
 	CacheParameterGroupName string                                  `queryParam:"style=form,explode=true,name=CacheParameterGroupName"`
 	Version                 GETDeleteCacheParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteCacheParameterGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteCacheParameterGroupRequest struct {
-	QueryParams GETDeleteCacheParameterGroupQueryParams
-	Headers     GETDeleteCacheParameterGroupHeaders
+	XAmzAlgorithm           *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteCacheParameterGroupResponse struct {

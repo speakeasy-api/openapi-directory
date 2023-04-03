@@ -27,7 +27,6 @@ pkg/models/operations/putsettingsorganizationsorganizationnamereceiversreceivern
 pkg/models/operations/putsettingsorganizationsorganizationnamesenderssendername.go
 pkg/models/shared/organization.go
 pkg/models/shared/settingmetadata.go
-pkg/models/shared/security.go
 pkg/models/shared/receiver.go
 pkg/models/shared/customconfiguration.go
 pkg/models/shared/sftptransport.go

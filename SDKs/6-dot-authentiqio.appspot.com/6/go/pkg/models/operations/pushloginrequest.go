@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PushLoginRequestQueryParams struct {
+type PushLoginRequestRequest struct {
+	// Push Token.
+	RequestBody []byte `request:"mediaType=application/jwt"`
 	// URI App will connect to
 	Callback string `queryParam:"style=form,explode=true,name=callback"`
-}
-
-type PushLoginRequestRequest struct {
-	QueryParams PushLoginRequestQueryParams
-	// Push Token.
-	Request []byte `request:"mediaType=application/jwt"`
 }
 
 // PushLoginRequest200ApplicationJSON - Successful response

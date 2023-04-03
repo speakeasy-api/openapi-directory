@@ -8,15 +8,12 @@ import (
 )
 
 type UpdatePaymentMethodStrongSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpdatePaymentMethodStrongPathParams struct {
-	// The identifier of the payment platform (stripe only is currently supported).
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type UpdatePaymentMethodStrongQueryParams struct {
+type UpdatePaymentMethodStrongRequest struct {
+	// Details of change card details request.
+	ItvUpdatePaymentStrongRequest shared.ItvUpdatePaymentStrongRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -29,14 +26,8 @@ type UpdatePaymentMethodStrongQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type UpdatePaymentMethodStrongRequest struct {
-	PathParams  UpdatePaymentMethodStrongPathParams
-	QueryParams UpdatePaymentMethodStrongQueryParams
-	// Details of change card details request.
-	Request  shared.ItvUpdatePaymentStrongRequest `request:"mediaType=application/json"`
-	Security UpdatePaymentMethodStrongSecurity
+	// The identifier of the payment platform (stripe only is currently supported).
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type UpdatePaymentMethodStrongResponse struct {

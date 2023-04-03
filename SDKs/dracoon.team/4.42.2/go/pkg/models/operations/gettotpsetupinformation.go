@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTotpSetupInformationHeaders struct {
+type GetTotpSetupInformationRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type GetTotpSetupInformationRequest struct {
-	Headers GetTotpSetupInformationHeaders
 }
 
 type GetTotpSetupInformationResponse struct {

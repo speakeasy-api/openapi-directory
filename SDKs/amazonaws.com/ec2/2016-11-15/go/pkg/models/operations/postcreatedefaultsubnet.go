@@ -50,25 +50,17 @@ func (e *POSTCreateDefaultSubnetVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateDefaultSubnetQueryParams struct {
-	Action  POSTCreateDefaultSubnetActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateDefaultSubnetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateDefaultSubnetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateDefaultSubnetRequest struct {
-	QueryParams POSTCreateDefaultSubnetQueryParams
-	Headers     POSTCreateDefaultSubnetHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateDefaultSubnetActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTCreateDefaultSubnetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateDefaultSubnetResponse struct {

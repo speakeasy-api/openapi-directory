@@ -8,20 +8,15 @@ import (
 )
 
 type PatchVaultItemSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type PatchVaultItemPathParams struct {
+type PatchVaultItemRequest struct {
+	RequestBody []shared.Patch `request:"mediaType=application/json"`
 	// The UUID of the Item to update
 	ItemUUID string `pathParam:"style=simple,explode=false,name=itemUuid"`
 	// The UUID of the Vault the item is in
 	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type PatchVaultItemRequest struct {
-	PathParams PatchVaultItemPathParams
-	Request    []shared.Patch `request:"mediaType=application/json"`
-	Security   PatchVaultItemSecurity
 }
 
 type PatchVaultItemResponse struct {

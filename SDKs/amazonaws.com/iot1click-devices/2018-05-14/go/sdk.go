@@ -120,14 +120,14 @@ func New(opts ...SDKOption) *SDK {
 //	received a claim code with the device(s).
 func (s *SDK) ClaimDevicesByClaimCode(ctx context.Context, request operations.ClaimDevicesByClaimCodeRequest) (*operations.ClaimDevicesByClaimCodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/claims/{claimCode}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/claims/{claimCode}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -198,14 +198,14 @@ func (s *SDK) ClaimDevicesByClaimCode(ctx context.Context, request operations.Cl
 //	details of the device.
 func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDeviceRequest) (*operations.DescribeDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -279,9 +279,9 @@ func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDev
 //	</note>
 func (s *SDK) FinalizeDeviceClaim(ctx context.Context, request operations.FinalizeDeviceClaimRequest) (*operations.FinalizeDeviceClaimResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/finalize-claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/finalize-claim", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -296,7 +296,7 @@ func (s *SDK) FinalizeDeviceClaim(ctx context.Context, request operations.Finali
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -385,14 +385,14 @@ func (s *SDK) FinalizeDeviceClaim(ctx context.Context, request operations.Finali
 // GetDeviceMethods - Given a device ID, returns the invokable methods associated with the device.
 func (s *SDK) GetDeviceMethods(ctx context.Context, request operations.GetDeviceMethodsRequest) (*operations.GetDeviceMethodsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -466,14 +466,14 @@ func (s *SDK) GetDeviceMethods(ctx context.Context, request operations.GetDevice
 //	</note>
 func (s *SDK) InitiateDeviceClaim(ctx context.Context, request operations.InitiateDeviceClaimRequest) (*operations.InitiateDeviceClaimResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/initiate-claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/initiate-claim", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -554,9 +554,9 @@ func (s *SDK) InitiateDeviceClaim(ctx context.Context, request operations.Initia
 //	parameters). See the "Example POST" code snippet below.
 func (s *SDK) InvokeDeviceMethod(ctx context.Context, request operations.InvokeDeviceMethodRequest) (*operations.InvokeDeviceMethodResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -571,7 +571,7 @@ func (s *SDK) InvokeDeviceMethod(ctx context.Context, request operations.InvokeD
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -672,16 +672,16 @@ func (s *SDK) InvokeDeviceMethod(ctx context.Context, request operations.InvokeD
 //	array of events for the device.
 func (s *SDK) ListDeviceEvents(ctx context.Context, request operations.ListDeviceEventsRequest) (*operations.ListDeviceEventsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/events#fromTimeStamp&toTimeStamp", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/events#fromTimeStamp&toTimeStamp", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -769,9 +769,9 @@ func (s *SDK) ListDevices(ctx context.Context, request operations.ListDevicesReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -842,14 +842,14 @@ func (s *SDK) ListDevices(ctx context.Context, request operations.ListDevicesReq
 // ListTagsForResource - Lists the tags associated with the specified resource ARN.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -910,9 +910,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 //	resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -927,7 +927,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -987,14 +987,14 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UnclaimDevice - Disassociates a device from your AWS account using its device ID.
 func (s *SDK) UnclaimDevice(ctx context.Context, request operations.UnclaimDeviceRequest) (*operations.UnclaimDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/unclaim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/unclaim", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1065,16 +1065,16 @@ func (s *SDK) UnclaimDevice(ctx context.Context, request operations.UnclaimDevic
 //	resource ARN.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1138,9 +1138,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 //	enables or disables the device given a device ID.
 func (s *SDK) UpdateDeviceState(ctx context.Context, request operations.UpdateDeviceStateRequest) (*operations.UpdateDeviceStateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/state", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1155,7 +1155,7 @@ func (s *SDK) UpdateDeviceState(ctx context.Context, request operations.UpdateDe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

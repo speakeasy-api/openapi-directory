@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConversionsConversionIDPathParams struct {
+type GetConversionsConversionIDRequest struct {
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type GetConversionsConversionIDRequest struct {
-	PathParams GetConversionsConversionIDPathParams
 }
 
 type GetConversionsConversionIDResponse struct {

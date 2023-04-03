@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type DeleteAssessmentFrameworkSharePathParams struct {
-	// The unique identifier for the share request to be deleted.
-	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
-}
-
 // DeleteAssessmentFrameworkShareRequestTypeEnum - Specifies whether the share request is a sent request or a received request.
 type DeleteAssessmentFrameworkShareRequestTypeEnum string
 
@@ -37,12 +32,7 @@ func (e *DeleteAssessmentFrameworkShareRequestTypeEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type DeleteAssessmentFrameworkShareQueryParams struct {
-	// Specifies whether the share request is a sent request or a received request.
-	RequestType DeleteAssessmentFrameworkShareRequestTypeEnum `queryParam:"style=form,explode=true,name=requestType"`
-}
-
-type DeleteAssessmentFrameworkShareHeaders struct {
+type DeleteAssessmentFrameworkShareRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,12 +40,10 @@ type DeleteAssessmentFrameworkShareHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAssessmentFrameworkShareRequest struct {
-	PathParams  DeleteAssessmentFrameworkSharePathParams
-	QueryParams DeleteAssessmentFrameworkShareQueryParams
-	Headers     DeleteAssessmentFrameworkShareHeaders
+	// The unique identifier for the share request to be deleted.
+	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
+	// Specifies whether the share request is a sent request or a received request.
+	RequestType DeleteAssessmentFrameworkShareRequestTypeEnum `queryParam:"style=form,explode=true,name=requestType"`
 }
 
 type DeleteAssessmentFrameworkShareResponse struct {

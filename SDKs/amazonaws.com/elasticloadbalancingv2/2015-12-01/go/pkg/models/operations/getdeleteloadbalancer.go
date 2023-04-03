@@ -50,26 +50,18 @@ func (e *GETDeleteLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteLoadBalancerQueryParams struct {
+type GETDeleteLoadBalancerRequest struct {
 	Action GETDeleteLoadBalancerActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the load balancer.
-	LoadBalancerArn string                           `queryParam:"style=form,explode=true,name=LoadBalancerArn"`
-	Version         GETDeleteLoadBalancerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteLoadBalancerHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteLoadBalancerRequest struct {
-	QueryParams GETDeleteLoadBalancerQueryParams
-	Headers     GETDeleteLoadBalancerHeaders
+	LoadBalancerArn   string                           `queryParam:"style=form,explode=true,name=LoadBalancerArn"`
+	Version           GETDeleteLoadBalancerVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteLoadBalancerResponse struct {

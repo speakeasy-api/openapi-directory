@@ -13,10 +13,6 @@ type CommercialDetectionRequestBody struct {
 	Text *string `form:"name=text"`
 }
 
-type CommercialDetectionRequest struct {
-	Request *CommercialDetectionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type CommercialDetectionResponse struct {
 	ContentType string
 	StatusCode  int

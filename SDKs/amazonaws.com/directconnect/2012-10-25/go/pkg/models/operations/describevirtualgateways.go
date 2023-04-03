@@ -30,7 +30,7 @@ func (e *DescribeVirtualGatewaysXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type DescribeVirtualGatewaysHeaders struct {
+type DescribeVirtualGatewaysRequest struct {
 	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type DescribeVirtualGatewaysHeaders struct {
 	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeVirtualGatewaysXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeVirtualGatewaysRequest struct {
-	Headers DescribeVirtualGatewaysHeaders
 }
 
 type DescribeVirtualGatewaysResponse struct {

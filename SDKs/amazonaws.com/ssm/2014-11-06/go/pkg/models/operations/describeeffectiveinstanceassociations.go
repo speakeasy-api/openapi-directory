@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeEffectiveInstanceAssociationsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeEffectiveInstanceAssociationsXAmzTargetEnum
 type DescribeEffectiveInstanceAssociationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeEffectiveInstanceAssociationsXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type DescribeEffectiveInstanceAssociationsHeaders struct {
+type DescribeEffectiveInstanceAssociationsRequest struct {
+	DescribeEffectiveInstanceAssociationsRequest shared.DescribeEffectiveInstanceAssociationsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                             `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeEffectiveInstanceAssociationsHeaders struct {
 	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeEffectiveInstanceAssociationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeEffectiveInstanceAssociationsRequest struct {
-	QueryParams DescribeEffectiveInstanceAssociationsQueryParams
-	Headers     DescribeEffectiveInstanceAssociationsHeaders
-	Request     shared.DescribeEffectiveInstanceAssociationsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeEffectiveInstanceAssociationsResponse struct {

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Delcs - Dealer License
 // API to verify Dealer License.
-func (s *apIs) Delcs(ctx context.Context, request operations.DelcsRequest) (*operations.DelcsResponse, error) {
+func (s *apIs) Delcs(ctx context.Context, request operations.DelcsRequestBody, security operations.DelcsSecurity) (*operations.DelcsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delcs/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Delcs(ctx context.Context, request operations.DelcsRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Delcs(ctx context.Context, request operations.DelcsRequest) (*ope
 
 // Malcs - Manufacturer License
 // API to verify Manufacturer License.
-func (s *apIs) Malcs(ctx context.Context, request operations.MalcsRequest) (*operations.MalcsResponse, error) {
+func (s *apIs) Malcs(ctx context.Context, request operations.MalcsRequestBody, security operations.MalcsSecurity) (*operations.MalcsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/malcs/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Malcs(ctx context.Context, request operations.MalcsRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Malcs(ctx context.Context, request operations.MalcsRequest) (*ope
 
 // Palcs - Packers License
 // API to verify Packers License.
-func (s *apIs) Palcs(ctx context.Context, request operations.PalcsRequest) (*operations.PalcsResponse, error) {
+func (s *apIs) Palcs(ctx context.Context, request operations.PalcsRequestBody, security operations.PalcsSecurity) (*operations.PalcsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/palcs/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Palcs(ctx context.Context, request operations.PalcsRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -372,7 +372,7 @@ func (s *apIs) Palcs(ctx context.Context, request operations.PalcsRequest) (*ope
 
 // Relcs - Repairer License
 // API to verify Repairer License.
-func (s *apIs) Relcs(ctx context.Context, request operations.RelcsRequest) (*operations.RelcsResponse, error) {
+func (s *apIs) Relcs(ctx context.Context, request operations.RelcsRequestBody, security operations.RelcsSecurity) (*operations.RelcsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/relcs/certificate"
 
@@ -388,7 +388,7 @@ func (s *apIs) Relcs(ctx context.Context, request operations.RelcsRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

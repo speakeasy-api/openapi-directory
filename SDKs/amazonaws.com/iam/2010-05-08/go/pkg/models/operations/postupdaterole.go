@@ -50,25 +50,17 @@ func (e *POSTUpdateRoleVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTUpdateRoleQueryParams struct {
-	Action  POSTUpdateRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUpdateRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdateRoleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUpdateRoleRequest struct {
-	QueryParams POSTUpdateRoleQueryParams
-	Headers     POSTUpdateRoleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUpdateRoleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                    `request:"mediaType=text/xml"`
+	Version           POSTUpdateRoleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUpdateRoleResponse struct {

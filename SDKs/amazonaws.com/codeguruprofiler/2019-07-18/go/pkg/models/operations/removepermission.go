@@ -30,19 +30,7 @@ func (e *RemovePermissionActionGroupEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RemovePermissionPathParams struct {
-	//  Specifies an action group that contains the permissions to remove from a profiling group's resource-based policy. One action group is supported, <code>agentPermissions</code>, which grants <code>ConfigureAgent</code> and <code>PostAgentProfile</code> permissions.
-	ActionGroup RemovePermissionActionGroupEnum `pathParam:"style=simple,explode=false,name=actionGroup"`
-	// The name of the profiling group.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
-type RemovePermissionQueryParams struct {
-	//  A universally unique identifier (UUID) for the revision of the resource-based policy from which you want to remove permissions.
-	RevisionID string `queryParam:"style=form,explode=true,name=revisionId"`
-}
-
-type RemovePermissionHeaders struct {
+type RemovePermissionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -50,12 +38,12 @@ type RemovePermissionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type RemovePermissionRequest struct {
-	PathParams  RemovePermissionPathParams
-	QueryParams RemovePermissionQueryParams
-	Headers     RemovePermissionHeaders
+	//  Specifies an action group that contains the permissions to remove from a profiling group's resource-based policy. One action group is supported, <code>agentPermissions</code>, which grants <code>ConfigureAgent</code> and <code>PostAgentProfile</code> permissions.
+	ActionGroup RemovePermissionActionGroupEnum `pathParam:"style=simple,explode=false,name=actionGroup"`
+	// The name of the profiling group.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
+	//  A universally unique identifier (UUID) for the revision of the resource-based policy from which you want to remove permissions.
+	RevisionID string `queryParam:"style=form,explode=true,name=revisionId"`
 }
 
 type RemovePermissionResponse struct {

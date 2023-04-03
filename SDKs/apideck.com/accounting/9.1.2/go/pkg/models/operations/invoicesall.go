@@ -8,10 +8,10 @@ import (
 )
 
 type InvoicesAllSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type InvoicesAllQueryParams struct {
+type InvoicesAllRequest struct {
 	// Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
@@ -24,21 +24,12 @@ type InvoicesAllQueryParams struct {
 	Raw *bool `queryParam:"style=form,explode=true,name=raw"`
 	// Apply sorting
 	Sort *shared.InvoicesSort `queryParam:"style=deepObject,explode=true,name=sort"`
-}
-
-type InvoicesAllHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
 	XApideckConsumerID string `header:"style=simple,explode=false,name=x-apideck-consumer-id"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID *string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type InvoicesAllRequest struct {
-	QueryParams InvoicesAllQueryParams
-	Headers     InvoicesAllHeaders
-	Security    InvoicesAllSecurity
 }
 
 type InvoicesAllResponse struct {

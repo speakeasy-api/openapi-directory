@@ -37,14 +37,14 @@ func newPortfolioMemberships(defaultClient, securityClient HTTPClient, serverURL
 // Returns the complete portfolio record for a single portfolio membership.
 func (s *portfolioMemberships) GetPortfolioMembership(ctx context.Context, request operations.GetPortfolioMembershipRequest) (*operations.GetPortfolioMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolio_memberships/{portfolio_membership_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolio_memberships/{portfolio_membership_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -111,7 +111,7 @@ func (s *portfolioMemberships) GetPortfolioMemberships(ctx context.Context, requ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -171,14 +171,14 @@ func (s *portfolioMemberships) GetPortfolioMemberships(ctx context.Context, requ
 // Returns the compact portfolio membership records for the portfolio.
 func (s *portfolioMemberships) GetPortfolioMembershipsForPortfolio(ctx context.Context, request operations.GetPortfolioMembershipsForPortfolioRequest) (*operations.GetPortfolioMembershipsForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/portfolio_memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/portfolio_memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

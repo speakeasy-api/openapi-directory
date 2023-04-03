@@ -55,26 +55,18 @@ func (e *GETCreateConfigurationSetVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETCreateConfigurationSetQueryParams struct {
+type GETCreateConfigurationSetRequest struct {
 	Action GETCreateConfigurationSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A data structure that contains the name of the configuration set.
-	ConfigurationSet GETCreateConfigurationSetConfigurationSet `queryParam:"style=form,explode=true,name=ConfigurationSet"`
-	Version          GETCreateConfigurationSetVersionEnum      `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateConfigurationSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateConfigurationSetRequest struct {
-	QueryParams GETCreateConfigurationSetQueryParams
-	Headers     GETCreateConfigurationSetHeaders
+	ConfigurationSet  GETCreateConfigurationSetConfigurationSet `queryParam:"style=form,explode=true,name=ConfigurationSet"`
+	Version           GETCreateConfigurationSetVersionEnum      `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateConfigurationSetResponse struct {

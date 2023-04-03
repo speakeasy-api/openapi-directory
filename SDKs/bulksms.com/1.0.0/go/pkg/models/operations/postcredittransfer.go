@@ -4,18 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostCreditTransferSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCreditTransferRequest struct {
-	// Contains details of the transfer request.
-	//
-	Request  shared.TransferEntry `request:"mediaType=application/json"`
-	Security PostCreditTransferSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type PostCreditTransferResponse struct {

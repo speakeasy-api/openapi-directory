@@ -114,7 +114,7 @@ func (s *resources) RequestSubscriptionScopes(ctx context.Context) (*operations.
 // None.
 func (s *resources) RequestUserAvatar(ctx context.Context, request operations.RequestUserAvatarRequest) (*operations.RequestUserAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/resources/users/{user_id}/avatar/{uuid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/resources/users/{user_id}/avatar/{uuid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

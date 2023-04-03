@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type AttachSecurityProfilePathParams struct {
-	// The security profile that is attached.
-	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
-}
-
-type AttachSecurityProfileQueryParams struct {
-	// The ARN of the target (thing group) to which the security profile is attached.
-	SecurityProfileTargetArn string `queryParam:"style=form,explode=true,name=securityProfileTargetArn"`
-}
-
-type AttachSecurityProfileHeaders struct {
+type AttachSecurityProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type AttachSecurityProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AttachSecurityProfileRequest struct {
-	PathParams  AttachSecurityProfilePathParams
-	QueryParams AttachSecurityProfileQueryParams
-	Headers     AttachSecurityProfileHeaders
+	// The security profile that is attached.
+	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
+	// The ARN of the target (thing group) to which the security profile is attached.
+	SecurityProfileTargetArn string `queryParam:"style=form,explode=true,name=securityProfileTargetArn"`
 }
 
 type AttachSecurityProfileResponse struct {

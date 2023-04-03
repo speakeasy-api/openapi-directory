@@ -116,7 +116,7 @@ func (s *SDK) CreateGame(ctx context.Context, request operations.CreateGameReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/game"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) CreateGame(ctx context.Context, request operations.CreateGameReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -230,9 +230,9 @@ func (s *SDK) CreateGame(ctx context.Context, request operations.CreateGameReque
 // CreateSnapshot - Creates a snapshot of the game configuration.
 func (s *SDK) CreateSnapshot(ctx context.Context, request operations.CreateSnapshotRequest) (*operations.CreateSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *SDK) CreateSnapshot(ctx context.Context, request operations.CreateSnaps
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -346,9 +346,9 @@ func (s *SDK) CreateSnapshot(ctx context.Context, request operations.CreateSnaps
 // CreateStage - Creates a new stage for stage-by-stage game development and deployment.
 func (s *SDK) CreateStage(ctx context.Context, request operations.CreateStageRequest) (*operations.CreateStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -363,7 +363,7 @@ func (s *SDK) CreateStage(ctx context.Context, request operations.CreateStageReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -462,14 +462,14 @@ func (s *SDK) CreateStage(ctx context.Context, request operations.CreateStageReq
 // DeleteGame - Deletes a game.
 func (s *SDK) DeleteGame(ctx context.Context, request operations.DeleteGameRequest) (*operations.DeleteGameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -558,14 +558,14 @@ func (s *SDK) DeleteGame(ctx context.Context, request operations.DeleteGameReque
 // DeleteStage - Deletes a stage from a game, along with the associated game runtime.
 func (s *SDK) DeleteStage(ctx context.Context, request operations.DeleteStageRequest) (*operations.DeleteStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -664,14 +664,14 @@ func (s *SDK) DeleteStage(ctx context.Context, request operations.DeleteStageReq
 // DisconnectPlayer - <p>Disconnects a player from the game runtime.</p> <p> If a player has multiple connections, this operation attempts to close all of them. </p>
 func (s *SDK) DisconnectPlayer(ctx context.Context, request operations.DisconnectPlayerRequest) (*operations.DisconnectPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/runtime/game/{GameName}/stage/{StageName}/player/{PlayerId}/disconnect", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/runtime/game/{GameName}/stage/{StageName}/player/{PlayerId}/disconnect", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -760,14 +760,14 @@ func (s *SDK) DisconnectPlayer(ctx context.Context, request operations.Disconnec
 // ExportSnapshot - Exports a game configuration snapshot.
 func (s *SDK) ExportSnapshot(ctx context.Context, request operations.ExportSnapshotRequest) (*operations.ExportSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/export", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/export", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -856,14 +856,14 @@ func (s *SDK) ExportSnapshot(ctx context.Context, request operations.ExportSnaps
 // GetExtension - Gets details about a specified extension.
 func (s *SDK) GetExtension(ctx context.Context, request operations.GetExtensionRequest) (*operations.GetExtensionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extension/{Namespace}/{Name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extension/{Namespace}/{Name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -952,14 +952,14 @@ func (s *SDK) GetExtension(ctx context.Context, request operations.GetExtensionR
 // GetExtensionVersion - Gets details about a specified extension version.
 func (s *SDK) GetExtensionVersion(ctx context.Context, request operations.GetExtensionVersionRequest) (*operations.GetExtensionVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extension/{Namespace}/{Name}/version/{ExtensionVersion}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extension/{Namespace}/{Name}/version/{ExtensionVersion}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1048,14 +1048,14 @@ func (s *SDK) GetExtensionVersion(ctx context.Context, request operations.GetExt
 // GetGame - Gets details about a game.
 func (s *SDK) GetGame(ctx context.Context, request operations.GetGameRequest) (*operations.GetGameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1144,16 +1144,16 @@ func (s *SDK) GetGame(ctx context.Context, request operations.GetGameRequest) (*
 // GetGameConfiguration - Gets the configuration of the game.
 func (s *SDK) GetGameConfiguration(ctx context.Context, request operations.GetGameConfigurationRequest) (*operations.GetGameConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/configuration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1244,14 +1244,14 @@ func (s *SDK) GetGameConfiguration(ctx context.Context, request operations.GetGa
 // GetGeneratedCodeJob - Gets details about a job that is generating code for a snapshot.
 func (s *SDK) GetGeneratedCodeJob(ctx context.Context, request operations.GetGeneratedCodeJobRequest) (*operations.GetGeneratedCodeJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/generated-sdk-code-job/{JobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/generated-sdk-code-job/{JobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1340,14 +1340,14 @@ func (s *SDK) GetGeneratedCodeJob(ctx context.Context, request operations.GetGen
 // GetPlayerConnectionStatus - <p>Gets the status of a player's connection to the game runtime.</p> <p> It's possible for a single player to have multiple connections to the game runtime. If a player is not connected, this operation returns an empty list. </p>
 func (s *SDK) GetPlayerConnectionStatus(ctx context.Context, request operations.GetPlayerConnectionStatusRequest) (*operations.GetPlayerConnectionStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/runtime/game/{GameName}/stage/{StageName}/player/{PlayerId}/connection", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/runtime/game/{GameName}/stage/{StageName}/player/{PlayerId}/connection", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1436,16 +1436,16 @@ func (s *SDK) GetPlayerConnectionStatus(ctx context.Context, request operations.
 // GetSnapshot - Gets a copy of the game configuration in a snapshot.
 func (s *SDK) GetSnapshot(ctx context.Context, request operations.GetSnapshotRequest) (*operations.GetSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1536,14 +1536,14 @@ func (s *SDK) GetSnapshot(ctx context.Context, request operations.GetSnapshotReq
 // GetStage - Gets information about a stage.
 func (s *SDK) GetStage(ctx context.Context, request operations.GetStageRequest) (*operations.GetStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1632,16 +1632,16 @@ func (s *SDK) GetStage(ctx context.Context, request operations.GetStageRequest) 
 // GetStageDeployment - Gets information about a stage deployment.
 func (s *SDK) GetStageDeployment(ctx context.Context, request operations.GetStageDeploymentRequest) (*operations.GetStageDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}/deployment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}/deployment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1732,9 +1732,9 @@ func (s *SDK) GetStageDeployment(ctx context.Context, request operations.GetStag
 // ImportGameConfiguration - <p>Imports a game configuration.</p> <p> This operation replaces the current configuration of the game with the provided input. This is not a reversible operation. If you want to preserve the previous configuration, use <code>CreateSnapshot</code> to make a new snapshot before importing. </p>
 func (s *SDK) ImportGameConfiguration(ctx context.Context, request operations.ImportGameConfigurationRequest) (*operations.ImportGameConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1749,7 +1749,7 @@ func (s *SDK) ImportGameConfiguration(ctx context.Context, request operations.Im
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1848,16 +1848,16 @@ func (s *SDK) ImportGameConfiguration(ctx context.Context, request operations.Im
 // ListExtensionVersions - <p>Gets a paginated list of available versions for the extension.</p> <p> Each time an API change is made to an extension, the version is incremented. The list retrieved by this operation shows the versions that are currently available. </p>
 func (s *SDK) ListExtensionVersions(ctx context.Context, request operations.ListExtensionVersionsRequest) (*operations.ListExtensionVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/extension/{Namespace}/{Name}/version", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/extension/{Namespace}/{Name}/version", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1955,9 +1955,9 @@ func (s *SDK) ListExtensions(ctx context.Context, request operations.ListExtensi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2045,9 +2045,9 @@ func (s *SDK) ListGames(ctx context.Context, request operations.ListGamesRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2128,16 +2128,16 @@ func (s *SDK) ListGames(ctx context.Context, request operations.ListGamesRequest
 // ListGeneratedCodeJobs - Gets a paginated list of code generation jobs for a snapshot.
 func (s *SDK) ListGeneratedCodeJobs(ctx context.Context, request operations.ListGeneratedCodeJobsRequest) (*operations.ListGeneratedCodeJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/generated-sdk-code-jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/generated-sdk-code-jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2228,16 +2228,16 @@ func (s *SDK) ListGeneratedCodeJobs(ctx context.Context, request operations.List
 // ListSnapshots - Gets a paginated list of snapshot summaries from the game.
 func (s *SDK) ListSnapshots(ctx context.Context, request operations.ListSnapshotsRequest) (*operations.ListSnapshotsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2328,16 +2328,16 @@ func (s *SDK) ListSnapshots(ctx context.Context, request operations.ListSnapshot
 // ListStageDeployments - Gets a paginated list of stage deployment summaries from the game.
 func (s *SDK) ListStageDeployments(ctx context.Context, request operations.ListStageDeploymentsRequest) (*operations.ListStageDeploymentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}/deployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2428,16 +2428,16 @@ func (s *SDK) ListStageDeployments(ctx context.Context, request operations.ListS
 // ListStages - Gets a paginated list of stage summaries from the game.
 func (s *SDK) ListStages(ctx context.Context, request operations.ListStagesRequest) (*operations.ListStagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2528,14 +2528,14 @@ func (s *SDK) ListStages(ctx context.Context, request operations.ListStagesReque
 // ListTagsForResource - Lists the tags associated with a GameSparks resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2604,9 +2604,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // StartGeneratedCodeJob -  Starts an asynchronous process that generates client code for system-defined and custom messages. The resulting code is collected as a .zip file and uploaded to a pre-signed Amazon S3 URL.
 func (s *SDK) StartGeneratedCodeJob(ctx context.Context, request operations.StartGeneratedCodeJobRequest) (*operations.StartGeneratedCodeJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/generated-sdk-code-job", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}/generated-sdk-code-job", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2621,7 +2621,7 @@ func (s *SDK) StartGeneratedCodeJob(ctx context.Context, request operations.Star
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2710,9 +2710,9 @@ func (s *SDK) StartGeneratedCodeJob(ctx context.Context, request operations.Star
 // StartStageDeployment - <p>Deploys a snapshot to the stage and creates a new game runtime.</p> <p> After you call this operation, you can check the deployment status by using <code>GetStageDeployment</code>. </p> <p> If there are any players connected to the previous game runtime, then both runtimes persist. Existing connections to the previous runtime are maintained. When players disconnect and reconnect, they connect to the new runtime. After there are no connections to the previous game runtime, it is deleted. </p>
 func (s *SDK) StartStageDeployment(ctx context.Context, request operations.StartStageDeploymentRequest) (*operations.StartStageDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}/deployment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}/deployment", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2727,7 +2727,7 @@ func (s *SDK) StartStageDeployment(ctx context.Context, request operations.Start
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2826,9 +2826,9 @@ func (s *SDK) StartStageDeployment(ctx context.Context, request operations.Start
 // TagResource - Adds tags to a GameSparks resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2843,7 +2843,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2912,16 +2912,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from a GameSparks resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2992,9 +2992,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateGame - Updates details of the game.
 func (s *SDK) UpdateGame(ctx context.Context, request operations.UpdateGameRequest) (*operations.UpdateGameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3009,7 +3009,7 @@ func (s *SDK) UpdateGame(ctx context.Context, request operations.UpdateGameReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3098,9 +3098,9 @@ func (s *SDK) UpdateGame(ctx context.Context, request operations.UpdateGameReque
 // UpdateGameConfiguration - Updates one or more sections of the game configuration.
 func (s *SDK) UpdateGameConfiguration(ctx context.Context, request operations.UpdateGameConfigurationRequest) (*operations.UpdateGameConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/configuration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/configuration", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3115,7 +3115,7 @@ func (s *SDK) UpdateGameConfiguration(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3214,9 +3214,9 @@ func (s *SDK) UpdateGameConfiguration(ctx context.Context, request operations.Up
 // UpdateSnapshot - Updates the metadata of a GameSparks snapshot.
 func (s *SDK) UpdateSnapshot(ctx context.Context, request operations.UpdateSnapshotRequest) (*operations.UpdateSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/snapshot/{SnapshotId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3231,7 +3231,7 @@ func (s *SDK) UpdateSnapshot(ctx context.Context, request operations.UpdateSnaps
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3320,9 +3320,9 @@ func (s *SDK) UpdateSnapshot(ctx context.Context, request operations.UpdateSnaps
 // UpdateStage - Updates the metadata of a stage.
 func (s *SDK) UpdateStage(ctx context.Context, request operations.UpdateStageRequest) (*operations.UpdateStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/game/{GameName}/stage/{StageName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3337,7 +3337,7 @@ func (s *SDK) UpdateStage(ctx context.Context, request operations.UpdateStageReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

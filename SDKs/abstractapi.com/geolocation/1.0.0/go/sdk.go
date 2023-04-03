@@ -94,10 +94,20 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // GetV1 - Retrieve the location of an IP address
-func (s *SDK) GetV1(ctx context.Context, request operations.GetV1Request) (*operations.GetV1Response, error) {
+func (s *SDK) GetV1(ctx context.Context, request operations.GetV1Request, opts ...operations.Option) (*operations.GetV1Response, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionServerURL,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
 	baseURL := operations.GetV1ServerList[0]
-	if request.ServerURL != nil {
-		baseURL = *request.ServerURL
+	if o.ServerURL != nil {
+		baseURL = *o.ServerURL
 	}
 
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/"
@@ -107,7 +117,7 @@ func (s *SDK) GetV1(ctx context.Context, request operations.GetV1Request) (*oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

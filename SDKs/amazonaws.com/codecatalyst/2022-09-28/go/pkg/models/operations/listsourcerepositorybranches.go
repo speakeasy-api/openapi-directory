@@ -7,22 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSourceRepositoryBranchesPathParams struct {
-	// The name of the project in the space.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-	// The name of the source repository.
-	SourceRepositoryName string `pathParam:"style=simple,explode=false,name=sourceRepositoryName"`
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type ListSourceRepositoryBranchesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListSourceRepositoryBranchesRequestBody struct {
 	// The maximum number of results to show in a single call to this API. If the number of results is larger than the number you specified, the response will include a <code>NextToken</code> element, which you can use to obtain additional results.
 	MaxResults *int64 `json:"maxResults,omitempty"`
@@ -31,9 +15,17 @@ type ListSourceRepositoryBranchesRequestBody struct {
 }
 
 type ListSourceRepositoryBranchesRequest struct {
-	PathParams  ListSourceRepositoryBranchesPathParams
-	QueryParams ListSourceRepositoryBranchesQueryParams
-	Request     ListSourceRepositoryBranchesRequestBody `request:"mediaType=application/json"`
+	RequestBody ListSourceRepositoryBranchesRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name of the project in the space.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
+	// The name of the source repository.
+	SourceRepositoryName string `pathParam:"style=simple,explode=false,name=sourceRepositoryName"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type ListSourceRepositoryBranchesResponse struct {

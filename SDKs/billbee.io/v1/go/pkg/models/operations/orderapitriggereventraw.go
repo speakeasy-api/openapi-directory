@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type OrderAPITriggerEventRawPathParams struct {
+type OrderAPITriggerEventRawRequest struct {
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// The id of the order
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type OrderAPITriggerEventRawRequest struct {
-	PathParams OrderAPITriggerEventRawPathParams
-	Request    []byte `request:"mediaType=text/xml"`
 }
 
 type OrderAPITriggerEventRawResponse struct {

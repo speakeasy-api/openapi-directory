@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeywordSearchQueryParams struct {
+type KeywordSearchRequest struct {
 	// domain for the search
 	DomainCode string `queryParam:"style=form,explode=true,name=domainCode"`
 	// keyword to search
@@ -16,10 +16,6 @@ type KeywordSearchQueryParams struct {
 	NumberOfProducts *int64 `queryParam:"style=form,explode=true,name=numberOfProducts"`
 	// sort option
 	SortBy *string `queryParam:"style=form,explode=true,name=sortBy"`
-}
-
-type KeywordSearchRequest struct {
-	QueryParams KeywordSearchQueryParams
 }
 
 type KeywordSearchResponse struct {

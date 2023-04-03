@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetDatapointsCountPathParams struct {
-	// Id of the group
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GroupsGetDatapointsCountStatusEnum - Status of the datapoint
 type GroupsGetDatapointsCountStatusEnum string
 
@@ -68,11 +63,13 @@ func (e *GroupsGetDatapointsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroupsGetDatapointsCountQueryParams struct {
+type GroupsGetDatapointsCountRequest struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
 	CreatedBefore *string `queryParam:"style=form,explode=true,name=createdBefore"`
+	// Id of the group
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Filter fields by favourite status
 	OnlyFavorites *bool `queryParam:"style=form,explode=true,name=onlyFavorites"`
 	// Status of the datapoint
@@ -83,11 +80,6 @@ type GroupsGetDatapointsCountQueryParams struct {
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Type of the datapoint ("tp"/"tl")
 	Type *GroupsGetDatapointsCountTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GroupsGetDatapointsCountRequest struct {
-	PathParams  GroupsGetDatapointsCountPathParams
-	QueryParams GroupsGetDatapointsCountQueryParams
 }
 
 type GroupsGetDatapointsCountResponse struct {

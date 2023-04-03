@@ -44,9 +44,9 @@ func (s *publicIPAddresses) GetContainersFloatingIps(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,7 +98,7 @@ func (s *publicIPAddresses) PostContainersFloatingIpsRequest(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -146,14 +146,14 @@ func (s *publicIPAddresses) PostContainersFloatingIpsRequest(ctx context.Context
 // This endpoint releases a public IP address from a space (corresponding IBM Containers command: `cf ic ip release <ip_adress>`). The public IP address is no longer allocated to the space. If a container was bound to the IP address, it is automatically unbound.
 func (s *publicIPAddresses) PostContainersFloatingIpsIPRelease(ctx context.Context, request operations.PostContainersFloatingIpsIPReleaseRequest) (*operations.PostContainersFloatingIpsIPReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/floating-ips/{ip}/release", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/floating-ips/{ip}/release", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -190,14 +190,14 @@ func (s *publicIPAddresses) PostContainersFloatingIpsIPRelease(ctx context.Conte
 // This endpoint binds an available public IP address to a single container (corresponding IBM Containers command: `cf ic ip bind <ip_adress> <container>`). After a container is bound to a public IP address, it can be accessed at `https://<public_ip_adress>:<public_port>`.
 func (s *publicIPAddresses) PostContainersNameOrIDFloatingIpsIPBind(ctx context.Context, request operations.PostContainersNameOrIDFloatingIpsIPBindRequest) (*operations.PostContainersNameOrIDFloatingIpsIPBindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/floating-ips/{ip}/bind", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/floating-ips/{ip}/bind", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -238,14 +238,14 @@ func (s *publicIPAddresses) PostContainersNameOrIDFloatingIpsIPBind(ctx context.
 // This endpoint unbinds a public IP address from a container (corresponding IBM Containers command: `cf ic ip unbind <ip_adress> <container>`). The container that is unbound from the IP address will not be accessible from the internet anymore. The public IP address will be further allocated to the space and can be used to be bound to other containers.
 func (s *publicIPAddresses) PostContainersNameOrIDFloatingIpsIPUnbind(ctx context.Context, request operations.PostContainersNameOrIDFloatingIpsIPUnbindRequest) (*operations.PostContainersNameOrIDFloatingIpsIPUnbindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/floating-ips/{ip}/unbind", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/floating-ips/{ip}/unbind", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

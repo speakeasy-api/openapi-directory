@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type PutDedicatedIPWarmupAttributesPathParams struct {
-	// The dedicated IP address that you want to update the warm-up attributes for.
-	IP string `pathParam:"style=simple,explode=false,name=IP"`
-}
-
-type PutDedicatedIPWarmupAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutDedicatedIPWarmupAttributesRequestBody struct {
 	// The warm-up percentage that you want to associate with the dedicated IP address.
 	WarmupPercentage int64 `json:"WarmupPercentage"`
 }
 
 type PutDedicatedIPWarmupAttributesRequest struct {
-	PathParams PutDedicatedIPWarmupAttributesPathParams
-	Headers    PutDedicatedIPWarmupAttributesHeaders
-	Request    PutDedicatedIPWarmupAttributesRequestBody `request:"mediaType=application/json"`
+	// The dedicated IP address that you want to update the warm-up attributes for.
+	IP                string                                    `pathParam:"style=simple,explode=false,name=IP"`
+	RequestBody       PutDedicatedIPWarmupAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutDedicatedIPWarmupAttributesResponse struct {

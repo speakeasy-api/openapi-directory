@@ -50,29 +50,21 @@ func (e *POSTDescribeClientVpnRoutesVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTDescribeClientVpnRoutesQueryParams struct {
+type POSTDescribeClientVpnRoutesRequest struct {
 	Action POSTDescribeClientVpnRoutesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination limit
 	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token
-	NextToken *string                                `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTDescribeClientVpnRoutesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDescribeClientVpnRoutesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTDescribeClientVpnRoutesRequest struct {
-	QueryParams POSTDescribeClientVpnRoutesQueryParams
-	Headers     POSTDescribeClientVpnRoutesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                                `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTDescribeClientVpnRoutesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDescribeClientVpnRoutesResponse struct {

@@ -50,7 +50,7 @@ func (e *GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum) UnmarshalJSO
 	}
 }
 
-type GETRegisterTransitGatewayMulticastGroupSourcesQueryParams struct {
+type GETRegisterTransitGatewayMulticastGroupSourcesRequest struct {
 	Action GETRegisterTransitGatewayMulticastGroupSourcesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -61,21 +61,13 @@ type GETRegisterTransitGatewayMulticastGroupSourcesQueryParams struct {
 	// The ID of the transit gateway multicast domain.
 	TransitGatewayMulticastDomainID string                                                    `queryParam:"style=form,explode=true,name=TransitGatewayMulticastDomainId"`
 	Version                         GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRegisterTransitGatewayMulticastGroupSourcesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRegisterTransitGatewayMulticastGroupSourcesRequest struct {
-	QueryParams GETRegisterTransitGatewayMulticastGroupSourcesQueryParams
-	Headers     GETRegisterTransitGatewayMulticastGroupSourcesHeaders
+	XAmzAlgorithm                   *string                                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRegisterTransitGatewayMulticastGroupSourcesResponse struct {

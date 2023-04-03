@@ -50,28 +50,20 @@ func (e *GETDeleteEnvironmentConfigurationVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETDeleteEnvironmentConfigurationQueryParams struct {
+type GETDeleteEnvironmentConfigurationRequest struct {
 	Action GETDeleteEnvironmentConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the application the environment is associated with.
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
 	// The name of the environment to delete the draft configuration from.
-	EnvironmentName string                                       `queryParam:"style=form,explode=true,name=EnvironmentName"`
-	Version         GETDeleteEnvironmentConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteEnvironmentConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteEnvironmentConfigurationRequest struct {
-	QueryParams GETDeleteEnvironmentConfigurationQueryParams
-	Headers     GETDeleteEnvironmentConfigurationHeaders
+	EnvironmentName   string                                       `queryParam:"style=form,explode=true,name=EnvironmentName"`
+	Version           GETDeleteEnvironmentConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteEnvironmentConfigurationResponse struct {

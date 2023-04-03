@@ -25,7 +25,6 @@ pkg/models/operations/delete.go
 pkg/models/operations/deletenetwork.go
 pkg/models/operations/export.go
 pkg/models/operations/list.go
-pkg/models/shared/security.go
 pkg/models/shared/transmitter.go
 pkg/models/shared/receiver.go
 pkg/models/shared/output.go
@@ -34,4 +33,5 @@ pkg/models/shared/environment.go
 pkg/models/shared/antenna.go
 pkg/models/shared/point.go
 pkg/models/shared/feature.go
+pkg/models/shared/security.go
 USAGE.md

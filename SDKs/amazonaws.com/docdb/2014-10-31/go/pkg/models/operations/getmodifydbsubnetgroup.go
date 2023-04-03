@@ -50,30 +50,22 @@ func (e *GETModifyDBSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyDBSubnetGroupQueryParams struct {
+type GETModifyDBSubnetGroupRequest struct {
 	Action GETModifyDBSubnetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The description for the subnet group.
 	DBSubnetGroupDescription *string `queryParam:"style=form,explode=true,name=DBSubnetGroupDescription"`
 	// <p>The name for the subnet group. This value is stored as a lowercase string. You can't modify the default subnet group. </p> <p>Constraints: Must match the name of an existing <code>DBSubnetGroup</code>. Must not be default.</p> <p>Example: <code>mySubnetgroup</code> </p>
 	DBSubnetGroupName string `queryParam:"style=form,explode=true,name=DBSubnetGroupName"`
 	// The Amazon EC2 subnet IDs for the subnet group.
-	SubnetIds []string                          `queryParam:"style=form,explode=true,name=SubnetIds"`
-	Version   GETModifyDBSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyDBSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyDBSubnetGroupRequest struct {
-	QueryParams GETModifyDBSubnetGroupQueryParams
-	Headers     GETModifyDBSubnetGroupHeaders
+	SubnetIds         []string                          `queryParam:"style=form,explode=true,name=SubnetIds"`
+	Version           GETModifyDBSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyDBSubnetGroupResponse struct {

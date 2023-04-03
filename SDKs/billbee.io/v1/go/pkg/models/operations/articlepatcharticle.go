@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type ArticlePatchArticlePathParams struct {
+type ArticlePatchArticleRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The id of the Product
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ArticlePatchArticleRequest struct {
-	PathParams ArticlePatchArticlePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type ArticlePatchArticleResponse struct {

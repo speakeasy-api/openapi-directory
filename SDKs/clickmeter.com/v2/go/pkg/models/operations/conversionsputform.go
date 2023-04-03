@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPutFormRequest struct {
-	// The body of the conversion
-	Request shared.APICoreDtoConversionsConversion `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type ConversionsPutFormResponse struct {
 	APICoreResponsesEntityURISystemInt64 *shared.APICoreResponsesEntityURISystemInt64
 	Body                                 []byte

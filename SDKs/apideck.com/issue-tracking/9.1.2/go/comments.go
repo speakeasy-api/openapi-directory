@@ -33,11 +33,11 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // CollectionTicketCommentsAdd - Create Comment
 // Create Comment
-func (s *comments) CollectionTicketCommentsAdd(ctx context.Context, request operations.CollectionTicketCommentsAddRequest) (*operations.CollectionTicketCommentsAddResponse, error) {
+func (s *comments) CollectionTicketCommentsAdd(ctx context.Context, request operations.CollectionTicketCommentsAddRequest, security operations.CollectionTicketCommentsAddSecurity) (*operations.CollectionTicketCommentsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionTicketCommentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -52,13 +52,13 @@ func (s *comments) CollectionTicketCommentsAdd(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -154,22 +154,22 @@ func (s *comments) CollectionTicketCommentsAdd(ctx context.Context, request oper
 
 // CollectionTicketCommentsAll - List Comments
 // List Comments
-func (s *comments) CollectionTicketCommentsAll(ctx context.Context, request operations.CollectionTicketCommentsAllRequest) (*operations.CollectionTicketCommentsAllResponse, error) {
+func (s *comments) CollectionTicketCommentsAll(ctx context.Context, request operations.CollectionTicketCommentsAllRequest, security operations.CollectionTicketCommentsAllSecurity) (*operations.CollectionTicketCommentsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -265,22 +265,22 @@ func (s *comments) CollectionTicketCommentsAll(ctx context.Context, request oper
 
 // CollectionTicketCommentsDelete - Delete Comment
 // Delete Comment
-func (s *comments) CollectionTicketCommentsDelete(ctx context.Context, request operations.CollectionTicketCommentsDeleteRequest) (*operations.CollectionTicketCommentsDeleteResponse, error) {
+func (s *comments) CollectionTicketCommentsDelete(ctx context.Context, request operations.CollectionTicketCommentsDeleteRequest, security operations.CollectionTicketCommentsDeleteSecurity) (*operations.CollectionTicketCommentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -376,22 +376,22 @@ func (s *comments) CollectionTicketCommentsDelete(ctx context.Context, request o
 
 // CollectionTicketCommentsOne - Get Comment
 // Get Comment
-func (s *comments) CollectionTicketCommentsOne(ctx context.Context, request operations.CollectionTicketCommentsOneRequest) (*operations.CollectionTicketCommentsOneResponse, error) {
+func (s *comments) CollectionTicketCommentsOne(ctx context.Context, request operations.CollectionTicketCommentsOneRequest, security operations.CollectionTicketCommentsOneSecurity) (*operations.CollectionTicketCommentsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -487,11 +487,11 @@ func (s *comments) CollectionTicketCommentsOne(ctx context.Context, request oper
 
 // CollectionTicketCommentsUpdate - Update Comment
 // Update Comment
-func (s *comments) CollectionTicketCommentsUpdate(ctx context.Context, request operations.CollectionTicketCommentsUpdateRequest) (*operations.CollectionTicketCommentsUpdateResponse, error) {
+func (s *comments) CollectionTicketCommentsUpdate(ctx context.Context, request operations.CollectionTicketCommentsUpdateRequest, security operations.CollectionTicketCommentsUpdateSecurity) (*operations.CollectionTicketCommentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/tickets/{ticket_id}/comments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionTicketCommentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -506,13 +506,13 @@ func (s *comments) CollectionTicketCommentsUpdate(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

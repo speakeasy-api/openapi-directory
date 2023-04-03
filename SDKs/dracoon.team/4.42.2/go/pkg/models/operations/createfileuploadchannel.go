@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateFileUploadChannelHeaders struct {
+type CreateFileUploadChannelRequest struct {
+	CreateFileUploadRequest shared.CreateFileUploadRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CreateFileUploadChannelRequest struct {
-	Headers CreateFileUploadChannelHeaders
-	Request shared.CreateFileUploadRequest `request:"mediaType=application/json"`
 }
 
 type CreateFileUploadChannelResponse struct {

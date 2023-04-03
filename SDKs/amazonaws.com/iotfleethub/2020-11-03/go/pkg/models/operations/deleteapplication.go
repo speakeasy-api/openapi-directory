@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteApplicationPathParams struct {
-	// The unique Id of the web application.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type DeleteApplicationQueryParams struct {
-	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteApplicationHeaders struct {
+type DeleteApplicationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteApplicationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteApplicationRequest struct {
-	PathParams  DeleteApplicationPathParams
-	QueryParams DeleteApplicationQueryParams
-	Headers     DeleteApplicationHeaders
+	// The unique Id of the web application.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
+	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
 }
 
 type DeleteApplicationResponse struct {

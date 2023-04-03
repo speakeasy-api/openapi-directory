@@ -6,14 +6,10 @@ import (
 	"net/http"
 )
 
-type GetGetEventsQueryParams struct {
+type GetGetEventsRequest struct {
 	IsFiltered *bool  `queryParam:"style=form,explode=true,name=is_filtered"`
 	Page       *int64 `queryParam:"style=form,explode=true,name=page"`
 	PageSize   *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetGetEventsRequest struct {
-	QueryParams GetGetEventsQueryParams
 }
 
 type GetGetEventsResponse struct {

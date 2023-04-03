@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMissionProfilePathParams struct {
-	// UUID of a mission profile.
-	MissionProfileID string `pathParam:"style=simple,explode=false,name=missionProfileId"`
-}
-
-type UpdateMissionProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateMissionProfileRequestBodyStreamsKmsKey - AWS Key Management Service (KMS) Key.
 type UpdateMissionProfileRequestBodyStreamsKmsKey struct {
 	KmsAliasArn *string `json:"kmsAliasArn,omitempty"`
@@ -48,9 +33,16 @@ type UpdateMissionProfileRequestBody struct {
 }
 
 type UpdateMissionProfileRequest struct {
-	PathParams UpdateMissionProfilePathParams
-	Headers    UpdateMissionProfileHeaders
-	Request    UpdateMissionProfileRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateMissionProfileRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// UUID of a mission profile.
+	MissionProfileID string `pathParam:"style=simple,explode=false,name=missionProfileId"`
 }
 
 type UpdateMissionProfileResponse struct {

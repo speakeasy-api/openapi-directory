@@ -50,19 +50,15 @@ func (e *POSTCreateDomainVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateDomainQueryParams struct {
+type POSTCreateDomainRequest struct {
 	AWSAccessKeyID   string                      `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           POSTCreateDomainActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody      []byte                      `request:"mediaType=text/xml"`
 	Signature        string                      `queryParam:"style=form,explode=true,name=Signature"`
 	SignatureMethod  string                      `queryParam:"style=form,explode=true,name=SignatureMethod"`
 	SignatureVersion string                      `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                      `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          POSTCreateDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateDomainRequest struct {
-	QueryParams POSTCreateDomainQueryParams
-	Request     []byte `request:"mediaType=text/xml"`
 }
 
 type POSTCreateDomainResponse struct {

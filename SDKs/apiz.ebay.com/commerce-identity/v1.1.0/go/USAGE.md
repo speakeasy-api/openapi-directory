@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetUserRequest{
-        Security: operations.GetUserSecurity{
-            APIAuth: shared.SchemeAPIAuth{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.User.GetUser(ctx, req)
+    res, err := s.User.GetUser(ctx)
     if err != nil {
         log.Fatal(err)
     }

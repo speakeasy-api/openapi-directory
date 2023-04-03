@@ -50,7 +50,7 @@ func newAddon(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //	  -H "Authorization: JWT <JWT Token>"
 //
 // ```
-func (s *addon) DeleteAddon(ctx context.Context, request operations.DeleteAddonRequest) (*operations.DeleteAddonResponse, error) {
+func (s *addon) DeleteAddon(ctx context.Context) (*operations.DeleteAddonResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addon"
 
@@ -59,7 +59,7 @@ func (s *addon) DeleteAddon(ctx context.Context, request operations.DeleteAddonR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,16 +99,16 @@ func (s *addon) DeleteAddon(ctx context.Context, request operations.DeleteAddonR
 // DeleteAddonLinkersLinkerKeyValues - Delete all linker values
 // Delete all [linker](/cloud/bitbucket/modules/linker/) values for the
 // specified linker of the authenticated application.
-func (s *addon) DeleteAddonLinkersLinkerKeyValues(ctx context.Context, request operations.DeleteAddonLinkersLinkerKeyValuesRequest) (*operations.DeleteAddonLinkersLinkerKeyValuesResponse, error) {
+func (s *addon) DeleteAddonLinkersLinkerKeyValues(ctx context.Context, request operations.DeleteAddonLinkersLinkerKeyValuesRequest, security operations.DeleteAddonLinkersLinkerKeyValuesSecurity) (*operations.DeleteAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,16 +148,16 @@ func (s *addon) DeleteAddonLinkersLinkerKeyValues(ctx context.Context, request o
 // DeleteAddonLinkersLinkerKeyValuesValueID - Delete a linker value
 // Delete a single [linker](/cloud/bitbucket/modules/linker/) value
 // of the authenticated application.
-func (s *addon) DeleteAddonLinkersLinkerKeyValuesValueID(ctx context.Context, request operations.DeleteAddonLinkersLinkerKeyValuesValueIDRequest) (*operations.DeleteAddonLinkersLinkerKeyValuesValueIDResponse, error) {
+func (s *addon) DeleteAddonLinkersLinkerKeyValuesValueID(ctx context.Context, request operations.DeleteAddonLinkersLinkerKeyValuesValueIDRequest, security operations.DeleteAddonLinkersLinkerKeyValuesValueIDSecurity) (*operations.DeleteAddonLinkersLinkerKeyValuesValueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *addon) DeleteAddonLinkersLinkerKeyValuesValueID(ctx context.Context, re
 // GetAddonLinkers - List linkers for an app
 // Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
 // for the authenticated application.
-func (s *addon) GetAddonLinkers(ctx context.Context, request operations.GetAddonLinkersRequest) (*operations.GetAddonLinkersResponse, error) {
+func (s *addon) GetAddonLinkers(ctx context.Context) (*operations.GetAddonLinkersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addon/linkers"
 
@@ -206,7 +206,7 @@ func (s *addon) GetAddonLinkers(ctx context.Context, request operations.GetAddon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -244,16 +244,16 @@ func (s *addon) GetAddonLinkers(ctx context.Context, request operations.GetAddon
 // GetAddonLinkersLinkerKey - Get a linker for an app
 // Gets a [linker](/cloud/bitbucket/modules/linker/) specified by `linker_key`
 // for the authenticated application.
-func (s *addon) GetAddonLinkersLinkerKey(ctx context.Context, request operations.GetAddonLinkersLinkerKeyRequest) (*operations.GetAddonLinkersLinkerKeyResponse, error) {
+func (s *addon) GetAddonLinkersLinkerKey(ctx context.Context, request operations.GetAddonLinkersLinkerKeyRequest, security operations.GetAddonLinkersLinkerKeySecurity) (*operations.GetAddonLinkersLinkerKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -300,16 +300,16 @@ func (s *addon) GetAddonLinkersLinkerKey(ctx context.Context, request operations
 // which will be translated to `([\w\-]+)`. A value must match this pattern.
 //
 // [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
-func (s *addon) GetAddonLinkersLinkerKeyValues(ctx context.Context, request operations.GetAddonLinkersLinkerKeyValuesRequest) (*operations.GetAddonLinkersLinkerKeyValuesResponse, error) {
+func (s *addon) GetAddonLinkersLinkerKeyValues(ctx context.Context, request operations.GetAddonLinkersLinkerKeyValuesRequest, security operations.GetAddonLinkersLinkerKeyValuesSecurity) (*operations.GetAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -349,16 +349,16 @@ func (s *addon) GetAddonLinkersLinkerKeyValues(ctx context.Context, request oper
 // GetAddonLinkersLinkerKeyValuesValueID - Get a linker value
 // Get a single [linker](/cloud/bitbucket/modules/linker/) value
 // of the authenticated application.
-func (s *addon) GetAddonLinkersLinkerKeyValuesValueID(ctx context.Context, request operations.GetAddonLinkersLinkerKeyValuesValueIDRequest) (*operations.GetAddonLinkersLinkerKeyValuesValueIDResponse, error) {
+func (s *addon) GetAddonLinkersLinkerKeyValuesValueID(ctx context.Context, request operations.GetAddonLinkersLinkerKeyValuesValueIDRequest, security operations.GetAddonLinkersLinkerKeyValuesValueIDSecurity) (*operations.GetAddonLinkersLinkerKeyValuesValueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -405,16 +405,16 @@ func (s *addon) GetAddonLinkersLinkerKeyValuesValueID(ctx context.Context, reque
 // which will be translated to `([\w\-]+)`. A value must match this pattern.
 //
 // [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
-func (s *addon) PostAddonLinkersLinkerKeyValues(ctx context.Context, request operations.PostAddonLinkersLinkerKeyValuesRequest) (*operations.PostAddonLinkersLinkerKeyValuesResponse, error) {
+func (s *addon) PostAddonLinkersLinkerKeyValues(ctx context.Context, request operations.PostAddonLinkersLinkerKeyValuesRequest, security operations.PostAddonLinkersLinkerKeyValuesSecurity) (*operations.PostAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -507,7 +507,7 @@ func (s *addon) PostAddonLinkersLinkerKeyValues(ctx context.Context, request ope
 //
 // Note that the scopes of the application cannot be increased
 // in the new descriptor nor reduced to none.
-func (s *addon) PutAddon(ctx context.Context, request operations.PutAddonRequest) (*operations.PutAddonResponse, error) {
+func (s *addon) PutAddon(ctx context.Context) (*operations.PutAddonResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addon"
 
@@ -516,7 +516,7 @@ func (s *addon) PutAddon(ctx context.Context, request operations.PutAddonRequest
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -565,16 +565,16 @@ func (s *addon) PutAddon(ctx context.Context, request operations.PutAddonRequest
 // which will be translated to `([\w\-]+)`. A value must match this pattern.
 //
 // [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
-func (s *addon) PutAddonLinkersLinkerKeyValues(ctx context.Context, request operations.PutAddonLinkersLinkerKeyValuesRequest) (*operations.PutAddonLinkersLinkerKeyValuesResponse, error) {
+func (s *addon) PutAddonLinkersLinkerKeyValues(ctx context.Context, request operations.PutAddonLinkersLinkerKeyValuesRequest, security operations.PutAddonLinkersLinkerKeyValuesSecurity) (*operations.PutAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

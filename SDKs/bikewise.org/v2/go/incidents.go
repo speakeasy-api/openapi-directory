@@ -48,7 +48,7 @@ func (s *incidents) GETVersionIncidentsFormat(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -78,7 +78,7 @@ func (s *incidents) GETVersionIncidentsFormat(ctx context.Context, request opera
 }
 func (s *incidents) GETVersionIncidentsIDFormat(ctx context.Context, request operations.GETVersionIncidentsIDFormatRequest) (*operations.GETVersionIncidentsIDFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/incidents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/incidents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

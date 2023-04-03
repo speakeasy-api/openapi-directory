@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestAuthorizationQueryParams struct {
-	// The MQTT client ID.
-	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
-}
-
-type TestAuthorizationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type TestAuthorizationRequestBody struct {
 	// A list of authorization info objects. Simulating authorization will create a response for each <code>authInfo</code> object in the list.
 	AuthInfos []shared.AuthInfo `json:"authInfos"`
@@ -36,9 +21,16 @@ type TestAuthorizationRequestBody struct {
 }
 
 type TestAuthorizationRequest struct {
-	QueryParams TestAuthorizationQueryParams
-	Headers     TestAuthorizationHeaders
-	Request     TestAuthorizationRequestBody `request:"mediaType=application/json"`
+	RequestBody       TestAuthorizationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The MQTT client ID.
+	ClientID *string `queryParam:"style=form,explode=true,name=clientId"`
 }
 
 type TestAuthorizationResponse struct {

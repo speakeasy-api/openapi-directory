@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProgressUpdateStreamsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListProgressUpdateStreamsXAmzTargetEnum
 type ListProgressUpdateStreamsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListProgressUpdateStreamsXAmzTargetEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type ListProgressUpdateStreamsHeaders struct {
+type ListProgressUpdateStreamsRequest struct {
+	ListProgressUpdateStreamsRequest shared.ListProgressUpdateStreamsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                 `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListProgressUpdateStreamsHeaders struct {
 	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListProgressUpdateStreamsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListProgressUpdateStreamsRequest struct {
-	QueryParams ListProgressUpdateStreamsQueryParams
-	Headers     ListProgressUpdateStreamsHeaders
-	Request     shared.ListProgressUpdateStreamsRequest `request:"mediaType=application/json"`
 }
 
 type ListProgressUpdateStreamsResponse struct {

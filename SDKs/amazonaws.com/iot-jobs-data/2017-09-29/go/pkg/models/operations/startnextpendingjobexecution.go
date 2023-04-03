@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartNextPendingJobExecutionPathParams struct {
-	// The name of the thing associated with the device.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
-type StartNextPendingJobExecutionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type StartNextPendingJobExecutionRequestBody struct {
 	// A collection of name/value pairs that describe the status of the job execution. If not specified, the statusDetails are unchanged.
 	StatusDetails map[string]string `json:"statusDetails,omitempty"`
@@ -30,9 +15,16 @@ type StartNextPendingJobExecutionRequestBody struct {
 }
 
 type StartNextPendingJobExecutionRequest struct {
-	PathParams StartNextPendingJobExecutionPathParams
-	Headers    StartNextPendingJobExecutionHeaders
-	Request    StartNextPendingJobExecutionRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartNextPendingJobExecutionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the thing associated with the device.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type StartNextPendingJobExecutionResponse struct {

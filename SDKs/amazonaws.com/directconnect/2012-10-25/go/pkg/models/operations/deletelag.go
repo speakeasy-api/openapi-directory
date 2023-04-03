@@ -30,7 +30,8 @@ func (e *DeleteLagXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteLagHeaders struct {
+type DeleteLagRequest struct {
+	DeleteLagRequest  shared.DeleteLagRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteLagHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteLagXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteLagRequest struct {
-	Headers DeleteLagHeaders
-	Request shared.DeleteLagRequest `request:"mediaType=application/json"`
 }
 
 type DeleteLagResponse struct {

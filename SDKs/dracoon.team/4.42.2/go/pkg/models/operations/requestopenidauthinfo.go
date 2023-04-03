@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestOpenIDAuthInfoQueryParams struct {
+type RequestOpenIDAuthInfoRequest struct {
 	// Show only global available items
 	IsGlobalAvailable *bool `queryParam:"style=form,explode=true,name=is_global_available"`
-}
-
-type RequestOpenIDAuthInfoRequest struct {
-	QueryParams RequestOpenIDAuthInfoQueryParams
 }
 
 type RequestOpenIDAuthInfoResponse struct {

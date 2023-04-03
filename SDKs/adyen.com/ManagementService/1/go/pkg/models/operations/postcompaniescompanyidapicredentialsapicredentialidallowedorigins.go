@@ -8,21 +8,16 @@ import (
 )
 
 type PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsPathParams struct {
+type PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest struct {
+	AllowedOrigin *shared.AllowedOrigin `request:"mediaType=application/json"`
 	// Unique identifier of the API credential.
 	APICredentialID string `pathParam:"style=simple,explode=false,name=apiCredentialId"`
 	// The unique identifier of the company account.
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest struct {
-	PathParams PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsPathParams
-	Request    *shared.AllowedOrigin `request:"mediaType=application/json"`
-	Security   PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsSecurity
 }
 
 type PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse struct {

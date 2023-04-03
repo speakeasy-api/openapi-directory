@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMedicalTranscriptionJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListMedicalTranscriptionJobsXAmzTargetEnum
 type ListMedicalTranscriptionJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListMedicalTranscriptionJobsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListMedicalTranscriptionJobsHeaders struct {
+type ListMedicalTranscriptionJobsRequest struct {
+	ListMedicalTranscriptionJobsRequest shared.ListMedicalTranscriptionJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListMedicalTranscriptionJobsHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListMedicalTranscriptionJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListMedicalTranscriptionJobsRequest struct {
-	QueryParams ListMedicalTranscriptionJobsQueryParams
-	Headers     ListMedicalTranscriptionJobsHeaders
-	Request     shared.ListMedicalTranscriptionJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListMedicalTranscriptionJobsResponse struct {

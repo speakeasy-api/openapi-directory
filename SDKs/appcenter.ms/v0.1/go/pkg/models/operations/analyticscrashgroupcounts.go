@@ -6,35 +6,25 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type AnalyticsCrashGroupCountsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type AnalyticsCrashGroupCountsPathParams struct {
+type AnalyticsCrashGroupCountsRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The id of the crash group.
 	CrashGroupID string `pathParam:"style=simple,explode=false,name=crash_group_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AnalyticsCrashGroupCountsQueryParams struct {
 	// Last date time in data in ISO 8601 date time format.
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Start date time in data in ISO 8601 date time format.
 	Start   time.Time `queryParam:"style=form,explode=true,name=start"`
 	Version string    `queryParam:"style=form,explode=true,name=version"`
-}
-
-type AnalyticsCrashGroupCountsRequest struct {
-	PathParams  AnalyticsCrashGroupCountsPathParams
-	QueryParams AnalyticsCrashGroupCountsQueryParams
-	Security    AnalyticsCrashGroupCountsSecurity
 }
 
 // AnalyticsCrashGroupCountsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

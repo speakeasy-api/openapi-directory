@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSRSRatingsQueryParams struct {
+type GetSRSRatingsRequest struct {
 	// Conference filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Team filter (required if year not specified)
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Season filter (required if team not specified)
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetSRSRatingsRequest struct {
-	QueryParams GetSRSRatingsQueryParams
 }
 
 type GetSRSRatingsResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDataRepositoryTasksQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeDataRepositoryTasksXAmzTargetEnum
 type DescribeDataRepositoryTasksXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeDataRepositoryTasksXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type DescribeDataRepositoryTasksHeaders struct {
+type DescribeDataRepositoryTasksRequest struct {
+	DescribeDataRepositoryTasksRequest shared.DescribeDataRepositoryTasksRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeDataRepositoryTasksHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeDataRepositoryTasksXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeDataRepositoryTasksRequest struct {
-	QueryParams DescribeDataRepositoryTasksQueryParams
-	Headers     DescribeDataRepositoryTasksHeaders
-	Request     shared.DescribeDataRepositoryTasksRequest `request:"mediaType=application/json"`
 }
 
 type DescribeDataRepositoryTasksResponse struct {

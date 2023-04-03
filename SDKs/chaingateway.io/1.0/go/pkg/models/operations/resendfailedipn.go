@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResendFailedIPNHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type ResendFailedIPNRequest struct {
-	Headers ResendFailedIPNHeaders
-	Request shared.ResendFailedIPNRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization          string                        `header:"style=simple,explode=false,name=Authorization"`
+	ResendFailedIPNRequest shared.ResendFailedIPNRequest `request:"mediaType=application/json"`
 }
 
 type ResendFailedIPNResponse struct {

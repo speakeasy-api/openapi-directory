@@ -44,7 +44,7 @@ func (s *search) SearchArtifacts(ctx context.Context, request operations.SearchA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -97,14 +97,14 @@ func (s *search) SearchArtifacts(ctx context.Context, request operations.SearchA
 // of all versions of an artifact (for example, in a user interface).
 func (s *search) SearchVersions(ctx context.Context, request operations.SearchVersionsRequest) (*operations.SearchVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/artifacts/{artifactId}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/search/artifacts/{artifactId}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

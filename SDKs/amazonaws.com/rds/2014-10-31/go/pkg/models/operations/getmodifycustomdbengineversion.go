@@ -77,7 +77,7 @@ func (e *GETModifyCustomDBEngineVersionVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETModifyCustomDBEngineVersionQueryParams struct {
+type GETModifyCustomDBEngineVersionRequest struct {
 	Action GETModifyCustomDBEngineVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional description of your CEV.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
@@ -86,23 +86,15 @@ type GETModifyCustomDBEngineVersionQueryParams struct {
 	// The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for Oracle, but optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per Amazon Web Services Region.
 	EngineVersion string `queryParam:"style=form,explode=true,name=EngineVersion"`
 	// <p>The availability status to be assigned to the CEV. Valid values are as follows:</p> <dl> <dt>available</dt> <dd> <p>You can use this CEV to create a new RDS Custom DB instance.</p> </dd> <dt>inactive</dt> <dd> <p>You can create a new RDS Custom instance by restoring a DB snapshot with this CEV. You can't patch or create new instances with this CEV.</p> </dd> </dl> <p>You can change any status to any status. A typical reason to change status is to prevent the accidental use of a CEV, or to make a deprecated CEV eligible for use again. For example, you might change the status of your CEV from <code>available</code> to <code>inactive</code>, and from <code>inactive</code> back to <code>available</code>. To change the availability status of the CEV, it must not currently be in use by an RDS Custom instance, snapshot, or automated backup.</p>
-	Status  *GETModifyCustomDBEngineVersionStatusEnum `queryParam:"style=form,explode=true,name=Status"`
-	Version GETModifyCustomDBEngineVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyCustomDBEngineVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyCustomDBEngineVersionRequest struct {
-	QueryParams GETModifyCustomDBEngineVersionQueryParams
-	Headers     GETModifyCustomDBEngineVersionHeaders
+	Status            *GETModifyCustomDBEngineVersionStatusEnum `queryParam:"style=form,explode=true,name=Status"`
+	Version           GETModifyCustomDBEngineVersionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyCustomDBEngineVersionResponse struct {

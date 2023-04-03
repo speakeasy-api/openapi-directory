@@ -50,25 +50,17 @@ func (e *POSTCreateVolumeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTCreateVolumeQueryParams struct {
-	Action  POSTCreateVolumeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateVolumeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateVolumeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateVolumeRequest struct {
-	QueryParams POSTCreateVolumeQueryParams
-	Headers     POSTCreateVolumeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateVolumeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                      `request:"mediaType=text/xml"`
+	Version           POSTCreateVolumeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateVolumeResponse struct {

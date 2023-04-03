@@ -4,26 +4,20 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BranchConfigurationsDeleteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type BranchConfigurationsDeletePathParams struct {
+type BranchConfigurationsDeleteRequest struct {
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The branch name
 	Branch string `pathParam:"style=simple,explode=false,name=branch"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type BranchConfigurationsDeleteRequest struct {
-	PathParams BranchConfigurationsDeletePathParams
-	Request    map[string]interface{} `request:"mediaType=application/json"`
-	Security   BranchConfigurationsDeleteSecurity
 }
 
 // BranchConfigurationsDelete200ApplicationJSON - Success

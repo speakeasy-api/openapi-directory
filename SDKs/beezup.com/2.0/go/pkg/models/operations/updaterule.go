@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRulePathParams struct {
+type UpdateRuleRequest struct {
 	// Your rule identifier
 	RuleID string `pathParam:"style=simple,explode=false,name=ruleId"`
 	// Your store identifier
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type UpdateRuleRequest struct {
-	PathParams UpdateRulePathParams
-	Request    shared.UpdateRuleRequest `request:"mediaType=application/json"`
+	StoreID           string                   `pathParam:"style=simple,explode=false,name=storeId"`
+	UpdateRuleRequest shared.UpdateRuleRequest `request:"mediaType=application/json"`
 }
 
 type UpdateRuleResponse struct {

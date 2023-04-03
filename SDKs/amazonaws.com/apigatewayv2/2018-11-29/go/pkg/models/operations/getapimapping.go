@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAPIMappingPathParams struct {
-	// The API mapping identifier.
-	APIMappingID string `pathParam:"style=simple,explode=false,name=apiMappingId"`
-	// The domain name.
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type GetAPIMappingHeaders struct {
+type GetAPIMappingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetAPIMappingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAPIMappingRequest struct {
-	PathParams GetAPIMappingPathParams
-	Headers    GetAPIMappingHeaders
+	// The API mapping identifier.
+	APIMappingID string `pathParam:"style=simple,explode=false,name=apiMappingId"`
+	// The domain name.
+	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
 }
 
 type GetAPIMappingResponse struct {

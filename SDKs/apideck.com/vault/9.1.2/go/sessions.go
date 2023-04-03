@@ -38,11 +38,11 @@ func newSessions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // URL to allow temporary access to manage their integrations and settings.
 //
 // Note: This is a short lived token that will expire after 1 hour (TTL: 3600).
-func (s *sessions) SessionsCreate(ctx context.Context, request operations.SessionsCreateRequest) (*operations.SessionsCreateResponse, error) {
+func (s *sessions) SessionsCreate(ctx context.Context, request operations.SessionsCreateRequest, security operations.SessionsCreateSecurity) (*operations.SessionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vault/sessions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Session", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,9 +54,9 @@ func (s *sessions) SessionsCreate(ctx context.Context, request operations.Sessio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

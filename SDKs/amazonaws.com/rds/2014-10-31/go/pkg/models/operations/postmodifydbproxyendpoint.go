@@ -50,25 +50,17 @@ func (e *POSTModifyDBProxyEndpointVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type POSTModifyDBProxyEndpointQueryParams struct {
-	Action  POSTModifyDBProxyEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyDBProxyEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyDBProxyEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyDBProxyEndpointRequest struct {
-	QueryParams POSTModifyDBProxyEndpointQueryParams
-	Headers     POSTModifyDBProxyEndpointHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyDBProxyEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                               `request:"mediaType=text/xml"`
+	Version           POSTModifyDBProxyEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyDBProxyEndpointResponse struct {

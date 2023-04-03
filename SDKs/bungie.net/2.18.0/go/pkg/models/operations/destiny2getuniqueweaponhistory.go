@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetUniqueWeaponHistoryPathParams struct {
+type Destiny2GetUniqueWeaponHistoryRequest struct {
 	// The id of the character to retrieve.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
 	// The Destiny membershipId of the user to retrieve.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetUniqueWeaponHistoryRequest struct {
-	PathParams Destiny2GetUniqueWeaponHistoryPathParams
 }
 
 // Destiny2GetUniqueWeaponHistory200Wildcard - Look at the Response property for more information about the nature of this response

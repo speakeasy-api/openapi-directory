@@ -9,21 +9,18 @@ import (
 	"time"
 )
 
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsPathParams struct {
-	IDAccount    int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	// Hint: you can use 'me' or 'all'
-	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsQueryParams struct {
+type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequest struct {
 	// display all transactions, including deleted ones
 	All *bool `queryParam:"style=form,explode=true,name=all"`
 	// display only deleted transactions
-	Deleted *bool   `queryParam:"style=form,explode=true,name=deleted"`
-	Expand  *string `queryParam:"style=form,explode=true,name=expand"`
+	Deleted   *bool   `queryParam:"style=form,explode=true,name=deleted"`
+	Expand    *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount int64   `pathParam:"style=simple,explode=false,name=id_account"`
 	// filter on given category id(s) (comma separated) or "null"
-	IDCategory *int64 `queryParam:"style=form,explode=true,name=id_category"`
+	IDCategory   *int64 `queryParam:"style=form,explode=true,name=id_category"`
+	IDConnection int64  `pathParam:"style=simple,explode=false,name=id_connection"`
+	// Hint: you can use 'me' or 'all'
+	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
 	// filter on income or expenditures
 	Income *bool `queryParam:"style=form,explode=true,name=income"`
 	// get only transactions updated after the specified datetime
@@ -46,11 +43,6 @@ type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsQueryPara
 	Value *string `queryParam:"style=form,explode=true,name=value"`
 	// filter transactions containing the given string
 	Wording *string `queryParam:"style=form,explode=true,name=wording"`
-}
-
-type GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsRequest struct {
-	PathParams  GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsPathParams
-	QueryParams GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsQueryParams
 }
 
 // GetUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactions200ApplicationJSON - transactions

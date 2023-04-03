@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBotVersionPathParams struct {
-	// The identifier of the bot that contains the version.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The version of the bot to delete.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-}
-
-type DeleteBotVersionQueryParams struct {
-	// By default, Amazon Lex checks if any other resource, such as an alias or bot network, is using the bot version before it is deleted and throws a <code>ResourceInUseException</code> exception if the version is being used by another resource. Set this parameter to <code>true</code> to skip this check and remove the version even if it is being used by another resource.
-	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
-}
-
-type DeleteBotVersionHeaders struct {
+type DeleteBotVersionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteBotVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBotVersionRequest struct {
-	PathParams  DeleteBotVersionPathParams
-	QueryParams DeleteBotVersionQueryParams
-	Headers     DeleteBotVersionHeaders
+	// The identifier of the bot that contains the version.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The version of the bot to delete.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// By default, Amazon Lex checks if any other resource, such as an alias or bot network, is using the bot version before it is deleted and throws a <code>ResourceInUseException</code> exception if the version is being used by another resource. Set this parameter to <code>true</code> to skip this check and remove the version even if it is being used by another resource.
+	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
 }
 
 type DeleteBotVersionResponse struct {

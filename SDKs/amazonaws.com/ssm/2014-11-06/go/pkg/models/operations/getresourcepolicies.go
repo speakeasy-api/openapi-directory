@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetResourcePoliciesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetResourcePoliciesXAmzTargetEnum
 type GetResourcePoliciesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetResourcePoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetResourcePoliciesHeaders struct {
+type GetResourcePoliciesRequest struct {
+	GetResourcePoliciesRequest shared.GetResourcePoliciesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetResourcePoliciesHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetResourcePoliciesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetResourcePoliciesRequest struct {
-	QueryParams GetResourcePoliciesQueryParams
-	Headers     GetResourcePoliciesHeaders
-	Request     shared.GetResourcePoliciesRequest `request:"mediaType=application/json"`
 }
 
 type GetResourcePoliciesResponse struct {

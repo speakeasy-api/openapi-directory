@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRulesExecutionsPathParams struct {
-	// Your store identifier
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetRulesExecutionsQueryParams struct {
+type GetRulesExecutionsRequest struct {
 	// The page to retrieve
 	PageNumber int64 `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The count of rule history to retrieve
 	PageSize int64 `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetRulesExecutionsRequest struct {
-	PathParams  GetRulesExecutionsPathParams
-	QueryParams GetRulesExecutionsQueryParams
+	// Your store identifier
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type GetRulesExecutionsResponse struct {

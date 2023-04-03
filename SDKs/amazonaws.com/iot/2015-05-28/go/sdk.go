@@ -114,16 +114,16 @@ func New(opts ...SDKOption) *SDK {
 // AcceptCertificateTransfer - <p>Accepts a pending certificate transfer. The default state of the certificate is INACTIVE.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AcceptCertificateTransfer</a> action.</p>
 func (s *SDK) AcceptCertificateTransfer(ctx context.Context, request operations.AcceptCertificateTransferRequest) (*operations.AcceptCertificateTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accept-certificate-transfer/{certificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accept-certificate-transfer/{certificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -227,7 +227,7 @@ func (s *SDK) AddThingToBillingGroup(ctx context.Context, request operations.Add
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing-groups/addThingToBillingGroup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -242,7 +242,7 @@ func (s *SDK) AddThingToBillingGroup(ctx context.Context, request operations.Add
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -323,7 +323,7 @@ func (s *SDK) AddThingToThingGroup(ctx context.Context, request operations.AddTh
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/thing-groups/addThingToThingGroup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -338,7 +338,7 @@ func (s *SDK) AddThingToThingGroup(ctx context.Context, request operations.AddTh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -417,9 +417,9 @@ func (s *SDK) AddThingToThingGroup(ctx context.Context, request operations.AddTh
 // AssociateTargetsWithJob - <p>Associates a group with a continuous job. The following criteria must be met: </p> <ul> <li> <p>The job must have been created with the <code>targetSelection</code> field set to "CONTINUOUS".</p> </li> <li> <p>The job status must currently be "IN_PROGRESS".</p> </li> <li> <p>The total number of targets associated with a job must not exceed 100.</p> </li> </ul> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AssociateTargetsWithJob</a> action.</p>
 func (s *SDK) AssociateTargetsWithJob(ctx context.Context, request operations.AssociateTargetsWithJobRequest) (*operations.AssociateTargetsWithJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/targets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/targets", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -434,9 +434,9 @@ func (s *SDK) AssociateTargetsWithJob(ctx context.Context, request operations.As
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -527,9 +527,9 @@ func (s *SDK) AssociateTargetsWithJob(ctx context.Context, request operations.As
 // AttachPolicy - <p>Attaches the specified policy to the specified principal (certificate or other credential).</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachPolicy</a> action.</p>
 func (s *SDK) AttachPolicy(ctx context.Context, request operations.AttachPolicyRequest) (*operations.AttachPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/target-policies/{policyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/target-policies/{policyName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -544,7 +544,7 @@ func (s *SDK) AttachPolicy(ctx context.Context, request operations.AttachPolicyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -644,14 +644,14 @@ func (s *SDK) AttachPolicy(ctx context.Context, request operations.AttachPolicyR
 // AttachPrincipalPolicy - <p>Attaches the specified policy to the specified principal (certificate or other credential).</p> <p> <b>Note:</b> This action is deprecated and works as expected for backward compatibility, but we won't add enhancements. Use <a>AttachPolicy</a> instead.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachPrincipalPolicy</a> action.</p>
 func (s *SDK) AttachPrincipalPolicy(ctx context.Context, request operations.AttachPrincipalPolicyRequest) (*operations.AttachPrincipalPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/principal-policies/{policyName}#x-amzn-iot-principal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/principal-policies/{policyName}#x-amzn-iot-principal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -751,16 +751,16 @@ func (s *SDK) AttachPrincipalPolicy(ctx context.Context, request operations.Atta
 // AttachSecurityProfile - <p>Associates a Device Defender security profile with a thing group or this account. Each thing group or account can have up to five security profiles associated with it.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachSecurityProfile</a> action.</p>
 func (s *SDK) AttachSecurityProfile(ctx context.Context, request operations.AttachSecurityProfileRequest) (*operations.AttachSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}/targets#securityProfileTargetArn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}/targets#securityProfileTargetArn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -861,14 +861,14 @@ func (s *SDK) AttachSecurityProfile(ctx context.Context, request operations.Atta
 // AttachThingPrincipal - <p>Attaches the specified principal to the specified thing. A principal can be X.509 certificates, Amazon Cognito identities or federated identities.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachThingPrincipal</a> action.</p>
 func (s *SDK) AttachThingPrincipal(ctx context.Context, request operations.AttachThingPrincipalRequest) (*operations.AttachThingPrincipalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/principals#x-amzn-principal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/principals#x-amzn-principal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -967,14 +967,14 @@ func (s *SDK) AttachThingPrincipal(ctx context.Context, request operations.Attac
 // CancelAuditMitigationActionsTask - <p>Cancels a mitigation action task that is in progress. If the task is not in progress, an InvalidRequestException occurs.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelAuditMitigationActionsTask</a> action.</p>
 func (s *SDK) CancelAuditMitigationActionsTask(ctx context.Context, request operations.CancelAuditMitigationActionsTaskRequest) (*operations.CancelAuditMitigationActionsTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/mitigationactions/tasks/{taskId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/mitigationactions/tasks/{taskId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1053,14 +1053,14 @@ func (s *SDK) CancelAuditMitigationActionsTask(ctx context.Context, request oper
 // CancelAuditTask - <p>Cancels an audit that is in progress. The audit can be either scheduled or on demand. If the audit isn't in progress, an "InvalidRequestException" occurs.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelAuditTask</a> action.</p>
 func (s *SDK) CancelAuditTask(ctx context.Context, request operations.CancelAuditTaskRequest) (*operations.CancelAuditTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/tasks/{taskId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/tasks/{taskId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1139,14 +1139,14 @@ func (s *SDK) CancelAuditTask(ctx context.Context, request operations.CancelAudi
 // CancelCertificateTransfer - <p>Cancels a pending transfer for the specified certificate.</p> <p> <b>Note</b> Only the transfer source account can use this operation to cancel a transfer. (Transfer destinations can use <a>RejectCertificateTransfer</a> instead.) After transfer, IoT returns the certificate to the source account in the INACTIVE state. After the destination account has accepted the transfer, the transfer cannot be cancelled.</p> <p>After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to INACTIVE.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelCertificateTransfer</a> action.</p>
 func (s *SDK) CancelCertificateTransfer(ctx context.Context, request operations.CancelCertificateTransferRequest) (*operations.CancelCertificateTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cancel-certificate-transfer/{certificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cancel-certificate-transfer/{certificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1246,14 +1246,14 @@ func (s *SDK) CancelCertificateTransfer(ctx context.Context, request operations.
 // CancelDetectMitigationActionsTask - <p> Cancels a Device Defender ML Detect mitigation action. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelDetectMitigationActionsTask</a> action.</p>
 func (s *SDK) CancelDetectMitigationActionsTask(ctx context.Context, request operations.CancelDetectMitigationActionsTaskRequest) (*operations.CancelDetectMitigationActionsTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detect/mitigationactions/tasks/{taskId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detect/mitigationactions/tasks/{taskId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1332,9 +1332,9 @@ func (s *SDK) CancelDetectMitigationActionsTask(ctx context.Context, request ope
 // CancelJob - <p>Cancels a job.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelJob</a> action.</p>
 func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest) (*operations.CancelJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1349,9 +1349,9 @@ func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1442,9 +1442,9 @@ func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest
 // CancelJobExecution - <p>Cancels the execution of a job for a given thing.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelJobExecution</a> action.</p>
 func (s *SDK) CancelJobExecution(ctx context.Context, request operations.CancelJobExecutionRequest) (*operations.CancelJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1459,9 +1459,9 @@ func (s *SDK) CancelJobExecution(ctx context.Context, request operations.CancelJ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1560,7 +1560,7 @@ func (s *SDK) ClearDefaultAuthorizer(ctx context.Context, request operations.Cle
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1659,14 +1659,14 @@ func (s *SDK) ClearDefaultAuthorizer(ctx context.Context, request operations.Cle
 // ConfirmTopicRuleDestination - <p>Confirms a topic rule destination. When you create a rule requiring a destination, IoT sends a confirmation message to the endpoint or base address you specify. The message includes a token which you pass back when calling <code>ConfirmTopicRuleDestination</code> to confirm that you own or have access to the endpoint.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ConfirmTopicRuleDestination</a> action.</p>
 func (s *SDK) ConfirmTopicRuleDestination(ctx context.Context, request operations.ConfirmTopicRuleDestinationRequest) (*operations.ConfirmTopicRuleDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/confirmdestination/{confirmationToken}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/confirmdestination/{confirmationToken}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1757,7 +1757,7 @@ func (s *SDK) CreateAuditSuppression(ctx context.Context, request operations.Cre
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/suppressions/create"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1772,7 +1772,7 @@ func (s *SDK) CreateAuditSuppression(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1861,9 +1861,9 @@ func (s *SDK) CreateAuditSuppression(ctx context.Context, request operations.Cre
 // CreateAuthorizer - <p>Creates an authorizer.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateAuthorizer</a> action.</p>
 func (s *SDK) CreateAuthorizer(ctx context.Context, request operations.CreateAuthorizerRequest) (*operations.CreateAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1878,7 +1878,7 @@ func (s *SDK) CreateAuthorizer(ctx context.Context, request operations.CreateAut
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1987,9 +1987,9 @@ func (s *SDK) CreateAuthorizer(ctx context.Context, request operations.CreateAut
 // CreateBillingGroup - <p>Creates a billing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateBillingGroup</a> action.</p>
 func (s *SDK) CreateBillingGroup(ctx context.Context, request operations.CreateBillingGroupRequest) (*operations.CreateBillingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2004,7 +2004,7 @@ func (s *SDK) CreateBillingGroup(ctx context.Context, request operations.CreateB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2085,7 +2085,7 @@ func (s *SDK) CreateCertificateFromCsr(ctx context.Context, request operations.C
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/certificates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2100,9 +2100,9 @@ func (s *SDK) CreateCertificateFromCsr(ctx context.Context, request operations.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2193,9 +2193,9 @@ func (s *SDK) CreateCertificateFromCsr(ctx context.Context, request operations.C
 // CreateCustomMetric - <p> Use this API to define a Custom Metric published by your devices to Device Defender. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateCustomMetric</a> action.</p>
 func (s *SDK) CreateCustomMetric(ctx context.Context, request operations.CreateCustomMetricRequest) (*operations.CreateCustomMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2210,7 +2210,7 @@ func (s *SDK) CreateCustomMetric(ctx context.Context, request operations.CreateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2299,9 +2299,9 @@ func (s *SDK) CreateCustomMetric(ctx context.Context, request operations.CreateC
 // CreateDimension - <p>Create a dimension that you can use to limit the scope of a metric used in a security profile for IoT Device Defender. For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric only to MQTT topics whose name match the pattern specified in the dimension.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateDimension</a> action.</p>
 func (s *SDK) CreateDimension(ctx context.Context, request operations.CreateDimensionRequest) (*operations.CreateDimensionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2316,7 +2316,7 @@ func (s *SDK) CreateDimension(ctx context.Context, request operations.CreateDime
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2405,9 +2405,9 @@ func (s *SDK) CreateDimension(ctx context.Context, request operations.CreateDime
 // CreateDomainConfiguration - <p>Creates a domain configuration.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateDomainConfiguration</a> action.</p>
 func (s *SDK) CreateDomainConfiguration(ctx context.Context, request operations.CreateDomainConfigurationRequest) (*operations.CreateDomainConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2422,7 +2422,7 @@ func (s *SDK) CreateDomainConfiguration(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2541,9 +2541,9 @@ func (s *SDK) CreateDomainConfiguration(ctx context.Context, request operations.
 // CreateDynamicThingGroup - <p>Creates a dynamic thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateDynamicThingGroup</a> action.</p>
 func (s *SDK) CreateDynamicThingGroup(ctx context.Context, request operations.CreateDynamicThingGroupRequest) (*operations.CreateDynamicThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dynamic-thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dynamic-thing-groups/{thingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2558,7 +2558,7 @@ func (s *SDK) CreateDynamicThingGroup(ctx context.Context, request operations.Cr
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2667,9 +2667,9 @@ func (s *SDK) CreateDynamicThingGroup(ctx context.Context, request operations.Cr
 // CreateFleetMetric - <p>Creates a fleet metric.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateFleetMetric</a> action.</p>
 func (s *SDK) CreateFleetMetric(ctx context.Context, request operations.CreateFleetMetricRequest) (*operations.CreateFleetMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2684,7 +2684,7 @@ func (s *SDK) CreateFleetMetric(ctx context.Context, request operations.CreateFl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2833,9 +2833,9 @@ func (s *SDK) CreateFleetMetric(ctx context.Context, request operations.CreateFl
 // CreateJob - <p>Creates a job.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateJob</a> action.</p>
 func (s *SDK) CreateJob(ctx context.Context, request operations.CreateJobRequest) (*operations.CreateJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2850,7 +2850,7 @@ func (s *SDK) CreateJob(ctx context.Context, request operations.CreateJobRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2949,9 +2949,9 @@ func (s *SDK) CreateJob(ctx context.Context, request operations.CreateJobRequest
 // CreateJobTemplate - <p>Creates a job template.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateJobTemplate</a> action.</p>
 func (s *SDK) CreateJobTemplate(ctx context.Context, request operations.CreateJobTemplateRequest) (*operations.CreateJobTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/job-templates/{jobTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/job-templates/{jobTemplateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2966,7 +2966,7 @@ func (s *SDK) CreateJobTemplate(ctx context.Context, request operations.CreateJo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3072,9 +3072,9 @@ func (s *SDK) CreateKeysAndCertificate(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3165,9 +3165,9 @@ func (s *SDK) CreateKeysAndCertificate(ctx context.Context, request operations.C
 // CreateMitigationAction - <p>Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Only certain types of mitigation actions can be applied to specific check names. For more information, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-mitigation-actions.html">Mitigation actions</a>. Each mitigation action can apply only one type of change.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateMitigationAction</a> action.</p>
 func (s *SDK) CreateMitigationAction(ctx context.Context, request operations.CreateMitigationActionRequest) (*operations.CreateMitigationActionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3182,7 +3182,7 @@ func (s *SDK) CreateMitigationAction(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3271,9 +3271,9 @@ func (s *SDK) CreateMitigationAction(ctx context.Context, request operations.Cre
 // CreateOTAUpdate - <p>Creates an IoT OTA update on a target group of things or groups.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateOTAUpdate</a> action.</p>
 func (s *SDK) CreateOTAUpdate(ctx context.Context, request operations.CreateOTAUpdateRequest) (*operations.CreateOTAUpdateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/otaUpdates/{otaUpdateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/otaUpdates/{otaUpdateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3288,7 +3288,7 @@ func (s *SDK) CreateOTAUpdate(ctx context.Context, request operations.CreateOTAU
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3407,9 +3407,9 @@ func (s *SDK) CreateOTAUpdate(ctx context.Context, request operations.CreateOTAU
 // CreatePolicy - <p>Creates an IoT policy.</p> <p>The created policy is the default version for the policy. This operation creates a policy version with a version identifier of <b>1</b> and sets <b>1</b> as the policy's default version.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreatePolicy</a> action.</p>
 func (s *SDK) CreatePolicy(ctx context.Context, request operations.CreatePolicyRequest) (*operations.CreatePolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3424,7 +3424,7 @@ func (s *SDK) CreatePolicy(ctx context.Context, request operations.CreatePolicyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3533,9 +3533,9 @@ func (s *SDK) CreatePolicy(ctx context.Context, request operations.CreatePolicyR
 // CreatePolicyVersion - <p>Creates a new version of the specified IoT policy. To update a policy, create a new policy version. A managed policy can have up to five versions. If the policy has five versions, you must use <a>DeletePolicyVersion</a> to delete an existing version before you create a new one.</p> <p>Optionally, you can set the new version as the policy's default version. The default version is the operative version (that is, the version that is in effect for the certificates to which the policy is attached).</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreatePolicyVersion</a> action.</p>
 func (s *SDK) CreatePolicyVersion(ctx context.Context, request operations.CreatePolicyVersionRequest) (*operations.CreatePolicyVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3550,9 +3550,9 @@ func (s *SDK) CreatePolicyVersion(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3673,14 +3673,14 @@ func (s *SDK) CreatePolicyVersion(ctx context.Context, request operations.Create
 // CreateProvisioningClaim - <p>Creates a provisioning claim.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateProvisioningClaim</a> action.</p>
 func (s *SDK) CreateProvisioningClaim(ctx context.Context, request operations.CreateProvisioningClaimRequest) (*operations.CreateProvisioningClaimResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/provisioning-claim", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/provisioning-claim", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3781,7 +3781,7 @@ func (s *SDK) CreateProvisioningTemplate(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/provisioning-templates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3796,7 +3796,7 @@ func (s *SDK) CreateProvisioningTemplate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3895,9 +3895,9 @@ func (s *SDK) CreateProvisioningTemplate(ctx context.Context, request operations
 // CreateProvisioningTemplateVersion - <p>Creates a new version of a provisioning template.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateProvisioningTemplateVersion</a> action.</p>
 func (s *SDK) CreateProvisioningTemplateVersion(ctx context.Context, request operations.CreateProvisioningTemplateVersionRequest) (*operations.CreateProvisioningTemplateVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3912,9 +3912,9 @@ func (s *SDK) CreateProvisioningTemplateVersion(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4025,9 +4025,9 @@ func (s *SDK) CreateProvisioningTemplateVersion(ctx context.Context, request ope
 // CreateRoleAlias - <p>Creates a role alias.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateRoleAlias</a> action.</p>
 func (s *SDK) CreateRoleAlias(ctx context.Context, request operations.CreateRoleAliasRequest) (*operations.CreateRoleAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4042,7 +4042,7 @@ func (s *SDK) CreateRoleAlias(ctx context.Context, request operations.CreateRole
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4151,9 +4151,9 @@ func (s *SDK) CreateRoleAlias(ctx context.Context, request operations.CreateRole
 // CreateScheduledAudit - <p>Creates a scheduled audit that is run at a specified time interval.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateScheduledAudit</a> action.</p>
 func (s *SDK) CreateScheduledAudit(ctx context.Context, request operations.CreateScheduledAuditRequest) (*operations.CreateScheduledAuditResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4168,7 +4168,7 @@ func (s *SDK) CreateScheduledAudit(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4257,9 +4257,9 @@ func (s *SDK) CreateScheduledAudit(ctx context.Context, request operations.Creat
 // CreateSecurityProfile - <p>Creates a Device Defender security profile.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateSecurityProfile</a> action.</p>
 func (s *SDK) CreateSecurityProfile(ctx context.Context, request operations.CreateSecurityProfileRequest) (*operations.CreateSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4274,7 +4274,7 @@ func (s *SDK) CreateSecurityProfile(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4353,9 +4353,9 @@ func (s *SDK) CreateSecurityProfile(ctx context.Context, request operations.Crea
 // CreateStream - <p>Creates a stream for delivering one or more large files in chunks over MQTT. A stream transports data bytes in chunks or blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a stream.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateStream</a> action.</p>
 func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamRequest) (*operations.CreateStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4370,7 +4370,7 @@ func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4489,9 +4489,9 @@ func (s *SDK) CreateStream(ctx context.Context, request operations.CreateStreamR
 // CreateThing - <p>Creates a thing record in the registry. If this call is made multiple times using the same thing name and configuration, the call will succeed. If this call is made with the same thing name but different configuration a <code>ResourceAlreadyExistsException</code> is thrown.</p> <note> <p>This is a control plane operation. See <a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for information about authorizing control plane actions.</p> </note> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateThing</a> action.</p>
 func (s *SDK) CreateThing(ctx context.Context, request operations.CreateThingRequest) (*operations.CreateThingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4506,7 +4506,7 @@ func (s *SDK) CreateThing(ctx context.Context, request operations.CreateThingReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4615,9 +4615,9 @@ func (s *SDK) CreateThing(ctx context.Context, request operations.CreateThingReq
 // CreateThingGroup - <p>Create a thing group.</p> <note> <p>This is a control plane operation. See <a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for information about authorizing control plane actions.</p> </note> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateThingGroup</a> action.</p>
 func (s *SDK) CreateThingGroup(ctx context.Context, request operations.CreateThingGroupRequest) (*operations.CreateThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4632,7 +4632,7 @@ func (s *SDK) CreateThingGroup(ctx context.Context, request operations.CreateThi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4711,9 +4711,9 @@ func (s *SDK) CreateThingGroup(ctx context.Context, request operations.CreateThi
 // CreateThingType - <p>Creates a new thing type.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateThingType</a> action.</p>
 func (s *SDK) CreateThingType(ctx context.Context, request operations.CreateThingTypeRequest) (*operations.CreateThingTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4728,7 +4728,7 @@ func (s *SDK) CreateThingType(ctx context.Context, request operations.CreateThin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4827,9 +4827,9 @@ func (s *SDK) CreateThingType(ctx context.Context, request operations.CreateThin
 // CreateTopicRule - <p>Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateTopicRule</a> action.</p>
 func (s *SDK) CreateTopicRule(ctx context.Context, request operations.CreateTopicRuleRequest) (*operations.CreateTopicRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4844,7 +4844,7 @@ func (s *SDK) CreateTopicRule(ctx context.Context, request operations.CreateTopi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4936,7 +4936,7 @@ func (s *SDK) CreateTopicRuleDestination(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/destinations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4951,7 +4951,7 @@ func (s *SDK) CreateTopicRuleDestination(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5047,9 +5047,9 @@ func (s *SDK) DeleteAccountAuditConfiguration(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5132,7 +5132,7 @@ func (s *SDK) DeleteAuditSuppression(ctx context.Context, request operations.Del
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/suppressions/delete"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -5147,7 +5147,7 @@ func (s *SDK) DeleteAuditSuppression(ctx context.Context, request operations.Del
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5216,14 +5216,14 @@ func (s *SDK) DeleteAuditSuppression(ctx context.Context, request operations.Del
 // DeleteAuthorizer - <p>Deletes an authorizer.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteAuthorizer</a> action.</p>
 func (s *SDK) DeleteAuthorizer(ctx context.Context, request operations.DeleteAuthorizerRequest) (*operations.DeleteAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5332,16 +5332,16 @@ func (s *SDK) DeleteAuthorizer(ctx context.Context, request operations.DeleteAut
 // DeleteBillingGroup - <p>Deletes the billing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteBillingGroup</a> action.</p>
 func (s *SDK) DeleteBillingGroup(ctx context.Context, request operations.DeleteBillingGroupRequest) (*operations.DeleteBillingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5422,14 +5422,14 @@ func (s *SDK) DeleteBillingGroup(ctx context.Context, request operations.DeleteB
 // DeleteCACertificate - <p>Deletes a registered CA certificate.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteCACertificate</a> action.</p>
 func (s *SDK) DeleteCACertificate(ctx context.Context, request operations.DeleteCACertificateRequest) (*operations.DeleteCACertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cacertificate/{caCertificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cacertificate/{caCertificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5538,16 +5538,16 @@ func (s *SDK) DeleteCACertificate(ctx context.Context, request operations.Delete
 // DeleteCertificate - <p>Deletes the specified certificate.</p> <p>A certificate cannot be deleted if it has a policy or IoT thing attached to it or if its status is set to ACTIVE. To delete a certificate, first use the <a>DetachPolicy</a> action to detach all policies. Next, use the <a>UpdateCertificate</a> action to set the certificate to the INACTIVE status.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteCertificate</a> action.</p>
 func (s *SDK) DeleteCertificate(ctx context.Context, request operations.DeleteCertificateRequest) (*operations.DeleteCertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{certificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{certificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -5659,14 +5659,14 @@ func (s *SDK) DeleteCertificate(ctx context.Context, request operations.DeleteCe
 // DeleteCustomMetric - <p> Deletes a Device Defender detect custom metric. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteCustomMetric</a> action.</p> <note> <p>Before you can delete a custom metric, you must first remove the custom metric from all security profiles it's a part of. The security profile associated with the custom metric can be found using the <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_ListSecurityProfiles.html">ListSecurityProfiles</a> API with <code>metricName</code> set to your custom metric name.</p> </note>
 func (s *SDK) DeleteCustomMetric(ctx context.Context, request operations.DeleteCustomMetricRequest) (*operations.DeleteCustomMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5735,14 +5735,14 @@ func (s *SDK) DeleteCustomMetric(ctx context.Context, request operations.DeleteC
 // DeleteDimension - <p>Removes the specified dimension from your Amazon Web Services accounts.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteDimension</a> action.</p>
 func (s *SDK) DeleteDimension(ctx context.Context, request operations.DeleteDimensionRequest) (*operations.DeleteDimensionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5811,14 +5811,14 @@ func (s *SDK) DeleteDimension(ctx context.Context, request operations.DeleteDime
 // DeleteDomainConfiguration - <p>Deletes the specified domain configuration.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteDomainConfiguration</a> action.</p>
 func (s *SDK) DeleteDomainConfiguration(ctx context.Context, request operations.DeleteDomainConfigurationRequest) (*operations.DeleteDomainConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -5917,16 +5917,16 @@ func (s *SDK) DeleteDomainConfiguration(ctx context.Context, request operations.
 // DeleteDynamicThingGroup - <p>Deletes a dynamic thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteDynamicThingGroup</a> action.</p>
 func (s *SDK) DeleteDynamicThingGroup(ctx context.Context, request operations.DeleteDynamicThingGroupRequest) (*operations.DeleteDynamicThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dynamic-thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dynamic-thing-groups/{thingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6007,16 +6007,16 @@ func (s *SDK) DeleteDynamicThingGroup(ctx context.Context, request operations.De
 // DeleteFleetMetric - <p>Deletes the specified fleet metric. Returns successfully with no error if the deletion is successful or you specify a fleet metric that doesn't exist.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteFleetMetric</a> action.</p>
 func (s *SDK) DeleteFleetMetric(ctx context.Context, request operations.DeleteFleetMetricRequest) (*operations.DeleteFleetMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6108,16 +6108,16 @@ func (s *SDK) DeleteFleetMetric(ctx context.Context, request operations.DeleteFl
 // DeleteJob - <p>Deletes a job and its related job executions.</p> <p>Deleting a job may take time, depending on the number of job executions created for the job and various other factors. While the job is being deleted, the status of the job will be shown as "DELETION_IN_PROGRESS". Attempting to delete or cancel a job whose status is already "DELETION_IN_PROGRESS" will result in an error.</p> <p>Only 10 jobs may have status "DELETION_IN_PROGRESS" at the same time, or a LimitExceededException will occur.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteJob</a> action.</p>
 func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest) (*operations.DeleteJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6209,16 +6209,16 @@ func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest
 // DeleteJobExecution - <p>Deletes a job execution.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteJobExecution</a> action.</p>
 func (s *SDK) DeleteJobExecution(ctx context.Context, request operations.DeleteJobExecutionRequest) (*operations.DeleteJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}/executionNumber/{executionNumber}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}/executionNumber/{executionNumber}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6300,14 +6300,14 @@ func (s *SDK) DeleteJobExecution(ctx context.Context, request operations.DeleteJ
 // DeleteJobTemplate - Deletes the specified job template.
 func (s *SDK) DeleteJobTemplate(ctx context.Context, request operations.DeleteJobTemplateRequest) (*operations.DeleteJobTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/job-templates/{jobTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/job-templates/{jobTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6377,14 +6377,14 @@ func (s *SDK) DeleteJobTemplate(ctx context.Context, request operations.DeleteJo
 // DeleteMitigationAction - <p>Deletes a defined mitigation action from your Amazon Web Services accounts.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteMitigationAction</a> action.</p>
 func (s *SDK) DeleteMitigationAction(ctx context.Context, request operations.DeleteMitigationActionRequest) (*operations.DeleteMitigationActionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6453,16 +6453,16 @@ func (s *SDK) DeleteMitigationAction(ctx context.Context, request operations.Del
 // DeleteOTAUpdate - <p>Delete an OTA update.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteOTAUpdate</a> action.</p>
 func (s *SDK) DeleteOTAUpdate(ctx context.Context, request operations.DeleteOTAUpdateRequest) (*operations.DeleteOTAUpdateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/otaUpdates/{otaUpdateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/otaUpdates/{otaUpdateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -6573,14 +6573,14 @@ func (s *SDK) DeleteOTAUpdate(ctx context.Context, request operations.DeleteOTAU
 // DeletePolicy - <p>Deletes the specified policy.</p> <p>A policy cannot be deleted if it has non-default versions or it is attached to any certificate.</p> <p>To delete a policy, use the <a>DeletePolicyVersion</a> action to delete all non-default versions of the policy; use the <a>DetachPolicy</a> action to detach the policy from any certificate; and then use the DeletePolicy action to delete the policy.</p> <p>When a policy is deleted using DeletePolicy, its default version is deleted with it.</p> <note> <p>Because of the distributed nature of Amazon Web Services, it can take up to five minutes after a policy is detached before it's ready to be deleted.</p> </note> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeletePolicy</a> action.</p>
 func (s *SDK) DeletePolicy(ctx context.Context, request operations.DeletePolicyRequest) (*operations.DeletePolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6680,14 +6680,14 @@ func (s *SDK) DeletePolicy(ctx context.Context, request operations.DeletePolicyR
 // DeletePolicyVersion - <p>Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this action. To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as the default version, use ListPolicyVersions.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeletePolicyVersion</a> action.</p>
 func (s *SDK) DeletePolicyVersion(ctx context.Context, request operations.DeletePolicyVersionRequest) (*operations.DeletePolicyVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version/{policyVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version/{policyVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6787,14 +6787,14 @@ func (s *SDK) DeletePolicyVersion(ctx context.Context, request operations.Delete
 // DeleteProvisioningTemplate - <p>Deletes a provisioning template.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteProvisioningTemplate</a> action.</p>
 func (s *SDK) DeleteProvisioningTemplate(ctx context.Context, request operations.DeleteProvisioningTemplateRequest) (*operations.DeleteProvisioningTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -6903,14 +6903,14 @@ func (s *SDK) DeleteProvisioningTemplate(ctx context.Context, request operations
 // DeleteProvisioningTemplateVersion - <p>Deletes a provisioning template version.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteProvisioningTemplateVersion</a> action.</p>
 func (s *SDK) DeleteProvisioningTemplateVersion(ctx context.Context, request operations.DeleteProvisioningTemplateVersionRequest) (*operations.DeleteProvisioningTemplateVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions/{versionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7026,7 +7026,7 @@ func (s *SDK) DeleteRegistrationCode(ctx context.Context, request operations.Del
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7115,14 +7115,14 @@ func (s *SDK) DeleteRegistrationCode(ctx context.Context, request operations.Del
 // DeleteRoleAlias - <p>Deletes a role alias</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteRoleAlias</a> action.</p>
 func (s *SDK) DeleteRoleAlias(ctx context.Context, request operations.DeleteRoleAliasRequest) (*operations.DeleteRoleAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7231,14 +7231,14 @@ func (s *SDK) DeleteRoleAlias(ctx context.Context, request operations.DeleteRole
 // DeleteScheduledAudit - <p>Deletes a scheduled audit.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteScheduledAudit</a> action.</p>
 func (s *SDK) DeleteScheduledAudit(ctx context.Context, request operations.DeleteScheduledAuditRequest) (*operations.DeleteScheduledAuditResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7317,16 +7317,16 @@ func (s *SDK) DeleteScheduledAudit(ctx context.Context, request operations.Delet
 // DeleteSecurityProfile - <p>Deletes a Device Defender security profile.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteSecurityProfile</a> action.</p>
 func (s *SDK) DeleteSecurityProfile(ctx context.Context, request operations.DeleteSecurityProfileRequest) (*operations.DeleteSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7407,14 +7407,14 @@ func (s *SDK) DeleteSecurityProfile(ctx context.Context, request operations.Dele
 // DeleteStream - <p>Deletes a stream.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteStream</a> action.</p>
 func (s *SDK) DeleteStream(ctx context.Context, request operations.DeleteStreamRequest) (*operations.DeleteStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7523,16 +7523,16 @@ func (s *SDK) DeleteStream(ctx context.Context, request operations.DeleteStreamR
 // DeleteThing - <p>Deletes the specified thing. Returns successfully with no error if the deletion is successful or you specify a thing that doesn't exist.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThing</a> action.</p>
 func (s *SDK) DeleteThing(ctx context.Context, request operations.DeleteThingRequest) (*operations.DeleteThingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7643,16 +7643,16 @@ func (s *SDK) DeleteThing(ctx context.Context, request operations.DeleteThingReq
 // DeleteThingGroup - <p>Deletes a thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingGroup</a> action.</p>
 func (s *SDK) DeleteThingGroup(ctx context.Context, request operations.DeleteThingGroupRequest) (*operations.DeleteThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -7733,14 +7733,14 @@ func (s *SDK) DeleteThingGroup(ctx context.Context, request operations.DeleteThi
 // DeleteThingType - <p>Deletes the specified thing type. You cannot delete a thing type if it has things associated with it. To delete a thing type, first mark it as deprecated by calling <a>DeprecateThingType</a>, then remove any associated things by calling <a>UpdateThing</a> to change the thing type on any associated thing, and finally use <a>DeleteThingType</a> to delete the thing type.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingType</a> action.</p>
 func (s *SDK) DeleteThingType(ctx context.Context, request operations.DeleteThingTypeRequest) (*operations.DeleteThingTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7839,14 +7839,14 @@ func (s *SDK) DeleteThingType(ctx context.Context, request operations.DeleteThin
 // DeleteTopicRule - <p>Deletes the rule.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteTopicRule</a> action.</p>
 func (s *SDK) DeleteTopicRule(ctx context.Context, request operations.DeleteTopicRuleRequest) (*operations.DeleteTopicRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -7926,14 +7926,14 @@ func (s *SDK) DeleteTopicRule(ctx context.Context, request operations.DeleteTopi
 // DeleteTopicRuleDestination - <p>Deletes a topic rule destination.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteTopicRuleDestination</a> action.</p>
 func (s *SDK) DeleteTopicRuleDestination(ctx context.Context, request operations.DeleteTopicRuleDestinationRequest) (*operations.DeleteTopicRuleDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/destinations/{arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/destinations/{arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8029,9 +8029,9 @@ func (s *SDK) DeleteV2LoggingLevel(ctx context.Context, request operations.Delet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -8093,9 +8093,9 @@ func (s *SDK) DeleteV2LoggingLevel(ctx context.Context, request operations.Delet
 // DeprecateThingType - <p>Deprecates a thing type. You can not associate new things with deprecated thing type.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeprecateThingType</a> action.</p>
 func (s *SDK) DeprecateThingType(ctx context.Context, request operations.DeprecateThingTypeRequest) (*operations.DeprecateThingTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}/deprecate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}/deprecate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8110,7 +8110,7 @@ func (s *SDK) DeprecateThingType(ctx context.Context, request operations.Depreca
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8216,7 +8216,7 @@ func (s *SDK) DescribeAccountAuditConfiguration(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8275,14 +8275,14 @@ func (s *SDK) DescribeAccountAuditConfiguration(ctx context.Context, request ope
 // DescribeAuditFinding - <p>Gets information about a single audit finding. Properties include the reason for noncompliance, the severity of the issue, and the start time when the audit that returned the finding.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAuditFinding</a> action.</p>
 func (s *SDK) DescribeAuditFinding(ctx context.Context, request operations.DescribeAuditFindingRequest) (*operations.DescribeAuditFindingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/findings/{findingId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/findings/{findingId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8361,14 +8361,14 @@ func (s *SDK) DescribeAuditFinding(ctx context.Context, request operations.Descr
 // DescribeAuditMitigationActionsTask - Gets information about an audit mitigation task that is used to apply mitigation actions to a set of audit findings. Properties include the actions being applied, the audit checks to which they're being applied, the task status, and aggregated task statistics.
 func (s *SDK) DescribeAuditMitigationActionsTask(ctx context.Context, request operations.DescribeAuditMitigationActionsTaskRequest) (*operations.DescribeAuditMitigationActionsTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/mitigationactions/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/mitigationactions/tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8449,7 +8449,7 @@ func (s *SDK) DescribeAuditSuppression(ctx context.Context, request operations.D
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/suppressions/describe"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -8464,7 +8464,7 @@ func (s *SDK) DescribeAuditSuppression(ctx context.Context, request operations.D
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8543,14 +8543,14 @@ func (s *SDK) DescribeAuditSuppression(ctx context.Context, request operations.D
 // DescribeAuditTask - <p>Gets information about a Device Defender audit.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAuditTask</a> action.</p>
 func (s *SDK) DescribeAuditTask(ctx context.Context, request operations.DescribeAuditTaskRequest) (*operations.DescribeAuditTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8629,14 +8629,14 @@ func (s *SDK) DescribeAuditTask(ctx context.Context, request operations.Describe
 // DescribeAuthorizer - <p>Describes an authorizer.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAuthorizer</a> action.</p>
 func (s *SDK) DescribeAuthorizer(ctx context.Context, request operations.DescribeAuthorizerRequest) (*operations.DescribeAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8735,14 +8735,14 @@ func (s *SDK) DescribeAuthorizer(ctx context.Context, request operations.Describ
 // DescribeBillingGroup - <p>Returns information about a billing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeBillingGroup</a> action.</p>
 func (s *SDK) DescribeBillingGroup(ctx context.Context, request operations.DescribeBillingGroupRequest) (*operations.DescribeBillingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8821,14 +8821,14 @@ func (s *SDK) DescribeBillingGroup(ctx context.Context, request operations.Descr
 // DescribeCACertificate - <p>Describes a registered CA certificate.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeCACertificate</a> action.</p>
 func (s *SDK) DescribeCACertificate(ctx context.Context, request operations.DescribeCACertificateRequest) (*operations.DescribeCACertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cacertificate/{caCertificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cacertificate/{caCertificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -8927,14 +8927,14 @@ func (s *SDK) DescribeCACertificate(ctx context.Context, request operations.Desc
 // DescribeCertificate - <p>Gets information about the specified certificate.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeCertificate</a> action.</p>
 func (s *SDK) DescribeCertificate(ctx context.Context, request operations.DescribeCertificateRequest) (*operations.DescribeCertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{certificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{certificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9033,14 +9033,14 @@ func (s *SDK) DescribeCertificate(ctx context.Context, request operations.Descri
 // DescribeCustomMetric - <p> Gets information about a Device Defender detect custom metric. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeCustomMetric</a> action.</p>
 func (s *SDK) DescribeCustomMetric(ctx context.Context, request operations.DescribeCustomMetricRequest) (*operations.DescribeCustomMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9126,7 +9126,7 @@ func (s *SDK) DescribeDefaultAuthorizer(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9225,14 +9225,14 @@ func (s *SDK) DescribeDefaultAuthorizer(ctx context.Context, request operations.
 // DescribeDetectMitigationActionsTask - <p> Gets information about a Device Defender ML Detect mitigation action. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDetectMitigationActionsTask</a> action.</p>
 func (s *SDK) DescribeDetectMitigationActionsTask(ctx context.Context, request operations.DescribeDetectMitigationActionsTaskRequest) (*operations.DescribeDetectMitigationActionsTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detect/mitigationactions/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detect/mitigationactions/tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9311,14 +9311,14 @@ func (s *SDK) DescribeDetectMitigationActionsTask(ctx context.Context, request o
 // DescribeDimension - <p>Provides details about a dimension that is defined in your Amazon Web Services accounts.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDimension</a> action.</p>
 func (s *SDK) DescribeDimension(ctx context.Context, request operations.DescribeDimensionRequest) (*operations.DescribeDimensionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9397,14 +9397,14 @@ func (s *SDK) DescribeDimension(ctx context.Context, request operations.Describe
 // DescribeDomainConfiguration - <p>Gets summary information about a domain configuration.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDomainConfiguration</a> action.</p>
 func (s *SDK) DescribeDomainConfiguration(ctx context.Context, request operations.DescribeDomainConfigurationRequest) (*operations.DescribeDomainConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9510,9 +9510,9 @@ func (s *SDK) DescribeEndpoint(ctx context.Context, request operations.DescribeE
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -9600,7 +9600,7 @@ func (s *SDK) DescribeEventConfigurations(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9659,14 +9659,14 @@ func (s *SDK) DescribeEventConfigurations(ctx context.Context, request operation
 // DescribeFleetMetric - <p>Gets information about the specified fleet metric.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeFleetMetric</a> action.</p>
 func (s *SDK) DescribeFleetMetric(ctx context.Context, request operations.DescribeFleetMetricRequest) (*operations.DescribeFleetMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9765,14 +9765,14 @@ func (s *SDK) DescribeFleetMetric(ctx context.Context, request operations.Descri
 // DescribeIndex - <p>Describes a search index.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeIndex</a> action.</p>
 func (s *SDK) DescribeIndex(ctx context.Context, request operations.DescribeIndexRequest) (*operations.DescribeIndexResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/indices/{indexName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/indices/{indexName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9871,14 +9871,14 @@ func (s *SDK) DescribeIndex(ctx context.Context, request operations.DescribeInde
 // DescribeJob - <p>Describes a job.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeJob</a> action.</p>
 func (s *SDK) DescribeJob(ctx context.Context, request operations.DescribeJobRequest) (*operations.DescribeJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -9957,16 +9957,16 @@ func (s *SDK) DescribeJob(ctx context.Context, request operations.DescribeJobReq
 // DescribeJobExecution - <p>Describes a job execution.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeJobExecution</a> action.</p>
 func (s *SDK) DescribeJobExecution(ctx context.Context, request operations.DescribeJobExecutionRequest) (*operations.DescribeJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10047,14 +10047,14 @@ func (s *SDK) DescribeJobExecution(ctx context.Context, request operations.Descr
 // DescribeJobTemplate - Returns information about a job template.
 func (s *SDK) DescribeJobTemplate(ctx context.Context, request operations.DescribeJobTemplateRequest) (*operations.DescribeJobTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/job-templates/{jobTemplateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/job-templates/{jobTemplateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10133,16 +10133,16 @@ func (s *SDK) DescribeJobTemplate(ctx context.Context, request operations.Descri
 // DescribeManagedJobTemplate - View details of a managed job template.
 func (s *SDK) DescribeManagedJobTemplate(ctx context.Context, request operations.DescribeManagedJobTemplateRequest) (*operations.DescribeManagedJobTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/managed-job-templates/{templateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/managed-job-templates/{templateName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -10223,14 +10223,14 @@ func (s *SDK) DescribeManagedJobTemplate(ctx context.Context, request operations
 // DescribeMitigationAction - <p>Gets information about a mitigation action.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeMitigationAction</a> action.</p>
 func (s *SDK) DescribeMitigationAction(ctx context.Context, request operations.DescribeMitigationActionRequest) (*operations.DescribeMitigationActionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10309,14 +10309,14 @@ func (s *SDK) DescribeMitigationAction(ctx context.Context, request operations.D
 // DescribeProvisioningTemplate - <p>Returns information about a provisioning template.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeProvisioningTemplate</a> action.</p>
 func (s *SDK) DescribeProvisioningTemplate(ctx context.Context, request operations.DescribeProvisioningTemplateRequest) (*operations.DescribeProvisioningTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10405,14 +10405,14 @@ func (s *SDK) DescribeProvisioningTemplate(ctx context.Context, request operatio
 // DescribeProvisioningTemplateVersion - <p>Returns information about a provisioning template version.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeProvisioningTemplateVersion</a> action.</p>
 func (s *SDK) DescribeProvisioningTemplateVersion(ctx context.Context, request operations.DescribeProvisioningTemplateVersionRequest) (*operations.DescribeProvisioningTemplateVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions/{versionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions/{versionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10501,14 +10501,14 @@ func (s *SDK) DescribeProvisioningTemplateVersion(ctx context.Context, request o
 // DescribeRoleAlias - <p>Describes a role alias.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeRoleAlias</a> action.</p>
 func (s *SDK) DescribeRoleAlias(ctx context.Context, request operations.DescribeRoleAliasRequest) (*operations.DescribeRoleAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10607,14 +10607,14 @@ func (s *SDK) DescribeRoleAlias(ctx context.Context, request operations.Describe
 // DescribeScheduledAudit - <p>Gets information about a scheduled audit.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeScheduledAudit</a> action.</p>
 func (s *SDK) DescribeScheduledAudit(ctx context.Context, request operations.DescribeScheduledAuditRequest) (*operations.DescribeScheduledAuditResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10693,14 +10693,14 @@ func (s *SDK) DescribeScheduledAudit(ctx context.Context, request operations.Des
 // DescribeSecurityProfile - <p>Gets information about a Device Defender security profile.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeSecurityProfile</a> action.</p>
 func (s *SDK) DescribeSecurityProfile(ctx context.Context, request operations.DescribeSecurityProfileRequest) (*operations.DescribeSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10779,14 +10779,14 @@ func (s *SDK) DescribeSecurityProfile(ctx context.Context, request operations.De
 // DescribeStream - <p>Gets information about a stream.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeStream</a> action.</p>
 func (s *SDK) DescribeStream(ctx context.Context, request operations.DescribeStreamRequest) (*operations.DescribeStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10885,14 +10885,14 @@ func (s *SDK) DescribeStream(ctx context.Context, request operations.DescribeStr
 // DescribeThing - <p>Gets information about the specified thing.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThing</a> action.</p>
 func (s *SDK) DescribeThing(ctx context.Context, request operations.DescribeThingRequest) (*operations.DescribeThingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -10991,14 +10991,14 @@ func (s *SDK) DescribeThing(ctx context.Context, request operations.DescribeThin
 // DescribeThingGroup - <p>Describe a thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThingGroup</a> action.</p>
 func (s *SDK) DescribeThingGroup(ctx context.Context, request operations.DescribeThingGroupRequest) (*operations.DescribeThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11077,14 +11077,14 @@ func (s *SDK) DescribeThingGroup(ctx context.Context, request operations.Describ
 // DescribeThingRegistrationTask - <p>Describes a bulk thing provisioning task.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThingRegistrationTask</a> action.</p>
 func (s *SDK) DescribeThingRegistrationTask(ctx context.Context, request operations.DescribeThingRegistrationTaskRequest) (*operations.DescribeThingRegistrationTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-registration-tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-registration-tasks/{taskId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11173,14 +11173,14 @@ func (s *SDK) DescribeThingRegistrationTask(ctx context.Context, request operati
 // DescribeThingType - <p>Gets information about the specified thing type.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThingType</a> action.</p>
 func (s *SDK) DescribeThingType(ctx context.Context, request operations.DescribeThingTypeRequest) (*operations.DescribeThingTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-types/{thingTypeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11279,9 +11279,9 @@ func (s *SDK) DescribeThingType(ctx context.Context, request operations.Describe
 // DetachPolicy - <p>Detaches a policy from the specified target.</p> <note> <p>Because of the distributed nature of Amazon Web Services, it can take up to five minutes after a policy is detached before it's ready to be deleted.</p> </note> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachPolicy</a> action.</p>
 func (s *SDK) DetachPolicy(ctx context.Context, request operations.DetachPolicyRequest) (*operations.DetachPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/target-policies/{policyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/target-policies/{policyName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11296,7 +11296,7 @@ func (s *SDK) DetachPolicy(ctx context.Context, request operations.DetachPolicyR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11386,14 +11386,14 @@ func (s *SDK) DetachPolicy(ctx context.Context, request operations.DetachPolicyR
 // DetachPrincipalPolicy - <p>Removes the specified policy from the specified certificate.</p> <p> <b>Note:</b> This action is deprecated and works as expected for backward compatibility, but we won't add enhancements. Use <a>DetachPolicy</a> instead.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachPrincipalPolicy</a> action.</p>
 func (s *SDK) DetachPrincipalPolicy(ctx context.Context, request operations.DetachPrincipalPolicyRequest) (*operations.DetachPrincipalPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/principal-policies/{policyName}#x-amzn-iot-principal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/principal-policies/{policyName}#x-amzn-iot-principal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11483,16 +11483,16 @@ func (s *SDK) DetachPrincipalPolicy(ctx context.Context, request operations.Deta
 // DetachSecurityProfile - <p>Disassociates a Device Defender security profile from a thing group or from this account.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachSecurityProfile</a> action.</p>
 func (s *SDK) DetachSecurityProfile(ctx context.Context, request operations.DetachSecurityProfileRequest) (*operations.DetachSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}/targets#securityProfileTargetArn", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}/targets#securityProfileTargetArn", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -11573,14 +11573,14 @@ func (s *SDK) DetachSecurityProfile(ctx context.Context, request operations.Deta
 // DetachThingPrincipal - <p>Detaches the specified principal from the specified thing. A principal can be X.509 certificates, IAM users, groups, and roles, Amazon Cognito identities or federated identities.</p> <note> <p>This call is asynchronous. It might take several seconds for the detachment to propagate.</p> </note> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachThingPrincipal</a> action.</p>
 func (s *SDK) DetachThingPrincipal(ctx context.Context, request operations.DetachThingPrincipalRequest) (*operations.DetachThingPrincipalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/principals#x-amzn-principal", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/principals#x-amzn-principal", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11679,14 +11679,14 @@ func (s *SDK) DetachThingPrincipal(ctx context.Context, request operations.Detac
 // DisableTopicRule - <p>Disables the rule.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DisableTopicRule</a> action.</p>
 func (s *SDK) DisableTopicRule(ctx context.Context, request operations.DisableTopicRuleRequest) (*operations.DisableTopicRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}/disable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}/disable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11766,14 +11766,14 @@ func (s *SDK) DisableTopicRule(ctx context.Context, request operations.DisableTo
 // EnableTopicRule - <p>Enables the rule.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">EnableTopicRule</a> action.</p>
 func (s *SDK) EnableTopicRule(ctx context.Context, request operations.EnableTopicRuleRequest) (*operations.EnableTopicRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}/enable", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}/enable", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -11860,9 +11860,9 @@ func (s *SDK) GetBehaviorModelTrainingSummaries(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -11945,7 +11945,7 @@ func (s *SDK) GetBucketsAggregation(ctx context.Context, request operations.GetB
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indices/buckets"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -11960,7 +11960,7 @@ func (s *SDK) GetBucketsAggregation(ctx context.Context, request operations.GetB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12091,7 +12091,7 @@ func (s *SDK) GetCardinality(ctx context.Context, request operations.GetCardinal
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indices/cardinality"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12106,7 +12106,7 @@ func (s *SDK) GetCardinality(ctx context.Context, request operations.GetCardinal
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12237,7 +12237,7 @@ func (s *SDK) GetEffectivePolicies(ctx context.Context, request operations.GetEf
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/effective-policies"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12252,9 +12252,9 @@ func (s *SDK) GetEffectivePolicies(ctx context.Context, request operations.GetEf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -12372,7 +12372,7 @@ func (s *SDK) GetIndexingConfiguration(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12461,14 +12461,14 @@ func (s *SDK) GetIndexingConfiguration(ctx context.Context, request operations.G
 // GetJobDocument - <p>Gets a job document.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetJobDocument</a> action.</p>
 func (s *SDK) GetJobDocument(ctx context.Context, request operations.GetJobDocumentRequest) (*operations.GetJobDocumentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/job-document", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/job-document", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12554,7 +12554,7 @@ func (s *SDK) GetLoggingOptions(ctx context.Context, request operations.GetLoggi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12623,14 +12623,14 @@ func (s *SDK) GetLoggingOptions(ctx context.Context, request operations.GetLoggi
 // GetOTAUpdate - <p>Gets an OTA update.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetOTAUpdate</a> action.</p>
 func (s *SDK) GetOTAUpdate(ctx context.Context, request operations.GetOTAUpdateRequest) (*operations.GetOTAUpdateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/otaUpdates/{otaUpdateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/otaUpdates/{otaUpdateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12731,7 +12731,7 @@ func (s *SDK) GetPercentiles(ctx context.Context, request operations.GetPercenti
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indices/percentiles"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -12746,7 +12746,7 @@ func (s *SDK) GetPercentiles(ctx context.Context, request operations.GetPercenti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12875,14 +12875,14 @@ func (s *SDK) GetPercentiles(ctx context.Context, request operations.GetPercenti
 // GetPolicy - <p>Gets information about the specified policy with the policy document of the default version.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetPolicy</a> action.</p>
 func (s *SDK) GetPolicy(ctx context.Context, request operations.GetPolicyRequest) (*operations.GetPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -12981,14 +12981,14 @@ func (s *SDK) GetPolicy(ctx context.Context, request operations.GetPolicyRequest
 // GetPolicyVersion - <p>Gets information about the specified policy version.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetPolicyVersion</a> action.</p>
 func (s *SDK) GetPolicyVersion(ctx context.Context, request operations.GetPolicyVersionRequest) (*operations.GetPolicyVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version/{policyVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version/{policyVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13094,7 +13094,7 @@ func (s *SDK) GetRegistrationCode(ctx context.Context, request operations.GetReg
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13185,7 +13185,7 @@ func (s *SDK) GetStatistics(ctx context.Context, request operations.GetStatistic
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indices/statistics"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13200,7 +13200,7 @@ func (s *SDK) GetStatistics(ctx context.Context, request operations.GetStatistic
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13329,14 +13329,14 @@ func (s *SDK) GetStatistics(ctx context.Context, request operations.GetStatistic
 // GetTopicRule - <p>Gets information about the rule.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetTopicRule</a> action.</p>
 func (s *SDK) GetTopicRule(ctx context.Context, request operations.GetTopicRuleRequest) (*operations.GetTopicRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13415,14 +13415,14 @@ func (s *SDK) GetTopicRule(ctx context.Context, request operations.GetTopicRuleR
 // GetTopicRuleDestination - <p>Gets information about a topic rule destination.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetTopicRuleDestination</a> action.</p>
 func (s *SDK) GetTopicRuleDestination(ctx context.Context, request operations.GetTopicRuleDestinationRequest) (*operations.GetTopicRuleDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/destinations/{arn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/destinations/{arn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13508,7 +13508,7 @@ func (s *SDK) GetV2LoggingOptions(ctx context.Context, request operations.GetV2L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -13584,9 +13584,9 @@ func (s *SDK) ListActiveViolations(ctx context.Context, request operations.ListA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13667,16 +13667,16 @@ func (s *SDK) ListActiveViolations(ctx context.Context, request operations.ListA
 // ListAttachedPolicies - <p>Lists the policies attached to the specified thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAttachedPolicies</a> action.</p>
 func (s *SDK) ListAttachedPolicies(ctx context.Context, request operations.ListAttachedPoliciesRequest) (*operations.ListAttachedPoliciesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attached-policies/{target}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/attached-policies/{target}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13789,7 +13789,7 @@ func (s *SDK) ListAuditFindings(ctx context.Context, request operations.ListAudi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/findings"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -13804,9 +13804,9 @@ func (s *SDK) ListAuditFindings(ctx context.Context, request operations.ListAudi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13884,9 +13884,9 @@ func (s *SDK) ListAuditMitigationActionsExecutions(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -13964,9 +13964,9 @@ func (s *SDK) ListAuditMitigationActionsTasks(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14039,7 +14039,7 @@ func (s *SDK) ListAuditSuppressions(ctx context.Context, request operations.List
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/suppressions/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -14054,9 +14054,9 @@ func (s *SDK) ListAuditSuppressions(ctx context.Context, request operations.List
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14134,9 +14134,9 @@ func (s *SDK) ListAuditTasks(ctx context.Context, request operations.ListAuditTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14214,9 +14214,9 @@ func (s *SDK) ListAuthorizers(ctx context.Context, request operations.ListAuthor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14314,9 +14314,9 @@ func (s *SDK) ListBillingGroups(ctx context.Context, request operations.ListBill
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14404,9 +14404,9 @@ func (s *SDK) ListCACertificates(ctx context.Context, request operations.ListCAC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14504,9 +14504,9 @@ func (s *SDK) ListCertificates(ctx context.Context, request operations.ListCerti
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14597,16 +14597,16 @@ func (s *SDK) ListCertificates(ctx context.Context, request operations.ListCerti
 // ListCertificatesByCA - <p>List the device certificates signed by the specified CA certificate.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListCertificatesByCA</a> action.</p>
 func (s *SDK) ListCertificatesByCA(ctx context.Context, request operations.ListCertificatesByCARequest) (*operations.ListCertificatesByCAResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates-by-ca/{caCertificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates-by-ca/{caCertificateId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14704,9 +14704,9 @@ func (s *SDK) ListCustomMetrics(ctx context.Context, request operations.ListCust
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14784,9 +14784,9 @@ func (s *SDK) ListDetectMitigationActionsExecutions(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14864,9 +14864,9 @@ func (s *SDK) ListDetectMitigationActionsTasks(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -14944,9 +14944,9 @@ func (s *SDK) ListDimensions(ctx context.Context, request operations.ListDimensi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15024,9 +15024,9 @@ func (s *SDK) ListDomainConfigurations(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15124,9 +15124,9 @@ func (s *SDK) ListFleetMetrics(ctx context.Context, request operations.ListFleet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15224,9 +15224,9 @@ func (s *SDK) ListIndices(ctx context.Context, request operations.ListIndicesReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15317,16 +15317,16 @@ func (s *SDK) ListIndices(ctx context.Context, request operations.ListIndicesReq
 // ListJobExecutionsForJob - <p>Lists the job executions for a job.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListJobExecutionsForJob</a> action.</p>
 func (s *SDK) ListJobExecutionsForJob(ctx context.Context, request operations.ListJobExecutionsForJobRequest) (*operations.ListJobExecutionsForJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/things", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/things", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15407,16 +15407,16 @@ func (s *SDK) ListJobExecutionsForJob(ctx context.Context, request operations.Li
 // ListJobExecutionsForThing - <p>Lists the job executions for the specified thing.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListJobExecutionsForThing</a> action.</p>
 func (s *SDK) ListJobExecutionsForThing(ctx context.Context, request operations.ListJobExecutionsForThingRequest) (*operations.ListJobExecutionsForThingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15504,9 +15504,9 @@ func (s *SDK) ListJobTemplates(ctx context.Context, request operations.ListJobTe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15584,9 +15584,9 @@ func (s *SDK) ListJobs(ctx context.Context, request operations.ListJobsRequest) 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15674,9 +15674,9 @@ func (s *SDK) ListManagedJobTemplates(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15764,9 +15764,9 @@ func (s *SDK) ListMetricValues(ctx context.Context, request operations.ListMetri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15854,9 +15854,9 @@ func (s *SDK) ListMitigationActions(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -15934,9 +15934,9 @@ func (s *SDK) ListOTAUpdates(ctx context.Context, request operations.ListOTAUpda
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16034,9 +16034,9 @@ func (s *SDK) ListOutgoingCertificates(ctx context.Context, request operations.L
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16134,9 +16134,9 @@ func (s *SDK) ListPolicies(ctx context.Context, request operations.ListPoliciesR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16234,9 +16234,9 @@ func (s *SDK) ListPolicyPrincipals(ctx context.Context, request operations.ListP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16337,14 +16337,14 @@ func (s *SDK) ListPolicyPrincipals(ctx context.Context, request operations.ListP
 // ListPolicyVersions - <p>Lists the versions of the specified policy and identifies the default version.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListPolicyVersions</a> action.</p>
 func (s *SDK) ListPolicyVersions(ctx context.Context, request operations.ListPolicyVersionsRequest) (*operations.ListPolicyVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -16450,9 +16450,9 @@ func (s *SDK) ListPrincipalPolicies(ctx context.Context, request operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16560,9 +16560,9 @@ func (s *SDK) ListPrincipalThings(ctx context.Context, request operations.ListPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16663,16 +16663,16 @@ func (s *SDK) ListPrincipalThings(ctx context.Context, request operations.ListPr
 // ListProvisioningTemplateVersions - <p>A list of provisioning template versions.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListProvisioningTemplateVersions</a> action.</p>
 func (s *SDK) ListProvisioningTemplateVersions(ctx context.Context, request operations.ListProvisioningTemplateVersionsRequest) (*operations.ListProvisioningTemplateVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}/versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16770,9 +16770,9 @@ func (s *SDK) ListProvisioningTemplates(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16860,9 +16860,9 @@ func (s *SDK) ListRelatedResourcesForAuditFinding(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -16950,9 +16950,9 @@ func (s *SDK) ListRoleAliases(ctx context.Context, request operations.ListRoleAl
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17050,9 +17050,9 @@ func (s *SDK) ListScheduledAudits(ctx context.Context, request operations.ListSc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17130,9 +17130,9 @@ func (s *SDK) ListSecurityProfiles(ctx context.Context, request operations.ListS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17220,9 +17220,9 @@ func (s *SDK) ListSecurityProfilesForTarget(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17310,9 +17310,9 @@ func (s *SDK) ListStreams(ctx context.Context, request operations.ListStreamsReq
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17410,9 +17410,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17493,16 +17493,16 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTargetsForPolicy - <p>List targets for the specified policy.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTargetsForPolicy</a> action.</p>
 func (s *SDK) ListTargetsForPolicy(ctx context.Context, request operations.ListTargetsForPolicyRequest) (*operations.ListTargetsForPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy-targets/{policyName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policy-targets/{policyName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17613,16 +17613,16 @@ func (s *SDK) ListTargetsForPolicy(ctx context.Context, request operations.ListT
 // ListTargetsForSecurityProfile - <p>Lists the targets (thing groups) associated with a given Device Defender security profile.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTargetsForSecurityProfile</a> action.</p>
 func (s *SDK) ListTargetsForSecurityProfile(ctx context.Context, request operations.ListTargetsForSecurityProfileRequest) (*operations.ListTargetsForSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}/targets", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}/targets", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17710,9 +17710,9 @@ func (s *SDK) ListThingGroups(ctx context.Context, request operations.ListThingG
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17793,16 +17793,16 @@ func (s *SDK) ListThingGroups(ctx context.Context, request operations.ListThingG
 // ListThingGroupsForThing - <p>List the thing groups to which the specified thing belongs.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingGroupsForThing</a> action.</p>
 func (s *SDK) ListThingGroupsForThing(ctx context.Context, request operations.ListThingGroupsForThingRequest) (*operations.ListThingGroupsForThingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/thing-groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/thing-groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17883,16 +17883,16 @@ func (s *SDK) ListThingGroupsForThing(ctx context.Context, request operations.Li
 // ListThingPrincipals - <p>Lists the principals associated with the specified thing. A principal can be X.509 certificates, IAM users, groups, and roles, Amazon Cognito identities or federated identities.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingPrincipals</a> action.</p>
 func (s *SDK) ListThingPrincipals(ctx context.Context, request operations.ListThingPrincipalsRequest) (*operations.ListThingPrincipalsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/principals", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/principals", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -17993,16 +17993,16 @@ func (s *SDK) ListThingPrincipals(ctx context.Context, request operations.ListTh
 // ListThingRegistrationTaskReports - Information about the thing registration tasks.
 func (s *SDK) ListThingRegistrationTaskReports(ctx context.Context, request operations.ListThingRegistrationTaskReportsRequest) (*operations.ListThingRegistrationTaskReportsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-registration-tasks/{taskId}/reports#reportType", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-registration-tasks/{taskId}/reports#reportType", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18090,9 +18090,9 @@ func (s *SDK) ListThingRegistrationTasks(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18180,9 +18180,9 @@ func (s *SDK) ListThingTypes(ctx context.Context, request operations.ListThingTy
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18280,9 +18280,9 @@ func (s *SDK) ListThings(ctx context.Context, request operations.ListThingsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18373,16 +18373,16 @@ func (s *SDK) ListThings(ctx context.Context, request operations.ListThingsReque
 // ListThingsInBillingGroup - <p>Lists the things you have added to the given billing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingsInBillingGroup</a> action.</p>
 func (s *SDK) ListThingsInBillingGroup(ctx context.Context, request operations.ListThingsInBillingGroupRequest) (*operations.ListThingsInBillingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}/things", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}/things", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18463,16 +18463,16 @@ func (s *SDK) ListThingsInBillingGroup(ctx context.Context, request operations.L
 // ListThingsInThingGroup - <p>Lists the things in the specified group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingsInThingGroup</a> action.</p>
 func (s *SDK) ListThingsInThingGroup(ctx context.Context, request operations.ListThingsInThingGroupRequest) (*operations.ListThingsInThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}/things", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}/things", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18560,9 +18560,9 @@ func (s *SDK) ListTopicRuleDestinations(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18650,9 +18650,9 @@ func (s *SDK) ListTopicRules(ctx context.Context, request operations.ListTopicRu
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18730,9 +18730,9 @@ func (s *SDK) ListV2LoggingLevels(ctx context.Context, request operations.ListV2
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18820,9 +18820,9 @@ func (s *SDK) ListViolationEvents(ctx context.Context, request operations.ListVi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -18893,9 +18893,9 @@ func (s *SDK) ListViolationEvents(ctx context.Context, request operations.ListVi
 // PutVerificationStateOnViolation - Set a verification state and provide a description of that verification state on a violation (detect alarm).
 func (s *SDK) PutVerificationStateOnViolation(ctx context.Context, request operations.PutVerificationStateOnViolationRequest) (*operations.PutVerificationStateOnViolationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/violations/verification-state/{violationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/violations/verification-state/{violationId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18910,7 +18910,7 @@ func (s *SDK) PutVerificationStateOnViolation(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -18981,7 +18981,7 @@ func (s *SDK) RegisterCACertificate(ctx context.Context, request operations.Regi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cacertificate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -18996,9 +18996,9 @@ func (s *SDK) RegisterCACertificate(ctx context.Context, request operations.Regi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -19141,7 +19141,7 @@ func (s *SDK) RegisterCertificate(ctx context.Context, request operations.Regist
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/certificate/register"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19156,9 +19156,9 @@ func (s *SDK) RegisterCertificate(ctx context.Context, request operations.Regist
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -19291,7 +19291,7 @@ func (s *SDK) RegisterCertificateWithoutCA(ctx context.Context, request operatio
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/certificate/register-no-ca"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19306,7 +19306,7 @@ func (s *SDK) RegisterCertificateWithoutCA(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -19427,7 +19427,7 @@ func (s *SDK) RegisterThing(ctx context.Context, request operations.RegisterThin
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/things"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19442,7 +19442,7 @@ func (s *SDK) RegisterThing(ctx context.Context, request operations.RegisterThin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -19551,9 +19551,9 @@ func (s *SDK) RegisterThing(ctx context.Context, request operations.RegisterThin
 // RejectCertificateTransfer - <p>Rejects a pending certificate transfer. After IoT rejects a certificate transfer, the certificate status changes from <b>PENDING_TRANSFER</b> to <b>INACTIVE</b>.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p> <p>This operation can only be called by the transfer destination. After it is called, the certificate will be returned to the source's account in the INACTIVE state.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RejectCertificateTransfer</a> action.</p>
 func (s *SDK) RejectCertificateTransfer(ctx context.Context, request operations.RejectCertificateTransferRequest) (*operations.RejectCertificateTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reject-certificate-transfer/{certificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/reject-certificate-transfer/{certificateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19568,7 +19568,7 @@ func (s *SDK) RejectCertificateTransfer(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -19670,7 +19670,7 @@ func (s *SDK) RemoveThingFromBillingGroup(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/billing-groups/removeThingFromBillingGroup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19685,7 +19685,7 @@ func (s *SDK) RemoveThingFromBillingGroup(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -19766,7 +19766,7 @@ func (s *SDK) RemoveThingFromThingGroup(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/thing-groups/removeThingFromThingGroup"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19781,7 +19781,7 @@ func (s *SDK) RemoveThingFromThingGroup(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -19860,9 +19860,9 @@ func (s *SDK) RemoveThingFromThingGroup(ctx context.Context, request operations.
 // ReplaceTopicRule - <p>Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ReplaceTopicRule</a> action.</p>
 func (s *SDK) ReplaceTopicRule(ctx context.Context, request operations.ReplaceTopicRuleRequest) (*operations.ReplaceTopicRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/rules/{ruleName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19877,7 +19877,7 @@ func (s *SDK) ReplaceTopicRule(ctx context.Context, request operations.ReplaceTo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -19969,7 +19969,7 @@ func (s *SDK) SearchIndex(ctx context.Context, request operations.SearchIndexReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indices/search"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -19984,7 +19984,7 @@ func (s *SDK) SearchIndex(ctx context.Context, request operations.SearchIndexReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20105,7 +20105,7 @@ func (s *SDK) SetDefaultAuthorizer(ctx context.Context, request operations.SetDe
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/default-authorizer"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20120,7 +20120,7 @@ func (s *SDK) SetDefaultAuthorizer(ctx context.Context, request operations.SetDe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20229,14 +20229,14 @@ func (s *SDK) SetDefaultAuthorizer(ctx context.Context, request operations.SetDe
 // SetDefaultPolicyVersion - <p>Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all certificates to which the policy is attached. To list the principals the policy is attached to, use the <a>ListPrincipalPolicies</a> action.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SetDefaultPolicyVersion</a> action.</p>
 func (s *SDK) SetDefaultPolicyVersion(ctx context.Context, request operations.SetDefaultPolicyVersionRequest) (*operations.SetDefaultPolicyVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version/{policyVersionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/policies/{policyName}/version/{policyVersionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20328,7 +20328,7 @@ func (s *SDK) SetLoggingOptions(ctx context.Context, request operations.SetLoggi
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/loggingOptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20343,7 +20343,7 @@ func (s *SDK) SetLoggingOptions(ctx context.Context, request operations.SetLoggi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20405,7 +20405,7 @@ func (s *SDK) SetV2LoggingLevel(ctx context.Context, request operations.SetV2Log
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2LoggingLevel"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20420,7 +20420,7 @@ func (s *SDK) SetV2LoggingLevel(ctx context.Context, request operations.SetV2Log
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20502,7 +20502,7 @@ func (s *SDK) SetV2LoggingOptions(ctx context.Context, request operations.SetV2L
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2LoggingOptions"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20517,7 +20517,7 @@ func (s *SDK) SetV2LoggingOptions(ctx context.Context, request operations.SetV2L
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20577,9 +20577,9 @@ func (s *SDK) SetV2LoggingOptions(ctx context.Context, request operations.SetV2L
 // StartAuditMitigationActionsTask - <p>Starts a task that applies a set of mitigation actions to the specified target.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartAuditMitigationActionsTask</a> action.</p>
 func (s *SDK) StartAuditMitigationActionsTask(ctx context.Context, request operations.StartAuditMitigationActionsTaskRequest) (*operations.StartAuditMitigationActionsTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/mitigationactions/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/mitigationactions/tasks/{taskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20594,7 +20594,7 @@ func (s *SDK) StartAuditMitigationActionsTask(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20683,9 +20683,9 @@ func (s *SDK) StartAuditMitigationActionsTask(ctx context.Context, request opera
 // StartDetectMitigationActionsTask - <p> Starts a Device Defender ML Detect mitigation actions task. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartDetectMitigationActionsTask</a> action.</p>
 func (s *SDK) StartDetectMitigationActionsTask(ctx context.Context, request operations.StartDetectMitigationActionsTaskRequest) (*operations.StartDetectMitigationActionsTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detect/mitigationactions/tasks/{taskId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/detect/mitigationactions/tasks/{taskId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20700,7 +20700,7 @@ func (s *SDK) StartDetectMitigationActionsTask(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20791,7 +20791,7 @@ func (s *SDK) StartOnDemandAuditTask(ctx context.Context, request operations.Sta
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/tasks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20806,7 +20806,7 @@ func (s *SDK) StartOnDemandAuditTask(ctx context.Context, request operations.Sta
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20887,7 +20887,7 @@ func (s *SDK) StartThingRegistrationTask(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/thing-registration-tasks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -20902,7 +20902,7 @@ func (s *SDK) StartThingRegistrationTask(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -20981,14 +20981,14 @@ func (s *SDK) StartThingRegistrationTask(ctx context.Context, request operations
 // StopThingRegistrationTask - <p>Cancels a bulk thing provisioning task.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StopThingRegistrationTask</a> action.</p>
 func (s *SDK) StopThingRegistrationTask(ctx context.Context, request operations.StopThingRegistrationTaskRequest) (*operations.StopThingRegistrationTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-registration-tasks/{taskId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-registration-tasks/{taskId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21079,7 +21079,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/tags"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21094,7 +21094,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21185,7 +21185,7 @@ func (s *SDK) TestAuthorization(ctx context.Context, request operations.TestAuth
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/test-authorization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21200,9 +21200,9 @@ func (s *SDK) TestAuthorization(ctx context.Context, request operations.TestAuth
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -21313,9 +21313,9 @@ func (s *SDK) TestAuthorization(ctx context.Context, request operations.TestAuth
 // TestInvokeAuthorizer - <p>Tests a custom authorization behavior by invoking a specified custom authorizer. Use this to test and debug the custom authorization behavior of devices that connect to the IoT device gateway.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TestInvokeAuthorizer</a> action.</p>
 func (s *SDK) TestInvokeAuthorizer(ctx context.Context, request operations.TestInvokeAuthorizerRequest) (*operations.TestInvokeAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}/test", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}/test", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21330,7 +21330,7 @@ func (s *SDK) TestInvokeAuthorizer(ctx context.Context, request operations.TestI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21439,9 +21439,9 @@ func (s *SDK) TestInvokeAuthorizer(ctx context.Context, request operations.TestI
 // TransferCertificate - <p>Transfers the specified certificate to the specified Amazon Web Services account.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TransferCertificate</a> action.</p> <p>You can cancel the transfer until it is acknowledged by the recipient.</p> <p>No notification is sent to the transfer destination's account. It is up to the caller to notify the transfer target.</p> <p>The certificate being transferred must not be in the ACTIVE state. You can use the <a>UpdateCertificate</a> action to deactivate it.</p> <p>The certificate must not have any policies attached to it. You can use the <a>DetachPolicy</a> action to detach them.</p>
 func (s *SDK) TransferCertificate(ctx context.Context, request operations.TransferCertificateRequest) (*operations.TransferCertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transfer-certificate/{certificateId}#targetAwsAccount", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/transfer-certificate/{certificateId}#targetAwsAccount", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21456,9 +21456,9 @@ func (s *SDK) TransferCertificate(ctx context.Context, request operations.Transf
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -21581,7 +21581,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/untag"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21596,7 +21596,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21677,7 +21677,7 @@ func (s *SDK) UpdateAccountAuditConfiguration(ctx context.Context, request opera
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/configuration"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21692,7 +21692,7 @@ func (s *SDK) UpdateAccountAuditConfiguration(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21763,7 +21763,7 @@ func (s *SDK) UpdateAuditSuppression(ctx context.Context, request operations.Upd
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/audit/suppressions/update"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21778,7 +21778,7 @@ func (s *SDK) UpdateAuditSuppression(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21857,9 +21857,9 @@ func (s *SDK) UpdateAuditSuppression(ctx context.Context, request operations.Upd
 // UpdateAuthorizer - <p>Updates an authorizer.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateAuthorizer</a> action.</p>
 func (s *SDK) UpdateAuthorizer(ctx context.Context, request operations.UpdateAuthorizerRequest) (*operations.UpdateAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/authorizer/{authorizerName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -21874,7 +21874,7 @@ func (s *SDK) UpdateAuthorizer(ctx context.Context, request operations.UpdateAut
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -21983,9 +21983,9 @@ func (s *SDK) UpdateAuthorizer(ctx context.Context, request operations.UpdateAut
 // UpdateBillingGroup - <p>Updates information about the billing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateBillingGroup</a> action.</p>
 func (s *SDK) UpdateBillingGroup(ctx context.Context, request operations.UpdateBillingGroupRequest) (*operations.UpdateBillingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/billing-groups/{billingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22000,7 +22000,7 @@ func (s *SDK) UpdateBillingGroup(ctx context.Context, request operations.UpdateB
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22089,9 +22089,9 @@ func (s *SDK) UpdateBillingGroup(ctx context.Context, request operations.UpdateB
 // UpdateCACertificate - <p>Updates a registered CA certificate.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateCACertificate</a> action.</p>
 func (s *SDK) UpdateCACertificate(ctx context.Context, request operations.UpdateCACertificateRequest) (*operations.UpdateCACertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cacertificate/{caCertificateId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/cacertificate/{caCertificateId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22106,9 +22106,9 @@ func (s *SDK) UpdateCACertificate(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -22200,16 +22200,16 @@ func (s *SDK) UpdateCACertificate(ctx context.Context, request operations.Update
 // UpdateCertificate - <p>Updates the status of the specified certificate. This operation is idempotent.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateCertificate</a> action.</p> <p>Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to IoT.</p> <p>Within a few minutes of updating a certificate from the ACTIVE state to any other state, IoT disconnects all devices that used that certificate to connect. Devices cannot use a certificate that is not in the ACTIVE state to reconnect.</p>
 func (s *SDK) UpdateCertificate(ctx context.Context, request operations.UpdateCertificateRequest) (*operations.UpdateCertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{certificateId}#newStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/certificates/{certificateId}#newStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -22311,9 +22311,9 @@ func (s *SDK) UpdateCertificate(ctx context.Context, request operations.UpdateCe
 // UpdateCustomMetric - <p>Updates a Device Defender detect custom metric. </p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateCustomMetric</a> action.</p>
 func (s *SDK) UpdateCustomMetric(ctx context.Context, request operations.UpdateCustomMetricRequest) (*operations.UpdateCustomMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/custom-metric/{metricName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22328,7 +22328,7 @@ func (s *SDK) UpdateCustomMetric(ctx context.Context, request operations.UpdateC
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22407,9 +22407,9 @@ func (s *SDK) UpdateCustomMetric(ctx context.Context, request operations.UpdateC
 // UpdateDimension - <p>Updates the definition for a dimension. You cannot change the type of a dimension after it is created (you can delete it and recreate it).</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateDimension</a> action.</p>
 func (s *SDK) UpdateDimension(ctx context.Context, request operations.UpdateDimensionRequest) (*operations.UpdateDimensionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dimensions/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22424,7 +22424,7 @@ func (s *SDK) UpdateDimension(ctx context.Context, request operations.UpdateDime
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22503,9 +22503,9 @@ func (s *SDK) UpdateDimension(ctx context.Context, request operations.UpdateDime
 // UpdateDomainConfiguration - <p>Updates values stored in the domain configuration. Domain configurations for default endpoints can't be updated.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateDomainConfiguration</a> action.</p>
 func (s *SDK) UpdateDomainConfiguration(ctx context.Context, request operations.UpdateDomainConfigurationRequest) (*operations.UpdateDomainConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/domainConfigurations/{domainConfigurationName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22520,7 +22520,7 @@ func (s *SDK) UpdateDomainConfiguration(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22629,9 +22629,9 @@ func (s *SDK) UpdateDomainConfiguration(ctx context.Context, request operations.
 // UpdateDynamicThingGroup - <p>Updates a dynamic thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateDynamicThingGroup</a> action.</p>
 func (s *SDK) UpdateDynamicThingGroup(ctx context.Context, request operations.UpdateDynamicThingGroupRequest) (*operations.UpdateDynamicThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dynamic-thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dynamic-thing-groups/{thingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22646,7 +22646,7 @@ func (s *SDK) UpdateDynamicThingGroup(ctx context.Context, request operations.Up
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22747,7 +22747,7 @@ func (s *SDK) UpdateEventConfigurations(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/event-configurations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22762,7 +22762,7 @@ func (s *SDK) UpdateEventConfigurations(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22831,9 +22831,9 @@ func (s *SDK) UpdateEventConfigurations(ctx context.Context, request operations.
 // UpdateFleetMetric - <p>Updates the data for a fleet metric.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateFleetMetric</a> action.</p>
 func (s *SDK) UpdateFleetMetric(ctx context.Context, request operations.UpdateFleetMetricRequest) (*operations.UpdateFleetMetricResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/fleet-metric/{metricName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22848,7 +22848,7 @@ func (s *SDK) UpdateFleetMetric(ctx context.Context, request operations.UpdateFl
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -22980,7 +22980,7 @@ func (s *SDK) UpdateIndexingConfiguration(ctx context.Context, request operation
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexing/config"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -22995,7 +22995,7 @@ func (s *SDK) UpdateIndexingConfiguration(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23084,9 +23084,9 @@ func (s *SDK) UpdateIndexingConfiguration(ctx context.Context, request operation
 // UpdateJob - <p>Updates supported fields of the specified job.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateJob</a> action.</p>
 func (s *SDK) UpdateJob(ctx context.Context, request operations.UpdateJobRequest) (*operations.UpdateJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23101,9 +23101,9 @@ func (s *SDK) UpdateJob(ctx context.Context, request operations.UpdateJobRequest
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -23175,9 +23175,9 @@ func (s *SDK) UpdateJob(ctx context.Context, request operations.UpdateJobRequest
 // UpdateMitigationAction - <p>Updates the definition for the specified mitigation action.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateMitigationAction</a> action.</p>
 func (s *SDK) UpdateMitigationAction(ctx context.Context, request operations.UpdateMitigationActionRequest) (*operations.UpdateMitigationActionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mitigationactions/actions/{actionName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23192,7 +23192,7 @@ func (s *SDK) UpdateMitigationAction(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23271,9 +23271,9 @@ func (s *SDK) UpdateMitigationAction(ctx context.Context, request operations.Upd
 // UpdateProvisioningTemplate - <p>Updates a provisioning template.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateProvisioningTemplate</a> action.</p>
 func (s *SDK) UpdateProvisioningTemplate(ctx context.Context, request operations.UpdateProvisioningTemplateRequest) (*operations.UpdateProvisioningTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/provisioning-templates/{templateName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23288,7 +23288,7 @@ func (s *SDK) UpdateProvisioningTemplate(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23377,9 +23377,9 @@ func (s *SDK) UpdateProvisioningTemplate(ctx context.Context, request operations
 // UpdateRoleAlias - <p>Updates a role alias.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateRoleAlias</a> action.</p>
 func (s *SDK) UpdateRoleAlias(ctx context.Context, request operations.UpdateRoleAliasRequest) (*operations.UpdateRoleAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/role-aliases/{roleAlias}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23394,7 +23394,7 @@ func (s *SDK) UpdateRoleAlias(ctx context.Context, request operations.UpdateRole
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23493,9 +23493,9 @@ func (s *SDK) UpdateRoleAlias(ctx context.Context, request operations.UpdateRole
 // UpdateScheduledAudit - <p>Updates a scheduled audit, including which checks are performed and how often the audit takes place.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateScheduledAudit</a> action.</p>
 func (s *SDK) UpdateScheduledAudit(ctx context.Context, request operations.UpdateScheduledAuditRequest) (*operations.UpdateScheduledAuditResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/audit/scheduledaudits/{scheduledAuditName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23510,7 +23510,7 @@ func (s *SDK) UpdateScheduledAudit(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23589,9 +23589,9 @@ func (s *SDK) UpdateScheduledAudit(ctx context.Context, request operations.Updat
 // UpdateSecurityProfile - <p>Updates a Device Defender security profile.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateSecurityProfile</a> action.</p>
 func (s *SDK) UpdateSecurityProfile(ctx context.Context, request operations.UpdateSecurityProfileRequest) (*operations.UpdateSecurityProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/security-profiles/{securityProfileName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23606,9 +23606,9 @@ func (s *SDK) UpdateSecurityProfile(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -23699,9 +23699,9 @@ func (s *SDK) UpdateSecurityProfile(ctx context.Context, request operations.Upda
 // UpdateStream - <p>Updates an existing stream. The stream version will be incremented by one.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateStream</a> action.</p>
 func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamRequest) (*operations.UpdateStreamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/streams/{streamId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23716,7 +23716,7 @@ func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23815,9 +23815,9 @@ func (s *SDK) UpdateStream(ctx context.Context, request operations.UpdateStreamR
 // UpdateThing - <p>Updates the data for a thing.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThing</a> action.</p>
 func (s *SDK) UpdateThing(ctx context.Context, request operations.UpdateThingRequest) (*operations.UpdateThingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23832,7 +23832,7 @@ func (s *SDK) UpdateThing(ctx context.Context, request operations.UpdateThingReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -23941,9 +23941,9 @@ func (s *SDK) UpdateThing(ctx context.Context, request operations.UpdateThingReq
 // UpdateThingGroup - <p>Update a thing group.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingGroup</a> action.</p>
 func (s *SDK) UpdateThingGroup(ctx context.Context, request operations.UpdateThingGroupRequest) (*operations.UpdateThingGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/thing-groups/{thingGroupName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -23958,7 +23958,7 @@ func (s *SDK) UpdateThingGroup(ctx context.Context, request operations.UpdateThi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -24049,7 +24049,7 @@ func (s *SDK) UpdateThingGroupsForThing(ctx context.Context, request operations.
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/thing-groups/updateThingGroupsForThing"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24064,7 +24064,7 @@ func (s *SDK) UpdateThingGroupsForThing(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -24145,7 +24145,7 @@ func (s *SDK) UpdateTopicRuleDestination(ctx context.Context, request operations
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/destinations"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24160,7 +24160,7 @@ func (s *SDK) UpdateTopicRuleDestination(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -24251,7 +24251,7 @@ func (s *SDK) ValidateSecurityProfileBehaviors(ctx context.Context, request oper
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/security-profile-behaviors/validate"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -24266,7 +24266,7 @@ func (s *SDK) ValidateSecurityProfileBehaviors(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

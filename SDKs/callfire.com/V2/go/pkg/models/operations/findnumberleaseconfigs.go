@@ -8,10 +8,11 @@ import (
 )
 
 type FindNumberLeaseConfigsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type FindNumberLeaseConfigsQueryParams struct {
+type FindNumberLeaseConfigsRequest struct {
 	// A city name
 	City *string `queryParam:"style=form,explode=true,name=city"`
 	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
@@ -28,11 +29,6 @@ type FindNumberLeaseConfigsQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// A five-digit Zipcode
 	Zipcode *string `queryParam:"style=form,explode=true,name=zipcode"`
-}
-
-type FindNumberLeaseConfigsRequest struct {
-	QueryParams FindNumberLeaseConfigsQueryParams
-	Security    FindNumberLeaseConfigsSecurity
 }
 
 type FindNumberLeaseConfigsResponse struct {

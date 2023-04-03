@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ProductSearchSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ProductSearchPathParams struct {
-	// Subject (e.g. Company) ID - 32 character hex value
-	SubjectID string `pathParam:"style=simple,explode=false,name=subjectId"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type ProductSearchRequest struct {
-	PathParams ProductSearchPathParams
-	Security   ProductSearchSecurity
+	// Subject (e.g. Company) ID - 32 character hex value
+	SubjectID string `pathParam:"style=simple,explode=false,name=subjectId"`
 }
 
 // ProductSearchDefaultApplicationJSON - Detailed information about the error

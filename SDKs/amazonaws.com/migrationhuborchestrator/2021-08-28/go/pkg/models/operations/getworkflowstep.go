@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkflowStepPathParams struct {
-	// The ID of the step.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetWorkflowStepQueryParams struct {
-	// desThe ID of the step group.
-	StepGroupID string `queryParam:"style=form,explode=true,name=stepGroupId"`
-	// The ID of the migration workflow.
-	WorkflowID string `queryParam:"style=form,explode=true,name=workflowId"`
-}
-
-type GetWorkflowStepHeaders struct {
+type GetWorkflowStepRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type GetWorkflowStepHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetWorkflowStepRequest struct {
-	PathParams  GetWorkflowStepPathParams
-	QueryParams GetWorkflowStepQueryParams
-	Headers     GetWorkflowStepHeaders
+	// The ID of the step.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// desThe ID of the step group.
+	StepGroupID string `queryParam:"style=form,explode=true,name=stepGroupId"`
+	// The ID of the migration workflow.
+	WorkflowID string `queryParam:"style=form,explode=true,name=workflowId"`
 }
 
 type GetWorkflowStepResponse struct {

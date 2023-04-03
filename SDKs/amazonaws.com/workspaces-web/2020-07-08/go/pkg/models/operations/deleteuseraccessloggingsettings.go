@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteUserAccessLoggingSettingsPathParams struct {
-	// The ARN of the user access logging settings.
-	UserAccessLoggingSettingsArn string `pathParam:"style=simple,explode=false,name=userAccessLoggingSettingsArn"`
-}
-
-type DeleteUserAccessLoggingSettingsHeaders struct {
+type DeleteUserAccessLoggingSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteUserAccessLoggingSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteUserAccessLoggingSettingsRequest struct {
-	PathParams DeleteUserAccessLoggingSettingsPathParams
-	Headers    DeleteUserAccessLoggingSettingsHeaders
+	// The ARN of the user access logging settings.
+	UserAccessLoggingSettingsArn string `pathParam:"style=simple,explode=false,name=userAccessLoggingSettingsArn"`
 }
 
 type DeleteUserAccessLoggingSettingsResponse struct {

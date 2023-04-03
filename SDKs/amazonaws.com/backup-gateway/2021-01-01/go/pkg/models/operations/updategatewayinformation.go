@@ -30,20 +30,16 @@ func (e *UpdateGatewayInformationXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type UpdateGatewayInformationHeaders struct {
-	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateGatewayInformationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateGatewayInformationRequest struct {
-	Headers UpdateGatewayInformationHeaders
-	Request shared.UpdateGatewayInformationInput `request:"mediaType=application/json"`
+	UpdateGatewayInformationInput shared.UpdateGatewayInformationInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    UpdateGatewayInformationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateGatewayInformationResponse struct {

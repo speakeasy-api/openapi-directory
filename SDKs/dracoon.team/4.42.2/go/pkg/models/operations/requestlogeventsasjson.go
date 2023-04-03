@@ -9,69 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// RequestLogEventsAsJSONStatusEnum - Operation status:
-//
-// * `0` - Success
-//
-// * `2` - Error
-type RequestLogEventsAsJSONStatusEnum string
-
-const (
-	RequestLogEventsAsJSONStatusEnumZero RequestLogEventsAsJSONStatusEnum = "0"
-	RequestLogEventsAsJSONStatusEnumTwo  RequestLogEventsAsJSONStatusEnum = "2"
-)
-
-func (e *RequestLogEventsAsJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "0":
-		fallthrough
-	case "2":
-		*e = RequestLogEventsAsJSONStatusEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RequestLogEventsAsJSONStatusEnum: %s", s)
-	}
-}
-
-type RequestLogEventsAsJSONQueryParams struct {
-	// Filter events until given date
-	//
-	// e.g. `2015-12-31T23:59:00`
-	DateEnd *string `queryParam:"style=form,explode=true,name=date_end"`
-	// Filter events from given date
-	//
-	// e.g. `2015-12-31T23:59:00`
-	DateStart *string `queryParam:"style=form,explode=true,name=date_start"`
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Operation status:
-	//
-	// * `0` - Success
-	//
-	// * `2` - Error
-	Status *RequestLogEventsAsJSONStatusEnum `queryParam:"style=form,explode=true,name=status"`
-	// Operation ID
-	//
-	// cf. `GET /eventlog/operations`
-	Type *int `queryParam:"style=form,explode=true,name=type"`
-	// User client
-	UserClient *string `queryParam:"style=form,explode=true,name=user_client"`
-	// User ID
-	UserID *int64 `queryParam:"style=form,explode=true,name=user_id"`
-}
-
 // RequestLogEventsAsJSONXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestLogEventsAsJSONXSdsDateFormatEnum string
 
@@ -105,16 +42,71 @@ func (e *RequestLogEventsAsJSONXSdsDateFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type RequestLogEventsAsJSONHeaders struct {
+// RequestLogEventsAsJSONStatusEnum - Operation status:
+//
+// * `0` - Success
+//
+// * `2` - Error
+type RequestLogEventsAsJSONStatusEnum string
+
+const (
+	RequestLogEventsAsJSONStatusEnumZero RequestLogEventsAsJSONStatusEnum = "0"
+	RequestLogEventsAsJSONStatusEnumTwo  RequestLogEventsAsJSONStatusEnum = "2"
+)
+
+func (e *RequestLogEventsAsJSONStatusEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "0":
+		fallthrough
+	case "2":
+		*e = RequestLogEventsAsJSONStatusEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for RequestLogEventsAsJSONStatusEnum: %s", s)
+	}
+}
+
+type RequestLogEventsAsJSONRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestLogEventsAsJSONXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestLogEventsAsJSONRequest struct {
-	QueryParams RequestLogEventsAsJSONQueryParams
-	Headers     RequestLogEventsAsJSONHeaders
+	// Filter events until given date
+	//
+	// e.g. `2015-12-31T23:59:00`
+	DateEnd *string `queryParam:"style=form,explode=true,name=date_end"`
+	// Filter events from given date
+	//
+	// e.g. `2015-12-31T23:59:00`
+	DateStart *string `queryParam:"style=form,explode=true,name=date_start"`
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// Operation status:
+	//
+	// * `0` - Success
+	//
+	// * `2` - Error
+	Status *RequestLogEventsAsJSONStatusEnum `queryParam:"style=form,explode=true,name=status"`
+	// Operation ID
+	//
+	// cf. `GET /eventlog/operations`
+	Type *int `queryParam:"style=form,explode=true,name=type"`
+	// User client
+	UserClient *string `queryParam:"style=form,explode=true,name=user_client"`
+	// User ID
+	UserID *int64 `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 type RequestLogEventsAsJSONResponse struct {

@@ -8,17 +8,12 @@ import (
 )
 
 type TokensGetBungieRewardsForUserSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TokensGetBungieRewardsForUserPathParams struct {
-	// bungie.net user membershipId for requested user rewards. If not self, elevated permissions are required.
-	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type TokensGetBungieRewardsForUserRequest struct {
-	PathParams TokensGetBungieRewardsForUserPathParams
-	Security   TokensGetBungieRewardsForUserSecurity
+	// bungie.net user membershipId for requested user rewards. If not self, elevated permissions are required.
+	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 }
 
 // TokensGetBungieRewardsForUser200Wildcard - Look at the Response property for more information about the nature of this response

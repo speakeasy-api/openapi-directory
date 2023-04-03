@@ -50,30 +50,22 @@ func (e *GETDescribeSuggestersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeSuggestersQueryParams struct {
+type GETDescribeSuggestersRequest struct {
 	Action GETDescribeSuggestersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Whether to display the deployed configuration (<code>true</code>) or include any pending changes (<code>false</code>). Defaults to <code>false</code>.
 	Deployed *bool `queryParam:"style=form,explode=true,name=Deployed"`
 	// The name of the domain you want to describe.
 	DomainName string `queryParam:"style=form,explode=true,name=DomainName"`
 	// The suggesters you want to describe.
-	SuggesterNames []string                         `queryParam:"style=form,explode=true,name=SuggesterNames"`
-	Version        GETDescribeSuggestersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeSuggestersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeSuggestersRequest struct {
-	QueryParams GETDescribeSuggestersQueryParams
-	Headers     GETDescribeSuggestersHeaders
+	SuggesterNames    []string                         `queryParam:"style=form,explode=true,name=SuggesterNames"`
+	Version           GETDescribeSuggestersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeSuggestersResponse struct {

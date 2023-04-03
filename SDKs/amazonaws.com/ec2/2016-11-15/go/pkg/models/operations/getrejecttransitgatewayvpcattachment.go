@@ -50,28 +50,20 @@ func (e *GETRejectTransitGatewayVpcAttachmentVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETRejectTransitGatewayVpcAttachmentQueryParams struct {
+type GETRejectTransitGatewayVpcAttachmentRequest struct {
 	Action GETRejectTransitGatewayVpcAttachmentActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the attachment.
 	TransitGatewayAttachmentID string                                          `queryParam:"style=form,explode=true,name=TransitGatewayAttachmentId"`
 	Version                    GETRejectTransitGatewayVpcAttachmentVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRejectTransitGatewayVpcAttachmentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRejectTransitGatewayVpcAttachmentRequest struct {
-	QueryParams GETRejectTransitGatewayVpcAttachmentQueryParams
-	Headers     GETRejectTransitGatewayVpcAttachmentHeaders
+	XAmzAlgorithm              *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRejectTransitGatewayVpcAttachmentResponse struct {

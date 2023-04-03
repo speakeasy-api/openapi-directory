@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBundlePathParams struct {
-	//  Unique bundle identifier.
-	BundleID string `pathParam:"style=simple,explode=false,name=bundleId"`
-}
-
-type DescribeBundleHeaders struct {
+type DescribeBundleRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeBundleHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBundleRequest struct {
-	PathParams DescribeBundlePathParams
-	Headers    DescribeBundleHeaders
+	//  Unique bundle identifier.
+	BundleID string `pathParam:"style=simple,explode=false,name=bundleId"`
 }
 
 type DescribeBundleResponse struct {

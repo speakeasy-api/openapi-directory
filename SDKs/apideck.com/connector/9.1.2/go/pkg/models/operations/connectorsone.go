@@ -8,23 +8,14 @@ import (
 )
 
 type ConnectorsOneSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ConnectorsOnePathParams struct {
-	// ID of the record you are acting upon.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ConnectorsOneHeaders struct {
-	// The ID of your Unify application
-	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type ConnectorsOneRequest struct {
-	PathParams ConnectorsOnePathParams
-	Headers    ConnectorsOneHeaders
-	Security   ConnectorsOneSecurity
+	// ID of the record you are acting upon.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The ID of your Unify application
+	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 }
 
 type ConnectorsOneResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTTerminateClientVpnConnectionsVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type POSTTerminateClientVpnConnectionsQueryParams struct {
-	Action  POSTTerminateClientVpnConnectionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTTerminateClientVpnConnectionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTTerminateClientVpnConnectionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTTerminateClientVpnConnectionsRequest struct {
-	QueryParams POSTTerminateClientVpnConnectionsQueryParams
-	Headers     POSTTerminateClientVpnConnectionsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTTerminateClientVpnConnectionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                       `request:"mediaType=text/xml"`
+	Version           POSTTerminateClientVpnConnectionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTTerminateClientVpnConnectionsResponse struct {

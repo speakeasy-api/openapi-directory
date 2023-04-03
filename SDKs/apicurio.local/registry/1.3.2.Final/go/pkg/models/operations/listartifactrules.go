@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListArtifactRulesPathParams struct {
+type ListArtifactRulesRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
-type ListArtifactRulesRequest struct {
-	PathParams ListArtifactRulesPathParams
 }
 
 type ListArtifactRulesResponse struct {

@@ -13,32 +13,29 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Oauth2: &shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
+            Oauth2: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
         }),
     )
 
     req := operations.CreateAttachmentForObjectRequest{
-        QueryParams: operations.CreateAttachmentForObjectQueryParams{
-            OptFields: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-            OptPretty: false,
-        },
-        Request: shared.AttachmentRequest{
+        AttachmentRequest: shared.AttachmentRequest{
             ConnectToApp: false,
             File: &shared.AttachmentRequestFile{
-                Content: []byte("unde"),
-                File: "nulla",
+                Content: []byte("corrupti"),
+                File: "provident",
             },
-            Name: "corrupti",
-            Parent: "illum",
+            Name: "distinctio",
+            Parent: "quibusdam",
             ResourceSubtype: "external",
-            URL: "vel",
+            URL: "unde",
         },
+        OptFields: []string{
+            "corrupti",
+            "illum",
+            "vel",
+            "error",
+        },
+        OptPretty: false,
     }
 
     ctx := context.Background()

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeJobRunPathParams struct {
-	// The ID of the job run request.
-	JobRunID string `pathParam:"style=simple,explode=false,name=jobRunId"`
-	// The ID of the virtual cluster for which the job run is submitted.
-	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
-}
-
-type DescribeJobRunHeaders struct {
+type DescribeJobRunRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeJobRunHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeJobRunRequest struct {
-	PathParams DescribeJobRunPathParams
-	Headers    DescribeJobRunHeaders
+	// The ID of the job run request.
+	JobRunID string `pathParam:"style=simple,explode=false,name=jobRunId"`
+	// The ID of the virtual cluster for which the job run is submitted.
+	VirtualClusterID string `pathParam:"style=simple,explode=false,name=virtualClusterId"`
 }
 
 type DescribeJobRunResponse struct {

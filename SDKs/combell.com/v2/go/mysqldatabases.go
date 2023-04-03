@@ -36,9 +36,9 @@ func newMySQLDatabases(defaultClient, securityClient HTTPClient, serverURL, lang
 // ChangeDatabaseUserPassword - Change password for mysql user
 func (s *mySQLDatabases) ChangeDatabaseUserPassword(ctx context.Context, request operations.ChangeDatabaseUserPasswordRequest) (*operations.ChangeDatabaseUserPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users/{userName}/password", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users/{userName}/password", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateUserPasswordRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *mySQLDatabases) ChangeDatabaseUserPassword(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -82,9 +82,9 @@ func (s *mySQLDatabases) ChangeDatabaseUserPassword(ctx context.Context, request
 // ChangeDatabaseUserStatus - Enable/disable mysql user
 func (s *mySQLDatabases) ChangeDatabaseUserStatus(ctx context.Context, request operations.ChangeDatabaseUserStatusRequest) (*operations.ChangeDatabaseUserStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users/{userName}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users/{userName}/status", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateUserStatusRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -96,7 +96,7 @@ func (s *mySQLDatabases) ChangeDatabaseUserStatus(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,7 +126,7 @@ func (s *mySQLDatabases) ChangeDatabaseUserStatus(ctx context.Context, request o
 }
 
 // CreateMySQLDatabase - Create a new mysql database
-func (s *mySQLDatabases) CreateMySQLDatabase(ctx context.Context, request operations.CreateMySQLDatabaseRequest) (*operations.CreateMySQLDatabaseResponse, error) {
+func (s *mySQLDatabases) CreateMySQLDatabase(ctx context.Context, request shared.CreateMySQLDatabase) (*operations.CreateMySQLDatabaseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mysqldatabases"
 
@@ -181,9 +181,9 @@ func (s *mySQLDatabases) CreateMySQLDatabase(ctx context.Context, request operat
 // The creation of a new mysql user will result in a user with read_only rights.
 func (s *mySQLDatabases) CreateMySQLUser(ctx context.Context, request operations.CreateMySQLUserRequest) (*operations.CreateMySQLUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateMySQLUser", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -195,7 +195,7 @@ func (s *mySQLDatabases) CreateMySQLUser(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -237,14 +237,14 @@ func (s *mySQLDatabases) CreateMySQLUser(ctx context.Context, request operations
 // DeleteDatabase - Delete a mysql database
 func (s *mySQLDatabases) DeleteDatabase(ctx context.Context, request operations.DeleteDatabaseRequest) (*operations.DeleteDatabaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -279,14 +279,14 @@ func (s *mySQLDatabases) DeleteDatabase(ctx context.Context, request operations.
 // The deletion of a mysql user is allowed for users with read_only rights.
 func (s *mySQLDatabases) DeleteDatabaseUser(ctx context.Context, request operations.DeleteDatabaseUserRequest) (*operations.DeleteDatabaseUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users/{userName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users/{userName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -320,14 +320,14 @@ func (s *mySQLDatabases) DeleteDatabaseUser(ctx context.Context, request operati
 // GetDatabaseUsers - Overview of mysql users
 func (s *mySQLDatabases) GetDatabaseUsers(ctx context.Context, request operations.GetDatabaseUsersRequest) (*operations.GetDatabaseUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -368,14 +368,14 @@ func (s *mySQLDatabases) GetDatabaseUsers(ctx context.Context, request operation
 // GetMySQLDatabase - Get a specific database
 func (s *mySQLDatabases) GetMySQLDatabase(ctx context.Context, request operations.GetMySQLDatabaseRequest) (*operations.GetMySQLDatabaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/mysqldatabases/{databaseName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -423,7 +423,7 @@ func (s *mySQLDatabases) GetMySQLDatabases(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.SearchRequest{
-        Security: operations.SearchSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        QueryParams: operations.SearchQueryParams{
-            MatchMode: "regexp",
-            Query: "provident",
-        },
+        MatchMode: "regexp",
+        Query: "provident",
     }
 
     ctx := context.Background()
-    res, err := s.Search.Search(ctx, req)
+    res, err := s.Search.Search(ctx, req, operations.SearchSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

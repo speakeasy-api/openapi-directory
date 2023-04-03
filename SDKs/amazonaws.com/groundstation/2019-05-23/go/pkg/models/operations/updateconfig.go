@@ -9,6 +9,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// UpdateConfigRequestBodyConfigData - <p>Object containing the parameters of a <code>Config</code>.</p> <p>See the subtype definitions for what each type of <code>Config</code> contains.</p>
+type UpdateConfigRequestBodyConfigData struct {
+	AntennaDownlinkConfig            *shared.AntennaDownlinkConfig            `json:"antennaDownlinkConfig,omitempty"`
+	AntennaDownlinkDemodDecodeConfig *shared.AntennaDownlinkDemodDecodeConfig `json:"antennaDownlinkDemodDecodeConfig,omitempty"`
+	AntennaUplinkConfig              *shared.AntennaUplinkConfig              `json:"antennaUplinkConfig,omitempty"`
+	DataflowEndpointConfig           *shared.DataflowEndpointConfig           `json:"dataflowEndpointConfig,omitempty"`
+	S3RecordingConfig                *shared.S3RecordingConfig                `json:"s3RecordingConfig,omitempty"`
+	TrackingConfig                   *shared.TrackingConfig                   `json:"trackingConfig,omitempty"`
+	UplinkEchoConfig                 *shared.UplinkEchoConfig                 `json:"uplinkEchoConfig,omitempty"`
+}
+
+type UpdateConfigRequestBody struct {
+	// <p>Object containing the parameters of a <code>Config</code>.</p> <p>See the subtype definitions for what each type of <code>Config</code> contains.</p>
+	ConfigData UpdateConfigRequestBodyConfigData `json:"configData"`
+	// Name of a <code>Config</code>.
+	Name string `json:"name"`
+}
+
 // UpdateConfigConfigTypeEnum - Type of a <code>Config</code>.
 type UpdateConfigConfigTypeEnum string
 
@@ -48,45 +66,19 @@ func (e *UpdateConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateConfigPathParams struct {
+type UpdateConfigRequest struct {
+	RequestBody       UpdateConfigRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// UUID of a <code>Config</code>.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
 	// Type of a <code>Config</code>.
 	ConfigType UpdateConfigConfigTypeEnum `pathParam:"style=simple,explode=false,name=configType"`
-}
-
-type UpdateConfigHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// UpdateConfigRequestBodyConfigData - <p>Object containing the parameters of a <code>Config</code>.</p> <p>See the subtype definitions for what each type of <code>Config</code> contains.</p>
-type UpdateConfigRequestBodyConfigData struct {
-	AntennaDownlinkConfig            *shared.AntennaDownlinkConfig            `json:"antennaDownlinkConfig,omitempty"`
-	AntennaDownlinkDemodDecodeConfig *shared.AntennaDownlinkDemodDecodeConfig `json:"antennaDownlinkDemodDecodeConfig,omitempty"`
-	AntennaUplinkConfig              *shared.AntennaUplinkConfig              `json:"antennaUplinkConfig,omitempty"`
-	DataflowEndpointConfig           *shared.DataflowEndpointConfig           `json:"dataflowEndpointConfig,omitempty"`
-	S3RecordingConfig                *shared.S3RecordingConfig                `json:"s3RecordingConfig,omitempty"`
-	TrackingConfig                   *shared.TrackingConfig                   `json:"trackingConfig,omitempty"`
-	UplinkEchoConfig                 *shared.UplinkEchoConfig                 `json:"uplinkEchoConfig,omitempty"`
-}
-
-type UpdateConfigRequestBody struct {
-	// <p>Object containing the parameters of a <code>Config</code>.</p> <p>See the subtype definitions for what each type of <code>Config</code> contains.</p>
-	ConfigData UpdateConfigRequestBodyConfigData `json:"configData"`
-	// Name of a <code>Config</code>.
-	Name string `json:"name"`
-}
-
-type UpdateConfigRequest struct {
-	PathParams UpdateConfigPathParams
-	Headers    UpdateConfigHeaders
-	Request    UpdateConfigRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateConfigResponse struct {

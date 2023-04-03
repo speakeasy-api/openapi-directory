@@ -8,21 +8,16 @@ import (
 )
 
 type CustomInsurancePlanNamesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type CustomInsurancePlanNamesListQueryParams struct {
+type CustomInsurancePlanNamesListRequest struct {
 	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Name     *string `queryParam:"style=form,explode=true,name=name"`
 	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Since    *string `queryParam:"style=form,explode=true,name=since"`
 	User     *int64  `queryParam:"style=form,explode=true,name=user"`
-}
-
-type CustomInsurancePlanNamesListRequest struct {
-	QueryParams CustomInsurancePlanNamesListQueryParams
-	Security    CustomInsurancePlanNamesListSecurity
 }
 
 // CustomInsurancePlanNamesList200ApplicationJSON - Paginated Result

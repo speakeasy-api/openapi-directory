@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPresetsQueryParams struct {
+type ListPresetsRequest struct {
 	// To list presets in chronological order by the date and time that they were created, enter <code>true</code>. To list presets in reverse chronological order, enter <code>false</code>.
 	Ascending *string `queryParam:"style=form,explode=true,name=Ascending"`
 	// When Elastic Transcoder returns more than one page of results, use <code>pageToken</code> in subsequent <code>GET</code> requests to get each successive page of results.
-	PageToken *string `queryParam:"style=form,explode=true,name=PageToken"`
-}
-
-type ListPresetsHeaders struct {
+	PageToken         *string `queryParam:"style=form,explode=true,name=PageToken"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type ListPresetsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListPresetsRequest struct {
-	QueryParams ListPresetsQueryParams
-	Headers     ListPresetsHeaders
 }
 
 type ListPresetsResponse struct {

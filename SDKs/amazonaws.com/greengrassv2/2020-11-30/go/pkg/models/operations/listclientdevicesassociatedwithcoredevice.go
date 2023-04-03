@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListClientDevicesAssociatedWithCoreDevicePathParams struct {
-	// The name of the core device. This is also the name of the IoT thing.
-	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
-}
-
-type ListClientDevicesAssociatedWithCoreDeviceQueryParams struct {
-	// The maximum number of results to be returned per paginated request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to be used for the next set of paginated results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListClientDevicesAssociatedWithCoreDeviceHeaders struct {
+type ListClientDevicesAssociatedWithCoreDeviceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListClientDevicesAssociatedWithCoreDeviceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListClientDevicesAssociatedWithCoreDeviceRequest struct {
-	PathParams  ListClientDevicesAssociatedWithCoreDevicePathParams
-	QueryParams ListClientDevicesAssociatedWithCoreDeviceQueryParams
-	Headers     ListClientDevicesAssociatedWithCoreDeviceHeaders
+	// The name of the core device. This is also the name of the IoT thing.
+	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
+	// The maximum number of results to be returned per paginated request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to be used for the next set of paginated results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListClientDevicesAssociatedWithCoreDeviceResponse struct {

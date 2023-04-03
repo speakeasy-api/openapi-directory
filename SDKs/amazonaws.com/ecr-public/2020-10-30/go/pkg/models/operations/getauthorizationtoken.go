@@ -30,7 +30,8 @@ func (e *GetAuthorizationTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAuthorizationTokenHeaders struct {
+type GetAuthorizationTokenRequest struct {
+	RequestBody       map[string]interface{}              `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetAuthorizationTokenHeaders struct {
 	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetAuthorizationTokenXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetAuthorizationTokenRequest struct {
-	Headers GetAuthorizationTokenHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type GetAuthorizationTokenResponse struct {

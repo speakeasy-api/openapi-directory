@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ZebraGETSecurity struct {
-	QueryAPIKey shared.SchemeQueryAPIKey `security:"scheme,type=apiKey,subtype=query"`
+	QueryAPIKey string `security:"scheme,type=apiKey,subtype=query,name=apikey"`
 }
 
-type ZebraGETQueryParams struct {
+type ZebraGETRequest struct {
 	// Most common is CODE_39 or QR_CODE
 	Format string `queryParam:"style=form,explode=true,name=format"`
 	// Height of the barcode generated image
@@ -22,11 +21,6 @@ type ZebraGETQueryParams struct {
 	Value string `queryParam:"style=form,explode=true,name=value"`
 	// Width of the barcode generated image
 	Width *int64 `queryParam:"style=form,explode=true,name=width"`
-}
-
-type ZebraGETRequest struct {
-	QueryParams ZebraGETQueryParams
-	Security    ZebraGETSecurity
 }
 
 type ZebraGETResponse struct {

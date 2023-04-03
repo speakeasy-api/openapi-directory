@@ -34,7 +34,7 @@ func newInitialization(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // PostStoreDetail - Store payout details
 // Stores payment details under the `PAYOUT` recurring contract. These payment details can be used later to submit a payout via the `/submitThirdParty` call.
-func (s *initialization) PostStoreDetail(ctx context.Context, request operations.PostStoreDetailRequest) (*operations.PostStoreDetailResponse, error) {
+func (s *initialization) PostStoreDetail(ctx context.Context, request shared.StoreDetailRequest, security operations.PostStoreDetailSecurity) (*operations.PostStoreDetailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/storeDetail"
 
@@ -50,7 +50,7 @@ func (s *initialization) PostStoreDetail(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *initialization) PostStoreDetail(ctx context.Context, request operations
 // Submits a payout and stores its details for subsequent payouts.
 //
 // The submitted payout must be confirmed or declined either by a reviewer or via `/confirmThirdParty` or `/declineThirdParty` calls.
-func (s *initialization) PostStoreDetailAndSubmitThirdParty(ctx context.Context, request operations.PostStoreDetailAndSubmitThirdPartyRequest) (*operations.PostStoreDetailAndSubmitThirdPartyResponse, error) {
+func (s *initialization) PostStoreDetailAndSubmitThirdParty(ctx context.Context, request shared.StoreDetailAndSubmitRequest, security operations.PostStoreDetailAndSubmitThirdPartySecurity) (*operations.PostStoreDetailAndSubmitThirdPartyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/storeDetailAndSubmitThirdParty"
 
@@ -122,7 +122,7 @@ func (s *initialization) PostStoreDetailAndSubmitThirdParty(ctx context.Context,
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,7 +178,7 @@ func (s *initialization) PostStoreDetailAndSubmitThirdParty(ctx context.Context,
 // Submits a payout using the previously stored payment details. To store payment details, use the `/storeDetail` API call.
 //
 // The submitted payout must be confirmed or declined either by a reviewer or via `/confirmThirdParty` or `/declineThirdParty` calls.
-func (s *initialization) PostSubmitThirdParty(ctx context.Context, request operations.PostSubmitThirdPartyRequest) (*operations.PostSubmitThirdPartyResponse, error) {
+func (s *initialization) PostSubmitThirdParty(ctx context.Context, request shared.SubmitRequest, security operations.PostSubmitThirdPartySecurity) (*operations.PostSubmitThirdPartyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/submitThirdParty"
 
@@ -194,7 +194,7 @@ func (s *initialization) PostSubmitThirdParty(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -14,12 +14,10 @@ func main() {
     s := sdk.New()
 
     req := operations.ConvertAPIRequest{
-        QueryParams: operations.ConvertAPIQueryParams{
-            Format: "apiblueprint",
+        RequestBody: &operations.ConvertAPIRequestBody{
+            URL: "corrupti",
         },
-        Request: &operations.ConvertAPIRequestBody{
-            URL: "provident",
-        },
+        Format: "wadl2009",
     }
 
     ctx := context.Background()

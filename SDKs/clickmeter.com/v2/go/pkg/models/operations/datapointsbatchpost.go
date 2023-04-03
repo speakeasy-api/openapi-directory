@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsBatchPostRequest struct {
-	// A json containing the datapoints to update.
-	Request shared.APICoreRequestsDatapointsBatch `request:"mediaType=application/json"`
-}
-
 type DataPointsBatchPostResponse struct {
 	APICoreResponsesModifyBatchItemResponceAPICoreDtoDatapointsDatapointSystemInt64 *shared.APICoreResponsesModifyBatchItemResponceAPICoreDtoDatapointsDatapointSystemInt64
 	ContentType                                                                     string

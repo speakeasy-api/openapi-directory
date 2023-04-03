@@ -10,8 +10,8 @@ import (
 )
 
 type PmjaySecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type PmjayRequestBodyCertificateParameters struct {
@@ -54,12 +54,6 @@ type PmjayRequestBody struct {
 	Format PmjayRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type PmjayRequest struct {
-	// Request format
-	Request  *PmjayRequestBody `request:"mediaType=application/json"`
-	Security PmjaySecurity
 }
 
 type Pmjay504ApplicationJSONErrorEnum string

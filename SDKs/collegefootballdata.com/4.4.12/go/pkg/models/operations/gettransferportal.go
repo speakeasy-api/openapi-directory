@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTransferPortalQueryParams struct {
+type GetTransferPortalRequest struct {
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTransferPortalRequest struct {
-	QueryParams GetTransferPortalQueryParams
 }
 
 type GetTransferPortalResponse struct {

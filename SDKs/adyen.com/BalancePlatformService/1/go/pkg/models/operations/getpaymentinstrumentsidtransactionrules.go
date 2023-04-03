@@ -8,18 +8,13 @@ import (
 )
 
 type GetPaymentInstrumentsIDTransactionRulesSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetPaymentInstrumentsIDTransactionRulesPathParams struct {
-	// The unique identifier of the payment instrument.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetPaymentInstrumentsIDTransactionRulesRequest struct {
-	PathParams GetPaymentInstrumentsIDTransactionRulesPathParams
-	Security   GetPaymentInstrumentsIDTransactionRulesSecurity
+	// The unique identifier of the payment instrument.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPaymentInstrumentsIDTransactionRulesResponse struct {

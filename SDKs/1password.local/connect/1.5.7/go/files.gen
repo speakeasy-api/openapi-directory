@@ -34,7 +34,6 @@ pkg/models/operations/getvaultbyid.go
 pkg/models/operations/getvaults.go
 pkg/models/shared/errorresponse.go
 pkg/models/shared/apirequest.go
-pkg/models/shared/security.go
 pkg/models/shared/file.go
 pkg/models/shared/servicedependency.go
 pkg/models/shared/fullitem.go
@@ -44,3 +43,4 @@ pkg/models/shared/item.go
 pkg/models/shared/patch.go
 pkg/models/shared/vault.go
 USAGE.md
+pkg/models/operations/options.go

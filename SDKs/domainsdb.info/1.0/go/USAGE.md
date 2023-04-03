@@ -14,13 +14,9 @@ func main() {
     s := sdk.New()
 
     req := operations.GetDomainsTldZoneIDDownloadRequest{
-        PathParams: operations.GetDomainsTldZoneIDDownloadPathParams{
-            ZoneID: "corrupti",
-        },
-        QueryParams: operations.GetDomainsTldZoneIDDownloadQueryParams{
-            APIKey: "provident",
-            Date: "distinctio",
-        },
+        APIKey: "corrupti",
+        Date: "provident",
+        ZoneID: "distinctio",
     }
 
     ctx := context.Background()

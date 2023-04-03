@@ -46,3 +46,4 @@ pkg/models/operations/confirmsplanting3.go
 pkg/models/shared/airtravelmultilegrequest.go
 pkg/models/shared/leg1.go
 USAGE.md
+pkg/models/operations/options.go

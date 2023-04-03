@@ -50,7 +50,7 @@ func (e *GETDescribeHsmConfigurationsVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeHsmConfigurationsQueryParams struct {
+type GETDescribeHsmConfigurationsRequest struct {
 	Action GETDescribeHsmConfigurationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is specified, information is returned for all HSM configurations owned by your Amazon Web Services account.
 	HsmConfigurationIdentifier *string `queryParam:"style=form,explode=true,name=HsmConfigurationIdentifier"`
@@ -61,23 +61,15 @@ type GETDescribeHsmConfigurationsQueryParams struct {
 	// A tag key or keys for which you want to return all matching HSM configurations that are associated with the specified key or keys. For example, suppose that you have HSM configurations that are tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with the HSM configurations that have either or both of these tag keys associated with them.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// A tag value or values for which you want to return all matching HSM configurations that are associated with the specified tag value or values. For example, suppose that you have HSM configurations that are tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with the HSM configurations that have either or both of these tag values associated with them.
-	TagValues []string                                `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeHsmConfigurationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeHsmConfigurationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeHsmConfigurationsRequest struct {
-	QueryParams GETDescribeHsmConfigurationsQueryParams
-	Headers     GETDescribeHsmConfigurationsHeaders
+	TagValues         []string                                `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeHsmConfigurationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeHsmConfigurationsResponse struct {

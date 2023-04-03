@@ -113,9 +113,9 @@ func New(opts ...SDKOption) *SDK {
 // CreateComponent - Creates a new component for an Amplify app.
 func (s *SDK) CreateComponent(ctx context.Context, request operations.CreateComponentRequest) (*operations.CreateComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -130,9 +130,9 @@ func (s *SDK) CreateComponent(ctx context.Context, request operations.CreateComp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -213,9 +213,9 @@ func (s *SDK) CreateComponent(ctx context.Context, request operations.CreateComp
 // CreateForm - Creates a new form for an Amplify app.
 func (s *SDK) CreateForm(ctx context.Context, request operations.CreateFormRequest) (*operations.CreateFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -230,9 +230,9 @@ func (s *SDK) CreateForm(ctx context.Context, request operations.CreateFormReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -313,9 +313,9 @@ func (s *SDK) CreateForm(ctx context.Context, request operations.CreateFormReque
 // CreateTheme - Creates a theme to apply to the components in an Amplify app.
 func (s *SDK) CreateTheme(ctx context.Context, request operations.CreateThemeRequest) (*operations.CreateThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -330,9 +330,9 @@ func (s *SDK) CreateTheme(ctx context.Context, request operations.CreateThemeReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -413,14 +413,14 @@ func (s *SDK) CreateTheme(ctx context.Context, request operations.CreateThemeReq
 // DeleteComponent - Deletes a component from an Amplify app.
 func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComponentRequest) (*operations.DeleteComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -480,14 +480,14 @@ func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComp
 // DeleteForm - Deletes a form from an Amplify app.
 func (s *SDK) DeleteForm(ctx context.Context, request operations.DeleteFormRequest) (*operations.DeleteFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -547,14 +547,14 @@ func (s *SDK) DeleteForm(ctx context.Context, request operations.DeleteFormReque
 // DeleteTheme - Deletes a theme from an Amplify app.
 func (s *SDK) DeleteTheme(ctx context.Context, request operations.DeleteThemeRequest) (*operations.DeleteThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -614,9 +614,9 @@ func (s *SDK) DeleteTheme(ctx context.Context, request operations.DeleteThemeReq
 // ExchangeCodeForToken - Exchanges an access code for a token.
 func (s *SDK) ExchangeCodeForToken(ctx context.Context, request operations.ExchangeCodeForTokenRequest) (*operations.ExchangeCodeForTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -631,7 +631,7 @@ func (s *SDK) ExchangeCodeForToken(ctx context.Context, request operations.Excha
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -680,16 +680,16 @@ func (s *SDK) ExchangeCodeForToken(ctx context.Context, request operations.Excha
 // ExportComponents - Exports component configurations to code that is ready to integrate into an Amplify app.
 func (s *SDK) ExportComponents(ctx context.Context, request operations.ExportComponentsRequest) (*operations.ExportComponentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/components", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -750,16 +750,16 @@ func (s *SDK) ExportComponents(ctx context.Context, request operations.ExportCom
 // ExportForms - Exports form configurations to code that is ready to integrate into an Amplify app.
 func (s *SDK) ExportForms(ctx context.Context, request operations.ExportFormsRequest) (*operations.ExportFormsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/forms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/forms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -820,16 +820,16 @@ func (s *SDK) ExportForms(ctx context.Context, request operations.ExportFormsReq
 // ExportThemes - Exports theme configurations to code that is ready to integrate into an Amplify app.
 func (s *SDK) ExportThemes(ctx context.Context, request operations.ExportThemesRequest) (*operations.ExportThemesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/themes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/themes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -890,14 +890,14 @@ func (s *SDK) ExportThemes(ctx context.Context, request operations.ExportThemesR
 // GetComponent - Returns an existing component for an Amplify app.
 func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentRequest) (*operations.GetComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -966,14 +966,14 @@ func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentR
 // GetForm - Returns an existing form for an Amplify app.
 func (s *SDK) GetForm(ctx context.Context, request operations.GetFormRequest) (*operations.GetFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1042,14 +1042,14 @@ func (s *SDK) GetForm(ctx context.Context, request operations.GetFormRequest) (*
 // GetMetadata - Returns existing metadata for an Amplify app.
 func (s *SDK) GetMetadata(ctx context.Context, request operations.GetMetadataRequest) (*operations.GetMetadataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1108,14 +1108,14 @@ func (s *SDK) GetMetadata(ctx context.Context, request operations.GetMetadataReq
 // GetTheme - Returns an existing theme for an Amplify app.
 func (s *SDK) GetTheme(ctx context.Context, request operations.GetThemeRequest) (*operations.GetThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1184,16 +1184,16 @@ func (s *SDK) GetTheme(ctx context.Context, request operations.GetThemeRequest) 
 // ListComponents - Retrieves a list of components for a specified Amplify app and backend environment.
 func (s *SDK) ListComponents(ctx context.Context, request operations.ListComponentsRequest) (*operations.ListComponentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1254,16 +1254,16 @@ func (s *SDK) ListComponents(ctx context.Context, request operations.ListCompone
 // ListForms - Retrieves a list of forms for a specified Amplify app and backend environment.
 func (s *SDK) ListForms(ctx context.Context, request operations.ListFormsRequest) (*operations.ListFormsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1324,16 +1324,16 @@ func (s *SDK) ListForms(ctx context.Context, request operations.ListFormsRequest
 // ListThemes - Retrieves a list of themes for a specified Amplify app and backend environment.
 func (s *SDK) ListThemes(ctx context.Context, request operations.ListThemesRequest) (*operations.ListThemesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1394,9 +1394,9 @@ func (s *SDK) ListThemes(ctx context.Context, request operations.ListThemesReque
 // PutMetadataFlag - Stores the metadata information about a feature on a form or view.
 func (s *SDK) PutMetadataFlag(ctx context.Context, request operations.PutMetadataFlagRequest) (*operations.PutMetadataFlagResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata/features/{featureName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata/features/{featureName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1411,7 +1411,7 @@ func (s *SDK) PutMetadataFlag(ctx context.Context, request operations.PutMetadat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1461,9 +1461,9 @@ func (s *SDK) PutMetadataFlag(ctx context.Context, request operations.PutMetadat
 // RefreshToken - Refreshes a previously issued access token that might have expired.
 func (s *SDK) RefreshToken(ctx context.Context, request operations.RefreshTokenRequest) (*operations.RefreshTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}/refresh", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}/refresh", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1478,7 +1478,7 @@ func (s *SDK) RefreshToken(ctx context.Context, request operations.RefreshTokenR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1527,9 +1527,9 @@ func (s *SDK) RefreshToken(ctx context.Context, request operations.RefreshTokenR
 // UpdateComponent - Updates an existing component.
 func (s *SDK) UpdateComponent(ctx context.Context, request operations.UpdateComponentRequest) (*operations.UpdateComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1544,9 +1544,9 @@ func (s *SDK) UpdateComponent(ctx context.Context, request operations.UpdateComp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1617,9 +1617,9 @@ func (s *SDK) UpdateComponent(ctx context.Context, request operations.UpdateComp
 // UpdateForm - Updates an existing form.
 func (s *SDK) UpdateForm(ctx context.Context, request operations.UpdateFormRequest) (*operations.UpdateFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1634,9 +1634,9 @@ func (s *SDK) UpdateForm(ctx context.Context, request operations.UpdateFormReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1707,9 +1707,9 @@ func (s *SDK) UpdateForm(ctx context.Context, request operations.UpdateFormReque
 // UpdateTheme - Updates an existing theme.
 func (s *SDK) UpdateTheme(ctx context.Context, request operations.UpdateThemeRequest) (*operations.UpdateThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1724,9 +1724,9 @@ func (s *SDK) UpdateTheme(ctx context.Context, request operations.UpdateThemeReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

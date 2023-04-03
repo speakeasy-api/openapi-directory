@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DownloadAvatarPathParams struct {
+type DownloadAvatarRequest struct {
 	// User ID
 	UserID int64 `pathParam:"style=simple,explode=false,name=user_id"`
 	// UUID of the avatar
 	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
-}
-
-type DownloadAvatarRequest struct {
-	PathParams DownloadAvatarPathParams
 }
 
 type DownloadAvatarResponse struct {

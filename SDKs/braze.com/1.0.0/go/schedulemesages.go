@@ -73,7 +73,7 @@ func (s *scheduleMesages) GetUpcomingScheduledCampaignsAndCanvases(ctx context.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -126,7 +126,7 @@ func (s *scheduleMesages) GetUpcomingScheduledCampaignsAndCanvases(ctx context.C
 // - [Broadcast](https://www.braze.com/docs/api/parameters/#broadcast)
 // - [Trigger Properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object/)
 // - [Schedule Object](https://www.braze.com/docs/api/objects_filters/schedule_object/)
-func (s *scheduleMesages) ScheduleAPITriggeredCanvases(ctx context.Context, request operations.ScheduleAPITriggeredCanvasesRequest) (*operations.ScheduleAPITriggeredCanvasesResponse, error) {
+func (s *scheduleMesages) ScheduleAPITriggeredCanvases(ctx context.Context, request operations.ScheduleAPITriggeredCanvasesRequestBody) (*operations.ScheduleAPITriggeredCanvasesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/canvas/trigger/schedule/create"
 

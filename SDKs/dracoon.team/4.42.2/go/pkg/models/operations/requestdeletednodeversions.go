@@ -9,28 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestDeletedNodeVersionsPathParams struct {
-	// Parent ID (room or folder ID)
-	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
-}
-
-type RequestDeletedNodeVersionsQueryParams struct {
-	// Range limit.
-	//
-	// Maximum 500.
-	//
-	//  For more results please use paging (`offset` + `limit`).
-	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Node name
-	Name string `queryParam:"style=form,explode=true,name=name"`
-	// Range offset
-	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-	// Sort string
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Node type
-	Type string `queryParam:"style=form,explode=true,name=type"`
-}
-
 // RequestDeletedNodeVersionsXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestDeletedNodeVersionsXSdsDateFormatEnum string
 
@@ -64,17 +42,27 @@ func (e *RequestDeletedNodeVersionsXSdsDateFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type RequestDeletedNodeVersionsHeaders struct {
+type RequestDeletedNodeVersionsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestDeletedNodeVersionsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestDeletedNodeVersionsRequest struct {
-	PathParams  RequestDeletedNodeVersionsPathParams
-	QueryParams RequestDeletedNodeVersionsQueryParams
-	Headers     RequestDeletedNodeVersionsHeaders
+	// Range limit.
+	//
+	// Maximum 500.
+	//
+	//  For more results please use paging (`offset` + `limit`).
+	Limit *int `queryParam:"style=form,explode=true,name=limit"`
+	// Node name
+	Name string `queryParam:"style=form,explode=true,name=name"`
+	// Parent ID (room or folder ID)
+	NodeID int64 `pathParam:"style=simple,explode=false,name=node_id"`
+	// Range offset
+	Offset *int `queryParam:"style=form,explode=true,name=offset"`
+	// Sort string
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// Node type
+	Type string `queryParam:"style=form,explode=true,name=type"`
 }
 
 type RequestDeletedNodeVersionsResponse struct {

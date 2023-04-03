@@ -50,7 +50,7 @@ func (e *GETReleaseAddressVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETReleaseAddressQueryParams struct {
+type GETReleaseAddressRequest struct {
 	Action GETReleaseAddressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// [EC2-VPC] The allocation ID. Required for EC2-VPC.
 	AllocationID *string `queryParam:"style=form,explode=true,name=AllocationId"`
@@ -59,23 +59,15 @@ type GETReleaseAddressQueryParams struct {
 	// <p>The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises IP addresses.</p> <p>If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code> error.</p> <p>You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you receive an <code>InvalidParameterCombination</code> error.</p>
 	NetworkBorderGroup *string `queryParam:"style=form,explode=true,name=NetworkBorderGroup"`
 	// [EC2-Classic] The Elastic IP address. Required for EC2-Classic.
-	PublicIP *string                      `queryParam:"style=form,explode=true,name=PublicIp"`
-	Version  GETReleaseAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReleaseAddressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReleaseAddressRequest struct {
-	QueryParams GETReleaseAddressQueryParams
-	Headers     GETReleaseAddressHeaders
+	PublicIP          *string                      `queryParam:"style=form,explode=true,name=PublicIp"`
+	Version           GETReleaseAddressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReleaseAddressResponse struct {

@@ -50,7 +50,7 @@ func (e *GETModifyLocalGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETModifyLocalGatewayRouteQueryParams struct {
+type GETModifyLocalGatewayRouteRequest struct {
 	Action GETModifyLocalGatewayRouteActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The CIDR block used for destination matches. The value that you provide must match the CIDR of an existing route in the table.
 	DestinationCidrBlock *string `queryParam:"style=form,explode=true,name=DestinationCidrBlock"`
@@ -65,21 +65,13 @@ type GETModifyLocalGatewayRouteQueryParams struct {
 	// The ID of the network interface.
 	NetworkInterfaceID *string                               `queryParam:"style=form,explode=true,name=NetworkInterfaceId"`
 	Version            GETModifyLocalGatewayRouteVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyLocalGatewayRouteHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyLocalGatewayRouteRequest struct {
-	QueryParams GETModifyLocalGatewayRouteQueryParams
-	Headers     GETModifyLocalGatewayRouteHeaders
+	XAmzAlgorithm      *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyLocalGatewayRouteResponse struct {

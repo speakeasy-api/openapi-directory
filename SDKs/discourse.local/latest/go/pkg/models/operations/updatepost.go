@@ -6,15 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdatePostPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type UpdatePostHeaders struct {
-	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
-	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
 type UpdatePostRequestBodyPost struct {
 	EditReason *string `json:"edit_reason,omitempty"`
 	Raw        string  `json:"raw"`
@@ -25,9 +16,10 @@ type UpdatePostRequestBody struct {
 }
 
 type UpdatePostRequest struct {
-	PathParams UpdatePostPathParams
-	Headers    UpdatePostHeaders
-	Request    *UpdatePostRequestBody `request:"mediaType=application/json"`
+	APIKey      string                 `header:"style=simple,explode=false,name=Api-Key"`
+	APIUsername string                 `header:"style=simple,explode=false,name=Api-Username"`
+	RequestBody *UpdatePostRequestBody `request:"mediaType=application/json"`
+	ID          string                 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdatePost200ApplicationJSONPostActionsSummary struct {

@@ -36,20 +36,20 @@ func newPaymentMethodsMerchantLevel(defaultClient, securityClient HTTPClient, se
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payment methods read
-func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettings(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsRequest) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsResponse, error) {
+func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettings(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsRequest, security operations.GetMerchantsMerchantIDPaymentMethodSettingsSecurity) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -107,16 +107,16 @@ func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSetting
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payment methods read
-func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodID(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse, error) {
+func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodID(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest, security operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDSecurity) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -174,16 +174,16 @@ func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSetting
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payment methods read
-func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomains(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsRequest) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsResponse, error) {
+func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomains(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsRequest, security operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsSecurity) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -241,11 +241,11 @@ func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSetting
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payment methods read and write
-func (s *paymentMethodsMerchantLevel) PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodID(ctx context.Context, request operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest) (*operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse, error) {
+func (s *paymentMethodsMerchantLevel) PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodID(ctx context.Context, request operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest, security operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDSecurity) (*operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePaymentMethodInfo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -257,7 +257,7 @@ func (s *paymentMethodsMerchantLevel) PatchMerchantsMerchantIDPaymentMethodSetti
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -315,11 +315,11 @@ func (s *paymentMethodsMerchantLevel) PatchMerchantsMerchantIDPaymentMethodSetti
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payment methods read and write
-func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettings(ctx context.Context, request operations.PostMerchantsMerchantIDPaymentMethodSettingsRequest) (*operations.PostMerchantsMerchantIDPaymentMethodSettingsResponse, error) {
+func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettings(ctx context.Context, request operations.PostMerchantsMerchantIDPaymentMethodSettingsRequest, security operations.PostMerchantsMerchantIDPaymentMethodSettingsSecurity) (*operations.PostMerchantsMerchantIDPaymentMethodSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentMethodSetupInfo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -331,7 +331,7 @@ func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -389,11 +389,11 @@ func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettin
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Payment methods read and write
-func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomains(ctx context.Context, request operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsRequest) (*operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsResponse, error) {
+func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomains(ctx context.Context, request operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsRequest, security operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsSecurity) (*operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplePayInfo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -405,7 +405,7 @@ func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

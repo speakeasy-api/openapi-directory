@@ -13,12 +13,10 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostMakePdfRequest{
-        Request: operations.PostMakePdfRequestBody{
-            HTML: "corrupti",
-            Key: "provident",
-            URL: "distinctio",
-        },
+    req := operations.PostMakePdfRequestBody{
+        HTML: "corrupti",
+        Key: "provident",
+        URL: "distinctio",
     }
 
     ctx := context.Background()

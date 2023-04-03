@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOrganizationAdminAccountsQueryParams struct {
-	// The maximum number of items to include in each page of a paginated response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The nextToken string that specifies which page of results to return in a paginated response.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListOrganizationAdminAccountsHeaders struct {
+type ListOrganizationAdminAccountsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListOrganizationAdminAccountsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListOrganizationAdminAccountsRequest struct {
-	QueryParams ListOrganizationAdminAccountsQueryParams
-	Headers     ListOrganizationAdminAccountsHeaders
+	// The maximum number of items to include in each page of a paginated response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The nextToken string that specifies which page of results to return in a paginated response.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListOrganizationAdminAccountsResponse struct {

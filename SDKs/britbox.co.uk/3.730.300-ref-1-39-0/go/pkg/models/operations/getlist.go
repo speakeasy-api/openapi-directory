@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListPathParams struct {
-	// The identifier of the list to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListQueryParams struct {
+type GetListRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -37,6 +32,8 @@ type GetListQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the list to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// The item type to filter by. Defaults to unspecified.
 	ItemType *shared.ItemTypeEnum `queryParam:"style=form,explode=true,name=item_type"`
 	// Language code for the preferred language to be returned in the response.
@@ -67,11 +64,6 @@ type GetListQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetListRequest struct {
-	PathParams  GetListPathParams
-	QueryParams GetListQueryParams
 }
 
 type GetListResponse struct {

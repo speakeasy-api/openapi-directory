@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRulePathParams struct {
-	// The unique ID of the retention rule.
-	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
-}
-
-type UpdateRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateRuleRequestBodyResourceTypeEnum - <note> <p>This parameter is currently not supported. You can't update a retention rule's resource type after creation.</p> </note>
 type UpdateRuleRequestBodyResourceTypeEnum string
 
@@ -66,9 +51,16 @@ type UpdateRuleRequestBody struct {
 }
 
 type UpdateRuleRequest struct {
-	PathParams UpdateRulePathParams
-	Headers    UpdateRuleHeaders
-	Request    UpdateRuleRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateRuleRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID of the retention rule.
+	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 }
 
 type UpdateRuleResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDatasetImportJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDatasetImportJobsXAmzTargetEnum
 type ListDatasetImportJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDatasetImportJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListDatasetImportJobsHeaders struct {
+type ListDatasetImportJobsRequest struct {
+	ListDatasetImportJobsRequest shared.ListDatasetImportJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDatasetImportJobsHeaders struct {
 	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDatasetImportJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDatasetImportJobsRequest struct {
-	QueryParams ListDatasetImportJobsQueryParams
-	Headers     ListDatasetImportJobsHeaders
-	Request     shared.ListDatasetImportJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListDatasetImportJobsResponse struct {

@@ -7,25 +7,17 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetCollectibleNodeDetailsPathParams struct {
+type Destiny2GetCollectibleNodeDetailsRequest struct {
 	// The Destiny Character ID of the character for whom we're getting collectible detail info.
 	CharacterID int64 `pathParam:"style=simple,explode=false,name=characterId"`
 	// The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
 	CollectiblePresentationNodeHash int64 `pathParam:"style=simple,explode=false,name=collectiblePresentationNodeHash"`
+	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+	Components []int `queryParam:"style=form,explode=false,name=components"`
 	// Destiny membership ID of another user. You may be denied.
 	DestinyMembershipID int64 `pathParam:"style=simple,explode=false,name=destinyMembershipId"`
 	// A valid non-BungieNet membership type.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type Destiny2GetCollectibleNodeDetailsQueryParams struct {
-	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
-	Components []int `queryParam:"style=form,explode=false,name=components"`
-}
-
-type Destiny2GetCollectibleNodeDetailsRequest struct {
-	PathParams  Destiny2GetCollectibleNodeDetailsPathParams
-	QueryParams Destiny2GetCollectibleNodeDetailsQueryParams
 }
 
 // Destiny2GetCollectibleNodeDetails200Wildcard - Returns the detailed information about a Collectible Presentation Node and any Collectibles that are direct descendants.

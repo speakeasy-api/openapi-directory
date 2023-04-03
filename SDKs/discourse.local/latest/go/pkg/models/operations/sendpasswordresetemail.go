@@ -10,10 +10,6 @@ type SendPasswordResetEmailRequestBody struct {
 	Login string `json:"login"`
 }
 
-type SendPasswordResetEmailRequest struct {
-	Request *SendPasswordResetEmailRequestBody `request:"mediaType=application/json"`
-}
-
 // SendPasswordResetEmail200ApplicationJSON - success response
 type SendPasswordResetEmail200ApplicationJSON struct {
 	Success   string `json:"success"`

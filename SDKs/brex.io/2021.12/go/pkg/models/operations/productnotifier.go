@@ -4,22 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ProductNotifierSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ProductNotifierPathParams struct {
-	// ID of the ProductOrderNotifier as returned from a /notifier POST call - 32 character hex value
-	NotifierID string `pathParam:"style=simple,explode=false,name=notifierId"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type ProductNotifierRequest struct {
-	PathParams ProductNotifierPathParams
-	Security   ProductNotifierSecurity
+	// ID of the ProductOrderNotifier as returned from a /notifier POST call - 32 character hex value
+	NotifierID string `pathParam:"style=simple,explode=false,name=notifierId"`
 }
 
 // ProductNotifierDefaultApplicationJSON - Detailed information about the error

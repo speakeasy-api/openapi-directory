@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CrashesDeleteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashesDeletePathParams struct {
+type CrashesDeleteRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// id of a specific group
@@ -20,17 +19,8 @@ type CrashesDeletePathParams struct {
 	CrashID string `pathParam:"style=simple,explode=false,name=crash_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashesDeleteQueryParams struct {
 	// true in that case if the method should skip update counts
 	RetentionDelete *bool `queryParam:"style=form,explode=true,name=retention_delete"`
-}
-
-type CrashesDeleteRequest struct {
-	PathParams  CrashesDeletePathParams
-	QueryParams CrashesDeleteQueryParams
-	Security    CrashesDeleteSecurity
 }
 
 // CrashesDeleteDefaultApplicationJSON - Error

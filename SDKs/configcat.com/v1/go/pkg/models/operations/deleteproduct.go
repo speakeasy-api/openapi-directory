@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteProductPathParams struct {
+type DeleteProductRequest struct {
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type DeleteProductRequest struct {
-	PathParams DeleteProductPathParams
 }
 
 type DeleteProductResponse struct {

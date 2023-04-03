@@ -4,29 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CommitsListByShaListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CommitsListByShaListPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CommitsListByShaListQueryParams struct {
-	// A collection of commit SHAs comma-delimited
-	Hashes []string `queryParam:"style=form,explode=false,name=hashes"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type CommitsListByShaListRequest struct {
-	PathParams  CommitsListByShaListPathParams
-	QueryParams CommitsListByShaListQueryParams
-	Security    CommitsListByShaListSecurity
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// A collection of commit SHAs comma-delimited
+	Hashes []string `queryParam:"style=form,explode=false,name=hashes"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type CommitsListByShaList200ApplicationJSONCommitAuthor struct {

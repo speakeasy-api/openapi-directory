@@ -30,7 +30,8 @@ func (e *GetTestXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTestHeaders struct {
+type GetTestRequest struct {
+	GetTestRequest    shared.GetTestRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetTestHeaders struct {
 	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetTestXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetTestRequest struct {
-	Headers GetTestHeaders
-	Request shared.GetTestRequest `request:"mediaType=application/json"`
 }
 
 type GetTestResponse struct {

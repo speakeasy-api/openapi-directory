@@ -8,19 +8,14 @@ import (
 )
 
 type PostMerchantsMerchantIDUsersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostMerchantsMerchantIDUsersPathParams struct {
-	// Unique identifier of the merchant.
-	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostMerchantsMerchantIDUsersRequest struct {
-	PathParams PostMerchantsMerchantIDUsersPathParams
-	Request    *shared.CreateMerchantUserRequest `request:"mediaType=application/json"`
-	Security   PostMerchantsMerchantIDUsersSecurity
+	CreateMerchantUserRequest *shared.CreateMerchantUserRequest `request:"mediaType=application/json"`
+	// Unique identifier of the merchant.
+	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 }
 
 type PostMerchantsMerchantIDUsersResponse struct {

@@ -13,11 +13,9 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AdultContentDetectionRequest{
-        Request: &operations.AdultContentDetectionRequestBody{
-            APIKey: "corrupti",
-            Text: "provident",
-        },
+    req := operations.AdultContentDetectionRequestBody{
+        APIKey: "corrupti",
+        Text: "provident",
     }
 
     ctx := context.Background()

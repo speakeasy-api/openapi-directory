@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateResponseHeadersPolicy20200531PathParams struct {
-	// The identifier for the response headers policy that you are updating.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateResponseHeadersPolicy20200531Headers struct {
-	// <p>The version of the response headers policy that you are updating.</p> <p>The version is returned in the cache policy's <code>ETag</code> field in the response to <code>GetResponseHeadersPolicyConfig</code>.</p>
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateResponseHeadersPolicy20200531RequestBodyResponseHeadersPolicyConfig - <p>A response headers policy configuration.</p> <p>A response headers policy configuration contains metadata about the response headers policy, and configurations for sets of HTTP response headers.</p>
 type UpdateResponseHeadersPolicy20200531RequestBodyResponseHeadersPolicyConfig struct {
 	Comment                   *string
@@ -41,9 +24,18 @@ type UpdateResponseHeadersPolicy20200531RequestBody struct {
 }
 
 type UpdateResponseHeadersPolicy20200531Request struct {
-	PathParams UpdateResponseHeadersPolicy20200531PathParams
-	Headers    UpdateResponseHeadersPolicy20200531Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The identifier for the response headers policy that you are updating.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// <p>The version of the response headers policy that you are updating.</p> <p>The version is returned in the cache policy's <code>ETag</code> field in the response to <code>GetResponseHeadersPolicyConfig</code>.</p>
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateResponseHeadersPolicy20200531Response struct {

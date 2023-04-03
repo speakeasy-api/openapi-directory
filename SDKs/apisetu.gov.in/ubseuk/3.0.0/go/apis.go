@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Hscer - Class XII Marksheet
 // API to verify Class XII Marksheet.
-func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*operations.HscerResponse, error) {
+func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequestBody, security operations.HscerSecurity) (*operations.HscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hscer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 // Hsmgr - Class XII Migration Certificate
 // API to verify Class XII Migration Certificate.
-func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequest) (*operations.HsmgrResponse, error) {
+func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequestBody, security operations.HsmgrSecurity) (*operations.HsmgrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hsmgr/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Hsmgr(ctx context.Context, request operations.HsmgrRequest) (*ope
 
 // Sscer - Class X Marksheet
 // API to verify Class X Marksheet.
-func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*operations.SscerResponse, error) {
+func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequestBody, security operations.SscerSecurity) (*operations.SscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sscer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Sscer(ctx context.Context, request operations.SscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

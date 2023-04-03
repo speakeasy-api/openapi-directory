@@ -50,7 +50,7 @@ func (e *GETDescribeClusterSubnetGroupsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDescribeClusterSubnetGroupsQueryParams struct {
+type GETDescribeClusterSubnetGroupsRequest struct {
 	Action GETDescribeClusterSubnetGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the cluster subnet group for which information is requested.
 	ClusterSubnetGroupName *string `queryParam:"style=form,explode=true,name=ClusterSubnetGroupName"`
@@ -61,23 +61,15 @@ type GETDescribeClusterSubnetGroupsQueryParams struct {
 	// A tag key or keys for which you want to return all matching cluster subnet groups that are associated with the specified key or keys. For example, suppose that you have subnet groups that are tagged with keys called <code>owner</code> and <code>environment</code>. If you specify both of these tag keys in the request, Amazon Redshift returns a response with the subnet groups that have either or both of these tag keys associated with them.
 	TagKeys []string `queryParam:"style=form,explode=true,name=TagKeys"`
 	// A tag value or values for which you want to return all matching cluster subnet groups that are associated with the specified tag value or values. For example, suppose that you have subnet groups that are tagged with values called <code>admin</code> and <code>test</code>. If you specify both of these tag values in the request, Amazon Redshift returns a response with the subnet groups that have either or both of these tag values associated with them.
-	TagValues []string                                  `queryParam:"style=form,explode=true,name=TagValues"`
-	Version   GETDescribeClusterSubnetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeClusterSubnetGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeClusterSubnetGroupsRequest struct {
-	QueryParams GETDescribeClusterSubnetGroupsQueryParams
-	Headers     GETDescribeClusterSubnetGroupsHeaders
+	TagValues         []string                                  `queryParam:"style=form,explode=true,name=TagValues"`
+	Version           GETDescribeClusterSubnetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeClusterSubnetGroupsResponse struct {

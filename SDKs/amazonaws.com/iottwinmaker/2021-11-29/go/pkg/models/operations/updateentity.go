@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEntityPathParams struct {
-	// The ID of the entity.
-	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
-	// The ID of the workspace that contains the entity.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type UpdateEntityHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateEntityRequestBodyParentEntityUpdate - The parent entity update request.
 type UpdateEntityRequestBodyParentEntityUpdate struct {
 	ParentEntityID *string                            `json:"parentEntityId,omitempty"`
@@ -42,9 +25,18 @@ type UpdateEntityRequestBody struct {
 }
 
 type UpdateEntityRequest struct {
-	PathParams UpdateEntityPathParams
-	Headers    UpdateEntityHeaders
-	Request    UpdateEntityRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateEntityRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the entity.
+	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
+	// The ID of the workspace that contains the entity.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type UpdateEntityResponse struct {

@@ -50,28 +50,20 @@ func (e *GETDeleteWarmPoolVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteWarmPoolQueryParams struct {
+type GETDeleteWarmPoolRequest struct {
 	Action GETDeleteWarmPoolActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// Specifies that the warm pool is to be deleted along with all of its associated instances, without waiting for all instances to be terminated. This parameter also deletes any outstanding lifecycle actions associated with the warm pool instances.
-	ForceDelete *bool                        `queryParam:"style=form,explode=true,name=ForceDelete"`
-	Version     GETDeleteWarmPoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteWarmPoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteWarmPoolRequest struct {
-	QueryParams GETDeleteWarmPoolQueryParams
-	Headers     GETDeleteWarmPoolHeaders
+	ForceDelete       *bool                        `queryParam:"style=form,explode=true,name=ForceDelete"`
+	Version           GETDeleteWarmPoolVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteWarmPoolResponse struct {

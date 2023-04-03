@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteApplicationPathParams struct {
-	// The ID of the application that will be deleted.
-	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
-}
-
-type DeleteApplicationHeaders struct {
+type DeleteApplicationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteApplicationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteApplicationRequest struct {
-	PathParams DeleteApplicationPathParams
-	Headers    DeleteApplicationHeaders
+	// The ID of the application that will be deleted.
+	ApplicationID string `pathParam:"style=simple,explode=false,name=applicationId"`
 }
 
 type DeleteApplicationResponse struct {

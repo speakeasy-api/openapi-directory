@@ -7,25 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTextPathParams struct {
-	// The alias of the Amazon Lex bot.
-	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
-	// The name of the Amazon Lex bot.
-	BotName string `pathParam:"style=simple,explode=false,name=botName"`
-	// <p>The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot. At runtime, each request must contain the <code>userID</code> field.</p> <p>To decide the user ID to use for your application, consider the following factors.</p> <ul> <li> <p>The <code>userID</code> field must not contain any personally identifiable information of the user, for example, name, personal identification numbers, or other end user personal information.</p> </li> <li> <p>If you want a user to start a conversation on one device and continue on another device, use a user-specific identifier.</p> </li> <li> <p>If you want the same user to be able to have two independent conversations on two different devices, choose a device-specific identifier.</p> </li> <li> <p>A user can't have two independent conversations with two different versions of the same bot. For example, a user can't have a conversation with the PROD and BETA versions of the same bot. If you anticipate that a user will need to have conversation with two different versions, for example, while testing, include the bot alias in the user ID to separate the two conversations.</p> </li> </ul>
-	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type PostTextHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PostTextRequestBody struct {
 	// <p>A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by including the context in the request,</p> <p>If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you specify an empty list, all contexts for the session are cleared.</p>
 	ActiveContexts []shared.ActiveContext `json:"activeContexts,omitempty"`
@@ -38,9 +19,20 @@ type PostTextRequestBody struct {
 }
 
 type PostTextRequest struct {
-	PathParams PostTextPathParams
-	Headers    PostTextHeaders
-	Request    PostTextRequestBody `request:"mediaType=application/json"`
+	RequestBody       PostTextRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The alias of the Amazon Lex bot.
+	BotAlias string `pathParam:"style=simple,explode=false,name=botAlias"`
+	// The name of the Amazon Lex bot.
+	BotName string `pathParam:"style=simple,explode=false,name=botName"`
+	// <p>The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot. At runtime, each request must contain the <code>userID</code> field.</p> <p>To decide the user ID to use for your application, consider the following factors.</p> <ul> <li> <p>The <code>userID</code> field must not contain any personally identifiable information of the user, for example, name, personal identification numbers, or other end user personal information.</p> </li> <li> <p>If you want a user to start a conversation on one device and continue on another device, use a user-specific identifier.</p> </li> <li> <p>If you want the same user to be able to have two independent conversations on two different devices, choose a device-specific identifier.</p> </li> <li> <p>A user can't have two independent conversations with two different versions of the same bot. For example, a user can't have a conversation with the PROD and BETA versions of the same bot. If you anticipate that a user will need to have conversation with two different versions, for example, while testing, include the bot alias in the user ID to separate the two conversations.</p> </li> </ul>
+	UserID string `pathParam:"style=simple,explode=false,name=userId"`
 }
 
 type PostTextResponse struct {

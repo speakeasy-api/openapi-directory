@@ -42,7 +42,7 @@ func (s *channels) GetChannels(ctx context.Context, request operations.GetChanne
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,14 +84,14 @@ func (s *channels) GetChannels(ctx context.Context, request operations.GetChanne
 // Get the editorial highlights of a given channel in TV & iPlayer.
 func (s *channels) GetHighlightsByChannel(ctx context.Context, request operations.GetHighlightsByChannelRequest) (*operations.GetHighlightsByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/highlights", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/highlights", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -133,14 +133,14 @@ func (s *channels) GetHighlightsByChannel(ctx context.Context, request operation
 // Get schedule by channel
 func (s *channels) GetScheduleByChannel(ctx context.Context, request operations.GetScheduleByChannelRequest) (*operations.GetScheduleByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/schedule/{date}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/schedule/{date}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

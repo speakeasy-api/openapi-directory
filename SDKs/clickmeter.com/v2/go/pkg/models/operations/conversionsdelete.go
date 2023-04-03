@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsDeletePathParams struct {
+type ConversionsDeleteRequest struct {
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsDeleteRequest struct {
-	PathParams ConversionsDeletePathParams
 }
 
 type ConversionsDeleteResponse struct {

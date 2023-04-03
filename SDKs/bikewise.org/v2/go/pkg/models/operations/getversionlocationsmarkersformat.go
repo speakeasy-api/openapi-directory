@@ -44,7 +44,7 @@ func (e *GETVersionLocationsMarkersFormatIncidentTypeEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETVersionLocationsMarkersFormatQueryParams struct {
+type GETVersionLocationsMarkersFormatRequest struct {
 	// <p>Give ‘em all to me. Will ignore limit</p>
 	//
 	All *bool `queryParam:"style=form,explode=true,name=all"`
@@ -69,10 +69,6 @@ type GETVersionLocationsMarkersFormatQueryParams struct {
 	// <p>Full text search of incidents</p>
 	//
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GETVersionLocationsMarkersFormatRequest struct {
-	QueryParams GETVersionLocationsMarkersFormatQueryParams
 }
 
 type GETVersionLocationsMarkersFormatResponse struct {

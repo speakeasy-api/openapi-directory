@@ -10,7 +10,8 @@ import (
 )
 
 type GetMessagesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 // GetMessagesSortOrderEnum - The default value is DESCENDING
@@ -36,7 +37,7 @@ func (e *GetMessagesSortOrderEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetMessagesQueryParams struct {
+type GetMessagesRequest struct {
 	// See the message filtering for more information.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// The maximum number of messages that are returned.  The default is 1000.
@@ -47,11 +48,6 @@ type GetMessagesQueryParams struct {
 	// If the `sortOrder` is DESCENDING, the newest messages be first in the result.  ASCENDING places the oldest messages on top of the response.
 	//
 	SortOrder *GetMessagesSortOrderEnum `queryParam:"style=form,explode=true,name=sortOrder"`
-}
-
-type GetMessagesRequest struct {
-	QueryParams GetMessagesQueryParams
-	Security    GetMessagesSecurity
 }
 
 type GetMessagesResponse struct {

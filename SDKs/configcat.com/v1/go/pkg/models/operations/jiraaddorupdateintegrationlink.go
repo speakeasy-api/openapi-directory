@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type JiraAddOrUpdateIntegrationLinkPathParams struct {
+type JiraAddOrUpdateIntegrationLinkRequest struct {
+	AddOrUpdateJiraIntegrationLinkModel *shared.AddOrUpdateJiraIntegrationLinkModel `request:"mediaType=application/json"`
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
 	// The key of the integration link.
 	Key string `pathParam:"style=simple,explode=false,name=key"`
 	// The id of the Setting.
 	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type JiraAddOrUpdateIntegrationLinkRequest struct {
-	PathParams JiraAddOrUpdateIntegrationLinkPathParams
-	Request    *shared.AddOrUpdateJiraIntegrationLinkModel `request:"mediaType=application/json"`
 }
 
 type JiraAddOrUpdateIntegrationLinkResponse struct {

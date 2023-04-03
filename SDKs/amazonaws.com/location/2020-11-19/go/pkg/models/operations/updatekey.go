@@ -8,21 +8,6 @@ import (
 	"time"
 )
 
-type UpdateKeyPathParams struct {
-	// The name of the API key resource to update.
-	KeyName string `pathParam:"style=simple,explode=false,name=KeyName"`
-}
-
-type UpdateKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateKeyRequestBodyRestrictions - API Restrictions on the allowed actions, resources, and referers for an API key resource.
 type UpdateKeyRequestBodyRestrictions struct {
 	AllowActions   []string `json:"AllowActions,omitempty"`
@@ -44,9 +29,16 @@ type UpdateKeyRequestBody struct {
 }
 
 type UpdateKeyRequest struct {
-	PathParams UpdateKeyPathParams
-	Headers    UpdateKeyHeaders
-	Request    UpdateKeyRequestBody `request:"mediaType=application/json"`
+	// The name of the API key resource to update.
+	KeyName           string               `pathParam:"style=simple,explode=false,name=KeyName"`
+	RequestBody       UpdateKeyRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateKeyResponse struct {

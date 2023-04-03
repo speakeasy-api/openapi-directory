@@ -74,26 +74,18 @@ func (e *GETSetSecurityTokenServicePreferencesVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETSetSecurityTokenServicePreferencesQueryParams struct {
+type GETSetSecurityTokenServicePreferencesRequest struct {
 	Action GETSetSecurityTokenServicePreferencesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The version of the global endpoint token. Version 1 tokens are valid only in Amazon Web Services Regions that are available by default. These tokens do not work in manually enabled Regions, such as Asia Pacific (Hong Kong). Version 2 tokens are valid in all Regions. However, version 2 tokens are longer and might affect systems where you temporarily store tokens.</p> <p>For information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and deactivating STS in an Amazon Web Services Region</a> in the <i>IAM User Guide</i>.</p>
 	GlobalEndpointTokenVersion GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum `queryParam:"style=form,explode=true,name=GlobalEndpointTokenVersion"`
 	Version                    GETSetSecurityTokenServicePreferencesVersionEnum                    `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetSecurityTokenServicePreferencesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetSecurityTokenServicePreferencesRequest struct {
-	QueryParams GETSetSecurityTokenServicePreferencesQueryParams
-	Headers     GETSetSecurityTokenServicePreferencesHeaders
+	XAmzAlgorithm              *string                                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetSecurityTokenServicePreferencesResponse struct {

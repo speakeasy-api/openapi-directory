@@ -50,25 +50,17 @@ func (e *POSTModifyLoadBalancerAttributesVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type POSTModifyLoadBalancerAttributesQueryParams struct {
-	Action  POSTModifyLoadBalancerAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyLoadBalancerAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyLoadBalancerAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyLoadBalancerAttributesRequest struct {
-	QueryParams POSTModifyLoadBalancerAttributesQueryParams
-	Headers     POSTModifyLoadBalancerAttributesHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyLoadBalancerAttributesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                      `request:"mediaType=text/xml"`
+	Version           POSTModifyLoadBalancerAttributesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyLoadBalancerAttributesResponse struct {

@@ -50,26 +50,18 @@ func (e *GETListIdentityPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListIdentityPoliciesQueryParams struct {
+type GETListIdentityPoliciesRequest struct {
 	Action GETListIdentityPoliciesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identity that is associated with the policy for which the policies will be listed. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: <code>user@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.</p> <p>To successfully call this API, you must own the identity.</p>
-	Identity string                             `queryParam:"style=form,explode=true,name=Identity"`
-	Version  GETListIdentityPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListIdentityPoliciesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListIdentityPoliciesRequest struct {
-	QueryParams GETListIdentityPoliciesQueryParams
-	Headers     GETListIdentityPoliciesHeaders
+	Identity          string                             `queryParam:"style=form,explode=true,name=Identity"`
+	Version           GETListIdentityPoliciesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListIdentityPoliciesResponse struct {

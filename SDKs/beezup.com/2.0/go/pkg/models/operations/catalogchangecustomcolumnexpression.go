@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogChangeCustomColumnExpressionPathParams struct {
+type CatalogChangeCustomColumnExpressionRequest struct {
+	ChangeCustomColumnExpressionRequest shared.ChangeCustomColumnExpressionRequest `request:"mediaType=application/json"`
 	// The custom column identifier
 	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogChangeCustomColumnExpressionRequest struct {
-	PathParams CatalogChangeCustomColumnExpressionPathParams
-	Request    shared.ChangeCustomColumnExpressionRequest `request:"mediaType=application/json"`
 }
 
 type CatalogChangeCustomColumnExpressionResponse struct {

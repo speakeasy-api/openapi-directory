@@ -34,11 +34,11 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // PaymentsAdd - Create Payment
 // Create Payment
-func (s *payments) PaymentsAdd(ctx context.Context, request operations.PaymentsAddRequest) (*operations.PaymentsAddResponse, error) {
+func (s *payments) PaymentsAdd(ctx context.Context, request operations.PaymentsAddRequest, security operations.PaymentsAddSecurity) (*operations.PaymentsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/payments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *payments) PaymentsAdd(ctx context.Context, request operations.PaymentsA
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *payments) PaymentsAdd(ctx context.Context, request operations.PaymentsA
 
 // PaymentsAll - List Payments
 // List Payments
-func (s *payments) PaymentsAll(ctx context.Context, request operations.PaymentsAllRequest) (*operations.PaymentsAllResponse, error) {
+func (s *payments) PaymentsAll(ctx context.Context, request operations.PaymentsAllRequest, security operations.PaymentsAllSecurity) (*operations.PaymentsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/payments"
 
@@ -164,13 +164,13 @@ func (s *payments) PaymentsAll(ctx context.Context, request operations.PaymentsA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *payments) PaymentsAll(ctx context.Context, request operations.PaymentsA
 
 // PaymentsDelete - Delete Payment
 // Delete Payment
-func (s *payments) PaymentsDelete(ctx context.Context, request operations.PaymentsDeleteRequest) (*operations.PaymentsDeleteResponse, error) {
+func (s *payments) PaymentsDelete(ctx context.Context, request operations.PaymentsDeleteRequest, security operations.PaymentsDeleteSecurity) (*operations.PaymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/payments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *payments) PaymentsDelete(ctx context.Context, request operations.Paymen
 
 // PaymentsOne - Get Payment
 // Get Payment
-func (s *payments) PaymentsOne(ctx context.Context, request operations.PaymentsOneRequest) (*operations.PaymentsOneResponse, error) {
+func (s *payments) PaymentsOne(ctx context.Context, request operations.PaymentsOneRequest, security operations.PaymentsOneSecurity) (*operations.PaymentsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/payments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *payments) PaymentsOne(ctx context.Context, request operations.PaymentsO
 
 // PaymentsUpdate - Update Payment
 // Update Payment
-func (s *payments) PaymentsUpdate(ctx context.Context, request operations.PaymentsUpdateRequest) (*operations.PaymentsUpdateResponse, error) {
+func (s *payments) PaymentsUpdate(ctx context.Context, request operations.PaymentsUpdateRequest, security operations.PaymentsUpdateSecurity) (*operations.PaymentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/payments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/payments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *payments) PaymentsUpdate(ctx context.Context, request operations.Paymen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

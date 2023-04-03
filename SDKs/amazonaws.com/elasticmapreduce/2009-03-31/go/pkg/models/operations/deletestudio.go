@@ -30,7 +30,8 @@ func (e *DeleteStudioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteStudioHeaders struct {
+type DeleteStudioRequest struct {
+	DeleteStudioInput shared.DeleteStudioInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteStudioHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteStudioXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteStudioRequest struct {
-	Headers DeleteStudioHeaders
-	Request shared.DeleteStudioInput `request:"mediaType=application/json"`
 }
 
 type DeleteStudioResponse struct {

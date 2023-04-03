@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchFlightOffersHeaders struct {
+type SearchFlightOffersRequest struct {
+	// list of criteria to retrieve a list of flight offers
+	GetFlightOffersQuery shared.GetFlightOffersQuery `request:"mediaType=application/vnd.amadeus+json"`
 	// the HTTP method to apply
 	XHTTPMethodOverride string `header:"style=simple,explode=false,name=X-HTTP-Method-Override"`
-}
-
-type SearchFlightOffersRequest struct {
-	Headers SearchFlightOffersHeaders
-	// list of criteria to retrieve a list of flight offers
-	Request shared.GetFlightOffersQuery `request:"mediaType=application/vnd.amadeus+json"`
 }
 
 // SearchFlightOffersSuccess - Successful Operation

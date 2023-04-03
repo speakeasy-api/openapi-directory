@@ -46,7 +46,7 @@ func (s *support) ForgotPassword(ctx context.Context, request operations.ForgotP
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/request-password-reset"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PasswordResetEmailRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -61,7 +61,7 @@ func (s *support) ForgotPassword(ctx context.Context, request operations.ForgotP
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -115,7 +115,7 @@ func (s *support) ForgotPassword(ctx context.Context, request operations.ForgotP
 // GetSubscriptionData - Returns the details of subscription data for a user with specified id.
 func (s *support) GetSubscriptionData(ctx context.Context, request operations.GetSubscriptionDataRequest) (*operations.GetSubscriptionDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check-subscription/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/check-subscription/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +187,7 @@ func (s *support) ResetPassword(ctx context.Context, request operations.ResetPas
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reset-password"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PasswordResetRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -202,7 +202,7 @@ func (s *support) ResetPassword(ctx context.Context, request operations.ResetPas
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -262,7 +262,7 @@ func (s *support) ResetPassword(ctx context.Context, request operations.ResetPas
 // The token has en expiry, so if the link is not clicked before it expires, the account holder
 // may need to request a new verification email be sent. This can be done via the endpoint
 // /account/request-email-verification.
-func (s *support) VerifyEmail(ctx context.Context, request operations.VerifyEmailRequest) (*operations.VerifyEmailResponse, error) {
+func (s *support) VerifyEmail(ctx context.Context, request operations.VerifyEmailRequest, security operations.VerifyEmailSecurity) (*operations.VerifyEmailResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/verify-email"
 
@@ -271,11 +271,11 @@ func (s *support) VerifyEmail(ctx context.Context, request operations.VerifyEmai
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

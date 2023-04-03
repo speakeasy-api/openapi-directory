@@ -40,14 +40,14 @@ func newOrganisationsAddresses(defaultClient, securityClient HTTPClient, serverU
 // Delete an address
 func (s *organisationsAddresses) DeleteOrganisationsPartyIDAddressesAddressID(ctx context.Context, request operations.DeleteOrganisationsPartyIDAddressesAddressIDRequest) (*operations.DeleteOrganisationsPartyIDAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -97,14 +97,14 @@ func (s *organisationsAddresses) DeleteOrganisationsPartyIDAddressesAddressID(ct
 // GetOrganisationsPartyIDAddresses - Retrieve a list of addresses
 func (s *organisationsAddresses) GetOrganisationsPartyIDAddresses(ctx context.Context, request operations.GetOrganisationsPartyIDAddressesRequest) (*operations.GetOrganisationsPartyIDAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -166,14 +166,14 @@ func (s *organisationsAddresses) GetOrganisationsPartyIDAddresses(ctx context.Co
 // Retrieve an address
 func (s *organisationsAddresses) GetOrganisationsPartyIDAddressesAddressID(ctx context.Context, request operations.GetOrganisationsPartyIDAddressesAddressIDRequest) (*operations.GetOrganisationsPartyIDAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses/{addressId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -233,9 +233,9 @@ func (s *organisationsAddresses) GetOrganisationsPartyIDAddressesAddressID(ctx c
 // Create an address
 func (s *organisationsAddresses) PostOrganisationsPartyIDAddresses(ctx context.Context, request operations.PostOrganisationsPartyIDAddressesRequest) (*operations.PostOrganisationsPartyIDAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -250,7 +250,7 @@ func (s *organisationsAddresses) PostOrganisationsPartyIDAddresses(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -312,9 +312,9 @@ func (s *organisationsAddresses) PostOrganisationsPartyIDAddresses(ctx context.C
 // Update an address
 func (s *organisationsAddresses) PutOrganisationsPartyIDAddressesAddressID(ctx context.Context, request operations.PutOrganisationsPartyIDAddressesAddressIDRequest) (*operations.PutOrganisationsPartyIDAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses/{addressId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/addresses/{addressId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -329,7 +329,7 @@ func (s *organisationsAddresses) PutOrganisationsPartyIDAddressesAddressID(ctx c
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

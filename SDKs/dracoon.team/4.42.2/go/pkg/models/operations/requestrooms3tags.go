@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestRoomS3TagsPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type RequestRoomS3TagsHeaders struct {
+type RequestRoomS3TagsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestRoomS3TagsRequest struct {
-	PathParams RequestRoomS3TagsPathParams
-	Headers    RequestRoomS3TagsHeaders
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type RequestRoomS3TagsResponse struct {

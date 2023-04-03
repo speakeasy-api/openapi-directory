@@ -8,17 +8,13 @@ import (
 )
 
 type StartTextBroadcastSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type StartTextBroadcastPathParams struct {
-	// An id of a text broadcast to start
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type StartTextBroadcastRequest struct {
-	PathParams StartTextBroadcastPathParams
-	Security   StartTextBroadcastSecurity
+	// An id of a text broadcast to start
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type StartTextBroadcastResponse struct {

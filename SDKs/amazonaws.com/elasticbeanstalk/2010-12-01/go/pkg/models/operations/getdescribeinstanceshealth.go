@@ -51,7 +51,7 @@ func (e *GETDescribeInstancesHealthVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribeInstancesHealthQueryParams struct {
+type GETDescribeInstancesHealthRequest struct {
 	Action GETDescribeInstancesHealthActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Specifies the response elements you wish to receive. To retrieve all attributes, set to <code>All</code>. If no attribute names are specified, returns a list of instances.
 	AttributeNames []shared.InstancesHealthAttributeEnum `queryParam:"style=form,explode=true,name=AttributeNames"`
@@ -60,23 +60,15 @@ type GETDescribeInstancesHealthQueryParams struct {
 	// Specify the AWS Elastic Beanstalk environment by name.
 	EnvironmentName *string `queryParam:"style=form,explode=true,name=EnvironmentName"`
 	// Specify the pagination token returned by a previous call.
-	NextToken *string                               `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETDescribeInstancesHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeInstancesHealthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeInstancesHealthRequest struct {
-	QueryParams GETDescribeInstancesHealthQueryParams
-	Headers     GETDescribeInstancesHealthHeaders
+	NextToken         *string                               `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETDescribeInstancesHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeInstancesHealthResponse struct {

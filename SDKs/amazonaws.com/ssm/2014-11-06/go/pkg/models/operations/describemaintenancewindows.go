@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMaintenanceWindowsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeMaintenanceWindowsXAmzTargetEnum
 type DescribeMaintenanceWindowsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeMaintenanceWindowsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DescribeMaintenanceWindowsHeaders struct {
+type DescribeMaintenanceWindowsRequest struct {
+	DescribeMaintenanceWindowsRequest shared.DescribeMaintenanceWindowsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeMaintenanceWindowsHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeMaintenanceWindowsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeMaintenanceWindowsRequest struct {
-	QueryParams DescribeMaintenanceWindowsQueryParams
-	Headers     DescribeMaintenanceWindowsHeaders
-	Request     shared.DescribeMaintenanceWindowsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeMaintenanceWindowsResponse struct {

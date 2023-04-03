@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEventSourceMappingPathParams struct {
-	// The identifier of the event source mapping.
-	UUID string `pathParam:"style=simple,explode=false,name=UUID"`
-}
-
-type UpdateEventSourceMappingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateEventSourceMappingRequestBodyDestinationConfig - A configuration object that specifies the destination of an event after Lambda processes it.
 type UpdateEventSourceMappingRequestBodyDestinationConfig struct {
 	OnFailure *shared.OnFailure `json:"OnFailure,omitempty"`
@@ -79,9 +64,16 @@ type UpdateEventSourceMappingRequestBody struct {
 }
 
 type UpdateEventSourceMappingRequest struct {
-	PathParams UpdateEventSourceMappingPathParams
-	Headers    UpdateEventSourceMappingHeaders
-	Request    UpdateEventSourceMappingRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateEventSourceMappingRequestBody `request:"mediaType=application/json"`
+	// The identifier of the event source mapping.
+	UUID              string  `pathParam:"style=simple,explode=false,name=UUID"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateEventSourceMappingResponse struct {

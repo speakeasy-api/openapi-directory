@@ -10,10 +10,6 @@ var EcommerceDeliveryServerList = []string{
 	"http://api.climatekuul.com:8000/footprint",
 }
 
-type EcommerceDeliveryHeaders struct {
-	ContentType string `header:"style=simple,explode=false,name=Content-Type"`
-}
-
 type EcommerceDeliveryRequestBody struct {
 	// Client Api Key
 	APIKeyL1 string `form:"name=apiKey_l1"`
@@ -38,9 +34,8 @@ type EcommerceDeliveryRequestBody struct {
 }
 
 type EcommerceDeliveryRequest struct {
-	Headers   EcommerceDeliveryHeaders
-	Request   *EcommerceDeliveryRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
+	ContentType string                        `header:"style=simple,explode=false,name=Content-Type"`
+	RequestBody *EcommerceDeliveryRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type EcommerceDeliveryResponse struct {

@@ -8,12 +8,14 @@ import (
 )
 
 type PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDPathParams struct {
+type PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest struct {
+	// The updated comment.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The id of the comment.
 	CommentID int64 `pathParam:"style=simple,explode=false,name=comment_id"`
 	// The issue id
@@ -26,13 +28,6 @@ type PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDPathParams st
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest struct {
-	PathParams PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDPathParams
-	// The updated comment.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity
 }
 
 type PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse struct {

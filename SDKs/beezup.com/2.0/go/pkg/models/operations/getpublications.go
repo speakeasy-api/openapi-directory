@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPublicationsPathParams struct {
-	// Account Id to query (required)
-	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
-	// Marketplace Technical Code to query (required)
-	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
 type GetPublicationsPublicationTypesEnum string
 
 const (
@@ -54,18 +47,17 @@ func (e *GetPublicationsPublicationTypesEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPublicationsQueryParams struct {
+type GetPublicationsRequest struct {
+	// Account Id to query (required)
+	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
 	// Channel Catalog Id by which to filter (optional)
 	ChannelCatalogID *string `queryParam:"style=form,explode=true,name=channelCatalogId"`
 	// Amount of entries to fetch (optional, default set to 10)
 	Count *int `queryParam:"style=form,explode=true,name=count"`
+	// Marketplace Technical Code to query (required)
+	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
 	// Publication types by which to filter (optional)
 	PublicationTypes []GetPublicationsPublicationTypesEnum `queryParam:"style=form,explode=false,name=publicationTypes"`
-}
-
-type GetPublicationsRequest struct {
-	PathParams  GetPublicationsPathParams
-	QueryParams GetPublicationsQueryParams
 }
 
 type GetPublicationsResponse struct {

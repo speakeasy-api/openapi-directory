@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostTagsetsRequest struct {
-	// Tag set to be created
-	Request shared.TagSetSubmission `request:"mediaType=application/json"`
-}
-
 type PostTagsetsResponse struct {
 	ContentType string
 	StatusCode  int

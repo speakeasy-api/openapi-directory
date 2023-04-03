@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type PutDedicatedIPInPoolPathParams struct {
-	// The IP address that you want to move to the dedicated IP pool. The value you specify has to be a dedicated IP address that's associated with your Amazon Web Services account.
-	IP string `pathParam:"style=simple,explode=false,name=IP"`
-}
-
-type PutDedicatedIPInPoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutDedicatedIPInPoolRequestBody struct {
 	// The name of a dedicated IP pool.
 	DestinationPoolName string `json:"DestinationPoolName"`
 }
 
 type PutDedicatedIPInPoolRequest struct {
-	PathParams PutDedicatedIPInPoolPathParams
-	Headers    PutDedicatedIPInPoolHeaders
-	Request    PutDedicatedIPInPoolRequestBody `request:"mediaType=application/json"`
+	// The IP address that you want to move to the dedicated IP pool. The value you specify has to be a dedicated IP address that's associated with your Amazon Web Services account.
+	IP                string                          `pathParam:"style=simple,explode=false,name=IP"`
+	RequestBody       PutDedicatedIPInPoolRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutDedicatedIPInPoolResponse struct {

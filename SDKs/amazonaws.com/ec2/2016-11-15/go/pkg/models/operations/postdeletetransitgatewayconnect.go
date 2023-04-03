@@ -50,25 +50,17 @@ func (e *POSTDeleteTransitGatewayConnectVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type POSTDeleteTransitGatewayConnectQueryParams struct {
-	Action  POSTDeleteTransitGatewayConnectActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteTransitGatewayConnectVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteTransitGatewayConnectHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteTransitGatewayConnectRequest struct {
-	QueryParams POSTDeleteTransitGatewayConnectQueryParams
-	Headers     POSTDeleteTransitGatewayConnectHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteTransitGatewayConnectActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                     `request:"mediaType=text/xml"`
+	Version           POSTDeleteTransitGatewayConnectVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteTransitGatewayConnectResponse struct {

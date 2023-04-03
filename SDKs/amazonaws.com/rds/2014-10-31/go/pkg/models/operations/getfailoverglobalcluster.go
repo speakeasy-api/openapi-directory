@@ -50,28 +50,20 @@ func (e *GETFailoverGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETFailoverGlobalClusterQueryParams struct {
+type GETFailoverGlobalClusterRequest struct {
 	Action GETFailoverGlobalClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>Identifier of the Aurora global database (<a>GlobalCluster</a>) that should be failed over. The identifier is the unique key assigned by the user when the Aurora global database was created. In other words, it's the name of the Aurora global database that you want to fail over.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identifier of an existing <a>GlobalCluster</a> (Aurora global database).</p> </li> </ul>
 	GlobalClusterIdentifier string `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`
 	// Identifier of the secondary Aurora DB cluster that you want to promote to primary for the Aurora global database (<a>GlobalCluster</a>.) Use the Amazon Resource Name (ARN) for the identifier so that Aurora can locate the cluster in its Amazon Web Services Region.
 	TargetDbClusterIdentifier string                              `queryParam:"style=form,explode=true,name=TargetDbClusterIdentifier"`
 	Version                   GETFailoverGlobalClusterVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETFailoverGlobalClusterHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETFailoverGlobalClusterRequest struct {
-	QueryParams GETFailoverGlobalClusterQueryParams
-	Headers     GETFailoverGlobalClusterHeaders
+	XAmzAlgorithm             *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETFailoverGlobalClusterResponse struct {

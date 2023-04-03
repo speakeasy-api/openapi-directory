@@ -7,23 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListArtifactsPathParams struct {
-	//  The unique ID for an Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	//  The name of a branch that is part of an Amplify app.
-	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
-	//  The unique ID for a job.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type ListArtifactsQueryParams struct {
-	//  The maximum number of records to list in a single response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	//  A pagination token. Set to null to start listing artifacts from start. If a non-null pagination token is returned in a result, pass its value in here to list more artifacts.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListArtifactsHeaders struct {
+type ListArtifactsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -31,12 +15,16 @@ type ListArtifactsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListArtifactsRequest struct {
-	PathParams  ListArtifactsPathParams
-	QueryParams ListArtifactsQueryParams
-	Headers     ListArtifactsHeaders
+	//  The unique ID for an Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	//  The name of a branch that is part of an Amplify app.
+	BranchName string `pathParam:"style=simple,explode=false,name=branchName"`
+	//  The unique ID for a job.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
+	//  The maximum number of records to list in a single response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	//  A pagination token. Set to null to start listing artifacts from start. If a non-null pagination token is returned in a result, pass its value in here to list more artifacts.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListArtifactsResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSpacePathParams struct {
+type GetSpaceRequest struct {
 	// The name of the space.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type GetSpaceRequest struct {
-	PathParams GetSpacePathParams
 }
 
 type GetSpaceResponse struct {

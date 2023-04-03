@@ -8,18 +8,13 @@ import (
 )
 
 type GetLegalEntitiesIDTermsOfServiceStatusSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetLegalEntitiesIDTermsOfServiceStatusPathParams struct {
-	// The unique identifier of the legal entity.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type GetLegalEntitiesIDTermsOfServiceStatusRequest struct {
-	PathParams GetLegalEntitiesIDTermsOfServiceStatusPathParams
-	Security   GetLegalEntitiesIDTermsOfServiceStatusSecurity
+	// The unique identifier of the legal entity.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetLegalEntitiesIDTermsOfServiceStatusResponse struct {

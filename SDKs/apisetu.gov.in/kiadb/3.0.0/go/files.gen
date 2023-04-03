@@ -21,5 +21,4 @@ pkg/models/operations/pscer.go
 pkg/models/operations/psnoc.go
 pkg/models/operations/wtrbl.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

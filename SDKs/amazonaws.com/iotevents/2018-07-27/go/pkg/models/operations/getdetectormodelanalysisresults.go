@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDetectorModelAnalysisResultsPathParams struct {
-	// The ID of the analysis result that you want to retrieve.
-	AnalysisID string `pathParam:"style=simple,explode=false,name=analysisId"`
-}
-
-type GetDetectorModelAnalysisResultsQueryParams struct {
-	// The maximum number of results to be returned per request.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token that you can use to return the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type GetDetectorModelAnalysisResultsHeaders struct {
+type GetDetectorModelAnalysisResultsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type GetDetectorModelAnalysisResultsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDetectorModelAnalysisResultsRequest struct {
-	PathParams  GetDetectorModelAnalysisResultsPathParams
-	QueryParams GetDetectorModelAnalysisResultsQueryParams
-	Headers     GetDetectorModelAnalysisResultsHeaders
+	// The ID of the analysis result that you want to retrieve.
+	AnalysisID string `pathParam:"style=simple,explode=false,name=analysisId"`
+	// The maximum number of results to be returned per request.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token that you can use to return the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type GetDetectorModelAnalysisResultsResponse struct {

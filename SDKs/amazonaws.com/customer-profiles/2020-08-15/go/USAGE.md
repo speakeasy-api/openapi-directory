@@ -13,34 +13,29 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddProfileKeyRequest{
-        PathParams: operations.AddProfileKeyPathParams{
-            DomainName: "corrupti",
-        },
-        Headers: operations.AddProfileKeyHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.AddProfileKeyRequestBody{
-            KeyName: "vel",
-            ProfileID: "error",
+        DomainName: "corrupti",
+        RequestBody: operations.AddProfileKeyRequestBody{
+            KeyName: "provident",
+            ProfileID: "distinctio",
             Values: []string{
-                "suscipit",
-                "iure",
-                "magnam",
+                "unde",
+                "nulla",
+                "corrupti",
+                "illum",
             },
         },
+        XAmzAlgorithm: "vel",
+        XAmzContentSha256: "error",
+        XAmzCredential: "deserunt",
+        XAmzDate: "suscipit",
+        XAmzSecurityToken: "iure",
+        XAmzSignature: "magnam",
+        XAmzSignedHeaders: "debitis",
     }
 
     ctx := context.Background()

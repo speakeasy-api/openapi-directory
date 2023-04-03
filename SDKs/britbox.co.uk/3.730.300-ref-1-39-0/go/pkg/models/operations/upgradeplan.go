@@ -8,15 +8,12 @@ import (
 )
 
 type UpgradePlanSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type UpgradePlanPathParams struct {
-	// The identifier of the payment platform (stripe/itunes). Only Stripe is supported
-	Platform string `pathParam:"style=simple,explode=false,name=platform"`
-}
-
-type UpgradePlanQueryParams struct {
+type UpgradePlanRequest struct {
+	// Details of an upgrade request.
+	ItvUpgradePlanRequest shared.ItvUpgradePlanRequest `request:"mediaType=application/json"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -29,14 +26,8 @@ type UpgradePlanQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type UpgradePlanRequest struct {
-	PathParams  UpgradePlanPathParams
-	QueryParams UpgradePlanQueryParams
-	// Details of an upgrade request.
-	Request  shared.ItvUpgradePlanRequest `request:"mediaType=application/json"`
-	Security UpgradePlanSecurity
+	// The identifier of the payment platform (stripe/itunes). Only Stripe is supported
+	Platform string `pathParam:"style=simple,explode=false,name=platform"`
 }
 
 type UpgradePlanResponse struct {

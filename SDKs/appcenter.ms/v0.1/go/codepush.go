@@ -95,7 +95,7 @@ func (s *codepush) CodePushAcquisitionUpdateCheck(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -144,7 +144,7 @@ func (s *codepush) CodePushAcquisitionUpdateCheck(ctx context.Context, request o
 }
 
 // CodePushAcquisitionUpdateDeployStatus - Report Deployment status metric
-func (s *codepush) CodePushAcquisitionUpdateDeployStatus(ctx context.Context, request operations.CodePushAcquisitionUpdateDeployStatusRequest) (*operations.CodePushAcquisitionUpdateDeployStatusResponse, error) {
+func (s *codepush) CodePushAcquisitionUpdateDeployStatus(ctx context.Context, request operations.CodePushAcquisitionUpdateDeployStatusRequestBody) (*operations.CodePushAcquisitionUpdateDeployStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/public/codepush/report_status/deploy"
 
@@ -199,7 +199,7 @@ func (s *codepush) CodePushAcquisitionUpdateDeployStatus(ctx context.Context, re
 }
 
 // CodePushAcquisitionUpdateDownloadStatus - Report download of specified release
-func (s *codepush) CodePushAcquisitionUpdateDownloadStatus(ctx context.Context, request operations.CodePushAcquisitionUpdateDownloadStatusRequest) (*operations.CodePushAcquisitionUpdateDownloadStatusResponse, error) {
+func (s *codepush) CodePushAcquisitionUpdateDownloadStatus(ctx context.Context, request operations.CodePushAcquisitionUpdateDownloadStatusRequestBody) (*operations.CodePushAcquisitionUpdateDownloadStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/public/codepush/report_status/download"
 
@@ -254,16 +254,16 @@ func (s *codepush) CodePushAcquisitionUpdateDownloadStatus(ctx context.Context, 
 }
 
 // CodePushDeploymentMetricsGet - Gets all releases metrics for specified Deployment
-func (s *codepush) CodePushDeploymentMetricsGet(ctx context.Context, request operations.CodePushDeploymentMetricsGetRequest) (*operations.CodePushDeploymentMetricsGetResponse, error) {
+func (s *codepush) CodePushDeploymentMetricsGet(ctx context.Context, request operations.CodePushDeploymentMetricsGetRequest, security operations.CodePushDeploymentMetricsGetSecurity) (*operations.CodePushDeploymentMetricsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/metrics", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/metrics", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -308,11 +308,11 @@ func (s *codepush) CodePushDeploymentMetricsGet(ctx context.Context, request ope
 }
 
 // CodePushDeploymentReleaseRollback - Rollback the latest or a specific release for an app deployment
-func (s *codepush) CodePushDeploymentReleaseRollback(ctx context.Context, request operations.CodePushDeploymentReleaseRollbackRequest) (*operations.CodePushDeploymentReleaseRollbackResponse, error) {
+func (s *codepush) CodePushDeploymentReleaseRollback(ctx context.Context, request operations.CodePushDeploymentReleaseRollbackRequest, security operations.CodePushDeploymentReleaseRollbackSecurity) (*operations.CodePushDeploymentReleaseRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/rollback_release", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/rollback_release", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -324,7 +324,7 @@ func (s *codepush) CodePushDeploymentReleaseRollback(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -369,11 +369,11 @@ func (s *codepush) CodePushDeploymentReleaseRollback(ctx context.Context, reques
 }
 
 // CodePushDeploymentReleasesCreate - Create a new CodePush release for the specified deployment
-func (s *codepush) CodePushDeploymentReleasesCreate(ctx context.Context, request operations.CodePushDeploymentReleasesCreateRequest) (*operations.CodePushDeploymentReleasesCreateResponse, error) {
+func (s *codepush) CodePushDeploymentReleasesCreate(ctx context.Context, request operations.CodePushDeploymentReleasesCreateRequest, security operations.CodePushDeploymentReleasesCreateSecurity) (*operations.CodePushDeploymentReleasesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -388,7 +388,7 @@ func (s *codepush) CodePushDeploymentReleasesCreate(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -433,16 +433,16 @@ func (s *codepush) CodePushDeploymentReleasesCreate(ctx context.Context, request
 }
 
 // CodePushDeploymentReleasesDelete - Clears a Deployment of releases
-func (s *codepush) CodePushDeploymentReleasesDelete(ctx context.Context, request operations.CodePushDeploymentReleasesDeleteRequest) (*operations.CodePushDeploymentReleasesDeleteResponse, error) {
+func (s *codepush) CodePushDeploymentReleasesDelete(ctx context.Context, request operations.CodePushDeploymentReleasesDeleteRequest, security operations.CodePushDeploymentReleasesDeleteSecurity) (*operations.CodePushDeploymentReleasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -478,16 +478,16 @@ func (s *codepush) CodePushDeploymentReleasesDelete(ctx context.Context, request
 }
 
 // CodePushDeploymentReleasesGet - Gets the history of releases on a Deployment
-func (s *codepush) CodePushDeploymentReleasesGet(ctx context.Context, request operations.CodePushDeploymentReleasesGetRequest) (*operations.CodePushDeploymentReleasesGetResponse, error) {
+func (s *codepush) CodePushDeploymentReleasesGet(ctx context.Context, request operations.CodePushDeploymentReleasesGetRequest, security operations.CodePushDeploymentReleasesGetSecurity) (*operations.CodePushDeploymentReleasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -532,16 +532,16 @@ func (s *codepush) CodePushDeploymentReleasesGet(ctx context.Context, request op
 }
 
 // CodePushDeploymentUploadCreate - Create a new CodePush release upload for the specified deployment
-func (s *codepush) CodePushDeploymentUploadCreate(ctx context.Context, request operations.CodePushDeploymentUploadCreateRequest) (*operations.CodePushDeploymentUploadCreateResponse, error) {
+func (s *codepush) CodePushDeploymentUploadCreate(ctx context.Context, request operations.CodePushDeploymentUploadCreateRequest, security operations.CodePushDeploymentUploadCreateSecurity) (*operations.CodePushDeploymentUploadCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/uploads", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/uploads", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -586,11 +586,11 @@ func (s *codepush) CodePushDeploymentUploadCreate(ctx context.Context, request o
 }
 
 // CodePushDeploymentsCreate - Creates a CodePush Deployment for the given app
-func (s *codepush) CodePushDeploymentsCreate(ctx context.Context, request operations.CodePushDeploymentsCreateRequest) (*operations.CodePushDeploymentsCreateResponse, error) {
+func (s *codepush) CodePushDeploymentsCreate(ctx context.Context, request operations.CodePushDeploymentsCreateRequest, security operations.CodePushDeploymentsCreateSecurity) (*operations.CodePushDeploymentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -605,7 +605,7 @@ func (s *codepush) CodePushDeploymentsCreate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,11 +650,11 @@ func (s *codepush) CodePushDeploymentsCreate(ctx context.Context, request operat
 }
 
 // CodePushDeploymentsDelete - Deletes a CodePush Deployment for the given app
-func (s *codepush) CodePushDeploymentsDelete(ctx context.Context, request operations.CodePushDeploymentsDeleteRequest) (*operations.CodePushDeploymentsDeleteResponse, error) {
+func (s *codepush) CodePushDeploymentsDelete(ctx context.Context, request operations.CodePushDeploymentsDeleteRequest, security operations.CodePushDeploymentsDeleteSecurity) (*operations.CodePushDeploymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -666,7 +666,7 @@ func (s *codepush) CodePushDeploymentsDelete(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -702,16 +702,16 @@ func (s *codepush) CodePushDeploymentsDelete(ctx context.Context, request operat
 }
 
 // CodePushDeploymentsGet - Gets a CodePush Deployment for the given app
-func (s *codepush) CodePushDeploymentsGet(ctx context.Context, request operations.CodePushDeploymentsGetRequest) (*operations.CodePushDeploymentsGetResponse, error) {
+func (s *codepush) CodePushDeploymentsGet(ctx context.Context, request operations.CodePushDeploymentsGetRequest, security operations.CodePushDeploymentsGetSecurity) (*operations.CodePushDeploymentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -756,16 +756,16 @@ func (s *codepush) CodePushDeploymentsGet(ctx context.Context, request operation
 }
 
 // CodePushDeploymentsList - Gets a list of CodePush deployments for the given app
-func (s *codepush) CodePushDeploymentsList(ctx context.Context, request operations.CodePushDeploymentsListRequest) (*operations.CodePushDeploymentsListResponse, error) {
+func (s *codepush) CodePushDeploymentsList(ctx context.Context, request operations.CodePushDeploymentsListRequest, security operations.CodePushDeploymentsListSecurity) (*operations.CodePushDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -810,11 +810,11 @@ func (s *codepush) CodePushDeploymentsList(ctx context.Context, request operatio
 }
 
 // CodePushDeploymentsPromote - Promote one release (default latest one) from one deployment to another
-func (s *codepush) CodePushDeploymentsPromote(ctx context.Context, request operations.CodePushDeploymentsPromoteRequest) (*operations.CodePushDeploymentsPromoteResponse, error) {
+func (s *codepush) CodePushDeploymentsPromote(ctx context.Context, request operations.CodePushDeploymentsPromoteRequest, security operations.CodePushDeploymentsPromoteSecurity) (*operations.CodePushDeploymentsPromoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/promote_release/{promote_deployment_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/promote_release/{promote_deployment_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -826,7 +826,7 @@ func (s *codepush) CodePushDeploymentsPromote(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -871,11 +871,11 @@ func (s *codepush) CodePushDeploymentsPromote(ctx context.Context, request opera
 }
 
 // CodePushDeploymentsUpdate - Modifies a CodePush Deployment for the given app
-func (s *codepush) CodePushDeploymentsUpdate(ctx context.Context, request operations.CodePushDeploymentsUpdateRequest) (*operations.CodePushDeploymentsUpdateResponse, error) {
+func (s *codepush) CodePushDeploymentsUpdate(ctx context.Context, request operations.CodePushDeploymentsUpdateRequest, security operations.CodePushDeploymentsUpdateSecurity) (*operations.CodePushDeploymentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -890,7 +890,7 @@ func (s *codepush) CodePushDeploymentsUpdate(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -926,11 +926,11 @@ func (s *codepush) CodePushDeploymentsUpdate(ctx context.Context, request operat
 }
 
 // DeploymentReleasesUpdate - Modifies a CodePush release metadata under the given Deployment
-func (s *codepush) DeploymentReleasesUpdate(ctx context.Context, request operations.DeploymentReleasesUpdateRequest) (*operations.DeploymentReleasesUpdateResponse, error) {
+func (s *codepush) DeploymentReleasesUpdate(ctx context.Context, request operations.DeploymentReleasesUpdateRequest, security operations.DeploymentReleasesUpdateSecurity) (*operations.DeploymentReleasesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases/{release_label}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases/{release_label}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -945,7 +945,7 @@ func (s *codepush) DeploymentReleasesUpdate(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -991,7 +991,7 @@ func (s *codepush) DeploymentReleasesUpdate(ctx context.Context, request operati
 }
 
 // LegacyCodePushAcquisitionUpdateCheck - Check for updates
-func (s *codepush) LegacyCodePushAcquisitionUpdateCheck(ctx context.Context, request operations.LegacyCodePushAcquisitionUpdateCheckRequest) (*operations.LegacyCodePushAcquisitionUpdateCheckResponse, error) {
+func (s *codepush) LegacyCodePushAcquisitionUpdateCheck(ctx context.Context, request operations.LegacyCodePushAcquisitionUpdateCheckRequest, security operations.LegacyCodePushAcquisitionUpdateCheckSecurity) (*operations.LegacyCodePushAcquisitionUpdateCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/legacy/updateCheck"
 
@@ -1000,11 +1000,11 @@ func (s *codepush) LegacyCodePushAcquisitionUpdateCheck(ctx context.Context, req
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1049,7 +1049,7 @@ func (s *codepush) LegacyCodePushAcquisitionUpdateCheck(ctx context.Context, req
 }
 
 // LegacyCodePushAcquisitionUpdateDownloadStatus - Report download of specified release
-func (s *codepush) LegacyCodePushAcquisitionUpdateDownloadStatus(ctx context.Context, request operations.LegacyCodePushAcquisitionUpdateDownloadStatusRequest) (*operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse, error) {
+func (s *codepush) LegacyCodePushAcquisitionUpdateDownloadStatus(ctx context.Context, request operations.LegacyCodePushAcquisitionUpdateDownloadStatusRequestBody, security operations.LegacyCodePushAcquisitionUpdateDownloadStatusSecurity) (*operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/legacy/reportStatus/download"
 
@@ -1068,7 +1068,7 @@ func (s *codepush) LegacyCodePushAcquisitionUpdateDownloadStatus(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1104,7 +1104,7 @@ func (s *codepush) LegacyCodePushAcquisitionUpdateDownloadStatus(ctx context.Con
 }
 
 // LegacyCodePushAcquisitionUpdateInstallsStatus - Report deploy of specified release
-func (s *codepush) LegacyCodePushAcquisitionUpdateInstallsStatus(ctx context.Context, request operations.LegacyCodePushAcquisitionUpdateInstallsStatusRequest) (*operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse, error) {
+func (s *codepush) LegacyCodePushAcquisitionUpdateInstallsStatus(ctx context.Context, request operations.LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody, security operations.LegacyCodePushAcquisitionUpdateInstallsStatusSecurity) (*operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/legacy/reportStatus/deploy"
 
@@ -1123,7 +1123,7 @@ func (s *codepush) LegacyCodePushAcquisitionUpdateInstallsStatus(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

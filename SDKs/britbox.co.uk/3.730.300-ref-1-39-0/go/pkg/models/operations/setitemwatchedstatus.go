@@ -8,15 +8,10 @@ import (
 )
 
 type SetItemWatchedStatusSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type SetItemWatchedStatusPathParams struct {
-	// The id of the item being watched.
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type SetItemWatchedStatusQueryParams struct {
+type SetItemWatchedStatusRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -39,6 +34,8 @@ type SetItemWatchedStatusQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The id of the item being watched.
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -53,12 +50,6 @@ type SetItemWatchedStatusQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The playhead position to record.
 	Position int `queryParam:"style=form,explode=true,name=position"`
-}
-
-type SetItemWatchedStatusRequest struct {
-	PathParams  SetItemWatchedStatusPathParams
-	QueryParams SetItemWatchedStatusQueryParams
-	Security    SetItemWatchedStatusSecurity
 }
 
 type SetItemWatchedStatusResponse struct {

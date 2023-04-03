@@ -8,19 +8,14 @@ import (
 )
 
 type LabResultsListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type LabResultsListQueryParams struct {
+type LabResultsListRequest struct {
 	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Order    *int64  `queryParam:"style=form,explode=true,name=order"`
 	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type LabResultsListRequest struct {
-	QueryParams LabResultsListQueryParams
-	Security    LabResultsListSecurity
 }
 
 // LabResultsList200ApplicationJSON - Paginated Result

@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProductRequest struct {
-	// Product object that you would like to store.
-	Request shared.ProductInput `request:"mediaType=application/json"`
-}
-
 type CreateProductResponse struct {
 	// The request is malformed.
 	ClientErrorResponse *shared.ClientErrorResponse

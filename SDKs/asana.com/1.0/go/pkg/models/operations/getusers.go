@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUsersQueryParams struct {
+type GetUsersRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -26,10 +26,6 @@ type GetUsersQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// The workspace or organization ID to filter users on.
 	Workspace *string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetUsersRequest struct {
-	QueryParams GetUsersQueryParams
 }
 
 // GetUsers200ApplicationJSON - Successfully retrieved the requested user records.

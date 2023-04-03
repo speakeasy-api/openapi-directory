@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCustomFieldSettingsForProjectPathParams struct {
-	// Globally unique identifier for the project.
-	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
-}
-
-type GetCustomFieldSettingsForProjectQueryParams struct {
+type GetCustomFieldSettingsForProjectRequest struct {
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -27,11 +22,8 @@ type GetCustomFieldSettingsForProjectQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetCustomFieldSettingsForProjectRequest struct {
-	PathParams  GetCustomFieldSettingsForProjectPathParams
-	QueryParams GetCustomFieldSettingsForProjectQueryParams
+	// Globally unique identifier for the project.
+	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
 }
 
 // GetCustomFieldSettingsForProject200ApplicationJSON - Successfully retrieved custom field settings objects for a project.

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectPathParams struct {
+type GetProjectRequest struct {
 	// The name of the project in the space.
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// The name of the space.
 	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type GetProjectRequest struct {
-	PathParams GetProjectPathParams
 }
 
 type GetProjectResponse struct {

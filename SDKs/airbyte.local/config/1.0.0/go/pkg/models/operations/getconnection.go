@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetConnectionRequest struct {
-	Request shared.ConnectionIDRequestBody `request:"mediaType=application/json"`
-}
-
 type GetConnectionResponse struct {
 	// Successful operation
 	ConnectionRead *shared.ConnectionRead

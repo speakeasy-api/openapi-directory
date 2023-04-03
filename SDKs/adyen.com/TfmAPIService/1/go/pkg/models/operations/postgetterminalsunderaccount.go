@@ -8,12 +8,7 @@ import (
 )
 
 type PostGetTerminalsUnderAccountSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostGetTerminalsUnderAccountRequest struct {
-	Request  *shared.GetTerminalsUnderAccountRequest `request:"mediaType=application/json"`
-	Security PostGetTerminalsUnderAccountSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 type PostGetTerminalsUnderAccountResponse struct {

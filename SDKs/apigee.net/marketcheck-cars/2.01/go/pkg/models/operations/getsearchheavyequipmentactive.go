@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchHeavyEquipmentActiveQueryParams struct {
+type GetSearchHeavyEquipmentActiveRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on their body type
@@ -96,10 +96,6 @@ type GetSearchHeavyEquipmentActiveQueryParams struct {
 	Year *string `queryParam:"style=form,explode=true,name=year"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchHeavyEquipmentActiveRequest struct {
-	QueryParams GetSearchHeavyEquipmentActiveQueryParams
 }
 
 type GetSearchHeavyEquipmentActiveResponse struct {

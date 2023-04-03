@@ -50,7 +50,7 @@ func (e *GETDescribeOrderableClusterOptionsVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETDescribeOrderableClusterOptionsQueryParams struct {
+type GETDescribeOrderableClusterOptionsRequest struct {
 	Action GETDescribeOrderableClusterOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The version filter value. Specify this parameter to show only the available offerings matching the specified version.</p> <p>Default: All versions.</p> <p>Constraints: Must be one of the version returned from <a>DescribeClusterVersions</a>.</p>
 	ClusterVersion *string `queryParam:"style=form,explode=true,name=ClusterVersion"`
@@ -59,23 +59,15 @@ type GETDescribeOrderableClusterOptionsQueryParams struct {
 	// <p>The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified <code>MaxRecords</code> value, a value is returned in a <code>marker</code> field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. </p> <p>Default: <code>100</code> </p> <p>Constraints: minimum 20, maximum 100.</p>
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// The node type filter value. Specify this parameter to show only the available offerings matching the specified node type.
-	NodeType *string                                       `queryParam:"style=form,explode=true,name=NodeType"`
-	Version  GETDescribeOrderableClusterOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeOrderableClusterOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeOrderableClusterOptionsRequest struct {
-	QueryParams GETDescribeOrderableClusterOptionsQueryParams
-	Headers     GETDescribeOrderableClusterOptionsHeaders
+	NodeType          *string                                       `queryParam:"style=form,explode=true,name=NodeType"`
+	Version           GETDescribeOrderableClusterOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeOrderableClusterOptionsResponse struct {

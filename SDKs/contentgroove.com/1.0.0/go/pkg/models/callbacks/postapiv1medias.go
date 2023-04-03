@@ -189,7 +189,3 @@ type PostAPIV1MediasMediaProcessingFinishedRequestBody struct {
 	Event   *string                                                   `json:"event,omitempty"`
 	Payload *PostAPIV1MediasMediaProcessingFinishedRequestBodyPayload `json:"payload,omitempty"`
 }
-
-type PostAPIV1MediasMediaProcessingFinishedRequest struct {
-	Request *PostAPIV1MediasMediaProcessingFinishedRequestBody `request:"mediaType=application/json"`
-}

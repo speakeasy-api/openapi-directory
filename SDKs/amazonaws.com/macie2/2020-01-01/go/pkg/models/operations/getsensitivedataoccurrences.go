@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSensitiveDataOccurrencesPathParams struct {
-	// The unique identifier for the finding.
-	FindingID string `pathParam:"style=simple,explode=false,name=findingId"`
-}
-
-type GetSensitiveDataOccurrencesHeaders struct {
+type GetSensitiveDataOccurrencesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetSensitiveDataOccurrencesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSensitiveDataOccurrencesRequest struct {
-	PathParams GetSensitiveDataOccurrencesPathParams
-	Headers    GetSensitiveDataOccurrencesHeaders
+	// The unique identifier for the finding.
+	FindingID string `pathParam:"style=simple,explode=false,name=findingId"`
 }
 
 type GetSensitiveDataOccurrencesResponse struct {

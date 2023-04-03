@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type HarvestAccountPathParams struct {
-	AccountID int `pathParam:"style=simple,explode=false,name=accountId"`
-	// The marketplace technical code
-	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
-}
-
-type HarvestAccountQueryParams struct {
+type HarvestAccountRequest struct {
+	AccountID          int     `pathParam:"style=simple,explode=false,name=accountId"`
 	BeezUPOrderID      *string `queryParam:"style=form,explode=true,name=beezUPOrderId"`
 	MarketplaceOrderID *string `queryParam:"style=form,explode=true,name=marketplaceOrderId"`
-}
-
-type HarvestAccountRequest struct {
-	PathParams  HarvestAccountPathParams
-	QueryParams HarvestAccountQueryParams
+	// The marketplace technical code
+	MarketplaceTechnicalCode string `pathParam:"style=simple,explode=false,name=marketplaceTechnicalCode"`
 }
 
 type HarvestAccountResponse struct {

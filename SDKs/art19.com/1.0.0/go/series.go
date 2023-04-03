@@ -36,7 +36,7 @@ func newSeries(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // privileges the used credential holds. All credentials will have access to active series
 // with a public page enabled (on ART19). Utilizing a filter to limit the result to series
 // associated with your account is recommended.
-func (s *series) GetSeries(ctx context.Context, request operations.GetSeriesRequest) (*operations.GetSeriesResponse, error) {
+func (s *series) GetSeries(ctx context.Context, request operations.GetSeriesRequest, security operations.GetSeriesSecurity) (*operations.GetSeriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/series"
 
@@ -45,11 +45,11 @@ func (s *series) GetSeries(ctx context.Context, request operations.GetSeriesRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,16 +101,16 @@ func (s *series) GetSeries(ctx context.Context, request operations.GetSeriesRequ
 }
 
 // GetSeriesID - Get a specific series
-func (s *series) GetSeriesID(ctx context.Context, request operations.GetSeriesIDRequest) (*operations.GetSeriesIDResponse, error) {
+func (s *series) GetSeriesID(ctx context.Context, request operations.GetSeriesIDRequest, security operations.GetSeriesIDSecurity) (*operations.GetSeriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/series/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/series/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

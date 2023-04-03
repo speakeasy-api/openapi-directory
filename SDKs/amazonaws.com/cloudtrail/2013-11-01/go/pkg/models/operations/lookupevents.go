@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type LookupEventsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // LookupEventsXAmzTargetEnum
 type LookupEventsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *LookupEventsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type LookupEventsHeaders struct {
+type LookupEventsRequest struct {
+	LookupEventsRequest shared.LookupEventsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type LookupEventsHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        LookupEventsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type LookupEventsRequest struct {
-	QueryParams LookupEventsQueryParams
-	Headers     LookupEventsHeaders
-	Request     shared.LookupEventsRequest `request:"mediaType=application/json"`
 }
 
 type LookupEventsResponse struct {

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteStudioComponentPathParams struct {
-	// The studio component ID.
-	StudioComponentID string `pathParam:"style=simple,explode=false,name=studioComponentId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type DeleteStudioComponentHeaders struct {
+type DeleteStudioComponentRequest struct {
 	XAmzAlgorithm *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	// Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
 	XAmzClientToken   *string `header:"style=simple,explode=false,name=X-Amz-Client-Token"`
@@ -24,11 +17,10 @@ type DeleteStudioComponentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteStudioComponentRequest struct {
-	PathParams DeleteStudioComponentPathParams
-	Headers    DeleteStudioComponentHeaders
+	// The studio component ID.
+	StudioComponentID string `pathParam:"style=simple,explode=false,name=studioComponentId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type DeleteStudioComponentResponse struct {

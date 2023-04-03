@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecommendationsPathParams struct {
-	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
-	// The identifier of the session. Can be either the ID or the ARN. URLs cannot contain the ARN.
-	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
-}
-
-type GetRecommendationsQueryParams struct {
-	// The maximum number of results to return per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The duration (in seconds) for which the call waits for a recommendation to be made available before returning. If a recommendation is available, the call returns sooner than <code>WaitTimeSeconds</code>. If no messages are available and the wait time expires, the call returns successfully with an empty list.
-	WaitTimeSeconds *int64 `queryParam:"style=form,explode=true,name=waitTimeSeconds"`
-}
-
-type GetRecommendationsHeaders struct {
+type GetRecommendationsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type GetRecommendationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetRecommendationsRequest struct {
-	PathParams  GetRecommendationsPathParams
-	QueryParams GetRecommendationsQueryParams
-	Headers     GetRecommendationsHeaders
+	// The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	AssistantID string `pathParam:"style=simple,explode=false,name=assistantId"`
+	// The maximum number of results to return per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The identifier of the session. Can be either the ID or the ARN. URLs cannot contain the ARN.
+	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
+	// The duration (in seconds) for which the call waits for a recommendation to be made available before returning. If a recommendation is available, the call returns sooner than <code>WaitTimeSeconds</code>. If no messages are available and the wait time expires, the call returns successfully with an empty list.
+	WaitTimeSeconds *int64 `queryParam:"style=form,explode=true,name=waitTimeSeconds"`
 }
 
 type GetRecommendationsResponse struct {

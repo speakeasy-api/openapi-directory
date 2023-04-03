@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelTaskPathParams struct {
-	// The ID of the task that you are attempting to cancel. You can retrieve a task ID by using the <code>ListTasks</code> operation.
-	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
-}
-
-type CancelTaskHeaders struct {
+type CancelTaskRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CancelTaskHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelTaskRequest struct {
-	PathParams CancelTaskPathParams
-	Headers    CancelTaskHeaders
+	// The ID of the task that you are attempting to cancel. You can retrieve a task ID by using the <code>ListTasks</code> operation.
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
 type CancelTaskResponse struct {

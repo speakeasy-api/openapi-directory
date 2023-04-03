@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDestinationOAuthConsentRequest struct {
-	Request shared.DestinationOauthConsentRequest `request:"mediaType=application/json"`
-}
-
 type GetDestinationOAuthConsentResponse struct {
 	ContentType string
 	// Input failed validation

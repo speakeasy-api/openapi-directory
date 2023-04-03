@@ -4,12 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ProductOrderConciergeSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // ProductOrderConciergeRequestBody - Parameters for the concierge order
@@ -40,12 +39,6 @@ type ProductOrderConciergeRequestBody struct {
 	RegisterNumber *string `form:"name=registerNumber"`
 	// Kompanyid of the company you want to place the order for
 	SubjectID *string `form:"name=subjectId"`
-}
-
-type ProductOrderConciergeRequest struct {
-	// Parameters for the concierge order
-	Request  *ProductOrderConciergeRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security ProductOrderConciergeSecurity
 }
 
 // ProductOrderConciergeDefaultApplicationJSON - Detailed information about the error

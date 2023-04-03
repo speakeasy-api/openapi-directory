@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFormsPathParams struct {
-	// The unique ID for the Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type ListFormsQueryParams struct {
-	// The maximum number of forms to retrieve.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to request the next page of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListFormsHeaders struct {
+type ListFormsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListFormsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListFormsRequest struct {
-	PathParams  ListFormsPathParams
-	QueryParams ListFormsQueryParams
-	Headers     ListFormsHeaders
+	// The unique ID for the Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The maximum number of forms to retrieve.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to request the next page of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListFormsResponse struct {

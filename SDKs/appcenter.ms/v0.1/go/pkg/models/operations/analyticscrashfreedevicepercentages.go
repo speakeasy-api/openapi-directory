@@ -6,33 +6,23 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type AnalyticsCrashFreeDevicePercentagesSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AnalyticsCrashFreeDevicePercentagesPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type AnalyticsCrashFreeDevicePercentagesQueryParams struct {
-	// Last date time in data in ISO 8601 date time format.
-	End *time.Time `queryParam:"style=form,explode=true,name=end"`
-	// Start date time in data in ISO 8601 date time format.
-	Start   time.Time `queryParam:"style=form,explode=true,name=start"`
-	Version string    `queryParam:"style=form,explode=true,name=version"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AnalyticsCrashFreeDevicePercentagesRequest struct {
-	PathParams  AnalyticsCrashFreeDevicePercentagesPathParams
-	QueryParams AnalyticsCrashFreeDevicePercentagesQueryParams
-	Security    AnalyticsCrashFreeDevicePercentagesSecurity
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// Last date time in data in ISO 8601 date time format.
+	End *time.Time `queryParam:"style=form,explode=true,name=end"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// Start date time in data in ISO 8601 date time format.
+	Start   time.Time `queryParam:"style=form,explode=true,name=start"`
+	Version string    `queryParam:"style=form,explode=true,name=version"`
 }
 
 // AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

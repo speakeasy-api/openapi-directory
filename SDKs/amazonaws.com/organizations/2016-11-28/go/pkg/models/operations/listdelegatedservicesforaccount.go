@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListDelegatedServicesForAccountQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListDelegatedServicesForAccountXAmzTargetEnum
 type ListDelegatedServicesForAccountXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListDelegatedServicesForAccountXAmzTargetEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListDelegatedServicesForAccountHeaders struct {
+type ListDelegatedServicesForAccountRequest struct {
+	ListDelegatedServicesForAccountRequest shared.ListDelegatedServicesForAccountRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListDelegatedServicesForAccountHeaders struct {
 	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListDelegatedServicesForAccountXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListDelegatedServicesForAccountRequest struct {
-	QueryParams ListDelegatedServicesForAccountQueryParams
-	Headers     ListDelegatedServicesForAccountHeaders
-	Request     shared.ListDelegatedServicesForAccountRequest `request:"mediaType=application/json"`
 }
 
 type ListDelegatedServicesForAccountResponse struct {

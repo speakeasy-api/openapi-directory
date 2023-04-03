@@ -50,26 +50,18 @@ func (e *GETGETInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETInstanceProfileQueryParams struct {
+type GETGETInstanceProfileRequest struct {
 	Action GETGETInstanceProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the instance profile to get information about.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	InstanceProfileName string                           `queryParam:"style=form,explode=true,name=InstanceProfileName"`
 	Version             GETGETInstanceProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETInstanceProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETInstanceProfileRequest struct {
-	QueryParams GETGETInstanceProfileQueryParams
-	Headers     GETGETInstanceProfileHeaders
+	XAmzAlgorithm       *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETInstanceProfileResponse struct {

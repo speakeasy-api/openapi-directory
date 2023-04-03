@@ -64,7 +64,14 @@ func (e *ListAuditTasksTaskTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListAuditTasksQueryParams struct {
+type ListAuditTasksRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The end of the time period.
 	EndTime time.Time `queryParam:"style=form,explode=true,name=endTime"`
 	// The maximum number of results to return at one time. The default is 25.
@@ -77,21 +84,6 @@ type ListAuditTasksQueryParams struct {
 	TaskStatus *ListAuditTasksTaskStatusEnum `queryParam:"style=form,explode=true,name=taskStatus"`
 	// A filter to limit the output to the specified type of audit: can be one of "ON_DEMAND_AUDIT_TASK" or "SCHEDULED__AUDIT_TASK".
 	TaskType *ListAuditTasksTaskTypeEnum `queryParam:"style=form,explode=true,name=taskType"`
-}
-
-type ListAuditTasksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAuditTasksRequest struct {
-	QueryParams ListAuditTasksQueryParams
-	Headers     ListAuditTasksHeaders
 }
 
 type ListAuditTasksResponse struct {

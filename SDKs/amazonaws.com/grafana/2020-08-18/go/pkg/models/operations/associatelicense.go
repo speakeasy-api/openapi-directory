@@ -33,14 +33,7 @@ func (e *AssociateLicenseLicenseTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AssociateLicensePathParams struct {
-	// The type of license to associate with the workspace.
-	LicenseType AssociateLicenseLicenseTypeEnum `pathParam:"style=simple,explode=false,name=licenseType"`
-	// The ID of the workspace to associate the license with.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type AssociateLicenseHeaders struct {
+type AssociateLicenseRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -48,11 +41,10 @@ type AssociateLicenseHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type AssociateLicenseRequest struct {
-	PathParams AssociateLicensePathParams
-	Headers    AssociateLicenseHeaders
+	// The type of license to associate with the workspace.
+	LicenseType AssociateLicenseLicenseTypeEnum `pathParam:"style=simple,explode=false,name=licenseType"`
+	// The ID of the workspace to associate the license with.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type AssociateLicenseResponse struct {

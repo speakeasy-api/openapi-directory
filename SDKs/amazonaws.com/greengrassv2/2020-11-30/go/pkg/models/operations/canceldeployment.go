@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelDeploymentPathParams struct {
-	// The ID of the deployment.
-	DeploymentID string `pathParam:"style=simple,explode=false,name=deploymentId"`
-}
-
-type CancelDeploymentHeaders struct {
+type CancelDeploymentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type CancelDeploymentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelDeploymentRequest struct {
-	PathParams CancelDeploymentPathParams
-	Headers    CancelDeploymentHeaders
+	// The ID of the deployment.
+	DeploymentID string `pathParam:"style=simple,explode=false,name=deploymentId"`
 }
 
 type CancelDeploymentResponse struct {

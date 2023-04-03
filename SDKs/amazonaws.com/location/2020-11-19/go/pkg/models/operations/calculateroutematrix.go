@@ -10,21 +10,6 @@ import (
 	"time"
 )
 
-type CalculateRouteMatrixPathParams struct {
-	// The name of the route calculator resource that you want to use to calculate the route matrix.
-	CalculatorName string `pathParam:"style=simple,explode=false,name=CalculatorName"`
-}
-
-type CalculateRouteMatrixHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CalculateRouteMatrixRequestBodyCarModeOptions - Contains details about additional route preferences for requests that specify <code>TravelMode</code> as <code>Car</code>.
 type CalculateRouteMatrixRequestBodyCarModeOptions struct {
 	AvoidFerries *bool `json:"AvoidFerries,omitempty"`
@@ -116,9 +101,16 @@ type CalculateRouteMatrixRequestBody struct {
 }
 
 type CalculateRouteMatrixRequest struct {
-	PathParams CalculateRouteMatrixPathParams
-	Headers    CalculateRouteMatrixHeaders
-	Request    CalculateRouteMatrixRequestBody `request:"mediaType=application/json"`
+	// The name of the route calculator resource that you want to use to calculate the route matrix.
+	CalculatorName    string                          `pathParam:"style=simple,explode=false,name=CalculatorName"`
+	RequestBody       CalculateRouteMatrixRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CalculateRouteMatrixResponse struct {

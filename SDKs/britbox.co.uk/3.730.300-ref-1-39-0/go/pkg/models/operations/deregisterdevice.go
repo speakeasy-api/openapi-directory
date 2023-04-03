@@ -8,15 +8,10 @@ import (
 )
 
 type DeregisterDeviceSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type DeregisterDevicePathParams struct {
-	// The unique identifier for the registered device e.g. serial number.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeregisterDeviceQueryParams struct {
+type DeregisterDeviceRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -39,6 +34,8 @@ type DeregisterDeviceQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The unique identifier for the registered device e.g. serial number.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -51,12 +48,6 @@ type DeregisterDeviceQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type DeregisterDeviceRequest struct {
-	PathParams  DeregisterDevicePathParams
-	QueryParams DeregisterDeviceQueryParams
-	Security    DeregisterDeviceSecurity
 }
 
 type DeregisterDeviceResponse struct {

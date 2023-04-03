@@ -8,19 +8,14 @@ import (
 )
 
 type AllergiesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type AllergiesListQueryParams struct {
+type AllergiesListRequest struct {
 	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
 	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 	Patient  *int64  `queryParam:"style=form,explode=true,name=patient"`
-}
-
-type AllergiesListRequest struct {
-	QueryParams AllergiesListQueryParams
-	Security    AllergiesListSecurity
 }
 
 // AllergiesList200ApplicationJSON - Paginated Result

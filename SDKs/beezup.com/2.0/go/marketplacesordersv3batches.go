@@ -37,9 +37,9 @@ func newMarketplacesOrdersV3Batches(defaultClient, securityClient HTTPClient, se
 // Max 100 items per call.
 func (s *marketplacesOrdersV3Batches) ChangeOrderListV2(ctx context.Context, request operations.ChangeOrderListV2Request) (*operations.ChangeOrderListV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/batches/changeOrders/{changeOrderType}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/batches/changeOrders/{changeOrderType}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeOrderListRequestV2", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,7 +54,7 @@ func (s *marketplacesOrdersV3Batches) ChangeOrderListV2(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -119,7 +119,7 @@ func (s *marketplacesOrdersV3Batches) ChangeOrderListV3(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders/v3/batches/changeOrders"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeOrderListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -134,7 +134,7 @@ func (s *marketplacesOrdersV3Batches) ChangeOrderListV3(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -198,7 +198,7 @@ func (s *marketplacesOrdersV3Batches) ClearMerchantOrderInfoListV3(ctx context.C
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders/v3/batches/clearMerchantOrderInfos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClearMerchantOrderInfoListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -213,7 +213,7 @@ func (s *marketplacesOrdersV3Batches) ClearMerchantOrderInfoListV3(ctx context.C
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -277,7 +277,7 @@ func (s *marketplacesOrdersV3Batches) SetMerchantOrderInfoListV3(ctx context.Con
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/orders/v3/batches/setMerchantOrderInfos"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMerchantOrderInfoListRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -292,7 +292,7 @@ func (s *marketplacesOrdersV3Batches) SetMerchantOrderInfoListV3(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

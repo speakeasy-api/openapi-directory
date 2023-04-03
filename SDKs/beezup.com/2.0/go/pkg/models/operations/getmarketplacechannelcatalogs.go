@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMarketplaceChannelCatalogsQueryParams struct {
+type GetMarketplaceChannelCatalogsRequest struct {
 	// The StoreId to filter by
 	StoreID *string `queryParam:"style=form,explode=true,name=storeId"`
-}
-
-type GetMarketplaceChannelCatalogsRequest struct {
-	QueryParams GetMarketplaceChannelCatalogsQueryParams
 }
 
 type GetMarketplaceChannelCatalogsResponse struct {

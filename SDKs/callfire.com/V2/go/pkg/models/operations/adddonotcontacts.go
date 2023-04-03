@@ -8,13 +8,8 @@ import (
 )
 
 type AddDoNotContactsSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type AddDoNotContactsRequest struct {
-	// AddDoNotContactsRequest object
-	Request  *shared.AddDoNotContactRequest `request:"mediaType=application/json"`
-	Security AddDoNotContactsSecurity
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type AddDoNotContactsResponse struct {

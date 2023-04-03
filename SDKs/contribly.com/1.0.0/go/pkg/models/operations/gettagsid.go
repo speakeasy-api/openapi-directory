@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTagsIDPathParams struct {
+type GetTagsIDRequest struct {
 	// Id of the tag to return
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTagsIDRequest struct {
-	PathParams GetTagsIDPathParams
 }
 
 type GetTagsIDResponse struct {

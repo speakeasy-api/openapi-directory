@@ -67,7 +67,7 @@ func (s *users) CreateUser(ctx context.Context, request operations.CreateUserReq
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/users"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -82,7 +82,7 @@ func (s *users) CreateUser(ctx context.Context, request operations.CreateUserReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -162,14 +162,14 @@ func (s *users) CreateUser(ctx context.Context, request operations.CreateUserReq
 // User **CANNOT** be deleted if he is a last room administrator of any room.
 func (s *users) RemoveUser(ctx context.Context, request operations.RemoveUserRequest) (*operations.RemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -231,14 +231,14 @@ func (s *users) RemoveUser(ctx context.Context, request operations.RemoveUserReq
 // * Characters are **case-insensitive**.
 func (s *users) RemoveUserAttribute(ctx context.Context, request operations.RemoveUserAttributeRequest) (*operations.RemoveUserAttributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -303,14 +303,14 @@ func (s *users) RemoveUserAttribute(ctx context.Context, request operations.Remo
 // Emergency code can be used instead of standard MFA authentication to disable all MFA setups.
 func (s *users) RequestEmergencyMfaCode(ctx context.Context, request operations.RequestEmergencyMfaCodeRequest) (*operations.RequestEmergencyMfaCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/mfa/emergency_code", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/mfa/emergency_code", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -382,14 +382,14 @@ func (s *users) RequestEmergencyMfaCode(ctx context.Context, request operations.
 // An empty list is returned if no rooms were found where the user is last admin.
 func (s *users) RequestLastAdminRoomsUsers(ctx context.Context, request operations.RequestLastAdminRoomsUsersRequest) (*operations.RequestLastAdminRoomsUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/last_admin_rooms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/last_admin_rooms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -474,16 +474,16 @@ func (s *users) RequestLastAdminRoomsUsers(ctx context.Context, request operatio
 // </details>
 func (s *users) RequestUser(ctx context.Context, request operations.RequestUserRequest) (*operations.RequestUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -605,16 +605,16 @@ func (s *users) RequestUser(ctx context.Context, request operations.RequestUserR
 // </details>
 func (s *users) RequestUserAttributes(ctx context.Context, request operations.RequestUserAttributesRequest) (*operations.RequestUserAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -706,16 +706,16 @@ func (s *users) RequestUserAttributes(ctx context.Context, request operations.Re
 // </details>
 func (s *users) RequestUserGroups(ctx context.Context, request operations.RequestUserGroupsRequest) (*operations.RequestUserGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -787,14 +787,14 @@ func (s *users) RequestUserGroups(ctx context.Context, request operations.Reques
 // None.
 func (s *users) RequestUserRoles(ctx context.Context, request operations.RequestUserRolesRequest) (*operations.RequestUserRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/roles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/roles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -957,9 +957,9 @@ func (s *users) RequestUsers(ctx context.Context, request operations.RequestUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1055,16 +1055,16 @@ func (s *users) RequestUsers(ctx context.Context, request operations.RequestUser
 // </details>
 func (s *users) RequestUsersRooms(ctx context.Context, request operations.RequestUsersRoomsRequest) (*operations.RequestUsersRoomsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/rooms", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/rooms", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1142,9 +1142,9 @@ func (s *users) RequestUsersRooms(ctx context.Context, request operations.Reques
 // * Characters are **case-insensitive**.
 func (s *users) SetUserAttributes(ctx context.Context, request operations.SetUserAttributesRequest) (*operations.SetUserAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAttributes", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1159,7 +1159,7 @@ func (s *users) SetUserAttributes(ctx context.Context, request operations.SetUse
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1246,9 +1246,9 @@ func (s *users) SetUserAttributes(ctx context.Context, request operations.SetUse
 // </details>
 func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateUserRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1263,7 +1263,7 @@ func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -1342,9 +1342,9 @@ func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserReq
 // * Characters are **case-insensitive**.
 func (s *users) UpdateUserAttributes(ctx context.Context, request operations.UpdateUserAttributesRequest) (*operations.UpdateUserAttributesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/users/{user_id}/userAttributes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAttributes", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1359,7 +1359,7 @@ func (s *users) UpdateUserAttributes(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

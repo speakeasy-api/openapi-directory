@@ -35,7 +35,7 @@ func newFunctions(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // FunctionsCreate - Create Function
 // Create a new function. You can pass a list of [permissions](/docs/permissions) to allow different project users or team with access to execute the function using the client API.
-func (s *functions) FunctionsCreate(ctx context.Context, request operations.FunctionsCreateRequest) (*operations.FunctionsCreateResponse, error) {
+func (s *functions) FunctionsCreate(ctx context.Context, request operations.FunctionsCreateRequestBody, security operations.FunctionsCreateSecurity) (*operations.FunctionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/functions"
 
@@ -51,7 +51,7 @@ func (s *functions) FunctionsCreate(ctx context.Context, request operations.Func
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,11 +87,11 @@ func (s *functions) FunctionsCreate(ctx context.Context, request operations.Func
 
 // FunctionsCreateExecution - Create Execution
 // Trigger a function execution. The returned object will return you the current execution status. You can ping the `Get Execution` endpoint to get updates on the current execution status. Once this endpoint is called, your function execution process will start asynchronously.
-func (s *functions) FunctionsCreateExecution(ctx context.Context, request operations.FunctionsCreateExecutionRequest) (*operations.FunctionsCreateExecutionResponse, error) {
+func (s *functions) FunctionsCreateExecution(ctx context.Context, request operations.FunctionsCreateExecutionRequest, security operations.FunctionsCreateExecutionSecurity) (*operations.FunctionsCreateExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -103,7 +103,7 @@ func (s *functions) FunctionsCreateExecution(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -143,11 +143,11 @@ func (s *functions) FunctionsCreateExecution(ctx context.Context, request operat
 // This endpoint accepts a tar.gz file compressed with your code. Make sure to include any dependencies your code has within the compressed file. You can learn more about code packaging in the [Appwrite Cloud Functions tutorial](/docs/functions).
 //
 // Use the "command" param to set the entry point used to execute your code.
-func (s *functions) FunctionsCreateTag(ctx context.Context, request operations.FunctionsCreateTagRequest) (*operations.FunctionsCreateTagResponse, error) {
+func (s *functions) FunctionsCreateTag(ctx context.Context, request operations.FunctionsCreateTagRequest, security operations.FunctionsCreateTagSecurity) (*operations.FunctionsCreateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,7 +159,7 @@ func (s *functions) FunctionsCreateTag(ctx context.Context, request operations.F
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -195,16 +195,16 @@ func (s *functions) FunctionsCreateTag(ctx context.Context, request operations.F
 
 // FunctionsDelete - Delete Function
 // Delete a function by its unique ID.
-func (s *functions) FunctionsDelete(ctx context.Context, request operations.FunctionsDeleteRequest) (*operations.FunctionsDeleteResponse, error) {
+func (s *functions) FunctionsDelete(ctx context.Context, request operations.FunctionsDeleteRequest, security operations.FunctionsDeleteSecurity) (*operations.FunctionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -231,16 +231,16 @@ func (s *functions) FunctionsDelete(ctx context.Context, request operations.Func
 
 // FunctionsDeleteTag - Delete Tag
 // Delete a code tag by its unique ID.
-func (s *functions) FunctionsDeleteTag(ctx context.Context, request operations.FunctionsDeleteTagRequest) (*operations.FunctionsDeleteTagResponse, error) {
+func (s *functions) FunctionsDeleteTag(ctx context.Context, request operations.FunctionsDeleteTagRequest, security operations.FunctionsDeleteTagSecurity) (*operations.FunctionsDeleteTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,16 +267,16 @@ func (s *functions) FunctionsDeleteTag(ctx context.Context, request operations.F
 
 // FunctionsGet - Get Function
 // Get a function by its unique ID.
-func (s *functions) FunctionsGet(ctx context.Context, request operations.FunctionsGetRequest) (*operations.FunctionsGetResponse, error) {
+func (s *functions) FunctionsGet(ctx context.Context, request operations.FunctionsGetRequest, security operations.FunctionsGetSecurity) (*operations.FunctionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -312,16 +312,16 @@ func (s *functions) FunctionsGet(ctx context.Context, request operations.Functio
 
 // FunctionsGetExecution - Get Execution
 // Get a function execution log by its unique ID.
-func (s *functions) FunctionsGetExecution(ctx context.Context, request operations.FunctionsGetExecutionRequest) (*operations.FunctionsGetExecutionResponse, error) {
+func (s *functions) FunctionsGetExecution(ctx context.Context, request operations.FunctionsGetExecutionRequest, security operations.FunctionsGetExecutionSecurity) (*operations.FunctionsGetExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -357,16 +357,16 @@ func (s *functions) FunctionsGetExecution(ctx context.Context, request operation
 
 // FunctionsGetTag - Get Tag
 // Get a code tag by its unique ID.
-func (s *functions) FunctionsGetTag(ctx context.Context, request operations.FunctionsGetTagRequest) (*operations.FunctionsGetTagResponse, error) {
+func (s *functions) FunctionsGetTag(ctx context.Context, request operations.FunctionsGetTagRequest, security operations.FunctionsGetTagSecurity) (*operations.FunctionsGetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -402,7 +402,7 @@ func (s *functions) FunctionsGetTag(ctx context.Context, request operations.Func
 
 // FunctionsList - List Functions
 // Get a list of all the project's functions. You can use the query params to filter your results.
-func (s *functions) FunctionsList(ctx context.Context, request operations.FunctionsListRequest) (*operations.FunctionsListResponse, error) {
+func (s *functions) FunctionsList(ctx context.Context, request operations.FunctionsListRequest, security operations.FunctionsListSecurity) (*operations.FunctionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/functions"
 
@@ -411,11 +411,11 @@ func (s *functions) FunctionsList(ctx context.Context, request operations.Functi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -451,20 +451,20 @@ func (s *functions) FunctionsList(ctx context.Context, request operations.Functi
 
 // FunctionsListExecutions - List Executions
 // Get a list of all the current user function execution logs. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's executions. [Learn more about different API modes](/docs/admin).
-func (s *functions) FunctionsListExecutions(ctx context.Context, request operations.FunctionsListExecutionsRequest) (*operations.FunctionsListExecutionsResponse, error) {
+func (s *functions) FunctionsListExecutions(ctx context.Context, request operations.FunctionsListExecutionsRequest, security operations.FunctionsListExecutionsSecurity) (*operations.FunctionsListExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -500,20 +500,20 @@ func (s *functions) FunctionsListExecutions(ctx context.Context, request operati
 
 // FunctionsListTags - List Tags
 // Get a list of all the project's code tags. You can use the query params to filter your results.
-func (s *functions) FunctionsListTags(ctx context.Context, request operations.FunctionsListTagsRequest) (*operations.FunctionsListTagsResponse, error) {
+func (s *functions) FunctionsListTags(ctx context.Context, request operations.FunctionsListTagsRequest, security operations.FunctionsListTagsSecurity) (*operations.FunctionsListTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -549,11 +549,11 @@ func (s *functions) FunctionsListTags(ctx context.Context, request operations.Fu
 
 // FunctionsUpdate - Update Function
 // Update function by its unique ID.
-func (s *functions) FunctionsUpdate(ctx context.Context, request operations.FunctionsUpdateRequest) (*operations.FunctionsUpdateResponse, error) {
+func (s *functions) FunctionsUpdate(ctx context.Context, request operations.FunctionsUpdateRequest, security operations.FunctionsUpdateSecurity) (*operations.FunctionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -565,7 +565,7 @@ func (s *functions) FunctionsUpdate(ctx context.Context, request operations.Func
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -601,11 +601,11 @@ func (s *functions) FunctionsUpdate(ctx context.Context, request operations.Func
 
 // FunctionsUpdateTag - Update Function Tag
 // Update the function code tag ID using the unique function ID. Use this endpoint to switch the code tag that should be executed by the execution endpoint.
-func (s *functions) FunctionsUpdateTag(ctx context.Context, request operations.FunctionsUpdateTagRequest) (*operations.FunctionsUpdateTagResponse, error) {
+func (s *functions) FunctionsUpdateTag(ctx context.Context, request operations.FunctionsUpdateTagRequest, security operations.FunctionsUpdateTagSecurity) (*operations.FunctionsUpdateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tag", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tag", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -617,7 +617,7 @@ func (s *functions) FunctionsUpdateTag(ctx context.Context, request operations.F
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

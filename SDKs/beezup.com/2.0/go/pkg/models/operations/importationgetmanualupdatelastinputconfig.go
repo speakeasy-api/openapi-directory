@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationGetManualUpdateLastInputConfigPathParams struct {
+type ImportationGetManualUpdateLastInputConfigRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationGetManualUpdateLastInputConfigRequest struct {
-	PathParams ImportationGetManualUpdateLastInputConfigPathParams
 }
 
 type ImportationGetManualUpdateLastInputConfigResponse struct {

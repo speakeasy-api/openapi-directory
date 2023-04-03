@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.GetSearchV1FieldsRequest{
-        QueryParams: operations.GetSearchV1FieldsQueryParams{
-            Callback: "corrupti",
-        },
+        Callback: "corrupti",
     }
 
     ctx := context.Background()

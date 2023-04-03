@@ -8,12 +8,7 @@ import (
 )
 
 type PostFindTerminalSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PostFindTerminalRequest struct {
-	Request  *shared.FindTerminalRequest `request:"mediaType=application/json"`
-	Security PostFindTerminalSecurity
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
 }
 
 type PostFindTerminalResponse struct {

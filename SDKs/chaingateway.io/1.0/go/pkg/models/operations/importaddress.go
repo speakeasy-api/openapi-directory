@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type ImportAddressRequest struct {
-	Headers ImportAddressHeaders
-	Request shared.ImportAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization        string                      `header:"style=simple,explode=false,name=Authorization"`
+	ImportAddressRequest shared.ImportAddressRequest `request:"mediaType=application/json"`
 }
 
 type ImportAddressResponse struct {

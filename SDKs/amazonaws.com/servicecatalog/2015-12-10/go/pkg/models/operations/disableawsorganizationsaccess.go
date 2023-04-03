@@ -29,7 +29,8 @@ func (e *DisableAWSOrganizationsAccessXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DisableAWSOrganizationsAccessHeaders struct {
+type DisableAWSOrganizationsAccessRequest struct {
+	RequestBody       map[string]interface{}                      `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DisableAWSOrganizationsAccessHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisableAWSOrganizationsAccessXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisableAWSOrganizationsAccessRequest struct {
-	Headers DisableAWSOrganizationsAccessHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DisableAWSOrganizationsAccessResponse struct {

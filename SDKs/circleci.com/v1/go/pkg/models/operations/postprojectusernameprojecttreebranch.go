@@ -7,18 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostProjectUsernameProjectTreeBranchPathParams struct {
-	// The branch name should be url-encoded.
-	//
-	Branch string `pathParam:"style=simple,explode=false,name=branch"`
-	// XXXXXXXXX
-	//
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-	// XXXXXXXXX
-	//
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type PostProjectUsernameProjectTreeBranchRequestBody struct {
 	// Additional environment variables to inject into the build environment. A map of names to values.
 	//
@@ -33,8 +21,16 @@ type PostProjectUsernameProjectTreeBranchRequestBody struct {
 }
 
 type PostProjectUsernameProjectTreeBranchRequest struct {
-	PathParams PostProjectUsernameProjectTreeBranchPathParams
-	Request    *PostProjectUsernameProjectTreeBranchRequestBody `request:"mediaType=application/json"`
+	RequestBody *PostProjectUsernameProjectTreeBranchRequestBody `request:"mediaType=application/json"`
+	// The branch name should be url-encoded.
+	//
+	Branch string `pathParam:"style=simple,explode=false,name=branch"`
+	// XXXXXXXXX
+	//
+	Project string `pathParam:"style=simple,explode=false,name=project"`
+	// XXXXXXXXX
+	//
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type PostProjectUsernameProjectTreeBranchResponse struct {

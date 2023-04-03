@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateExperimentPathParams struct {
-	// The name or ARN of the project that you want to create the new experiment in.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type CreateExperimentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateExperimentRequestBodyOnlineAbConfig - A structure that contains the configuration of which variation to use as the "control" version. The "control" version is used for comparison with other variations. This structure also specifies how much experiment traffic is allocated to each variation.
 type CreateExperimentRequestBodyOnlineAbConfig struct {
 	ControlTreatmentName *string          `json:"controlTreatmentName,omitempty"`
@@ -50,9 +35,16 @@ type CreateExperimentRequestBody struct {
 }
 
 type CreateExperimentRequest struct {
-	PathParams CreateExperimentPathParams
-	Headers    CreateExperimentHeaders
-	Request    CreateExperimentRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateExperimentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name or ARN of the project that you want to create the new experiment in.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type CreateExperimentResponse struct {

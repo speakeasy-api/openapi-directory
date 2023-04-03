@@ -30,20 +30,16 @@ func (e *EnableAWSServiceAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type EnableAWSServiceAccessHeaders struct {
-	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        EnableAWSServiceAccessXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type EnableAWSServiceAccessRequest struct {
-	Headers EnableAWSServiceAccessHeaders
-	Request shared.EnableAWSServiceAccessRequest `request:"mediaType=application/json"`
+	EnableAWSServiceAccessRequest shared.EnableAWSServiceAccessRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                 *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                    EnableAWSServiceAccessXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type EnableAWSServiceAccessResponse struct {

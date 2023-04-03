@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetNextDeparturesByCRSPathParams struct {
+type GetNextDeparturesByCRSRequest struct {
 	// The CRS (Computer Reservation System) for the station you wish to get departure information for, e.g. KGX for London Kings Cross.
 	Crs string `pathParam:"style=simple,explode=false,name=CRS"`
-}
-
-type GetNextDeparturesByCRSQueryParams struct {
 	// The National Rail OpenLDBWS API Key to use for looking up service information. You must register with National Rail to obtain this key and whitelist it with us. See https://api.departureboard.io/docs/registration for more information.
 	APIKey string `queryParam:"style=form,explode=true,name=apiKey"`
 	// The CRS (Computer Reservation System) codes to show departing services to. Up to 20 destination stations can be specified. These should be split by a comma, for example HAY,EAL,PAD.
@@ -22,11 +19,6 @@ type GetNextDeparturesByCRSQueryParams struct {
 	TimeOffset *int64 `queryParam:"style=form,explode=true,name=timeOffset"`
 	// The time window in minutes to offset the arrival and departure information by. For example, a value of 20 will not show services arriving to or departing from the selected station within the next 20 minutes.
 	TimeWindow *int64 `queryParam:"style=form,explode=true,name=timeWindow"`
-}
-
-type GetNextDeparturesByCRSRequest struct {
-	PathParams  GetNextDeparturesByCRSPathParams
-	QueryParams GetNextDeparturesByCRSQueryParams
 }
 
 type GetNextDeparturesByCRSResponse struct {

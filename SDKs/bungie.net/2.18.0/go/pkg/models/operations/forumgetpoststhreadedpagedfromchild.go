@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForumGetPostsThreadedPagedFromChildPathParams struct {
+type ForumGetPostsThreadedPagedFromChildRequest struct {
 	ChildPostID    int64 `pathParam:"style=simple,explode=false,name=childPostId"`
 	Page           int   `pathParam:"style=simple,explode=false,name=page"`
 	PageSize       int   `pathParam:"style=simple,explode=false,name=pageSize"`
 	ReplySize      int   `pathParam:"style=simple,explode=false,name=replySize"`
 	RootThreadMode bool  `pathParam:"style=simple,explode=false,name=rootThreadMode"`
-	SortMode       int   `pathParam:"style=simple,explode=false,name=sortMode"`
-}
-
-type ForumGetPostsThreadedPagedFromChildQueryParams struct {
 	// If this value is not null or empty, banned posts are requested to be returned
 	Showbanned *string `queryParam:"style=form,explode=true,name=showbanned"`
-}
-
-type ForumGetPostsThreadedPagedFromChildRequest struct {
-	PathParams  ForumGetPostsThreadedPagedFromChildPathParams
-	QueryParams ForumGetPostsThreadedPagedFromChildQueryParams
+	SortMode   int     `pathParam:"style=simple,explode=false,name=sortMode"`
 }
 
 // ForumGetPostsThreadedPagedFromChild200Wildcard - Look at the Response property for more information about the nature of this response

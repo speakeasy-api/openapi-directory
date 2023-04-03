@@ -30,20 +30,16 @@ func (e *StartTextTranslationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type StartTextTranslationJobHeaders struct {
-	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StartTextTranslationJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StartTextTranslationJobRequest struct {
-	Headers StartTextTranslationJobHeaders
-	Request shared.StartTextTranslationJobRequest `request:"mediaType=application/json"`
+	StartTextTranslationJobRequest shared.StartTextTranslationJobRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                  *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256              *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                 *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                       *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken              *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                  *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders              *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                     StartTextTranslationJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StartTextTranslationJobResponse struct {

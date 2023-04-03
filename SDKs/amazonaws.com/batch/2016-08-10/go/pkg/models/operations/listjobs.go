@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListJobsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListJobsRequestBodyJobStatusEnum - The job status used to filter jobs in the specified queue. If the <code>filters</code> parameter is specified, the <code>jobStatus</code> parameter is ignored and jobs with any status are returned. If you don't specify a status, only <code>RUNNING</code> jobs are returned.
 type ListJobsRequestBodyJobStatusEnum string
 
@@ -83,9 +66,18 @@ type ListJobsRequestBody struct {
 }
 
 type ListJobsRequest struct {
-	QueryParams ListJobsQueryParams
-	Headers     ListJobsHeaders
-	Request     ListJobsRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListJobsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListJobsResponse struct {

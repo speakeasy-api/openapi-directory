@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ContentSearchHelpArticlesPathParams struct {
+type ContentSearchHelpArticlesRequest struct {
 	Searchtext string `pathParam:"style=simple,explode=false,name=searchtext"`
 	Size       string `pathParam:"style=simple,explode=false,name=size"`
-}
-
-type ContentSearchHelpArticlesRequest struct {
-	PathParams ContentSearchHelpArticlesPathParams
 }
 
 // ContentSearchHelpArticles200Wildcard - Look at the Response property for more information about the nature of this response

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOfferRequest struct {
-	Request shared.OfferRequest `request:"mediaType=application/json"`
-}
-
 type GetOfferResponse struct {
 	// Bad request. (Invalid billing period, invalid offer, etc.). You cannot get a pricing for a free offer.
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

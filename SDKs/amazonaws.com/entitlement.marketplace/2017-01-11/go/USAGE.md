@@ -13,53 +13,41 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GetEntitlementsRequest{
-        Headers: operations.GetEntitlementsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
-        },
-        Request: shared.GetEntitlementsRequest{
+        GetEntitlementsRequest: shared.GetEntitlementsRequest{
             Filter: map[string][]string{
-                "vel": []string{
+                "provident": []string{
+                    "quibusdam",
+                    "unde",
+                    "nulla",
+                },
+                "corrupti": []string{
+                    "vel",
+                    "error",
                     "deserunt",
                     "suscipit",
-                    "iure",
                 },
-                "magnam": []string{
+                "iure": []string{
+                    "debitis",
                     "ipsa",
-                    "delectus",
-                    "tempora",
-                    "suscipit",
-                },
-                "molestiae": []string{
-                    "placeat",
-                    "voluptatum",
-                    "iusto",
-                    "excepturi",
-                },
-                "nisi": []string{
-                    "temporibus",
-                    "ab",
-                    "quis",
-                    "veritatis",
                 },
             },
-            MaxResults: 648172,
-            NextToken: "perferendis",
-            ProductCode: "ipsam",
+            MaxResults: 963663,
+            NextToken: "tempora",
+            ProductCode: "suscipit",
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "minus",
+        XAmzCredential: "placeat",
+        XAmzDate: "voluptatum",
+        XAmzSecurityToken: "iusto",
+        XAmzSignature: "excepturi",
+        XAmzSignedHeaders: "nisi",
+        XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
     }
 
     ctx := context.Background()

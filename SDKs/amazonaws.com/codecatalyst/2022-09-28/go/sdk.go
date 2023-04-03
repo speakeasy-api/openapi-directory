@@ -112,7 +112,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateAccessToken - Creates a personal access token (PAT) for the current user. A personal access token (PAT) is similar to a password. It is associated with your user account. You use PATs to access Amazon CodeCatalyst resources such as source repositories from third-party applications like Git and integrated development environments (IDEs). For more information, see <a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/ipa-tokens-keys.html">Managing personal access tokens in Amazon CodeCatalyst</a>.
-func (s *SDK) CreateAccessToken(ctx context.Context, request operations.CreateAccessTokenRequest) (*operations.CreateAccessTokenResponse, error) {
+func (s *SDK) CreateAccessToken(ctx context.Context, request operations.CreateAccessTokenRequestBody) (*operations.CreateAccessTokenResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accessTokens"
 
@@ -228,9 +228,9 @@ func (s *SDK) CreateAccessToken(ctx context.Context, request operations.CreateAc
 // CreateDevEnvironment - <p>Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development Dev Environment that you can use to quickly work on the code stored in the source repositories of your project. </p> <note> <p>When created in the Amazon CodeCatalyst console, by default a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. None of these defaults apply to a Dev Environment created programmatically.</p> </note>
 func (s *SDK) CreateDevEnvironment(ctx context.Context, request operations.CreateDevEnvironmentRequest) (*operations.CreateDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -342,9 +342,9 @@ func (s *SDK) CreateDevEnvironment(ctx context.Context, request operations.Creat
 // CreateProject - Creates a project in a specified space.
 func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjectRequest) (*operations.CreateProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -456,9 +456,9 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 // CreateSourceRepositoryBranch - <p>Creates a branch in a specified source repository in Amazon CodeCatalyst. </p> <note> <p>This API only creates a branch in a source repository hosted in Amazon CodeCatalyst. You cannot use this API to create a branch in a linked repository.</p> </note>
 func (s *SDK) CreateSourceRepositoryBranch(ctx context.Context, request operations.CreateSourceRepositoryBranchRequest) (*operations.CreateSourceRepositoryBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches/{name}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -570,7 +570,7 @@ func (s *SDK) CreateSourceRepositoryBranch(ctx context.Context, request operatio
 // DeleteAccessToken - Deletes a specified personal access token (PAT). A personal access token can only be deleted by the user who created it.
 func (s *SDK) DeleteAccessToken(ctx context.Context, request operations.DeleteAccessTokenRequest) (*operations.DeleteAccessTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accessTokens/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accessTokens/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -674,7 +674,7 @@ func (s *SDK) DeleteAccessToken(ctx context.Context, request operations.DeleteAc
 // DeleteDevEnvironment - Deletes a Dev Environment.
 func (s *SDK) DeleteDevEnvironment(ctx context.Context, request operations.DeleteDevEnvironmentRequest) (*operations.DeleteDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -778,7 +778,7 @@ func (s *SDK) DeleteDevEnvironment(ctx context.Context, request operations.Delet
 // GetDevEnvironment - Returns information about a Dev Environment for a source repository in a project. Dev Environments are specific to the user who creates them.
 func (s *SDK) GetDevEnvironment(ctx context.Context, request operations.GetDevEnvironmentRequest) (*operations.GetDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -882,7 +882,7 @@ func (s *SDK) GetDevEnvironment(ctx context.Context, request operations.GetDevEn
 // GetProject - Returns information about a project.
 func (s *SDK) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -986,7 +986,7 @@ func (s *SDK) GetProject(ctx context.Context, request operations.GetProjectReque
 // GetSourceRepositoryCloneUrls - Returns information about the URLs that can be used with a Git client to clone a source repository.
 func (s *SDK) GetSourceRepositoryCloneUrls(ctx context.Context, request operations.GetSourceRepositoryCloneUrlsRequest) (*operations.GetSourceRepositoryCloneUrlsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/cloneUrls", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/cloneUrls", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1090,7 +1090,7 @@ func (s *SDK) GetSourceRepositoryCloneUrls(ctx context.Context, request operatio
 // GetSpace - Returns information about an space.
 func (s *SDK) GetSpace(ctx context.Context, request operations.GetSpaceRequest) (*operations.GetSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{name}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{name}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1194,7 +1194,7 @@ func (s *SDK) GetSpace(ctx context.Context, request operations.GetSpaceRequest) 
 // GetSubscription - Returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.
 func (s *SDK) GetSubscription(ctx context.Context, request operations.GetSubscriptionRequest) (*operations.GetSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/subscription", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/subscription", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1305,7 +1305,7 @@ func (s *SDK) GetUserDetails(ctx context.Context, request operations.GetUserDeta
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1408,7 +1408,7 @@ func (s *SDK) ListAccessTokens(ctx context.Context, request operations.ListAcces
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accessTokens"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1423,7 +1423,7 @@ func (s *SDK) ListAccessTokens(ctx context.Context, request operations.ListAcces
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1524,9 +1524,9 @@ func (s *SDK) ListAccessTokens(ctx context.Context, request operations.ListAcces
 // ListDevEnvironments - Retrives a list of Dev Environments in a project.
 func (s *SDK) ListDevEnvironments(ctx context.Context, request operations.ListDevEnvironmentsRequest) (*operations.ListDevEnvironmentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1541,7 +1541,7 @@ func (s *SDK) ListDevEnvironments(ctx context.Context, request operations.ListDe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1642,9 +1642,9 @@ func (s *SDK) ListDevEnvironments(ctx context.Context, request operations.ListDe
 // ListEventLogs - Retrieves a list of events that occurred during a specified time period in a space. You can use these events to audit user and system activity in a space.
 func (s *SDK) ListEventLogs(ctx context.Context, request operations.ListEventLogsRequest) (*operations.ListEventLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/eventLogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/eventLogs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1659,7 +1659,7 @@ func (s *SDK) ListEventLogs(ctx context.Context, request operations.ListEventLog
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1760,9 +1760,9 @@ func (s *SDK) ListEventLogs(ctx context.Context, request operations.ListEventLog
 // ListProjects - Retrieves a list of projects.
 func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsRequest) (*operations.ListProjectsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1777,7 +1777,7 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1878,9 +1878,9 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 // ListSourceRepositories - Retrieves a list of source repositories in a project.
 func (s *SDK) ListSourceRepositories(ctx context.Context, request operations.ListSourceRepositoriesRequest) (*operations.ListSourceRepositoriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1895,7 +1895,7 @@ func (s *SDK) ListSourceRepositories(ctx context.Context, request operations.Lis
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1996,9 +1996,9 @@ func (s *SDK) ListSourceRepositories(ctx context.Context, request operations.Lis
 // ListSourceRepositoryBranches - Retrieves a list of branches in a specified source repository.
 func (s *SDK) ListSourceRepositoryBranches(ctx context.Context, request operations.ListSourceRepositoryBranchesRequest) (*operations.ListSourceRepositoryBranchesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2013,7 +2013,7 @@ func (s *SDK) ListSourceRepositoryBranches(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2116,7 +2116,7 @@ func (s *SDK) ListSpaces(ctx context.Context, request operations.ListSpacesReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/spaces"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2131,7 +2131,7 @@ func (s *SDK) ListSpaces(ctx context.Context, request operations.ListSpacesReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2232,9 +2232,9 @@ func (s *SDK) ListSpaces(ctx context.Context, request operations.ListSpacesReque
 // StartDevEnvironment - Starts a specified Dev Environment and puts it into an active state.
 func (s *SDK) StartDevEnvironment(ctx context.Context, request operations.StartDevEnvironmentRequest) (*operations.StartDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2346,9 +2346,9 @@ func (s *SDK) StartDevEnvironment(ctx context.Context, request operations.StartD
 // StartDevEnvironmentSession - Starts a session for a specified Dev Environment.
 func (s *SDK) StartDevEnvironmentSession(ctx context.Context, request operations.StartDevEnvironmentSessionRequest) (*operations.StartDevEnvironmentSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2460,7 +2460,7 @@ func (s *SDK) StartDevEnvironmentSession(ctx context.Context, request operations
 // StopDevEnvironment - Pauses a specified Dev Environment and places it in a non-running state. Stopped Dev Environments do not consume compute minutes.
 func (s *SDK) StopDevEnvironment(ctx context.Context, request operations.StopDevEnvironmentRequest) (*operations.StopDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2564,7 +2564,7 @@ func (s *SDK) StopDevEnvironment(ctx context.Context, request operations.StopDev
 // StopDevEnvironmentSession - Stops a session for a specified Dev Environment.
 func (s *SDK) StopDevEnvironmentSession(ctx context.Context, request operations.StopDevEnvironmentSessionRequest) (*operations.StopDevEnvironmentSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session/{sessionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session/{sessionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2668,9 +2668,9 @@ func (s *SDK) StopDevEnvironmentSession(ctx context.Context, request operations.
 // UpdateDevEnvironment - Changes one or more values for a Dev Environment. Updating certain values of the Dev Environment will cause a restart.
 func (s *SDK) UpdateDevEnvironment(ctx context.Context, request operations.UpdateDevEnvironmentRequest) (*operations.UpdateDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

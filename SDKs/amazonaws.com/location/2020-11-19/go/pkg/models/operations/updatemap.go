@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMapPathParams struct {
-	// The name of the map resource to update.
-	MapName string `pathParam:"style=simple,explode=false,name=MapName"`
-}
-
-type UpdateMapHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateMapRequestBodyPricingPlanEnum - No longer used. If included, the only allowed value is <code>RequestBasedUsage</code>.
 type UpdateMapRequestBodyPricingPlanEnum string
 
@@ -59,9 +44,16 @@ type UpdateMapRequestBody struct {
 }
 
 type UpdateMapRequest struct {
-	PathParams UpdateMapPathParams
-	Headers    UpdateMapHeaders
-	Request    UpdateMapRequestBody `request:"mediaType=application/json"`
+	// The name of the map resource to update.
+	MapName           string               `pathParam:"style=simple,explode=false,name=MapName"`
+	RequestBody       UpdateMapRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateMapResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRoleMappingPathParams struct {
+type GetRoleMappingRequest struct {
 	// Unique id of a principal (typically either a user or service account).
 	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
-}
-
-type GetRoleMappingRequest struct {
-	PathParams GetRoleMappingPathParams
 }
 
 type GetRoleMappingResponse struct {

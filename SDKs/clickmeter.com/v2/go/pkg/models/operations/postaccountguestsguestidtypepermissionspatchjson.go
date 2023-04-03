@@ -33,17 +33,13 @@ func (e *PostAccountGuestsGuestIDTypePermissionsPatchJSONTypeEnum) UnmarshalJSON
 	}
 }
 
-type PostAccountGuestsGuestIDTypePermissionsPatchJSONPathParams struct {
+type PostAccountGuestsGuestIDTypePermissionsPatchJSONRequest struct {
+	// The patch permission request
+	APICoreRequestsPermissionPatchRequest shared.APICoreRequestsPermissionPatchRequest `request:"mediaType=application/json"`
 	// Id of the guest
 	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
 	// Can be "datapoint" or "group"
 	Type PostAccountGuestsGuestIDTypePermissionsPatchJSONTypeEnum `pathParam:"style=simple,explode=false,name=type"`
-}
-
-type PostAccountGuestsGuestIDTypePermissionsPatchJSONRequest struct {
-	PathParams PostAccountGuestsGuestIDTypePermissionsPatchJSONPathParams
-	// The patch permission request
-	Request shared.APICoreRequestsPermissionPatchRequest `request:"mediaType=application/json"`
 }
 
 type PostAccountGuestsGuestIDTypePermissionsPatchJSONResponse struct {

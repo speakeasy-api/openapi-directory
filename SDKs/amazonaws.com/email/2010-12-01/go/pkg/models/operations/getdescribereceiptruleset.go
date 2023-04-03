@@ -50,26 +50,18 @@ func (e *GETDescribeReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeReceiptRuleSetQueryParams struct {
+type GETDescribeReceiptRuleSetRequest struct {
 	Action GETDescribeReceiptRuleSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the receipt rule set to describe.
-	RuleSetName string                               `queryParam:"style=form,explode=true,name=RuleSetName"`
-	Version     GETDescribeReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeReceiptRuleSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeReceiptRuleSetRequest struct {
-	QueryParams GETDescribeReceiptRuleSetQueryParams
-	Headers     GETDescribeReceiptRuleSetHeaders
+	RuleSetName       string                               `queryParam:"style=form,explode=true,name=RuleSetName"`
+	Version           GETDescribeReceiptRuleSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeReceiptRuleSetResponse struct {

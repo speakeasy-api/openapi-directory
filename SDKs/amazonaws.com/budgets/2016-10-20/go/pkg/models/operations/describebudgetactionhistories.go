@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBudgetActionHistoriesQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeBudgetActionHistoriesXAmzTargetEnum
 type DescribeBudgetActionHistoriesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeBudgetActionHistoriesXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type DescribeBudgetActionHistoriesHeaders struct {
+type DescribeBudgetActionHistoriesRequest struct {
+	DescribeBudgetActionHistoriesRequest shared.DescribeBudgetActionHistoriesRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeBudgetActionHistoriesHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeBudgetActionHistoriesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeBudgetActionHistoriesRequest struct {
-	QueryParams DescribeBudgetActionHistoriesQueryParams
-	Headers     DescribeBudgetActionHistoriesHeaders
-	Request     shared.DescribeBudgetActionHistoriesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeBudgetActionHistoriesResponse struct {

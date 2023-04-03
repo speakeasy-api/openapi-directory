@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamespaceYearsPathParams struct {
+type GetNamespaceYearsRequest struct {
 	// Namespace to fetch data for
 	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-}
-
-type GetNamespaceYearsRequest struct {
-	PathParams GetNamespaceYearsPathParams
 }
 
 type GetNamespaceYearsResponse struct {

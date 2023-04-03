@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateControlPathParams struct {
-	//  The identifier for the control.
-	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
-}
-
-type UpdateControlHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateControlRequestBody struct {
 	//  The recommended actions to carry out if the control isn't fulfilled.
 	ActionPlanInstructions *string `json:"actionPlanInstructions,omitempty"`
@@ -38,9 +23,16 @@ type UpdateControlRequestBody struct {
 }
 
 type UpdateControlRequest struct {
-	PathParams UpdateControlPathParams
-	Headers    UpdateControlHeaders
-	Request    UpdateControlRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateControlRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The identifier for the control.
+	ControlID string `pathParam:"style=simple,explode=false,name=controlId"`
 }
 
 type UpdateControlResponse struct {

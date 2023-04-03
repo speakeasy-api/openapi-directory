@@ -50,29 +50,21 @@ func (e *POSTGetIpamPoolAllocationsVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTGetIpamPoolAllocationsQueryParams struct {
+type POSTGetIpamPoolAllocationsRequest struct {
 	Action POSTGetIpamPoolAllocationsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Pagination limit
 	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token
-	NextToken *string                               `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   POSTGetIpamPoolAllocationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetIpamPoolAllocationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type POSTGetIpamPoolAllocationsRequest struct {
-	QueryParams POSTGetIpamPoolAllocationsQueryParams
-	Headers     POSTGetIpamPoolAllocationsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	NextToken         *string                               `queryParam:"style=form,explode=true,name=NextToken"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTGetIpamPoolAllocationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetIpamPoolAllocationsResponse struct {

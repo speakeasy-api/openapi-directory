@@ -13,12 +13,10 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateAccountRequest{
-        Request: &shared.CreateAccount{
-            FtpPassword: "corrupti",
-            Identifier: "provident",
-            ServicepackID: 715190,
-        },
+    req := shared.CreateAccount{
+        FtpPassword: "corrupti",
+        Identifier: "provident",
+        ServicepackID: 715190,
     }
 
     ctx := context.Background()

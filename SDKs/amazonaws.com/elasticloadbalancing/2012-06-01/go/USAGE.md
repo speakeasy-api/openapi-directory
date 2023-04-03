@@ -13,32 +13,26 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETApplySecurityGroupsToLoadBalancerRequest{
-        QueryParams: operations.GETApplySecurityGroupsToLoadBalancerQueryParams{
-            Action: "ApplySecurityGroupsToLoadBalancer",
-            LoadBalancerName: "corrupti",
-            SecurityGroups: []string{
-                "distinctio",
-                "quibusdam",
-                "unde",
-            },
-            Version: "2012-06-01",
+        Action: "ApplySecurityGroupsToLoadBalancer",
+        LoadBalancerName: "corrupti",
+        SecurityGroups: []string{
+            "distinctio",
+            "quibusdam",
+            "unde",
         },
-        Headers: operations.GETApplySecurityGroupsToLoadBalancerHeaders{
-            XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "corrupti",
-            XAmzCredential: "illum",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "error",
-            XAmzSignature: "deserunt",
-            XAmzSignedHeaders: "suscipit",
-        },
+        Version: "2012-06-01",
+        XAmzAlgorithm: "nulla",
+        XAmzContentSha256: "corrupti",
+        XAmzCredential: "illum",
+        XAmzDate: "vel",
+        XAmzSecurityToken: "error",
+        XAmzSignature: "deserunt",
+        XAmzSignedHeaders: "suscipit",
     }
 
     ctx := context.Background()

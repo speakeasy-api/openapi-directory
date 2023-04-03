@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSubscriptionsIDPathParams struct {
+type DeleteSubscriptionsIDRequest struct {
 	// Id of the subscription to delete
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteSubscriptionsIDRequest struct {
-	PathParams DeleteSubscriptionsIDPathParams
 }
 
 type DeleteSubscriptionsIDResponse struct {

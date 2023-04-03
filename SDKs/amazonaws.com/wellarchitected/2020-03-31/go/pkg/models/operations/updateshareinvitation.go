@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateShareInvitationPathParams struct {
-	// The ID assigned to the share invitation.
-	ShareInvitationID string `pathParam:"style=simple,explode=false,name=ShareInvitationId"`
-}
-
-type UpdateShareInvitationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateShareInvitationRequestBodyShareInvitationActionEnum - Share invitation action taken by contributor.
 type UpdateShareInvitationRequestBodyShareInvitationActionEnum string
 
@@ -54,9 +39,16 @@ type UpdateShareInvitationRequestBody struct {
 }
 
 type UpdateShareInvitationRequest struct {
-	PathParams UpdateShareInvitationPathParams
-	Headers    UpdateShareInvitationHeaders
-	Request    UpdateShareInvitationRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateShareInvitationRequestBody `request:"mediaType=application/json"`
+	// The ID assigned to the share invitation.
+	ShareInvitationID string  `pathParam:"style=simple,explode=false,name=ShareInvitationId"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateShareInvitationResponse struct {

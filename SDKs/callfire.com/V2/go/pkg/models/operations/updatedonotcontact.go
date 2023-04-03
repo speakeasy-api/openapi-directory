@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateDoNotContactSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateDoNotContactPathParams struct {
-	// ~
-	Number string `pathParam:"style=simple,explode=false,name=number"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateDoNotContactRequest struct {
-	PathParams UpdateDoNotContactPathParams
 	// DoNotContact object
-	Request  *shared.DoNotContactInput `request:"mediaType=application/json"`
-	Security UpdateDoNotContactSecurity
+	DoNotContactInput *shared.DoNotContactInput `request:"mediaType=application/json"`
+	// ~
+	Number string `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateDoNotContactResponse struct {

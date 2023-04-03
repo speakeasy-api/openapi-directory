@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveOpenIDIdpConfigPathParams struct {
-	// OpenID Connect IDP configuration ID
-	IdpID int `pathParam:"style=simple,explode=false,name=idp_id"`
-}
-
-type RemoveOpenIDIdpConfigHeaders struct {
+type RemoveOpenIDIdpConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveOpenIDIdpConfigRequest struct {
-	PathParams RemoveOpenIDIdpConfigPathParams
-	Headers    RemoveOpenIDIdpConfigHeaders
+	// OpenID Connect IDP configuration ID
+	IdpID int `pathParam:"style=simple,explode=false,name=idp_id"`
 }
 
 type RemoveOpenIDIdpConfigResponse struct {

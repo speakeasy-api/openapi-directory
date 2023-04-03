@@ -8,26 +8,17 @@ import (
 )
 
 type GetCompaniesCompanyIDWebhooksSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetCompaniesCompanyIDWebhooksPathParams struct {
+type GetCompaniesCompanyIDWebhooksRequest struct {
 	// Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account).
 	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
-}
-
-type GetCompaniesCompanyIDWebhooksQueryParams struct {
 	// The number of the page to fetch.
 	PageNumber *int `queryParam:"style=form,explode=true,name=pageNumber"`
 	// The number of items to have on a page, maximum 100. The default is 10 items on a page.
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type GetCompaniesCompanyIDWebhooksRequest struct {
-	PathParams  GetCompaniesCompanyIDWebhooksPathParams
-	QueryParams GetCompaniesCompanyIDWebhooksQueryParams
-	Security    GetCompaniesCompanyIDWebhooksSecurity
 }
 
 type GetCompaniesCompanyIDWebhooksResponse struct {

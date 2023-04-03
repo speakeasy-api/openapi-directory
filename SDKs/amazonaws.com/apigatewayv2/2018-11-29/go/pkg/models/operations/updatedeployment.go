@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateDeploymentPathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The deployment ID.
-	DeploymentID string `pathParam:"style=simple,explode=false,name=deploymentId"`
-}
-
-type UpdateDeploymentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateDeploymentRequestBody struct {
 	// A string with a length between [0-1024].
 	Description *string `json:"description,omitempty"`
 }
 
 type UpdateDeploymentRequest struct {
-	PathParams UpdateDeploymentPathParams
-	Headers    UpdateDeploymentHeaders
-	Request    UpdateDeploymentRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateDeploymentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The deployment ID.
+	DeploymentID string `pathParam:"style=simple,explode=false,name=deploymentId"`
 }
 
 type UpdateDeploymentResponse struct {

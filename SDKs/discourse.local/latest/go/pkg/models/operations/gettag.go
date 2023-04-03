@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetTagPathParams struct {
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
 type GetTagRequest struct {
-	PathParams GetTagPathParams
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type GetTag200ApplicationJSONTopicListTags struct {

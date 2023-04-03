@@ -71,7 +71,7 @@ func (e *GETModifyVpcTenancyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETModifyVpcTenancyQueryParams struct {
+type GETModifyVpcTenancyRequest struct {
 	Action GETModifyVpcTenancyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -79,10 +79,7 @@ type GETModifyVpcTenancyQueryParams struct {
 	InstanceTenancy GETModifyVpcTenancyInstanceTenancyEnum `queryParam:"style=form,explode=true,name=InstanceTenancy"`
 	Version         GETModifyVpcTenancyVersionEnum         `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETModifyVpcTenancyHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -90,11 +87,6 @@ type GETModifyVpcTenancyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpcTenancyRequest struct {
-	QueryParams GETModifyVpcTenancyQueryParams
-	Headers     GETModifyVpcTenancyHeaders
 }
 
 type GETModifyVpcTenancyResponse struct {

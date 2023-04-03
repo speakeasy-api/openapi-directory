@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListClassificationScopesQueryParams struct {
-	// The name of the classification scope to retrieve the unique identifier for.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-	// The nextToken string that specifies which page of results to return in a paginated response.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListClassificationScopesHeaders struct {
+type ListClassificationScopesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListClassificationScopesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListClassificationScopesRequest struct {
-	QueryParams ListClassificationScopesQueryParams
-	Headers     ListClassificationScopesHeaders
+	// The name of the classification scope to retrieve the unique identifier for.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// The nextToken string that specifies which page of results to return in a paginated response.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListClassificationScopesResponse struct {

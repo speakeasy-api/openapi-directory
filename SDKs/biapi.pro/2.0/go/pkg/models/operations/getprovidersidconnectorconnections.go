@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProvidersIDConnectorConnectionsPathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-}
-
-type GetProvidersIDConnectorConnectionsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+type GetProvidersIDConnectorConnectionsRequest struct {
+	Expand      *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64   `pathParam:"style=simple,explode=false,name=id_connector"`
 	// the length of the connection subset
 	Range *int64 `queryParam:"style=form,explode=true,name=range"`
-}
-
-type GetProvidersIDConnectorConnectionsRequest struct {
-	PathParams  GetProvidersIDConnectorConnectionsPathParams
-	QueryParams GetProvidersIDConnectorConnectionsQueryParams
 }
 
 // GetProvidersIDConnectorConnections200ApplicationJSON - connections

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -33,7 +34,7 @@ func newCertificate(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // GetCertificatePdf - Download the certificate in pdf format
-func (s *certificate) GetCertificatePdf(ctx context.Context, request operations.GetCertificatePdfRequest) (*operations.GetCertificatePdfResponse, error) {
+func (s *certificate) GetCertificatePdf(ctx context.Context, request shared.CertificateRequest, security operations.GetCertificatePdfSecurity) (*operations.GetCertificatePdfResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pdf/certificate"
 
@@ -52,7 +53,7 @@ func (s *certificate) GetCertificatePdf(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CodePushDeploymentReleasesCreateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CodePushDeploymentReleasesCreatePathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// deployment name
-	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // CodePushDeploymentReleasesCreateRequestBodyReleaseUpload - The upload metadata from the release initialization step.
@@ -53,10 +43,14 @@ type CodePushDeploymentReleasesCreateRequestBody struct {
 }
 
 type CodePushDeploymentReleasesCreateRequest struct {
-	PathParams CodePushDeploymentReleasesCreatePathParams
 	// The necessary information required to download the bundle and being the release process.
-	Request  CodePushDeploymentReleasesCreateRequestBody `request:"mediaType=application/json"`
-	Security CodePushDeploymentReleasesCreateSecurity
+	RequestBody CodePushDeploymentReleasesCreateRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// deployment name
+	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CodePushDeploymentReleasesCreateDefaultApplicationJSON - Error

@@ -34,16 +34,16 @@ func newMarketplacesChannelCatalogsSettings(defaultClient, securityClient HTTPCl
 // GetChannelCatalogMarketplaceProperties - Get the marketplace properties for a channel catalog
 func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceProperties(ctx context.Context, request operations.GetChannelCatalogMarketplacePropertiesRequest) (*operations.GetChannelCatalogMarketplacePropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -98,7 +98,7 @@ func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceProper
 // GetChannelCatalogMarketplaceSettings - Get the marketplace settings for a channel catalog
 func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceSettings(ctx context.Context, request operations.GetChannelCatalogMarketplaceSettingsRequest) (*operations.GetChannelCatalogMarketplaceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,9 +158,9 @@ func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceSettin
 // Partial update accepted.
 func (s *marketplacesChannelCatalogsSettings) SetChannelCatalogMarketplaceSettings(ctx context.Context, request operations.SetChannelCatalogMarketplaceSettingsRequest) (*operations.SetChannelCatalogMarketplaceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetChannelCatalogMarketplaceSettingsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -197,6 +197,9 @@ func (s *marketplacesChannelCatalogsSettings) SetChannelCatalogMarketplaceSettin
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 503:
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 400:
 		fallthrough
 	default:
@@ -209,8 +212,6 @@ func (s *marketplacesChannelCatalogsSettings) SetChannelCatalogMarketplaceSettin
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 503:
-		res.Headers = httpRes.Header
 	}
 
 	return res, nil

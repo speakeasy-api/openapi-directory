@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountTypesIDAccountTypePathParams struct {
-	IDAccountType int64 `pathParam:"style=simple,explode=false,name=id_account_type"`
-}
-
-type GetAccountTypesIDAccountTypeQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetAccountTypesIDAccountTypeRequest struct {
-	PathParams  GetAccountTypesIDAccountTypePathParams
-	QueryParams GetAccountTypesIDAccountTypeQueryParams
+	Expand        *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccountType int64   `pathParam:"style=simple,explode=false,name=id_account_type"`
 }
 
 type GetAccountTypesIDAccountTypeResponse struct {

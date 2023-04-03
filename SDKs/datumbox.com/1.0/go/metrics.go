@@ -34,7 +34,7 @@ func newMetrics(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // DocumentSimilarity - Estimates the similarity between 2 Documents
 // The Document Similarity function estimates the degree of similarity between two documents. It can be used to detect duplicate webpages or detect plagiarism.
-func (s *metrics) DocumentSimilarity(ctx context.Context, request operations.DocumentSimilarityRequest) (*operations.DocumentSimilarityResponse, error) {
+func (s *metrics) DocumentSimilarity(ctx context.Context, request operations.DocumentSimilarityRequestBody) (*operations.DocumentSimilarityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/1.0/DocumentSimilarity.json"
 

@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobTemplatesQueryParams struct {
-	// The maximum number of results to return in the list.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use to return the next set of results in the list.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListJobTemplatesHeaders struct {
+type ListJobTemplatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListJobTemplatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobTemplatesRequest struct {
-	QueryParams ListJobTemplatesQueryParams
-	Headers     ListJobTemplatesHeaders
+	// The maximum number of results to return in the list.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use to return the next set of results in the list.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListJobTemplatesResponse struct {

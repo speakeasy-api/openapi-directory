@@ -8,17 +8,12 @@ import (
 )
 
 type AllergiesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AllergiesCreateQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AllergiesCreateRequest struct {
-	QueryParams AllergiesCreateQueryParams
-	Security    AllergiesCreateSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
 }
 
 type AllergiesCreateResponse struct {

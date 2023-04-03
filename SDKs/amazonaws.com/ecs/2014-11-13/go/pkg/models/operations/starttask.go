@@ -30,7 +30,8 @@ func (e *StartTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StartTaskHeaders struct {
+type StartTaskRequest struct {
+	StartTaskRequest  shared.StartTaskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type StartTaskHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        StartTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type StartTaskRequest struct {
-	Headers StartTaskHeaders
-	Request shared.StartTaskRequest `request:"mediaType=application/json"`
 }
 
 type StartTaskResponse struct {

@@ -30,7 +30,8 @@ func (e *SendBonusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SendBonusHeaders struct {
+type SendBonusRequest struct {
+	SendBonusRequest  shared.SendBonusRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type SendBonusHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        SendBonusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type SendBonusRequest struct {
-	Headers SendBonusHeaders
-	Request shared.SendBonusRequest `request:"mediaType=application/json"`
 }
 
 type SendBonusResponse struct {

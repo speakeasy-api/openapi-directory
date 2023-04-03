@@ -13,32 +13,26 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ListRealtimeContactAnalysisSegmentsRequest{
-        QueryParams: operations.ListRealtimeContactAnalysisSegmentsQueryParams{
-            MaxResults: "corrupti",
-            NextToken: "provident",
+        MaxResults: "corrupti",
+        NextToken: "provident",
+        RequestBody: operations.ListRealtimeContactAnalysisSegmentsRequestBody{
+            ContactID: "distinctio",
+            InstanceID: "quibusdam",
+            MaxResults: 602763,
+            NextToken: "nulla",
         },
-        Headers: operations.ListRealtimeContactAnalysisSegmentsHeaders{
-            XAmzAlgorithm: "distinctio",
-            XAmzContentSha256: "quibusdam",
-            XAmzCredential: "unde",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "illum",
-            XAmzSignedHeaders: "vel",
-        },
-        Request: operations.ListRealtimeContactAnalysisSegmentsRequestBody{
-            ContactID: "error",
-            InstanceID: "deserunt",
-            MaxResults: 384382,
-            NextToken: "iure",
-        },
+        XAmzAlgorithm: "corrupti",
+        XAmzContentSha256: "illum",
+        XAmzCredential: "vel",
+        XAmzDate: "error",
+        XAmzSecurityToken: "deserunt",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "iure",
     }
 
     ctx := context.Background()

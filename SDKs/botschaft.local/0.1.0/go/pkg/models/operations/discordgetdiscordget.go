@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DiscordGetDiscordGetQueryParams struct {
+type DiscordGetDiscordGetRequest struct {
+	Authorization *string `header:"style=simple,explode=false,name=authorization"`
 	Base64Message *string `queryParam:"style=form,explode=true,name=base64_message"`
 	Channel       string  `queryParam:"style=form,explode=true,name=channel"`
 	Message       *string `queryParam:"style=form,explode=true,name=message"`
-}
-
-type DiscordGetDiscordGetHeaders struct {
-	Authorization *string `header:"style=simple,explode=false,name=authorization"`
-}
-
-type DiscordGetDiscordGetRequest struct {
-	QueryParams DiscordGetDiscordGetQueryParams
-	Headers     DiscordGetDiscordGetHeaders
 }
 
 type DiscordGetDiscordGetResponse struct {

@@ -80,14 +80,14 @@ func (s *info) GetInfoTld(ctx context.Context) (*operations.GetInfoTldResponse, 
 // GetInfoTldZone - Returns statistics for specific zone
 func (s *info) GetInfoTldZone(ctx context.Context, request operations.GetInfoTldZoneRequest) (*operations.GetInfoTldZoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/info/tld/{zone}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/info/tld/{zone}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -134,7 +134,7 @@ func (s *info) GetAPIInfoItem(ctx context.Context, request operations.GetAPIInfo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,7 +182,7 @@ func (s *info) GetStatisticsCollection(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -223,14 +223,14 @@ func (s *info) GetStatisticsCollection(ctx context.Context, request operations.G
 // GetStatisticsItem - Returns statistics for specific zone
 func (s *info) GetStatisticsItem(ctx context.Context, request operations.GetStatisticsItemRequest) (*operations.GetStatisticsItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/info/stat/{zone}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/info/stat/{zone}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

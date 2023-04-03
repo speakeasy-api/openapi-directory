@@ -14,22 +14,17 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteProxyRequest{
-        Security: operations.DeleteProxySecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Headers: operations.DeleteProxyHeaders{
-            XApideckAppID: "corrupti",
-            XApideckConsumerID: "provident",
-            XApideckDownstreamAuthorization: "distinctio",
-            XApideckDownstreamURL: "quibusdam",
-            XApideckServiceID: "unde",
-        },
+        XApideckAppID: "corrupti",
+        XApideckConsumerID: "provident",
+        XApideckDownstreamAuthorization: "distinctio",
+        XApideckDownstreamURL: "quibusdam",
+        XApideckServiceID: "unde",
     }
 
     ctx := context.Background()
-    res, err := s.Execute.DeleteProxy(ctx, req)
+    res, err := s.Execute.DeleteProxy(ctx, req, operations.DeleteProxySecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

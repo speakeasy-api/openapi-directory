@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutAuditEventsQueryParams struct {
-	// The ARN or ID (the ARN suffix) of a channel.
-	ChannelArn string `queryParam:"style=form,explode=true,name=channelArn"`
-	// A unique identifier that is conditionally required when the channel's resource policy includes an external ID. This value can be any string, such as a passphrase or account number.
-	ExternalID *string `queryParam:"style=form,explode=true,name=externalId"`
-}
-
-type PutAuditEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type PutAuditEventsRequestBody struct {
 	// The JSON payload of events that you want to ingest. You can also point to the JSON event payload in a file.
 	AuditEvents []shared.AuditEvent `json:"auditEvents"`
 }
 
 type PutAuditEventsRequest struct {
-	QueryParams PutAuditEventsQueryParams
-	Headers     PutAuditEventsHeaders
-	Request     PutAuditEventsRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutAuditEventsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ARN or ID (the ARN suffix) of a channel.
+	ChannelArn string `queryParam:"style=form,explode=true,name=channelArn"`
+	// A unique identifier that is conditionally required when the channel's resource policy includes an external ID. This value can be any string, such as a passphrase or account number.
+	ExternalID *string `queryParam:"style=form,explode=true,name=externalId"`
 }
 
 type PutAuditEventsResponse struct {

@@ -6,11 +6,6 @@ import (
 	"net/http"
 )
 
-type ShipmentPostShipmentRawRequest struct {
-	// Data to specify shipment parameters
-	Request []byte `request:"mediaType=text/xml"`
-}
-
 type ShipmentPostShipmentRawResponse struct {
 	ContentType string
 	// OK

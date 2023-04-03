@@ -37,7 +37,7 @@ func (s *intent) AddMediaIntentHandling(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/intent/addMedia"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -49,7 +49,7 @@ func (s *intent) AddMediaIntentHandling(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -90,7 +90,7 @@ func (s *intent) PlayMediaIntentHandling(ctx context.Context, request operations
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/intent/playMedia"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -102,7 +102,7 @@ func (s *intent) PlayMediaIntentHandling(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -143,7 +143,7 @@ func (s *intent) UpdateMediaAffinityIntentHandling(ctx context.Context, request 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/intent/updateMediaAffinity"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -155,7 +155,7 @@ func (s *intent) UpdateMediaAffinityIntentHandling(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

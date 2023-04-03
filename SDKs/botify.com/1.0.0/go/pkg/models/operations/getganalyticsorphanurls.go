@@ -99,29 +99,21 @@ func (e *GetGanalyticsOrphanURLsSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetGanalyticsOrphanURLsPathParams struct {
+type GetGanalyticsOrphanURLsRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Type of traffic, value: 'organic' (from search engine)or 'social' (from a social network)
 	Medium GetGanalyticsOrphanURLsMediumEnum `pathParam:"style=simple,explode=false,name=medium"`
+	// Page Number
+	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Project's identifier
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// Page Size
+	Size *int64 `queryParam:"style=form,explode=true,name=size"`
 	// Traffic source, value: name of the search engine or social network
 	Source GetGanalyticsOrphanURLsSourceEnum `pathParam:"style=simple,explode=false,name=source"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetGanalyticsOrphanURLsQueryParams struct {
-	// Page Number
-	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-	// Page Size
-	Size *int64 `queryParam:"style=form,explode=true,name=size"`
-}
-
-type GetGanalyticsOrphanURLsRequest struct {
-	PathParams  GetGanalyticsOrphanURLsPathParams
-	QueryParams GetGanalyticsOrphanURLsQueryParams
 }
 
 // GetGanalyticsOrphanURLs200ApplicationJSON - Successful operation

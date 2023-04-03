@@ -14,3 +14,4 @@ pkg/utils/utils.go
 pkg/models/operations/getv1.go
 pkg/models/shared/inlineresponse200.go
 USAGE.md
+pkg/models/operations/options.go

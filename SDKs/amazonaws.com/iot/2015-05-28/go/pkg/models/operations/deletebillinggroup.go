@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteBillingGroupPathParams struct {
-	// The name of the billing group.
-	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
-}
-
-type DeleteBillingGroupQueryParams struct {
-	// The expected version of the billing group. If the version of the billing group does not match the expected version specified in the request, the <code>DeleteBillingGroup</code> request is rejected with a <code>VersionConflictException</code>.
-	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
-}
-
-type DeleteBillingGroupHeaders struct {
+type DeleteBillingGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteBillingGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBillingGroupRequest struct {
-	PathParams  DeleteBillingGroupPathParams
-	QueryParams DeleteBillingGroupQueryParams
-	Headers     DeleteBillingGroupHeaders
+	// The name of the billing group.
+	BillingGroupName string `pathParam:"style=simple,explode=false,name=billingGroupName"`
+	// The expected version of the billing group. If the version of the billing group does not match the expected version specified in the request, the <code>DeleteBillingGroup</code> request is rejected with a <code>VersionConflictException</code>.
+	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
 }
 
 type DeleteBillingGroupResponse struct {

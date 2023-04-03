@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SeeContentBlockInformationQueryParams struct {
+type SeeContentBlockInformationRequest struct {
 	// (Required) String
 	//
 	// The Content Block ID. This can be found by either listing Content Block information or going to the Developer Console, then API Settings, then scrolling to the bottom and searching for your Content Block API Identifier.
@@ -15,10 +15,6 @@ type SeeContentBlockInformationQueryParams struct {
 	//
 	// When set to ‘true’, the API returns back the Message Variation API ID of Campaigns and Canvases where this content block is included, to be used in subsequent calls. The results exclude archived or deleted Campaigns or Canvases.
 	IncludeInclusionData *string `queryParam:"style=form,explode=true,name=include_inclusion_data"`
-}
-
-type SeeContentBlockInformationRequest struct {
-	QueryParams SeeContentBlockInformationQueryParams
 }
 
 type SeeContentBlockInformationResponse struct {

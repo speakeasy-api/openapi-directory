@@ -14,26 +14,21 @@ func main() {
     s := sdk.New()
 
     req := operations.CompanyAlternativeSearchRequest{
-        Security: operations.CompanyAlternativeSearchSecurity{
-            UserKey: shared.SchemeUserKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        PathParams: operations.CompanyAlternativeSearchPathParams{
-            Country: "corrupti",
-        },
-        Request: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "7868 Stamm Junctions",
-            Name: "error",
-            Number: "deserunt",
-            Phone: "1-528-292-3478 x545",
+        RequestBody: &operations.CompanyAlternativeSearchRequestBody{
+            Address: "5786 Little Streets",
+            Name: "vel",
+            Number: "error",
+            Phone: "1-542-909-2347 x8545",
             URL: "nisi",
             Vat: "recusandae",
         },
+        Country: "temporibus",
     }
 
     ctx := context.Background()
-    res, err := s.V1Company.CompanyAlternativeSearch(ctx, req)
+    res, err := s.V1Company.CompanyAlternativeSearch(ctx, req, operations.CompanyAlternativeSearchSecurity{
+        UserKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

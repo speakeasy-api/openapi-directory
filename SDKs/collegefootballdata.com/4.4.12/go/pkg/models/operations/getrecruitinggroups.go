@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetRecruitingGroupsQueryParams struct {
+type GetRecruitingGroupsRequest struct {
 	// conference filter
 	Conference *string `queryParam:"style=form,explode=true,name=conference"`
 	// Ending year
@@ -16,10 +16,6 @@ type GetRecruitingGroupsQueryParams struct {
 	StartYear *int64 `queryParam:"style=form,explode=true,name=startYear"`
 	// Team filter
 	Team *string `queryParam:"style=form,explode=true,name=team"`
-}
-
-type GetRecruitingGroupsRequest struct {
-	QueryParams GetRecruitingGroupsQueryParams
 }
 
 type GetRecruitingGroupsResponse struct {

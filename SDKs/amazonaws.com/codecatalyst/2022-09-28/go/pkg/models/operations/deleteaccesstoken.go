@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteAccessTokenPathParams struct {
+type DeleteAccessTokenRequest struct {
 	// The ID of the personal access token to delete. You can find the IDs of all PATs associated with your user account by calling <a>ListAccessTokens</a>.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteAccessTokenRequest struct {
-	PathParams DeleteAccessTokenPathParams
 }
 
 type DeleteAccessTokenResponse struct {

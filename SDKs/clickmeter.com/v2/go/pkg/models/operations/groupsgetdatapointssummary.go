@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupsGetDatapointsSummaryPathParams struct {
-	// Filter by this group id
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // GroupsGetDatapointsSummarySortDirectionEnum - Direction of sort "asc" or "desc"
 type GroupsGetDatapointsSummarySortDirectionEnum string
 
@@ -149,11 +144,13 @@ func (e *GroupsGetDatapointsSummaryTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroupsGetDatapointsSummaryQueryParams struct {
+type GroupsGetDatapointsSummaryRequest struct {
 	// Is the datapoint marked as favourite
 	Favourite *bool `queryParam:"style=form,explode=true,name=favourite"`
 	// If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
 	FromDay *string `queryParam:"style=form,explode=true,name=fromDay"`
+	// Filter by this group id
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 	// Limit results to this number
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Offset where to start from
@@ -174,11 +171,6 @@ type GroupsGetDatapointsSummaryQueryParams struct {
 	ToDay *string `queryParam:"style=form,explode=true,name=toDay"`
 	// Type of datapoint ("tl"/"tp")
 	Type *GroupsGetDatapointsSummaryTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GroupsGetDatapointsSummaryRequest struct {
-	PathParams  GroupsGetDatapointsSummaryPathParams
-	QueryParams GroupsGetDatapointsSummaryQueryParams
 }
 
 type GroupsGetDatapointsSummaryResponse struct {

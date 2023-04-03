@@ -14,22 +14,20 @@ func main() {
     s := sdk.New()
 
     req := operations.GetFlightOffersRequest{
-        QueryParams: operations.GetFlightOffersQueryParams{
-            Adults: 548814,
-            Children: 592845,
-            CurrencyCode: "distinctio",
-            DepartureDate: "2021-03-11",
-            DestinationLocationCode: "nulla",
-            ExcludedAirlineCodes: "corrupti",
-            IncludedAirlineCodes: "illum",
-            Infants: 423655,
-            Max: 623564,
-            MaxPrice: 645894,
-            NonStop: false,
-            OriginLocationCode: "suscipit",
-            ReturnDate: "2022-09-14",
-            TravelClass: "FIRST",
-        },
+        Adults: 548814,
+        Children: 592845,
+        CurrencyCode: "distinctio",
+        DepartureDate: "2021-03-11",
+        DestinationLocationCode: "nulla",
+        ExcludedAirlineCodes: "corrupti",
+        IncludedAirlineCodes: "illum",
+        Infants: 423655,
+        Max: 623564,
+        MaxPrice: 645894,
+        NonStop: false,
+        OriginLocationCode: "suscipit",
+        ReturnDate: "2022-09-14",
+        TravelClass: "FIRST",
     }
 
     ctx := context.Background()

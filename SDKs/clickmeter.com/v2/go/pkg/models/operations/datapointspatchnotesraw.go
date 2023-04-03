@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DataPointsPatchNotesRawPathParams struct {
+type DataPointsPatchNotesRawRequest struct {
+	// Patch requests
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the datapoint
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DataPointsPatchNotesRawRequest struct {
-	PathParams DataPointsPatchNotesRawPathParams
-	// Patch requests
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type DataPointsPatchNotesRawResponse struct {

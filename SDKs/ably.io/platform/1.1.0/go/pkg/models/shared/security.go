@@ -7,11 +7,7 @@ type SchemeBasicAuth struct {
 	Username string `security:"name=username"`
 }
 
-type SchemeBearerAuth struct {
-	Authorization string `security:"name=Authorization"`
-}
-
 type Security struct {
-	BasicAuth  *SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-	BearerAuth *SchemeBearerAuth `security:"scheme,type=http,subtype=bearer"`
+	BasicAuth  *SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	BearerAuth *string          `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }

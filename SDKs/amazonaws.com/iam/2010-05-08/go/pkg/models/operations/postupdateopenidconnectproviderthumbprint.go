@@ -50,25 +50,17 @@ func (e *POSTUpdateOpenIDConnectProviderThumbprintVersionEnum) UnmarshalJSON(dat
 	}
 }
 
-type POSTUpdateOpenIDConnectProviderThumbprintQueryParams struct {
-	Action  POSTUpdateOpenIDConnectProviderThumbprintActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTUpdateOpenIDConnectProviderThumbprintVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTUpdateOpenIDConnectProviderThumbprintHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTUpdateOpenIDConnectProviderThumbprintRequest struct {
-	QueryParams POSTUpdateOpenIDConnectProviderThumbprintQueryParams
-	Headers     POSTUpdateOpenIDConnectProviderThumbprintHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTUpdateOpenIDConnectProviderThumbprintActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                               `request:"mediaType=text/xml"`
+	Version           POSTUpdateOpenIDConnectProviderThumbprintVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTUpdateOpenIDConnectProviderThumbprintResponse struct {

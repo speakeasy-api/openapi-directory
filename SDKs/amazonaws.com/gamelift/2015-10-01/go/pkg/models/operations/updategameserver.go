@@ -30,20 +30,16 @@ func (e *UpdateGameServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateGameServerHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateGameServerXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateGameServerRequest struct {
-	Headers UpdateGameServerHeaders
-	Request shared.UpdateGameServerInput `request:"mediaType=application/json"`
+	UpdateGameServerInput shared.UpdateGameServerInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            UpdateGameServerXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateGameServerResponse struct {

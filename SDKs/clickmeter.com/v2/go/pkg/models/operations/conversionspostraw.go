@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPostRawPathParams struct {
+type ConversionsPostRawRequest struct {
+	// Updated body of the conversion
+	RequestBody []byte `request:"mediaType=text/xml"`
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsPostRawRequest struct {
-	PathParams ConversionsPostRawPathParams
-	// Updated body of the conversion
-	Request []byte `request:"mediaType=text/xml"`
 }
 
 type ConversionsPostRawResponse struct {

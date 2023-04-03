@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UploadFunctionPathParams struct {
-	// The name you want to assign to the function you are uploading. The function names appear in the console and are returned in the <a>ListFunctions</a> API. Function names are used to specify functions to other AWS Lambda APIs, such as <a>InvokeAsync</a>.
-	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-}
-
 // UploadFunctionModeEnum - How the Lambda function will be invoked. Lambda supports only the "event" mode.
 type UploadFunctionModeEnum string
 
@@ -33,6 +28,11 @@ func (e *UploadFunctionModeEnum) UnmarshalJSON(data []byte) error {
 	default:
 		return fmt.Errorf("invalid value for UploadFunctionModeEnum: %s", s)
 	}
+}
+
+type UploadFunctionRequestBody struct {
+	// A .zip file containing your packaged source code. For more information about creating a .zip file, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events.html">AWS LambdaL How it Works</a> in the AWS Lambda Developer Guide.
+	FunctionZip string `json:"FunctionZip"`
 }
 
 // UploadFunctionRuntimeEnum - The runtime environment for the Lambda function you are uploading. Currently, Lambda supports only "nodejs" as the runtime.
@@ -56,24 +56,24 @@ func (e *UploadFunctionRuntimeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UploadFunctionQueryParams struct {
+type UploadFunctionRequest struct {
 	// A short, user-defined function description. Lambda does not use this value. Assign a meaningful description as you see fit.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
+	// The name you want to assign to the function you are uploading. The function names appear in the console and are returned in the <a>ListFunctions</a> API. Function names are used to specify functions to other AWS Lambda APIs, such as <a>InvokeAsync</a>.
+	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
 	// The function that Lambda calls to begin execution. For Node.js, it is the <i>module-name</i>.<i>export</i> value in your function.
 	Handler string `queryParam:"style=form,explode=true,name=Handler"`
 	// The amount of memory, in MB, your Lambda function is given. Lambda uses this memory size to infer the amount of CPU allocated to your function. Your function use-case determines your CPU and memory requirements. For example, database operation might need less memory compared to image processing function. The default value is 128 MB. The value must be a multiple of 64 MB.
 	MemorySize *int64 `queryParam:"style=form,explode=true,name=MemorySize"`
 	// How the Lambda function will be invoked. Lambda supports only the "event" mode.
-	Mode UploadFunctionModeEnum `queryParam:"style=form,explode=true,name=Mode"`
+	Mode        UploadFunctionModeEnum    `queryParam:"style=form,explode=true,name=Mode"`
+	RequestBody UploadFunctionRequestBody `request:"mediaType=application/json"`
 	// The Amazon Resource Name (ARN) of the IAM role that Lambda assumes when it executes your function to access any other Amazon Web Services (AWS) resources.
 	Role string `queryParam:"style=form,explode=true,name=Role"`
 	// The runtime environment for the Lambda function you are uploading. Currently, Lambda supports only "nodejs" as the runtime.
 	Runtime UploadFunctionRuntimeEnum `queryParam:"style=form,explode=true,name=Runtime"`
 	// The function execution time at which Lambda should terminate the function. Because the execution time has cost implications, we recommend you set this value based on your expected execution time. The default is 3 seconds.
-	Timeout *int64 `queryParam:"style=form,explode=true,name=Timeout"`
-}
-
-type UploadFunctionHeaders struct {
+	Timeout           *int64  `queryParam:"style=form,explode=true,name=Timeout"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -81,18 +81,6 @@ type UploadFunctionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UploadFunctionRequestBody struct {
-	// A .zip file containing your packaged source code. For more information about creating a .zip file, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events.html">AWS LambdaL How it Works</a> in the AWS Lambda Developer Guide.
-	FunctionZip string `json:"FunctionZip"`
-}
-
-type UploadFunctionRequest struct {
-	PathParams  UploadFunctionPathParams
-	QueryParams UploadFunctionQueryParams
-	Headers     UploadFunctionHeaders
-	Request     UploadFunctionRequestBody `request:"mediaType=application/json"`
 }
 
 type UploadFunctionResponse struct {

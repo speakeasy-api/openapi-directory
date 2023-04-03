@@ -8,23 +8,15 @@ import (
 )
 
 type GetMediaSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMediaPathParams struct {
-	// An id of a media resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetMediaQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetMediaRequest struct {
-	PathParams  GetMediaPathParams
-	QueryParams GetMediaQueryParams
-	Security    GetMediaSecurity
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// An id of a media resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetMediaResponse struct {

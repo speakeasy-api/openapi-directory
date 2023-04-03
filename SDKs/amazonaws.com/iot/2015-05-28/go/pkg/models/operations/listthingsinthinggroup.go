@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListThingsInThingGroupPathParams struct {
-	// The thing group name.
-	ThingGroupName string `pathParam:"style=simple,explode=false,name=thingGroupName"`
-}
-
-type ListThingsInThingGroupQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// When true, list things in this thing group and in all child groups as well.
-	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
-}
-
-type ListThingsInThingGroupHeaders struct {
+type ListThingsInThingGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListThingsInThingGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListThingsInThingGroupRequest struct {
-	PathParams  ListThingsInThingGroupPathParams
-	QueryParams ListThingsInThingGroupQueryParams
-	Headers     ListThingsInThingGroupHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// When true, list things in this thing group and in all child groups as well.
+	Recursive *bool `queryParam:"style=form,explode=true,name=recursive"`
+	// The thing group name.
+	ThingGroupName string `pathParam:"style=simple,explode=false,name=thingGroupName"`
 }
 
 type ListThingsInThingGroupResponse struct {

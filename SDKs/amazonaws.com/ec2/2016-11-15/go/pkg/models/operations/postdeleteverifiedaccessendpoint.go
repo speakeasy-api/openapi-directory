@@ -50,25 +50,17 @@ func (e *POSTDeleteVerifiedAccessEndpointVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type POSTDeleteVerifiedAccessEndpointQueryParams struct {
-	Action  POSTDeleteVerifiedAccessEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteVerifiedAccessEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteVerifiedAccessEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteVerifiedAccessEndpointRequest struct {
-	QueryParams POSTDeleteVerifiedAccessEndpointQueryParams
-	Headers     POSTDeleteVerifiedAccessEndpointHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteVerifiedAccessEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                      `request:"mediaType=text/xml"`
+	Version           POSTDeleteVerifiedAccessEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteVerifiedAccessEndpointResponse struct {

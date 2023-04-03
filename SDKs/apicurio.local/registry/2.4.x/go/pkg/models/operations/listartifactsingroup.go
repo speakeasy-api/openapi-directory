@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListArtifactsInGroupPathParams struct {
+type ListArtifactsInGroupRequest struct {
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type ListArtifactsInGroupQueryParams struct {
 	// The number of artifacts to return.  Defaults to 20.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// The number of artifacts to skip before starting the result set.  Defaults to 0.
@@ -25,11 +22,6 @@ type ListArtifactsInGroupQueryParams struct {
 	// * `createdOn`
 	//
 	Orderby *shared.SortByEnum `queryParam:"style=form,explode=true,name=orderby"`
-}
-
-type ListArtifactsInGroupRequest struct {
-	PathParams  ListArtifactsInGroupPathParams
-	QueryParams ListArtifactsInGroupQueryParams
 }
 
 type ListArtifactsInGroupResponse struct {

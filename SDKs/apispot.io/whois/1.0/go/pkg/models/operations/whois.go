@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type WhoisPathParams struct {
-	// Domain
-	Domain string `pathParam:"style=simple,explode=false,name=domain"`
-}
-
 // WhoisFormatEnum
 type WhoisFormatEnum string
 
@@ -40,13 +35,10 @@ func (e *WhoisFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type WhoisQueryParams struct {
-	Format *WhoisFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
 type WhoisRequest struct {
-	PathParams  WhoisPathParams
-	QueryParams WhoisQueryParams
+	// Domain
+	Domain string           `pathParam:"style=simple,explode=false,name=domain"`
+	Format *WhoisFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 type WhoisResponse struct {

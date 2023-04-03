@@ -40,7 +40,14 @@ func (e *ListAuditMitigationActionsTasksTaskStatusEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type ListAuditMitigationActionsTasksQueryParams struct {
+type ListAuditMitigationActionsTasksRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// Specify this filter to limit results to tasks that were applied to results for a specific audit.
 	AuditTaskID *string `queryParam:"style=form,explode=true,name=auditTaskId"`
 	// Specify this filter to limit results to tasks that were completed or canceled on or before a specific date and time.
@@ -55,21 +62,6 @@ type ListAuditMitigationActionsTasksQueryParams struct {
 	StartTime time.Time `queryParam:"style=form,explode=true,name=startTime"`
 	// Specify this filter to limit results to tasks that are in a specific state.
 	TaskStatus *ListAuditMitigationActionsTasksTaskStatusEnum `queryParam:"style=form,explode=true,name=taskStatus"`
-}
-
-type ListAuditMitigationActionsTasksHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListAuditMitigationActionsTasksRequest struct {
-	QueryParams ListAuditMitigationActionsTasksQueryParams
-	Headers     ListAuditMitigationActionsTasksHeaders
 }
 
 type ListAuditMitigationActionsTasksResponse struct {

@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type PostPathPathParams struct {
-	Path string `pathParam:"style=simple,explode=false,name=path"`
-}
-
-type PostPathQueryParams struct {
+type PostPathRequest struct {
 	Name           string `queryParam:"style=form,explode=true,name=:name"`
 	JcrPrimaryType string `queryParam:"style=form,explode=true,name=jcr:primaryType"`
-}
-
-type PostPathRequest struct {
-	PathParams  PostPathPathParams
-	QueryParams PostPathQueryParams
+	Path           string `pathParam:"style=simple,explode=false,name=path"`
 }
 
 type PostPathResponse struct {

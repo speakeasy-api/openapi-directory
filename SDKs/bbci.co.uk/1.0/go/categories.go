@@ -42,7 +42,7 @@ func (s *categories) GetCategories(ctx context.Context, request operations.GetCa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,14 +84,14 @@ func (s *categories) GetCategories(ctx context.Context, request operations.GetCa
 // Get sub-categories
 func (s *categories) GetSubCategories(ctx context.Context, request operations.GetSubCategoriesRequest) (*operations.GetSubCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

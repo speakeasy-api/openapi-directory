@@ -50,25 +50,17 @@ func (e *POSTCancelImageLaunchPermissionVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type POSTCancelImageLaunchPermissionQueryParams struct {
-	Action  POSTCancelImageLaunchPermissionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCancelImageLaunchPermissionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCancelImageLaunchPermissionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCancelImageLaunchPermissionRequest struct {
-	QueryParams POSTCancelImageLaunchPermissionQueryParams
-	Headers     POSTCancelImageLaunchPermissionHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCancelImageLaunchPermissionActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                     `request:"mediaType=text/xml"`
+	Version           POSTCancelImageLaunchPermissionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCancelImageLaunchPermissionResponse struct {

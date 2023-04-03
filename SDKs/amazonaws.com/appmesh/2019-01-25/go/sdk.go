@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // CreateGatewayRoute - <p>Creates a gateway route.</p> <p>A gateway route is attached to a virtual gateway and routes traffic to an existing virtual service. If a route matches a request, it can distribute traffic to a target virtual service.</p> <p>For more information about gateway routes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/gateway-routes.html">Gateway routes</a>.</p>
 func (s *SDK) CreateGatewayRoute(ctx context.Context, request operations.CreateGatewayRouteRequest) (*operations.CreateGatewayRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,9 +131,9 @@ func (s *SDK) CreateGatewayRoute(ctx context.Context, request operations.CreateG
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -256,7 +256,7 @@ func (s *SDK) CreateMesh(ctx context.Context, request operations.CreateMeshReque
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v20190125/meshes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -271,7 +271,7 @@ func (s *SDK) CreateMesh(ctx context.Context, request operations.CreateMeshReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -390,9 +390,9 @@ func (s *SDK) CreateMesh(ctx context.Context, request operations.CreateMeshReque
 // CreateRoute - <p>Creates a route that is associated with a virtual router.</p> <p> You can route several different protocols and define a retry policy for a route. Traffic can be routed to one or more virtual nodes.</p> <p>For more information about routes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html">Routes</a>.</p>
 func (s *SDK) CreateRoute(ctx context.Context, request operations.CreateRouteRequest) (*operations.CreateRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -407,9 +407,9 @@ func (s *SDK) CreateRoute(ctx context.Context, request operations.CreateRouteReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -530,9 +530,9 @@ func (s *SDK) CreateRoute(ctx context.Context, request operations.CreateRouteReq
 // CreateVirtualGateway - <p>Creates a virtual gateway.</p> <p>A virtual gateway allows resources outside your mesh to communicate to resources that are inside your mesh. The virtual gateway represents an Envoy proxy running in an Amazon ECS task, in a Kubernetes service, or on an Amazon EC2 instance. Unlike a virtual node, which represents an Envoy running with an application, a virtual gateway represents Envoy deployed by itself.</p> <p>For more information about virtual gateways, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">Virtual gateways</a>. </p>
 func (s *SDK) CreateVirtualGateway(ctx context.Context, request operations.CreateVirtualGatewayRequest) (*operations.CreateVirtualGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -547,9 +547,9 @@ func (s *SDK) CreateVirtualGateway(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -670,9 +670,9 @@ func (s *SDK) CreateVirtualGateway(ctx context.Context, request operations.Creat
 // CreateVirtualNode - <p>Creates a virtual node within a service mesh.</p> <p> A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment. When you create a virtual node, you can specify the service discovery information for your task group, and whether the proxy running in a task group will communicate with other proxies using Transport Layer Security (TLS).</p> <p>You define a <code>listener</code> for any inbound traffic that your virtual node expects. Any virtual service that your virtual node expects to communicate to is specified as a <code>backend</code>.</p> <p>The response metadata for your new virtual node contains the <code>arn</code> that is associated with the virtual node. Set this value to the full ARN; for example, <code>arn:aws:appmesh:us-west-2:123456789012:myMesh/default/virtualNode/myApp</code>) as the <code>APPMESH_RESOURCE_ARN</code> environment variable for your task group's Envoy proxy container in your task definition or pod spec. This is then mapped to the <code>node.id</code> and <code>node.cluster</code> Envoy parameters.</p> <note> <p>By default, App Mesh uses the name of the resource you specified in <code>APPMESH_RESOURCE_ARN</code> when Envoy is referring to itself in metrics and traces. You can override this behavior by setting the <code>APPMESH_RESOURCE_CLUSTER</code> environment variable with your own name.</p> </note> <p>For more information about virtual nodes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html">Virtual nodes</a>. You must be using <code>1.15.0</code> or later of the Envoy image when setting these variables. For more information aboutApp Mesh Envoy variables, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html">Envoy image</a> in the App Mesh User Guide.</p>
 func (s *SDK) CreateVirtualNode(ctx context.Context, request operations.CreateVirtualNodeRequest) (*operations.CreateVirtualNodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -687,9 +687,9 @@ func (s *SDK) CreateVirtualNode(ctx context.Context, request operations.CreateVi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -810,9 +810,9 @@ func (s *SDK) CreateVirtualNode(ctx context.Context, request operations.CreateVi
 // CreateVirtualRouter - <p>Creates a virtual router within a service mesh.</p> <p>Specify a <code>listener</code> for any inbound traffic that your virtual router receives. Create a virtual router for each protocol and port that you need to route. Virtual routers handle traffic for one or more virtual services within your mesh. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes.</p> <p>For more information about virtual routers, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html">Virtual routers</a>.</p>
 func (s *SDK) CreateVirtualRouter(ctx context.Context, request operations.CreateVirtualRouterRequest) (*operations.CreateVirtualRouterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -827,9 +827,9 @@ func (s *SDK) CreateVirtualRouter(ctx context.Context, request operations.Create
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -950,9 +950,9 @@ func (s *SDK) CreateVirtualRouter(ctx context.Context, request operations.Create
 // CreateVirtualService - <p>Creates a virtual service within a service mesh.</p> <p>A virtual service is an abstraction of a real service that is provided by a virtual node directly or indirectly by means of a virtual router. Dependent services call your virtual service by its <code>virtualServiceName</code>, and those requests are routed to the virtual node or virtual router that is specified as the provider for the virtual service.</p> <p>For more information about virtual services, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html">Virtual services</a>.</p>
 func (s *SDK) CreateVirtualService(ctx context.Context, request operations.CreateVirtualServiceRequest) (*operations.CreateVirtualServiceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -967,9 +967,9 @@ func (s *SDK) CreateVirtualService(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1090,16 +1090,16 @@ func (s *SDK) CreateVirtualService(ctx context.Context, request operations.Creat
 // DeleteGatewayRoute - Deletes an existing gateway route.
 func (s *SDK) DeleteGatewayRoute(ctx context.Context, request operations.DeleteGatewayRouteRequest) (*operations.DeleteGatewayRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes/{gatewayRouteName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes/{gatewayRouteName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1210,14 +1210,14 @@ func (s *SDK) DeleteGatewayRoute(ctx context.Context, request operations.DeleteG
 // DeleteMesh - <p>Deletes an existing service mesh.</p> <p>You must delete all resources (virtual services, routes, virtual routers, and virtual nodes) in the service mesh before you can delete the mesh itself.</p>
 func (s *SDK) DeleteMesh(ctx context.Context, request operations.DeleteMeshRequest) (*operations.DeleteMeshResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1326,16 +1326,16 @@ func (s *SDK) DeleteMesh(ctx context.Context, request operations.DeleteMeshReque
 // DeleteRoute - Deletes an existing route.
 func (s *SDK) DeleteRoute(ctx context.Context, request operations.DeleteRouteRequest) (*operations.DeleteRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1446,16 +1446,16 @@ func (s *SDK) DeleteRoute(ctx context.Context, request operations.DeleteRouteReq
 // DeleteVirtualGateway - Deletes an existing virtual gateway. You cannot delete a virtual gateway if any gateway routes are associated to it.
 func (s *SDK) DeleteVirtualGateway(ctx context.Context, request operations.DeleteVirtualGatewayRequest) (*operations.DeleteVirtualGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways/{virtualGatewayName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways/{virtualGatewayName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1566,16 +1566,16 @@ func (s *SDK) DeleteVirtualGateway(ctx context.Context, request operations.Delet
 // DeleteVirtualNode - <p>Deletes an existing virtual node.</p> <p>You must delete any virtual services that list a virtual node as a service provider before you can delete the virtual node itself.</p>
 func (s *SDK) DeleteVirtualNode(ctx context.Context, request operations.DeleteVirtualNodeRequest) (*operations.DeleteVirtualNodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes/{virtualNodeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes/{virtualNodeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1686,16 +1686,16 @@ func (s *SDK) DeleteVirtualNode(ctx context.Context, request operations.DeleteVi
 // DeleteVirtualRouter - <p>Deletes an existing virtual router.</p> <p>You must delete any routes associated with the virtual router before you can delete the router itself.</p>
 func (s *SDK) DeleteVirtualRouter(ctx context.Context, request operations.DeleteVirtualRouterRequest) (*operations.DeleteVirtualRouterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters/{virtualRouterName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters/{virtualRouterName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1806,16 +1806,16 @@ func (s *SDK) DeleteVirtualRouter(ctx context.Context, request operations.Delete
 // DeleteVirtualService - Deletes an existing virtual service.
 func (s *SDK) DeleteVirtualService(ctx context.Context, request operations.DeleteVirtualServiceRequest) (*operations.DeleteVirtualServiceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices/{virtualServiceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices/{virtualServiceName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1926,16 +1926,16 @@ func (s *SDK) DeleteVirtualService(ctx context.Context, request operations.Delet
 // DescribeGatewayRoute - Describes an existing gateway route.
 func (s *SDK) DescribeGatewayRoute(ctx context.Context, request operations.DescribeGatewayRouteRequest) (*operations.DescribeGatewayRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes/{gatewayRouteName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes/{gatewayRouteName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2036,16 +2036,16 @@ func (s *SDK) DescribeGatewayRoute(ctx context.Context, request operations.Descr
 // DescribeMesh - Describes an existing service mesh.
 func (s *SDK) DescribeMesh(ctx context.Context, request operations.DescribeMeshRequest) (*operations.DescribeMeshResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2146,16 +2146,16 @@ func (s *SDK) DescribeMesh(ctx context.Context, request operations.DescribeMeshR
 // DescribeRoute - Describes an existing route.
 func (s *SDK) DescribeRoute(ctx context.Context, request operations.DescribeRouteRequest) (*operations.DescribeRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2256,16 +2256,16 @@ func (s *SDK) DescribeRoute(ctx context.Context, request operations.DescribeRout
 // DescribeVirtualGateway - Describes an existing virtual gateway.
 func (s *SDK) DescribeVirtualGateway(ctx context.Context, request operations.DescribeVirtualGatewayRequest) (*operations.DescribeVirtualGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways/{virtualGatewayName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways/{virtualGatewayName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2366,16 +2366,16 @@ func (s *SDK) DescribeVirtualGateway(ctx context.Context, request operations.Des
 // DescribeVirtualNode - Describes an existing virtual node.
 func (s *SDK) DescribeVirtualNode(ctx context.Context, request operations.DescribeVirtualNodeRequest) (*operations.DescribeVirtualNodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes/{virtualNodeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes/{virtualNodeName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2476,16 +2476,16 @@ func (s *SDK) DescribeVirtualNode(ctx context.Context, request operations.Descri
 // DescribeVirtualRouter - Describes an existing virtual router.
 func (s *SDK) DescribeVirtualRouter(ctx context.Context, request operations.DescribeVirtualRouterRequest) (*operations.DescribeVirtualRouterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters/{virtualRouterName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters/{virtualRouterName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2586,16 +2586,16 @@ func (s *SDK) DescribeVirtualRouter(ctx context.Context, request operations.Desc
 // DescribeVirtualService - Describes an existing virtual service.
 func (s *SDK) DescribeVirtualService(ctx context.Context, request operations.DescribeVirtualServiceRequest) (*operations.DescribeVirtualServiceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices/{virtualServiceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices/{virtualServiceName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2696,16 +2696,16 @@ func (s *SDK) DescribeVirtualService(ctx context.Context, request operations.Des
 // ListGatewayRoutes - Returns a list of existing gateway routes that are associated to a virtual gateway.
 func (s *SDK) ListGatewayRoutes(ctx context.Context, request operations.ListGatewayRoutesRequest) (*operations.ListGatewayRoutesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2813,9 +2813,9 @@ func (s *SDK) ListMeshes(ctx context.Context, request operations.ListMeshesReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2916,16 +2916,16 @@ func (s *SDK) ListMeshes(ctx context.Context, request operations.ListMeshesReque
 // ListRoutes - Returns a list of existing routes in a service mesh.
 func (s *SDK) ListRoutes(ctx context.Context, request operations.ListRoutesRequest) (*operations.ListRoutesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3033,9 +3033,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3136,16 +3136,16 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListVirtualGateways - Returns a list of existing virtual gateways in a service mesh.
 func (s *SDK) ListVirtualGateways(ctx context.Context, request operations.ListVirtualGatewaysRequest) (*operations.ListVirtualGatewaysResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3246,16 +3246,16 @@ func (s *SDK) ListVirtualGateways(ctx context.Context, request operations.ListVi
 // ListVirtualNodes - Returns a list of existing virtual nodes.
 func (s *SDK) ListVirtualNodes(ctx context.Context, request operations.ListVirtualNodesRequest) (*operations.ListVirtualNodesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3356,16 +3356,16 @@ func (s *SDK) ListVirtualNodes(ctx context.Context, request operations.ListVirtu
 // ListVirtualRouters - Returns a list of existing virtual routers in a service mesh.
 func (s *SDK) ListVirtualRouters(ctx context.Context, request operations.ListVirtualRoutersRequest) (*operations.ListVirtualRoutersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3466,16 +3466,16 @@ func (s *SDK) ListVirtualRouters(ctx context.Context, request operations.ListVir
 // ListVirtualServices - Returns a list of existing virtual services in a service mesh.
 func (s *SDK) ListVirtualServices(ctx context.Context, request operations.ListVirtualServicesRequest) (*operations.ListVirtualServicesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3578,7 +3578,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v20190125/tag#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3593,9 +3593,9 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3708,7 +3708,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v20190125/untag#resourceArn"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3723,9 +3723,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3826,9 +3826,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateGatewayRoute - Updates an existing gateway route that is associated to a specified virtual gateway in a service mesh.
 func (s *SDK) UpdateGatewayRoute(ctx context.Context, request operations.UpdateGatewayRouteRequest) (*operations.UpdateGatewayRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes/{gatewayRouteName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateway/{virtualGatewayName}/gatewayRoutes/{gatewayRouteName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3843,9 +3843,9 @@ func (s *SDK) UpdateGatewayRoute(ctx context.Context, request operations.UpdateG
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3966,9 +3966,9 @@ func (s *SDK) UpdateGatewayRoute(ctx context.Context, request operations.UpdateG
 // UpdateMesh - Updates an existing service mesh.
 func (s *SDK) UpdateMesh(ctx context.Context, request operations.UpdateMeshRequest) (*operations.UpdateMeshResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3983,7 +3983,7 @@ func (s *SDK) UpdateMesh(ctx context.Context, request operations.UpdateMeshReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -4092,9 +4092,9 @@ func (s *SDK) UpdateMesh(ctx context.Context, request operations.UpdateMeshReque
 // UpdateRoute - Updates an existing route for a specified service mesh and virtual router.
 func (s *SDK) UpdateRoute(ctx context.Context, request operations.UpdateRouteRequest) (*operations.UpdateRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouter/{virtualRouterName}/routes/{routeName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4109,9 +4109,9 @@ func (s *SDK) UpdateRoute(ctx context.Context, request operations.UpdateRouteReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4232,9 +4232,9 @@ func (s *SDK) UpdateRoute(ctx context.Context, request operations.UpdateRouteReq
 // UpdateVirtualGateway - Updates an existing virtual gateway in a specified service mesh.
 func (s *SDK) UpdateVirtualGateway(ctx context.Context, request operations.UpdateVirtualGatewayRequest) (*operations.UpdateVirtualGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways/{virtualGatewayName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualGateways/{virtualGatewayName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4249,9 +4249,9 @@ func (s *SDK) UpdateVirtualGateway(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4372,9 +4372,9 @@ func (s *SDK) UpdateVirtualGateway(ctx context.Context, request operations.Updat
 // UpdateVirtualNode - Updates an existing virtual node in a specified service mesh.
 func (s *SDK) UpdateVirtualNode(ctx context.Context, request operations.UpdateVirtualNodeRequest) (*operations.UpdateVirtualNodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes/{virtualNodeName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualNodes/{virtualNodeName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4389,9 +4389,9 @@ func (s *SDK) UpdateVirtualNode(ctx context.Context, request operations.UpdateVi
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4512,9 +4512,9 @@ func (s *SDK) UpdateVirtualNode(ctx context.Context, request operations.UpdateVi
 // UpdateVirtualRouter - Updates an existing virtual router in a specified service mesh.
 func (s *SDK) UpdateVirtualRouter(ctx context.Context, request operations.UpdateVirtualRouterRequest) (*operations.UpdateVirtualRouterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters/{virtualRouterName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualRouters/{virtualRouterName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4529,9 +4529,9 @@ func (s *SDK) UpdateVirtualRouter(ctx context.Context, request operations.Update
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -4652,9 +4652,9 @@ func (s *SDK) UpdateVirtualRouter(ctx context.Context, request operations.Update
 // UpdateVirtualService - Updates an existing virtual service in a specified service mesh.
 func (s *SDK) UpdateVirtualService(ctx context.Context, request operations.UpdateVirtualServiceRequest) (*operations.UpdateVirtualServiceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices/{virtualServiceName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v20190125/meshes/{meshName}/virtualServices/{virtualServiceName}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -4669,9 +4669,9 @@ func (s *SDK) UpdateVirtualService(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

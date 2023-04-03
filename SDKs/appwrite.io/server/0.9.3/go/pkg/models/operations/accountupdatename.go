@@ -8,18 +8,13 @@ import (
 )
 
 type AccountUpdateNameSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountUpdateNameRequestBody struct {
 	// User name. Max length: 128 chars.
 	Name string `json:"name"`
-}
-
-type AccountUpdateNameRequest struct {
-	Request  *AccountUpdateNameRequestBody `request:"mediaType=application/json"`
-	Security AccountUpdateNameSecurity
 }
 
 type AccountUpdateNameResponse struct {

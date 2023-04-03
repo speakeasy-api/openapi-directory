@@ -6,32 +6,22 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type CrashesListSessionLogsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashesListSessionLogsPathParams struct {
+type CrashesListSessionLogsRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The id of the a crash
 	CrashID string `pathParam:"style=simple,explode=false,name=crash_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashesListSessionLogsQueryParams struct {
 	// Date of data requested
 	Date *time.Time `queryParam:"style=form,explode=true,name=date"`
-}
-
-type CrashesListSessionLogsRequest struct {
-	PathParams  CrashesListSessionLogsPathParams
-	QueryParams CrashesListSessionLogsQueryParams
-	Security    CrashesListSessionLogsSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type CrashesListSessionLogsDefaultApplicationJSONErrorCodeEnum string

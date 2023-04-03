@@ -35,11 +35,11 @@ func newDriveGroups(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // DriveGroupsAdd - Create DriveGroup
 // Create DriveGroup
-func (s *driveGroups) DriveGroupsAdd(ctx context.Context, request operations.DriveGroupsAddRequest) (*operations.DriveGroupsAddResponse, error) {
+func (s *driveGroups) DriveGroupsAdd(ctx context.Context, request operations.DriveGroupsAddRequest, security operations.DriveGroupsAddSecurity) (*operations.DriveGroupsAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/drive-groups"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DriveGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -54,13 +54,13 @@ func (s *driveGroups) DriveGroupsAdd(ctx context.Context, request operations.Dri
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -156,7 +156,7 @@ func (s *driveGroups) DriveGroupsAdd(ctx context.Context, request operations.Dri
 
 // DriveGroupsAll - List DriveGroups
 // List DriveGroups
-func (s *driveGroups) DriveGroupsAll(ctx context.Context, request operations.DriveGroupsAllRequest) (*operations.DriveGroupsAllResponse, error) {
+func (s *driveGroups) DriveGroupsAll(ctx context.Context, request operations.DriveGroupsAllRequest, security operations.DriveGroupsAllSecurity) (*operations.DriveGroupsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/file-storage/drive-groups"
 
@@ -165,13 +165,13 @@ func (s *driveGroups) DriveGroupsAll(ctx context.Context, request operations.Dri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -267,22 +267,22 @@ func (s *driveGroups) DriveGroupsAll(ctx context.Context, request operations.Dri
 
 // DriveGroupsDelete - Delete DriveGroup
 // Delete DriveGroup
-func (s *driveGroups) DriveGroupsDelete(ctx context.Context, request operations.DriveGroupsDeleteRequest) (*operations.DriveGroupsDeleteResponse, error) {
+func (s *driveGroups) DriveGroupsDelete(ctx context.Context, request operations.DriveGroupsDeleteRequest, security operations.DriveGroupsDeleteSecurity) (*operations.DriveGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drive-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drive-groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -378,22 +378,22 @@ func (s *driveGroups) DriveGroupsDelete(ctx context.Context, request operations.
 
 // DriveGroupsOne - Get DriveGroup
 // Get DriveGroup
-func (s *driveGroups) DriveGroupsOne(ctx context.Context, request operations.DriveGroupsOneRequest) (*operations.DriveGroupsOneResponse, error) {
+func (s *driveGroups) DriveGroupsOne(ctx context.Context, request operations.DriveGroupsOneRequest, security operations.DriveGroupsOneSecurity) (*operations.DriveGroupsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drive-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drive-groups/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -489,11 +489,11 @@ func (s *driveGroups) DriveGroupsOne(ctx context.Context, request operations.Dri
 
 // DriveGroupsUpdate - Update DriveGroup
 // Update DriveGroup
-func (s *driveGroups) DriveGroupsUpdate(ctx context.Context, request operations.DriveGroupsUpdateRequest) (*operations.DriveGroupsUpdateResponse, error) {
+func (s *driveGroups) DriveGroupsUpdate(ctx context.Context, request operations.DriveGroupsUpdateRequest, security operations.DriveGroupsUpdateSecurity) (*operations.DriveGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drive-groups/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/file-storage/drive-groups/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DriveGroupInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -508,13 +508,13 @@ func (s *driveGroups) DriveGroupsUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

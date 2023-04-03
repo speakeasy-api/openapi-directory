@@ -4,31 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AccountCreateOAuth2SessionSecurity struct {
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AccountCreateOAuth2SessionPathParams struct {
-	// OAuth2 Provider. Currently, supported providers are: amazon, apple, bitbucket, bitly, box, discord, dropbox, facebook, github, gitlab, google, linkedin, microsoft, paypal, paypalSandbox, salesforce, slack, spotify, tradeshift, tradeshiftBox, twitch, vk, yahoo, yandex, wordpress.
-	Provider string `pathParam:"style=simple,explode=false,name=provider"`
-}
-
-type AccountCreateOAuth2SessionQueryParams struct {
+type AccountCreateOAuth2SessionRequest struct {
 	// URL to redirect back to your app after a failed login attempt.  Only URLs from hostnames in your project platform list are allowed. This requirement helps to prevent an [open redirect](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) attack against your project API.
 	Failure *string `queryParam:"style=form,explode=true,name=failure"`
+	// OAuth2 Provider. Currently, supported providers are: amazon, apple, bitbucket, bitly, box, discord, dropbox, facebook, github, gitlab, google, linkedin, microsoft, paypal, paypalSandbox, salesforce, slack, spotify, tradeshift, tradeshiftBox, twitch, vk, yahoo, yandex, wordpress.
+	Provider string `pathParam:"style=simple,explode=false,name=provider"`
 	// A list of custom OAuth2 scopes. Check each provider internal docs for a list of supported scopes.
 	Scopes []string `queryParam:"style=form,explode=true,name=scopes"`
 	// URL to redirect back to your app after a successful login attempt.  Only URLs from hostnames in your project platform list are allowed. This requirement helps to prevent an [open redirect](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) attack against your project API.
 	Success *string `queryParam:"style=form,explode=true,name=success"`
-}
-
-type AccountCreateOAuth2SessionRequest struct {
-	PathParams  AccountCreateOAuth2SessionPathParams
-	QueryParams AccountCreateOAuth2SessionQueryParams
-	Security    AccountCreateOAuth2SessionSecurity
 }
 
 type AccountCreateOAuth2SessionResponse struct {

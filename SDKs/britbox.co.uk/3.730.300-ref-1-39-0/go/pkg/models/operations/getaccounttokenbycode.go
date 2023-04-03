@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountTokenByCodeQueryParams struct {
+type GetAccountTokenByCodeRequest struct {
+	// The device id e.g. serial number and authorization code.
+	AccountTokenByCodeRequest shared.AccountTokenByCodeRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type GetAccountTokenByCodeQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetAccountTokenByCodeRequest struct {
-	QueryParams GetAccountTokenByCodeQueryParams
-	// The device id e.g. serial number and authorization code.
-	Request shared.AccountTokenByCodeRequest `request:"mediaType=application/json"`
 }
 
 type GetAccountTokenByCodeResponse struct {

@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteRoutePathParams struct {
-	// The name of the service mesh in which to delete the route.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-	// The name of the route to delete.
-	RouteName string `pathParam:"style=simple,explode=false,name=routeName"`
-	// The name of the virtual router in which to delete the route.
-	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
-}
-
-type DeleteRouteHeaders struct {
+type DeleteRouteRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type DeleteRouteHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRouteRequest struct {
-	PathParams DeleteRoutePathParams
-	Headers    DeleteRouteHeaders
+	// The name of the service mesh in which to delete the route.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
+	// The name of the route to delete.
+	RouteName string `pathParam:"style=simple,explode=false,name=routeName"`
+	// The name of the virtual router in which to delete the route.
+	VirtualRouterName string `pathParam:"style=simple,explode=false,name=virtualRouterName"`
 }
 
 type DeleteRouteResponse struct {

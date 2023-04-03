@@ -50,28 +50,20 @@ func (e *GETCancelUpdateStackVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCancelUpdateStackQueryParams struct {
+type GETCancelUpdateStackRequest struct {
 	Action GETCancelUpdateStackActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to retry requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation successfully received them.
 	ClientRequestToken *string `queryParam:"style=form,explode=true,name=ClientRequestToken"`
 	// The name or the unique stack ID that's associated with the stack.
-	StackName string                          `queryParam:"style=form,explode=true,name=StackName"`
-	Version   GETCancelUpdateStackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelUpdateStackHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCancelUpdateStackRequest struct {
-	QueryParams GETCancelUpdateStackQueryParams
-	Headers     GETCancelUpdateStackHeaders
+	StackName         string                          `queryParam:"style=form,explode=true,name=StackName"`
+	Version           GETCancelUpdateStackVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCancelUpdateStackResponse struct {

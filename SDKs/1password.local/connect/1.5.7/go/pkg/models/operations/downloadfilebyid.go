@@ -8,21 +8,16 @@ import (
 )
 
 type DownloadFileByIDSecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type DownloadFileByIDPathParams struct {
+type DownloadFileByIDRequest struct {
 	// UUID of the file to get content from
 	FileUUID string `pathParam:"style=simple,explode=false,name=fileUuid"`
 	// The UUID of the Item the File is in
 	ItemUUID string `pathParam:"style=simple,explode=false,name=itemUuid"`
 	// The UUID of the Vault the item is in
 	VaultUUID string `pathParam:"style=simple,explode=false,name=vaultUuid"`
-}
-
-type DownloadFileByIDRequest struct {
-	PathParams DownloadFileByIDPathParams
-	Security   DownloadFileByIDSecurity
 }
 
 type DownloadFileByIDResponse struct {

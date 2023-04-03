@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutRegistryNamespacesNamespacePathParams struct {
-	// The name for your namespace to create your private Docker images registry in Bluemix. You cannot change the name afterward. The namespace can be 4-30 characters long, must start with at least one letter or number, and can only contain lowercase letters, numbers or underscores (_). You can test the availability of your namespace by calling the `GET /registry/namespaces/<namespace>` endpoint. When a HTTP code `404 Not Found` is returned, the namespace is available in Bluemix.
-	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-}
-
-type PutRegistryNamespacesNamespaceHeaders struct {
+type PutRegistryNamespacesNamespaceRequest struct {
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PutRegistryNamespacesNamespaceRequest struct {
-	PathParams PutRegistryNamespacesNamespacePathParams
-	Headers    PutRegistryNamespacesNamespaceHeaders
+	// The name for your namespace to create your private Docker images registry in Bluemix. You cannot change the name afterward. The namespace can be 4-30 characters long, must start with at least one letter or number, and can only contain lowercase letters, numbers or underscores (_). You can test the availability of your namespace by calling the `GET /registry/namespaces/<namespace>` endpoint. When a HTTP code `404 Not Found` is returned, the namespace is available in Bluemix.
+	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
 }
 
 type PutRegistryNamespacesNamespaceResponse struct {

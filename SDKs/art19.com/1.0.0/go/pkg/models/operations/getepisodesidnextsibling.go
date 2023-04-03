@@ -8,24 +8,15 @@ import (
 )
 
 type GetEpisodesIDNextSiblingSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetEpisodesIDNextSiblingPathParams struct {
-	// The ID of the episode to find the one episode released right after it.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetEpisodesIDNextSiblingQueryParams struct {
-	// If `true`, get the next released and published episode with an available media file.
-	//
-	Rss *bool `queryParam:"style=form,explode=true,name=rss"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetEpisodesIDNextSiblingRequest struct {
-	PathParams  GetEpisodesIDNextSiblingPathParams
-	QueryParams GetEpisodesIDNextSiblingQueryParams
-	Security    GetEpisodesIDNextSiblingSecurity
+	// The ID of the episode to find the one episode released right after it.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// If `true`, get the next released and published episode with an available media file.
+	//
+	Rss *bool `queryParam:"style=form,explode=true,name=rss"`
 }
 
 // GetEpisodesIDNextSibling200ApplicationVndAPIPlusJSON - Success

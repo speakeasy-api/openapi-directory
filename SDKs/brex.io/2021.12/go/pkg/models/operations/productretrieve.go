@@ -7,21 +7,15 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ProductRetrieveSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ProductRetrievePathParams struct {
-	// ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type ProductRetrieveRequest struct {
-	PathParams ProductRetrievePathParams
-	Security   ProductRetrieveSecurity
+	// ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // ProductRetrieveDefaultApplicationJSON - Detailed information about the error

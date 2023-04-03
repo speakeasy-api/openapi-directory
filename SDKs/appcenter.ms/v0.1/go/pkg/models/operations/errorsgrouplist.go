@@ -6,19 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type ErrorsGroupListSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsGroupListPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ErrorsGroupListErrorTypeEnum - Type of error (handled vs unhandled), including All
@@ -48,27 +40,25 @@ func (e *ErrorsGroupListErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ErrorsGroupListQueryParams struct {
+type ErrorsGroupListRequest struct {
 	// controls the sorting order and sorting based on which column
 	DollarOrderby *string `queryParam:"style=form,explode=true,name=$orderby"`
 	// The maximum number of results to return. (0 will fetch all results till the max number.)
 	DollarTop *int64 `queryParam:"style=form,explode=true,name=$top"`
 	// app build
 	AppBuild *string `queryParam:"style=form,explode=true,name=app_build"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// Last date time in data in ISO 8601 date time format
 	End *time.Time `queryParam:"style=form,explode=true,name=end"`
 	// Type of error (handled vs unhandled), including All
 	ErrorType  *ErrorsGroupListErrorTypeEnum `queryParam:"style=form,explode=true,name=errorType"`
 	GroupState *string                       `queryParam:"style=form,explode=true,name=groupState"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// Start date time in data in ISO 8601 date time format
 	Start   time.Time `queryParam:"style=form,explode=true,name=start"`
 	Version *string   `queryParam:"style=form,explode=true,name=version"`
-}
-
-type ErrorsGroupListRequest struct {
-	PathParams  ErrorsGroupListPathParams
-	QueryParams ErrorsGroupListQueryParams
-	Security    ErrorsGroupListSecurity
 }
 
 type ErrorsGroupListDefaultApplicationJSONErrorCodeEnum string

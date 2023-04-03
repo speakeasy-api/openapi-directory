@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteActionTargetPathParams struct {
+type DeleteActionTargetRequest struct {
 	// The Amazon Resource Name (ARN) of the custom action target to delete.
-	ActionTargetArn string `pathParam:"style=simple,explode=false,name=ActionTargetArn"`
-}
-
-type DeleteActionTargetHeaders struct {
+	ActionTargetArn   string  `pathParam:"style=simple,explode=false,name=ActionTargetArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DeleteActionTargetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteActionTargetRequest struct {
-	PathParams DeleteActionTargetPathParams
-	Headers    DeleteActionTargetHeaders
 }
 
 type DeleteActionTargetResponse struct {

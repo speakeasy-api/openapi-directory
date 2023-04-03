@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateResourceDefinitionVersionPathParams struct {
-	// The ID of the resource definition.
-	ResourceDefinitionID string `pathParam:"style=simple,explode=false,name=ResourceDefinitionId"`
-}
-
-type CreateResourceDefinitionVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// A client token used to correlate requests and responses.
-	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
-}
-
 type CreateResourceDefinitionVersionRequestBody struct {
 	// A list of resources.
 	Resources []shared.Resource `json:"Resources,omitempty"`
 }
 
 type CreateResourceDefinitionVersionRequest struct {
-	PathParams CreateResourceDefinitionVersionPathParams
-	Headers    CreateResourceDefinitionVersionHeaders
-	Request    CreateResourceDefinitionVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody CreateResourceDefinitionVersionRequestBody `request:"mediaType=application/json"`
+	// The ID of the resource definition.
+	ResourceDefinitionID string  `pathParam:"style=simple,explode=false,name=ResourceDefinitionId"`
+	XAmzAlgorithm        *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// A client token used to correlate requests and responses.
+	XAmznClientToken *string `header:"style=simple,explode=false,name=X-Amzn-Client-Token"`
 }
 
 type CreateResourceDefinitionVersionResponse struct {

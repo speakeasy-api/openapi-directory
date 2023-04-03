@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GenerateDownloadURLForZipArchiveHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
 type GenerateDownloadURLForZipArchiveRequest struct {
-	Headers GenerateDownloadURLForZipArchiveHeaders
-	Request shared.ZipDownloadRequest `request:"mediaType=application/json"`
+	// Authentication token
+	XSdsAuthToken      *string                   `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
+	ZipDownloadRequest shared.ZipDownloadRequest `request:"mediaType=application/json"`
 }
 
 type GenerateDownloadURLForZipArchiveResponse struct {

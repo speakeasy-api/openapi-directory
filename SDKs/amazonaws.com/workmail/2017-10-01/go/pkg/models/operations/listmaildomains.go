@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMailDomainsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListMailDomainsXAmzTargetEnum
 type ListMailDomainsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListMailDomainsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListMailDomainsHeaders struct {
+type ListMailDomainsRequest struct {
+	ListMailDomainsRequest shared.ListMailDomainsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                       `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListMailDomainsHeaders struct {
 	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListMailDomainsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListMailDomainsRequest struct {
-	QueryParams ListMailDomainsQueryParams
-	Headers     ListMailDomainsHeaders
-	Request     shared.ListMailDomainsRequest `request:"mediaType=application/json"`
 }
 
 type ListMailDomainsResponse struct {

@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTeamQueryParams struct {
+// UpdateTeamRequestBodyInput - The team to update.
+type UpdateTeamRequestBodyInput struct {
+	Data *shared.TeamRequestInput `json:"data,omitempty"`
+}
+
+type UpdateTeamRequest struct {
+	// The team to update.
+	RequestBody UpdateTeamRequestBodyInput `request:"mediaType=application/json"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,17 +29,6 @@ type UpdateTeamQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// UpdateTeamRequestBodyInput - The team to update.
-type UpdateTeamRequestBodyInput struct {
-	Data *shared.TeamRequestInput `json:"data,omitempty"`
-}
-
-type UpdateTeamRequest struct {
-	QueryParams UpdateTeamQueryParams
-	// The team to update.
-	Request UpdateTeamRequestBodyInput `request:"mediaType=application/json"`
 }
 
 // UpdateTeam200ApplicationJSON - Successfully updated the team.

@@ -35,14 +35,14 @@ func newProgrammesTLEOs(defaultClient, securityClient HTTPClient, serverURL, lan
 // Get broadcasts by channel
 func (s *programmesTLEOs) GetBroadcastsByChannel(ctx context.Context, request operations.GetBroadcastsByChannelRequest) (*operations.GetBroadcastsByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/broadcasts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/broadcasts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -84,14 +84,14 @@ func (s *programmesTLEOs) GetBroadcastsByChannel(ctx context.Context, request op
 // Get the editorial highlights of a given category in TV & iPlayer.
 func (s *programmesTLEOs) GetHighlightsByCategory(ctx context.Context, request operations.GetHighlightsByCategoryRequest) (*operations.GetHighlightsByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/highlights", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/highlights", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -140,7 +140,7 @@ func (s *programmesTLEOs) GetProgrammeHighlights(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -182,14 +182,14 @@ func (s *programmesTLEOs) GetProgrammeHighlights(ctx context.Context, request op
 // Get the list of all the Programmes (TLEOs) for a given category in TV & iPlayer.
 func (s *programmesTLEOs) GetProgrammesByCategory(ctx context.Context, request operations.GetProgrammesByCategoryRequest) (*operations.GetProgrammesByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/programmes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}/programmes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -231,14 +231,14 @@ func (s *programmesTLEOs) GetProgrammesByCategory(ctx context.Context, request o
 // Get programmes by channel
 func (s *programmesTLEOs) GetProgrammesByChannel(ctx context.Context, request operations.GetProgrammesByChannelRequest) (*operations.GetProgrammesByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/programmes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel}/programmes", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -280,14 +280,14 @@ func (s *programmesTLEOs) GetProgrammesByChannel(ctx context.Context, request op
 // Get the programme for a given programme identifier.
 func (s *programmesTLEOs) GetProgrammesByParentPID(ctx context.Context, request operations.GetProgrammesByParentPIDRequest) (*operations.GetProgrammesByParentPIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/programmes/{pid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/programmes/{pid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

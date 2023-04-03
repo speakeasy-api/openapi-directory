@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UsersGetForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type UsersGetForOrgPathParams struct {
+type UsersGetForOrgRequest struct {
 	// The organization's name
 	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 	// The slug name of the user
 	UserName string `pathParam:"style=simple,explode=false,name=user_name"`
-}
-
-type UsersGetForOrgRequest struct {
-	PathParams UsersGetForOrgPathParams
-	Security   UsersGetForOrgSecurity
 }
 
 type UsersGetForOrgDefaultApplicationJSONErrorCodeEnum string

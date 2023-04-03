@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ContentRssNewsArticlesPathParams struct {
-	// Zero-based pagination token for paging through result sets.
-	PageToken string `pathParam:"style=simple,explode=false,name=pageToken"`
-}
-
-type ContentRssNewsArticlesQueryParams struct {
+type ContentRssNewsArticlesRequest struct {
 	// Optionally filter response to only include news items in a certain category.
 	Categoryfilter *string `queryParam:"style=form,explode=true,name=categoryfilter"`
 	// Optionally include full content body for each news item.
 	Includebody *bool `queryParam:"style=form,explode=true,name=includebody"`
-}
-
-type ContentRssNewsArticlesRequest struct {
-	PathParams  ContentRssNewsArticlesPathParams
-	QueryParams ContentRssNewsArticlesQueryParams
+	// Zero-based pagination token for paging through result sets.
+	PageToken string `pathParam:"style=simple,explode=false,name=pageToken"`
 }
 
 // ContentRssNewsArticles200Wildcard - Look at the Response property for more information about the nature of this response

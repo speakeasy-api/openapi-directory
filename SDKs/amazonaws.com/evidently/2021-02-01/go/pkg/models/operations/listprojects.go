@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProjectsQueryParams struct {
-	// The maximum number of results to include in the response.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use when requesting the next set of results. You received this token from a previous <code>ListProjects</code> operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListProjectsHeaders struct {
+type ListProjectsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type ListProjectsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProjectsRequest struct {
-	QueryParams ListProjectsQueryParams
-	Headers     ListProjectsHeaders
+	// The maximum number of results to include in the response.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use when requesting the next set of results. You received this token from a previous <code>ListProjects</code> operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListProjectsResponse struct {

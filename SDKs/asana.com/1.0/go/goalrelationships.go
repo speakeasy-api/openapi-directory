@@ -39,9 +39,9 @@ func newGoalRelationships(defaultClient, securityClient HTTPClient, serverURL, l
 // Returns the newly created goal relationship record.
 func (s *goalRelationships) AddSupportingRelationship(ctx context.Context, request operations.AddSupportingRelationshipRequest) (*operations.AddSupportingRelationshipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/addSupportingRelationship", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/addSupportingRelationship", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -56,7 +56,7 @@ func (s *goalRelationships) AddSupportingRelationship(ctx context.Context, reque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,14 +116,14 @@ func (s *goalRelationships) AddSupportingRelationship(ctx context.Context, reque
 // Returns the complete updated goal relationship record for a single goal relationship.
 func (s *goalRelationships) GetGoalRelationship(ctx context.Context, request operations.GetGoalRelationshipRequest) (*operations.GetGoalRelationshipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goal_relationships/{goal_relationship_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goal_relationships/{goal_relationship_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -190,7 +190,7 @@ func (s *goalRelationships) GetGoalRelationships(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -250,9 +250,9 @@ func (s *goalRelationships) GetGoalRelationships(ctx context.Context, request op
 // Removes a goal relationship for a given parent goal.
 func (s *goalRelationships) RemoveSupportingRelationship(ctx context.Context, request operations.RemoveSupportingRelationshipRequest) (*operations.RemoveSupportingRelationshipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/removeSupportingRelationship", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/removeSupportingRelationship", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -267,7 +267,7 @@ func (s *goalRelationships) RemoveSupportingRelationship(ctx context.Context, re
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -331,9 +331,9 @@ func (s *goalRelationships) RemoveSupportingRelationship(ctx context.Context, re
 // Returns the complete updated goal relationship record.
 func (s *goalRelationships) UpdateGoalRelationship(ctx context.Context, request operations.UpdateGoalRelationshipRequest) (*operations.UpdateGoalRelationshipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goal_relationships/{goal_relationship_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/goal_relationships/{goal_relationship_gid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -348,7 +348,7 @@ func (s *goalRelationships) UpdateGoalRelationship(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

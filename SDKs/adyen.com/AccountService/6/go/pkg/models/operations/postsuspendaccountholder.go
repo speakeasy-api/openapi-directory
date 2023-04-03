@@ -8,13 +8,8 @@ import (
 )
 
 type PostSuspendAccountHolderSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostSuspendAccountHolderRequest struct {
-	Request  *shared.SuspendAccountHolderRequest `request:"mediaType=application/json"`
-	Security PostSuspendAccountHolderSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostSuspendAccountHolderResponse struct {

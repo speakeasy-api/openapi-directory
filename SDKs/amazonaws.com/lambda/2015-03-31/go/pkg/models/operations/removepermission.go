@@ -6,21 +6,15 @@ import (
 	"net/http"
 )
 
-type RemovePermissionPathParams struct {
+type RemovePermissionRequest struct {
 	// <p>The name of the Lambda function, version, or alias.</p> <p class="title"> <b>Name formats</b> </p> <ul> <li> <p> <b>Function name</b> – <code>my-function</code> (name-only), <code>my-function:v1</code> (with alias).</p> </li> <li> <p> <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:my-function</code>.</p> </li> <li> <p> <b>Partial ARN</b> – <code>123456789012:function:my-function</code>.</p> </li> </ul> <p>You can append a version number or alias to any of the formats. The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
 	FunctionName string `pathParam:"style=simple,explode=false,name=FunctionName"`
-	// Statement ID of the permission to remove.
-	StatementID string `pathParam:"style=simple,explode=false,name=StatementId"`
-}
-
-type RemovePermissionQueryParams struct {
 	// Specify a version or alias to remove permissions from a published version of the function.
 	Qualifier *string `queryParam:"style=form,explode=true,name=Qualifier"`
 	// Update the policy only if the revision ID matches the ID that's specified. Use this option to avoid modifying a policy that has changed since you last read it.
 	RevisionID *string `queryParam:"style=form,explode=true,name=RevisionId"`
-}
-
-type RemovePermissionHeaders struct {
+	// Statement ID of the permission to remove.
+	StatementID       string  `pathParam:"style=simple,explode=false,name=StatementId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -28,12 +22,6 @@ type RemovePermissionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type RemovePermissionRequest struct {
-	PathParams  RemovePermissionPathParams
-	QueryParams RemovePermissionQueryParams
-	Headers     RemovePermissionHeaders
 }
 
 type RemovePermissionResponse struct {

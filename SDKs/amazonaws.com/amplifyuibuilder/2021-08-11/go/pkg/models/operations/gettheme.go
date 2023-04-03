@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetThemePathParams struct {
-	// The unique ID of the Amplify app.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-	// The unique ID for the theme.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetThemeHeaders struct {
+type GetThemeRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetThemeHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetThemeRequest struct {
-	PathParams GetThemePathParams
-	Headers    GetThemeHeaders
+	// The unique ID of the Amplify app.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment that is part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The unique ID for the theme.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetThemeResponse struct {

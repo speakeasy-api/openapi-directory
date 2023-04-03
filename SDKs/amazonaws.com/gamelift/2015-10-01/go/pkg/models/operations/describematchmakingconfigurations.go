@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeMatchmakingConfigurationsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeMatchmakingConfigurationsXAmzTargetEnum
 type DescribeMatchmakingConfigurationsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeMatchmakingConfigurationsXAmzTargetEnum) UnmarshalJSON(data []b
 	}
 }
 
-type DescribeMatchmakingConfigurationsHeaders struct {
+type DescribeMatchmakingConfigurationsRequest struct {
+	DescribeMatchmakingConfigurationsInput shared.DescribeMatchmakingConfigurationsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeMatchmakingConfigurationsHeaders struct {
 	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeMatchmakingConfigurationsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeMatchmakingConfigurationsRequest struct {
-	QueryParams DescribeMatchmakingConfigurationsQueryParams
-	Headers     DescribeMatchmakingConfigurationsHeaders
-	Request     shared.DescribeMatchmakingConfigurationsInput `request:"mediaType=application/json"`
 }
 
 type DescribeMatchmakingConfigurationsResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFleetAdvisorCollectorsQueryParams struct {
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeFleetAdvisorCollectorsXAmzTargetEnum
 type DescribeFleetAdvisorCollectorsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeFleetAdvisorCollectorsXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DescribeFleetAdvisorCollectorsHeaders struct {
+type DescribeFleetAdvisorCollectorsRequest struct {
+	DescribeFleetAdvisorCollectorsRequest shared.DescribeFleetAdvisorCollectorsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
+	// Pagination token
+	NextToken         *string                                      `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeFleetAdvisorCollectorsHeaders struct {
 	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeFleetAdvisorCollectorsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeFleetAdvisorCollectorsRequest struct {
-	QueryParams DescribeFleetAdvisorCollectorsQueryParams
-	Headers     DescribeFleetAdvisorCollectorsHeaders
-	Request     shared.DescribeFleetAdvisorCollectorsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeFleetAdvisorCollectorsResponse struct {

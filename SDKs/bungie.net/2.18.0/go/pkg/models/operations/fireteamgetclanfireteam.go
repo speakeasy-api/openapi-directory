@@ -8,19 +8,14 @@ import (
 )
 
 type FireteamGetClanFireteamSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FireteamGetClanFireteamPathParams struct {
+type FireteamGetClanFireteamRequest struct {
 	// The unique id of the fireteam.
 	FireteamID int64 `pathParam:"style=simple,explode=false,name=fireteamId"`
 	// The group id of the clan.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type FireteamGetClanFireteamRequest struct {
-	PathParams FireteamGetClanFireteamPathParams
-	Security   FireteamGetClanFireteamSecurity
 }
 
 // FireteamGetClanFireteam200Wildcard - Look at the Response property for more information about the nature of this response

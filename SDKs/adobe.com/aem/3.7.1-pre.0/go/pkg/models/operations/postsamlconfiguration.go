@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostSamlConfigurationQueryParams struct {
+type PostSamlConfigurationRequest struct {
 	DollarLocation              *string  `queryParam:"style=form,explode=true,name=$location"`
 	Action                      *string  `queryParam:"style=form,explode=true,name=action"`
 	AddGroupMemberships         *bool    `queryParam:"style=form,explode=true,name=addGroupMemberships"`
@@ -37,10 +37,6 @@ type PostSamlConfigurationQueryParams struct {
 	UseEncryption               *bool    `queryParam:"style=form,explode=true,name=useEncryption"`
 	UserIDAttribute             *string  `queryParam:"style=form,explode=true,name=userIDAttribute"`
 	UserIntermediatePath        *string  `queryParam:"style=form,explode=true,name=userIntermediatePath"`
-}
-
-type PostSamlConfigurationRequest struct {
-	QueryParams PostSamlConfigurationQueryParams
 }
 
 type PostSamlConfigurationResponse struct {

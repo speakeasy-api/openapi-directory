@@ -8,13 +8,8 @@ import (
 )
 
 type PostTransferInstrumentsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostTransferInstrumentsRequest struct {
-	Request  *shared.TransferInstrumentInfo `request:"mediaType=application/json"`
-	Security PostTransferInstrumentsSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostTransferInstrumentsResponse struct {

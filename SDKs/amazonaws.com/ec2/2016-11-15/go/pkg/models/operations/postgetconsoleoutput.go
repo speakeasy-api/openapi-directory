@@ -50,25 +50,17 @@ func (e *POSTGetConsoleOutputVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetConsoleOutputQueryParams struct {
-	Action  POSTGetConsoleOutputActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetConsoleOutputVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetConsoleOutputHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetConsoleOutputRequest struct {
-	QueryParams POSTGetConsoleOutputQueryParams
-	Headers     POSTGetConsoleOutputHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetConsoleOutputActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                          `request:"mediaType=text/xml"`
+	Version           POSTGetConsoleOutputVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetConsoleOutputResponse struct {

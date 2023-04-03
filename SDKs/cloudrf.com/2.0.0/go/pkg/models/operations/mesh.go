@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MeshSecurity struct {
-	APIKeyAuth shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=key"`
 }
 
-type MeshQueryParams struct {
+type MeshRequest struct {
 	// Super layer name eg. National_map
 	Name string `queryParam:"style=form,explode=true,name=name"`
 	// Network name eg. 100_BLUE_repeaters_nationwide
 	Network string `queryParam:"style=form,explode=true,name=network"`
-}
-
-type MeshRequest struct {
-	QueryParams MeshQueryParams
-	Security    MeshSecurity
 }
 
 type MeshResponse struct {

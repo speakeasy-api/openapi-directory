@@ -7,21 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRuleGroupsNamespacesPathParams struct {
-	// The ID of the workspace.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type ListRuleGroupsNamespacesQueryParams struct {
-	// Maximum results to return in response (default=100, maximum=1000).
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value will be returned.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-	// Pagination token to request the next page in a paginated list. This token is obtained from the output of the previous ListRuleGroupsNamespaces request.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListRuleGroupsNamespacesHeaders struct {
+type ListRuleGroupsNamespacesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +15,14 @@ type ListRuleGroupsNamespacesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRuleGroupsNamespacesRequest struct {
-	PathParams  ListRuleGroupsNamespacesPathParams
-	QueryParams ListRuleGroupsNamespacesQueryParams
-	Headers     ListRuleGroupsNamespacesHeaders
+	// Maximum results to return in response (default=100, maximum=1000).
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Optional filter for rule groups namespace name. Only the rule groups namespace that begin with this value will be returned.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// Pagination token to request the next page in a paginated list. This token is obtained from the output of the previous ListRuleGroupsNamespaces request.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ID of the workspace.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type ListRuleGroupsNamespacesResponse struct {

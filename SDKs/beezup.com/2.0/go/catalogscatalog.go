@@ -36,7 +36,7 @@ func newCatalogsCatalog(defaultClient, securityClient HTTPClient, serverURL, lan
 // The operation will give you all the operations you will be able to do on this store for this API.
 func (s *catalogsCatalog) CatalogStoreIndex(ctx context.Context, request operations.CatalogStoreIndexRequest) (*operations.CatalogStoreIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,9 +90,9 @@ func (s *catalogsCatalog) CatalogStoreIndex(ctx context.Context, request operati
 // CatalogChangeCatalogColumnUserName - Change Catalog Column User Name
 func (s *catalogsCatalog) CatalogChangeCatalogColumnUserName(ctx context.Context, request operations.CatalogChangeCatalogColumnUserNameRequest) (*operations.CatalogChangeCatalogColumnUserNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/catalogColumns/{columnId}/rename", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/catalogColumns/{columnId}/rename", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeUserColumnNameRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -127,6 +127,16 @@ func (s *catalogsCatalog) CatalogChangeCatalogColumnUserName(ctx context.Context
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ImportAlreadyInProgressResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ImportAlreadyInProgressResponse = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -141,16 +151,6 @@ func (s *catalogsCatalog) CatalogChangeCatalogColumnUserName(ctx context.Context
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ImportAlreadyInProgressResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ImportAlreadyInProgressResponse = out
-		}
 	}
 
 	return res, nil
@@ -159,9 +159,9 @@ func (s *catalogsCatalog) CatalogChangeCatalogColumnUserName(ctx context.Context
 // CatalogChangeCustomColumnExpression - Change custom column expression
 func (s *catalogsCatalog) CatalogChangeCustomColumnExpression(ctx context.Context, request operations.CatalogChangeCustomColumnExpressionRequest) (*operations.CatalogChangeCustomColumnExpressionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}/expression", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}/expression", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeCustomColumnExpressionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -196,6 +196,16 @@ func (s *catalogsCatalog) CatalogChangeCustomColumnExpression(ctx context.Contex
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ImportAlreadyInProgressResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ImportAlreadyInProgressResponse = out
+		}
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -210,16 +220,6 @@ func (s *catalogsCatalog) CatalogChangeCustomColumnExpression(ctx context.Contex
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ImportAlreadyInProgressResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ImportAlreadyInProgressResponse = out
-		}
 	}
 
 	return res, nil
@@ -228,9 +228,9 @@ func (s *catalogsCatalog) CatalogChangeCustomColumnExpression(ctx context.Contex
 // CatalogChangeCustomColumnUserName - Change Custom Column User Name
 func (s *catalogsCatalog) CatalogChangeCustomColumnUserName(ctx context.Context, request operations.CatalogChangeCustomColumnUserNameRequest) (*operations.CatalogChangeCustomColumnUserNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}/rename", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}/rename", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeUserColumnNameRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -265,6 +265,16 @@ func (s *catalogsCatalog) CatalogChangeCustomColumnUserName(ctx context.Context,
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ImportAlreadyInProgressResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ImportAlreadyInProgressResponse = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -279,16 +289,6 @@ func (s *catalogsCatalog) CatalogChangeCustomColumnUserName(ctx context.Context,
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ImportAlreadyInProgressResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ImportAlreadyInProgressResponse = out
-		}
 	}
 
 	return res, nil
@@ -297,9 +297,9 @@ func (s *catalogsCatalog) CatalogChangeCustomColumnUserName(ctx context.Context,
 // CatalogComputeExpression - Compute the expression for this catalog.
 func (s *catalogsCatalog) CatalogComputeExpression(ctx context.Context, request operations.CatalogComputeExpressionRequest) (*operations.CatalogComputeExpressionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/computeExpression", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/computeExpression", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ComputeExpressionRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -373,7 +373,7 @@ func (s *catalogsCatalog) CatalogComputeExpression(ctx context.Context, request 
 // CatalogDeleteCustomColumn - Delete custom column
 func (s *catalogsCatalog) CatalogDeleteCustomColumn(ctx context.Context, request operations.CatalogDeleteCustomColumnRequest) (*operations.CatalogDeleteCustomColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -424,7 +424,7 @@ func (s *catalogsCatalog) CatalogDeleteCustomColumn(ctx context.Context, request
 // CatalogGetCatalogColumns - Get catalog column list
 func (s *catalogsCatalog) CatalogGetCatalogColumns(ctx context.Context, request operations.CatalogGetCatalogColumnsRequest) (*operations.CatalogGetCatalogColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/catalogColumns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/catalogColumns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -480,14 +480,14 @@ func (s *catalogsCatalog) CatalogGetCatalogColumns(ctx context.Context, request 
 // CatalogGetCategories - Get category list
 func (s *catalogsCatalog) CatalogGetCategories(ctx context.Context, request operations.CatalogGetCategoriesRequest) (*operations.CatalogGetCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/categories", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/categories", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -540,7 +540,7 @@ func (s *catalogsCatalog) CatalogGetCategories(ctx context.Context, request oper
 // CatalogGetCustomColumnExpression - Get the encrypted custom column expression
 func (s *catalogsCatalog) CatalogGetCustomColumnExpression(ctx context.Context, request operations.CatalogGetCustomColumnExpressionRequest) (*operations.CatalogGetCustomColumnExpressionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}/expression", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}/expression", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -596,7 +596,7 @@ func (s *catalogsCatalog) CatalogGetCustomColumnExpression(ctx context.Context, 
 // CatalogGetCustomColumns - Get custom column list
 func (s *catalogsCatalog) CatalogGetCustomColumns(ctx context.Context, request operations.CatalogGetCustomColumnsRequest) (*operations.CatalogGetCustomColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +652,7 @@ func (s *catalogsCatalog) CatalogGetCustomColumns(ctx context.Context, request o
 // CatalogGetProductByProductID - Get product by ProductId
 func (s *catalogsCatalog) CatalogGetProductByProductID(ctx context.Context, request operations.CatalogGetProductByProductIDRequest) (*operations.CatalogGetProductByProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -708,14 +708,14 @@ func (s *catalogsCatalog) CatalogGetProductByProductID(ctx context.Context, requ
 // CatalogGetProductBySku - Get product by Sku
 func (s *catalogsCatalog) CatalogGetProductBySku(ctx context.Context, request operations.CatalogGetProductBySkuRequest) (*operations.CatalogGetProductBySkuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -768,9 +768,9 @@ func (s *catalogsCatalog) CatalogGetProductBySku(ctx context.Context, request op
 // CatalogGetProducts - Get product list
 func (s *catalogsCatalog) CatalogGetProducts(ctx context.Context, request operations.CatalogGetProductsRequest) (*operations.CatalogGetProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products/list", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetProductsRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -835,7 +835,7 @@ func (s *catalogsCatalog) CatalogGetProducts(ctx context.Context, request operat
 // We will return 10 products randomly selected with all product values
 func (s *catalogsCatalog) CatalogGetRandomProducts(ctx context.Context, request operations.CatalogGetRandomProductsRequest) (*operations.CatalogGetRandomProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products/random", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/products/random", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -891,9 +891,9 @@ func (s *catalogsCatalog) CatalogGetRandomProducts(ctx context.Context, request 
 // CatalogSaveCustomColumn - Create or replace a custom column
 func (s *catalogsCatalog) CatalogSaveCustomColumn(ctx context.Context, request operations.CatalogSaveCustomColumnRequest) (*operations.CatalogSaveCustomColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/customColumns/{columnId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCustomColumnRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -930,6 +930,16 @@ func (s *catalogsCatalog) CatalogSaveCustomColumn(ctx context.Context, request o
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ImportAlreadyInProgressResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ImportAlreadyInProgressResponse = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	default:
@@ -942,16 +952,6 @@ func (s *catalogsCatalog) CatalogSaveCustomColumn(ctx context.Context, request o
 
 			res.BeezUPCommonErrorResponseMessage = out
 		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ImportAlreadyInProgressResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ImportAlreadyInProgressResponse = out
-		}
 	}
 
 	return res, nil
@@ -960,7 +960,7 @@ func (s *catalogsCatalog) CatalogSaveCustomColumn(ctx context.Context, request o
 // ImportationGetManualUpdateLastInputConfig - Get the last input configuration
 func (s *catalogsCatalog) ImportationGetManualUpdateLastInputConfig(ctx context.Context, request operations.ImportationGetManualUpdateLastInputConfigRequest) (*operations.ImportationGetManualUpdateLastInputConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/inputConfiguration", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/inputConfiguration", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

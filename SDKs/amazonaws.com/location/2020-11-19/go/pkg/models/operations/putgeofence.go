@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutGeofencePathParams struct {
-	// The geofence collection to store the geofence in.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-	// An identifier for the geofence. For example, <code>ExampleGeofence-1</code>.
-	GeofenceID string `pathParam:"style=simple,explode=false,name=GeofenceId"`
-}
-
-type PutGeofenceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutGeofenceRequestBodyGeometry - <p>Contains the geofence geometry details.</p> <p>A geofence geometry is made up of either a polygon or a circle. Can be either a polygon or a circle. Including both will return a validation error.</p> <note> <p>Amazon Location doesn't currently support polygons with holes, multipolygons, polygons that are wound clockwise, or that cross the antimeridian. </p> </note>
 type PutGeofenceRequestBodyGeometry struct {
 	Circle  *shared.Circle `json:"Circle,omitempty"`
@@ -36,9 +19,18 @@ type PutGeofenceRequestBody struct {
 }
 
 type PutGeofenceRequest struct {
-	PathParams PutGeofencePathParams
-	Headers    PutGeofenceHeaders
-	Request    PutGeofenceRequestBody `request:"mediaType=application/json"`
+	// The geofence collection to store the geofence in.
+	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
+	// An identifier for the geofence. For example, <code>ExampleGeofence-1</code>.
+	GeofenceID        string                 `pathParam:"style=simple,explode=false,name=GeofenceId"`
+	RequestBody       PutGeofenceRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutGeofenceResponse struct {

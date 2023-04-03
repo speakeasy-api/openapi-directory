@@ -77,7 +77,7 @@ func (e *GETRestoreFromClusterSnapshotVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETRestoreFromClusterSnapshotQueryParams struct {
+type GETRestoreFromClusterSnapshotRequest struct {
 	Action GETRestoreFromClusterSnapshotActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Reserved.
 	AdditionalInfo *string `queryParam:"style=form,explode=true,name=AdditionalInfo"`
@@ -146,21 +146,13 @@ type GETRestoreFromClusterSnapshotQueryParams struct {
 	Version                      GETRestoreFromClusterSnapshotVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// <p>A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.</p> <p>Default: The default VPC security group is associated with the cluster.</p> <p>VPC security groups only apply to clusters in VPCs.</p>
 	VpcSecurityGroupIds []string `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
-}
-
-type GETRestoreFromClusterSnapshotHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRestoreFromClusterSnapshotRequest struct {
-	QueryParams GETRestoreFromClusterSnapshotQueryParams
-	Headers     GETRestoreFromClusterSnapshotHeaders
+	XAmzAlgorithm       *string  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRestoreFromClusterSnapshotResponse struct {

@@ -8,12 +8,14 @@ import (
 )
 
 type PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsPathParams struct {
+type PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest struct {
+	// The new issue comment object.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The issue id
 	IssueID string `pathParam:"style=simple,explode=false,name=issue_id"`
 	// This can either be the repository slug or the UUID of the repository,
@@ -24,13 +26,6 @@ type PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest struct {
-	PathParams PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsPathParams
-	// The new issue comment object.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsSecurity
 }
 
 type PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse struct {

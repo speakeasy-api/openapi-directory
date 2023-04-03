@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReferencePathParams struct {
-	// The reference's ID.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// The reference's store ID.
-	ReferenceStoreID string `pathParam:"style=simple,explode=false,name=referenceStoreId"`
-}
-
 // GetReferenceFileEnum - The file to retrieve.
 type GetReferenceFileEnum string
 
@@ -40,14 +33,7 @@ func (e *GetReferenceFileEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetReferenceQueryParams struct {
-	// The file to retrieve.
-	File *GetReferenceFileEnum `queryParam:"style=form,explode=true,name=file"`
-	// The part number to retrieve.
-	PartNumber int64 `queryParam:"style=form,explode=true,name=partNumber"`
-}
-
-type GetReferenceHeaders struct {
+type GetReferenceRequest struct {
 	// The range to retrieve.
 	Range             *string `header:"style=simple,explode=false,name=Range"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
@@ -57,12 +43,14 @@ type GetReferenceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReferenceRequest struct {
-	PathParams  GetReferencePathParams
-	QueryParams GetReferenceQueryParams
-	Headers     GetReferenceHeaders
+	// The file to retrieve.
+	File *GetReferenceFileEnum `queryParam:"style=form,explode=true,name=file"`
+	// The reference's ID.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The part number to retrieve.
+	PartNumber int64 `queryParam:"style=form,explode=true,name=partNumber"`
+	// The reference's store ID.
+	ReferenceStoreID string `pathParam:"style=simple,explode=false,name=referenceStoreId"`
 }
 
 type GetReferenceResponse struct {

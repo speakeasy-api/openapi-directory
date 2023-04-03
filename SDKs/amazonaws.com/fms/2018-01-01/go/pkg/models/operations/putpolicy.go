@@ -30,7 +30,8 @@ func (e *PutPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PutPolicyHeaders struct {
+type PutPolicyRequest struct {
+	PutPolicyRequest  shared.PutPolicyRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type PutPolicyHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        PutPolicyXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type PutPolicyRequest struct {
-	Headers PutPolicyHeaders
-	Request shared.PutPolicyRequest `request:"mediaType=application/json"`
 }
 
 type PutPolicyResponse struct {

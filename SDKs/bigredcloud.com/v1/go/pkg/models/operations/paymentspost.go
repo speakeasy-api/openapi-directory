@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PaymentsPostRequest struct {
-	// Information of Payment to create.
-	Request shared.PaymentDto `request:"mediaType=application/json"`
-}
 
 type PaymentsPostResponse struct {
 	ContentType string

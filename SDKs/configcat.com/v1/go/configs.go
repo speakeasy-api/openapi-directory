@@ -41,9 +41,9 @@ func newConfigs(defaultClient, securityClient HTTPClient, serverURL, language, s
 // identified by the `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *configs) CreateConfig(ctx context.Context, request operations.CreateConfigRequest) (*operations.CreateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/configs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/configs", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -110,7 +110,7 @@ func (s *configs) CreateConfig(ctx context.Context, request operations.CreateCon
 // This endpoint removes a Config identified by the `configId` parameter.
 func (s *configs) DeleteConfig(ctx context.Context, request operations.DeleteConfigRequest) (*operations.DeleteConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *configs) DeleteConfig(ctx context.Context, request operations.DeleteCon
 // identified by the `configId`.
 func (s *configs) GetConfig(ctx context.Context, request operations.GetConfigRequest) (*operations.GetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *configs) GetConfig(ctx context.Context, request operations.GetConfigReq
 // `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *configs) GetConfigs(ctx context.Context, request operations.GetConfigsRequest) (*operations.GetConfigsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/configs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/configs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -274,9 +274,9 @@ func (s *configs) GetConfigs(ctx context.Context, request operations.GetConfigsR
 // This endpoint updates a Config identified by the `configId` parameter.
 func (s *configs) UpdateConfig(ctx context.Context, request operations.UpdateConfigRequest) (*operations.UpdateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateConfigRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

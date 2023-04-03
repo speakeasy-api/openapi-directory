@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDashboardPathParams struct {
-	// The ID of the dashboard.
-	DashboardID string `pathParam:"style=simple,explode=false,name=dashboardId"`
-}
-
-type DescribeDashboardHeaders struct {
+type DescribeDashboardRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeDashboardHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDashboardRequest struct {
-	PathParams DescribeDashboardPathParams
-	Headers    DescribeDashboardHeaders
+	// The ID of the dashboard.
+	DashboardID string `pathParam:"style=simple,explode=false,name=dashboardId"`
 }
 
 type DescribeDashboardResponse struct {

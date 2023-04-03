@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListMailboxExportJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListMailboxExportJobsXAmzTargetEnum
 type ListMailboxExportJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListMailboxExportJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListMailboxExportJobsHeaders struct {
+type ListMailboxExportJobsRequest struct {
+	ListMailboxExportJobsRequest shared.ListMailboxExportJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                             `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListMailboxExportJobsHeaders struct {
 	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListMailboxExportJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListMailboxExportJobsRequest struct {
-	QueryParams ListMailboxExportJobsQueryParams
-	Headers     ListMailboxExportJobsHeaders
-	Request     shared.ListMailboxExportJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListMailboxExportJobsResponse struct {

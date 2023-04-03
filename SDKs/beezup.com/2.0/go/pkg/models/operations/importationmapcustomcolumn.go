@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationMapCustomColumnPathParams struct {
+type ImportationMapCustomColumnRequest struct {
 	// The custom column identifier
 	ColumnID string `pathParam:"style=simple,explode=false,name=columnId"`
 	// The execution identifier of you catalog importation
-	ExecutionID string `pathParam:"style=simple,explode=false,name=executionId"`
+	ExecutionID            string                        `pathParam:"style=simple,explode=false,name=executionId"`
+	MapBeezUPColumnRequest shared.MapBeezUPColumnRequest `request:"mediaType=application/json"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationMapCustomColumnRequest struct {
-	PathParams ImportationMapCustomColumnPathParams
-	Request    shared.MapBeezUPColumnRequest `request:"mediaType=application/json"`
 }
 
 type ImportationMapCustomColumnResponse struct {

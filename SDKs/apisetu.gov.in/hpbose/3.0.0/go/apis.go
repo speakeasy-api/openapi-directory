@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Hvcer - Class XII Provisional Certificate
 // API to verify Class XII Provisional Certificate.
-func (s *apIs) Hvcer(ctx context.Context, request operations.HvcerRequest) (*operations.HvcerResponse, error) {
+func (s *apIs) Hvcer(ctx context.Context, request operations.HvcerRequestBody, security operations.HvcerSecurity) (*operations.HvcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hvcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Hvcer(ctx context.Context, request operations.HvcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Hvcer(ctx context.Context, request operations.HvcerRequest) (*ope
 
 // Svcer - Class X Provisional Certificate
 // API to verify Class X Provisional Certificate.
-func (s *apIs) Svcer(ctx context.Context, request operations.SvcerRequest) (*operations.SvcerResponse, error) {
+func (s *apIs) Svcer(ctx context.Context, request operations.SvcerRequestBody, security operations.SvcerSecurity) (*operations.SvcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/svcer/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Svcer(ctx context.Context, request operations.SvcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

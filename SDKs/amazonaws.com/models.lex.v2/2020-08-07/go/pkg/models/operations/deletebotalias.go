@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteBotAliasPathParams struct {
-	// The unique identifier of the bot alias to delete.
-	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
-	// The unique identifier of the bot associated with the alias to delete.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type DeleteBotAliasQueryParams struct {
-	// By default, Amazon Lex checks if any other resource, such as a bot network, is using the bot alias before it is deleted and throws a <code>ResourceInUseException</code> exception if the alias is being used by another resource. Set this parameter to <code>true</code> to skip this check and remove the alias even if it is being used by another resource.
-	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
-}
-
-type DeleteBotAliasHeaders struct {
+type DeleteBotAliasRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteBotAliasHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteBotAliasRequest struct {
-	PathParams  DeleteBotAliasPathParams
-	QueryParams DeleteBotAliasQueryParams
-	Headers     DeleteBotAliasHeaders
+	// The unique identifier of the bot alias to delete.
+	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
+	// The unique identifier of the bot associated with the alias to delete.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// By default, Amazon Lex checks if any other resource, such as a bot network, is using the bot alias before it is deleted and throws a <code>ResourceInUseException</code> exception if the alias is being used by another resource. Set this parameter to <code>true</code> to skip this check and remove the alias even if it is being used by another resource.
+	SkipResourceInUseCheck *bool `queryParam:"style=form,explode=true,name=skipResourceInUseCheck"`
 }
 
 type DeleteBotAliasResponse struct {

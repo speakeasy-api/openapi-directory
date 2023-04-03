@@ -34,7 +34,7 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // PostAccountHolderBalance - Get the balances of an account holder
 // Returns the account balances of an account holder. An account's balances are organized according by currencies. This mean that an account may have multiple balances: one for each currency.
-func (s *general) PostAccountHolderBalance(ctx context.Context, request operations.PostAccountHolderBalanceRequest) (*operations.PostAccountHolderBalanceResponse, error) {
+func (s *general) PostAccountHolderBalance(ctx context.Context, request shared.AccountHolderBalanceRequest, security operations.PostAccountHolderBalanceSecurity) (*operations.PostAccountHolderBalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accountHolderBalance"
 
@@ -50,7 +50,7 @@ func (s *general) PostAccountHolderBalance(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *general) PostAccountHolderBalance(ctx context.Context, request operatio
 
 // PostAccountHolderTransactionList - Get a list of transactions
 // Returns a list of transactions for an account holder's accounts. You can specify the accounts and transaction statuses to be included on the list. The call returns a maximum of 50 transactions for each account. To retrieve all transactions, you must make another call with the 'page' value incremented. Transactions are listed in chronological order, with the most recent transaction first.
-func (s *general) PostAccountHolderTransactionList(ctx context.Context, request operations.PostAccountHolderTransactionListRequest) (*operations.PostAccountHolderTransactionListResponse, error) {
+func (s *general) PostAccountHolderTransactionList(ctx context.Context, request shared.AccountHolderTransactionListRequest, security operations.PostAccountHolderTransactionListSecurity) (*operations.PostAccountHolderTransactionListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accountHolderTransactionList"
 
@@ -122,7 +122,7 @@ func (s *general) PostAccountHolderTransactionList(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *general) PostAccountHolderTransactionList(ctx context.Context, request 
 // Sends a direct debit request to an account holder's bank account. If the direct debit is successful, the funds are settled in the accounts specified in the split instructions. Adyen sends the result of the direct debit in a [`DIRECT_DEBIT_INITIATED`](https://docs.adyen.com/api-explorer/#/NotificationService/latest/post/DIRECT_DEBIT_INITIATED) notification webhook.
 //
 //	To learn more about direct debits, see [Top up accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/top-up-accounts).
-func (s *general) PostDebitAccountHolder(ctx context.Context, request operations.PostDebitAccountHolderRequest) (*operations.PostDebitAccountHolderResponse, error) {
+func (s *general) PostDebitAccountHolder(ctx context.Context, request shared.DebitAccountHolderRequest, security operations.PostDebitAccountHolderSecurity) (*operations.PostDebitAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/debitAccountHolder"
 
@@ -196,7 +196,7 @@ func (s *general) PostDebitAccountHolder(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -252,7 +252,7 @@ func (s *general) PostDebitAccountHolder(ctx context.Context, request operations
 
 // PostPayoutAccountHolder - Pay out from an account to the account holder
 // Pays out a specified amount from an account to the bank account of account holder.
-func (s *general) PostPayoutAccountHolder(ctx context.Context, request operations.PostPayoutAccountHolderRequest) (*operations.PostPayoutAccountHolderResponse, error) {
+func (s *general) PostPayoutAccountHolder(ctx context.Context, request shared.PayoutAccountHolderRequest, security operations.PostPayoutAccountHolderSecurity) (*operations.PostPayoutAccountHolderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payoutAccountHolder"
 
@@ -268,7 +268,7 @@ func (s *general) PostPayoutAccountHolder(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -324,7 +324,7 @@ func (s *general) PostPayoutAccountHolder(ctx context.Context, request operation
 
 // PostRefundFundsTransfer - Refund a funds transfer
 // Refunds funds transferred from one account to another. Both accounts must be in the same platform, but can have different account holders.
-func (s *general) PostRefundFundsTransfer(ctx context.Context, request operations.PostRefundFundsTransferRequest) (*operations.PostRefundFundsTransferResponse, error) {
+func (s *general) PostRefundFundsTransfer(ctx context.Context, request shared.RefundFundsTransferRequest, security operations.PostRefundFundsTransferSecurity) (*operations.PostRefundFundsTransferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/refundFundsTransfer"
 
@@ -340,7 +340,7 @@ func (s *general) PostRefundFundsTransfer(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -396,7 +396,7 @@ func (s *general) PostRefundFundsTransfer(ctx context.Context, request operation
 
 // PostRefundNotPaidOutTransfers - Refund all transactions of an account since the most recent payout
 // Refunds all the transactions of an account that have taken place since the most recent payout. This request is on a account basis (as opposed to a payment basis), so only the portion of the payment that was made to the specified account is refunded. The commissions, fees, and payments to other accounts remain in the accounts to which they were sent as designated by the original payment's split details.
-func (s *general) PostRefundNotPaidOutTransfers(ctx context.Context, request operations.PostRefundNotPaidOutTransfersRequest) (*operations.PostRefundNotPaidOutTransfersResponse, error) {
+func (s *general) PostRefundNotPaidOutTransfers(ctx context.Context, request shared.RefundNotPaidOutTransfersRequest, security operations.PostRefundNotPaidOutTransfersSecurity) (*operations.PostRefundNotPaidOutTransfersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/refundNotPaidOutTransfers"
 
@@ -412,7 +412,7 @@ func (s *general) PostRefundNotPaidOutTransfers(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -468,7 +468,7 @@ func (s *general) PostRefundNotPaidOutTransfers(ctx context.Context, request ope
 
 // PostSetupBeneficiary - Designate a beneficiary account and transfer the benefactor's current balance
 // Defines a benefactor and a beneficiary relationship between two accounts. At the time of benefactor/beneficiary setup, the funds in the benefactor account are transferred to the beneficiary account, and any further payments to the benefactor account are automatically sent to the beneficiary account. A series of benefactor/beneficiaries may not exceed four beneficiaries and may not have a cycle in it.
-func (s *general) PostSetupBeneficiary(ctx context.Context, request operations.PostSetupBeneficiaryRequest) (*operations.PostSetupBeneficiaryResponse, error) {
+func (s *general) PostSetupBeneficiary(ctx context.Context, request shared.SetupBeneficiaryRequest, security operations.PostSetupBeneficiarySecurity) (*operations.PostSetupBeneficiaryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/setupBeneficiary"
 
@@ -484,7 +484,7 @@ func (s *general) PostSetupBeneficiary(ctx context.Context, request operations.P
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -540,7 +540,7 @@ func (s *general) PostSetupBeneficiary(ctx context.Context, request operations.P
 
 // PostTransferFunds - Transfer funds between platform accounts
 // Transfers funds from one account to another account. Both accounts must be in the same platform, but can have different account holders. The transfer must include a transfer code, which should be determined by the platform, in compliance with local regulations.
-func (s *general) PostTransferFunds(ctx context.Context, request operations.PostTransferFundsRequest) (*operations.PostTransferFundsResponse, error) {
+func (s *general) PostTransferFunds(ctx context.Context, request shared.TransferFundsRequest, security operations.PostTransferFundsSecurity) (*operations.PostTransferFundsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transferFunds"
 
@@ -556,7 +556,7 @@ func (s *general) PostTransferFunds(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

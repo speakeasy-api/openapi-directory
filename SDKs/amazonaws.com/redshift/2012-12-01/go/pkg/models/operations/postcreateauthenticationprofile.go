@@ -50,25 +50,17 @@ func (e *POSTCreateAuthenticationProfileVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type POSTCreateAuthenticationProfileQueryParams struct {
-	Action  POSTCreateAuthenticationProfileActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateAuthenticationProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateAuthenticationProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateAuthenticationProfileRequest struct {
-	QueryParams POSTCreateAuthenticationProfileQueryParams
-	Headers     POSTCreateAuthenticationProfileHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateAuthenticationProfileActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                     `request:"mediaType=text/xml"`
+	Version           POSTCreateAuthenticationProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateAuthenticationProfileResponse struct {

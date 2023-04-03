@@ -30,20 +30,16 @@ func (e *SetDefaultSenderIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SetDefaultSenderIDHeaders struct {
-	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        SetDefaultSenderIDXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type SetDefaultSenderIDRequest struct {
-	Headers SetDefaultSenderIDHeaders
-	Request shared.SetDefaultSenderIDRequest `request:"mediaType=application/json"`
+	SetDefaultSenderIDRequest shared.SetDefaultSenderIDRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm             *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                SetDefaultSenderIDXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type SetDefaultSenderIDResponse struct {

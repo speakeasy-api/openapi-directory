@@ -50,28 +50,20 @@ func (e *GETDeleteTagsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteTagsQueryParams struct {
+type GETDeleteTagsRequest struct {
 	Action GETDeleteTagsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) from which you want to remove the tag or tags. For example, <code>arn:aws:redshift:us-east-2:123456789:cluster:t1</code>.
 	ResourceName string `queryParam:"style=form,explode=true,name=ResourceName"`
 	// The tag key that you want to delete.
-	TagKeys []string                 `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETDeleteTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteTagsRequest struct {
-	QueryParams GETDeleteTagsQueryParams
-	Headers     GETDeleteTagsHeaders
+	TagKeys           []string                 `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETDeleteTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteTagsResponse struct {

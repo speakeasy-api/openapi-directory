@@ -4,14 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PostProxySecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type PostProxyHeaders struct {
+type PostProxyRequest struct {
+	// Depending on the verb/method of the request this will contain the request body you want to POST/PATCH/PUT.
+	RequestBody []byte `request:"mediaType=*/*"`
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
 	// ID of the consumer which you want to get or push data from
@@ -22,13 +23,6 @@ type PostProxyHeaders struct {
 	XApideckDownstreamURL string `header:"style=simple,explode=false,name=x-apideck-downstream-url"`
 	// Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
 	XApideckServiceID string `header:"style=simple,explode=false,name=x-apideck-service-id"`
-}
-
-type PostProxyRequest struct {
-	Headers PostProxyHeaders
-	// Depending on the verb/method of the request this will contain the request body you want to POST/PATCH/PUT.
-	Request  []byte `request:"mediaType=*/*"`
-	Security PostProxySecurity
 }
 
 // PostProxy401ApplicationJSON - Unauthorized

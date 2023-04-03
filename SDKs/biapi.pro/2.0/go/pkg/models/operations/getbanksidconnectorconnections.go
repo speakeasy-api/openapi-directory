@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBanksIDConnectorConnectionsPathParams struct {
-	IDConnector int64 `pathParam:"style=simple,explode=false,name=id_connector"`
-}
-
-type GetBanksIDConnectorConnectionsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
+type GetBanksIDConnectorConnectionsRequest struct {
+	Expand      *string `queryParam:"style=form,explode=true,name=expand"`
+	IDConnector int64   `pathParam:"style=simple,explode=false,name=id_connector"`
 	// methode of selection use between 'diversity' (default), 'cover' and 'type_select'
 	Method *string `queryParam:"style=form,explode=true,name=method"`
 	// Ensure the connection will not have a sync happening for at
@@ -25,11 +22,6 @@ type GetBanksIDConnectorConnectionsQueryParams struct {
 	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// for 'type_select' method. Specific account type id (weboob_type_id) to select
 	Type *int64 `queryParam:"style=form,explode=true,name=type"`
-}
-
-type GetBanksIDConnectorConnectionsRequest struct {
-	PathParams  GetBanksIDConnectorConnectionsPathParams
-	QueryParams GetBanksIDConnectorConnectionsQueryParams
 }
 
 // GetBanksIDConnectorConnections200ApplicationJSON - connections

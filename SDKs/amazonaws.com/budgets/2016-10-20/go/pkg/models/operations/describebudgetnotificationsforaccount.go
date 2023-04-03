@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBudgetNotificationsForAccountQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeBudgetNotificationsForAccountXAmzTargetEnum
 type DescribeBudgetNotificationsForAccountXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeBudgetNotificationsForAccountXAmzTargetEnum) UnmarshalJSON(data
 	}
 }
 
-type DescribeBudgetNotificationsForAccountHeaders struct {
+type DescribeBudgetNotificationsForAccountRequest struct {
+	DescribeBudgetNotificationsForAccountRequest shared.DescribeBudgetNotificationsForAccountRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                             `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeBudgetNotificationsForAccountHeaders struct {
 	XAmzSignature     *string                                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeBudgetNotificationsForAccountXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeBudgetNotificationsForAccountRequest struct {
-	QueryParams DescribeBudgetNotificationsForAccountQueryParams
-	Headers     DescribeBudgetNotificationsForAccountHeaders
-	Request     shared.DescribeBudgetNotificationsForAccountRequest `request:"mediaType=application/json"`
 }
 
 type DescribeBudgetNotificationsForAccountResponse struct {

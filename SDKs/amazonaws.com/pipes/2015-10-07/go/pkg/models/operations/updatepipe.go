@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdatePipePathParams struct {
-	// The name of the pipe.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type UpdatePipeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdatePipeRequestBodyDesiredStateEnum - The state the pipe should be in.
 type UpdatePipeRequestBodyDesiredStateEnum string
 
@@ -102,9 +87,16 @@ type UpdatePipeRequestBody struct {
 }
 
 type UpdatePipeRequest struct {
-	PathParams UpdatePipePathParams
-	Headers    UpdatePipeHeaders
-	Request    UpdatePipeRequestBody `request:"mediaType=application/json"`
+	// The name of the pipe.
+	Name              string                `pathParam:"style=simple,explode=false,name=Name"`
+	RequestBody       UpdatePipeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdatePipeResponse struct {

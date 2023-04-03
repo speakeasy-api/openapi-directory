@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteConfiguredTablePathParams struct {
-	// The unique ID for the configured table to delete.
-	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
-}
-
-type DeleteConfiguredTableHeaders struct {
+type DeleteConfiguredTableRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteConfiguredTableHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteConfiguredTableRequest struct {
-	PathParams DeleteConfiguredTablePathParams
-	Headers    DeleteConfiguredTableHeaders
+	// The unique ID for the configured table to delete.
+	ConfiguredTableIdentifier string `pathParam:"style=simple,explode=false,name=configuredTableIdentifier"`
 }
 
 type DeleteConfiguredTableResponse struct {

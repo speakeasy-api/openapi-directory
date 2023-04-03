@@ -13,29 +13,25 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AssociateOriginationIdentityRequest{
-        Headers: operations.AssociateOriginationIdentityHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "PinpointSMSVoiceV2.AssociateOriginationIdentity",
+        AssociateOriginationIdentityRequest: shared.AssociateOriginationIdentityRequest{
+            ClientToken: "corrupti",
+            IsoCountryCode: "provident",
+            OriginationIdentity: "distinctio",
+            PoolID: "quibusdam",
         },
-        Request: shared.AssociateOriginationIdentityRequest{
-            ClientToken: "illum",
-            IsoCountryCode: "vel",
-            OriginationIdentity: "error",
-            PoolID: "deserunt",
-        },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "PinpointSMSVoiceV2.AssociateOriginationIdentity",
     }
 
     ctx := context.Background()

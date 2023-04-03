@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTableVersionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetTableVersionsXAmzTargetEnum
 type GetTableVersionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetTableVersionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetTableVersionsHeaders struct {
+type GetTableVersionsRequest struct {
+	GetTableVersionsRequest shared.GetTableVersionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetTableVersionsHeaders struct {
 	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetTableVersionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetTableVersionsRequest struct {
-	QueryParams GetTableVersionsQueryParams
-	Headers     GetTableVersionsHeaders
-	Request     shared.GetTableVersionsRequest `request:"mediaType=application/json"`
 }
 
 type GetTableVersionsResponse struct {

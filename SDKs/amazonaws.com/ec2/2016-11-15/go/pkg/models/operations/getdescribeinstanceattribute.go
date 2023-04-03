@@ -116,30 +116,22 @@ func (e *GETDescribeInstanceAttributeVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeInstanceAttributeQueryParams struct {
+type GETDescribeInstanceAttributeRequest struct {
 	Action GETDescribeInstanceAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The instance attribute.</p> <p>Note: The <code>enaSupport</code> attribute is not supported at this time.</p>
 	Attribute GETDescribeInstanceAttributeAttributeEnum `queryParam:"style=form,explode=true,name=Attribute"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
 	// The ID of the instance.
-	InstanceID string                                  `queryParam:"style=form,explode=true,name=InstanceId"`
-	Version    GETDescribeInstanceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeInstanceAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeInstanceAttributeRequest struct {
-	QueryParams GETDescribeInstanceAttributeQueryParams
-	Headers     GETDescribeInstanceAttributeHeaders
+	InstanceID        string                                  `queryParam:"style=form,explode=true,name=InstanceId"`
+	Version           GETDescribeInstanceAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeInstanceAttributeResponse struct {

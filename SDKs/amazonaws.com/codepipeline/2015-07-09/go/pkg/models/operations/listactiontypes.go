@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListActionTypesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListActionTypesXAmzTargetEnum
 type ListActionTypesXAmzTargetEnum string
 
@@ -35,21 +30,18 @@ func (e *ListActionTypesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListActionTypesHeaders struct {
-	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListActionTypesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListActionTypesRequest struct {
-	QueryParams ListActionTypesQueryParams
-	Headers     ListActionTypesHeaders
-	Request     shared.ListActionTypesInput `request:"mediaType=application/json"`
+	ListActionTypesInput shared.ListActionTypesInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm        *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget           ListActionTypesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListActionTypesResponse struct {

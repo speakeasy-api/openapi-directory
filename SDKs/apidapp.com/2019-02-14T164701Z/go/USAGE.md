@@ -14,9 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.DeleteKeyKeyRequest{
-        PathParams: operations.DeleteKeyKeyPathParams{
-            Key: "corrupti",
-        },
+        Key: "corrupti",
     }
 
     ctx := context.Background()

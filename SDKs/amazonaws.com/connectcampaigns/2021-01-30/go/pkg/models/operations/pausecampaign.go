@@ -6,11 +6,7 @@ import (
 	"net/http"
 )
 
-type PauseCampaignPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PauseCampaignHeaders struct {
+type PauseCampaignRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -18,11 +14,7 @@ type PauseCampaignHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type PauseCampaignRequest struct {
-	PathParams PauseCampaignPathParams
-	Headers    PauseCampaignHeaders
+	ID                string  `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PauseCampaignResponse struct {

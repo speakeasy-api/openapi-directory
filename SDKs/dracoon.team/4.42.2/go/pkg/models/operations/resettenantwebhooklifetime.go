@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ResetTenantWebhookLifetimePathParams struct {
-	// Webhook ID
-	WebhookID int64 `pathParam:"style=simple,explode=false,name=webhook_id"`
-}
-
 // ResetTenantWebhookLifetimeXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type ResetTenantWebhookLifetimeXSdsDateFormatEnum string
 
@@ -47,16 +42,13 @@ func (e *ResetTenantWebhookLifetimeXSdsDateFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type ResetTenantWebhookLifetimeHeaders struct {
+type ResetTenantWebhookLifetimeRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *ResetTenantWebhookLifetimeXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
 	// Service Authentication token
 	XSdsServiceToken *string `header:"style=simple,explode=false,name=X-Sds-Service-Token"`
-}
-
-type ResetTenantWebhookLifetimeRequest struct {
-	PathParams ResetTenantWebhookLifetimePathParams
-	Headers    ResetTenantWebhookLifetimeHeaders
+	// Webhook ID
+	WebhookID int64 `pathParam:"style=simple,explode=false,name=webhook_id"`
 }
 
 type ResetTenantWebhookLifetimeResponse struct {

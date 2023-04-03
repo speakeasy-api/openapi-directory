@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSearchDomainItemQueryParams struct {
+type GetSearchDomainItemRequest struct {
 	// A record includes
 	A *string `queryParam:"style=form,explode=true,name=A"`
 	// CNAME record includes
@@ -34,10 +34,6 @@ type GetSearchDomainItemQueryParams struct {
 	Page *string `queryParam:"style=form,explode=true,name=page"`
 	// In Zone
 	Zone *string `queryParam:"style=form,explode=true,name=zone"`
-}
-
-type GetSearchDomainItemRequest struct {
-	QueryParams GetSearchDomainItemQueryParams
 }
 
 type GetSearchDomainItemResponse struct {

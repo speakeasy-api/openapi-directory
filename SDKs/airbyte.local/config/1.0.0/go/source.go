@@ -34,7 +34,7 @@ func newSource(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // CheckConnectionToSource - Check connection to the source
-func (s *source) CheckConnectionToSource(ctx context.Context, request operations.CheckConnectionToSourceRequest) (*operations.CheckConnectionToSourceResponse, error) {
+func (s *source) CheckConnectionToSource(ctx context.Context, request shared.SourceIDRequestBody) (*operations.CheckConnectionToSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/check_connection"
 
@@ -108,7 +108,7 @@ func (s *source) CheckConnectionToSource(ctx context.Context, request operations
 }
 
 // CheckConnectionToSourceForUpdate - Check connection for a proposed update to a source
-func (s *source) CheckConnectionToSourceForUpdate(ctx context.Context, request operations.CheckConnectionToSourceForUpdateRequest) (*operations.CheckConnectionToSourceForUpdateResponse, error) {
+func (s *source) CheckConnectionToSourceForUpdate(ctx context.Context, request shared.SourceUpdate) (*operations.CheckConnectionToSourceForUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/check_connection_for_update"
 
@@ -182,7 +182,7 @@ func (s *source) CheckConnectionToSourceForUpdate(ctx context.Context, request o
 }
 
 // CloneSource - Clone source
-func (s *source) CloneSource(ctx context.Context, request operations.CloneSourceRequest) (*operations.CloneSourceResponse, error) {
+func (s *source) CloneSource(ctx context.Context, request shared.SourceCloneRequestBody) (*operations.CloneSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/clone"
 
@@ -256,7 +256,7 @@ func (s *source) CloneSource(ctx context.Context, request operations.CloneSource
 }
 
 // CreateSource - Create a source
-func (s *source) CreateSource(ctx context.Context, request operations.CreateSourceRequest) (*operations.CreateSourceResponse, error) {
+func (s *source) CreateSource(ctx context.Context, request shared.SourceCreate) (*operations.CreateSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/create"
 
@@ -320,7 +320,7 @@ func (s *source) CreateSource(ctx context.Context, request operations.CreateSour
 }
 
 // DeleteSource - Delete a source
-func (s *source) DeleteSource(ctx context.Context, request operations.DeleteSourceRequest) (*operations.DeleteSourceResponse, error) {
+func (s *source) DeleteSource(ctx context.Context, request shared.SourceIDRequestBody) (*operations.DeleteSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/delete"
 
@@ -385,7 +385,7 @@ func (s *source) DeleteSource(ctx context.Context, request operations.DeleteSour
 }
 
 // DiscoverSchemaForSource - Discover the schema catalog of the source
-func (s *source) DiscoverSchemaForSource(ctx context.Context, request operations.DiscoverSchemaForSourceRequest) (*operations.DiscoverSchemaForSourceResponse, error) {
+func (s *source) DiscoverSchemaForSource(ctx context.Context, request shared.SourceDiscoverSchemaRequestBody) (*operations.DiscoverSchemaForSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/discover_schema"
 
@@ -459,7 +459,7 @@ func (s *source) DiscoverSchemaForSource(ctx context.Context, request operations
 }
 
 // GetMostRecentSourceActorCatalog - Get most recent ActorCatalog for source
-func (s *source) GetMostRecentSourceActorCatalog(ctx context.Context, request operations.GetMostRecentSourceActorCatalogRequest) (*operations.GetMostRecentSourceActorCatalogResponse, error) {
+func (s *source) GetMostRecentSourceActorCatalog(ctx context.Context, request shared.SourceIDRequestBody) (*operations.GetMostRecentSourceActorCatalogResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/most_recent_source_actor_catalog"
 
@@ -533,7 +533,7 @@ func (s *source) GetMostRecentSourceActorCatalog(ctx context.Context, request op
 }
 
 // GetSource - Get source
-func (s *source) GetSource(ctx context.Context, request operations.GetSourceRequest) (*operations.GetSourceResponse, error) {
+func (s *source) GetSource(ctx context.Context, request shared.SourceIDRequestBody) (*operations.GetSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/get"
 
@@ -608,7 +608,7 @@ func (s *source) GetSource(ctx context.Context, request operations.GetSourceRequ
 
 // ListSourcesForWorkspace - List sources for workspace
 // List sources for workspace. Does not return deleted sources.
-func (s *source) ListSourcesForWorkspace(ctx context.Context, request operations.ListSourcesForWorkspaceRequest) (*operations.ListSourcesForWorkspaceResponse, error) {
+func (s *source) ListSourcesForWorkspace(ctx context.Context, request shared.WorkspaceIDRequestBody) (*operations.ListSourcesForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/list"
 
@@ -682,7 +682,7 @@ func (s *source) ListSourcesForWorkspace(ctx context.Context, request operations
 }
 
 // SearchSources - Search sources
-func (s *source) SearchSources(ctx context.Context, request operations.SearchSourcesRequest) (*operations.SearchSourcesResponse, error) {
+func (s *source) SearchSources(ctx context.Context, request shared.SourceSearch) (*operations.SearchSourcesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/search"
 
@@ -746,7 +746,7 @@ func (s *source) SearchSources(ctx context.Context, request operations.SearchSou
 }
 
 // UpdateSource - Update a source
-func (s *source) UpdateSource(ctx context.Context, request operations.UpdateSourceRequest) (*operations.UpdateSourceResponse, error) {
+func (s *source) UpdateSource(ctx context.Context, request shared.SourceUpdate) (*operations.UpdateSourceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/update"
 
@@ -820,7 +820,7 @@ func (s *source) UpdateSource(ctx context.Context, request operations.UpdateSour
 }
 
 // WriteDiscoverCatalogResult - Should only called from worker, to write result from discover activity back to DB.
-func (s *source) WriteDiscoverCatalogResult(ctx context.Context, request operations.WriteDiscoverCatalogResultRequest) (*operations.WriteDiscoverCatalogResultResponse, error) {
+func (s *source) WriteDiscoverCatalogResult(ctx context.Context, request shared.SourceDiscoverSchemaWriteRequestBody) (*operations.WriteDiscoverCatalogResultResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/sources/write_discover_catalog_result"
 

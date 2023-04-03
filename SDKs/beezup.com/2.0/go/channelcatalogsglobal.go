@@ -33,7 +33,7 @@ func newChannelCatalogsGlobal(defaultClient, securityClient HTTPClient, serverUR
 }
 
 // AddChannelCatalog - Add a new channel catalog
-func (s *channelCatalogsGlobal) AddChannelCatalog(ctx context.Context, request operations.AddChannelCatalogRequest) (*operations.AddChannelCatalogResponse, error) {
+func (s *channelCatalogsGlobal) AddChannelCatalog(ctx context.Context, request shared.AddChannelCatalogRequest) (*operations.AddChannelCatalogResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/channelCatalogs/"
 
@@ -103,7 +103,7 @@ func (s *channelCatalogsGlobal) AddChannelCatalog(ctx context.Context, request o
 // DeleteChannelCatalog - Delete the channel catalog
 func (s *channelCatalogsGlobal) DeleteChannelCatalog(ctx context.Context, request operations.DeleteChannelCatalogRequest) (*operations.DeleteChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +150,7 @@ func (s *channelCatalogsGlobal) DeleteChannelCatalog(ctx context.Context, reques
 // GetChannelCatalog - Get the channel catalog information
 func (s *channelCatalogsGlobal) GetChannelCatalog(ctx context.Context, request operations.GetChannelCatalogRequest) (*operations.GetChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +267,7 @@ func (s *channelCatalogsGlobal) GetChannelCatalogs(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -44,7 +44,7 @@ func (e *GETVersionIncidentsFormatIncidentTypeEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETVersionIncidentsFormatQueryParams struct {
+type GETVersionIncidentsFormatRequest struct {
 	// <p>Only incidents of specific type</p>
 	//
 	IncidentType *GETVersionIncidentsFormatIncidentTypeEnum `queryParam:"style=form,explode=true,name=incident_type"`
@@ -69,10 +69,6 @@ type GETVersionIncidentsFormatQueryParams struct {
 	// <p>Full text search of incidents</p>
 	//
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-}
-
-type GETVersionIncidentsFormatRequest struct {
-	QueryParams GETVersionIncidentsFormatQueryParams
 }
 
 type GETVersionIncidentsFormatResponse struct {

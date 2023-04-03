@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type RetrieveUserHostedPropertyValuePathParams struct {
+type RetrieveUserHostedPropertyValueRequest struct {
 	// The key of the Connect app.
 	AppKey string `pathParam:"style=simple,explode=false,name=app_key"`
 	// The name of the property.
 	PropertyName string `pathParam:"style=simple,explode=false,name=property_name"`
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type RetrieveUserHostedPropertyValueRequest struct {
-	PathParams RetrieveUserHostedPropertyValuePathParams
 }
 
 type RetrieveUserHostedPropertyValueResponse struct {

@@ -55,7 +55,7 @@ func (e *GETModifyVerifiedAccessTrustProviderVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETModifyVerifiedAccessTrustProviderQueryParams struct {
+type GETModifyVerifiedAccessTrustProviderRequest struct {
 	Action GETModifyVerifiedAccessTrustProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -68,21 +68,13 @@ type GETModifyVerifiedAccessTrustProviderQueryParams struct {
 	// The ID of the Amazon Web Services Verified Access trust provider.
 	VerifiedAccessTrustProviderID string                                          `queryParam:"style=form,explode=true,name=VerifiedAccessTrustProviderId"`
 	Version                       GETModifyVerifiedAccessTrustProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyVerifiedAccessTrustProviderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVerifiedAccessTrustProviderRequest struct {
-	QueryParams GETModifyVerifiedAccessTrustProviderQueryParams
-	Headers     GETModifyVerifiedAccessTrustProviderHeaders
+	XAmzAlgorithm                 *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256             *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                      *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken             *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                 *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders             *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyVerifiedAccessTrustProviderResponse struct {

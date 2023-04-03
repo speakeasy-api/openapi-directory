@@ -6,45 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PepOrderSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-// PepOrderTypeEnum - Type (Business or Person) of the requested Pep Sanction Check
-type PepOrderTypeEnum string
-
-const (
-	PepOrderTypeEnumUnknown PepOrderTypeEnum = ""
-	PepOrderTypeEnumB       PepOrderTypeEnum = "B"
-	PepOrderTypeEnumP       PepOrderTypeEnum = "P"
-)
-
-func (e *PepOrderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "":
-		fallthrough
-	case "B":
-		fallthrough
-	case "P":
-		*e = PepOrderTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PepOrderTypeEnum: %s", s)
-	}
-}
-
-type PepOrderPathParams struct {
-	// Search string for the Pep Sanction Check
-	Search string `pathParam:"style=simple,explode=false,name=search"`
-	// Type (Business or Person) of the requested Pep Sanction Check
-	Type PepOrderTypeEnum `pathParam:"style=simple,explode=false,name=type"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // PepOrderRequestBody - Optional parameters to enhance search
@@ -83,11 +48,40 @@ type PepOrderRequestBody struct {
 	Webhook *string `form:"name=Webhook"`
 }
 
+// PepOrderTypeEnum - Type (Business or Person) of the requested Pep Sanction Check
+type PepOrderTypeEnum string
+
+const (
+	PepOrderTypeEnumUnknown PepOrderTypeEnum = ""
+	PepOrderTypeEnumB       PepOrderTypeEnum = "B"
+	PepOrderTypeEnumP       PepOrderTypeEnum = "P"
+)
+
+func (e *PepOrderTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "":
+		fallthrough
+	case "B":
+		fallthrough
+	case "P":
+		*e = PepOrderTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PepOrderTypeEnum: %s", s)
+	}
+}
+
 type PepOrderRequest struct {
-	PathParams PepOrderPathParams
 	// Optional parameters to enhance search
-	Request  *PepOrderRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security PepOrderSecurity
+	RequestBody *PepOrderRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// Search string for the Pep Sanction Check
+	Search string `pathParam:"style=simple,explode=false,name=search"`
+	// Type (Business or Person) of the requested Pep Sanction Check
+	Type PepOrderTypeEnum `pathParam:"style=simple,explode=false,name=type"`
 }
 
 // PepOrderDefaultApplicationJSON - Detailed information about the error

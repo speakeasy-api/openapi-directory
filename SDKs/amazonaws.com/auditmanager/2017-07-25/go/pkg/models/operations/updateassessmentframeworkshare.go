@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAssessmentFrameworkSharePathParams struct {
-	//  The unique identifier for the share request.
-	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
-}
-
-type UpdateAssessmentFrameworkShareHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAssessmentFrameworkShareRequestBodyActionEnum - Specifies the update action for the share request.
 type UpdateAssessmentFrameworkShareRequestBodyActionEnum string
 
@@ -83,9 +68,16 @@ type UpdateAssessmentFrameworkShareRequestBody struct {
 }
 
 type UpdateAssessmentFrameworkShareRequest struct {
-	PathParams UpdateAssessmentFrameworkSharePathParams
-	Headers    UpdateAssessmentFrameworkShareHeaders
-	Request    UpdateAssessmentFrameworkShareRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAssessmentFrameworkShareRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique identifier for the share request.
+	RequestID string `pathParam:"style=simple,explode=false,name=requestId"`
 }
 
 type UpdateAssessmentFrameworkShareResponse struct {

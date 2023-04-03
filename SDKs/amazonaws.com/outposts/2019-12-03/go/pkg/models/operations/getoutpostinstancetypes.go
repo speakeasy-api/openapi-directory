@@ -7,17 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOutpostInstanceTypesPathParams struct {
-	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
-	OutpostID string `pathParam:"style=simple,explode=false,name=OutpostId"`
-}
-
-type GetOutpostInstanceTypesQueryParams struct {
+type GetOutpostInstanceTypesRequest struct {
 	MaxResults *int64  `queryParam:"style=form,explode=true,name=MaxResults"`
 	NextToken  *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
-type GetOutpostInstanceTypesHeaders struct {
+	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
+	OutpostID         string  `pathParam:"style=simple,explode=false,name=OutpostId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +19,6 @@ type GetOutpostInstanceTypesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetOutpostInstanceTypesRequest struct {
-	PathParams  GetOutpostInstanceTypesPathParams
-	QueryParams GetOutpostInstanceTypesQueryParams
-	Headers     GetOutpostInstanceTypesHeaders
 }
 
 type GetOutpostInstanceTypesResponse struct {

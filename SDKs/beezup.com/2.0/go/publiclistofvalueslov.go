@@ -35,14 +35,14 @@ func newPublicListOfValuesLOV(defaultClient, securityClient HTTPClient, serverUR
 // GetPublicListOfValues - Get the list of values related to this list name
 func (s *publicListOfValuesLOV) GetPublicListOfValues(ctx context.Context, request operations.GetPublicListOfValuesRequest) (*operations.GetPublicListOfValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/public/lov/{listName}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/public/lov/{listName}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -105,7 +105,7 @@ func (s *publicListOfValuesLOV) GetPublicLovIndex(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

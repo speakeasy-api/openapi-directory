@@ -6,7 +6,9 @@ import (
 	"net/http"
 )
 
-type CreateOrUpdateReportPathParams struct {
+type CreateOrUpdateReportRequest struct {
+	// The report to create or update
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The commit the report belongs to.
 	Commit string `pathParam:"style=simple,explode=false,name=commit"`
 	// The repository.
@@ -15,12 +17,6 @@ type CreateOrUpdateReportPathParams struct {
 	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type CreateOrUpdateReportRequest struct {
-	PathParams CreateOrUpdateReportPathParams
-	// The report to create or update
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CreateOrUpdateReportResponse struct {

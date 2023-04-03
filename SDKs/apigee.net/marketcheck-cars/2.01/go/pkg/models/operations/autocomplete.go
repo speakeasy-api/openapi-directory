@@ -129,7 +129,7 @@ func (e *AutoCompleteSortByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AutoCompleteQueryParams struct {
+type AutoCompleteRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Body subtype to filter the listings on. Valid filter values are those that our Search facets API returns for unique body subtypes. You can pass in multiple body subtype values comma separated
@@ -202,10 +202,6 @@ type AutoCompleteQueryParams struct {
 	Year *string `queryParam:"style=form,explode=true,name=year"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type AutoCompleteRequest struct {
-	QueryParams AutoCompleteQueryParams
 }
 
 type AutoCompleteResponse struct {

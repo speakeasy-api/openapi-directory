@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteEntityPathParams struct {
-	// The ID of the entity to delete.
-	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
-	// The ID of the workspace that contains the entity to delete.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type DeleteEntityQueryParams struct {
-	// A Boolean value that specifies whether the operation deletes child entities.
-	IsRecursive *bool `queryParam:"style=form,explode=true,name=isRecursive"`
-}
-
-type DeleteEntityHeaders struct {
+type DeleteEntityRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type DeleteEntityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEntityRequest struct {
-	PathParams  DeleteEntityPathParams
-	QueryParams DeleteEntityQueryParams
-	Headers     DeleteEntityHeaders
+	// The ID of the entity to delete.
+	EntityID string `pathParam:"style=simple,explode=false,name=entityId"`
+	// A Boolean value that specifies whether the operation deletes child entities.
+	IsRecursive *bool `queryParam:"style=form,explode=true,name=isRecursive"`
+	// The ID of the workspace that contains the entity to delete.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type DeleteEntityResponse struct {

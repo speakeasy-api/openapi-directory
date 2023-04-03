@@ -50,25 +50,17 @@ func (e *POSTListAllowedNodeTypeModificationsVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type POSTListAllowedNodeTypeModificationsQueryParams struct {
-	Action  POSTListAllowedNodeTypeModificationsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTListAllowedNodeTypeModificationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTListAllowedNodeTypeModificationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTListAllowedNodeTypeModificationsRequest struct {
-	QueryParams POSTListAllowedNodeTypeModificationsQueryParams
-	Headers     POSTListAllowedNodeTypeModificationsHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTListAllowedNodeTypeModificationsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                          `request:"mediaType=text/xml"`
+	Version           POSTListAllowedNodeTypeModificationsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTListAllowedNodeTypeModificationsResponse struct {

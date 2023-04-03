@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeBotAliasPathParams struct {
-	// The identifier of the bot alias to describe.
-	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
-	// The identifier of the bot associated with the bot alias to describe.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-}
-
-type DescribeBotAliasHeaders struct {
+type DescribeBotAliasRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeBotAliasHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeBotAliasRequest struct {
-	PathParams DescribeBotAliasPathParams
-	Headers    DescribeBotAliasHeaders
+	// The identifier of the bot alias to describe.
+	BotAliasID string `pathParam:"style=simple,explode=false,name=botAliasId"`
+	// The identifier of the bot associated with the bot alias to describe.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
 }
 
 type DescribeBotAliasResponse struct {

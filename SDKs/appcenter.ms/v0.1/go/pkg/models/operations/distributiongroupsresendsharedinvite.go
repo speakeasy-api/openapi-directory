@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsResendSharedInviteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsResendSharedInvitePathParams struct {
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // DistributionGroupsResendSharedInviteRequestBody - The list of members to add
@@ -27,10 +19,12 @@ type DistributionGroupsResendSharedInviteRequestBody struct {
 }
 
 type DistributionGroupsResendSharedInviteRequest struct {
-	PathParams DistributionGroupsResendSharedInvitePathParams
 	// The list of members to add
-	Request  DistributionGroupsResendSharedInviteRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsResendSharedInviteSecurity
+	RequestBody DistributionGroupsResendSharedInviteRequestBody `request:"mediaType=application/json"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsResendSharedInviteDefaultApplicationJSONErrorCodeEnum string

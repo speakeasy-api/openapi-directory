@@ -14,5 +14,4 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/pecer.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

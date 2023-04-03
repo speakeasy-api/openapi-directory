@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlanPathParams struct {
+type GetPlanRequest struct {
 	// The identifier of the plan received from ee/offers.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPlanQueryParams struct {
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -25,11 +22,6 @@ type GetPlanQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetPlanRequest struct {
-	PathParams  GetPlanPathParams
-	QueryParams GetPlanQueryParams
 }
 
 type GetPlanResponse struct {

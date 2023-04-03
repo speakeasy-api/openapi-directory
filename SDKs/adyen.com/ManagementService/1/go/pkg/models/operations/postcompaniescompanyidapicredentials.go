@@ -8,19 +8,14 @@ import (
 )
 
 type PostCompaniesCompanyIDAPICredentialsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostCompaniesCompanyIDAPICredentialsPathParams struct {
-	// The unique identifier of the company account.
-	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostCompaniesCompanyIDAPICredentialsRequest struct {
-	PathParams PostCompaniesCompanyIDAPICredentialsPathParams
-	Request    *shared.CreateCompanyAPICredentialRequest `request:"mediaType=application/json"`
-	Security   PostCompaniesCompanyIDAPICredentialsSecurity
+	CreateCompanyAPICredentialRequest *shared.CreateCompanyAPICredentialRequest `request:"mediaType=application/json"`
+	// The unique identifier of the company account.
+	CompanyID string `pathParam:"style=simple,explode=false,name=companyId"`
 }
 
 type PostCompaniesCompanyIDAPICredentialsResponse struct {

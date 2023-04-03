@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStreamingSessionBackupPathParams struct {
-	// The ID of the backup.
-	BackupID string `pathParam:"style=simple,explode=false,name=backupId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetStreamingSessionBackupHeaders struct {
+type GetStreamingSessionBackupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetStreamingSessionBackupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetStreamingSessionBackupRequest struct {
-	PathParams GetStreamingSessionBackupPathParams
-	Headers    GetStreamingSessionBackupHeaders
+	// The ID of the backup.
+	BackupID string `pathParam:"style=simple,explode=false,name=backupId"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetStreamingSessionBackupResponse struct {

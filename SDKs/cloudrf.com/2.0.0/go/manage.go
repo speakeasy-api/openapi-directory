@@ -33,7 +33,7 @@ func newManage(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AddClutter - Upload clutter data as GeoJSON
 // Upload GeoJSON lineString and polygon features to your account. The height property is in metres and the material code / type / attenuation are.. 1	Trees –	0.25,2Trees +	0.5,3	Timber –	1.0,4	Timber +	1.5,5	Brick – 	1.5,6	Brick +	2.0,7	Concrete –	3.0,8	Concrete +	4.0,9	Metal	6.0
-func (s *manage) AddClutter(ctx context.Context, request operations.AddClutterRequest) (*operations.AddClutterResponse, error) {
+func (s *manage) AddClutter(ctx context.Context, request operations.AddClutterRequestBody, security operations.AddClutterSecurity) (*operations.AddClutterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clutter/add"
 
@@ -52,7 +52,7 @@ func (s *manage) AddClutter(ctx context.Context, request operations.AddClutterRe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *manage) AddClutter(ctx context.Context, request operations.AddClutterRe
 
 // Delete - Delete a calculation from the database.
 // Warning! you could lose data. This function will delete the entry from the database and the file from the disk. Accidental deletion can be reversed by contacting support with biscuits who maintain an offsite backup.
-func (s *manage) Delete(ctx context.Context, request operations.DeleteRequest) (*operations.DeleteResponse, error) {
+func (s *manage) Delete(ctx context.Context, request operations.DeleteRequest, security operations.DeleteSecurity) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/archive/delete"
 
@@ -88,11 +88,11 @@ func (s *manage) Delete(ctx context.Context, request operations.DeleteRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -119,7 +119,7 @@ func (s *manage) Delete(ctx context.Context, request operations.DeleteRequest) (
 
 // DeleteNetwork - Delete an entire network
 // Warning! you could lose data. This function will delete the entry from the database and the file from the disk. Accidental deletion can be reversed by contacting support with biscuits who maintain an offsite backup.
-func (s *manage) DeleteNetwork(ctx context.Context, request operations.DeleteNetworkRequest) (*operations.DeleteNetworkResponse, error) {
+func (s *manage) DeleteNetwork(ctx context.Context, request operations.DeleteNetworkRequest, security operations.DeleteNetworkSecurity) (*operations.DeleteNetworkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/archive/delete/network"
 
@@ -128,11 +128,11 @@ func (s *manage) DeleteNetwork(ctx context.Context, request operations.DeleteNet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,7 +159,7 @@ func (s *manage) DeleteNetwork(ctx context.Context, request operations.DeleteNet
 
 // Export - Export a calculation in a GIS file format
 // Download your data in a format suitable for a third party viewer like Google Earth or ESRI Arcmap.
-func (s *manage) Export(ctx context.Context, request operations.ExportRequest) (*operations.ExportResponse, error) {
+func (s *manage) Export(ctx context.Context, request operations.ExportRequest, security operations.ExportSecurity) (*operations.ExportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/archive/export"
 
@@ -168,11 +168,11 @@ func (s *manage) Export(ctx context.Context, request operations.ExportRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -199,7 +199,7 @@ func (s *manage) Export(ctx context.Context, request operations.ExportRequest) (
 
 // List - List calculations from your archive
 // List your area and path calculations, sorted by time and limited to the last few hundred. To fetch all for a given network append a 'net' filter with the network name.
-func (s *manage) List(ctx context.Context, request operations.ListRequest) (*operations.ListResponse, error) {
+func (s *manage) List(ctx context.Context, request operations.ListRequest, security operations.ListSecurity) (*operations.ListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/archive/list"
 
@@ -208,11 +208,11 @@ func (s *manage) List(ctx context.Context, request operations.ListRequest) (*ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

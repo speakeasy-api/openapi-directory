@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CatalogStoreIndexPathParams struct {
+type CatalogStoreIndexRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type CatalogStoreIndexRequest struct {
-	PathParams CatalogStoreIndexPathParams
 }
 
 type CatalogStoreIndexResponse struct {

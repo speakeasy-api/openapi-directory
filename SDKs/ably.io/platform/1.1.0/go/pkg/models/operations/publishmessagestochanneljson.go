@@ -7,26 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PublishMessagesToChannelJSONPathParams struct {
-	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
-	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
-}
-
-type PublishMessagesToChannelJSONQueryParams struct {
-	// The response format you would like
-	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type PublishMessagesToChannelJSONHeaders struct {
+type PublishMessagesToChannelJSONRequest struct {
+	MessageInput *shared.MessageInput `request:"mediaType=application/json"`
 	// The version of the API you wish to use.
 	XAblyVersion *string `header:"style=simple,explode=false,name=X-Ably-Version"`
-}
-
-type PublishMessagesToChannelJSONRequest struct {
-	PathParams  PublishMessagesToChannelJSONPathParams
-	QueryParams PublishMessagesToChannelJSONQueryParams
-	Headers     PublishMessagesToChannelJSONHeaders
-	Request     *shared.MessageInput `request:"mediaType=application/json"`
+	// The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+	ChannelID string `pathParam:"style=simple,explode=false,name=channel_id"`
+	// The response format you would like
+	Format *shared.ResponseFormatEnum `queryParam:"style=form,explode=true,name=format"`
 }
 
 // PublishMessagesToChannelJSON2XXApplicationXMsgpack - OK

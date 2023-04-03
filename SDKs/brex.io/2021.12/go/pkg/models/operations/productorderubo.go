@@ -4,12 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ProductOrderUboSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // ProductOrderUboRequestBody - Parameters for the UBO order
@@ -26,12 +25,6 @@ type ProductOrderUboRequestBody struct {
 	Strategy *string `form:"name=strategy"`
 	// KYC API Id (32 byte hexid) of the company you want to place the order for
 	SubjectID string `form:"name=subjectId"`
-}
-
-type ProductOrderUboRequest struct {
-	// Parameters for the UBO order
-	Request  *ProductOrderUboRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security ProductOrderUboSecurity
 }
 
 // ProductOrderUboDefaultApplicationJSON - Detailed information about the error

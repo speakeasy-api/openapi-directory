@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureMailboxAutoForwardPathParams struct {
-	// Automatically added
-	MailboxName string `pathParam:"style=simple,explode=false,name=mailboxName"`
-}
-
-type ConfigureMailboxAutoForwardQueryParams struct {
-	// Mailbox name.
-	MailboxName string `queryParam:"style=form,explode=true,name=mailbox_name"`
-}
-
 type ConfigureMailboxAutoForwardRequest struct {
-	PathParams  ConfigureMailboxAutoForwardPathParams
-	QueryParams ConfigureMailboxAutoForwardQueryParams
 	// Contains the auto-forward information.
-	Request *shared.AutoForward `request:"mediaType=application/json"`
+	AutoForward *shared.AutoForward `request:"mediaType=application/json"`
+	// Automatically added
+	MailboxNamePathParameter string `pathParam:"style=simple,explode=false,name=mailboxName"`
+	// Mailbox name.
+	MailboxNameQueryParameter string `queryParam:"style=form,explode=true,name=mailbox_name"`
 }
 
 type ConfigureMailboxAutoForwardResponse struct {

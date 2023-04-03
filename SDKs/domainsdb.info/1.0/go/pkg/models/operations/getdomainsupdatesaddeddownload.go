@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetDomainsUpdatesAddedDownloadQueryParams struct {
+type GetDomainsUpdatesAddedDownloadRequest struct {
 	// API key
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Request date
 	Date *string `queryParam:"style=form,explode=true,name=date"`
-}
-
-type GetDomainsUpdatesAddedDownloadRequest struct {
-	QueryParams GetDomainsUpdatesAddedDownloadQueryParams
 }
 
 type GetDomainsUpdatesAddedDownloadResponse struct {

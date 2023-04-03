@@ -50,28 +50,20 @@ func (e *GETDeleteConfigurationTemplateVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDeleteConfigurationTemplateQueryParams struct {
+type GETDeleteConfigurationTemplateRequest struct {
 	Action GETDeleteConfigurationTemplateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the application to delete the configuration template from.
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
 	// The name of the configuration template to delete.
-	TemplateName string                                    `queryParam:"style=form,explode=true,name=TemplateName"`
-	Version      GETDeleteConfigurationTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteConfigurationTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteConfigurationTemplateRequest struct {
-	QueryParams GETDeleteConfigurationTemplateQueryParams
-	Headers     GETDeleteConfigurationTemplateHeaders
+	TemplateName      string                                    `queryParam:"style=form,explode=true,name=TemplateName"`
+	Version           GETDeleteConfigurationTemplateVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteConfigurationTemplateResponse struct {

@@ -13,27 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AcceptQualificationRequestRequest{
-        Headers: operations.AcceptQualificationRequestHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "MTurkRequesterServiceV20170117.AcceptQualificationRequest",
+        AcceptQualificationRequestRequest: shared.AcceptQualificationRequestRequest{
+            IntegerValue: 548814,
+            QualificationRequestID: "provident",
         },
-        Request: shared.AcceptQualificationRequestRequest{
-            IntegerValue: 847252,
-            QualificationRequestID: "vel",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        XAmzTarget: "MTurkRequesterServiceV20170117.AcceptQualificationRequest",
     }
 
     ctx := context.Background()

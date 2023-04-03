@@ -8,18 +8,13 @@ import (
 )
 
 type AccountUpdatePrefsSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountUpdatePrefsRequestBody struct {
 	// Prefs key-value JSON object.
 	Prefs map[string]interface{} `json:"prefs"`
-}
-
-type AccountUpdatePrefsRequest struct {
-	Request  *AccountUpdatePrefsRequestBody `request:"mediaType=application/json"`
-	Security AccountUpdatePrefsSecurity
 }
 
 type AccountUpdatePrefsResponse struct {

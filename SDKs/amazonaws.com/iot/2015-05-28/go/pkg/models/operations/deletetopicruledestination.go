@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteTopicRuleDestinationPathParams struct {
-	// The ARN of the topic rule destination to delete.
-	Arn string `pathParam:"style=simple,explode=false,name=arn"`
-}
-
-type DeleteTopicRuleDestinationHeaders struct {
+type DeleteTopicRuleDestinationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteTopicRuleDestinationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTopicRuleDestinationRequest struct {
-	PathParams DeleteTopicRuleDestinationPathParams
-	Headers    DeleteTopicRuleDestinationHeaders
+	// The ARN of the topic rule destination to delete.
+	Arn string `pathParam:"style=simple,explode=false,name=arn"`
 }
 
 type DeleteTopicRuleDestinationResponse struct {

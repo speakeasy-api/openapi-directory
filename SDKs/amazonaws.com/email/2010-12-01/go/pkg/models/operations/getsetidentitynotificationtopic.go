@@ -77,30 +77,22 @@ func (e *GETSetIdentityNotificationTopicVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETSetIdentityNotificationTopicQueryParams struct {
+type GETSetIdentityNotificationTopicRequest struct {
 	Action GETSetIdentityNotificationTopicActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identity (email address or domain) that you want to set the Amazon SNS topic for.</p> <important> <p>You can only specify a verified identity for this parameter.</p> </important> <p>You can specify an identity by using its name or by using its Amazon Resource Name (ARN). The following examples are all valid identities: <code>sender@example.com</code>, <code>example.com</code>, <code>arn:aws:ses:us-east-1:123456789012:identity/example.com</code>.</p>
 	Identity string `queryParam:"style=form,explode=true,name=Identity"`
 	// The type of notifications that will be published to the specified Amazon SNS topic.
 	NotificationType GETSetIdentityNotificationTopicNotificationTypeEnum `queryParam:"style=form,explode=true,name=NotificationType"`
 	// The Amazon Resource Name (ARN) of the Amazon SNS topic. If the parameter is omitted from the request or a null value is passed, <code>SnsTopic</code> is cleared and publishing is disabled.
-	SnsTopic *string                                    `queryParam:"style=form,explode=true,name=SnsTopic"`
-	Version  GETSetIdentityNotificationTopicVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetIdentityNotificationTopicHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetIdentityNotificationTopicRequest struct {
-	QueryParams GETSetIdentityNotificationTopicQueryParams
-	Headers     GETSetIdentityNotificationTopicHeaders
+	SnsTopic          *string                                    `queryParam:"style=form,explode=true,name=SnsTopic"`
+	Version           GETSetIdentityNotificationTopicVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetIdentityNotificationTopicResponse struct {

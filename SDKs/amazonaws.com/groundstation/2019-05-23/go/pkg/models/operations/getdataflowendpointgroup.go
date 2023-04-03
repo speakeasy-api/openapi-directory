@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDataflowEndpointGroupPathParams struct {
-	// UUID of a dataflow endpoint group.
-	DataflowEndpointGroupID string `pathParam:"style=simple,explode=false,name=dataflowEndpointGroupId"`
-}
-
-type GetDataflowEndpointGroupHeaders struct {
+type GetDataflowEndpointGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetDataflowEndpointGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDataflowEndpointGroupRequest struct {
-	PathParams GetDataflowEndpointGroupPathParams
-	Headers    GetDataflowEndpointGroupHeaders
+	// UUID of a dataflow endpoint group.
+	DataflowEndpointGroupID string `pathParam:"style=simple,explode=false,name=dataflowEndpointGroupId"`
 }
 
 type GetDataflowEndpointGroupResponse struct {

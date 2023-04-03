@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTemplateStepPathParams struct {
-	// The ID of the step.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTemplateStepQueryParams struct {
-	// The ID of the step group.
-	StepGroupID string `queryParam:"style=form,explode=true,name=stepGroupId"`
-	// The ID of the template.
-	TemplateID string `queryParam:"style=form,explode=true,name=templateId"`
-}
-
-type GetTemplateStepHeaders struct {
+type GetTemplateStepRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type GetTemplateStepHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTemplateStepRequest struct {
-	PathParams  GetTemplateStepPathParams
-	QueryParams GetTemplateStepQueryParams
-	Headers     GetTemplateStepHeaders
+	// The ID of the step.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// The ID of the step group.
+	StepGroupID string `queryParam:"style=form,explode=true,name=stepGroupId"`
+	// The ID of the template.
+	TemplateID string `queryParam:"style=form,explode=true,name=templateId"`
 }
 
 type GetTemplateStepResponse struct {

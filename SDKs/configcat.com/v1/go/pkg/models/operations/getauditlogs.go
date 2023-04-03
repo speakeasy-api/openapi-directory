@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type GetAuditlogsPathParams struct {
-	// The identifier of the Product.
-	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
 // GetAuditlogsAuditLogTypeEnum - Filter Audit logs by Audit log type.
 type GetAuditlogsAuditLogTypeEnum string
 
@@ -258,7 +253,7 @@ func (e *GetAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetAuditlogsQueryParams struct {
+type GetAuditlogsRequest struct {
 	// Filter Audit logs by Audit log type.
 	AuditLogType *GetAuditlogsAuditLogTypeEnum `queryParam:"style=form,explode=true,name=auditLogType"`
 	// The identifier of the Config.
@@ -267,13 +262,10 @@ type GetAuditlogsQueryParams struct {
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=environmentId"`
 	// Filter Audit logs by starting UTC date.
 	FromUtcDateTime *time.Time `queryParam:"style=form,explode=true,name=fromUtcDateTime"`
+	// The identifier of the Product.
+	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
 	// Filter Audit logs by ending UTC date.
 	ToUtcDateTime *time.Time `queryParam:"style=form,explode=true,name=toUtcDateTime"`
-}
-
-type GetAuditlogsRequest struct {
-	PathParams  GetAuditlogsPathParams
-	QueryParams GetAuditlogsQueryParams
 }
 
 type GetAuditlogsResponse struct {

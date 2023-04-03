@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdatePipelineVariableForTeamPathParams struct {
+type UpdatePipelineVariableForTeamRequest struct {
+	// The updated variable.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
 	// The UUID of the variable.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
-}
-
-type UpdatePipelineVariableForTeamRequest struct {
-	PathParams UpdatePipelineVariableForTeamPathParams
-	// The updated variable.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdatePipelineVariableForTeamResponse struct {

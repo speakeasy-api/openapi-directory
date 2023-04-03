@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostRequestRequest struct {
-	// Requests are sent to socket
-	Request shared.AllRequestTypesExample `request:"mediaType=application/json"`
-}
-
 type PostRequestResponse struct {
 	// Responses are received from socket
 	AllResponseTypesExample *shared.AllResponseTypesExample

@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GetIncidentsQueryParams struct {
+type GetIncidentsRequest struct {
 	// filter last_update date <= start_date. YYYY-MM-DD format.
 	EndDate *string `queryParam:"style=form,explode=true,name=end_date"`
 	// give only the current state of the particular incidents.
@@ -21,10 +21,6 @@ type GetIncidentsQueryParams struct {
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// comma_separated list, filter the incidents of the given weboob_id
 	WeboobID *string `queryParam:"style=form,explode=true,name=weboob_id"`
-}
-
-type GetIncidentsRequest struct {
-	QueryParams GetIncidentsQueryParams
 }
 
 type GetIncidentsResponse struct {

@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type MedicationsAppendToPharmacyNoteSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type MedicationsAppendToPharmacyNotePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type MedicationsAppendToPharmacyNoteQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type MedicationsAppendToPharmacyNoteRequest struct {
-	PathParams  MedicationsAppendToPharmacyNotePathParams
-	QueryParams MedicationsAppendToPharmacyNoteQueryParams
-	Security    MedicationsAppendToPharmacyNoteSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID      string `pathParam:"style=simple,explode=false,name=id"`
+	Patient *int64 `queryParam:"style=form,explode=true,name=patient"`
 }
 
 type MedicationsAppendToPharmacyNoteResponse struct {

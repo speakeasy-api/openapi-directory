@@ -7,16 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSecurityControlDefinitionsQueryParams struct {
+type ListSecurityControlDefinitionsRequest struct {
 	//  An optional parameter that limits the total results of the API response to the specified number. If this parameter isn't provided in the request, the results include the first 25 security controls that apply to the specified standard. The results also include a <code>NextToken</code> parameter that you can use in a subsequent API call to get the next 25 controls. This repeats until all controls for the standard are returned.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	//  Optional pagination parameter.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	//  The Amazon Resource Name (ARN) of the standard that you want to view controls for.
-	StandardsArn *string `queryParam:"style=form,explode=true,name=StandardsArn"`
-}
-
-type ListSecurityControlDefinitionsHeaders struct {
+	StandardsArn      *string `queryParam:"style=form,explode=true,name=StandardsArn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +21,6 @@ type ListSecurityControlDefinitionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSecurityControlDefinitionsRequest struct {
-	QueryParams ListSecurityControlDefinitionsQueryParams
-	Headers     ListSecurityControlDefinitionsHeaders
 }
 
 type ListSecurityControlDefinitionsResponse struct {

@@ -13,41 +13,41 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateRescoreExecutionPlanRequest{
-        Headers: operations.CreateRescoreExecutionPlanHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSKendraRerankingFrontendService.CreateRescoreExecutionPlan",
-        },
-        Request: shared.CreateRescoreExecutionPlanRequest{
+        CreateRescoreExecutionPlanRequest: shared.CreateRescoreExecutionPlanRequest{
             CapacityUnits: &shared.CapacityUnitsConfiguration{
-                RescoreCapacityUnits: 847252,
+                RescoreCapacityUnits: 548814,
             },
-            ClientToken: "vel",
-            Description: "error",
-            Name: "deserunt",
+            ClientToken: "provident",
+            Description: "distinctio",
+            Name: "quibusdam",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "illum",
+                    Value: "vel",
+                },
+                shared.Tag{
+                    Key: "error",
+                    Value: "deserunt",
                 },
             },
         },
+        XAmzAlgorithm: "suscipit",
+        XAmzContentSha256: "iure",
+        XAmzCredential: "magnam",
+        XAmzDate: "debitis",
+        XAmzSecurityToken: "ipsa",
+        XAmzSignature: "delectus",
+        XAmzSignedHeaders: "tempora",
+        XAmzTarget: "AWSKendraRerankingFrontendService.CreateRescoreExecutionPlan",
     }
 
     ctx := context.Background()

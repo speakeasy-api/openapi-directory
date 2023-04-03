@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type GetUserWatchingQueryParams struct {
+type GetUserWatchingRequest struct {
 	// The BBC-id cookie value
 	IdentityCookie float64 `queryParam:"style=form,explode=true,name=identity_cookie"`
-}
-
-type GetUserWatchingRequest struct {
-	QueryParams GetUserWatchingQueryParams
 }
 
 type GetUserWatchingResponse struct {

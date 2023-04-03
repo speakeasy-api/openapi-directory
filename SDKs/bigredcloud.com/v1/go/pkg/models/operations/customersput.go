@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomersPutPathParams struct {
+type CustomersPutRequest struct {
+	// Information of Customer to update.
+	CustomerDto shared.CustomerDto `request:"mediaType=application/json"`
 	// Id of Customer to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomersPutRequest struct {
-	PathParams CustomersPutPathParams
-	// Information of Customer to update.
-	Request shared.CustomerDto `request:"mediaType=application/json"`
 }
 
 type CustomersPutResponse struct {

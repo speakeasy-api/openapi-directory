@@ -4,15 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetInitialsSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AvatarsGetInitialsQueryParams struct {
+type AvatarsGetInitialsRequest struct {
 	// Changes background color. By default a random color will be picked and stay will persistent to the given name.
 	Background *string `queryParam:"style=form,explode=true,name=background"`
 	// Changes text color. By default a random color will be picked and stay will persistent to the given name.
@@ -23,11 +22,6 @@ type AvatarsGetInitialsQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Image width. Pass an integer between 0 to 2000. Defaults to 100.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type AvatarsGetInitialsRequest struct {
-	QueryParams AvatarsGetInitialsQueryParams
-	Security    AvatarsGetInitialsSecurity
 }
 
 type AvatarsGetInitialsResponse struct {

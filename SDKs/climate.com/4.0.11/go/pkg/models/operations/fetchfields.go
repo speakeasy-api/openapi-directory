@@ -8,26 +8,17 @@ import (
 )
 
 type FetchFieldsSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type FetchFieldsQueryParams struct {
-	// Optional prefix filter for field name. Must be at least 3 characters.
-	FieldName *string `queryParam:"style=form,explode=true,name=fieldName"`
-}
-
-type FetchFieldsHeaders struct {
+type FetchFieldsRequest struct {
 	// Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
 	XLimit *int `header:"style=simple,explode=false,name=X-Limit"`
 	// Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
 	XNextToken *string `header:"style=simple,explode=false,name=X-Next-Token"`
-}
-
-type FetchFieldsRequest struct {
-	QueryParams FetchFieldsQueryParams
-	Headers     FetchFieldsHeaders
-	Security    FetchFieldsSecurity
+	// Optional prefix filter for field name. Must be at least 3 characters.
+	FieldName *string `queryParam:"style=form,explode=true,name=fieldName"`
 }
 
 type FetchFieldsResponse struct {

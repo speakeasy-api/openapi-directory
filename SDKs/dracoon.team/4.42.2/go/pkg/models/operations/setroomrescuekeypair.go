@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetRoomRescueKeyPairPathParams struct {
-	// Room ID
-	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
-}
-
-type SetRoomRescueKeyPairHeaders struct {
+type SetRoomRescueKeyPairRequest struct {
+	UserKeyPairContainer shared.UserKeyPairContainer `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type SetRoomRescueKeyPairRequest struct {
-	PathParams SetRoomRescueKeyPairPathParams
-	Headers    SetRoomRescueKeyPairHeaders
-	Request    shared.UserKeyPairContainer `request:"mediaType=application/json"`
+	// Room ID
+	RoomID int64 `pathParam:"style=simple,explode=false,name=room_id"`
 }
 
 type SetRoomRescueKeyPairResponse struct {

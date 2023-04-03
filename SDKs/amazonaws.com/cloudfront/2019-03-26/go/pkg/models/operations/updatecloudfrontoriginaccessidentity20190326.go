@@ -6,23 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateCloudFrontOriginAccessIdentity20190326PathParams struct {
-	// The identity's id.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type UpdateCloudFrontOriginAccessIdentity20190326Headers struct {
-	// The value of the <code>ETag</code> header that you received when retrieving the identity's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
-	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateCloudFrontOriginAccessIdentity20190326RequestBodyCloudFrontOriginAccessIdentityConfig - Origin access identity configuration. Send a <code>GET</code> request to the <code>/<i>CloudFront API version</i>/CloudFront/identity ID/config</code> resource.
 type UpdateCloudFrontOriginAccessIdentity20190326RequestBodyCloudFrontOriginAccessIdentityConfig struct {
 	CallerReference *string
@@ -35,9 +18,18 @@ type UpdateCloudFrontOriginAccessIdentity20190326RequestBody struct {
 }
 
 type UpdateCloudFrontOriginAccessIdentity20190326Request struct {
-	PathParams UpdateCloudFrontOriginAccessIdentity20190326PathParams
-	Headers    UpdateCloudFrontOriginAccessIdentity20190326Headers
-	Request    []byte `request:"mediaType=text/xml"`
+	// The identity's id.
+	ID string `pathParam:"style=simple,explode=false,name=Id"`
+	// The value of the <code>ETag</code> header that you received when retrieving the identity's configuration. For example: <code>E2QWRUHAPOMQZL</code>.
+	IfMatch           *string `header:"style=simple,explode=false,name=If-Match"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateCloudFrontOriginAccessIdentity20190326Response struct {

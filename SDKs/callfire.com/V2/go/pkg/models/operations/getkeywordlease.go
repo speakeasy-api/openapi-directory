@@ -8,23 +8,15 @@ import (
 )
 
 type GetKeywordLeaseSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetKeywordLeasePathParams struct {
-	// Keyword text that a lease is desired for
-	Keyword string `pathParam:"style=simple,explode=false,name=keyword"`
-}
-
-type GetKeywordLeaseQueryParams struct {
-	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetKeywordLeaseRequest struct {
-	PathParams  GetKeywordLeasePathParams
-	QueryParams GetKeywordLeaseQueryParams
-	Security    GetKeywordLeaseSecurity
+	// Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// Keyword text that a lease is desired for
+	Keyword string `pathParam:"style=simple,explode=false,name=keyword"`
 }
 
 type GetKeywordLeaseResponse struct {

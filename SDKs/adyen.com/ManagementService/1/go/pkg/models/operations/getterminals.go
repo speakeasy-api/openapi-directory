@@ -8,11 +8,11 @@ import (
 )
 
 type GetTerminalsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetTerminalsQueryParams struct {
+type GetTerminalsRequest struct {
 	// Returns terminals of the [models](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/companies/{companyId}/terminalModels) specified in the format *brand.model*.
 	BrandModels *string `queryParam:"style=form,explode=true,name=brandModels"`
 	// Returns terminals located in the countries specified by their [two-letter country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
@@ -27,11 +27,6 @@ type GetTerminalsQueryParams struct {
 	SearchQuery *string `queryParam:"style=form,explode=true,name=searchQuery"`
 	// Returns terminals that are assigned to the [stores](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/stores) specified by their unique store ID.
 	StoreIds *string `queryParam:"style=form,explode=true,name=storeIds"`
-}
-
-type GetTerminalsRequest struct {
-	QueryParams GetTerminalsQueryParams
-	Security    GetTerminalsSecurity
 }
 
 type GetTerminalsResponse struct {

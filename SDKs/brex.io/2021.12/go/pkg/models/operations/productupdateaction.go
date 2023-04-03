@@ -4,19 +4,11 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ProductUpdateActionSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ProductUpdateActionPathParams struct {
-	// The action you want to perform for the order
-	Action string `pathParam:"style=simple,explode=false,name=action"`
-	// ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
-	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // ProductUpdateActionRequestBody - Parameters for the update order endpoint
@@ -26,10 +18,12 @@ type ProductUpdateActionRequestBody struct {
 }
 
 type ProductUpdateActionRequest struct {
-	PathParams ProductUpdateActionPathParams
 	// Parameters for the update order endpoint
-	Request  *ProductUpdateActionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security ProductUpdateActionSecurity
+	RequestBody *ProductUpdateActionRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// The action you want to perform for the order
+	Action string `pathParam:"style=simple,explode=false,name=action"`
+	// ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
+	OrderID string `pathParam:"style=simple,explode=false,name=orderId"`
 }
 
 // ProductUpdateActionDefaultApplicationJSON - Detailed information about the error

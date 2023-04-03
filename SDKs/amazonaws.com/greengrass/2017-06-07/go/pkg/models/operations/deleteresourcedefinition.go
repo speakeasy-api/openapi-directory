@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type DeleteResourceDefinitionPathParams struct {
-	// The ID of the resource definition.
-	ResourceDefinitionID string `pathParam:"style=simple,explode=false,name=ResourceDefinitionId"`
-}
-
-type DeleteResourceDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteResourceDefinitionRequest struct {
-	PathParams DeleteResourceDefinitionPathParams
-	Headers    DeleteResourceDefinitionHeaders
+	// The ID of the resource definition.
+	ResourceDefinitionID string  `pathParam:"style=simple,explode=false,name=ResourceDefinitionId"`
+	XAmzAlgorithm        *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteResourceDefinitionResponse struct {

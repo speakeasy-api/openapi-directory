@@ -34,7 +34,7 @@ func newV1TinVerification(defaultClient, securityClient HTTPClient, serverURL, l
 
 // TinVerificationBasicCheck - Verifies a TIN number
 // Performs a basic verification check of a given TIN number and name.
-func (s *v1TinVerification) TinVerificationBasicCheck(ctx context.Context, request operations.TinVerificationBasicCheckRequest) (*operations.TinVerificationBasicCheckResponse, error) {
+func (s *v1TinVerification) TinVerificationBasicCheck(ctx context.Context, request operations.TinVerificationBasicCheckRequest, security operations.TinVerificationBasicCheckSecurity) (*operations.TinVerificationBasicCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/tin-verification/basic-check"
 
@@ -43,11 +43,11 @@ func (s *v1TinVerification) TinVerificationBasicCheck(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *v1TinVerification) TinVerificationBasicCheck(ctx context.Context, reque
 
 // TinVerificationComprehensiveCheck - EIN Name Lookup with TIN number and retrieves company data
 // Performs an EIN name match using provided TIN Number. Additionally to the name lookup it will lookup company details
-func (s *v1TinVerification) TinVerificationComprehensiveCheck(ctx context.Context, request operations.TinVerificationComprehensiveCheckRequest) (*operations.TinVerificationComprehensiveCheckResponse, error) {
+func (s *v1TinVerification) TinVerificationComprehensiveCheck(ctx context.Context, request operations.TinVerificationComprehensiveCheckRequest, security operations.TinVerificationComprehensiveCheckSecurity) (*operations.TinVerificationComprehensiveCheckResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/tin-verification/comprehensive-check"
 
@@ -102,11 +102,11 @@ func (s *v1TinVerification) TinVerificationComprehensiveCheck(ctx context.Contex
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *v1TinVerification) TinVerificationComprehensiveCheck(ctx context.Contex
 
 // TinVerificationNameLookup - EIN Name Lookup with TIN number
 // Performs an EIN name match using provided TIN Number
-func (s *v1TinVerification) TinVerificationNameLookup(ctx context.Context, request operations.TinVerificationNameLookupRequest) (*operations.TinVerificationNameLookupResponse, error) {
+func (s *v1TinVerification) TinVerificationNameLookup(ctx context.Context, request operations.TinVerificationNameLookupRequest, security operations.TinVerificationNameLookupSecurity) (*operations.TinVerificationNameLookupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/tin-verification/name-lookup"
 
@@ -161,11 +161,11 @@ func (s *v1TinVerification) TinVerificationNameLookup(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

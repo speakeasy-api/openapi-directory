@@ -39,20 +39,20 @@ func newTerminalSettingsMerchantLevel(defaultClient, securityClient HTTPClient, 
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalLogos(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalLogosRequest) (*operations.GetMerchantsMerchantIDTerminalLogosResponse, error) {
+func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalLogos(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalLogosRequest, security operations.GetMerchantsMerchantIDTerminalLogosSecurity) (*operations.GetMerchantsMerchantIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -111,16 +111,16 @@ func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalLogos(ctx 
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalSettings(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalSettingsRequest) (*operations.GetMerchantsMerchantIDTerminalSettingsResponse, error) {
+func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalSettings(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalSettingsRequest, security operations.GetMerchantsMerchantIDTerminalSettingsSecurity) (*operations.GetMerchantsMerchantIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,11 +182,11 @@ func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalSettings(c
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalLogos(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalLogosRequest) (*operations.PatchMerchantsMerchantIDTerminalLogosResponse, error) {
+func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalLogos(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalLogosRequest, security operations.PatchMerchantsMerchantIDTerminalLogosSecurity) (*operations.PatchMerchantsMerchantIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -198,11 +198,11 @@ func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalLogos(ct
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -265,11 +265,11 @@ func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalLogos(ct
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
-func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalSettings(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalSettingsRequest) (*operations.PatchMerchantsMerchantIDTerminalSettingsResponse, error) {
+func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalSettings(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalSettingsRequest, security operations.PatchMerchantsMerchantIDTerminalSettingsSecurity) (*operations.PatchMerchantsMerchantIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -281,7 +281,7 @@ func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalSettings
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

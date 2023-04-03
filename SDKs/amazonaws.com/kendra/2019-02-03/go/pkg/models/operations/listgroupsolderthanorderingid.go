@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGroupsOlderThanOrderingIDQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListGroupsOlderThanOrderingIDXAmzTargetEnum
 type ListGroupsOlderThanOrderingIDXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListGroupsOlderThanOrderingIDXAmzTargetEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type ListGroupsOlderThanOrderingIDHeaders struct {
+type ListGroupsOlderThanOrderingIDRequest struct {
+	ListGroupsOlderThanOrderingIDRequest shared.ListGroupsOlderThanOrderingIDRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                     `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListGroupsOlderThanOrderingIDHeaders struct {
 	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListGroupsOlderThanOrderingIDXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListGroupsOlderThanOrderingIDRequest struct {
-	QueryParams ListGroupsOlderThanOrderingIDQueryParams
-	Headers     ListGroupsOlderThanOrderingIDHeaders
-	Request     shared.ListGroupsOlderThanOrderingIDRequest `request:"mediaType=application/json"`
 }
 
 type ListGroupsOlderThanOrderingIDResponse struct {

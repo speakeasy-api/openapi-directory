@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteDashboardPathParams struct {
-	// The ID of the dashboard to delete.
-	DashboardID string `pathParam:"style=simple,explode=false,name=dashboardId"`
-}
-
-type DeleteDashboardQueryParams struct {
-	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteDashboardHeaders struct {
+type DeleteDashboardRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteDashboardHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteDashboardRequest struct {
-	PathParams  DeleteDashboardPathParams
-	QueryParams DeleteDashboardQueryParams
-	Headers     DeleteDashboardHeaders
+	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The ID of the dashboard to delete.
+	DashboardID string `pathParam:"style=simple,explode=false,name=dashboardId"`
 }
 
 type DeleteDashboardResponse struct {

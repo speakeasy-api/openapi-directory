@@ -8,23 +8,18 @@ import (
 )
 
 type PostUsersSelectedUserSSHKeysSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostUsersSelectedUserSSHKeysPathParams struct {
+type PostUsersSelectedUserSSHKeysRequest struct {
+	// The new SSH key object. Note that the username property has been deprecated due to [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// This can either be the UUID of the account, surrounded by curly-braces, for
 	// example: `{account UUID}`, OR an Atlassian Account ID.
 	//
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
-}
-
-type PostUsersSelectedUserSSHKeysRequest struct {
-	PathParams PostUsersSelectedUserSSHKeysPathParams
-	// The new SSH key object. Note that the username property has been deprecated due to [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostUsersSelectedUserSSHKeysSecurity
 }
 
 type PostUsersSelectedUserSSHKeysResponse struct {

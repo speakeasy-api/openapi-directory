@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOrganizationalUnitsForParentQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListOrganizationalUnitsForParentXAmzTargetEnum
 type ListOrganizationalUnitsForParentXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListOrganizationalUnitsForParentXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type ListOrganizationalUnitsForParentHeaders struct {
+type ListOrganizationalUnitsForParentRequest struct {
+	ListOrganizationalUnitsForParentRequest shared.ListOrganizationalUnitsForParentRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListOrganizationalUnitsForParentHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListOrganizationalUnitsForParentXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListOrganizationalUnitsForParentRequest struct {
-	QueryParams ListOrganizationalUnitsForParentQueryParams
-	Headers     ListOrganizationalUnitsForParentHeaders
-	Request     shared.ListOrganizationalUnitsForParentRequest `request:"mediaType=application/json"`
 }
 
 type ListOrganizationalUnitsForParentResponse struct {

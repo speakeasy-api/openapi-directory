@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type DisassociateAssessmentReportEvidenceFolderPathParams struct {
-	//  The unique identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-}
-
-type DisassociateAssessmentReportEvidenceFolderHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DisassociateAssessmentReportEvidenceFolderRequestBody struct {
 	//  The unique identifier for the folder that the evidence is stored in.
 	EvidenceFolderID string `json:"evidenceFolderId"`
 }
 
 type DisassociateAssessmentReportEvidenceFolderRequest struct {
-	PathParams DisassociateAssessmentReportEvidenceFolderPathParams
-	Headers    DisassociateAssessmentReportEvidenceFolderHeaders
-	Request    DisassociateAssessmentReportEvidenceFolderRequestBody `request:"mediaType=application/json"`
+	RequestBody       DisassociateAssessmentReportEvidenceFolderRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	//  The unique identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
 }
 
 type DisassociateAssessmentReportEvidenceFolderResponse struct {

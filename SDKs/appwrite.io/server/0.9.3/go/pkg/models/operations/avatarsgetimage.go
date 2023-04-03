@@ -4,27 +4,21 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetImageSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type AvatarsGetImageQueryParams struct {
+type AvatarsGetImageRequest struct {
 	// Resize preview image height, Pass an integer between 0 to 2000.
 	Height *int `queryParam:"style=form,explode=true,name=height"`
 	// Image URL which you want to crop.
 	URL string `queryParam:"style=form,explode=true,name=url"`
 	// Resize preview image width, Pass an integer between 0 to 2000.
 	Width *int `queryParam:"style=form,explode=true,name=width"`
-}
-
-type AvatarsGetImageRequest struct {
-	QueryParams AvatarsGetImageQueryParams
-	Security    AvatarsGetImageSecurity
 }
 
 type AvatarsGetImageResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListHyperParameterTuningJobsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListHyperParameterTuningJobsXAmzTargetEnum
 type ListHyperParameterTuningJobsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListHyperParameterTuningJobsXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListHyperParameterTuningJobsHeaders struct {
+type ListHyperParameterTuningJobsRequest struct {
+	ListHyperParameterTuningJobsRequest shared.ListHyperParameterTuningJobsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListHyperParameterTuningJobsHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListHyperParameterTuningJobsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListHyperParameterTuningJobsRequest struct {
-	QueryParams ListHyperParameterTuningJobsQueryParams
-	Headers     ListHyperParameterTuningJobsHeaders
-	Request     shared.ListHyperParameterTuningJobsRequest `request:"mediaType=application/json"`
 }
 
 type ListHyperParameterTuningJobsResponse struct {

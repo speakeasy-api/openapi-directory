@@ -116,7 +116,7 @@ func (s *SDK) GetIceServerConfig(ctx context.Context, request operations.GetIceS
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/get-ice-server-config"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) GetIceServerConfig(ctx context.Context, request operations.GetIceS
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -232,7 +232,7 @@ func (s *SDK) SendAlexaOfferToMaster(ctx context.Context, request operations.Sen
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/send-alexa-offer-to-master"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -247,7 +247,7 @@ func (s *SDK) SendAlexaOfferToMaster(ctx context.Context, request operations.Sen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

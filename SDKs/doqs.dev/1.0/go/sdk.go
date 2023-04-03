@@ -113,7 +113,7 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // CreateTemplateDesignerTemplatesPost - Create Template
-func (s *SDK) CreateTemplateDesignerTemplatesPost(ctx context.Context, request operations.CreateTemplateDesignerTemplatesPostRequest) (*operations.CreateTemplateDesignerTemplatesPostResponse, error) {
+func (s *SDK) CreateTemplateDesignerTemplatesPost(ctx context.Context, request shared.CreateOrUpdateTemplateRequest) (*operations.CreateTemplateDesignerTemplatesPostResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/designer/templates/"
 
@@ -181,7 +181,7 @@ func (s *SDK) CreateTemplateDesignerTemplatesPost(ctx context.Context, request o
 // DeleteDesignerTemplatesIDDelete - Delete
 func (s *SDK) DeleteDesignerTemplatesIDDelete(ctx context.Context, request operations.DeleteDesignerTemplatesIDDeleteRequest) (*operations.DeleteDesignerTemplatesIDDeleteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,9 +237,9 @@ func (s *SDK) DeleteDesignerTemplatesIDDelete(ctx context.Context, request opera
 // GeneratePdfDesignerTemplatesIDGeneratePost - Generate Pdf
 func (s *SDK) GeneratePdfDesignerTemplatesIDGeneratePost(ctx context.Context, request operations.GeneratePdfDesignerTemplatesIDGeneratePostRequest) (*operations.GeneratePdfDesignerTemplatesIDGeneratePostResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}/generate", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}/generate", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GeneratePDFPayload", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -310,7 +310,7 @@ func (s *SDK) ListTemplatesDesignerTemplatesGet(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -363,7 +363,7 @@ func (s *SDK) ListTemplatesDesignerTemplatesGet(ctx context.Context, request ope
 // ListTemplatesDesignerTemplatesIDGet - List Templates
 func (s *SDK) ListTemplatesDesignerTemplatesIDGet(ctx context.Context, request operations.ListTemplatesDesignerTemplatesIDGetRequest) (*operations.ListTemplatesDesignerTemplatesIDGetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -417,7 +417,7 @@ func (s *SDK) ListTemplatesDesignerTemplatesIDGet(ctx context.Context, request o
 }
 
 // PreviewDesignerTemplatesPreviewPost - Preview
-func (s *SDK) PreviewDesignerTemplatesPreviewPost(ctx context.Context, request operations.PreviewDesignerTemplatesPreviewPostRequest) (*operations.PreviewDesignerTemplatesPreviewPostResponse, error) {
+func (s *SDK) PreviewDesignerTemplatesPreviewPost(ctx context.Context, request shared.PreviewModel) (*operations.PreviewDesignerTemplatesPreviewPostResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/designer/templates/preview"
 
@@ -485,9 +485,9 @@ func (s *SDK) PreviewDesignerTemplatesPreviewPost(ctx context.Context, request o
 // UpdateTemplateDesignerTemplatesIDPut - Update Template
 func (s *SDK) UpdateTemplateDesignerTemplatesIDPut(ctx context.Context, request operations.UpdateTemplateDesignerTemplatesIDPutRequest) (*operations.UpdateTemplateDesignerTemplatesIDPutResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateOrUpdateTemplateRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

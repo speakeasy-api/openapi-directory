@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostUsers2FALoginRequest struct {
-	// Login details.
-	Request shared.Users2FALoginRequest `request:"mediaType=application/json"`
-}
-
 type PostUsers2FALoginResponse struct {
 	ContentType string
 	// Authentication failed or second factor required

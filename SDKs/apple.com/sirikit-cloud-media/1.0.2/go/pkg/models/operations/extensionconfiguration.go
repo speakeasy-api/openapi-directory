@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type ExtensionConfigurationHeaders struct {
+type ExtensionConfigurationRequest struct {
 	AcceptLanguage                 string   `header:"style=simple,explode=false,name=Accept-Language"`
 	CacheControl                   string   `header:"style=simple,explode=false,name=Cache-Control"`
 	IfNoneMatch                    *string  `header:"style=simple,explode=false,name=If-None-Match"`
@@ -14,10 +14,6 @@ type ExtensionConfigurationHeaders struct {
 	UserAgent                      string   `header:"style=simple,explode=false,name=User-Agent"`
 	XApplecloudextensionRetryCount *float64 `header:"style=simple,explode=false,name=x-applecloudextension-retry-count"`
 	XApplecloudextensionSessionID  string   `header:"style=simple,explode=false,name=x-applecloudextension-session-id"`
-}
-
-type ExtensionConfigurationRequest struct {
-	Headers ExtensionConfigurationHeaders
 }
 
 type ExtensionConfigurationResponse struct {

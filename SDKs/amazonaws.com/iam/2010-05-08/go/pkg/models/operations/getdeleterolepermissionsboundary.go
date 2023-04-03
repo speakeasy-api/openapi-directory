@@ -50,26 +50,18 @@ func (e *GETDeleteRolePermissionsBoundaryVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDeleteRolePermissionsBoundaryQueryParams struct {
+type GETDeleteRolePermissionsBoundaryRequest struct {
 	Action GETDeleteRolePermissionsBoundaryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name (friendly name, not ARN) of the IAM role from which you want to remove the permissions boundary.
-	RoleName string                                      `queryParam:"style=form,explode=true,name=RoleName"`
-	Version  GETDeleteRolePermissionsBoundaryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteRolePermissionsBoundaryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteRolePermissionsBoundaryRequest struct {
-	QueryParams GETDeleteRolePermissionsBoundaryQueryParams
-	Headers     GETDeleteRolePermissionsBoundaryHeaders
+	RoleName          string                                      `queryParam:"style=form,explode=true,name=RoleName"`
+	Version           GETDeleteRolePermissionsBoundaryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteRolePermissionsBoundaryResponse struct {

@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCognitoEventsPathParams struct {
+type GetCognitoEventsRequest struct {
 	// The Cognito Identity Pool ID for the request
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type GetCognitoEventsHeaders struct {
+	IdentityPoolID    string  `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetCognitoEventsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCognitoEventsRequest struct {
-	PathParams GetCognitoEventsPathParams
-	Headers    GetCognitoEventsHeaders
 }
 
 type GetCognitoEventsResponse struct {

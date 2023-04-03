@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAnnotationImportJobPathParams struct {
-	// The job's ID.
-	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
-}
-
-type GetAnnotationImportJobHeaders struct {
+type GetAnnotationImportJobRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetAnnotationImportJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetAnnotationImportJobRequest struct {
-	PathParams GetAnnotationImportJobPathParams
-	Headers    GetAnnotationImportJobHeaders
+	// The job's ID.
+	JobID string `pathParam:"style=simple,explode=false,name=jobId"`
 }
 
 type GetAnnotationImportJobResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTGetPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetPolicyQueryParams struct {
-	Action  POSTGetPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetPolicyRequest struct {
-	QueryParams POSTGetPolicyQueryParams
-	Headers     POSTGetPolicyHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetPolicyActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                   `request:"mediaType=text/xml"`
+	Version           POSTGetPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetPolicyResponse struct {

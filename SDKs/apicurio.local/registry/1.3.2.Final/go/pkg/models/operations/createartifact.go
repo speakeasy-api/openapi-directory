@@ -9,41 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// CreateArtifactIfExistsEnum - Set this option to instruct the server on what to do if the artifact already exists.
-type CreateArtifactIfExistsEnum string
-
-const (
-	CreateArtifactIfExistsEnumFail           CreateArtifactIfExistsEnum = "FAIL"
-	CreateArtifactIfExistsEnumUpdate         CreateArtifactIfExistsEnum = "UPDATE"
-	CreateArtifactIfExistsEnumReturn         CreateArtifactIfExistsEnum = "RETURN"
-	CreateArtifactIfExistsEnumReturnOrUpdate CreateArtifactIfExistsEnum = "RETURN_OR_UPDATE"
-)
-
-func (e *CreateArtifactIfExistsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "FAIL":
-		fallthrough
-	case "UPDATE":
-		fallthrough
-	case "RETURN":
-		fallthrough
-	case "RETURN_OR_UPDATE":
-		*e = CreateArtifactIfExistsEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CreateArtifactIfExistsEnum: %s", s)
-	}
-}
-
-type CreateArtifactQueryParams struct {
-	// Set this option to instruct the server on what to do if the artifact already exists.
-	IfExists *CreateArtifactIfExistsEnum `queryParam:"style=form,explode=true,name=ifExists"`
-}
-
 // CreateArtifactXRegistryArtifactTypeEnum - Specifies the type of the artifact being added. Possible values include:
 //
 // * Avro (`AVRO`)
@@ -106,7 +71,52 @@ func (e *CreateArtifactXRegistryArtifactTypeEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type CreateArtifactHeaders struct {
+// CreateArtifactIfExistsEnum - Set this option to instruct the server on what to do if the artifact already exists.
+type CreateArtifactIfExistsEnum string
+
+const (
+	CreateArtifactIfExistsEnumFail           CreateArtifactIfExistsEnum = "FAIL"
+	CreateArtifactIfExistsEnumUpdate         CreateArtifactIfExistsEnum = "UPDATE"
+	CreateArtifactIfExistsEnumReturn         CreateArtifactIfExistsEnum = "RETURN"
+	CreateArtifactIfExistsEnumReturnOrUpdate CreateArtifactIfExistsEnum = "RETURN_OR_UPDATE"
+)
+
+func (e *CreateArtifactIfExistsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "FAIL":
+		fallthrough
+	case "UPDATE":
+		fallthrough
+	case "RETURN":
+		fallthrough
+	case "RETURN_OR_UPDATE":
+		*e = CreateArtifactIfExistsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateArtifactIfExistsEnum: %s", s)
+	}
+}
+
+type CreateArtifactRequest struct {
+	// The content of the artifact being created. This is often, but not always, JSON data
+	// representing one of the supported artifact types:
+	//
+	// * Avro (`AVRO`)
+	// * Protobuf (`PROTOBUF`)
+	// * Protobuf File Descriptor (`PROTOBUF_FD`)
+	// * JSON Schema (`JSON`)
+	// * Kafka Connect (`KCONNECT`)
+	// * OpenAPI (`OPENAPI`)
+	// * AsyncAPI (`ASYNCAPI`)
+	// * GraphQL (`GRAPHQL`)
+	// * Web Services Description Language (`WSDL`)
+	// * XML Schema (`XSD`)
+	//
+	RequestBody []byte `request:"mediaType=*/*"`
 	// A client-provided, globally unique identifier for the new artifact.
 	XRegistryArtifactID *string `header:"style=simple,explode=false,name=X-Registry-ArtifactId"`
 	// Specifies the type of the artifact being added. Possible values include:
@@ -122,26 +132,8 @@ type CreateArtifactHeaders struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	XRegistryArtifactType *CreateArtifactXRegistryArtifactTypeEnum `header:"style=simple,explode=false,name=X-Registry-ArtifactType"`
-}
-
-type CreateArtifactRequest struct {
-	QueryParams CreateArtifactQueryParams
-	Headers     CreateArtifactHeaders
-	// The content of the artifact being created. This is often, but not always, JSON data
-	// representing one of the supported artifact types:
-	//
-	// * Avro (`AVRO`)
-	// * Protobuf (`PROTOBUF`)
-	// * Protobuf File Descriptor (`PROTOBUF_FD`)
-	// * JSON Schema (`JSON`)
-	// * Kafka Connect (`KCONNECT`)
-	// * OpenAPI (`OPENAPI`)
-	// * AsyncAPI (`ASYNCAPI`)
-	// * GraphQL (`GRAPHQL`)
-	// * Web Services Description Language (`WSDL`)
-	// * XML Schema (`XSD`)
-	//
-	Request []byte `request:"mediaType=*/*"`
+	// Set this option to instruct the server on what to do if the artifact already exists.
+	IfExists *CreateArtifactIfExistsEnum `queryParam:"style=form,explode=true,name=ifExists"`
 }
 
 type CreateArtifactResponse struct {

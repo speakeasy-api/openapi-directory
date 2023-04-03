@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureChannelCatalogColumnMappingsPathParams struct {
+type ConfigureChannelCatalogColumnMappingsRequest struct {
+	RequestBody []shared.ChannelCatalogColumnMapping `request:"mediaType=application/json"`
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type ConfigureChannelCatalogColumnMappingsRequest struct {
-	PathParams ConfigureChannelCatalogColumnMappingsPathParams
-	Request    []shared.ChannelCatalogColumnMapping `request:"mediaType=application/json"`
 }
 
 type ConfigureChannelCatalogColumnMappingsResponse struct {

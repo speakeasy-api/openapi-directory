@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GroupV2GetGroupOptionalConversationsPathParams struct {
+type GroupV2GetGroupOptionalConversationsRequest struct {
 	// Requested group's id.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GroupV2GetGroupOptionalConversationsRequest struct {
-	PathParams GroupV2GetGroupOptionalConversationsPathParams
 }
 
 // GroupV2GetGroupOptionalConversations200Wildcard - Look at the Response property for more information about the nature of this response

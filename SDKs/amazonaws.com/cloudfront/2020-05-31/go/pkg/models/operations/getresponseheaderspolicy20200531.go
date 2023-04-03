@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetResponseHeadersPolicy20200531PathParams struct {
+type GetResponseHeadersPolicy20200531Request struct {
 	// <p>The identifier for the response headers policy.</p> <p>If the response headers policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the response headers policy is not attached to a cache behavior, you can get the identifier using <code>ListResponseHeadersPolicies</code>.</p>
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetResponseHeadersPolicy20200531Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetResponseHeadersPolicy20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetResponseHeadersPolicy20200531Request struct {
-	PathParams GetResponseHeadersPolicy20200531PathParams
-	Headers    GetResponseHeadersPolicy20200531Headers
 }
 
 type GetResponseHeadersPolicy20200531Response struct {

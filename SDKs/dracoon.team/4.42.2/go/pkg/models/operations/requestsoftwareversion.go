@@ -42,13 +42,9 @@ func (e *RequestSoftwareVersionXSdsDateFormatEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type RequestSoftwareVersionHeaders struct {
+type RequestSoftwareVersionRequest struct {
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestSoftwareVersionXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestSoftwareVersionRequest struct {
-	Headers RequestSoftwareVersionHeaders
 }
 
 type RequestSoftwareVersionResponse struct {

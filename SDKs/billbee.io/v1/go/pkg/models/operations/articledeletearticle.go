@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type ArticleDeleteArticlePathParams struct {
+type ArticleDeleteArticleRequest struct {
 	// The id of the Product
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ArticleDeleteArticleRequest struct {
-	PathParams ArticleDeleteArticlePathParams
 }
 
 type ArticleDeleteArticleResponse struct {

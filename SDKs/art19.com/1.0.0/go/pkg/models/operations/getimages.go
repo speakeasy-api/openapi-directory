@@ -8,20 +8,15 @@ import (
 )
 
 type GetImagesSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type GetImagesQueryParams struct {
+type GetImagesRequest struct {
 	// The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
 	// The brackets *MUST* be percent-encoded, per the requirements in
 	// [RFC 3986 § 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
 	//
 	Ids []string `queryParam:"style=form,explode=true,name=ids[]"`
-}
-
-type GetImagesRequest struct {
-	QueryParams GetImagesQueryParams
-	Security    GetImagesSecurity
 }
 
 // GetImages400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

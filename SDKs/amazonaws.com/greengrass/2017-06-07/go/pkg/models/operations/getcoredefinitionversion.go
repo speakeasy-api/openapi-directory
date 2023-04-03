@@ -7,26 +7,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCoreDefinitionVersionPathParams struct {
+type GetCoreDefinitionVersionRequest struct {
 	// The ID of the core definition.
 	CoreDefinitionID string `pathParam:"style=simple,explode=false,name=CoreDefinitionId"`
 	// The ID of the core definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListCoreDefinitionVersions'' requests. If the version is the last one that was associated with a core definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
-	CoreDefinitionVersionID string `pathParam:"style=simple,explode=false,name=CoreDefinitionVersionId"`
-}
-
-type GetCoreDefinitionVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCoreDefinitionVersionRequest struct {
-	PathParams GetCoreDefinitionVersionPathParams
-	Headers    GetCoreDefinitionVersionHeaders
+	CoreDefinitionVersionID string  `pathParam:"style=simple,explode=false,name=CoreDefinitionVersionId"`
+	XAmzAlgorithm           *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetCoreDefinitionVersionResponse struct {

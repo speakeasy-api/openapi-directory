@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type GetDistribution20170325PathParams struct {
+type GetDistribution20170325Request struct {
 	// The distribution's ID.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type GetDistribution20170325Headers struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type GetDistribution20170325Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDistribution20170325Request struct {
-	PathParams GetDistribution20170325PathParams
-	Headers    GetDistribution20170325Headers
 }
 
 type GetDistribution20170325Response struct {

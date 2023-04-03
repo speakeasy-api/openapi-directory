@@ -13,42 +13,38 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            APIKeyAuth: shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            APIKeyAuth: "YOUR_API_KEY_HERE",
         }),
     )
 
-    req := operations.CreateTemplateDesignerTemplatesPostRequest{
-        Request: shared.CreateOrUpdateTemplateRequest{
-            Components: []map[string]interface{}{
-                map[string]interface{}{
-                    "distinctio": "quibusdam",
-                    "unde": "nulla",
-                    "corrupti": "illum",
-                },
-                map[string]interface{}{
-                    "error": "deserunt",
-                    "suscipit": "iure",
-                },
-                map[string]interface{}{
-                    "debitis": "ipsa",
-                    "delectus": "tempora",
-                },
+    req := shared.CreateOrUpdateTemplateRequest{
+        Components: []map[string]interface{}{
+            map[string]interface{}{
+                "distinctio": "quibusdam",
+                "unde": "nulla",
+                "corrupti": "illum",
             },
-            CSS: "suscipit",
-            FooterHTML: "molestiae",
-            Format: "a5",
-            HeaderHTML: "placeat",
-            Name: "voluptatum",
-            Orientation: "landscape",
-            PreviewPayload: map[string]interface{}{
-                "nisi": "recusandae",
-                "temporibus": "ab",
-                "quis": "veritatis",
+            map[string]interface{}{
+                "error": "deserunt",
+                "suscipit": "iure",
             },
-            TemplateHTML: "deserunt",
+            map[string]interface{}{
+                "debitis": "ipsa",
+                "delectus": "tempora",
+            },
         },
+        CSS: "suscipit",
+        FooterHTML: "molestiae",
+        Format: "a5",
+        HeaderHTML: "placeat",
+        Name: "voluptatum",
+        Orientation: "landscape",
+        PreviewPayload: map[string]interface{}{
+            "nisi": "recusandae",
+            "temporibus": "ab",
+            "quis": "veritatis",
+        },
+        TemplateHTML: "deserunt",
     }
 
     ctx := context.Background()

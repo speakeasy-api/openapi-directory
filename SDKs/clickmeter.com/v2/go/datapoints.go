@@ -34,7 +34,7 @@ func newDataPoints(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // DataPointsBatchDelete - Delete multiple datapoints
-func (s *dataPoints) DataPointsBatchDelete(ctx context.Context, request operations.DataPointsBatchDeleteRequest) (*operations.DataPointsBatchDeleteResponse, error) {
+func (s *dataPoints) DataPointsBatchDelete(ctx context.Context, request shared.APICoreRequestsDeleteBatch) (*operations.DataPointsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datapoints/batch"
 
@@ -100,7 +100,7 @@ func (s *dataPoints) DataPointsBatchDelete(ctx context.Context, request operatio
 }
 
 // DataPointsBatchPost - Update multiple datapoints
-func (s *dataPoints) DataPointsBatchPost(ctx context.Context, request operations.DataPointsBatchPostRequest) (*operations.DataPointsBatchPostResponse, error) {
+func (s *dataPoints) DataPointsBatchPost(ctx context.Context, request shared.APICoreRequestsDatapointsBatch) (*operations.DataPointsBatchPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datapoints/batch"
 
@@ -166,7 +166,7 @@ func (s *dataPoints) DataPointsBatchPost(ctx context.Context, request operations
 }
 
 // DataPointsBatchPut - Create multiple datapoints
-func (s *dataPoints) DataPointsBatchPut(ctx context.Context, request operations.DataPointsBatchPutRequest) (*operations.DataPointsBatchPutResponse, error) {
+func (s *dataPoints) DataPointsBatchPut(ctx context.Context, request shared.APICoreRequestsDatapointsBatch) (*operations.DataPointsBatchPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datapoints/batch"
 
@@ -241,7 +241,7 @@ func (s *dataPoints) DataPointsCount(ctx context.Context, request operations.Dat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -308,7 +308,7 @@ func (s *dataPoints) DataPointsCount(ctx context.Context, request operations.Dat
 // DataPointsDelete - Delete a datapoint
 func (s *dataPoints) DataPointsDelete(ctx context.Context, request operations.DataPointsDeleteRequest) (*operations.DataPointsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -385,7 +385,7 @@ func (s *dataPoints) DataPointsGet(ctx context.Context, request operations.DataP
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -438,14 +438,14 @@ func (s *dataPoints) DataPointsGet(ctx context.Context, request operations.DataP
 // DataPointsGetHits - Retrieve the list of events related to this datapoint.
 func (s *dataPoints) DataPointsGetHits(ctx context.Context, request operations.DataPointsGetHitsRequest) (*operations.DataPointsGetHitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/hits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/hits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -503,7 +503,7 @@ func (s *dataPoints) DataPointsGetStatisticsAggregatedSingle(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -561,7 +561,7 @@ func (s *dataPoints) DataPointsGetStatisticsAllList(ctx context.Context, request
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -612,14 +612,14 @@ func (s *dataPoints) DataPointsGetStatisticsAllList(ctx context.Context, request
 // DataPointsGetStatisticsList - Retrieve statistics about this datapoint for a timeframe grouped by some temporal entity (day/week/month)
 func (s *dataPoints) DataPointsGetStatisticsList(ctx context.Context, request operations.DataPointsGetStatisticsListRequest) (*operations.DataPointsGetStatisticsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/aggregated/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/aggregated/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -670,14 +670,14 @@ func (s *dataPoints) DataPointsGetStatisticsList(ctx context.Context, request op
 // DataPointsGetStatisticsSingle - Retrieve statistics about this datapoint for a timeframe
 func (s *dataPoints) DataPointsGetStatisticsSingle(ctx context.Context, request operations.DataPointsGetStatisticsSingleRequest) (*operations.DataPointsGetStatisticsSingleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/aggregated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/aggregated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -728,7 +728,7 @@ func (s *dataPoints) DataPointsGetStatisticsSingle(ctx context.Context, request 
 // DataPointsPatchFavourite - Fast switch the "favourite" field of a datapoint
 func (s *dataPoints) DataPointsPatchFavourite(ctx context.Context, request operations.DataPointsPatchFavouriteRequest) (*operations.DataPointsPatchFavouriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/favourite", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/favourite", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -800,9 +800,9 @@ func (s *dataPoints) DataPointsPatchFavourite(ctx context.Context, request opera
 // DataPointsPatchNotesForm - Fast patch the "notes" field of a datapoint
 func (s *dataPoints) DataPointsPatchNotesForm(ctx context.Context, request operations.DataPointsPatchNotesFormRequest) (*operations.DataPointsPatchNotesFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -882,9 +882,9 @@ func (s *dataPoints) DataPointsPatchNotesForm(ctx context.Context, request opera
 // DataPointsPatchNotesJSON - Fast patch the "notes" field of a datapoint
 func (s *dataPoints) DataPointsPatchNotesJSON(ctx context.Context, request operations.DataPointsPatchNotesJSONRequest) (*operations.DataPointsPatchNotesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -964,9 +964,9 @@ func (s *dataPoints) DataPointsPatchNotesJSON(ctx context.Context, request opera
 // DataPointsPatchNotesRaw - Fast patch the "notes" field of a datapoint
 func (s *dataPoints) DataPointsPatchNotesRaw(ctx context.Context, request operations.DataPointsPatchNotesRawRequest) (*operations.DataPointsPatchNotesRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1046,9 +1046,9 @@ func (s *dataPoints) DataPointsPatchNotesRaw(ctx context.Context, request operat
 // DataPointsPost - Update a datapoint
 func (s *dataPoints) DataPointsPost(ctx context.Context, request operations.DataPointsPostRequest) (*operations.DataPointsPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoDatapointsDatapoint", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1124,7 +1124,7 @@ func (s *dataPoints) DataPointsPost(ctx context.Context, request operations.Data
 }
 
 // DataPointsPut - Create a datapoint
-func (s *dataPoints) DataPointsPut(ctx context.Context, request operations.DataPointsPutRequest) (*operations.DataPointsPutResponse, error) {
+func (s *dataPoints) DataPointsPut(ctx context.Context, request shared.APICoreDtoDatapointsDatapoint) (*operations.DataPointsPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/datapoints"
 
@@ -1206,7 +1206,7 @@ func (s *dataPoints) DataPointsPut(ctx context.Context, request operations.DataP
 // GetDatapointsID - Get a datapoint
 func (s *dataPoints) GetDatapointsID(ctx context.Context, request operations.GetDatapointsIDRequest) (*operations.GetDatapointsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/datapoints/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

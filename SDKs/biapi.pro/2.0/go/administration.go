@@ -35,14 +35,14 @@ func newAdministration(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteClientsIDClient - Delete a client
 func (s *administration) DeleteClientsIDClient(ctx context.Context, request operations.DeleteClientsIDClientRequest) (*operations.DeleteClientsIDClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -83,14 +83,14 @@ func (s *administration) DeleteClientsIDClient(ctx context.Context, request oper
 // DeleteClientsIDClientLogo - Delete the client logo
 func (s *administration) DeleteClientsIDClientLogo(ctx context.Context, request operations.DeleteClientsIDClientLogoRequest) (*operations.DeleteClientsIDClientLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}/logo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}/logo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -139,7 +139,7 @@ func (s *administration) DeleteWebhooks(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -187,7 +187,7 @@ func (s *administration) DeleteWebhooksAuth(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -229,14 +229,14 @@ func (s *administration) DeleteWebhooksAuth(ctx context.Context, request operati
 // Updates the deleted field with the date of the deletion<br><br>
 func (s *administration) DeleteWebhooksAuthIDAuth(ctx context.Context, request operations.DeleteWebhooksAuthIDAuthRequest) (*operations.DeleteWebhooksAuthIDAuthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/auth/{id_auth}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/auth/{id_auth}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -278,14 +278,14 @@ func (s *administration) DeleteWebhooksAuthIDAuth(ctx context.Context, request o
 // Updates the deleted field with the date of the deletion<br><br>
 func (s *administration) DeleteWebhooksIDWebhook(ctx context.Context, request operations.DeleteWebhooksIDWebhookRequest) (*operations.DeleteWebhooksIDWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -326,14 +326,14 @@ func (s *administration) DeleteWebhooksIDWebhook(ctx context.Context, request op
 // DeleteWebhooksIDWebhookAddToData - delete all entries
 func (s *administration) DeleteWebhooksIDWebhookAddToData(ctx context.Context, request operations.DeleteWebhooksIDWebhookAddToDataRequest) (*operations.DeleteWebhooksIDWebhookAddToDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -374,14 +374,14 @@ func (s *administration) DeleteWebhooksIDWebhookAddToData(ctx context.Context, r
 // DeleteWebhooksIDWebhookAddToDataKey - delete the requested entry
 func (s *administration) DeleteWebhooksIDWebhookAddToDataKey(ctx context.Context, request operations.DeleteWebhooksIDWebhookAddToDataKeyRequest) (*operations.DeleteWebhooksIDWebhookAddToDataKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -429,7 +429,7 @@ func (s *administration) GetClients(ctx context.Context, request operations.GetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -471,14 +471,14 @@ func (s *administration) GetClients(ctx context.Context, request operations.GetC
 // If you use the manage_token or a configuration token, you will get also the client secret.<br><br>
 func (s *administration) GetClientsIDClient(ctx context.Context, request operations.GetClientsIDClientRequest) (*operations.GetClientsIDClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -527,7 +527,7 @@ func (s *administration) GetConfig(ctx context.Context, request operations.GetCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -567,7 +567,7 @@ func (s *administration) GetConfigLogs(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -615,7 +615,7 @@ func (s *administration) GetMonitoring(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -689,7 +689,7 @@ func (s *administration) GetWebhooks(ctx context.Context, request operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -737,7 +737,7 @@ func (s *administration) GetWebhooksAuth(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -778,14 +778,14 @@ func (s *administration) GetWebhooksAuth(ctx context.Context, request operations
 // GetWebhooksIDWebhookAddToData - retrieve the list of the value to add in webhooks when sending the requested webhook
 func (s *administration) GetWebhooksIDWebhookAddToData(ctx context.Context, request operations.GetWebhooksIDWebhookAddToDataRequest) (*operations.GetWebhooksIDWebhookAddToDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -826,14 +826,14 @@ func (s *administration) GetWebhooksIDWebhookAddToData(ctx context.Context, requ
 // GetWebhooksIDWebhookAddToDataKey - retrieve the value to add in the requested webhook for the requested name
 func (s *administration) GetWebhooksIDWebhookAddToDataKey(ctx context.Context, request operations.GetWebhooksIDWebhookAddToDataKeyRequest) (*operations.GetWebhooksIDWebhookAddToDataKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -875,14 +875,14 @@ func (s *administration) GetWebhooksIDWebhookAddToDataKey(ctx context.Context, r
 // Get logs of the webhooks.<br><br>By default, it selects logs for the last month. You can use "min_date" and "max_date" to change boundary dates.<br><br>
 func (s *administration) GetWebhooksIDWebhookLogs(ctx context.Context, request operations.GetWebhooksIDWebhookLogsRequest) (*operations.GetWebhooksIDWebhookLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/logs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/logs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -925,7 +925,7 @@ func (s *administration) PostClients(ctx context.Context, request operations.Pos
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/clients"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -937,7 +937,7 @@ func (s *administration) PostClients(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -978,14 +978,14 @@ func (s *administration) PostClients(ctx context.Context, request operations.Pos
 // PostClientsIDClientLogo - Update the client logo
 func (s *administration) PostClientsIDClientLogo(ctx context.Context, request operations.PostClientsIDClientLogoRequest) (*operations.PostClientsIDClientLogoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}/logo", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}/logo", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1135,7 +1135,7 @@ func (s *administration) PostWebhooks(ctx context.Context, request operations.Po
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1147,7 +1147,7 @@ func (s *administration) PostWebhooks(ctx context.Context, request operations.Po
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1190,7 +1190,7 @@ func (s *administration) PostWebhooksAuth(ctx context.Context, request operation
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks/auth"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1205,7 +1205,7 @@ func (s *administration) PostWebhooksAuth(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1246,9 +1246,9 @@ func (s *administration) PostWebhooksAuth(ctx context.Context, request operation
 // PostWebhooksAuthIDAuth - Updates the webhook authentication type
 func (s *administration) PostWebhooksAuthIDAuth(ctx context.Context, request operations.PostWebhooksAuthIDAuthRequest) (*operations.PostWebhooksAuthIDAuthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/auth/{id_auth}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/auth/{id_auth}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1263,7 +1263,7 @@ func (s *administration) PostWebhooksAuthIDAuth(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1304,9 +1304,9 @@ func (s *administration) PostWebhooksAuthIDAuth(ctx context.Context, request ope
 // PostWebhooksIDWebhook - Updates a webhook
 func (s *administration) PostWebhooksIDWebhook(ctx context.Context, request operations.PostWebhooksIDWebhookRequest) (*operations.PostWebhooksIDWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1318,7 +1318,7 @@ func (s *administration) PostWebhooksIDWebhook(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1360,14 +1360,14 @@ func (s *administration) PostWebhooksIDWebhook(ctx context.Context, request oper
 // For each parameter, a value will be added in the webhook data. Use the key to set the name of the field. The values that can be added are to be found in the user configuration.<br><br>
 func (s *administration) PostWebhooksIDWebhookAddToData(ctx context.Context, request operations.PostWebhooksIDWebhookAddToDataRequest) (*operations.PostWebhooksIDWebhookAddToDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1409,14 +1409,14 @@ func (s *administration) PostWebhooksIDWebhookAddToData(ctx context.Context, req
 // For each parameter, a value will be added in the webhook data. Use the key to set the name of the field. The values that can be added are to be found in the user configuration.<br><br>
 func (s *administration) PostWebhooksIDWebhookAddToDataKey(ctx context.Context, request operations.PostWebhooksIDWebhookAddToDataKeyRequest) (*operations.PostWebhooksIDWebhookAddToDataKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data/{key}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}/add_to_data/{key}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1457,9 +1457,9 @@ func (s *administration) PostWebhooksIDWebhookAddToDataKey(ctx context.Context, 
 // PutClientsIDClient - Update a client
 func (s *administration) PutClientsIDClient(ctx context.Context, request operations.PutClientsIDClientRequest) (*operations.PutClientsIDClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/clients/{id_client}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1471,7 +1471,7 @@ func (s *administration) PutClientsIDClient(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1512,9 +1512,9 @@ func (s *administration) PutClientsIDClient(ctx context.Context, request operati
 // PutWebhooksAuthIDAuth - Updates the webhook authentication type
 func (s *administration) PutWebhooksAuthIDAuth(ctx context.Context, request operations.PutWebhooksAuthIDAuthRequest) (*operations.PutWebhooksAuthIDAuthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/auth/{id_auth}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/auth/{id_auth}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1529,7 +1529,7 @@ func (s *administration) PutWebhooksAuthIDAuth(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1570,9 +1570,9 @@ func (s *administration) PutWebhooksAuthIDAuth(ctx context.Context, request oper
 // PutWebhooksIDWebhook - Updates a webhook
 func (s *administration) PutWebhooksIDWebhook(ctx context.Context, request operations.PutWebhooksIDWebhookRequest) (*operations.PutWebhooksIDWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id_webhook}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1584,7 +1584,7 @@ func (s *administration) PutWebhooksIDWebhook(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

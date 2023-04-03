@@ -50,7 +50,7 @@ func (e *GETModifyVpnTunnelCertificateVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETModifyVpnTunnelCertificateQueryParams struct {
+type GETModifyVpnTunnelCertificateRequest struct {
 	Action GETModifyVpnTunnelCertificateActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun  *bool                                    `queryParam:"style=form,explode=true,name=DryRun"`
@@ -58,22 +58,14 @@ type GETModifyVpnTunnelCertificateQueryParams struct {
 	// The ID of the Amazon Web Services Site-to-Site VPN connection.
 	VpnConnectionID string `queryParam:"style=form,explode=true,name=VpnConnectionId"`
 	// The external IP address of the VPN tunnel.
-	VpnTunnelOutsideIPAddress string `queryParam:"style=form,explode=true,name=VpnTunnelOutsideIpAddress"`
-}
-
-type GETModifyVpnTunnelCertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpnTunnelCertificateRequest struct {
-	QueryParams GETModifyVpnTunnelCertificateQueryParams
-	Headers     GETModifyVpnTunnelCertificateHeaders
+	VpnTunnelOutsideIPAddress string  `queryParam:"style=form,explode=true,name=VpnTunnelOutsideIpAddress"`
+	XAmzAlgorithm             *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyVpnTunnelCertificateResponse struct {

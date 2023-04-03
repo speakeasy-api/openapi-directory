@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetUserSettingsPathParams struct {
-	// The ARN of the user settings.
-	UserSettingsArn string `pathParam:"style=simple,explode=false,name=userSettingsArn"`
-}
-
-type GetUserSettingsHeaders struct {
+type GetUserSettingsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetUserSettingsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetUserSettingsRequest struct {
-	PathParams GetUserSettingsPathParams
-	Headers    GetUserSettingsHeaders
+	// The ARN of the user settings.
+	UserSettingsArn string `pathParam:"style=simple,explode=false,name=userSettingsArn"`
 }
 
 type GetUserSettingsResponse struct {

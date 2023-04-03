@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConversionsPatchFormPathParams struct {
+type ConversionsPatchFormRequest struct {
+	// Patch request
+	APICoreRequestsConversionPatchBody shared.APICoreRequestsConversionPatchBody `request:"mediaType=application/x-www-form-urlencoded"`
 	// Id of the conversion
 	ConversionID int64 `pathParam:"style=simple,explode=false,name=conversionId"`
-}
-
-type ConversionsPatchFormRequest struct {
-	PathParams ConversionsPatchFormPathParams
-	// Patch request
-	Request shared.APICoreRequestsConversionPatchBody `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type ConversionsPatchFormResponse struct {

@@ -4,26 +4,20 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/types"
 )
 
 type ProductOrderWithOptionSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
-type ProductOrderWithOptionPathParams struct {
+type ProductOrderWithOptionRequest struct {
 	// Product option (e.g. Accounts year) from a previous Availability call
 	Option string `pathParam:"style=simple,explode=false,name=option"`
 	// SKU - 9 character value from a Product object
 	Sku string `pathParam:"style=simple,explode=false,name=sku"`
 	// Subject (e.g. Company) ID - 32 character hex value
 	SubjectID string `pathParam:"style=simple,explode=false,name=subjectId"`
-}
-
-type ProductOrderWithOptionRequest struct {
-	PathParams ProductOrderWithOptionPathParams
-	Security   ProductOrderWithOptionSecurity
 }
 
 // ProductOrderWithOptionDefaultApplicationJSON - Detailed information about the error

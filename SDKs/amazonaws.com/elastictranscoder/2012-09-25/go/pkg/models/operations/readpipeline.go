@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReadPipelinePathParams struct {
+type ReadPipelineRequest struct {
 	// The identifier of the pipeline to read.
-	ID string `pathParam:"style=simple,explode=false,name=Id"`
-}
-
-type ReadPipelineHeaders struct {
+	ID                string  `pathParam:"style=simple,explode=false,name=Id"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type ReadPipelineHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ReadPipelineRequest struct {
-	PathParams ReadPipelinePathParams
-	Headers    ReadPipelineHeaders
 }
 
 type ReadPipelineResponse struct {

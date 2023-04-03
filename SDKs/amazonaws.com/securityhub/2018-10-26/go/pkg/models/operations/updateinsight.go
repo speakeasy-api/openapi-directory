@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateInsightPathParams struct {
-	// The ARN of the insight that you want to update.
-	InsightArn string `pathParam:"style=simple,explode=false,name=InsightArn"`
-}
-
-type UpdateInsightHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateInsightRequestBodyFilters - <p>A collection of attributes that are applied to all active Security Hub-aggregated findings and that result in a subset of findings that are included in this insight.</p> <p>You can filter by up to 10 finding attributes. For each attribute, you can provide up to 20 filter values.</p>
 type UpdateInsightRequestBodyFilters struct {
 	AwsAccountID                                   []shared.StringFilter  `json:"AwsAccountId,omitempty"`
@@ -133,9 +118,16 @@ type UpdateInsightRequestBody struct {
 }
 
 type UpdateInsightRequest struct {
-	PathParams UpdateInsightPathParams
-	Headers    UpdateInsightHeaders
-	Request    UpdateInsightRequestBody `request:"mediaType=application/json"`
+	// The ARN of the insight that you want to update.
+	InsightArn        string                   `pathParam:"style=simple,explode=false,name=InsightArn"`
+	RequestBody       UpdateInsightRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateInsightResponse struct {

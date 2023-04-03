@@ -50,30 +50,22 @@ func (e *GETDescribeConfigurationSettingsVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDescribeConfigurationSettingsQueryParams struct {
+type GETDescribeConfigurationSettingsRequest struct {
 	Action GETDescribeConfigurationSettingsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The application for the environment or configuration template.
 	ApplicationName string `queryParam:"style=form,explode=true,name=ApplicationName"`
 	// <p>The name of the environment to describe.</p> <p> Condition: You must specify either this or a TemplateName, but not both. If you specify both, AWS Elastic Beanstalk returns an <code>InvalidParameterCombination</code> error. If you do not specify either, AWS Elastic Beanstalk returns <code>MissingRequiredParameter</code> error. </p>
 	EnvironmentName *string `queryParam:"style=form,explode=true,name=EnvironmentName"`
 	// <p>The name of the configuration template to describe.</p> <p> Conditional: You must specify either this parameter or an EnvironmentName, but not both. If you specify both, AWS Elastic Beanstalk returns an <code>InvalidParameterCombination</code> error. If you do not specify either, AWS Elastic Beanstalk returns a <code>MissingRequiredParameter</code> error. </p>
-	TemplateName *string                                     `queryParam:"style=form,explode=true,name=TemplateName"`
-	Version      GETDescribeConfigurationSettingsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeConfigurationSettingsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeConfigurationSettingsRequest struct {
-	QueryParams GETDescribeConfigurationSettingsQueryParams
-	Headers     GETDescribeConfigurationSettingsHeaders
+	TemplateName      *string                                     `queryParam:"style=form,explode=true,name=TemplateName"`
+	Version           GETDescribeConfigurationSettingsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeConfigurationSettingsResponse struct {

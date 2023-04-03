@@ -71,7 +71,6 @@ pkg/models/shared/activity.go
 pkg/models/shared/address.go
 pkg/models/shared/customfield.go
 pkg/models/shared/activityattendee.go
-pkg/models/shared/security.go
 pkg/models/shared/getactivitiesresponse.go
 pkg/models/shared/meta.go
 pkg/models/shared/links.go
@@ -136,4 +135,5 @@ pkg/models/shared/getusersresponse.go
 pkg/models/shared/deleteuserresponse.go
 pkg/models/shared/getuserresponse.go
 pkg/models/shared/updateuserresponse.go
+pkg/models/shared/security.go
 USAGE.md

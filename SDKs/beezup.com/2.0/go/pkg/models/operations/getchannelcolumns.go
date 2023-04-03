@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelColumnsPathParams struct {
-	// The channel identifier
-	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
-}
-
-type GetChannelColumnsHeaders struct {
+type GetChannelColumnsRequest struct {
 	// Indicates that the client accepts that the response will be compressed to reduce traffic size.
 	AcceptEncoding []string `header:"style=simple,explode=false,name=Accept-Encoding"`
-}
-
-type GetChannelColumnsRequest struct {
-	PathParams GetChannelColumnsPathParams
-	Headers    GetChannelColumnsHeaders
 	// Allow you to filter the channel column identifier list your want to get
-	Request []string `request:"mediaType=application/json"`
+	RequestBody []string `request:"mediaType=application/json"`
+	// The channel identifier
+	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 }
 
 type GetChannelColumnsResponse struct {

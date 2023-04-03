@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAggregateConformancePackComplianceSummaryQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetAggregateConformancePackComplianceSummaryXAmzTargetEnum
 type GetAggregateConformancePackComplianceSummaryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *GetAggregateConformancePackComplianceSummaryXAmzTargetEnum) UnmarshalJS
 	}
 }
 
-type GetAggregateConformancePackComplianceSummaryHeaders struct {
+type GetAggregateConformancePackComplianceSummaryRequest struct {
+	GetAggregateConformancePackComplianceSummaryRequest shared.GetAggregateConformancePackComplianceSummaryRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
+	// Pagination token
+	NextToken         *string                                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type GetAggregateConformancePackComplianceSummaryHeaders struct {
 	XAmzSignature     *string                                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetAggregateConformancePackComplianceSummaryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetAggregateConformancePackComplianceSummaryRequest struct {
-	QueryParams GetAggregateConformancePackComplianceSummaryQueryParams
-	Headers     GetAggregateConformancePackComplianceSummaryHeaders
-	Request     shared.GetAggregateConformancePackComplianceSummaryRequest `request:"mediaType=application/json"`
 }
 
 type GetAggregateConformancePackComplianceSummaryResponse struct {

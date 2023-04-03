@@ -50,25 +50,17 @@ func (e *POSTDisassociateRouteTableVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type POSTDisassociateRouteTableQueryParams struct {
-	Action  POSTDisassociateRouteTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDisassociateRouteTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDisassociateRouteTableHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDisassociateRouteTableRequest struct {
-	QueryParams POSTDisassociateRouteTableQueryParams
-	Headers     POSTDisassociateRouteTableHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDisassociateRouteTableActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                `request:"mediaType=text/xml"`
+	Version           POSTDisassociateRouteTableVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDisassociateRouteTableResponse struct {

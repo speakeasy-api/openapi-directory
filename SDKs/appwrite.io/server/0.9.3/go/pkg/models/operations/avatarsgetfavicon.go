@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AvatarsGetFaviconSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AvatarsGetFaviconQueryParams struct {
-	// Website URL which you want to fetch the favicon from.
-	URL string `queryParam:"style=form,explode=true,name=url"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AvatarsGetFaviconRequest struct {
-	QueryParams AvatarsGetFaviconQueryParams
-	Security    AvatarsGetFaviconSecurity
+	// Website URL which you want to fetch the favicon from.
+	URL string `queryParam:"style=form,explode=true,name=url"`
 }
 
 type AvatarsGetFaviconResponse struct {

@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerAddressesGetAllQueryParams struct {
+type CustomerAddressesGetAllRequest struct {
 	// The current page to request starting with 1 (default is 1)
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The page size for the result list. Values between 1 and 250 are allowed. (default is 50)
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
-}
-
-type CustomerAddressesGetAllRequest struct {
-	QueryParams CustomerAddressesGetAllQueryParams
 }
 
 type CustomerAddressesGetAllResponse struct {

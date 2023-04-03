@@ -4,14 +4,13 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CrashesGetCrashTextAttachmentContentSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type CrashesGetCrashTextAttachmentContentPathParams struct {
+type CrashesGetCrashTextAttachmentContentRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// attachment id
@@ -20,11 +19,6 @@ type CrashesGetCrashTextAttachmentContentPathParams struct {
 	CrashID string `pathParam:"style=simple,explode=false,name=crash_id"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type CrashesGetCrashTextAttachmentContentRequest struct {
-	PathParams CrashesGetCrashTextAttachmentContentPathParams
-	Security   CrashesGetCrashTextAttachmentContentSecurity
 }
 
 // CrashesGetCrashTextAttachmentContentDefaultApplicationJSON - Error

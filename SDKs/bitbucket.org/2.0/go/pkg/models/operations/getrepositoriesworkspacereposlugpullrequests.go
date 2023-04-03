@@ -10,20 +10,9 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams struct {
-	// This can either be the repository slug or the UUID of the repository,
-	// surrounded by curly-braces, for example: `{repository UUID}`.
-	//
-	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// This can either be the workspace ID (slug) or the workspace UUID
-	// surrounded by curly-braces, for example: `{workspace UUID}`.
-	//
-	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum - Only return pull requests that are in this state. This parameter can be repeated.
@@ -56,15 +45,17 @@ func (e *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum) UnmarshalJSON(da
 	}
 }
 
-type GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams struct {
+type GetRepositoriesWorkspaceRepoSlugPullrequestsRequest struct {
+	// This can either be the repository slug or the UUID of the repository,
+	// surrounded by curly-braces, for example: `{repository UUID}`.
+	//
+	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// Only return pull requests that are in this state. This parameter can be repeated.
 	State *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum `queryParam:"style=form,explode=true,name=state"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugPullrequestsRequest struct {
-	PathParams  GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams
-	QueryParams GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams
-	Security    GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity
+	// This can either be the workspace ID (slug) or the workspace UUID
+	// surrounded by curly-braces, for example: `{workspace UUID}`.
+	//
+	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugPullrequestsResponse struct {

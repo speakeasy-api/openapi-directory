@@ -8,12 +8,14 @@ import (
 )
 
 type PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyPathParams struct {
+type PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest struct {
+	// The updated build status object
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The commit's SHA1.
 	Commit string `pathParam:"style=simple,explode=false,name=commit"`
 	// The build status' unique key
@@ -26,13 +28,6 @@ type PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyPathParams stru
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest struct {
-	PathParams PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyPathParams
-	// The updated build status object
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity
 }
 
 type PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse struct {

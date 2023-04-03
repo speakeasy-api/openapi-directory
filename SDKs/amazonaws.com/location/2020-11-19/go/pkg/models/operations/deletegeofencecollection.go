@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteGeofenceCollectionPathParams struct {
+type DeleteGeofenceCollectionRequest struct {
 	// The name of the geofence collection to be deleted.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-}
-
-type DeleteGeofenceCollectionHeaders struct {
+	CollectionName    string  `pathParam:"style=simple,explode=false,name=CollectionName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteGeofenceCollectionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteGeofenceCollectionRequest struct {
-	PathParams DeleteGeofenceCollectionPathParams
-	Headers    DeleteGeofenceCollectionHeaders
 }
 
 type DeleteGeofenceCollectionResponse struct {

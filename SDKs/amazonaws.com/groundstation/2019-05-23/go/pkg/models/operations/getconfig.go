@@ -48,14 +48,7 @@ func (e *GetConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetConfigPathParams struct {
-	// UUID of a <code>Config</code>.
-	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-	// Type of a <code>Config</code>.
-	ConfigType GetConfigConfigTypeEnum `pathParam:"style=simple,explode=false,name=configType"`
-}
-
-type GetConfigHeaders struct {
+type GetConfigRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -63,11 +56,10 @@ type GetConfigHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetConfigRequest struct {
-	PathParams GetConfigPathParams
-	Headers    GetConfigHeaders
+	// UUID of a <code>Config</code>.
+	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
+	// Type of a <code>Config</code>.
+	ConfigType GetConfigConfigTypeEnum `pathParam:"style=simple,explode=false,name=configType"`
 }
 
 type GetConfigResponse struct {

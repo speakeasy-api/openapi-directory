@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV1CustomersIDPathParams struct {
+type GetV1CustomersIDRequest struct {
 	// Id of Customer to return.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetV1CustomersIDQueryParams struct {
 	// If "true" then Customer's ledger balance will be calculated; otherwise balance will be returned as 0.
 	NeedBalance *bool `queryParam:"style=form,explode=true,name=needBalance"`
-}
-
-type GetV1CustomersIDRequest struct {
-	PathParams  GetV1CustomersIDPathParams
-	QueryParams GetV1CustomersIDQueryParams
 }
 
 type GetV1CustomersIDResponse struct {

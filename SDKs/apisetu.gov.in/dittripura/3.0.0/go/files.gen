@@ -31,5 +31,4 @@ pkg/models/operations/smcer.go
 pkg/models/operations/sslcs.go
 pkg/models/operations/vrwmi.go
 pkg/models/shared/consentartifactschema.go
-pkg/models/shared/security.go
 USAGE.md

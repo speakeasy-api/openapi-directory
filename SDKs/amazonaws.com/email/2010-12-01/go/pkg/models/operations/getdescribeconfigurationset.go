@@ -51,28 +51,20 @@ func (e *GETDescribeConfigurationSetVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETDescribeConfigurationSetQueryParams struct {
+type GETDescribeConfigurationSetRequest struct {
 	Action GETDescribeConfigurationSetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A list of configuration set attributes to return.
 	ConfigurationSetAttributeNames []shared.ConfigurationSetAttributeEnum `queryParam:"style=form,explode=true,name=ConfigurationSetAttributeNames"`
 	// The name of the configuration set to describe.
 	ConfigurationSetName string                                 `queryParam:"style=form,explode=true,name=ConfigurationSetName"`
 	Version              GETDescribeConfigurationSetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeConfigurationSetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeConfigurationSetRequest struct {
-	QueryParams GETDescribeConfigurationSetQueryParams
-	Headers     GETDescribeConfigurationSetHeaders
+	XAmzAlgorithm        *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeConfigurationSetResponse struct {

@@ -9,6 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type BatchReadRequestBody struct {
+	// A list of operations that are part of the batch.
+	Operations []shared.BatchReadOperation `json:"Operations"`
+}
+
 // BatchReadXAmzConsistencyLevelEnum - Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
 type BatchReadXAmzConsistencyLevelEnum string
 
@@ -33,28 +38,19 @@ func (e *BatchReadXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type BatchReadHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+type BatchReadRequest struct {
+	RequestBody       BatchReadRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// Represents the manner and timing in which the successful write or update of an object is reflected in a subsequent read operation of that same object.
 	XAmzConsistencyLevel *BatchReadXAmzConsistencyLevelEnum `header:"style=simple,explode=false,name=x-amz-consistency-level"`
 	// The Amazon Resource Name (ARN) that is associated with the <a>Directory</a>. For more information, see <a>arns</a>.
 	XAmzDataPartition string `header:"style=simple,explode=false,name=x-amz-data-partition"`
-}
-
-type BatchReadRequestBody struct {
-	// A list of operations that are part of the batch.
-	Operations []shared.BatchReadOperation `json:"Operations"`
-}
-
-type BatchReadRequest struct {
-	Headers BatchReadHeaders
-	Request BatchReadRequestBody `request:"mediaType=application/json"`
 }
 
 type BatchReadResponse struct {

@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListEventSourcesQueryParams struct {
+type ListEventSourcesRequest struct {
 	// The Amazon Resource Name (ARN) of the Amazon Kinesis stream.
 	EventSource *string `queryParam:"style=form,explode=true,name=EventSource"`
 	// The name of the AWS Lambda function.
@@ -15,10 +15,7 @@ type ListEventSourcesQueryParams struct {
 	// Optional string. An opaque pagination token returned from a previous <code>ListEventSources</code> operation. If present, specifies to continue the list from where the returning call left off.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// Optional integer. Specifies the maximum number of event sources to return in response. This value must be greater than 0.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListEventSourcesHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,11 +23,6 @@ type ListEventSourcesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListEventSourcesRequest struct {
-	QueryParams ListEventSourcesQueryParams
-	Headers     ListEventSourcesHeaders
 }
 
 type ListEventSourcesResponse struct {

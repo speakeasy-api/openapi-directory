@@ -8,12 +8,18 @@ import (
 )
 
 type PutRepositoriesWorkspaceRepoSlugSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PutRepositoriesWorkspaceRepoSlugPathParams struct {
+type PutRepositoriesWorkspaceRepoSlugRequest struct {
+	// The repository that is to be updated.
+	//
+	// Note that the elements "owner" and "full_name" are ignored since the
+	// URL implies them.
+	//
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
@@ -22,17 +28,6 @@ type PutRepositoriesWorkspaceRepoSlugPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PutRepositoriesWorkspaceRepoSlugRequest struct {
-	PathParams PutRepositoriesWorkspaceRepoSlugPathParams
-	// The repository that is to be updated.
-	//
-	// Note that the elements "owner" and "full_name" are ignored since the
-	// URL implies them.
-	//
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PutRepositoriesWorkspaceRepoSlugSecurity
 }
 
 type PutRepositoriesWorkspaceRepoSlugResponse struct {

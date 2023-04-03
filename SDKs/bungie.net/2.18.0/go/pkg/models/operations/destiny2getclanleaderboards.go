@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetClanLeaderboardsPathParams struct {
+type Destiny2GetClanLeaderboardsRequest struct {
 	// Group ID of the clan whose leaderboards you wish to fetch.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type Destiny2GetClanLeaderboardsQueryParams struct {
 	// Maximum number of top players to return. Use a large number to get entire leaderboard.
 	Maxtop *int `queryParam:"style=form,explode=true,name=maxtop"`
 	// List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 	Modes *string `queryParam:"style=form,explode=true,name=modes"`
 	// ID of stat to return rather than returning all Leaderboard stats.
 	Statid *string `queryParam:"style=form,explode=true,name=statid"`
-}
-
-type Destiny2GetClanLeaderboardsRequest struct {
-	PathParams  Destiny2GetClanLeaderboardsPathParams
-	QueryParams Destiny2GetClanLeaderboardsQueryParams
 }
 
 // Destiny2GetClanLeaderboards200Wildcard - Look at the Response property for more information about the nature of this response

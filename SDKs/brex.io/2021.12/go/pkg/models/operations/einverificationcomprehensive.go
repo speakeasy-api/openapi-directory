@@ -8,17 +8,12 @@ import (
 )
 
 type EinVerificationComprehensiveSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type EinVerificationComprehensiveQueryParams struct {
-	// Nine letter EIN number with or without hyphens
-	Ein string `queryParam:"style=form,explode=true,name=ein"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 type EinVerificationComprehensiveRequest struct {
-	QueryParams EinVerificationComprehensiveQueryParams
-	Security    EinVerificationComprehensiveSecurity
+	// Nine letter EIN number with or without hyphens
+	Ein string `queryParam:"style=form,explode=true,name=ein"`
 }
 
 // EinVerificationComprehensiveDefaultApplicationJSON - Detailed information about the error

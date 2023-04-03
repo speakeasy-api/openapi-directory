@@ -7,25 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestRoomRescueKeyPathParams struct {
-	// File ID
-	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
-}
-
-type RequestRoomRescueKeyQueryParams struct {
-	// Version (NEW)
-	Version *string `queryParam:"style=form,explode=true,name=version"`
-}
-
-type RequestRoomRescueKeyHeaders struct {
+type RequestRoomRescueKeyRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestRoomRescueKeyRequest struct {
-	PathParams  RequestRoomRescueKeyPathParams
-	QueryParams RequestRoomRescueKeyQueryParams
-	Headers     RequestRoomRescueKeyHeaders
+	// File ID
+	FileID int64 `pathParam:"style=simple,explode=false,name=file_id"`
+	// Version (NEW)
+	Version *string `queryParam:"style=form,explode=true,name=version"`
 }
 
 type RequestRoomRescueKeyResponse struct {

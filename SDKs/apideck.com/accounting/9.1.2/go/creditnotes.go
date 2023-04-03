@@ -34,11 +34,11 @@ func newCreditNotes(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // CreditNotesAdd - Create Credit Note
 // Create Credit Note
-func (s *creditNotes) CreditNotesAdd(ctx context.Context, request operations.CreditNotesAddRequest) (*operations.CreditNotesAddResponse, error) {
+func (s *creditNotes) CreditNotesAdd(ctx context.Context, request operations.CreditNotesAddRequest, security operations.CreditNotesAddSecurity) (*operations.CreditNotesAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/credit-notes"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreditNoteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -53,13 +53,13 @@ func (s *creditNotes) CreditNotesAdd(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -155,7 +155,7 @@ func (s *creditNotes) CreditNotesAdd(ctx context.Context, request operations.Cre
 
 // CreditNotesAll - List Credit Notes
 // List Credit Notes
-func (s *creditNotes) CreditNotesAll(ctx context.Context, request operations.CreditNotesAllRequest) (*operations.CreditNotesAllResponse, error) {
+func (s *creditNotes) CreditNotesAll(ctx context.Context, request operations.CreditNotesAllRequest, security operations.CreditNotesAllSecurity) (*operations.CreditNotesAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accounting/credit-notes"
 
@@ -164,13 +164,13 @@ func (s *creditNotes) CreditNotesAll(ctx context.Context, request operations.Cre
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -266,22 +266,22 @@ func (s *creditNotes) CreditNotesAll(ctx context.Context, request operations.Cre
 
 // CreditNotesDelete - Delete Credit Note
 // Delete Credit Note
-func (s *creditNotes) CreditNotesDelete(ctx context.Context, request operations.CreditNotesDeleteRequest) (*operations.CreditNotesDeleteResponse, error) {
+func (s *creditNotes) CreditNotesDelete(ctx context.Context, request operations.CreditNotesDeleteRequest, security operations.CreditNotesDeleteSecurity) (*operations.CreditNotesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/credit-notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/credit-notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -377,22 +377,22 @@ func (s *creditNotes) CreditNotesDelete(ctx context.Context, request operations.
 
 // CreditNotesOne - Get Credit Note
 // Get Credit Note
-func (s *creditNotes) CreditNotesOne(ctx context.Context, request operations.CreditNotesOneRequest) (*operations.CreditNotesOneResponse, error) {
+func (s *creditNotes) CreditNotesOne(ctx context.Context, request operations.CreditNotesOneRequest, security operations.CreditNotesOneSecurity) (*operations.CreditNotesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/credit-notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/credit-notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -488,11 +488,11 @@ func (s *creditNotes) CreditNotesOne(ctx context.Context, request operations.Cre
 
 // CreditNotesUpdate - Update Credit Note
 // Update Credit Note
-func (s *creditNotes) CreditNotesUpdate(ctx context.Context, request operations.CreditNotesUpdateRequest) (*operations.CreditNotesUpdateResponse, error) {
+func (s *creditNotes) CreditNotesUpdate(ctx context.Context, request operations.CreditNotesUpdateRequest, security operations.CreditNotesUpdateSecurity) (*operations.CreditNotesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/credit-notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accounting/credit-notes/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreditNoteInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -507,13 +507,13 @@ func (s *creditNotes) CreditNotesUpdate(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

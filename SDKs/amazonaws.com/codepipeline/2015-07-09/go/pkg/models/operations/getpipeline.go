@@ -30,7 +30,8 @@ func (e *GetPipelineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPipelineHeaders struct {
+type GetPipelineRequest struct {
+	GetPipelineInput  shared.GetPipelineInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetPipelineHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetPipelineXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetPipelineRequest struct {
-	Headers GetPipelineHeaders
-	Request shared.GetPipelineInput `request:"mediaType=application/json"`
 }
 
 type GetPipelineResponse struct {

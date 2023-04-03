@@ -50,25 +50,17 @@ func (e *POSTAuthorizeClientVpnIngressVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTAuthorizeClientVpnIngressQueryParams struct {
-	Action  POSTAuthorizeClientVpnIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTAuthorizeClientVpnIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTAuthorizeClientVpnIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTAuthorizeClientVpnIngressRequest struct {
-	QueryParams POSTAuthorizeClientVpnIngressQueryParams
-	Headers     POSTAuthorizeClientVpnIngressHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTAuthorizeClientVpnIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTAuthorizeClientVpnIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTAuthorizeClientVpnIngressResponse struct {

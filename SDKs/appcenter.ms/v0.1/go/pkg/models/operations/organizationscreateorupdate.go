@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type OrganizationsCreateOrUpdateSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // OrganizationsCreateOrUpdateRequestBody - The organization data
@@ -19,12 +18,6 @@ type OrganizationsCreateOrUpdateRequestBody struct {
 	DisplayName *string `json:"display_name,omitempty"`
 	// The name of the organization used in URLs
 	Name *string `json:"name,omitempty"`
-}
-
-type OrganizationsCreateOrUpdateRequest struct {
-	// The organization data
-	Request  OrganizationsCreateOrUpdateRequestBody `request:"mediaType=application/json"`
-	Security OrganizationsCreateOrUpdateSecurity
 }
 
 type OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum string

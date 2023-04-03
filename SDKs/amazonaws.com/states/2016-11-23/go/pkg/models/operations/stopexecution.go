@@ -30,20 +30,16 @@ func (e *StopExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StopExecutionHeaders struct {
-	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        StopExecutionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type StopExecutionRequest struct {
-	Headers StopExecutionHeaders
-	Request shared.StopExecutionInput `request:"mediaType=application/json"`
+	StopExecutionInput shared.StopExecutionInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm      *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget         StopExecutionXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type StopExecutionResponse struct {

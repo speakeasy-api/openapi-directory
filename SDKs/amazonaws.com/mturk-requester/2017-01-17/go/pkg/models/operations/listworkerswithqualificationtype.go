@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListWorkersWithQualificationTypeQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListWorkersWithQualificationTypeXAmzTargetEnum
 type ListWorkersWithQualificationTypeXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListWorkersWithQualificationTypeXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type ListWorkersWithQualificationTypeHeaders struct {
+type ListWorkersWithQualificationTypeRequest struct {
+	ListWorkersWithQualificationTypeRequest shared.ListWorkersWithQualificationTypeRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                        `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListWorkersWithQualificationTypeHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListWorkersWithQualificationTypeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListWorkersWithQualificationTypeRequest struct {
-	QueryParams ListWorkersWithQualificationTypeQueryParams
-	Headers     ListWorkersWithQualificationTypeHeaders
-	Request     shared.ListWorkersWithQualificationTypeRequest `request:"mediaType=application/json"`
 }
 
 type ListWorkersWithQualificationTypeResponse struct {

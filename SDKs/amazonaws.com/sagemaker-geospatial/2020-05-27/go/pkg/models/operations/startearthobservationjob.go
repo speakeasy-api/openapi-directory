@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartEarthObservationJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartEarthObservationJobRequestBodyInputConfig - Input configuration information.
 type StartEarthObservationJobRequestBodyInputConfig struct {
 	DataSourceConfig               *shared.EojDataSourceConfigInput       `json:"DataSourceConfig,omitempty"`
@@ -55,8 +45,14 @@ type StartEarthObservationJobRequestBody struct {
 }
 
 type StartEarthObservationJobRequest struct {
-	Headers StartEarthObservationJobHeaders
-	Request StartEarthObservationJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartEarthObservationJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type StartEarthObservationJobResponse struct {

@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPostFormRequest struct {
-	Request shared.APICoreDtoAccountingUser `request:"mediaType=application/x-www-form-urlencoded"`
-}
-
 type AccountPostFormResponse struct {
 	APICoreDtoAccountingUser *shared.APICoreDtoAccountingUser
 	Body                     []byte

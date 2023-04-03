@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type UpdateUsernamePathParams struct {
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 type UpdateUsernameRequestBody struct {
 	NewUsername string `json:"new_username"`
 }
 
 type UpdateUsernameRequest struct {
-	PathParams UpdateUsernamePathParams
-	Request    *UpdateUsernameRequestBody `request:"mediaType=application/json"`
+	RequestBody *UpdateUsernameRequestBody `request:"mediaType=application/json"`
+	Username    string                     `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type UpdateUsernameResponse struct {

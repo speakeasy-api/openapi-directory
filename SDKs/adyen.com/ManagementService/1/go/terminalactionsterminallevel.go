@@ -42,7 +42,7 @@ func newTerminalActionsTerminalLevel(defaultClient, securityClient HTTPClient, s
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal actions read and write
-func (s *terminalActionsTerminalLevel) PostTerminalsScheduleActions(ctx context.Context, request operations.PostTerminalsScheduleActionsRequest) (*operations.PostTerminalsScheduleActionsResponse, error) {
+func (s *terminalActionsTerminalLevel) PostTerminalsScheduleActions(ctx context.Context, request shared.ScheduleTerminalActionsRequest, security operations.PostTerminalsScheduleActionsSecurity) (*operations.PostTerminalsScheduleActionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/terminals/scheduleActions"
 
@@ -58,7 +58,7 @@ func (s *terminalActionsTerminalLevel) PostTerminalsScheduleActions(ctx context.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

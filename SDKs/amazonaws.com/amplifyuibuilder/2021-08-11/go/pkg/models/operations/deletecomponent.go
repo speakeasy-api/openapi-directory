@@ -6,16 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteComponentPathParams struct {
-	// The unique ID of the Amplify app associated with the component to delete.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-	// The unique ID of the component to delete.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type DeleteComponentHeaders struct {
+type DeleteComponentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -23,11 +14,12 @@ type DeleteComponentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteComponentRequest struct {
-	PathParams DeleteComponentPathParams
-	Headers    DeleteComponentHeaders
+	// The unique ID of the Amplify app associated with the component to delete.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
+	// The unique ID of the component to delete.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeleteComponentResponse struct {

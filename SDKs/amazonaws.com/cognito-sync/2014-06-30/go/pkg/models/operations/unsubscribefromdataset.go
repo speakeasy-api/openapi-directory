@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type UnsubscribeFromDatasetPathParams struct {
+type UnsubscribeFromDatasetRequest struct {
 	// The name of the dataset from which to unsubcribe.
 	DatasetName string `pathParam:"style=simple,explode=false,name=DatasetName"`
 	// The unique ID generated for this device by Cognito.
@@ -14,10 +14,7 @@ type UnsubscribeFromDatasetPathParams struct {
 	// Unique ID for this identity.
 	IdentityID string `pathParam:"style=simple,explode=false,name=IdentityId"`
 	// A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. The ID of the pool to which this identity belongs.
-	IdentityPoolID string `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
-}
-
-type UnsubscribeFromDatasetHeaders struct {
+	IdentityPoolID    string  `pathParam:"style=simple,explode=false,name=IdentityPoolId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,11 +22,6 @@ type UnsubscribeFromDatasetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UnsubscribeFromDatasetRequest struct {
-	PathParams UnsubscribeFromDatasetPathParams
-	Headers    UnsubscribeFromDatasetHeaders
 }
 
 type UnsubscribeFromDatasetResponse struct {

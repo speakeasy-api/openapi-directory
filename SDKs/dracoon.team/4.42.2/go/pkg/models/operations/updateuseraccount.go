@@ -42,16 +42,12 @@ func (e *UpdateUserAccountXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateUserAccountHeaders struct {
+type UpdateUserAccountRequest struct {
+	UpdateUserAccountRequest shared.UpdateUserAccountRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *UpdateUserAccountXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type UpdateUserAccountRequest struct {
-	Headers UpdateUserAccountHeaders
-	Request shared.UpdateUserAccountRequest `request:"mediaType=application/json"`
 }
 
 type UpdateUserAccountResponse struct {

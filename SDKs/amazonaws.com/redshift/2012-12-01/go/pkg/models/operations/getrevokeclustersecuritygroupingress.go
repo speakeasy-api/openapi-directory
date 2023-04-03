@@ -50,7 +50,7 @@ func (e *GETRevokeClusterSecurityGroupIngressVersionEnum) UnmarshalJSON(data []b
 	}
 }
 
-type GETRevokeClusterSecurityGroupIngressQueryParams struct {
+type GETRevokeClusterSecurityGroupIngressRequest struct {
 	Action GETRevokeClusterSecurityGroupIngressActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The IP range for which to revoke access. This range must be a valid Classless Inter-Domain Routing (CIDR) block of IP addresses. If <code>CIDRIP</code> is specified, <code>EC2SecurityGroupName</code> and <code>EC2SecurityGroupOwnerId</code> cannot be provided.
 	Cidrip *string `queryParam:"style=form,explode=true,name=CIDRIP"`
@@ -61,21 +61,13 @@ type GETRevokeClusterSecurityGroupIngressQueryParams struct {
 	// <p>The Amazon Web Services account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable value. If <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be provided. and <code>CIDRIP</code> cannot be provided. </p> <p>Example: <code>111122223333</code> </p>
 	Ec2SecurityGroupOwnerID *string                                         `queryParam:"style=form,explode=true,name=EC2SecurityGroupOwnerId"`
 	Version                 GETRevokeClusterSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRevokeClusterSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRevokeClusterSecurityGroupIngressRequest struct {
-	QueryParams GETRevokeClusterSecurityGroupIngressQueryParams
-	Headers     GETRevokeClusterSecurityGroupIngressHeaders
+	XAmzAlgorithm           *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256       *string                                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential          *string                                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                *string                                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken       *string                                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature           *string                                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders       *string                                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRevokeClusterSecurityGroupIngressResponse struct {

@@ -13,16 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteAddonRequest{
-        Security: operations.DeleteAddonSecurity{
-            APIKey: &shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Addon.DeleteAddon(ctx, req)
+    res, err := s.Addon.DeleteAddon(ctx)
     if err != nil {
         log.Fatal(err)
     }

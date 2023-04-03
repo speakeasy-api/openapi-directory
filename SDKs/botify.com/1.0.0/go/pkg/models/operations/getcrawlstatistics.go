@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCrawlStatisticsPathParams struct {
+type GetCrawlStatisticsRequest struct {
 	// Analysis' identifier
 	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Project's identifier
 	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
 	// User's identifier
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type GetCrawlStatisticsRequest struct {
-	PathParams GetCrawlStatisticsPathParams
 }
 
 type GetCrawlStatisticsResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SignConfirmPathParams struct {
+type SignConfirmRequest struct {
 	// Job ID (20 chars)
 	Job string `pathParam:"style=simple,explode=false,name=job"`
-}
-
-type SignConfirmRequest struct {
-	PathParams SignConfirmPathParams
 }
 
 // SignConfirm202ApplicationJSON - Successfully confirmed

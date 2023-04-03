@@ -42,15 +42,11 @@ func (e *RequestUserKeyPairsXSdsDateFormatEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type RequestUserKeyPairsHeaders struct {
+type RequestUserKeyPairsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestUserKeyPairsXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestUserKeyPairsRequest struct {
-	Headers RequestUserKeyPairsHeaders
 }
 
 type RequestUserKeyPairsResponse struct {

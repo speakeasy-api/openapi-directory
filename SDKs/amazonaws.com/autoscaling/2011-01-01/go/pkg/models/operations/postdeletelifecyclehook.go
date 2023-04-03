@@ -50,25 +50,17 @@ func (e *POSTDeleteLifecycleHookVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteLifecycleHookQueryParams struct {
-	Action  POSTDeleteLifecycleHookActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteLifecycleHookVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteLifecycleHookHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteLifecycleHookRequest struct {
-	QueryParams POSTDeleteLifecycleHookQueryParams
-	Headers     POSTDeleteLifecycleHookHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteLifecycleHookActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                             `request:"mediaType=text/xml"`
+	Version           POSTDeleteLifecycleHookVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteLifecycleHookResponse struct {

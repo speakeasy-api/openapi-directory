@@ -87,7 +87,7 @@ func (e *DataPointsGetTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DataPointsGetQueryParams struct {
+type DataPointsGetRequest struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
@@ -110,10 +110,6 @@ type DataPointsGetQueryParams struct {
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Type of the datapoint ("tp"/"tl")
 	Type *DataPointsGetTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type DataPointsGetRequest struct {
-	QueryParams DataPointsGetQueryParams
 }
 
 type DataPointsGetResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CompleteFileUploadViaSharePathParams struct {
-	// Access key
-	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
 // CompleteFileUploadViaShareXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type CompleteFileUploadViaShareXSdsDateFormatEnum string
 
@@ -49,15 +42,14 @@ func (e *CompleteFileUploadViaShareXSdsDateFormatEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type CompleteFileUploadViaShareHeaders struct {
+type CompleteFileUploadViaShareRequest struct {
+	UserFileKeyList *shared.UserFileKeyList `request:"mediaType=application/json"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *CompleteFileUploadViaShareXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type CompleteFileUploadViaShareRequest struct {
-	PathParams CompleteFileUploadViaSharePathParams
-	Headers    CompleteFileUploadViaShareHeaders
-	Request    *shared.UserFileKeyList `request:"mediaType=application/json"`
+	// Access key
+	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type CompleteFileUploadViaShareResponse struct {

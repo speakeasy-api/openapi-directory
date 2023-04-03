@@ -8,8 +8,8 @@ import (
 )
 
 type TeamsCreateSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type TeamsCreateRequestBody struct {
@@ -17,11 +17,6 @@ type TeamsCreateRequestBody struct {
 	Name string `json:"name"`
 	// Array of strings. Use this param to set the roles in the team for the user who created it. The default role is **owner**. A role can be any string. Learn more about [roles and permissions](/docs/permissions). Max length for each role is 32 chars.
 	Roles []string `json:"roles,omitempty"`
-}
-
-type TeamsCreateRequest struct {
-	Request  *TeamsCreateRequestBody `request:"mediaType=application/json"`
-	Security TeamsCreateSecurity
 }
 
 type TeamsCreateResponse struct {

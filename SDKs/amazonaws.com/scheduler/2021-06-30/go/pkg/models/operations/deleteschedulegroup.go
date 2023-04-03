@@ -6,17 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteScheduleGroupPathParams struct {
+type DeleteScheduleGroupRequest struct {
 	// The name of the schedule group to delete.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type DeleteScheduleGroupQueryParams struct {
-	//  Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a client token, EventBridge Scheduler uses a randomly generated token for the request to ensure idempotency.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteScheduleGroupHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +16,8 @@ type DeleteScheduleGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteScheduleGroupRequest struct {
-	PathParams  DeleteScheduleGroupPathParams
-	QueryParams DeleteScheduleGroupQueryParams
-	Headers     DeleteScheduleGroupHeaders
+	//  Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a client token, EventBridge Scheduler uses a randomly generated token for the request to ensure idempotency.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
 }
 
 type DeleteScheduleGroupResponse struct {

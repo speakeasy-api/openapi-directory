@@ -6,23 +6,15 @@ import (
 	"net/http"
 )
 
-type DeleteCatchAllPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-	// Automatically added
-	EmailAddress string `pathParam:"style=simple,explode=false,name=emailAddress"`
-}
-
-type DeleteCatchAllQueryParams struct {
-	// Mail zone domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// E-mail address to which all e-mails are sent to inexistent mailboxes or aliases.
-	EmailAddress string `queryParam:"style=form,explode=true,name=email_address"`
-}
-
 type DeleteCatchAllRequest struct {
-	PathParams  DeleteCatchAllPathParams
-	QueryParams DeleteCatchAllQueryParams
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Mail zone domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
+	// Automatically added
+	EmailAddressPathParameter string `pathParam:"style=simple,explode=false,name=emailAddress"`
+	// E-mail address to which all e-mails are sent to inexistent mailboxes or aliases.
+	EmailAddressQueryParameter string `queryParam:"style=form,explode=true,name=email_address"`
 }
 
 type DeleteCatchAllResponse struct {

@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchEvaluateGeofencesPathParams struct {
-	// The geofence collection used in evaluating the position of devices against its geofences.
-	CollectionName string `pathParam:"style=simple,explode=false,name=CollectionName"`
-}
-
-type BatchEvaluateGeofencesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchEvaluateGeofencesRequestBody struct {
 	// Contains device details for each device to be evaluated against the given geofence collection.
 	DevicePositionUpdates []shared.DevicePositionUpdate `json:"DevicePositionUpdates"`
 }
 
 type BatchEvaluateGeofencesRequest struct {
-	PathParams BatchEvaluateGeofencesPathParams
-	Headers    BatchEvaluateGeofencesHeaders
-	Request    BatchEvaluateGeofencesRequestBody `request:"mediaType=application/json"`
+	// The geofence collection used in evaluating the position of devices against its geofences.
+	CollectionName    string                            `pathParam:"style=simple,explode=false,name=CollectionName"`
+	RequestBody       BatchEvaluateGeofencesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type BatchEvaluateGeofencesResponse struct {

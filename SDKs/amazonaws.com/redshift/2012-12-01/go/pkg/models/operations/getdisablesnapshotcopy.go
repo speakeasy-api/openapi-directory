@@ -50,26 +50,18 @@ func (e *GETDisableSnapshotCopyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDisableSnapshotCopyQueryParams struct {
+type GETDisableSnapshotCopyRequest struct {
 	Action GETDisableSnapshotCopyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The unique identifier of the source cluster that you want to disable copying of snapshots to a destination region.</p> <p>Constraints: Must be the valid name of an existing cluster that has cross-region snapshot copy enabled.</p>
 	ClusterIdentifier string                            `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETDisableSnapshotCopyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisableSnapshotCopyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableSnapshotCopyRequest struct {
-	QueryParams GETDisableSnapshotCopyQueryParams
-	Headers     GETDisableSnapshotCopyHeaders
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisableSnapshotCopyResponse struct {

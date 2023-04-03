@@ -50,25 +50,17 @@ func (e *POSTDeleteCacheParameterGroupVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type POSTDeleteCacheParameterGroupQueryParams struct {
-	Action  POSTDeleteCacheParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteCacheParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteCacheParameterGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteCacheParameterGroupRequest struct {
-	QueryParams POSTDeleteCacheParameterGroupQueryParams
-	Headers     POSTDeleteCacheParameterGroupHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteCacheParameterGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                   `request:"mediaType=text/xml"`
+	Version           POSTDeleteCacheParameterGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteCacheParameterGroupResponse struct {

@@ -43,7 +43,7 @@ func (s *quota) GetContainersQuota(ctx context.Context, request operations.GetCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -97,7 +97,7 @@ func (s *quota) GetContainersUsage(ctx context.Context, request operations.GetCo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -144,7 +144,7 @@ func (s *quota) PutContainersQuota(ctx context.Context, request operations.PutCo
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/containers/quota"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContainersQuotaList", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,7 +159,7 @@ func (s *quota) PutContainersQuota(ctx context.Context, request operations.PutCo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

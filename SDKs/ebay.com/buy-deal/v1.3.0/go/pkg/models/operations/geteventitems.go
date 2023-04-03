@@ -8,10 +8,12 @@ import (
 )
 
 type GetEventItemsSecurity struct {
-	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetEventItemsQueryParams struct {
+type GetEventItemsRequest struct {
+	// A header used to specify the eBay marketplace ID.
+	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 	// The unique identifier of the eBay category for the search. Maximum Value: 1
 	CategoryIds *string `queryParam:"style=form,explode=true,name=category_ids"`
 	// A filter for items that can be shipped to the specified country.
@@ -22,17 +24,6 @@ type GetEventItemsQueryParams struct {
 	Limit *string `queryParam:"style=form,explode=true,name=limit"`
 	// The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output. For example, if the offset is set to 0 and the limit is set to 10, the method will retrieve items 1 through 10 from the list of items returned. If the offset is set to 10 and the limit is set to 10, the method will retrieve items 11 through 20 from the list of items returned. Default: 0
 	Offset *string `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetEventItemsHeaders struct {
-	// A header used to specify the eBay marketplace ID.
-	XEbayCMarketplaceID string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
-}
-
-type GetEventItemsRequest struct {
-	QueryParams GetEventItemsQueryParams
-	Headers     GetEventItemsHeaders
-	Security    GetEventItemsSecurity
 }
 
 type GetEventItemsResponse struct {

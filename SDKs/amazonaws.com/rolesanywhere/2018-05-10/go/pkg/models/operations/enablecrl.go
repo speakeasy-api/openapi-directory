@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EnableCrlPathParams struct {
-	// The unique identifier of the certificate revocation list (CRL).
-	CrlID string `pathParam:"style=simple,explode=false,name=crlId"`
-}
-
-type EnableCrlHeaders struct {
+type EnableCrlRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type EnableCrlHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type EnableCrlRequest struct {
-	PathParams EnableCrlPathParams
-	Headers    EnableCrlHeaders
+	// The unique identifier of the certificate revocation list (CRL).
+	CrlID string `pathParam:"style=simple,explode=false,name=crlId"`
 }
 
 type EnableCrlResponse struct {

@@ -7,17 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteAssetModelPathParams struct {
-	// The ID of the asset model to delete.
-	AssetModelID string `pathParam:"style=simple,explode=false,name=assetModelId"`
-}
-
-type DeleteAssetModelQueryParams struct {
-	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type DeleteAssetModelHeaders struct {
+type DeleteAssetModelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -25,12 +15,10 @@ type DeleteAssetModelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAssetModelRequest struct {
-	PathParams  DeleteAssetModelPathParams
-	QueryParams DeleteAssetModelQueryParams
-	Headers     DeleteAssetModelHeaders
+	// The ID of the asset model to delete.
+	AssetModelID string `pathParam:"style=simple,explode=false,name=assetModelId"`
+	// A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
 }
 
 type DeleteAssetModelResponse struct {

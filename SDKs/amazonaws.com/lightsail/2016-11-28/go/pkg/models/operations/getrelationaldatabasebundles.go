@@ -30,20 +30,16 @@ func (e *GetRelationalDatabaseBundlesXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetRelationalDatabaseBundlesHeaders struct {
-	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetRelationalDatabaseBundlesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetRelationalDatabaseBundlesRequest struct {
-	Headers GetRelationalDatabaseBundlesHeaders
-	Request shared.GetRelationalDatabaseBundlesRequest `request:"mediaType=application/json"`
+	GetRelationalDatabaseBundlesRequest shared.GetRelationalDatabaseBundlesRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                      *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                            *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                   *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                       *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                   *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                          GetRelationalDatabaseBundlesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetRelationalDatabaseBundlesResponse struct {

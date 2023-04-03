@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLayerVersionPathParams struct {
+type GetLayerVersionRequest struct {
 	// The name or Amazon Resource Name (ARN) of the layer.
 	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
 	// The version number.
-	VersionNumber int64 `pathParam:"style=simple,explode=false,name=VersionNumber"`
-}
-
-type GetLayerVersionHeaders struct {
+	VersionNumber     int64   `pathParam:"style=simple,explode=false,name=VersionNumber"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetLayerVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLayerVersionRequest struct {
-	PathParams GetLayerVersionPathParams
-	Headers    GetLayerVersionHeaders
 }
 
 type GetLayerVersionResponse struct {

@@ -8,17 +8,14 @@ import (
 )
 
 type FunctionsListExecutionsSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type FunctionsListExecutionsPathParams struct {
+type FunctionsListExecutionsRequest struct {
 	// Function unique ID.
 	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
-}
-
-type FunctionsListExecutionsQueryParams struct {
 	// Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Results offset. The default value is 0. Use this param to manage pagination.
@@ -27,12 +24,6 @@ type FunctionsListExecutionsQueryParams struct {
 	OrderType *string `queryParam:"style=form,explode=true,name=orderType"`
 	// Search term to filter your list results. Max length: 256 chars.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-}
-
-type FunctionsListExecutionsRequest struct {
-	PathParams  FunctionsListExecutionsPathParams
-	QueryParams FunctionsListExecutionsQueryParams
-	Security    FunctionsListExecutionsSecurity
 }
 
 type FunctionsListExecutionsResponse struct {

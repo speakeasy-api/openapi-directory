@@ -82,7 +82,7 @@ func (e *GETPutWarmPoolVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETPutWarmPoolQueryParams struct {
+type GETPutWarmPoolRequest struct {
 	Action GETPutWarmPoolActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -93,23 +93,15 @@ type GETPutWarmPoolQueryParams struct {
 	// Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 	MinSize *int64 `queryParam:"style=form,explode=true,name=MinSize"`
 	// Sets the instance state to transition to after the lifecycle actions are complete. Default is <code>Stopped</code>.
-	PoolState *GETPutWarmPoolPoolStateEnum `queryParam:"style=form,explode=true,name=PoolState"`
-	Version   GETPutWarmPoolVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPutWarmPoolHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPutWarmPoolRequest struct {
-	QueryParams GETPutWarmPoolQueryParams
-	Headers     GETPutWarmPoolHeaders
+	PoolState         *GETPutWarmPoolPoolStateEnum `queryParam:"style=form,explode=true,name=PoolState"`
+	Version           GETPutWarmPoolVersionEnum    `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPutWarmPoolResponse struct {

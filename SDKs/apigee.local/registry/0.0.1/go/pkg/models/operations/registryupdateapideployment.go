@@ -7,7 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryUpdateAPIDeploymentPathParams struct {
+type RegistryUpdateAPIDeploymentRequest struct {
+	APIDeploymentInput shared.APIDeploymentInput `request:"mediaType=application/json"`
+	// If set to true, and the deployment is not found, a new deployment will be created. In this situation, `update_mask` is ignored.
+	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The deployment id.
@@ -16,19 +19,8 @@ type RegistryUpdateAPIDeploymentPathParams struct {
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryUpdateAPIDeploymentQueryParams struct {
-	// If set to true, and the deployment is not found, a new deployment will be created. In this situation, `update_mask` is ignored.
-	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// The list of fields to be updated. If omitted, all fields are updated that are set in the request message (fields set to default values are ignored). If a "*" is specified, all fields are updated, including fields that are unspecified/default in the request.
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
-}
-
-type RegistryUpdateAPIDeploymentRequest struct {
-	PathParams  RegistryUpdateAPIDeploymentPathParams
-	QueryParams RegistryUpdateAPIDeploymentQueryParams
-	Request     shared.APIDeploymentInput `request:"mediaType=application/json"`
 }
 
 type RegistryUpdateAPIDeploymentResponse struct {

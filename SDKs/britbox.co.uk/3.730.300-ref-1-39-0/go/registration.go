@@ -48,7 +48,7 @@ func (s *registration) Register(ctx context.Context, request operations.Register
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/register"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegistrationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -63,7 +63,7 @@ func (s *registration) Register(ctx context.Context, request operations.Register
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

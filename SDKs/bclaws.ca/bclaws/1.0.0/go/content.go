@@ -33,7 +33,7 @@ func newContent(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetContentAspectID - Describes the documents and directories available within a specific 'aspect' (content group) of the BCLaws library
 func (s *content) GetContentAspectID(ctx context.Context, request operations.GetContentAspectIDRequest) (*operations.GetContentAspectIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/content/{aspectId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/content/{aspectId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -68,7 +68,7 @@ func (s *content) GetContentAspectID(ctx context.Context, request operations.Get
 // GetContentAspectIDCivixDocumentID - Lists the metadata available for the specified index or directory from the BCLaws legislative respository
 func (s *content) GetContentAspectIDCivixDocumentID(ctx context.Context, request operations.GetContentAspectIDCivixDocumentIDRequest) (*operations.GetContentAspectIDCivixDocumentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/content/{aspectId}/{civixDocumentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/content/{aspectId}/{civixDocumentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type GetMessageDataPathParams struct {
+type GetMessageDataRequest struct {
 	// ID of Queue Message for which data is to be returned
 	QueueMessageID string `pathParam:"style=simple,explode=false,name=queueMessageId"`
 	// Name of Queue
 	QueueName string `pathParam:"style=simple,explode=false,name=queueName"`
-}
-
-type GetMessageDataRequest struct {
-	PathParams GetMessageDataPathParams
 }
 
 type GetMessageDataResponse struct {

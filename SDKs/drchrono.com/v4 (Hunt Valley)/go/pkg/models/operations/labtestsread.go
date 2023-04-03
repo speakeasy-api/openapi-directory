@@ -8,22 +8,13 @@ import (
 )
 
 type LabTestsReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type LabTestsReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type LabTestsReadQueryParams struct {
-	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Order  *int64 `queryParam:"style=form,explode=true,name=order"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LabTestsReadRequest struct {
-	PathParams  LabTestsReadPathParams
-	QueryParams LabTestsReadQueryParams
-	Security    LabTestsReadSecurity
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	ID     string `pathParam:"style=simple,explode=false,name=id"`
+	Order  *int64 `queryParam:"style=form,explode=true,name=order"`
 }
 
 type LabTestsReadResponse struct {

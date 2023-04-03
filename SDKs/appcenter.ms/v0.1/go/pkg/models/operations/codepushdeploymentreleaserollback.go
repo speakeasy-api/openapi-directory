@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type CodePushDeploymentReleaseRollbackSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type CodePushDeploymentReleaseRollbackPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// deployment name
-	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // CodePushDeploymentReleaseRollbackRequestBody - The specific release label that you want to rollback to
@@ -28,10 +18,14 @@ type CodePushDeploymentReleaseRollbackRequestBody struct {
 }
 
 type CodePushDeploymentReleaseRollbackRequest struct {
-	PathParams CodePushDeploymentReleaseRollbackPathParams
 	// The specific release label that you want to rollback to
-	Request  *CodePushDeploymentReleaseRollbackRequestBody `request:"mediaType=application/json"`
-	Security CodePushDeploymentReleaseRollbackSecurity
+	RequestBody *CodePushDeploymentReleaseRollbackRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// deployment name
+	DeploymentName string `pathParam:"style=simple,explode=false,name=deployment_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // CodePushDeploymentReleaseRollbackDefaultApplicationJSON - Error

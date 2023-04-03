@@ -8,14 +8,10 @@ import (
 )
 
 type PatientsOnpatientAccessReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PatientsOnpatientAccessReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatientsOnpatientAccessReadQueryParams struct {
+type PatientsOnpatientAccessReadRequest struct {
 	ChartID           *string `queryParam:"style=form,explode=true,name=chart_id"`
 	DateOfBirth       *string `queryParam:"style=form,explode=true,name=date_of_birth"`
 	Doctor            *int64  `queryParam:"style=form,explode=true,name=doctor"`
@@ -23,16 +19,11 @@ type PatientsOnpatientAccessReadQueryParams struct {
 	Ethnicity         *string `queryParam:"style=form,explode=true,name=ethnicity"`
 	FirstName         *string `queryParam:"style=form,explode=true,name=first_name"`
 	Gender            *string `queryParam:"style=form,explode=true,name=gender"`
+	ID                string  `pathParam:"style=simple,explode=false,name=id"`
 	LastName          *string `queryParam:"style=form,explode=true,name=last_name"`
 	PreferredLanguage *string `queryParam:"style=form,explode=true,name=preferred_language"`
 	Race              *string `queryParam:"style=form,explode=true,name=race"`
 	Since             *string `queryParam:"style=form,explode=true,name=since"`
-}
-
-type PatientsOnpatientAccessReadRequest struct {
-	PathParams  PatientsOnpatientAccessReadPathParams
-	QueryParams PatientsOnpatientAccessReadQueryParams
-	Security    PatientsOnpatientAccessReadSecurity
 }
 
 type PatientsOnpatientAccessReadResponse struct {

@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFbsTeamsQueryParams struct {
+type GetFbsTeamsRequest struct {
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetFbsTeamsRequest struct {
-	QueryParams GetFbsTeamsQueryParams
 }
 
 type GetFbsTeamsResponse struct {

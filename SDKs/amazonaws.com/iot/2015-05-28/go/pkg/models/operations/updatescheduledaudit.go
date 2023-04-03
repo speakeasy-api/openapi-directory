@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateScheduledAuditPathParams struct {
-	// The name of the scheduled audit. (Max. 128 chars)
-	ScheduledAuditName string `pathParam:"style=simple,explode=false,name=scheduledAuditName"`
-}
-
-type UpdateScheduledAuditHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateScheduledAuditRequestBodyDayOfWeekEnum - The day of the week on which the scheduled audit takes place. This can be one of <code>SUN</code>, <code>MON</code>, <code>TUE</code>, <code>WED</code>, <code>THU</code>, <code>FRI</code>, or <code>SAT</code>. This field is required if the "frequency" parameter is set to <code>WEEKLY</code> or <code>BIWEEKLY</code>.
 type UpdateScheduledAuditRequestBodyDayOfWeekEnum string
 
@@ -105,9 +90,16 @@ type UpdateScheduledAuditRequestBody struct {
 }
 
 type UpdateScheduledAuditRequest struct {
-	PathParams UpdateScheduledAuditPathParams
-	Headers    UpdateScheduledAuditHeaders
-	Request    UpdateScheduledAuditRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateScheduledAuditRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the scheduled audit. (Max. 128 chars)
+	ScheduledAuditName string `pathParam:"style=simple,explode=false,name=scheduledAuditName"`
 }
 
 type UpdateScheduledAuditResponse struct {

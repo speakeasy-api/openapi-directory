@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOrderListLightRequest struct {
-	Request shared.OrderListRequest `request:"mediaType=application/json"`
-}
-
 type GetOrderListLightResponse struct {
 	// Could not process request for given parameters values. Please check error message for more details.
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

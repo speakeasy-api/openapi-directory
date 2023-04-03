@@ -71,7 +71,7 @@ func (e *GETGETShippingLabelVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETShippingLabelQueryParams struct {
+type GETGETShippingLabelRequest struct {
 	APIVersion       *string                          `queryParam:"style=form,explode=true,name=APIVersion"`
 	AWSAccessKeyID   string                           `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GETGETShippingLabelActionEnum    `queryParam:"style=form,explode=true,name=Action"`
@@ -92,10 +92,6 @@ type GETGETShippingLabelQueryParams struct {
 	Street1          *string                          `queryParam:"style=form,explode=true,name=street1"`
 	Street2          *string                          `queryParam:"style=form,explode=true,name=street2"`
 	Street3          *string                          `queryParam:"style=form,explode=true,name=street3"`
-}
-
-type GETGETShippingLabelRequest struct {
-	QueryParams GETGETShippingLabelQueryParams
 }
 
 type GETGETShippingLabelResponse struct {

@@ -4,20 +4,14 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetBlockIDSecurity struct {
-	Key2 shared.SchemeKey2 `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetBlockIDPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	Key2 string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
 }
 
 type GetBlockIDRequest struct {
-	PathParams GetBlockIDPathParams
-	Security   GetBlockIDSecurity
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetBlockIDResponse struct {

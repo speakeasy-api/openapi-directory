@@ -7,25 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRouteResponsePathParams struct {
-	// The API identifier.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The route ID.
-	RouteID string `pathParam:"style=simple,explode=false,name=routeId"`
-	// The route response ID.
-	RouteResponseID string `pathParam:"style=simple,explode=false,name=routeResponseId"`
-}
-
-type UpdateRouteResponseHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateRouteResponseRequestBody struct {
 	// An expression used to extract information at runtime. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">Selection Expressions</a> for more information.
 	ModelSelectionExpression *string `json:"modelSelectionExpression,omitempty"`
@@ -38,9 +19,20 @@ type UpdateRouteResponseRequestBody struct {
 }
 
 type UpdateRouteResponseRequest struct {
-	PathParams UpdateRouteResponsePathParams
-	Headers    UpdateRouteResponseHeaders
-	Request    UpdateRouteResponseRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateRouteResponseRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The API identifier.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The route ID.
+	RouteID string `pathParam:"style=simple,explode=false,name=routeId"`
+	// The route response ID.
+	RouteResponseID string `pathParam:"style=simple,explode=false,name=routeResponseId"`
 }
 
 type UpdateRouteResponseResponse struct {

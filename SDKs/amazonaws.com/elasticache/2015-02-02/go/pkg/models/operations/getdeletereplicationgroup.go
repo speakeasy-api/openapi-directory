@@ -50,7 +50,7 @@ func (e *GETDeleteReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDeleteReplicationGroupQueryParams struct {
+type GETDeleteReplicationGroupRequest struct {
 	Action GETDeleteReplicationGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of a final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster, rather than one of the replicas; this is to ensure that it captures the freshest data. After the final snapshot is taken, the replication group is immediately deleted.
 	FinalSnapshotIdentifier *string `queryParam:"style=form,explode=true,name=FinalSnapshotIdentifier"`
@@ -59,21 +59,13 @@ type GETDeleteReplicationGroupQueryParams struct {
 	// If set to <code>true</code>, all of the read replicas are deleted, but the primary node is retained.
 	RetainPrimaryCluster *bool                                `queryParam:"style=form,explode=true,name=RetainPrimaryCluster"`
 	Version              GETDeleteReplicationGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteReplicationGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteReplicationGroupRequest struct {
-	QueryParams GETDeleteReplicationGroupQueryParams
-	Headers     GETDeleteReplicationGroupHeaders
+	XAmzAlgorithm        *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteReplicationGroupResponse struct {

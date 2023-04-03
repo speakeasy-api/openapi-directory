@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPartitionIndexesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // GetPartitionIndexesXAmzTargetEnum
 type GetPartitionIndexesXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *GetPartitionIndexesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetPartitionIndexesHeaders struct {
+type GetPartitionIndexesRequest struct {
+	GetPartitionIndexesRequest shared.GetPartitionIndexesRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type GetPartitionIndexesHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetPartitionIndexesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetPartitionIndexesRequest struct {
-	QueryParams GetPartitionIndexesQueryParams
-	Headers     GetPartitionIndexesHeaders
-	Request     shared.GetPartitionIndexesRequest `request:"mediaType=application/json"`
 }
 
 type GetPartitionIndexesResponse struct {

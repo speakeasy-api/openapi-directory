@@ -34,7 +34,7 @@ func newDestinationDefinitionSpecification(defaultClient, securityClient HTTPCli
 }
 
 // GetDestinationDefinitionSpecification - Get specification for a destinationDefinition
-func (s *destinationDefinitionSpecification) GetDestinationDefinitionSpecification(ctx context.Context, request operations.GetDestinationDefinitionSpecificationRequest) (*operations.GetDestinationDefinitionSpecificationResponse, error) {
+func (s *destinationDefinitionSpecification) GetDestinationDefinitionSpecification(ctx context.Context, request shared.DestinationDefinitionIDWithWorkspaceID) (*operations.GetDestinationDefinitionSpecificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definition_specifications/get"
 

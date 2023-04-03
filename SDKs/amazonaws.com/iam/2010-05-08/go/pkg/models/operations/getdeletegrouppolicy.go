@@ -50,28 +50,20 @@ func (e *GETDeleteGroupPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteGroupPolicyQueryParams struct {
+type GETDeleteGroupPolicyRequest struct {
 	Action GETDeleteGroupPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name (friendly name, not ARN) identifying the group that the policy is embedded in.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	GroupName string `queryParam:"style=form,explode=true,name=GroupName"`
 	// <p>The name identifying the policy document to delete.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	PolicyName string                          `queryParam:"style=form,explode=true,name=PolicyName"`
-	Version    GETDeleteGroupPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteGroupPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteGroupPolicyRequest struct {
-	QueryParams GETDeleteGroupPolicyQueryParams
-	Headers     GETDeleteGroupPolicyHeaders
+	PolicyName        string                          `queryParam:"style=form,explode=true,name=PolicyName"`
+	Version           GETDeleteGroupPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteGroupPolicyResponse struct {

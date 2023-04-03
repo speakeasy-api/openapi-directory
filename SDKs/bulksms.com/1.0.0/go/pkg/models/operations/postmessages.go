@@ -9,10 +9,16 @@ import (
 )
 
 type PostMessagesSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
-type PostMessagesQueryParams struct {
+type PostMessagesRequest struct {
+	// Contains details of the message (or messages) that you want to send.
+	//
+	// One `SubmissionEntry` can produce many messages, and your request may contain multiple such entries.
+	//
+	RequestBody []shared.SubmissionEntry `request:"mediaType=application/json"`
 	// Specifies how to deal with message text that contains characters not present in the GSM 03.38 character set.
 	//
 	// Messages that contain only GSM 03.38 characters are not affected by this setting.
@@ -47,16 +53,6 @@ type PostMessagesQueryParams struct {
 	// A value that is longer than 256 characters is truncated.
 	//
 	ScheduleDescription *string `queryParam:"style=form,explode=true,name=schedule-description"`
-}
-
-type PostMessagesRequest struct {
-	QueryParams PostMessagesQueryParams
-	// Contains details of the message (or messages) that you want to send.
-	//
-	// One `SubmissionEntry` can produce many messages, and your request may contain multiple such entries.
-	//
-	Request  []shared.SubmissionEntry `request:"mediaType=application/json"`
-	Security PostMessagesSecurity
 }
 
 type PostMessagesResponse struct {

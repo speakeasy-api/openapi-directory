@@ -33,7 +33,7 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 }
 
 // TryNotificationConfig - Try sending a notifications
-func (s *notifications) TryNotificationConfig(ctx context.Context, request operations.TryNotificationConfigRequest) (*operations.TryNotificationConfigResponse, error) {
+func (s *notifications) TryNotificationConfig(ctx context.Context, request shared.Notification) (*operations.TryNotificationConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/notifications/try"
 

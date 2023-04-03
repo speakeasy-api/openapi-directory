@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type EditNameServersPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type EditNameServersQueryParams struct {
-	// The domain name
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type EditNameServersRequest struct {
-	PathParams  EditNameServersPathParams
-	QueryParams EditNameServersQueryParams
-	Request     *shared.EditNameServers `request:"mediaType=application/json"`
+	EditNameServers *shared.EditNameServers `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// The domain name
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type EditNameServersResponse struct {

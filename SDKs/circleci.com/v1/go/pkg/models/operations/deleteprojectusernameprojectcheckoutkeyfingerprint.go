@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-type DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams struct {
+type DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest struct {
 	// XXXXXXXXXX
 	//
 	Fingerprint string `pathParam:"style=simple,explode=false,name=fingerprint"`
@@ -18,10 +18,6 @@ type DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams struct {
 	// XXXXXXXXX
 	//
 	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
-type DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest struct {
-	PathParams DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams
 }
 
 type DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum string

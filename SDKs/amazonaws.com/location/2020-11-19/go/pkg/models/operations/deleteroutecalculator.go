@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteRouteCalculatorPathParams struct {
+type DeleteRouteCalculatorRequest struct {
 	// The name of the route calculator resource to be deleted.
-	CalculatorName string `pathParam:"style=simple,explode=false,name=CalculatorName"`
-}
-
-type DeleteRouteCalculatorHeaders struct {
+	CalculatorName    string  `pathParam:"style=simple,explode=false,name=CalculatorName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteRouteCalculatorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteRouteCalculatorRequest struct {
-	PathParams DeleteRouteCalculatorPathParams
-	Headers    DeleteRouteCalculatorHeaders
 }
 
 type DeleteRouteCalculatorResponse struct {

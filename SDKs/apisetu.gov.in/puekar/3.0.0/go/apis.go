@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Hscer - Class XII Marksheet
 // API to verify Class XII Marksheet.
-func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*operations.HscerResponse, error) {
+func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequestBody, security operations.HscerSecurity) (*operations.HscerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hscer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Hscer(ctx context.Context, request operations.HscerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

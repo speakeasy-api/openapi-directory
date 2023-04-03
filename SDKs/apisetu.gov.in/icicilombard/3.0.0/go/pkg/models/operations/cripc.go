@@ -10,8 +10,8 @@ import (
 )
 
 type CripcSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type CripcRequestBodyCertificateParameters struct {
@@ -50,12 +50,6 @@ type CripcRequestBody struct {
 	Format CripcRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type CripcRequest struct {
-	// Request format
-	Request  *CripcRequestBody `request:"mediaType=application/json"`
-	Security CripcSecurity
 }
 
 type Cripc504ApplicationJSONErrorEnum string

@@ -44,7 +44,7 @@ func (s *subscriptionIPNRequests) ListFailedIPNs(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -91,7 +91,7 @@ func (s *subscriptionIPNRequests) ListSubscribedAddresses(ctx context.Context, r
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -133,7 +133,7 @@ func (s *subscriptionIPNRequests) ResendFailedIPN(ctx context.Context, request o
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resendFailedIPN"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResendFailedIPNRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -148,7 +148,7 @@ func (s *subscriptionIPNRequests) ResendFailedIPN(ctx context.Context, request o
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -190,7 +190,7 @@ func (s *subscriptionIPNRequests) SubscribeAddress(ctx context.Context, request 
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/subscribeAddress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscribeAddressRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -205,7 +205,7 @@ func (s *subscriptionIPNRequests) SubscribeAddress(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -247,7 +247,7 @@ func (s *subscriptionIPNRequests) UnsubscribeAddress(ctx context.Context, reques
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/unsubscribeAddress"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnsubscribeAddressRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -262,7 +262,7 @@ func (s *subscriptionIPNRequests) UnsubscribeAddress(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

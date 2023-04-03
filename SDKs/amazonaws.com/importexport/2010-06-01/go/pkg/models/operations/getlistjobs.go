@@ -71,7 +71,7 @@ func (e *GETListJobsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListJobsQueryParams struct {
+type GETListJobsRequest struct {
 	APIVersion       *string                  `queryParam:"style=form,explode=true,name=APIVersion"`
 	AWSAccessKeyID   string                   `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action           GETListJobsActionEnum    `queryParam:"style=form,explode=true,name=Action"`
@@ -83,10 +83,6 @@ type GETListJobsQueryParams struct {
 	SignatureVersion string                   `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                   `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETListJobsVersionEnum   `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListJobsRequest struct {
-	QueryParams GETListJobsQueryParams
 }
 
 type GETListJobsResponse struct {

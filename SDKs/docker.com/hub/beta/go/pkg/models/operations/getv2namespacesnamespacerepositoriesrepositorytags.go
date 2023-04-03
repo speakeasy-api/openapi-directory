@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetV2NamespacesNamespaceRepositoriesRepositoryTagsPathParams struct {
-	Namespace  string `pathParam:"style=simple,explode=false,name=namespace"`
-	Repository string `pathParam:"style=simple,explode=false,name=repository"`
-}
-
-type GetV2NamespacesNamespaceRepositoriesRepositoryTagsQueryParams struct {
+type GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest struct {
+	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
 	// Page number to get. Defaults to 1.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of items to get per page. Defaults to 10. Max of 100.
-	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
-}
-
-type GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest struct {
-	PathParams  GetV2NamespacesNamespaceRepositoriesRepositoryTagsPathParams
-	QueryParams GetV2NamespacesNamespaceRepositoriesRepositoryTagsQueryParams
+	PageSize   *int64 `queryParam:"style=form,explode=true,name=page_size"`
+	Repository string `pathParam:"style=simple,explode=false,name=repository"`
 }
 
 type GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse struct {

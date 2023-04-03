@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateArtifactRulePathParams struct {
+type CreateArtifactRuleRequest struct {
+	Rule shared.Rule `request:"mediaType=application/json"`
 	// The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-}
-
-type CreateArtifactRuleRequest struct {
-	PathParams CreateArtifactRulePathParams
-	Request    shared.Rule `request:"mediaType=application/json"`
 }
 
 type CreateArtifactRuleResponse struct {

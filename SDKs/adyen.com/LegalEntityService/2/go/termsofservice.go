@@ -33,16 +33,16 @@ func newTermsOfService(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetLegalEntitiesIDTermsOfServiceAcceptanceInfos - Get Terms of Service information for a legal entity
 // Returns Terms of Service information for a legal entity.
-func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceAcceptanceInfos(ctx context.Context, request operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosRequest) (*operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosResponse, error) {
+func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceAcceptanceInfos(ctx context.Context, request operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosRequest, security operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosSecurity) (*operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceAcceptanceInfos", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceAcceptanceInfos", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,16 +96,16 @@ func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceAcceptanceInfos(ctx con
 
 // GetLegalEntitiesIDTermsOfServiceStatus - Get Terms of Service status
 // Returns the required types of Terms of Service that need to be accepted by a legal entity.
-func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceStatus(ctx context.Context, request operations.GetLegalEntitiesIDTermsOfServiceStatusRequest) (*operations.GetLegalEntitiesIDTermsOfServiceStatusResponse, error) {
+func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceStatus(ctx context.Context, request operations.GetLegalEntitiesIDTermsOfServiceStatusRequest, security operations.GetLegalEntitiesIDTermsOfServiceStatusSecurity) (*operations.GetLegalEntitiesIDTermsOfServiceStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceStatus", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -159,11 +159,11 @@ func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceStatus(ctx context.Cont
 
 // PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid - Accept Terms of Service
 // Accepts Terms of Service.
-func (s *termsOfService) PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid(ctx context.Context, request operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidRequest) (*operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidResponse, error) {
+func (s *termsOfService) PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid(ctx context.Context, request operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidRequest, security operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidSecurity) (*operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService/{termsofservicedocumentid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService/{termsofservicedocumentid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AcceptTermsOfServiceRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -175,7 +175,7 @@ func (s *termsOfService) PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,11 +229,11 @@ func (s *termsOfService) PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumen
 
 // PostLegalEntitiesIDTermsOfService - Get Terms of Service document
 // Returns the Terms of Service document for a legal entity.
-func (s *termsOfService) PostLegalEntitiesIDTermsOfService(ctx context.Context, request operations.PostLegalEntitiesIDTermsOfServiceRequest) (*operations.PostLegalEntitiesIDTermsOfServiceResponse, error) {
+func (s *termsOfService) PostLegalEntitiesIDTermsOfService(ctx context.Context, request operations.PostLegalEntitiesIDTermsOfServiceRequest, security operations.PostLegalEntitiesIDTermsOfServiceSecurity) (*operations.PostLegalEntitiesIDTermsOfServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetTermsOfServiceDocumentRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -245,7 +245,7 @@ func (s *termsOfService) PostLegalEntitiesIDTermsOfService(ctx context.Context, 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

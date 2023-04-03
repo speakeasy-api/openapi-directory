@@ -50,28 +50,20 @@ func (e *GETCancelBundleTaskVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCancelBundleTaskQueryParams struct {
+type GETCancelBundleTaskRequest struct {
 	Action GETCancelBundleTaskActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the bundle task.
 	BundleID string `queryParam:"style=form,explode=true,name=BundleId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                          `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETCancelBundleTaskVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCancelBundleTaskHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCancelBundleTaskRequest struct {
-	QueryParams GETCancelBundleTaskQueryParams
-	Headers     GETCancelBundleTaskHeaders
+	DryRun            *bool                          `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETCancelBundleTaskVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCancelBundleTaskResponse struct {

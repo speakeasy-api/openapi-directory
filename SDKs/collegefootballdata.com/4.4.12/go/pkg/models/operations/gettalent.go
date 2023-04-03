@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTalentQueryParams struct {
+type GetTalentRequest struct {
 	// Year filter
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetTalentRequest struct {
-	QueryParams GetTalentQueryParams
 }
 
 type GetTalentResponse struct {

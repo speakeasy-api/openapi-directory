@@ -7,25 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateIntentPathParams struct {
-	// The identifier of the bot associated with this intent.
-	BotID string `pathParam:"style=simple,explode=false,name=botId"`
-	// The identifier of the version of the bot associated with this intent.
-	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
-	// The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
-	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
-}
-
-type CreateIntentHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateIntentRequestBodyDialogCodeHook - Settings that determine the Lambda function that Amazon Lex uses for processing user responses.
 type CreateIntentRequestBodyDialogCodeHook struct {
 	Enabled *bool `json:"enabled,omitempty"`
@@ -113,9 +94,20 @@ type CreateIntentRequestBody struct {
 }
 
 type CreateIntentRequest struct {
-	PathParams CreateIntentPathParams
-	Headers    CreateIntentHeaders
-	Request    CreateIntentRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateIntentRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The identifier of the bot associated with this intent.
+	BotID string `pathParam:"style=simple,explode=false,name=botId"`
+	// The identifier of the version of the bot associated with this intent.
+	BotVersion string `pathParam:"style=simple,explode=false,name=botVersion"`
+	// The identifier of the language and locale where this intent is used. All of the bots, slot types, and slots used by the intent must have the same locale. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.
+	LocaleID string `pathParam:"style=simple,explode=false,name=localeId"`
 }
 
 type CreateIntentResponse struct {

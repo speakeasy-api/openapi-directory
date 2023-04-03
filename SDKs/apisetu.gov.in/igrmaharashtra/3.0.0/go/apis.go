@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Llcer - Leave and License Certificate
 // API to verify Leave and License Certificate.
-func (s *apIs) Llcer(ctx context.Context, request operations.LlcerRequest) (*operations.LlcerResponse, error) {
+func (s *apIs) Llcer(ctx context.Context, request operations.LlcerRequestBody, security operations.LlcerSecurity) (*operations.LlcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/llcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Llcer(ctx context.Context, request operations.LlcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

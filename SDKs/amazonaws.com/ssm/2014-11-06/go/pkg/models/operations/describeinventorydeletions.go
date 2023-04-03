@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeInventoryDeletionsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeInventoryDeletionsXAmzTargetEnum
 type DescribeInventoryDeletionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeInventoryDeletionsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DescribeInventoryDeletionsHeaders struct {
+type DescribeInventoryDeletionsRequest struct {
+	DescribeInventoryDeletionsRequest shared.DescribeInventoryDeletionsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeInventoryDeletionsHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeInventoryDeletionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeInventoryDeletionsRequest struct {
-	QueryParams DescribeInventoryDeletionsQueryParams
-	Headers     DescribeInventoryDeletionsHeaders
-	Request     shared.DescribeInventoryDeletionsRequest `request:"mediaType=application/json"`
 }
 
 type DescribeInventoryDeletionsResponse struct {

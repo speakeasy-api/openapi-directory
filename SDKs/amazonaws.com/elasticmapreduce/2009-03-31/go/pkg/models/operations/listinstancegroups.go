@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListInstanceGroupsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListInstanceGroupsXAmzTargetEnum
 type ListInstanceGroupsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListInstanceGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListInstanceGroupsHeaders struct {
+type ListInstanceGroupsRequest struct {
+	ListInstanceGroupsInput shared.ListInstanceGroupsInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                          `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListInstanceGroupsHeaders struct {
 	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListInstanceGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListInstanceGroupsRequest struct {
-	QueryParams ListInstanceGroupsQueryParams
-	Headers     ListInstanceGroupsHeaders
-	Request     shared.ListInstanceGroupsInput `request:"mediaType=application/json"`
 }
 
 type ListInstanceGroupsResponse struct {

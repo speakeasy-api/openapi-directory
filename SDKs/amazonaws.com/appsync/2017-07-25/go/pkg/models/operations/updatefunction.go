@@ -7,23 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateFunctionPathParams struct {
-	// The GraphQL API ID.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The function ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
-}
-
-type UpdateFunctionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateFunctionRequestBodyRuntime - Describes a runtime used by an Amazon Web Services AppSync pipeline resolver or Amazon Web Services AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified.
 type UpdateFunctionRequestBodyRuntime struct {
 	Name           *shared.RuntimeNameEnum `json:"name,omitempty"`
@@ -61,9 +44,18 @@ type UpdateFunctionRequestBody struct {
 }
 
 type UpdateFunctionRequest struct {
-	PathParams UpdateFunctionPathParams
-	Headers    UpdateFunctionHeaders
-	Request    UpdateFunctionRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateFunctionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The GraphQL API ID.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The function ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type UpdateFunctionResponse struct {

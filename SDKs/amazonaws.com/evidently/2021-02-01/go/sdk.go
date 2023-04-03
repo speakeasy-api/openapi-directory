@@ -114,9 +114,9 @@ func New(opts ...SDKOption) *SDK {
 // BatchEvaluateFeature - <p>This operation assigns feature variation to user sessions. For each user session, you pass in an <code>entityID</code> that represents the user. Evidently then checks the evaluation rules and assigns the variation.</p> <p>The first rules that are evaluated are the override rules. If the user's <code>entityID</code> matches an override rule, the user is served the variation specified by that rule.</p> <p>Next, if there is a launch of the feature, the user might be assigned to a variation in the launch. The chance of this depends on the percentage of users that are allocated to that launch. If the user is enrolled in the launch, the variation they are served depends on the allocation of the various feature variations used for the launch.</p> <p>If the user is not assigned to a launch, and there is an ongoing experiment for this feature, the user might be assigned to a variation in the experiment. The chance of this depends on the percentage of users that are allocated to that experiment. If the user is enrolled in the experiment, the variation they are served depends on the allocation of the various feature variations used for the experiment. </p> <p>If the user is not assigned to a launch or experiment, they are served the default variation.</p>
 func (s *SDK) BatchEvaluateFeature(ctx context.Context, request operations.BatchEvaluateFeatureRequest) (*operations.BatchEvaluateFeatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/evaluations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/evaluations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -131,7 +131,7 @@ func (s *SDK) BatchEvaluateFeature(ctx context.Context, request operations.Batch
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -210,9 +210,9 @@ func (s *SDK) BatchEvaluateFeature(ctx context.Context, request operations.Batch
 // CreateExperiment - <p>Creates an Evidently <i>experiment</i>. Before you create an experiment, you must create the feature to use for the experiment.</p> <p>An experiment helps you make feature design decisions based on evidence and data. An experiment can test as many as five variations at once. Evidently collects experiment data and analyzes it by statistical methods, and provides clear recommendations about which variations perform better.</p> <p>You can optionally specify a <code>segment</code> to have the experiment consider only certain audience types in the experiment, such as using only user sessions from a certain location or who use a certain internet browser.</p> <p>Don't use this operation to update an existing experiment. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateExperiment.html">UpdateExperiment</a>. </p>
 func (s *SDK) CreateExperiment(ctx context.Context, request operations.CreateExperimentRequest) (*operations.CreateExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -227,7 +227,7 @@ func (s *SDK) CreateExperiment(ctx context.Context, request operations.CreateExp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -316,9 +316,9 @@ func (s *SDK) CreateExperiment(ctx context.Context, request operations.CreateExp
 // CreateFeature - <p>Creates an Evidently <i>feature</i> that you want to launch or test. You can define up to five variations of a feature, and use these variations in your launches and experiments. A feature must be created in a project. For information about creating a project, see <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateProject.html">CreateProject</a>.</p> <p>Don't use this operation to update an existing feature. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateFeature.html">UpdateFeature</a>. </p>
 func (s *SDK) CreateFeature(ctx context.Context, request operations.CreateFeatureRequest) (*operations.CreateFeatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -333,7 +333,7 @@ func (s *SDK) CreateFeature(ctx context.Context, request operations.CreateFeatur
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -422,9 +422,9 @@ func (s *SDK) CreateFeature(ctx context.Context, request operations.CreateFeatur
 // CreateLaunch - <p>Creates a <i>launch</i> of a given feature. Before you create a launch, you must create the feature to use for the launch.</p> <p>You can use a launch to safely validate new features by serving them to a specified percentage of your users while you roll out the feature. You can monitor the performance of the new feature to help you decide when to ramp up traffic to more users. This helps you reduce risk and identify unintended consequences before you fully launch the feature.</p> <p>Don't use this operation to update an existing launch. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateLaunch.html">UpdateLaunch</a>. </p>
 func (s *SDK) CreateLaunch(ctx context.Context, request operations.CreateLaunchRequest) (*operations.CreateLaunchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -439,7 +439,7 @@ func (s *SDK) CreateLaunch(ctx context.Context, request operations.CreateLaunchR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -530,7 +530,7 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -545,7 +545,7 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -626,7 +626,7 @@ func (s *SDK) CreateSegment(ctx context.Context, request operations.CreateSegmen
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/segments"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -641,7 +641,7 @@ func (s *SDK) CreateSegment(ctx context.Context, request operations.CreateSegmen
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -720,14 +720,14 @@ func (s *SDK) CreateSegment(ctx context.Context, request operations.CreateSegmen
 // DeleteExperiment - <p>Deletes an Evidently experiment. The feature used for the experiment is not deleted.</p> <p>To stop an experiment without deleting it, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_StopExperiment.html">StopExperiment</a>. </p>
 func (s *SDK) DeleteExperiment(ctx context.Context, request operations.DeleteExperimentRequest) (*operations.DeleteExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -826,14 +826,14 @@ func (s *SDK) DeleteExperiment(ctx context.Context, request operations.DeleteExp
 // DeleteFeature - Deletes an Evidently feature.
 func (s *SDK) DeleteFeature(ctx context.Context, request operations.DeleteFeatureRequest) (*operations.DeleteFeatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features/{feature}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features/{feature}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -922,14 +922,14 @@ func (s *SDK) DeleteFeature(ctx context.Context, request operations.DeleteFeatur
 // DeleteLaunch - <p>Deletes an Evidently launch. The feature used for the launch is not deleted.</p> <p>To stop a launch without deleting it, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_StopLaunch.html">StopLaunch</a>. </p>
 func (s *SDK) DeleteLaunch(ctx context.Context, request operations.DeleteLaunchRequest) (*operations.DeleteLaunchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1018,14 +1018,14 @@ func (s *SDK) DeleteLaunch(ctx context.Context, request operations.DeleteLaunchR
 // DeleteProject - Deletes an Evidently project. Before you can delete a project, you must delete all the features that the project contains. To delete a feature, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_DeleteFeature.html">DeleteFeature</a>.
 func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1114,14 +1114,14 @@ func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjec
 // DeleteSegment - Deletes a segment. You can't delete a segment that is being used in a launch or experiment, even if that launch or experiment is not currently running.
 func (s *SDK) DeleteSegment(ctx context.Context, request operations.DeleteSegmentRequest) (*operations.DeleteSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/segments/{segment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/segments/{segment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1210,9 +1210,9 @@ func (s *SDK) DeleteSegment(ctx context.Context, request operations.DeleteSegmen
 // EvaluateFeature - <p>This operation assigns a feature variation to one given user session. You pass in an <code>entityID</code> that represents the user. Evidently then checks the evaluation rules and assigns the variation.</p> <p>The first rules that are evaluated are the override rules. If the user's <code>entityID</code> matches an override rule, the user is served the variation specified by that rule.</p> <p>If there is a current launch with this feature that uses segment overrides, and if the user session's <code>evaluationContext</code> matches a segment rule defined in a segment override, the configuration in the segment overrides is used. For more information about segments, see <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateSegment.html">CreateSegment</a> and <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Use segments to focus your audience</a>.</p> <p>If there is a launch with no segment overrides, the user might be assigned to a variation in the launch. The chance of this depends on the percentage of users that are allocated to that launch. If the user is enrolled in the launch, the variation they are served depends on the allocation of the various feature variations used for the launch.</p> <p>If the user is not assigned to a launch, and there is an ongoing experiment for this feature, the user might be assigned to a variation in the experiment. The chance of this depends on the percentage of users that are allocated to that experiment.</p> <p>If the experiment uses a segment, then only user sessions with <code>evaluationContext</code> values that match the segment rule are used in the experiment.</p> <p>If the user is enrolled in the experiment, the variation they are served depends on the allocation of the various feature variations used for the experiment. </p> <p>If the user is not assigned to a launch or experiment, they are served the default variation.</p>
 func (s *SDK) EvaluateFeature(ctx context.Context, request operations.EvaluateFeatureRequest) (*operations.EvaluateFeatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/evaluations/{feature}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/evaluations/{feature}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1227,7 +1227,7 @@ func (s *SDK) EvaluateFeature(ctx context.Context, request operations.EvaluateFe
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1306,14 +1306,14 @@ func (s *SDK) EvaluateFeature(ctx context.Context, request operations.EvaluateFe
 // GetExperiment - Returns the details about one experiment. You must already know the experiment name. To retrieve a list of experiments in your account, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListExperiments.html">ListExperiments</a>.
 func (s *SDK) GetExperiment(ctx context.Context, request operations.GetExperimentRequest) (*operations.GetExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1392,9 +1392,9 @@ func (s *SDK) GetExperiment(ctx context.Context, request operations.GetExperimen
 // GetExperimentResults - <p>Retrieves the results of a running or completed experiment. No results are available until there have been 100 events for each variation and at least 10 minutes have passed since the start of the experiment. To increase the statistical power, Evidently performs an additional offline p-value analysis at the end of the experiment. Offline p-value analysis can detect statistical significance in some cases where the anytime p-values used during the experiment do not find statistical significance.</p> <p>Experiment results are available up to 63 days after the start of the experiment. They are not available after that because of CloudWatch data retention policies.</p>
 func (s *SDK) GetExperimentResults(ctx context.Context, request operations.GetExperimentResultsRequest) (*operations.GetExperimentResultsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}/results", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}/results", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1409,7 +1409,7 @@ func (s *SDK) GetExperimentResults(ctx context.Context, request operations.GetEx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1498,14 +1498,14 @@ func (s *SDK) GetExperimentResults(ctx context.Context, request operations.GetEx
 // GetFeature - Returns the details about one feature. You must already know the feature name. To retrieve a list of features in your account, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListFeatures.html">ListFeatures</a>.
 func (s *SDK) GetFeature(ctx context.Context, request operations.GetFeatureRequest) (*operations.GetFeatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features/{feature}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features/{feature}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1584,14 +1584,14 @@ func (s *SDK) GetFeature(ctx context.Context, request operations.GetFeatureReque
 // GetLaunch - Returns the details about one launch. You must already know the launch name. To retrieve a list of launches in your account, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListLaunches.html">ListLaunches</a>.
 func (s *SDK) GetLaunch(ctx context.Context, request operations.GetLaunchRequest) (*operations.GetLaunchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1670,14 +1670,14 @@ func (s *SDK) GetLaunch(ctx context.Context, request operations.GetLaunchRequest
 // GetProject - Returns the details about one launch. You must already know the project name. To retrieve a list of projects in your account, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListProjects.html">ListProjects</a>.
 func (s *SDK) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1756,14 +1756,14 @@ func (s *SDK) GetProject(ctx context.Context, request operations.GetProjectReque
 // GetSegment - Returns information about the specified segment. Specify the segment you want to view by specifying its ARN.
 func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentRequest) (*operations.GetSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/segments/{segment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/segments/{segment}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -1842,16 +1842,16 @@ func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentReque
 // ListExperiments - Returns configuration details about all the experiments in the specified project.
 func (s *SDK) ListExperiments(ctx context.Context, request operations.ListExperimentsRequest) (*operations.ListExperimentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1922,16 +1922,16 @@ func (s *SDK) ListExperiments(ctx context.Context, request operations.ListExperi
 // ListFeatures - Returns configuration details about all the features in the specified project.
 func (s *SDK) ListFeatures(ctx context.Context, request operations.ListFeaturesRequest) (*operations.ListFeaturesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2012,16 +2012,16 @@ func (s *SDK) ListFeatures(ctx context.Context, request operations.ListFeaturesR
 // ListLaunches - Returns configuration details about all the launches in the specified project.
 func (s *SDK) ListLaunches(ctx context.Context, request operations.ListLaunchesRequest) (*operations.ListLaunchesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2099,9 +2099,9 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2172,16 +2172,16 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 // ListSegmentReferences - Use this operation to find which experiments or launches are using a specified segment.
 func (s *SDK) ListSegmentReferences(ctx context.Context, request operations.ListSegmentReferencesRequest) (*operations.ListSegmentReferencesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/segments/{segment}/references#type", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/segments/{segment}/references#type", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2269,9 +2269,9 @@ func (s *SDK) ListSegments(ctx context.Context, request operations.ListSegmentsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2342,14 +2342,14 @@ func (s *SDK) ListSegments(ctx context.Context, request operations.ListSegmentsR
 // ListTagsForResource - Displays the tags associated with an Evidently resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2418,9 +2418,9 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // PutProjectEvents - Sends performance events to Evidently. These events can be used to evaluate a launch or an experiment.
 func (s *SDK) PutProjectEvents(ctx context.Context, request operations.PutProjectEventsRequest) (*operations.PutProjectEventsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/projects/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/events/projects/{project}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2435,7 +2435,7 @@ func (s *SDK) PutProjectEvents(ctx context.Context, request operations.PutProjec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2514,9 +2514,9 @@ func (s *SDK) PutProjectEvents(ctx context.Context, request operations.PutProjec
 // StartExperiment - Starts an existing experiment. To create an experiment, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateExperiment.html">CreateExperiment</a>.
 func (s *SDK) StartExperiment(ctx context.Context, request operations.StartExperimentRequest) (*operations.StartExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}/start", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2531,7 +2531,7 @@ func (s *SDK) StartExperiment(ctx context.Context, request operations.StartExper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2630,14 +2630,14 @@ func (s *SDK) StartExperiment(ctx context.Context, request operations.StartExper
 // StartLaunch - Starts an existing launch. To create a launch, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateLaunch.html">CreateLaunch</a>.
 func (s *SDK) StartLaunch(ctx context.Context, request operations.StartLaunchRequest) (*operations.StartLaunchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2736,9 +2736,9 @@ func (s *SDK) StartLaunch(ctx context.Context, request operations.StartLaunchReq
 // StopExperiment - Stops an experiment that is currently running. If you stop an experiment, you can't resume it or restart it.
 func (s *SDK) StopExperiment(ctx context.Context, request operations.StopExperimentRequest) (*operations.StopExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2753,7 +2753,7 @@ func (s *SDK) StopExperiment(ctx context.Context, request operations.StopExperim
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2852,9 +2852,9 @@ func (s *SDK) StopExperiment(ctx context.Context, request operations.StopExperim
 // StopLaunch - Stops a launch that is currently running. After you stop a launch, you will not be able to resume it or restart it. Also, it will not be evaluated as a rule for traffic allocation, and the traffic that was allocated to the launch will instead be available to the feature's experiment, if there is one. Otherwise, all traffic will be served the default variation after the launch is stopped.
 func (s *SDK) StopLaunch(ctx context.Context, request operations.StopLaunchRequest) (*operations.StopLaunchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}/cancel", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2869,7 +2869,7 @@ func (s *SDK) StopLaunch(ctx context.Context, request operations.StopLaunchReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -2948,9 +2948,9 @@ func (s *SDK) StopLaunch(ctx context.Context, request operations.StopLaunchReque
 // TagResource - <p>Assigns one or more tags (key-value pairs) to the specified CloudWatch Evidently resource. Projects, features, launches, and experiments can be tagged.</p> <p>Tags can help you organize and categorize your resources. You can also use them to scope user permissions by granting a user permission to access or change only resources with certain tag values.</p> <p>Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of characters.</p> <p>You can use the <code>TagResource</code> action with a resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the list of tags associated with the alarm. If you specify a tag key that is already associated with the resource, the new tag value that you specify replaces the previous value for that tag.</p> <p>You can associate as many as 50 tags with a resource.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.</p>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2965,7 +2965,7 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3036,7 +3036,7 @@ func (s *SDK) TestSegmentPattern(ctx context.Context, request operations.TestSeg
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/test-segment-pattern"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3051,7 +3051,7 @@ func (s *SDK) TestSegmentPattern(ctx context.Context, request operations.TestSeg
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3120,16 +3120,16 @@ func (s *SDK) TestSegmentPattern(ctx context.Context, request operations.TestSeg
 // UntagResource - Removes one or more tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3200,9 +3200,9 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateExperiment - <p>Updates an Evidently experiment. </p> <p>Don't use this operation to update an experiment's tag. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_TagResource.html">TagResource</a>. </p>
 func (s *SDK) UpdateExperiment(ctx context.Context, request operations.UpdateExperimentRequest) (*operations.UpdateExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/experiments/{experiment}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3217,7 +3217,7 @@ func (s *SDK) UpdateExperiment(ctx context.Context, request operations.UpdateExp
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3296,9 +3296,9 @@ func (s *SDK) UpdateExperiment(ctx context.Context, request operations.UpdateExp
 // UpdateFeature - <p>Updates an existing feature.</p> <p>You can't use this operation to update the tags of an existing feature. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_TagResource.html">TagResource</a>. </p>
 func (s *SDK) UpdateFeature(ctx context.Context, request operations.UpdateFeatureRequest) (*operations.UpdateFeatureResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features/{feature}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/features/{feature}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3313,7 +3313,7 @@ func (s *SDK) UpdateFeature(ctx context.Context, request operations.UpdateFeatur
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3402,9 +3402,9 @@ func (s *SDK) UpdateFeature(ctx context.Context, request operations.UpdateFeatur
 // UpdateLaunch - <p>Updates a launch of a given feature. </p> <p>Don't use this operation to update the tags of an existing launch. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_TagResource.html">TagResource</a>. </p>
 func (s *SDK) UpdateLaunch(ctx context.Context, request operations.UpdateLaunchRequest) (*operations.UpdateLaunchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/launches/{launch}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3419,7 +3419,7 @@ func (s *SDK) UpdateLaunch(ctx context.Context, request operations.UpdateLaunchR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3498,9 +3498,9 @@ func (s *SDK) UpdateLaunch(ctx context.Context, request operations.UpdateLaunchR
 // UpdateProject - <p>Updates the description of an existing project.</p> <p>To create a new project, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateProject.html">CreateProject</a>.</p> <p>Don't use this operation to update the data storage options of a project. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateProjectDataDelivery.html">UpdateProjectDataDelivery</a>. </p> <p>Don't use this operation to update the tags of a project. Instead, use <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_TagResource.html">TagResource</a>. </p>
 func (s *SDK) UpdateProject(ctx context.Context, request operations.UpdateProjectRequest) (*operations.UpdateProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3515,7 +3515,7 @@ func (s *SDK) UpdateProject(ctx context.Context, request operations.UpdateProjec
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 
@@ -3604,9 +3604,9 @@ func (s *SDK) UpdateProject(ctx context.Context, request operations.UpdateProjec
 // UpdateProjectDataDelivery - <p>Updates the data storage options for this project. If you store evaluation events, you an keep them and analyze them on your own. If you choose not to store evaluation events, Evidently deletes them after using them to produce metrics and other experiment results that you can view.</p> <p>You can't specify both <code>cloudWatchLogs</code> and <code>s3Destination</code> in the same operation.</p>
 func (s *SDK) UpdateProjectDataDelivery(ctx context.Context, request operations.UpdateProjectDataDeliveryRequest) (*operations.UpdateProjectDataDeliveryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/data-delivery", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project}/data-delivery", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -3621,7 +3621,7 @@ func (s *SDK) UpdateProjectDataDelivery(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s._securityClient
 

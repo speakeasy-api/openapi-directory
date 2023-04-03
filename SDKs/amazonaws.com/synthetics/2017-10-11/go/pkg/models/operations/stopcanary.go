@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type StopCanaryPathParams struct {
-	// The name of the canary that you want to stop. To find the names of your canaries, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">ListCanaries</a>.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type StopCanaryHeaders struct {
+type StopCanaryRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type StopCanaryHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type StopCanaryRequest struct {
-	PathParams StopCanaryPathParams
-	Headers    StopCanaryHeaders
+	// The name of the canary that you want to stop. To find the names of your canaries, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">ListCanaries</a>.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type StopCanaryResponse struct {

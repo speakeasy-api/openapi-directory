@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ContentGetContentTypePathParams struct {
-	Type string `pathParam:"style=simple,explode=false,name=type"`
-}
-
 type ContentGetContentTypeRequest struct {
-	PathParams ContentGetContentTypePathParams
+	Type string `pathParam:"style=simple,explode=false,name=type"`
 }
 
 // ContentGetContentType200Wildcard - Look at the Response property for more information about the nature of this response

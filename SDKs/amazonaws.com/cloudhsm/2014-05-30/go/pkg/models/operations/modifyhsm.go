@@ -30,7 +30,8 @@ func (e *ModifyHsmXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ModifyHsmHeaders struct {
+type ModifyHsmRequest struct {
+	ModifyHsmRequest  shared.ModifyHsmRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type ModifyHsmHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ModifyHsmXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ModifyHsmRequest struct {
-	Headers ModifyHsmHeaders
-	Request shared.ModifyHsmRequest `request:"mediaType=application/json"`
 }
 
 type ModifyHsmResponse struct {

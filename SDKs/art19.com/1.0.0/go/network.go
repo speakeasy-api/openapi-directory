@@ -36,7 +36,7 @@ func newNetwork(defaultClient, securityClient HTTPClient, serverURL, language, s
 //
 //   - The attribute `cover_image_id` has been replaced with the relationship `cover_image`
 //     and will be removed from the response in a future release.
-func (s *network) GetNetworks(ctx context.Context, request operations.GetNetworksRequest) (*operations.GetNetworksResponse, error) {
+func (s *network) GetNetworks(ctx context.Context, request operations.GetNetworksRequest, security operations.GetNetworksSecurity) (*operations.GetNetworksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/networks"
 
@@ -45,11 +45,11 @@ func (s *network) GetNetworks(ctx context.Context, request operations.GetNetwork
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,16 +105,16 @@ func (s *network) GetNetworks(ctx context.Context, request operations.GetNetwork
 //
 //   - The attribute `cover_image_id` has been replaced with the relationship `cover_image`
 //     and will be removed from the response in a future release.
-func (s *network) GetNetworksID(ctx context.Context, request operations.GetNetworksIDRequest) (*operations.GetNetworksIDResponse, error) {
+func (s *network) GetNetworksID(ctx context.Context, request operations.GetNetworksIDRequest, security operations.GetNetworksIDSecurity) (*operations.GetNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

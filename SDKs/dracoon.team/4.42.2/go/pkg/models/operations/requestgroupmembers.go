@@ -7,14 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestGroupMembersPathParams struct {
-	// Group ID
-	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
-}
-
-type RequestGroupMembersQueryParams struct {
+type RequestGroupMembersRequest struct {
+	// Authentication token
+	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Filter string
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
+	// Group ID
+	GroupID int64 `pathParam:"style=simple,explode=false,name=group_id"`
 	// Range limit.
 	//
 	// Maximum 500.
@@ -23,17 +22,6 @@ type RequestGroupMembersQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Range offset
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type RequestGroupMembersHeaders struct {
-	// Authentication token
-	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestGroupMembersRequest struct {
-	PathParams  RequestGroupMembersPathParams
-	QueryParams RequestGroupMembersQueryParams
-	Headers     RequestGroupMembersHeaders
 }
 
 type RequestGroupMembersResponse struct {

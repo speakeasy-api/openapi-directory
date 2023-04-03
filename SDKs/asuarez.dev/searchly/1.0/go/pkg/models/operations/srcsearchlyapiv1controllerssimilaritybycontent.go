@@ -13,11 +13,6 @@ type SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody struct {
 	Content *string `json:"content,omitempty"`
 }
 
-type SrcSearchlyAPIV1ControllersSimilarityByContentRequest struct {
-	// Body wrapper for the request.
-	Request SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody `request:"mediaType=application/json"`
-}
-
 type SrcSearchlyAPIV1ControllersSimilarityByContentResponse struct {
 	// Standard SearchLy API v1 JSON response. You should check the `error` attribute to determine if there was an error.
 	APIResponseSimilarity *shared.APIResponseSimilarity

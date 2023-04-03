@@ -13,41 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddTagsToResourceRequest{
-        Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AmazonSSM.AddTagsToResource",
-        },
-        Request: shared.AddTagsToResourceRequest{
-            ResourceID: "illum",
-            ResourceType: "Parameter",
+        AddTagsToResourceRequest: shared.AddTagsToResourceRequest{
+            ResourceID: "corrupti",
+            ResourceType: "OpsItem",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "deserunt",
-                    Value: "suscipit",
+                    Key: "quibusdam",
+                    Value: "unde",
                 },
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
+                    Key: "nulla",
+                    Value: "corrupti",
                 },
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "illum",
+                    Value: "vel",
                 },
             },
         },
+        XAmzAlgorithm: "error",
+        XAmzContentSha256: "deserunt",
+        XAmzCredential: "suscipit",
+        XAmzDate: "iure",
+        XAmzSecurityToken: "magnam",
+        XAmzSignature: "debitis",
+        XAmzSignedHeaders: "ipsa",
+        XAmzTarget: "AmazonSSM.AddTagsToResource",
     }
 
     ctx := context.Background()

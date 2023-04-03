@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteStoreSharePathParams struct {
+type DeleteStoreShareRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 	// The friend user id
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type DeleteStoreShareRequest struct {
-	PathParams DeleteStoreSharePathParams
 }
 
 type DeleteStoreShareResponse struct {

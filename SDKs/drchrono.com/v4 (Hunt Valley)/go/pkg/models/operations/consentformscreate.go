@@ -8,16 +8,11 @@ import (
 )
 
 type ConsentFormsCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ConsentFormsCreateQueryParams struct {
-	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ConsentFormsCreateRequest struct {
-	QueryParams ConsentFormsCreateQueryParams
-	Security    ConsentFormsCreateSecurity
+	Doctor *int64 `queryParam:"style=form,explode=true,name=doctor"`
 }
 
 type ConsentFormsCreateResponse struct {

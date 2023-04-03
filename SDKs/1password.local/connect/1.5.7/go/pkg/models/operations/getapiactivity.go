@@ -8,19 +8,14 @@ import (
 )
 
 type GetAPIActivitySecurity struct {
-	ConnectToken shared.SchemeConnectToken `security:"scheme,type=http,subtype=bearer"`
+	ConnectToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
 }
 
-type GetAPIActivityQueryParams struct {
+type GetAPIActivityRequest struct {
 	// How many API Events should be retrieved in a single request.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// How far into the collection of API Events should the response start
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetAPIActivityRequest struct {
-	QueryParams GetAPIActivityQueryParams
-	Security    GetAPIActivitySecurity
 }
 
 type GetAPIActivityResponse struct {

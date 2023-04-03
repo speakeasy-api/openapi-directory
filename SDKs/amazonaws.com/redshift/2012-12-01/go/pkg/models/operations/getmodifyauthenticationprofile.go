@@ -50,28 +50,20 @@ func (e *GETModifyAuthenticationProfileVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETModifyAuthenticationProfileQueryParams struct {
+type GETModifyAuthenticationProfileRequest struct {
 	Action GETModifyAuthenticationProfileActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The new content of the authentication profile in JSON format. The maximum length of the JSON string is determined by a quota for your account.
 	AuthenticationProfileContent string `queryParam:"style=form,explode=true,name=AuthenticationProfileContent"`
 	// The name of the authentication profile to replace.
 	AuthenticationProfileName string                                    `queryParam:"style=form,explode=true,name=AuthenticationProfileName"`
 	Version                   GETModifyAuthenticationProfileVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyAuthenticationProfileHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyAuthenticationProfileRequest struct {
-	QueryParams GETModifyAuthenticationProfileQueryParams
-	Headers     GETModifyAuthenticationProfileHeaders
+	XAmzAlgorithm             *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256         *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential            *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                  *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken         *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature             *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders         *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyAuthenticationProfileResponse struct {

@@ -8,19 +8,13 @@ import (
 )
 
 type IbanComprehensiveSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // IbanComprehensiveRequestBody - IBAN number
 type IbanComprehensiveRequestBody struct {
 	// IBAN number to validate
 	IbanNumber string `form:"name=ibanNumber"`
-}
-
-type IbanComprehensiveRequest struct {
-	// IBAN number
-	Request  IbanComprehensiveRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security IbanComprehensiveSecurity
 }
 
 // IbanComprehensiveDefaultApplicationJSON - Detailed information about the error

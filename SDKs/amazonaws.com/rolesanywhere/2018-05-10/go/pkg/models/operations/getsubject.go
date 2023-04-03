@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSubjectPathParams struct {
-	// The unique identifier of the subject.
-	SubjectID string `pathParam:"style=simple,explode=false,name=subjectId"`
-}
-
-type GetSubjectHeaders struct {
+type GetSubjectRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetSubjectHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetSubjectRequest struct {
-	PathParams GetSubjectPathParams
-	Headers    GetSubjectHeaders
+	// The unique identifier of the subject.
+	SubjectID string `pathParam:"style=simple,explode=false,name=subjectId"`
 }
 
 type GetSubjectResponse struct {

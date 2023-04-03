@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CodePushAcquisitionUpdateCheckQueryParams struct {
+type CodePushAcquisitionUpdateCheckRequest struct {
 	AppVersion                string  `queryParam:"style=form,explode=true,name=app_version"`
 	ClientUniqueID            *string `queryParam:"style=form,explode=true,name=client_unique_id"`
 	DeploymentKey             string  `queryParam:"style=form,explode=true,name=deployment_key"`
@@ -15,10 +15,6 @@ type CodePushAcquisitionUpdateCheckQueryParams struct {
 	PackageHash               *string `queryParam:"style=form,explode=true,name=package_hash"`
 	PreviousDeploymentKey     *string `queryParam:"style=form,explode=true,name=previous_deployment_key"`
 	PreviousLabelOrAppVersion *string `queryParam:"style=form,explode=true,name=previous_label_or_app_version"`
-}
-
-type CodePushAcquisitionUpdateCheckRequest struct {
-	QueryParams CodePushAcquisitionUpdateCheckQueryParams
 }
 
 // CodePushAcquisitionUpdateCheckDefaultApplicationJSON - Error

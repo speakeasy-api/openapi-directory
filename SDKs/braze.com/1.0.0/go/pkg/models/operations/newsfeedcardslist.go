@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type NewsFeedCardsListQueryParams struct {
+type NewsFeedCardsListRequest struct {
 	// (Optional) Boolean
 	//
 	// Whether or not to include archived cards, defaults to false
@@ -19,10 +19,6 @@ type NewsFeedCardsListQueryParams struct {
 	//
 	// Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest.
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type NewsFeedCardsListRequest struct {
-	QueryParams NewsFeedCardsListQueryParams
 }
 
 type NewsFeedCardsListResponse struct {

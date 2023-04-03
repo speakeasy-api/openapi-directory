@@ -7,7 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPlayerSeasonStatsQueryParams struct {
+type GetPlayerSeasonStatsRequest struct {
 	// Stat category filter (e.g. passing)
 	Category *string `queryParam:"style=form,explode=true,name=category"`
 	// Conference abbreviation filter
@@ -22,10 +22,6 @@ type GetPlayerSeasonStatsQueryParams struct {
 	Team *string `queryParam:"style=form,explode=true,name=team"`
 	// Year filter
 	Year int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type GetPlayerSeasonStatsRequest struct {
-	QueryParams GetPlayerSeasonStatsQueryParams
 }
 
 type GetPlayerSeasonStatsResponse struct {

@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostBanksCategoriesIDCategoryPathParams struct {
-	IDCategory int64 `pathParam:"style=simple,explode=false,name=id_category"`
-}
-
-type PostBanksCategoriesIDCategoryQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type PostBanksCategoriesIDCategoryRequestBody struct {
 	// new name for the supplied category
 	Name string `multipartForm:"name=name"`
 }
 
 type PostBanksCategoriesIDCategoryRequest struct {
-	PathParams  PostBanksCategoriesIDCategoryPathParams
-	QueryParams PostBanksCategoriesIDCategoryQueryParams
-	Request     PostBanksCategoriesIDCategoryRequestBody `request:"mediaType=multipart/form-data"`
+	RequestBody PostBanksCategoriesIDCategoryRequestBody `request:"mediaType=multipart/form-data"`
+	Expand      *string                                  `queryParam:"style=form,explode=true,name=expand"`
+	IDCategory  int64                                    `pathParam:"style=simple,explode=false,name=id_category"`
 }
 
 type PostBanksCategoriesIDCategoryResponse struct {

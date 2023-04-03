@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddUserForTeamPathParams struct {
-	// Globally unique identifier for the team.
-	TeamGid string `pathParam:"style=simple,explode=false,name=team_gid"`
-}
-
-type AddUserForTeamQueryParams struct {
-	// Defines fields to return.
-	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
-	// The id of included objects will always be returned, regardless of the field options.
-	OptFields []string `queryParam:"style=form,explode=false,name=opt_fields"`
-	// Provides “pretty” output.
-	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
-	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
 // AddUserForTeamRequestBody - The user to add to the team.
 type AddUserForTeamRequestBody struct {
 	// A user identification object for specification with the addUser/removeUser endpoints.
@@ -29,10 +14,17 @@ type AddUserForTeamRequestBody struct {
 }
 
 type AddUserForTeamRequest struct {
-	PathParams  AddUserForTeamPathParams
-	QueryParams AddUserForTeamQueryParams
 	// The user to add to the team.
-	Request AddUserForTeamRequestBody `request:"mediaType=application/json"`
+	RequestBody AddUserForTeamRequestBody `request:"mediaType=application/json"`
+	// Defines fields to return.
+	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+	// The id of included objects will always be returned, regardless of the field options.
+	OptFields []string `queryParam:"style=form,explode=false,name=opt_fields"`
+	// Provides “pretty” output.
+	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
+	// Globally unique identifier for the team.
+	TeamGid string `pathParam:"style=simple,explode=false,name=team_gid"`
 }
 
 // AddUserForTeam200ApplicationJSON - Successfully added user to the team.

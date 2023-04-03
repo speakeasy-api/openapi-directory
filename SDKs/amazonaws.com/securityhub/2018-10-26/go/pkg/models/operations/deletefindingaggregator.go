@@ -6,24 +6,16 @@ import (
 	"net/http"
 )
 
-type DeleteFindingAggregatorPathParams struct {
-	// The ARN of the finding aggregator to delete. To obtain the ARN, use <code>ListFindingAggregators</code>.
-	FindingAggregatorArn string `pathParam:"style=simple,explode=false,name=FindingAggregatorArn"`
-}
-
-type DeleteFindingAggregatorHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteFindingAggregatorRequest struct {
-	PathParams DeleteFindingAggregatorPathParams
-	Headers    DeleteFindingAggregatorHeaders
+	// The ARN of the finding aggregator to delete. To obtain the ARN, use <code>ListFindingAggregators</code>.
+	FindingAggregatorArn string  `pathParam:"style=simple,explode=false,name=FindingAggregatorArn"`
+	XAmzAlgorithm        *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256    *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential       *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate             *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken    *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature        *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders    *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteFindingAggregatorResponse struct {

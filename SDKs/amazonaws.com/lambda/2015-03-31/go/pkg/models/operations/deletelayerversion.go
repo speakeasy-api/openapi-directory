@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteLayerVersionPathParams struct {
+type DeleteLayerVersionRequest struct {
 	// The name or Amazon Resource Name (ARN) of the layer.
 	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
 	// The version number.
-	VersionNumber int64 `pathParam:"style=simple,explode=false,name=VersionNumber"`
-}
-
-type DeleteLayerVersionHeaders struct {
+	VersionNumber     int64   `pathParam:"style=simple,explode=false,name=VersionNumber"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type DeleteLayerVersionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteLayerVersionRequest struct {
-	PathParams DeleteLayerVersionPathParams
-	Headers    DeleteLayerVersionHeaders
 }
 
 type DeleteLayerVersionResponse struct {

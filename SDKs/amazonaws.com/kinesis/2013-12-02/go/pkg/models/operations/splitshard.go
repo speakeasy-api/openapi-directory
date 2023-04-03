@@ -30,7 +30,8 @@ func (e *SplitShardXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type SplitShardHeaders struct {
+type SplitShardRequest struct {
+	SplitShardInput   shared.SplitShardInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type SplitShardHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        SplitShardXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type SplitShardRequest struct {
-	Headers SplitShardHeaders
-	Request shared.SplitShardInput `request:"mediaType=application/json"`
 }
 
 type SplitShardResponse struct {

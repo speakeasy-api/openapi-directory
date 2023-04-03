@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-type DeleteLensPathParams struct {
-	LensAlias string `pathParam:"style=simple,explode=false,name=LensAlias"`
-}
-
 // DeleteLensLensStatusEnum - The status of the lens to be deleted.
 type DeleteLensLensStatusEnum string
 
@@ -39,26 +35,18 @@ func (e *DeleteLensLensStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteLensQueryParams struct {
-	ClientRequestToken string `queryParam:"style=form,explode=true,name=ClientRequestToken"`
-	// The status of the lens to be deleted.
-	LensStatus DeleteLensLensStatusEnum `queryParam:"style=form,explode=true,name=LensStatus"`
-}
-
-type DeleteLensHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteLensRequest struct {
-	PathParams  DeleteLensPathParams
-	QueryParams DeleteLensQueryParams
-	Headers     DeleteLensHeaders
+	ClientRequestToken string `queryParam:"style=form,explode=true,name=ClientRequestToken"`
+	LensAlias          string `pathParam:"style=simple,explode=false,name=LensAlias"`
+	// The status of the lens to be deleted.
+	LensStatus        DeleteLensLensStatusEnum `queryParam:"style=form,explode=true,name=LensStatus"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteLensResponse struct {

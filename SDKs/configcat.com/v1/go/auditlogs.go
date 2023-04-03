@@ -37,14 +37,14 @@ func newAuditLogs(defaultClient, securityClient HTTPClient, serverURL, language,
 // and the result can be optionally filtered by Config and/or Environment.
 func (s *auditLogs) GetAuditlogs(ctx context.Context, request operations.GetAuditlogsRequest) (*operations.GetAuditlogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/auditlogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/auditlogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -100,7 +100,7 @@ func (s *auditLogs) GetAuditlogs(ctx context.Context, request operations.GetAudi
 // This endpoint returns the list of Feature Flags and Settings that were deleted from the given Config.
 func (s *auditLogs) GetDeletedSettings(ctx context.Context, request operations.GetDeletedSettingsRequest) (*operations.GetDeletedSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/deleted-settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/deleted-settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -160,14 +160,14 @@ func (s *auditLogs) GetDeletedSettings(ctx context.Context, request operations.G
 // and the result can be optionally filtered by Product and/or Config and/or Environment.
 func (s *auditLogs) GetOrganizationAuditlogs(ctx context.Context, request operations.GetOrganizationAuditlogsRequest) (*operations.GetOrganizationAuditlogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/auditlogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/auditlogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -13,31 +13,25 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.GETDeleteAlarmsRequest{
-        QueryParams: operations.GETDeleteAlarmsQueryParams{
-            Action: "DeleteAlarms",
-            AlarmNames: []string{
-                "provident",
-                "distinctio",
-                "quibusdam",
-            },
-            Version: "2010-08-01",
+        Action: "DeleteAlarms",
+        AlarmNames: []string{
+            "provident",
+            "distinctio",
+            "quibusdam",
         },
-        Headers: operations.GETDeleteAlarmsHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "corrupti",
-            XAmzDate: "illum",
-            XAmzSecurityToken: "vel",
-            XAmzSignature: "error",
-            XAmzSignedHeaders: "deserunt",
-        },
+        Version: "2010-08-01",
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
     }
 
     ctx := context.Background()

@@ -81,32 +81,24 @@ func (e *GETDescribeEventsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeEventsQueryParams struct {
-	Action           GETDescribeEventsActionEnum      `queryParam:"style=form,explode=true,name=Action"`
-	Duration         *int64                           `queryParam:"style=form,explode=true,name=Duration"`
-	EndTime          *time.Time                       `queryParam:"style=form,explode=true,name=EndTime"`
-	EventCategories  []string                         `queryParam:"style=form,explode=true,name=EventCategories"`
-	Marker           *string                          `queryParam:"style=form,explode=true,name=Marker"`
-	MaxRecords       *int64                           `queryParam:"style=form,explode=true,name=MaxRecords"`
-	SourceIdentifier *string                          `queryParam:"style=form,explode=true,name=SourceIdentifier"`
-	SourceType       *GETDescribeEventsSourceTypeEnum `queryParam:"style=form,explode=true,name=SourceType"`
-	StartTime        *time.Time                       `queryParam:"style=form,explode=true,name=StartTime"`
-	Version          GETDescribeEventsVersionEnum     `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEventsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETDescribeEventsRequest struct {
-	QueryParams GETDescribeEventsQueryParams
-	Headers     GETDescribeEventsHeaders
+	Action            GETDescribeEventsActionEnum      `queryParam:"style=form,explode=true,name=Action"`
+	Duration          *int64                           `queryParam:"style=form,explode=true,name=Duration"`
+	EndTime           *time.Time                       `queryParam:"style=form,explode=true,name=EndTime"`
+	EventCategories   []string                         `queryParam:"style=form,explode=true,name=EventCategories"`
+	Marker            *string                          `queryParam:"style=form,explode=true,name=Marker"`
+	MaxRecords        *int64                           `queryParam:"style=form,explode=true,name=MaxRecords"`
+	SourceIdentifier  *string                          `queryParam:"style=form,explode=true,name=SourceIdentifier"`
+	SourceType        *GETDescribeEventsSourceTypeEnum `queryParam:"style=form,explode=true,name=SourceType"`
+	StartTime         *time.Time                       `queryParam:"style=form,explode=true,name=StartTime"`
+	Version           GETDescribeEventsVersionEnum     `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEventsResponse struct {

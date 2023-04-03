@@ -4,20 +4,12 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DatabaseUpdateDocumentSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DatabaseUpdateDocumentPathParams struct {
-	// Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
-	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
-	// Document unique ID.
-	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type DatabaseUpdateDocumentRequestBody struct {
@@ -30,9 +22,11 @@ type DatabaseUpdateDocumentRequestBody struct {
 }
 
 type DatabaseUpdateDocumentRequest struct {
-	PathParams DatabaseUpdateDocumentPathParams
-	Request    *DatabaseUpdateDocumentRequestBody `request:"mediaType=application/json"`
-	Security   DatabaseUpdateDocumentSecurity
+	RequestBody *DatabaseUpdateDocumentRequestBody `request:"mediaType=application/json"`
+	// Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
+	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
+	// Document unique ID.
+	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
 }
 
 type DatabaseUpdateDocumentResponse struct {

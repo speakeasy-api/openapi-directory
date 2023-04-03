@@ -34,11 +34,11 @@ func newTexts(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // AddTextBroadcastBatch - Add batches to a text broadcast
 // Allows adding an extra batches to an already created text broadcast campaign. The batches which being  added pass the CallFire validation process (unlike in the recipients version of this API). That is why using of a scrubDuplicates flag remove duplicates from your batch. Batches may be added as a contact list id, a list of contact ids, or a list of numbers
-func (s *texts) AddTextBroadcastBatch(ctx context.Context, request operations.AddTextBroadcastBatchRequest) (*operations.AddTextBroadcastBatchResponse, error) {
+func (s *texts) AddTextBroadcastBatch(ctx context.Context, request operations.AddTextBroadcastBatchRequest, security operations.AddTextBroadcastBatchSecurity) (*operations.AddTextBroadcastBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,11 +50,11 @@ func (s *texts) AddTextBroadcastBatch(ctx context.Context, request operations.Ad
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -108,11 +108,11 @@ func (s *texts) AddTextBroadcastBatch(ctx context.Context, request operations.Ad
 
 // AddTextBroadcastRecipients - Add recipients to a text broadcast
 // Use this API to add recipients to a text broadcast which is already created. Post a list of Recipient objects to be immediately added to the text broadcast campaign. These contacts will not go through validation process, and will be acted upon as they are added. Recipients may be added as a list of contact ids, or list of numbers
-func (s *texts) AddTextBroadcastRecipients(ctx context.Context, request operations.AddTextBroadcastRecipientsRequest) (*operations.AddTextBroadcastRecipientsResponse, error) {
+func (s *texts) AddTextBroadcastRecipients(ctx context.Context, request operations.AddTextBroadcastRecipientsRequest, security operations.AddTextBroadcastRecipientsSecurity) (*operations.AddTextBroadcastRecipientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/recipients", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/recipients", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -124,11 +124,11 @@ func (s *texts) AddTextBroadcastRecipients(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,16 +182,16 @@ func (s *texts) AddTextBroadcastRecipients(ctx context.Context, request operatio
 
 // ArchiveTextBroadcast - Archive text broadcast
 // Archives a text broadcast (and hides it in the search results)
-func (s *texts) ArchiveTextBroadcast(ctx context.Context, request operations.ArchiveTextBroadcastRequest) (*operations.ArchiveTextBroadcastResponse, error) {
+func (s *texts) ArchiveTextBroadcast(ctx context.Context, request operations.ArchiveTextBroadcastRequest, security operations.ArchiveTextBroadcastSecurity) (*operations.ArchiveTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/archive", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/archive", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -235,7 +235,7 @@ func (s *texts) ArchiveTextBroadcast(ctx context.Context, request operations.Arc
 
 // CreateTextAutoReply - Create an auto reply
 // CallFire gives you possibility to set up auto reply messages for your numbers and keywords. You can set a general auto reply for anyone who texts your number, keyword, and/or include a text to match, so that the auto reply would be sent only to those who text the matched text
-func (s *texts) CreateTextAutoReply(ctx context.Context, request operations.CreateTextAutoReplyRequest) (*operations.CreateTextAutoReplyResponse, error) {
+func (s *texts) CreateTextAutoReply(ctx context.Context, request shared.TextAutoReply, security operations.CreateTextAutoReplySecurity) (*operations.CreateTextAutoReplyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/texts/auto-replys"
 
@@ -251,7 +251,7 @@ func (s *texts) CreateTextAutoReply(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -305,11 +305,11 @@ func (s *texts) CreateTextAutoReply(ctx context.Context, request operations.Crea
 
 // CreateTextBroadcast - Create a text broadcast
 // Creates a text broadcast campaign using the Text Broadcast API. Send a TextBroadcast object in the message body to detail a text broadcast campaign. A campaign can be created without contacts and with bare minimum configuration, but contacts have to be added further on to use the campaign. It supports scheduling, retry logic, pattern-based messages.
-func (s *texts) CreateTextBroadcast(ctx context.Context, request operations.CreateTextBroadcastRequest) (*operations.CreateTextBroadcastResponse, error) {
+func (s *texts) CreateTextBroadcast(ctx context.Context, request operations.CreateTextBroadcastRequest, security operations.CreateTextBroadcastSecurity) (*operations.CreateTextBroadcastResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/texts/broadcasts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TextBroadcastInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -321,11 +321,11 @@ func (s *texts) CreateTextBroadcast(ctx context.Context, request operations.Crea
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -379,16 +379,16 @@ func (s *texts) CreateTextBroadcast(ctx context.Context, request operations.Crea
 
 // DeleteTextAutoReply - Delete an auto reply
 // Deletes a text auto reply and removes the configuration. Can not delete a TextAutoReply which is currently active for a campaign
-func (s *texts) DeleteTextAutoReply(ctx context.Context, request operations.DeleteTextAutoReplyRequest) (*operations.DeleteTextAutoReplyResponse, error) {
+func (s *texts) DeleteTextAutoReply(ctx context.Context, request operations.DeleteTextAutoReplyRequest, security operations.DeleteTextAutoReplySecurity) (*operations.DeleteTextAutoReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -432,7 +432,7 @@ func (s *texts) DeleteTextAutoReply(ctx context.Context, request operations.Dele
 
 // FindTextAutoReplys - Find auto replies
 // Find all text autoreplies created by user. Returns a paged list of TextAutoReply
-func (s *texts) FindTextAutoReplys(ctx context.Context, request operations.FindTextAutoReplysRequest) (*operations.FindTextAutoReplysResponse, error) {
+func (s *texts) FindTextAutoReplys(ctx context.Context, request operations.FindTextAutoReplysRequest, security operations.FindTextAutoReplysSecurity) (*operations.FindTextAutoReplysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/texts/auto-replys"
 
@@ -441,11 +441,11 @@ func (s *texts) FindTextAutoReplys(ctx context.Context, request operations.FindT
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -499,7 +499,7 @@ func (s *texts) FindTextAutoReplys(ctx context.Context, request operations.FindT
 
 // FindTextBroadcasts - Find text broadcasts
 // Searches for all text broadcasts created by user. Can query on label, name, and the current running status of the campaign. Returns a paged list of text broadcasts
-func (s *texts) FindTextBroadcasts(ctx context.Context, request operations.FindTextBroadcastsRequest) (*operations.FindTextBroadcastsResponse, error) {
+func (s *texts) FindTextBroadcasts(ctx context.Context, request operations.FindTextBroadcastsRequest, security operations.FindTextBroadcastsSecurity) (*operations.FindTextBroadcastsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/texts/broadcasts"
 
@@ -508,11 +508,11 @@ func (s *texts) FindTextBroadcasts(ctx context.Context, request operations.FindT
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -566,7 +566,7 @@ func (s *texts) FindTextBroadcasts(ctx context.Context, request operations.FindT
 
 // FindTexts - Find texts
 // Searches for texts sent or received by user. Use "campaignId=0" parameter to query for all texts sent through the POST /texts API. See [call states and results](https://developers.callfire.com/results-responses-errors.html)
-func (s *texts) FindTexts(ctx context.Context, request operations.FindTextsRequest) (*operations.FindTextsResponse, error) {
+func (s *texts) FindTexts(ctx context.Context, request operations.FindTextsRequest, security operations.FindTextsSecurity) (*operations.FindTextsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/texts"
 
@@ -575,11 +575,11 @@ func (s *texts) FindTexts(ctx context.Context, request operations.FindTextsReque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -633,20 +633,20 @@ func (s *texts) FindTexts(ctx context.Context, request operations.FindTextsReque
 
 // GetText - Find a specific text
 // Returns a single Text instance for a given text id
-func (s *texts) GetText(ctx context.Context, request operations.GetTextRequest) (*operations.GetTextResponse, error) {
+func (s *texts) GetText(ctx context.Context, request operations.GetTextRequest, security operations.GetTextSecurity) (*operations.GetTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -700,20 +700,20 @@ func (s *texts) GetText(ctx context.Context, request operations.GetTextRequest) 
 
 // GetTextAutoReply - Find a specific auto reply
 // Returns a single TextAutoReply instance for a given text auto reply id
-func (s *texts) GetTextAutoReply(ctx context.Context, request operations.GetTextAutoReplyRequest) (*operations.GetTextAutoReplyResponse, error) {
+func (s *texts) GetTextAutoReply(ctx context.Context, request operations.GetTextAutoReplyRequest, security operations.GetTextAutoReplySecurity) (*operations.GetTextAutoReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -767,20 +767,20 @@ func (s *texts) GetTextAutoReply(ctx context.Context, request operations.GetText
 
 // GetTextBroadcast - Find a specific text broadcast
 // Returns a single TextBroadcast instance for a given text broadcast id
-func (s *texts) GetTextBroadcast(ctx context.Context, request operations.GetTextBroadcastRequest) (*operations.GetTextBroadcastResponse, error) {
+func (s *texts) GetTextBroadcast(ctx context.Context, request operations.GetTextBroadcastRequest, security operations.GetTextBroadcastSecurity) (*operations.GetTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -834,20 +834,20 @@ func (s *texts) GetTextBroadcast(ctx context.Context, request operations.GetText
 
 // GetTextBroadcastBatches - Find batches in a text broadcast
 // This endpoint will enable the user to page through all of the batches for a particular text broadcast campaign
-func (s *texts) GetTextBroadcastBatches(ctx context.Context, request operations.GetTextBroadcastBatchesRequest) (*operations.GetTextBroadcastBatchesResponse, error) {
+func (s *texts) GetTextBroadcastBatches(ctx context.Context, request operations.GetTextBroadcastBatchesRequest, security operations.GetTextBroadcastBatchesSecurity) (*operations.GetTextBroadcastBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -901,20 +901,20 @@ func (s *texts) GetTextBroadcastBatches(ctx context.Context, request operations.
 
 // GetTextBroadcastStats - Get statistics on text broadcast
 // Returns the broadcast statistics. Example: total number of the sent/received actions, total cost, number of remaining outbound actions, error count, etc
-func (s *texts) GetTextBroadcastStats(ctx context.Context, request operations.GetTextBroadcastStatsRequest) (*operations.GetTextBroadcastStatsResponse, error) {
+func (s *texts) GetTextBroadcastStats(ctx context.Context, request operations.GetTextBroadcastStatsRequest, security operations.GetTextBroadcastStatsSecurity) (*operations.GetTextBroadcastStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -968,20 +968,20 @@ func (s *texts) GetTextBroadcastStats(ctx context.Context, request operations.Ge
 
 // GetTextBroadcastTexts - Find texts in a text broadcast
 // This endpoint will enable the user to page through all of the texts for a particular text broadcast campaign
-func (s *texts) GetTextBroadcastTexts(ctx context.Context, request operations.GetTextBroadcastTextsRequest) (*operations.GetTextBroadcastTextsResponse, error) {
+func (s *texts) GetTextBroadcastTexts(ctx context.Context, request operations.GetTextBroadcastTextsRequest, security operations.GetTextBroadcastTextsSecurity) (*operations.GetTextBroadcastTextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/texts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/texts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1035,11 +1035,11 @@ func (s *texts) GetTextBroadcastTexts(ctx context.Context, request operations.Ge
 
 // SendTexts - Send texts
 // Use the /texts API to send individual texts quickly. By default all texts are going out from CallFire's dedicated short code. Example: 67076, 818818 etc
-func (s *texts) SendTexts(ctx context.Context, request operations.SendTextsRequest) (*operations.SendTextsResponse, error) {
+func (s *texts) SendTexts(ctx context.Context, request operations.SendTextsRequest, security operations.SendTextsSecurity) (*operations.SendTextsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/texts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1051,11 +1051,11 @@ func (s *texts) SendTexts(ctx context.Context, request operations.SendTextsReque
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1109,16 +1109,16 @@ func (s *texts) SendTexts(ctx context.Context, request operations.SendTextsReque
 
 // StartTextBroadcast - Start text broadcast
 // Starts a text broadcast
-func (s *texts) StartTextBroadcast(ctx context.Context, request operations.StartTextBroadcastRequest) (*operations.StartTextBroadcastResponse, error) {
+func (s *texts) StartTextBroadcast(ctx context.Context, request operations.StartTextBroadcastRequest, security operations.StartTextBroadcastSecurity) (*operations.StartTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1162,16 +1162,16 @@ func (s *texts) StartTextBroadcast(ctx context.Context, request operations.Start
 
 // StopTextBroadcast - Stop text broadcast
 // Stops a text broadcast
-func (s *texts) StopTextBroadcast(ctx context.Context, request operations.StopTextBroadcastRequest) (*operations.StopTextBroadcastResponse, error) {
+func (s *texts) StopTextBroadcast(ctx context.Context, request operations.StopTextBroadcastRequest, security operations.StopTextBroadcastSecurity) (*operations.StopTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1215,11 +1215,11 @@ func (s *texts) StopTextBroadcast(ctx context.Context, request operations.StopTe
 
 // ToggleTextBroadcastRecipientsStatus - Disable/enable undialed recipients in broadcast
 // This operation lets the user to disable/enable undialed contacts in created broadcast
-func (s *texts) ToggleTextBroadcastRecipientsStatus(ctx context.Context, request operations.ToggleTextBroadcastRecipientsStatusRequest) (*operations.ToggleTextBroadcastRecipientsStatusResponse, error) {
+func (s *texts) ToggleTextBroadcastRecipientsStatus(ctx context.Context, request operations.ToggleTextBroadcastRecipientsStatusRequest, security operations.ToggleTextBroadcastRecipientsStatusSecurity) (*operations.ToggleTextBroadcastRecipientsStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/toggleRecipientsStatus", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/toggleRecipientsStatus", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1231,11 +1231,11 @@ func (s *texts) ToggleTextBroadcastRecipientsStatus(ctx context.Context, request
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1279,11 +1279,11 @@ func (s *texts) ToggleTextBroadcastRecipientsStatus(ctx context.Context, request
 
 // UpdateTextBroadcast - Update a text broadcast
 // Allows modifying the configuration of existing text broadcast campaign. See TextBroadcast for more information on what can/can't be updated on this API
-func (s *texts) UpdateTextBroadcast(ctx context.Context, request operations.UpdateTextBroadcastRequest) (*operations.UpdateTextBroadcastResponse, error) {
+func (s *texts) UpdateTextBroadcast(ctx context.Context, request operations.UpdateTextBroadcastRequest, security operations.UpdateTextBroadcastSecurity) (*operations.UpdateTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TextBroadcastInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1295,11 +1295,11 @@ func (s *texts) UpdateTextBroadcast(ctx context.Context, request operations.Upda
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

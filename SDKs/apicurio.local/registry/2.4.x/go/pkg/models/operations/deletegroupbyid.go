@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteGroupByIDPathParams struct {
+type DeleteGroupByIDRequest struct {
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type DeleteGroupByIDRequest struct {
-	PathParams DeleteGroupByIDPathParams
 }
 
 type DeleteGroupByIDResponse struct {

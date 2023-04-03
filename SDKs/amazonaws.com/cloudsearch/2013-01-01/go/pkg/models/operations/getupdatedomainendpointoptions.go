@@ -57,28 +57,20 @@ func (e *GETUpdateDomainEndpointOptionsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETUpdateDomainEndpointOptionsQueryParams struct {
+type GETUpdateDomainEndpointOptionsRequest struct {
 	Action GETUpdateDomainEndpointOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Whether to require that all requests to the domain arrive over HTTPS. We recommend Policy-Min-TLS-1-2-2019-07 for TLSSecurityPolicy. For compatibility with older clients, the default is Policy-Min-TLS-1-0-2019-07.
 	DomainEndpointOptions GETUpdateDomainEndpointOptionsDomainEndpointOptions `queryParam:"style=form,explode=true,name=DomainEndpointOptions"`
 	// A string that represents the name of a domain.
-	DomainName string                                    `queryParam:"style=form,explode=true,name=DomainName"`
-	Version    GETUpdateDomainEndpointOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateDomainEndpointOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETUpdateDomainEndpointOptionsRequest struct {
-	QueryParams GETUpdateDomainEndpointOptionsQueryParams
-	Headers     GETUpdateDomainEndpointOptionsHeaders
+	DomainName        string                                    `queryParam:"style=form,explode=true,name=DomainName"`
+	Version           GETUpdateDomainEndpointOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateDomainEndpointOptionsResponse struct {

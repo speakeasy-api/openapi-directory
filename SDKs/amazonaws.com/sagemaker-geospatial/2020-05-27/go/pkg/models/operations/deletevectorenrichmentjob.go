@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteVectorEnrichmentJobPathParams struct {
+type DeleteVectorEnrichmentJobRequest struct {
 	// The Amazon Resource Name (ARN) of the Vector Enrichment job being deleted.
-	Arn string `pathParam:"style=simple,explode=false,name=Arn"`
-}
-
-type DeleteVectorEnrichmentJobHeaders struct {
+	Arn               string  `pathParam:"style=simple,explode=false,name=Arn"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteVectorEnrichmentJobHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteVectorEnrichmentJobRequest struct {
-	PathParams DeleteVectorEnrichmentJobPathParams
-	Headers    DeleteVectorEnrichmentJobHeaders
 }
 
 type DeleteVectorEnrichmentJobResponse struct {

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportsForCommitPathParams struct {
+type GetReportsForCommitRequest struct {
 	// The commit for which to retrieve reports.
 	Commit string `pathParam:"style=simple,explode=false,name=commit"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetReportsForCommitRequest struct {
-	PathParams GetReportsForCommitPathParams
 }
 
 type GetReportsForCommitResponse struct {

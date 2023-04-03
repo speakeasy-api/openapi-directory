@@ -8,7 +8,7 @@ import (
 )
 
 type ImageOcrPhotoRecognizeBusinessCardSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=Apikey"`
 }
 
 type ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile struct {
@@ -19,11 +19,6 @@ type ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile struct {
 type ImageOcrPhotoRecognizeBusinessCardRequestBody struct {
 	// Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
 	ImageFile ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile `multipartForm:"file"`
-}
-
-type ImageOcrPhotoRecognizeBusinessCardRequest struct {
-	Request  ImageOcrPhotoRecognizeBusinessCardRequestBody `request:"mediaType=multipart/form-data"`
-	Security ImageOcrPhotoRecognizeBusinessCardSecurity
 }
 
 type ImageOcrPhotoRecognizeBusinessCardResponse struct {

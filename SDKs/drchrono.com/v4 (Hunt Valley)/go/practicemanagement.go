@@ -34,7 +34,7 @@ func newPracticeManagement(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // InventoryCategoriesList - Retrieve or search inventory categories
-func (s *practiceManagement) InventoryCategoriesList(ctx context.Context, request operations.InventoryCategoriesListRequest) (*operations.InventoryCategoriesListResponse, error) {
+func (s *practiceManagement) InventoryCategoriesList(ctx context.Context, request operations.InventoryCategoriesListRequest, security operations.InventoryCategoriesListSecurity) (*operations.InventoryCategoriesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/inventory_categories"
 
@@ -43,11 +43,11 @@ func (s *practiceManagement) InventoryCategoriesList(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -93,20 +93,20 @@ func (s *practiceManagement) InventoryCategoriesList(ctx context.Context, reques
 }
 
 // InventoryCategoriesRead - Retrieve an existing inventory category
-func (s *practiceManagement) InventoryCategoriesRead(ctx context.Context, request operations.InventoryCategoriesReadRequest) (*operations.InventoryCategoriesReadResponse, error) {
+func (s *practiceManagement) InventoryCategoriesRead(ctx context.Context, request operations.InventoryCategoriesReadRequest, security operations.InventoryCategoriesReadSecurity) (*operations.InventoryCategoriesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/inventory_categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/inventory_categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *practiceManagement) InventoryCategoriesRead(ctx context.Context, reques
 }
 
 // InventoryVaccinesCreate - Create vaccine inventory
-func (s *practiceManagement) InventoryVaccinesCreate(ctx context.Context, request operations.InventoryVaccinesCreateRequest) (*operations.InventoryVaccinesCreateResponse, error) {
+func (s *practiceManagement) InventoryVaccinesCreate(ctx context.Context, request operations.InventoryVaccinesCreateRequest, security operations.InventoryVaccinesCreateSecurity) (*operations.InventoryVaccinesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/inventory_vaccines"
 
@@ -161,11 +161,11 @@ func (s *practiceManagement) InventoryVaccinesCreate(ctx context.Context, reques
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -211,7 +211,7 @@ func (s *practiceManagement) InventoryVaccinesCreate(ctx context.Context, reques
 }
 
 // InventoryVaccinesList - Retrieve or search vaccine inventories
-func (s *practiceManagement) InventoryVaccinesList(ctx context.Context, request operations.InventoryVaccinesListRequest) (*operations.InventoryVaccinesListResponse, error) {
+func (s *practiceManagement) InventoryVaccinesList(ctx context.Context, request operations.InventoryVaccinesListRequest, security operations.InventoryVaccinesListSecurity) (*operations.InventoryVaccinesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/inventory_vaccines"
 
@@ -220,11 +220,11 @@ func (s *practiceManagement) InventoryVaccinesList(ctx context.Context, request 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -270,20 +270,20 @@ func (s *practiceManagement) InventoryVaccinesList(ctx context.Context, request 
 }
 
 // InventoryVaccinesRead - Retrieve an existing vaccine inventory
-func (s *practiceManagement) InventoryVaccinesRead(ctx context.Context, request operations.InventoryVaccinesReadRequest) (*operations.InventoryVaccinesReadResponse, error) {
+func (s *practiceManagement) InventoryVaccinesRead(ctx context.Context, request operations.InventoryVaccinesReadRequest, security operations.InventoryVaccinesReadSecurity) (*operations.InventoryVaccinesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/inventory_vaccines/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/inventory_vaccines/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *practiceManagement) InventoryVaccinesRead(ctx context.Context, request 
 }
 
 // MessagesCreate - Create messages in doctor's message center
-func (s *practiceManagement) MessagesCreate(ctx context.Context, request operations.MessagesCreateRequest) (*operations.MessagesCreateResponse, error) {
+func (s *practiceManagement) MessagesCreate(ctx context.Context, request operations.MessagesCreateRequest, security operations.MessagesCreateSecurity) (*operations.MessagesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/messages"
 
@@ -338,11 +338,11 @@ func (s *practiceManagement) MessagesCreate(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,20 +388,20 @@ func (s *practiceManagement) MessagesCreate(ctx context.Context, request operati
 }
 
 // MessagesDelete - Delete an existing message in doctor's message center
-func (s *practiceManagement) MessagesDelete(ctx context.Context, request operations.MessagesDeleteRequest) (*operations.MessagesDeleteResponse, error) {
+func (s *practiceManagement) MessagesDelete(ctx context.Context, request operations.MessagesDeleteRequest, security operations.MessagesDeleteSecurity) (*operations.MessagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -439,7 +439,7 @@ func (s *practiceManagement) MessagesDelete(ctx context.Context, request operati
 }
 
 // MessagesList - Retrieve or search messages in doctor's message center
-func (s *practiceManagement) MessagesList(ctx context.Context, request operations.MessagesListRequest) (*operations.MessagesListResponse, error) {
+func (s *practiceManagement) MessagesList(ctx context.Context, request operations.MessagesListRequest, security operations.MessagesListSecurity) (*operations.MessagesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/messages"
 
@@ -448,11 +448,11 @@ func (s *practiceManagement) MessagesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -498,20 +498,20 @@ func (s *practiceManagement) MessagesList(ctx context.Context, request operation
 }
 
 // MessagesPartialUpdate - Update an existing message in doctor's message center
-func (s *practiceManagement) MessagesPartialUpdate(ctx context.Context, request operations.MessagesPartialUpdateRequest) (*operations.MessagesPartialUpdateResponse, error) {
+func (s *practiceManagement) MessagesPartialUpdate(ctx context.Context, request operations.MessagesPartialUpdateRequest, security operations.MessagesPartialUpdateSecurity) (*operations.MessagesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -549,20 +549,20 @@ func (s *practiceManagement) MessagesPartialUpdate(ctx context.Context, request 
 }
 
 // MessagesRead - Retrieve an existing message in doctor's message center
-func (s *practiceManagement) MessagesRead(ctx context.Context, request operations.MessagesReadRequest) (*operations.MessagesReadResponse, error) {
+func (s *practiceManagement) MessagesRead(ctx context.Context, request operations.MessagesReadRequest, security operations.MessagesReadSecurity) (*operations.MessagesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -608,20 +608,20 @@ func (s *practiceManagement) MessagesRead(ctx context.Context, request operation
 }
 
 // MessagesUpdate - Update an existing message in doctor's message center
-func (s *practiceManagement) MessagesUpdate(ctx context.Context, request operations.MessagesUpdateRequest) (*operations.MessagesUpdateResponse, error) {
+func (s *practiceManagement) MessagesUpdate(ctx context.Context, request operations.MessagesUpdateRequest, security operations.MessagesUpdateSecurity) (*operations.MessagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -659,20 +659,20 @@ func (s *practiceManagement) MessagesUpdate(ctx context.Context, request operati
 }
 
 // OfficesAddExamRoom - Add an exam room to the office
-func (s *practiceManagement) OfficesAddExamRoom(ctx context.Context, request operations.OfficesAddExamRoomRequest) (*operations.OfficesAddExamRoomResponse, error) {
+func (s *practiceManagement) OfficesAddExamRoom(ctx context.Context, request operations.OfficesAddExamRoomRequest, security operations.OfficesAddExamRoomSecurity) (*operations.OfficesAddExamRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}/add_exam_room", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}/add_exam_room", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -718,7 +718,7 @@ func (s *practiceManagement) OfficesAddExamRoom(ctx context.Context, request ope
 }
 
 // OfficesList - Retrieve or search offices
-func (s *practiceManagement) OfficesList(ctx context.Context, request operations.OfficesListRequest) (*operations.OfficesListResponse, error) {
+func (s *practiceManagement) OfficesList(ctx context.Context, request operations.OfficesListRequest, security operations.OfficesListSecurity) (*operations.OfficesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/offices"
 
@@ -727,11 +727,11 @@ func (s *practiceManagement) OfficesList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -777,20 +777,20 @@ func (s *practiceManagement) OfficesList(ctx context.Context, request operations
 }
 
 // OfficesPartialUpdate - Update an existing office
-func (s *practiceManagement) OfficesPartialUpdate(ctx context.Context, request operations.OfficesPartialUpdateRequest) (*operations.OfficesPartialUpdateResponse, error) {
+func (s *practiceManagement) OfficesPartialUpdate(ctx context.Context, request operations.OfficesPartialUpdateRequest, security operations.OfficesPartialUpdateSecurity) (*operations.OfficesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -828,20 +828,20 @@ func (s *practiceManagement) OfficesPartialUpdate(ctx context.Context, request o
 }
 
 // OfficesRead - Retrieve an existing office
-func (s *practiceManagement) OfficesRead(ctx context.Context, request operations.OfficesReadRequest) (*operations.OfficesReadResponse, error) {
+func (s *practiceManagement) OfficesRead(ctx context.Context, request operations.OfficesReadRequest, security operations.OfficesReadSecurity) (*operations.OfficesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -887,20 +887,20 @@ func (s *practiceManagement) OfficesRead(ctx context.Context, request operations
 }
 
 // OfficesUpdate - Update an existing office
-func (s *practiceManagement) OfficesUpdate(ctx context.Context, request operations.OfficesUpdateRequest) (*operations.OfficesUpdateResponse, error) {
+func (s *practiceManagement) OfficesUpdate(ctx context.Context, request operations.OfficesUpdateRequest, security operations.OfficesUpdateSecurity) (*operations.OfficesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -938,7 +938,7 @@ func (s *practiceManagement) OfficesUpdate(ctx context.Context, request operatio
 }
 
 // TaskCategoriesCreate - Create a task category
-func (s *practiceManagement) TaskCategoriesCreate(ctx context.Context, request operations.TaskCategoriesCreateRequest) (*operations.TaskCategoriesCreateResponse, error) {
+func (s *practiceManagement) TaskCategoriesCreate(ctx context.Context, request operations.TaskCategoriesCreateRequest, security operations.TaskCategoriesCreateSecurity) (*operations.TaskCategoriesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_categories"
 
@@ -947,11 +947,11 @@ func (s *practiceManagement) TaskCategoriesCreate(ctx context.Context, request o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -997,7 +997,7 @@ func (s *practiceManagement) TaskCategoriesCreate(ctx context.Context, request o
 }
 
 // TaskCategoriesList - Retrieve or search task categories
-func (s *practiceManagement) TaskCategoriesList(ctx context.Context, request operations.TaskCategoriesListRequest) (*operations.TaskCategoriesListResponse, error) {
+func (s *practiceManagement) TaskCategoriesList(ctx context.Context, request operations.TaskCategoriesListRequest, security operations.TaskCategoriesListSecurity) (*operations.TaskCategoriesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_categories"
 
@@ -1006,11 +1006,11 @@ func (s *practiceManagement) TaskCategoriesList(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1056,20 +1056,20 @@ func (s *practiceManagement) TaskCategoriesList(ctx context.Context, request ope
 }
 
 // TaskCategoriesPartialUpdate - Update an existing task category
-func (s *practiceManagement) TaskCategoriesPartialUpdate(ctx context.Context, request operations.TaskCategoriesPartialUpdateRequest) (*operations.TaskCategoriesPartialUpdateResponse, error) {
+func (s *practiceManagement) TaskCategoriesPartialUpdate(ctx context.Context, request operations.TaskCategoriesPartialUpdateRequest, security operations.TaskCategoriesPartialUpdateSecurity) (*operations.TaskCategoriesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1107,20 +1107,20 @@ func (s *practiceManagement) TaskCategoriesPartialUpdate(ctx context.Context, re
 }
 
 // TaskCategoriesRead - Retrieve an existing task category
-func (s *practiceManagement) TaskCategoriesRead(ctx context.Context, request operations.TaskCategoriesReadRequest) (*operations.TaskCategoriesReadResponse, error) {
+func (s *practiceManagement) TaskCategoriesRead(ctx context.Context, request operations.TaskCategoriesReadRequest, security operations.TaskCategoriesReadSecurity) (*operations.TaskCategoriesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1166,20 +1166,20 @@ func (s *practiceManagement) TaskCategoriesRead(ctx context.Context, request ope
 }
 
 // TaskCategoriesUpdate - Update an existing task category
-func (s *practiceManagement) TaskCategoriesUpdate(ctx context.Context, request operations.TaskCategoriesUpdateRequest) (*operations.TaskCategoriesUpdateResponse, error) {
+func (s *practiceManagement) TaskCategoriesUpdate(ctx context.Context, request operations.TaskCategoriesUpdateRequest, security operations.TaskCategoriesUpdateSecurity) (*operations.TaskCategoriesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1217,7 +1217,7 @@ func (s *practiceManagement) TaskCategoriesUpdate(ctx context.Context, request o
 }
 
 // TaskNotesCreate - Create a task note
-func (s *practiceManagement) TaskNotesCreate(ctx context.Context, request operations.TaskNotesCreateRequest) (*operations.TaskNotesCreateResponse, error) {
+func (s *practiceManagement) TaskNotesCreate(ctx context.Context, request operations.TaskNotesCreateRequest, security operations.TaskNotesCreateSecurity) (*operations.TaskNotesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_notes"
 
@@ -1226,11 +1226,11 @@ func (s *practiceManagement) TaskNotesCreate(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1276,7 +1276,7 @@ func (s *practiceManagement) TaskNotesCreate(ctx context.Context, request operat
 }
 
 // TaskNotesList - Retrieve or search task notes
-func (s *practiceManagement) TaskNotesList(ctx context.Context, request operations.TaskNotesListRequest) (*operations.TaskNotesListResponse, error) {
+func (s *practiceManagement) TaskNotesList(ctx context.Context, request operations.TaskNotesListRequest, security operations.TaskNotesListSecurity) (*operations.TaskNotesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_notes"
 
@@ -1285,11 +1285,11 @@ func (s *practiceManagement) TaskNotesList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1335,20 +1335,20 @@ func (s *practiceManagement) TaskNotesList(ctx context.Context, request operatio
 }
 
 // TaskNotesPartialUpdate - Update an existing task note
-func (s *practiceManagement) TaskNotesPartialUpdate(ctx context.Context, request operations.TaskNotesPartialUpdateRequest) (*operations.TaskNotesPartialUpdateResponse, error) {
+func (s *practiceManagement) TaskNotesPartialUpdate(ctx context.Context, request operations.TaskNotesPartialUpdateRequest, security operations.TaskNotesPartialUpdateSecurity) (*operations.TaskNotesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1386,20 +1386,20 @@ func (s *practiceManagement) TaskNotesPartialUpdate(ctx context.Context, request
 }
 
 // TaskNotesRead - Retrieve an existing task note
-func (s *practiceManagement) TaskNotesRead(ctx context.Context, request operations.TaskNotesReadRequest) (*operations.TaskNotesReadResponse, error) {
+func (s *practiceManagement) TaskNotesRead(ctx context.Context, request operations.TaskNotesReadRequest, security operations.TaskNotesReadSecurity) (*operations.TaskNotesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1445,20 +1445,20 @@ func (s *practiceManagement) TaskNotesRead(ctx context.Context, request operatio
 }
 
 // TaskNotesUpdate - Update an existing task note
-func (s *practiceManagement) TaskNotesUpdate(ctx context.Context, request operations.TaskNotesUpdateRequest) (*operations.TaskNotesUpdateResponse, error) {
+func (s *practiceManagement) TaskNotesUpdate(ctx context.Context, request operations.TaskNotesUpdateRequest, security operations.TaskNotesUpdateSecurity) (*operations.TaskNotesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1496,7 +1496,7 @@ func (s *practiceManagement) TaskNotesUpdate(ctx context.Context, request operat
 }
 
 // TaskStatusesCreate - Create a task status
-func (s *practiceManagement) TaskStatusesCreate(ctx context.Context, request operations.TaskStatusesCreateRequest) (*operations.TaskStatusesCreateResponse, error) {
+func (s *practiceManagement) TaskStatusesCreate(ctx context.Context, request operations.TaskStatusesCreateRequest, security operations.TaskStatusesCreateSecurity) (*operations.TaskStatusesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_statuses"
 
@@ -1505,11 +1505,11 @@ func (s *practiceManagement) TaskStatusesCreate(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1555,7 +1555,7 @@ func (s *practiceManagement) TaskStatusesCreate(ctx context.Context, request ope
 }
 
 // TaskStatusesList - Retrieve or search task statuses
-func (s *practiceManagement) TaskStatusesList(ctx context.Context, request operations.TaskStatusesListRequest) (*operations.TaskStatusesListResponse, error) {
+func (s *practiceManagement) TaskStatusesList(ctx context.Context, request operations.TaskStatusesListRequest, security operations.TaskStatusesListSecurity) (*operations.TaskStatusesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_statuses"
 
@@ -1564,11 +1564,11 @@ func (s *practiceManagement) TaskStatusesList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1614,20 +1614,20 @@ func (s *practiceManagement) TaskStatusesList(ctx context.Context, request opera
 }
 
 // TaskStatusesPartialUpdate - Update an existing task status
-func (s *practiceManagement) TaskStatusesPartialUpdate(ctx context.Context, request operations.TaskStatusesPartialUpdateRequest) (*operations.TaskStatusesPartialUpdateResponse, error) {
+func (s *practiceManagement) TaskStatusesPartialUpdate(ctx context.Context, request operations.TaskStatusesPartialUpdateRequest, security operations.TaskStatusesPartialUpdateSecurity) (*operations.TaskStatusesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1665,20 +1665,20 @@ func (s *practiceManagement) TaskStatusesPartialUpdate(ctx context.Context, requ
 }
 
 // TaskStatusesRead - Retrieve an existing task status
-func (s *practiceManagement) TaskStatusesRead(ctx context.Context, request operations.TaskStatusesReadRequest) (*operations.TaskStatusesReadResponse, error) {
+func (s *practiceManagement) TaskStatusesRead(ctx context.Context, request operations.TaskStatusesReadRequest, security operations.TaskStatusesReadSecurity) (*operations.TaskStatusesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1724,20 +1724,20 @@ func (s *practiceManagement) TaskStatusesRead(ctx context.Context, request opera
 }
 
 // TaskStatusesUpdate - Update an existing task status
-func (s *practiceManagement) TaskStatusesUpdate(ctx context.Context, request operations.TaskStatusesUpdateRequest) (*operations.TaskStatusesUpdateResponse, error) {
+func (s *practiceManagement) TaskStatusesUpdate(ctx context.Context, request operations.TaskStatusesUpdateRequest, security operations.TaskStatusesUpdateSecurity) (*operations.TaskStatusesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1775,7 +1775,7 @@ func (s *practiceManagement) TaskStatusesUpdate(ctx context.Context, request ope
 }
 
 // TaskTemplatesCreate - Create a task template
-func (s *practiceManagement) TaskTemplatesCreate(ctx context.Context, request operations.TaskTemplatesCreateRequest) (*operations.TaskTemplatesCreateResponse, error) {
+func (s *practiceManagement) TaskTemplatesCreate(ctx context.Context, request operations.TaskTemplatesCreateRequest, security operations.TaskTemplatesCreateSecurity) (*operations.TaskTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_templates"
 
@@ -1784,11 +1784,11 @@ func (s *practiceManagement) TaskTemplatesCreate(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1834,7 +1834,7 @@ func (s *practiceManagement) TaskTemplatesCreate(ctx context.Context, request op
 }
 
 // TaskTemplatesList - Retrieve or search task templates
-func (s *practiceManagement) TaskTemplatesList(ctx context.Context, request operations.TaskTemplatesListRequest) (*operations.TaskTemplatesListResponse, error) {
+func (s *practiceManagement) TaskTemplatesList(ctx context.Context, request operations.TaskTemplatesListRequest, security operations.TaskTemplatesListSecurity) (*operations.TaskTemplatesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/task_templates"
 
@@ -1843,11 +1843,11 @@ func (s *practiceManagement) TaskTemplatesList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1893,20 +1893,20 @@ func (s *practiceManagement) TaskTemplatesList(ctx context.Context, request oper
 }
 
 // TaskTemplatesPartialUpdate - Update an existing task template
-func (s *practiceManagement) TaskTemplatesPartialUpdate(ctx context.Context, request operations.TaskTemplatesPartialUpdateRequest) (*operations.TaskTemplatesPartialUpdateResponse, error) {
+func (s *practiceManagement) TaskTemplatesPartialUpdate(ctx context.Context, request operations.TaskTemplatesPartialUpdateRequest, security operations.TaskTemplatesPartialUpdateSecurity) (*operations.TaskTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1944,20 +1944,20 @@ func (s *practiceManagement) TaskTemplatesPartialUpdate(ctx context.Context, req
 }
 
 // TaskTemplatesRead - Retrieve an existing task template
-func (s *practiceManagement) TaskTemplatesRead(ctx context.Context, request operations.TaskTemplatesReadRequest) (*operations.TaskTemplatesReadResponse, error) {
+func (s *practiceManagement) TaskTemplatesRead(ctx context.Context, request operations.TaskTemplatesReadRequest, security operations.TaskTemplatesReadSecurity) (*operations.TaskTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2003,20 +2003,20 @@ func (s *practiceManagement) TaskTemplatesRead(ctx context.Context, request oper
 }
 
 // TaskTemplatesUpdate - Update an existing task template
-func (s *practiceManagement) TaskTemplatesUpdate(ctx context.Context, request operations.TaskTemplatesUpdateRequest) (*operations.TaskTemplatesUpdateResponse, error) {
+func (s *practiceManagement) TaskTemplatesUpdate(ctx context.Context, request operations.TaskTemplatesUpdateRequest, security operations.TaskTemplatesUpdateSecurity) (*operations.TaskTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2054,7 +2054,7 @@ func (s *practiceManagement) TaskTemplatesUpdate(ctx context.Context, request op
 }
 
 // TasksCreate - Create a task
-func (s *practiceManagement) TasksCreate(ctx context.Context, request operations.TasksCreateRequest) (*operations.TasksCreateResponse, error) {
+func (s *practiceManagement) TasksCreate(ctx context.Context, request operations.TasksCreateRequest, security operations.TasksCreateSecurity) (*operations.TasksCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tasks"
 
@@ -2063,11 +2063,11 @@ func (s *practiceManagement) TasksCreate(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2113,7 +2113,7 @@ func (s *practiceManagement) TasksCreate(ctx context.Context, request operations
 }
 
 // TasksList - Retrieve or search tasks
-func (s *practiceManagement) TasksList(ctx context.Context, request operations.TasksListRequest) (*operations.TasksListResponse, error) {
+func (s *practiceManagement) TasksList(ctx context.Context, request operations.TasksListRequest, security operations.TasksListSecurity) (*operations.TasksListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/tasks"
 
@@ -2122,11 +2122,11 @@ func (s *practiceManagement) TasksList(ctx context.Context, request operations.T
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2172,20 +2172,20 @@ func (s *practiceManagement) TasksList(ctx context.Context, request operations.T
 }
 
 // TasksPartialUpdate - Update an existing task
-func (s *practiceManagement) TasksPartialUpdate(ctx context.Context, request operations.TasksPartialUpdateRequest) (*operations.TasksPartialUpdateResponse, error) {
+func (s *practiceManagement) TasksPartialUpdate(ctx context.Context, request operations.TasksPartialUpdateRequest, security operations.TasksPartialUpdateSecurity) (*operations.TasksPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2223,20 +2223,20 @@ func (s *practiceManagement) TasksPartialUpdate(ctx context.Context, request ope
 }
 
 // TasksRead - Retrieve an existing task
-func (s *practiceManagement) TasksRead(ctx context.Context, request operations.TasksReadRequest) (*operations.TasksReadResponse, error) {
+func (s *practiceManagement) TasksRead(ctx context.Context, request operations.TasksReadRequest, security operations.TasksReadSecurity) (*operations.TasksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2282,20 +2282,20 @@ func (s *practiceManagement) TasksRead(ctx context.Context, request operations.T
 }
 
 // TasksUpdate - Update an existing task
-func (s *practiceManagement) TasksUpdate(ctx context.Context, request operations.TasksUpdateRequest) (*operations.TasksUpdateResponse, error) {
+func (s *practiceManagement) TasksUpdate(ctx context.Context, request operations.TasksUpdateRequest, security operations.TasksUpdateSecurity) (*operations.TasksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

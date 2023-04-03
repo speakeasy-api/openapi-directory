@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GsiPredictionQueryParams struct {
+type GsiPredictionRequest struct {
 	// Any valid Stromkonto account (address).
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Zipcode (Postleitzahl) of a city in Germany.
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GsiPredictionRequest struct {
-	QueryParams GsiPredictionQueryParams
 }
 
 // GsiPrediction200ApplicationJSONLocation - Standarized location info sourced for prediction

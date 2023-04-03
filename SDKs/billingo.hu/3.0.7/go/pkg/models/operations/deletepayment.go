@@ -7,12 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeletePaymentPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type DeletePaymentRequest struct {
-	PathParams DeletePaymentPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type DeletePaymentResponse struct {

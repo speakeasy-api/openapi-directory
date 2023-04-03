@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DetachSecurityProfilePathParams struct {
-	// The security profile that is detached.
-	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
-}
-
-type DetachSecurityProfileQueryParams struct {
-	// The ARN of the thing group from which the security profile is detached.
-	SecurityProfileTargetArn string `queryParam:"style=form,explode=true,name=securityProfileTargetArn"`
-}
-
-type DetachSecurityProfileHeaders struct {
+type DetachSecurityProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DetachSecurityProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DetachSecurityProfileRequest struct {
-	PathParams  DetachSecurityProfilePathParams
-	QueryParams DetachSecurityProfileQueryParams
-	Headers     DetachSecurityProfileHeaders
+	// The security profile that is detached.
+	SecurityProfileName string `pathParam:"style=simple,explode=false,name=securityProfileName"`
+	// The ARN of the thing group from which the security profile is detached.
+	SecurityProfileTargetArn string `queryParam:"style=form,explode=true,name=securityProfileTargetArn"`
 }
 
 type DetachSecurityProfileResponse struct {

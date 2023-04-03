@@ -30,20 +30,16 @@ func (e *DeleteRemediationConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type DeleteRemediationConfigurationHeaders struct {
-	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DeleteRemediationConfigurationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DeleteRemediationConfigurationRequest struct {
-	Headers DeleteRemediationConfigurationHeaders
-	Request shared.DeleteRemediationConfigurationRequest `request:"mediaType=application/json"`
+	DeleteRemediationConfigurationRequest shared.DeleteRemediationConfigurationRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm                         *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                     *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                        *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                              *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                     *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                         *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                     *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                            DeleteRemediationConfigurationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DeleteRemediationConfigurationResponse struct {

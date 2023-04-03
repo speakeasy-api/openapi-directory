@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteReportFilterPathParams struct {
+type DeleteReportFilterRequest struct {
 	// Your report filter identifier
 	ReportFilterID string `pathParam:"style=simple,explode=false,name=reportFilterId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type DeleteReportFilterRequest struct {
-	PathParams DeleteReportFilterPathParams
 }
 
 type DeleteReportFilterResponse struct {

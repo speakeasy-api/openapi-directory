@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeAssetPropertyPathParams struct {
-	// The ID of the asset.
-	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
-	// The ID of the asset property.
-	PropertyID string `pathParam:"style=simple,explode=false,name=propertyId"`
-}
-
-type DescribeAssetPropertyHeaders struct {
+type DescribeAssetPropertyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeAssetPropertyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeAssetPropertyRequest struct {
-	PathParams DescribeAssetPropertyPathParams
-	Headers    DescribeAssetPropertyHeaders
+	// The ID of the asset.
+	AssetID string `pathParam:"style=simple,explode=false,name=assetId"`
+	// The ID of the asset property.
+	PropertyID string `pathParam:"style=simple,explode=false,name=propertyId"`
 }
 
 type DescribeAssetPropertyResponse struct {

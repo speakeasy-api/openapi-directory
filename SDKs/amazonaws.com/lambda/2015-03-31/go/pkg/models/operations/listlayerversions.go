@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLayerVersionsPathParams struct {
-	// The name or Amazon Resource Name (ARN) of the layer.
-	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
-}
-
 // ListLayerVersionsCompatibleArchitectureEnum - The compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html">instruction set architecture</a>.
 type ListLayerVersionsCompatibleArchitectureEnum string
 
@@ -140,18 +135,17 @@ func (e *ListLayerVersionsCompatibleRuntimeEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type ListLayerVersionsQueryParams struct {
+type ListLayerVersionsRequest struct {
 	// The compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html">instruction set architecture</a>.
 	CompatibleArchitecture *ListLayerVersionsCompatibleArchitectureEnum `queryParam:"style=form,explode=true,name=CompatibleArchitecture"`
 	// A runtime identifier. For example, <code>go1.x</code>.
 	CompatibleRuntime *ListLayerVersionsCompatibleRuntimeEnum `queryParam:"style=form,explode=true,name=CompatibleRuntime"`
+	// The name or Amazon Resource Name (ARN) of the layer.
+	LayerName string `pathParam:"style=simple,explode=false,name=LayerName"`
 	// A pagination token returned by a previous call.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of versions to return.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListLayerVersionsHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -159,12 +153,6 @@ type ListLayerVersionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListLayerVersionsRequest struct {
-	PathParams  ListLayerVersionsPathParams
-	QueryParams ListLayerVersionsQueryParams
-	Headers     ListLayerVersionsHeaders
 }
 
 type ListLayerVersionsResponse struct {

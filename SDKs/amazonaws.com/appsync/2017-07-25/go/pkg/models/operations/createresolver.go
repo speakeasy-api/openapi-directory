@@ -9,23 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateResolverPathParams struct {
-	// The ID for the GraphQL API for which the resolver is being created.
-	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
-	// The name of the <code>Type</code>.
-	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
-}
-
-type CreateResolverHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateResolverRequestBodyCachingConfig - The caching configuration for a resolver that has caching activated.
 type CreateResolverRequestBodyCachingConfig struct {
 	CachingKeys []string `json:"cachingKeys,omitempty"`
@@ -100,9 +83,18 @@ type CreateResolverRequestBody struct {
 }
 
 type CreateResolverRequest struct {
-	PathParams CreateResolverPathParams
-	Headers    CreateResolverHeaders
-	Request    CreateResolverRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateResolverRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID for the GraphQL API for which the resolver is being created.
+	APIID string `pathParam:"style=simple,explode=false,name=apiId"`
+	// The name of the <code>Type</code>.
+	TypeName string `pathParam:"style=simple,explode=false,name=typeName"`
 }
 
 type CreateResolverResponse struct {

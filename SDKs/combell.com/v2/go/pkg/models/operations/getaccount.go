@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetAccountPathParams struct {
-	// Automatically added
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
-}
-
-type GetAccountQueryParams struct {
-	// The id of the account.
-	AccountID int `queryParam:"style=form,explode=true,name=account_id"`
-}
-
 type GetAccountRequest struct {
-	PathParams  GetAccountPathParams
-	QueryParams GetAccountQueryParams
+	// Automatically added
+	AccountIDPathParameter string `pathParam:"style=simple,explode=false,name=accountId"`
+	// The id of the account.
+	AccountIDQueryParameter int `queryParam:"style=form,explode=true,name=account_id"`
 }
 
 type GetAccountResponse struct {

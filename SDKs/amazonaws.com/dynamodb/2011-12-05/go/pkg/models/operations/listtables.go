@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTablesQueryParams struct {
-	// Pagination token
-	ExclusiveStartTableName *string `queryParam:"style=form,explode=true,name=ExclusiveStartTableName"`
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-}
-
 // ListTablesXAmzTargetEnum
 type ListTablesXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListTablesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTablesHeaders struct {
+type ListTablesRequest struct {
+	// Pagination token
+	ExclusiveStartTableName *string `queryParam:"style=form,explode=true,name=ExclusiveStartTableName"`
+	// Pagination limit
+	Limit             *string                  `queryParam:"style=form,explode=true,name=Limit"`
+	ListTablesInput   shared.ListTablesInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListTablesHeaders struct {
 	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTablesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTablesRequest struct {
-	QueryParams ListTablesQueryParams
-	Headers     ListTablesHeaders
-	Request     shared.ListTablesInput `request:"mediaType=application/json"`
 }
 
 type ListTablesResponse struct {

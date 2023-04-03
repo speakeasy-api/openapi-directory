@@ -35,14 +35,14 @@ func newSalesEntries(defaultClient, securityClient HTTPClient, serverURL, langua
 // SalesEntriesDelete - Removes an existing Sales Entry.
 func (s *salesEntries) SalesEntriesDelete(ctx context.Context, request operations.SalesEntriesDeleteRequest) (*operations.SalesEntriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -127,7 +127,7 @@ func (s *salesEntries) SalesEntriesGet(ctx context.Context) (*operations.SalesEn
 }
 
 // SalesEntriesPost - Creates a new Sales Entry.
-func (s *salesEntries) SalesEntriesPost(ctx context.Context, request operations.SalesEntriesPostRequest) (*operations.SalesEntriesPostResponse, error) {
+func (s *salesEntries) SalesEntriesPost(ctx context.Context, request shared.SalesEntryDto) (*operations.SalesEntriesPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesEntries"
 
@@ -181,7 +181,7 @@ func (s *salesEntries) SalesEntriesPost(ctx context.Context, request operations.
 }
 
 // SalesEntriesProcessBatch - Processes a batch of Sales Entries.
-func (s *salesEntries) SalesEntriesProcessBatch(ctx context.Context, request operations.SalesEntriesProcessBatchRequest) (*operations.SalesEntriesProcessBatchResponse, error) {
+func (s *salesEntries) SalesEntriesProcessBatch(ctx context.Context, request []shared.BatchItemSalesEntryDto) (*operations.SalesEntriesProcessBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesEntries/batch"
 
@@ -237,9 +237,9 @@ func (s *salesEntries) SalesEntriesProcessBatch(ctx context.Context, request ope
 // SalesEntriesPut - Updates an existing Sales Entry.
 func (s *salesEntries) SalesEntriesPut(ctx context.Context, request operations.SalesEntriesPutRequest) (*operations.SalesEntriesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesEntryDto", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -291,7 +291,7 @@ func (s *salesEntries) SalesEntriesPut(ctx context.Context, request operations.S
 // GetV1SalesEntriesID - Returns information about a single Sales Entry.
 func (s *salesEntries) GetV1SalesEntriesID(ctx context.Context, request operations.GetV1SalesEntriesIDRequest) (*operations.GetV1SalesEntriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

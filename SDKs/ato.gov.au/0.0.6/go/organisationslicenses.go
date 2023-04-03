@@ -39,14 +39,14 @@ func newOrganisationsLicenses(defaultClient, securityClient HTTPClient, serverUR
 // Delete a license
 func (s *organisationsLicenses) DeleteOrganisationsPartyIDLicensesProductID(ctx context.Context, request operations.DeleteOrganisationsPartyIDLicensesProductIDRequest) (*operations.DeleteOrganisationsPartyIDLicensesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -96,14 +96,14 @@ func (s *organisationsLicenses) DeleteOrganisationsPartyIDLicensesProductID(ctx 
 // GetOrganisationsPartyIDLicenses - Retrieve a list of licenses
 func (s *organisationsLicenses) GetOrganisationsPartyIDLicenses(ctx context.Context, request operations.GetOrganisationsPartyIDLicensesRequest) (*operations.GetOrganisationsPartyIDLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -165,14 +165,14 @@ func (s *organisationsLicenses) GetOrganisationsPartyIDLicenses(ctx context.Cont
 // Retrieve a license
 func (s *organisationsLicenses) GetOrganisationsPartyIDLicensesProductID(ctx context.Context, request operations.GetOrganisationsPartyIDLicensesProductIDRequest) (*operations.GetOrganisationsPartyIDLicensesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -232,9 +232,9 @@ func (s *organisationsLicenses) GetOrganisationsPartyIDLicensesProductID(ctx con
 // Create a license
 func (s *organisationsLicenses) PostOrganisationsPartyIDLicenses(ctx context.Context, request operations.PostOrganisationsPartyIDLicensesRequest) (*operations.PostOrganisationsPartyIDLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -249,7 +249,7 @@ func (s *organisationsLicenses) PostOrganisationsPartyIDLicenses(ctx context.Con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -311,9 +311,9 @@ func (s *organisationsLicenses) PostOrganisationsPartyIDLicenses(ctx context.Con
 // Update a license
 func (s *organisationsLicenses) PutOrganisationsPartyIDLicensesProductID(ctx context.Context, request operations.PutOrganisationsPartyIDLicensesProductIDRequest) (*operations.PutOrganisationsPartyIDLicensesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -328,7 +328,7 @@ func (s *organisationsLicenses) PutOrganisationsPartyIDLicensesProductID(ctx con
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

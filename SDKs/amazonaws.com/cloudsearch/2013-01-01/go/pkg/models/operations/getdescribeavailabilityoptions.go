@@ -50,28 +50,20 @@ func (e *GETDescribeAvailabilityOptionsVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETDescribeAvailabilityOptionsQueryParams struct {
+type GETDescribeAvailabilityOptionsRequest struct {
 	Action GETDescribeAvailabilityOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Whether to display the deployed configuration (<code>true</code>) or include any pending changes (<code>false</code>). Defaults to <code>false</code>.
 	Deployed *bool `queryParam:"style=form,explode=true,name=Deployed"`
 	// The name of the domain you want to describe.
-	DomainName string                                    `queryParam:"style=form,explode=true,name=DomainName"`
-	Version    GETDescribeAvailabilityOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAvailabilityOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAvailabilityOptionsRequest struct {
-	QueryParams GETDescribeAvailabilityOptionsQueryParams
-	Headers     GETDescribeAvailabilityOptionsHeaders
+	DomainName        string                                    `queryParam:"style=form,explode=true,name=DomainName"`
+	Version           GETDescribeAvailabilityOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAvailabilityOptionsResponse struct {

@@ -34,7 +34,7 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // PostCloseAccount - Close an account
 // Closes an account. If an account is closed, you cannot process transactions, pay out its funds, or reopen it. If payments are made to a closed account, the payments are sent to your liable account.
-func (s *accounts) PostCloseAccount(ctx context.Context, request operations.PostCloseAccountRequest) (*operations.PostCloseAccountResponse, error) {
+func (s *accounts) PostCloseAccount(ctx context.Context, request shared.CloseAccountRequest, security operations.PostCloseAccountSecurity) (*operations.PostCloseAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/closeAccount"
 
@@ -50,7 +50,7 @@ func (s *accounts) PostCloseAccount(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *accounts) PostCloseAccount(ctx context.Context, request operations.Post
 
 // PostCreateAccount - Create an account
 // Creates an account under an account holder. An account holder can have [multiple accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#create-additional-accounts).
-func (s *accounts) PostCreateAccount(ctx context.Context, request operations.PostCreateAccountRequest) (*operations.PostCreateAccountResponse, error) {
+func (s *accounts) PostCreateAccount(ctx context.Context, request shared.CreateAccountRequest, security operations.PostCreateAccountSecurity) (*operations.PostCreateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createAccount"
 
@@ -122,7 +122,7 @@ func (s *accounts) PostCreateAccount(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,7 +178,7 @@ func (s *accounts) PostCreateAccount(ctx context.Context, request operations.Pos
 
 // PostUpdateAccount - Update an account
 // Updates the description or payout schedule of an account.
-func (s *accounts) PostUpdateAccount(ctx context.Context, request operations.PostUpdateAccountRequest) (*operations.PostUpdateAccountResponse, error) {
+func (s *accounts) PostUpdateAccount(ctx context.Context, request shared.UpdateAccountRequest, security operations.PostUpdateAccountSecurity) (*operations.PostUpdateAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateAccount"
 
@@ -194,7 +194,7 @@ func (s *accounts) PostUpdateAccount(ctx context.Context, request operations.Pos
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

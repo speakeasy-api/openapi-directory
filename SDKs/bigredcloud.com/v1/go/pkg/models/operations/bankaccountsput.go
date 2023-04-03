@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BankAccountsPutPathParams struct {
+type BankAccountsPutRequest struct {
+	// Information of Bank Account to update.
+	BankAccountDto shared.BankAccountDto `request:"mediaType=application/json"`
 	// Id of Bank Account to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type BankAccountsPutRequest struct {
-	PathParams BankAccountsPutPathParams
-	// Information of Bank Account to update.
-	Request shared.BankAccountDto `request:"mediaType=application/json"`
 }
 
 type BankAccountsPutResponse struct {

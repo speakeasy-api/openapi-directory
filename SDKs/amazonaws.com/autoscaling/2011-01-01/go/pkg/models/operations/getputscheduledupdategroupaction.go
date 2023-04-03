@@ -51,7 +51,7 @@ func (e *GETPutScheduledUpdateGroupActionVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETPutScheduledUpdateGroupActionQueryParams struct {
+type GETPutScheduledUpdateGroupActionRequest struct {
 	Action GETPutScheduledUpdateGroupActionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
@@ -72,23 +72,15 @@ type GETPutScheduledUpdateGroupActionQueryParams struct {
 	// This property is no longer used.
 	Time *time.Time `queryParam:"style=form,explode=true,name=Time"`
 	// <p>Specifies the time zone for a cron expression. If a time zone is not provided, UTC is used by default. </p> <p>Valid values are the canonical names of the IANA time zones, derived from the IANA Time Zone Database (such as <code>Etc/GMT+9</code> or <code>Pacific/Tahiti</code>). For more information, see <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a>.</p>
-	TimeZone *string                                     `queryParam:"style=form,explode=true,name=TimeZone"`
-	Version  GETPutScheduledUpdateGroupActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPutScheduledUpdateGroupActionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPutScheduledUpdateGroupActionRequest struct {
-	QueryParams GETPutScheduledUpdateGroupActionQueryParams
-	Headers     GETPutScheduledUpdateGroupActionHeaders
+	TimeZone          *string                                     `queryParam:"style=form,explode=true,name=TimeZone"`
+	Version           GETPutScheduledUpdateGroupActionVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPutScheduledUpdateGroupActionResponse struct {

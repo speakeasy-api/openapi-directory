@@ -13,45 +13,37 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ActivatePipelineRequest{
-        Headers: operations.ActivatePipelineHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "DataPipeline.ActivatePipeline",
-        },
-        Request: shared.ActivatePipelineInput{
+        ActivatePipelineInput: shared.ActivatePipelineInput{
             ParameterValues: []shared.ParameterValue{
                 shared.ParameterValue{
-                    ID: "vel",
-                    StringValue: "error",
+                    ID: "provident",
+                    StringValue: "distinctio",
                 },
                 shared.ParameterValue{
-                    ID: "deserunt",
-                    StringValue: "suscipit",
+                    ID: "quibusdam",
+                    StringValue: "unde",
                 },
                 shared.ParameterValue{
-                    ID: "iure",
-                    StringValue: "magnam",
-                },
-                shared.ParameterValue{
-                    ID: "debitis",
-                    StringValue: "ipsa",
+                    ID: "nulla",
+                    StringValue: "corrupti",
                 },
             },
-            PipelineID: "delectus",
-            StartTimestamp: "2022-08-14T01:03:07.567Z",
+            PipelineID: "illum",
+            StartTimestamp: "2022-05-18T09:34:54.894Z",
         },
+        XAmzAlgorithm: "deserunt",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "iure",
+        XAmzDate: "magnam",
+        XAmzSecurityToken: "debitis",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "delectus",
+        XAmzTarget: "DataPipeline.ActivatePipeline",
     }
 
     ctx := context.Background()

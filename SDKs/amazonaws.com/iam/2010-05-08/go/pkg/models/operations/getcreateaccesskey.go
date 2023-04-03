@@ -50,26 +50,18 @@ func (e *GETCreateAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateAccessKeyQueryParams struct {
+type GETCreateAccessKeyRequest struct {
 	Action GETCreateAccessKeyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the IAM user that the new key will belong to.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
-	UserName *string                       `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETCreateAccessKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateAccessKeyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateAccessKeyRequest struct {
-	QueryParams GETCreateAccessKeyQueryParams
-	Headers     GETCreateAccessKeyHeaders
+	UserName          *string                       `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETCreateAccessKeyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateAccessKeyResponse struct {

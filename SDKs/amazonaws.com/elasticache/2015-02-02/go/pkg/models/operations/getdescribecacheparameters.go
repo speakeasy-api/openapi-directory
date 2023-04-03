@@ -50,7 +50,7 @@ func (e *GETDescribeCacheParametersVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribeCacheParametersQueryParams struct {
+type GETDescribeCacheParametersRequest struct {
 	Action GETDescribeCacheParametersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of a specific cache parameter group to return details for.
 	CacheParameterGroupName string `queryParam:"style=form,explode=true,name=CacheParameterGroupName"`
@@ -59,23 +59,15 @@ type GETDescribeCacheParametersQueryParams struct {
 	// <p>The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a marker is included in the response so that the remaining results can be retrieved.</p> <p>Default: 100</p> <p>Constraints: minimum 20; maximum 100.</p>
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// <p>The parameter types to return.</p> <p>Valid values: <code>user</code> | <code>system</code> | <code>engine-default</code> </p>
-	Source  *string                               `queryParam:"style=form,explode=true,name=Source"`
-	Version GETDescribeCacheParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeCacheParametersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeCacheParametersRequest struct {
-	QueryParams GETDescribeCacheParametersQueryParams
-	Headers     GETDescribeCacheParametersHeaders
+	Source            *string                               `queryParam:"style=form,explode=true,name=Source"`
+	Version           GETDescribeCacheParametersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeCacheParametersResponse struct {

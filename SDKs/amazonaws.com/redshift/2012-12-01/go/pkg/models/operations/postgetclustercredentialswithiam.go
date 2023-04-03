@@ -50,25 +50,17 @@ func (e *POSTGetClusterCredentialsWithIAMVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type POSTGetClusterCredentialsWithIAMQueryParams struct {
-	Action  POSTGetClusterCredentialsWithIAMActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetClusterCredentialsWithIAMVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetClusterCredentialsWithIAMHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetClusterCredentialsWithIAMRequest struct {
-	QueryParams POSTGetClusterCredentialsWithIAMQueryParams
-	Headers     POSTGetClusterCredentialsWithIAMHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetClusterCredentialsWithIAMActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                      `request:"mediaType=text/xml"`
+	Version           POSTGetClusterCredentialsWithIAMVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetClusterCredentialsWithIAMResponse struct {

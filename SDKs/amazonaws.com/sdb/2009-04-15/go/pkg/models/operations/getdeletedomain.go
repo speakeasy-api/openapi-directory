@@ -50,7 +50,7 @@ func (e *GETDeleteDomainVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteDomainQueryParams struct {
+type GETDeleteDomainRequest struct {
 	AWSAccessKeyID string                    `queryParam:"style=form,explode=true,name=AWSAccessKeyId"`
 	Action         GETDeleteDomainActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the domain to delete.
@@ -60,10 +60,6 @@ type GETDeleteDomainQueryParams struct {
 	SignatureVersion string                     `queryParam:"style=form,explode=true,name=SignatureVersion"`
 	Timestamp        string                     `queryParam:"style=form,explode=true,name=Timestamp"`
 	Version          GETDeleteDomainVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDomainRequest struct {
-	QueryParams GETDeleteDomainQueryParams
 }
 
 type GETDeleteDomainResponse struct {

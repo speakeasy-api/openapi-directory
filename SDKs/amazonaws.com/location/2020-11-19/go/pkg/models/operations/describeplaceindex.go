@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribePlaceIndexPathParams struct {
+type DescribePlaceIndexRequest struct {
 	// The name of the place index resource.
-	IndexName string `pathParam:"style=simple,explode=false,name=IndexName"`
-}
-
-type DescribePlaceIndexHeaders struct {
+	IndexName         string  `pathParam:"style=simple,explode=false,name=IndexName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type DescribePlaceIndexHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribePlaceIndexRequest struct {
-	PathParams DescribePlaceIndexPathParams
-	Headers    DescribePlaceIndexHeaders
 }
 
 type DescribePlaceIndexResponse struct {

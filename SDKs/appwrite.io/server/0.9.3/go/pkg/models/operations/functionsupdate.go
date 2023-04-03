@@ -8,13 +8,8 @@ import (
 )
 
 type FunctionsUpdateSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type FunctionsUpdatePathParams struct {
-	// Function unique ID.
-	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type FunctionsUpdateRequestBody struct {
@@ -33,9 +28,9 @@ type FunctionsUpdateRequestBody struct {
 }
 
 type FunctionsUpdateRequest struct {
-	PathParams FunctionsUpdatePathParams
-	Request    *FunctionsUpdateRequestBody `request:"mediaType=application/json"`
-	Security   FunctionsUpdateSecurity
+	RequestBody *FunctionsUpdateRequestBody `request:"mediaType=application/json"`
+	// Function unique ID.
+	FunctionID string `pathParam:"style=simple,explode=false,name=functionId"`
 }
 
 type FunctionsUpdateResponse struct {

@@ -50,30 +50,22 @@ func (e *GETPutNotificationConfigurationVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETPutNotificationConfigurationQueryParams struct {
+type GETPutNotificationConfigurationRequest struct {
 	Action GETPutNotificationConfigurationActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The type of event that causes the notification to be sent. To query the notification types supported by Amazon EC2 Auto Scaling, call the <a>DescribeAutoScalingNotificationTypes</a> API.
 	NotificationTypes []string `queryParam:"style=form,explode=true,name=NotificationTypes"`
 	// The Amazon Resource Name (ARN) of the Amazon SNS topic.
-	TopicARN string                                     `queryParam:"style=form,explode=true,name=TopicARN"`
-	Version  GETPutNotificationConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPutNotificationConfigurationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPutNotificationConfigurationRequest struct {
-	QueryParams GETPutNotificationConfigurationQueryParams
-	Headers     GETPutNotificationConfigurationHeaders
+	TopicARN          string                                     `queryParam:"style=form,explode=true,name=TopicARN"`
+	Version           GETPutNotificationConfigurationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPutNotificationConfigurationResponse struct {

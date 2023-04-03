@@ -7,14 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetWorkflowPathParams struct {
+type GetWorkflowRequest struct {
 	// The unique name of the domain.
 	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
 	// Unique identifier for the workflow.
-	WorkflowID string `pathParam:"style=simple,explode=false,name=WorkflowId"`
-}
-
-type GetWorkflowHeaders struct {
+	WorkflowID        string  `pathParam:"style=simple,explode=false,name=WorkflowId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +19,6 @@ type GetWorkflowHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetWorkflowRequest struct {
-	PathParams GetWorkflowPathParams
-	Headers    GetWorkflowHeaders
 }
 
 type GetWorkflowResponse struct {

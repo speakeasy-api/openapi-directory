@@ -34,16 +34,16 @@ func newAccountHolders(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // GetAccountHoldersID - Get an account holder
 // Returns an account holder.
-func (s *accountHolders) GetAccountHoldersID(ctx context.Context, request operations.GetAccountHoldersIDRequest) (*operations.GetAccountHoldersIDResponse, error) {
+func (s *accountHolders) GetAccountHoldersID(ctx context.Context, request operations.GetAccountHoldersIDRequest, security operations.GetAccountHoldersIDSecurity) (*operations.GetAccountHoldersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -99,20 +99,20 @@ func (s *accountHolders) GetAccountHoldersID(ctx context.Context, request operat
 // Returns a paginated list of the balance accounts associated with an account holder. To fetch multiple pages, use the query parameters.
 //
 // For example, to limit the page to 5 balance accounts and skip the first 10, use `/accountHolders/{id}/balanceAccounts?limit=5&offset=10`.
-func (s *accountHolders) GetAccountHoldersIDBalanceAccounts(ctx context.Context, request operations.GetAccountHoldersIDBalanceAccountsRequest) (*operations.GetAccountHoldersIDBalanceAccountsResponse, error) {
+func (s *accountHolders) GetAccountHoldersIDBalanceAccounts(ctx context.Context, request operations.GetAccountHoldersIDBalanceAccountsRequest, security operations.GetAccountHoldersIDBalanceAccountsSecurity) (*operations.GetAccountHoldersIDBalanceAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}/balanceAccounts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}/balanceAccounts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,11 +166,11 @@ func (s *accountHolders) GetAccountHoldersIDBalanceAccounts(ctx context.Context,
 
 // PatchAccountHoldersID - Update an account holder
 // Updates an account holder. When updating an account holder resource, if a parameter is not provided in the request, it is left unchanged.
-func (s *accountHolders) PatchAccountHoldersID(ctx context.Context, request operations.PatchAccountHoldersIDRequest) (*operations.PatchAccountHoldersIDResponse, error) {
+func (s *accountHolders) PatchAccountHoldersID(ctx context.Context, request operations.PatchAccountHoldersIDRequest, security operations.PatchAccountHoldersIDSecurity) (*operations.PatchAccountHoldersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountHolderInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -182,7 +182,7 @@ func (s *accountHolders) PatchAccountHoldersID(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *accountHolders) PatchAccountHoldersID(ctx context.Context, request oper
 
 // PostAccountHolders - Create an account holder
 // Creates an account holder linked to a [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities).
-func (s *accountHolders) PostAccountHolders(ctx context.Context, request operations.PostAccountHoldersRequest) (*operations.PostAccountHoldersResponse, error) {
+func (s *accountHolders) PostAccountHolders(ctx context.Context, request shared.AccountHolderInfoInput, security operations.PostAccountHoldersSecurity) (*operations.PostAccountHoldersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/accountHolders"
 
@@ -252,7 +252,7 @@ func (s *accountHolders) PostAccountHolders(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type UpdateCertificatePathParams struct {
-	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
-	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
-}
-
 // UpdateCertificateNewStatusEnum - <p>The new status.</p> <p> <b>Note:</b> Setting the status to PENDING_TRANSFER or PENDING_ACTIVATION will result in an exception being thrown. PENDING_TRANSFER and PENDING_ACTIVATION are statuses used internally by IoT. They are not intended for developer use.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
 type UpdateCertificateNewStatusEnum string
 
@@ -49,12 +44,7 @@ func (e *UpdateCertificateNewStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateCertificateQueryParams struct {
-	// <p>The new status.</p> <p> <b>Note:</b> Setting the status to PENDING_TRANSFER or PENDING_ACTIVATION will result in an exception being thrown. PENDING_TRANSFER and PENDING_ACTIVATION are statuses used internally by IoT. They are not intended for developer use.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
-	NewStatus UpdateCertificateNewStatusEnum `queryParam:"style=form,explode=true,name=newStatus"`
-}
-
-type UpdateCertificateHeaders struct {
+type UpdateCertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -62,12 +52,10 @@ type UpdateCertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type UpdateCertificateRequest struct {
-	PathParams  UpdateCertificatePathParams
-	QueryParams UpdateCertificateQueryParams
-	Headers     UpdateCertificateHeaders
+	// The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+	CertificateID string `pathParam:"style=simple,explode=false,name=certificateId"`
+	// <p>The new status.</p> <p> <b>Note:</b> Setting the status to PENDING_TRANSFER or PENDING_ACTIVATION will result in an exception being thrown. PENDING_TRANSFER and PENDING_ACTIVATION are statuses used internally by IoT. They are not intended for developer use.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
+	NewStatus UpdateCertificateNewStatusEnum `queryParam:"style=form,explode=true,name=newStatus"`
 }
 
 type UpdateCertificateResponse struct {

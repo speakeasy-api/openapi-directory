@@ -49,9 +49,9 @@ pkg/models/operations/getmetadataofchannel.go
 pkg/models/operations/getpresenceofchannel.go
 pkg/models/shared/tokendetails.go
 pkg/models/shared/error.go
+pkg/models/shared/responseformatenum.go
 pkg/models/shared/tokenrequest.go
 pkg/models/shared/signedtokenrequest.go
-pkg/models/shared/responseformatenum.go
 pkg/models/shared/message.go
 pkg/models/shared/extras.go
 pkg/models/shared/push.go

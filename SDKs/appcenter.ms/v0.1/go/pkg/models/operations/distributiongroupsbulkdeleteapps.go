@@ -4,18 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsBulkDeleteAppsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsBulkDeleteAppsPathParams struct {
-	// The name of the distribution group
-	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DistributionGroupsBulkDeleteAppsRequestBodyApps struct {
@@ -30,10 +22,12 @@ type DistributionGroupsBulkDeleteAppsRequestBody struct {
 }
 
 type DistributionGroupsBulkDeleteAppsRequest struct {
-	PathParams DistributionGroupsBulkDeleteAppsPathParams
 	// The name of the apps to be deleted from the distribution group. The apps have to be owned by the organization.
-	Request  DistributionGroupsBulkDeleteAppsRequestBody `request:"mediaType=application/json"`
-	Security DistributionGroupsBulkDeleteAppsSecurity
+	RequestBody DistributionGroupsBulkDeleteAppsRequestBody `request:"mediaType=application/json"`
+	// The name of the distribution group
+	DistributionGroupName string `pathParam:"style=simple,explode=false,name=distribution_group_name"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsBulkDeleteAppsResponse struct {

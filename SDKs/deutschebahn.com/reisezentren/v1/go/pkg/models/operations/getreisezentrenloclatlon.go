@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReisezentrenLocLatLonPathParams struct {
+type GetReisezentrenLocLatLonRequest struct {
 	// Latitude
 	Lat float32 `pathParam:"style=simple,explode=false,name=lat"`
 	// Longitude
 	Lon float32 `pathParam:"style=simple,explode=false,name=lon"`
-}
-
-type GetReisezentrenLocLatLonRequest struct {
-	PathParams GetReisezentrenLocLatLonPathParams
 }
 
 type GetReisezentrenLocLatLonResponse struct {

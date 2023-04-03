@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDevicePathParams struct {
-	// The ARN of the device to retrieve.
-	DeviceArn string `pathParam:"style=simple,explode=false,name=deviceArn"`
-}
-
-type GetDeviceHeaders struct {
+type GetDeviceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetDeviceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDeviceRequest struct {
-	PathParams GetDevicePathParams
-	Headers    GetDeviceHeaders
+	// The ARN of the device to retrieve.
+	DeviceArn string `pathParam:"style=simple,explode=false,name=deviceArn"`
 }
 
 type GetDeviceResponse struct {

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteSegmentPathParams struct {
-	// Specifies the segment to delete.
-	Segment string `pathParam:"style=simple,explode=false,name=segment"`
-}
-
-type DeleteSegmentHeaders struct {
+type DeleteSegmentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteSegmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteSegmentRequest struct {
-	PathParams DeleteSegmentPathParams
-	Headers    DeleteSegmentHeaders
+	// Specifies the segment to delete.
+	Segment string `pathParam:"style=simple,explode=false,name=segment"`
 }
 
 type DeleteSegmentResponse struct {

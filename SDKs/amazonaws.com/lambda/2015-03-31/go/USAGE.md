@@ -13,35 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AddLayerVersionPermissionRequest{
-        PathParams: operations.AddLayerVersionPermissionPathParams{
-            LayerName: "corrupti",
-            VersionNumber: 592845,
+        LayerName: "corrupti",
+        RequestBody: operations.AddLayerVersionPermissionRequestBody{
+            Action: "provident",
+            OrganizationID: "distinctio",
+            Principal: "quibusdam",
+            StatementID: "unde",
         },
-        QueryParams: operations.AddLayerVersionPermissionQueryParams{
-            RevisionID: "distinctio",
-        },
-        Headers: operations.AddLayerVersionPermissionHeaders{
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-        },
-        Request: operations.AddLayerVersionPermissionRequestBody{
-            Action: "deserunt",
-            OrganizationID: "suscipit",
-            Principal: "iure",
-            StatementID: "magnam",
-        },
+        RevisionID: "nulla",
+        VersionNumber: 544883,
+        XAmzAlgorithm: "illum",
+        XAmzContentSha256: "vel",
+        XAmzCredential: "error",
+        XAmzDate: "deserunt",
+        XAmzSecurityToken: "suscipit",
+        XAmzSignature: "iure",
+        XAmzSignedHeaders: "magnam",
     }
 
     ctx := context.Background()

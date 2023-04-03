@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type HolidayPathParams struct {
-	// Primary key for a holiday
-	HolidayID int64 `pathParam:"style=simple,explode=false,name=holidayId"`
-}
-
 // HolidayOptionalEnum - A boolean parameter. If false or 0 (default), will return provinces for which this is a legislated holiday. If true or 1, will return provinces which optionally celebrate this holiday.
 type HolidayOptionalEnum string
 
@@ -44,16 +39,13 @@ func (e *HolidayOptionalEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HolidayQueryParams struct {
+type HolidayRequest struct {
+	// Primary key for a holiday
+	HolidayID int64 `pathParam:"style=simple,explode=false,name=holidayId"`
 	// A boolean parameter. If false or 0 (default), will return provinces for which this is a legislated holiday. If true or 1, will return provinces which optionally celebrate this holiday.
 	Optional *HolidayOptionalEnum `queryParam:"style=form,explode=true,name=optional"`
 	// A calendar year
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
-}
-
-type HolidayRequest struct {
-	PathParams  HolidayPathParams
-	QueryParams HolidayQueryParams
 }
 
 // Holiday400ApplicationJSON - Bad Request

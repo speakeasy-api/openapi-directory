@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type EmailSendEmailStatementRequest struct {
-	Request shared.EmailStatementDto `request:"mediaType=application/json"`
-}
 
 type EmailSendEmailStatementResponse struct {
 	ContentType string

@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Licer - Insurance Policy - Life
 // API to verify Insurance Policy - Life.
-func (s *apIs) Licer(ctx context.Context, request operations.LicerRequest) (*operations.LicerResponse, error) {
+func (s *apIs) Licer(ctx context.Context, request operations.LicerRequestBody, security operations.LicerSecurity) (*operations.LicerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/licer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Licer(ctx context.Context, request operations.LicerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

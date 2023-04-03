@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetItemRelatedListPathParams struct {
-	// The identifier of the item to based related items off.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetItemRelatedListQueryParams struct {
+type GetItemRelatedListRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -37,6 +32,8 @@ type GetItemRelatedListQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The identifier of the item to based related items off.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -59,11 +56,6 @@ type GetItemRelatedListQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetItemRelatedListRequest struct {
-	PathParams  GetItemRelatedListPathParams
-	QueryParams GetItemRelatedListQueryParams
 }
 
 type GetItemRelatedListResponse struct {

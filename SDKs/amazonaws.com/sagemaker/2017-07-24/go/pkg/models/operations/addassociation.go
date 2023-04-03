@@ -30,20 +30,16 @@ func (e *AddAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AddAssociationHeaders struct {
-	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        AddAssociationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type AddAssociationRequest struct {
-	Headers AddAssociationHeaders
-	Request shared.AddAssociationRequest `request:"mediaType=application/json"`
+	AddAssociationRequest shared.AddAssociationRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            AddAssociationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type AddAssociationResponse struct {

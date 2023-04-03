@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type Destiny2GetPublicVendorsQueryParams struct {
+type Destiny2GetPublicVendorsRequest struct {
 	// A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 	Components []int `queryParam:"style=form,explode=false,name=components"`
-}
-
-type Destiny2GetPublicVendorsRequest struct {
-	QueryParams Destiny2GetPublicVendorsQueryParams
 }
 
 // Destiny2GetPublicVendors200Wildcard - A response containing all valid components for the public Vendors endpoint.

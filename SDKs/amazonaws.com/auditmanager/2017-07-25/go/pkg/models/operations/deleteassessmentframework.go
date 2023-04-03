@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAssessmentFrameworkPathParams struct {
-	//  The identifier for the custom framework.
-	FrameworkID string `pathParam:"style=simple,explode=false,name=frameworkId"`
-}
-
-type DeleteAssessmentFrameworkHeaders struct {
+type DeleteAssessmentFrameworkRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteAssessmentFrameworkHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteAssessmentFrameworkRequest struct {
-	PathParams DeleteAssessmentFrameworkPathParams
-	Headers    DeleteAssessmentFrameworkHeaders
+	//  The identifier for the custom framework.
+	FrameworkID string `pathParam:"style=simple,explode=false,name=frameworkId"`
 }
 
 type DeleteAssessmentFrameworkResponse struct {

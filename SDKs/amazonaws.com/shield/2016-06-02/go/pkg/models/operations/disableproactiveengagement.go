@@ -29,7 +29,8 @@ func (e *DisableProactiveEngagementXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type DisableProactiveEngagementHeaders struct {
+type DisableProactiveEngagementRequest struct {
+	RequestBody       map[string]interface{}                   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DisableProactiveEngagementHeaders struct {
 	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisableProactiveEngagementXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisableProactiveEngagementRequest struct {
-	Headers DisableProactiveEngagementHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DisableProactiveEngagementResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTCreateDBClusterEndpointVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type POSTCreateDBClusterEndpointQueryParams struct {
-	Action  POSTCreateDBClusterEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTCreateDBClusterEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTCreateDBClusterEndpointHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTCreateDBClusterEndpointRequest struct {
-	QueryParams POSTCreateDBClusterEndpointQueryParams
-	Headers     POSTCreateDBClusterEndpointHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTCreateDBClusterEndpointActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                 `request:"mediaType=text/xml"`
+	Version           POSTCreateDBClusterEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTCreateDBClusterEndpointResponse struct {

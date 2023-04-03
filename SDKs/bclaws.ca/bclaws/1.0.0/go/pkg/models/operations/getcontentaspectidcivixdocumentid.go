@@ -53,15 +53,11 @@ func (e *GetContentAspectIDCivixDocumentIDAspectIDEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GetContentAspectIDCivixDocumentIDPathParams struct {
+type GetContentAspectIDCivixDocumentIDRequest struct {
 	// The identifier of the 'aspect' (content group) to search
 	AspectID GetContentAspectIDCivixDocumentIDAspectIDEnum `pathParam:"style=simple,explode=false,name=aspectId"`
 	// The document identification code for an index or directory
 	CivixDocumentID string `pathParam:"style=simple,explode=false,name=civixDocumentId"`
-}
-
-type GetContentAspectIDCivixDocumentIDRequest struct {
-	PathParams GetContentAspectIDCivixDocumentIDPathParams
 }
 
 type GetContentAspectIDCivixDocumentIDResponse struct {

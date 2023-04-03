@@ -6,11 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type BillingAggregatedInformationGetAllSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // BillingAggregatedInformationGetAllPeriodEnum - Type of period that should be included in the Billing Information
@@ -64,18 +63,13 @@ func (e *BillingAggregatedInformationGetAllServiceEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type BillingAggregatedInformationGetAllQueryParams struct {
+type BillingAggregatedInformationGetAllRequest struct {
 	// Type of period that should be included in the Billing Information
 	Period *BillingAggregatedInformationGetAllPeriodEnum `queryParam:"style=form,explode=true,name=period"`
 	// Type of service that should be included in the Billing Information
 	Service *BillingAggregatedInformationGetAllServiceEnum `queryParam:"style=form,explode=true,name=service"`
 	// Controls whether the API should show the original plan when Azure Subscription is not enabled
 	ShowOriginalPlans *bool `queryParam:"style=form,explode=true,name=showOriginalPlans"`
-}
-
-type BillingAggregatedInformationGetAllRequest struct {
-	QueryParams BillingAggregatedInformationGetAllQueryParams
-	Security    BillingAggregatedInformationGetAllSecurity
 }
 
 // BillingAggregatedInformationGetAllDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeWorkspaceBundlesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeWorkspaceBundlesXAmzTargetEnum
 type DescribeWorkspaceBundlesXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *DescribeWorkspaceBundlesXAmzTargetEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type DescribeWorkspaceBundlesHeaders struct {
+type DescribeWorkspaceBundlesRequest struct {
+	DescribeWorkspaceBundlesRequest shared.DescribeWorkspaceBundlesRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                                `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type DescribeWorkspaceBundlesHeaders struct {
 	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeWorkspaceBundlesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeWorkspaceBundlesRequest struct {
-	QueryParams DescribeWorkspaceBundlesQueryParams
-	Headers     DescribeWorkspaceBundlesHeaders
-	Request     shared.DescribeWorkspaceBundlesRequest `request:"mediaType=application/json"`
 }
 
 type DescribeWorkspaceBundlesResponse struct {

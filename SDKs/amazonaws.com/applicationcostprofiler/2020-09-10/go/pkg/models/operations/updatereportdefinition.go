@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateReportDefinitionPathParams struct {
-	// Required. ID of the report to update.
-	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type UpdateReportDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateReportDefinitionRequestBodyDestinationS3Location - Represents the Amazon Simple Storage Service (Amazon S3) location where AWS Application Cost Profiler reports are generated and then written to.
 type UpdateReportDefinitionRequestBodyDestinationS3Location struct {
 	Bucket *string `json:"bucket,omitempty"`
@@ -93,9 +78,16 @@ type UpdateReportDefinitionRequestBody struct {
 }
 
 type UpdateReportDefinitionRequest struct {
-	PathParams UpdateReportDefinitionPathParams
-	Headers    UpdateReportDefinitionHeaders
-	Request    UpdateReportDefinitionRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateReportDefinitionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Required. ID of the report to update.
+	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 }
 
 type UpdateReportDefinitionResponse struct {

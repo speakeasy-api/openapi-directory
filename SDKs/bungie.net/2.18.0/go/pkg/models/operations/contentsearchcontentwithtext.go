@@ -7,28 +7,20 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ContentSearchContentWithTextPathParams struct {
-	Locale string `pathParam:"style=simple,explode=false,name=locale"`
-}
-
-type ContentSearchContentWithTextQueryParams struct {
+type ContentSearchContentWithTextRequest struct {
 	// Content type tag: Help, News, etc. Supply multiple ctypes separated by space.
 	Ctype *string `queryParam:"style=form,explode=true,name=ctype"`
 	// Page number for the search results, starting with page 1.
 	Currentpage *int `queryParam:"style=form,explode=true,name=currentpage"`
 	// Not used.
-	Head *bool `queryParam:"style=form,explode=true,name=head"`
+	Head   *bool  `queryParam:"style=form,explode=true,name=head"`
+	Locale string `pathParam:"style=simple,explode=false,name=locale"`
 	// Word or phrase for the search.
 	Searchtext *string `queryParam:"style=form,explode=true,name=searchtext"`
 	// For analytics, hint at the part of the app that triggered the search. Optional.
 	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// Tag used on the content to be searched.
 	Tag *string `queryParam:"style=form,explode=true,name=tag"`
-}
-
-type ContentSearchContentWithTextRequest struct {
-	PathParams  ContentSearchContentWithTextPathParams
-	QueryParams ContentSearchContentWithTextQueryParams
 }
 
 // ContentSearchContentWithText200Wildcard - Look at the Response property for more information about the nature of this response

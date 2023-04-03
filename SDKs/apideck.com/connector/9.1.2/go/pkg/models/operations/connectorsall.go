@@ -8,27 +8,18 @@ import (
 )
 
 type ConnectorsAllSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
-type ConnectorsAllQueryParams struct {
+type ConnectorsAllRequest struct {
 	// Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Apply filters
 	Filter *shared.ConnectorsFilter `queryParam:"style=deepObject,explode=true,name=filter"`
 	// Number of records to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type ConnectorsAllHeaders struct {
 	// The ID of your Unify application
 	XApideckAppID string `header:"style=simple,explode=false,name=x-apideck-app-id"`
-}
-
-type ConnectorsAllRequest struct {
-	QueryParams ConnectorsAllQueryParams
-	Headers     ConnectorsAllHeaders
-	Security    ConnectorsAllSecurity
 }
 
 type ConnectorsAllResponse struct {

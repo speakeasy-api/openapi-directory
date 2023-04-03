@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteCACertificatePathParams struct {
-	// The ID of the certificate to delete. (The last part of the certificate ARN contains the certificate ID.)
-	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
-}
-
-type DeleteCACertificateHeaders struct {
+type DeleteCACertificateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteCACertificateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteCACertificateRequest struct {
-	PathParams DeleteCACertificatePathParams
-	Headers    DeleteCACertificateHeaders
+	// The ID of the certificate to delete. (The last part of the certificate ARN contains the certificate ID.)
+	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
 }
 
 type DeleteCACertificateResponse struct {

@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListApplicationsQueryParams struct {
+type ListApplicationsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The unique identifier of the runtime environment where the applications are deployed.
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=environmentId"`
 	// The maximum number of applications to return.
@@ -16,21 +23,6 @@ type ListApplicationsQueryParams struct {
 	Names []string `queryParam:"style=form,explode=true,name=names"`
 	// A pagination token to control the number of applications displayed in the list.
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListApplicationsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListApplicationsRequest struct {
-	QueryParams ListApplicationsQueryParams
-	Headers     ListApplicationsHeaders
 }
 
 type ListApplicationsResponse struct {

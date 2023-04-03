@@ -8,7 +8,14 @@ import (
 	"time"
 )
 
-type ListDetectMitigationActionsExecutionsQueryParams struct {
+type ListDetectMitigationActionsExecutionsRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	//  The end of the time period for which ML Detect mitigation actions executions are returned.
 	EndTime *time.Time `queryParam:"style=form,explode=true,name=endTime"`
 	//  The maximum number of results to return at one time. The default is 25.
@@ -23,21 +30,6 @@ type ListDetectMitigationActionsExecutionsQueryParams struct {
 	ThingName *string `queryParam:"style=form,explode=true,name=thingName"`
 	//  The unique identifier of the violation.
 	ViolationID *string `queryParam:"style=form,explode=true,name=violationId"`
-}
-
-type ListDetectMitigationActionsExecutionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDetectMitigationActionsExecutionsRequest struct {
-	QueryParams ListDetectMitigationActionsExecutionsQueryParams
-	Headers     ListDetectMitigationActionsExecutionsHeaders
 }
 
 type ListDetectMitigationActionsExecutionsResponse struct {

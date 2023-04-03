@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateDestinationRequest struct {
-	Request shared.DestinationCreate `request:"mediaType=application/json"`
-}
-
 type CreateDestinationResponse struct {
 	ContentType string
 	// Successful operation

@@ -50,26 +50,18 @@ func (e *GETDisableLoggingVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDisableLoggingQueryParams struct {
+type GETDisableLoggingRequest struct {
 	Action GETDisableLoggingActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The identifier of the cluster on which logging is to be stopped.</p> <p>Example: <code>examplecluster</code> </p>
 	ClusterIdentifier string                       `queryParam:"style=form,explode=true,name=ClusterIdentifier"`
 	Version           GETDisableLoggingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDisableLoggingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDisableLoggingRequest struct {
-	QueryParams GETDisableLoggingQueryParams
-	Headers     GETDisableLoggingHeaders
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDisableLoggingResponse struct {

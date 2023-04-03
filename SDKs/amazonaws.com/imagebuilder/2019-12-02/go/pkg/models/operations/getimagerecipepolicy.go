@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetImageRecipePolicyQueryParams struct {
-	// The Amazon Resource Name (ARN) of the image recipe whose policy you want to retrieve.
-	ImageRecipeArn string `queryParam:"style=form,explode=true,name=imageRecipeArn"`
-}
-
-type GetImageRecipePolicyHeaders struct {
+type GetImageRecipePolicyRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetImageRecipePolicyHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetImageRecipePolicyRequest struct {
-	QueryParams GetImageRecipePolicyQueryParams
-	Headers     GetImageRecipePolicyHeaders
+	// The Amazon Resource Name (ARN) of the image recipe whose policy you want to retrieve.
+	ImageRecipeArn string `queryParam:"style=form,explode=true,name=imageRecipeArn"`
 }
 
 type GetImageRecipePolicyResponse struct {

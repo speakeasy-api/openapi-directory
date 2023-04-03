@@ -30,7 +30,8 @@ func (e *CreateJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateJobHeaders struct {
+type CreateJobRequest struct {
+	CreateJobRequest  shared.CreateJobRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type CreateJobHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        CreateJobXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type CreateJobRequest struct {
-	Headers CreateJobHeaders
-	Request shared.CreateJobRequest `request:"mediaType=application/json"`
 }
 
 type CreateJobResponse struct {

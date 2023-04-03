@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateNumberLeaseConfigSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateNumberLeaseConfigPathParams struct {
-	// A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
-	Number string `pathParam:"style=simple,explode=false,name=number"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateNumberLeaseConfigRequest struct {
-	PathParams UpdateNumberLeaseConfigPathParams
 	// The configuration of a number lease object. There are two available types of configuration: IVR, TRACKING
-	Request  *shared.NumberConfig `request:"mediaType=application/json"`
-	Security UpdateNumberLeaseConfigSecurity
+	NumberConfig *shared.NumberConfig `request:"mediaType=application/json"`
+	// A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
+	Number string `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNumberLeaseConfigResponse struct {

@@ -8,21 +8,16 @@ import (
 )
 
 type PatchMerchantsMerchantIDStoresStoreIDSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PatchMerchantsMerchantIDStoresStoreIDPathParams struct {
+type PatchMerchantsMerchantIDStoresStoreIDRequest struct {
+	UpdateStoreRequest *shared.UpdateStoreRequest `request:"mediaType=application/json"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// The unique identifier of the store.
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type PatchMerchantsMerchantIDStoresStoreIDRequest struct {
-	PathParams PatchMerchantsMerchantIDStoresStoreIDPathParams
-	Request    *shared.UpdateStoreRequest `request:"mediaType=application/json"`
-	Security   PatchMerchantsMerchantIDStoresStoreIDSecurity
 }
 
 type PatchMerchantsMerchantIDStoresStoreIDResponse struct {

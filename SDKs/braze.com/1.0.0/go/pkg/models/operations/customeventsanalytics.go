@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type CustomEventsAnalyticsQueryParams struct {
+type CustomEventsAnalyticsRequest struct {
 	// (Optional) String
 	//
 	// App API identifier retrieved from the Developer Console to limit analytics to a specific app
@@ -31,10 +31,6 @@ type CustomEventsAnalyticsQueryParams struct {
 	//
 	// Unit of time between data points - can be "day" or "hour" (defaults to "day")
 	Unit *string `queryParam:"style=form,explode=true,name=unit"`
-}
-
-type CustomEventsAnalyticsRequest struct {
-	QueryParams CustomEventsAnalyticsQueryParams
 }
 
 type CustomEventsAnalyticsResponse struct {

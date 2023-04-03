@@ -13,46 +13,46 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateParallelDataRequest{
-        Headers: operations.CreateParallelDataHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AWSShineFrontendService_20170701.CreateParallelData",
-        },
-        Request: shared.CreateParallelDataRequest{
-            ClientToken: "illum",
-            Description: "vel",
+        CreateParallelDataRequest: shared.CreateParallelDataRequest{
+            ClientToken: "corrupti",
+            Description: "provident",
             EncryptionKey: &shared.EncryptionKey{
-                ID: "error",
+                ID: "distinctio",
                 Type: "KMS",
             },
-            Name: "deserunt",
+            Name: "quibusdam",
             ParallelDataConfig: shared.ParallelDataConfig{
                 Format: "CSV",
-                S3URI: "iure",
+                S3URI: "nulla",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "illum",
+                    Value: "vel",
                 },
                 shared.Tag{
-                    Key: "delectus",
-                    Value: "tempora",
+                    Key: "error",
+                    Value: "deserunt",
+                },
+                shared.Tag{
+                    Key: "suscipit",
+                    Value: "iure",
                 },
             },
         },
+        XAmzAlgorithm: "magnam",
+        XAmzContentSha256: "debitis",
+        XAmzCredential: "ipsa",
+        XAmzDate: "delectus",
+        XAmzSecurityToken: "tempora",
+        XAmzSignature: "suscipit",
+        XAmzSignedHeaders: "molestiae",
+        XAmzTarget: "AWSShineFrontendService_20170701.CreateParallelData",
     }
 
     ctx := context.Background()

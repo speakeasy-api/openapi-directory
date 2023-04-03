@@ -6,18 +6,10 @@ import (
 	"net/http"
 )
 
-type GetPostPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPostHeaders struct {
+type GetPostRequest struct {
 	APIKey      string `header:"style=simple,explode=false,name=Api-Key"`
 	APIUsername string `header:"style=simple,explode=false,name=Api-Username"`
-}
-
-type GetPostRequest struct {
-	PathParams GetPostPathParams
-	Headers    GetPostHeaders
+	ID          string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetPost200ApplicationJSONActionsSummary struct {

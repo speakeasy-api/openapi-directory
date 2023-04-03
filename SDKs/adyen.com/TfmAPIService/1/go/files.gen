@@ -20,7 +20,6 @@ pkg/models/operations/postgetterminalsunderaccount.go
 pkg/models/shared/serviceerror.go
 pkg/models/shared/assignterminalsresponse.go
 pkg/models/shared/assignterminalsrequest.go
-pkg/models/shared/security.go
 pkg/models/shared/findterminalresponse.go
 pkg/models/shared/findterminalrequest.go
 pkg/models/shared/getstoresunderaccountresponse.go

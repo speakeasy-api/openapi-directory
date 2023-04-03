@@ -30,7 +30,7 @@ func (e *GetComplianceSummaryByConfigRuleXAmzTargetEnum) UnmarshalJSON(data []by
 	}
 }
 
-type GetComplianceSummaryByConfigRuleHeaders struct {
+type GetComplianceSummaryByConfigRuleRequest struct {
 	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,10 +39,6 @@ type GetComplianceSummaryByConfigRuleHeaders struct {
 	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetComplianceSummaryByConfigRuleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetComplianceSummaryByConfigRuleRequest struct {
-	Headers GetComplianceSummaryByConfigRuleHeaders
 }
 
 type GetComplianceSummaryByConfigRuleResponse struct {

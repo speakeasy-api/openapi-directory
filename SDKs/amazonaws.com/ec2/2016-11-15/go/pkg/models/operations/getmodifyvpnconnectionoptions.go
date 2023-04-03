@@ -50,7 +50,7 @@ func (e *GETModifyVpnConnectionOptionsVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETModifyVpnConnectionOptionsQueryParams struct {
+type GETModifyVpnConnectionOptionsRequest struct {
 	Action GETModifyVpnConnectionOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -64,10 +64,7 @@ type GETModifyVpnConnectionOptionsQueryParams struct {
 	RemoteIpv6NetworkCidr *string                                  `queryParam:"style=form,explode=true,name=RemoteIpv6NetworkCidr"`
 	Version               GETModifyVpnConnectionOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the Site-to-Site VPN connection.
-	VpnConnectionID string `queryParam:"style=form,explode=true,name=VpnConnectionId"`
-}
-
-type GETModifyVpnConnectionOptionsHeaders struct {
+	VpnConnectionID   string  `queryParam:"style=form,explode=true,name=VpnConnectionId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -75,11 +72,6 @@ type GETModifyVpnConnectionOptionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyVpnConnectionOptionsRequest struct {
-	QueryParams GETModifyVpnConnectionOptionsQueryParams
-	Headers     GETModifyVpnConnectionOptionsHeaders
 }
 
 type GETModifyVpnConnectionOptionsResponse struct {

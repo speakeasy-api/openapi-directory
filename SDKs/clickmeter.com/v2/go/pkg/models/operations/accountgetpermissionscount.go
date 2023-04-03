@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountGetPermissionsCountPathParams struct {
-	// Id of the guest
-	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
-}
-
 // AccountGetPermissionsCountEntityTypeEnum - Can be "datapoint" or "group"
 type AccountGetPermissionsCountEntityTypeEnum string
 
@@ -62,18 +57,15 @@ func (e *AccountGetPermissionsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountGetPermissionsCountQueryParams struct {
+type AccountGetPermissionsCountRequest struct {
 	// Optional id of the datapoint/group entity to filter by
 	EntityID *int64 `queryParam:"style=form,explode=true,name=entityId"`
 	// Can be "datapoint" or "group"
 	EntityType *AccountGetPermissionsCountEntityTypeEnum `queryParam:"style=form,explode=true,name=entityType"`
+	// Id of the guest
+	GuestID int64 `pathParam:"style=simple,explode=false,name=guestId"`
 	// Can be "w" or "r"
 	Type *AccountGetPermissionsCountTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type AccountGetPermissionsCountRequest struct {
-	PathParams  AccountGetPermissionsCountPathParams
-	QueryParams AccountGetPermissionsCountQueryParams
 }
 
 type AccountGetPermissionsCountResponse struct {

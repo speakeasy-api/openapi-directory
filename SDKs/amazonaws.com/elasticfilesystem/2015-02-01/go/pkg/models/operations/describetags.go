@@ -7,19 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeTagsPathParams struct {
+type DescribeTagsRequest struct {
 	// The ID of the file system whose tag set you want to retrieve.
 	FileSystemID string `pathParam:"style=simple,explode=false,name=FileSystemId"`
-}
-
-type DescribeTagsQueryParams struct {
 	// (Optional) An opaque pagination token returned from a previous <code>DescribeTags</code> operation (String). If present, it specifies to continue the list from where the previous call left off.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// (Optional) The maximum number of file system tags to return in the response. Currently, this number is automatically set to 100, and other values are ignored. The response is paginated at 100 per page if you have more than 100 tags.
-	MaxItems *int64 `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type DescribeTagsHeaders struct {
+	MaxItems          *int64  `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +21,6 @@ type DescribeTagsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeTagsRequest struct {
-	PathParams  DescribeTagsPathParams
-	QueryParams DescribeTagsQueryParams
-	Headers     DescribeTagsHeaders
 }
 
 type DescribeTagsResponse struct {

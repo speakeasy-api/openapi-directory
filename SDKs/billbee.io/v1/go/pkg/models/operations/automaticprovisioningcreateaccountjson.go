@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type AutomaticProvisioningCreateAccountJSONRequest struct {
-	Request shared.RechnungsdruckWebAppControllersAPIAutomaticProvisioningControllerCreateAccountContainer `request:"mediaType=application/json"`
-}
 
 type AutomaticProvisioningCreateAccountJSONResponse struct {
 	// OK

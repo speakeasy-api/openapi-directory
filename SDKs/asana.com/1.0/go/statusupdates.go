@@ -47,7 +47,7 @@ func (s *statusUpdates) CreateStatusForObject(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/status_updates"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -62,7 +62,7 @@ func (s *statusUpdates) CreateStatusForObject(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,14 +124,14 @@ func (s *statusUpdates) CreateStatusForObject(ctx context.Context, request opera
 // Returns an empty data record.
 func (s *statusUpdates) DeleteStatus(ctx context.Context, request operations.DeleteStatusRequest) (*operations.DeleteStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -191,14 +191,14 @@ func (s *statusUpdates) DeleteStatus(ctx context.Context, request operations.Del
 // Returns the complete record for a single status update.
 func (s *statusUpdates) GetStatus(ctx context.Context, request operations.GetStatusRequest) (*operations.GetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -265,7 +265,7 @@ func (s *statusUpdates) GetStatusesForObject(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

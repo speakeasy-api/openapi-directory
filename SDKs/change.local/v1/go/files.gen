@@ -19,5 +19,4 @@ pkg/models/operations/getapiv1donationsshow.go
 pkg/models/operations/getapiv1nonprofitslist.go
 pkg/models/operations/getapiv1nonprofitsshow.go
 pkg/models/operations/postapiv1donationscreate.go
-pkg/models/shared/security.go
 USAGE.md

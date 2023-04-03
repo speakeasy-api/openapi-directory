@@ -71,7 +71,7 @@ func (e *GETDescribeAddressesAttributeVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETDescribeAddressesAttributeQueryParams struct {
+type GETDescribeAddressesAttributeRequest struct {
 	Action GETDescribeAddressesAttributeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// [EC2-VPC] The allocation IDs.
 	AllocationID []string `queryParam:"style=form,explode=true,name=AllocationId"`
@@ -82,23 +82,15 @@ type GETDescribeAddressesAttributeQueryParams struct {
 	// The maximum number of results to return with a single call. To retrieve the remaining results, make another call with the returned <code>nextToken</code> value.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// The token for the next page of results.
-	NextToken *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
-	Version   GETDescribeAddressesAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeAddressesAttributeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeAddressesAttributeRequest struct {
-	QueryParams GETDescribeAddressesAttributeQueryParams
-	Headers     GETDescribeAddressesAttributeHeaders
+	NextToken         *string                                  `queryParam:"style=form,explode=true,name=NextToken"`
+	Version           GETDescribeAddressesAttributeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeAddressesAttributeResponse struct {

@@ -6,29 +6,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesAvailableToTesterSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ReleasesAvailableToTesterPathParams struct {
+type ReleasesAvailableToTesterRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ReleasesAvailableToTesterQueryParams struct {
 	// when *true*, filters out releases that were uploaded but were never distributed. Releases that under deleted distribution groups will not be filtered out.
 	PublishedOnly *bool `queryParam:"style=form,explode=true,name=published_only"`
-}
-
-type ReleasesAvailableToTesterRequest struct {
-	PathParams  ReleasesAvailableToTesterPathParams
-	QueryParams ReleasesAvailableToTesterQueryParams
-	Security    ReleasesAvailableToTesterSecurity
 }
 
 // ReleasesAvailableToTester200ApplicationJSONBuild - Build information for the release

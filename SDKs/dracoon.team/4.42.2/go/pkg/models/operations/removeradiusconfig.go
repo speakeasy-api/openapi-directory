@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveRadiusConfigHeaders struct {
+type RemoveRadiusConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RemoveRadiusConfigRequest struct {
-	Headers RemoveRadiusConfigHeaders
 }
 
 type RemoveRadiusConfigResponse struct {

@@ -8,24 +8,15 @@ import (
 )
 
 type ImplantableDevicesReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ImplantableDevicesReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type ImplantableDevicesReadQueryParams struct {
-	Doctor      *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	MuDate      *string `queryParam:"style=form,explode=true,name=mu_date"`
-	MuDateRange *string `queryParam:"style=form,explode=true,name=mu_date_range"`
-	Patient     *int64  `queryParam:"style=form,explode=true,name=patient"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ImplantableDevicesReadRequest struct {
-	PathParams  ImplantableDevicesReadPathParams
-	QueryParams ImplantableDevicesReadQueryParams
-	Security    ImplantableDevicesReadSecurity
+	Doctor      *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	ID          string  `pathParam:"style=simple,explode=false,name=id"`
+	MuDate      *string `queryParam:"style=form,explode=true,name=mu_date"`
+	MuDateRange *string `queryParam:"style=form,explode=true,name=mu_date_range"`
+	Patient     *int64  `queryParam:"style=form,explode=true,name=patient"`
 }
 
 type ImplantableDevicesReadResponse struct {

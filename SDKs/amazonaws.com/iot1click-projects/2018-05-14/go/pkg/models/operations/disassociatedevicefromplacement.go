@@ -6,16 +6,7 @@ import (
 	"net/http"
 )
 
-type DisassociateDeviceFromPlacementPathParams struct {
-	// The device ID that should be removed from the placement.
-	DeviceTemplateName string `pathParam:"style=simple,explode=false,name=deviceTemplateName"`
-	// The name of the placement that the device should be removed from.
-	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
-	// The name of the project that contains the placement.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type DisassociateDeviceFromPlacementHeaders struct {
+type DisassociateDeviceFromPlacementRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -23,11 +14,12 @@ type DisassociateDeviceFromPlacementHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisassociateDeviceFromPlacementRequest struct {
-	PathParams DisassociateDeviceFromPlacementPathParams
-	Headers    DisassociateDeviceFromPlacementHeaders
+	// The device ID that should be removed from the placement.
+	DeviceTemplateName string `pathParam:"style=simple,explode=false,name=deviceTemplateName"`
+	// The name of the placement that the device should be removed from.
+	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
+	// The name of the project that contains the placement.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type DisassociateDeviceFromPlacementResponse struct {

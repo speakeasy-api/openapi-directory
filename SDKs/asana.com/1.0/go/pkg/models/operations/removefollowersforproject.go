@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveFollowersForProjectPathParams struct {
-	// Globally unique identifier for the project.
-	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
+// RemoveFollowersForProjectRequestBody - Information about the followers being removed.
+type RemoveFollowersForProjectRequestBody struct {
+	Data *shared.RemoveFollowersRequest `json:"data,omitempty"`
 }
 
-type RemoveFollowersForProjectQueryParams struct {
+type RemoveFollowersForProjectRequest struct {
+	// Information about the followers being removed.
+	RequestBody RemoveFollowersForProjectRequestBody `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type RemoveFollowersForProjectQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// RemoveFollowersForProjectRequestBody - Information about the followers being removed.
-type RemoveFollowersForProjectRequestBody struct {
-	Data *shared.RemoveFollowersRequest `json:"data,omitempty"`
-}
-
-type RemoveFollowersForProjectRequest struct {
-	PathParams  RemoveFollowersForProjectPathParams
-	QueryParams RemoveFollowersForProjectQueryParams
-	// Information about the followers being removed.
-	Request RemoveFollowersForProjectRequestBody `request:"mediaType=application/json"`
+	// Globally unique identifier for the project.
+	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
 }
 
 // RemoveFollowersForProject200ApplicationJSON - Successfully removed followers from the project.

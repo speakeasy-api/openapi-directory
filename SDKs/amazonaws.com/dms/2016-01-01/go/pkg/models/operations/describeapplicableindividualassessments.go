@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeApplicableIndividualAssessmentsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-}
-
 // DescribeApplicableIndividualAssessmentsXAmzTargetEnum
 type DescribeApplicableIndividualAssessmentsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeApplicableIndividualAssessmentsXAmzTargetEnum) UnmarshalJSON(da
 	}
 }
 
-type DescribeApplicableIndividualAssessmentsHeaders struct {
+type DescribeApplicableIndividualAssessmentsRequest struct {
+	DescribeApplicableIndividualAssessmentsMessage shared.DescribeApplicableIndividualAssessmentsMessage `request:"mediaType=application/json"`
+	// Pagination token
+	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
+	// Pagination limit
+	MaxRecords        *string                                               `queryParam:"style=form,explode=true,name=MaxRecords"`
 	XAmzAlgorithm     *string                                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeApplicableIndividualAssessmentsHeaders struct {
 	XAmzSignature     *string                                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeApplicableIndividualAssessmentsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeApplicableIndividualAssessmentsRequest struct {
-	QueryParams DescribeApplicableIndividualAssessmentsQueryParams
-	Headers     DescribeApplicableIndividualAssessmentsHeaders
-	Request     shared.DescribeApplicableIndividualAssessmentsMessage `request:"mediaType=application/json"`
 }
 
 type DescribeApplicableIndividualAssessmentsResponse struct {

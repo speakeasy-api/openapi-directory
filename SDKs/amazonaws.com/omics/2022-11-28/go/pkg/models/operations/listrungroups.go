@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListRunGroupsQueryParams struct {
-	// The maximum number of run groups to return in one page of results.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The run groups' name.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-	// Specify the pagination token from a previous request to retrieve the next page of results.
-	StartingToken *string `queryParam:"style=form,explode=true,name=startingToken"`
-}
-
-type ListRunGroupsHeaders struct {
+type ListRunGroupsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type ListRunGroupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRunGroupsRequest struct {
-	QueryParams ListRunGroupsQueryParams
-	Headers     ListRunGroupsHeaders
+	// The maximum number of run groups to return in one page of results.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The run groups' name.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
+	// Specify the pagination token from a previous request to retrieve the next page of results.
+	StartingToken *string `queryParam:"style=form,explode=true,name=startingToken"`
 }
 
 type ListRunGroupsResponse struct {

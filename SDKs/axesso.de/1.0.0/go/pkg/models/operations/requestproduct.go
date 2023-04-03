@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestProductQueryParams struct {
+type RequestProductRequest struct {
 	// Size parameter if available.
 	Size *string `queryParam:"style=form,explode=true,name=size"`
 	// The url of the requested product.
 	URL string `queryParam:"style=form,explode=true,name=url"`
-}
-
-type RequestProductRequest struct {
-	QueryParams RequestProductQueryParams
 }
 
 type RequestProductResponse struct {

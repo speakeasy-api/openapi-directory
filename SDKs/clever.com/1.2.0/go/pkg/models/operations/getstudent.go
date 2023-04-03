@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStudentPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetStudentQueryParams struct {
-	Include *string `queryParam:"style=form,explode=true,name=include"`
-}
-
 type GetStudentRequest struct {
-	PathParams  GetStudentPathParams
-	QueryParams GetStudentQueryParams
+	ID      string  `pathParam:"style=simple,explode=false,name=id"`
+	Include *string `queryParam:"style=form,explode=true,name=include"`
 }
 
 type GetStudentResponse struct {

@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type VatLevelTwoSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type VatLevelTwoPathParams struct {
-	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
-	Country string `pathParam:"style=simple,explode=false,name=country"`
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
 }
 
 // VatLevelTwoRequestBody - VAT number and confirmation request
@@ -25,10 +19,10 @@ type VatLevelTwoRequestBody struct {
 }
 
 type VatLevelTwoRequest struct {
-	PathParams VatLevelTwoPathParams
 	// VAT number and confirmation request
-	Request  VatLevelTwoRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	Security VatLevelTwoSecurity
+	RequestBody VatLevelTwoRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	// ISO_3166-1_alpha-2 representation of a country name - 2 chars
+	Country string `pathParam:"style=simple,explode=false,name=country"`
 }
 
 // VatLevelTwoDefaultApplicationJSON - Detailed information about the error

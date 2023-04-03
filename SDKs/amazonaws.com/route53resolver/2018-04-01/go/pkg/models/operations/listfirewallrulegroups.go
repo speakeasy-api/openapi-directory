@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFirewallRuleGroupsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListFirewallRuleGroupsXAmzTargetEnum
 type ListFirewallRuleGroupsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListFirewallRuleGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type ListFirewallRuleGroupsHeaders struct {
+type ListFirewallRuleGroupsRequest struct {
+	ListFirewallRuleGroupsRequest shared.ListFirewallRuleGroupsRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                              `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListFirewallRuleGroupsHeaders struct {
 	XAmzSignature     *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListFirewallRuleGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListFirewallRuleGroupsRequest struct {
-	QueryParams ListFirewallRuleGroupsQueryParams
-	Headers     ListFirewallRuleGroupsHeaders
-	Request     shared.ListFirewallRuleGroupsRequest `request:"mediaType=application/json"`
 }
 
 type ListFirewallRuleGroupsResponse struct {

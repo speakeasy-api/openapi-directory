@@ -7,23 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMapTilePathParams struct {
+type GetMapTileRequest struct {
 	// The map resource to retrieve the map tiles from.
 	MapName string `pathParam:"style=simple,explode=false,name=MapName"`
 	// The X axis value for the map tile.
-	X string `pathParam:"style=simple,explode=false,name=X"`
-	// The Y axis value for the map tile.
-	Y string `pathParam:"style=simple,explode=false,name=Y"`
-	// The zoom value for the map tile.
-	Z string `pathParam:"style=simple,explode=false,name=Z"`
-}
-
-type GetMapTileQueryParams struct {
-	// The optional <a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html">API key</a> to authorize the request.
-	Key *string `queryParam:"style=form,explode=true,name=key"`
-}
-
-type GetMapTileHeaders struct {
+	X                 string  `pathParam:"style=simple,explode=false,name=X"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -31,12 +19,12 @@ type GetMapTileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMapTileRequest struct {
-	PathParams  GetMapTilePathParams
-	QueryParams GetMapTileQueryParams
-	Headers     GetMapTileHeaders
+	// The Y axis value for the map tile.
+	Y string `pathParam:"style=simple,explode=false,name=Y"`
+	// The zoom value for the map tile.
+	Z string `pathParam:"style=simple,explode=false,name=Z"`
+	// The optional <a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html">API key</a> to authorize the request.
+	Key *string `queryParam:"style=form,explode=true,name=key"`
 }
 
 type GetMapTileResponse struct {

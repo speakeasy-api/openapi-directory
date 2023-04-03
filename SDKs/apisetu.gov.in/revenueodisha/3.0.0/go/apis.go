@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Rdcer - Copy of Registered Deed
 // API to verify Copy of Registered Deed.
-func (s *apIs) Rdcer(ctx context.Context, request operations.RdcerRequest) (*operations.RdcerResponse, error) {
+func (s *apIs) Rdcer(ctx context.Context, request operations.RdcerRequestBody, security operations.RdcerSecurity) (*operations.RdcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rdcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Rdcer(ctx context.Context, request operations.RdcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Rdcer(ctx context.Context, request operations.RdcerRequest) (*ope
 
 // Ror1b - Records of Rights
 // API to verify Records of Rights.
-func (s *apIs) Ror1b(ctx context.Context, request operations.Ror1bRequest) (*operations.Ror1bResponse, error) {
+func (s *apIs) Ror1b(ctx context.Context, request operations.Ror1bRequestBody, security operations.Ror1bSecurity) (*operations.Ror1bResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ror1b/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Ror1b(ctx context.Context, request operations.Ror1bRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

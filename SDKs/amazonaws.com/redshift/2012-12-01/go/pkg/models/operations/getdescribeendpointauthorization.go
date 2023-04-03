@@ -50,7 +50,7 @@ func (e *GETDescribeEndpointAuthorizationVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETDescribeEndpointAuthorizationQueryParams struct {
+type GETDescribeEndpointAuthorizationRequest struct {
 	// The Amazon Web Services account ID of either the cluster owner (grantor) or grantee. If <code>Grantee</code> parameter is true, then the <code>Account</code> value is of the grantor.
 	Account *string                                    `queryParam:"style=form,explode=true,name=Account"`
 	Action  GETDescribeEndpointAuthorizationActionEnum `queryParam:"style=form,explode=true,name=Action"`
@@ -61,23 +61,15 @@ type GETDescribeEndpointAuthorizationQueryParams struct {
 	// An optional pagination token provided by a previous <code>DescribeEndpointAuthorization</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by the <code>MaxRecords</code> parameter.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a pagination token called a <code>Marker</code> is included in the response so that the remaining results can be retrieved.
-	MaxRecords *int64                                      `queryParam:"style=form,explode=true,name=MaxRecords"`
-	Version    GETDescribeEndpointAuthorizationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEndpointAuthorizationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEndpointAuthorizationRequest struct {
-	QueryParams GETDescribeEndpointAuthorizationQueryParams
-	Headers     GETDescribeEndpointAuthorizationHeaders
+	MaxRecords        *int64                                      `queryParam:"style=form,explode=true,name=MaxRecords"`
+	Version           GETDescribeEndpointAuthorizationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEndpointAuthorizationResponse struct {

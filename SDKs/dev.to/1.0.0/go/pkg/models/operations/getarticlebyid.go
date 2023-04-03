@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type GetArticleByIDPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type GetArticleByIDRequest struct {
-	PathParams GetArticleByIDPathParams
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetArticleByIDResponse struct {

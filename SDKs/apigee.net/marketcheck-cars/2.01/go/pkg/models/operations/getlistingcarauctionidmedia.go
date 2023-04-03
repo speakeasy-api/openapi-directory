@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetListingCarAuctionIDMediaPathParams struct {
-	// Listing id to get all the listing attributes
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetListingCarAuctionIDMediaQueryParams struct {
+type GetListingCarAuctionIDMediaRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Flag on whether to include api_key in response API urls (if any)
 	AppendAPIKey *bool `queryParam:"style=form,explode=true,name=append_api_key"`
-}
-
-type GetListingCarAuctionIDMediaRequest struct {
-	PathParams  GetListingCarAuctionIDMediaPathParams
-	QueryParams GetListingCarAuctionIDMediaQueryParams
+	// Listing id to get all the listing attributes
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetListingCarAuctionIDMediaResponse struct {

@@ -50,7 +50,7 @@ func (e *GETAssociateDhcpOptionsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAssociateDhcpOptionsQueryParams struct {
+type GETAssociateDhcpOptionsRequest struct {
 	Action GETAssociateDhcpOptionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the DHCP options set, or <code>default</code> to associate no DHCP options with the VPC.
 	DhcpOptionsID string `queryParam:"style=form,explode=true,name=DhcpOptionsId"`
@@ -58,10 +58,7 @@ type GETAssociateDhcpOptionsQueryParams struct {
 	DryRun  *bool                              `queryParam:"style=form,explode=true,name=DryRun"`
 	Version GETAssociateDhcpOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETAssociateDhcpOptionsHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -69,11 +66,6 @@ type GETAssociateDhcpOptionsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateDhcpOptionsRequest struct {
-	QueryParams GETAssociateDhcpOptionsQueryParams
-	Headers     GETAssociateDhcpOptionsHeaders
 }
 
 type GETAssociateDhcpOptionsResponse struct {

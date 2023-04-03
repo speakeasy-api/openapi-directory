@@ -50,25 +50,17 @@ func (e *POSTGetAccessKeyLastUsedVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTGetAccessKeyLastUsedQueryParams struct {
-	Action  POSTGetAccessKeyLastUsedActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetAccessKeyLastUsedVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetAccessKeyLastUsedHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetAccessKeyLastUsedRequest struct {
-	QueryParams POSTGetAccessKeyLastUsedQueryParams
-	Headers     POSTGetAccessKeyLastUsedHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetAccessKeyLastUsedActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTGetAccessKeyLastUsedVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetAccessKeyLastUsedResponse struct {

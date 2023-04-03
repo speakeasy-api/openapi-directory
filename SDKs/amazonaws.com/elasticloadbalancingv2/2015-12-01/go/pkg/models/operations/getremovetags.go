@@ -50,28 +50,20 @@ func (e *GETRemoveTagsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETRemoveTagsQueryParams struct {
+type GETRemoveTagsRequest struct {
 	Action GETRemoveTagsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the resource.
 	ResourceArns []string `queryParam:"style=form,explode=true,name=ResourceArns"`
 	// The tag keys for the tags to remove.
-	TagKeys []string                 `queryParam:"style=form,explode=true,name=TagKeys"`
-	Version GETRemoveTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemoveTagsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRemoveTagsRequest struct {
-	QueryParams GETRemoveTagsQueryParams
-	Headers     GETRemoveTagsHeaders
+	TagKeys           []string                 `queryParam:"style=form,explode=true,name=TagKeys"`
+	Version           GETRemoveTagsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemoveTagsResponse struct {

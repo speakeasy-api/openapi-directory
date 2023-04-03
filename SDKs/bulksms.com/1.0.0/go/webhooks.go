@@ -35,7 +35,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteWebhooksID - Delete a webhook
 func (s *webhooks) DeleteWebhooksID(ctx context.Context, request operations.DeleteWebhooksIDRequest) (*operations.DeleteWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *webhooks) DeleteWebhooksID(ctx context.Context, request operations.Dele
 
 // GetWebhooks - List webhooks
 // Contains a list of your webhooks
-func (s *webhooks) GetWebhooks(ctx context.Context, request operations.GetWebhooksRequest) (*operations.GetWebhooksResponse, error) {
+func (s *webhooks) GetWebhooks(ctx context.Context) (*operations.GetWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks"
 
@@ -88,7 +88,7 @@ func (s *webhooks) GetWebhooks(ctx context.Context, request operations.GetWebhoo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *webhooks) GetWebhooks(ctx context.Context, request operations.GetWebhoo
 // GetWebhooksID - Read a webhook
 func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebhooksIDRequest) (*operations.GetWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -232,7 +232,7 @@ func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebh
 // The following emails can be expected
 //   - A __message retrying__ email is sent after an invocation has failed with a retry-able error.  This email is an early warning, allowing you to investigate your systems.
 //   - A __message discarded__ email is sent after failure email is send when a message is discarded as a consequence of a non-retry-able error.
-func (s *webhooks) PostWebhooks(ctx context.Context, request operations.PostWebhooksRequest) (*operations.PostWebhooksResponse, error) {
+func (s *webhooks) PostWebhooks(ctx context.Context, request shared.WebhookEntry, security operations.PostWebhooksSecurity) (*operations.PostWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks"
 
@@ -251,7 +251,7 @@ func (s *webhooks) PostWebhooks(ctx context.Context, request operations.PostWebh
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -298,9 +298,9 @@ func (s *webhooks) PostWebhooks(ctx context.Context, request operations.PostWebh
 // PostWebhooksID - Update a webhook
 func (s *webhooks) PostWebhooksID(ctx context.Context, request operations.PostWebhooksIDRequest) (*operations.PostWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookEntry", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteChannelCatalogProductValueOverridePathParams struct {
+type DeleteChannelCatalogProductValueOverrideRequest struct {
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
 	// The channel column identifier
 	ChannelColumnID string `pathParam:"style=simple,explode=false,name=channelColumnId"`
 	// The product identifier
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type DeleteChannelCatalogProductValueOverrideRequest struct {
-	PathParams DeleteChannelCatalogProductValueOverridePathParams
 }
 
 type DeleteChannelCatalogProductValueOverrideResponse struct {

@@ -6,27 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DistributionGroupsDetailsForOrgSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DistributionGroupsDetailsForOrgPathParams struct {
-	// The organization's name
-	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
-}
-
-type DistributionGroupsDetailsForOrgQueryParams struct {
-	// The max number of apps to include in the response
-	AppsLimit *float64 `queryParam:"style=form,explode=true,name=apps_limit"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DistributionGroupsDetailsForOrgRequest struct {
-	PathParams  DistributionGroupsDetailsForOrgPathParams
-	QueryParams DistributionGroupsDetailsForOrgQueryParams
-	Security    DistributionGroupsDetailsForOrgSecurity
+	// The max number of apps to include in the response
+	AppsLimit *float64 `queryParam:"style=form,explode=true,name=apps_limit"`
+	// The organization's name
+	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 }
 
 type DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum string

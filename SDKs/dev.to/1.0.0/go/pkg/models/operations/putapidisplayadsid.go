@@ -8,11 +8,6 @@ import (
 	"net/http"
 )
 
-type PutAPIDisplayAdsIDPathParams struct {
-	// The ID of the user to unpublish.
-	ID int `pathParam:"style=simple,explode=false,name=id"`
-}
-
 // PutAPIDisplayAdsIDRequestBodyDisplayToEnum - Potentially limits visitors to whom the ad is visible
 type PutAPIDisplayAdsIDRequestBodyDisplayToEnum string
 
@@ -95,8 +90,9 @@ type PutAPIDisplayAdsIDRequestBody struct {
 }
 
 type PutAPIDisplayAdsIDRequest struct {
-	PathParams PutAPIDisplayAdsIDPathParams
-	Request    *PutAPIDisplayAdsIDRequestBody `request:"mediaType=application/json"`
+	RequestBody *PutAPIDisplayAdsIDRequestBody `request:"mediaType=application/json"`
+	// The ID of the user to unpublish.
+	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutAPIDisplayAdsIDResponse struct {

@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteConfigPathParams struct {
+type DeleteConfigRequest struct {
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-}
-
-type DeleteConfigRequest struct {
-	PathParams DeleteConfigPathParams
 }
 
 type DeleteConfigResponse struct {

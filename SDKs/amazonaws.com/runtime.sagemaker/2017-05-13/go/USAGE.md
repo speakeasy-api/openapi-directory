@@ -13,36 +13,30 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.InvokeEndpointRequest{
-        PathParams: operations.InvokeEndpointPathParams{
-            EndpointName: "corrupti",
+        Accept: "corrupti",
+        ContentType: "provident",
+        EndpointName: "distinctio",
+        RequestBody: operations.InvokeEndpointRequestBody{
+            Body: "quibusdam",
         },
-        Headers: operations.InvokeEndpointHeaders{
-            Accept: "provident",
-            ContentType: "distinctio",
-            XAmzAlgorithm: "quibusdam",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "nulla",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "illum",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "error",
-            XAmznSageMakerCustomAttributes: "deserunt",
-            XAmznSageMakerEnableExplanations: "suscipit",
-            XAmznSageMakerInferenceID: "iure",
-            XAmznSageMakerTargetContainerHostname: "magnam",
-            XAmznSageMakerTargetModel: "debitis",
-            XAmznSageMakerTargetVariant: "ipsa",
-        },
-        Request: operations.InvokeEndpointRequestBody{
-            Body: "delectus",
-        },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmznSageMakerCustomAttributes: "suscipit",
+        XAmznSageMakerEnableExplanations: "iure",
+        XAmznSageMakerInferenceID: "magnam",
+        XAmznSageMakerTargetContainerHostname: "debitis",
+        XAmznSageMakerTargetModel: "ipsa",
+        XAmznSageMakerTargetVariant: "delectus",
     }
 
     ctx := context.Background()

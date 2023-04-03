@@ -138,7 +138,7 @@ func (e *PredictCarPriceTransmissionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type PredictCarPriceQueryParams struct {
+type PredictCarPriceRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Base exterior color of the car
@@ -189,10 +189,6 @@ type PredictCarPriceQueryParams struct {
 	Year *int64 `queryParam:"style=form,explode=true,name=year"`
 	// Location zip
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type PredictCarPriceRequest struct {
-	QueryParams PredictCarPriceQueryParams
 }
 
 type PredictCarPriceResponse struct {

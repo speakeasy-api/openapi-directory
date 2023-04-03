@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetFormResponsesQueryParams struct {
+type GetFormResponsesRequest struct {
 	// Restrict results to responses relating to this contribution.
 	Contribution *string `queryParam:"style=form,explode=true,name=contribution"`
 	// Restrict results to responses submitted to this form.
 	Form *string `queryParam:"style=form,explode=true,name=form"`
 	// Restrict results to responses submitted by this user.
 	User *string `queryParam:"style=form,explode=true,name=user"`
-}
-
-type GetFormResponsesRequest struct {
-	QueryParams GetFormResponsesQueryParams
 }
 
 type GetFormResponsesResponse struct {

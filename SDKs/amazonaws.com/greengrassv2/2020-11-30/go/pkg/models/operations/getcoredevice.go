@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCoreDevicePathParams struct {
-	// The name of the core device. This is also the name of the IoT thing.
-	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
-}
-
-type GetCoreDeviceHeaders struct {
+type GetCoreDeviceRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetCoreDeviceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetCoreDeviceRequest struct {
-	PathParams GetCoreDevicePathParams
-	Headers    GetCoreDeviceHeaders
+	// The name of the core device. This is also the name of the IoT thing.
+	CoreDeviceThingName string `pathParam:"style=simple,explode=false,name=coreDeviceThingName"`
 }
 
 type GetCoreDeviceResponse struct {

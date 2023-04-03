@@ -50,25 +50,17 @@ func (e *GETDescribeStopwordOptionsVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETDescribeStopwordOptionsQueryParams struct {
-	Action     GETDescribeStopwordOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DomainName string                                `queryParam:"style=form,explode=true,name=DomainName"`
-	Version    GETDescribeStopwordOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeStopwordOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETDescribeStopwordOptionsRequest struct {
-	QueryParams GETDescribeStopwordOptionsQueryParams
-	Headers     GETDescribeStopwordOptionsHeaders
+	Action            GETDescribeStopwordOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	DomainName        string                                `queryParam:"style=form,explode=true,name=DomainName"`
+	Version           GETDescribeStopwordOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeStopwordOptionsResponse struct {

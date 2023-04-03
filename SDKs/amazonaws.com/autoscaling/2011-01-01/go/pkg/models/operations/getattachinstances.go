@@ -50,28 +50,20 @@ func (e *GETAttachInstancesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAttachInstancesQueryParams struct {
+type GETAttachInstancesRequest struct {
 	Action GETAttachInstancesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the Auto Scaling group.
 	AutoScalingGroupName string `queryParam:"style=form,explode=true,name=AutoScalingGroupName"`
 	// The IDs of the instances. You can specify up to 20 instances.
-	InstanceIds []string                      `queryParam:"style=form,explode=true,name=InstanceIds"`
-	Version     GETAttachInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAttachInstancesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAttachInstancesRequest struct {
-	QueryParams GETAttachInstancesQueryParams
-	Headers     GETAttachInstancesHeaders
+	InstanceIds       []string                      `queryParam:"style=form,explode=true,name=InstanceIds"`
+	Version           GETAttachInstancesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAttachInstancesResponse struct {

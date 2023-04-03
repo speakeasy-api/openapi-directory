@@ -7,21 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListIntegrationsPathParams struct {
+type ListIntegrationsRequest struct {
 	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type ListIntegrationsQueryParams struct {
-	// Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
-	IncludeHidden *bool `queryParam:"style=form,explode=true,name=include-hidden"`
-	// The maximum number of objects returned per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
-	// The pagination token from the previous ListIntegrations API call.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-}
-
-type ListIntegrationsHeaders struct {
+	DomainName        string  `pathParam:"style=simple,explode=false,name=DomainName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -29,12 +17,12 @@ type ListIntegrationsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListIntegrationsRequest struct {
-	PathParams  ListIntegrationsPathParams
-	QueryParams ListIntegrationsQueryParams
-	Headers     ListIntegrationsHeaders
+	// Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+	IncludeHidden *bool `queryParam:"style=form,explode=true,name=include-hidden"`
+	// The maximum number of objects returned per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
+	// The pagination token from the previous ListIntegrations API call.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
 }
 
 type ListIntegrationsResponse struct {

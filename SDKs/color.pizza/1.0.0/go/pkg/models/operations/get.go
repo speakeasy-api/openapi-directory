@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetQueryParams struct {
+type GetRequest struct {
 	// The name of the color name list to use
 	List *shared.PossibleListsEnum `queryParam:"style=form,explode=false,name=list"`
 	// Allow duplicate names or not
 	Noduplicates *bool `queryParam:"style=form,explode=true,name=noduplicates"`
 	// The hex values of the colors to retrieve without '#'
 	Values *string `queryParam:"style=form,explode=true,name=values"`
-}
-
-type GetRequest struct {
-	QueryParams GetQueryParams
 }
 
 // Get200ApplicationJSON - OK

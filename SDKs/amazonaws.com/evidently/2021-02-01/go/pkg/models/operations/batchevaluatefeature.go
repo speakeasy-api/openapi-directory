@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchEvaluateFeaturePathParams struct {
-	// The name or ARN of the project that contains the feature being evaluated.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type BatchEvaluateFeatureHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchEvaluateFeatureRequestBody struct {
 	// An array of structures, where each structure assigns a feature variation to one user session.
 	Requests []shared.EvaluationRequest `json:"requests"`
 }
 
 type BatchEvaluateFeatureRequest struct {
-	PathParams BatchEvaluateFeaturePathParams
-	Headers    BatchEvaluateFeatureHeaders
-	Request    BatchEvaluateFeatureRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchEvaluateFeatureRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name or ARN of the project that contains the feature being evaluated.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type BatchEvaluateFeatureResponse struct {

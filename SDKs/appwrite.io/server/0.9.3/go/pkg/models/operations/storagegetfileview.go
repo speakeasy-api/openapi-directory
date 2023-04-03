@@ -4,23 +4,17 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type StorageGetFileViewSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type StorageGetFileViewPathParams struct {
-	// File unique ID.
-	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type StorageGetFileViewRequest struct {
-	PathParams StorageGetFileViewPathParams
-	Security   StorageGetFileViewSecurity
+	// File unique ID.
+	FileID string `pathParam:"style=simple,explode=false,name=fileId"`
 }
 
 type StorageGetFileViewResponse struct {

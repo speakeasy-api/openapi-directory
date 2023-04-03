@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteAnnotationPathParams struct {
+type DeleteAnnotationRequest struct {
 	// Either the uuid or external-id of the annotation.
 	AnnotationID string `pathParam:"style=simple,explode=false,name=annotationId"`
 	// The commit the annotation belongs to.
@@ -17,10 +17,6 @@ type DeleteAnnotationPathParams struct {
 	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type DeleteAnnotationRequest struct {
-	PathParams DeleteAnnotationPathParams
 }
 
 type DeleteAnnotationResponse struct {

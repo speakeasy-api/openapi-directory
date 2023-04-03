@@ -14,15 +14,11 @@ func main() {
     s := sdk.New()
 
     req := operations.GetNhArtRequest{
-        QueryParams: operations.GetNhArtQueryParams{
-            Excludedetails: "corrupti",
-            Hasfake: "provident",
-            Thumbsize: 715190,
-        },
-        Headers: operations.GetNhArtHeaders{
-            AcceptVersion: "quibusdam",
-            XAPIKey: "9d8d69a6-74e0-4f46-bcc8-796ed151a05d",
-        },
+        AcceptVersion: "corrupti",
+        XAPIKey: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+        Excludedetails: "perferendis",
+        Hasfake: "ipsam",
+        Thumbsize: 832620,
     }
 
     ctx := context.Background()

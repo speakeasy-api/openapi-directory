@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProjectsForWorkspacePathParams struct {
-	// Globally unique identifier for the workspace or organization.
-	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
-}
-
-type GetProjectsForWorkspaceQueryParams struct {
+type GetProjectsForWorkspaceRequest struct {
 	// Only return projects whose `archived` field takes on the value of this parameter.
 	Archived *bool `queryParam:"style=form,explode=true,name=archived"`
 	// Results per page.
@@ -29,11 +24,8 @@ type GetProjectsForWorkspaceQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-type GetProjectsForWorkspaceRequest struct {
-	PathParams  GetProjectsForWorkspacePathParams
-	QueryParams GetProjectsForWorkspaceQueryParams
+	// Globally unique identifier for the workspace or organization.
+	WorkspaceGid string `pathParam:"style=simple,explode=false,name=workspace_gid"`
 }
 
 // GetProjectsForWorkspace200ApplicationJSON - Successfully retrieved the requested workspace's projects.

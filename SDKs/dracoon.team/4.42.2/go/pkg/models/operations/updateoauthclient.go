@@ -10,20 +10,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateOAuthClientPathParams struct {
-	// OAuth client ID
-	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
-}
-
-type UpdateOAuthClientHeaders struct {
+type UpdateOAuthClientRequest struct {
+	UpdateOAuthClientRequest shared.UpdateOAuthClientRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UpdateOAuthClientRequest struct {
-	PathParams UpdateOAuthClientPathParams
-	Headers    UpdateOAuthClientHeaders
-	Request    shared.UpdateOAuthClientRequest `request:"mediaType=application/json"`
+	// OAuth client ID
+	ClientID string `pathParam:"style=simple,explode=false,name=client_id"`
 }
 
 type UpdateOAuthClient400ApplicationJSONType string

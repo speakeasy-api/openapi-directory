@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetProfilePathParams struct {
-	// The unique identifier of the profile.
-	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
-}
-
-type GetProfileHeaders struct {
+type GetProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetProfileRequest struct {
-	PathParams GetProfilePathParams
-	Headers    GetProfileHeaders
+	// The unique identifier of the profile.
+	ProfileID string `pathParam:"style=simple,explode=false,name=profileId"`
 }
 
 type GetProfileResponse struct {

@@ -29,7 +29,8 @@ func (e *DisassociateDRTRoleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DisassociateDRTRoleHeaders struct {
+type DisassociateDRTRoleRequest struct {
+	RequestBody       map[string]interface{}            `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -38,11 +39,6 @@ type DisassociateDRTRoleHeaders struct {
 	XAmzSignature     *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DisassociateDRTRoleXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DisassociateDRTRoleRequest struct {
-	Headers DisassociateDRTRoleHeaders
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type DisassociateDRTRoleResponse struct {

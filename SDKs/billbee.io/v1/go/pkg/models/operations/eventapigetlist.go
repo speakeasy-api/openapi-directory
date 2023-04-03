@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type EventAPIGetListQueryParams struct {
+type EventAPIGetListRequest struct {
 	// Specifies the newest date to include in the response
 	MaxDate *time.Time `queryParam:"style=form,explode=true,name=maxDate"`
 	// Specifies the oldest date to include in the response
@@ -20,10 +20,6 @@ type EventAPIGetListQueryParams struct {
 	PageSize *int `queryParam:"style=form,explode=true,name=pageSize"`
 	// Filter for specific event types
 	TypeID []int `queryParam:"style=form,explode=true,name=typeId"`
-}
-
-type EventAPIGetListRequest struct {
-	QueryParams EventAPIGetListQueryParams
 }
 
 type EventAPIGetListResponse struct {

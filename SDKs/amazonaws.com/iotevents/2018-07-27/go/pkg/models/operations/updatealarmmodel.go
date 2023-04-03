@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateAlarmModelPathParams struct {
-	// The name of the alarm model.
-	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
-}
-
-type UpdateAlarmModelHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateAlarmModelRequestBodyAlarmCapabilities - Contains the configuration information of alarm state changes.
 type UpdateAlarmModelRequestBodyAlarmCapabilities struct {
 	AcknowledgeFlow             *shared.AcknowledgeFlow             `json:"acknowledgeFlow,omitempty"`
@@ -61,9 +46,16 @@ type UpdateAlarmModelRequestBody struct {
 }
 
 type UpdateAlarmModelRequest struct {
-	PathParams UpdateAlarmModelPathParams
-	Headers    UpdateAlarmModelHeaders
-	Request    UpdateAlarmModelRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateAlarmModelRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the alarm model.
+	AlarmModelName string `pathParam:"style=simple,explode=false,name=alarmModelName"`
 }
 
 type UpdateAlarmModelResponse struct {

@@ -50,7 +50,7 @@ func (e *GETDescribeCacheClustersVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeCacheClustersQueryParams struct {
+type GETDescribeCacheClustersRequest struct {
 	Action GETDescribeCacheClustersActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The user-supplied cluster identifier. If this parameter is specified, only information about that specific cluster is returned. This parameter isn't case sensitive.
 	CacheClusterID *string `queryParam:"style=form,explode=true,name=CacheClusterId"`
@@ -63,21 +63,13 @@ type GETDescribeCacheClustersQueryParams struct {
 	// An optional flag that can be included in the <code>DescribeCacheCluster</code> request to retrieve information about the individual cache nodes.
 	ShowCacheNodeInfo *bool                               `queryParam:"style=form,explode=true,name=ShowCacheNodeInfo"`
 	Version           GETDescribeCacheClustersVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeCacheClustersHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeCacheClustersRequest struct {
-	QueryParams GETDescribeCacheClustersQueryParams
-	Headers     GETDescribeCacheClustersHeaders
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeCacheClustersResponse struct {

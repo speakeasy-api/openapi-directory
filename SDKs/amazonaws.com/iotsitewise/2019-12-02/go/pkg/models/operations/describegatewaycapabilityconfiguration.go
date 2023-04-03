@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeGatewayCapabilityConfigurationPathParams struct {
-	// The namespace of the capability configuration. For example, if you configure OPC-UA sources from the IoT SiteWise console, your OPC-UA capability configuration has the namespace <code>iotsitewise:opcuacollector:version</code>, where <code>version</code> is a number such as <code>1</code>.
-	CapabilityNamespace string `pathParam:"style=simple,explode=false,name=capabilityNamespace"`
-	// The ID of the gateway that defines the capability configuration.
-	GatewayID string `pathParam:"style=simple,explode=false,name=gatewayId"`
-}
-
-type DescribeGatewayCapabilityConfigurationHeaders struct {
+type DescribeGatewayCapabilityConfigurationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeGatewayCapabilityConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeGatewayCapabilityConfigurationRequest struct {
-	PathParams DescribeGatewayCapabilityConfigurationPathParams
-	Headers    DescribeGatewayCapabilityConfigurationHeaders
+	// The namespace of the capability configuration. For example, if you configure OPC-UA sources from the IoT SiteWise console, your OPC-UA capability configuration has the namespace <code>iotsitewise:opcuacollector:version</code>, where <code>version</code> is a number such as <code>1</code>.
+	CapabilityNamespace string `pathParam:"style=simple,explode=false,name=capabilityNamespace"`
+	// The ID of the gateway that defines the capability configuration.
+	GatewayID string `pathParam:"style=simple,explode=false,name=gatewayId"`
 }
 
 type DescribeGatewayCapabilityConfigurationResponse struct {

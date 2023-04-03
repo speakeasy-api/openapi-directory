@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type DatabaseDeleteDocumentSecurity struct {
-	Jwt     shared.SchemeJwt     `security:"scheme,type=apiKey,subtype=header"`
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type DatabaseDeleteDocumentPathParams struct {
+type DatabaseDeleteDocumentRequest struct {
 	// Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
 	CollectionID string `pathParam:"style=simple,explode=false,name=collectionId"`
 	// Document unique ID.
 	DocumentID string `pathParam:"style=simple,explode=false,name=documentId"`
-}
-
-type DatabaseDeleteDocumentRequest struct {
-	PathParams DatabaseDeleteDocumentPathParams
-	Security   DatabaseDeleteDocumentSecurity
 }
 
 type DatabaseDeleteDocumentResponse struct {

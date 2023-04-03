@@ -9,15 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCrawlStatisticsByFrequencyPathParams struct {
-	// Analysis' identifier
-	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
-	// Project's identifier
-	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
-	// User's identifier
-	Username string `pathParam:"style=simple,explode=false,name=username"`
-}
-
 // GetCrawlStatisticsByFrequencyFrequencyEnum - Aggregation frequency
 type GetCrawlStatisticsByFrequencyFrequencyEnum string
 
@@ -45,16 +36,17 @@ func (e *GetCrawlStatisticsByFrequencyFrequencyEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GetCrawlStatisticsByFrequencyQueryParams struct {
+type GetCrawlStatisticsByFrequencyRequest struct {
+	// Analysis' identifier
+	AnalysisSlug string `pathParam:"style=simple,explode=false,name=analysis_slug"`
 	// Aggregation frequency
 	Frequency GetCrawlStatisticsByFrequencyFrequencyEnum `queryParam:"style=form,explode=true,name=frequency"`
 	// max number of elements to retrieve
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-}
-
-type GetCrawlStatisticsByFrequencyRequest struct {
-	PathParams  GetCrawlStatisticsByFrequencyPathParams
-	QueryParams GetCrawlStatisticsByFrequencyQueryParams
+	// Project's identifier
+	ProjectSlug string `pathParam:"style=simple,explode=false,name=project_slug"`
+	// User's identifier
+	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
 type GetCrawlStatisticsByFrequencyResponse struct {

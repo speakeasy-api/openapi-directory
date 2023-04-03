@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TestRadiusConfigHeaders struct {
+type TestRadiusConfigRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type TestRadiusConfigRequest struct {
-	Headers TestRadiusConfigHeaders
 }
 
 type TestRadiusConfigResponse struct {

@@ -50,28 +50,20 @@ func (e *GETCreateOptionGroupVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateOptionGroupQueryParams struct {
+type GETCreateOptionGroupRequest struct {
 	Action                 GETCreateOptionGroupActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	EngineName             string                          `queryParam:"style=form,explode=true,name=EngineName"`
 	MajorEngineVersion     string                          `queryParam:"style=form,explode=true,name=MajorEngineVersion"`
 	OptionGroupDescription string                          `queryParam:"style=form,explode=true,name=OptionGroupDescription"`
 	OptionGroupName        string                          `queryParam:"style=form,explode=true,name=OptionGroupName"`
 	Version                GETCreateOptionGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateOptionGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateOptionGroupRequest struct {
-	QueryParams GETCreateOptionGroupQueryParams
-	Headers     GETCreateOptionGroupHeaders
+	XAmzAlgorithm          *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateOptionGroupResponse struct {

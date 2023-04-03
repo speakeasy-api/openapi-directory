@@ -12,10 +12,6 @@ type StromkontoLoginRequestBody struct {
 	Email *string `json:"email,omitempty"`
 }
 
-type StromkontoLoginRequest struct {
-	Request StromkontoLoginRequestBody `request:"mediaType=application/json"`
-}
-
 // StromkontoLogin200ApplicationJSONStatusEnum - Registration status of a user. In case unregistered gets returned use the `register` endpoint to (re-)register.
 type StromkontoLogin200ApplicationJSONStatusEnum string
 

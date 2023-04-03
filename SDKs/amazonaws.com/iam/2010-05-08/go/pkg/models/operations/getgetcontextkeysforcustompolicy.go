@@ -50,26 +50,18 @@ func (e *GETGETContextKeysForCustomPolicyVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type GETGETContextKeysForCustomPolicyQueryParams struct {
+type GETGETContextKeysForCustomPolicyRequest struct {
 	Action GETGETContextKeysForCustomPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>A list of policies for which you want the list of context keys referenced in those policies. Each document is specified as a string containing the complete, valid JSON text of an IAM policy.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to validate this parameter is a string of characters consisting of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space character (<code>\u0020</code>) through the end of the ASCII character range</p> </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>)</p> </li> <li> <p>The special characters tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>)</p> </li> </ul>
-	PolicyInputList []string                                    `queryParam:"style=form,explode=true,name=PolicyInputList"`
-	Version         GETGETContextKeysForCustomPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETContextKeysForCustomPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETContextKeysForCustomPolicyRequest struct {
-	QueryParams GETGETContextKeysForCustomPolicyQueryParams
-	Headers     GETGETContextKeysForCustomPolicyHeaders
+	PolicyInputList   []string                                    `queryParam:"style=form,explode=true,name=PolicyInputList"`
+	Version           GETGETContextKeysForCustomPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETContextKeysForCustomPolicyResponse struct {

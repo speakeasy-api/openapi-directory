@@ -35,7 +35,7 @@ func newStorage(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // StorageCreateFile - Create File
 // Create a new file. The user who creates the file will automatically be assigned to read and write access unless he has passed custom values for read and write arguments.
-func (s *storage) StorageCreateFile(ctx context.Context, request operations.StorageCreateFileRequest) (*operations.StorageCreateFileResponse, error) {
+func (s *storage) StorageCreateFile(ctx context.Context, request operations.StorageCreateFileRequestBody, security operations.StorageCreateFileSecurity) (*operations.StorageCreateFileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/storage/files"
 
@@ -51,7 +51,7 @@ func (s *storage) StorageCreateFile(ctx context.Context, request operations.Stor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,16 +87,16 @@ func (s *storage) StorageCreateFile(ctx context.Context, request operations.Stor
 
 // StorageDeleteFile - Delete File
 // Delete a file by its unique ID. Only users with write permissions have access to delete this resource.
-func (s *storage) StorageDeleteFile(ctx context.Context, request operations.StorageDeleteFileRequest) (*operations.StorageDeleteFileResponse, error) {
+func (s *storage) StorageDeleteFile(ctx context.Context, request operations.StorageDeleteFileRequest, security operations.StorageDeleteFileSecurity) (*operations.StorageDeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -123,16 +123,16 @@ func (s *storage) StorageDeleteFile(ctx context.Context, request operations.Stor
 
 // StorageGetFile - Get File
 // Get a file by its unique ID. This endpoint response returns a JSON object with the file metadata.
-func (s *storage) StorageGetFile(ctx context.Context, request operations.StorageGetFileRequest) (*operations.StorageGetFileResponse, error) {
+func (s *storage) StorageGetFile(ctx context.Context, request operations.StorageGetFileRequest, security operations.StorageGetFileSecurity) (*operations.StorageGetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,16 +168,16 @@ func (s *storage) StorageGetFile(ctx context.Context, request operations.Storage
 
 // StorageGetFileDownload - Get File for Download
 // Get a file content by its unique ID. The endpoint response return with a 'Content-Disposition: attachment' header that tells the browser to start downloading the file to user downloads directory.
-func (s *storage) StorageGetFileDownload(ctx context.Context, request operations.StorageGetFileDownloadRequest) (*operations.StorageGetFileDownloadResponse, error) {
+func (s *storage) StorageGetFileDownload(ctx context.Context, request operations.StorageGetFileDownloadRequest, security operations.StorageGetFileDownloadSecurity) (*operations.StorageGetFileDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -204,20 +204,20 @@ func (s *storage) StorageGetFileDownload(ctx context.Context, request operations
 
 // StorageGetFilePreview - Get File Preview
 // Get a file preview image. Currently, this method supports preview for image files (jpg, png, and gif), other supported formats, like pdf, docs, slides, and spreadsheets, will return the file icon image. You can also pass query string arguments for cutting and resizing your preview image.
-func (s *storage) StorageGetFilePreview(ctx context.Context, request operations.StorageGetFilePreviewRequest) (*operations.StorageGetFilePreviewResponse, error) {
+func (s *storage) StorageGetFilePreview(ctx context.Context, request operations.StorageGetFilePreviewRequest, security operations.StorageGetFilePreviewSecurity) (*operations.StorageGetFilePreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/preview", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/preview", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -244,16 +244,16 @@ func (s *storage) StorageGetFilePreview(ctx context.Context, request operations.
 
 // StorageGetFileView - Get File for View
 // Get a file content by its unique ID. This endpoint is similar to the download method but returns with no  'Content-Disposition: attachment' header.
-func (s *storage) StorageGetFileView(ctx context.Context, request operations.StorageGetFileViewRequest) (*operations.StorageGetFileViewResponse, error) {
+func (s *storage) StorageGetFileView(ctx context.Context, request operations.StorageGetFileViewRequest, security operations.StorageGetFileViewSecurity) (*operations.StorageGetFileViewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/view", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/view", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -280,7 +280,7 @@ func (s *storage) StorageGetFileView(ctx context.Context, request operations.Sto
 
 // StorageListFiles - List Files
 // Get a list of all the user files. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's files. [Learn more about different API modes](/docs/admin).
-func (s *storage) StorageListFiles(ctx context.Context, request operations.StorageListFilesRequest) (*operations.StorageListFilesResponse, error) {
+func (s *storage) StorageListFiles(ctx context.Context, request operations.StorageListFilesRequest, security operations.StorageListFilesSecurity) (*operations.StorageListFilesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/storage/files"
 
@@ -289,11 +289,11 @@ func (s *storage) StorageListFiles(ctx context.Context, request operations.Stora
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -329,11 +329,11 @@ func (s *storage) StorageListFiles(ctx context.Context, request operations.Stora
 
 // StorageUpdateFile - Update File
 // Update a file by its unique ID. Only users with write permissions have access to update this resource.
-func (s *storage) StorageUpdateFile(ctx context.Context, request operations.StorageUpdateFileRequest) (*operations.StorageUpdateFileResponse, error) {
+func (s *storage) StorageUpdateFile(ctx context.Context, request operations.StorageUpdateFileRequest, security operations.StorageUpdateFileSecurity) (*operations.StorageUpdateFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -345,7 +345,7 @@ func (s *storage) StorageUpdateFile(ctx context.Context, request operations.Stor
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

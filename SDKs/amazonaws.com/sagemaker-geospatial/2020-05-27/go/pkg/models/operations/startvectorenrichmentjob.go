@@ -7,16 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type StartVectorEnrichmentJobHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // StartVectorEnrichmentJobRequestBodyInputConfig - The input structure for the InputConfig in a VectorEnrichmentJob.
 type StartVectorEnrichmentJobRequestBodyInputConfig struct {
 	DataSourceConfig *shared.VectorEnrichmentJobDataSourceConfigInput `json:"DataSourceConfig,omitempty"`
@@ -47,8 +37,14 @@ type StartVectorEnrichmentJobRequestBody struct {
 }
 
 type StartVectorEnrichmentJobRequest struct {
-	Headers StartVectorEnrichmentJobHeaders
-	Request StartVectorEnrichmentJobRequestBody `request:"mediaType=application/json"`
+	RequestBody       StartVectorEnrichmentJobRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type StartVectorEnrichmentJobResponse struct {

@@ -6,22 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesPutDistributionGroupSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReleasesPutDistributionGroupPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The id of the releases destination
-	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the release
-	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type ReleasesPutDistributionGroupRequestBody struct {
@@ -30,9 +18,15 @@ type ReleasesPutDistributionGroupRequestBody struct {
 }
 
 type ReleasesPutDistributionGroupRequest struct {
-	PathParams ReleasesPutDistributionGroupPathParams
-	Request    *ReleasesPutDistributionGroupRequestBody `request:"mediaType=application/json"`
-	Security   ReleasesPutDistributionGroupSecurity
+	RequestBody *ReleasesPutDistributionGroupRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The id of the releases destination
+	GroupID string `pathParam:"style=simple,explode=false,name=group_id"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the release
+	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
 }
 
 type ReleasesPutDistributionGroup404ApplicationJSONCodeEnum string

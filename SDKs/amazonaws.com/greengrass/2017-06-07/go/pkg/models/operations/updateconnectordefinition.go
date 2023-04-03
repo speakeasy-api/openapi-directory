@@ -6,30 +6,22 @@ import (
 	"net/http"
 )
 
-type UpdateConnectorDefinitionPathParams struct {
-	// The ID of the connector definition.
-	ConnectorDefinitionID string `pathParam:"style=simple,explode=false,name=ConnectorDefinitionId"`
-}
-
-type UpdateConnectorDefinitionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateConnectorDefinitionRequestBody struct {
 	// The name of the definition.
 	Name *string `json:"Name,omitempty"`
 }
 
 type UpdateConnectorDefinitionRequest struct {
-	PathParams UpdateConnectorDefinitionPathParams
-	Headers    UpdateConnectorDefinitionHeaders
-	Request    UpdateConnectorDefinitionRequestBody `request:"mediaType=application/json"`
+	// The ID of the connector definition.
+	ConnectorDefinitionID string                               `pathParam:"style=simple,explode=false,name=ConnectorDefinitionId"`
+	RequestBody           UpdateConnectorDefinitionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateConnectorDefinitionResponse struct {

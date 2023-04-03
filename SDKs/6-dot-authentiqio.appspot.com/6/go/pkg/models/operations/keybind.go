@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type KeyBindPathParams struct {
+type KeyBindRequest struct {
 	// Public Signing Key - Authentiq ID (43 chars)
 	Pk string `pathParam:"style=simple,explode=false,name=PK"`
-}
-
-type KeyBindRequest struct {
-	PathParams KeyBindPathParams
 	// Authentiq ID to register
-	Request []byte `request:"mediaType=application/jwt"`
+	RequestBody []byte `request:"mediaType=application/jwt"`
 }
 
 // KeyBind200ApplicationJSON - Successfully updated

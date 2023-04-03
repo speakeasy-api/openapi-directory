@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Skcer - Skill Certificate
 // API to verify Skill Certificate.
-func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequest) (*operations.SkcerResponse, error) {
+func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequestBody, security operations.SkcerSecurity) (*operations.SkcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/skcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Skcer(ctx context.Context, request operations.SkcerRequest) (*ope
 
 // Skmst - Skill Marksheet/ Score Card
 // API to verify Skill Marksheet/ Score Card.
-func (s *apIs) Skmst(ctx context.Context, request operations.SkmstRequest) (*operations.SkmstResponse, error) {
+func (s *apIs) Skmst(ctx context.Context, request operations.SkmstRequestBody, security operations.SkmstSecurity) (*operations.SkmstResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/skmst/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Skmst(ctx context.Context, request operations.SkmstRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type AnalyticsCrashGroupsTotalsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type AnalyticsCrashGroupsTotalsPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type AnalyticsCrashGroupsTotalsRequestBodyCrashGroups struct {
@@ -30,9 +22,11 @@ type AnalyticsCrashGroupsTotalsRequestBody struct {
 }
 
 type AnalyticsCrashGroupsTotalsRequest struct {
-	PathParams AnalyticsCrashGroupsTotalsPathParams
-	Request    AnalyticsCrashGroupsTotalsRequestBody `request:"mediaType=application/json"`
-	Security   AnalyticsCrashGroupsTotalsSecurity
+	RequestBody AnalyticsCrashGroupsTotalsRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 // AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.

@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type InvokeDeviceMethodPathParams struct {
-	// The unique identifier of the device.
-	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
-}
-
-type InvokeDeviceMethodHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // InvokeDeviceMethodRequestBodyDeviceMethod - The device method to invoke.
 type InvokeDeviceMethodRequestBodyDeviceMethod struct {
 	DeviceType *string `json:"DeviceType,omitempty"`
@@ -36,9 +21,16 @@ type InvokeDeviceMethodRequestBody struct {
 }
 
 type InvokeDeviceMethodRequest struct {
-	PathParams InvokeDeviceMethodPathParams
-	Headers    InvokeDeviceMethodHeaders
-	Request    InvokeDeviceMethodRequestBody `request:"mediaType=application/json"`
+	RequestBody       InvokeDeviceMethodRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the device.
+	DeviceID string `pathParam:"style=simple,explode=false,name=deviceId"`
 }
 
 type InvokeDeviceMethodResponse struct {

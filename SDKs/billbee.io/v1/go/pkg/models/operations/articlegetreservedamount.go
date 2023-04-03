@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleGetReservedAmountQueryParams struct {
+type ArticleGetReservedAmountRequest struct {
 	// The id or the sku of the article to query
 	ID string `queryParam:"style=form,explode=true,name=id"`
 	// Either the value id or the value sku to specify the meaning of the id parameter
 	LookupBy *string `queryParam:"style=form,explode=true,name=lookupBy"`
 	// Optional the stock id if the multi stock feature is enabled
 	StockID *int64 `queryParam:"style=form,explode=true,name=stockId"`
-}
-
-type ArticleGetReservedAmountRequest struct {
-	QueryParams ArticleGetReservedAmountQueryParams
 }
 
 type ArticleGetReservedAmountResponse struct {

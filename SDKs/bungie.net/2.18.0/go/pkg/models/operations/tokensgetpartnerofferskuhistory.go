@@ -8,19 +8,14 @@ import (
 )
 
 type TokensGetPartnerOfferSkuHistorySecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type TokensGetPartnerOfferSkuHistoryPathParams struct {
+type TokensGetPartnerOfferSkuHistoryRequest struct {
 	// The partner application identifier.
 	PartnerApplicationID int `pathParam:"style=simple,explode=false,name=partnerApplicationId"`
 	// The bungie.net user to apply missing offers to. If not self, elevated permissions are required.
 	TargetBnetMembershipID int64 `pathParam:"style=simple,explode=false,name=targetBnetMembershipId"`
-}
-
-type TokensGetPartnerOfferSkuHistoryRequest struct {
-	PathParams TokensGetPartnerOfferSkuHistoryPathParams
-	Security   TokensGetPartnerOfferSkuHistorySecurity
 }
 
 // TokensGetPartnerOfferSkuHistory200Wildcard - Look at the Response property for more information about the nature of this response

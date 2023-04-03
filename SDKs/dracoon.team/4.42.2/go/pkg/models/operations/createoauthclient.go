@@ -10,14 +10,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateOAuthClientHeaders struct {
+type CreateOAuthClientRequest struct {
+	CreateOAuthClientRequest shared.CreateOAuthClientRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CreateOAuthClientRequest struct {
-	Headers CreateOAuthClientHeaders
-	Request shared.CreateOAuthClientRequest `request:"mediaType=application/json"`
 }
 
 type CreateOAuthClient400ApplicationJSONType string

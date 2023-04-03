@@ -36,14 +36,14 @@ func newWorkspaceMemberships(defaultClient, securityClient HTTPClient, serverURL
 // Returns the complete workspace record for a single workspace membership.
 func (s *workspaceMemberships) GetWorkspaceMembership(ctx context.Context, request operations.GetWorkspaceMembershipRequest) (*operations.GetWorkspaceMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspace_memberships/{workspace_membership_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspace_memberships/{workspace_membership_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,14 +103,14 @@ func (s *workspaceMemberships) GetWorkspaceMembership(ctx context.Context, reque
 // Returns the compact workspace membership records for the user.
 func (s *workspaceMemberships) GetWorkspaceMembershipsForUser(ctx context.Context, request operations.GetWorkspaceMembershipsForUserRequest) (*operations.GetWorkspaceMembershipsForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/workspace_memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/workspace_memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -170,14 +170,14 @@ func (s *workspaceMemberships) GetWorkspaceMembershipsForUser(ctx context.Contex
 // Returns the compact workspace membership records for the workspace.
 func (s *workspaceMemberships) GetWorkspaceMembershipsForWorkspace(ctx context.Context, request operations.GetWorkspaceMembershipsForWorkspaceRequest) (*operations.GetWorkspaceMembershipsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/workspace_memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/workspace_memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -8,26 +8,17 @@ import (
 )
 
 type GetBalancePlatformsIDAccountHoldersSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetBalancePlatformsIDAccountHoldersPathParams struct {
+type GetBalancePlatformsIDAccountHoldersRequest struct {
 	// The unique identifier of the balance platform.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetBalancePlatformsIDAccountHoldersQueryParams struct {
 	// The number of items returned per page, maximum 100 items. By default, the response returns 10 items per page.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// The number of items that you want to skip.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type GetBalancePlatformsIDAccountHoldersRequest struct {
-	PathParams  GetBalancePlatformsIDAccountHoldersPathParams
-	QueryParams GetBalancePlatformsIDAccountHoldersQueryParams
-	Security    GetBalancePlatformsIDAccountHoldersSecurity
 }
 
 type GetBalancePlatformsIDAccountHoldersResponse struct {

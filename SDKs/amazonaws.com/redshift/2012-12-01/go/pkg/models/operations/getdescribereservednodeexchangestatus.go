@@ -50,7 +50,7 @@ func (e *GETDescribeReservedNodeExchangeStatusVersionEnum) UnmarshalJSON(data []
 	}
 }
 
-type GETDescribeReservedNodeExchangeStatusQueryParams struct {
+type GETDescribeReservedNodeExchangeStatusRequest struct {
 	Action GETDescribeReservedNodeExchangeStatusActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional pagination token provided by a previous <code>DescribeReservedNodeExchangeStatus</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by the <code>MaxRecords</code> parameter. You can retrieve the next set of response records by providing the returned marker value in the <code>Marker</code> parameter and retrying the request.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -59,23 +59,15 @@ type GETDescribeReservedNodeExchangeStatusQueryParams struct {
 	// The identifier of the reserved-node exchange request.
 	ReservedNodeExchangeRequestID *string `queryParam:"style=form,explode=true,name=ReservedNodeExchangeRequestId"`
 	// The identifier of the source reserved node in a reserved-node exchange request.
-	ReservedNodeID *string                                          `queryParam:"style=form,explode=true,name=ReservedNodeId"`
-	Version        GETDescribeReservedNodeExchangeStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeReservedNodeExchangeStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeReservedNodeExchangeStatusRequest struct {
-	QueryParams GETDescribeReservedNodeExchangeStatusQueryParams
-	Headers     GETDescribeReservedNodeExchangeStatusHeaders
+	ReservedNodeID    *string                                          `queryParam:"style=form,explode=true,name=ReservedNodeId"`
+	Version           GETDescribeReservedNodeExchangeStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeReservedNodeExchangeStatusResponse struct {

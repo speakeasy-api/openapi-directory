@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureFtpPathParams struct {
-	// Automatically added
-	DomainName string `pathParam:"style=simple,explode=false,name=domainName"`
-}
-
-type ConfigureFtpQueryParams struct {
-	// Linux hosting domain name.
-	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-}
-
 type ConfigureFtpRequest struct {
-	PathParams  ConfigureFtpPathParams
-	QueryParams ConfigureFtpQueryParams
-	Request     *shared.FtpConfiguration `request:"mediaType=application/json"`
+	FtpConfiguration *shared.FtpConfiguration `request:"mediaType=application/json"`
+	// Automatically added
+	DomainNamePathParameter string `pathParam:"style=simple,explode=false,name=domainName"`
+	// Linux hosting domain name.
+	DomainNameQueryParameter string `queryParam:"style=form,explode=true,name=domain_name"`
 }
 
 type ConfigureFtpResponse struct {

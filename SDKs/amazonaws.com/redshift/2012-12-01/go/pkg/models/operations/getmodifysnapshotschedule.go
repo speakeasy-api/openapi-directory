@@ -50,28 +50,20 @@ func (e *GETModifySnapshotScheduleVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETModifySnapshotScheduleQueryParams struct {
+type GETModifySnapshotScheduleRequest struct {
 	Action GETModifySnapshotScheduleActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An updated list of schedule definitions. A schedule definition is made up of schedule expressions, for example, "cron(30 12 *)" or "rate(12 hours)".
 	ScheduleDefinitions []string `queryParam:"style=form,explode=true,name=ScheduleDefinitions"`
 	// A unique alphanumeric identifier of the schedule to modify.
 	ScheduleIdentifier string                               `queryParam:"style=form,explode=true,name=ScheduleIdentifier"`
 	Version            GETModifySnapshotScheduleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifySnapshotScheduleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifySnapshotScheduleRequest struct {
-	QueryParams GETModifySnapshotScheduleQueryParams
-	Headers     GETModifySnapshotScheduleHeaders
+	XAmzAlgorithm      *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifySnapshotScheduleResponse struct {

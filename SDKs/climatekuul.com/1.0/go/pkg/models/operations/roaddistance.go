@@ -28,11 +28,6 @@ type RoadDistanceRequestBody struct {
 	VehicleYear *int `form:"name=vehicle_year"`
 }
 
-type RoadDistanceRequest struct {
-	Request   *RoadDistanceRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type RoadDistanceResponse struct {
 	ContentType string
 	StatusCode  int

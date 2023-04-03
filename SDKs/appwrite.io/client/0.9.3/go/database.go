@@ -34,11 +34,11 @@ func newDatabase(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // DatabaseCreateDocument - Create Document
 // Create a new Document. Before using this route, you should create a new collection resource using either a [server integration](/docs/server/database#databaseCreateCollection) API or directly from your database console.
-func (s *database) DatabaseCreateDocument(ctx context.Context, request operations.DatabaseCreateDocumentRequest) (*operations.DatabaseCreateDocumentResponse, error) {
+func (s *database) DatabaseCreateDocument(ctx context.Context, request operations.DatabaseCreateDocumentRequest, security operations.DatabaseCreateDocumentSecurity) (*operations.DatabaseCreateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -50,7 +50,7 @@ func (s *database) DatabaseCreateDocument(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,16 +86,16 @@ func (s *database) DatabaseCreateDocument(ctx context.Context, request operation
 
 // DatabaseDeleteDocument - Delete Document
 // Delete a document by its unique ID. This endpoint deletes only the parent documents, its attributes and relations to other documents. Child documents **will not** be deleted.
-func (s *database) DatabaseDeleteDocument(ctx context.Context, request operations.DatabaseDeleteDocumentRequest) (*operations.DatabaseDeleteDocumentResponse, error) {
+func (s *database) DatabaseDeleteDocument(ctx context.Context, request operations.DatabaseDeleteDocumentRequest, security operations.DatabaseDeleteDocumentSecurity) (*operations.DatabaseDeleteDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,16 +122,16 @@ func (s *database) DatabaseDeleteDocument(ctx context.Context, request operation
 
 // DatabaseGetDocument - Get Document
 // Get a document by its unique ID. This endpoint response returns a JSON object with the document data.
-func (s *database) DatabaseGetDocument(ctx context.Context, request operations.DatabaseGetDocumentRequest) (*operations.DatabaseGetDocumentResponse, error) {
+func (s *database) DatabaseGetDocument(ctx context.Context, request operations.DatabaseGetDocumentRequest, security operations.DatabaseGetDocumentSecurity) (*operations.DatabaseGetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -167,20 +167,20 @@ func (s *database) DatabaseGetDocument(ctx context.Context, request operations.D
 
 // DatabaseListDocuments - List Documents
 // Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents. [Learn more about different API modes](/docs/admin).
-func (s *database) DatabaseListDocuments(ctx context.Context, request operations.DatabaseListDocumentsRequest) (*operations.DatabaseListDocumentsResponse, error) {
+func (s *database) DatabaseListDocuments(ctx context.Context, request operations.DatabaseListDocumentsRequest, security operations.DatabaseListDocumentsSecurity) (*operations.DatabaseListDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -216,11 +216,11 @@ func (s *database) DatabaseListDocuments(ctx context.Context, request operations
 
 // DatabaseUpdateDocument - Update Document
 // Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated.
-func (s *database) DatabaseUpdateDocument(ctx context.Context, request operations.DatabaseUpdateDocumentRequest) (*operations.DatabaseUpdateDocumentResponse, error) {
+func (s *database) DatabaseUpdateDocument(ctx context.Context, request operations.DatabaseUpdateDocumentRequest, security operations.DatabaseUpdateDocumentSecurity) (*operations.DatabaseUpdateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -232,7 +232,7 @@ func (s *database) DatabaseUpdateDocument(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

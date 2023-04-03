@@ -6,19 +6,11 @@ import (
 	"net/http"
 )
 
-type DeleteDatabasePathParams struct {
-	// Automatically added
-	DatabaseName string `pathParam:"style=simple,explode=false,name=databaseName"`
-}
-
-type DeleteDatabaseQueryParams struct {
-	// Name of the database.
-	DatabaseName string `queryParam:"style=form,explode=true,name=database_name"`
-}
-
 type DeleteDatabaseRequest struct {
-	PathParams  DeleteDatabasePathParams
-	QueryParams DeleteDatabaseQueryParams
+	// Automatically added
+	DatabaseNamePathParameter string `pathParam:"style=simple,explode=false,name=databaseName"`
+	// Name of the database.
+	DatabaseNameQueryParameter string `queryParam:"style=form,explode=true,name=database_name"`
 }
 
 type DeleteDatabaseResponse struct {

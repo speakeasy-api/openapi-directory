@@ -30,7 +30,8 @@ func (e *GetBranchXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetBranchHeaders struct {
+type GetBranchRequest struct {
+	GetBranchInput    shared.GetBranchInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetBranchHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetBranchXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetBranchRequest struct {
-	Headers GetBranchHeaders
-	Request shared.GetBranchInput `request:"mediaType=application/json"`
 }
 
 type GetBranchResponse struct {

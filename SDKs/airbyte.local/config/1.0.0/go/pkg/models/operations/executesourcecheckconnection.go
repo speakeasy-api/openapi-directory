@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExecuteSourceCheckConnectionRequest struct {
-	Request shared.SourceCoreConfig `request:"mediaType=application/json"`
-}
-
 type ExecuteSourceCheckConnectionResponse struct {
 	// Successful operation
 	CheckConnectionRead *shared.CheckConnectionRead

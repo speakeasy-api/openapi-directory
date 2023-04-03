@@ -9,21 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PutEmailIdentityDkimSigningAttributesPathParams struct {
-	// The email identity.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-}
-
-type PutEmailIdentityDkimSigningAttributesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes - An object that contains configuration for Bring Your Own DKIM (BYODKIM), or, for Easy DKIM
 type PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes struct {
 	DomainSigningPrivateKey *string                          `json:"DomainSigningPrivateKey,omitempty"`
@@ -63,9 +48,16 @@ type PutEmailIdentityDkimSigningAttributesRequestBody struct {
 }
 
 type PutEmailIdentityDkimSigningAttributesRequest struct {
-	PathParams PutEmailIdentityDkimSigningAttributesPathParams
-	Headers    PutEmailIdentityDkimSigningAttributesHeaders
-	Request    PutEmailIdentityDkimSigningAttributesRequestBody `request:"mediaType=application/json"`
+	// The email identity.
+	EmailIdentity     string                                           `pathParam:"style=simple,explode=false,name=EmailIdentity"`
+	RequestBody       PutEmailIdentityDkimSigningAttributesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type PutEmailIdentityDkimSigningAttributesResponse struct {

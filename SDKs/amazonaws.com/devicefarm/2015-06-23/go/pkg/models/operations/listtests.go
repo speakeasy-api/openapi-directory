@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListTestsQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListTestsXAmzTargetEnum
 type ListTestsXAmzTargetEnum string
 
@@ -35,7 +30,8 @@ func (e *ListTestsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListTestsHeaders struct {
+type ListTestsRequest struct {
+	ListTestsRequest  shared.ListTestsRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +40,8 @@ type ListTestsHeaders struct {
 	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListTestsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListTestsRequest struct {
-	QueryParams ListTestsQueryParams
-	Headers     ListTestsHeaders
-	Request     shared.ListTestsRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListTestsResponse struct {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateRoleMappingPathParams struct {
+type UpdateRoleMappingRequest struct {
+	UpdateRole shared.UpdateRole `request:"mediaType=application/json"`
 	// Unique id of a principal (typically either a user or service account).
 	PrincipalID string `pathParam:"style=simple,explode=false,name=principalId"`
-}
-
-type UpdateRoleMappingRequest struct {
-	PathParams UpdateRoleMappingPathParams
-	Request    shared.UpdateRole `request:"mediaType=application/json"`
 }
 
 type UpdateRoleMappingResponse struct {

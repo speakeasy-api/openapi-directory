@@ -13,19 +13,14 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.PostCloseAccountHolderRequest{
-        Security: operations.PostCloseAccountHolderSecurity{
-            APIKeyAuth: &shared.SchemeAPIKeyAuth{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
-        },
-        Request: &shared.CloseAccountHolderRequest{
-            AccountHolderCode: "corrupti",
-        },
+    req := shared.CloseAccountHolderRequest{
+        AccountHolderCode: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.AccountHolders.PostCloseAccountHolder(ctx, req)
+    res, err := s.AccountHolders.PostCloseAccountHolder(ctx, req, operations.PostCloseAccountHolderSecurity{
+        APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -50,7 +50,7 @@ func (s *authorization) GenerateDeviceAuthorizationCode(ctx context.Context, req
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorization/device/code"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceRegistrationRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -65,7 +65,7 @@ func (s *authorization) GenerateDeviceAuthorizationCode(ctx context.Context, req
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -135,7 +135,7 @@ func (s *authorization) GetAccountToken(ctx context.Context, request operations.
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorization"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -150,7 +150,7 @@ func (s *authorization) GetAccountToken(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -228,7 +228,7 @@ func (s *authorization) GetAccountTokenByCode(ctx context.Context, request opera
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorization/device"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountTokenByCodeRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -243,7 +243,7 @@ func (s *authorization) GetAccountTokenByCode(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -308,11 +308,11 @@ func (s *authorization) GetAccountTokenByCode(ctx context.Context, request opera
 // Tokens are used to access restricted service endpoints. These restriced endpoints
 // will require a specific token type (e.g Profile) with a specific scope (e.g. Catalog)
 // before access is granted.
-func (s *authorization) GetProfileToken(ctx context.Context, request operations.GetProfileTokenRequest) (*operations.GetProfileTokenResponse, error) {
+func (s *authorization) GetProfileToken(ctx context.Context, request operations.GetProfileTokenRequest, security operations.GetProfileTokenSecurity) (*operations.GetProfileTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorization/profile"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileTokenRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -327,11 +327,11 @@ func (s *authorization) GetProfileToken(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -392,7 +392,7 @@ func (s *authorization) RefreshToken(ctx context.Context, request operations.Ref
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorization/refresh"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TokenRefreshRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -407,7 +407,7 @@ func (s *authorization) RefreshToken(ctx context.Context, request operations.Ref
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -478,7 +478,7 @@ func (s *authorization) SignOut(ctx context.Context, request operations.SignOutR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -530,7 +530,7 @@ func (s *authorization) SingleSignOn(ctx context.Context, request operations.Sin
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorization/sso"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SingleSignOnRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -545,7 +545,7 @@ func (s *authorization) SingleSignOn(ctx context.Context, request operations.Sin
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

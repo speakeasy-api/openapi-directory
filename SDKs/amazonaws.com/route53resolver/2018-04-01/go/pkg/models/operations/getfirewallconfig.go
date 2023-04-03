@@ -30,20 +30,16 @@ func (e *GetFirewallConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetFirewallConfigHeaders struct {
-	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        GetFirewallConfigXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type GetFirewallConfigRequest struct {
-	Headers GetFirewallConfigHeaders
-	Request shared.GetFirewallConfigRequest `request:"mediaType=application/json"`
+	GetFirewallConfigRequest shared.GetFirewallConfigRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm            *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget               GetFirewallConfigXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type GetFirewallConfigResponse struct {

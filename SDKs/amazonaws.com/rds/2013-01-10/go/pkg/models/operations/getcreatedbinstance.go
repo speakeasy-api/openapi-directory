@@ -50,7 +50,7 @@ func (e *GETCreateDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCreateDBInstanceQueryParams struct {
+type GETCreateDBInstanceRequest struct {
 	Action                     GETCreateDBInstanceActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AllocatedStorage           int64                          `queryParam:"style=form,explode=true,name=AllocatedStorage"`
 	AutoMinorVersionUpgrade    *bool                          `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
@@ -77,21 +77,13 @@ type GETCreateDBInstanceQueryParams struct {
 	PubliclyAccessible         *bool                          `queryParam:"style=form,explode=true,name=PubliclyAccessible"`
 	Version                    GETCreateDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	VpcSecurityGroupIds        []string                       `queryParam:"style=form,explode=true,name=VpcSecurityGroupIds"`
-}
-
-type GETCreateDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateDBInstanceRequest struct {
-	QueryParams GETCreateDBInstanceQueryParams
-	Headers     GETCreateDBInstanceHeaders
+	XAmzAlgorithm              *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateDBInstanceResponse struct {

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type PostAgentPathParams struct {
-	Name    string `pathParam:"style=simple,explode=false,name=name"`
-	Runmode string `pathParam:"style=simple,explode=false,name=runmode"`
-}
-
-type PostAgentQueryParams struct {
+type PostAgentRequest struct {
 	Operation                               *string  `queryParam:"style=form,explode=true,name=:operation"`
 	JcrContentCqDistribute                  *bool    `queryParam:"style=form,explode=true,name=jcr:content/cq:distribute"`
 	JcrContentCqDistributeAtTypeHint        *string  `queryParam:"style=form,explode=true,name=jcr:content/cq:distribute@TypeHint"`
@@ -62,11 +57,8 @@ type PostAgentQueryParams struct {
 	JcrContentTriggerSpecific               *bool    `queryParam:"style=form,explode=true,name=jcr:content/triggerSpecific"`
 	JcrContentUserID                        *string  `queryParam:"style=form,explode=true,name=jcr:content/userId"`
 	JcrPrimaryType                          *string  `queryParam:"style=form,explode=true,name=jcr:primaryType"`
-}
-
-type PostAgentRequest struct {
-	PathParams  PostAgentPathParams
-	QueryParams PostAgentQueryParams
+	Name                                    string   `pathParam:"style=simple,explode=false,name=name"`
+	Runmode                                 string   `pathParam:"style=simple,explode=false,name=runmode"`
 }
 
 type PostAgentResponse struct {

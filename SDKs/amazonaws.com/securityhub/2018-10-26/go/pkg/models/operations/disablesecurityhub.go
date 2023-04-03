@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type DisableSecurityHubHeaders struct {
+type DisableSecurityHubRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -14,10 +14,6 @@ type DisableSecurityHubHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DisableSecurityHubRequest struct {
-	Headers DisableSecurityHubHeaders
 }
 
 type DisableSecurityHubResponse struct {

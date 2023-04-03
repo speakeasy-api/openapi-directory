@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateNumberLeaseSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateNumberLeasePathParams struct {
-	// A phone number in E.164 format (11-digit). Example: 12132000384
-	Number string `pathParam:"style=simple,explode=false,name=number"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateNumberLeaseRequest struct {
-	PathParams UpdateNumberLeasePathParams
 	// A NumberLease object to update
-	Request  *shared.NumberLeaseInput `request:"mediaType=application/json"`
-	Security UpdateNumberLeaseSecurity
+	NumberLeaseInput *shared.NumberLeaseInput `request:"mediaType=application/json"`
+	// A phone number in E.164 format (11-digit). Example: 12132000384
+	Number string `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type UpdateNumberLeaseResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTRevokeCacheSecurityGroupIngressVersionEnum) UnmarshalJSON(data []by
 	}
 }
 
-type POSTRevokeCacheSecurityGroupIngressQueryParams struct {
-	Action  POSTRevokeCacheSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTRevokeCacheSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTRevokeCacheSecurityGroupIngressHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTRevokeCacheSecurityGroupIngressRequest struct {
-	QueryParams POSTRevokeCacheSecurityGroupIngressQueryParams
-	Headers     POSTRevokeCacheSecurityGroupIngressHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTRevokeCacheSecurityGroupIngressActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                         `request:"mediaType=text/xml"`
+	Version           POSTRevokeCacheSecurityGroupIngressVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTRevokeCacheSecurityGroupIngressResponse struct {

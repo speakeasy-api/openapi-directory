@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetExperimentPathParams struct {
-	// The name of the experiment that you want to see the details of.
-	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
-	// The name or ARN of the project that contains the experiment.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type GetExperimentHeaders struct {
+type GetExperimentRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetExperimentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetExperimentRequest struct {
-	PathParams GetExperimentPathParams
-	Headers    GetExperimentHeaders
+	// The name of the experiment that you want to see the details of.
+	Experiment string `pathParam:"style=simple,explode=false,name=experiment"`
+	// The name or ARN of the project that contains the experiment.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type GetExperimentResponse struct {

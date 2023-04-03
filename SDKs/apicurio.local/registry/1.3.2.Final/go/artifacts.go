@@ -91,7 +91,7 @@ func (s *artifacts) CreateArtifact(ctx context.Context, request operations.Creat
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/artifacts"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -106,9 +106,9 @@ func (s *artifacts) CreateArtifact(ctx context.Context, request operations.Creat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -168,7 +168,7 @@ func (s *artifacts) CreateArtifact(ctx context.Context, request operations.Creat
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) DeleteArtifact(ctx context.Context, request operations.DeleteArtifactRequest) (*operations.DeleteArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -222,7 +222,7 @@ func (s *artifacts) DeleteArtifact(ctx context.Context, request operations.Delet
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetArtifactByGlobalID(ctx context.Context, request operations.GetArtifactByGlobalIDRequest) (*operations.GetArtifactByGlobalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/{globalId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ids/{globalId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +265,7 @@ func (s *artifacts) GetArtifactByGlobalID(ctx context.Context, request operation
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetLatestArtifact(ctx context.Context, request operations.GetLatestArtifactRequest) (*operations.GetLatestArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +378,7 @@ func (s *artifacts) SearchArtifacts(ctx context.Context, request operations.Sear
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -464,9 +464,9 @@ func (s *artifacts) SearchArtifacts(ctx context.Context, request operations.Sear
 // (and therefore official) version of the artifact.
 func (s *artifacts) UpdateArtifact(ctx context.Context, request operations.UpdateArtifactRequest) (*operations.UpdateArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -481,7 +481,7 @@ func (s *artifacts) UpdateArtifact(ctx context.Context, request operations.Updat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -553,9 +553,9 @@ func (s *artifacts) UpdateArtifact(ctx context.Context, request operations.Updat
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) UpdateArtifactState(ctx context.Context, request operations.UpdateArtifactStateRequest) (*operations.UpdateArtifactStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/state", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/state", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateState", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

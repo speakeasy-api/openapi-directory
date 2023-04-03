@@ -10,21 +10,16 @@ import (
 )
 
 type ProvisioningProfileSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ProvisioningProfilePathParams struct {
+type ProvisioningProfileRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The release_id
 	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
-}
-
-type ProvisioningProfileRequest struct {
-	PathParams ProvisioningProfilePathParams
-	Security   ProvisioningProfileSecurity
 }
 
 type ProvisioningProfile400ApplicationJSONCodeEnum string

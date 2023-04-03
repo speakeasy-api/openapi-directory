@@ -8,13 +8,7 @@ import (
 )
 
 type PostContributionsSecurity struct {
-	Oauth shared.SchemeOauth `security:"scheme,type=oauth2"`
-}
-
-type PostContributionsRequest struct {
-	// Contribution object to be created
-	Request  shared.Contribution `request:"mediaType=application/json"`
-	Security PostContributionsSecurity
+	Oauth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PostContributionsResponse struct {

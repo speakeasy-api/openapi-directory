@@ -6,14 +6,7 @@ import (
 	"net/http"
 )
 
-type CancelPipelineReprocessingPathParams struct {
-	// The name of pipeline for which data reprocessing is canceled.
-	PipelineName string `pathParam:"style=simple,explode=false,name=pipelineName"`
-	// The ID of the reprocessing task (returned by <code>StartPipelineReprocessing</code>).
-	ReprocessingID string `pathParam:"style=simple,explode=false,name=reprocessingId"`
-}
-
-type CancelPipelineReprocessingHeaders struct {
+type CancelPipelineReprocessingRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +14,10 @@ type CancelPipelineReprocessingHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type CancelPipelineReprocessingRequest struct {
-	PathParams CancelPipelineReprocessingPathParams
-	Headers    CancelPipelineReprocessingHeaders
+	// The name of pipeline for which data reprocessing is canceled.
+	PipelineName string `pathParam:"style=simple,explode=false,name=pipelineName"`
+	// The ID of the reprocessing task (returned by <code>StartPipelineReprocessing</code>).
+	ReprocessingID string `pathParam:"style=simple,explode=false,name=reprocessingId"`
 }
 
 type CancelPipelineReprocessingResponse struct {

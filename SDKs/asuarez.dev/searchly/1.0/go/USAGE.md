@@ -13,10 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequest{
-        Request: operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
-            Content: "corrupti",
-        },
+    req := operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
+        Content: "corrupti",
     }
 
     ctx := context.Background()

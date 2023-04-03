@@ -13,61 +13,63 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAPIRequest{
-        Headers: operations.CreateAPIHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.CreateAPIRequestBody{
-            APIKeySelectionExpression: "illum",
+        RequestBody: operations.CreateAPIRequestBody{
+            APIKeySelectionExpression: "corrupti",
             CorsConfiguration: &operations.CreateAPIRequestBodyCorsConfiguration{
                 AllowCredentials: false,
                 AllowHeaders: []string{
-                    "error",
-                    "deserunt",
+                    "distinctio",
+                    "quibusdam",
+                    "unde",
                 },
                 AllowMethods: []string{
+                    "corrupti",
+                    "illum",
+                    "vel",
+                    "error",
+                },
+                AllowOrigins: []string{
+                    "suscipit",
                     "iure",
                     "magnam",
                 },
-                AllowOrigins: []string{
+                ExposeHeaders: []string{
                     "ipsa",
                     "delectus",
                     "tempora",
                     "suscipit",
                 },
-                ExposeHeaders: []string{
-                    "minus",
-                    "placeat",
-                },
-                MaxAge: 528895,
+                MaxAge: 477665,
             },
-            CredentialsArn: "iusto",
-            Description: "excepturi",
+            CredentialsArn: "minus",
+            Description: "placeat",
             DisableExecuteAPIEndpoint: false,
             DisableSchemaValidation: false,
-            Name: "nisi",
-            ProtocolType: "HTTP",
-            RouteKey: "temporibus",
-            RouteSelectionExpression: "ab",
+            Name: "voluptatum",
+            ProtocolType: "WEBSOCKET",
+            RouteKey: "excepturi",
+            RouteSelectionExpression: "nisi",
             Tags: map[string]string{
-                "veritatis": "deserunt",
-                "perferendis": "ipsam",
+                "temporibus": "ab",
+                "quis": "veritatis",
+                "deserunt": "perferendis",
+                "ipsam": "repellendus",
             },
-            Target: "repellendus",
-            Version: "sapiente",
+            Target: "sapiente",
+            Version: "quo",
         },
+        XAmzAlgorithm: "odit",
+        XAmzContentSha256: "at",
+        XAmzCredential: "at",
+        XAmzDate: "maiores",
+        XAmzSecurityToken: "molestiae",
+        XAmzSignature: "quod",
+        XAmzSignedHeaders: "quod",
     }
 
     ctx := context.Background()

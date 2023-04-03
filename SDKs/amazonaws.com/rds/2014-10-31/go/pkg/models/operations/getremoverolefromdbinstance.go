@@ -50,30 +50,22 @@ func (e *GETRemoveRoleFromDBInstanceVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETRemoveRoleFromDBInstanceQueryParams struct {
+type GETRemoveRoleFromDBInstanceRequest struct {
 	Action GETRemoveRoleFromDBInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the DB instance to disassociate the IAM role from.
 	DBInstanceIdentifier string `queryParam:"style=form,explode=true,name=DBInstanceIdentifier"`
 	// The name of the feature for the DB instance that the IAM role is to be disassociated from. For information about supported feature names, see <code>DBEngineVersion</code>.
 	FeatureName string `queryParam:"style=form,explode=true,name=FeatureName"`
 	// The Amazon Resource Name (ARN) of the IAM role to disassociate from the DB instance, for example, <code>arn:aws:iam::123456789012:role/AccessRole</code>.
-	RoleArn string                                 `queryParam:"style=form,explode=true,name=RoleArn"`
-	Version GETRemoveRoleFromDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRemoveRoleFromDBInstanceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRemoveRoleFromDBInstanceRequest struct {
-	QueryParams GETRemoveRoleFromDBInstanceQueryParams
-	Headers     GETRemoveRoleFromDBInstanceHeaders
+	RoleArn           string                                 `queryParam:"style=form,explode=true,name=RoleArn"`
+	Version           GETRemoveRoleFromDBInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRemoveRoleFromDBInstanceResponse struct {

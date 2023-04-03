@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContainersCreateQueryParams struct {
-	// Choose a name for your container. The characters in the name can include uppercase letters, lowercase letters, numbers, periods (.), underscores (_), or hyphens (-), but the name must start with a letter.
-	Name *string `queryParam:"style=form,explode=true,name=name"`
-}
-
-type PostContainersCreateHeaders struct {
+type PostContainersCreateRequest struct {
+	// Summary of input parameter to create a container in IBM Containers.
+	CreateContainer shared.CreateContainer `request:"mediaType=application/json"`
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersCreateRequest struct {
-	QueryParams PostContainersCreateQueryParams
-	Headers     PostContainersCreateHeaders
-	// Summary of input parameter to create a container in IBM Containers.
-	Request shared.CreateContainer `request:"mediaType=application/json"`
+	// Choose a name for your container. The characters in the name can include uppercase letters, lowercase letters, numbers, periods (.), underscores (_), or hyphens (-), but the name must start with a letter.
+	Name *string `queryParam:"style=form,explode=true,name=name"`
 }
 
 type PostContainersCreateResponse struct {

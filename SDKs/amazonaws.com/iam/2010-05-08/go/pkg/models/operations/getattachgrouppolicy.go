@@ -50,28 +50,20 @@ func (e *GETAttachGroupPolicyVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAttachGroupPolicyQueryParams struct {
+type GETAttachGroupPolicyRequest struct {
 	Action GETAttachGroupPolicyActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name (friendly name, not ARN) of the group to attach the policy to.</p> <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
 	GroupName string `queryParam:"style=form,explode=true,name=GroupName"`
 	// <p>The Amazon Resource Name (ARN) of the IAM policy you want to attach.</p> <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
-	PolicyArn string                          `queryParam:"style=form,explode=true,name=PolicyArn"`
-	Version   GETAttachGroupPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAttachGroupPolicyHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAttachGroupPolicyRequest struct {
-	QueryParams GETAttachGroupPolicyQueryParams
-	Headers     GETAttachGroupPolicyHeaders
+	PolicyArn         string                          `queryParam:"style=form,explode=true,name=PolicyArn"`
+	Version           GETAttachGroupPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAttachGroupPolicyResponse struct {

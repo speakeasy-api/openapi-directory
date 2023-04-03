@@ -35,22 +35,22 @@ func newConsumers(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // ConsumerRequestCountsAll - Consumer request counts
 // Get consumer request counts within a given datetime range.
-func (s *consumers) ConsumerRequestCountsAll(ctx context.Context, request operations.ConsumerRequestCountsAllRequest) (*operations.ConsumerRequestCountsAllResponse, error) {
+func (s *consumers) ConsumerRequestCountsAll(ctx context.Context, request operations.ConsumerRequestCountsAllRequest, security operations.ConsumerRequestCountsAllSecurity) (*operations.ConsumerRequestCountsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}/stats", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}/stats", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,11 +146,11 @@ func (s *consumers) ConsumerRequestCountsAll(ctx context.Context, request operat
 
 // ConsumersAdd - Create consumer
 // Create a consumer
-func (s *consumers) ConsumersAdd(ctx context.Context, request operations.ConsumersAddRequest) (*operations.ConsumersAddResponse, error) {
+func (s *consumers) ConsumersAdd(ctx context.Context, request operations.ConsumersAddRequest, security operations.ConsumersAddSecurity) (*operations.ConsumersAddResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vault/consumers"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConsumerInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -165,9 +165,9 @@ func (s *consumers) ConsumersAdd(ctx context.Context, request operations.Consume
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -263,7 +263,7 @@ func (s *consumers) ConsumersAdd(ctx context.Context, request operations.Consume
 
 // ConsumersAll - Get all consumers
 // This endpoint includes all application consumers, along with an aggregated count of requests made.
-func (s *consumers) ConsumersAll(ctx context.Context, request operations.ConsumersAllRequest) (*operations.ConsumersAllResponse, error) {
+func (s *consumers) ConsumersAll(ctx context.Context, request operations.ConsumersAllRequest, security operations.ConsumersAllSecurity) (*operations.ConsumersAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/vault/consumers"
 
@@ -272,13 +272,13 @@ func (s *consumers) ConsumersAll(ctx context.Context, request operations.Consume
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -374,18 +374,18 @@ func (s *consumers) ConsumersAll(ctx context.Context, request operations.Consume
 
 // ConsumersDelete - Delete consumer
 // Delete consumer and all their connections, including credentials.
-func (s *consumers) ConsumersDelete(ctx context.Context, request operations.ConsumersDeleteRequest) (*operations.ConsumersDeleteResponse, error) {
+func (s *consumers) ConsumersDelete(ctx context.Context, request operations.ConsumersDeleteRequest, security operations.ConsumersDeleteSecurity) (*operations.ConsumersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -481,18 +481,18 @@ func (s *consumers) ConsumersDelete(ctx context.Context, request operations.Cons
 
 // ConsumersOne - Get consumer
 // Consumer detail including their aggregated counts with the connections they have authorized.
-func (s *consumers) ConsumersOne(ctx context.Context, request operations.ConsumersOneRequest) (*operations.ConsumersOneResponse, error) {
+func (s *consumers) ConsumersOne(ctx context.Context, request operations.ConsumersOneRequest, security operations.ConsumersOneSecurity) (*operations.ConsumersOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -588,11 +588,11 @@ func (s *consumers) ConsumersOne(ctx context.Context, request operations.Consume
 
 // ConsumersUpdate - Update consumer
 // Update consumer metadata such as name and email.
-func (s *consumers) ConsumersUpdate(ctx context.Context, request operations.ConsumersUpdateRequest) (*operations.ConsumersUpdateResponse, error) {
+func (s *consumers) ConsumersUpdate(ctx context.Context, request operations.ConsumersUpdateRequest, security operations.ConsumersUpdateSecurity) (*operations.ConsumersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/vault/consumers/{consumer_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateConsumerRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -607,9 +607,9 @@ func (s *consumers) ConsumersUpdate(ctx context.Context, request operations.Cons
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

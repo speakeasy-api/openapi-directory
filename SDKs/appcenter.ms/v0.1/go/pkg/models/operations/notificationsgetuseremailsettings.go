@@ -6,16 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type NotificationsGetUserEmailSettingsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type NotificationsGetUserEmailSettingsRequest struct {
-	Security NotificationsGetUserEmailSettingsSecurity
-}
 
 // NotificationsGetUserEmailSettingsDefaultApplicationJSONCodeEnum - The status code return by the API. It can be 400 or 404 or 409 or 500.
 type NotificationsGetUserEmailSettingsDefaultApplicationJSONCodeEnum string

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListGameServerGroupsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListGameServerGroupsXAmzTargetEnum
 type ListGameServerGroupsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListGameServerGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListGameServerGroupsHeaders struct {
+type ListGameServerGroupsRequest struct {
+	// Pagination limit
+	Limit                     *string                          `queryParam:"style=form,explode=true,name=Limit"`
+	ListGameServerGroupsInput shared.ListGameServerGroupsInput `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListGameServerGroupsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListGameServerGroupsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListGameServerGroupsRequest struct {
-	QueryParams ListGameServerGroupsQueryParams
-	Headers     ListGameServerGroupsHeaders
-	Request     shared.ListGameServerGroupsInput `request:"mediaType=application/json"`
 }
 
 type ListGameServerGroupsResponse struct {

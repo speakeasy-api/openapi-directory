@@ -36,14 +36,14 @@ func newProjectMemberships(defaultClient, securityClient HTTPClient, serverURL, 
 // Returns the complete project record for a single project membership.
 func (s *projectMemberships) GetProjectMembership(ctx context.Context, request operations.GetProjectMembershipRequest) (*operations.GetProjectMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_memberships/{project_membership_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/project_memberships/{project_membership_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -103,14 +103,14 @@ func (s *projectMemberships) GetProjectMembership(ctx context.Context, request o
 // Returns the compact project membership records for the project.
 func (s *projectMemberships) GetProjectMembershipsForProject(ctx context.Context, request operations.GetProjectMembershipsForProjectRequest) (*operations.GetProjectMembershipsForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_memberships", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_memberships", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

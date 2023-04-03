@@ -34,7 +34,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // ApisAll - List APIs
 // List APIs
-func (s *apIs) ApisAll(ctx context.Context, request operations.ApisAllRequest) (*operations.ApisAllResponse, error) {
+func (s *apIs) ApisAll(ctx context.Context, request operations.ApisAllRequest, security operations.ApisAllSecurity) (*operations.ApisAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/connector/apis"
 
@@ -43,13 +43,13 @@ func (s *apIs) ApisAll(ctx context.Context, request operations.ApisAllRequest) (
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,18 +125,18 @@ func (s *apIs) ApisAll(ctx context.Context, request operations.ApisAllRequest) (
 
 // ApisOne - Get API
 // Get API
-func (s *apIs) ApisOne(ctx context.Context, request operations.ApisOneRequest) (*operations.ApisOneResponse, error) {
+func (s *apIs) ApisOne(ctx context.Context, request operations.ApisOneRequest, security operations.ApisOneSecurity) (*operations.ApisOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connector/apis/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/connector/apis/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

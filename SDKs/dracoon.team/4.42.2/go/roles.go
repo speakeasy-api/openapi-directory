@@ -47,9 +47,9 @@ func newRoles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // None.
 func (s *roles) AddRoleGroups(ctx context.Context, request operations.AddRoleGroupsRequest) (*operations.AddRoleGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -64,7 +64,7 @@ func (s *roles) AddRoleGroups(ctx context.Context, request operations.AddRoleGro
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -134,9 +134,9 @@ func (s *roles) AddRoleGroups(ctx context.Context, request operations.AddRoleGro
 // None.
 func (s *roles) AddRoleUsers(ctx context.Context, request operations.AddRoleUsersRequest) (*operations.AddRoleUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -151,7 +151,7 @@ func (s *roles) AddRoleUsers(ctx context.Context, request operations.AddRoleUser
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -245,16 +245,16 @@ func (s *roles) AddRoleUsers(ctx context.Context, request operations.AddRoleUser
 // </details>
 func (s *roles) RequestRoleGroups(ctx context.Context, request operations.RequestRoleGroupsRequest) (*operations.RequestRoleGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/groups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -358,16 +358,16 @@ func (s *roles) RequestRoleGroups(ctx context.Context, request operations.Reques
 // </details>
 func (s *roles) RequestRoleUsers(ctx context.Context, request operations.RequestRoleUsersRequest) (*operations.RequestRoleUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -446,7 +446,7 @@ func (s *roles) RequestRoles(ctx context.Context, request operations.RequestRole
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -513,9 +513,9 @@ func (s *roles) RequestRoles(ctx context.Context, request operations.RequestRole
 // None.
 func (s *roles) RevokeRoleGroups(ctx context.Context, request operations.RevokeRoleGroupsRequest) (*operations.RevokeRoleGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/groups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/groups", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -530,7 +530,7 @@ func (s *roles) RevokeRoleGroups(ctx context.Context, request operations.RevokeR
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 
@@ -601,9 +601,9 @@ func (s *roles) RevokeRoleGroups(ctx context.Context, request operations.RevokeR
 // None.
 func (s *roles) RevokeRoleUsers(ctx context.Context, request operations.RevokeRoleUsersRequest) (*operations.RevokeRoleUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/roles/{role_id}/users", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserIds", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -618,7 +618,7 @@ func (s *roles) RevokeRoleUsers(ctx context.Context, request operations.RevokeRo
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.securityClient
 

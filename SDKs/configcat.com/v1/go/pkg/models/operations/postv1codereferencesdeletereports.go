@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostV1CodeReferencesDeleteReportsRequest struct {
-	Request shared.DeleteRepositoryReportsRequest `request:"mediaType=application/json"`
-}
 
 type PostV1CodeReferencesDeleteReportsResponse struct {
 	ContentType string

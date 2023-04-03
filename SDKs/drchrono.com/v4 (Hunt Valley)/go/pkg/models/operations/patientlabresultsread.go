@@ -8,24 +8,15 @@ import (
 )
 
 type PatientLabResultsReadSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type PatientLabResultsReadPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type PatientLabResultsReadQueryParams struct {
-	Doctor         *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	OrderingDoctor *int64  `queryParam:"style=form,explode=true,name=ordering_doctor"`
-	Patient        *int64  `queryParam:"style=form,explode=true,name=patient"`
-	Since          *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type PatientLabResultsReadRequest struct {
-	PathParams  PatientLabResultsReadPathParams
-	QueryParams PatientLabResultsReadQueryParams
-	Security    PatientLabResultsReadSecurity
+	Doctor         *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	ID             string  `pathParam:"style=simple,explode=false,name=id"`
+	OrderingDoctor *int64  `queryParam:"style=form,explode=true,name=ordering_doctor"`
+	Patient        *int64  `queryParam:"style=form,explode=true,name=patient"`
+	Since          *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 type PatientLabResultsReadResponse struct {

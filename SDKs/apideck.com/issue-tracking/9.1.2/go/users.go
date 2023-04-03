@@ -33,22 +33,22 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // CollectionUsersAll - List Users
 // List Users
-func (s *users) CollectionUsersAll(ctx context.Context, request operations.CollectionUsersAllRequest) (*operations.CollectionUsersAllResponse, error) {
+func (s *users) CollectionUsersAll(ctx context.Context, request operations.CollectionUsersAllRequest, security operations.CollectionUsersAllSecurity) (*operations.CollectionUsersAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/users", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/users", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,22 +144,22 @@ func (s *users) CollectionUsersAll(ctx context.Context, request operations.Colle
 
 // CollectionUsersOne - Get user
 // Get user
-func (s *users) CollectionUsersOne(ctx context.Context, request operations.CollectionUsersOneRequest) (*operations.CollectionUsersOneResponse, error) {
+func (s *users) CollectionUsersOne(ctx context.Context, request operations.CollectionUsersOneRequest, security operations.CollectionUsersOneSecurity) (*operations.CollectionUsersOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/users/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/issue-tracking/collections/{collection_id}/users/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

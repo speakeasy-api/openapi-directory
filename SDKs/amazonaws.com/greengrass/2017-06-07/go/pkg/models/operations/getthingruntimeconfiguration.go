@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetThingRuntimeConfigurationPathParams struct {
+type GetThingRuntimeConfigurationRequest struct {
 	// The thing name.
-	ThingName string `pathParam:"style=simple,explode=false,name=ThingName"`
-}
-
-type GetThingRuntimeConfigurationHeaders struct {
+	ThingName         string  `pathParam:"style=simple,explode=false,name=ThingName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetThingRuntimeConfigurationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetThingRuntimeConfigurationRequest struct {
-	PathParams GetThingRuntimeConfigurationPathParams
-	Headers    GetThingRuntimeConfigurationHeaders
 }
 
 type GetThingRuntimeConfigurationResponse struct {

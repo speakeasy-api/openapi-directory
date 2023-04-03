@@ -13,62 +13,54 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAutoPredictorRequest{
-        Headers: operations.CreateAutoPredictorHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "AmazonForecast.CreateAutoPredictor",
-        },
-        Request: shared.CreateAutoPredictorRequest{
+        CreateAutoPredictorRequest: shared.CreateAutoPredictorRequest{
             DataConfig: &shared.DataConfig{
                 AdditionalDatasets: []shared.AdditionalDataset{
                     shared.AdditionalDataset{
                         Configuration: map[string][]string{
-                            "error": []string{
+                            "distinctio": []string{
+                                "unde",
+                                "nulla",
+                                "corrupti",
+                                "illum",
+                            },
+                            "vel": []string{
+                                "deserunt",
                                 "suscipit",
                                 "iure",
-                                "magnam",
                             },
-                            "debitis": []string{
+                            "magnam": []string{
+                                "ipsa",
                                 "delectus",
+                                "tempora",
+                                "suscipit",
                             },
                         },
-                        Name: "tempora",
+                        Name: "molestiae",
                     },
                     shared.AdditionalDataset{
                         Configuration: map[string][]string{
-                            "molestiae": []string{
-                                "placeat",
-                                "voluptatum",
+                            "placeat": []string{
                                 "iusto",
                                 "excepturi",
+                                "nisi",
                             },
-                            "nisi": []string{
-                                "temporibus",
+                            "recusandae": []string{
                                 "ab",
                                 "quis",
                                 "veritatis",
+                                "deserunt",
                             },
-                        },
-                        Name: "deserunt",
-                    },
-                    shared.AdditionalDataset{
-                        Configuration: map[string][]string{
-                            "ipsam": []string{
+                            "perferendis": []string{
+                                "repellendus",
                                 "sapiente",
-                                "quo",
-                                "odit",
+                            },
+                            "quo": []string{
                                 "at",
                             },
                         },
@@ -146,6 +138,14 @@ func main() {
                 Month: "MARCH",
             },
         },
+        XAmzAlgorithm: "corporis",
+        XAmzContentSha256: "explicabo",
+        XAmzCredential: "nobis",
+        XAmzDate: "enim",
+        XAmzSecurityToken: "omnis",
+        XAmzSignature: "nemo",
+        XAmzSignedHeaders: "minima",
+        XAmzTarget: "AmazonForecast.CreateAutoPredictor",
     }
 
     ctx := context.Background()

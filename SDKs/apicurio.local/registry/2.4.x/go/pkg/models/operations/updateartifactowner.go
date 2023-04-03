@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateArtifactOwnerPathParams struct {
+type UpdateArtifactOwnerRequest struct {
+	ArtifactOwner shared.ArtifactOwner `request:"mediaType=application/json"`
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type UpdateArtifactOwnerRequest struct {
-	PathParams UpdateArtifactOwnerPathParams
-	Request    shared.ArtifactOwner `request:"mediaType=application/json"`
 }
 
 type UpdateArtifactOwnerResponse struct {

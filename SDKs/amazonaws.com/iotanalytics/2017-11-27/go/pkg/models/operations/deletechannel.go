@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteChannelPathParams struct {
-	// The name of the channel to delete.
-	ChannelName string `pathParam:"style=simple,explode=false,name=channelName"`
-}
-
-type DeleteChannelHeaders struct {
+type DeleteChannelRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteChannelHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteChannelRequest struct {
-	PathParams DeleteChannelPathParams
-	Headers    DeleteChannelHeaders
+	// The name of the channel to delete.
+	ChannelName string `pathParam:"style=simple,explode=false,name=channelName"`
 }
 
 type DeleteChannelResponse struct {

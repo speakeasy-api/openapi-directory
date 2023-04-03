@@ -14,30 +14,23 @@ func main() {
     s := sdk.New()
 
     req := operations.CollectionsAllRequest{
-        Security: operations.CollectionsAllSecurity{
-            APIKey: shared.SchemeAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+        Cursor: "corrupti",
+        Fields: "provident",
+        Limit: 715190,
+        Raw: false,
+        Sort: &shared.CollectionsSort{
+            By: "name",
+            Direction: "desc",
         },
-        QueryParams: operations.CollectionsAllQueryParams{
-            Cursor: "corrupti",
-            Fields: "provident",
-            Limit: 715190,
-            Raw: false,
-            Sort: &shared.CollectionsSort{
-                By: "name",
-                Direction: "desc",
-            },
-        },
-        Headers: operations.CollectionsAllHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "nulla",
-            XApideckServiceID: "corrupti",
-        },
+        XApideckAppID: "unde",
+        XApideckConsumerID: "nulla",
+        XApideckServiceID: "corrupti",
     }
 
     ctx := context.Background()
-    res, err := s.Collections.CollectionsAll(ctx, req)
+    res, err := s.Collections.CollectionsAll(ctx, req, operations.CollectionsAllSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

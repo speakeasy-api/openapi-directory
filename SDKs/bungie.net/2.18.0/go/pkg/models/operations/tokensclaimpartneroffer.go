@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type TokensClaimPartnerOfferSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type TokensClaimPartnerOfferRequest struct {
-	Security TokensClaimPartnerOfferSecurity
-}
 
 // TokensClaimPartnerOffer200Wildcard - Look at the Response property for more information about the nature of this response
 type TokensClaimPartnerOffer200Wildcard struct {

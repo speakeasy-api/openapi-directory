@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListSegmentReferencesPathParams struct {
-	// The ARN of the segment that you want to view information for.
-	Segment string `pathParam:"style=simple,explode=false,name=segment"`
-}
-
 // ListSegmentReferencesTypeEnum - Specifies whether to return information about launches or experiments that use this segment.
 type ListSegmentReferencesTypeEnum string
 
@@ -38,16 +33,7 @@ func (e *ListSegmentReferencesTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListSegmentReferencesQueryParams struct {
-	// The maximum number of results to include in the response. If you omit this, the default of 50 is used.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The token to use when requesting the next set of results. You received this token from a previous <code>ListSegmentReferences</code> operation.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// Specifies whether to return information about launches or experiments that use this segment.
-	Type ListSegmentReferencesTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type ListSegmentReferencesHeaders struct {
+type ListSegmentReferencesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -55,12 +41,14 @@ type ListSegmentReferencesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListSegmentReferencesRequest struct {
-	PathParams  ListSegmentReferencesPathParams
-	QueryParams ListSegmentReferencesQueryParams
-	Headers     ListSegmentReferencesHeaders
+	// The maximum number of results to include in the response. If you omit this, the default of 50 is used.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// The token to use when requesting the next set of results. You received this token from a previous <code>ListSegmentReferences</code> operation.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The ARN of the segment that you want to view information for.
+	Segment string `pathParam:"style=simple,explode=false,name=segment"`
+	// Specifies whether to return information about launches or experiments that use this segment.
+	Type ListSegmentReferencesTypeEnum `queryParam:"style=form,explode=true,name=type"`
 }
 
 type ListSegmentReferencesResponse struct {

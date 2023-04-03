@@ -34,7 +34,7 @@ func newVerification(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // PostDeleteBankAccounts - Delete bank accounts
 // Deletes bank accounts associated with an account holder.
-func (s *verification) PostDeleteBankAccounts(ctx context.Context, request operations.PostDeleteBankAccountsRequest) (*operations.PostDeleteBankAccountsResponse, error) {
+func (s *verification) PostDeleteBankAccounts(ctx context.Context, request shared.DeleteBankAccountRequest, security operations.PostDeleteBankAccountsSecurity) (*operations.PostDeleteBankAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteBankAccounts"
 
@@ -50,7 +50,7 @@ func (s *verification) PostDeleteBankAccounts(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *verification) PostDeleteBankAccounts(ctx context.Context, request opera
 
 // PostDeleteLegalArrangements - Delete legal arrangements
 // Deletes legal arrangements and/or legal arrangement entities associated with an account holder.
-func (s *verification) PostDeleteLegalArrangements(ctx context.Context, request operations.PostDeleteLegalArrangementsRequest) (*operations.PostDeleteLegalArrangementsResponse, error) {
+func (s *verification) PostDeleteLegalArrangements(ctx context.Context, request shared.DeleteLegalArrangementRequest, security operations.PostDeleteLegalArrangementsSecurity) (*operations.PostDeleteLegalArrangementsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteLegalArrangements"
 
@@ -122,7 +122,7 @@ func (s *verification) PostDeleteLegalArrangements(ctx context.Context, request 
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -178,7 +178,7 @@ func (s *verification) PostDeleteLegalArrangements(ctx context.Context, request 
 
 // PostDeleteShareholders - Delete shareholders
 // Deletes shareholders associated with an account holder.
-func (s *verification) PostDeleteShareholders(ctx context.Context, request operations.PostDeleteShareholdersRequest) (*operations.PostDeleteShareholdersResponse, error) {
+func (s *verification) PostDeleteShareholders(ctx context.Context, request shared.DeleteShareholderRequest, security operations.PostDeleteShareholdersSecurity) (*operations.PostDeleteShareholdersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteShareholders"
 
@@ -194,7 +194,7 @@ func (s *verification) PostDeleteShareholders(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -250,7 +250,7 @@ func (s *verification) PostDeleteShareholders(ctx context.Context, request opera
 
 // PostDeleteSignatories - Delete signatories
 // Deletes signatories associated with an account holder.
-func (s *verification) PostDeleteSignatories(ctx context.Context, request operations.PostDeleteSignatoriesRequest) (*operations.PostDeleteSignatoriesResponse, error) {
+func (s *verification) PostDeleteSignatories(ctx context.Context, request shared.DeleteSignatoriesRequest, security operations.PostDeleteSignatoriesSecurity) (*operations.PostDeleteSignatoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteSignatories"
 
@@ -266,7 +266,7 @@ func (s *verification) PostDeleteSignatories(ctx context.Context, request operat
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -322,7 +322,7 @@ func (s *verification) PostDeleteSignatories(ctx context.Context, request operat
 
 // PostGetUploadedDocuments - Get documents
 // Returns documents that were previously uploaded for an account holder. Adyen uses the documents during the [verification process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
-func (s *verification) PostGetUploadedDocuments(ctx context.Context, request operations.PostGetUploadedDocumentsRequest) (*operations.PostGetUploadedDocumentsResponse, error) {
+func (s *verification) PostGetUploadedDocuments(ctx context.Context, request shared.GetUploadedDocumentsRequest, security operations.PostGetUploadedDocumentsSecurity) (*operations.PostGetUploadedDocumentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getUploadedDocuments"
 
@@ -338,7 +338,7 @@ func (s *verification) PostGetUploadedDocuments(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -392,7 +392,7 @@ func (s *verification) PostGetUploadedDocuments(ctx context.Context, request ope
 
 // PostUploadDocument - Upload a document
 // Uploads a document for an account holder. Adyen uses the documents during the [verification process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
-func (s *verification) PostUploadDocument(ctx context.Context, request operations.PostUploadDocumentRequest) (*operations.PostUploadDocumentResponse, error) {
+func (s *verification) PostUploadDocument(ctx context.Context, request shared.UploadDocumentRequest, security operations.PostUploadDocumentSecurity) (*operations.PostUploadDocumentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploadDocument"
 
@@ -408,7 +408,7 @@ func (s *verification) PostUploadDocument(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProfileObjectsPathParams struct {
-	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type ListProfileObjectsQueryParams struct {
-	// The maximum number of objects returned per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
-	// The pagination token from the previous call to ListProfileObjects.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-}
-
-type ListProfileObjectsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // ListProfileObjectsRequestBodyObjectFilter - The filter applied to ListProfileObjects response to include profile objects with the specified index values. This filter is only supported for ObjectTypeName _asset, _case and _order.
 type ListProfileObjectsRequestBodyObjectFilter struct {
 	KeyName *string  `json:"KeyName,omitempty"`
@@ -45,10 +23,20 @@ type ListProfileObjectsRequestBody struct {
 }
 
 type ListProfileObjectsRequest struct {
-	PathParams  ListProfileObjectsPathParams
-	QueryParams ListProfileObjectsQueryParams
-	Headers     ListProfileObjectsHeaders
-	Request     ListProfileObjectsRequestBody `request:"mediaType=application/json"`
+	// The unique name of the domain.
+	DomainName        string                        `pathParam:"style=simple,explode=false,name=DomainName"`
+	RequestBody       ListProfileObjectsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The maximum number of objects returned per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
+	// The pagination token from the previous call to ListProfileObjects.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
 }
 
 type ListProfileObjectsResponse struct {

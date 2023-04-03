@@ -50,28 +50,20 @@ func (e *GETPurchaseReservedNodeOfferingVersionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type GETPurchaseReservedNodeOfferingQueryParams struct {
+type GETPurchaseReservedNodeOfferingRequest struct {
 	Action GETPurchaseReservedNodeOfferingActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The number of reserved nodes that you want to purchase.</p> <p>Default: <code>1</code> </p>
 	NodeCount *int64 `queryParam:"style=form,explode=true,name=NodeCount"`
 	// The unique identifier of the reserved node offering you want to purchase.
 	ReservedNodeOfferingID string                                     `queryParam:"style=form,explode=true,name=ReservedNodeOfferingId"`
 	Version                GETPurchaseReservedNodeOfferingVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPurchaseReservedNodeOfferingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPurchaseReservedNodeOfferingRequest struct {
-	QueryParams GETPurchaseReservedNodeOfferingQueryParams
-	Headers     GETPurchaseReservedNodeOfferingHeaders
+	XAmzAlgorithm          *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPurchaseReservedNodeOfferingResponse struct {

@@ -35,7 +35,7 @@ func newClinical(defaultClient, securityClient HTTPClient, serverURL, language, 
 }
 
 // AllergiesCreate - Create patient allergy
-func (s *clinical) AllergiesCreate(ctx context.Context, request operations.AllergiesCreateRequest) (*operations.AllergiesCreateResponse, error) {
+func (s *clinical) AllergiesCreate(ctx context.Context, request operations.AllergiesCreateRequest, security operations.AllergiesCreateSecurity) (*operations.AllergiesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/allergies"
 
@@ -44,11 +44,11 @@ func (s *clinical) AllergiesCreate(ctx context.Context, request operations.Aller
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -94,7 +94,7 @@ func (s *clinical) AllergiesCreate(ctx context.Context, request operations.Aller
 }
 
 // AllergiesList - Retrieve or search patient allergies
-func (s *clinical) AllergiesList(ctx context.Context, request operations.AllergiesListRequest) (*operations.AllergiesListResponse, error) {
+func (s *clinical) AllergiesList(ctx context.Context, request operations.AllergiesListRequest, security operations.AllergiesListSecurity) (*operations.AllergiesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/allergies"
 
@@ -103,11 +103,11 @@ func (s *clinical) AllergiesList(ctx context.Context, request operations.Allergi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -153,20 +153,20 @@ func (s *clinical) AllergiesList(ctx context.Context, request operations.Allergi
 }
 
 // AllergiesPartialUpdate - Update an existing patient allergy
-func (s *clinical) AllergiesPartialUpdate(ctx context.Context, request operations.AllergiesPartialUpdateRequest) (*operations.AllergiesPartialUpdateResponse, error) {
+func (s *clinical) AllergiesPartialUpdate(ctx context.Context, request operations.AllergiesPartialUpdateRequest, security operations.AllergiesPartialUpdateSecurity) (*operations.AllergiesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -204,20 +204,20 @@ func (s *clinical) AllergiesPartialUpdate(ctx context.Context, request operation
 }
 
 // AllergiesRead - Retrieve an existing patient allergy
-func (s *clinical) AllergiesRead(ctx context.Context, request operations.AllergiesReadRequest) (*operations.AllergiesReadResponse, error) {
+func (s *clinical) AllergiesRead(ctx context.Context, request operations.AllergiesReadRequest, security operations.AllergiesReadSecurity) (*operations.AllergiesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -263,20 +263,20 @@ func (s *clinical) AllergiesRead(ctx context.Context, request operations.Allergi
 }
 
 // AllergiesUpdate - Update an existing patient allergy
-func (s *clinical) AllergiesUpdate(ctx context.Context, request operations.AllergiesUpdateRequest) (*operations.AllergiesUpdateResponse, error) {
+func (s *clinical) AllergiesUpdate(ctx context.Context, request operations.AllergiesUpdateRequest, security operations.AllergiesUpdateSecurity) (*operations.AllergiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -314,7 +314,7 @@ func (s *clinical) AllergiesUpdate(ctx context.Context, request operations.Aller
 }
 
 // AmendmentsCreate - Create patient amendments to a patient's clinical records
-func (s *clinical) AmendmentsCreate(ctx context.Context, request operations.AmendmentsCreateRequest) (*operations.AmendmentsCreateResponse, error) {
+func (s *clinical) AmendmentsCreate(ctx context.Context, request operations.AmendmentsCreateRequest, security operations.AmendmentsCreateSecurity) (*operations.AmendmentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/amendments"
 
@@ -323,11 +323,11 @@ func (s *clinical) AmendmentsCreate(ctx context.Context, request operations.Amen
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -373,20 +373,20 @@ func (s *clinical) AmendmentsCreate(ctx context.Context, request operations.Amen
 }
 
 // AmendmentsDelete - Delete an existing patient amendment, you can only interact with amendments created by your API application
-func (s *clinical) AmendmentsDelete(ctx context.Context, request operations.AmendmentsDeleteRequest) (*operations.AmendmentsDeleteResponse, error) {
+func (s *clinical) AmendmentsDelete(ctx context.Context, request operations.AmendmentsDeleteRequest, security operations.AmendmentsDeleteSecurity) (*operations.AmendmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -424,7 +424,7 @@ func (s *clinical) AmendmentsDelete(ctx context.Context, request operations.Amen
 }
 
 // AmendmentsList - Retrieve or search patient amendments. You can only interact with amendments created by your API application
-func (s *clinical) AmendmentsList(ctx context.Context, request operations.AmendmentsListRequest) (*operations.AmendmentsListResponse, error) {
+func (s *clinical) AmendmentsList(ctx context.Context, request operations.AmendmentsListRequest, security operations.AmendmentsListSecurity) (*operations.AmendmentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/amendments"
 
@@ -433,11 +433,11 @@ func (s *clinical) AmendmentsList(ctx context.Context, request operations.Amendm
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -483,20 +483,20 @@ func (s *clinical) AmendmentsList(ctx context.Context, request operations.Amendm
 }
 
 // AmendmentsPartialUpdate - Update an existing patient amendment, you can only interact with amendments created by your API application
-func (s *clinical) AmendmentsPartialUpdate(ctx context.Context, request operations.AmendmentsPartialUpdateRequest) (*operations.AmendmentsPartialUpdateResponse, error) {
+func (s *clinical) AmendmentsPartialUpdate(ctx context.Context, request operations.AmendmentsPartialUpdateRequest, security operations.AmendmentsPartialUpdateSecurity) (*operations.AmendmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -534,20 +534,20 @@ func (s *clinical) AmendmentsPartialUpdate(ctx context.Context, request operatio
 }
 
 // AmendmentsRead - Retrieve an existing patient amendment, you can only interact with amendments created by your API application
-func (s *clinical) AmendmentsRead(ctx context.Context, request operations.AmendmentsReadRequest) (*operations.AmendmentsReadResponse, error) {
+func (s *clinical) AmendmentsRead(ctx context.Context, request operations.AmendmentsReadRequest, security operations.AmendmentsReadSecurity) (*operations.AmendmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -593,20 +593,20 @@ func (s *clinical) AmendmentsRead(ctx context.Context, request operations.Amendm
 }
 
 // AmendmentsUpdate - Update an existing patient amendment, you can only interact with amendments created by your API application
-func (s *clinical) AmendmentsUpdate(ctx context.Context, request operations.AmendmentsUpdateRequest) (*operations.AmendmentsUpdateResponse, error) {
+func (s *clinical) AmendmentsUpdate(ctx context.Context, request operations.AmendmentsUpdateRequest, security operations.AmendmentsUpdateSecurity) (*operations.AmendmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -644,7 +644,7 @@ func (s *clinical) AmendmentsUpdate(ctx context.Context, request operations.Amen
 }
 
 // AppointmentProfilesCreate - Create appointment profiles for a doctor's calendar
-func (s *clinical) AppointmentProfilesCreate(ctx context.Context, request operations.AppointmentProfilesCreateRequest) (*operations.AppointmentProfilesCreateResponse, error) {
+func (s *clinical) AppointmentProfilesCreate(ctx context.Context, request operations.AppointmentProfilesCreateRequest, security operations.AppointmentProfilesCreateSecurity) (*operations.AppointmentProfilesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/appointment_profiles"
 
@@ -653,11 +653,11 @@ func (s *clinical) AppointmentProfilesCreate(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -703,20 +703,20 @@ func (s *clinical) AppointmentProfilesCreate(ctx context.Context, request operat
 }
 
 // AppointmentProfilesDelete - Delete an existing appointment profile
-func (s *clinical) AppointmentProfilesDelete(ctx context.Context, request operations.AppointmentProfilesDeleteRequest) (*operations.AppointmentProfilesDeleteResponse, error) {
+func (s *clinical) AppointmentProfilesDelete(ctx context.Context, request operations.AppointmentProfilesDeleteRequest, security operations.AppointmentProfilesDeleteSecurity) (*operations.AppointmentProfilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -754,7 +754,7 @@ func (s *clinical) AppointmentProfilesDelete(ctx context.Context, request operat
 }
 
 // AppointmentProfilesList - Retrieve or search appointment profiles for a doctor's calendar
-func (s *clinical) AppointmentProfilesList(ctx context.Context, request operations.AppointmentProfilesListRequest) (*operations.AppointmentProfilesListResponse, error) {
+func (s *clinical) AppointmentProfilesList(ctx context.Context, request operations.AppointmentProfilesListRequest, security operations.AppointmentProfilesListSecurity) (*operations.AppointmentProfilesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/appointment_profiles"
 
@@ -763,11 +763,11 @@ func (s *clinical) AppointmentProfilesList(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -813,20 +813,20 @@ func (s *clinical) AppointmentProfilesList(ctx context.Context, request operatio
 }
 
 // AppointmentProfilesPartialUpdate - Update an existing appointment profile
-func (s *clinical) AppointmentProfilesPartialUpdate(ctx context.Context, request operations.AppointmentProfilesPartialUpdateRequest) (*operations.AppointmentProfilesPartialUpdateResponse, error) {
+func (s *clinical) AppointmentProfilesPartialUpdate(ctx context.Context, request operations.AppointmentProfilesPartialUpdateRequest, security operations.AppointmentProfilesPartialUpdateSecurity) (*operations.AppointmentProfilesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -864,20 +864,20 @@ func (s *clinical) AppointmentProfilesPartialUpdate(ctx context.Context, request
 }
 
 // AppointmentProfilesRead - Retrieve an existing appointment profile
-func (s *clinical) AppointmentProfilesRead(ctx context.Context, request operations.AppointmentProfilesReadRequest) (*operations.AppointmentProfilesReadResponse, error) {
+func (s *clinical) AppointmentProfilesRead(ctx context.Context, request operations.AppointmentProfilesReadRequest, security operations.AppointmentProfilesReadSecurity) (*operations.AppointmentProfilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -923,20 +923,20 @@ func (s *clinical) AppointmentProfilesRead(ctx context.Context, request operatio
 }
 
 // AppointmentProfilesUpdate - Update an existing appointment profile
-func (s *clinical) AppointmentProfilesUpdate(ctx context.Context, request operations.AppointmentProfilesUpdateRequest) (*operations.AppointmentProfilesUpdateResponse, error) {
+func (s *clinical) AppointmentProfilesUpdate(ctx context.Context, request operations.AppointmentProfilesUpdateRequest, security operations.AppointmentProfilesUpdateSecurity) (*operations.AppointmentProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -974,7 +974,7 @@ func (s *clinical) AppointmentProfilesUpdate(ctx context.Context, request operat
 }
 
 // AppointmentTemplatesCreate - Create appointment templates for a doctor's calendar
-func (s *clinical) AppointmentTemplatesCreate(ctx context.Context, request operations.AppointmentTemplatesCreateRequest) (*operations.AppointmentTemplatesCreateResponse, error) {
+func (s *clinical) AppointmentTemplatesCreate(ctx context.Context, request operations.AppointmentTemplatesCreateRequest, security operations.AppointmentTemplatesCreateSecurity) (*operations.AppointmentTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/appointment_templates"
 
@@ -983,11 +983,11 @@ func (s *clinical) AppointmentTemplatesCreate(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1033,20 +1033,20 @@ func (s *clinical) AppointmentTemplatesCreate(ctx context.Context, request opera
 }
 
 // AppointmentTemplatesDelete - Delete an existing appointment template
-func (s *clinical) AppointmentTemplatesDelete(ctx context.Context, request operations.AppointmentTemplatesDeleteRequest) (*operations.AppointmentTemplatesDeleteResponse, error) {
+func (s *clinical) AppointmentTemplatesDelete(ctx context.Context, request operations.AppointmentTemplatesDeleteRequest, security operations.AppointmentTemplatesDeleteSecurity) (*operations.AppointmentTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1084,7 +1084,7 @@ func (s *clinical) AppointmentTemplatesDelete(ctx context.Context, request opera
 }
 
 // AppointmentTemplatesList - Retrieve or search appointment templates for a doctor's calendar
-func (s *clinical) AppointmentTemplatesList(ctx context.Context, request operations.AppointmentTemplatesListRequest) (*operations.AppointmentTemplatesListResponse, error) {
+func (s *clinical) AppointmentTemplatesList(ctx context.Context, request operations.AppointmentTemplatesListRequest, security operations.AppointmentTemplatesListSecurity) (*operations.AppointmentTemplatesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/appointment_templates"
 
@@ -1093,11 +1093,11 @@ func (s *clinical) AppointmentTemplatesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1143,20 +1143,20 @@ func (s *clinical) AppointmentTemplatesList(ctx context.Context, request operati
 }
 
 // AppointmentTemplatesPartialUpdate - Update an existing appointment template
-func (s *clinical) AppointmentTemplatesPartialUpdate(ctx context.Context, request operations.AppointmentTemplatesPartialUpdateRequest) (*operations.AppointmentTemplatesPartialUpdateResponse, error) {
+func (s *clinical) AppointmentTemplatesPartialUpdate(ctx context.Context, request operations.AppointmentTemplatesPartialUpdateRequest, security operations.AppointmentTemplatesPartialUpdateSecurity) (*operations.AppointmentTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1194,20 +1194,20 @@ func (s *clinical) AppointmentTemplatesPartialUpdate(ctx context.Context, reques
 }
 
 // AppointmentTemplatesRead - Retrieve an existing appointment template
-func (s *clinical) AppointmentTemplatesRead(ctx context.Context, request operations.AppointmentTemplatesReadRequest) (*operations.AppointmentTemplatesReadResponse, error) {
+func (s *clinical) AppointmentTemplatesRead(ctx context.Context, request operations.AppointmentTemplatesReadRequest, security operations.AppointmentTemplatesReadSecurity) (*operations.AppointmentTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1253,20 +1253,20 @@ func (s *clinical) AppointmentTemplatesRead(ctx context.Context, request operati
 }
 
 // AppointmentTemplatesUpdate - Update an existing appointment template
-func (s *clinical) AppointmentTemplatesUpdate(ctx context.Context, request operations.AppointmentTemplatesUpdateRequest) (*operations.AppointmentTemplatesUpdateResponse, error) {
+func (s *clinical) AppointmentTemplatesUpdate(ctx context.Context, request operations.AppointmentTemplatesUpdateRequest, security operations.AppointmentTemplatesUpdateSecurity) (*operations.AppointmentTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1304,7 +1304,7 @@ func (s *clinical) AppointmentTemplatesUpdate(ctx context.Context, request opera
 }
 
 // AppointmentsCreate - Create a new appointment or break on doctor's calendar
-func (s *clinical) AppointmentsCreate(ctx context.Context, request operations.AppointmentsCreateRequest) (*operations.AppointmentsCreateResponse, error) {
+func (s *clinical) AppointmentsCreate(ctx context.Context, request operations.AppointmentsCreateRequest, security operations.AppointmentsCreateSecurity) (*operations.AppointmentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/appointments"
 
@@ -1313,11 +1313,11 @@ func (s *clinical) AppointmentsCreate(ctx context.Context, request operations.Ap
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1365,20 +1365,20 @@ func (s *clinical) AppointmentsCreate(ctx context.Context, request operations.Ap
 }
 
 // AppointmentsDelete - Delete an existing appointment or break
-func (s *clinical) AppointmentsDelete(ctx context.Context, request operations.AppointmentsDeleteRequest) (*operations.AppointmentsDeleteResponse, error) {
+func (s *clinical) AppointmentsDelete(ctx context.Context, request operations.AppointmentsDeleteRequest, security operations.AppointmentsDeleteSecurity) (*operations.AppointmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1417,7 +1417,7 @@ func (s *clinical) AppointmentsDelete(ctx context.Context, request operations.Ap
 
 // AppointmentsList - Retrieve or search appointment or breaks.
 // <b>Note:</b> Either `since`, `date` or `date_range` parameter must be specified.
-func (s *clinical) AppointmentsList(ctx context.Context, request operations.AppointmentsListRequest) (*operations.AppointmentsListResponse, error) {
+func (s *clinical) AppointmentsList(ctx context.Context, request operations.AppointmentsListRequest, security operations.AppointmentsListSecurity) (*operations.AppointmentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/appointments"
 
@@ -1426,11 +1426,11 @@ func (s *clinical) AppointmentsList(ctx context.Context, request operations.Appo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1476,20 +1476,20 @@ func (s *clinical) AppointmentsList(ctx context.Context, request operations.Appo
 }
 
 // AppointmentsPartialUpdate - Update an existing appointment or break
-func (s *clinical) AppointmentsPartialUpdate(ctx context.Context, request operations.AppointmentsPartialUpdateRequest) (*operations.AppointmentsPartialUpdateResponse, error) {
+func (s *clinical) AppointmentsPartialUpdate(ctx context.Context, request operations.AppointmentsPartialUpdateRequest, security operations.AppointmentsPartialUpdateSecurity) (*operations.AppointmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1529,20 +1529,20 @@ func (s *clinical) AppointmentsPartialUpdate(ctx context.Context, request operat
 }
 
 // AppointmentsRead - Retrieve an existing appointment or break
-func (s *clinical) AppointmentsRead(ctx context.Context, request operations.AppointmentsReadRequest) (*operations.AppointmentsReadResponse, error) {
+func (s *clinical) AppointmentsRead(ctx context.Context, request operations.AppointmentsReadRequest, security operations.AppointmentsReadSecurity) (*operations.AppointmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1588,20 +1588,20 @@ func (s *clinical) AppointmentsRead(ctx context.Context, request operations.Appo
 }
 
 // AppointmentsUpdate - Update an existing appointment or break
-func (s *clinical) AppointmentsUpdate(ctx context.Context, request operations.AppointmentsUpdateRequest) (*operations.AppointmentsUpdateResponse, error) {
+func (s *clinical) AppointmentsUpdate(ctx context.Context, request operations.AppointmentsUpdateRequest, security operations.AppointmentsUpdateSecurity) (*operations.AppointmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1641,7 +1641,7 @@ func (s *clinical) AppointmentsUpdate(ctx context.Context, request operations.Ap
 }
 
 // CarePlansList - Retrieve or search care plans
-func (s *clinical) CarePlansList(ctx context.Context, request operations.CarePlansListRequest) (*operations.CarePlansListResponse, error) {
+func (s *clinical) CarePlansList(ctx context.Context, request operations.CarePlansListRequest, security operations.CarePlansListSecurity) (*operations.CarePlansListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/care_plans"
 
@@ -1650,11 +1650,11 @@ func (s *clinical) CarePlansList(ctx context.Context, request operations.CarePla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1700,20 +1700,20 @@ func (s *clinical) CarePlansList(ctx context.Context, request operations.CarePla
 }
 
 // CarePlansRead - Retrieve an existing care plan
-func (s *clinical) CarePlansRead(ctx context.Context, request operations.CarePlansReadRequest) (*operations.CarePlansReadResponse, error) {
+func (s *clinical) CarePlansRead(ctx context.Context, request operations.CarePlansReadRequest, security operations.CarePlansReadSecurity) (*operations.CarePlansReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/care_plans/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/care_plans/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1757,7 +1757,7 @@ func (s *clinical) CarePlansRead(ctx context.Context, request operations.CarePla
 
 	return res, nil
 }
-func (s *clinical) CareTeamMembersList(ctx context.Context, request operations.CareTeamMembersListRequest) (*operations.CareTeamMembersListResponse, error) {
+func (s *clinical) CareTeamMembersList(ctx context.Context, request operations.CareTeamMembersListRequest, security operations.CareTeamMembersListSecurity) (*operations.CareTeamMembersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/care_team_members"
 
@@ -1766,11 +1766,11 @@ func (s *clinical) CareTeamMembersList(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1814,20 +1814,20 @@ func (s *clinical) CareTeamMembersList(ctx context.Context, request operations.C
 
 	return res, nil
 }
-func (s *clinical) CareTeamMembersRead(ctx context.Context, request operations.CareTeamMembersReadRequest) (*operations.CareTeamMembersReadResponse, error) {
+func (s *clinical) CareTeamMembersRead(ctx context.Context, request operations.CareTeamMembersReadRequest, security operations.CareTeamMembersReadSecurity) (*operations.CareTeamMembersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/care_team_members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/care_team_members/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1873,7 +1873,7 @@ func (s *clinical) CareTeamMembersRead(ctx context.Context, request operations.C
 }
 
 // ClaimBillingNotesCreate - Create a new billing note
-func (s *clinical) ClaimBillingNotesCreate(ctx context.Context, request operations.ClaimBillingNotesCreateRequest) (*operations.ClaimBillingNotesCreateResponse, error) {
+func (s *clinical) ClaimBillingNotesCreate(ctx context.Context, request operations.ClaimBillingNotesCreateRequest, security operations.ClaimBillingNotesCreateSecurity) (*operations.ClaimBillingNotesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/claim_billing_notes"
 
@@ -1882,11 +1882,11 @@ func (s *clinical) ClaimBillingNotesCreate(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1932,7 +1932,7 @@ func (s *clinical) ClaimBillingNotesCreate(ctx context.Context, request operatio
 }
 
 // ClaimBillingNotesList - Retrieve or search billing notes
-func (s *clinical) ClaimBillingNotesList(ctx context.Context, request operations.ClaimBillingNotesListRequest) (*operations.ClaimBillingNotesListResponse, error) {
+func (s *clinical) ClaimBillingNotesList(ctx context.Context, request operations.ClaimBillingNotesListRequest, security operations.ClaimBillingNotesListSecurity) (*operations.ClaimBillingNotesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/claim_billing_notes"
 
@@ -1941,11 +1941,11 @@ func (s *clinical) ClaimBillingNotesList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1991,20 +1991,20 @@ func (s *clinical) ClaimBillingNotesList(ctx context.Context, request operations
 }
 
 // ClaimBillingNotesRead - Retrieve an existing billing note
-func (s *clinical) ClaimBillingNotesRead(ctx context.Context, request operations.ClaimBillingNotesReadRequest) (*operations.ClaimBillingNotesReadResponse, error) {
+func (s *clinical) ClaimBillingNotesRead(ctx context.Context, request operations.ClaimBillingNotesReadRequest, security operations.ClaimBillingNotesReadSecurity) (*operations.ClaimBillingNotesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/claim_billing_notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/claim_billing_notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2050,7 +2050,7 @@ func (s *clinical) ClaimBillingNotesRead(ctx context.Context, request operations
 }
 
 // ClinicalNoteFieldTypesList - Retrieve or search clinical note field types
-func (s *clinical) ClinicalNoteFieldTypesList(ctx context.Context, request operations.ClinicalNoteFieldTypesListRequest) (*operations.ClinicalNoteFieldTypesListResponse, error) {
+func (s *clinical) ClinicalNoteFieldTypesList(ctx context.Context, request operations.ClinicalNoteFieldTypesListRequest, security operations.ClinicalNoteFieldTypesListSecurity) (*operations.ClinicalNoteFieldTypesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/clinical_note_field_types"
 
@@ -2059,11 +2059,11 @@ func (s *clinical) ClinicalNoteFieldTypesList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2109,20 +2109,20 @@ func (s *clinical) ClinicalNoteFieldTypesList(ctx context.Context, request opera
 }
 
 // ClinicalNoteFieldTypesRead - Retrieve an existing clinial note field type
-func (s *clinical) ClinicalNoteFieldTypesRead(ctx context.Context, request operations.ClinicalNoteFieldTypesReadRequest) (*operations.ClinicalNoteFieldTypesReadResponse, error) {
+func (s *clinical) ClinicalNoteFieldTypesRead(ctx context.Context, request operations.ClinicalNoteFieldTypesReadRequest, security operations.ClinicalNoteFieldTypesReadSecurity) (*operations.ClinicalNoteFieldTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2168,7 +2168,7 @@ func (s *clinical) ClinicalNoteFieldTypesRead(ctx context.Context, request opera
 }
 
 // ClinicalNoteFieldValuesCreate - Create clinical note field value
-func (s *clinical) ClinicalNoteFieldValuesCreate(ctx context.Context, request operations.ClinicalNoteFieldValuesCreateRequest) (*operations.ClinicalNoteFieldValuesCreateResponse, error) {
+func (s *clinical) ClinicalNoteFieldValuesCreate(ctx context.Context, request operations.ClinicalNoteFieldValuesCreateRequest, security operations.ClinicalNoteFieldValuesCreateSecurity) (*operations.ClinicalNoteFieldValuesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/clinical_note_field_values"
 
@@ -2177,11 +2177,11 @@ func (s *clinical) ClinicalNoteFieldValuesCreate(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2227,7 +2227,7 @@ func (s *clinical) ClinicalNoteFieldValuesCreate(ctx context.Context, request op
 }
 
 // ClinicalNoteFieldValuesList - Retrieve or search clinical note field values
-func (s *clinical) ClinicalNoteFieldValuesList(ctx context.Context, request operations.ClinicalNoteFieldValuesListRequest) (*operations.ClinicalNoteFieldValuesListResponse, error) {
+func (s *clinical) ClinicalNoteFieldValuesList(ctx context.Context, request operations.ClinicalNoteFieldValuesListRequest, security operations.ClinicalNoteFieldValuesListSecurity) (*operations.ClinicalNoteFieldValuesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/clinical_note_field_values"
 
@@ -2236,11 +2236,11 @@ func (s *clinical) ClinicalNoteFieldValuesList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2286,20 +2286,20 @@ func (s *clinical) ClinicalNoteFieldValuesList(ctx context.Context, request oper
 }
 
 // ClinicalNoteFieldValuesPartialUpdate - Update an existing clinical note field value
-func (s *clinical) ClinicalNoteFieldValuesPartialUpdate(ctx context.Context, request operations.ClinicalNoteFieldValuesPartialUpdateRequest) (*operations.ClinicalNoteFieldValuesPartialUpdateResponse, error) {
+func (s *clinical) ClinicalNoteFieldValuesPartialUpdate(ctx context.Context, request operations.ClinicalNoteFieldValuesPartialUpdateRequest, security operations.ClinicalNoteFieldValuesPartialUpdateSecurity) (*operations.ClinicalNoteFieldValuesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2337,20 +2337,20 @@ func (s *clinical) ClinicalNoteFieldValuesPartialUpdate(ctx context.Context, req
 }
 
 // ClinicalNoteFieldValuesRead - Retrieve an existing clinical note field value
-func (s *clinical) ClinicalNoteFieldValuesRead(ctx context.Context, request operations.ClinicalNoteFieldValuesReadRequest) (*operations.ClinicalNoteFieldValuesReadResponse, error) {
+func (s *clinical) ClinicalNoteFieldValuesRead(ctx context.Context, request operations.ClinicalNoteFieldValuesReadRequest, security operations.ClinicalNoteFieldValuesReadSecurity) (*operations.ClinicalNoteFieldValuesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2396,20 +2396,20 @@ func (s *clinical) ClinicalNoteFieldValuesRead(ctx context.Context, request oper
 }
 
 // ClinicalNoteFieldValuesUpdate - Update an existing clinical note field value
-func (s *clinical) ClinicalNoteFieldValuesUpdate(ctx context.Context, request operations.ClinicalNoteFieldValuesUpdateRequest) (*operations.ClinicalNoteFieldValuesUpdateResponse, error) {
+func (s *clinical) ClinicalNoteFieldValuesUpdate(ctx context.Context, request operations.ClinicalNoteFieldValuesUpdateRequest, security operations.ClinicalNoteFieldValuesUpdateSecurity) (*operations.ClinicalNoteFieldValuesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2447,7 +2447,7 @@ func (s *clinical) ClinicalNoteFieldValuesUpdate(ctx context.Context, request op
 }
 
 // ClinicalNoteTemplatesList - Retrieve or search clinical note templates
-func (s *clinical) ClinicalNoteTemplatesList(ctx context.Context, request operations.ClinicalNoteTemplatesListRequest) (*operations.ClinicalNoteTemplatesListResponse, error) {
+func (s *clinical) ClinicalNoteTemplatesList(ctx context.Context, request operations.ClinicalNoteTemplatesListRequest, security operations.ClinicalNoteTemplatesListSecurity) (*operations.ClinicalNoteTemplatesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/clinical_note_templates"
 
@@ -2456,11 +2456,11 @@ func (s *clinical) ClinicalNoteTemplatesList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2506,20 +2506,20 @@ func (s *clinical) ClinicalNoteTemplatesList(ctx context.Context, request operat
 }
 
 // ClinicalNoteTemplatesRead - Retrieve an existing clinical note tempalte
-func (s *clinical) ClinicalNoteTemplatesRead(ctx context.Context, request operations.ClinicalNoteTemplatesReadRequest) (*operations.ClinicalNoteTemplatesReadResponse, error) {
+func (s *clinical) ClinicalNoteTemplatesRead(ctx context.Context, request operations.ClinicalNoteTemplatesReadRequest, security operations.ClinicalNoteTemplatesReadSecurity) (*operations.ClinicalNoteTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_templates/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_templates/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2563,7 +2563,7 @@ func (s *clinical) ClinicalNoteTemplatesRead(ctx context.Context, request operat
 
 	return res, nil
 }
-func (s *clinical) ClinicalNotesList(ctx context.Context, request operations.ClinicalNotesListRequest) (*operations.ClinicalNotesListResponse, error) {
+func (s *clinical) ClinicalNotesList(ctx context.Context, request operations.ClinicalNotesListRequest, security operations.ClinicalNotesListSecurity) (*operations.ClinicalNotesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/clinical_notes"
 
@@ -2572,11 +2572,11 @@ func (s *clinical) ClinicalNotesList(ctx context.Context, request operations.Cli
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2620,20 +2620,20 @@ func (s *clinical) ClinicalNotesList(ctx context.Context, request operations.Cli
 
 	return res, nil
 }
-func (s *clinical) ClinicalNotesRead(ctx context.Context, request operations.ClinicalNotesReadRequest) (*operations.ClinicalNotesReadResponse, error) {
+func (s *clinical) ClinicalNotesRead(ctx context.Context, request operations.ClinicalNotesReadRequest, security operations.ClinicalNotesReadSecurity) (*operations.ClinicalNotesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_notes/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2679,20 +2679,20 @@ func (s *clinical) ClinicalNotesRead(ctx context.Context, request operations.Cli
 }
 
 // ConsentFormsApplyToAppointment - Assign (apply) a consent form to appointment
-func (s *clinical) ConsentFormsApplyToAppointment(ctx context.Context, request operations.ConsentFormsApplyToAppointmentRequest) (*operations.ConsentFormsApplyToAppointmentResponse, error) {
+func (s *clinical) ConsentFormsApplyToAppointment(ctx context.Context, request operations.ConsentFormsApplyToAppointmentRequest, security operations.ConsentFormsApplyToAppointmentSecurity) (*operations.ConsentFormsApplyToAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/apply_to_appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/apply_to_appointment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2730,7 +2730,7 @@ func (s *clinical) ConsentFormsApplyToAppointment(ctx context.Context, request o
 }
 
 // ConsentFormsCreate - Create a patient consent form
-func (s *clinical) ConsentFormsCreate(ctx context.Context, request operations.ConsentFormsCreateRequest) (*operations.ConsentFormsCreateResponse, error) {
+func (s *clinical) ConsentFormsCreate(ctx context.Context, request operations.ConsentFormsCreateRequest, security operations.ConsentFormsCreateSecurity) (*operations.ConsentFormsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/consent_forms"
 
@@ -2739,11 +2739,11 @@ func (s *clinical) ConsentFormsCreate(ctx context.Context, request operations.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2789,7 +2789,7 @@ func (s *clinical) ConsentFormsCreate(ctx context.Context, request operations.Co
 }
 
 // ConsentFormsList - Retrieve or search patient consent forms
-func (s *clinical) ConsentFormsList(ctx context.Context, request operations.ConsentFormsListRequest) (*operations.ConsentFormsListResponse, error) {
+func (s *clinical) ConsentFormsList(ctx context.Context, request operations.ConsentFormsListRequest, security operations.ConsentFormsListSecurity) (*operations.ConsentFormsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/consent_forms"
 
@@ -2798,11 +2798,11 @@ func (s *clinical) ConsentFormsList(ctx context.Context, request operations.Cons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2848,20 +2848,20 @@ func (s *clinical) ConsentFormsList(ctx context.Context, request operations.Cons
 }
 
 // ConsentFormsPartialUpdate - Update an existing patient consent form
-func (s *clinical) ConsentFormsPartialUpdate(ctx context.Context, request operations.ConsentFormsPartialUpdateRequest) (*operations.ConsentFormsPartialUpdateResponse, error) {
+func (s *clinical) ConsentFormsPartialUpdate(ctx context.Context, request operations.ConsentFormsPartialUpdateRequest, security operations.ConsentFormsPartialUpdateSecurity) (*operations.ConsentFormsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2899,20 +2899,20 @@ func (s *clinical) ConsentFormsPartialUpdate(ctx context.Context, request operat
 }
 
 // ConsentFormsRead - Retrieve an existing patient consent form
-func (s *clinical) ConsentFormsRead(ctx context.Context, request operations.ConsentFormsReadRequest) (*operations.ConsentFormsReadResponse, error) {
+func (s *clinical) ConsentFormsRead(ctx context.Context, request operations.ConsentFormsReadRequest, security operations.ConsentFormsReadSecurity) (*operations.ConsentFormsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2958,20 +2958,20 @@ func (s *clinical) ConsentFormsRead(ctx context.Context, request operations.Cons
 }
 
 // ConsentFormsUnapplyFromAppointment - Unassign (unapply) a consent form from appointment
-func (s *clinical) ConsentFormsUnapplyFromAppointment(ctx context.Context, request operations.ConsentFormsUnapplyFromAppointmentRequest) (*operations.ConsentFormsUnapplyFromAppointmentResponse, error) {
+func (s *clinical) ConsentFormsUnapplyFromAppointment(ctx context.Context, request operations.ConsentFormsUnapplyFromAppointmentRequest, security operations.ConsentFormsUnapplyFromAppointmentSecurity) (*operations.ConsentFormsUnapplyFromAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/unapply_from_appointment", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/unapply_from_appointment", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3009,20 +3009,20 @@ func (s *clinical) ConsentFormsUnapplyFromAppointment(ctx context.Context, reque
 }
 
 // ConsentFormsUpdate - Update an existing patient consent form
-func (s *clinical) ConsentFormsUpdate(ctx context.Context, request operations.ConsentFormsUpdateRequest) (*operations.ConsentFormsUpdateResponse, error) {
+func (s *clinical) ConsentFormsUpdate(ctx context.Context, request operations.ConsentFormsUpdateRequest, security operations.ConsentFormsUpdateSecurity) (*operations.ConsentFormsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3060,7 +3060,7 @@ func (s *clinical) ConsentFormsUpdate(ctx context.Context, request operations.Co
 }
 
 // CustomAppointmentFieldsCreate - Create custom appointment fields
-func (s *clinical) CustomAppointmentFieldsCreate(ctx context.Context, request operations.CustomAppointmentFieldsCreateRequest) (*operations.CustomAppointmentFieldsCreateResponse, error) {
+func (s *clinical) CustomAppointmentFieldsCreate(ctx context.Context, request operations.CustomAppointmentFieldsCreateRequest, security operations.CustomAppointmentFieldsCreateSecurity) (*operations.CustomAppointmentFieldsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/custom_appointment_fields"
 
@@ -3069,11 +3069,11 @@ func (s *clinical) CustomAppointmentFieldsCreate(ctx context.Context, request op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3119,7 +3119,7 @@ func (s *clinical) CustomAppointmentFieldsCreate(ctx context.Context, request op
 }
 
 // CustomAppointmentFieldsList - Retrieve or search custom appointment fields
-func (s *clinical) CustomAppointmentFieldsList(ctx context.Context, request operations.CustomAppointmentFieldsListRequest) (*operations.CustomAppointmentFieldsListResponse, error) {
+func (s *clinical) CustomAppointmentFieldsList(ctx context.Context, request operations.CustomAppointmentFieldsListRequest, security operations.CustomAppointmentFieldsListSecurity) (*operations.CustomAppointmentFieldsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/custom_appointment_fields"
 
@@ -3128,11 +3128,11 @@ func (s *clinical) CustomAppointmentFieldsList(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3178,20 +3178,20 @@ func (s *clinical) CustomAppointmentFieldsList(ctx context.Context, request oper
 }
 
 // CustomAppointmentFieldsPartialUpdate - Update an existing custom appointment field
-func (s *clinical) CustomAppointmentFieldsPartialUpdate(ctx context.Context, request operations.CustomAppointmentFieldsPartialUpdateRequest) (*operations.CustomAppointmentFieldsPartialUpdateResponse, error) {
+func (s *clinical) CustomAppointmentFieldsPartialUpdate(ctx context.Context, request operations.CustomAppointmentFieldsPartialUpdateRequest, security operations.CustomAppointmentFieldsPartialUpdateSecurity) (*operations.CustomAppointmentFieldsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3229,20 +3229,20 @@ func (s *clinical) CustomAppointmentFieldsPartialUpdate(ctx context.Context, req
 }
 
 // CustomAppointmentFieldsRead - Retrieve an existing custom appointment field
-func (s *clinical) CustomAppointmentFieldsRead(ctx context.Context, request operations.CustomAppointmentFieldsReadRequest) (*operations.CustomAppointmentFieldsReadResponse, error) {
+func (s *clinical) CustomAppointmentFieldsRead(ctx context.Context, request operations.CustomAppointmentFieldsReadRequest, security operations.CustomAppointmentFieldsReadSecurity) (*operations.CustomAppointmentFieldsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3288,20 +3288,20 @@ func (s *clinical) CustomAppointmentFieldsRead(ctx context.Context, request oper
 }
 
 // CustomAppointmentFieldsUpdate - Update an existing custom appointment field
-func (s *clinical) CustomAppointmentFieldsUpdate(ctx context.Context, request operations.CustomAppointmentFieldsUpdateRequest) (*operations.CustomAppointmentFieldsUpdateResponse, error) {
+func (s *clinical) CustomAppointmentFieldsUpdate(ctx context.Context, request operations.CustomAppointmentFieldsUpdateRequest, security operations.CustomAppointmentFieldsUpdateSecurity) (*operations.CustomAppointmentFieldsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3339,7 +3339,7 @@ func (s *clinical) CustomAppointmentFieldsUpdate(ctx context.Context, request op
 }
 
 // CustomDemographicsCreate - Create custom demographics fields
-func (s *clinical) CustomDemographicsCreate(ctx context.Context, request operations.CustomDemographicsCreateRequest) (*operations.CustomDemographicsCreateResponse, error) {
+func (s *clinical) CustomDemographicsCreate(ctx context.Context, request operations.CustomDemographicsCreateRequest, security operations.CustomDemographicsCreateSecurity) (*operations.CustomDemographicsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/custom_demographics"
 
@@ -3348,11 +3348,11 @@ func (s *clinical) CustomDemographicsCreate(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3398,7 +3398,7 @@ func (s *clinical) CustomDemographicsCreate(ctx context.Context, request operati
 }
 
 // CustomDemographicsList - Retrieve or search custom demographics fields
-func (s *clinical) CustomDemographicsList(ctx context.Context, request operations.CustomDemographicsListRequest) (*operations.CustomDemographicsListResponse, error) {
+func (s *clinical) CustomDemographicsList(ctx context.Context, request operations.CustomDemographicsListRequest, security operations.CustomDemographicsListSecurity) (*operations.CustomDemographicsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/custom_demographics"
 
@@ -3407,11 +3407,11 @@ func (s *clinical) CustomDemographicsList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3457,20 +3457,20 @@ func (s *clinical) CustomDemographicsList(ctx context.Context, request operation
 }
 
 // CustomDemographicsPartialUpdate - Update an existing custom demographics field
-func (s *clinical) CustomDemographicsPartialUpdate(ctx context.Context, request operations.CustomDemographicsPartialUpdateRequest) (*operations.CustomDemographicsPartialUpdateResponse, error) {
+func (s *clinical) CustomDemographicsPartialUpdate(ctx context.Context, request operations.CustomDemographicsPartialUpdateRequest, security operations.CustomDemographicsPartialUpdateSecurity) (*operations.CustomDemographicsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3508,20 +3508,20 @@ func (s *clinical) CustomDemographicsPartialUpdate(ctx context.Context, request 
 }
 
 // CustomDemographicsRead - Retrieve an existing custom demographics field
-func (s *clinical) CustomDemographicsRead(ctx context.Context, request operations.CustomDemographicsReadRequest) (*operations.CustomDemographicsReadResponse, error) {
+func (s *clinical) CustomDemographicsRead(ctx context.Context, request operations.CustomDemographicsReadRequest, security operations.CustomDemographicsReadSecurity) (*operations.CustomDemographicsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3567,20 +3567,20 @@ func (s *clinical) CustomDemographicsRead(ctx context.Context, request operation
 }
 
 // CustomDemographicsUpdate - Update an existing custom demographics field
-func (s *clinical) CustomDemographicsUpdate(ctx context.Context, request operations.CustomDemographicsUpdateRequest) (*operations.CustomDemographicsUpdateResponse, error) {
+func (s *clinical) CustomDemographicsUpdate(ctx context.Context, request operations.CustomDemographicsUpdateRequest, security operations.CustomDemographicsUpdateSecurity) (*operations.CustomDemographicsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3618,7 +3618,7 @@ func (s *clinical) CustomDemographicsUpdate(ctx context.Context, request operati
 }
 
 // CustomVitalsList - Retrieve or search custom vital types
-func (s *clinical) CustomVitalsList(ctx context.Context, request operations.CustomVitalsListRequest) (*operations.CustomVitalsListResponse, error) {
+func (s *clinical) CustomVitalsList(ctx context.Context, request operations.CustomVitalsListRequest, security operations.CustomVitalsListSecurity) (*operations.CustomVitalsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/custom_vitals"
 
@@ -3627,11 +3627,11 @@ func (s *clinical) CustomVitalsList(ctx context.Context, request operations.Cust
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3677,20 +3677,20 @@ func (s *clinical) CustomVitalsList(ctx context.Context, request operations.Cust
 }
 
 // CustomVitalsRead - Retrieve an existing custom vital type
-func (s *clinical) CustomVitalsRead(ctx context.Context, request operations.CustomVitalsReadRequest) (*operations.CustomVitalsReadResponse, error) {
+func (s *clinical) CustomVitalsRead(ctx context.Context, request operations.CustomVitalsReadRequest, security operations.CustomVitalsReadSecurity) (*operations.CustomVitalsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_vitals/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/custom_vitals/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3736,7 +3736,7 @@ func (s *clinical) CustomVitalsRead(ctx context.Context, request operations.Cust
 }
 
 // DocumentsCreate - Create documents
-func (s *clinical) DocumentsCreate(ctx context.Context, request operations.DocumentsCreateRequest) (*operations.DocumentsCreateResponse, error) {
+func (s *clinical) DocumentsCreate(ctx context.Context, request operations.DocumentsCreateRequest, security operations.DocumentsCreateSecurity) (*operations.DocumentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/documents"
 
@@ -3745,11 +3745,11 @@ func (s *clinical) DocumentsCreate(ctx context.Context, request operations.Docum
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3795,20 +3795,20 @@ func (s *clinical) DocumentsCreate(ctx context.Context, request operations.Docum
 }
 
 // DocumentsDelete - Delete an existing appointment template
-func (s *clinical) DocumentsDelete(ctx context.Context, request operations.DocumentsDeleteRequest) (*operations.DocumentsDeleteResponse, error) {
+func (s *clinical) DocumentsDelete(ctx context.Context, request operations.DocumentsDeleteRequest, security operations.DocumentsDeleteSecurity) (*operations.DocumentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3846,7 +3846,7 @@ func (s *clinical) DocumentsDelete(ctx context.Context, request operations.Docum
 }
 
 // DocumentsList - Retrieve or search documents
-func (s *clinical) DocumentsList(ctx context.Context, request operations.DocumentsListRequest) (*operations.DocumentsListResponse, error) {
+func (s *clinical) DocumentsList(ctx context.Context, request operations.DocumentsListRequest, security operations.DocumentsListSecurity) (*operations.DocumentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/documents"
 
@@ -3855,11 +3855,11 @@ func (s *clinical) DocumentsList(ctx context.Context, request operations.Documen
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3905,20 +3905,20 @@ func (s *clinical) DocumentsList(ctx context.Context, request operations.Documen
 }
 
 // DocumentsPartialUpdate - Update an existing appointment template
-func (s *clinical) DocumentsPartialUpdate(ctx context.Context, request operations.DocumentsPartialUpdateRequest) (*operations.DocumentsPartialUpdateResponse, error) {
+func (s *clinical) DocumentsPartialUpdate(ctx context.Context, request operations.DocumentsPartialUpdateRequest, security operations.DocumentsPartialUpdateSecurity) (*operations.DocumentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3956,20 +3956,20 @@ func (s *clinical) DocumentsPartialUpdate(ctx context.Context, request operation
 }
 
 // DocumentsRead - Retrieve an existing appointment template
-func (s *clinical) DocumentsRead(ctx context.Context, request operations.DocumentsReadRequest) (*operations.DocumentsReadResponse, error) {
+func (s *clinical) DocumentsRead(ctx context.Context, request operations.DocumentsReadRequest, security operations.DocumentsReadSecurity) (*operations.DocumentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4015,20 +4015,20 @@ func (s *clinical) DocumentsRead(ctx context.Context, request operations.Documen
 }
 
 // DocumentsUpdate - Update an existing appointment template
-func (s *clinical) DocumentsUpdate(ctx context.Context, request operations.DocumentsUpdateRequest) (*operations.DocumentsUpdateResponse, error) {
+func (s *clinical) DocumentsUpdate(ctx context.Context, request operations.DocumentsUpdateRequest, security operations.DocumentsUpdateSecurity) (*operations.DocumentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4066,7 +4066,7 @@ func (s *clinical) DocumentsUpdate(ctx context.Context, request operations.Docum
 }
 
 // EobsCreate - Create EOB object
-func (s *clinical) EobsCreate(ctx context.Context, request operations.EobsCreateRequest) (*operations.EobsCreateResponse, error) {
+func (s *clinical) EobsCreate(ctx context.Context, request operations.EobsCreateRequest, security operations.EobsCreateSecurity) (*operations.EobsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/eobs"
 
@@ -4075,11 +4075,11 @@ func (s *clinical) EobsCreate(ctx context.Context, request operations.EobsCreate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4125,7 +4125,7 @@ func (s *clinical) EobsCreate(ctx context.Context, request operations.EobsCreate
 }
 
 // EobsList - Retrieve or search EOB objects
-func (s *clinical) EobsList(ctx context.Context, request operations.EobsListRequest) (*operations.EobsListResponse, error) {
+func (s *clinical) EobsList(ctx context.Context, request operations.EobsListRequest, security operations.EobsListSecurity) (*operations.EobsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/eobs"
 
@@ -4134,11 +4134,11 @@ func (s *clinical) EobsList(ctx context.Context, request operations.EobsListRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4184,20 +4184,20 @@ func (s *clinical) EobsList(ctx context.Context, request operations.EobsListRequ
 }
 
 // EobsRead - Retrieve an existing EOB object
-func (s *clinical) EobsRead(ctx context.Context, request operations.EobsReadRequest) (*operations.EobsReadResponse, error) {
+func (s *clinical) EobsRead(ctx context.Context, request operations.EobsReadRequest, security operations.EobsReadSecurity) (*operations.EobsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/eobs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/eobs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4241,7 +4241,7 @@ func (s *clinical) EobsRead(ctx context.Context, request operations.EobsReadRequ
 
 	return res, nil
 }
-func (s *clinical) FeeSchedulesList(ctx context.Context, request operations.FeeSchedulesListRequest) (*operations.FeeSchedulesListResponse, error) {
+func (s *clinical) FeeSchedulesList(ctx context.Context, request operations.FeeSchedulesListRequest, security operations.FeeSchedulesListSecurity) (*operations.FeeSchedulesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/fee_schedules"
 
@@ -4250,11 +4250,11 @@ func (s *clinical) FeeSchedulesList(ctx context.Context, request operations.FeeS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4298,20 +4298,20 @@ func (s *clinical) FeeSchedulesList(ctx context.Context, request operations.FeeS
 
 	return res, nil
 }
-func (s *clinical) FeeSchedulesRead(ctx context.Context, request operations.FeeSchedulesReadRequest) (*operations.FeeSchedulesReadResponse, error) {
+func (s *clinical) FeeSchedulesRead(ctx context.Context, request operations.FeeSchedulesReadRequest, security operations.FeeSchedulesReadSecurity) (*operations.FeeSchedulesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/fee_schedules/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/fee_schedules/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4357,7 +4357,7 @@ func (s *clinical) FeeSchedulesRead(ctx context.Context, request operations.FeeS
 }
 
 // ImplantableDevicesList - Retrieve or search implantable devices
-func (s *clinical) ImplantableDevicesList(ctx context.Context, request operations.ImplantableDevicesListRequest) (*operations.ImplantableDevicesListResponse, error) {
+func (s *clinical) ImplantableDevicesList(ctx context.Context, request operations.ImplantableDevicesListRequest, security operations.ImplantableDevicesListSecurity) (*operations.ImplantableDevicesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/implantable_devices"
 
@@ -4366,11 +4366,11 @@ func (s *clinical) ImplantableDevicesList(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4416,20 +4416,20 @@ func (s *clinical) ImplantableDevicesList(ctx context.Context, request operation
 }
 
 // ImplantableDevicesRead - Retrieve an existing implantable device
-func (s *clinical) ImplantableDevicesRead(ctx context.Context, request operations.ImplantableDevicesReadRequest) (*operations.ImplantableDevicesReadResponse, error) {
+func (s *clinical) ImplantableDevicesRead(ctx context.Context, request operations.ImplantableDevicesReadRequest, security operations.ImplantableDevicesReadSecurity) (*operations.ImplantableDevicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/implantable_devices/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/implantable_devices/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4473,7 +4473,7 @@ func (s *clinical) ImplantableDevicesRead(ctx context.Context, request operation
 
 	return res, nil
 }
-func (s *clinical) InsurancesList(ctx context.Context, request operations.InsurancesListRequest) (*operations.InsurancesListResponse, error) {
+func (s *clinical) InsurancesList(ctx context.Context, request operations.InsurancesListRequest, security operations.InsurancesListSecurity) (*operations.InsurancesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/insurances"
 
@@ -4482,11 +4482,11 @@ func (s *clinical) InsurancesList(ctx context.Context, request operations.Insura
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4530,20 +4530,20 @@ func (s *clinical) InsurancesList(ctx context.Context, request operations.Insura
 
 	return res, nil
 }
-func (s *clinical) InsurancesRead(ctx context.Context, request operations.InsurancesReadRequest) (*operations.InsurancesReadResponse, error) {
+func (s *clinical) InsurancesRead(ctx context.Context, request operations.InsurancesReadRequest, security operations.InsurancesReadSecurity) (*operations.InsurancesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/insurances/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/insurances/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4595,7 +4595,7 @@ func (s *clinical) InsurancesRead(ctx context.Context, request operations.Insura
 // - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
 //
 // - Update `/api/lab_orders` status
-func (s *clinical) LabDocumentsCreate(ctx context.Context, request operations.LabDocumentsCreateRequest) (*operations.LabDocumentsCreateResponse, error) {
+func (s *clinical) LabDocumentsCreate(ctx context.Context, request operations.LabDocumentsCreateRequest, security operations.LabDocumentsCreateSecurity) (*operations.LabDocumentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_documents"
 
@@ -4604,11 +4604,11 @@ func (s *clinical) LabDocumentsCreate(ctx context.Context, request operations.La
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4654,20 +4654,20 @@ func (s *clinical) LabDocumentsCreate(ctx context.Context, request operations.La
 }
 
 // LabDocumentsDelete - Delete an existing lab order document
-func (s *clinical) LabDocumentsDelete(ctx context.Context, request operations.LabDocumentsDeleteRequest) (*operations.LabDocumentsDeleteResponse, error) {
+func (s *clinical) LabDocumentsDelete(ctx context.Context, request operations.LabDocumentsDeleteRequest, security operations.LabDocumentsDeleteSecurity) (*operations.LabDocumentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4705,7 +4705,7 @@ func (s *clinical) LabDocumentsDelete(ctx context.Context, request operations.La
 }
 
 // LabDocumentsList - Retrieve or search lab order documents
-func (s *clinical) LabDocumentsList(ctx context.Context, request operations.LabDocumentsListRequest) (*operations.LabDocumentsListResponse, error) {
+func (s *clinical) LabDocumentsList(ctx context.Context, request operations.LabDocumentsListRequest, security operations.LabDocumentsListSecurity) (*operations.LabDocumentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_documents"
 
@@ -4714,11 +4714,11 @@ func (s *clinical) LabDocumentsList(ctx context.Context, request operations.LabD
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4764,20 +4764,20 @@ func (s *clinical) LabDocumentsList(ctx context.Context, request operations.LabD
 }
 
 // LabDocumentsPartialUpdate - Update an existing lab order document
-func (s *clinical) LabDocumentsPartialUpdate(ctx context.Context, request operations.LabDocumentsPartialUpdateRequest) (*operations.LabDocumentsPartialUpdateResponse, error) {
+func (s *clinical) LabDocumentsPartialUpdate(ctx context.Context, request operations.LabDocumentsPartialUpdateRequest, security operations.LabDocumentsPartialUpdateSecurity) (*operations.LabDocumentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4815,20 +4815,20 @@ func (s *clinical) LabDocumentsPartialUpdate(ctx context.Context, request operat
 }
 
 // LabDocumentsRead - Retrieve an existing lab order document
-func (s *clinical) LabDocumentsRead(ctx context.Context, request operations.LabDocumentsReadRequest) (*operations.LabDocumentsReadResponse, error) {
+func (s *clinical) LabDocumentsRead(ctx context.Context, request operations.LabDocumentsReadRequest, security operations.LabDocumentsReadSecurity) (*operations.LabDocumentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4874,20 +4874,20 @@ func (s *clinical) LabDocumentsRead(ctx context.Context, request operations.LabD
 }
 
 // LabDocumentsUpdate - Update an existing lab order document
-func (s *clinical) LabDocumentsUpdate(ctx context.Context, request operations.LabDocumentsUpdateRequest) (*operations.LabDocumentsUpdateResponse, error) {
+func (s *clinical) LabDocumentsUpdate(ctx context.Context, request operations.LabDocumentsUpdateRequest, security operations.LabDocumentsUpdateSecurity) (*operations.LabDocumentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4931,7 +4931,7 @@ func (s *clinical) LabDocumentsUpdate(ctx context.Context, request operations.La
 // - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
 //
 // - Update `/api/lab_orders` status
-func (s *clinical) LabOrdersCreate(ctx context.Context, request operations.LabOrdersCreateRequest) (*operations.LabOrdersCreateResponse, error) {
+func (s *clinical) LabOrdersCreate(ctx context.Context, request operations.LabOrdersCreateRequest, security operations.LabOrdersCreateSecurity) (*operations.LabOrdersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_orders"
 
@@ -4940,11 +4940,11 @@ func (s *clinical) LabOrdersCreate(ctx context.Context, request operations.LabOr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4990,20 +4990,20 @@ func (s *clinical) LabOrdersCreate(ctx context.Context, request operations.LabOr
 }
 
 // LabOrdersDelete - Delete an existing lab order
-func (s *clinical) LabOrdersDelete(ctx context.Context, request operations.LabOrdersDeleteRequest) (*operations.LabOrdersDeleteResponse, error) {
+func (s *clinical) LabOrdersDelete(ctx context.Context, request operations.LabOrdersDeleteRequest, security operations.LabOrdersDeleteSecurity) (*operations.LabOrdersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5041,7 +5041,7 @@ func (s *clinical) LabOrdersDelete(ctx context.Context, request operations.LabOr
 }
 
 // LabOrdersList - Retrieve or search lab orders
-func (s *clinical) LabOrdersList(ctx context.Context, request operations.LabOrdersListRequest) (*operations.LabOrdersListResponse, error) {
+func (s *clinical) LabOrdersList(ctx context.Context, request operations.LabOrdersListRequest, security operations.LabOrdersListSecurity) (*operations.LabOrdersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_orders"
 
@@ -5050,11 +5050,11 @@ func (s *clinical) LabOrdersList(ctx context.Context, request operations.LabOrde
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5100,20 +5100,20 @@ func (s *clinical) LabOrdersList(ctx context.Context, request operations.LabOrde
 }
 
 // LabOrdersPartialUpdate - Update an existing lab order
-func (s *clinical) LabOrdersPartialUpdate(ctx context.Context, request operations.LabOrdersPartialUpdateRequest) (*operations.LabOrdersPartialUpdateResponse, error) {
+func (s *clinical) LabOrdersPartialUpdate(ctx context.Context, request operations.LabOrdersPartialUpdateRequest, security operations.LabOrdersPartialUpdateSecurity) (*operations.LabOrdersPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5151,20 +5151,20 @@ func (s *clinical) LabOrdersPartialUpdate(ctx context.Context, request operation
 }
 
 // LabOrdersRead - Retrieve an existing lab order
-func (s *clinical) LabOrdersRead(ctx context.Context, request operations.LabOrdersReadRequest) (*operations.LabOrdersReadResponse, error) {
+func (s *clinical) LabOrdersRead(ctx context.Context, request operations.LabOrdersReadRequest, security operations.LabOrdersReadSecurity) (*operations.LabOrdersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5208,7 +5208,7 @@ func (s *clinical) LabOrdersRead(ctx context.Context, request operations.LabOrde
 
 	return res, nil
 }
-func (s *clinical) LabOrdersSummaryList(ctx context.Context, request operations.LabOrdersSummaryListRequest) (*operations.LabOrdersSummaryListResponse, error) {
+func (s *clinical) LabOrdersSummaryList(ctx context.Context, request operations.LabOrdersSummaryListRequest, security operations.LabOrdersSummaryListSecurity) (*operations.LabOrdersSummaryListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_orders_summary"
 
@@ -5217,11 +5217,11 @@ func (s *clinical) LabOrdersSummaryList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5265,20 +5265,20 @@ func (s *clinical) LabOrdersSummaryList(ctx context.Context, request operations.
 
 	return res, nil
 }
-func (s *clinical) LabOrdersSummaryRead(ctx context.Context, request operations.LabOrdersSummaryReadRequest) (*operations.LabOrdersSummaryReadResponse, error) {
+func (s *clinical) LabOrdersSummaryRead(ctx context.Context, request operations.LabOrdersSummaryReadRequest, security operations.LabOrdersSummaryReadSecurity) (*operations.LabOrdersSummaryReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders_summary/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders_summary/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5324,20 +5324,20 @@ func (s *clinical) LabOrdersSummaryRead(ctx context.Context, request operations.
 }
 
 // LabOrdersUpdate - Update an existing lab order
-func (s *clinical) LabOrdersUpdate(ctx context.Context, request operations.LabOrdersUpdateRequest) (*operations.LabOrdersUpdateResponse, error) {
+func (s *clinical) LabOrdersUpdate(ctx context.Context, request operations.LabOrdersUpdateRequest, security operations.LabOrdersUpdateSecurity) (*operations.LabOrdersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5381,7 +5381,7 @@ func (s *clinical) LabOrdersUpdate(ctx context.Context, request operations.LabOr
 // - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
 //
 // - Update `/api/lab_orders` status
-func (s *clinical) LabResultsCreate(ctx context.Context, request operations.LabResultsCreateRequest) (*operations.LabResultsCreateResponse, error) {
+func (s *clinical) LabResultsCreate(ctx context.Context, request operations.LabResultsCreateRequest, security operations.LabResultsCreateSecurity) (*operations.LabResultsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_results"
 
@@ -5390,11 +5390,11 @@ func (s *clinical) LabResultsCreate(ctx context.Context, request operations.LabR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5440,20 +5440,20 @@ func (s *clinical) LabResultsCreate(ctx context.Context, request operations.LabR
 }
 
 // LabResultsDelete - Delete an existing lab result
-func (s *clinical) LabResultsDelete(ctx context.Context, request operations.LabResultsDeleteRequest) (*operations.LabResultsDeleteResponse, error) {
+func (s *clinical) LabResultsDelete(ctx context.Context, request operations.LabResultsDeleteRequest, security operations.LabResultsDeleteSecurity) (*operations.LabResultsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5491,7 +5491,7 @@ func (s *clinical) LabResultsDelete(ctx context.Context, request operations.LabR
 }
 
 // LabResultsList - Retrieve or search lab results
-func (s *clinical) LabResultsList(ctx context.Context, request operations.LabResultsListRequest) (*operations.LabResultsListResponse, error) {
+func (s *clinical) LabResultsList(ctx context.Context, request operations.LabResultsListRequest, security operations.LabResultsListSecurity) (*operations.LabResultsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_results"
 
@@ -5500,11 +5500,11 @@ func (s *clinical) LabResultsList(ctx context.Context, request operations.LabRes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5550,20 +5550,20 @@ func (s *clinical) LabResultsList(ctx context.Context, request operations.LabRes
 }
 
 // LabResultsPartialUpdate - Update an existing lab result
-func (s *clinical) LabResultsPartialUpdate(ctx context.Context, request operations.LabResultsPartialUpdateRequest) (*operations.LabResultsPartialUpdateResponse, error) {
+func (s *clinical) LabResultsPartialUpdate(ctx context.Context, request operations.LabResultsPartialUpdateRequest, security operations.LabResultsPartialUpdateSecurity) (*operations.LabResultsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5601,20 +5601,20 @@ func (s *clinical) LabResultsPartialUpdate(ctx context.Context, request operatio
 }
 
 // LabResultsRead - Retrieve an existing lab result
-func (s *clinical) LabResultsRead(ctx context.Context, request operations.LabResultsReadRequest) (*operations.LabResultsReadResponse, error) {
+func (s *clinical) LabResultsRead(ctx context.Context, request operations.LabResultsReadRequest, security operations.LabResultsReadSecurity) (*operations.LabResultsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5660,20 +5660,20 @@ func (s *clinical) LabResultsRead(ctx context.Context, request operations.LabRes
 }
 
 // LabResultsUpdate - Update an existing lab result
-func (s *clinical) LabResultsUpdate(ctx context.Context, request operations.LabResultsUpdateRequest) (*operations.LabResultsUpdateResponse, error) {
+func (s *clinical) LabResultsUpdate(ctx context.Context, request operations.LabResultsUpdateRequest, security operations.LabResultsUpdateSecurity) (*operations.LabResultsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5717,7 +5717,7 @@ func (s *clinical) LabResultsUpdate(ctx context.Context, request operations.LabR
 // - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
 //
 // - Update `/api/lab_orders` status
-func (s *clinical) LabTestsCreate(ctx context.Context, request operations.LabTestsCreateRequest) (*operations.LabTestsCreateResponse, error) {
+func (s *clinical) LabTestsCreate(ctx context.Context, request operations.LabTestsCreateRequest, security operations.LabTestsCreateSecurity) (*operations.LabTestsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_tests"
 
@@ -5726,11 +5726,11 @@ func (s *clinical) LabTestsCreate(ctx context.Context, request operations.LabTes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5776,20 +5776,20 @@ func (s *clinical) LabTestsCreate(ctx context.Context, request operations.LabTes
 }
 
 // LabTestsDelete - Delete an existing lab test
-func (s *clinical) LabTestsDelete(ctx context.Context, request operations.LabTestsDeleteRequest) (*operations.LabTestsDeleteResponse, error) {
+func (s *clinical) LabTestsDelete(ctx context.Context, request operations.LabTestsDeleteRequest, security operations.LabTestsDeleteSecurity) (*operations.LabTestsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5827,7 +5827,7 @@ func (s *clinical) LabTestsDelete(ctx context.Context, request operations.LabTes
 }
 
 // LabTestsList - Retrieve or search lab tests
-func (s *clinical) LabTestsList(ctx context.Context, request operations.LabTestsListRequest) (*operations.LabTestsListResponse, error) {
+func (s *clinical) LabTestsList(ctx context.Context, request operations.LabTestsListRequest, security operations.LabTestsListSecurity) (*operations.LabTestsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_tests"
 
@@ -5836,11 +5836,11 @@ func (s *clinical) LabTestsList(ctx context.Context, request operations.LabTests
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5886,20 +5886,20 @@ func (s *clinical) LabTestsList(ctx context.Context, request operations.LabTests
 }
 
 // LabTestsPartialUpdate - Update an existing lab test
-func (s *clinical) LabTestsPartialUpdate(ctx context.Context, request operations.LabTestsPartialUpdateRequest) (*operations.LabTestsPartialUpdateResponse, error) {
+func (s *clinical) LabTestsPartialUpdate(ctx context.Context, request operations.LabTestsPartialUpdateRequest, security operations.LabTestsPartialUpdateSecurity) (*operations.LabTestsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5937,20 +5937,20 @@ func (s *clinical) LabTestsPartialUpdate(ctx context.Context, request operations
 }
 
 // LabTestsRead - Retrieve an existing lab test
-func (s *clinical) LabTestsRead(ctx context.Context, request operations.LabTestsReadRequest) (*operations.LabTestsReadResponse, error) {
+func (s *clinical) LabTestsRead(ctx context.Context, request operations.LabTestsReadRequest, security operations.LabTestsReadSecurity) (*operations.LabTestsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5996,20 +5996,20 @@ func (s *clinical) LabTestsRead(ctx context.Context, request operations.LabTests
 }
 
 // LabTestsUpdate - Update an existing lab test
-func (s *clinical) LabTestsUpdate(ctx context.Context, request operations.LabTestsUpdateRequest) (*operations.LabTestsUpdateResponse, error) {
+func (s *clinical) LabTestsUpdate(ctx context.Context, request operations.LabTestsUpdateRequest, security operations.LabTestsUpdateSecurity) (*operations.LabTestsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6047,20 +6047,20 @@ func (s *clinical) LabTestsUpdate(ctx context.Context, request operations.LabTes
 }
 
 // MedicationsAppendToPharmacyNote - Append a message to the "pharmacy_note" section of the prescription, in a new paragraph
-func (s *clinical) MedicationsAppendToPharmacyNote(ctx context.Context, request operations.MedicationsAppendToPharmacyNoteRequest) (*operations.MedicationsAppendToPharmacyNoteResponse, error) {
+func (s *clinical) MedicationsAppendToPharmacyNote(ctx context.Context, request operations.MedicationsAppendToPharmacyNoteRequest, security operations.MedicationsAppendToPharmacyNoteSecurity) (*operations.MedicationsAppendToPharmacyNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}/append_to_pharmacy_note", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}/append_to_pharmacy_note", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6098,7 +6098,7 @@ func (s *clinical) MedicationsAppendToPharmacyNote(ctx context.Context, request 
 }
 
 // MedicationsCreate - Create patient medications
-func (s *clinical) MedicationsCreate(ctx context.Context, request operations.MedicationsCreateRequest) (*operations.MedicationsCreateResponse, error) {
+func (s *clinical) MedicationsCreate(ctx context.Context, request operations.MedicationsCreateRequest, security operations.MedicationsCreateSecurity) (*operations.MedicationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/medications"
 
@@ -6107,11 +6107,11 @@ func (s *clinical) MedicationsCreate(ctx context.Context, request operations.Med
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6157,7 +6157,7 @@ func (s *clinical) MedicationsCreate(ctx context.Context, request operations.Med
 }
 
 // MedicationsList - Retrieve or search patient medications
-func (s *clinical) MedicationsList(ctx context.Context, request operations.MedicationsListRequest) (*operations.MedicationsListResponse, error) {
+func (s *clinical) MedicationsList(ctx context.Context, request operations.MedicationsListRequest, security operations.MedicationsListSecurity) (*operations.MedicationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/medications"
 
@@ -6166,11 +6166,11 @@ func (s *clinical) MedicationsList(ctx context.Context, request operations.Medic
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6216,20 +6216,20 @@ func (s *clinical) MedicationsList(ctx context.Context, request operations.Medic
 }
 
 // MedicationsPartialUpdate - Update an existing patient medications
-func (s *clinical) MedicationsPartialUpdate(ctx context.Context, request operations.MedicationsPartialUpdateRequest) (*operations.MedicationsPartialUpdateResponse, error) {
+func (s *clinical) MedicationsPartialUpdate(ctx context.Context, request operations.MedicationsPartialUpdateRequest, security operations.MedicationsPartialUpdateSecurity) (*operations.MedicationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6267,20 +6267,20 @@ func (s *clinical) MedicationsPartialUpdate(ctx context.Context, request operati
 }
 
 // MedicationsRead - Retrieve an existing patient medications
-func (s *clinical) MedicationsRead(ctx context.Context, request operations.MedicationsReadRequest) (*operations.MedicationsReadResponse, error) {
+func (s *clinical) MedicationsRead(ctx context.Context, request operations.MedicationsReadRequest, security operations.MedicationsReadSecurity) (*operations.MedicationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6326,20 +6326,20 @@ func (s *clinical) MedicationsRead(ctx context.Context, request operations.Medic
 }
 
 // MedicationsUpdate - Update an existing patient medications
-func (s *clinical) MedicationsUpdate(ctx context.Context, request operations.MedicationsUpdateRequest) (*operations.MedicationsUpdateResponse, error) {
+func (s *clinical) MedicationsUpdate(ctx context.Context, request operations.MedicationsUpdateRequest, security operations.MedicationsUpdateSecurity) (*operations.MedicationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6377,7 +6377,7 @@ func (s *clinical) MedicationsUpdate(ctx context.Context, request operations.Med
 }
 
 // PatientCommunicationsCreate - Create patient communication for CQM
-func (s *clinical) PatientCommunicationsCreate(ctx context.Context, request operations.PatientCommunicationsCreateRequest) (*operations.PatientCommunicationsCreateResponse, error) {
+func (s *clinical) PatientCommunicationsCreate(ctx context.Context, request operations.PatientCommunicationsCreateRequest, security operations.PatientCommunicationsCreateSecurity) (*operations.PatientCommunicationsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_communications"
 
@@ -6386,11 +6386,11 @@ func (s *clinical) PatientCommunicationsCreate(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6436,7 +6436,7 @@ func (s *clinical) PatientCommunicationsCreate(ctx context.Context, request oper
 }
 
 // PatientCommunicationsList - Retrieve or search patient communications for CQM
-func (s *clinical) PatientCommunicationsList(ctx context.Context, request operations.PatientCommunicationsListRequest) (*operations.PatientCommunicationsListResponse, error) {
+func (s *clinical) PatientCommunicationsList(ctx context.Context, request operations.PatientCommunicationsListRequest, security operations.PatientCommunicationsListSecurity) (*operations.PatientCommunicationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_communications"
 
@@ -6445,11 +6445,11 @@ func (s *clinical) PatientCommunicationsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6495,20 +6495,20 @@ func (s *clinical) PatientCommunicationsList(ctx context.Context, request operat
 }
 
 // PatientCommunicationsPartialUpdate - Update an existing patient communication for CQM
-func (s *clinical) PatientCommunicationsPartialUpdate(ctx context.Context, request operations.PatientCommunicationsPartialUpdateRequest) (*operations.PatientCommunicationsPartialUpdateResponse, error) {
+func (s *clinical) PatientCommunicationsPartialUpdate(ctx context.Context, request operations.PatientCommunicationsPartialUpdateRequest, security operations.PatientCommunicationsPartialUpdateSecurity) (*operations.PatientCommunicationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6546,20 +6546,20 @@ func (s *clinical) PatientCommunicationsPartialUpdate(ctx context.Context, reque
 }
 
 // PatientCommunicationsRead - Retrieve an existing patient communication for CQM
-func (s *clinical) PatientCommunicationsRead(ctx context.Context, request operations.PatientCommunicationsReadRequest) (*operations.PatientCommunicationsReadResponse, error) {
+func (s *clinical) PatientCommunicationsRead(ctx context.Context, request operations.PatientCommunicationsReadRequest, security operations.PatientCommunicationsReadSecurity) (*operations.PatientCommunicationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6605,20 +6605,20 @@ func (s *clinical) PatientCommunicationsRead(ctx context.Context, request operat
 }
 
 // PatientCommunicationsUpdate - Update an existing patient communication for CQM
-func (s *clinical) PatientCommunicationsUpdate(ctx context.Context, request operations.PatientCommunicationsUpdateRequest) (*operations.PatientCommunicationsUpdateResponse, error) {
+func (s *clinical) PatientCommunicationsUpdate(ctx context.Context, request operations.PatientCommunicationsUpdateRequest, security operations.PatientCommunicationsUpdateSecurity) (*operations.PatientCommunicationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6656,7 +6656,7 @@ func (s *clinical) PatientCommunicationsUpdate(ctx context.Context, request oper
 }
 
 // PatientFlagTypesCreate - Create patient flag types
-func (s *clinical) PatientFlagTypesCreate(ctx context.Context, request operations.PatientFlagTypesCreateRequest) (*operations.PatientFlagTypesCreateResponse, error) {
+func (s *clinical) PatientFlagTypesCreate(ctx context.Context, request operations.PatientFlagTypesCreateRequest, security operations.PatientFlagTypesCreateSecurity) (*operations.PatientFlagTypesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_flag_types"
 
@@ -6665,11 +6665,11 @@ func (s *clinical) PatientFlagTypesCreate(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6715,7 +6715,7 @@ func (s *clinical) PatientFlagTypesCreate(ctx context.Context, request operation
 }
 
 // PatientFlagTypesList - Retrieve or search patient flag types
-func (s *clinical) PatientFlagTypesList(ctx context.Context, request operations.PatientFlagTypesListRequest) (*operations.PatientFlagTypesListResponse, error) {
+func (s *clinical) PatientFlagTypesList(ctx context.Context, request operations.PatientFlagTypesListRequest, security operations.PatientFlagTypesListSecurity) (*operations.PatientFlagTypesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_flag_types"
 
@@ -6724,11 +6724,11 @@ func (s *clinical) PatientFlagTypesList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6774,20 +6774,20 @@ func (s *clinical) PatientFlagTypesList(ctx context.Context, request operations.
 }
 
 // PatientFlagTypesPartialUpdate - Update an existing patient flag type
-func (s *clinical) PatientFlagTypesPartialUpdate(ctx context.Context, request operations.PatientFlagTypesPartialUpdateRequest) (*operations.PatientFlagTypesPartialUpdateResponse, error) {
+func (s *clinical) PatientFlagTypesPartialUpdate(ctx context.Context, request operations.PatientFlagTypesPartialUpdateRequest, security operations.PatientFlagTypesPartialUpdateSecurity) (*operations.PatientFlagTypesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6825,20 +6825,20 @@ func (s *clinical) PatientFlagTypesPartialUpdate(ctx context.Context, request op
 }
 
 // PatientFlagTypesRead - Retrieve an existing patient flag type
-func (s *clinical) PatientFlagTypesRead(ctx context.Context, request operations.PatientFlagTypesReadRequest) (*operations.PatientFlagTypesReadResponse, error) {
+func (s *clinical) PatientFlagTypesRead(ctx context.Context, request operations.PatientFlagTypesReadRequest, security operations.PatientFlagTypesReadSecurity) (*operations.PatientFlagTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6884,20 +6884,20 @@ func (s *clinical) PatientFlagTypesRead(ctx context.Context, request operations.
 }
 
 // PatientFlagTypesUpdate - Update an existing patient flag type
-func (s *clinical) PatientFlagTypesUpdate(ctx context.Context, request operations.PatientFlagTypesUpdateRequest) (*operations.PatientFlagTypesUpdateResponse, error) {
+func (s *clinical) PatientFlagTypesUpdate(ctx context.Context, request operations.PatientFlagTypesUpdateRequest, security operations.PatientFlagTypesUpdateSecurity) (*operations.PatientFlagTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6935,7 +6935,7 @@ func (s *clinical) PatientFlagTypesUpdate(ctx context.Context, request operation
 }
 
 // PatientInterventionsCreate - Create patient intervention for CQM
-func (s *clinical) PatientInterventionsCreate(ctx context.Context, request operations.PatientInterventionsCreateRequest) (*operations.PatientInterventionsCreateResponse, error) {
+func (s *clinical) PatientInterventionsCreate(ctx context.Context, request operations.PatientInterventionsCreateRequest, security operations.PatientInterventionsCreateSecurity) (*operations.PatientInterventionsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_interventions"
 
@@ -6944,11 +6944,11 @@ func (s *clinical) PatientInterventionsCreate(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -6994,7 +6994,7 @@ func (s *clinical) PatientInterventionsCreate(ctx context.Context, request opera
 }
 
 // PatientInterventionsList - Retrieve or search patient interventions for CQM
-func (s *clinical) PatientInterventionsList(ctx context.Context, request operations.PatientInterventionsListRequest) (*operations.PatientInterventionsListResponse, error) {
+func (s *clinical) PatientInterventionsList(ctx context.Context, request operations.PatientInterventionsListRequest, security operations.PatientInterventionsListSecurity) (*operations.PatientInterventionsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_interventions"
 
@@ -7003,11 +7003,11 @@ func (s *clinical) PatientInterventionsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7053,20 +7053,20 @@ func (s *clinical) PatientInterventionsList(ctx context.Context, request operati
 }
 
 // PatientInterventionsPartialUpdate - Update an existing patient intervention for CQM
-func (s *clinical) PatientInterventionsPartialUpdate(ctx context.Context, request operations.PatientInterventionsPartialUpdateRequest) (*operations.PatientInterventionsPartialUpdateResponse, error) {
+func (s *clinical) PatientInterventionsPartialUpdate(ctx context.Context, request operations.PatientInterventionsPartialUpdateRequest, security operations.PatientInterventionsPartialUpdateSecurity) (*operations.PatientInterventionsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7104,20 +7104,20 @@ func (s *clinical) PatientInterventionsPartialUpdate(ctx context.Context, reques
 }
 
 // PatientInterventionsRead - Retrieve an existing patient intervention for CQM
-func (s *clinical) PatientInterventionsRead(ctx context.Context, request operations.PatientInterventionsReadRequest) (*operations.PatientInterventionsReadResponse, error) {
+func (s *clinical) PatientInterventionsRead(ctx context.Context, request operations.PatientInterventionsReadRequest, security operations.PatientInterventionsReadSecurity) (*operations.PatientInterventionsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7163,20 +7163,20 @@ func (s *clinical) PatientInterventionsRead(ctx context.Context, request operati
 }
 
 // PatientInterventionsUpdate - Update an existing patient intervention for CQM
-func (s *clinical) PatientInterventionsUpdate(ctx context.Context, request operations.PatientInterventionsUpdateRequest) (*operations.PatientInterventionsUpdateResponse, error) {
+func (s *clinical) PatientInterventionsUpdate(ctx context.Context, request operations.PatientInterventionsUpdateRequest, security operations.PatientInterventionsUpdateSecurity) (*operations.PatientInterventionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7212,7 +7212,7 @@ func (s *clinical) PatientInterventionsUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *clinical) PatientLabResultsCreate(ctx context.Context, request operations.PatientLabResultsCreateRequest) (*operations.PatientLabResultsCreateResponse, error) {
+func (s *clinical) PatientLabResultsCreate(ctx context.Context, request operations.PatientLabResultsCreateRequest, security operations.PatientLabResultsCreateSecurity) (*operations.PatientLabResultsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_lab_results"
 
@@ -7221,11 +7221,11 @@ func (s *clinical) PatientLabResultsCreate(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7269,20 +7269,20 @@ func (s *clinical) PatientLabResultsCreate(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *clinical) PatientLabResultsDelete(ctx context.Context, request operations.PatientLabResultsDeleteRequest) (*operations.PatientLabResultsDeleteResponse, error) {
+func (s *clinical) PatientLabResultsDelete(ctx context.Context, request operations.PatientLabResultsDeleteRequest, security operations.PatientLabResultsDeleteSecurity) (*operations.PatientLabResultsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7318,7 +7318,7 @@ func (s *clinical) PatientLabResultsDelete(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *clinical) PatientLabResultsList(ctx context.Context, request operations.PatientLabResultsListRequest) (*operations.PatientLabResultsListResponse, error) {
+func (s *clinical) PatientLabResultsList(ctx context.Context, request operations.PatientLabResultsListRequest, security operations.PatientLabResultsListSecurity) (*operations.PatientLabResultsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_lab_results"
 
@@ -7327,11 +7327,11 @@ func (s *clinical) PatientLabResultsList(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7375,20 +7375,20 @@ func (s *clinical) PatientLabResultsList(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *clinical) PatientLabResultsPartialUpdate(ctx context.Context, request operations.PatientLabResultsPartialUpdateRequest) (*operations.PatientLabResultsPartialUpdateResponse, error) {
+func (s *clinical) PatientLabResultsPartialUpdate(ctx context.Context, request operations.PatientLabResultsPartialUpdateRequest, security operations.PatientLabResultsPartialUpdateSecurity) (*operations.PatientLabResultsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7424,20 +7424,20 @@ func (s *clinical) PatientLabResultsPartialUpdate(ctx context.Context, request o
 
 	return res, nil
 }
-func (s *clinical) PatientLabResultsRead(ctx context.Context, request operations.PatientLabResultsReadRequest) (*operations.PatientLabResultsReadResponse, error) {
+func (s *clinical) PatientLabResultsRead(ctx context.Context, request operations.PatientLabResultsReadRequest, security operations.PatientLabResultsReadSecurity) (*operations.PatientLabResultsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7481,20 +7481,20 @@ func (s *clinical) PatientLabResultsRead(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *clinical) PatientLabResultsUpdate(ctx context.Context, request operations.PatientLabResultsUpdateRequest) (*operations.PatientLabResultsUpdateResponse, error) {
+func (s *clinical) PatientLabResultsUpdate(ctx context.Context, request operations.PatientLabResultsUpdateRequest, security operations.PatientLabResultsUpdateSecurity) (*operations.PatientLabResultsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7530,7 +7530,7 @@ func (s *clinical) PatientLabResultsUpdate(ctx context.Context, request operatio
 
 	return res, nil
 }
-func (s *clinical) PatientMessagesCreate(ctx context.Context, request operations.PatientMessagesCreateRequest) (*operations.PatientMessagesCreateResponse, error) {
+func (s *clinical) PatientMessagesCreate(ctx context.Context, request operations.PatientMessagesCreateRequest, security operations.PatientMessagesCreateSecurity) (*operations.PatientMessagesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_messages"
 
@@ -7539,11 +7539,11 @@ func (s *clinical) PatientMessagesCreate(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7587,7 +7587,7 @@ func (s *clinical) PatientMessagesCreate(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *clinical) PatientMessagesList(ctx context.Context, request operations.PatientMessagesListRequest) (*operations.PatientMessagesListResponse, error) {
+func (s *clinical) PatientMessagesList(ctx context.Context, request operations.PatientMessagesListRequest, security operations.PatientMessagesListSecurity) (*operations.PatientMessagesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_messages"
 
@@ -7596,11 +7596,11 @@ func (s *clinical) PatientMessagesList(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7644,20 +7644,20 @@ func (s *clinical) PatientMessagesList(ctx context.Context, request operations.P
 
 	return res, nil
 }
-func (s *clinical) PatientMessagesPartialUpdate(ctx context.Context, request operations.PatientMessagesPartialUpdateRequest) (*operations.PatientMessagesPartialUpdateResponse, error) {
+func (s *clinical) PatientMessagesPartialUpdate(ctx context.Context, request operations.PatientMessagesPartialUpdateRequest, security operations.PatientMessagesPartialUpdateSecurity) (*operations.PatientMessagesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7693,20 +7693,20 @@ func (s *clinical) PatientMessagesPartialUpdate(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *clinical) PatientMessagesRead(ctx context.Context, request operations.PatientMessagesReadRequest) (*operations.PatientMessagesReadResponse, error) {
+func (s *clinical) PatientMessagesRead(ctx context.Context, request operations.PatientMessagesReadRequest, security operations.PatientMessagesReadSecurity) (*operations.PatientMessagesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7750,20 +7750,20 @@ func (s *clinical) PatientMessagesRead(ctx context.Context, request operations.P
 
 	return res, nil
 }
-func (s *clinical) PatientMessagesUpdate(ctx context.Context, request operations.PatientMessagesUpdateRequest) (*operations.PatientMessagesUpdateResponse, error) {
+func (s *clinical) PatientMessagesUpdate(ctx context.Context, request operations.PatientMessagesUpdateRequest, security operations.PatientMessagesUpdateSecurity) (*operations.PatientMessagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7801,7 +7801,7 @@ func (s *clinical) PatientMessagesUpdate(ctx context.Context, request operations
 }
 
 // PatientPhysicalExamsCreate - Create patient physical exam for CQM
-func (s *clinical) PatientPhysicalExamsCreate(ctx context.Context, request operations.PatientPhysicalExamsCreateRequest) (*operations.PatientPhysicalExamsCreateResponse, error) {
+func (s *clinical) PatientPhysicalExamsCreate(ctx context.Context, request operations.PatientPhysicalExamsCreateRequest, security operations.PatientPhysicalExamsCreateSecurity) (*operations.PatientPhysicalExamsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_physical_exams"
 
@@ -7810,11 +7810,11 @@ func (s *clinical) PatientPhysicalExamsCreate(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7860,7 +7860,7 @@ func (s *clinical) PatientPhysicalExamsCreate(ctx context.Context, request opera
 }
 
 // PatientPhysicalExamsList - Retrieve or search patient physical exams for CQM
-func (s *clinical) PatientPhysicalExamsList(ctx context.Context, request operations.PatientPhysicalExamsListRequest) (*operations.PatientPhysicalExamsListResponse, error) {
+func (s *clinical) PatientPhysicalExamsList(ctx context.Context, request operations.PatientPhysicalExamsListRequest, security operations.PatientPhysicalExamsListSecurity) (*operations.PatientPhysicalExamsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_physical_exams"
 
@@ -7869,11 +7869,11 @@ func (s *clinical) PatientPhysicalExamsList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7919,20 +7919,20 @@ func (s *clinical) PatientPhysicalExamsList(ctx context.Context, request operati
 }
 
 // PatientPhysicalExamsPartialUpdate - Update an existing patient physical exam for CQM
-func (s *clinical) PatientPhysicalExamsPartialUpdate(ctx context.Context, request operations.PatientPhysicalExamsPartialUpdateRequest) (*operations.PatientPhysicalExamsPartialUpdateResponse, error) {
+func (s *clinical) PatientPhysicalExamsPartialUpdate(ctx context.Context, request operations.PatientPhysicalExamsPartialUpdateRequest, security operations.PatientPhysicalExamsPartialUpdateSecurity) (*operations.PatientPhysicalExamsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -7970,20 +7970,20 @@ func (s *clinical) PatientPhysicalExamsPartialUpdate(ctx context.Context, reques
 }
 
 // PatientPhysicalExamsRead - Retrieve an existing patient physical exam for CQM
-func (s *clinical) PatientPhysicalExamsRead(ctx context.Context, request operations.PatientPhysicalExamsReadRequest) (*operations.PatientPhysicalExamsReadResponse, error) {
+func (s *clinical) PatientPhysicalExamsRead(ctx context.Context, request operations.PatientPhysicalExamsReadRequest, security operations.PatientPhysicalExamsReadSecurity) (*operations.PatientPhysicalExamsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8029,20 +8029,20 @@ func (s *clinical) PatientPhysicalExamsRead(ctx context.Context, request operati
 }
 
 // PatientPhysicalExamsUpdate - Update an existing patient physical exam for CQM
-func (s *clinical) PatientPhysicalExamsUpdate(ctx context.Context, request operations.PatientPhysicalExamsUpdateRequest) (*operations.PatientPhysicalExamsUpdateResponse, error) {
+func (s *clinical) PatientPhysicalExamsUpdate(ctx context.Context, request operations.PatientPhysicalExamsUpdateRequest, security operations.PatientPhysicalExamsUpdateSecurity) (*operations.PatientPhysicalExamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8078,7 +8078,7 @@ func (s *clinical) PatientPhysicalExamsUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *clinical) PatientRiskAssessmentsCreate(ctx context.Context, request operations.PatientRiskAssessmentsCreateRequest) (*operations.PatientRiskAssessmentsCreateResponse, error) {
+func (s *clinical) PatientRiskAssessmentsCreate(ctx context.Context, request operations.PatientRiskAssessmentsCreateRequest, security operations.PatientRiskAssessmentsCreateSecurity) (*operations.PatientRiskAssessmentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_risk_assessments"
 
@@ -8087,11 +8087,11 @@ func (s *clinical) PatientRiskAssessmentsCreate(ctx context.Context, request ope
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8135,7 +8135,7 @@ func (s *clinical) PatientRiskAssessmentsCreate(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *clinical) PatientRiskAssessmentsList(ctx context.Context, request operations.PatientRiskAssessmentsListRequest) (*operations.PatientRiskAssessmentsListResponse, error) {
+func (s *clinical) PatientRiskAssessmentsList(ctx context.Context, request operations.PatientRiskAssessmentsListRequest, security operations.PatientRiskAssessmentsListSecurity) (*operations.PatientRiskAssessmentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_risk_assessments"
 
@@ -8144,11 +8144,11 @@ func (s *clinical) PatientRiskAssessmentsList(ctx context.Context, request opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8192,20 +8192,20 @@ func (s *clinical) PatientRiskAssessmentsList(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *clinical) PatientRiskAssessmentsPartialUpdate(ctx context.Context, request operations.PatientRiskAssessmentsPartialUpdateRequest) (*operations.PatientRiskAssessmentsPartialUpdateResponse, error) {
+func (s *clinical) PatientRiskAssessmentsPartialUpdate(ctx context.Context, request operations.PatientRiskAssessmentsPartialUpdateRequest, security operations.PatientRiskAssessmentsPartialUpdateSecurity) (*operations.PatientRiskAssessmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8241,20 +8241,20 @@ func (s *clinical) PatientRiskAssessmentsPartialUpdate(ctx context.Context, requ
 
 	return res, nil
 }
-func (s *clinical) PatientRiskAssessmentsRead(ctx context.Context, request operations.PatientRiskAssessmentsReadRequest) (*operations.PatientRiskAssessmentsReadResponse, error) {
+func (s *clinical) PatientRiskAssessmentsRead(ctx context.Context, request operations.PatientRiskAssessmentsReadRequest, security operations.PatientRiskAssessmentsReadSecurity) (*operations.PatientRiskAssessmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8298,20 +8298,20 @@ func (s *clinical) PatientRiskAssessmentsRead(ctx context.Context, request opera
 
 	return res, nil
 }
-func (s *clinical) PatientRiskAssessmentsUpdate(ctx context.Context, request operations.PatientRiskAssessmentsUpdateRequest) (*operations.PatientRiskAssessmentsUpdateResponse, error) {
+func (s *clinical) PatientRiskAssessmentsUpdate(ctx context.Context, request operations.PatientRiskAssessmentsUpdateRequest, security operations.PatientRiskAssessmentsUpdateSecurity) (*operations.PatientRiskAssessmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8349,7 +8349,7 @@ func (s *clinical) PatientRiskAssessmentsUpdate(ctx context.Context, request ope
 }
 
 // PatientVaccineRecordsCreate - Create patient vaccine records
-func (s *clinical) PatientVaccineRecordsCreate(ctx context.Context, request operations.PatientVaccineRecordsCreateRequest) (*operations.PatientVaccineRecordsCreateResponse, error) {
+func (s *clinical) PatientVaccineRecordsCreate(ctx context.Context, request operations.PatientVaccineRecordsCreateRequest, security operations.PatientVaccineRecordsCreateSecurity) (*operations.PatientVaccineRecordsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_vaccine_records"
 
@@ -8358,11 +8358,11 @@ func (s *clinical) PatientVaccineRecordsCreate(ctx context.Context, request oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8408,7 +8408,7 @@ func (s *clinical) PatientVaccineRecordsCreate(ctx context.Context, request oper
 }
 
 // PatientVaccineRecordsList - Retrieve or search patient vaccine records
-func (s *clinical) PatientVaccineRecordsList(ctx context.Context, request operations.PatientVaccineRecordsListRequest) (*operations.PatientVaccineRecordsListResponse, error) {
+func (s *clinical) PatientVaccineRecordsList(ctx context.Context, request operations.PatientVaccineRecordsListRequest, security operations.PatientVaccineRecordsListSecurity) (*operations.PatientVaccineRecordsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_vaccine_records"
 
@@ -8417,11 +8417,11 @@ func (s *clinical) PatientVaccineRecordsList(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8467,20 +8467,20 @@ func (s *clinical) PatientVaccineRecordsList(ctx context.Context, request operat
 }
 
 // PatientVaccineRecordsPartialUpdate - Update an existing patient vaccine records
-func (s *clinical) PatientVaccineRecordsPartialUpdate(ctx context.Context, request operations.PatientVaccineRecordsPartialUpdateRequest) (*operations.PatientVaccineRecordsPartialUpdateResponse, error) {
+func (s *clinical) PatientVaccineRecordsPartialUpdate(ctx context.Context, request operations.PatientVaccineRecordsPartialUpdateRequest, security operations.PatientVaccineRecordsPartialUpdateSecurity) (*operations.PatientVaccineRecordsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8518,20 +8518,20 @@ func (s *clinical) PatientVaccineRecordsPartialUpdate(ctx context.Context, reque
 }
 
 // PatientVaccineRecordsRead - Retrieve an existing patient vaccine records
-func (s *clinical) PatientVaccineRecordsRead(ctx context.Context, request operations.PatientVaccineRecordsReadRequest) (*operations.PatientVaccineRecordsReadResponse, error) {
+func (s *clinical) PatientVaccineRecordsRead(ctx context.Context, request operations.PatientVaccineRecordsReadRequest, security operations.PatientVaccineRecordsReadSecurity) (*operations.PatientVaccineRecordsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8577,20 +8577,20 @@ func (s *clinical) PatientVaccineRecordsRead(ctx context.Context, request operat
 }
 
 // PatientVaccineRecordsUpdate - Update an existing patient vaccine records
-func (s *clinical) PatientVaccineRecordsUpdate(ctx context.Context, request operations.PatientVaccineRecordsUpdateRequest) (*operations.PatientVaccineRecordsUpdateResponse, error) {
+func (s *clinical) PatientVaccineRecordsUpdate(ctx context.Context, request operations.PatientVaccineRecordsUpdateRequest, security operations.PatientVaccineRecordsUpdateSecurity) (*operations.PatientVaccineRecordsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8628,20 +8628,20 @@ func (s *clinical) PatientVaccineRecordsUpdate(ctx context.Context, request oper
 }
 
 // PatientsCcda - Retrieve patient CCDA
-func (s *clinical) PatientsCcda(ctx context.Context, request operations.PatientsCcdaRequest) (*operations.PatientsCcdaResponse, error) {
+func (s *clinical) PatientsCcda(ctx context.Context, request operations.PatientsCcdaRequest, security operations.PatientsCcdaSecurity) (*operations.PatientsCcdaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/ccda", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/ccda", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8687,7 +8687,7 @@ func (s *clinical) PatientsCcda(ctx context.Context, request operations.Patients
 }
 
 // PatientsCreate - Create patient
-func (s *clinical) PatientsCreate(ctx context.Context, request operations.PatientsCreateRequest) (*operations.PatientsCreateResponse, error) {
+func (s *clinical) PatientsCreate(ctx context.Context, request operations.PatientsCreateRequest, security operations.PatientsCreateSecurity) (*operations.PatientsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patients"
 
@@ -8696,11 +8696,11 @@ func (s *clinical) PatientsCreate(ctx context.Context, request operations.Patien
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8746,20 +8746,20 @@ func (s *clinical) PatientsCreate(ctx context.Context, request operations.Patien
 }
 
 // PatientsDelete - Delete an existing patient
-func (s *clinical) PatientsDelete(ctx context.Context, request operations.PatientsDeleteRequest) (*operations.PatientsDeleteResponse, error) {
+func (s *clinical) PatientsDelete(ctx context.Context, request operations.PatientsDeleteRequest, security operations.PatientsDeleteSecurity) (*operations.PatientsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8797,7 +8797,7 @@ func (s *clinical) PatientsDelete(ctx context.Context, request operations.Patien
 }
 
 // PatientsList - Retrieve or search patients
-func (s *clinical) PatientsList(ctx context.Context, request operations.PatientsListRequest) (*operations.PatientsListResponse, error) {
+func (s *clinical) PatientsList(ctx context.Context, request operations.PatientsListRequest, security operations.PatientsListSecurity) (*operations.PatientsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patients"
 
@@ -8806,11 +8806,11 @@ func (s *clinical) PatientsList(ctx context.Context, request operations.Patients
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8856,20 +8856,20 @@ func (s *clinical) PatientsList(ctx context.Context, request operations.Patients
 }
 
 // PatientsOnpatientAccessCreate - Send new onpatient invite to patient
-func (s *clinical) PatientsOnpatientAccessCreate(ctx context.Context, request operations.PatientsOnpatientAccessCreateRequest) (*operations.PatientsOnpatientAccessCreateResponse, error) {
+func (s *clinical) PatientsOnpatientAccessCreate(ctx context.Context, request operations.PatientsOnpatientAccessCreateRequest, security operations.PatientsOnpatientAccessCreateSecurity) (*operations.PatientsOnpatientAccessCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8915,20 +8915,20 @@ func (s *clinical) PatientsOnpatientAccessCreate(ctx context.Context, request op
 }
 
 // PatientsOnpatientAccessDelete - Revoke sent onpatient invites
-func (s *clinical) PatientsOnpatientAccessDelete(ctx context.Context, request operations.PatientsOnpatientAccessDeleteRequest) (*operations.PatientsOnpatientAccessDeleteResponse, error) {
+func (s *clinical) PatientsOnpatientAccessDelete(ctx context.Context, request operations.PatientsOnpatientAccessDeleteRequest, security operations.PatientsOnpatientAccessDeleteSecurity) (*operations.PatientsOnpatientAccessDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -8966,20 +8966,20 @@ func (s *clinical) PatientsOnpatientAccessDelete(ctx context.Context, request op
 }
 
 // PatientsOnpatientAccessRead - Retrieve or search existing onpatient access invites
-func (s *clinical) PatientsOnpatientAccessRead(ctx context.Context, request operations.PatientsOnpatientAccessReadRequest) (*operations.PatientsOnpatientAccessReadResponse, error) {
+func (s *clinical) PatientsOnpatientAccessRead(ctx context.Context, request operations.PatientsOnpatientAccessReadRequest, security operations.PatientsOnpatientAccessReadSecurity) (*operations.PatientsOnpatientAccessReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9025,20 +9025,20 @@ func (s *clinical) PatientsOnpatientAccessRead(ctx context.Context, request oper
 }
 
 // PatientsPartialUpdate - Update an existing patient
-func (s *clinical) PatientsPartialUpdate(ctx context.Context, request operations.PatientsPartialUpdateRequest) (*operations.PatientsPartialUpdateResponse, error) {
+func (s *clinical) PatientsPartialUpdate(ctx context.Context, request operations.PatientsPartialUpdateRequest, security operations.PatientsPartialUpdateSecurity) (*operations.PatientsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9076,20 +9076,20 @@ func (s *clinical) PatientsPartialUpdate(ctx context.Context, request operations
 }
 
 // PatientsQrda1 - Retrieve patient QRDA1
-func (s *clinical) PatientsQrda1(ctx context.Context, request operations.PatientsQrda1Request) (*operations.PatientsQrda1Response, error) {
+func (s *clinical) PatientsQrda1(ctx context.Context, request operations.PatientsQrda1Request, security operations.PatientsQrda1Security) (*operations.PatientsQrda1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/qrda1", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/qrda1", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9135,20 +9135,20 @@ func (s *clinical) PatientsQrda1(ctx context.Context, request operations.Patient
 }
 
 // PatientsRead - Retrieve an existing patient
-func (s *clinical) PatientsRead(ctx context.Context, request operations.PatientsReadRequest) (*operations.PatientsReadResponse, error) {
+func (s *clinical) PatientsRead(ctx context.Context, request operations.PatientsReadRequest, security operations.PatientsReadSecurity) (*operations.PatientsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9192,7 +9192,7 @@ func (s *clinical) PatientsRead(ctx context.Context, request operations.Patients
 
 	return res, nil
 }
-func (s *clinical) PatientsSummaryCreate(ctx context.Context, request operations.PatientsSummaryCreateRequest) (*operations.PatientsSummaryCreateResponse, error) {
+func (s *clinical) PatientsSummaryCreate(ctx context.Context, request operations.PatientsSummaryCreateRequest, security operations.PatientsSummaryCreateSecurity) (*operations.PatientsSummaryCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patients_summary"
 
@@ -9201,11 +9201,11 @@ func (s *clinical) PatientsSummaryCreate(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9249,20 +9249,20 @@ func (s *clinical) PatientsSummaryCreate(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *clinical) PatientsSummaryDelete(ctx context.Context, request operations.PatientsSummaryDeleteRequest) (*operations.PatientsSummaryDeleteResponse, error) {
+func (s *clinical) PatientsSummaryDelete(ctx context.Context, request operations.PatientsSummaryDeleteRequest, security operations.PatientsSummaryDeleteSecurity) (*operations.PatientsSummaryDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9298,7 +9298,7 @@ func (s *clinical) PatientsSummaryDelete(ctx context.Context, request operations
 
 	return res, nil
 }
-func (s *clinical) PatientsSummaryList(ctx context.Context, request operations.PatientsSummaryListRequest) (*operations.PatientsSummaryListResponse, error) {
+func (s *clinical) PatientsSummaryList(ctx context.Context, request operations.PatientsSummaryListRequest, security operations.PatientsSummaryListSecurity) (*operations.PatientsSummaryListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patients_summary"
 
@@ -9307,11 +9307,11 @@ func (s *clinical) PatientsSummaryList(ctx context.Context, request operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9355,20 +9355,20 @@ func (s *clinical) PatientsSummaryList(ctx context.Context, request operations.P
 
 	return res, nil
 }
-func (s *clinical) PatientsSummaryPartialUpdate(ctx context.Context, request operations.PatientsSummaryPartialUpdateRequest) (*operations.PatientsSummaryPartialUpdateResponse, error) {
+func (s *clinical) PatientsSummaryPartialUpdate(ctx context.Context, request operations.PatientsSummaryPartialUpdateRequest, security operations.PatientsSummaryPartialUpdateSecurity) (*operations.PatientsSummaryPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9404,20 +9404,20 @@ func (s *clinical) PatientsSummaryPartialUpdate(ctx context.Context, request ope
 
 	return res, nil
 }
-func (s *clinical) PatientsSummaryRead(ctx context.Context, request operations.PatientsSummaryReadRequest) (*operations.PatientsSummaryReadResponse, error) {
+func (s *clinical) PatientsSummaryRead(ctx context.Context, request operations.PatientsSummaryReadRequest, security operations.PatientsSummaryReadSecurity) (*operations.PatientsSummaryReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9461,20 +9461,20 @@ func (s *clinical) PatientsSummaryRead(ctx context.Context, request operations.P
 
 	return res, nil
 }
-func (s *clinical) PatientsSummaryUpdate(ctx context.Context, request operations.PatientsSummaryUpdateRequest) (*operations.PatientsSummaryUpdateResponse, error) {
+func (s *clinical) PatientsSummaryUpdate(ctx context.Context, request operations.PatientsSummaryUpdateRequest, security operations.PatientsSummaryUpdateSecurity) (*operations.PatientsSummaryUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9512,20 +9512,20 @@ func (s *clinical) PatientsSummaryUpdate(ctx context.Context, request operations
 }
 
 // PatientsUpdate - Update an existing patient
-func (s *clinical) PatientsUpdate(ctx context.Context, request operations.PatientsUpdateRequest) (*operations.PatientsUpdateResponse, error) {
+func (s *clinical) PatientsUpdate(ctx context.Context, request operations.PatientsUpdateRequest, security operations.PatientsUpdateSecurity) (*operations.PatientsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9563,7 +9563,7 @@ func (s *clinical) PatientsUpdate(ctx context.Context, request operations.Patien
 }
 
 // PrescriptionMessagesList - Retrieve or search prescription messages
-func (s *clinical) PrescriptionMessagesList(ctx context.Context, request operations.PrescriptionMessagesListRequest) (*operations.PrescriptionMessagesListResponse, error) {
+func (s *clinical) PrescriptionMessagesList(ctx context.Context, request operations.PrescriptionMessagesListRequest, security operations.PrescriptionMessagesListSecurity) (*operations.PrescriptionMessagesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/prescription_messages"
 
@@ -9572,11 +9572,11 @@ func (s *clinical) PrescriptionMessagesList(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9622,20 +9622,20 @@ func (s *clinical) PrescriptionMessagesList(ctx context.Context, request operati
 }
 
 // PrescriptionMessagesRead - Retrieve an existing prescription message
-func (s *clinical) PrescriptionMessagesRead(ctx context.Context, request operations.PrescriptionMessagesReadRequest) (*operations.PrescriptionMessagesReadResponse, error) {
+func (s *clinical) PrescriptionMessagesRead(ctx context.Context, request operations.PrescriptionMessagesReadRequest, security operations.PrescriptionMessagesReadSecurity) (*operations.PrescriptionMessagesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/prescription_messages/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/prescription_messages/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9681,7 +9681,7 @@ func (s *clinical) PrescriptionMessagesRead(ctx context.Context, request operati
 }
 
 // ProblemsCreate - Create patient problems
-func (s *clinical) ProblemsCreate(ctx context.Context, request operations.ProblemsCreateRequest) (*operations.ProblemsCreateResponse, error) {
+func (s *clinical) ProblemsCreate(ctx context.Context, request operations.ProblemsCreateRequest, security operations.ProblemsCreateSecurity) (*operations.ProblemsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/problems"
 
@@ -9690,11 +9690,11 @@ func (s *clinical) ProblemsCreate(ctx context.Context, request operations.Proble
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9740,7 +9740,7 @@ func (s *clinical) ProblemsCreate(ctx context.Context, request operations.Proble
 }
 
 // ProblemsList - Retrieve or search patient problems
-func (s *clinical) ProblemsList(ctx context.Context, request operations.ProblemsListRequest) (*operations.ProblemsListResponse, error) {
+func (s *clinical) ProblemsList(ctx context.Context, request operations.ProblemsListRequest, security operations.ProblemsListSecurity) (*operations.ProblemsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/problems"
 
@@ -9749,11 +9749,11 @@ func (s *clinical) ProblemsList(ctx context.Context, request operations.Problems
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9799,20 +9799,20 @@ func (s *clinical) ProblemsList(ctx context.Context, request operations.Problems
 }
 
 // ProblemsPartialUpdate - Update an existing patient problems
-func (s *clinical) ProblemsPartialUpdate(ctx context.Context, request operations.ProblemsPartialUpdateRequest) (*operations.ProblemsPartialUpdateResponse, error) {
+func (s *clinical) ProblemsPartialUpdate(ctx context.Context, request operations.ProblemsPartialUpdateRequest, security operations.ProblemsPartialUpdateSecurity) (*operations.ProblemsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9850,20 +9850,20 @@ func (s *clinical) ProblemsPartialUpdate(ctx context.Context, request operations
 }
 
 // ProblemsRead - Retrieve an existing patient problems
-func (s *clinical) ProblemsRead(ctx context.Context, request operations.ProblemsReadRequest) (*operations.ProblemsReadResponse, error) {
+func (s *clinical) ProblemsRead(ctx context.Context, request operations.ProblemsReadRequest, security operations.ProblemsReadSecurity) (*operations.ProblemsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9909,20 +9909,20 @@ func (s *clinical) ProblemsRead(ctx context.Context, request operations.Problems
 }
 
 // ProblemsUpdate - Update an existing patient problems
-func (s *clinical) ProblemsUpdate(ctx context.Context, request operations.ProblemsUpdateRequest) (*operations.ProblemsUpdateResponse, error) {
+func (s *clinical) ProblemsUpdate(ctx context.Context, request operations.ProblemsUpdateRequest, security operations.ProblemsUpdateSecurity) (*operations.ProblemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -9960,7 +9960,7 @@ func (s *clinical) ProblemsUpdate(ctx context.Context, request operations.Proble
 }
 
 // ReminderProfilesCreate - Create reminder profile
-func (s *clinical) ReminderProfilesCreate(ctx context.Context, request operations.ReminderProfilesCreateRequest) (*operations.ReminderProfilesCreateResponse, error) {
+func (s *clinical) ReminderProfilesCreate(ctx context.Context, request operations.ReminderProfilesCreateRequest, security operations.ReminderProfilesCreateSecurity) (*operations.ReminderProfilesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/reminder_profiles"
 
@@ -9969,11 +9969,11 @@ func (s *clinical) ReminderProfilesCreate(ctx context.Context, request operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10019,20 +10019,20 @@ func (s *clinical) ReminderProfilesCreate(ctx context.Context, request operation
 }
 
 // ReminderProfilesDelete - Delete an existing reminder profile
-func (s *clinical) ReminderProfilesDelete(ctx context.Context, request operations.ReminderProfilesDeleteRequest) (*operations.ReminderProfilesDeleteResponse, error) {
+func (s *clinical) ReminderProfilesDelete(ctx context.Context, request operations.ReminderProfilesDeleteRequest, security operations.ReminderProfilesDeleteSecurity) (*operations.ReminderProfilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10070,7 +10070,7 @@ func (s *clinical) ReminderProfilesDelete(ctx context.Context, request operation
 }
 
 // ReminderProfilesList - Retrieve or search reminder profiles
-func (s *clinical) ReminderProfilesList(ctx context.Context, request operations.ReminderProfilesListRequest) (*operations.ReminderProfilesListResponse, error) {
+func (s *clinical) ReminderProfilesList(ctx context.Context, request operations.ReminderProfilesListRequest, security operations.ReminderProfilesListSecurity) (*operations.ReminderProfilesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/reminder_profiles"
 
@@ -10079,11 +10079,11 @@ func (s *clinical) ReminderProfilesList(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10129,20 +10129,20 @@ func (s *clinical) ReminderProfilesList(ctx context.Context, request operations.
 }
 
 // ReminderProfilesPartialUpdate - Update an existing reminder profile
-func (s *clinical) ReminderProfilesPartialUpdate(ctx context.Context, request operations.ReminderProfilesPartialUpdateRequest) (*operations.ReminderProfilesPartialUpdateResponse, error) {
+func (s *clinical) ReminderProfilesPartialUpdate(ctx context.Context, request operations.ReminderProfilesPartialUpdateRequest, security operations.ReminderProfilesPartialUpdateSecurity) (*operations.ReminderProfilesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10180,20 +10180,20 @@ func (s *clinical) ReminderProfilesPartialUpdate(ctx context.Context, request op
 }
 
 // ReminderProfilesRead - Retrieve an existing reminder profile
-func (s *clinical) ReminderProfilesRead(ctx context.Context, request operations.ReminderProfilesReadRequest) (*operations.ReminderProfilesReadResponse, error) {
+func (s *clinical) ReminderProfilesRead(ctx context.Context, request operations.ReminderProfilesReadRequest, security operations.ReminderProfilesReadSecurity) (*operations.ReminderProfilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10239,20 +10239,20 @@ func (s *clinical) ReminderProfilesRead(ctx context.Context, request operations.
 }
 
 // ReminderProfilesUpdate - Update an existing reminder profile
-func (s *clinical) ReminderProfilesUpdate(ctx context.Context, request operations.ReminderProfilesUpdateRequest) (*operations.ReminderProfilesUpdateResponse, error) {
+func (s *clinical) ReminderProfilesUpdate(ctx context.Context, request operations.ReminderProfilesUpdateRequest, security operations.ReminderProfilesUpdateSecurity) (*operations.ReminderProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10296,7 +10296,7 @@ func (s *clinical) ReminderProfilesUpdate(ctx context.Context, request operation
 // - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
 //
 // - Update `/api/lab_orders` status
-func (s *clinical) SublabsCreate(ctx context.Context, request operations.SublabsCreateRequest) (*operations.SublabsCreateResponse, error) {
+func (s *clinical) SublabsCreate(ctx context.Context) (*operations.SublabsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/sublabs"
 
@@ -10305,7 +10305,7 @@ func (s *clinical) SublabsCreate(ctx context.Context, request operations.Sublabs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10351,16 +10351,16 @@ func (s *clinical) SublabsCreate(ctx context.Context, request operations.Sublabs
 }
 
 // SublabsDelete - Delete an existing sub vendor
-func (s *clinical) SublabsDelete(ctx context.Context, request operations.SublabsDeleteRequest) (*operations.SublabsDeleteResponse, error) {
+func (s *clinical) SublabsDelete(ctx context.Context, request operations.SublabsDeleteRequest, security operations.SublabsDeleteSecurity) (*operations.SublabsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10398,7 +10398,7 @@ func (s *clinical) SublabsDelete(ctx context.Context, request operations.Sublabs
 }
 
 // SublabsList - Retrieve or search sub vendors
-func (s *clinical) SublabsList(ctx context.Context, request operations.SublabsListRequest) (*operations.SublabsListResponse, error) {
+func (s *clinical) SublabsList(ctx context.Context, request operations.SublabsListRequest, security operations.SublabsListSecurity) (*operations.SublabsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/sublabs"
 
@@ -10407,11 +10407,11 @@ func (s *clinical) SublabsList(ctx context.Context, request operations.SublabsLi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10457,16 +10457,16 @@ func (s *clinical) SublabsList(ctx context.Context, request operations.SublabsLi
 }
 
 // SublabsPartialUpdate - Update an existing sub vendor
-func (s *clinical) SublabsPartialUpdate(ctx context.Context, request operations.SublabsPartialUpdateRequest) (*operations.SublabsPartialUpdateResponse, error) {
+func (s *clinical) SublabsPartialUpdate(ctx context.Context, request operations.SublabsPartialUpdateRequest, security operations.SublabsPartialUpdateSecurity) (*operations.SublabsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10504,16 +10504,16 @@ func (s *clinical) SublabsPartialUpdate(ctx context.Context, request operations.
 }
 
 // SublabsRead - Retrieve an existing sub vendor
-func (s *clinical) SublabsRead(ctx context.Context, request operations.SublabsReadRequest) (*operations.SublabsReadResponse, error) {
+func (s *clinical) SublabsRead(ctx context.Context, request operations.SublabsReadRequest, security operations.SublabsReadSecurity) (*operations.SublabsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10559,16 +10559,16 @@ func (s *clinical) SublabsRead(ctx context.Context, request operations.SublabsRe
 }
 
 // SublabsUpdate - Update an existing sub vendor
-func (s *clinical) SublabsUpdate(ctx context.Context, request operations.SublabsUpdateRequest) (*operations.SublabsUpdateResponse, error) {
+func (s *clinical) SublabsUpdate(ctx context.Context, request operations.SublabsUpdateRequest, security operations.SublabsUpdateSecurity) (*operations.SublabsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

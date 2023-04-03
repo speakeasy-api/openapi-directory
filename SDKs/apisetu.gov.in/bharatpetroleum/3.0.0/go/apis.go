@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Lpgsv - LPG Subscription Voucher
 // API to verify LPG Subscription Voucher.
-func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequest) (*operations.LpgsvResponse, error) {
+func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequestBody, security operations.LpgsvSecurity) (*operations.LpgsvResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/lpgsv/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Lpgsv(ctx context.Context, request operations.LpgsvRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SystemCountriesSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SystemCountriesRequest struct {
-	Security SystemCountriesSecurity
-}
 
 // SystemCountriesDefaultApplicationJSON - Detailed information about the error
 type SystemCountriesDefaultApplicationJSON struct {

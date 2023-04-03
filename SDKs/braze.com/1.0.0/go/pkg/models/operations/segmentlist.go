@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type SegmentListQueryParams struct {
+type SegmentListRequest struct {
 	// (Optional) Integer
 	//
 	// The page of segments to return, defaults to 0 (returns the first set of up to 100)
@@ -15,10 +15,6 @@ type SegmentListQueryParams struct {
 	//
 	// Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest.
 	SortDirection *string `queryParam:"style=form,explode=true,name=sort_direction"`
-}
-
-type SegmentListRequest struct {
-	QueryParams SegmentListQueryParams
 }
 
 type SegmentListResponse struct {

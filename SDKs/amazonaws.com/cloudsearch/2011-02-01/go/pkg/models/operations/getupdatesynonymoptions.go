@@ -50,26 +50,18 @@ func (e *GETUpdateSynonymOptionsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETUpdateSynonymOptionsQueryParams struct {
-	Action     GETUpdateSynonymOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	DomainName string                             `queryParam:"style=form,explode=true,name=DomainName"`
-	Synonyms   string                             `queryParam:"style=form,explode=true,name=Synonyms"`
-	Version    GETUpdateSynonymOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETUpdateSynonymOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type GETUpdateSynonymOptionsRequest struct {
-	QueryParams GETUpdateSynonymOptionsQueryParams
-	Headers     GETUpdateSynonymOptionsHeaders
+	Action            GETUpdateSynonymOptionsActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	DomainName        string                             `queryParam:"style=form,explode=true,name=DomainName"`
+	Synonyms          string                             `queryParam:"style=form,explode=true,name=Synonyms"`
+	Version           GETUpdateSynonymOptionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETUpdateSynonymOptionsResponse struct {

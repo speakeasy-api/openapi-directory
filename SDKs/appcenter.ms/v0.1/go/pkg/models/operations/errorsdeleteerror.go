@@ -6,14 +6,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ErrorsDeleteErrorSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ErrorsDeleteErrorPathParams struct {
+type ErrorsDeleteErrorRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The id of the error group
@@ -22,11 +21,6 @@ type ErrorsDeleteErrorPathParams struct {
 	ErrorID string `pathParam:"style=simple,explode=false,name=errorId"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsDeleteErrorRequest struct {
-	PathParams ErrorsDeleteErrorPathParams
-	Security   ErrorsDeleteErrorSecurity
 }
 
 type ErrorsDeleteErrorDefaultApplicationJSONErrorCodeEnum string

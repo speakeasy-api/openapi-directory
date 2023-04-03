@@ -8,9 +8,18 @@ import (
 	"net/http"
 )
 
-type UpdateCACertificatePathParams struct {
-	// The CA certificate identifier.
-	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
+// UpdateCACertificateRequestBodyRegistrationConfig - The registration configuration.
+type UpdateCACertificateRequestBodyRegistrationConfig struct {
+	RoleArn      *string `json:"roleArn,omitempty"`
+	TemplateBody *string `json:"templateBody,omitempty"`
+	TemplateName *string `json:"templateName,omitempty"`
+}
+
+type UpdateCACertificateRequestBody struct {
+	// The registration configuration.
+	RegistrationConfig *UpdateCACertificateRequestBodyRegistrationConfig `json:"registrationConfig,omitempty"`
+	// If true, removes auto registration.
+	RemoveAutoRegistration *bool `json:"removeAutoRegistration,omitempty"`
 }
 
 // UpdateCACertificateNewAutoRegistrationStatusEnum - The new value for the auto registration status. Valid values are: "ENABLE" or "DISABLE".
@@ -61,42 +70,21 @@ func (e *UpdateCACertificateNewStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateCACertificateQueryParams struct {
+type UpdateCACertificateRequest struct {
+	RequestBody       UpdateCACertificateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The CA certificate identifier.
+	CaCertificateID string `pathParam:"style=simple,explode=false,name=caCertificateId"`
 	// The new value for the auto registration status. Valid values are: "ENABLE" or "DISABLE".
 	NewAutoRegistrationStatus *UpdateCACertificateNewAutoRegistrationStatusEnum `queryParam:"style=form,explode=true,name=newAutoRegistrationStatus"`
 	// <p>The updated status of the CA certificate.</p> <p> <b>Note:</b> The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
 	NewStatus *UpdateCACertificateNewStatusEnum `queryParam:"style=form,explode=true,name=newStatus"`
-}
-
-type UpdateCACertificateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-// UpdateCACertificateRequestBodyRegistrationConfig - The registration configuration.
-type UpdateCACertificateRequestBodyRegistrationConfig struct {
-	RoleArn      *string `json:"roleArn,omitempty"`
-	TemplateBody *string `json:"templateBody,omitempty"`
-	TemplateName *string `json:"templateName,omitempty"`
-}
-
-type UpdateCACertificateRequestBody struct {
-	// The registration configuration.
-	RegistrationConfig *UpdateCACertificateRequestBodyRegistrationConfig `json:"registrationConfig,omitempty"`
-	// If true, removes auto registration.
-	RemoveAutoRegistration *bool `json:"removeAutoRegistration,omitempty"`
-}
-
-type UpdateCACertificateRequest struct {
-	PathParams  UpdateCACertificatePathParams
-	QueryParams UpdateCACertificateQueryParams
-	Headers     UpdateCACertificateHeaders
-	Request     UpdateCACertificateRequestBody `request:"mediaType=application/json"`
 }
 
 type UpdateCACertificateResponse struct {

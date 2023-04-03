@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ReleasesAddDistributionGroupSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ReleasesAddDistributionGroupPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-	// The ID of the release
-	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ReleasesAddDistributionGroupRequestBody - The release information.
@@ -33,10 +23,14 @@ type ReleasesAddDistributionGroupRequestBody struct {
 }
 
 type ReleasesAddDistributionGroupRequest struct {
-	PathParams ReleasesAddDistributionGroupPathParams
 	// The release information.
-	Request  ReleasesAddDistributionGroupRequestBody `request:"mediaType=application/json"`
-	Security ReleasesAddDistributionGroupSecurity
+	RequestBody ReleasesAddDistributionGroupRequestBody `request:"mediaType=application/json"`
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	// The ID of the release
+	ReleaseID int64 `pathParam:"style=simple,explode=false,name=release_id"`
 }
 
 type ReleasesAddDistributionGroup404ApplicationJSONCodeEnum string

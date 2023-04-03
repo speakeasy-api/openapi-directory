@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetMissionProfilePathParams struct {
-	// UUID of a mission profile.
-	MissionProfileID string `pathParam:"style=simple,explode=false,name=missionProfileId"`
-}
-
-type GetMissionProfileHeaders struct {
+type GetMissionProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetMissionProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetMissionProfileRequest struct {
-	PathParams GetMissionProfilePathParams
-	Headers    GetMissionProfileHeaders
+	// UUID of a mission profile.
+	MissionProfileID string `pathParam:"style=simple,explode=false,name=missionProfileId"`
 }
 
 type GetMissionProfileResponse struct {

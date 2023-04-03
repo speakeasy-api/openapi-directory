@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEndpointQueryParams struct {
-	// The certificate ARN of the device. This is an optional parameter.
-	CertificateArn *string `queryParam:"style=form,explode=true,name=certificateArn"`
-	// The thing ARN of the device. This is an optional parameter.
-	ThingArn *string `queryParam:"style=form,explode=true,name=thingArn"`
-}
-
-type GetEndpointHeaders struct {
+type GetEndpointRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetEndpointHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEndpointRequest struct {
-	QueryParams GetEndpointQueryParams
-	Headers     GetEndpointHeaders
+	// The certificate ARN of the device. This is an optional parameter.
+	CertificateArn *string `queryParam:"style=form,explode=true,name=certificateArn"`
+	// The thing ARN of the device. This is an optional parameter.
+	ThingArn *string `queryParam:"style=form,explode=true,name=thingArn"`
 }
 
 type GetEndpointResponse struct {

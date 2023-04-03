@@ -50,26 +50,18 @@ func (e *GETEnableAlarmActionsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETEnableAlarmActionsQueryParams struct {
+type GETEnableAlarmActionsRequest struct {
 	Action GETEnableAlarmActionsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The names of the alarms.
-	AlarmNames []string                         `queryParam:"style=form,explode=true,name=AlarmNames"`
-	Version    GETEnableAlarmActionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETEnableAlarmActionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETEnableAlarmActionsRequest struct {
-	QueryParams GETEnableAlarmActionsQueryParams
-	Headers     GETEnableAlarmActionsHeaders
+	AlarmNames        []string                         `queryParam:"style=form,explode=true,name=AlarmNames"`
+	Version           GETEnableAlarmActionsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETEnableAlarmActionsResponse struct {

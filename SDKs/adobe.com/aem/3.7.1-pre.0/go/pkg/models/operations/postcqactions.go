@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type PostCqActionsQueryParams struct {
+type PostCqActionsRequest struct {
 	AuthorizableID string `queryParam:"style=form,explode=true,name=authorizableId"`
 	Changelog      string `queryParam:"style=form,explode=true,name=changelog"`
-}
-
-type PostCqActionsRequest struct {
-	QueryParams PostCqActionsQueryParams
 }
 
 type PostCqActionsResponse struct {

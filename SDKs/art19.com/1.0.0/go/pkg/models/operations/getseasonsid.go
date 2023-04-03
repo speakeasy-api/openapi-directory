@@ -8,17 +8,12 @@ import (
 )
 
 type GetSeasonsIDSecurity struct {
-	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type GetSeasonsIDPathParams struct {
-	// The ID of the season resource to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type GetSeasonsIDRequest struct {
-	PathParams GetSeasonsIDPathParams
-	Security   GetSeasonsIDSecurity
+	// The ID of the season resource to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 // GetSeasonsID200ApplicationVndAPIPlusJSON - Success

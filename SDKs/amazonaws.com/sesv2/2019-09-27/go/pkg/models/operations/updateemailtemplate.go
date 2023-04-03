@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateEmailTemplatePathParams struct {
-	// The name of the template.
-	TemplateName string `pathParam:"style=simple,explode=false,name=TemplateName"`
-}
-
-type UpdateEmailTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateEmailTemplateRequestBodyTemplateContent - The content of the email, composed of a subject line, an HTML part, and a text-only part.
 type UpdateEmailTemplateRequestBodyTemplateContent struct {
 	HTML    *string `json:"Html,omitempty"`
@@ -34,9 +19,16 @@ type UpdateEmailTemplateRequestBody struct {
 }
 
 type UpdateEmailTemplateRequest struct {
-	PathParams UpdateEmailTemplatePathParams
-	Headers    UpdateEmailTemplateHeaders
-	Request    UpdateEmailTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody UpdateEmailTemplateRequestBody `request:"mediaType=application/json"`
+	// The name of the template.
+	TemplateName      string  `pathParam:"style=simple,explode=false,name=TemplateName"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type UpdateEmailTemplateResponse struct {

@@ -50,25 +50,17 @@ func (e *POSTModifyRuleVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTModifyRuleQueryParams struct {
-	Action  POSTModifyRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTModifyRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTModifyRuleHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTModifyRuleRequest struct {
-	QueryParams POSTModifyRuleQueryParams
-	Headers     POSTModifyRuleHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTModifyRuleActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                    `request:"mediaType=text/xml"`
+	Version           POSTModifyRuleVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTModifyRuleResponse struct {

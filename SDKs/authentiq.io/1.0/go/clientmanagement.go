@@ -35,7 +35,7 @@ func newClientManagement(defaultClient, securityClient HTTPClient, serverURL, la
 
 // Client - List clients
 // Retrieve a list of clients.
-func (s *clientManagement) Client(ctx context.Context, request operations.ClientRequest) (*operations.ClientResponse, error) {
+func (s *clientManagement) Client(ctx context.Context) (*operations.ClientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/client"
 
@@ -44,7 +44,7 @@ func (s *clientManagement) Client(ctx context.Context, request operations.Client
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -113,16 +113,16 @@ func (s *clientManagement) Client(ctx context.Context, request operations.Client
 // Delete a previously registered client.
 //
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
-func (s *clientManagement) ClientClientID(ctx context.Context, request operations.ClientClientIDRequest) (*operations.ClientClientIDResponse, error) {
+func (s *clientManagement) ClientClientID(ctx context.Context, request operations.ClientClientIDRequest, security operations.ClientClientIDSecurity) (*operations.ClientClientIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +184,7 @@ func (s *clientManagement) ClientClientID(ctx context.Context, request operation
 // This endpoint is compatible with [OIDC's Client Registration](http://openid.net/specs/openid-connect-registration-1_0.html) extension.
 //
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientRegistration - OIDC Client Registration Endpoint
-func (s *clientManagement) CreateClient(ctx context.Context, request operations.CreateClientRequest) (*operations.CreateClientResponse, error) {
+func (s *clientManagement) CreateClient(ctx context.Context, request shared.Client, security operations.CreateClientSecurity) (*operations.CreateClientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/client"
 
@@ -203,7 +203,7 @@ func (s *clientManagement) CreateClient(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -265,16 +265,16 @@ func (s *clientManagement) CreateClient(ctx context.Context, request operations.
 // Retrieve the configuration of a previously registered client.
 //
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
-func (s *clientManagement) GetClient(ctx context.Context, request operations.GetClientRequest) (*operations.GetClientResponse, error) {
+func (s *clientManagement) GetClient(ctx context.Context, request operations.GetClientRequest, security operations.GetClientSecurity) (*operations.GetClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -343,11 +343,11 @@ func (s *clientManagement) GetClient(ctx context.Context, request operations.Get
 // Update the configuration of a previously registered client.
 //
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
-func (s *clientManagement) UpdateClient(ctx context.Context, request operations.UpdateClientRequest) (*operations.UpdateClientResponse, error) {
+func (s *clientManagement) UpdateClient(ctx context.Context, request operations.UpdateClientRequest, security operations.UpdateClientSecurity) (*operations.UpdateClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Client", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -362,7 +362,7 @@ func (s *clientManagement) UpdateClient(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

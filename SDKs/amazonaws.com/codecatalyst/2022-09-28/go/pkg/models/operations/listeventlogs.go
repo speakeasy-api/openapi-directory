@@ -8,18 +8,6 @@ import (
 	"time"
 )
 
-type ListEventLogsPathParams struct {
-	// The name of the space.
-	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
-}
-
-type ListEventLogsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 type ListEventLogsRequestBody struct {
 	// The time after which you do not want any events retrieved, in coordinated universal time (UTC) timestamp format as specified in <a href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339</a>.
 	EndTime time.Time `json:"endTime"`
@@ -34,9 +22,13 @@ type ListEventLogsRequestBody struct {
 }
 
 type ListEventLogsRequest struct {
-	PathParams  ListEventLogsPathParams
-	QueryParams ListEventLogsQueryParams
-	Request     ListEventLogsRequestBody `request:"mediaType=application/json"`
+	RequestBody ListEventLogsRequestBody `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The name of the space.
+	SpaceName string `pathParam:"style=simple,explode=false,name=spaceName"`
 }
 
 type ListEventLogsResponse struct {

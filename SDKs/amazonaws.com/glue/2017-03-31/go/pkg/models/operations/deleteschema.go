@@ -30,7 +30,8 @@ func (e *DeleteSchemaXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type DeleteSchemaHeaders struct {
+type DeleteSchemaRequest struct {
+	DeleteSchemaInput shared.DeleteSchemaInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type DeleteSchemaHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DeleteSchemaXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DeleteSchemaRequest struct {
-	Headers DeleteSchemaHeaders
-	Request shared.DeleteSchemaInput `request:"mediaType=application/json"`
 }
 
 type DeleteSchemaResponse struct {

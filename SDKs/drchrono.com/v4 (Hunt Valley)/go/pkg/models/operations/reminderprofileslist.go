@@ -8,18 +8,13 @@ import (
 )
 
 type ReminderProfilesListSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type ReminderProfilesListQueryParams struct {
-	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
-	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type ReminderProfilesListRequest struct {
-	QueryParams ReminderProfilesListQueryParams
-	Security    ReminderProfilesListSecurity
+	Cursor   *string `queryParam:"style=form,explode=true,name=cursor"`
+	Doctor   *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	PageSize *int64  `queryParam:"style=form,explode=true,name=page_size"`
 }
 
 // ReminderProfilesList200ApplicationJSON - Paginated Result

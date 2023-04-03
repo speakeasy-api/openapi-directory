@@ -32,20 +32,20 @@ func newErrors(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // ErrorsAppBuildsList - List of app builds
-func (s *errors) ErrorsAppBuildsList(ctx context.Context, request operations.ErrorsAppBuildsListRequest) (*operations.ErrorsAppBuildsListResponse, error) {
+func (s *errors) ErrorsAppBuildsList(ctx context.Context, request operations.ErrorsAppBuildsListRequest, security operations.ErrorsAppBuildsListSecurity) (*operations.ErrorsAppBuildsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/availableAppBuilds", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/availableAppBuilds", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,20 +90,20 @@ func (s *errors) ErrorsAppBuildsList(ctx context.Context, request operations.Err
 }
 
 // ErrorsAvailableVersions - Get all available versions in the time range.
-func (s *errors) ErrorsAvailableVersions(ctx context.Context, request operations.ErrorsAvailableVersionsRequest) (*operations.ErrorsAvailableVersionsResponse, error) {
+func (s *errors) ErrorsAvailableVersions(ctx context.Context, request operations.ErrorsAvailableVersionsRequest, security operations.ErrorsAvailableVersionsSecurity) (*operations.ErrorsAvailableVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/available_versions", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/available_versions", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -148,20 +148,20 @@ func (s *errors) ErrorsAvailableVersions(ctx context.Context, request operations
 }
 
 // ErrorsCountsPerDay - Count of crashes or errors by day in the time range based the selected versions. If SingleErrorTypeParameter is not provided, defaults to handlederror.
-func (s *errors) ErrorsCountsPerDay(ctx context.Context, request operations.ErrorsCountsPerDayRequest) (*operations.ErrorsCountsPerDayResponse, error) {
+func (s *errors) ErrorsCountsPerDay(ctx context.Context, request operations.ErrorsCountsPerDayRequest, security operations.ErrorsCountsPerDaySecurity) (*operations.ErrorsCountsPerDayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -206,16 +206,16 @@ func (s *errors) ErrorsCountsPerDay(ctx context.Context, request operations.Erro
 }
 
 // ErrorsDeleteError - Delete a specific error and related attachments and blobs for an app. Searchable data will not be deleted immediately and may take up to 30 days.
-func (s *errors) ErrorsDeleteError(ctx context.Context, request operations.ErrorsDeleteErrorRequest) (*operations.ErrorsDeleteErrorResponse, error) {
+func (s *errors) ErrorsDeleteError(ctx context.Context, request operations.ErrorsDeleteErrorRequest, security operations.ErrorsDeleteErrorSecurity) (*operations.ErrorsDeleteErrorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -260,16 +260,16 @@ func (s *errors) ErrorsDeleteError(ctx context.Context, request operations.Error
 }
 
 // ErrorsErrorAttachmentLocation - Error attachment location.
-func (s *errors) ErrorsErrorAttachmentLocation(ctx context.Context, request operations.ErrorsErrorAttachmentLocationRequest) (*operations.ErrorsErrorAttachmentLocationResponse, error) {
+func (s *errors) ErrorsErrorAttachmentLocation(ctx context.Context, request operations.ErrorsErrorAttachmentLocationRequest, security operations.ErrorsErrorAttachmentLocationSecurity) (*operations.ErrorsErrorAttachmentLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/location", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/location", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -314,16 +314,16 @@ func (s *errors) ErrorsErrorAttachmentLocation(ctx context.Context, request oper
 }
 
 // ErrorsErrorAttachmentText - Error attachment text.
-func (s *errors) ErrorsErrorAttachmentText(ctx context.Context, request operations.ErrorsErrorAttachmentTextRequest) (*operations.ErrorsErrorAttachmentTextResponse, error) {
+func (s *errors) ErrorsErrorAttachmentText(ctx context.Context, request operations.ErrorsErrorAttachmentTextRequest, security operations.ErrorsErrorAttachmentTextSecurity) (*operations.ErrorsErrorAttachmentTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -368,16 +368,16 @@ func (s *errors) ErrorsErrorAttachmentText(ctx context.Context, request operatio
 }
 
 // ErrorsErrorAttachments - List error attachments.
-func (s *errors) ErrorsErrorAttachments(ctx context.Context, request operations.ErrorsErrorAttachmentsRequest) (*operations.ErrorsErrorAttachmentsResponse, error) {
+func (s *errors) ErrorsErrorAttachments(ctx context.Context, request operations.ErrorsErrorAttachmentsRequest, security operations.ErrorsErrorAttachmentsSecurity) (*operations.ErrorsErrorAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -422,20 +422,20 @@ func (s *errors) ErrorsErrorAttachments(ctx context.Context, request operations.
 }
 
 // ErrorsErrorDownload - Download details for a specific error.
-func (s *errors) ErrorsErrorDownload(ctx context.Context, request operations.ErrorsErrorDownloadRequest) (*operations.ErrorsErrorDownloadResponse, error) {
+func (s *errors) ErrorsErrorDownload(ctx context.Context, request operations.ErrorsErrorDownloadRequest, security operations.ErrorsErrorDownloadSecurity) (*operations.ErrorsErrorDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -480,20 +480,20 @@ func (s *errors) ErrorsErrorDownload(ctx context.Context, request operations.Err
 }
 
 // ErrorsErrorGroupsSearch - Error groups list based on search parameters
-func (s *errors) ErrorsErrorGroupsSearch(ctx context.Context, request operations.ErrorsErrorGroupsSearchRequest) (*operations.ErrorsErrorGroupsSearchResponse, error) {
+func (s *errors) ErrorsErrorGroupsSearch(ctx context.Context, request operations.ErrorsErrorGroupsSearchRequest, security operations.ErrorsErrorGroupsSearchSecurity) (*operations.ErrorsErrorGroupsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -538,16 +538,16 @@ func (s *errors) ErrorsErrorGroupsSearch(ctx context.Context, request operations
 }
 
 // ErrorsErrorLocation - Error location.
-func (s *errors) ErrorsErrorLocation(ctx context.Context, request operations.ErrorsErrorLocationRequest) (*operations.ErrorsErrorLocationResponse, error) {
+func (s *errors) ErrorsErrorLocation(ctx context.Context, request operations.ErrorsErrorLocationRequest, security operations.ErrorsErrorLocationSecurity) (*operations.ErrorsErrorLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -592,20 +592,20 @@ func (s *errors) ErrorsErrorLocation(ctx context.Context, request operations.Err
 }
 
 // ErrorsErrorSearch - Errors list based on search parameters
-func (s *errors) ErrorsErrorSearch(ctx context.Context, request operations.ErrorsErrorSearchRequest) (*operations.ErrorsErrorSearchResponse, error) {
+func (s *errors) ErrorsErrorSearch(ctx context.Context, request operations.ErrorsErrorSearchRequest, security operations.ErrorsErrorSearchSecurity) (*operations.ErrorsErrorSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/search", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/search", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -650,16 +650,16 @@ func (s *errors) ErrorsErrorSearch(ctx context.Context, request operations.Error
 }
 
 // ErrorsErrorStackTrace - Error Stacktrace details.
-func (s *errors) ErrorsErrorStackTrace(ctx context.Context, request operations.ErrorsErrorStackTraceRequest) (*operations.ErrorsErrorStackTraceResponse, error) {
+func (s *errors) ErrorsErrorStackTrace(ctx context.Context, request operations.ErrorsErrorStackTraceRequest, security operations.ErrorsErrorStackTraceSecurity) (*operations.ErrorsErrorStackTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/stacktrace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/stacktrace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -704,16 +704,16 @@ func (s *errors) ErrorsErrorStackTrace(ctx context.Context, request operations.E
 }
 
 // ErrorsGetErrorDetails - Error details.
-func (s *errors) ErrorsGetErrorDetails(ctx context.Context, request operations.ErrorsGetErrorDetailsRequest) (*operations.ErrorsGetErrorDetailsResponse, error) {
+func (s *errors) ErrorsGetErrorDetails(ctx context.Context, request operations.ErrorsGetErrorDetailsRequest, security operations.ErrorsGetErrorDetailsSecurity) (*operations.ErrorsGetErrorDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -758,20 +758,20 @@ func (s *errors) ErrorsGetErrorDetails(ctx context.Context, request operations.E
 }
 
 // ErrorsGroupCountsPerDay - Count of errors by day in the time range of the selected error group with selected version
-func (s *errors) ErrorsGroupCountsPerDay(ctx context.Context, request operations.ErrorsGroupCountsPerDayRequest) (*operations.ErrorsGroupCountsPerDayResponse, error) {
+func (s *errors) ErrorsGroupCountsPerDay(ctx context.Context, request operations.ErrorsGroupCountsPerDayRequest, security operations.ErrorsGroupCountsPerDaySecurity) (*operations.ErrorsGroupCountsPerDayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -816,16 +816,16 @@ func (s *errors) ErrorsGroupCountsPerDay(ctx context.Context, request operations
 }
 
 // ErrorsGroupDetails - Error group details
-func (s *errors) ErrorsGroupDetails(ctx context.Context, request operations.ErrorsGroupDetailsRequest) (*operations.ErrorsGroupDetailsResponse, error) {
+func (s *errors) ErrorsGroupDetails(ctx context.Context, request operations.ErrorsGroupDetailsRequest, security operations.ErrorsGroupDetailsSecurity) (*operations.ErrorsGroupDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -870,20 +870,20 @@ func (s *errors) ErrorsGroupDetails(ctx context.Context, request operations.Erro
 }
 
 // ErrorsGroupErrorFreeDevicePercentages - Percentage of error-free devices by day in the time range. Api will return -1 if crash devices is greater than active devices
-func (s *errors) ErrorsGroupErrorFreeDevicePercentages(ctx context.Context, request operations.ErrorsGroupErrorFreeDevicePercentagesRequest) (*operations.ErrorsGroupErrorFreeDevicePercentagesResponse, error) {
+func (s *errors) ErrorsGroupErrorFreeDevicePercentages(ctx context.Context, request operations.ErrorsGroupErrorFreeDevicePercentagesRequest, security operations.ErrorsGroupErrorFreeDevicePercentagesSecurity) (*operations.ErrorsGroupErrorFreeDevicePercentagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorfreeDevicePercentages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorfreeDevicePercentages", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -928,16 +928,16 @@ func (s *errors) ErrorsGroupErrorFreeDevicePercentages(ctx context.Context, requ
 }
 
 // ErrorsGroupErrorStackTrace - Gets the stack trace for the error group.
-func (s *errors) ErrorsGroupErrorStackTrace(ctx context.Context, request operations.ErrorsGroupErrorStackTraceRequest) (*operations.ErrorsGroupErrorStackTraceResponse, error) {
+func (s *errors) ErrorsGroupErrorStackTrace(ctx context.Context, request operations.ErrorsGroupErrorStackTraceRequest, security operations.ErrorsGroupErrorStackTraceSecurity) (*operations.ErrorsGroupErrorStackTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -982,20 +982,20 @@ func (s *errors) ErrorsGroupErrorStackTrace(ctx context.Context, request operati
 }
 
 // ErrorsGroupList - List of error groups
-func (s *errors) ErrorsGroupList(ctx context.Context, request operations.ErrorsGroupListRequest) (*operations.ErrorsGroupListResponse, error) {
+func (s *errors) ErrorsGroupList(ctx context.Context, request operations.ErrorsGroupListRequest, security operations.ErrorsGroupListSecurity) (*operations.ErrorsGroupListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1040,20 +1040,20 @@ func (s *errors) ErrorsGroupList(ctx context.Context, request operations.ErrorsG
 }
 
 // ErrorsGroupModelCounts - Top models of the selected error group.
-func (s *errors) ErrorsGroupModelCounts(ctx context.Context, request operations.ErrorsGroupModelCountsRequest) (*operations.ErrorsGroupModelCountsResponse, error) {
+func (s *errors) ErrorsGroupModelCounts(ctx context.Context, request operations.ErrorsGroupModelCountsRequest, security operations.ErrorsGroupModelCountsSecurity) (*operations.ErrorsGroupModelCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1098,20 +1098,20 @@ func (s *errors) ErrorsGroupModelCounts(ctx context.Context, request operations.
 }
 
 // ErrorsGroupOperatingSystemCounts - Top OSes of the selected error group.
-func (s *errors) ErrorsGroupOperatingSystemCounts(ctx context.Context, request operations.ErrorsGroupOperatingSystemCountsRequest) (*operations.ErrorsGroupOperatingSystemCountsResponse, error) {
+func (s *errors) ErrorsGroupOperatingSystemCounts(ctx context.Context, request operations.ErrorsGroupOperatingSystemCountsRequest, security operations.ErrorsGroupOperatingSystemCountsSecurity) (*operations.ErrorsGroupOperatingSystemCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1156,16 +1156,16 @@ func (s *errors) ErrorsGroupOperatingSystemCounts(ctx context.Context, request o
 }
 
 // ErrorsLatestErrorDetails - Latest error details.
-func (s *errors) ErrorsLatestErrorDetails(ctx context.Context, request operations.ErrorsLatestErrorDetailsRequest) (*operations.ErrorsLatestErrorDetailsResponse, error) {
+func (s *errors) ErrorsLatestErrorDetails(ctx context.Context, request operations.ErrorsLatestErrorDetailsRequest, security operations.ErrorsLatestErrorDetailsSecurity) (*operations.ErrorsLatestErrorDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/latest", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/latest", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1210,20 +1210,20 @@ func (s *errors) ErrorsLatestErrorDetails(ctx context.Context, request operation
 }
 
 // ErrorsListForGroup - Get all errors for group
-func (s *errors) ErrorsListForGroup(ctx context.Context, request operations.ErrorsListForGroupRequest) (*operations.ErrorsListForGroupResponse, error) {
+func (s *errors) ErrorsListForGroup(ctx context.Context, request operations.ErrorsListForGroupRequest, security operations.ErrorsListForGroupSecurity) (*operations.ErrorsListForGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1268,20 +1268,20 @@ func (s *errors) ErrorsListForGroup(ctx context.Context, request operations.Erro
 }
 
 // ErrorsListSessionLogs - Get session logs by error ID
-func (s *errors) ErrorsListSessionLogs(ctx context.Context, request operations.ErrorsListSessionLogsRequest) (*operations.ErrorsListSessionLogsResponse, error) {
+func (s *errors) ErrorsListSessionLogs(ctx context.Context, request operations.ErrorsListSessionLogsRequest, security operations.ErrorsListSessionLogsSecurity) (*operations.ErrorsListSessionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/sessionLogs", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/sessionLogs", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1326,11 +1326,11 @@ func (s *errors) ErrorsListSessionLogs(ctx context.Context, request operations.E
 }
 
 // ErrorsUpdateState - Update error group state
-func (s *errors) ErrorsUpdateState(ctx context.Context, request operations.ErrorsUpdateStateRequest) (*operations.ErrorsUpdateStateResponse, error) {
+func (s *errors) ErrorsUpdateState(ctx context.Context, request operations.ErrorsUpdateStateRequest, security operations.ErrorsUpdateStateSecurity) (*operations.ErrorsUpdateStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1345,7 +1345,7 @@ func (s *errors) ErrorsUpdateState(ctx context.Context, request operations.Error
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1391,16 +1391,16 @@ func (s *errors) ErrorsUpdateState(ctx context.Context, request operations.Error
 
 // ErrorsGetRetentionSettings - gets the retention settings in days
 // gets the retention settings in days
-func (s *errors) ErrorsGetRetentionSettings(ctx context.Context, request operations.ErrorsGetRetentionSettingsRequest) (*operations.ErrorsGetRetentionSettingsResponse, error) {
+func (s *errors) ErrorsGetRetentionSettings(ctx context.Context, request operations.ErrorsGetRetentionSettingsRequest, security operations.ErrorsGetRetentionSettingsSecurity) (*operations.ErrorsGetRetentionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

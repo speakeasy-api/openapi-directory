@@ -119,7 +119,7 @@ func (e *GETReportInstanceStatusVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETReportInstanceStatusQueryParams struct {
+type GETReportInstanceStatusRequest struct {
 	Action GETReportInstanceStatusActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Descriptive text about the health state of your instance.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
@@ -134,23 +134,15 @@ type GETReportInstanceStatusQueryParams struct {
 	// The time at which the reported instance health state began.
 	StartTime *time.Time `queryParam:"style=form,explode=true,name=StartTime"`
 	// The status of all instances listed.
-	Status  GETReportInstanceStatusStatusEnum  `queryParam:"style=form,explode=true,name=Status"`
-	Version GETReportInstanceStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETReportInstanceStatusHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETReportInstanceStatusRequest struct {
-	QueryParams GETReportInstanceStatusQueryParams
-	Headers     GETReportInstanceStatusHeaders
+	Status            GETReportInstanceStatusStatusEnum  `queryParam:"style=form,explode=true,name=Status"`
+	Version           GETReportInstanceStatusVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETReportInstanceStatusResponse struct {

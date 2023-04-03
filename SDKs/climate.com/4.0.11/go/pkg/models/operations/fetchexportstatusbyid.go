@@ -8,18 +8,13 @@ import (
 )
 
 type FetchExportStatusByIDSecurity struct {
-	APIKey                  *shared.SchemeAPIKey                  `security:"scheme,type=apiKey,subtype=header"`
-	Oauth2AuthorizationCode *shared.SchemeOauth2AuthorizationCode `security:"scheme,type=oauth2"`
-}
-
-type FetchExportStatusByIDPathParams struct {
-	// Unique identifier of an Export.
-	ExportID string `pathParam:"style=simple,explode=false,name=exportId"`
+	APIKey                  *string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+	Oauth2AuthorizationCode *string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type FetchExportStatusByIDRequest struct {
-	PathParams FetchExportStatusByIDPathParams
-	Security   FetchExportStatusByIDSecurity
+	// Unique identifier of an Export.
+	ExportID string `pathParam:"style=simple,explode=false,name=exportId"`
 }
 
 type FetchExportStatusByIDResponse struct {

@@ -7,18 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UseEmergencyCodeQueryParams struct {
-	EmergencyCode string `queryParam:"style=form,explode=true,name=emergency_code"`
-}
-
-type UseEmergencyCodeHeaders struct {
+type UseEmergencyCodeRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type UseEmergencyCodeRequest struct {
-	QueryParams UseEmergencyCodeQueryParams
-	Headers     UseEmergencyCodeHeaders
+	EmergencyCode string  `queryParam:"style=form,explode=true,name=emergency_code"`
 }
 
 type UseEmergencyCodeResponse struct {

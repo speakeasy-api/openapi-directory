@@ -7,7 +7,8 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RegistryRollbackAPIDeploymentPathParams struct {
+type RegistryRollbackAPIDeploymentRequest struct {
+	RollbackAPIDeploymentRequest shared.RollbackAPIDeploymentRequest `request:"mediaType=application/json"`
 	// The api id.
 	API string `pathParam:"style=simple,explode=false,name=api"`
 	// The deployment id.
@@ -16,11 +17,6 @@ type RegistryRollbackAPIDeploymentPathParams struct {
 	Location string `pathParam:"style=simple,explode=false,name=location"`
 	// The project id.
 	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type RegistryRollbackAPIDeploymentRequest struct {
-	PathParams RegistryRollbackAPIDeploymentPathParams
-	Request    shared.RollbackAPIDeploymentRequest `request:"mediaType=application/json"`
 }
 
 type RegistryRollbackAPIDeploymentResponse struct {

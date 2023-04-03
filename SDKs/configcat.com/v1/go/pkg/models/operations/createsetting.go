@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateSettingPathParams struct {
+type CreateSettingRequest struct {
+	CreateSettingInitialValues shared.CreateSettingInitialValues `request:"mediaType=application/json"`
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-}
-
-type CreateSettingRequest struct {
-	PathParams CreateSettingPathParams
-	Request    shared.CreateSettingInitialValues `request:"mediaType=application/json"`
 }
 
 type CreateSettingResponse struct {

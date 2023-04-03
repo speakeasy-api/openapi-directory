@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateWorkspaceFeedbackRequest struct {
-	Request shared.WorkspaceGiveFeedback `request:"mediaType=application/json"`
-}
-
 type UpdateWorkspaceFeedbackResponse struct {
 	ContentType string
 	// Object with given id was not found.

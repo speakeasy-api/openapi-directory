@@ -8,16 +8,6 @@ import (
 	"time"
 )
 
-type SendHeartbeatHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // SendHeartbeatRequestBodyDeploymentResult - Information about the result of a deployment on an edge device that is registered with SageMaker Edge Manager.
 type SendHeartbeatRequestBodyDeploymentResult struct {
 	DeploymentEndTime       *time.Time               `json:"DeploymentEndTime,omitempty"`
@@ -44,8 +34,14 @@ type SendHeartbeatRequestBody struct {
 }
 
 type SendHeartbeatRequest struct {
-	Headers SendHeartbeatHeaders
-	Request SendHeartbeatRequestBody `request:"mediaType=application/json"`
+	RequestBody       SendHeartbeatRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type SendHeartbeatResponse struct {

@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBootstrapActionsQueryParams struct {
-	// Pagination token
-	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
-}
-
 // ListBootstrapActionsXAmzTargetEnum
 type ListBootstrapActionsXAmzTargetEnum string
 
@@ -35,7 +30,10 @@ func (e *ListBootstrapActionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListBootstrapActionsHeaders struct {
+type ListBootstrapActionsRequest struct {
+	ListBootstrapActionsInput shared.ListBootstrapActionsInput `request:"mediaType=application/json"`
+	// Pagination token
+	Marker            *string                            `queryParam:"style=form,explode=true,name=Marker"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +42,6 @@ type ListBootstrapActionsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListBootstrapActionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListBootstrapActionsRequest struct {
-	QueryParams ListBootstrapActionsQueryParams
-	Headers     ListBootstrapActionsHeaders
-	Request     shared.ListBootstrapActionsInput `request:"mediaType=application/json"`
 }
 
 type ListBootstrapActionsResponse struct {

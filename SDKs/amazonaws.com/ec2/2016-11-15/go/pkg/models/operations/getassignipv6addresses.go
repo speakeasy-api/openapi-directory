@@ -50,7 +50,7 @@ func (e *GETAssignIpv6AddressesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETAssignIpv6AddressesQueryParams struct {
+type GETAssignIpv6AddressesRequest struct {
 	Action GETAssignIpv6AddressesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The number of additional IPv6 addresses to assign to the network interface. The specified number of IPv6 addresses are assigned in addition to the existing IPv6 addresses that are already assigned to the network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can't use this option if specifying specific IPv6 addresses.
 	Ipv6AddressCount *int64 `queryParam:"style=form,explode=true,name=Ipv6AddressCount"`
@@ -63,21 +63,13 @@ type GETAssignIpv6AddressesQueryParams struct {
 	// The ID of the network interface.
 	NetworkInterfaceID string                            `queryParam:"style=form,explode=true,name=NetworkInterfaceId"`
 	Version            GETAssignIpv6AddressesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETAssignIpv6AddressesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssignIpv6AddressesRequest struct {
-	QueryParams GETAssignIpv6AddressesQueryParams
-	Headers     GETAssignIpv6AddressesHeaders
+	XAmzAlgorithm      *string                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETAssignIpv6AddressesResponse struct {

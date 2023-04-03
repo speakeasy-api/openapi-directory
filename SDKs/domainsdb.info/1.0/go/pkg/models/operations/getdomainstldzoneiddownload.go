@@ -6,20 +6,12 @@ import (
 	"net/http"
 )
 
-type GetDomainsTldZoneIDDownloadPathParams struct {
-	ZoneID string `pathParam:"style=simple,explode=false,name=zone_id"`
-}
-
-type GetDomainsTldZoneIDDownloadQueryParams struct {
+type GetDomainsTldZoneIDDownloadRequest struct {
 	// API key
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Request date
-	Date *string `queryParam:"style=form,explode=true,name=date"`
-}
-
-type GetDomainsTldZoneIDDownloadRequest struct {
-	PathParams  GetDomainsTldZoneIDDownloadPathParams
-	QueryParams GetDomainsTldZoneIDDownloadQueryParams
+	Date   *string `queryParam:"style=form,explode=true,name=date"`
+	ZoneID string  `pathParam:"style=simple,explode=false,name=zone_id"`
 }
 
 type GetDomainsTldZoneIDDownloadResponse struct {

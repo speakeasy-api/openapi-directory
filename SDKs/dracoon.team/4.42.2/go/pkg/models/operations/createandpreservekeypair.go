@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAndPreserveKeyPairHeaders struct {
+type CreateAndPreserveKeyPairRequest struct {
+	CreateKeyPairRequest shared.CreateKeyPairRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CreateAndPreserveKeyPairRequest struct {
-	Headers CreateAndPreserveKeyPairHeaders
-	Request shared.CreateKeyPairRequest `request:"mediaType=application/json"`
 }
 
 type CreateAndPreserveKeyPairResponse struct {

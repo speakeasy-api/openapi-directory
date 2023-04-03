@@ -8,15 +8,10 @@ import (
 )
 
 type RateItemSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type RateItemPathParams struct {
-	// The id of the item to rate.
-	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
-}
-
-type RateItemQueryParams struct {
+type RateItemRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -39,6 +34,8 @@ type RateItemQueryParams struct {
 	// See the `feature-flags.md` for available flag details.
 	//
 	Ff []shared.FeatureFlagsEnum `queryParam:"style=form,explode=false,name=ff"`
+	// The id of the item to rate.
+	ItemID string `pathParam:"style=simple,explode=false,name=itemId"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -53,12 +50,6 @@ type RateItemQueryParams struct {
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
 	// The item rating between 1 and 10 inclusive.
 	Rating int `queryParam:"style=form,explode=true,name=rating"`
-}
-
-type RateItemRequest struct {
-	PathParams  RateItemPathParams
-	QueryParams RateItemQueryParams
-	Security    RateItemSecurity
 }
 
 type RateItemResponse struct {

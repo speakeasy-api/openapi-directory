@@ -50,30 +50,22 @@ func (e *GETListQueuesVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETListQueuesQueryParams struct {
+type GETListQueuesRequest struct {
 	Action GETListQueuesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Maximum number of results to include in the response. Value range is 1 to 1000. You must set <code>MaxResults</code> to receive a value for <code>NextToken</code> in the response.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=MaxResults"`
 	// Pagination token to request the next set of results.
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
 	// <p>A string to use for filtering the list results. Only those queues whose name begins with the specified string are returned.</p> <p>Queue URLs and names are case-sensitive.</p>
-	QueueNamePrefix *string                  `queryParam:"style=form,explode=true,name=QueueNamePrefix"`
-	Version         GETListQueuesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETListQueuesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETListQueuesRequest struct {
-	QueryParams GETListQueuesQueryParams
-	Headers     GETListQueuesHeaders
+	QueueNamePrefix   *string                  `queryParam:"style=form,explode=true,name=QueueNamePrefix"`
+	Version           GETListQueuesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETListQueuesResponse struct {

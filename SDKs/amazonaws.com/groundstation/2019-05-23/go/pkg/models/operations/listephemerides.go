@@ -8,23 +8,6 @@ import (
 	"time"
 )
 
-type ListEphemeridesQueryParams struct {
-	// Maximum number of ephemerides to return.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// Pagination token.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
-type ListEphemeridesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type ListEphemeridesRequestBody struct {
 	// The end time to list in UTC. The operation will return an ephemeris if its expiration time is within the time range defined by the <code>startTime</code> and <code>endTime</code>.
 	EndTime time.Time `json:"endTime"`
@@ -37,9 +20,18 @@ type ListEphemeridesRequestBody struct {
 }
 
 type ListEphemeridesRequest struct {
-	QueryParams ListEphemeridesQueryParams
-	Headers     ListEphemeridesHeaders
-	Request     ListEphemeridesRequestBody `request:"mediaType=application/json"`
+	RequestBody       ListEphemeridesRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Maximum number of ephemerides to return.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// Pagination token.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListEphemeridesResponse struct {

@@ -50,7 +50,7 @@ func (e *GETAssociateTrunkInterfaceVersionEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-type GETAssociateTrunkInterfaceQueryParams struct {
+type GETAssociateTrunkInterfaceRequest struct {
 	Action GETAssociateTrunkInterfaceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the branch network interface.
 	BranchInterfaceID string `queryParam:"style=form,explode=true,name=BranchInterfaceId"`
@@ -64,10 +64,7 @@ type GETAssociateTrunkInterfaceQueryParams struct {
 	TrunkInterfaceID string                                `queryParam:"style=form,explode=true,name=TrunkInterfaceId"`
 	Version          GETAssociateTrunkInterfaceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VLAN. This applies to the VLAN protocol.
-	VlanID *int64 `queryParam:"style=form,explode=true,name=VlanId"`
-}
-
-type GETAssociateTrunkInterfaceHeaders struct {
+	VlanID            *int64  `queryParam:"style=form,explode=true,name=VlanId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -75,11 +72,6 @@ type GETAssociateTrunkInterfaceHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETAssociateTrunkInterfaceRequest struct {
-	QueryParams GETAssociateTrunkInterfaceQueryParams
-	Headers     GETAssociateTrunkInterfaceHeaders
 }
 
 type GETAssociateTrunkInterfaceResponse struct {

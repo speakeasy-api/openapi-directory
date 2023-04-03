@@ -35,7 +35,7 @@ func newStromQuittung(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // QuittungComit - Finishs a collection of data and finalizes receipt. Use this method after collecting all data via quittung/prepare
 // Uses collected fields or provided fields to create a final receipt (Strom-Quittung).
-func (s *stromQuittung) QuittungComit(ctx context.Context, request operations.QuittungComitRequest) (*operations.QuittungComitResponse, error) {
+func (s *stromQuittung) QuittungComit(ctx context.Context, request operations.QuittungComitRequestBody) (*operations.QuittungComitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quittung/commit"
 
@@ -88,7 +88,7 @@ func (s *stromQuittung) QuittungComit(ctx context.Context, request operations.Qu
 
 // QuittungCreate - Create a receipt for an energy delivery (only valid in Germany).
 // Creates a full featured receipt (Quittung) for an energy delivery as it appears on a charging session or similar events. Allows to embed receipt generation directly into external services.
-func (s *stromQuittung) QuittungCreate(ctx context.Context, request operations.QuittungCreateRequest) (*operations.QuittungCreateResponse, error) {
+func (s *stromQuittung) QuittungCreate(ctx context.Context, request operations.QuittungCreateRequestBody) (*operations.QuittungCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quittung/create"
 
@@ -144,7 +144,7 @@ func (s *stromQuittung) QuittungCreate(ctx context.Context, request operations.Q
 
 // QuittungPrepare - Allows to collect data with several requests (or a single) for a receipt.
 // During the first call an account parameter will be returned within the result object. Any other parameter will be set inside the preperation. If account is put into body/request in following requests, the existing collection will be extended/updated with the provided body parameters/values.
-func (s *stromQuittung) QuittungPrepare(ctx context.Context, request operations.QuittungPrepareRequest) (*operations.QuittungPrepareResponse, error) {
+func (s *stromQuittung) QuittungPrepare(ctx context.Context, request operations.QuittungPrepareRequestBody) (*operations.QuittungPrepareResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/quittung/prepare"
 
@@ -206,7 +206,7 @@ func (s *stromQuittung) QuittungTSE(ctx context.Context, request operations.Quit
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -255,7 +255,7 @@ func (s *stromQuittung) QuittungTSEData(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -295,7 +295,7 @@ func (s *stromQuittung) QuittungTSEsignature(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -335,7 +335,7 @@ func (s *stromQuittung) QuittungZugferd(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

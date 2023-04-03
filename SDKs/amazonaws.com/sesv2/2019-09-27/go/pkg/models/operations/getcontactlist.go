@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetContactListPathParams struct {
+type GetContactListRequest struct {
 	// The name of the contact list.
-	ContactListName string `pathParam:"style=simple,explode=false,name=ContactListName"`
-}
-
-type GetContactListHeaders struct {
+	ContactListName   string  `pathParam:"style=simple,explode=false,name=ContactListName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetContactListHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetContactListRequest struct {
-	PathParams GetContactListPathParams
-	Headers    GetContactListHeaders
 }
 
 type GetContactListResponse struct {

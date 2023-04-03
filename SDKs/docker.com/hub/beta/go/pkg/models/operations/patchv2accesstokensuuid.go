@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PatchV2AccessTokensUUIDPathParams struct {
-	UUID string `pathParam:"style=simple,explode=false,name=uuid"`
-}
-
 type PatchV2AccessTokensUUIDRequest struct {
-	PathParams PatchV2AccessTokensUUIDPathParams
-	Request    shared.PatchAccessTokenRequest `request:"mediaType=application/json"`
+	PatchAccessTokenRequest shared.PatchAccessTokenRequest `request:"mediaType=application/json"`
+	UUID                    string                         `pathParam:"style=simple,explode=false,name=uuid"`
 }
 
 type PatchV2AccessTokensUUIDResponse struct {

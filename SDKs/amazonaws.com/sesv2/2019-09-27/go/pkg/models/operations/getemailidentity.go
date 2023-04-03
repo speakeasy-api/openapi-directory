@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEmailIdentityPathParams struct {
+type GetEmailIdentityRequest struct {
 	// The email identity.
-	EmailIdentity string `pathParam:"style=simple,explode=false,name=EmailIdentity"`
-}
-
-type GetEmailIdentityHeaders struct {
+	EmailIdentity     string  `pathParam:"style=simple,explode=false,name=EmailIdentity"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetEmailIdentityHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEmailIdentityRequest struct {
-	PathParams GetEmailIdentityPathParams
-	Headers    GetEmailIdentityHeaders
 }
 
 type GetEmailIdentityResponse struct {

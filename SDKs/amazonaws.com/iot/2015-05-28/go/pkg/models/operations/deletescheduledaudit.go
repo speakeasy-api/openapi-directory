@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteScheduledAuditPathParams struct {
-	// The name of the scheduled audit you want to delete.
-	ScheduledAuditName string `pathParam:"style=simple,explode=false,name=scheduledAuditName"`
-}
-
-type DeleteScheduledAuditHeaders struct {
+type DeleteScheduledAuditRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteScheduledAuditHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteScheduledAuditRequest struct {
-	PathParams DeleteScheduledAuditPathParams
-	Headers    DeleteScheduledAuditHeaders
+	// The name of the scheduled audit you want to delete.
+	ScheduledAuditName string `pathParam:"style=simple,explode=false,name=scheduledAuditName"`
 }
 
 type DeleteScheduledAuditResponse struct {

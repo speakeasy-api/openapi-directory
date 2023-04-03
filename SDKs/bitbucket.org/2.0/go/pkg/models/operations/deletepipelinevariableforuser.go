@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type DeletePipelineVariableForUserPathParams struct {
+type DeletePipelineVariableForUserRequest struct {
 	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
 	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
 	// The UUID of the variable to delete.
 	VariableUUID string `pathParam:"style=simple,explode=false,name=variable_uuid"`
-}
-
-type DeletePipelineVariableForUserRequest struct {
-	PathParams DeletePipelineVariableForUserPathParams
 }
 
 type DeletePipelineVariableForUserResponse struct {

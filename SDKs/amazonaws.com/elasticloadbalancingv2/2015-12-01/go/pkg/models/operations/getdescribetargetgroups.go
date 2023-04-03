@@ -50,7 +50,7 @@ func (e *GETDescribeTargetGroupsVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDescribeTargetGroupsQueryParams struct {
+type GETDescribeTargetGroupsRequest struct {
 	Action GETDescribeTargetGroupsActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The Amazon Resource Name (ARN) of the load balancer.
 	LoadBalancerArn *string `queryParam:"style=form,explode=true,name=LoadBalancerArn"`
@@ -61,23 +61,15 @@ type GETDescribeTargetGroupsQueryParams struct {
 	// The maximum number of results to return with this call.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=PageSize"`
 	// The Amazon Resource Names (ARN) of the target groups.
-	TargetGroupArns []string                           `queryParam:"style=form,explode=true,name=TargetGroupArns"`
-	Version         GETDescribeTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeTargetGroupsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeTargetGroupsRequest struct {
-	QueryParams GETDescribeTargetGroupsQueryParams
-	Headers     GETDescribeTargetGroupsHeaders
+	TargetGroupArns   []string                           `queryParam:"style=form,explode=true,name=TargetGroupArns"`
+	Version           GETDescribeTargetGroupsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeTargetGroupsResponse struct {

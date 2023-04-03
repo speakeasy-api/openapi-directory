@@ -24,96 +24,74 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.PutEventsRequest{
-        Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-        },
-        Request: operations.PutEventsRequestBody{
+        RequestBody: operations.PutEventsRequestBody{
             EventList: []shared.Event{
                 shared.Event{
-                    EventID: "vel",
-                    EventType: "error",
-                    EventValue: 6458.94,
+                    EventID: "provident",
+                    EventType: "distinctio",
+                    EventValue: 8442.66,
                     Impression: []string{
-                        "iure",
-                        "magnam",
+                        "nulla",
+                        "corrupti",
+                        "illum",
                     },
-                    ItemID: "debitis",
+                    ItemID: "vel",
                     MetricAttribution: &shared.MetricAttribution{
-                        EventAttributionSource: "ipsa",
+                        EventAttributionSource: "error",
                     },
-                    Properties: "delectus",
-                    RecommendationID: "tempora",
-                    SentAt: "2022-07-10T15:39:12.517Z",
+                    Properties: "deserunt",
+                    RecommendationID: "suscipit",
+                    SentAt: "2022-09-14T09:35:47.986Z",
                 },
                 shared.Event{
-                    EventID: "minus",
-                    EventType: "placeat",
-                    EventValue: 5288.95,
+                    EventID: "debitis",
+                    EventType: "ipsa",
+                    EventValue: 9636.63,
                     Impression: []string{
-                        "excepturi",
-                        "nisi",
+                        "suscipit",
+                        "molestiae",
                     },
-                    ItemID: "recusandae",
+                    ItemID: "minus",
                     MetricAttribution: &shared.MetricAttribution{
-                        EventAttributionSource: "temporibus",
+                        EventAttributionSource: "placeat",
                     },
-                    Properties: "ab",
-                    RecommendationID: "quis",
-                    SentAt: "2022-05-09T10:00:51.349Z",
+                    Properties: "voluptatum",
+                    RecommendationID: "iusto",
+                    SentAt: "2022-03-20T06:24:36.919Z",
                 },
                 shared.Event{
-                    EventID: "perferendis",
-                    EventType: "ipsam",
-                    EventValue: 8326.2,
+                    EventID: "recusandae",
+                    EventType: "temporibus",
+                    EventValue: 710.36,
                     Impression: []string{
-                        "quo",
-                        "odit",
-                        "at",
-                        "at",
+                        "veritatis",
+                        "deserunt",
                     },
-                    ItemID: "maiores",
+                    ItemID: "perferendis",
                     MetricAttribution: &shared.MetricAttribution{
-                        EventAttributionSource: "molestiae",
+                        EventAttributionSource: "ipsam",
                     },
-                    Properties: "quod",
-                    RecommendationID: "quod",
-                    SentAt: "2022-06-25T00:37:01.696Z",
-                },
-                shared.Event{
-                    EventID: "porro",
-                    EventType: "dolorum",
-                    EventValue: 1182.74,
-                    Impression: []string{
-                        "officia",
-                        "occaecati",
-                        "fugit",
-                    },
-                    ItemID: "deleniti",
-                    MetricAttribution: &shared.MetricAttribution{
-                        EventAttributionSource: "hic",
-                    },
-                    Properties: "optio",
-                    RecommendationID: "totam",
-                    SentAt: "2022-08-02T15:33:40.440Z",
+                    Properties: "repellendus",
+                    RecommendationID: "sapiente",
+                    SentAt: "2022-07-31T07:34:52.790Z",
                 },
             },
-            SessionID: "molestiae",
-            TrackingID: "modi",
-            UserID: "qui",
+            SessionID: "at",
+            TrackingID: "at",
+            UserID: "maiores",
         },
+        XAmzAlgorithm: "molestiae",
+        XAmzContentSha256: "quod",
+        XAmzCredential: "quod",
+        XAmzDate: "esse",
+        XAmzSecurityToken: "totam",
+        XAmzSignature: "porro",
+        XAmzSignedHeaders: "dolorum",
     }
 
     ctx := context.Background()
@@ -130,7 +108,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 
@@ -139,4 +117,15 @@ func main() {
 * `PutUsers` - Adds one or more users to a Users dataset. For more information see <a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html">Importing Users Incrementally</a>.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta and therefore, we recommend pinning usage to a specific package version.
+This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated and maintained programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

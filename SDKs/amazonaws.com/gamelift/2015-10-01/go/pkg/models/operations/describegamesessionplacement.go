@@ -30,20 +30,16 @@ func (e *DescribeGameSessionPlacementXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type DescribeGameSessionPlacementHeaders struct {
-	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        DescribeGameSessionPlacementXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type DescribeGameSessionPlacementRequest struct {
-	Headers DescribeGameSessionPlacementHeaders
-	Request shared.DescribeGameSessionPlacementInput `request:"mediaType=application/json"`
+	DescribeGameSessionPlacementInput shared.DescribeGameSessionPlacementInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256                 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken                 *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders                 *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                        DescribeGameSessionPlacementXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type DescribeGameSessionPlacementResponse struct {

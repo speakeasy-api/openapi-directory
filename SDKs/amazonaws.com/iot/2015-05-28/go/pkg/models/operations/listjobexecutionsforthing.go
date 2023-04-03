@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListJobExecutionsForThingPathParams struct {
-	// The thing name.
-	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
-}
-
 // ListJobExecutionsForThingStatusEnum - An optional filter that lets you search for jobs that have the specified status.
 type ListJobExecutionsForThingStatusEnum string
 
@@ -56,7 +51,14 @@ func (e *ListJobExecutionsForThingStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListJobExecutionsForThingQueryParams struct {
+type ListJobExecutionsForThingRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The unique identifier you assigned to this job when it was created.
 	JobID *string `queryParam:"style=form,explode=true,name=jobId"`
 	// The maximum number of results to be returned per request.
@@ -67,22 +69,8 @@ type ListJobExecutionsForThingQueryParams struct {
 	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 	// An optional filter that lets you search for jobs that have the specified status.
 	Status *ListJobExecutionsForThingStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type ListJobExecutionsForThingHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListJobExecutionsForThingRequest struct {
-	PathParams  ListJobExecutionsForThingPathParams
-	QueryParams ListJobExecutionsForThingQueryParams
-	Headers     ListJobExecutionsForThingHeaders
+	// The thing name.
+	ThingName string `pathParam:"style=simple,explode=false,name=thingName"`
 }
 
 type ListJobExecutionsForThingResponse struct {

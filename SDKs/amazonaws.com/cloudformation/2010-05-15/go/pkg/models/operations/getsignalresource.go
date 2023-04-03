@@ -74,7 +74,7 @@ func (e *GETSignalResourceVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETSignalResourceQueryParams struct {
+type GETSignalResourceRequest struct {
 	Action GETSignalResourceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The logical ID of the resource that you want to signal. The logical ID is the name of the resource that given in the template.
 	LogicalResourceID string `queryParam:"style=form,explode=true,name=LogicalResourceId"`
@@ -83,23 +83,15 @@ type GETSignalResourceQueryParams struct {
 	// The status of the signal, which is either success or failure. A failure signal causes CloudFormation to immediately fail the stack creation or update.
 	Status GETSignalResourceStatusEnum `queryParam:"style=form,explode=true,name=Status"`
 	// A unique ID of the signal. When you signal Amazon EC2 instances or Auto Scaling groups, specify the instance ID that you are signaling as the unique ID. If you send multiple signals to a single resource (such as signaling a wait condition), each signal requires a different unique ID.
-	UniqueID string                       `queryParam:"style=form,explode=true,name=UniqueId"`
-	Version  GETSignalResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSignalResourceHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSignalResourceRequest struct {
-	QueryParams GETSignalResourceQueryParams
-	Headers     GETSignalResourceHeaders
+	UniqueID          string                       `queryParam:"style=form,explode=true,name=UniqueId"`
+	Version           GETSignalResourceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSignalResourceResponse struct {

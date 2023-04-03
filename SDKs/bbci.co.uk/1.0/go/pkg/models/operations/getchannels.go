@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetChannelsQueryParams struct {
+type GetChannelsRequest struct {
 	// The language for any applicable localised strings.
 	Lang shared.LangEnum `queryParam:"style=form,explode=true,name=lang"`
 	// The region to get the channels for.
 	Region *string `queryParam:"style=form,explode=true,name=region"`
-}
-
-type GetChannelsRequest struct {
-	QueryParams GetChannelsQueryParams
 }
 
 type GetChannelsResponse struct {

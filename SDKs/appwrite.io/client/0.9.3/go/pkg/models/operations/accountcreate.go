@@ -8,7 +8,7 @@ import (
 )
 
 type AccountCreateSecurity struct {
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
 type AccountCreateRequestBody struct {
@@ -18,11 +18,6 @@ type AccountCreateRequestBody struct {
 	Name *string `json:"name,omitempty"`
 	// User password. Must be between 6 to 32 chars.
 	Password string `json:"password"`
-}
-
-type AccountCreateRequest struct {
-	Request  *AccountCreateRequestBody `request:"mediaType=application/json"`
-	Security AccountCreateSecurity
 }
 
 type AccountCreateResponse struct {

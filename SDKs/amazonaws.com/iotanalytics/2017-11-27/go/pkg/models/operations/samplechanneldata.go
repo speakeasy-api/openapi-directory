@@ -8,21 +8,7 @@ import (
 	"time"
 )
 
-type SampleChannelDataPathParams struct {
-	// The name of the channel whose message samples are retrieved.
-	ChannelName string `pathParam:"style=simple,explode=false,name=channelName"`
-}
-
-type SampleChannelDataQueryParams struct {
-	// The end of the time window from which sample messages are retrieved.
-	EndTime *time.Time `queryParam:"style=form,explode=true,name=endTime"`
-	// The number of sample messages to be retrieved. The limit is 10. The default is also 10.
-	MaxMessages *int64 `queryParam:"style=form,explode=true,name=maxMessages"`
-	// The start of the time window from which sample messages are retrieved.
-	StartTime *time.Time `queryParam:"style=form,explode=true,name=startTime"`
-}
-
-type SampleChannelDataHeaders struct {
+type SampleChannelDataRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -30,12 +16,14 @@ type SampleChannelDataHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type SampleChannelDataRequest struct {
-	PathParams  SampleChannelDataPathParams
-	QueryParams SampleChannelDataQueryParams
-	Headers     SampleChannelDataHeaders
+	// The name of the channel whose message samples are retrieved.
+	ChannelName string `pathParam:"style=simple,explode=false,name=channelName"`
+	// The end of the time window from which sample messages are retrieved.
+	EndTime *time.Time `queryParam:"style=form,explode=true,name=endTime"`
+	// The number of sample messages to be retrieved. The limit is 10. The default is also 10.
+	MaxMessages *int64 `queryParam:"style=form,explode=true,name=maxMessages"`
+	// The start of the time window from which sample messages are retrieved.
+	StartTime *time.Time `queryParam:"style=form,explode=true,name=startTime"`
 }
 
 type SampleChannelDataResponse struct {

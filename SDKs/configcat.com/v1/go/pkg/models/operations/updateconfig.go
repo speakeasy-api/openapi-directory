@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateConfigPathParams struct {
+type UpdateConfigRequest struct {
+	UpdateConfigRequest shared.UpdateConfigRequest `request:"mediaType=application/json"`
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
-}
-
-type UpdateConfigRequest struct {
-	PathParams UpdateConfigPathParams
-	Request    shared.UpdateConfigRequest `request:"mediaType=application/json"`
 }
 
 type UpdateConfigResponse struct {

@@ -4,21 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GetMediaDataBinarySecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type GetMediaDataBinaryPathParams struct {
-	// An id of a media resource
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type GetMediaDataBinaryRequest struct {
-	PathParams GetMediaDataBinaryPathParams
-	Security   GetMediaDataBinarySecurity
+	// An id of a media resource
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetMediaDataBinaryResponse struct {

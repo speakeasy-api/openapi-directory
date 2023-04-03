@@ -6,17 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteThingGroupPathParams struct {
-	// The name of the thing group to delete.
-	ThingGroupName string `pathParam:"style=simple,explode=false,name=thingGroupName"`
-}
-
-type DeleteThingGroupQueryParams struct {
-	// The expected version of the thing group to delete.
-	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
-}
-
-type DeleteThingGroupHeaders struct {
+type DeleteThingGroupRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,12 +14,10 @@ type DeleteThingGroupHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteThingGroupRequest struct {
-	PathParams  DeleteThingGroupPathParams
-	QueryParams DeleteThingGroupQueryParams
-	Headers     DeleteThingGroupHeaders
+	// The expected version of the thing group to delete.
+	ExpectedVersion *int64 `queryParam:"style=form,explode=true,name=expectedVersion"`
+	// The name of the thing group to delete.
+	ThingGroupName string `pathParam:"style=simple,explode=false,name=thingGroupName"`
 }
 
 type DeleteThingGroupResponse struct {

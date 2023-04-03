@@ -6,19 +6,13 @@ import (
 	"net/http"
 )
 
-type ListDistributionsByCachePolicyId20200531PathParams struct {
+type ListDistributionsByCachePolicyId20200531Request struct {
 	// The ID of the cache policy whose associated distribution IDs you want to list.
 	CachePolicyID string `pathParam:"style=simple,explode=false,name=CachePolicyId"`
-}
-
-type ListDistributionsByCachePolicyId20200531QueryParams struct {
 	// Use this field when paginating results to indicate where to begin in your list of distribution IDs. The response includes distribution IDs in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of distribution IDs that you want in the response.
-	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListDistributionsByCachePolicyId20200531Headers struct {
+	MaxItems          *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -26,12 +20,6 @@ type ListDistributionsByCachePolicyId20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListDistributionsByCachePolicyId20200531Request struct {
-	PathParams  ListDistributionsByCachePolicyId20200531PathParams
-	QueryParams ListDistributionsByCachePolicyId20200531QueryParams
-	Headers     ListDistributionsByCachePolicyId20200531Headers
 }
 
 type ListDistributionsByCachePolicyId20200531Response struct {

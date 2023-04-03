@@ -8,12 +8,14 @@ import (
 )
 
 type PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams struct {
+type PostRepositoriesWorkspaceRepoSlugIssuesExportRequest struct {
+	// The options to apply to the export. Available options include `project_key` and `project_name` which, if specified, are used as the project key and name in the exported Jira json format. Option `send_email` specifies whether an email should be sent upon export result. Option `include_attachments` specifies whether attachments are included in the export.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
@@ -22,13 +24,6 @@ type PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type PostRepositoriesWorkspaceRepoSlugIssuesExportRequest struct {
-	PathParams PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams
-	// The options to apply to the export. Available options include `project_key` and `project_name` which, if specified, are used as the project key and name in the exported Jira json format. Option `send_email` specifies whether an email should be sent upon export result. Option `include_attachments` specifies whether attachments are included in the export.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity
 }
 
 type PostRepositoriesWorkspaceRepoSlugIssuesExportResponse struct {

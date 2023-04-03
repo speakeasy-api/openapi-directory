@@ -6,12 +6,8 @@ import (
 	"net/http"
 )
 
-type PostRepliesPathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type PostRepliesRequest struct {
-	PathParams PostRepliesPathParams
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PostReplies200ApplicationJSONActionsSummary struct {

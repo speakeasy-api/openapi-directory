@@ -10,11 +10,6 @@ import (
 	"time"
 )
 
-type ListProfileTimesPathParams struct {
-	// The name of the profiling group.
-	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
-}
-
 // ListProfileTimesOrderByEnum - The order (ascending or descending by start time of the profile) to use when listing profiles. Defaults to <code>TIMESTAMP_DESCENDING</code>.
 type ListProfileTimesOrderByEnum string
 
@@ -66,7 +61,14 @@ func (e *ListProfileTimesPeriodEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListProfileTimesQueryParams struct {
+type ListProfileTimesRequest struct {
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	// The end time of the time range from which to list the profiles.
 	EndTime time.Time `queryParam:"style=form,explode=true,name=endTime"`
 	// The maximum number of profile time results returned by <code>ListProfileTimes</code> in paginated output. When this parameter is used, <code>ListProfileTimes</code> only returns <code>maxResults</code> results in a single page with a <code>nextToken</code> response element. The remaining results of the initial request can be seen by sending another <code>ListProfileTimes</code> request with the returned <code>nextToken</code> value.
@@ -77,24 +79,10 @@ type ListProfileTimesQueryParams struct {
 	OrderBy *ListProfileTimesOrderByEnum `queryParam:"style=form,explode=true,name=orderBy"`
 	// <p> The aggregation period. This specifies the period during which an aggregation profile collects posted agent profiles for a profiling group. There are 3 valid values. </p> <ul> <li> <p> <code>P1D</code> — 1 day </p> </li> <li> <p> <code>PT1H</code> — 1 hour </p> </li> <li> <p> <code>PT5M</code> — 5 minutes </p> </li> </ul>
 	Period ListProfileTimesPeriodEnum `queryParam:"style=form,explode=true,name=period"`
+	// The name of the profiling group.
+	ProfilingGroupName string `pathParam:"style=simple,explode=false,name=profilingGroupName"`
 	// The start time of the time range from which to list the profiles.
 	StartTime time.Time `queryParam:"style=form,explode=true,name=startTime"`
-}
-
-type ListProfileTimesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProfileTimesRequest struct {
-	PathParams  ListProfileTimesPathParams
-	QueryParams ListProfileTimesQueryParams
-	Headers     ListProfileTimesHeaders
 }
 
 type ListProfileTimesResponse struct {

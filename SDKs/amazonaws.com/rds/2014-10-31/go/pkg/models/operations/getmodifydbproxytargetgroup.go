@@ -59,7 +59,7 @@ func (e *GETModifyDBProxyTargetGroupVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETModifyDBProxyTargetGroupQueryParams struct {
+type GETModifyDBProxyTargetGroupRequest struct {
 	Action GETModifyDBProxyTargetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The settings that determine the size and behavior of the connection pool for the target group.
 	ConnectionPoolConfig *GETModifyDBProxyTargetGroupConnectionPoolConfig `queryParam:"style=form,explode=true,name=ConnectionPoolConfig"`
@@ -68,23 +68,15 @@ type GETModifyDBProxyTargetGroupQueryParams struct {
 	// The new name for the modified <code>DBProxyTarget</code>. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
 	NewName *string `queryParam:"style=form,explode=true,name=NewName"`
 	// The name of the target group to modify.
-	TargetGroupName string                                 `queryParam:"style=form,explode=true,name=TargetGroupName"`
-	Version         GETModifyDBProxyTargetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyDBProxyTargetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyDBProxyTargetGroupRequest struct {
-	QueryParams GETModifyDBProxyTargetGroupQueryParams
-	Headers     GETModifyDBProxyTargetGroupHeaders
+	TargetGroupName   string                                 `queryParam:"style=form,explode=true,name=TargetGroupName"`
+	Version           GETModifyDBProxyTargetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyDBProxyTargetGroupResponse struct {

@@ -8,10 +8,10 @@ import (
 )
 
 type GetPurchasesSecurity struct {
-	AccountAuth shared.SchemeAccountAuth `security:"scheme,type=oauth2"`
+	AccountAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetPurchasesQueryParams struct {
+type GetPurchasesRequest struct {
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -46,11 +46,6 @@ type GetPurchasesQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type GetPurchasesRequest struct {
-	QueryParams GetPurchasesQueryParams
-	Security    GetPurchasesSecurity
 }
 
 type GetPurchasesResponse struct {

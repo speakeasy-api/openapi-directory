@@ -51,7 +51,7 @@ func (e *GETModifyCapacityReservationFleetVersionEnum) UnmarshalJSON(data []byte
 	}
 }
 
-type GETModifyCapacityReservationFleetQueryParams struct {
+type GETModifyCapacityReservationFleetRequest struct {
 	Action GETModifyCapacityReservationFleetActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The ID of the Capacity Reservation Fleet to modify.
 	CapacityReservationFleetID string `queryParam:"style=form,explode=true,name=CapacityReservationFleetId"`
@@ -64,21 +64,13 @@ type GETModifyCapacityReservationFleetQueryParams struct {
 	// The total number of capacity units to be reserved by the Capacity Reservation Fleet. This value, together with the instance type weights that you assign to each instance type used by the Fleet determine the number of instances for which the Fleet reserves capacity. Both values are based on units that make sense for your workload. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target capacity</a> in the Amazon EC2 User Guide.
 	TotalTargetCapacity *int64                                       `queryParam:"style=form,explode=true,name=TotalTargetCapacity"`
 	Version             GETModifyCapacityReservationFleetVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyCapacityReservationFleetHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyCapacityReservationFleetRequest struct {
-	QueryParams GETModifyCapacityReservationFleetQueryParams
-	Headers     GETModifyCapacityReservationFleetHeaders
+	XAmzAlgorithm       *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyCapacityReservationFleetResponse struct {

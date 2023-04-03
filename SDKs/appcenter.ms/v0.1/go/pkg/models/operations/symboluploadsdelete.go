@@ -6,26 +6,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type SymbolUploadsDeleteSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type SymbolUploadsDeletePathParams struct {
+type SymbolUploadsDeleteRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 	// The ID of the symbol upload
 	SymbolUploadID string `pathParam:"style=simple,explode=false,name=symbol_upload_id"`
-}
-
-type SymbolUploadsDeleteRequest struct {
-	PathParams SymbolUploadsDeletePathParams
-	Security   SymbolUploadsDeleteSecurity
 }
 
 // SymbolUploadsDelete500ApplicationJSON - Internal error

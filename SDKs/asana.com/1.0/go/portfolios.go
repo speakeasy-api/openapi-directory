@@ -38,9 +38,9 @@ func newPortfolios(defaultClient, securityClient HTTPClient, serverURL, language
 // Custom fields are associated with portfolios by way of custom field settings.  This method creates a setting for the portfolio.
 func (s *portfolios) AddCustomFieldSettingForPortfolio(ctx context.Context, request operations.AddCustomFieldSettingForPortfolioRequest) (*operations.AddCustomFieldSettingForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/addCustomFieldSetting", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/addCustomFieldSetting", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -55,7 +55,7 @@ func (s *portfolios) AddCustomFieldSettingForPortfolio(ctx context.Context, requ
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -116,9 +116,9 @@ func (s *portfolios) AddCustomFieldSettingForPortfolio(ctx context.Context, requ
 // Returns an empty data block.
 func (s *portfolios) AddItemForPortfolio(ctx context.Context, request operations.AddItemForPortfolioRequest) (*operations.AddItemForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/addItem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/addItem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -133,7 +133,7 @@ func (s *portfolios) AddItemForPortfolio(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -194,9 +194,9 @@ func (s *portfolios) AddItemForPortfolio(ctx context.Context, request operations
 // Returns the updated portfolio record.
 func (s *portfolios) AddMembersForPortfolio(ctx context.Context, request operations.AddMembersForPortfolioRequest) (*operations.AddMembersForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/addMembers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/addMembers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -211,7 +211,7 @@ func (s *portfolios) AddMembersForPortfolio(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -279,7 +279,7 @@ func (s *portfolios) CreatePortfolio(ctx context.Context, request operations.Cre
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolios"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -294,7 +294,7 @@ func (s *portfolios) CreatePortfolio(ctx context.Context, request operations.Cre
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -357,14 +357,14 @@ func (s *portfolios) CreatePortfolio(ctx context.Context, request operations.Cre
 // Returns an empty data record.
 func (s *portfolios) DeletePortfolio(ctx context.Context, request operations.DeletePortfolioRequest) (*operations.DeletePortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -424,14 +424,14 @@ func (s *portfolios) DeletePortfolio(ctx context.Context, request operations.Del
 // Get a list of the items in compact form in a portfolio.
 func (s *portfolios) GetItemsForPortfolio(ctx context.Context, request operations.GetItemsForPortfolioRequest) (*operations.GetItemsForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/items", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/items", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -491,14 +491,14 @@ func (s *portfolios) GetItemsForPortfolio(ctx context.Context, request operation
 // Returns the complete portfolio record for a single portfolio.
 func (s *portfolios) GetPortfolio(ctx context.Context, request operations.GetPortfolioRequest) (*operations.GetPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -565,7 +565,7 @@ func (s *portfolios) GetPortfolios(ctx context.Context, request operations.GetPo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -625,9 +625,9 @@ func (s *portfolios) GetPortfolios(ctx context.Context, request operations.GetPo
 // Removes a custom field setting from a portfolio.
 func (s *portfolios) RemoveCustomFieldSettingForPortfolio(ctx context.Context, request operations.RemoveCustomFieldSettingForPortfolioRequest) (*operations.RemoveCustomFieldSettingForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/removeCustomFieldSetting", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/removeCustomFieldSetting", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -642,7 +642,7 @@ func (s *portfolios) RemoveCustomFieldSettingForPortfolio(ctx context.Context, r
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -703,9 +703,9 @@ func (s *portfolios) RemoveCustomFieldSettingForPortfolio(ctx context.Context, r
 // Returns an empty data block.
 func (s *portfolios) RemoveItemForPortfolio(ctx context.Context, request operations.RemoveItemForPortfolioRequest) (*operations.RemoveItemForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/removeItem", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/removeItem", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -720,7 +720,7 @@ func (s *portfolios) RemoveItemForPortfolio(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -781,9 +781,9 @@ func (s *portfolios) RemoveItemForPortfolio(ctx context.Context, request operati
 // Returns the updated portfolio record.
 func (s *portfolios) RemoveMembersForPortfolio(ctx context.Context, request operations.RemoveMembersForPortfolioRequest) (*operations.RemoveMembersForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/removeMembers", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/removeMembers", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -798,7 +798,7 @@ func (s *portfolios) RemoveMembersForPortfolio(ctx context.Context, request oper
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -862,9 +862,9 @@ func (s *portfolios) RemoveMembersForPortfolio(ctx context.Context, request oper
 // Returns the complete updated portfolio record.
 func (s *portfolios) UpdatePortfolio(ctx context.Context, request operations.UpdatePortfolioRequest) (*operations.UpdatePortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -879,7 +879,7 @@ func (s *portfolios) UpdatePortfolio(ctx context.Context, request operations.Upd
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

@@ -13,31 +13,27 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
-        Headers: operations.AttachCustomerManagedPolicyReferenceToPermissionSetHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet",
-        },
-        Request: shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
+        AttachCustomerManagedPolicyReferenceToPermissionSetRequest: shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
             CustomerManagedPolicyReference: shared.CustomerManagedPolicyReference{
-                Name: "illum",
-                Path: "vel",
+                Name: "corrupti",
+                Path: "provident",
             },
-            InstanceArn: "error",
-            PermissionSetArn: "deserunt",
+            InstanceArn: "distinctio",
+            PermissionSetArn: "quibusdam",
         },
+        XAmzAlgorithm: "unde",
+        XAmzContentSha256: "nulla",
+        XAmzCredential: "corrupti",
+        XAmzDate: "illum",
+        XAmzSecurityToken: "vel",
+        XAmzSignature: "error",
+        XAmzSignedHeaders: "deserunt",
+        XAmzTarget: "SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet",
     }
 
     ctx := context.Background()

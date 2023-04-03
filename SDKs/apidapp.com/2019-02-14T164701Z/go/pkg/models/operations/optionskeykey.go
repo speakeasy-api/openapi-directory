@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type OptionsKeyKeyPathParams struct {
+type OptionsKeyKeyRequest struct {
 	// Automatically added
 	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-type OptionsKeyKeyRequest struct {
-	PathParams OptionsKeyKeyPathParams
 }
 
 type OptionsKeyKeyResponse struct {

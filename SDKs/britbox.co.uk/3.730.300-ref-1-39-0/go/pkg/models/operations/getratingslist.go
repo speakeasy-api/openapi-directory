@@ -10,7 +10,7 @@ import (
 )
 
 type GetRatingsListSecurity struct {
-	ProfileAuth shared.SchemeProfileAuth `security:"scheme,type=oauth2"`
+	ProfileAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 // GetRatingsListOrderByEnum - What to order by.
@@ -39,7 +39,7 @@ func (e *GetRatingsListOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetRatingsListQueryParams struct {
+type GetRatingsListRequest struct {
 	// The type of device the content is targeting.
 	Device *string `queryParam:"style=form,explode=true,name=device"`
 	// The set of opt in feature flags which cause breaking changes to responses.
@@ -93,11 +93,6 @@ type GetRatingsListQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetRatingsListRequest struct {
-	QueryParams GetRatingsListQueryParams
-	Security    GetRatingsListSecurity
 }
 
 type GetRatingsListResponse struct {

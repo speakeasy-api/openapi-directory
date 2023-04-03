@@ -7,7 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ForgotPasswordQueryParams struct {
+type ForgotPasswordRequest struct {
+	// Email address of account to request a password reset on.
+	PasswordResetEmailRequest shared.PasswordResetEmailRequest `request:"mediaType=application/json"`
 	// The set of opt in feature flags which cause breaking changes to responses.
 	//
 	// While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
@@ -42,12 +44,6 @@ type ForgotPasswordQueryParams struct {
 	// See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	//
 	Lang *string `queryParam:"style=form,explode=true,name=lang"`
-}
-
-type ForgotPasswordRequest struct {
-	QueryParams ForgotPasswordQueryParams
-	// Email address of account to request a password reset on.
-	Request shared.PasswordResetEmailRequest `request:"mediaType=application/json"`
 }
 
 type ForgotPasswordResponse struct {

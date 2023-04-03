@@ -8,19 +8,15 @@ import (
 )
 
 type UpdateCampaignBatchSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type UpdateCampaignBatchPathParams struct {
-	// An id of a batch to update
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type UpdateCampaignBatchRequest struct {
-	PathParams UpdateCampaignBatchPathParams
 	// A batch instance
-	Request  *shared.BatchInput `request:"mediaType=application/json"`
-	Security UpdateCampaignBatchSecurity
+	BatchInput *shared.BatchInput `request:"mediaType=application/json"`
+	// An id of a batch to update
+	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateCampaignBatchResponse struct {

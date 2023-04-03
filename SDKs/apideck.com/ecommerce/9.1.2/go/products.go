@@ -34,7 +34,7 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // ProductsAll - List Products
 // List Products
-func (s *products) ProductsAll(ctx context.Context, request operations.ProductsAllRequest) (*operations.ProductsAllResponse, error) {
+func (s *products) ProductsAll(ctx context.Context, request operations.ProductsAllRequest, security operations.ProductsAllSecurity) (*operations.ProductsAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerce/products"
 
@@ -43,13 +43,13 @@ func (s *products) ProductsAll(ctx context.Context, request operations.ProductsA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -145,22 +145,22 @@ func (s *products) ProductsAll(ctx context.Context, request operations.ProductsA
 
 // ProductsOne - Get Product
 // Get Product
-func (s *products) ProductsOne(ctx context.Context, request operations.ProductsOneRequest) (*operations.ProductsOneResponse, error) {
+func (s *products) ProductsOne(ctx context.Context, request operations.ProductsOneRequest, security operations.ProductsOneSecurity) (*operations.ProductsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecommerce/products/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/ecommerce/products/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

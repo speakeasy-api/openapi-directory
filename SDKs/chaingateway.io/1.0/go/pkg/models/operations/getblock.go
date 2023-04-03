@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetBlockHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type GetBlockRequest struct {
-	Headers GetBlockHeaders
-	Request shared.GetBlockRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization   string                 `header:"style=simple,explode=false,name=Authorization"`
+	GetBlockRequest shared.GetBlockRequest `request:"mediaType=application/json"`
 }
 
 type GetBlockResponse struct {

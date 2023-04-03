@@ -7,20 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GeneratePresignedUrlsFilesPathParams struct {
-	// Upload channel ID
-	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type GeneratePresignedUrlsFilesHeaders struct {
+type GeneratePresignedUrlsFilesRequest struct {
+	GeneratePresignedUrlsRequest shared.GeneratePresignedUrlsRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type GeneratePresignedUrlsFilesRequest struct {
-	PathParams GeneratePresignedUrlsFilesPathParams
-	Headers    GeneratePresignedUrlsFilesHeaders
-	Request    shared.GeneratePresignedUrlsRequest `request:"mediaType=application/json"`
+	// Upload channel ID
+	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
 }
 
 type GeneratePresignedUrlsFilesResponse struct {

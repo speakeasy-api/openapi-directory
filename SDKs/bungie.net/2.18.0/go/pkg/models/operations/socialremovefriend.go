@@ -4,21 +4,15 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type SocialRemoveFriendSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
-}
-
-type SocialRemoveFriendPathParams struct {
-	// The membership id of the user you wish to remove.
-	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type SocialRemoveFriendRequest struct {
-	PathParams SocialRemoveFriendPathParams
-	Security   SocialRemoveFriendSecurity
+	// The membership id of the user you wish to remove.
+	MembershipID string `pathParam:"style=simple,explode=false,name=membershipId"`
 }
 
 // SocialRemoveFriend200Wildcard - Look at the Response property for more information about the nature of this response

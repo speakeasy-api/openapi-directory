@@ -7,30 +7,22 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateCertificateFromCsrQueryParams struct {
-	// Specifies whether the certificate is active.
-	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
-}
-
-type CreateCertificateFromCsrHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateCertificateFromCsrRequestBody struct {
 	// The certificate signing request (CSR).
 	CertificateSigningRequest string `json:"certificateSigningRequest"`
 }
 
 type CreateCertificateFromCsrRequest struct {
-	QueryParams CreateCertificateFromCsrQueryParams
-	Headers     CreateCertificateFromCsrHeaders
-	Request     CreateCertificateFromCsrRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateCertificateFromCsrRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Specifies whether the certificate is active.
+	SetAsActive *bool `queryParam:"style=form,explode=true,name=setAsActive"`
 }
 
 type CreateCertificateFromCsrResponse struct {

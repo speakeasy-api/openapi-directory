@@ -34,7 +34,7 @@ func newInstantPayouts(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // PostPayout - Make an instant card payout
 // With this call, you can pay out to your customers, and funds will be made available within 30 minutes on the cardholder's bank account (this is dependent on whether the issuer supports this functionality). Instant card payouts are only supported for Visa and Mastercard cards.
-func (s *instantPayouts) PostPayout(ctx context.Context, request operations.PostPayoutRequest) (*operations.PostPayoutResponse, error) {
+func (s *instantPayouts) PostPayout(ctx context.Context, request shared.PayoutRequest, security operations.PostPayoutSecurity) (*operations.PostPayoutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payout"
 
@@ -50,7 +50,7 @@ func (s *instantPayouts) PostPayout(ctx context.Context, request operations.Post
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -36,10 +36,6 @@ type CreateGroupRequestBody struct {
 	Group CreateGroupRequestBodyGroup `json:"group"`
 }
 
-type CreateGroupRequest struct {
-	Request *CreateGroupRequestBody `request:"mediaType=application/json"`
-}
-
 type CreateGroup200ApplicationJSONBasicGroup struct {
 	AllowMembershipRequests   bool   `json:"allow_membership_requests"`
 	Automatic                 bool   `json:"automatic"`

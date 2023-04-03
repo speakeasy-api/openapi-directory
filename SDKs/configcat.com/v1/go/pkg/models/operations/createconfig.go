@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateConfigPathParams struct {
+type CreateConfigRequest struct {
+	CreateConfigRequest shared.CreateConfigRequest `request:"mediaType=application/json"`
 	// The identifier of the Product.
 	ProductID string `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type CreateConfigRequest struct {
-	PathParams CreateConfigPathParams
-	Request    shared.CreateConfigRequest `request:"mediaType=application/json"`
 }
 
 type CreateConfigResponse struct {

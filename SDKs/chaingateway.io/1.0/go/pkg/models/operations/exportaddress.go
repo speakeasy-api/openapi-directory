@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ExportAddressHeaders struct {
-	// API Key
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
-}
-
 type ExportAddressRequest struct {
-	Headers ExportAddressHeaders
-	Request shared.ExportAddressRequest `request:"mediaType=application/json"`
+	// API Key
+	Authorization        string                      `header:"style=simple,explode=false,name=Authorization"`
+	ExportAddressRequest shared.ExportAddressRequest `request:"mediaType=application/json"`
 }
 
 type ExportAddressResponse struct {

@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ErrorsGetRetentionSettingsSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type ErrorsGetRetentionSettingsPathParams struct {
+type ErrorsGetRetentionSettingsRequest struct {
 	// The name of the application
 	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
 	// The name of the owner
 	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
-}
-
-type ErrorsGetRetentionSettingsRequest struct {
-	PathParams ErrorsGetRetentionSettingsPathParams
-	Security   ErrorsGetRetentionSettingsSecurity
 }
 
 type ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum string

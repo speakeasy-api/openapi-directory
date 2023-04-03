@@ -6,22 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type ErrorsErrorDownloadSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type ErrorsErrorDownloadPathParams struct {
-	// The name of the application
-	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
-	// The id of the error group
-	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
-	// The id of the error
-	ErrorID string `pathParam:"style=simple,explode=false,name=errorId"`
-	// The name of the owner
-	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 // ErrorsErrorDownloadFormatEnum - the format of the crash log
@@ -48,15 +36,17 @@ func (e *ErrorsErrorDownloadFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ErrorsErrorDownloadQueryParams struct {
+type ErrorsErrorDownloadRequest struct {
+	// The name of the application
+	AppName string `pathParam:"style=simple,explode=false,name=app_name"`
+	// The id of the error group
+	ErrorGroupID string `pathParam:"style=simple,explode=false,name=errorGroupId"`
+	// The id of the error
+	ErrorID string `pathParam:"style=simple,explode=false,name=errorId"`
 	// the format of the crash log
 	Format *ErrorsErrorDownloadFormatEnum `queryParam:"style=form,explode=true,name=format"`
-}
-
-type ErrorsErrorDownloadRequest struct {
-	PathParams  ErrorsErrorDownloadPathParams
-	QueryParams ErrorsErrorDownloadQueryParams
-	Security    ErrorsErrorDownloadSecurity
+	// The name of the owner
+	OwnerName string `pathParam:"style=simple,explode=false,name=owner_name"`
 }
 
 type ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum string

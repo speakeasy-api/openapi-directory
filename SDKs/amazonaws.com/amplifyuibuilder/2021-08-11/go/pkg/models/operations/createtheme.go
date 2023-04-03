@@ -7,28 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateThemePathParams struct {
-	// The unique ID of the Amplify app associated with the theme.
-	AppID string `pathParam:"style=simple,explode=false,name=appId"`
-	// The name of the backend environment that is a part of the Amplify app.
-	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
-}
-
-type CreateThemeQueryParams struct {
-	// The unique client token.
-	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
-}
-
-type CreateThemeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // CreateThemeRequestBodyThemeToCreate - Represents all of the information that is required to create a theme.
 type CreateThemeRequestBodyThemeToCreate struct {
 	Name      *string              `json:"name,omitempty"`
@@ -43,10 +21,20 @@ type CreateThemeRequestBody struct {
 }
 
 type CreateThemeRequest struct {
-	PathParams  CreateThemePathParams
-	QueryParams CreateThemeQueryParams
-	Headers     CreateThemeHeaders
-	Request     CreateThemeRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateThemeRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique ID of the Amplify app associated with the theme.
+	AppID string `pathParam:"style=simple,explode=false,name=appId"`
+	// The unique client token.
+	ClientToken *string `queryParam:"style=form,explode=true,name=clientToken"`
+	// The name of the backend environment that is a part of the Amplify app.
+	EnvironmentName string `pathParam:"style=simple,explode=false,name=environmentName"`
 }
 
 type CreateThemeResponse struct {

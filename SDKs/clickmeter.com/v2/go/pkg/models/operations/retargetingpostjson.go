@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingPostJSONPathParams struct {
+type RetargetingPostJSONRequest struct {
+	// The body of the retargeting script
+	APICoreDtoRetargetingRetargetingScript shared.APICoreDtoRetargetingRetargetingScript `request:"mediaType=application/json"`
 	// The id of the retargeting script
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type RetargetingPostJSONRequest struct {
-	PathParams RetargetingPostJSONPathParams
-	// The body of the retargeting script
-	Request shared.APICoreDtoRetargetingRetargetingScript `request:"mediaType=application/json"`
 }
 
 type RetargetingPostJSONResponse struct {

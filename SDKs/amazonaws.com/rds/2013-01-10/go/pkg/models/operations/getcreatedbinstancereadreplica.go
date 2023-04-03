@@ -50,7 +50,7 @@ func (e *GETCreateDBInstanceReadReplicaVersionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GETCreateDBInstanceReadReplicaQueryParams struct {
+type GETCreateDBInstanceReadReplicaRequest struct {
 	Action                     GETCreateDBInstanceReadReplicaActionEnum  `queryParam:"style=form,explode=true,name=Action"`
 	AutoMinorVersionUpgrade    *bool                                     `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
 	AvailabilityZone           *string                                   `queryParam:"style=form,explode=true,name=AvailabilityZone"`
@@ -62,21 +62,13 @@ type GETCreateDBInstanceReadReplicaQueryParams struct {
 	PubliclyAccessible         *bool                                     `queryParam:"style=form,explode=true,name=PubliclyAccessible"`
 	SourceDBInstanceIdentifier string                                    `queryParam:"style=form,explode=true,name=SourceDBInstanceIdentifier"`
 	Version                    GETCreateDBInstanceReadReplicaVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCreateDBInstanceReadReplicaHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCreateDBInstanceReadReplicaRequest struct {
-	QueryParams GETCreateDBInstanceReadReplicaQueryParams
-	Headers     GETCreateDBInstanceReadReplicaHeaders
+	XAmzAlgorithm              *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256          *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential             *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                   *string                                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken          *string                                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature              *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders          *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCreateDBInstanceReadReplicaResponse struct {

@@ -50,28 +50,20 @@ func (e *GETRebalanceSlotsInGlobalReplicationGroupVersionEnum) UnmarshalJSON(dat
 	}
 }
 
-type GETRebalanceSlotsInGlobalReplicationGroupQueryParams struct {
+type GETRebalanceSlotsInGlobalReplicationGroupRequest struct {
 	Action GETRebalanceSlotsInGlobalReplicationGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// If <code>True</code>, redistribution is applied immediately.
 	ApplyImmediately bool `queryParam:"style=form,explode=true,name=ApplyImmediately"`
 	// The name of the Global datastore
 	GlobalReplicationGroupID string                                               `queryParam:"style=form,explode=true,name=GlobalReplicationGroupId"`
 	Version                  GETRebalanceSlotsInGlobalReplicationGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETRebalanceSlotsInGlobalReplicationGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETRebalanceSlotsInGlobalReplicationGroupRequest struct {
-	QueryParams GETRebalanceSlotsInGlobalReplicationGroupQueryParams
-	Headers     GETRebalanceSlotsInGlobalReplicationGroupHeaders
+	XAmzAlgorithm            *string                                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETRebalanceSlotsInGlobalReplicationGroupResponse struct {

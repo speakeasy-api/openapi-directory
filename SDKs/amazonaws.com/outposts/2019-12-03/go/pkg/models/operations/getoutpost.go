@@ -7,12 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetOutpostPathParams struct {
+type GetOutpostRequest struct {
 	//  The ID or the Amazon Resource Name (ARN) of the Outpost.
-	OutpostID string `pathParam:"style=simple,explode=false,name=OutpostId"`
-}
-
-type GetOutpostHeaders struct {
+	OutpostID         string  `pathParam:"style=simple,explode=false,name=OutpostId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +17,6 @@ type GetOutpostHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetOutpostRequest struct {
-	PathParams GetOutpostPathParams
-	Headers    GetOutpostHeaders
 }
 
 type GetOutpostResponse struct {

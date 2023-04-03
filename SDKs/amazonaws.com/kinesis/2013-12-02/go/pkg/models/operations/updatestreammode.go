@@ -30,20 +30,16 @@ func (e *UpdateStreamModeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type UpdateStreamModeHeaders struct {
-	XAmzAlgorithm     *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        UpdateStreamModeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type UpdateStreamModeRequest struct {
-	Headers UpdateStreamModeHeaders
-	Request shared.UpdateStreamModeInput `request:"mediaType=application/json"`
+	UpdateStreamModeInput shared.UpdateStreamModeInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm         *string                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256     *string                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential        *string                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate              *string                        `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken     *string                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature         *string                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders     *string                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget            UpdateStreamModeXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type UpdateStreamModeResponse struct {

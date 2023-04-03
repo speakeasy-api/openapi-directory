@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type PostV1CodeReferencesRequest struct {
-	Request shared.CodeReferenceRequest `request:"mediaType=application/json"`
-}
 
 type PostV1CodeReferencesResponse struct {
 	ContentType string

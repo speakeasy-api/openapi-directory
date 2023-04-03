@@ -51,7 +51,7 @@ func (e *GETDescribeServiceUpdatesVersionEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-type GETDescribeServiceUpdatesQueryParams struct {
+type GETDescribeServiceUpdatesRequest struct {
 	Action GETDescribeServiceUpdatesActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
@@ -62,21 +62,13 @@ type GETDescribeServiceUpdatesQueryParams struct {
 	// The status of the service update
 	ServiceUpdateStatus []shared.ServiceUpdateStatusEnum     `queryParam:"style=form,explode=true,name=ServiceUpdateStatus"`
 	Version             GETDescribeServiceUpdatesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeServiceUpdatesHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeServiceUpdatesRequest struct {
-	QueryParams GETDescribeServiceUpdatesQueryParams
-	Headers     GETDescribeServiceUpdatesHeaders
+	XAmzAlgorithm       *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256   *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential      *string                              `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate            *string                              `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken   *string                              `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature       *string                              `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders   *string                              `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeServiceUpdatesResponse struct {

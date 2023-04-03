@@ -8,13 +8,8 @@ import (
 )
 
 type PostRefundFundsTransferSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
-}
-
-type PostRefundFundsTransferRequest struct {
-	Request  *shared.RefundFundsTransferRequest `request:"mediaType=application/json"`
-	Security PostRefundFundsTransferSecurity
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
 type PostRefundFundsTransferResponse struct {

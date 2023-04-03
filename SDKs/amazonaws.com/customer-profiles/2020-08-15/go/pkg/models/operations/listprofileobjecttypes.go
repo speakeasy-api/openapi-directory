@@ -7,19 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListProfileObjectTypesPathParams struct {
+type ListProfileObjectTypesRequest struct {
 	// The unique name of the domain.
-	DomainName string `pathParam:"style=simple,explode=false,name=DomainName"`
-}
-
-type ListProfileObjectTypesQueryParams struct {
-	// The maximum number of objects returned per page.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
-	// Identifies the next page of results to return.
-	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
-}
-
-type ListProfileObjectTypesHeaders struct {
+	DomainName        string  `pathParam:"style=simple,explode=false,name=DomainName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +17,10 @@ type ListProfileObjectTypesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListProfileObjectTypesRequest struct {
-	PathParams  ListProfileObjectTypesPathParams
-	QueryParams ListProfileObjectTypesQueryParams
-	Headers     ListProfileObjectTypesHeaders
+	// The maximum number of objects returned per page.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=max-results"`
+	// Identifies the next page of results to return.
+	NextToken *string `queryParam:"style=form,explode=true,name=next-token"`
 }
 
 type ListProfileObjectTypesResponse struct {

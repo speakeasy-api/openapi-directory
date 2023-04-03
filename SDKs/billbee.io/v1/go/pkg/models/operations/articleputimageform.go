@@ -7,17 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticlePutImageFormPathParams struct {
+type ArticlePutImageFormRequest struct {
+	// The ArticleApiImageModel
+	BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
 	// The image id. If you pass 0, the image will be added
 	ImageID int64 `pathParam:"style=simple,explode=false,name=imageId"`
 	// The product id
 	ProductID int64 `pathParam:"style=simple,explode=false,name=productId"`
-}
-
-type ArticlePutImageFormRequest struct {
-	PathParams ArticlePutImageFormPathParams
-	// The ArticleApiImageModel
-	Request shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel `request:"mediaType=application/x-www-form-urlencoded"`
 }
 
 type ArticlePutImageFormResponse struct {

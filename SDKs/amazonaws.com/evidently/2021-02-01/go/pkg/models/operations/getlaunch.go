@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLaunchPathParams struct {
-	// The name of the launch that you want to see the details of.
-	Launch string `pathParam:"style=simple,explode=false,name=launch"`
-	// The name or ARN of the project that contains the launch.
-	Project string `pathParam:"style=simple,explode=false,name=project"`
-}
-
-type GetLaunchHeaders struct {
+type GetLaunchRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetLaunchHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLaunchRequest struct {
-	PathParams GetLaunchPathParams
-	Headers    GetLaunchHeaders
+	// The name of the launch that you want to see the details of.
+	Launch string `pathParam:"style=simple,explode=false,name=launch"`
+	// The name or ARN of the project that contains the launch.
+	Project string `pathParam:"style=simple,explode=false,name=project"`
 }
 
 type GetLaunchResponse struct {

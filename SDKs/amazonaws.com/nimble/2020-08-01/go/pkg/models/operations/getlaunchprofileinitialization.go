@@ -7,23 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLaunchProfileInitializationPathParams struct {
-	// The ID of the launch profile used to control access from the streaming session.
-	LaunchProfileID string `pathParam:"style=simple,explode=false,name=launchProfileId"`
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type GetLaunchProfileInitializationQueryParams struct {
-	// The launch profile protocol versions supported by the client.
-	LaunchProfileProtocolVersions []string `queryParam:"style=form,explode=true,name=launchProfileProtocolVersions"`
-	// The launch purpose.
-	LaunchPurpose string `queryParam:"style=form,explode=true,name=launchPurpose"`
-	// The platform where this Launch Profile will be used, either Windows or Linux.
-	Platform string `queryParam:"style=form,explode=true,name=platform"`
-}
-
-type GetLaunchProfileInitializationHeaders struct {
+type GetLaunchProfileInitializationRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -31,12 +15,16 @@ type GetLaunchProfileInitializationHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetLaunchProfileInitializationRequest struct {
-	PathParams  GetLaunchProfileInitializationPathParams
-	QueryParams GetLaunchProfileInitializationQueryParams
-	Headers     GetLaunchProfileInitializationHeaders
+	// The ID of the launch profile used to control access from the streaming session.
+	LaunchProfileID string `pathParam:"style=simple,explode=false,name=launchProfileId"`
+	// The launch profile protocol versions supported by the client.
+	LaunchProfileProtocolVersions []string `queryParam:"style=form,explode=true,name=launchProfileProtocolVersions"`
+	// The launch purpose.
+	LaunchPurpose string `queryParam:"style=form,explode=true,name=launchPurpose"`
+	// The platform where this Launch Profile will be used, either Windows or Linux.
+	Platform string `queryParam:"style=form,explode=true,name=platform"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type GetLaunchProfileInitializationResponse struct {

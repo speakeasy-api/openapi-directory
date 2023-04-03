@@ -50,30 +50,22 @@ func (e *GETImportClientVpnClientCertificateRevocationListVersionEnum) Unmarshal
 	}
 }
 
-type GETImportClientVpnClientCertificateRevocationListQueryParams struct {
+type GETImportClientVpnClientCertificateRevocationListRequest struct {
 	Action GETImportClientVpnClientCertificateRevocationListActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The client certificate revocation list file. For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-certificates.html#cvpn-working-certificates-generate">Generate a Client Certificate Revocation List</a> in the <i>Client VPN Administrator Guide</i>.
 	CertificateRevocationList string `queryParam:"style=form,explode=true,name=CertificateRevocationList"`
 	// The ID of the Client VPN endpoint to which the client certificate revocation list applies.
 	ClientVpnEndpointID string `queryParam:"style=form,explode=true,name=ClientVpnEndpointId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
-	DryRun  *bool                                                        `queryParam:"style=form,explode=true,name=DryRun"`
-	Version GETImportClientVpnClientCertificateRevocationListVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETImportClientVpnClientCertificateRevocationListHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETImportClientVpnClientCertificateRevocationListRequest struct {
-	QueryParams GETImportClientVpnClientCertificateRevocationListQueryParams
-	Headers     GETImportClientVpnClientCertificateRevocationListHeaders
+	DryRun            *bool                                                        `queryParam:"style=form,explode=true,name=DryRun"`
+	Version           GETImportClientVpnClientCertificateRevocationListVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETImportClientVpnClientCertificateRevocationListResponse struct {

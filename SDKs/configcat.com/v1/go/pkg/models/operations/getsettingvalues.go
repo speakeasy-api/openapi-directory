@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSettingValuesPathParams struct {
+type GetSettingValuesRequest struct {
 	// The identifier of the Config.
 	ConfigID string `pathParam:"style=simple,explode=false,name=configId"`
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
-}
-
-type GetSettingValuesRequest struct {
-	PathParams GetSettingValuesPathParams
 }
 
 type GetSettingValuesResponse struct {

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteTrackerPathParams struct {
+type DeleteTrackerRequest struct {
 	// The name of the tracker resource to be deleted.
-	TrackerName string `pathParam:"style=simple,explode=false,name=TrackerName"`
-}
-
-type DeleteTrackerHeaders struct {
+	TrackerName       string  `pathParam:"style=simple,explode=false,name=TrackerName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteTrackerHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTrackerRequest struct {
-	PathParams DeleteTrackerPathParams
-	Headers    DeleteTrackerHeaders
 }
 
 type DeleteTrackerResponse struct {

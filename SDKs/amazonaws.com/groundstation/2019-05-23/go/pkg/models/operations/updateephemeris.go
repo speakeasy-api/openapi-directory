@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateEphemerisPathParams struct {
-	// The AWS Ground Station ephemeris ID.
-	EphemerisID string `pathParam:"style=simple,explode=false,name=ephemerisId"`
-}
-
-type UpdateEphemerisHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateEphemerisRequestBody struct {
 	// Whether the ephemeris is enabled or not. Changing this value will not require the ephemeris to be re-validated.
 	Enabled bool `json:"enabled"`
@@ -32,9 +17,16 @@ type UpdateEphemerisRequestBody struct {
 }
 
 type UpdateEphemerisRequest struct {
-	PathParams UpdateEphemerisPathParams
-	Headers    UpdateEphemerisHeaders
-	Request    UpdateEphemerisRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateEphemerisRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The AWS Ground Station ephemeris ID.
+	EphemerisID string `pathParam:"style=simple,explode=false,name=ephemerisId"`
 }
 
 type UpdateEphemerisResponse struct {

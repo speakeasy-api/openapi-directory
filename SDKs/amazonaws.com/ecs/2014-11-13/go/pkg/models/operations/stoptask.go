@@ -30,7 +30,8 @@ func (e *StopTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type StopTaskHeaders struct {
+type StopTaskRequest struct {
+	StopTaskRequest   shared.StopTaskRequest `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type StopTaskHeaders struct {
 	XAmzSignature     *string                `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        StopTaskXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type StopTaskRequest struct {
-	Headers StopTaskHeaders
-	Request shared.StopTaskRequest `request:"mediaType=application/json"`
 }
 
 type StopTaskResponse struct {

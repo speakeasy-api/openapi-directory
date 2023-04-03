@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SuppliersPutPathParams struct {
+type SuppliersPutRequest struct {
+	// Information of Supplier to update.
+	SupplierDto shared.SupplierDto `request:"mediaType=application/json"`
 	// Id of Supplier to update.
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type SuppliersPutRequest struct {
-	PathParams SuppliersPutPathParams
-	// Information of Supplier to update.
-	Request shared.SupplierDto `request:"mediaType=application/json"`
 }
 
 type SuppliersPutResponse struct {

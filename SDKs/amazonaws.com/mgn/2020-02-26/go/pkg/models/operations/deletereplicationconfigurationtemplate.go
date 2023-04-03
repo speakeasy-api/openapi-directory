@@ -6,24 +6,20 @@ import (
 	"net/http"
 )
 
-type DeleteReplicationConfigurationTemplateHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type DeleteReplicationConfigurationTemplateRequestBody struct {
 	// Request to delete Replication Configuration Template from service by Replication Configuration Template ID.
 	ReplicationConfigurationTemplateID string `json:"replicationConfigurationTemplateID"`
 }
 
 type DeleteReplicationConfigurationTemplateRequest struct {
-	Headers DeleteReplicationConfigurationTemplateHeaders
-	Request DeleteReplicationConfigurationTemplateRequestBody `request:"mediaType=application/json"`
+	RequestBody       DeleteReplicationConfigurationTemplateRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                           `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                           `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type DeleteReplicationConfigurationTemplateResponse struct {

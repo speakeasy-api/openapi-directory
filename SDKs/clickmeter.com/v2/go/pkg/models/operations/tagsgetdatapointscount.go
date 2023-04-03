@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsGetDatapointsCountPathParams struct {
-	// Id of the tag.
-	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
 // TagsGetDatapointsCountStatusEnum - Status of the datapoint
 type TagsGetDatapointsCountStatusEnum string
 
@@ -68,22 +63,19 @@ func (e *TagsGetDatapointsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TagsGetDatapointsCountQueryParams struct {
+type TagsGetDatapointsCountRequest struct {
 	// Exclude datapoints created before this date (YYYYMMDD)
 	CreatedAfter *string `queryParam:"style=form,explode=true,name=createdAfter"`
 	// Exclude datapoints created after this date (YYYYMMDD)
 	CreatedBefore *string `queryParam:"style=form,explode=true,name=createdBefore"`
 	// Status of the datapoint
 	Status *TagsGetDatapointsCountStatusEnum `queryParam:"style=form,explode=true,name=status"`
+	// Id of the tag.
+	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
 	// Filter fields by this pattern
 	TextSearch *string `queryParam:"style=form,explode=true,name=textSearch"`
 	// Type of the datapoint ("tp"/"tl")
 	Type *TagsGetDatapointsCountTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type TagsGetDatapointsCountRequest struct {
-	PathParams  TagsGetDatapointsCountPathParams
-	QueryParams TagsGetDatapointsCountQueryParams
 }
 
 type TagsGetDatapointsCountResponse struct {

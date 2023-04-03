@@ -51,30 +51,22 @@ func (e *GETDescribeEnvironmentHealthVersionEnum) UnmarshalJSON(data []byte) err
 	}
 }
 
-type GETDescribeEnvironmentHealthQueryParams struct {
+type GETDescribeEnvironmentHealthRequest struct {
 	Action GETDescribeEnvironmentHealthActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Specify the response elements to return. To retrieve all attributes, set to <code>All</code>. If no attribute names are specified, returns the name of the environment.
 	AttributeNames []shared.EnvironmentHealthAttributeEnum `queryParam:"style=form,explode=true,name=AttributeNames"`
 	// <p>Specify the environment by ID.</p> <p>You must specify either this or an EnvironmentName, or both.</p>
 	EnvironmentID *string `queryParam:"style=form,explode=true,name=EnvironmentId"`
 	// <p>Specify the environment by name.</p> <p>You must specify either this or an EnvironmentName, or both.</p>
-	EnvironmentName *string                                 `queryParam:"style=form,explode=true,name=EnvironmentName"`
-	Version         GETDescribeEnvironmentHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDescribeEnvironmentHealthHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDescribeEnvironmentHealthRequest struct {
-	QueryParams GETDescribeEnvironmentHealthQueryParams
-	Headers     GETDescribeEnvironmentHealthHeaders
+	EnvironmentName   *string                                 `queryParam:"style=form,explode=true,name=EnvironmentName"`
+	Version           GETDescribeEnvironmentHealthVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDescribeEnvironmentHealthResponse struct {

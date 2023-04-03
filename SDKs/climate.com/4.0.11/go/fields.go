@@ -36,7 +36,7 @@ func newFields(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // FetchAllFields - Retrieve list of all Fields the user has access to.
 // Retrieve all fields the authenticated user has access to, including fields shared with the authenticated user from other resource owners. Filter the results by field name if the `fieldName` query parameter is specified.
 // A 409 will be returned if the X-Next-Token has expired. When receiving a 409, the client should discard the X-Next-Token, discard all currently persisted fields for the user, and re-fetch fields from /fields/all.
-func (s *fields) FetchAllFields(ctx context.Context, request operations.FetchAllFieldsRequest) (*operations.FetchAllFieldsResponse, error) {
+func (s *fields) FetchAllFields(ctx context.Context, request operations.FetchAllFieldsRequest, security operations.FetchAllFieldsSecurity) (*operations.FetchAllFieldsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/fields/all"
 
@@ -45,13 +45,13 @@ func (s *fields) FetchAllFields(ctx context.Context, request operations.FetchAll
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,16 +127,16 @@ func (s *fields) FetchAllFields(ctx context.Context, request operations.FetchAll
 
 // FetchFieldByID - Retrieve a specific Field by ID
 // Retrieve a given **Field** by ID.
-func (s *fields) FetchFieldByID(ctx context.Context, request operations.FetchFieldByIDRequest) (*operations.FetchFieldByIDResponse, error) {
+func (s *fields) FetchFieldByID(ctx context.Context, request operations.FetchFieldByIDRequest, security operations.FetchFieldByIDSecurity) (*operations.FetchFieldByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/fields/{fieldId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v4/fields/{fieldId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -198,7 +198,7 @@ func (s *fields) FetchFieldByID(ctx context.Context, request operations.FetchFie
 
 // FetchFields - Retrieve list of Fields
 // Retrieve list of **Fields**. Filter the results by field name if the `fieldName` query parameter is specified.
-func (s *fields) FetchFields(ctx context.Context, request operations.FetchFieldsRequest) (*operations.FetchFieldsResponse, error) {
+func (s *fields) FetchFields(ctx context.Context, request operations.FetchFieldsRequest, security operations.FetchFieldsSecurity) (*operations.FetchFieldsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v4/fields"
 
@@ -207,13 +207,13 @@ func (s *fields) FetchFields(ctx context.Context, request operations.FetchFields
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

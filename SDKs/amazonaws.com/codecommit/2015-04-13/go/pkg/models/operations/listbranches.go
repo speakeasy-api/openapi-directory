@@ -9,11 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListBranchesQueryParams struct {
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-}
-
 // ListBranchesXAmzTargetEnum
 type ListBranchesXAmzTargetEnum string
 
@@ -35,7 +30,8 @@ func (e *ListBranchesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListBranchesHeaders struct {
+type ListBranchesRequest struct {
+	ListBranchesInput shared.ListBranchesInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -44,12 +40,8 @@ type ListBranchesHeaders struct {
 	XAmzSignature     *string                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListBranchesXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListBranchesRequest struct {
-	QueryParams ListBranchesQueryParams
-	Headers     ListBranchesHeaders
-	Request     shared.ListBranchesInput `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
 }
 
 type ListBranchesResponse struct {

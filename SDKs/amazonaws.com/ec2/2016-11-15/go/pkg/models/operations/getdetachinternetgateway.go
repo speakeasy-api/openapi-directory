@@ -50,7 +50,7 @@ func (e *GETDetachInternetGatewayVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDetachInternetGatewayQueryParams struct {
+type GETDetachInternetGatewayRequest struct {
 	Action GETDetachInternetGatewayActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
@@ -58,10 +58,7 @@ type GETDetachInternetGatewayQueryParams struct {
 	InternetGatewayID string                              `queryParam:"style=form,explode=true,name=InternetGatewayId"`
 	Version           GETDetachInternetGatewayVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	// The ID of the VPC.
-	VpcID string `queryParam:"style=form,explode=true,name=VpcId"`
-}
-
-type GETDetachInternetGatewayHeaders struct {
+	VpcID             string  `queryParam:"style=form,explode=true,name=VpcId"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -69,11 +66,6 @@ type GETDetachInternetGatewayHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDetachInternetGatewayRequest struct {
-	QueryParams GETDetachInternetGatewayQueryParams
-	Headers     GETDetachInternetGatewayHeaders
 }
 
 type GETDetachInternetGatewayResponse struct {

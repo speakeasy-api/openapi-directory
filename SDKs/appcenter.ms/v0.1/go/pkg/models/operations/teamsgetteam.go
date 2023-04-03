@@ -6,23 +6,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type TeamsGetTeamSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
-type TeamsGetTeamPathParams struct {
+type TeamsGetTeamRequest struct {
 	// The organization's name
 	OrgName string `pathParam:"style=simple,explode=false,name=org_name"`
 	// The team's name
 	TeamName string `pathParam:"style=simple,explode=false,name=team_name"`
-}
-
-type TeamsGetTeamRequest struct {
-	PathParams TeamsGetTeamPathParams
-	Security   TeamsGetTeamSecurity
 }
 
 type TeamsGetTeamDefaultApplicationJSONErrorCodeEnum string

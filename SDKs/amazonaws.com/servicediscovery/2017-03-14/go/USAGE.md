@@ -13,42 +13,42 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateHTTPNamespaceRequest{
-        Headers: operations.CreateHTTPNamespaceHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "Route53AutoNaming_v20170314.CreateHttpNamespace",
-        },
-        Request: shared.CreateHTTPNamespaceRequest{
-            CreatorRequestID: "illum",
-            Description: "vel",
-            Name: "error",
+        CreateHTTPNamespaceRequest: shared.CreateHTTPNamespaceRequest{
+            CreatorRequestID: "corrupti",
+            Description: "provident",
+            Name: "distinctio",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "iure",
+                    Key: "unde",
+                    Value: "nulla",
                 },
                 shared.Tag{
-                    Key: "magnam",
-                    Value: "debitis",
+                    Key: "corrupti",
+                    Value: "illum",
                 },
                 shared.Tag{
-                    Key: "ipsa",
-                    Value: "delectus",
+                    Key: "vel",
+                    Value: "error",
+                },
+                shared.Tag{
+                    Key: "deserunt",
+                    Value: "suscipit",
                 },
             },
         },
+        XAmzAlgorithm: "iure",
+        XAmzContentSha256: "magnam",
+        XAmzCredential: "debitis",
+        XAmzDate: "ipsa",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "tempora",
+        XAmzSignedHeaders: "suscipit",
+        XAmzTarget: "Route53AutoNaming_v20170314.CreateHttpNamespace",
     }
 
     ctx := context.Background()

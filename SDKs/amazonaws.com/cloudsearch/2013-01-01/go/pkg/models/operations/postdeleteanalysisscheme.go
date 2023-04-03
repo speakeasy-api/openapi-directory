@@ -50,25 +50,17 @@ func (e *POSTDeleteAnalysisSchemeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type POSTDeleteAnalysisSchemeQueryParams struct {
-	Action  POSTDeleteAnalysisSchemeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTDeleteAnalysisSchemeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTDeleteAnalysisSchemeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTDeleteAnalysisSchemeRequest struct {
-	QueryParams POSTDeleteAnalysisSchemeQueryParams
-	Headers     POSTDeleteAnalysisSchemeHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTDeleteAnalysisSchemeActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                              `request:"mediaType=text/xml"`
+	Version           POSTDeleteAnalysisSchemeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                             `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                             `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                             `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                             `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                             `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                             `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                             `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTDeleteAnalysisSchemeResponse struct {

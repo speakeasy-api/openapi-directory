@@ -14,16 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GETVersionIncidentsFormatRequest{
-        QueryParams: operations.GETVersionIncidentsFormatQueryParams{
-            IncidentType: "unconfirmed",
-            OccurredAfter: 592845,
-            OccurredBefore: 715190,
-            Page: 844266,
-            PerPage: 602763,
-            Proximity: "nulla",
-            ProximitySquare: 544883,
-            Query: "illum",
-        },
+        IncidentType: "unconfirmed",
+        OccurredAfter: 592845,
+        OccurredBefore: 715190,
+        Page: 844266,
+        PerPage: 602763,
+        Proximity: "nulla",
+        ProximitySquare: 544883,
+        Query: "illum",
     }
 
     ctx := context.Background()

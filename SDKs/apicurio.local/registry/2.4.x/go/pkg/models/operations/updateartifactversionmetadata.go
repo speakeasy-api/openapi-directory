@@ -7,18 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateArtifactVersionMetaDataPathParams struct {
+type UpdateArtifactVersionMetaDataRequest struct {
+	EditableMetaData shared.EditableMetaData `request:"mediaType=application/json"`
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
 	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
 	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 	// The unique identifier of a specific version of the artifact content.
 	Version string `pathParam:"style=simple,explode=false,name=version"`
-}
-
-type UpdateArtifactVersionMetaDataRequest struct {
-	PathParams UpdateArtifactVersionMetaDataPathParams
-	Request    shared.EditableMetaData `request:"mediaType=application/json"`
 }
 
 type UpdateArtifactVersionMetaDataResponse struct {

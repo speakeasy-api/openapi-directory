@@ -7,11 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AccountPutGuestJSONRequest struct {
-	// Guest object to create
-	Request shared.APICoreDtoAccountingGuest `request:"mediaType=application/json"`
-}
-
 type AccountPutGuestJSONResponse struct {
 	APICoreDtoAccountingGuest *shared.APICoreDtoAccountingGuest
 	Body                      []byte

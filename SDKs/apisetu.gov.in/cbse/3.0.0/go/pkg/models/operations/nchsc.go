@@ -10,8 +10,8 @@ import (
 )
 
 type NchscSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type NchscRequestBodyCertificateParameters struct {
@@ -52,12 +52,6 @@ type NchscRequestBody struct {
 	Format NchscRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type NchscRequest struct {
-	// Request format
-	Request  *NchscRequestBody `request:"mediaType=application/json"`
-	Security NchscSecurity
 }
 
 type Nchsc504ApplicationJSONErrorEnum string

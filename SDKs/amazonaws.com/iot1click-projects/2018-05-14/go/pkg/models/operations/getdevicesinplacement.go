@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetDevicesInPlacementPathParams struct {
-	// The name of the placement to get the devices from.
-	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
-	// The name of the project containing the placement.
-	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
-}
-
-type GetDevicesInPlacementHeaders struct {
+type GetDevicesInPlacementRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type GetDevicesInPlacementHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDevicesInPlacementRequest struct {
-	PathParams GetDevicesInPlacementPathParams
-	Headers    GetDevicesInPlacementHeaders
+	// The name of the placement to get the devices from.
+	PlacementName string `pathParam:"style=simple,explode=false,name=placementName"`
+	// The name of the project containing the placement.
+	ProjectName string `pathParam:"style=simple,explode=false,name=projectName"`
 }
 
 type GetDevicesInPlacementResponse struct {

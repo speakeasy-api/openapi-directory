@@ -8,20 +8,15 @@ import (
 )
 
 type PutSettingsOrganizationsOrganizationNameSendersSenderNameSecurity struct {
-	OAuth2 shared.SchemeOAuth2 `security:"scheme,type=oauth2"`
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PutSettingsOrganizationsOrganizationNameSendersSenderNamePathParams struct {
+type PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest struct {
+	SenderInput *shared.SenderInput `request:"mediaType=application/json"`
 	// Fetch senders with this organization name
 	OrganizationName string `pathParam:"style=simple,explode=false,name=organizationName"`
 	// The name of a sender to the data hub
 	SenderName string `pathParam:"style=simple,explode=false,name=senderName"`
-}
-
-type PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest struct {
-	PathParams PutSettingsOrganizationsOrganizationNameSendersSenderNamePathParams
-	Request    *shared.SenderInput `request:"mediaType=application/json"`
-	Security   PutSettingsOrganizationsOrganizationNameSendersSenderNameSecurity
 }
 
 type PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse struct {

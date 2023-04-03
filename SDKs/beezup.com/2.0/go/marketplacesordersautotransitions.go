@@ -33,7 +33,7 @@ func newMarketplacesOrdersAutoTransitions(defaultClient, securityClient HTTPClie
 }
 
 // ConfigureAutomaticTransitions - Configure new or existing automatic Order status transition
-func (s *marketplacesOrdersAutoTransitions) ConfigureAutomaticTransitions(ctx context.Context, request operations.ConfigureAutomaticTransitionsRequest) (*operations.ConfigureAutomaticTransitionsResponse, error) {
+func (s *marketplacesOrdersAutoTransitions) ConfigureAutomaticTransitions(ctx context.Context, request shared.ConfigureAutomaticTransitionRequest) (*operations.ConfigureAutomaticTransitionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/automaticTransitions"
 
@@ -99,9 +99,9 @@ func (s *marketplacesOrdersAutoTransitions) GetAutomaticTransitions(ctx context.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

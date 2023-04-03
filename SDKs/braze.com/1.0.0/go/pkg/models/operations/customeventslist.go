@@ -6,15 +6,11 @@ import (
 	"net/http"
 )
 
-type CustomEventsListQueryParams struct {
+type CustomEventsListRequest struct {
 	// (Optional) Integer
 	//
 	// The page of event names to return, defaults to 0 (returns the first set of up to 250)
 	Page *string `queryParam:"style=form,explode=true,name=page"`
-}
-
-type CustomEventsListRequest struct {
-	QueryParams CustomEventsListQueryParams
 }
 
 type CustomEventsListResponse struct {

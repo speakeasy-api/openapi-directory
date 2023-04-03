@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListLogSubscriptionsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListLogSubscriptionsXAmzTargetEnum
 type ListLogSubscriptionsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListLogSubscriptionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListLogSubscriptionsHeaders struct {
+type ListLogSubscriptionsRequest struct {
+	// Pagination limit
+	Limit                       *string                            `queryParam:"style=form,explode=true,name=Limit"`
+	ListLogSubscriptionsRequest shared.ListLogSubscriptionsRequest `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                            `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListLogSubscriptionsHeaders struct {
 	XAmzSignature     *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListLogSubscriptionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListLogSubscriptionsRequest struct {
-	QueryParams ListLogSubscriptionsQueryParams
-	Headers     ListLogSubscriptionsHeaders
-	Request     shared.ListLogSubscriptionsRequest `request:"mediaType=application/json"`
 }
 
 type ListLogSubscriptionsResponse struct {

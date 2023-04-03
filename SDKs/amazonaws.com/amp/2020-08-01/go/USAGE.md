@@ -13,29 +13,23 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.CreateAlertManagerDefinitionRequest{
-        PathParams: operations.CreateAlertManagerDefinitionPathParams{
-            WorkspaceID: "corrupti",
+        RequestBody: operations.CreateAlertManagerDefinitionRequestBody{
+            ClientToken: "corrupti",
+            Data: "provident",
         },
-        Headers: operations.CreateAlertManagerDefinitionHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.CreateAlertManagerDefinitionRequestBody{
-            ClientToken: "vel",
-            Data: "error",
-        },
+        XAmzAlgorithm: "distinctio",
+        XAmzContentSha256: "quibusdam",
+        XAmzCredential: "unde",
+        XAmzDate: "nulla",
+        XAmzSecurityToken: "corrupti",
+        XAmzSignature: "illum",
+        XAmzSignedHeaders: "vel",
+        WorkspaceID: "error",
     }
 
     ctx := context.Background()

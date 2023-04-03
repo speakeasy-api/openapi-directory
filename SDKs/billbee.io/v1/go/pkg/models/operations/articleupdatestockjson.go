@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ArticleUpdateStockJSONRequest struct {
-	Request shared.BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel `request:"mediaType=application/json"`
-}
-
 type ArticleUpdateStockJSONResponse struct {
 	Body        []byte
 	ContentType string

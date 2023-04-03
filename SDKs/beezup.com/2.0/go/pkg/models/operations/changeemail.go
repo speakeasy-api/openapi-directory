@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ChangeEmailRequest struct {
-	Request shared.ChangeEmailRequest `request:"mediaType=application/json"`
-}
-
 type ChangeEmailResponse struct {
 	// New email does not respect the emails's constraints
 	BeezUPCommonErrorResponseMessage *shared.BeezUPCommonErrorResponseMessage

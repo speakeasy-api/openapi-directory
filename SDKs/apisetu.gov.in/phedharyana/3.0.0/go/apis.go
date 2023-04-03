@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Etcer - Enlistment Certificate
 // API to verify Enlistment Certificate.
-func (s *apIs) Etcer(ctx context.Context, request operations.EtcerRequest) (*operations.EtcerResponse, error) {
+func (s *apIs) Etcer(ctx context.Context, request operations.EtcerRequestBody, security operations.EtcerSecurity) (*operations.EtcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/etcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Etcer(ctx context.Context, request operations.EtcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -146,7 +146,7 @@ func (s *apIs) Etcer(ctx context.Context, request operations.EtcerRequest) (*ope
 
 // Govid - ID Card
 // API to verify ID Card.
-func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*operations.GovidResponse, error) {
+func (s *apIs) Govid(ctx context.Context, request operations.GovidRequestBody, security operations.GovidSecurity) (*operations.GovidResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/govid/certificate"
 
@@ -162,7 +162,7 @@ func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +259,7 @@ func (s *apIs) Govid(ctx context.Context, request operations.GovidRequest) (*ope
 
 // Sicer - Sanction Letter/ Certificate
 // API to verify Sanction Letter/ Certificate.
-func (s *apIs) Sicer(ctx context.Context, request operations.SicerRequest) (*operations.SicerResponse, error) {
+func (s *apIs) Sicer(ctx context.Context, request operations.SicerRequestBody, security operations.SicerSecurity) (*operations.SicerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sicer/certificate"
 
@@ -275,7 +275,7 @@ func (s *apIs) Sicer(ctx context.Context, request operations.SicerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

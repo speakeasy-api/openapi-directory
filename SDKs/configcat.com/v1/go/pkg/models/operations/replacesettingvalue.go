@@ -7,22 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ReplaceSettingValuePathParams struct {
+type ReplaceSettingValueRequest struct {
+	UpdateSettingValueModel shared.UpdateSettingValueModel `request:"mediaType=application/json"`
 	// The identifier of the Environment.
 	EnvironmentID string `pathParam:"style=simple,explode=false,name=environmentId"`
-	// The id of the Setting.
-	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
-}
-
-type ReplaceSettingValueQueryParams struct {
 	// The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
 	Reason *string `queryParam:"style=form,explode=true,name=reason"`
-}
-
-type ReplaceSettingValueRequest struct {
-	PathParams  ReplaceSettingValuePathParams
-	QueryParams ReplaceSettingValueQueryParams
-	Request     shared.UpdateSettingValueModel `request:"mediaType=application/json"`
+	// The id of the Setting.
+	SettingID int `pathParam:"style=simple,explode=false,name=settingId"`
 }
 
 type ReplaceSettingValueResponse struct {

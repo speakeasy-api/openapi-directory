@@ -50,7 +50,7 @@ func (e *GETCopyImageVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETCopyImageQueryParams struct {
+type GETCopyImageRequest struct {
 	Action GETCopyImageActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a> in the <i>Amazon EC2 API Reference</i>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
@@ -71,23 +71,15 @@ type GETCopyImageQueryParams struct {
 	// The ID of the AMI to copy.
 	SourceImageID string `queryParam:"style=form,explode=true,name=SourceImageId"`
 	// The name of the Region that contains the AMI to copy.
-	SourceRegion string                  `queryParam:"style=form,explode=true,name=SourceRegion"`
-	Version      GETCopyImageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETCopyImageHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETCopyImageRequest struct {
-	QueryParams GETCopyImageQueryParams
-	Headers     GETCopyImageHeaders
+	SourceRegion      string                  `queryParam:"style=form,explode=true,name=SourceRegion"`
+	Version           GETCopyImageVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                 `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                 `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                 `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                 `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                 `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                 `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                 `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETCopyImageResponse struct {

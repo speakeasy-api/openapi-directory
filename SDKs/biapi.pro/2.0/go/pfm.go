@@ -71,14 +71,14 @@ func (s *pfm) DeleteAuthToken(ctx context.Context) (*operations.DeleteAuthTokenR
 // GetUsersIDUser - Get a user
 func (s *pfm) GetUsersIDUser(ctx context.Context, request operations.GetUsersIDUserRequest) (*operations.GetUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -119,7 +119,7 @@ func (s *pfm) GetUsersIDUser(ctx context.Context, request operations.GetUsersIDU
 // GetUsersIDUserForecast - Get forecast
 func (s *pfm) GetUsersIDUserForecast(ctx context.Context, request operations.GetUsersIDUserForecastRequest) (*operations.GetUsersIDUserForecastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/forecast", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/forecast", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,14 +154,14 @@ func (s *pfm) GetUsersIDUserForecast(ctx context.Context, request operations.Get
 // GetUsersIDUserProfiles - Get profiles
 func (s *pfm) GetUsersIDUserProfiles(ctx context.Context, request operations.GetUsersIDUserProfilesRequest) (*operations.GetUsersIDUserProfilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -202,14 +202,14 @@ func (s *pfm) GetUsersIDUserProfiles(ctx context.Context, request operations.Get
 // GetUsersIDUserProfilesMain - Get the main profile
 func (s *pfm) GetUsersIDUserProfilesMain(ctx context.Context, request operations.GetUsersIDUserProfilesMainRequest) (*operations.GetUsersIDUserProfilesMainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/main", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/main", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -250,14 +250,14 @@ func (s *pfm) GetUsersIDUserProfilesMain(ctx context.Context, request operations
 // GetUsersIDUserProfilesIDProfile - Get a profile
 func (s *pfm) GetUsersIDUserProfilesIDProfile(ctx context.Context, request operations.GetUsersIDUserProfilesIDProfileRequest) (*operations.GetUsersIDUserProfilesIDProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/{id_profile}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/profiles/{id_profile}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -297,7 +297,7 @@ func (s *pfm) GetUsersIDUserProfilesIDProfile(ctx context.Context, request opera
 
 // PostAuthToken - Login to API with credentials
 // Request a new user token by giving an username and a password. Or a manage payment token by giving a client<br><br><br><br>
-func (s *pfm) PostAuthToken(ctx context.Context, request operations.PostAuthTokenRequest) (*operations.PostAuthTokenResponse, error) {
+func (s *pfm) PostAuthToken(ctx context.Context, request operations.PostAuthTokenRequestBody) (*operations.PostAuthTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/token"
 

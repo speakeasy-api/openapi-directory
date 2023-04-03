@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListFlywheelIterationHistoryQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListFlywheelIterationHistoryXAmzTargetEnum
 type ListFlywheelIterationHistoryXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListFlywheelIterationHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-type ListFlywheelIterationHistoryHeaders struct {
+type ListFlywheelIterationHistoryRequest struct {
+	ListFlywheelIterationHistoryRequest shared.ListFlywheelIterationHistoryRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                    `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListFlywheelIterationHistoryHeaders struct {
 	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListFlywheelIterationHistoryXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListFlywheelIterationHistoryRequest struct {
-	QueryParams ListFlywheelIterationHistoryQueryParams
-	Headers     ListFlywheelIterationHistoryHeaders
-	Request     shared.ListFlywheelIterationHistoryRequest `request:"mediaType=application/json"`
 }
 
 type ListFlywheelIterationHistoryResponse struct {

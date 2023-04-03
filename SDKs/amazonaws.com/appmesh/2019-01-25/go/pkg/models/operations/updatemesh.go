@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateMeshPathParams struct {
-	// The name of the service mesh to update.
-	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
-}
-
-type UpdateMeshHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateMeshRequestBodySpec - An object that represents the specification of a service mesh.
 type UpdateMeshRequestBodySpec struct {
 	EgressFilter *shared.EgressFilter `json:"egressFilter,omitempty"`
@@ -37,9 +22,16 @@ type UpdateMeshRequestBody struct {
 }
 
 type UpdateMeshRequest struct {
-	PathParams UpdateMeshPathParams
-	Headers    UpdateMeshHeaders
-	Request    UpdateMeshRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateMeshRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string               `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string               `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string               `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string               `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string               `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string               `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The name of the service mesh to update.
+	MeshName string `pathParam:"style=simple,explode=false,name=meshName"`
 }
 
 type UpdateMeshResponse struct {

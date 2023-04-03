@@ -34,7 +34,7 @@ func newLogs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GetLogs - Get logs
-func (s *logs) GetLogs(ctx context.Context, request operations.GetLogsRequest) (*operations.GetLogsResponse, error) {
+func (s *logs) GetLogs(ctx context.Context, request shared.LogsRequestBody) (*operations.GetLogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/logs/get"
 

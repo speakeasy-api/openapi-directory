@@ -30,7 +30,8 @@ func (e *GetDatabaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetDatabaseHeaders struct {
+type GetDatabaseRequest struct {
+	GetDatabaseInput  shared.GetDatabaseInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetDatabaseHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetDatabaseXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetDatabaseRequest struct {
-	Headers GetDatabaseHeaders
-	Request shared.GetDatabaseInput `request:"mediaType=application/json"`
 }
 
 type GetDatabaseResponse struct {

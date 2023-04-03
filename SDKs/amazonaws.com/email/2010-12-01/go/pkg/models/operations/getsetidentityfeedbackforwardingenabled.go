@@ -50,28 +50,20 @@ func (e *GETSetIdentityFeedbackForwardingEnabledVersionEnum) UnmarshalJSON(data 
 	}
 }
 
-type GETSetIdentityFeedbackForwardingEnabledQueryParams struct {
+type GETSetIdentityFeedbackForwardingEnabledRequest struct {
 	Action GETSetIdentityFeedbackForwardingEnabledActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// Sets whether Amazon SES will forward bounce and complaint notifications as email. <code>true</code> specifies that Amazon SES will forward bounce and complaint notifications as email, in addition to any Amazon SNS topic publishing otherwise specified. <code>false</code> specifies that Amazon SES will publish bounce and complaint notifications only through Amazon SNS. This value can only be set to <code>false</code> when Amazon SNS topics are set for both <code>Bounce</code> and <code>Complaint</code> notification types.
 	ForwardingEnabled bool `queryParam:"style=form,explode=true,name=ForwardingEnabled"`
 	// The identity for which to set bounce and complaint notification forwarding. Examples: <code>user@example.com</code>, <code>example.com</code>.
-	Identity string                                             `queryParam:"style=form,explode=true,name=Identity"`
-	Version  GETSetIdentityFeedbackForwardingEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETSetIdentityFeedbackForwardingEnabledHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETSetIdentityFeedbackForwardingEnabledRequest struct {
-	QueryParams GETSetIdentityFeedbackForwardingEnabledQueryParams
-	Headers     GETSetIdentityFeedbackForwardingEnabledHeaders
+	Identity          string                                             `queryParam:"style=form,explode=true,name=Identity"`
+	Version           GETSetIdentityFeedbackForwardingEnabledVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETSetIdentityFeedbackForwardingEnabledResponse struct {

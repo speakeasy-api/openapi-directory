@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ImportationGetReportingsPathParams struct {
+type ImportationGetReportingsRequest struct {
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type ImportationGetReportingsRequest struct {
-	PathParams ImportationGetReportingsPathParams
 }
 
 type ImportationGetReportingsResponse struct {

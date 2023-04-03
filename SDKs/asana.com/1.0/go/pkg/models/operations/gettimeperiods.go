@@ -8,7 +8,7 @@ import (
 	"openapi/pkg/types"
 )
 
-type GetTimePeriodsQueryParams struct {
+type GetTimePeriodsRequest struct {
 	// ISO 8601 date string
 	EndOn *types.Date `queryParam:"style=form,explode=true,name=end_on"`
 	// Results per page.
@@ -29,10 +29,6 @@ type GetTimePeriodsQueryParams struct {
 	StartOn *types.Date `queryParam:"style=form,explode=true,name=start_on"`
 	// Globally unique identifier for the workspace.
 	Workspace string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
-type GetTimePeriodsRequest struct {
-	QueryParams GetTimePeriodsQueryParams
 }
 
 // GetTimePeriods200ApplicationJSON - Successfully retrieved the requested time periods.

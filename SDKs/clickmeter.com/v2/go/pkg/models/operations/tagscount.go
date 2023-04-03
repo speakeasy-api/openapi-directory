@@ -38,7 +38,7 @@ func (e *TagsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type TagsCountQueryParams struct {
+type TagsCountRequest struct {
 	// Comma separated list of datapoints id to filter by
 	Datapoints *string `queryParam:"style=form,explode=true,name=datapoints"`
 	// Comma separated list of groups id to filter by
@@ -47,10 +47,6 @@ type TagsCountQueryParams struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// Type of entity related to the tag
 	Type *TagsCountTypeEnum `queryParam:"style=form,explode=true,name=type"`
-}
-
-type TagsCountRequest struct {
-	QueryParams TagsCountQueryParams
 }
 
 type TagsCountResponse struct {

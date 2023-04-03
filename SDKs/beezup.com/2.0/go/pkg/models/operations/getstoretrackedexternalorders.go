@@ -7,19 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetStoreTrackedExternalOrdersPathParams struct {
-	// Your store identifier
-	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type GetStoreTrackedExternalOrdersQueryParams struct {
+type GetStoreTrackedExternalOrdersRequest struct {
 	// The amount of external orders to retrieve
 	Count *int64 `queryParam:"style=form,explode=true,name=count"`
-}
-
-type GetStoreTrackedExternalOrdersRequest struct {
-	PathParams  GetStoreTrackedExternalOrdersPathParams
-	QueryParams GetStoreTrackedExternalOrdersQueryParams
+	// Your store identifier
+	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
 }
 
 type GetStoreTrackedExternalOrdersResponse struct {

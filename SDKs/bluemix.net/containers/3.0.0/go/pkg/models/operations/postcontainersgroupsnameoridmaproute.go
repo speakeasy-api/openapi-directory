@@ -7,23 +7,15 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type PostContainersGroupsNameOrIDMaproutePathParams struct {
-	// The name or unique ID of the container group to which you want to map a public route. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
-	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
-}
-
-type PostContainersGroupsNameOrIDMaprouteHeaders struct {
+type PostContainersGroupsNameOrIDMaprouteRequest struct {
+	// The public route that is mapped to the container group. A public route consists of the host name and domain.
+	Route shared.Route `request:"mediaType=application/json"`
 	// The unique ID of your organization space where you want to create or work with your containers. Run `cf space <space_name> --guid`, where `<space_name>` is the name of your space, to retrieve your space ID.
 	XAuthProjectID string `header:"style=simple,explode=false,name=X-Auth-Project-Id"`
 	// The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
 	XAuthToken string `header:"style=simple,explode=false,name=X-Auth-Token"`
-}
-
-type PostContainersGroupsNameOrIDMaprouteRequest struct {
-	PathParams PostContainersGroupsNameOrIDMaproutePathParams
-	Headers    PostContainersGroupsNameOrIDMaprouteHeaders
-	// The public route that is mapped to the container group. A public route consists of the host name and domain.
-	Request shared.Route `request:"mediaType=application/json"`
+	// The name or unique ID of the container group to which you want to map a public route. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
+	NameOrID string `pathParam:"style=simple,explode=false,name=name_or_id"`
 }
 
 type PostContainersGroupsNameOrIDMaprouteResponse struct {

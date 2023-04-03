@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CancelFileUploadViaSharePathParams struct {
+type CancelFileUploadViaShareRequest struct {
 	// Access key
 	AccessKey string `pathParam:"style=simple,explode=false,name=access_key"`
 	// Upload channel ID
 	UploadID string `pathParam:"style=simple,explode=false,name=upload_id"`
-}
-
-type CancelFileUploadViaShareRequest struct {
-	PathParams CancelFileUploadViaSharePathParams
 }
 
 type CancelFileUploadViaShareResponse struct {

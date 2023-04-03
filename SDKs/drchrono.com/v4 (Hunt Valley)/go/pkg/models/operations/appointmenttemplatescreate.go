@@ -8,18 +8,13 @@ import (
 )
 
 type AppointmentTemplatesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type AppointmentTemplatesCreateQueryParams struct {
-	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
-	Office  *int64 `queryParam:"style=form,explode=true,name=office"`
-	Profile *int64 `queryParam:"style=form,explode=true,name=profile"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type AppointmentTemplatesCreateRequest struct {
-	QueryParams AppointmentTemplatesCreateQueryParams
-	Security    AppointmentTemplatesCreateSecurity
+	Doctor  *int64 `queryParam:"style=form,explode=true,name=doctor"`
+	Office  *int64 `queryParam:"style=form,explode=true,name=office"`
+	Profile *int64 `queryParam:"style=form,explode=true,name=profile"`
 }
 
 type AppointmentTemplatesCreateResponse struct {

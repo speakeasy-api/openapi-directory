@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SalesEntriesProcessBatchRequest struct {
-	// Batch of Sales Entries to process.
-	Request []shared.BatchItemSalesEntryDto `request:"mediaType=application/json"`
-}
 
 type SalesEntriesProcessBatchResponse struct {
 	ContentType string

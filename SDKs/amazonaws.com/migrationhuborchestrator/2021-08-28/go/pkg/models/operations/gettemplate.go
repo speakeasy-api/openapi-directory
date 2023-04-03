@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetTemplatePathParams struct {
-	// The ID of the template.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetTemplateHeaders struct {
+type GetTemplateRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetTemplateHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetTemplateRequest struct {
-	PathParams GetTemplatePathParams
-	Headers    GetTemplateHeaders
+	// The ID of the template.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type GetTemplateResponse struct {

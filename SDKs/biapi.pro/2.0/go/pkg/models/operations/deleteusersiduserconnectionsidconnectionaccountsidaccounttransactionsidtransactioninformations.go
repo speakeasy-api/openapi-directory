@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsPathParams struct {
-	IDAccount     int64 `pathParam:"style=simple,explode=false,name=id_account"`
-	IDConnection  int64 `pathParam:"style=simple,explode=false,name=id_connection"`
-	IDTransaction int64 `pathParam:"style=simple,explode=false,name=id_transaction"`
+type DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest struct {
+	Expand        *string `queryParam:"style=form,explode=true,name=expand"`
+	IDAccount     int64   `pathParam:"style=simple,explode=false,name=id_account"`
+	IDConnection  int64   `pathParam:"style=simple,explode=false,name=id_connection"`
+	IDTransaction int64   `pathParam:"style=simple,explode=false,name=id_transaction"`
 	// Hint: you can use 'me' or 'all'
 	IDUser string `pathParam:"style=simple,explode=false,name=id_user"`
-}
-
-type DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
-type DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsRequest struct {
-	PathParams  DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsPathParams
-	QueryParams DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsQueryParams
 }
 
 type DeleteUsersIDUserConnectionsIDConnectionAccountsIDAccountTransactionsIDTransactionInformationsResponse struct {

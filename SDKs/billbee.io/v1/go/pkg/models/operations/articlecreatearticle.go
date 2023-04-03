@@ -4,12 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type ArticleCreateArticleRequest struct {
-	Request shared.BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput `request:"mediaType=application/json"`
-}
 
 type ArticleCreateArticleResponse struct {
 	// OK

@@ -7,36 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateProvisioningTemplateVersionPathParams struct {
-	// The name of the provisioning template.
-	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
-}
-
-type CreateProvisioningTemplateVersionQueryParams struct {
-	// Sets a fleet provision template version as the default version.
-	SetAsDefault *bool `queryParam:"style=form,explode=true,name=setAsDefault"`
-}
-
-type CreateProvisioningTemplateVersionHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type CreateProvisioningTemplateVersionRequestBody struct {
 	// The JSON formatted contents of the provisioning template.
 	TemplateBody string `json:"templateBody"`
 }
 
 type CreateProvisioningTemplateVersionRequest struct {
-	PathParams  CreateProvisioningTemplateVersionPathParams
-	QueryParams CreateProvisioningTemplateVersionQueryParams
-	Headers     CreateProvisioningTemplateVersionHeaders
-	Request     CreateProvisioningTemplateVersionRequestBody `request:"mediaType=application/json"`
+	RequestBody       CreateProvisioningTemplateVersionRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// Sets a fleet provision template version as the default version.
+	SetAsDefault *bool `queryParam:"style=form,explode=true,name=setAsDefault"`
+	// The name of the provisioning template.
+	TemplateName string `pathParam:"style=simple,explode=false,name=templateName"`
 }
 
 type CreateProvisioningTemplateVersionResponse struct {

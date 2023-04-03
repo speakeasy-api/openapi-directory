@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TagsDeleteRelatedGroupsPathParams struct {
+type TagsDeleteRelatedGroupsRequest struct {
 	// Id of the tag
 	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type TagsDeleteRelatedGroupsRequest struct {
-	PathParams TagsDeleteRelatedGroupsPathParams
 }
 
 type TagsDeleteRelatedGroupsResponse struct {

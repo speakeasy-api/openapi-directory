@@ -8,21 +8,6 @@ import (
 	"net/http"
 )
 
-type PutVerificationStateOnViolationPathParams struct {
-	// The violation ID.
-	ViolationID string `pathParam:"style=simple,explode=false,name=violationId"`
-}
-
-type PutVerificationStateOnViolationHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // PutVerificationStateOnViolationRequestBodyVerificationStateEnum - The verification state of the violation.
 type PutVerificationStateOnViolationRequestBodyVerificationStateEnum string
 
@@ -61,9 +46,16 @@ type PutVerificationStateOnViolationRequestBody struct {
 }
 
 type PutVerificationStateOnViolationRequest struct {
-	PathParams PutVerificationStateOnViolationPathParams
-	Headers    PutVerificationStateOnViolationHeaders
-	Request    PutVerificationStateOnViolationRequestBody `request:"mediaType=application/json"`
+	RequestBody       PutVerificationStateOnViolationRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                    `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                    `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                    `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                    `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                    `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                    `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The violation ID.
+	ViolationID string `pathParam:"style=simple,explode=false,name=violationId"`
 }
 
 type PutVerificationStateOnViolationResponse struct {

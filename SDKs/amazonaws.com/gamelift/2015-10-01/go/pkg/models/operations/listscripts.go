@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListScriptsQueryParams struct {
-	// Pagination limit
-	Limit *string `queryParam:"style=form,explode=true,name=Limit"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListScriptsXAmzTargetEnum
 type ListScriptsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListScriptsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListScriptsHeaders struct {
+type ListScriptsRequest struct {
+	// Pagination limit
+	Limit            *string                 `queryParam:"style=form,explode=true,name=Limit"`
+	ListScriptsInput shared.ListScriptsInput `request:"mediaType=application/json"`
+	// Pagination token
+	NextToken         *string                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListScriptsHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListScriptsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListScriptsRequest struct {
-	QueryParams ListScriptsQueryParams
-	Headers     ListScriptsHeaders
-	Request     shared.ListScriptsInput `request:"mediaType=application/json"`
 }
 
 type ListScriptsResponse struct {

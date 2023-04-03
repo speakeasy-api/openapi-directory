@@ -38,20 +38,20 @@ func newTerminalOrdersCompanyLevel(defaultClient, securityClient HTTPClient, ser
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDBillingEntities(ctx context.Context, request operations.GetCompaniesCompanyIDBillingEntitiesRequest) (*operations.GetCompaniesCompanyIDBillingEntitiesResponse, error) {
+func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDBillingEntities(ctx context.Context, request operations.GetCompaniesCompanyIDBillingEntitiesRequest, security operations.GetCompaniesCompanyIDBillingEntitiesSecurity) (*operations.GetCompaniesCompanyIDBillingEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/billingEntities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/billingEntities", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,20 +110,20 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDBillingEntities(ctx co
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDShippingLocations(ctx context.Context, request operations.GetCompaniesCompanyIDShippingLocationsRequest) (*operations.GetCompaniesCompanyIDShippingLocationsResponse, error) {
+func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDShippingLocations(ctx context.Context, request operations.GetCompaniesCompanyIDShippingLocationsRequest, security operations.GetCompaniesCompanyIDShippingLocationsSecurity) (*operations.GetCompaniesCompanyIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -182,16 +182,16 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDShippingLocations(ctx 
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalModels(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalModelsRequest) (*operations.GetCompaniesCompanyIDTerminalModelsResponse, error) {
+func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalModels(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalModelsRequest, security operations.GetCompaniesCompanyIDTerminalModelsSecurity) (*operations.GetCompaniesCompanyIDTerminalModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalModels", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalModels", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -250,20 +250,20 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalModels(ctx con
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrders(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalOrdersRequest) (*operations.GetCompaniesCompanyIDTerminalOrdersResponse, error) {
+func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrders(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalOrdersRequest, security operations.GetCompaniesCompanyIDTerminalOrdersSecurity) (*operations.GetCompaniesCompanyIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -321,16 +321,16 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrders(ctx con
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrdersOrderID(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalOrdersOrderIDRequest) (*operations.GetCompaniesCompanyIDTerminalOrdersOrderIDResponse, error) {
+func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrdersOrderID(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalOrdersOrderIDRequest, security operations.GetCompaniesCompanyIDTerminalOrdersOrderIDSecurity) (*operations.GetCompaniesCompanyIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -388,20 +388,20 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrdersOrderID(
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalProducts(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalProductsRequest) (*operations.GetCompaniesCompanyIDTerminalProductsResponse, error) {
+func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalProducts(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalProductsRequest, security operations.GetCompaniesCompanyIDTerminalProductsSecurity) (*operations.GetCompaniesCompanyIDTerminalProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalProducts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalProducts", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -464,11 +464,11 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalProducts(ctx c
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) PatchCompaniesCompanyIDTerminalOrdersOrderID(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDRequest) (*operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDResponse, error) {
+func (s *terminalOrdersCompanyLevel) PatchCompaniesCompanyIDTerminalOrdersOrderID(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDRequest, security operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDSecurity) (*operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -480,7 +480,7 @@ func (s *terminalOrdersCompanyLevel) PatchCompaniesCompanyIDTerminalOrdersOrderI
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -537,11 +537,11 @@ func (s *terminalOrdersCompanyLevel) PatchCompaniesCompanyIDTerminalOrdersOrderI
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDShippingLocations(ctx context.Context, request operations.PostCompaniesCompanyIDShippingLocationsRequest) (*operations.PostCompaniesCompanyIDShippingLocationsResponse, error) {
+func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDShippingLocations(ctx context.Context, request operations.PostCompaniesCompanyIDShippingLocationsRequest, security operations.PostCompaniesCompanyIDShippingLocationsSecurity) (*operations.PostCompaniesCompanyIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingLocation", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -553,7 +553,7 @@ func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDShippingLocations(ctx
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -610,11 +610,11 @@ func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDShippingLocations(ctx
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrders(ctx context.Context, request operations.PostCompaniesCompanyIDTerminalOrdersRequest) (*operations.PostCompaniesCompanyIDTerminalOrdersResponse, error) {
+func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrders(ctx context.Context, request operations.PostCompaniesCompanyIDTerminalOrdersRequest, security operations.PostCompaniesCompanyIDTerminalOrdersSecurity) (*operations.PostCompaniesCompanyIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -626,7 +626,7 @@ func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrders(ctx co
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -685,16 +685,16 @@ func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrders(ctx co
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal ordering read and write
-func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrdersOrderIDCancel(ctx context.Context, request operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelRequest) (*operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelResponse, error) {
+func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrdersOrderIDCancel(ctx context.Context, request operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelRequest, security operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelSecurity) (*operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}/cancel", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}/cancel", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

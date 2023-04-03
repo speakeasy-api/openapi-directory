@@ -8,32 +8,20 @@ import (
 	"time"
 )
 
-type GetDomainStatisticsReportPathParams struct {
+type GetDomainStatisticsReportRequest struct {
 	// The domain that you want to obtain deliverability metrics for.
 	Domain string `pathParam:"style=simple,explode=false,name=Domain"`
-}
-
-type GetDomainStatisticsReportQueryParams struct {
 	// The last day (in Unix time) that you want to obtain domain deliverability metrics for. The <code>EndDate</code> that you specify has to be less than or equal to 30 days after the <code>StartDate</code>.
 	EndDate time.Time `queryParam:"style=form,explode=true,name=EndDate"`
 	// The first day (in Unix time) that you want to obtain domain deliverability metrics for.
-	StartDate time.Time `queryParam:"style=form,explode=true,name=StartDate"`
-}
-
-type GetDomainStatisticsReportHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetDomainStatisticsReportRequest struct {
-	PathParams  GetDomainStatisticsReportPathParams
-	QueryParams GetDomainStatisticsReportQueryParams
-	Headers     GetDomainStatisticsReportHeaders
+	StartDate         time.Time `queryParam:"style=form,explode=true,name=StartDate"`
+	XAmzAlgorithm     *string   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GetDomainStatisticsReportResponse struct {

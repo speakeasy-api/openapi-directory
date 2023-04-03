@@ -6,17 +6,13 @@ import (
 	"net/http"
 )
 
-type StopPipelinePathParams struct {
+type StopPipelineRequest struct {
 	// The UUID of the pipeline.
 	PipelineUUID string `pathParam:"style=simple,explode=false,name=pipeline_uuid"`
 	// The repository.
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type StopPipelineRequest struct {
-	PathParams StopPipelinePathParams
 }
 
 type StopPipelineResponse struct {

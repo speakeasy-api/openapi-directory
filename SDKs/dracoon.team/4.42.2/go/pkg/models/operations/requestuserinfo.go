@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestUserInfoQueryParams struct {
-	// Get more info for this user
-	//
-	// e.g. list of user groups
-	MoreInfo *bool `queryParam:"style=form,explode=true,name=more_info"`
-}
-
 // RequestUserInfoXSdsDateFormatEnum - Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 type RequestUserInfoXSdsDateFormatEnum string
 
@@ -49,16 +42,15 @@ func (e *RequestUserInfoXSdsDateFormatEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type RequestUserInfoHeaders struct {
+type RequestUserInfoRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
 	// Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) & [leettime.de](http://leettime.de/))
 	XSdsDateFormat *RequestUserInfoXSdsDateFormatEnum `header:"style=simple,explode=false,name=X-Sds-Date-Format"`
-}
-
-type RequestUserInfoRequest struct {
-	QueryParams RequestUserInfoQueryParams
-	Headers     RequestUserInfoHeaders
+	// Get more info for this user
+	//
+	// e.g. list of user groups
+	MoreInfo *bool `queryParam:"style=form,explode=true,name=more_info"`
 }
 
 type RequestUserInfoResponse struct {

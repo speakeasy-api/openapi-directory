@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SetChannelCatalogMarketplaceSettingsPathParams struct {
+type SetChannelCatalogMarketplaceSettingsRequest struct {
 	// Channel Catalog Id to query
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type SetChannelCatalogMarketplaceSettingsRequest struct {
-	PathParams SetChannelCatalogMarketplaceSettingsPathParams
 	// Settings to save
-	Request shared.SetChannelCatalogMarketplaceSettingsRequest `request:"mediaType=application/json"`
+	SetChannelCatalogMarketplaceSettingsRequest shared.SetChannelCatalogMarketplaceSettingsRequest `request:"mediaType=application/json"`
 }
 
 type SetChannelCatalogMarketplaceSettingsResponse struct {

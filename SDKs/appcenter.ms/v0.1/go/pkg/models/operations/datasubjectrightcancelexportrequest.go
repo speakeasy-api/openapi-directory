@@ -6,22 +6,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"openapi/pkg/models/shared"
 	"time"
 )
 
 type DataSubjectRightCancelExportRequestSecurity struct {
-	APIToken shared.SchemeAPIToken `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type DataSubjectRightCancelExportRequestPathParams struct {
-	// Unique request ID (GUID)
-	Token string `pathParam:"style=simple,explode=false,name=token"`
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
 }
 
 type DataSubjectRightCancelExportRequestRequest struct {
-	PathParams DataSubjectRightCancelExportRequestPathParams
-	Security   DataSubjectRightCancelExportRequestSecurity
+	// Unique request ID (GUID)
+	Token string `pathParam:"style=simple,explode=false,name=token"`
 }
 
 type DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum string

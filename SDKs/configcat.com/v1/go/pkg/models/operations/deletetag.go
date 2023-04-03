@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteTagPathParams struct {
+type DeleteTagRequest struct {
 	// The identifier of the Tag.
 	TagID int64 `pathParam:"style=simple,explode=false,name=tagId"`
-}
-
-type DeleteTagRequest struct {
-	PathParams DeleteTagPathParams
 }
 
 type DeleteTagResponse struct {

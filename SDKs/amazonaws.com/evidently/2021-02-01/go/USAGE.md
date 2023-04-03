@@ -13,39 +13,38 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.BatchEvaluateFeatureRequest{
-        PathParams: operations.BatchEvaluateFeaturePathParams{
-            Project: "corrupti",
-        },
-        Headers: operations.BatchEvaluateFeatureHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "distinctio",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "unde",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "corrupti",
-            XAmzSignedHeaders: "illum",
-        },
-        Request: operations.BatchEvaluateFeatureRequestBody{
+        RequestBody: operations.BatchEvaluateFeatureRequestBody{
             Requests: []shared.EvaluationRequest{
                 shared.EvaluationRequest{
-                    EntityID: "error",
-                    EvaluationContext: "deserunt",
-                    Feature: "suscipit",
+                    EntityID: "provident",
+                    EvaluationContext: "distinctio",
+                    Feature: "quibusdam",
                 },
                 shared.EvaluationRequest{
-                    EntityID: "iure",
-                    EvaluationContext: "magnam",
-                    Feature: "debitis",
+                    EntityID: "unde",
+                    EvaluationContext: "nulla",
+                    Feature: "corrupti",
+                },
+                shared.EvaluationRequest{
+                    EntityID: "illum",
+                    EvaluationContext: "vel",
+                    Feature: "error",
                 },
             },
         },
+        XAmzAlgorithm: "deserunt",
+        XAmzContentSha256: "suscipit",
+        XAmzCredential: "iure",
+        XAmzDate: "magnam",
+        XAmzSecurityToken: "debitis",
+        XAmzSignature: "ipsa",
+        XAmzSignedHeaders: "delectus",
+        Project: "tempora",
     }
 
     ctx := context.Background()

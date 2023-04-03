@@ -87,7 +87,7 @@ func (e *GetSearchMotorcycleAutoCompleteSortByEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetSearchMotorcycleAutoCompleteQueryParams struct {
+type GetSearchMotorcycleAutoCompleteRequest struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// To filter listing on their body type
@@ -136,10 +136,6 @@ type GetSearchMotorcycleAutoCompleteQueryParams struct {
 	Year *string `queryParam:"style=form,explode=true,name=year"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
-}
-
-type GetSearchMotorcycleAutoCompleteRequest struct {
-	QueryParams GetSearchMotorcycleAutoCompleteQueryParams
 }
 
 type GetSearchMotorcycleAutoCompleteResponse struct {

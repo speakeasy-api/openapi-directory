@@ -4,11 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PreprocessingBinarizeSecurity struct {
-	Apikey shared.SchemeApikey `security:"scheme,type=apiKey,subtype=header"`
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=Apikey"`
 }
 
 type PreprocessingBinarizeRequestBodyImageFile struct {
@@ -19,11 +18,6 @@ type PreprocessingBinarizeRequestBodyImageFile struct {
 type PreprocessingBinarizeRequestBody struct {
 	// Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
 	ImageFile PreprocessingBinarizeRequestBodyImageFile `multipartForm:"file"`
-}
-
-type PreprocessingBinarizeRequest struct {
-	Request  PreprocessingBinarizeRequestBody `request:"mediaType=multipart/form-data"`
-	Security PreprocessingBinarizeSecurity
 }
 
 type PreprocessingBinarizeResponse struct {

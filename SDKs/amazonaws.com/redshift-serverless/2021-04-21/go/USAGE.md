@@ -13,42 +13,42 @@ import (
 func main() {
     s := sdk.New(
         sdk.WithSecurity(shared.Security{
-            Hmac: shared.SchemeHmac{
-                APIKey: "YOUR_API_KEY_HERE",
-            },
+            Hmac: "YOUR_API_KEY_HERE",
         }),
     )
 
     req := operations.ConvertRecoveryPointToSnapshotRequest{
-        Headers: operations.ConvertRecoveryPointToSnapshotHeaders{
-            XAmzAlgorithm: "corrupti",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "distinctio",
-            XAmzDate: "quibusdam",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "corrupti",
-            XAmzTarget: "RedshiftServerless.ConvertRecoveryPointToSnapshot",
-        },
-        Request: shared.ConvertRecoveryPointToSnapshotRequest{
-            RecoveryPointID: "illum",
-            RetentionPeriod: 423655,
-            SnapshotName: "error",
+        ConvertRecoveryPointToSnapshotRequest: shared.ConvertRecoveryPointToSnapshotRequest{
+            RecoveryPointID: "corrupti",
+            RetentionPeriod: 592845,
+            SnapshotName: "distinctio",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "iure",
+                    Key: "unde",
+                    Value: "nulla",
                 },
                 shared.Tag{
-                    Key: "magnam",
-                    Value: "debitis",
+                    Key: "corrupti",
+                    Value: "illum",
                 },
                 shared.Tag{
-                    Key: "ipsa",
-                    Value: "delectus",
+                    Key: "vel",
+                    Value: "error",
+                },
+                shared.Tag{
+                    Key: "deserunt",
+                    Value: "suscipit",
                 },
             },
         },
+        XAmzAlgorithm: "iure",
+        XAmzContentSha256: "magnam",
+        XAmzCredential: "debitis",
+        XAmzDate: "ipsa",
+        XAmzSecurityToken: "delectus",
+        XAmzSignature: "tempora",
+        XAmzSignedHeaders: "suscipit",
+        XAmzTarget: "RedshiftServerless.ConvertRecoveryPointToSnapshot",
     }
 
     ctx := context.Background()

@@ -8,21 +8,16 @@ import (
 )
 
 type PatchMerchantsMerchantIDStoresReferenceTerminalSettingsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PatchMerchantsMerchantIDStoresReferenceTerminalSettingsPathParams struct {
+type PatchMerchantsMerchantIDStoresReferenceTerminalSettingsRequest struct {
+	TerminalSettings *shared.TerminalSettings `request:"mediaType=application/json"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// The reference that identifies the store.
 	Reference string `pathParam:"style=simple,explode=false,name=reference"`
-}
-
-type PatchMerchantsMerchantIDStoresReferenceTerminalSettingsRequest struct {
-	PathParams PatchMerchantsMerchantIDStoresReferenceTerminalSettingsPathParams
-	Request    *shared.TerminalSettings `request:"mediaType=application/json"`
-	Security   PatchMerchantsMerchantIDStoresReferenceTerminalSettingsSecurity
 }
 
 type PatchMerchantsMerchantIDStoresReferenceTerminalSettingsResponse struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPublicItemMediaFilesPathParams struct {
-	// The identifier of the item whose video files to load.
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type GetPublicItemMediaFilesQueryParams struct {
+type GetPublicItemMediaFilesRequest struct {
 	// The video delivery type you require.
 	Delivery []shared.MediaFileDeliveryEnum `queryParam:"style=form,explode=false,name=delivery"`
 	// The type of device the content is targeting.
@@ -48,6 +43,8 @@ type GetPublicItemMediaFilesQueryParams struct {
 	// When not provided, Rocket API uses the legacy `User-Agent` header-based logic to find matching media files.
 	//
 	Formats []shared.MediaFileFormatsEnum `queryParam:"style=form,explode=false,name=formats"`
+	// The identifier of the item whose video files to load.
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Language code for the preferred language to be returned in the response.
 	//
 	// Parameter value is case-insensitive and should be
@@ -66,11 +63,6 @@ type GetPublicItemMediaFilesQueryParams struct {
 	Segments []string `queryParam:"style=form,explode=false,name=segments"`
 	// The active subscription code.
 	Sub *string `queryParam:"style=form,explode=true,name=sub"`
-}
-
-type GetPublicItemMediaFilesRequest struct {
-	PathParams  GetPublicItemMediaFilesPathParams
-	QueryParams GetPublicItemMediaFilesQueryParams
 }
 
 type GetPublicItemMediaFilesResponse struct {

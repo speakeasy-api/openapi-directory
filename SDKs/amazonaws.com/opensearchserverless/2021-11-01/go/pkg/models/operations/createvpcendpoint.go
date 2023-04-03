@@ -30,20 +30,16 @@ func (e *CreateVpcEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type CreateVpcEndpointHeaders struct {
-	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        CreateVpcEndpointXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type CreateVpcEndpointRequest struct {
-	Headers CreateVpcEndpointHeaders
-	Request shared.CreateVpcEndpointRequest `request:"mediaType=application/json"`
+	CreateVpcEndpointRequest shared.CreateVpcEndpointRequest `request:"mediaType=application/json"`
+	XAmzAlgorithm            *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256        *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential           *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                 *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken        *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature            *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders        *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget               CreateVpcEndpointXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
 }
 
 type CreateVpcEndpointResponse struct {

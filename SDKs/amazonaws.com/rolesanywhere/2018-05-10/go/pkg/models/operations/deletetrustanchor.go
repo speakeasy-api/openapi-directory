@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DeleteTrustAnchorPathParams struct {
-	// The unique identifier of the trust anchor.
-	TrustAnchorID string `pathParam:"style=simple,explode=false,name=trustAnchorId"`
-}
-
-type DeleteTrustAnchorHeaders struct {
+type DeleteTrustAnchorRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DeleteTrustAnchorHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteTrustAnchorRequest struct {
-	PathParams DeleteTrustAnchorPathParams
-	Headers    DeleteTrustAnchorHeaders
+	// The unique identifier of the trust anchor.
+	TrustAnchorID string `pathParam:"style=simple,explode=false,name=trustAnchorId"`
 }
 
 type DeleteTrustAnchorResponse struct {

@@ -35,7 +35,7 @@ func newBankAccount(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // CreateBankAccount - Create a bank account
 // Create a new bank account. Returns a bank account object if the create is succeded.
-func (s *bankAccount) CreateBankAccount(ctx context.Context, request operations.CreateBankAccountRequest) (*operations.CreateBankAccountResponse, error) {
+func (s *bankAccount) CreateBankAccount(ctx context.Context, request shared.BankAccountInput) (*operations.CreateBankAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bank-accounts"
 
@@ -134,7 +134,7 @@ func (s *bankAccount) CreateBankAccount(ctx context.Context, request operations.
 // Delete an existing bank account.
 func (s *bankAccount) DeleteBankAccount(ctx context.Context, request operations.DeleteBankAccountRequest) (*operations.DeleteBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -202,7 +202,7 @@ func (s *bankAccount) DeleteBankAccount(ctx context.Context, request operations.
 // Retrieves the details of an existing bank account.
 func (s *bankAccount) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,7 +296,7 @@ func (s *bankAccount) ListBankAccount(ctx context.Context, request operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -378,9 +378,9 @@ func (s *bankAccount) ListBankAccount(ctx context.Context, request operations.Li
 // Update an existing bank accounts. Returns a bank account object if the update is succeded.
 func (s *bankAccount) UpdateBankAccount(ctx context.Context, request operations.UpdateBankAccountRequest) (*operations.UpdateBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BankAccountInput", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

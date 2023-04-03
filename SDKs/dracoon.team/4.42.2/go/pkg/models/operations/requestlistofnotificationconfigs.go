@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RequestListOfNotificationConfigsHeaders struct {
+type RequestListOfNotificationConfigsRequest struct {
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type RequestListOfNotificationConfigsRequest struct {
-	Headers RequestListOfNotificationConfigsHeaders
 }
 
 type RequestListOfNotificationConfigsResponse struct {

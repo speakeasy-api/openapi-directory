@@ -8,17 +8,13 @@ import (
 )
 
 type DeleteDoNotContactSecurity struct {
-	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
-}
-
-type DeleteDoNotContactPathParams struct {
-	// Number associated with Do Not Contact (DNC) entry.
-	Number string `pathParam:"style=simple,explode=false,name=number"`
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
 }
 
 type DeleteDoNotContactRequest struct {
-	PathParams DeleteDoNotContactPathParams
-	Security   DeleteDoNotContactSecurity
+	// Number associated with Do Not Contact (DNC) entry.
+	Number string `pathParam:"style=simple,explode=false,name=number"`
 }
 
 type DeleteDoNotContactResponse struct {

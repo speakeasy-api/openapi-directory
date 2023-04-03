@@ -53,7 +53,7 @@ func (e *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspec
 	}
 }
 
-type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringPathParams struct {
+type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringRequest struct {
 	// The identifier of the 'aspect' (content group) to search
 	AspectID GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspectIDEnum `pathParam:"style=simple,explode=false,name=aspectId"`
 	// The document identification code for an index or directory
@@ -62,10 +62,6 @@ type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringPathParam
 	CivixIndexID string `pathParam:"style=simple,explode=false,name=civixIndexId"`
 	// The text to search for within the document
 	SearchString string `pathParam:"style=simple,explode=false,name=searchString"`
-}
-
-type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringRequest struct {
-	PathParams GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringPathParams
 }
 
 type GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringResponse struct {

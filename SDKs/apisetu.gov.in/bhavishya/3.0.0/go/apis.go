@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Pecer - Pension Certificate
 // API to verify Pension Certificate.
-func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequest) (*operations.PecerResponse, error) {
+func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequestBody, security operations.PecerSecurity) (*operations.PecerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/pecer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Pecer(ctx context.Context, request operations.PecerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateBankAccountPathParams struct {
-	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
 type UpdateBankAccountRequest struct {
-	PathParams UpdateBankAccountPathParams
 	// Bank account object that you would like to update.
-	Request shared.BankAccountInput `request:"mediaType=application/json"`
+	BankAccountInput shared.BankAccountInput `request:"mediaType=application/json"`
+	ID               int64                   `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type UpdateBankAccountResponse struct {

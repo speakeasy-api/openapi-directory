@@ -34,7 +34,7 @@ func newStores(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // StoresOne - Get Store
 // Get Store
-func (s *stores) StoresOne(ctx context.Context, request operations.StoresOneRequest) (*operations.StoresOneResponse, error) {
+func (s *stores) StoresOne(ctx context.Context, request operations.StoresOneRequest, security operations.StoresOneSecurity) (*operations.StoresOneResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ecommerce/store"
 
@@ -43,13 +43,13 @@ func (s *stores) StoresOne(ctx context.Context, request operations.StoresOneRequ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

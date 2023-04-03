@@ -34,7 +34,7 @@ func newCustomerShares(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteStoreShare - Delete a share of a store to another user
 func (s *customerShares) DeleteStoreShare(ctx context.Context, request operations.DeleteStoreShareRequest) (*operations.DeleteStoreShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares/{userId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares/{userId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,14 +81,14 @@ func (s *customerShares) DeleteStoreShare(ctx context.Context, request operation
 // GetStoreShares - Get shares related to this store
 func (s *customerShares) GetStoreShares(ctx context.Context, request operations.GetStoreSharesRequest) (*operations.GetStoreSharesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -142,9 +142,9 @@ func (s *customerShares) GetStoreShares(ctx context.Context, request operations.
 // ShareStore - Share a store to another user
 func (s *customerShares) ShareStore(ctx context.Context, request operations.ShareStoreRequest) (*operations.ShareStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

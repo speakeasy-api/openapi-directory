@@ -4,13 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SalesInvoicesPostRequest struct {
-	// Information of Sales Invoice to create.
-	Request shared.SalesInvoiceCreditNoteDto `request:"mediaType=application/json"`
-}
 
 type SalesInvoicesPostResponse struct {
 	ContentType string

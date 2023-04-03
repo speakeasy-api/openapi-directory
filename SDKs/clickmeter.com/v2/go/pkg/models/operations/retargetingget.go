@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetargetingGetQueryParams struct {
+type RetargetingGetRequest struct {
 	// Maximum elements to retrieve. Default to 20 if not specified.
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// Where to start when retrieving elements. Default is 0 if not specified.
 	Offset *int `queryParam:"style=form,explode=true,name=offset"`
-}
-
-type RetargetingGetRequest struct {
-	QueryParams RetargetingGetQueryParams
 }
 
 type RetargetingGetResponse struct {

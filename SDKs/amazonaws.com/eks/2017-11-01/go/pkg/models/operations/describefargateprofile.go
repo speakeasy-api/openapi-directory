@@ -7,14 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFargateProfilePathParams struct {
-	// The name of the Fargate profile to describe.
-	FargateProfileName string `pathParam:"style=simple,explode=false,name=fargateProfileName"`
-	// The name of the Amazon EKS cluster associated with the Fargate profile.
-	Name string `pathParam:"style=simple,explode=false,name=name"`
-}
-
-type DescribeFargateProfileHeaders struct {
+type DescribeFargateProfileRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -22,11 +15,10 @@ type DescribeFargateProfileHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeFargateProfileRequest struct {
-	PathParams DescribeFargateProfilePathParams
-	Headers    DescribeFargateProfileHeaders
+	// The name of the Fargate profile to describe.
+	FargateProfileName string `pathParam:"style=simple,explode=false,name=fargateProfileName"`
+	// The name of the Amazon EKS cluster associated with the Fargate profile.
+	Name string `pathParam:"style=simple,explode=false,name=name"`
 }
 
 type DescribeFargateProfileResponse struct {

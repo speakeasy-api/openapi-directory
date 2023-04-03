@@ -14,19 +14,14 @@ func main() {
     s := sdk.New()
 
     req := operations.GetAPIActivityRequest{
-        Security: operations.GetAPIActivitySecurity{
-            ConnectToken: shared.SchemeConnectToken{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-            },
-        },
-        QueryParams: operations.GetAPIActivityQueryParams{
-            Limit: 10,
-            Offset: 50,
-        },
+        Limit: 10,
+        Offset: 50,
     }
 
     ctx := context.Background()
-    res, err := s.Activity.GetAPIActivity(ctx, req)
+    res, err := s.Activity.GetAPIActivity(ctx, req, operations.GetAPIActivitySecurity{
+        ConnectToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }

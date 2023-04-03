@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams struct {
+type PostConfigAdobeGraniteSamlAuthenticationHandlerRequest struct {
 	AddGroupMemberships                   *bool    `queryParam:"style=form,explode=true,name=addGroupMemberships"`
 	AddGroupMembershipsAtTypeHint         *string  `queryParam:"style=form,explode=true,name=addGroupMemberships@TypeHint"`
 	AssertionConsumerServiceURL           *string  `queryParam:"style=form,explode=true,name=assertionConsumerServiceURL"`
@@ -55,10 +55,6 @@ type PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams struct {
 	UserIDAttributeAtTypeHint             *string  `queryParam:"style=form,explode=true,name=userIDAttribute@TypeHint"`
 	UserIntermediatePath                  *string  `queryParam:"style=form,explode=true,name=userIntermediatePath"`
 	UserIntermediatePathAtTypeHint        *string  `queryParam:"style=form,explode=true,name=userIntermediatePath@TypeHint"`
-}
-
-type PostConfigAdobeGraniteSamlAuthenticationHandlerRequest struct {
-	QueryParams PostConfigAdobeGraniteSamlAuthenticationHandlerQueryParams
 }
 
 type PostConfigAdobeGraniteSamlAuthenticationHandlerResponse struct {

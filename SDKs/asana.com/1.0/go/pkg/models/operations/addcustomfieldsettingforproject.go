@@ -7,27 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type AddCustomFieldSettingForProjectPathParams struct {
-	// Globally unique identifier for the project.
-	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
-}
-
-type AddCustomFieldSettingForProjectQueryParams struct {
-	// Provides “pretty” output.
-	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
-	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
 // AddCustomFieldSettingForProjectRequestBody - Information about the custom field setting.
 type AddCustomFieldSettingForProjectRequestBody struct {
 	Data *shared.AddCustomFieldSettingRequest `json:"data,omitempty"`
 }
 
 type AddCustomFieldSettingForProjectRequest struct {
-	PathParams  AddCustomFieldSettingForProjectPathParams
-	QueryParams AddCustomFieldSettingForProjectQueryParams
 	// Information about the custom field setting.
-	Request AddCustomFieldSettingForProjectRequestBody `request:"mediaType=application/json"`
+	RequestBody AddCustomFieldSettingForProjectRequestBody `request:"mediaType=application/json"`
+	// Provides “pretty” output.
+	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
+	// Globally unique identifier for the project.
+	ProjectGid string `pathParam:"style=simple,explode=false,name=project_gid"`
 }
 
 // AddCustomFieldSettingForProject200ApplicationJSON - Successfully added the custom field to the project.

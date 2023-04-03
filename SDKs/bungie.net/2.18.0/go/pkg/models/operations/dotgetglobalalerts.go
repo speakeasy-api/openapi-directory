@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DotGetGlobalAlertsQueryParams struct {
+type DotGetGlobalAlertsRequest struct {
 	// Determines whether Streaming Alerts are included in results
 	Includestreaming *bool `queryParam:"style=form,explode=true,name=includestreaming"`
-}
-
-type DotGetGlobalAlertsRequest struct {
-	QueryParams DotGetGlobalAlertsQueryParams
 }
 
 // DotGetGlobalAlerts200Wildcard - Look at the Response property for more information about the nature of this response

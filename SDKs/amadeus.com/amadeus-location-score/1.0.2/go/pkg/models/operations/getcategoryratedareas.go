@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetCategoryRatedAreasQueryParams struct {
+type GetCategoryRatedAreasRequest struct {
 	// Latitude in decimal coordinates
 	Latitude float64 `queryParam:"style=form,explode=true,name=latitude"`
 	// Longitude in decimal coordinates
 	Longitude float64 `queryParam:"style=form,explode=true,name=longitude"`
-}
-
-type GetCategoryRatedAreasRequest struct {
-	QueryParams GetCategoryRatedAreasQueryParams
 }
 
 // GetCategoryRatedAreas200ApplicationVndAmadeusPlusJSON - Successful Reply

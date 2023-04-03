@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteEnvironmentPathParams struct {
+type DeleteEnvironmentRequest struct {
 	// The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
-	Name string `pathParam:"style=simple,explode=false,name=Name"`
-}
-
-type DeleteEnvironmentHeaders struct {
+	Name              string  `pathParam:"style=simple,explode=false,name=Name"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteEnvironmentHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteEnvironmentRequest struct {
-	PathParams DeleteEnvironmentPathParams
-	Headers    DeleteEnvironmentHeaders
 }
 
 type DeleteEnvironmentResponse struct {

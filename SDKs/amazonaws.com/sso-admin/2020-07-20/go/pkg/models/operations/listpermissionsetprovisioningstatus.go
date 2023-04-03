@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListPermissionSetProvisioningStatusQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListPermissionSetProvisioningStatusXAmzTargetEnum
 type ListPermissionSetProvisioningStatusXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListPermissionSetProvisioningStatusXAmzTargetEnum) UnmarshalJSON(data [
 	}
 }
 
-type ListPermissionSetProvisioningStatusHeaders struct {
+type ListPermissionSetProvisioningStatusRequest struct {
+	ListPermissionSetProvisioningStatusRequest shared.ListPermissionSetProvisioningStatusRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                                           `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                           `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                           `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                           `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListPermissionSetProvisioningStatusHeaders struct {
 	XAmzSignature     *string                                           `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                           `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListPermissionSetProvisioningStatusXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListPermissionSetProvisioningStatusRequest struct {
-	QueryParams ListPermissionSetProvisioningStatusQueryParams
-	Headers     ListPermissionSetProvisioningStatusHeaders
-	Request     shared.ListPermissionSetProvisioningStatusRequest `request:"mediaType=application/json"`
 }
 
 type ListPermissionSetProvisioningStatusResponse struct {

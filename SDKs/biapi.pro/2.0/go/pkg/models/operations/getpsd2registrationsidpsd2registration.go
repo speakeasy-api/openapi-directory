@@ -7,17 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPsd2RegistrationsIDPsd2RegistrationPathParams struct {
-	IDPsd2Registration int64 `pathParam:"style=simple,explode=false,name=id_psd2-registration"`
-}
-
-type GetPsd2RegistrationsIDPsd2RegistrationQueryParams struct {
-	Expand *string `queryParam:"style=form,explode=true,name=expand"`
-}
-
 type GetPsd2RegistrationsIDPsd2RegistrationRequest struct {
-	PathParams  GetPsd2RegistrationsIDPsd2RegistrationPathParams
-	QueryParams GetPsd2RegistrationsIDPsd2RegistrationQueryParams
+	Expand             *string `queryParam:"style=form,explode=true,name=expand"`
+	IDPsd2Registration int64   `pathParam:"style=simple,explode=false,name=id_psd2-registration"`
 }
 
 type GetPsd2RegistrationsIDPsd2RegistrationResponse struct {

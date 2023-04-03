@@ -8,21 +8,16 @@ import (
 )
 
 type PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsSecurity struct {
-	APIKeyAuth *shared.SchemeAPIKeyAuth `security:"scheme,type=apiKey,subtype=header"`
-	BasicAuth  *shared.SchemeBasicAuth  `security:"scheme,type=http,subtype=basic"`
+	APIKeyAuth *string                 `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	BasicAuth  *shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsPathParams struct {
+type PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsRequest struct {
+	ApplePayInfo *shared.ApplePayInfo `request:"mediaType=application/json"`
 	// The unique identifier of the merchant account.
 	MerchantID string `pathParam:"style=simple,explode=false,name=merchantId"`
 	// The unique identifier of the payment method.
 	PaymentMethodID string `pathParam:"style=simple,explode=false,name=paymentMethodId"`
-}
-
-type PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsRequest struct {
-	PathParams PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsPathParams
-	Request    *shared.ApplePayInfo `request:"mediaType=application/json"`
-	Security   PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsSecurity
 }
 
 type PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsResponse struct {

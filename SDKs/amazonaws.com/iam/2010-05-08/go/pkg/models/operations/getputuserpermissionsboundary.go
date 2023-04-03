@@ -50,28 +50,20 @@ func (e *GETPutUserPermissionsBoundaryVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type GETPutUserPermissionsBoundaryQueryParams struct {
+type GETPutUserPermissionsBoundaryRequest struct {
 	Action GETPutUserPermissionsBoundaryActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The ARN of the managed policy that is used to set the permissions boundary for the user.</p> <p>A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that a resource-based policy can grant to an entity. To learn more, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM entities</a> in the <i>IAM User Guide</i>.</p> <p>For more information about policy types, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy types </a> in the <i>IAM User Guide</i>.</p>
 	PermissionsBoundary string `queryParam:"style=form,explode=true,name=PermissionsBoundary"`
 	// The name (friendly name, not ARN) of the IAM user for which you want to set the permissions boundary.
-	UserName string                                   `queryParam:"style=form,explode=true,name=UserName"`
-	Version  GETPutUserPermissionsBoundaryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETPutUserPermissionsBoundaryHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETPutUserPermissionsBoundaryRequest struct {
-	QueryParams GETPutUserPermissionsBoundaryQueryParams
-	Headers     GETPutUserPermissionsBoundaryHeaders
+	UserName          string                                   `queryParam:"style=form,explode=true,name=UserName"`
+	Version           GETPutUserPermissionsBoundaryVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETPutUserPermissionsBoundaryResponse struct {

@@ -8,12 +8,12 @@ import (
 )
 
 type GetRepositoriesWorkspaceRepoSlugIssuesImportSecurity struct {
-	APIKey *shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	Basic  *shared.SchemeBasic  `security:"scheme,type=http,subtype=basic"`
-	Oauth2 *shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GetRepositoriesWorkspaceRepoSlugIssuesImportPathParams struct {
+type GetRepositoriesWorkspaceRepoSlugIssuesImportRequest struct {
 	// This can either be the repository slug or the UUID of the repository,
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
@@ -22,11 +22,6 @@ type GetRepositoriesWorkspaceRepoSlugIssuesImportPathParams struct {
 	// surrounded by curly-braces, for example: `{workspace UUID}`.
 	//
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetRepositoriesWorkspaceRepoSlugIssuesImportRequest struct {
-	PathParams GetRepositoriesWorkspaceRepoSlugIssuesImportPathParams
-	Security   GetRepositoriesWorkspaceRepoSlugIssuesImportSecurity
 }
 
 type GetRepositoriesWorkspaceRepoSlugIssuesImportResponse struct {

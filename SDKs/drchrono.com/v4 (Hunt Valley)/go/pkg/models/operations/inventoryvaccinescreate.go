@@ -8,19 +8,14 @@ import (
 )
 
 type InventoryVaccinesCreateSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type InventoryVaccinesCreateQueryParams struct {
+type InventoryVaccinesCreateRequest struct {
 	CvxCode *string `queryParam:"style=form,explode=true,name=cvx_code"`
 	Doctor  *int64  `queryParam:"style=form,explode=true,name=doctor"`
 	Since   *string `queryParam:"style=form,explode=true,name=since"`
 	Status  *string `queryParam:"style=form,explode=true,name=status"`
-}
-
-type InventoryVaccinesCreateRequest struct {
-	QueryParams InventoryVaccinesCreateQueryParams
-	Security    InventoryVaccinesCreateSecurity
 }
 
 type InventoryVaccinesCreateResponse struct {

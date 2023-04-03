@@ -6,14 +6,11 @@ import (
 	"net/http"
 )
 
-type ListRealtimeLogConfigs20200531QueryParams struct {
+type ListRealtimeLogConfigs20200531Request struct {
 	// Use this field when paginating results to indicate where to begin in your list of real-time log configurations. The response includes real-time log configurations in the list that occur after the marker. To get the next page of the list, set this field's value to the value of <code>NextMarker</code> from the current page's response.
 	Marker *string `queryParam:"style=form,explode=true,name=Marker"`
 	// The maximum number of real-time log configurations that you want in the response.
-	MaxItems *string `queryParam:"style=form,explode=true,name=MaxItems"`
-}
-
-type ListRealtimeLogConfigs20200531Headers struct {
+	MaxItems          *string `queryParam:"style=form,explode=true,name=MaxItems"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -21,11 +18,6 @@ type ListRealtimeLogConfigs20200531Headers struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListRealtimeLogConfigs20200531Request struct {
-	QueryParams ListRealtimeLogConfigs20200531QueryParams
-	Headers     ListRealtimeLogConfigs20200531Headers
 }
 
 type ListRealtimeLogConfigs20200531Response struct {

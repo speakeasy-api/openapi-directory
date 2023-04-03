@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPipelineVariablesForWorkspacePathParams struct {
+type GetPipelineVariablesForWorkspaceRequest struct {
 	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
-}
-
-type GetPipelineVariablesForWorkspaceRequest struct {
-	PathParams GetPipelineVariablesForWorkspacePathParams
 }
 
 type GetPipelineVariablesForWorkspaceResponse struct {

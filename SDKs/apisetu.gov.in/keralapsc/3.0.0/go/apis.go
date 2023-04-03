@@ -33,7 +33,7 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // Otcer - OTV Certificate
 // API to verify OTV Certificate.
-func (s *apIs) Otcer(ctx context.Context, request operations.OtcerRequest) (*operations.OtcerResponse, error) {
+func (s *apIs) Otcer(ctx context.Context, request operations.OtcerRequestBody, security operations.OtcerSecurity) (*operations.OtcerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/otcer/certificate"
 
@@ -49,7 +49,7 @@ func (s *apIs) Otcer(ctx context.Context, request operations.OtcerRequest) (*ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

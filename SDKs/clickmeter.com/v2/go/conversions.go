@@ -43,7 +43,7 @@ func (s *conversions) ConversionsCount(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -108,7 +108,7 @@ func (s *conversions) ConversionsCount(ctx context.Context, request operations.C
 // ConversionsDelete - Delete conversion specified by id
 func (s *conversions) ConversionsDelete(ctx context.Context, request operations.ConversionsDeleteRequest) (*operations.ConversionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *conversions) ConversionsGet(ctx context.Context, request operations.Con
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -236,14 +236,14 @@ func (s *conversions) ConversionsGet(ctx context.Context, request operations.Con
 // ConversionsGetDatapoints - Retrieve a list of datapoints connected to this conversion
 func (s *conversions) ConversionsGetDatapoints(ctx context.Context, request operations.ConversionsGetDatapointsRequest) (*operations.ConversionsGetDatapointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -294,14 +294,14 @@ func (s *conversions) ConversionsGetDatapoints(ctx context.Context, request oper
 // ConversionsGetDatapointsCount - Retrieve a count of datapoints connected to this conversion
 func (s *conversions) ConversionsGetDatapointsCount(ctx context.Context, request operations.ConversionsGetDatapointsCountRequest) (*operations.ConversionsGetDatapointsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/count", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/count", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -366,14 +366,14 @@ func (s *conversions) ConversionsGetDatapointsCount(ctx context.Context, request
 // ConversionsGetHits - Retrieve the list of events related to this conversion.
 func (s *conversions) ConversionsGetHits(ctx context.Context, request operations.ConversionsGetHitsRequest) (*operations.ConversionsGetHitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/hits", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/hits", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -431,7 +431,7 @@ func (s *conversions) ConversionsGetStatisticsAllList(ctx context.Context, reque
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -482,14 +482,14 @@ func (s *conversions) ConversionsGetStatisticsAllList(ctx context.Context, reque
 // ConversionsGetStatisticsList - Retrieve statistics about this conversion for a timeframe grouped by some temporal entity (day/week/month)
 func (s *conversions) ConversionsGetStatisticsList(ctx context.Context, request operations.ConversionsGetStatisticsListRequest) (*operations.ConversionsGetStatisticsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/aggregated/list", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/aggregated/list", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -540,14 +540,14 @@ func (s *conversions) ConversionsGetStatisticsList(ctx context.Context, request 
 // ConversionsGetStatisticsSingle - Retrieve statistics about this conversion for a timeframe
 func (s *conversions) ConversionsGetStatisticsSingle(ctx context.Context, request operations.ConversionsGetStatisticsSingleRequest) (*operations.ConversionsGetStatisticsSingleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/aggregated", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/aggregated", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -598,9 +598,9 @@ func (s *conversions) ConversionsGetStatisticsSingle(ctx context.Context, reques
 // ConversionsPatchNotesForm - Fast patch the "notes" field of a conversion
 func (s *conversions) ConversionsPatchNotesForm(ctx context.Context, request operations.ConversionsPatchNotesFormRequest) (*operations.ConversionsPatchNotesFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -680,9 +680,9 @@ func (s *conversions) ConversionsPatchNotesForm(ctx context.Context, request ope
 // ConversionsPatchNotesJSON - Fast patch the "notes" field of a conversion
 func (s *conversions) ConversionsPatchNotesJSON(ctx context.Context, request operations.ConversionsPatchNotesJSONRequest) (*operations.ConversionsPatchNotesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -762,9 +762,9 @@ func (s *conversions) ConversionsPatchNotesJSON(ctx context.Context, request ope
 // ConversionsPatchNotesRaw - Fast patch the "notes" field of a conversion
 func (s *conversions) ConversionsPatchNotesRaw(ctx context.Context, request operations.ConversionsPatchNotesRawRequest) (*operations.ConversionsPatchNotesRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/notes", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -844,9 +844,9 @@ func (s *conversions) ConversionsPatchNotesRaw(ctx context.Context, request oper
 // ConversionsPatchForm - Modify the association between a conversion and a datapoint
 func (s *conversions) ConversionsPatchForm(ctx context.Context, request operations.ConversionsPatchFormRequest) (*operations.ConversionsPatchFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsConversionPatchBody", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -924,9 +924,9 @@ func (s *conversions) ConversionsPatchForm(ctx context.Context, request operatio
 // ConversionsPatchJSON - Modify the association between a conversion and a datapoint
 func (s *conversions) ConversionsPatchJSON(ctx context.Context, request operations.ConversionsPatchJSONRequest) (*operations.ConversionsPatchJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsConversionPatchBody", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1004,9 +1004,9 @@ func (s *conversions) ConversionsPatchJSON(ctx context.Context, request operatio
 // ConversionsPatchRaw - Modify the association between a conversion and a datapoint
 func (s *conversions) ConversionsPatchRaw(ctx context.Context, request operations.ConversionsPatchRawRequest) (*operations.ConversionsPatchRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1084,9 +1084,9 @@ func (s *conversions) ConversionsPatchRaw(ctx context.Context, request operation
 // ConversionsPostForm - Update conversion specified by id
 func (s *conversions) ConversionsPostForm(ctx context.Context, request operations.ConversionsPostFormRequest) (*operations.ConversionsPostFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "form")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoConversionsConversion", "form")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1164,9 +1164,9 @@ func (s *conversions) ConversionsPostForm(ctx context.Context, request operation
 // ConversionsPostJSON - Update conversion specified by id
 func (s *conversions) ConversionsPostJSON(ctx context.Context, request operations.ConversionsPostJSONRequest) (*operations.ConversionsPostJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoConversionsConversion", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1244,9 +1244,9 @@ func (s *conversions) ConversionsPostJSON(ctx context.Context, request operation
 // ConversionsPostRaw - Update conversion specified by id
 func (s *conversions) ConversionsPostRaw(ctx context.Context, request operations.ConversionsPostRawRequest) (*operations.ConversionsPostRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1322,7 +1322,7 @@ func (s *conversions) ConversionsPostRaw(ctx context.Context, request operations
 }
 
 // ConversionsPutForm - Create a conversion
-func (s *conversions) ConversionsPutForm(ctx context.Context, request operations.ConversionsPutFormRequest) (*operations.ConversionsPutFormResponse, error) {
+func (s *conversions) ConversionsPutForm(ctx context.Context, request shared.APICoreDtoConversionsConversion) (*operations.ConversionsPutFormResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversions"
 
@@ -1402,7 +1402,7 @@ func (s *conversions) ConversionsPutForm(ctx context.Context, request operations
 }
 
 // ConversionsPutJSON - Create a conversion
-func (s *conversions) ConversionsPutJSON(ctx context.Context, request operations.ConversionsPutJSONRequest) (*operations.ConversionsPutJSONResponse, error) {
+func (s *conversions) ConversionsPutJSON(ctx context.Context, request shared.APICoreDtoConversionsConversion) (*operations.ConversionsPutJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversions"
 
@@ -1482,7 +1482,7 @@ func (s *conversions) ConversionsPutJSON(ctx context.Context, request operations
 }
 
 // ConversionsPutRaw - Create a conversion
-func (s *conversions) ConversionsPutRaw(ctx context.Context, request operations.ConversionsPutRawRequest) (*operations.ConversionsPutRawResponse, error) {
+func (s *conversions) ConversionsPutRaw(ctx context.Context, request []byte) (*operations.ConversionsPutRawResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversions"
 
@@ -1564,7 +1564,7 @@ func (s *conversions) ConversionsPutRaw(ctx context.Context, request operations.
 // GetConversionsConversionID - Retrieve conversion specified by id
 func (s *conversions) GetConversionsConversionID(ctx context.Context, request operations.GetConversionsConversionIDRequest) (*operations.GetConversionsConversionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1634,9 +1634,9 @@ func (s *conversions) GetConversionsConversionID(ctx context.Context, request op
 // PutConversionsConversionIDDatapointsBatchPatch - Modify the association between a conversion and multiple datapoints
 func (s *conversions) PutConversionsConversionIDDatapointsBatchPatch(ctx context.Context, request operations.PutConversionsConversionIDDatapointsBatchPatchRequest) (*operations.PutConversionsConversionIDDatapointsBatchPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/batch/patch", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/datapoints/batch/patch", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPatchBodyBatch", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

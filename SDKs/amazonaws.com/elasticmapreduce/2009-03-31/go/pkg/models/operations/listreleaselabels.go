@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListReleaseLabelsQueryParams struct {
-	// Pagination limit
-	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // ListReleaseLabelsXAmzTargetEnum
 type ListReleaseLabelsXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *ListReleaseLabelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListReleaseLabelsHeaders struct {
+type ListReleaseLabelsRequest struct {
+	ListReleaseLabelsInput shared.ListReleaseLabelsInput `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxResults *string `queryParam:"style=form,explode=true,name=MaxResults"`
+	// Pagination token
+	NextToken         *string                         `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type ListReleaseLabelsHeaders struct {
 	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        ListReleaseLabelsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type ListReleaseLabelsRequest struct {
-	QueryParams ListReleaseLabelsQueryParams
-	Headers     ListReleaseLabelsHeaders
-	Request     shared.ListReleaseLabelsInput `request:"mediaType=application/json"`
 }
 
 type ListReleaseLabelsResponse struct {

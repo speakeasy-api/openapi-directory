@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeFleetAdvisorSchemasQueryParams struct {
-	// Pagination limit
-	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
-	// Pagination token
-	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-}
-
 // DescribeFleetAdvisorSchemasXAmzTargetEnum
 type DescribeFleetAdvisorSchemasXAmzTargetEnum string
 
@@ -37,7 +30,12 @@ func (e *DescribeFleetAdvisorSchemasXAmzTargetEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type DescribeFleetAdvisorSchemasHeaders struct {
+type DescribeFleetAdvisorSchemasRequest struct {
+	DescribeFleetAdvisorSchemasRequest shared.DescribeFleetAdvisorSchemasRequest `request:"mediaType=application/json"`
+	// Pagination limit
+	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
+	// Pagination token
+	NextToken         *string                                   `queryParam:"style=form,explode=true,name=NextToken"`
 	XAmzAlgorithm     *string                                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -46,12 +44,6 @@ type DescribeFleetAdvisorSchemasHeaders struct {
 	XAmzSignature     *string                                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        DescribeFleetAdvisorSchemasXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type DescribeFleetAdvisorSchemasRequest struct {
-	QueryParams DescribeFleetAdvisorSchemasQueryParams
-	Headers     DescribeFleetAdvisorSchemasHeaders
-	Request     shared.DescribeFleetAdvisorSchemasRequest `request:"mediaType=application/json"`
 }
 
 type DescribeFleetAdvisorSchemasResponse struct {

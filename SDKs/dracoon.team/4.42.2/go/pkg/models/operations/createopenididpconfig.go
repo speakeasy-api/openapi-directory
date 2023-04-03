@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateOpenIDIdpConfigHeaders struct {
+type CreateOpenIDIdpConfigRequest struct {
+	CreateOpenIDIdpConfigRequest shared.CreateOpenIDIdpConfigRequest `request:"mediaType=application/json"`
 	// Authentication token
 	XSdsAuthToken *string `header:"style=simple,explode=false,name=X-Sds-Auth-Token"`
-}
-
-type CreateOpenIDIdpConfigRequest struct {
-	Headers CreateOpenIDIdpConfigHeaders
-	Request shared.CreateOpenIDIdpConfigRequest `request:"mediaType=application/json"`
 }
 
 type CreateOpenIDIdpConfigResponse struct {

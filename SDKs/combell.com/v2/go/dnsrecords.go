@@ -35,14 +35,14 @@ func newDNSRecords(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteDNSDomainNameRecordsRecordID - Delete a record
 func (s *dnsRecords) DeleteDNSDomainNameRecordsRecordID(ctx context.Context, request operations.DeleteDNSDomainNameRecordsRecordIDRequest) (*operations.DeleteDNSDomainNameRecordsRecordIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -74,14 +74,14 @@ func (s *dnsRecords) DeleteDNSDomainNameRecordsRecordID(ctx context.Context, req
 // GetDNSDomainNameRecords - Get records
 func (s *dnsRecords) GetDNSDomainNameRecords(ctx context.Context, request operations.GetDNSDomainNameRecordsRequest) (*operations.GetDNSDomainNameRecordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -124,14 +124,14 @@ func (s *dnsRecords) GetDNSDomainNameRecords(ctx context.Context, request operat
 // GetDNSDomainNameRecordsRecordID - Get specific record
 func (s *dnsRecords) GetDNSDomainNameRecordsRecordID(ctx context.Context, request operations.GetDNSDomainNameRecordsRecordIDRequest) (*operations.GetDNSDomainNameRecordsRecordIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -172,9 +172,9 @@ func (s *dnsRecords) GetDNSDomainNameRecordsRecordID(ctx context.Context, reques
 // PostDNSDomainNameRecords - Create a record
 func (s *dnsRecords) PostDNSDomainNameRecords(ctx context.Context, request operations.PostDNSDomainNameRecordsRequest) (*operations.PostDNSDomainNameRecordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSRecord", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -186,7 +186,7 @@ func (s *dnsRecords) PostDNSDomainNameRecords(ctx context.Context, request opera
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -219,9 +219,9 @@ func (s *dnsRecords) PostDNSDomainNameRecords(ctx context.Context, request opera
 // PutDNSDomainNameRecordsRecordID - Edit a record
 func (s *dnsRecords) PutDNSDomainNameRecordsRecordID(ctx context.Context, request operations.PutDNSDomainNameRecordsRecordIDRequest) (*operations.PutDNSDomainNameRecordsRecordIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSRecord", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -233,7 +233,7 @@ func (s *dnsRecords) PutDNSDomainNameRecordsRecordID(ctx context.Context, reques
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

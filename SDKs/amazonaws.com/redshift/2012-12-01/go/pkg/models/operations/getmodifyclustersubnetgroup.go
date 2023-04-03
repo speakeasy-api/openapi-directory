@@ -50,30 +50,22 @@ func (e *GETModifyClusterSubnetGroupVersionEnum) UnmarshalJSON(data []byte) erro
 	}
 }
 
-type GETModifyClusterSubnetGroupQueryParams struct {
+type GETModifyClusterSubnetGroupRequest struct {
 	Action GETModifyClusterSubnetGroupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the subnet group to be modified.
 	ClusterSubnetGroupName string `queryParam:"style=form,explode=true,name=ClusterSubnetGroupName"`
 	// A text description of the subnet group to be modified.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
 	// An array of VPC subnet IDs. A maximum of 20 subnets can be modified in a single request.
-	SubnetIds []string                               `queryParam:"style=form,explode=true,name=SubnetIds"`
-	Version   GETModifyClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETModifyClusterSubnetGroupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETModifyClusterSubnetGroupRequest struct {
-	QueryParams GETModifyClusterSubnetGroupQueryParams
-	Headers     GETModifyClusterSubnetGroupHeaders
+	SubnetIds         []string                               `queryParam:"style=form,explode=true,name=SubnetIds"`
+	Version           GETModifyClusterSubnetGroupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETModifyClusterSubnetGroupResponse struct {

@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-type DeleteStreamPathParams struct {
-	// The stream ID.
-	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
-}
-
-type DeleteStreamHeaders struct {
+type DeleteStreamRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +14,8 @@ type DeleteStreamHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteStreamRequest struct {
-	PathParams DeleteStreamPathParams
-	Headers    DeleteStreamHeaders
+	// The stream ID.
+	StreamID string `pathParam:"style=simple,explode=false,name=streamId"`
 }
 
 type DeleteStreamResponse struct {

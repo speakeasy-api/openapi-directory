@@ -39,16 +39,7 @@ func (e *ListOTAUpdatesOTAUpdateStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListOTAUpdatesQueryParams struct {
-	// The maximum number of results to return at one time.
-	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// A token used to retrieve the next set of results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The OTA update job status.
-	OtaUpdateStatus *ListOTAUpdatesOTAUpdateStatusEnum `queryParam:"style=form,explode=true,name=otaUpdateStatus"`
-}
-
-type ListOTAUpdatesHeaders struct {
+type ListOTAUpdatesRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -56,11 +47,12 @@ type ListOTAUpdatesHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListOTAUpdatesRequest struct {
-	QueryParams ListOTAUpdatesQueryParams
-	Headers     ListOTAUpdatesHeaders
+	// The maximum number of results to return at one time.
+	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
+	// A token used to retrieve the next set of results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The OTA update job status.
+	OtaUpdateStatus *ListOTAUpdatesOTAUpdateStatusEnum `queryParam:"style=form,explode=true,name=otaUpdateStatus"`
 }
 
 type ListOTAUpdatesResponse struct {

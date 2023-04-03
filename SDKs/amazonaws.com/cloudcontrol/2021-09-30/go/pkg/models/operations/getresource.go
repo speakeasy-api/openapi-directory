@@ -30,7 +30,8 @@ func (e *GetResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GetResourceHeaders struct {
+type GetResourceRequest struct {
+	GetResourceInput  shared.GetResourceInput   `request:"mediaType=application/json"`
 	XAmzAlgorithm     *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -39,11 +40,6 @@ type GetResourceHeaders struct {
 	XAmzSignature     *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 	XAmzTarget        GetResourceXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
-type GetResourceRequest struct {
-	Headers GetResourceHeaders
-	Request shared.GetResourceInput `request:"mediaType=application/json"`
 }
 
 type GetResourceResponse struct {

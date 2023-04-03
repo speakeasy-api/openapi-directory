@@ -7,21 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type UpdateTrustAnchorPathParams struct {
-	// The unique identifier of the trust anchor.
-	TrustAnchorID string `pathParam:"style=simple,explode=false,name=trustAnchorId"`
-}
-
-type UpdateTrustAnchorHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 // UpdateTrustAnchorRequestBodySource - The trust anchor type and its related certificate data.
 type UpdateTrustAnchorRequestBodySource struct {
 	SourceData *shared.SourceData          `json:"sourceData,omitempty"`
@@ -36,9 +21,16 @@ type UpdateTrustAnchorRequestBody struct {
 }
 
 type UpdateTrustAnchorRequest struct {
-	PathParams UpdateTrustAnchorPathParams
-	Headers    UpdateTrustAnchorHeaders
-	Request    UpdateTrustAnchorRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateTrustAnchorRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                      `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                      `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                      `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                      `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                      `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                      `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                      `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the trust anchor.
+	TrustAnchorID string `pathParam:"style=simple,explode=false,name=trustAnchorId"`
 }
 
 type UpdateTrustAnchorResponse struct {

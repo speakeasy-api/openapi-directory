@@ -7,32 +7,24 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type BatchPutFieldOptionsPathParams struct {
-	// The unique identifier of the Cases domain.
-	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
-	// The unique identifier of a field.
-	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
-}
-
-type BatchPutFieldOptionsHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type BatchPutFieldOptionsRequestBody struct {
 	// A list of <code>FieldOption</code> objects.
 	Options []shared.FieldOption `json:"options"`
 }
 
 type BatchPutFieldOptionsRequest struct {
-	PathParams BatchPutFieldOptionsPathParams
-	Headers    BatchPutFieldOptionsHeaders
-	Request    BatchPutFieldOptionsRequestBody `request:"mediaType=application/json"`
+	RequestBody       BatchPutFieldOptionsRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The unique identifier of the Cases domain.
+	DomainID string `pathParam:"style=simple,explode=false,name=domainId"`
+	// The unique identifier of a field.
+	FieldID string `pathParam:"style=simple,explode=false,name=fieldId"`
 }
 
 type BatchPutFieldOptionsResponse struct {

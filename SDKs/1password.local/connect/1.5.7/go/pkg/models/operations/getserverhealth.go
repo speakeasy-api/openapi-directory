@@ -11,10 +11,6 @@ var GetServerHealthServerList = []string{
 	"http://localhost:8080",
 }
 
-type GetServerHealthRequest struct {
-	ServerURL *string
-}
-
 // GetServerHealth200ApplicationJSON - OK
 type GetServerHealth200ApplicationJSON struct {
 	Dependencies []shared.ServiceDependency `json:"dependencies,omitempty"`

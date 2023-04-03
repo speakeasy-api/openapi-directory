@@ -4,26 +4,16 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type LabDocumentsDeleteSecurity struct {
-	DrchronoOauth2 shared.SchemeDrchronoOauth2 `security:"scheme,type=oauth2"`
-}
-
-type LabDocumentsDeletePathParams struct {
-	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type LabDocumentsDeleteQueryParams struct {
-	Doctor *int64  `queryParam:"style=form,explode=true,name=doctor"`
-	Since  *string `queryParam:"style=form,explode=true,name=since"`
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 type LabDocumentsDeleteRequest struct {
-	PathParams  LabDocumentsDeletePathParams
-	QueryParams LabDocumentsDeleteQueryParams
-	Security    LabDocumentsDeleteSecurity
+	Doctor *int64  `queryParam:"style=form,explode=true,name=doctor"`
+	ID     string  `pathParam:"style=simple,explode=false,name=id"`
+	Since  *string `queryParam:"style=form,explode=true,name=since"`
 }
 
 type LabDocumentsDeleteResponse struct {

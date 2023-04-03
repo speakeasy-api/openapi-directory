@@ -6,21 +6,6 @@ import (
 	"net/http"
 )
 
-type UpdateWorkspaceAliasPathParams struct {
-	// The ID of the workspace being updated.
-	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
-}
-
-type UpdateWorkspaceAliasHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type UpdateWorkspaceAliasRequestBody struct {
 	// A user-assigned workspace alias.
 	Alias *string `json:"alias,omitempty"`
@@ -29,9 +14,16 @@ type UpdateWorkspaceAliasRequestBody struct {
 }
 
 type UpdateWorkspaceAliasRequest struct {
-	PathParams UpdateWorkspaceAliasPathParams
-	Headers    UpdateWorkspaceAliasHeaders
-	Request    UpdateWorkspaceAliasRequestBody `request:"mediaType=application/json"`
+	RequestBody       UpdateWorkspaceAliasRequestBody `request:"mediaType=application/json"`
+	XAmzAlgorithm     *string                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                         `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                         `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                         `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                         `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                         `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                         `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	// The ID of the workspace being updated.
+	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
 type UpdateWorkspaceAliasResponse struct {

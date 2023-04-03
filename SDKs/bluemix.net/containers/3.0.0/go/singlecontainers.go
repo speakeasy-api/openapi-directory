@@ -36,16 +36,16 @@ func newSingleContainers(defaultClient, securityClient HTTPClient, serverURL, la
 // Remove a single container that is identified by container ID or name from a space (corresponding IBM Containers command: `cf ic delete <container>`). The container must be stopped before it can be deleted, unless the `force` query parameter is set to true.
 func (s *singleContainers) DeleteContainersNameOrID(ctx context.Context, request operations.DeleteContainersNameOrIDRequest) (*operations.DeleteContainersNameOrIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -91,9 +91,9 @@ func (s *singleContainers) GetContainersJSON(ctx context.Context, request operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -138,14 +138,14 @@ func (s *singleContainers) GetContainersJSON(ctx context.Context, request operat
 // This endpoint returns the current state of a container. This state can either be a transient state, such as BUILDING and NETWORKING, or a non-transient state, such as RUNNING, SHUTDOWN, CRASHED, or SUSPENDED.
 func (s *singleContainers) GetContainersIDStatus(ctx context.Context, request operations.GetContainersIDStatusRequest) (*operations.GetContainersIDStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{id}/status", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{id}/status", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -190,14 +190,14 @@ func (s *singleContainers) GetContainersIDStatus(ctx context.Context, request op
 // This endpoint retrieves detailed information about a single container (corresponding IBM Containers command: `cf ic inspect <container>`).
 func (s *singleContainers) GetContainersNameOrIDJSON(ctx context.Context, request operations.GetContainersNameOrIDJSONRequest) (*operations.GetContainersNameOrIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/json", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -250,7 +250,7 @@ func (s *singleContainers) PostContainersCreate(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/containers/create"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContainer", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -265,9 +265,9 @@ func (s *singleContainers) PostContainersCreate(ctx context.Context, request ope
 
 	req.Header.Set("Content-Type", reqContentType)
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -316,14 +316,14 @@ func (s *singleContainers) PostContainersCreate(ctx context.Context, request ope
 // Pause all processes in a running single container with a given container ID or name (corresponding IBM Containers command: `cf ic pause <container>`).
 func (s *singleContainers) PostContainersNameOrIDPause(ctx context.Context, request operations.PostContainersNameOrIDPauseRequest) (*operations.PostContainersNameOrIDPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/pause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/pause", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -360,16 +360,16 @@ func (s *singleContainers) PostContainersNameOrIDPause(ctx context.Context, requ
 // Change the current name of an existing single container that is identified by the container ID or name (corresponding IBM Containers command: `cf ic rename <old_name> <new_name>`).
 func (s *singleContainers) PostContainersNameOrIDRename(ctx context.Context, request operations.PostContainersNameOrIDRenameRequest) (*operations.PostContainersNameOrIDRenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/rename", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/rename", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -410,16 +410,16 @@ func (s *singleContainers) PostContainersNameOrIDRename(ctx context.Context, req
 // Restart a container with a given container ID or name (corresponding IBM Containers command: `cf ic restart <container>`).
 func (s *singleContainers) PostContainersNameOrIDRestart(ctx context.Context, request operations.PostContainersNameOrIDRestartRequest) (*operations.PostContainersNameOrIDRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/restart", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/restart", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -460,14 +460,14 @@ func (s *singleContainers) PostContainersNameOrIDRestart(ctx context.Context, re
 // Start a single container with a given container name or ID (corresponding IBM Containers command: `cf ic start <container>`).
 func (s *singleContainers) PostContainersNameOrIDStart(ctx context.Context, request operations.PostContainersNameOrIDStartRequest) (*operations.PostContainersNameOrIDStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/start", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/start", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -506,16 +506,16 @@ func (s *singleContainers) PostContainersNameOrIDStart(ctx context.Context, requ
 // Stop a single container with a given container name or ID (corresponding IBM Containers command: `cf ic stop <container>`).
 func (s *singleContainers) PostContainersNameOrIDStop(ctx context.Context, request operations.PostContainersNameOrIDStopRequest) (*operations.PostContainersNameOrIDStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/stop", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/stop", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -556,14 +556,14 @@ func (s *singleContainers) PostContainersNameOrIDStop(ctx context.Context, reque
 // Unpause all processes that are currently stopped inside a single containers with a given container ID or name (corresponding IBM Containers command: `cf ic unpause <container>`).
 func (s *singleContainers) PostContainersNameOrIDUnpause(ctx context.Context, request operations.PostContainersNameOrIDUnpauseRequest) (*operations.PostContainersNameOrIDUnpauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/unpause", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/containers/{name_or_id}/unpause", request, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	utils.PopulateHeaders(ctx, req, request.Headers)
+	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

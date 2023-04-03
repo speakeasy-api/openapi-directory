@@ -4,24 +4,18 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type UsersDeleteSessionSecurity struct {
-	Key     shared.SchemeKey     `security:"scheme,type=apiKey,subtype=header"`
-	Project shared.SchemeProject `security:"scheme,type=apiKey,subtype=header"`
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
 }
 
-type UsersDeleteSessionPathParams struct {
+type UsersDeleteSessionRequest struct {
 	// User unique session ID.
 	SessionID string `pathParam:"style=simple,explode=false,name=sessionId"`
 	// User unique ID.
 	UserID string `pathParam:"style=simple,explode=false,name=userId"`
-}
-
-type UsersDeleteSessionRequest struct {
-	PathParams UsersDeleteSessionPathParams
-	Security   UsersDeleteSessionSecurity
 }
 
 type UsersDeleteSessionResponse struct {

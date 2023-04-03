@@ -7,10 +7,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type TryNotificationConfigRequest struct {
-	Request shared.Notification `request:"mediaType=application/json"`
-}
-
 type TryNotificationConfigResponse struct {
 	ContentType string
 	// Input failed validation

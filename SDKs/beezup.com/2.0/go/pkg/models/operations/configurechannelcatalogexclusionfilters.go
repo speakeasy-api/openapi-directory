@@ -7,14 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ConfigureChannelCatalogExclusionFiltersPathParams struct {
+type ConfigureChannelCatalogExclusionFiltersRequest struct {
+	RequestBody []shared.ExclusionFilter `request:"mediaType=application/json"`
 	// The channel catalog identifier
 	ChannelCatalogID string `pathParam:"style=simple,explode=false,name=channelCatalogId"`
-}
-
-type ConfigureChannelCatalogExclusionFiltersRequest struct {
-	PathParams ConfigureChannelCatalogExclusionFiltersPathParams
-	Request    []shared.ExclusionFilter `request:"mediaType=application/json"`
 }
 
 type ConfigureChannelCatalogExclusionFiltersResponse struct {

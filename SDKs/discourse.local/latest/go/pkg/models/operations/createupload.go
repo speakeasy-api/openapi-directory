@@ -49,10 +49,6 @@ type CreateUploadRequestBody struct {
 	UserID *int64 `multipartForm:"name=user_id"`
 }
 
-type CreateUploadRequest struct {
-	Request *CreateUploadRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 // CreateUpload200ApplicationJSON - file uploaded
 type CreateUpload200ApplicationJSON struct {
 	DominantColor    *string `json:"dominant_color,omitempty"`

@@ -50,28 +50,20 @@ func (e *GETDeleteDBInstanceAutomatedBackupVersionEnum) UnmarshalJSON(data []byt
 	}
 }
 
-type GETDeleteDBInstanceAutomatedBackupQueryParams struct {
+type GETDeleteDBInstanceAutomatedBackupRequest struct {
 	Action GETDeleteDBInstanceAutomatedBackupActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The Amazon Resource Name (ARN) of the automated backups to delete, for example, <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.</p> <p>This setting doesn't apply to RDS Custom.</p>
 	DBInstanceAutomatedBackupsArn *string `queryParam:"style=form,explode=true,name=DBInstanceAutomatedBackupsArn"`
 	// The identifier for the source DB instance, which can't be changed and which is unique to an Amazon Web Services Region.
-	DbiResourceID *string                                       `queryParam:"style=form,explode=true,name=DbiResourceId"`
-	Version       GETDeleteDBInstanceAutomatedBackupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteDBInstanceAutomatedBackupHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteDBInstanceAutomatedBackupRequest struct {
-	QueryParams GETDeleteDBInstanceAutomatedBackupQueryParams
-	Headers     GETDeleteDBInstanceAutomatedBackupHeaders
+	DbiResourceID     *string                                       `queryParam:"style=form,explode=true,name=DbiResourceId"`
+	Version           GETDeleteDBInstanceAutomatedBackupVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteDBInstanceAutomatedBackupResponse struct {

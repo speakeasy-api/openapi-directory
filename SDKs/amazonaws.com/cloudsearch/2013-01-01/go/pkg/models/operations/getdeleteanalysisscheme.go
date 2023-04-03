@@ -50,27 +50,19 @@ func (e *GETDeleteAnalysisSchemeVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETDeleteAnalysisSchemeQueryParams struct {
+type GETDeleteAnalysisSchemeRequest struct {
 	Action GETDeleteAnalysisSchemeActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// The name of the analysis scheme you want to delete.
 	AnalysisSchemeName string                             `queryParam:"style=form,explode=true,name=AnalysisSchemeName"`
 	DomainName         string                             `queryParam:"style=form,explode=true,name=DomainName"`
 	Version            GETDeleteAnalysisSchemeVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETDeleteAnalysisSchemeHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETDeleteAnalysisSchemeRequest struct {
-	QueryParams GETDeleteAnalysisSchemeQueryParams
-	Headers     GETDeleteAnalysisSchemeHeaders
+	XAmzAlgorithm      *string                            `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256  *string                            `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential     *string                            `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate           *string                            `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken  *string                            `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature      *string                            `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders  *string                            `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETDeleteAnalysisSchemeResponse struct {

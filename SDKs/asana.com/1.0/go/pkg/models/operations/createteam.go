@@ -7,7 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateTeamQueryParams struct {
+// CreateTeamRequestBodyInput - The team to create.
+type CreateTeamRequestBodyInput struct {
+	Data *shared.TeamRequestInput `json:"data,omitempty"`
+}
+
+type CreateTeamRequest struct {
+	// The team to create.
+	RequestBody CreateTeamRequestBodyInput `request:"mediaType=application/json"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,17 +29,6 @@ type CreateTeamQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// CreateTeamRequestBodyInput - The team to create.
-type CreateTeamRequestBodyInput struct {
-	Data *shared.TeamRequestInput `json:"data,omitempty"`
-}
-
-type CreateTeamRequest struct {
-	QueryParams CreateTeamQueryParams
-	// The team to create.
-	Request CreateTeamRequestBodyInput `request:"mediaType=application/json"`
 }
 
 // CreateTeam201ApplicationJSON - Successfully created a new team.

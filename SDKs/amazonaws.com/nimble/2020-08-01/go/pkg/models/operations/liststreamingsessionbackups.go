@@ -7,19 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListStreamingSessionBackupsPathParams struct {
-	// The studio ID.
-	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
-}
-
-type ListStreamingSessionBackupsQueryParams struct {
-	// The token for the next set of results, or null if there are no more results.
-	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
-	// The user ID of the user that owns the streaming session.
-	OwnedBy *string `queryParam:"style=form,explode=true,name=ownedBy"`
-}
-
-type ListStreamingSessionBackupsHeaders struct {
+type ListStreamingSessionBackupsRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -27,12 +15,12 @@ type ListStreamingSessionBackupsHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type ListStreamingSessionBackupsRequest struct {
-	PathParams  ListStreamingSessionBackupsPathParams
-	QueryParams ListStreamingSessionBackupsQueryParams
-	Headers     ListStreamingSessionBackupsHeaders
+	// The token for the next set of results, or null if there are no more results.
+	NextToken *string `queryParam:"style=form,explode=true,name=nextToken"`
+	// The user ID of the user that owns the streaming session.
+	OwnedBy *string `queryParam:"style=form,explode=true,name=ownedBy"`
+	// The studio ID.
+	StudioID string `pathParam:"style=simple,explode=false,name=studioId"`
 }
 
 type ListStreamingSessionBackupsResponse struct {

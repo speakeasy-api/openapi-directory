@@ -7,13 +7,9 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SrcSearchlyAPIV1ControllersSimilarityBySongQueryParams struct {
+type SrcSearchlyAPIV1ControllersSimilarityBySongRequest struct {
 	// Song identifier.
 	SongID int64 `queryParam:"style=form,explode=true,name=song_id"`
-}
-
-type SrcSearchlyAPIV1ControllersSimilarityBySongRequest struct {
-	QueryParams SrcSearchlyAPIV1ControllersSimilarityBySongQueryParams
 }
 
 type SrcSearchlyAPIV1ControllersSimilarityBySongResponse struct {

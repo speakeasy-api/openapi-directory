@@ -133,7 +133,7 @@ func New(opts ...SDKOption) *SDK {
 //
 // **Tips**
 //   - Read our **[Knowledge Base article](https://desk.zoho.com/portal/chompthis/kb/articles/im-having-trouble-getting-matches-for-barcodes-what-can-id-do)** for helpful tips and tricks.
-func (s *SDK) GetFoodBrandedBarcodePhp(ctx context.Context, request operations.GetFoodBrandedBarcodePhpRequest) (*operations.GetFoodBrandedBarcodePhpResponse, error) {
+func (s *SDK) GetFoodBrandedBarcodePhp(ctx context.Context, request operations.GetFoodBrandedBarcodePhpRequest, security operations.GetFoodBrandedBarcodePhpSecurity) (*operations.GetFoodBrandedBarcodePhpResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/food/branded/barcode.php"
 
@@ -142,11 +142,11 @@ func (s *SDK) GetFoodBrandedBarcodePhp(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *SDK) GetFoodBrandedBarcodePhp(ctx context.Context, request operations.G
 //   - Get started by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.
 //
 // > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.
-func (s *SDK) GetFoodBrandedNamePhp(ctx context.Context, request operations.GetFoodBrandedNamePhpRequest) (*operations.GetFoodBrandedNamePhpResponse, error) {
+func (s *SDK) GetFoodBrandedNamePhp(ctx context.Context, request operations.GetFoodBrandedNamePhpRequest, security operations.GetFoodBrandedNamePhpSecurity) (*operations.GetFoodBrandedNamePhpResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/food/branded/name.php"
 
@@ -206,11 +206,11 @@ func (s *SDK) GetFoodBrandedNamePhp(ctx context.Context, request operations.GetF
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -261,7 +261,7 @@ func (s *SDK) GetFoodBrandedNamePhp(ctx context.Context, request operations.GetF
 //   - Get started by using the **[Query Builder](https://chompthis.com/api/build.php)**.
 //
 // > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.
-func (s *SDK) GetFoodBrandedSearchPhp(ctx context.Context, request operations.GetFoodBrandedSearchPhpRequest) (*operations.GetFoodBrandedSearchPhpResponse, error) {
+func (s *SDK) GetFoodBrandedSearchPhp(ctx context.Context, request operations.GetFoodBrandedSearchPhpRequest, security operations.GetFoodBrandedSearchPhpSecurity) (*operations.GetFoodBrandedSearchPhpResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/food/branded/search.php"
 
@@ -270,11 +270,11 @@ func (s *SDK) GetFoodBrandedSearchPhp(ctx context.Context, request operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -328,7 +328,7 @@ func (s *SDK) GetFoodBrandedSearchPhp(ctx context.Context, request operations.Ge
 //   - Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.
 //
 // > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.
-func (s *SDK) GetFoodIngredientSearchPhp(ctx context.Context, request operations.GetFoodIngredientSearchPhpRequest) (*operations.GetFoodIngredientSearchPhpResponse, error) {
+func (s *SDK) GetFoodIngredientSearchPhp(ctx context.Context, request operations.GetFoodIngredientSearchPhpRequest, security operations.GetFoodIngredientSearchPhpSecurity) (*operations.GetFoodIngredientSearchPhpResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/food/ingredient/search.php"
 
@@ -337,11 +337,11 @@ func (s *SDK) GetFoodIngredientSearchPhp(ctx context.Context, request operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

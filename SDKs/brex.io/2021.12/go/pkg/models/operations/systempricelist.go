@@ -4,16 +4,7 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
-
-type SystemPricelistSecurity struct {
-	UserKey shared.SchemeUserKey `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type SystemPricelistRequest struct {
-	Security SystemPricelistSecurity
-}
 
 // SystemPricelistDefaultApplicationJSON - Detailed information about the error
 type SystemPricelistDefaultApplicationJSON struct {

@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetReportDefinitionPathParams struct {
-	// ID of the report to retrieve.
-	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
-}
-
-type GetReportDefinitionHeaders struct {
+type GetReportDefinitionRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type GetReportDefinitionHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetReportDefinitionRequest struct {
-	PathParams GetReportDefinitionPathParams
-	Headers    GetReportDefinitionHeaders
+	// ID of the report to retrieve.
+	ReportID string `pathParam:"style=simple,explode=false,name=reportId"`
 }
 
 type GetReportDefinitionResponse struct {

@@ -7,21 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetLatestArtifactPathParams struct {
+type GetLatestArtifactRequest struct {
 	// The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
 	ArtifactID string `pathParam:"style=simple,explode=false,name=artifactId"`
-	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
-	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
-}
-
-type GetLatestArtifactQueryParams struct {
 	// Allows the user to specify if the content should be dereferenced when being returned
 	Dereference *bool `queryParam:"style=form,explode=true,name=dereference"`
-}
-
-type GetLatestArtifactRequest struct {
-	PathParams  GetLatestArtifactPathParams
-	QueryParams GetLatestArtifactQueryParams
+	// The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+	GroupID string `pathParam:"style=simple,explode=false,name=groupId"`
 }
 
 type GetLatestArtifactResponse struct {

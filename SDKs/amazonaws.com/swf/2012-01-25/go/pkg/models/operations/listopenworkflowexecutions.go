@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ListOpenWorkflowExecutionsQueryParams struct {
-	// Pagination limit
-	MaximumPageSize *string `queryParam:"style=form,explode=true,name=maximumPageSize"`
-	// Pagination token
-	NextPageToken *string `queryParam:"style=form,explode=true,name=nextPageToken"`
-}
-
 // ListOpenWorkflowExecutionsXAmzTargetEnum
 type ListOpenWorkflowExecutionsXAmzTargetEnum string
 
@@ -37,21 +30,20 @@ func (e *ListOpenWorkflowExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-type ListOpenWorkflowExecutionsHeaders struct {
-	XAmzAlgorithm     *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	XAmzTarget        ListOpenWorkflowExecutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
-}
-
 type ListOpenWorkflowExecutionsRequest struct {
-	QueryParams ListOpenWorkflowExecutionsQueryParams
-	Headers     ListOpenWorkflowExecutionsHeaders
-	Request     shared.ListOpenWorkflowExecutionsInput `request:"mediaType=application/json"`
+	ListOpenWorkflowExecutionsInput shared.ListOpenWorkflowExecutionsInput   `request:"mediaType=application/json"`
+	XAmzAlgorithm                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256               *string                                  `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential                  *string                                  `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate                        *string                                  `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken               *string                                  `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature                   *string                                  `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders               *string                                  `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget                      ListOpenWorkflowExecutionsXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+	// Pagination limit
+	MaximumPageSize *string `queryParam:"style=form,explode=true,name=maximumPageSize"`
+	// Pagination token
+	NextPageToken *string `queryParam:"style=form,explode=true,name=nextPageToken"`
 }
 
 type ListOpenWorkflowExecutionsResponse struct {

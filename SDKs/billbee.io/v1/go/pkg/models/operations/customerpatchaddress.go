@@ -7,15 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CustomerPatchAddressPathParams struct {
+type CustomerPatchAddressRequest struct {
+	// The address fields to be changed. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// The id of the address
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
-}
-
-type CustomerPatchAddressRequest struct {
-	PathParams CustomerPatchAddressPathParams
-	// The address fields to be changed. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
-	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type CustomerPatchAddressResponse struct {

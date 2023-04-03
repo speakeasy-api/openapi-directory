@@ -10,8 +10,8 @@ import (
 )
 
 type TetmsSecurity struct {
-	APIKey   shared.SchemeAPIKey   `security:"scheme,type=apiKey,subtype=header"`
-	ClientID shared.SchemeClientID `security:"scheme,type=apiKey,subtype=header"`
+	APIKey   string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-APIKEY"`
+	ClientID string `security:"scheme,type=apiKey,subtype=header,name=X-APISETU-CLIENTID"`
 }
 
 type TetmsRequestBodyCertificateParameters struct {
@@ -52,12 +52,6 @@ type TetmsRequestBody struct {
 	Format TetmsRequestBodyFormatEnum `json:"format"`
 	// A unique transaction id for this request in UUID format. It is used for tracking the request.
 	TxnID string `json:"txnId"`
-}
-
-type TetmsRequest struct {
-	// Request format
-	Request  *TetmsRequestBody `request:"mediaType=application/json"`
-	Security TetmsSecurity
 }
 
 type Tetms504ApplicationJSONErrorEnum string

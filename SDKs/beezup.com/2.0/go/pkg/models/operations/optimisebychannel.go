@@ -7,16 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type OptimiseByChannelPathParams struct {
+type OptimiseByChannelRequest struct {
 	ActionName shared.OptimisationActionNameGeneralParametersEnum `pathParam:"style=simple,explode=false,name=actionName"`
 	// The channel identifier concerned by this optimisation
 	ChannelID string `pathParam:"style=simple,explode=false,name=channelId"`
 	// Your store identifier
 	StoreID string `pathParam:"style=simple,explode=false,name=storeId"`
-}
-
-type OptimiseByChannelRequest struct {
-	PathParams OptimiseByChannelPathParams
 }
 
 type OptimiseByChannelResponse struct {

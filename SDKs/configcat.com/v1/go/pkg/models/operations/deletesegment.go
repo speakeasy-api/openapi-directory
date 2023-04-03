@@ -6,13 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteSegmentPathParams struct {
+type DeleteSegmentRequest struct {
 	// The identifier of the Segment.
 	SegmentID string `pathParam:"style=simple,explode=false,name=segmentId"`
-}
-
-type DeleteSegmentRequest struct {
-	PathParams DeleteSegmentPathParams
 }
 
 type DeleteSegmentResponse struct {

@@ -4,16 +4,10 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type PutAPIV1ClipsIDSecurity struct {
-	BearerHeader shared.SchemeBearerHeader `security:"scheme,type=apiKey,subtype=header"`
-}
-
-type PutAPIV1ClipsIDPathParams struct {
-	// The id of the clip to be retrieved
-	ID string `pathParam:"style=simple,explode=false,name=id"`
+	BearerHeader string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
 }
 
 type PutAPIV1ClipsIDRequestBodyDataAttributes struct {
@@ -31,9 +25,9 @@ type PutAPIV1ClipsIDRequestBody struct {
 }
 
 type PutAPIV1ClipsIDRequest struct {
-	PathParams PutAPIV1ClipsIDPathParams
-	Request    PutAPIV1ClipsIDRequestBody `request:"mediaType=application/json"`
-	Security   PutAPIV1ClipsIDSecurity
+	RequestBody PutAPIV1ClipsIDRequestBody `request:"mediaType=application/json"`
+	// The id of the clip to be retrieved
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
 type PutAPIV1ClipsIDResponse struct {

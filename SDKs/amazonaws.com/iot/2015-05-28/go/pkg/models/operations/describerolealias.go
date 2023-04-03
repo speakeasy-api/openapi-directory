@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeRoleAliasPathParams struct {
-	// The role alias to describe.
-	RoleAlias string `pathParam:"style=simple,explode=false,name=roleAlias"`
-}
-
-type DescribeRoleAliasHeaders struct {
+type DescribeRoleAliasRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeRoleAliasHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeRoleAliasRequest struct {
-	PathParams DescribeRoleAliasPathParams
-	Headers    DescribeRoleAliasHeaders
+	// The role alias to describe.
+	RoleAlias string `pathParam:"style=simple,explode=false,name=roleAlias"`
 }
 
 type DescribeRoleAliasResponse struct {

@@ -9,13 +9,6 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetNamespacesRepositoriesImagesPathParams struct {
-	// Namespace of the repository.
-	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
-	// Name of the repository.
-	Repository string `pathParam:"style=simple,explode=false,name=repository"`
-}
-
 // GetNamespacesRepositoriesImagesOrderingEnum - Orders the results by this property.
 //
 // Prefixing with `-` sorts by descending order.
@@ -72,7 +65,7 @@ func (e *GetNamespacesRepositoriesImagesStatusEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-type GetNamespacesRepositoriesImagesQueryParams struct {
+type GetNamespacesRepositoriesImagesRequest struct {
 	// Sets the time from which an image must have been pushed or pulled to
 	// be counted as active.
 	//
@@ -84,6 +77,8 @@ type GetNamespacesRepositoriesImagesQueryParams struct {
 	// - `false`: no current tags.
 	//
 	CurrentlyTagged *bool `queryParam:"style=form,explode=true,name=currently_tagged"`
+	// Namespace of the repository.
+	Namespace string `pathParam:"style=simple,explode=false,name=namespace"`
 	// Orders the results by this property.
 	//
 	// Prefixing with `-` sorts by descending order.
@@ -93,13 +88,10 @@ type GetNamespacesRepositoriesImagesQueryParams struct {
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Number of images to get per page. Defaults to 10. Max of 100.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
+	// Name of the repository.
+	Repository string `pathParam:"style=simple,explode=false,name=repository"`
 	// Filters to only show images of this status.
 	Status *GetNamespacesRepositoriesImagesStatusEnum `queryParam:"style=form,explode=true,name=status"`
-}
-
-type GetNamespacesRepositoriesImagesRequest struct {
-	PathParams  GetNamespacesRepositoriesImagesPathParams
-	QueryParams GetNamespacesRepositoriesImagesQueryParams
 }
 
 type GetNamespacesRepositoriesImagesResponse struct {

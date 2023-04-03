@@ -50,25 +50,17 @@ func (e *POSTGetPredictiveScalingForecastVersionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-type POSTGetPredictiveScalingForecastQueryParams struct {
-	Action  POSTGetPredictiveScalingForecastActionEnum  `queryParam:"style=form,explode=true,name=Action"`
-	Version POSTGetPredictiveScalingForecastVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type POSTGetPredictiveScalingForecastHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
 type POSTGetPredictiveScalingForecastRequest struct {
-	QueryParams POSTGetPredictiveScalingForecastQueryParams
-	Headers     POSTGetPredictiveScalingForecastHeaders
-	Request     []byte `request:"mediaType=text/xml"`
+	Action            POSTGetPredictiveScalingForecastActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	RequestBody       []byte                                      `request:"mediaType=text/xml"`
+	Version           POSTGetPredictiveScalingForecastVersionEnum `queryParam:"style=form,explode=true,name=Version"`
+	XAmzAlgorithm     *string                                     `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                     `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                     `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                     `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                     `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                     `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                     `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type POSTGetPredictiveScalingForecastResponse struct {

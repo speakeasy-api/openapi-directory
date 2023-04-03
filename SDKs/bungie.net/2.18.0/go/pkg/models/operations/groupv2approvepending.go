@@ -4,25 +4,19 @@ package operations
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 )
 
 type GroupV2ApprovePendingSecurity struct {
-	Oauth2 shared.SchemeOauth2 `security:"scheme,type=oauth2"`
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type GroupV2ApprovePendingPathParams struct {
+type GroupV2ApprovePendingRequest struct {
 	// ID of the group.
 	GroupID int64 `pathParam:"style=simple,explode=false,name=groupId"`
 	// The membership id being approved.
 	MembershipID int64 `pathParam:"style=simple,explode=false,name=membershipId"`
 	// Membership type of the supplied membership ID.
 	MembershipType int `pathParam:"style=simple,explode=false,name=membershipType"`
-}
-
-type GroupV2ApprovePendingRequest struct {
-	PathParams GroupV2ApprovePendingPathParams
-	Security   GroupV2ApprovePendingSecurity
 }
 
 // GroupV2ApprovePending200Wildcard - Look at the Response property for more information about the nature of this response

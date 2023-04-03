@@ -7,12 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RemoveMembersForPortfolioPathParams struct {
-	// Globally unique identifier for the portfolio.
-	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
+// RemoveMembersForPortfolioRequestBody - Information about the members being removed.
+type RemoveMembersForPortfolioRequestBody struct {
+	Data *shared.RemoveMembersRequest `json:"data,omitempty"`
 }
 
-type RemoveMembersForPortfolioQueryParams struct {
+type RemoveMembersForPortfolioRequest struct {
+	// Information about the members being removed.
+	RequestBody RemoveMembersForPortfolioRequestBody `request:"mediaType=application/json"`
 	// Defines fields to return.
 	// Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
 	// The id of included objects will always be returned, regardless of the field options.
@@ -20,18 +22,8 @@ type RemoveMembersForPortfolioQueryParams struct {
 	// Provides “pretty” output.
 	// Provides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
 	OptPretty *bool `queryParam:"style=form,explode=true,name=opt_pretty"`
-}
-
-// RemoveMembersForPortfolioRequestBody - Information about the members being removed.
-type RemoveMembersForPortfolioRequestBody struct {
-	Data *shared.RemoveMembersRequest `json:"data,omitempty"`
-}
-
-type RemoveMembersForPortfolioRequest struct {
-	PathParams  RemoveMembersForPortfolioPathParams
-	QueryParams RemoveMembersForPortfolioQueryParams
-	// Information about the members being removed.
-	Request RemoveMembersForPortfolioRequestBody `request:"mediaType=application/json"`
+	// Globally unique identifier for the portfolio.
+	PortfolioGid string `pathParam:"style=simple,explode=false,name=portfolio_gid"`
 }
 
 // RemoveMembersForPortfolio200ApplicationJSON - Successfully removed the members from the portfolio.

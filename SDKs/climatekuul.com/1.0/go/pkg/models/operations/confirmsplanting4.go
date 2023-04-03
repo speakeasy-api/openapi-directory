@@ -21,11 +21,6 @@ type ConfirmsPlanting4RequestBody struct {
 	TransactionID string `form:"name=transaction_id"`
 }
 
-type ConfirmsPlanting4Request struct {
-	Request   *ConfirmsPlanting4RequestBody `request:"mediaType=application/x-www-form-urlencoded"`
-	ServerURL *string
-}
-
 type ConfirmsPlanting4Response struct {
 	ContentType string
 	StatusCode  int

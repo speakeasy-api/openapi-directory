@@ -7,16 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetEvidenceFolderPathParams struct {
-	//  The unique identifier for the assessment.
-	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
-	//  The unique identifier for the control set.
-	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
-	//  The unique identifier for the folder that the evidence is stored in.
-	EvidenceFolderID string `pathParam:"style=simple,explode=false,name=evidenceFolderId"`
-}
-
-type GetEvidenceFolderHeaders struct {
+type GetEvidenceFolderRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -24,11 +15,12 @@ type GetEvidenceFolderHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GetEvidenceFolderRequest struct {
-	PathParams GetEvidenceFolderPathParams
-	Headers    GetEvidenceFolderHeaders
+	//  The unique identifier for the assessment.
+	AssessmentID string `pathParam:"style=simple,explode=false,name=assessmentId"`
+	//  The unique identifier for the control set.
+	ControlSetID string `pathParam:"style=simple,explode=false,name=controlSetId"`
+	//  The unique identifier for the folder that the evidence is stored in.
+	EvidenceFolderID string `pathParam:"style=simple,explode=false,name=evidenceFolderId"`
 }
 
 type GetEvidenceFolderResponse struct {

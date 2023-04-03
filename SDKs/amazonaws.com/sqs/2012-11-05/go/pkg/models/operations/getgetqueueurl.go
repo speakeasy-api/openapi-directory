@@ -50,28 +50,20 @@ func (e *GETGETQueueURLVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GETGETQueueURLQueryParams struct {
+type GETGETQueueURLRequest struct {
 	Action GETGETQueueURLActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// <p>The name of the queue whose URL must be fetched. Maximum 80 characters. Valid values: alphanumeric characters, hyphens (<code>-</code>), and underscores (<code>_</code>).</p> <p>Queue URLs and names are case-sensitive.</p>
 	QueueName string `queryParam:"style=form,explode=true,name=QueueName"`
 	// The Amazon Web Services account ID of the account that created the queue.
 	QueueOwnerAWSAccountID *string                   `queryParam:"style=form,explode=true,name=QueueOwnerAWSAccountId"`
 	Version                GETGETQueueURLVersionEnum `queryParam:"style=form,explode=true,name=Version"`
-}
-
-type GETGETQueueURLHeaders struct {
-	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type GETGETQueueURLRequest struct {
-	QueryParams GETGETQueueURLQueryParams
-	Headers     GETGETQueueURLHeaders
+	XAmzAlgorithm          *string                   `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256      *string                   `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential         *string                   `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate               *string                   `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken      *string                   `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature          *string                   `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders      *string                   `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type GETGETQueueURLResponse struct {

@@ -6,12 +6,9 @@ import (
 	"net/http"
 )
 
-type DeleteGamePathParams struct {
+type DeleteGameRequest struct {
 	// The name of the game to delete.
-	GameName string `pathParam:"style=simple,explode=false,name=GameName"`
-}
-
-type DeleteGameHeaders struct {
+	GameName          string  `pathParam:"style=simple,explode=false,name=GameName"`
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -19,11 +16,6 @@ type DeleteGameHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DeleteGameRequest struct {
-	PathParams DeleteGamePathParams
-	Headers    DeleteGameHeaders
 }
 
 type DeleteGameResponse struct {

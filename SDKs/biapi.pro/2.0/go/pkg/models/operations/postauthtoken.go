@@ -19,10 +19,6 @@ type PostAuthTokenRequestBody struct {
 	Username string `multipartForm:"name=username"`
 }
 
-type PostAuthTokenRequest struct {
-	Request *PostAuthTokenRequestBody `request:"mediaType=multipart/form-data"`
-}
-
 type PostAuthToken200ApplicationJSON struct {
 	// duration in seconds of the token validity
 	ExpiresIn *int64 `json:"expires_in,omitempty"`

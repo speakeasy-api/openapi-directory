@@ -7,12 +7,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DescribeDatasetPathParams struct {
-	// The name of the dataset whose information is retrieved.
-	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
-}
-
-type DescribeDatasetHeaders struct {
+type DescribeDatasetRequest struct {
 	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
 	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
@@ -20,11 +15,8 @@ type DescribeDatasetHeaders struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-}
-
-type DescribeDatasetRequest struct {
-	PathParams DescribeDatasetPathParams
-	Headers    DescribeDatasetHeaders
+	// The name of the dataset whose information is retrieved.
+	DatasetName string `pathParam:"style=simple,explode=false,name=datasetName"`
 }
 
 type DescribeDatasetResponse struct {
